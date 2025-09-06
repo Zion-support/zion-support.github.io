@@ -1,35 +1,12 @@
 
-<<<<<<< HEAD
-
-
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {StarIcon} from "lucide-react";
-interface ListingScoreCardProps {;
-  title: string,;
-  description: string,;
-=======
-<<<<<<< HEAD
-import { cn } from '@/lib / utils';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { StarIcon } from './lucide-react';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { StarIcon } from "lucide-react";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -56,22 +33,13 @@ export function ListingScoreCard(): any ({ ;
   aiScore = 0;
   rating = 0;
   reviewCount = 0;
-<<<<<<< HEAD
-
-=======
   className
 }: ListingScoreCardProps) {
   return (
     <div className={cn(
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group"
-=======
 import { Button } from "@/components/ui/button",
 import { StarIcon } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -86,10 +54,10 @@ interface ListingScoreCardProps {
   className?: string
 }
 
-
+export function ListingScoreCard({ ;
+  title;
 export function ListingScoreCard({ 
   title,
-
   description, 
   image, 
   category, 
@@ -104,8 +72,6 @@ export function ListingScoreCard({
   return (
     <div className={cn(
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}>
       {image && (
@@ -170,20 +136,15 @@ export function ListingScoreCard({
                 <StarIcon
                   key={star}
                   className={cn(
+                    "h-4 w-4"
+                    star <= Math.round(rating)
+                      ? "text-zion-cyan fill-zion-cyan"
 
-<<<<<<< HEAD
-=======
                       : "text-zion-slate-light"
-=======
                     "h-4 w-4", 
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -240,7 +201,6 @@ export function ListingScoreCard({;
               <span>{aiScore}%</span>;
             </div>;
           )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </div>;
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
@@ -252,33 +212,11 @@ export function ListingScoreCard({;
               {[1, 2, 3, 4, 5].map((star) => (;
                 <StarIcon
                   key={star}
-<<<<<<< HEAD
-                  className={cn(
-                    "h-4 w-4", 
-                    star <= Math && Math.round(rating) 
-                      ? "text-zion-cyan fill-zion-cyan" 
-
-                      : "text-zion-slate-light"
-=======
-
-                    "h-4 w-4", 
-                    star <= Math.round(rating) 
-                      ? "text-zion-cyan fill-zion-cyan" 
-                      : "text-zion-slate-light"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                   className={cn(;
                     "h-4 w-4";
                     star <= Math.round(rating);
                       ? "text-zion-cyan fill-zion-cyan";
                       : "text-zion-slate-light";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   )}
                 />;
               ))}
@@ -296,51 +234,26 @@ export function ListingScoreCard({;
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
 
                 {tag}
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
               </Badge>
             ))}
           </div>
-<<<<<<< HEAD
         )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
               </Badge>;
             ))}
           </div>;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         )}
-
-
-        <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
-          Request Quote;
-        </Button>;
-
-        {author && (;
-          <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">;
-            {authorImage ? (;
-              <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />;
-            ) : (;
-              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">;
-                {author && author.charAt(0)}
-              </div>;
-
+        
+        <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+          Request Quote
+        </Button>
+        {author && (
+          <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">
+            {authorImage ? (
+              <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />
+            ) : (
+              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
+                {author.charAt(0)}
+              </div>
             )}
             <span className="text-sm text-zion-slate-light">{author}</span>;
           </div>;

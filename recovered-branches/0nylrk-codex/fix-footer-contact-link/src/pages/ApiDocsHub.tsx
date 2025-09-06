@@ -1,33 +1,14 @@
 
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Link} from "react-router-dom";
 import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-=======
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function ApiDocsHub() {
 
   const sections = [
@@ -49,65 +30,19 @@ export function ApiDocsHub() {
       icon: Webhook
       path: "/developers/docs/webhooks"
       color: "from-green-500 to-emerald-500"}
-<<<<<<< HEAD
-=======
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: "Sample Code"
       description: "Examples in JavaScript, Python, and Node.js";
       icon: Zap
       path: "/developers/docs/samples"
       color: "from-yellow-500 to-orange-500"}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-import React from './react';
-import { Link } from './react-router-dom';
-import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from './lucide-react';
-import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
-export /**
- * ApiDocsHub - Function description
- */
-function ApiDocsHub() {
-  const sections = [;
-    {
-      title: "Getting Started",
-      description: "Learn how to authenticate and make your first API request",
-      icon: BookOpen,
-      path: "/developers / docs / getting - started",
-      color: "from - blue - 500 to - cyan - 500"},
-    {
-      title: "API Reference",
-      description: "Detailed documentation for all available endpoints",
-      icon: Code,
-      path: "/developers / docs / reference",
-      color: "from - purple - 500 to - pink - 500"},
-    {
-      title: "Webhooks",
-      description: "Subscribe to events and receive real - time updates",
-      icon: Webhook,
-      path: "/developers / docs / webhooks",
-      color: "from - green - 500 to - emerald - 500"},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    {
-
-
       title: "Sample Code",;
       description: "Examples in JavaScript, Python, and Node.js";
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
       title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js",
-
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       title: "Error Codes & Rate Limits"
       description: "Understanding API errors and rate limiting"
@@ -185,20 +120,9 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
       </div>
     </ApiDocsLayout>
   )
-<<<<<<< HEAD
-
-
-=======
-=======
-<<<<<<< HEAD
 }
 export default ApiDocsHub;
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",;
@@ -304,15 +228,3 @@ export default ApiDocsHub;
           {sections.map((section) => (;
             <Link;
               key={section.path} ;
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

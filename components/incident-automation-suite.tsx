@@ -1,26 +1,13 @@
 <<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 return (<UltraAdvancedFuturisticBackground> <Head> <title> {
   service.name
 }- Zion Tech Group</title>) )
-=======
  return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-=======
 return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-=======
  return (<UltraAdvancedFuturisticBackground> <Head> <title> {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   service.name 
 }- Zion Tech Group</title>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
 
@@ -32,34 +19,13 @@ import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
-
-
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+export default function IncidentAutomationSuitePage() {
 
-
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
-=======
-import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
 export default function IncidentAutomationSuitePage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/incident-automation-suite'));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function IncidentAutomationSuitePage() {
-
-=======
-<<<<<<< HEAD
-export default function IncidentAutomationSuitePage() {;
-=======
-export default function IncidentAutomationSuitePage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -95,7 +61,6 @@ export default function IncidentAutomationSuitePage() {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
   service.name;
 }- Zion Tech Group</title>) );
 }</ul> </div> <div className="bg - black / 30 rounded - 2xl border border - emerald - 500 / 30 p - 6 h - fit" > <div className="flex items - end justify - between mb - 3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
@@ -147,7 +112,6 @@ if (return null) {
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
@@ -155,26 +119,4 @@ if (return null) {
       </div>;
 
 
-<<<<<<< HEAD
-=======
-
-
-    </UltraAdvancedFuturisticBackground>);
-}
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

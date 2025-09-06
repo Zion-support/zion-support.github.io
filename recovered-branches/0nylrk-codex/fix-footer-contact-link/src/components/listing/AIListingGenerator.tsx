@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -17,25 +7,17 @@ import {supabase} from "@/integrations/supabase/client";
 import {AIListingForm} from "./AIListingForm";
 import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
 import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Sparkles } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 import { AIListingForm } from "./AIListingForm",
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
 interface GeneratedContent {
-=======
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -44,9 +26,7 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
-<<<<<<< HEAD
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   description: string
   tags: string[]
@@ -91,8 +71,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       });
       if (error) {
         throw new Error(error.message)
-=======
-<<<<<<< HEAD
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 interface GeneratedContent {
@@ -103,8 +81,6 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -113,7 +89,6 @@ import { supabase } from "@/integrations/supabase/client",;
 import { AIListingForm } from "./AIListingForm",;
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",;
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface GeneratedContent {;
   description: string,;
   tags: string[],;
@@ -174,30 +149,6 @@ function AIListingGenerator() {
   const [is_loading, setIsLoading] = useState (false);
   const [generated_content, setGeneratedContent] = useState < GeneratedContent | null>(null);
 ;
-<<<<<<< HEAD
-  const handle_generate = async ({
-
-    title;
-    category;
-    key_features;
-    target_audience;
-  }: {
-
-    title: string,
-    category: string,
-    key_features: string,
-    target_audience: string;
-  }) => {
-    setIsLoading (true);
-;
-
-    try {
-      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
-        body: { title, category, key_features, target_audience }
-      });
-
-
-=======
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast(),;
   const [isLoading, setIsLoading] = useState(false),;
@@ -220,20 +171,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
       if (data.error) {
         throw new Error(data.error)
       }
-
-
-
-
 
       setGeneratedContent(data.generated);
       toast({
@@ -247,11 +188,20 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
-=======
-<<<<<<< HEAD
-=======
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  const handleApply = () => {
+    if (generatedContent && onApplyGenerated) {
+      onApplyGenerated(generatedContent);
+      toast({
+        title: "Content Applied"
+        description: "The generated content has been applied to your listing."
+      })
+    }
+  }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="space-y-6">
@@ -266,20 +216,12 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           </p>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
           <AIListingForm
             onSubmit={handleGenerate}
             isLoading={isLoading}
-=======
           <AIListingForm 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
       // Check condition
 if ( {) {
@@ -386,27 +328,9 @@ if ( {) {
           </p>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-          <AIListingForm
-            onSubmit={handleGenerate} 
-            isLoading={isLoading} 
-=======
-
-          <AIListingForm 
-            onSubmit={handleGenerate} 
-            isLoading={isLoading} 
-
-
-=======
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             initialValues={initialValues}
           />;
         </CardContent>;
@@ -417,15 +341,12 @@ if ( {) {
       {generatedContent && !isLoading && (;
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
       )}
-
-
-
+    </div>
+  )
+}
     </div>;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 ;
-
-
-

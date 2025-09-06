@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-
-
-    let sourceText = '';    ;
+let sourceText = '';    ;
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
 
 
@@ -11,156 +7,8 @@
 }
 
 }
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
-;
-    let source_text = '';
-    for (const lang of supported_languages.map (l => l.code)) {
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState, useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/components/ui/use-toast",
-import { useTranslation } from "react-i18next",
-import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
-import { useIsMobile } from "@/hooks/use-mobile",
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-<<<<<<< HEAD
-import { useTranslationService } from "@/hooks/useTranslationService";
-import {logErrorToProduction} from '@/utils/productionLogger';
-export default function TranslationManager() {
-
-
-    let sourceText = ''
-    for (const lang of supportedLanguages.map(l => l.code)) {
-
-}
-}
-=======
-import { useTranslationService } from "@/hooks/useTranslationService",
-import {logErrorToProduction} from '@/utils/productionLogger',
-export default function TranslationManager() {
-
-  const { t, i18n } = useTranslation(),
-  const isMobile = useIsMobile(),
-  const { supportedLanguages } = useLanguage(),
-  const { translateContent, isTranslating } = useTranslationService(),
-  
-  const [selectedNamespace, setSelectedNamespace] = useState("translation"),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [translations, setTranslations] = useState<Record<string any>>({}),
-  const [filteredKeys, setFilteredKeys] = useState<string[]>([]),
-  const [editingKey, setEditingKey] = useState<string | null>(null),
-  const [editedTranslations, setEditedTranslations] = useState<Record<string Record<SupportedLanguage string>>>({}),
-  const [isSaving, setIsSaving] = useState(false),
-  
-  // Simulated translation data - in a real app, this would come from your backend
-  useEffect(() => {
-    // For demo purposes, we're using the loaded translations from i18next
-    const currentTranslations: Record<string any> = {},
-    
-    supportedLanguages.forEach(lang => {
-      const res = i18n.getResourceBundle(lang.code, selectedNamespace),
-      if (res) {
-        // Flatten nested objects for easier management
-        const flattenObject = (obj: any, prefix = '') => {
-          return Object.keys(obj).reduce((acc, key) => {
-            const pre = prefix.length ? `${prefix}.` : '',
-            if (typeof obj[key] === 'object' && obj[key] !== null) {
-              Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
-            } else {
-              acc[`${pre}${key}`] = obj[key]
-import React, { useState, useEffect } from 'react',;
-import { Header } from "@/components/Header",;
-import { SEO } from "@/components/SEO",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Textarea } from "@/components/ui/textarea",;
-import { toast } from "@/components/ui/use-toast",;
-import { useTranslation } from "react-i18next",;
-import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react';
-import { useIsMobile } from "@/hooks/use-mobile",;
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",;
-import { useTranslationService } from "@/hooks/useTranslationService",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-export default function TranslationManager() {;
-  const { t, i18n } = useTranslation(),;
-  const isMobile = useIsMobile(),;
-  const { supportedLanguages } = useLanguage(),;
-  const { translateContent, isTranslating } = useTranslationService(),;
-  const [selectedNamespace, setSelectedNamespace] = useState("translation"),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  const [translations, setTranslations] = useState<Record<string any>>({}),;
-  const [filteredKeys, setFilteredKeys] = useState<string[]>([]),;
-  const [editingKey, setEditingKey] = useState<string | null>(null),;
-  const [editedTranslations, setEditedTranslations] = useState<Record<string Record<SupportedLanguage string>>>({}),;
-  const [isSaving, setIsSaving] = useState(false),;
-  // Simulated translation data - in a real app, this would come from your backend;
-  useEffect(() => {;
-    // For demo purposes, we're using the loaded translations from i18next;
-    const currentTranslations: Record<string any> = {},;
-    supportedLanguages.forEach(lang => {;
-      const res = i18n.getResourceBundle(lang.code, selectedNamespace),;
-      if (res) {;
-        // Flatten nested objects for easier management;
-        const flattenObject = (obj: any, prefix = '') => {;
-          return Object.keys(obj).reduce((acc, key) => {;
-            const pre = prefix.length ? `${prefix}.` : '',;
-            if (typeof obj[key] === 'object' && obj[key] !== null) {;
-              Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
-            } else {;
-              acc[`${pre}${key}`] = obj[key];
-            }
-            return acc;
-          }, {} as Record<string string>);
-        },;
-        currentTranslations[lang.code] = flattenObject(res);
-      }
-    }),;
-    setTranslations(currentTranslations),;
-    // Get all unique keys across all languages;
-    const allKeys = new Set<string>(),;
-    Object.values(currentTranslations).forEach(langTranslations => {;
-      Object.keys(langTranslations).forEach(key => allKeys.add(key));
-    }),;
-    setFilteredKeys(Array.from(allKeys));
-  }, [selectedNamespace, i18n]),;
-  // Filter keys based on search query;
-  useEffect(() => {;
-    if (!searchQuery.trim()) {;
-      // Get all unique keys across all languages;
-      const allKeys = new Set<string>(),;
-      Object.values(translations).forEach(langTranslations => {;
-        Object.keys(langTranslations).forEach(key => allKeys.add(key));
-      }),;
-      setFilteredKeys(Array.from(allKeys)),;
-      return;
-    }
 ;
     const query = searchQuery.toLowerCase().trim(),;
     const filtered: string[] = [],;
@@ -507,10 +355,4 @@ export default function TranslationManager() {;
     </>;
   );
 }
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}

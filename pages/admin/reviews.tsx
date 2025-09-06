@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 import type { NextPage } from 'next',;
 import type { Review } from '../../types/reviews',;
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-=======
   async function refresh() {
     const res = await fetch('/api/admin/debug/reviews'),
     const data = await res.json(),
@@ -19,12 +11,9 @@ const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('AD
       setAll(data.reviews),
       setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import type { Review } from '../../types/reviews';
-<<<<<<< HEAD
 
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') |'dev-admin-key')
 const AdminReviewsPage: NextPage = () => {
@@ -46,14 +35,8 @@ const AdminReviewsPage: NextPage = () => {
       headers: {
         'Content-Type': 'application/jsonx-admin-key': adminKey |'dev-admin-key'}
       body: JSON.stringify({ action, reviewId })})
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     if (res.ok) refresh()
-=======
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+  }
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
 const AdminReviewsPage: NextPage = () => {;
   const [pending, setPending] = useState<Review[]>([]);
@@ -68,12 +51,27 @@ const AdminReviewsPage: NextPage = () => {;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  useEffect(() => { refresh() }, []),;
+  async function moderate(action: 'approve' | 'remove', reviewId: string) {;
+    const res = await fetch('/api/reviews/moderate', {;
+      method: 'POST',;
+      headers: {;
+        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'},;
+      body: JSON.stringify({ action, reviewId })}),;
+    if (res.ok) refresh();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -105,16 +103,11 @@ const AdminReviewsPage: NextPage = () => {;
       </section>
     </main>
   )
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+}
+export default AdminReviewsPage;
 
 },
 export default AdminReviewsPage,
-
-=======
 },
 =======
 <<<<<<< HEAD
@@ -131,10 +124,5 @@ export default AdminReviewsPage,
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+export default AdminReviewsPage,;
 export default AdminReviewsPage,
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

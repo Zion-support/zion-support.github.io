@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import { useState, useEffect } from 'react,
-=======
 import { useState, useEffect } from 'react,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState,useEffect } from 'react', export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value), useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay), return () => { clearTimeout(handler)}},[value,delay]), return debouncedValue};
 export default useDebounce,
 export const useDebounce = <T>(value: T, delay: number): T => {,
@@ -22,40 +11,15 @@ export const useDebounce = <T>(value: T, delay: number): T => {,
       clearTimeout(handler)}}, [value, delay]),;
   return debouncedValue};
 export default useDebounce,
-<<<<<<< HEAD
 ,
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 ,
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-
-
-
-import { useState, useEffect } from 'react,
-import { useState, useEffect } from 'react', export const use_debounce = <T>(value: T, delay: number): T => { const [debounced_value, setDebouncedValue] = useState < T>(value), useEffect (() => { const handler = set_timeout (() => { setDebouncedValue (value)}, delay), return () => { clear_timeout (handler)}}, [value, delay]), return debounced_value}
-export default use_debounce,
-export const use_debounce = <T>(value: T, delay: number): T => {,
-  const [debounced_value, setDebouncedValue] = useState < T>(value),
-  useEffect (() => {,
-    const handler = set_timeout (() => {,
-      setDebouncedValue (value)}, delay),
-    return () => {,
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 import { useState, useEffect } from 'react
 import { useState,useEffect } from 'react', export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value), useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay), return () => { clearTimeout(handler)}},[value,delay]), return debouncedValue}
 export default useDebounce
@@ -68,25 +32,8 @@ export const useDebounce = <T>(value: T, delay: number): T => {
       clearTimeout(handler)}}, [value, delay])
   return debouncedValue}
 export default useDebounce
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-      clear_timeout (handler)}}, [value, delay]),
-  return debounced_value}
-export default use_debounce,
-,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+origin/main
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { useState, useEffect } from 'react';
 export const use_debounce = <T>(value: T, delay: number): T => {
   const [debounced_value, setDebouncedValue] = useState < T>(value);
@@ -94,23 +41,16 @@ export const use_debounce = <T>(value: T, delay: number): T => {
     const handler = set_timeout (() => {
       setDebouncedValue (value)}, delay);
     return () => {
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
       clearTimeout(handler)}}, [value, delay]);
   return debouncedValue}
 export default useDebounce;
 import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: 'T',delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
-
 import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
-
 import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/add-new-services-and-deploy-updates-0462
       clearTimeout(handler);
     };
   }, [value, delay]);
@@ -119,22 +59,9 @@ import { useState,useEffect } from 'react'; export const useDebounce = <T>(value
 };
 
 export default useDebounce;
-
-
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
-
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
+origin/main
+origin/automation-improvements-final
 import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-      clear_timeout (handler)}}, [value, delay]);
-  return debounced_value}
-export default use_debounce;
-import { useState, useEffect } from 'react'; export const use_debounce = <T>(value: 'T', delay: number): T => { const [debounced_value, setDebouncedValue] = useState < T>(value); useEffect (() => { const handler = set_timeout (() => { setDebouncedValue (value)}, delay); return () => { clear_timeout (handler)}}, [value, delay]); return debounced_value} export default use_debounce;
-import { useState, useEffect } from 'react'; export const use_debounce = <T>(value: T, delay: number): T => { const [debounced_value, setDebouncedValue] = useState < T>(value); useEffect (() => { const handler = set_timeout (() => { setDebouncedValue (value)}, delay); return () => { clear_timeout (handler)}}, [value, delay]); return debounced_value} export default use_debounce;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

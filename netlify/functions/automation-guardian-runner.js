@@ -7,10 +7,8 @@ function runNode(relPath, args = []) {
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
-
 exports && exports.config = {
   schedule: '*/10 * * * *'},
-
 exports && exports.handler = async () => {
   const logs = [],
   function logStep(name, fn) {
@@ -44,7 +42,6 @@ exports && exports.handler = async () => {
   // Attempt to push any changes
 
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
-
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
 
@@ -93,4 +90,3 @@ function log_step() {
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,45 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
+origin/main
+origin/automation-improvements-final
 
-=======
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-
-import { ;
-  Shield, ;
-  Rocket, ;
-  BarChart3, ;
-  Settings, ;
-  ArrowRight,;
-  CheckCircle,;
-  Users,;
-  Building,;
-  Globe,;
-  Target;
-
-=======
-<<<<<<< HEAD
 import {
   Shield
   Rocket
@@ -51,7 +19,6 @@ import {
   Building
   Globe
   Target
-=======
 import { 
   Shield, 
   Rocket, 
@@ -63,16 +30,13 @@ import {
   Building,
   Globe,
   Target;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from 'lucide-react';
 import Layout from '../../components/Layout';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
-
->>>>>>> origin/automation-improvements-final
-
-
+origin/main
+origin/automation-improvements-final
 
 const solutions = [
   {
@@ -126,63 +90,6 @@ const solutions = [
       "Ongoing Support"
     ]
     color: "from-orange-600 to-orange-800"
-<<<<<<< HEAD
-
-const solutions = [;
-  {;
-    title: "Enterprise Solutions",;
-    description: "Comprehensive technology solutions for large organizations",;
-    icon: Building,;
-    href: "/solutions/enterprise",;
-    features: [;
-      "Scalable Infrastructure",;
-      "Enterprise Security",;
-      "Custom Integration",;
-      "24/7 Support";
-    ],;
-    color: "from-blue-600 to-blue-800";
-  },;
-  {;
-    title: "Startup Solutions",;
-    description: "Rapid deployment solutions for growing startups",;
-    icon: Rocket,;
-    href: "/solutions/startup",;
-    features: [;
-      "Quick Setup",;
-      "Cost Effective",;
-      "Scalable Growth",;
-      "Expert Guidance";
-    ],;
-    color: "from-green-600 to-green-800";
-  },;
-  {;
-    title: "Industry Solutions",;
-    description: "Specialized solutions for specific industries",;
-    icon: BarChart3,;
-    href: "/solutions/industry",;
-    features: [;
-      "Industry Expertise",;
-      "Compliance Ready",;
-      "Custom Workflows",;
-      "Best Practices";
-    ],;
-    color: "from-purple-600 to-purple-800";
-  },;
-  {;
-    title: "Custom Development",;
-    description: "Tailored solutions built specifically for your needs",;
-    icon: Settings,;
-    href: "/solutions/custom",;
-    features: [;
-      "Bespoke Development",;
-      "Unique Requirements",;
-      "Full Ownership",;
-      "Ongoing Support";
-    ],;
-    color: "from-orange-600 to-orange-800";
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 ];
 
@@ -206,34 +113,6 @@ export default function SolutionsPage() {;
 
   return (
     <Layout
-<<<<<<< HEAD
-      title="Solutions - Zion Tech Group"
-      description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development and specialized services."
-      keywords="enterprise solutions, startup solutions, custom development, industry solutions, technology consulting">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-        {/* Hero Section */}
-
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
-          <div className="absolute inset-0">;
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
-          </div>;
-
-          <div className="container mx-auto px-4 relative z-10">;
-            <motion&& motion.div
-
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-                Technology Solutions for{' '}
-
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -457,7 +336,6 @@ const SolutionsPage: NextPage = () => {
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }
       ];
@@ -468,15 +346,7 @@ const SolutionsPage: NextPage = () => {
 }
   ],
   return (
-<<<<<<< HEAD
-
-                From startups to enterprises, we provide tailored technology solutions that drive growth, 
-
-
-=======
-<<<<<<< HEAD
     <Layout 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       title="Solutions - Zion Tech Group"
       description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development and specialized services."
       keywords="enterprise solutions, startup solutions, custom development, industry solutions, technology consulting"
@@ -502,12 +372,8 @@ const SolutionsPage: NextPage = () => {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
                 From startups to enterprises, we provide tailored technology solutions that drive growth
-=======
                 From startups to enterprises, we provide tailored technology solutions that drive growth, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 efficiency, and innovation across all industries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -739,12 +605,6 @@ const SolutionsPage: NextPage = () => {
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Our Solution Categories
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We offer comprehensive technology solutions tailored to different business needs and stages.
@@ -783,8 +643,6 @@ const SolutionsPage: NextPage = () => {
                     <Link
                       href={solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
       <Head>
         <title>Industry Solutions - Zion Tech Group | Tailored Technology Solutions</title>
@@ -810,47 +668,11 @@ const SolutionsPage: NextPage = () => {
           {solutions.map((category, categoryIndex) => (
             <div key={categoryIndex} className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-<<<<<<< HEAD
-
-
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
-                  Every Business;
-                </span>;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-                From startups to enterprises, we provide tailored technology solutions that drive growth, ;
-                efficiency, and innovation across all industries.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
-                  Get Custom Solution;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
-                  Learn More;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-
-        {/* Solutions Grid */}
-        <section className="py-20 bg-gray-50">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-
-
-=======
                 {category.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We offer comprehensive technology solutions tailored to different business needs and stages.
@@ -858,7 +680,6 @@ const SolutionsPage: NextPage = () => {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {solutions.map((solution, index) => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 const IconComponent = solution.icon;
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -994,12 +815,6 @@ export default SolutionsPage;
                     whileInView={{ opacity: 1, coordinate_y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
-                    while_hover={{ coordinate_y: -5 }}
-                  >;
-                    <div className={`w - 16 h - 16 bg - gradient - to - r ${solution.color} rounded - lg flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform`}>;
-                      <IconComponent className="w - 8 h - 8 text - white" />;
-=======
                     whileHover={{ y: -5 }}
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
@@ -1011,11 +826,7 @@ export default SolutionsPage;
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {solution.description}
                     </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <ul className="space-y-2 mb-6">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -1027,7 +838,6 @@ export default SolutionsPage;
                     <Link
                       href={solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
-=======
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-800 mb-2">Use Cases:</h4>
                       <ul className="space-y-1">
@@ -1074,7 +884,6 @@ export default SolutionsPage;
   }
 }
                       </span>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     </div>;
                     <h3 className="text - 2xl font - bold text - gray - 900 mb - 4">;
                       {solution.title}
@@ -1203,20 +1012,10 @@ export default SolutionsPage;
   }
 }
                       className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <span>Explore {solution.title}</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </motion.div>
                 );
               })}
@@ -1313,12 +1112,9 @@ export default SolutionsPage;
       </div>
     </Layout>
   );
-<<<<<<< HEAD
 }
   )
 }
-=======
-=======
                   </div>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -1370,7 +1166,6 @@ export default SolutionsPage;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
         <div className="mt-16 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
@@ -1449,10 +1244,8 @@ export default SolutionsPage;
       </main>
     </div>
   )
-<<<<<<< HEAD
 };
 
-=======
 },
 export default SolutionsPage,
         <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 mt-16 text-center text-white">;
@@ -1566,12 +1359,6 @@ export default SolutionsPage,
     </div>;
   );
 },;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default SolutionsPage;
 
-
 export default SolutionsPage;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

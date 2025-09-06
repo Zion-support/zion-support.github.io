@@ -1,9 +1,7 @@
 ;
-
-interface ImportMetaEnv {
-  readonly VITE_APP_TITLE: string,
-  readonly VITE_SUPABASE_URL: string,
-  readonly VITE_SUPABASE_ANON_KEY: string,
+interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
+  readonly VITE_SUPABASE_URL: string;
+  readonly VITE_SUPABASE_ANON_KEY: string;
   // add more env variables as needed;
 }
 interface ImportMeta {
@@ -23,14 +21,7 @@ declare module 'path' {
   export function join (...paths: string[]): string,
   export function dirname (path: string): string;
 }
-declare module 'lovable - tagger' {
-  import { Plugin } from 'vite',
-  export function component_tagger (): Plugin;
-}
-// Add Node.js globals;
-
-=======
-
+declare module 'lovable-tagger' {import { Plugin } from 'vite';
 interface ImportMetaEnv {;
   readonly VITE_APP_TITLE: string,;
   readonly VITE_SUPABASE_URL: string,;
@@ -61,24 +52,12 @@ declare module 'path' {;
 ;
 declare module 'lovable-tagger' {;
   import { Plugin } from 'vite',;
-
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 declare let __dirname: string,
 declare let process: {
   env: {
@@ -93,16 +72,5 @@ declare let process: {;
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
-}
+};

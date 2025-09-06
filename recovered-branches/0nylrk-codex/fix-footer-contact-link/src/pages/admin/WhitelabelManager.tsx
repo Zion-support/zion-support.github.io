@@ -1,33 +1,4 @@
 
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -40,10 +11,6 @@ import {Navigate} from "react-router-dom";
 export default function WhitelabelManager() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -51,35 +18,30 @@ import { SEO } from "@/components/SEO",
 import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function WhitelabelManager() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
   // Check if user has admin role
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
-
-  if (!isAdmin) {;
-    return <Navigate to="/unauthorized" />;
-
-=======
-
-
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+export default function WhitelabelManager() {
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("tenants"),
+  
+  // Check if user has admin role
+  const isAdmin = user?.role === "admin",
+  
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
-<<<<<<< HEAD
-=======
-
-
-=======
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.
                 </p>
               </div>
@@ -90,13 +52,7 @@ export default function WhitelabelManager() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -243,23 +199,7 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

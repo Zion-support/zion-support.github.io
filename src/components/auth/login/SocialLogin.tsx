@@ -1,40 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Facebook, Twitter, Loader2 } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Web3Login } from "./Web3Login",
-import { useState } from "react";
-import { openAuthPopup } from "@/api/authSocial";
-export function SocialLogin() {
-<<<<<<< HEAD
-  const [isLoading, setIsLoading] = useState(false);
-  const handleGoogle = null;
-=======
-  const [isLoading, setIsLoading] = useState(false)
-  const handleGoogle = () => {
-    setIsLoading(true)
-    window.location.href = '/auth/google'
-  }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-<<<<<<< HEAD
-=======
-  const handleGoogle = () => {
-    setIsLoading(true),
-    window.location.href = '/auth/google'
-  },
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-  return (
+return (
     <div className='mt-6'>
       <div className='relative'>
         <div className='absolute inset-0 flex items-center'>
@@ -69,7 +33,6 @@ export function SocialLogin() {;
         </div>;
         <div className='relative flex justify-center text-sm'>;
           <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>;
-=======
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import { Web3Login } from './Web3Login';
@@ -92,7 +55,6 @@ function SocialLogin() {
         </div>;
         <div className='relative flex justify - center text - sm'>;
           <span className='px - 2 bg - zion - blue - dark text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Or continue with;
           </span>;
         </div>;
@@ -109,16 +71,6 @@ function SocialLogin() {
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -128,15 +80,9 @@ function SocialLogin() {
               <path d="M5.26498 14.2949C5.02498 13.5699 4.88501 12.7999 4.88501 11.9999C4.88501 11.1999 5.01998 10.4299 5.26498 9.7049L1.275 6.60986C0.46 8.22986 0 10.0599 0 11.9999 C0 13.9399 0.46 15.7699 1.28 17.3899L5.26498 14.2949Z" fill="#FBBC05" />
               <path d="M12.0004 24C15.2404 24 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.2654 14.29L1.27539 17.385C3.25539 21.31 7.3104 24 12.0004 24Z" fill="#34A853" />
             </svg>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </Button>;
         <Button
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
           type='button'
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
@@ -153,9 +99,6 @@ function SocialLogin() {
           disabled={isLoading}        >
           <span className='sr-only'>Sign in with Twitter</span>
           <Twitter className='h-5 w-5' />
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </Button>
         <Web3Login />
       </div>
@@ -164,10 +107,6 @@ function SocialLogin() {
 };
 <<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -186,16 +125,6 @@ function SocialLogin() {
         >
           <span className="sr-only">Sign in with Twitter</span>
           <Twitter className="h-5 w-5" />
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </Button>
         <Web3Login />
       </div>
@@ -206,9 +135,7 @@ function SocialLogin() {
           disabled={isLoading}        >;
           <span className='sr-only'>Sign in with Twitter</span>;
           <Twitter className='h-5 w-5' />;
-=======
 
-=======
 
 =======
 <<<<<<< HEAD
@@ -289,15 +216,7 @@ export function SocialLogin() {;
 <<<<<<< HEAD
 
 
-=======
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       <div className='mt - 6 grid grid - cols - 4 gap - 3'>;
         <Button;
           type='button';
@@ -354,14 +273,4 @@ export function SocialLogin() {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,22 +1,6 @@
+import Head from 'next/head';
 
 export default function SiteHealth() {
-
-=======
-
-
-
-export default function SiteHealth() {
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -56,7 +40,6 @@ export default function SiteHealth() {
           content='Dashboards and audits for accessibility, performance, and link integrity.'
         />;
       </Head>;
-
       <div aria-hidden className='pointer-events-none absolute inset-0 -z-10'>;
         <div className='absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float' />;
         <div className='absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow' />;
@@ -67,7 +50,6 @@ export default function SiteHealth() {
         </div>;
         <div className='absolute inset-0 beams opacity-[0 && 0.06]' />;
       </div>;
-
       <header className='relative z-10'>;
         <nav className='mx-auto flex max-w-7xl items-center justify-between px-6 py-6'>;
           <div className='text-2xl font-bold tracking-wide'>;
@@ -97,7 +79,6 @@ export default function SiteHealth() {
             <Link href="/reports/ai-trends"><a>AI Trends</a></Link>;
         </nav>;
       </header>;
-
       <main className='relative z-10'>;
         <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center'>;
           <div className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'>;
@@ -171,7 +152,6 @@ export default function SiteHealth() {
             </Link>;
           </div>;
         </section>;
-
         <section className='mx-auto max-w-7xl px-6 pb-14'>;
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
             Dashboards;
@@ -210,7 +190,6 @@ export default function SiteHealth() {
             ))}
           </div>;
         </section>;
-
         <section className='mx-auto max-w-7xl px-6 pb-16'>;
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
             Artifacts;
@@ -226,7 +205,6 @@ export default function SiteHealth() {
 
               href='/reports/seo/index && index.html'
               className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'>;
-=======
 import Head from 'next / head';
   return (
     <div className='relative min - h-screen overflow - hidden bg - slate - 950 text - white'>;
@@ -373,8 +351,51 @@ import Head from 'next / head';
             <a href="/reports/seo/index.html" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">SEO Audit Dashboard →</a>
           </div>
         </section>
-
-        <section className="mx-auto max-w-7xl px-6 pb-24">
+<section className="mx-auto max-w-7xl px-6 pb-24">
+=======
+        <section className='mx-auto max-w-7xl px-6 pb-16'>
+          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
+            Artifacts
+          </h2>
+          <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-2'>
+            <a
+              href='/reports/seo/latest.json'
+              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'
+            >
+              Latest SEO Report JSON ↗
+            </a>
+            <a
+              href='/reports/seo/index.html'
+              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'
+            >
+              SEO Audit Dashboard →
+            </a>
+          </div>
+        </section>
+        <section className='mx-auto max-w-7xl px-6 pb-24'>
+          <div className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'>
+            <h3 className='text-2xl font-bold'>
+              Keep quality high — continuously
+            </h3>
+            <p className='mx-auto mt-2 max-w-2xl text-white/80'>
+              Automations enforce guardrails and publish transparent artifacts
+              for every run.
+            </p>
+            <div className='mt-6 flex flex-wrap justify-center gap-3'>
+              <Link href='/automation'>
+                <a className='rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white'>
+                  Get Started
+                </a>
+              </Link>
+              <a
+                href='/site-health'
+                target='_blank'
+                rel='noopener'
+                className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'
+              >
+                View Pipelines
+              </a>            </div>        <section className="mx-auto max-w-7xl px-6 pb-24">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">
             <h3 className="text-2xl font-bold">Keep quality high — continuously</h3>
             <p className="mx-auto mt-2 max-w-2xl text-white/80">Automations enforce guardrails and publish transparent artifacts for every run.</p>
@@ -389,8 +410,6 @@ import Head from 'next / head';
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <section className='mx - auto max - w-7xl px - 6 pb - 24'>;
           <div className='animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop - blur - xl'>;
             <h3 className='text - 2xl font - bold'>;
@@ -430,14 +449,3 @@ import Head from 'next / head';
 
         </nav>
       </header>
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

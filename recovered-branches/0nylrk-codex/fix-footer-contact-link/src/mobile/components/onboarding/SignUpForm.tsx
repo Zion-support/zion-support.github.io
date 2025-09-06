@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
@@ -15,28 +10,49 @@ import {Alert, AlertDescription} from "@/components/ui/alert";
 export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { useNavigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 export function SignUpForm() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+  const navigate = useNavigate();
+  const { signup, login, loginWithGoogle } = useAuth();
+  const [formData, setFormData] = useState({
+    email: ""
+    password: ""
+    name: ""})
+  const [isLoading, setIsLoading] = useState(false);
+  const [signupMode, setSignupMode] = useState(true);
+  const [error, setError] = useState("");
+import { AlertCircle } from "lucide-react",
+import { Alert, AlertDescription } from "@/components/ui/alert",
 
-
+export function SignUpForm() {
+  const navigate = useNavigate(),
+  const { signup, login, loginWithGoogle } = useAuth(),
+  
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    name: ""}),
+  const [isLoading, setIsLoading] = useState(false),
+  const [signupMode, setSignupMode] = useState(true),
+  const [error, setError] = useState(""),
+  
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     setError("")
-
-
+  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError("");
+    setIsLoading(true)
   },
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -44,8 +60,6 @@ export function SignUpForm() {
     setError(""),
     setIsLoading(true),
     
-
-
     try {
       if (signupMode) {
         const { error } = await signup(formData.email, formData.password, {
@@ -55,28 +69,13 @@ export function SignUpForm() {
         }
         navigate("/mobile")
       } else {
-
-
+        const { error } = await login(formData.email, formData.password);
         const { error } = await login(formData.email, formData.password),
         
-
-
         if (error) {
           throw new Error(error)
         }
         navigate("/mobile")
-
-import React, { useState } from "react";
-import {Label} from "@/components/ui/label";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {useNavigate} from "react-router-dom";
-import {useAuth} from "@/hooks/useAuth";
-import {AlertCircle} from "lucide-react";
-import {Alert, AlertDescription} from "@/components/ui/alert";
-
-=======
-
 import React, { useState } from "react",;
 import { Label } from "@/components/ui/label",;
 import { Input } from "@/components/ui/input",;
@@ -127,92 +126,15 @@ export function SignUpForm() {;
         }
 
         navigate("/mobile");
-<<<<<<< HEAD
-
-import React, { useState } from './react';
-import { Label } from '@/components / ui / label';
-import { Input } from '@/components / ui / input';
-import { Button } from '@/components / ui / button';
-import { use_navigate } from './react-router-dom';
-import { use_auth } from '@/hooks / use_auth';
-import { AlertCircle } from './lucide-react';
-import { Alert, AlertDescription } from '@/components / ui / alert';
-export /**
- * SignUpForm - Function description
- */
-function SignUpForm() {
-  const navigate = use_navigate ();
-  const { signup, login, loginWithGoogle } = use_auth ();
-;
-  const [form_data, setFormData] = useState ({
-    email: "",
-    password: "",
-    name: ""}),
-  const [is_loading, setIsLoading] = useState (false);
-  const [signup_mode, setSignupMode] = useState (true);
-  const [error, set_error] = useState ("");
-;
-  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    const { name, value } = e.target;
-    setFormData (prev => ({ ...prev, [name]: value }));
-    set_error ("");
-  }
-;
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default ();
-    set_error ("");
-    setIsLoading (true),
-    try {
-      // Check condition
-if ( {) {
-  $2
-}
-        const { error } = await signup (form_data.email, form_data.password, {
-          name: form_data.name}),
-        // Check condition
-if ( {) {
-  $2
-}
-          throw new Error (error);
-        }
-        navigate ("/mobile");
-      } else {
-        const { error } = await login (form_data.email, form_data.password);
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          throw new Error (error);
-        }
-        navigate ("/mobile");
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
     } catch (err: any) {
       set_error (err.message);
     } finally {
       setIsLoading (false);
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   };
-<<<<<<< HEAD
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle()
@@ -220,53 +142,20 @@ if ( {) {
       setError(err.message)
     }
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   };
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
       setError(err && err.message);
     }
-<<<<<<< HEAD
-  };
-
-
-=======
-
-  };
-
-=======
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium text-center">;
         {signupMode ? "Create your account" : "Welcome back"}
-<<<<<<< HEAD
-
-
-        <Button 
-          variant="outline" 
-
-
-=======
       </h2>
       <div className="space-y-2">
         <Button
@@ -282,14 +171,10 @@ if ( {) {
           </svg>
           Continue with Google
         </Button>
-<<<<<<< HEAD
         <Button
           variant="outline"
-=======
         <Button 
           variant="outline" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -396,24 +281,12 @@ if ( {) {
             onChange={handleInputChange}
             required
             placeholder="Create a password"
-<<<<<<< HEAD
-
-
-        <Button 
-          type="submit" 
-
-
-=======
           />
         </div>
-<<<<<<< HEAD
         <Button
           type="submit"
-=======
         <Button 
           type="submit" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           className="w-full py-6"
           disabled={isLoading}
         >
@@ -458,18 +331,12 @@ if ( {) {
           onClick={() => setSignupMode(!signupMode)}
         >;
           {signupMode ? "Sign In" : "Sign Up"}
-
-        </Button>;
-      </p>;
-    </div>;
-  );
-=======
-
-
+        </Button>
+      </p>
+    </div>
+  )
+}
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 ;
-
-
-

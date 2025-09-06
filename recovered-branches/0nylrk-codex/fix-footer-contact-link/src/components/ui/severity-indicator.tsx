@@ -1,27 +1,11 @@
 
-<<<<<<< HEAD
-
-
-
-
 import React from "react";
 import {cn} from "@/lib/utils";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {cn} from "@/lib/utils";
-import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 interface SeverityIndicatorProps {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 interface SeverityIndicatorProps {;
   severity: "safe" | "suspicious" | "dangerous",;
@@ -32,6 +16,14 @@ interface SeverityIndicatorProps {;
   className?: string;
 }
 
+export function SeverityIndicator({
+  severity
+  showIcon = true
+  showText = true
+  size = "md";
+  className
+import { cn } from "@/lib/utils",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
 <<<<<<< HEAD
 =======
@@ -51,13 +43,11 @@ interface SeverityIndicatorProps {
 export function SeverityIndicator({ 
   severity, 
   showIcon = true, 
-
+  showText = true, ;
+  size = "md";
   showText = true, 
   size = "md",
-
   className 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }: SeverityIndicatorProps) {
   const getSeverityIcon = () => {
     switch (severity) {
@@ -78,7 +68,13 @@ export function SeverityIndicator(): any ({ ;
         return <AlertTriangle className={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-amber-500"
-
+        )} />;
+      default: return <CheckCircle className={cn(
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
+          "text-green-500"
+        )} />
+    }
+  }
         )} />,
       default:
         return <CheckCircle className={cn(
@@ -88,24 +84,13 @@ export function SeverityIndicator(): any ({ ;
     }
   },
 
-
   return (
     <div className={cn("flex items-center gap-1", className)}>
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
@@ -154,14 +139,6 @@ export function SeverityIndicator({;
 
     </div>;
   );
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -195,10 +172,3 @@ function SeverityIndicator() {
     }
   }
 ;
-  return (
-    <div className={cn ("flex items - center gap - 1", class_name)}>;
-      {show_icon && getSeverityIcon ()}
-      {show_text && <span className="capitalize text - sm">{severity}</span>}
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

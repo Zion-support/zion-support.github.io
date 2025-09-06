@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-
-
-=======
-
-
-=======
-<<<<<<< HEAD:src.disabled/components/ui/popover.jsx
-<<<<<<< HEAD
+:src.disabled/components/ui/popover.jsx
 import React,{ createContext,useContext,useState } from\';react\' const Popover({ children }) {} const [isOpen,setIsOpen] = useState(false) return (<PopoverContext.Provider value = {} { isOpen,setIsOpen }}> <div className=\'relative\'> {children} </div> </PopoverContext.Provider>)}\''; \"export\": function PopoverTrigger({ children,className = \'' }) {} const context = useContext(PopoverContext) if (!context)\';\'; \"throw\": new Error(\'PopoverTrigger must be used within Popover\'';) return: (<div className={className} onClick={() => context.setIsOpen(!context.isOpen)}> {children} </div>)}\' export function PopoverContent({ children,className = \''\'}) {} const context = useContext(PopoverContext) if (!context)\' throw new Error(\'';\"PopoverContent\": must be used within Popover\') if (!context.isOpen) return null return (<div className={`absolute z-50 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 p-4 ${className}`}>\' {children}\'' </div>)}\'';\'"\''\';\"';\'"\'';\''\'"
 const React,{ createContext,useContext,useState } from";react" const Popover({ children }) {} const [isOpen,setIsOpen] = useState(false) return (<PopoverContext.Provider value = {} { isOpen,setIsOpen }}> <div className="relative"> {children} </div> </PopoverContext.Provider>)}""; export: function PopoverTrigger({ children,className = "" }) {} const context = useContext(PopoverContext) if (!context)";"; throw: new Error("PopoverTrigger must be used within Popover"";) return: (<div className={className} onClick={() => context.setIsOpen(!context.isOpen)}> {children} </div>)}" export function PopoverContent({ children,className = """}) {} const context = useContext(PopoverContext) if (!context)" throw new Error("";PopoverContent: must be used within Popover") if (!context.isOpen) return null return (<div className={`absolute z-50 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 p-4 ${className}`}>" {children}"" </div>)}"";""""";"";"""";""""""`"`
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React,{ createContext,useContext,useState } from\';react\' const Popover({ children }) {} const [isOpen,setIsOpen] = useState(false) return (<PopoverContext.Provider value = {} { isOpen,setIsOpen }}> <div className=\'relative\'> {children} </div> </PopoverContext.Provider>)}\''; \"export\": function PopoverTrigger({ children,className = \'' }) {} const context = useContext(PopoverContext) if (!context)\';\'; \"throw\": new Error(\'PopoverTrigger must be used within Popover\'';) return: (<div className={className} onClick={() => context.setIsOpen(!context.isOpen)}> {children} </div>)}\' export function PopoverContent({ children,className = \''\'}) {} const context = useContext(PopoverContext) if (!context)\' throw new Error(\'';\"PopoverContent\": must be used within Popover\') if (!context.isOpen) return null return (<div className={`absolute z-50 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 p-4 ${className}`}>\' {children}\'' </div>)}\'';\'"\''\';\"';\'"\'';\''\'"
 const React,{ createContext,useContext,useState } from";react" const Popover({ children }) {} const [isOpen,setIsOpen] = useState(false) return (<PopoverContext.Provider value = {} { isOpen,setIsOpen }}> <div className="relative"> {children} </div> </PopoverContext.Provider>)}""; export: function PopoverTrigger({ children,className = "" }) {} const context = useContext(PopoverContext) if (!context)";"; throw: new Error("PopoverTrigger must be used within Popover"";) return: (<div className={className} onClick={() => context.setIsOpen(!context.isOpen)}> {children} </div>)}" export function PopoverContent({ children,className = """}) {} const context = useContext(PopoverContext) if (!context)" throw new Error("";PopoverContent: must be used within Popover") if (!context.isOpen) return null return (<div className={`absolute z-50 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 p-4 ${className}`}>" {children}"" </div>)}"";""""";"";"""";""""""`"`
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ui/popover.jsx
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+:temp_exclude/src.disabled/components/ui/popover.jsx
 import _React,{ createContext,useContext,useState } from';react' const Popover({ children }) {} const [isOpen,setIsOpen] = useState(false) return (<PopoverContext.Provider value = {} { isOpen,setIsOpen }}> <div className='relative'> {children} </div> </PopoverContext.Provider>)}''; "export": function PopoverTrigger({ children,className = '' }) {} const context = useContext(PopoverContext) if (!context)';'; "throw": new Error('PopoverTrigger must be used within Popover'';) return: (<div className={className} onClick={() => context.setIsOpen(!context.isOpen)}> {children} </div>)}' export function PopoverContent({ children,className = '''}) {} const context = useContext(PopoverContext) if (!context)' throw new Error('';"PopoverContent": must be used within Popover') if (!context.isOpen) return null return (<div className={`absolute z-50 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 p-4 ${className}`}>' {children}'' </div>)}'';'"''';"';'"'';'''"
 =======
 =======

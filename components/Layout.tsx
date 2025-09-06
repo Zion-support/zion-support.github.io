@@ -6,20 +6,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -37,23 +33,11 @@ import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-
-
-=======
-
-
-
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+origin/main
 interface LayoutProps {
   children: React.ReactNode;
-=======
 interface LayoutProps {;
   children: React && React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
   keywords?: string;
@@ -102,7 +86,6 @@ const Layout: React.FC<LayoutProps> = ({;
 
   return (
     <div className="min-h-screen bg-white">;
-=======
 const Layout: React.FC < LayoutProps> = ({
   children,
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
@@ -139,7 +122,6 @@ const Layout: React.FC < LayoutProps> = ({
 ;
   return (
     <div className="min - h-screen bg - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <Head>;
         <title>{title}</title>;
         <meta name="description" content={description} />;
@@ -151,7 +133,6 @@ const Layout: React.FC < LayoutProps> = ({
 
 =======
 import React, { ReactNode } from "react";
-=======
         <meta property="og:title" content={ogTitle || title} />;
         <meta
           property="og:description"
@@ -160,7 +141,6 @@ import React, { ReactNode } from "react";
         <meta property="og:image" content={ogImage} />;
         <meta property="og:url" content={canonical} />;
         <meta property="og:type" content="website" />;
-
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />;
         <meta name="twitter:title" content={ogTitle || title} />;
@@ -169,7 +149,6 @@ import React, { ReactNode } from "react";
           content={ogDescription || description}
         />;
         <meta name="twitter:image" content={ogImage} />;
-
         {/* JSON-LD */}
         <script
           type="application/ld+json"
@@ -177,14 +156,12 @@ import React, { ReactNode } from "react";
           dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
         />;
       </Head>;
-
       <Header />;
       <main>{children}</main>;
       <Footer />;
     </div>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
@@ -198,59 +175,22 @@ import React, { ReactNode } from "react";
 =======
 =======
 import React, { ReactNode } from "react";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface LayoutProps {
   children: ReactNode,
 }
-
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className="min-h-screen">
       {children}
     </main>
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   );
 }
 export default Layout;
-=======
-<<<<<<< HEAD
-        {no_index && <meta name="robots" content="noindex, nofollow" />}
-        {/* Open Graph */}
-        <meta property="og:title" content={og_title || title} />;
-        <meta;
-          property="og:description";
-          content={og_description || description}
-        />;
-        <meta property="og:image" content={og_image} />;
-        <meta property="og:url" content={canonical} />;
-        <meta property="og:type" content="website" />;
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={og_title || title} />;
-        <meta;
-          name="twitter:description";
-          content={og_description || description}
-        />;
-        <meta name="twitter:image" content={og_image} />;
-        {/* JSON - LD */}
-        <script;
-          type="application / ld + json";
-          dangerouslySetInnerHTML={{ __html: JSON.stringify (json_ld) }}
-        />;
-      </Head>;
-      <Header />;
-      <main>{children}</main>;
-      <Footer />;
-    </div>);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { ReactNode } from "react";
 interface LayoutProps {
   children: ReactNode;
@@ -261,7 +201,6 @@ interface LayoutProps {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
   } catch (error) {
@@ -286,19 +225,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

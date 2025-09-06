@@ -1,25 +1,14 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 // Support utilities
 export const support = {
   // Add support functionality here
-<<<<<<< HEAD
   logEvent: (event: any) => null
   getArticles: () => []
   getArticleById: (id: string) => null
 }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   logEvent: (event: any) => null,
   getArticles: () => [],
   getArticleById: (id: string) => null;
 };
-
-<<<<<<< HEAD
-
 
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here
@@ -61,15 +50,8 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   log_event: (event: any) => null,
   get_articles: () => [],
   getArticleById: (id: string) => null;
-}
-;
-export const logSupportEventToOperator = (event: any) =>: any {
-  // Add support event logging functionality here;
-  return null;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+};
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
@@ -79,11 +61,3 @@ export const logSupportEventToOperator = (event: any) => {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-};
-=======
-
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

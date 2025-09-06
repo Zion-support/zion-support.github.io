@@ -5,22 +5,10 @@ import path from 'path';
 
 
 import {
-<<<<<<< HEAD
-
-
-  getSessionFromReq,;
-  isInternalAgentRequest,;
-
-
-=======
-<<<<<<< HEAD
   getSessionFromReq
   isInternalAgentRequest;
-=======
   getSessionFromReq,;
   isInternalAgentRequest,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);
@@ -33,8 +21,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   res.status(200).json({ status, insights })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   getSessionFromReq,
   isInternalAgentRequest,
 } from '../../../utils / admin_auth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils / admin_auth';
@@ -64,6 +50,16 @@ if ( {) {
     : { items: [], updated_at: null }
 ;
 res.status (200).json ({ status, insights });  res.status (200).json ({ status, insights });
+
+  const _status = fs.existsSync(statusPath)
+    ? JSON.parse(fs.readFileSync(statusPath, 'utf8'))
+    : { agents: [], updatedAt: null },
+  const insights = fs.existsSync(insightsPath)
+    ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
+    : { items: [], updatedAt: null },
+
+  res.status(200).json({ status, insights })
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

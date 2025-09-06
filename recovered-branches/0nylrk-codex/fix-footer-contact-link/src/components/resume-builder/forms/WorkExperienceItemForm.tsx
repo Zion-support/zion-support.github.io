@@ -1,14 +1,5 @@
 
-<<<<<<< HEAD
-=======
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -26,15 +17,7 @@ import {format} from "date-fns";
 import {CalendarIcon, Loader2} from "lucide-react";
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState } from 'react',
-
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -49,25 +32,25 @@ import { cn } from "@/lib/utils",
 import { Switch } from "@/components/ui/switch",
 import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from "lucide-react",
-
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define form schema
 
 const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required"),
   role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
-
+    required_error: "Start date is required"})
+  end_date: z.date().optional()
+  is_current: z.boolean().default(false)
+  description: z.string().optional()
+  location: z.string().optional()})
+type FormValues = z.infer<typeof formSchema>;
+interface WorkExperienceItemFormProps {
+  initialData?: WorkExperience;
+  onSubmit: (data: WorkExperience) => Promise<void>
     required_error: "Start date is required"}),
   end_date: z.date().optional(),
   is_current: z.boolean().default(false),
@@ -79,40 +62,35 @@ type FormValues = z.infer<typeof formSchema>,
 interface WorkExperienceItemFormProps {
   initialData?: WorkExperience,
   onSubmit: (data: WorkExperience) => Promise<void>,
-
   onCancel: () => void
 }
 <<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 export function WorkExperienceItemForm({;
   initialData;
   onSubmit;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   onCancel}: WorkExperienceItemFormProps) {
-
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-
-
+      company_name: initialData?.company_name |""
+      role_title: initialData?.role_title |""
+      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date()
+      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined
+      is_current: initialData?.is_current |false
+      description: initialData?.description |""
+      location: initialData?.location |""}})
+  const { isSubmitting } = form.formState;
+  const watchIsCurrent = form.watch("is_current");
+  const watchRoleTitle = form.watch("role_title");
+  const watchCompanyName = form.watch("company_name");
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
@@ -126,8 +104,6 @@ export function WorkExperienceItemForm({
   const watchRoleTitle = form.watch("role_title"),
   const watchCompanyName = form.watch("company_name"),
 
-
-
   const handleFormSubmit = async (values: FormValues) => {
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
@@ -139,22 +115,19 @@ export function WorkExperienceItemForm({
       is_current: values.is_current,      // Required
       description: values.description,    // Optional
       location: values.location,          // Optional
-
-
-=======
-
+    }
+    await onSubmit(workExperience)
+  }
     },
     
     await onSubmit(workExperience)
   },
 
-
   const handleAIEnhancement = (content: string) => {
     form.setValue("description", content, { shouldDirty: true })
     setIsEnhancementDialogOpen(false)
-
+  }
   },
-
 
   return (
     <>
@@ -172,7 +145,6 @@ export function WorkExperienceItemForm({
                   </FormControl>
                   <FormMessage />
                 </FormItem>
-
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -396,20 +368,10 @@ function WorkExperienceItemForm() {
                     <Input placeholder="e.g. Acme Corporation" {...field} />;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                 </FormItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             />
             <FormField
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               control={form.control}
               name="role_title";
               render={({ field }) => (
@@ -427,24 +389,18 @@ function WorkExperienceItemForm() {
               control={form.control}
               name="location";
               render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Location</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>)}
+                <FormItem>
+                  <FormLabel>Location</FormLabel>
+                  <FormControl>
+                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
             />;
             <FormField;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               control={form.control}
               name="is_current";
               render={({ field }) => (
@@ -631,114 +587,54 @@ function WorkExperienceItemForm() {
                       variant="outline"
                       size="sm"
                       onClick={() => setIsEnhancementDialogOpen(true)}
-                      className="text-xs";
-=======
-                  </FormItem>)}
-              />)}
-          </div>;
-          <FormField;
-            control={form.control}
-            name="description";
-            render={({ field }) => (
-              <FormItem>;
-                <div className="flex justify - between items - center">;
-                  <FormLabel > Description</FormLabel>;
-                  <div className="flex gap - 2">;
-                    <AIEnhancementButton;
-                      options={{
-                        enhancement_type: "work - description",
-                        content: field.value || "",
-                        context: `${watchRoleTitle} at ${watchCompanyName}`;
-                      }}
-                      on_enhanced={(content) => form.set_value ("description", content, { should_dirty: true })}
-                      button_text="Enhance with AI";
-                    />;
-                    <Button;
-                      type="button";
-                      variant="outline";
-                      size="sm";
-                      on_click={() => setIsEnhancementDialogOpen (true)}
-                      className="text - xs";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                    >;
-                      AI Writer;
-                    </Button>;
-                  </div>;
-                </div>;
-                <FormControl>;
-
-                  <Textarea;
-                    placeholder="Describe your responsibilities, achievements, and skills used in this role...";
-                    className="min - h-[150px]";
-
+                      className="text-xs"
+                    >
+                      AI Writer
+                    </Button>
+                  </div>
+                </div>
+                <FormControl>
+                  <Textarea
+                    placeholder="Describe your responsibilities, achievements, and skills used in this role..."
+                    className="min-h-[150px]"
                     {...field}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-
-          />;
-
-          <div className="flex justify-end gap-2">;
-            <Button type="button" variant="outline" onClick={onCancel}>;
-              Cancel;
-            </Button>;
-            <Button type="submit" disabled={isSubmitting}>;
-              {isSubmitting ? (;
-                <>;
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-                  Saving...;
-                </>;
-              ) : (;
-                <>Save</>;
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <div className="flex justify-end gap-2">
+            <Button type="button" variant="outline" onClick={onCancel}>
+              Cancel
+            </Button>
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Saving...
+                </>
+              ) : (
+                <>Save</>
               )}
-=======
-              </FormItem>)}
-          />;
-          <div className="flex justify - end gap - 2">;
-            <Button type="button" variant="outline" on_click={on_cancel}>;
-              Cancel;
-            </Button>;
-            <Button type="submit" disabled={is_submitting}>;
-              {is_submitting ? (
-                <>;
-                  <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
-                  Saving...;
-                </>) : (
-                <>Save</>)}
+            </Button>
+          </div>
+        </form>
+      </Form>
+      <AIEnhancementDialog
+        title="Enhance Work Experience Description"
+        isOpen={isEnhancementDialogOpen}
+        onClose={() => setIsEnhancementDialogOpen(false)}
+        onApply={handleAIEnhancement}
+        defaultOptions={{
+          enhancementType: "work-description"
+          content: form.getValues("description") |""
 
-            </Button>;
-          </div>;
-        </form>;
-      </Form>;
-
-        defaultOptions={{;
-          enhancementType: "work-description",;
-          content: form && form.getValues("description") || "",;
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
-        initialContent={form && form.getValues("description") || ""}
-      />;
-    </>;
-  );
+        initialContent={form.getValues("description") |""}
+      />
+    </>
+  )
 }
-
-=======
-      <AIEnhancementDialog;
-        title="Enhance Work Experience Description";
-        is_open={isEnhancementDialogOpen}
-        on_close={() => setIsEnhancementDialogOpen (false)}
-        on_apply={handleAIEnhancement}
-        default_options={{
-          enhancement_type: "work - description",
-          content: form.get_values ("description") || "",
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
-        initial_content={form.get_values ("description") || ""}
-      />;
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

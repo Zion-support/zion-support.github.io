@@ -1,45 +1,18 @@
 
-<<<<<<< HEAD
-
-
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components/icons';
-import './video-call ;
-interface Participant {;
-  id: string,;
-  name: string,;
-
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components / icons';
-import './video - call.css';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import './video-call.css';
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX  } from '@/components/icons';
 import './video-call.css';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface Participant {
   id: string,
   name: string,
@@ -110,19 +83,11 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
 
     const newVideoState = !isVideoEnabled;
     setIsVideoEnabled(newVideoState);
-    if (onToggleVideo) {;
-      onToggleVideo(newVideoState);
-=======
-<<<<<<< HEAD
-=======
+    if (onToggleVideo) {
+      onToggleVideo(newVideoState)
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',
 import './video-call.css',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface Participant {
   id: string,
   name: string,
@@ -131,13 +96,7 @@ interface Participant {
   isVideoEnabled?: boolean,
   isScreenSharing?: boolean,
   isHost?: boolean
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -150,18 +109,11 @@ interface Participant {
     }
   };
 
-  const handleToggleScreenShare = () => {;
-
-    const newScreenShareState = !isScreenSharing;
-    setIsScreenSharing(newScreenShareState);
-=======
-<<<<<<< HEAD
-
-  };
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const handleToggleVideo = () => {
+    const newVideoState = !isVideoEnabled;
+    setIsVideoEnabled(newVideoState);
+    if (onToggleVideo) {
+      onToggleVideo(newVideoState)
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -228,24 +180,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     setIsVideoEnabled(newVideoState),;
     if (onToggleVideo) {;
       onToggleVideo(newVideoState);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     // If turning video back on, ensure we're not in audio-only mode
     if (newVideoState) {
       setIsAudioOnly(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const handleToggleScreenShare = () => {
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);
@@ -266,18 +208,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (onLeave) {
       onLeave()
     }
-<<<<<<< HEAD
-
-  };
-
-=======
-<<<<<<< HEAD
   }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   },;
   const handleToggleScreenShare = () => {;
     const newScreenShareState = !isScreenSharing,;
@@ -310,17 +242,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
   },
 <<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;
@@ -502,11 +423,7 @@ if ( {) {
                     </Avatar>;
                   </div>;
                 )}
-
-
                 
-
-
                 <div className="video-metadata flex items-center space-x-2">
                   <span>{participant.name}</span>
                   {participant.isMuted && <MicOff className="h-4 w-4" />}
@@ -525,139 +442,55 @@ if ( {) {
           )}
         </div>
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
-
-
-                <div className="video-metadata flex items-center space-x-2">;
-                  <span>{participant && participant.name}</span>;
-                  {participant && participant.isMuted && <MicOff className="h-4 w-4" />}
-                  {participant && participant.isHost && <Badge variant="secondary" className="text-xs">Host</Badge>}
-                </div>;
-              </div>;
-            ));
-          ) : (;
-            <div className="col-span-full flex flex-col items-center justify-center py-12 text-white">;
-              <Video className="h-16 w-16 mb-4 opacity-30" />;
-              <p className="text-center text-lg mb-2">No participants yet</p>;
-              <p className="text-center text-sm text-gray-300">;
-                Share the meeting link to invite others;
-              </p>;
-            </div>;
-          )}
-        </div>;
-
-        <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">;
           <Button
-            variant="outline" 
-            size="icon" 
-
-=======
-
+            variant="outline"
+            size="icon"
           <Button 
             variant="outline" 
             size="icon" 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleMute}>;
             {isMuted ? <MicOff /> : <Mic />}
-<<<<<<< HEAD
-
-          </Button>;
-
-=======
           </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Button
-=======
-
+            variant="outline"
+            size="icon"
           
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Button 
 
             variant="outline" 
             size="icon" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleVideo}>;
             {isVideoEnabled ? <Video /> : <VideoOff />}
-<<<<<<< HEAD
-
-          </Button>;
-
-=======
           </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Button
-=======
-
+            variant="outline"
           
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Button 
 
             variant="outline" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             size="icon"
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleScreenShare}>;
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
-<<<<<<< HEAD
-
-          </Button>;
-
-=======
           </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Button
-=======
-
+            variant="outline"
           
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Button 
 
             variant="outline" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             size="icon"
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleAudioOnly}>;
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
 
           </Button>
-<<<<<<< HEAD
-
-          <Button 
-            variant="destructive" 
-
-
-=======
-<<<<<<< HEAD
           <Button
             variant="destructive"
-=======
           <Button 
             variant="destructive" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
             onClick={handleLeaveCall}
@@ -668,120 +501,8 @@ if ( {) {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-
-          </Button>;
-
-          <Button
-            variant="destructive" 
-            size="icon"
-            className="video-button video-button-danger rounded-full h-10 w-10"
-            onClick={handleLeaveCall}>;
-            <Phone className="rotate-135" />;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-=======
-
-},
-
-=======
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
-                  <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text - white">;
-                    {/* Placeholder for actual video stream */}
-                    <Video className="h - 12 w - 12 opacity - 50" />;
-                  </div>) : participant.isScreenSharing ? (
-                  <div className="bg - zion - blue h - full w - full flex items - center justify - center text - white">;
-                    {/* Placeholder for screen share */}
-                    <ScreenShare className="h - 12 w - 12 opacity - 50" />;
-                  </div>) : (
-                  <div className="bg - zion - blue - dark h - full w - full flex items - center justify - center">;
-                    <Avatar className="h - 20 w - 20">;
-                      <AvatarImage src={participant.avatar} alt={participant.name} />;
-                      <AvatarFallback className="bg - zion - purple text - white text - 2xl">;
-                        {participant.name.char_at (0).toUpperCase ()}
-                      </AvatarFallback>;
-                    </Avatar>;
-                  </div>)}
-                <div className="video - metadata flex items - center space - x-2">;
-                  <span>{participant.name}</span>;
-                  {participant.is_muted && <MicOff className="h - 4 w - 4" />}
-                  {participant.is_host && <Badge variant="secondary" className="text - xs">Host</Badge>}
-                </div>;
-              </div>))) : (
-            <div className="col - span - full flex flex - col items - center justify - center py - 12 text - white">;
-              <Video className="h - 16 w - 16 mb - 4 opacity - 30" />;
-              <p className="text - center text - lg mb - 2">No participants yet</p>;
-              <p className="text - center text - sm text - gray - 300">;
-                Share the meeting link to invite others;
-              </p>;
-            </div>)}
-        </div>;
-        <div className="bg - zion - blue - dark border - t border - zion - blue - light p - 4 flex items - center justify - center space - x-3">;
-          <Button;
-            variant="outline";
-            size="icon";
-            className="video - button rounded - full h - 10 w - 10";
-            on_click={handleToggleMute}
-          >;
-            {is_muted ? <MicOff /> : <Mic />}
-          </Button>;
-          <Button;
-            variant="outline";
-            size="icon";
-            className="video - button rounded - full h - 10 w - 10";
-            on_click={handleToggleVideo}
-          >;
-            {isVideoEnabled ? <Video /> : <VideoOff />}
-          </Button>;
-          <Button;
-            variant="outline";
-            size="icon";
-            className="video - button rounded - full h - 10 w - 10";
-            on_click={handleToggleScreenShare}
-          >;
-            {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
-          </Button>;
-          <Button;
-            variant="outline";
-            size="icon";
-            className="video - button rounded - full h - 10 w - 10";
-            on_click={handleToggleAudioOnly}
-          >;
-            {isAudioOnly ? <VolumeX /> : <Volume2 />}
-          </Button>;
-          <Button;
-            variant="destructive";
-            size="icon";
-            className="video - button video - button - danger rounded - full h - 10 w - 10";
-            on_click={handleLeaveCall}
-          >;
-            <Phone className="rotate - 135" />;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,104 +1,3 @@
-
-<<<<<<< HEAD
-
-=======
-import { ContractFormValues } from '@/components/contracts/components/ContractForm'
-import { ContractTemplate } from '@/types/contracts'
-import { useContractTemplates } from '@/hooks/useContractTemplates'
-import { Button } from '@/components/ui/button'
-import {
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Switch } from '@/components/ui/switch'
-const formSchema = z.object({
-  title: z.string().min(1, 'Title is required')
-  isDefault: z.boolean()
-})
-type FormValues = z.infer<typeof formSchema>
-interface TemplateSaveFormProps {
-  onCancel: () => void
-  onComplete: () => void
-  editTemplate?: ContractTemplate | null
-  currentValues?: ContractFormValues
-export function TemplateSaveForm({
-  onCancel
-  onComplete
-  editTemplate
-  currentValues
-}: TemplateSaveFormProps) {
-  const [saving, setSaving] = useState(false)
-  const { createTemplate, updateTemplate } = useContractTemplates()
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      title: editTemplate?.title |''
-      isDefault: editTemplate?.is_default |false
-    }
-  })
-  const onSubmit = async (values: FormValues) => {    if (!currentValues && !editTemplate) {
-      return;
-    }
-    setSaving(true)
-    try {
-      if (editTemplate) {
-        await updateTemplate.mutateAsync({
-          templateId: editTemplate.id
-          title: values.title
-          templateData: editTemplate.template_data
-          isDefault: values.isDefault
-        })
-      } else if (currentValues) {
-        await createTemplate.mutateAsync({
-          title: values.title
-          templateData: currentValues
-          isDefault: values.isDefault
-        })
-      }
-      onComplete()
-    } finally {
-      setSaving(false)
-    }
-  }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-import { useState } from "react",
-import { useForm, type ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Loader2 } from 'lucide-react'
-import { ContractFormValues } from "@/components/contracts/components/ContractForm",
-import { ContractTemplate } from "@/types/contracts",
-import { useContractTemplates } from "@/hooks/useContractTemplates",
-import { Button } from "@/components/ui/button",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Switch } from "@/components/ui/switch",
-const formSchema = z.object({
-  title: z.string().min(1, "Title is required"),
-  isDefault: z.boolean()}),
-
-type FormValues = z.infer<typeof formSchema>,
-
-interface TemplateSaveFormProps {
-  onCancel: () => void,
-  onComplete: () => void,
-  editTemplate?: ContractTemplate | null,
-  currentValues?: ContractFormValues
-import { useState } from "react",;
-import { useForm, type ControllerRenderProps } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Loader2 } from 'lucide-react';
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';
 import { ContractTemplate } from '@/types/contracts';
@@ -262,37 +161,22 @@ if ( {) {
     }
   },
   
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-
+          name='title'
+          render={({
+            field
+          }: {
+            field: ControllerRenderProps<FormValues, 'title'>
+          }) => (            <FormItem>
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
 <<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder='Enter template name' />
@@ -303,7 +187,6 @@ if ( {) {
             field: ControllerRenderProps<FormValues, 'title'>;
           }) => (            <FormItem>;
               <FormLabel>Template Name</FormLabel>;
-=======
             field: ControllerRenderProps < FormValues, 'title'>;
           }) => (            <FormItem>;
               <FormLabel > Template Name</FormLabel>;
@@ -335,7 +218,6 @@ if ( {) {
                   aria-label='Default template'
                   checked={field && field.value}
                   onCheckedChange={field && field.onChange}                />;
-=======
 
   };
   return (;
@@ -373,7 +255,6 @@ if ( {) {
                   checked={field.value}
                   onCheckedChange={field.onChange}
                 />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </FormControl>;
               <FormMessage />;
             </FormItem>;
@@ -386,18 +267,9 @@ if ( {) {
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Cancel
           </Button>
           <Button type='submit' disabled={saving}>
-=======
             field: ControllerRenderProps < FormValues, 'is_default'>;
           }) => (
             <FormItem className='flex items - center justify - between'>;
@@ -418,7 +290,6 @@ if ( {) {
             Cancel;
           </Button>;
           <Button type='submit' disabled={saving}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {saving ? (
 
         />;
@@ -435,16 +306,11 @@ if ( {) {
               </>;
             ) : (;
               `${editTemplate ? 'Update' : 'Save'} Template`;
-=======
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
               `${editTemplate ? 'Update' : 'Save'} Template`
             )}
           </Button>
@@ -461,23 +327,16 @@ try {
 }placeholder="Enter template name" />
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
-<<<<<<< HEAD
   editTemplate ? "Update" : "Save"
 }Template`)
 }</Button> </div> </form> </Form>)
 }"}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
 <<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
               `${editTemplate ? "Update" : "Save"} Template`
 
             )}
@@ -488,10 +347,7 @@ try {
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if ( {) {
   $2
@@ -506,20 +362,5 @@ if ( {) {
 }Template`);
 }</Button> </div> </form> </Form>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

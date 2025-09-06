@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface RealMicroSaasService {
-=======
 export interface RealMicroSaasService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -36,18 +29,13 @@ export interface RealMicroSaasService {;
     mobile: string;
     email: string;
     address: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-=======
   }
 }
 export const realMicroSaasServices: RealMicroSaasService[] = [
   // AI-Powered Business Solutions
   {
-<<<<<<< HEAD
-=======
     id: 'ai-legal-document-generator',
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
@@ -1377,9 +1365,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6,
     reviews: 6,
   },];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
     tagline: 'Generate legally compliant documents in seconds with AI'
@@ -2122,7 +2109,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       trialDays: 14
       setupTime: '15 minutes'
     }
-
     features: [
       'Inbox labeling and prioritization'
       'On-brand response templates'
@@ -2132,7 +2118,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Metrics: FRT/ART, deflection rate'
     ]
     benefits: [
-
       'Cut response time by 60%'
       'Deflect 30–50% routine tickets'
       'Improve CSAT and NPS'
@@ -2719,6 +2704,10 @@ export const getServicesByCategory = (category: string) => {
 // Helper functions;
 export const getServicesByCategory = (category: string) =>: any {
   return realMicroSaasServices.filter (service => service.category === category);    id: 'data - contracts - hub';
+=======
+export const getServicesByCategory = (category: string) => {;
+  return realMicroSaasServices.filter(service => service.category === category);    id: 'data-contracts-hub';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
@@ -2753,14 +2742,18 @@ export const getServicesByCategory = (category: string) =>: any {
   }
 ];
 // Helper functions
+<<<<<<< HEAD
 export const getServicesByCategory = (category: string) => {
   return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
+=======
+export const getServicesByCategory = (category: string) => {;
+  return realMicroSaasServices.filter(service => service.category === category);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
 techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];
 realImplementation: true;
 implementationDetails: 'Template gallery, response store, analytics, export jobs.';
-=======
     rating: 4.6,
     reviews: 6;
   }
@@ -2774,7 +2767,6 @@ competitors: ['TypeformSurveySparrowTally'];
 tech_stack: ['Next.jsSupabaseVercel EdgeOpenAI'];
 real_implementation: true;
 implementation_details: 'Template gallery, response store, analytics, export jobs.';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 roi: 'Improves feedback volume 20–50%.';
 use_cases: ['NPSBeta feedback_lead qual'];
 integrations: ['HubSpotSegmentZapier'];
@@ -2798,7 +2790,6 @@ competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
 implementationDetails: 'Template JSON schemas, rules engine, import/export.';
-=======
 reviews: 22;
 }
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
@@ -2806,7 +2797,6 @@ competitors: ['AsanaClickUpNotion'];
 tech_stack: ['Next.jsPrismaPostgreSQL'];
 real_implementation: true;
 implementation_details: 'Template JSON schemas, rules engine, import / export.';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 roi: 'Deliverables throughput +15–25%.';
 use_cases: ['Client delivery_editorial calendar_sprints'];
 integrations: ['Google CalendarSlackLinear'];
@@ -2828,9 +2818,6 @@ reviews: 14
 
 export const serviceCategories = [
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   'Legal Technology'
   'Customer Service & Support'
   'Digital Marketing & SEO'
@@ -2860,28 +2847,49 @@ export const serviceCategories = [
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+  'Legal Technology',
+  'Customer Service & Support',
+  'Digital Marketing & SEO',
+  'Creative & Media',
+  'Data & Analytics',
+  'Human Resources',
+  'Sales & CRM',
+  'Market Research',
+  'Blockchain & Cryptocurrency',
+  'Cloud & DevOps',
+  'Database & Performance',
+  'Design & UI/UX',
+  'Development & DevOps',
+  'Business Intelligence',
+  'Quantum Computing',
+  'Cybersecurity',
+  'Metaverse & Virtual Reality',
+  'Web3 & DeFi',
+  'IoT & Edge Computing',
+  'Autonomous Vehicles & Robotics',
+  'Climate & Environmental',
+  'Biotechnology & Healthcare',
+  'Financial Technology',
+  'Education Technology',
+  'Enterprise IT',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   return realMicroSaasServices.filter(service => service.category === category)
 };
-
 export const getServicesByPriceRange = (min: number, max: number) => {
   return realMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', '').replace(, ''));
     return price >= min && (max === Infinity || price <= max)
   })
 };
-
 export const getPopularServices = () => {
   return realMicroSaasServices.filter(service => service.popular)
 };
-
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
-=======
 reviews: 14;
 }
 ;
@@ -2910,39 +2918,54 @@ export const service_categories = [;
   'Biotechnology & Healthcare',
   'Financial Technology',
   'Education Technology',
-<<<<<<< HEAD
-  'Enterprise IT',
-=======
   'Enterprise IT',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
-<<<<<<< HEAD
-  'Enterprise IT';
+  'Enterprise IT'
 ];
 
 
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  }
+}
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 export interface RealMicroSaasService {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  'Enterprise IT'
-];
-<<<<<<< HEAD
-
-=======
-export interface RealMicroSaasService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -3791,9 +3814,3 @@ export const serviceCategories = [;
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology',;
   'Enterprise IT';
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

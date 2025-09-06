@@ -1,22 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-interface ApplicationsTableProps {
-
-  applications: JobApplication[]
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
-  onViewScore: (application: JobApplication) => void
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {format} from "date-fns";
 import {JobApplication} from "@/types/jobs";
 import {Avatar} from "@/components/ui/avatar";
@@ -29,27 +11,13 @@ import {Briefcase, User} from "lucide-react";
 import {HireConfirmationModal} from "@/components/hiring-tracker/HireConfirmationModal";
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
-<<<<<<< HEAD
-interface ApplicationsTableProps {;
-  applications: JobApplication[],;
-  processingId: string | null,;
-  onViewApplication: (applicationId: string) => Promise<void>,;
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,;
-  onViewScore: (application: JobApplication) => void;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar } from "@/components/ui/avatar",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
-=======
 import { Badge } from "@/components/ui/badge",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { 
   Table;
   TableBody;
@@ -62,17 +30,10 @@ import { ApplicationActions } from "./ApplicationActions",
 import { StatusBadge } from "./StatusBadge",
 import { Briefcase, User } from "lucide-react",
 import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
-<<<<<<< HEAD
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
-=======
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplicationsTableProps {
 
   applications: JobApplication[]
@@ -80,18 +41,11 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 export function ApplicationsTable({
   applications
   processingId
   onViewApplication
-
-
-export function ApplicationsTable(): any ({ ;
-  applications, ;
-  processingId, ;
-  onViewApplication, ;
 
   onStatusChange;
   onViewScore;
@@ -99,56 +53,30 @@ export function ApplicationsTable(): any ({ ;
   const [hireModalOpen, setHireModalOpen] = useState(false);
 
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
-
-
 export function ApplicationsTable({ 
   applications, 
   processingId, 
-
+  onViewApplication, ;
+  onStatusChange;
+  onViewApplication, 
+  onStatusChange,
+  onViewScore
+}: ApplicationsTableProps) {
+  const [hireModalOpen, setHireModalOpen] = useState(false),
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
+  
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application)
     setHireModalOpen(true)
-
+  }
   },
   
-
-
   const handleHireConfirmed = () => {
     // This will be called after the hire confirmation is completed
     toast({
       title: "Hiring process initiated"
       description: "Offer has been sent to the talent."
     })
-
-import { format } from './date - fns';
-import { JobApplication } from '@/types / jobs';
-import { Avatar } from '@/components / ui / avatar';
-import { Badge } from '@/components / ui / badge';
-import { ClickableBadge } from '@/components / ui / clickable - badge';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-import { ApplicationActions } from './ApplicationActions';
-import { StatusBadge } from './StatusBadge';
-import { Briefcase, User } from './lucide-react';
-import { HireConfirmationModal } from '@/components / hiring - tracker / HireConfirmationModal';
-import { useState } from './react';
-import { toast } from '@/hooks / use - toast';
-interface ApplicationsTableProps {
-  applications: JobApplication[],
-  processing_id: string | null,
-  onViewApplication: (application_id: string) => Promise < void>,
-  onStatusChange: (application_id: string, new_status: string) => Promise < void>,
-  onViewScore: (application: JobApplication) => void;
-}
-export /**
- * ApplicationsTable - Function description
- */
-function ApplicationsTable() {
-  const [hireModalOpen, setHireModalOpen] = useState (false);
-  const [selected_application, setSelectedApplication] = useState < JobApplication | null>(null);
-;
-  const handleHireClick = (application: JobApplication) =>: any {
-    setSelectedApplication (application),
-    setHireModalOpen (true);
   }
 ;
   const handleHireConfirmed = () =>: any {
@@ -160,12 +88,8 @@ function ApplicationsTable() {
   }
 ;
 
-=======
-
   },
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <div className="rounded - md border">;
@@ -210,7 +134,6 @@ function ApplicationsTable() {
                       <Briefcase className="h-3 w-3 mr-1" /> Hire
                     </ClickableBadge>
                     <ApplicationActions
-
 import { format } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
 import { Avatar } from "@/components/ui/avatar",;
@@ -374,20 +297,6 @@ export function ApplicationsTable({;
                       <Briefcase className="h - 3 w - 3 mr - 1" /> Hire;
                     </ClickableBadge>;
                     <ApplicationActions;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-                    <ApplicationActions;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       application={application}
                       processing_id={processing_id}
                       onViewApplication={onViewApplication}

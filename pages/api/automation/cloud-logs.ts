@@ -1,20 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 async function fetchFromGitHub(): Promise<any[]> {;
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 async function fetchFromGitHub(): Promise<any[]> {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   try {
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
       } catch {
@@ -55,24 +47,17 @@ if ( {) {
       }
     }
   } catch {
-<<<<<<< HEAD
-=======
     // fall through to GitHub
   }
 const remote = await fetchFromGitHub()
 
-<<<<<<< HEAD
   return res.status(200).json({ logs: remote })
-=======
-=======
 const remote = await fetchFromGitHub(),
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 async function fetchFromGitHub(): Promise<any[]> {;
   try {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const repoUrl = require('../../../package.json').repository?.url || '';
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i);
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
@@ -155,38 +140,10 @@ export default async function handler(req, res) {
   }
 }
   } catch {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     // fall through to GitHub;
   }
 
-<<<<<<< HEAD
-=======
   const remote = await fetchFromGitHub();
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return res.status(200).json({ logs: remote });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-}
-
-=======
-const remote = await fetchFromGitHub (),
-  return res.status (200).json ({ logs: remote });
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-  return res.status(200).json({ logs: remote });
-
 };
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

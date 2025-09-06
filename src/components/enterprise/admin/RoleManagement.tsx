@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
-=======
-<<<<<<< HEAD
 import React from 'react';
 =======
 =======
@@ -48,65 +38,20 @@ export /**
 function RoleManagement() {
   // Mock team members data;
   const team_members = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-} from '@/components/ui/tooltip'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-import React from "react",
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Switch } from "@/components/ui/switch",
-import { toast } from "@/hooks/use-toast",
-import { InfoIcon } from 'lucide-react'
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger} from "@/components/ui/tooltip",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
-} from '@/components/ui/table'
-import { Badge } from '@/components/ui/badge'
-import { Switch } from '@/components/ui/switch'
-import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-react'
-  Tooltip
-  TooltipContent
-  TooltipProvider
-  TooltipTrigger
-} from '@/components/ui/tooltip'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export function RoleManagement() {
-  // Mock team members data
-  const teamMembers = [
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     {
-
-        view_candidates: true,
-        edit_candidates: true,
-        create_jobs: true,
-        manage_team: true,
-        view_billing: true,
-        manage_billing: true,
-      },
-    },
-
+      id: 1
+      name: 'Alex Johnson'
+      email: 'alex@example.com'
+      role: 'Admin'
+      permissions: {
+        viewCandidates: true
+        editCandidates: true
+        createJobs: true
+        manageTeam: true
+        viewBilling: true
+        manageBilling: true
+      }
+    }
     {
       id: 2
       name: 'Jamie Smith'
@@ -171,8 +116,6 @@ export function RoleManagement() {
     Viewer: 'Read - only access to candidates',
 
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import {;
   Table,;
@@ -270,7 +213,6 @@ export function RoleManagement() {;
     Manager: 'Can view candidates and create jobs',;
     Viewer: 'Read-only access to candidates',;
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
@@ -321,11 +263,6 @@ export function RoleManagement() {;
         createJobs: false,
         manageTeam: false,
         viewBilling: false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         manageBilling: false,
       },
     },
@@ -346,15 +283,14 @@ export function RoleManagement() {;
     Manager: 'Can view candidates and create jobs',
     Viewer: 'Read-only access to candidates',
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         manageBilling: false}}],
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-
-<<<<<<< HEAD
-
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
 
 =======
 <<<<<<< HEAD
@@ -365,7 +301,18 @@ export function RoleManagement() {;
   return (
     <div className="space-y-6">
       <div>
-
+        <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
+          {Object.entries(roleDescriptions).map(([role, description]) => (
+            <div
+              key={role}
+              className='bg-card rounded-lg p-4 border border-border'
+            >
+              <div className='flex items-center gap-2 mb-2'>
+                <Badge variant={role === 'Admin' ? 'default' : 'outline'}>
+                  {role}
+                </Badge>              </div>
+              <p className='text-sm text-muted-foreground'>{description}</p>
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => (
@@ -376,31 +323,16 @@ export function RoleManagement() {;
               <p className="text-sm text-muted-foreground">{description}</p>
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
-
-
+        </div>
+      </div>
+      <div className='rounded-md border'>
 
       <div className="rounded-md border">
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <Table>
           <TableHeader>
             <TableRow>
@@ -484,21 +416,12 @@ export function RoleManagement() {;
             </TableRow>
           </TableHeader>
           <TableBody>
-
-
+            {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <TableCell>
                   <div className='font-medium'>{member.name}</div>
                   <div className='text-sm text-muted-foreground'>
@@ -507,7 +430,6 @@ export function RoleManagement() {;
                 </TableCell>
                 <TableCell>
 
-=======
 
                   <select 
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
@@ -517,21 +439,11 @@ export function RoleManagement() {;
                     <option value="Recruiter">Recruiter</option>
                     <option value="Manager">Manager</option>
                     <option value="Viewer">Viewer</option>
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
-
+                    aria-label='View candidates'
                     aria-label="View candidates"
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>
@@ -664,7 +576,6 @@ export function RoleManagement() {;
               <p className="text-sm text-muted-foreground">{description}</p>;
             </div>;
           ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>;
       </div>;
 
@@ -760,11 +671,9 @@ export function RoleManagement() {;
                   </div>;
                 </TableCell>;
                 <TableCell>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <select
                     className='w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
                     defaultValue={member && member.role}>;
-=======
     <div className='space - y-6'>;
       <div>;
         <h3 className='text - xl font - medium mb - 4'>Role Permissions</h3>;
@@ -877,7 +786,6 @@ export function RoleManagement() {;
                   <select;
                     className='w - full h - 9 rounded - md border border - input bg - background px - 3 py - 1 text - sm shadow - sm transition - colors focus - visible:outline - none focus - visible:ring - 1 focus - visible:ring - ring';
                     default_value={member.role}                  >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <option value='Admin'>Admin</option>;
                     <option value='Recruiter'>Recruiter</option>;
                     <option value='Manager'>Manager</option>;
@@ -891,14 +799,6 @@ export function RoleManagement() {;
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
                       handlePermissionChange(
@@ -921,7 +821,6 @@ export function RoleManagement() {;
                     }                  />
                 </TableCell>
                 <TableCell className='text-center'>
-=======
                     checked={member && member.permissions.viewCandidates}
                     onCheckedChange={checked =>;
                       handlePermissionChange(;
@@ -944,7 +843,6 @@ export function RoleManagement() {;
                     }                  />;
                 </TableCell>;
                 <TableCell className='text-center'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Switch
                     aria-label='Create jobs'
                     checked={member && member.permissions.createJobs}
@@ -965,9 +863,7 @@ export function RoleManagement() {;
                     aria-label='View billing'
 <<<<<<< HEAD
 
-=======
                     checked={member.permissions.viewBilling}
-<<<<<<< HEAD
                     onCheckedChange={checked =>
                       handlePermissionChange(member.id, 'viewBilling', checked)
                     }                  />
@@ -976,25 +872,16 @@ export function RoleManagement() {;
             ))}
           </TableBody>
         </Table>
-<<<<<<< HEAD
       </div>
     </div>
   )
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-                    checked={member.permissions.viewBilling}
-
       </div>;
     </div>;
   );
 };
 <<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
@@ -1013,16 +900,8 @@ export function RoleManagement() {;
 <<<<<<< HEAD
 
 
-=======
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 <TableCell className='text - center'>;
                   <Switch;
                     aria - label='View candidates';
@@ -1075,14 +954,4 @@ export function RoleManagement() {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

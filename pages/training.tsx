@@ -5,19 +5,12 @@
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+origin/automation-improvements-final
 
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-import React from 'react';
-<<<<<<< HEAD
-=======
-import Layout from '../components/Layout';
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 import Layout from '../components/Layout';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+import React from 'react';
+import Layout from '../components/Layout';
 
 export default function Training() {
 <<<<<<< HEAD
@@ -41,24 +34,11 @@ export default function Training() {
             <p className="text-gray-600">Training page is under construction.</p>
           </div>
         </div>
-
-import React from 'react';
-import Layout from '../components/Layout';
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function Training() {
-
-
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+      </div>
+    </Layout>
+  );
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -304,18 +284,10 @@ export default function TrainingPage() {
 
   const getCategoryColor = (category: string) => {
     const colors = {
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
       'ai-consciousness': 'cyan',
       'quantum-computing': 'purple',
       'autonomous-ops': 'green',
       'enterprise-it': 'blue',
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
     };
     return colors[category as keyof typeof colors] || 'gray'
@@ -325,8 +297,6 @@ export default function TrainingPage() {
     setExpandedProgram(expandedProgram === id ? null : id)
 
   },
-
-
   return (
 
     <Layout>
@@ -367,12 +337,20 @@ export default function TrainingPage() {
               </div>
             </motion.div>
           </div>
+          <div className="text-center">
+            <p className="text-gray-600">Training page is under construction.</p>
+          </div>
+        </div>
+      </div>
+    </Layout>;
+  );
+}
+};
+  )
+};
 
-<<<<<<< HEAD
-=======
 export default Training;
 };export default Training;
-=======
         </section>
         {/* Category Filters */  } catch (error) {
     console.error("Error:", error);
@@ -608,7 +586,6 @@ export default Training;
   const getCategoryColor = (category: string) => {;
     const colors = {;
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     };
     return colors[category as keyof typeof colors] || 'gray';
   };
@@ -656,7 +633,6 @@ export default Training;
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Category Filters */}
         <section className='py-10'>
@@ -1102,40 +1078,23 @@ export default Training;
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
       </div>
     </Layout>
-
-
+  ),
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      </div>
+    </Layout>
+  );
 }
-
+};
+}
   )
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 export default Training;
 };export default Training;
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
-
-=======
-
-
+ursor/integrate-build-improve-and-re-verify-8f7d
 
   {
   opacity: 0, y: 20 
@@ -1186,63 +1145,34 @@ export default Training;
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
-
-=======
-
+};
+}
+origin/main
   )
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+}
+export default Training;
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+};export default Training;
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 };export default Training;
 
->>>>>>> origin/main
-=======
+origin/main
   )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 
 export default Training;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-<<<<<<< HEAD
-import Layout from '../components / Layout';
-;
-export default /**
- * Training - Function description
- */
-function Training() {
-  return (
-    <Layout;
-      title="Training & Education - Zion Tech Group";
-      description="Professional training and education services for technology professionals.";
-    >;
-      <div className="min - h-screen bg - gray - 50 py - 20">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">Training & Education</h1>;
-            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-              Professional training and education services for technology professionals.;
-            </p>;
-=======
-=======
 }  )
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/fix-lint-push-and-merge-to-main-ae4e
 };
 
 export default Training;
 };export default Training;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 },
 export default Training,
             >;
@@ -1267,7 +1197,6 @@ export default Training,
                 </a>;
               </div>;
             </motion.div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">Training page is under construction.</p>;
@@ -1281,11 +1210,3 @@ export default Training,
 }
 ;
 export default Training;
-<<<<<<< HEAD
-}export default Training;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

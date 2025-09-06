@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useEffect, useState } from 'react';
 import {supabase} from '@/utils / supabase / client';
@@ -56,7 +55,6 @@ function UserProfile() {
   // Check condition
 if ( {) {
   $2
-=======
 
 'use client';
 import React, { useEffect, useState } from 'react';
@@ -69,7 +67,6 @@ import { useRouter } from 'next/navigation';
 import type { User as SupabaseUser, AuthChangeEvent, Session } from '@supabase/supabase-js';
 interface UserProfileProps {;
   onUserChange?: (user: SupabaseUser | null) => void;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     return (
       <Card className='w - full max - w-sm'>;
@@ -176,16 +173,7 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     );
   }
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (loading) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return (
       <Card className='w-full max-w-sm'>;
         <CardHeader>;
@@ -202,13 +190,8 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
         </CardContent>;
       </Card>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
-<<<<<<< HEAD
-
-
-=======
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -235,12 +218,8 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
             </span>
           </div>
         </div>
-<<<<<<< HEAD
         <Button onClick={handleSignOut} variant='outline' className='w-full'>
           <LogOut className='h-4 w-4 mr-2' />
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           Sign Out
         </Button>;
       </CardContent>;
@@ -250,15 +229,10 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
 }
 <<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           Sign Out
         </Button>
       </CardContent>
@@ -300,19 +274,11 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     </Card>;
   );
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
   )
 } 
 <<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   // Check condition
 if ( {) {
   $2
@@ -366,12 +332,3 @@ if ( {) {
         </Button>;
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-  )
-} 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

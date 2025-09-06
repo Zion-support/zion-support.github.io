@@ -1,19 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
-
-=======
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
     const r = await fetch(
-<<<<<<< HEAD
       `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
-=======
       `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     );
     const metrics = await r && r.json();
     const jobs24 =
@@ -41,6 +34,7 @@ export default async function handler(
 
 
   } catch (e) {
+<<<<<<< HEAD
     res && res.status(200).json({ summary: [], error: 'Failed to compute summary' });
   }
 

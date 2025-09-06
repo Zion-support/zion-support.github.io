@@ -1,31 +1,11 @@
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { QuoteFormData } from "@/types/quotes",
-<<<<<<< HEAD
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
-=======
 import { Label } from "@/components/ui/label",
 import { Slider } from "@/components/ui/slider",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface BudgetStepProps {
 
   formData: QuoteFormData
@@ -37,26 +17,15 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
   const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
     if (type === "range" && !formData.budget.maxAmount) {
       updateFormData({
-
-import { QuoteFormData } from '@/types / quotes';
-import { Label } from '@/components / ui / label';
-import { Slider } from '@/components / ui / slider';
-interface BudgetStepProps {
-  form_data: QuoteFormData,
-  updateFormData: (data: Partial < QuoteFormData>) => void;
-}
-export /**
- * BudgetStep - Function description
- */
-function BudgetStep() {
-  const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      updateFormData ({
+        budget: {;
+          ...formData.budget;
+          type,
+          maxAmount: formData.budget.amount + 5000
         budget: {
-          ...form_data.budget;
+          ...formData.budget;
+          type
+          maxAmount: formData.budget.amount + 5000
+          ...formData.budget,
           type,
           max_amount: form_data.budget.amount + 5000;
 
@@ -81,22 +50,11 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
         budget: {;
           ...formData && formData.budget;
           type,;
-<<<<<<< HEAD
-          maxAmount: formData && formData.budget.amount + 5000;
-=======
-
-=======
           maxAmount: formData.budget.amount + 5000;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       })
     } else {
       updateFormData({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         budget: {
 
 
@@ -112,41 +70,20 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
         }
       });
     }
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   },
-=======
   };
-=======
   },
 <<<<<<< HEAD
 
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: 'USD'
       maximumFractionDigits: 0
     }).format(value)
-
-
+  }
   },
-
-
 
   return (
     <div className="space-y-6">
@@ -165,19 +102,8 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
               <h4 className="font-medium text-white">Fixed Budget</h4>
               <p className="text-sm text-zion-slate-light">I have a set amount</p>
             </div>
-<<<<<<< HEAD
-
-
-            <div 
-
-
-=======
-<<<<<<< HEAD
             <div
-=======
             <div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "hourly"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -188,19 +114,8 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
               <h4 className="font-medium text-white">Hourly Rate</h4>
               <p className="text-sm text-zion-slate-light">Pay per hour of work</p>
             </div>
-<<<<<<< HEAD
-
-
-            <div 
-
-
-=======
-<<<<<<< HEAD
             <div
-=======
             <div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "range"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -212,20 +127,7 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
               <p className="text-sm text-zion-slate-light">I have a min and max</p>
             </div>
           </div>
-
-
           
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {formData.budget.type === "fixed" && (
             <div className="mt-6">
               <Label className="text-zion-slate-light mb-4 block">
@@ -343,11 +245,15 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
                   defaultValue={[formData && formData.budget.amount]}
                   max={50000}
                   step={500}
+                  onValueChange={(value) => {
+                    const newAmount = value[0];
+                    const maxAmount = formData.budget.maxAmount |50000;
+                    updateFormData({
+                      budget: {
+                        ...formData.budget
+                        amount: newAmount
 
-                    const maxAmount = formData && formData.budget.maxAmount || 50000;
-
-=======
-
+                        maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount
                   onValueChange={(value) => {;
                     const newAmount = value[0],;
                     const maxAmount = formData.budget.maxAmount || 50000,;
@@ -357,29 +263,26 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
                         ...formData && formData.budget, ;
                         amount: newAmount,;
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       }
                     });
                   }}
-
-
+                  className="py-4"
+                />
+                <div className="flex justify-between text-sm text-zion-slate-light mt-2">
+                  <span>$0</span>
+                  <span>$50,000</span>
+                </div>
+              </div>
+              <div>
+                <Label className="text-zion-slate-light mb-4 block">
+                  Maximum Budget: {formatCurrency(formData.budget.maxAmount |0)}
+                </Label>
+                <Slider
+                  defaultValue={[formData.budget.maxAmount |formData.budget.amount + 5000]}
                   Maximum Budget: {formatCurrency(formData.budget.maxAmount || 0)}
                 </Label>;
                 <Slider;
                   defaultValue={[formData.budget.maxAmount || formData.budget.amount + 5000]}
-
-
                   min={formData.budget.amount}
 =======
                   className="py-4";

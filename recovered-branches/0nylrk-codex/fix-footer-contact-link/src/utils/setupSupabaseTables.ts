@@ -1,26 +1,8 @@
 
-<<<<<<< HEAD
-
-import { supabase } from "@/integrations/supabase/client",
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
-=======
 import { supabase } from "@/integrations/supabase/client",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import {supabase} from "@/integrations/supabase/client";
-=======
 import { supabase } from "@/integrations/supabase/client",
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 /**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
@@ -36,11 +18,12 @@ export const ensureProfilesTableExists = async () => {
         WHERE table_schema = 'public' 
 
         AND table_name = 'profiles'
-
-
+      ),`;
+    });
       ),`
-
-
+    });
+    }),
+    
     // If there's an error, log it and proceed with table creation
     if (error) {
       console && console.warn("Error checking if profiles table exists, attempting to create it:", error)
@@ -89,14 +72,14 @@ if ( {) {
         bio TEXT,
         avatar_url TEXT,
         headline TEXT
-
+      );
+      -- Create RLS policies
+      ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
       ),
       
       -- Create RLS policies
       ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY,
       
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       -- Create policies
       DO $$
       BEGIN
@@ -106,32 +89,12 @@ if ( {) {
           WHERE policyname = 'Users can view their own profile'
           AND tablename = 'profiles'
         ) THEN
-          CREATE POLICY "Users can view their own profile" 
-            ON public && public.profiles FOR SELECT 
-            USING (auth && auth.uid() = id);
-
-=======
-        headline TEXT);
-;
-      -- Create RLS policies;
-      ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
-;
-      -- Create policies;
-      DO $$;
-      BEGIN;
-        IF NOT EXISTS (
-          SELECT FROM pg_catalog.pg_policies;
-          WHERE policyname = 'Users can view their own profile';
-          AND tablename = 'profiles') THEN;
-          CREATE POLICY "Users can view their own profile";
-            ON public.profiles FOR SELECT;
-            USING (auth.uid () = id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          CREATE POLICY "Users can view their own profile"
+            ON public.profiles FOR SELECT
+            USING (auth.uid() = id);
         END IF;
-      END;
+      END
       $$;
-
-
           CREATE POLICY "Users can view their own profile" 
             ON public.profiles FOR SELECT 
             USING (auth.uid() = id),
@@ -139,8 +102,6 @@ if ( {) {
       END
       $$,
       
-
-
       DO $$
       BEGIN
         IF NOT EXISTS (
@@ -149,27 +110,12 @@ if ( {) {
           WHERE policyname = 'Users can update their own profile'
           AND tablename = 'profiles'
         ) THEN
-          CREATE POLICY "Users can update their own profile" 
-            ON public && public.profiles FOR UPDATE 
-            USING (auth && auth.uid() = id);
-
-=======
-;
-      DO $$;
-      BEGIN;
-        IF NOT EXISTS (
-          SELECT FROM pg_catalog.pg_policies;
-          WHERE policyname = 'Users can update their own profile';
-          AND tablename = 'profiles') THEN;
-          CREATE POLICY "Users can update their own profile";
-            ON public.profiles FOR UPDATE;
-            USING (auth.uid () = id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          CREATE POLICY "Users can update their own profile"
+            ON public.profiles FOR UPDATE
+            USING (auth.uid() = id);
         END IF;
-      END;
+      END
       $$;
-
-
           CREATE POLICY "Users can update their own profile" 
             ON public.profiles FOR UPDATE 
             USING (auth.uid() = id),
@@ -177,22 +123,13 @@ if ( {) {
       END
       $$,
         
-
-
       -- Set up trigger for new users
       CREATE OR REPLACE FUNCTION public && public.handle_new_user()
       RETURNS TRIGGER AS $$
       BEGIN
-
-;
-      -- Set up trigger for new users;
-      CREATE OR REPLACE FUNCTION public.handle_new_user ();
-      RETURNS TRIGGER AS $$;
-      BEGIN;
-        INSERT INTO public.profiles (id, display_name, bio, headline);
-        VALUES (new.id,
-                new.raw_user_meta_data->>'display_name',
-
+        INSERT INTO public.profiles (id, display_name, bio, headline)
+        VALUES (new.id
+                new.raw_user_meta_data->>'display_name'
                 new.raw_user_meta_data->>'bio';
                 new.raw_user_meta_data->>'headline');
 =======
@@ -205,9 +142,6 @@ if ( {) {
         RETURN new;
       END;
       $$ LANGUAGE plpgsql SECURITY DEFINER;
-
-        INSERT INTO public.profiles (id, display_name, bio, headline)
-
         VALUES (new.id, 
                 new.raw_user_meta_data->>'display_name', 
                 new.raw_user_meta_data->>'bio',
@@ -216,25 +150,15 @@ if ( {) {
       END,
       $$ LANGUAGE plpgsql SECURITY DEFINER,
       
-
-
       -- Check if trigger exists before creating it
       DO $$
       BEGIN
         IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN
           CREATE TRIGGER on_auth_user_created
-
-;
-      -- Check if trigger exists before creating it;
-      DO $$;
-      BEGIN;
-        IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN;
-          CREATE TRIGGER on_auth_user_created;
-            AFTER INSERT ON auth.users;
-            FOR EACH ROW EXECUTE FUNCTION public.handle_new_user ();
-
-        END IF;
-      END;
+            AFTER INSERT ON auth.users
+            FOR EACH ROW EXECUTE FUNCTION public.handle_new_user(),
+        END IF,
+      END
       $$;
     `;
 
@@ -255,36 +179,6 @@ export const initializeDatabase = async () => {
   await ensureProfilesTableExists()
 }
 
-=======
-;
-    // Execute the creation query using RPC to avoid TypeScript errors;
-    const { error: create_error } = await supabase.rpc ('exec', { sql: createTableQuery });
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.error ('Error creating profiles table:', create_error);
-    } else {
-      console.log ('Profiles table setup completed');
-    }
-  } catch (error) {
-    console.error ('Error setting up profiles table:', error);
-  }
-}
-;
-// Call this when the app starts to ensure the table exists;
-export const initialize_database = async () => {
-  await ensureProfilesTableExists ();
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-            AFTER INSERT ON auth.users
-            FOR EACH ROW EXECUTE FUNCTION public.handle_new_user(),
-        END IF,
-      END
-
       $$,
     `,
     
@@ -294,12 +188,6 @@ export const initialize_database = async () => {
     if (createError) {
       console.error('Error creating profiles table:', createError)
     } else {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       console.log('Profiles table setup completed')
     }
   } catch (error) {
@@ -309,8 +197,6 @@ export const initialize_database = async () => {
 
 // Call this when the app starts to ensure the table exists
 export const initializeDatabase = async () => {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // // // console.log('Profiles table setup completed')
 import { supabase } from "@/integrations/supabase/client",;
 /**;
@@ -410,9 +296,5 @@ export const ensureProfilesTableExists = async () => {;
 };
 // Call this when the app starts to ensure the table exists;
 export const initializeDatabase = async () => {;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   await ensureProfilesTableExists();
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

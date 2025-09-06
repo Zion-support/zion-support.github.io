@@ -1,23 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-interface ApplicationRowProps {
-
-  application: JobApplication
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
-
-  onViewScore: (application: JobApplication) => void
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {Calendar, User, FileText, BarChart} from "lucide-react";
@@ -28,13 +9,26 @@ import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {StatusBadge} from "./StatusBadge";
 import {ScoreBadge} from "./ScoreBadge";
 import {ApplicationActions} from "./ApplicationActions";
-<<<<<<< HEAD
-interface ApplicationRowProps {;
-  application: JobApplication,;
-  processingId: string | null,;
-  onViewApplication: (applicationId: string) => Promise<void>,;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,;
-  onViewScore: (application: JobApplication) => void;
+import { formatDistanceToNow } from "date-fns",
+import { Link } from "react-router-dom",
+import { Calendar, User, FileText, BarChart } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Avatar } from "@/components/ui/avatar",
+import { TableRow, TableCell } from "@/components/ui/table",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { StatusBadge } from "./StatusBadge",
+import { ScoreBadge } from "./ScoreBadge";
+import { ApplicationActions } from "./ApplicationActions";
+import { ScoreBadge } from "./ScoreBadge",
+import { ApplicationActions } from "./ApplicationActions",
+interface ApplicationRowProps {
+
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+
+  onViewScore: (application: JobApplication) => void
 }
 =======
 =======
@@ -71,29 +65,16 @@ interface ApplicationRowProps {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-export function ApplicationRow(): any ({;
-
+export function ApplicationRow({;
   application;
   processingId;
   onViewApplication;
   onStatusChange;
-  onViewScore;
-}: ApplicationRowProps) {;
-=======
-<<<<<<< HEAD
-}
-
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApplicationRow({
   application,
   processingId,
   onViewApplication,
   onStatusChange,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   onViewScore
 }: ApplicationRowProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -105,7 +86,6 @@ export function ApplicationRow({
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
-
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 import { Calendar, User, FileText, BarChart } from "lucide-react",;
@@ -268,17 +248,6 @@ function ApplicationRow() {
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           application={application}
           processing_id={processing_id}
           onViewApplication={onViewApplication}

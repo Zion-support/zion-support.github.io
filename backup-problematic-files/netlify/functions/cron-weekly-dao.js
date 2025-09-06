@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD:netlify/functions/cron-weekly-dao.js
-=======
-<<<<<<< HEAD:backup-problematic-files/netlify/functions/cron-weekly-dao.js
+:netlify/functions/cron-weekly-dao.js
+:backup-problematic-files/netlify/functions/cron-weekly-dao.js
 const fs = require('fs'),;
 const path = require('path'),;
 const { upsertFile } = require('./_lib/github'),;
@@ -27,13 +22,8 @@ exports.handler = async function() {;
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-dao.js
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-dao.js
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/netlify/functions/cron-weekly-dao.js
+:backup-problematic-files/netlify/functions/cron-weekly-dao.js
 const fs = require('fs');
 const path = require('path');
 const { upsertFile } = require('./_lib/github');
@@ -78,28 +68,20 @@ exports.handler = async function () {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
     }
+:netlify/functions/cron-weekly-dao.js
 
-
-
+:backup-problematic-files/netlify/functions/cron-weekly-dao.js
     return { statusCode: 200, body: JSON.stringify({ ok: true, updatedAt: data.updatedAt }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+:netlify/functions/cron-weekly-dao.js
+
+}
 
 },
-<<<<<<< HEAD
-
-=======
-
-
-=======
-<<<<<<< HEAD
->>>>>>> main:netlify/functions/cron-weekly-dao.js
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-dao.js
-=======
-<<<<<<< HEAD:netlify/functions/cron-weekly-dao.js
-=======
->>>>>>> main:netlify/functions/cron-weekly-dao.js
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-dao.js
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+main:netlify/functions/cron-weekly-dao.js
+:backup-problematic-files/netlify/functions/cron-weekly-dao.js
+:netlify/functions/cron-weekly-dao.js
+main:netlify/functions/cron-weekly-dao.js
+:backup-problematic-files/netlify/functions/cron-weekly-dao.js

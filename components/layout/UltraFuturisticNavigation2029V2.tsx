@@ -1,43 +1,9 @@
-
-
+import React, { useState } from 'react',
 import React, { useState } from 'react';
-
-
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-=======
-<<<<<<< HEAD
   Menu
   X
   Search
@@ -96,12 +62,6 @@ import { motion, AnimatePresence } from 'framer-motion';
   Award
   Clock
   CheckCircle;} from 'lucide-react';import {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-import {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Menu,
   X,
   Search,
@@ -161,14 +121,9 @@ import {
 
   Clock,;
   CheckCircle,;} from 'lucide-react';import { ;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Menu, X, Search, ChevronDown, ChevronRight;
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
   BookOpen, MessageCircle, Star, TrendingUp;
   Layers, Cpu, Database, Cloud, Lock, Shield;
@@ -243,7 +198,6 @@ const serviceCategories = [
     icon: Target,
     color: 'from-green-600 via-yellow-600 to-orange-600',
     description: 'Cutting-edge micro solutions',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     services: [
 
 
@@ -302,43 +256,28 @@ const quickLinks = [
 =======
   { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-;
-const quick_links = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'News', href: '/news', icon: TrendingUp },
-  { name: 'Careers', href: '/careers', icon: GraduationCap },
 
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default function UltraFuturisticNavigation2029V2() {
-  const [isOpen, setIsOpen] = useState(false)
-=======
-
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function UltraFuturisticNavigation2029V2() {
-=======
 export default function UltraFuturisticNavigation2029V2() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isOpen, setIsOpen] = useState(false);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   return (
-
-<<<<<<< HEAD
+    <nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20'>
+      {/* Main Navigation Bar */}
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex justify-between items-center h-20'>          {/* Logo */}    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
+      {/* Main Navigation Bar */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className='flex-shrink-0'
 
 =======
 <<<<<<< HEAD
@@ -362,19 +301,7 @@ export default function UltraFuturisticNavigation2029V2() {;
                 <p className='text-xs text-gray-400'>
                   Future Technology Solutions
                 </p>              </div>          >
-=======
-    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
-      {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex-shrink-0"
-          >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -543,24 +470,58 @@ function UltraFuturisticNavigation2029V2() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+=======
+                animate={{ opacity: 1, y: 0 }}          <div className="hidden lg:flex items-center space-x-8">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {mainNavigation.map((item) => (
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: mainNavigation.indexOf(item) * 0.1 }}
-                className="relative group"
+className="relative group"
               >
                 <Link
                   href={item.href}
                   className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10"
                 >
                   <item.icon className="w-4 h-4" />
+=======
+<<<<<<< HEAD
+                transition={{
+                  duration: 0.5
+                  delay: mainNavigation.indexOf(item) * 0.1
+                }}
+                className='relative group'
+                <Link
+                  href={item.href}
+                  className='flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10'
+                >
+                  <item.icon className='w-4 h-4' />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <span>{item.name}</span>
                 </Link>
-                
                 {/* Hover effect */}
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
+                <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />              </motion.div>                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
+              </motion.div>
+            ))}
+          </div>
+          {/* Right side - Contact & Search */}
+          <div className='hidden lg:flex items-center space-x-4'>
+
+              </motion.div>
+
+            ))}
+          </div>
+          {/* Right side - Contact & Search */}
+<<<<<<< HEAD
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Search */}
+=======
+          <div className='hidden lg:flex items-center space-x-4'>
+=======
+
               </motion.div>
 
             ))}
@@ -568,16 +529,17 @@ function UltraFuturisticNavigation2029V2() {
 
           {/* Right side - Contact & Search */}
 
-<<<<<<< HEAD
-          <div className="hidden lg:flex items-center space-x-4">
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Search */}
+            <div className='relative'>
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
+              <input
+                type='text'
+                placeholder='Search services...'
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
+                className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />            {/* Search */}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
 
@@ -586,28 +548,16 @@ function UltraFuturisticNavigation2029V2() {
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
-
-
-=======
-                onChange={e => setSearchQuery(e.target.value)}
-
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64"
+              />
+            </div>
                 className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />
 
               />
 
             </div>
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Contact Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -627,28 +577,11 @@ function UltraFuturisticNavigation2029V2() {
               onClick={toggleMenu}
               className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
 
-
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-
-
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -656,8 +589,8 @@ function UltraFuturisticNavigation2029V2() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-
-<<<<<<< HEAD
+            transition={{ duration: 0.3 }}
+            className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
 
 =======
 <<<<<<< HEAD
@@ -670,8 +603,8 @@ function UltraFuturisticNavigation2029V2() {
             <div className='px-4 py-6 space-y-4'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Mobile Search */}
-              <div className='relative'>;
-                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
+              <div className='relative'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
                 <input
                   type='text'
                   placeholder='Search services...'
@@ -683,10 +616,11 @@ function UltraFuturisticNavigation2029V2() {
 
 
               {/* Mobile Navigation Links */}
-              <div className='space-y-2'>;
-                {mainNavigation && mainNavigation.map(item => (                  <Link
-                    key={item && item.name}
-                    href={item && item.href}
+              <div className='space-y-2'>
+                {mainNavigation.map(item => (                  <Link
+                    key={item.name}
+                    href={item.href}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     onClick={closeMenu}
                     className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'>;
                     <item && item.icon className='w-5 h-5' />                    <span>{item && item.name}</span>          >;
@@ -719,41 +653,57 @@ function UltraFuturisticNavigation2029V2() {
                     key={item && item.name}
                     href={item && item.href}
                     onClick={closeMenu}
-
-
+                    className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+                  >
+                    <item.icon className='w-5 h-5' />                    className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
+                  >
+                    <item.icon className="w-5 h-5" />
+                    <span>{item.name}</span>
+                  </Link>
                 ))}
-
-              </div>;
-
-
-=======
+              </div>
 
 
                   </Link>
                 ))}
               </div>
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Quick Links */}
-
-
+              <div className='pt-4 border-t border-gray-700'>
+                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
+                  Quick Links
+                </h3>
+                <div className='space-y-2'>
+                  {quickLinks.map(item => (                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+                    >
+                      <item.icon className='w-4 h-4' />
+                      <span className='text-sm'>{item.name}</span>                    </Link>              <div className="pt-4 border-t border-gray-700">
+                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>
+                <div className="space-y-2">
+                  {quickLinks.map((item) => (
+                      key={item.name}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+                    >
+                      <item.icon className='w-4 h-4' />
+                      <span className='text-sm'>{item.name}</span>                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
+                    >
+                      <item.icon className="w-4 h-4" />
+                      <span className="text-sm">{item.name}</span>
                   ))}
                 </div>
               </div>
 
 <<<<<<< HEAD
 
-
+                  ))}
+                </div>
+              </div>
 
 =======
 <<<<<<< HEAD
@@ -772,18 +722,6 @@ function UltraFuturisticNavigation2029V2() {
                     <Phone className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.mobile}</span>
 
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400">
                     <Mail className="w-4 h-4" />
@@ -793,7 +731,6 @@ function UltraFuturisticNavigation2029V2() {
                     <MapPin className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.address}</span>
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </div>
 
@@ -825,7 +762,6 @@ function UltraFuturisticNavigation2029V2() {
                   <div className="flex items-center space-x-3 text-gray-400">;
                     <MapPin className="w-4 h-4" />;
                     <span className="text-sm">{contactInfo && contactInfo.address}</span>;
-=======
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -937,7 +873,6 @@ function UltraFuturisticNavigation2029V2() {
                   <div className="flex items - center space - x-3 text - gray - 400">;
                     <MapPin className="w - 4 h - 4" />;
                     <span className="text - sm">{contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </div>;
                 </div>;
               </div>;
@@ -952,27 +887,33 @@ function UltraFuturisticNavigation2029V2() {
         )}
       </AnimatePresence>
 
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Service Categories Dropdown */}
+      <AnimatePresence>;
+        {activeCategory && (;
+          <motion&& motion.div
 =======
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+<<<<<<< HEAD
+=======
+
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Service Categories Dropdown */}
-      <AnimatePresence>;
-        {activeCategory && (;
-          <motion&& motion.div
+      <AnimatePresence>
+        {activeCategory && (
+          <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-
-<<<<<<< HEAD
+            transition={{ duration: 0.3 }}
+            className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
 
 =======
 <<<<<<< HEAD
@@ -1000,6 +941,7 @@ function UltraFuturisticNavigation2029V2() {
             animate={{ opacity: 1, coordinate_y: 0 }}
             exit={{ opacity: 0, coordinate_y: -20 }}
             transition={{ duration: 0.3 }}
+<<<<<<< HEAD
             className='absolute top - full left - 0 right - 0 bg - gray - 900 / 95 backdrop - blur - xl border - t border - cyan - 500 / 20 z - 40';
           >;
             <div className='max - w-7xl mx - auto px - 4 py - 8'>;
@@ -1052,7 +994,6 @@ function UltraFuturisticNavigation2029V2() {
                         </p>;
                       </div>;
                     </div>;
-
                     <div className='space-y-3'>                      {category && category.services.map((service, index) => (;
                         <Link
                           key={service && service.name}
@@ -1071,7 +1012,6 @@ function UltraFuturisticNavigation2029V2() {
                         <p className="text-sm text-gray-400">{category && category.description}</p>;
                       </div>;
                     </div>;
-
                     <div className="space-y-3">;
                       {category && category.services.map((service, index) => (;
 
@@ -1106,6 +1046,31 @@ function UltraFuturisticNavigation2029V2() {
                         <Link
                           key={service.name}
                           href={service.href}
+                          className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group'
+                        >
+                          <div className='flex justify-between items-start'>
+                            <div>
+                              <h4 className='font-medium text-white group-hover:text-cyan-400 transition-colors duration-300'>
+                                {service.name}
+                              </h4>
+                              <p className='text-sm text-gray-400 mt-1'>
+                                {service.description}
+                              </p>
+                            </div>
+                            <span className='text-sm font-semibold text-cyan-400'>
+                              {service.price}
+                            </span>                          </div>                        >
+                          <div className="flex justify-between items-start">
+                            <div>
+                              <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
+                                {service.name}
+                              </h4>
+                              <p className="text-sm text-gray-400 mt-1">{service.description}</p>
+                            </div>
+                            <span className="text-sm font-semibold text-cyan-400">{service.price}</span>
+                          </div>
+
+                          </div>
 
 <<<<<<< HEAD
 =======
@@ -1152,13 +1117,8 @@ function UltraFuturisticNavigation2029V2() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                         </p>;
                       </div>;
                     </div>;
@@ -1217,8 +1177,5 @@ function UltraFuturisticNavigation2029V2() {
       </AnimatePresence>;
     </nav>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  );
+}

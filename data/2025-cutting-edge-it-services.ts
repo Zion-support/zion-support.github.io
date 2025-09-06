@@ -3,14 +3,6 @@
 
 
 
-export const cuttingEdgeITServices2025 = [
-  {
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const cuttingEdgeITServices2025 = [
@@ -429,14 +421,11 @@ export const cuttingEdgeITServices2025 = [
       'Google Cloud'
     ]
     compliance: [
-<<<<<<< HEAD
       'DevOps Best Practices'
       'Security Standards'
       'Quality Assurance Protocols'
     ]
   }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       'DevOps Best Practices',
       'Security Standards',
       'Quality Assurance Protocols',
@@ -444,12 +433,6 @@ export const cuttingEdgeITServices2025 = [
 <<<<<<< HEAD
 
   },;
-
-
-=======
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
 =======
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
@@ -457,26 +440,10 @@ export const cuttingEdgeITServices2025 = [
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
-<<<<<<< HEAD
-
-
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-
-
-=======
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -682,16 +649,5 @@ export const cuttingEdgeITServices2025 = [;
     ],;
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

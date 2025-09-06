@@ -1,5 +1,23 @@
-<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+import { readJson, writeJson } from '../../../utils/fsDb';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',;
+;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  const { account, amount, type, serviceId } = req.body as { account?: string, amount?: number, type?: string, serviceId?: string }
+  if (!account |!amount |amount <= 0 |!type) return res.status(400).json({ error: 'Invalid input' })
+  const redemptions = readJson<any[]>('tokens/redemptions.json', [])
+  const id = `rdm_${Math.random().toString(36).slice(2)}_${Date.now()}`
+  const record = { id, account, amount, type, serviceId: serviceId ?? null, createdAt: Date.now() }
+  redemptions.push(record)
+  writeJson('tokens/redemptions.json', redemptions)
+  // If premium support: create a support request to prioritize
+  if (type === 'premium_support') {
+    const reqs = readJson<any[]>('support/requests.json', [])
+    const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`
+    reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() })
 
     writeJson('support/requests.json', reqs)
   }
@@ -39,11 +57,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
-<<<<<<< HEAD
-=======
+  return res.status(200).json({ ok: true, id });
+};
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -71,7 +87,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 =======
@@ -107,14 +122,6 @@ if ( {) {
   return res.status (200).json ({ ok: true, id });
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   return res.status(200).json({ ok: true, id });
   } catch (error) {
     console.error("Error:", error);
@@ -128,11 +135,5 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

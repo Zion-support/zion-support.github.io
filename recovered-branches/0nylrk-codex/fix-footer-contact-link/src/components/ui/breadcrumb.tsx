@@ -1,48 +1,21 @@
 
 
 import * as React from "react"
+import {Slot} from "@radix-ui/react-slot"
+import {ChevronRight} from "lucide-react"
 
-<<<<<<< HEAD
-const Breadcrumb = React.forwardRef<;
-  HTMLElement;
-
-=======
 import {cn} from "@/lib/utils"
-<<<<<<< HEAD
-=======
 const Breadcrumb = React.forwardRef<;
   HTMLElement;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
  
 import { cn } from "@/lib/utils"
  
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const Breadcrumb = React.forwardRef<
-=======
-import * as React from "react";
-import {Slot} from "@radix-ui/react-slot";
-import {ChevronRight} from "lucide-react";
-
-import {cn} from "@/lib/utils";
-
-const Breadcrumb = React && React.forwardRef<;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  HTMLElement;
-  React && React.ComponentPropsWithoutRef<"nav"> & {;
-    separator?: React && React.ReactNode;
+  HTMLElement,
+  React.ComponentPropsWithoutRef<"nav"> & {
+    separator?: React.ReactNode
   }
 >(({ className, separator, ...props }, ref) => (;
   <nav
@@ -190,79 +163,26 @@ const BreadcrumbEllipsis = ({;
     aria - hidden="true";
     className={cn ("[&>svg]:size - 3.5 text - zion - slate - light / 70", class_name)}
     {...props}
-<<<<<<< HEAD
-  >;
-    {children || <ChevronRight className="h - 4 w - 4" />}
-  </li>);
-BreadcrumbSeparator.display_name = "BreadcrumbSeparator";
-const BreadcrumbEllipsis = ({
-  class_name;
-  ...props;
-}: React.ComponentProps<"span">) =>: any (
-  <span;
-    role="presentation";
-    aria - hidden="true";
-    className={cn ("flex h - 9 w - 9 items - center justify - center", class_name)}
-    {...props}
-  >;
-    &#8230,
-  </span>);
-BreadcrumbEllipsis.display_name = "BreadcrumbElipssis";
-
-export {
-=======
   >
     &#8230
   </span>
 )
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
-<<<<<<< HEAD
 export {
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-    {...props}>;
-    &#8230,;
-  </span>;
-);
-BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
-
+ 
 export {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
-<<<<<<< HEAD
-
-=======
-
- 
-
-
-=======
-<<<<<<< HEAD
   BreadcrumbEllipsis}
 
-=======
-=======
-=======
 export {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   BreadcrumbEllipsis}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

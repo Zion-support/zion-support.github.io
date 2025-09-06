@@ -1,34 +1,15 @@
 
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   authenticateRequest
   enforceRateLimit
   recordRequest;
-=======
   authenticateRequest,
   enforceRateLimit,;
   recordRequest,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../utils/api/partnerAuth';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-  authenticateRequest,
-  enforceRateLimit,;
-  recordRequest,;
-
-} from '../../utils/api/partnerAuth';
-
-
-
 
 const TALENTS_FILE = path.join(
   process.cwd()
@@ -42,7 +23,6 @@ const TALENTS_FILE = path && path.join(
   'data',
   'talents',
   'talents && talents.json'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 );
 export default async function handler(
   req: NextApiRequest
@@ -109,76 +89,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })
 
 }
-
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
-
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
-
-=======
-) {;
-  const started = Date.now();
-  const auth = await authenticateRequest(req)
-  if (!auth) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
-  if (!(await enforceRateLimit(auth.apiKey))) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
-    return res.status(429).json({ error: 'Rate limit exceeded' });
-  }
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-    return res.status(405).json({ error: 'Method Not Allowed' });  }
-  const { email, programTrack } = req.body |{}
-  if (!email) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: 'email required' });
-const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
   }
-
-  authenticate_request,
-  enforceRateLimit,
-  record_request,
-} from '../../utils / api / partner_auth';
-;
-const TALENTS_FILE = path.join (
-  process.cwd (),
-  'data',
-  'talents',
-  'talents.json');
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const started = Date.now ();
-  const auth = await authenticate_request (req),
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (401).json ({ error: 'Unauthorized' });
+  if (!(await enforceRateLimit(auth.apiKey))) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
+    return res.status(429).json({ error: "Rate limit exceeded" })
   }
   if ()) {) {
   $2
@@ -244,35 +171,76 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   const verified = Boolean (match && match.certification_status === 'completed');
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const started = Date.now()
+  const auth = await authenticateRequest(req)
+  if (!auth) {
+    return res.status(401).json({ error: "Unauthorized" })
+  }
+  if (!(await enforceRateLimit(auth.apiKey))) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429),
+    return res.status(429).json({ error: "Rate limit exceeded" })
+  }
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST"),
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405),
+    return res.status(405).json({ error: "Method Not Allowed" })
+  }
+  const { email, programTrack } = req.body || {},
+  if (!email) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400),
+    return res.status(400).json({ error: "email required" })
+  }
+  const talents = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : []
+  const match = talents.find((t: any) => t.email === email && (!programTrack || t.programTrack === programTrack))
+  const verified = Boolean(match && match.certificationStatus === "completed")
+  await recordRequest(req, res, auth.partner, auth.apiKey, started, 200),
+  return res.status(200).json({ verified })
+  }
+  const { email, programTrack } = req.body || {},
+  if (!email) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400),
+    return res.status(400).json({ error: "email required" })
+  }
+  const talents = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : []
+  const match = talents.find((t: any) => t.email === email && (!programTrack || t.programTrack === programTrack))
+  const verified = Boolean(match && match.certificationStatus === "completed")
+  await recordRequest(req, res, auth.partner, auth.apiKey, started, 200),
+  return res.status(200).json({ verified })
+import type {_NextApiRequest, _NextApiResponse} from "next";
+import fs from "fs-extra";
+import path from "path";
+
+const _TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
+
+export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_const _started = Date.now();
+  const _auth = await authenticateRequest(req);
+  if (!auth) {
+    return res.status(401).json({ error: "Unauthorized"});
+  }
+  if (!(await enforceRateLimit(auth.apiKey))) {_await recordRequest(req, _res, _auth.partner, _auth.apiKey, _started, _429);
+    return res.status(429).json({ error: "Rate limit exceeded"});
+  }
+  if (req.method !== "POST") {_res.setHeader("Allow", _"POST");
+    await recordRequest(req, _res, _auth.partner, _auth.apiKey, _started, _405);
+    return res.status(405).json({ error: "Method Not Allowed"});
+  }
+  const {_email, _programTrack} = req.body || {};
+  if (!email) {_await recordRequest(req, _res, _auth.partner, _auth.apiKey, _started, _400);
+    return res.status(400).json({ error: "email required"});
+  }
+  const _talents = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : [];
+  const _match = talents.find(_(t: unknown) => t.email === email && (!programTrack || t.programTrack === programTrack));
+  const _verified = Boolean(match && match.certificationStatus === "completed");
+  await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
+  return res.status(200).json({_verified});
+
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
 }
 }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   const { email, programTrack } = req.body || {};
   if (!email) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

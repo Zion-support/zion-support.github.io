@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-
-
-  {
-
-=======
-    id: 'edge - computing - orchestrator',
-    name: 'Edge Computing Orchestrator',
-    tagline: 'Intelligent edge computing management and optimization',
-    price: '$1, 999',
-    period: '/month',
-    description:;
-      'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.',
-    features: [;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface AdvancedITService {
-=======
 export interface AdvancedITService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -50,7 +30,6 @@ export interface AdvancedITService {;
     mobile: string;
     email: string;
     address: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
       'Intelligent resource allocation',
       'Real - time performance optimization',
@@ -66,16 +45,25 @@ export interface AdvancedITService {;
     popular: true,
     icon: '🌐',
 
-<<<<<<< HEAD
-=======
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
 
-  reviews: number;
-export const advancedITServices: AdvancedITService[] = [
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Complete edge computing orchestration platform with intelligent resource management and real - time optimization.',
+    launch_date: '2024 - 10 - 01',
+    customers: 156,
+    rating: 4 && 4.7,
+    reviews: 89,
+  },
   {
     id: 'quantum-cloud-platform'
     name: 'Quantum Cloud Platform'
@@ -756,159 +744,22 @@ export const advancedITServices: AdvancedITService[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
     launchDate: '2024-10-01'
     customers: 89
     rating: 4.8
     reviews: 45
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-    color: 'from - green - 600 to - emerald - 700',
-    text_color: 'text - green - 400',
-    link: 'https://ziontechgroup.com / edge - computing - orchestrator',
-    market_position:;
-      'Advanced edge orchestration platform competing with AWS Greengrass and Azure IoT Edge',
-    target_audience:;
-      'IoT companies, Manufacturing, Smart cities, Transportation, Healthcare',
-    trial_days: 30,
-    setup_time: '2 weeks',
-    category: 'Edge Computing',
-    real_service: true,
-    technology: [;
-      'Edge Computing',
-      'AI / ML',
-      'IoT',
-      'Container Orchestration',
-      'Real - time Analytics',
-    ],
-    integrations: [;
-      'AWS IoT',
-      'Azure IoT',
-      'Google Cloud IoT',
-      'Kubernetes',
-      'Docker',
-    ],
-    use_cases: [;
-      'IoT management',
-      'Real - time analytics',
-      'Edge AI',
-      'Smart manufacturing',
-    ],
-    roi: '300% ROI within 6 months through reduced latency and improved performance',
-    competitors: [;
-      'AWS Greengrass ($1000+/month)',
-      'Azure IoT Edge ($2000+/month)',
-      'Google Cloud IoT',
-    ],
-    market_size: '$50B edge computing market',
-    growth_rate: '250% annual growth',
-    variant: 'edge - futuristic',
-    contact_info: {
-
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Complete edge computing orchestration platform with intelligent resource management and real - time optimization.',
-    launch_date: '2024 - 10 - 01',
-    customers: 156,
-    rating: 4 && 4.7,
-    reviews: 89,
-  },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  {
-
-=======
-    id: 'zero - trust - security - platform',
-    name: 'Zero Trust Security Platform',
-    tagline: 'Comprehensive zero trust security implementation',
-    price: '$3, 999',
-    period: '/month',
-    description:;
-      'Enterprise - grade zero trust security platform implementing the latest security principles with continuous verification, micro - segmentation, and advanced threat detection.',
-    features: [;
-
-      'Continuous identity verification',
-      'Micro - segmentation',
-      'Advanced threat detection',
-      'Behavioral analytics',
-      'Compliance tools',
-      'Real - time monitoring',
-      'Automated response',
-      'Integration APIs',
-      'Security dashboard',
-      '24 / 7 security support',
-    ],
-    popular: true,
-    icon: '🛡️',
-
-=======
-    color: 'from - red - 600 to - orange - 700',
-    text_color: 'text - red - 400',
-    link: 'https://ziontechgroup.com / zero - trust - security - platform',
-    market_position:;
-      'Comprehensive zero trust platform competing with Palo Alto Networks and CrowdStrike',
-    target_audience:;
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations',
-    trial_days: 30,
-    setup_time: '1 month',
-    category: 'Cybersecurity',
-    real_service: true,
-    technology: [;
-      'Zero Trust Architecture',
-      'AI / ML',
-      'Identity Management',
-      'Network Security',
-      'Threat Intelligence',
-    ],
-    integrations: [;
-      'Active Directory',
-      'Okta',
-      'Palo Alto Networks',
-      'CrowdStrike',
-      'SIEM systems',
-    ],
-    use_cases: [;
-      'Enterprise security',
-      'Government compliance',
-      'Financial security',
-      'Healthcare compliance',
-    ],
-    roi: '400% ROI within 12 months through security improvements and compliance benefits',
-    competitors: [;
-      'Palo Alto Networks ($10000+/month)',
-      'CrowdStrike ($5000+/month)',
-      'Zscaler',
-    ],
-    market_size: '$30B zero trust market',
-    growth_rate: '200% annual growth',
-    variant: 'zero - trust - futuristic',
-    contact_info: {
-
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.',
-    launch_date: '2024 - 09 - 01',
+      'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
+    launchDate: '2024-10-01',
     customers: 89,
     rating: 4 && 4.8,
     reviews: 45,
 <<<<<<< HEAD
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered automation',
-=======
     id: 'ai - powered - devops - platform',
     name: 'AI - Powered DevOps Platform',
     tagline: 'Intelligent DevOps automation and optimization',
@@ -990,7 +841,6 @@ export const advancedITServices: AdvancedITService[] = [
     rating: 4 && 4.6,
     reviews: 123,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1073,7 +923,6 @@ export const advancedITServices: AdvancedITService[] = [
     rating: 4 && 4.7,
     reviews: 34,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1156,7 +1005,6 @@ export const advancedITServices: AdvancedITService[] = [
     rating: 4 && 4.9,
     reviews: 6,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1239,7 +1087,6 @@ export const advancedITServices: AdvancedITService[] = [
     rating: 4 && 4.7,
     reviews: 89,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1322,7 +1169,6 @@ export const advancedITServices: AdvancedITService[] = [
     rating: 4 && 4.6,
     reviews: 123,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1406,9 +1252,91 @@ export const advancedITServices: AdvancedITService[] = [
     reviews: 45,
   },
 =======
+    id: 'ai-powered-cloud-migration'
+    name: 'AI-Powered Cloud Migration'
+    tagline: 'Intelligent cloud migration and optimization'
+    price: '$5,999'
+    period: '/month'
+    description:
+      'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.'
+    features: [
+      'AI migration planning'
+      'Cost optimization'
+      'Performance analysis'
+      'Security assessment'
+      'Compliance tools'
+      'Automated migration'
+      'Real-time monitoring'
+      'Integration APIs'
+      'Migration dashboard'
+      '24/7 support'
+    ]
+    popular: true
+    icon: '☁️'
+    color: 'from-blue-600 to-indigo-700'
+    textColor: 'text-blue-400'
+    link: 'https://ziontechgroup.com/ai-powered-cloud-migration'
+    marketPosition:
+      'AI-enhanced cloud migration competing with Accenture and Deloitte'
+    targetAudience:
+      'Enterprises, Government agencies, Financial institutions, Healthcare organizations'
+    trialDays: 30
+    setupTime: '1 month'
+    category: 'Cloud Migration'
+    realService: true
+    technology: [
+      'AI/ML'
+      'Cloud Computing'
+      'Migration Tools'
+      'Performance Analysis'
+      'Cost Optimization'
+    ]
+    integrations: [
+      'AWS'
+      'Azure'
+      'Google Cloud'
+      'On-premises systems'
+      'Monitoring tools'
+    ]
+    useCases: [
+      'Cloud migration'
+      'Cost optimization'
+      'Performance improvement'
+      'Security enhancement'
+    ]
+    roi: '600% ROI within 12 months through cost savings and performance improvements'
+    competitors: [
+      'Accenture ($50000+/month)'
+      'Deloitte ($40000+/month)'
+      'AWS Migration Hub'
+    ]
+    marketSize: '$15B cloud migration market'
+    growthRate: '200% annual growth'
+    variant: 'ai-migration-futuristic'
+    contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails:
+<<<<<<< HEAD
+      'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
+    launchDate: '2024-10-01'
+    customers: 89
+    rating: 4.8
+    reviews: 45
+  }
+=======
+      'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
+    launchDate: '2024-10-01',
+    customers: 89,
+    rating: 4.8,
+    reviews: 45,
   },;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1421,10 +1349,8 @@ export const advancedITServices: AdvancedITService[] = [
 
 
     rating: 4 && 4.8,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 45
 <<<<<<< HEAD
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1433,27 +1359,10 @@ export const advancedITServices: AdvancedITService[] = [
     customers: 89;
     rating: 4.8,
     reviews: 45;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 
 ];
-
-=======
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 export interface AdvancedITService {;
-
-=======
-export interface AdvancedITService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1881,12 +1790,5 @@ export const advancedITServices: AdvancedITService[] = [;
     customers: 89,;
     rating: 4.8,;
     reviews: 45;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

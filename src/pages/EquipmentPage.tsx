@@ -1,28 +1,9 @@
-<<<<<<< HEAD
-
-
-
-
 }
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-=======
-
-
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
@@ -38,8 +19,17 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
-
-
+    id: "nvidia-a100-server";
+    title: "NVIDIA A100 GPU Training Server";
+    description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
+    category: "AI Hardware";
+    price: 85000;
+    currency: "$";
+    brand: "NVIDIA";
+    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
+    tags: ["AI", "Machine Learning", "GPU"],
+    author: { name: "NVIDIA", id: "nvidia" },
+    images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -209,29 +199,15 @@ const EquipmentFilterControls = ({
 ),
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
@@ -270,9 +246,47 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
     </Card>
   )
 },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+
+  const {
+    items: equipment,
+    loading,
+    error,
+    hasMore,
+    total,
+    isFetching,
+    lastElementRef,
+    refresh,
+    scrollToTop,
+    loadMore
+  } = useInfiniteScrollPagination(fetchEquipment, 12),
+
+  // Refresh when filters change
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      refresh()
+    }, 100), // Small delay to prevent rapid successive refreshes
+
+    return () => clearTimeout(timeoutId)
+  }, [sortBy, filterCategory, showRecommended, refresh]),
+
+  const marketStats = useMemo(() => {
+    if (equipment.length === 0) return null,
+    return getEquipmentMarketStats(equipment)
+  }, [equipment]),
+
+  const categories = useMemo(() => {
+    // Use all possible categories, not just from current items
+    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"]
+  }, []),
+
+  const [showScrollTop, setShowScrollTop] = useState(false),
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
 
   // Loading state
   if (loading && equipment.length === 0) {
@@ -289,9 +303,10 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
     )
   }
 
+<<<<<<< HEAD
 
 
-=======
+
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -411,9 +426,87 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
       </motion.div>
 
 
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+        <AnimatePresence mode="popLayout">
+          {equipment.map((item, index) => (
+            <motion.div
+              key={item.id} 
+              ref={index === equipment.length - 1 ? lastElementRef : null}
+              initial={{ opacity: 0, scale: 0.9 }} ;
+              animate={{ opacity: 1, scale: 1 }} ;
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ delay: Math.min(index * 0.03, 0.5) }} ;
+              whileHover={{ scale: 1.02 }}
+            >;
+              <EquipmentCard;
+                equipment={item}
+                onViewDetails={() => {;
+                  if (typeof window !== 'undefined') {;
+                    try {;
+                      sessionStorage.setItem(`equipment:${item.id}`, JSON.stringify(item));
+                    } catch {;
+                      // ignore storage errors;
+                    }
+                  }
+                  router.push(`/equipment/${item.id}`);
+                }}
+              />;
+            </motion.div>;
+          ))}
+        </AnimatePresence>;
+      </motion.div>;
+      {(isFetching || loading) && equipment.length > 0 && (;
+        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+          <EquipmentLoadingGrid count={4} />;
+        </motion.div>;
+      )}
+
+      {hasMore && !loading && (
+        <div className="text-center mt-8">
+          {isFetching ? (
+            <Spinner className="mx-auto h-6 w-6" />
+          ) : (
+            <Button onClick={loadMore} variant="outline" size="lg">
+              Load More Equipment
+            </Button>
+          )}
+          {total !== undefined && (;
+            <p className="mt-2 text-sm text-muted-foreground">;
+              Showing {equipment.length} of {total} items;
+            </p>;
+          )}
+        </div>;
+      )}
+;
+      {!hasMore && equipment.length > 0 && (;
+        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+          <div className="text-muted-foreground text-lg mb-2">🏭 You've explored all available equipment!</div>;
+          <div className="text-sm text-muted-foreground">Showing {equipment.length} datacenter equipment items</div>;
+        </motion.div>;
+      )}
+;
+      <AnimatePresence>;
+        {showScrollTop && (;
+          <motion.button;
+            onClick={scrollToTop} ;
+            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
+            initial={{ opacity: 0, scale: 0 }} ;
+            animate={{ opacity: 1, scale: 1 }} ;
+            exit={{ opacity: 0, scale: 0 }}
+            whileHover={{ scale: 1.1 }} ;
+            whileTap={{ scale: 0.9 }}
+          >;
+            <ArrowUp className="h-5 w-5 text-primary-foreground" />;
+          </motion.button>;
+        )}
+      </AnimatePresence>;
+    </div>;
+  );
+}
+;
 // Main export with error boundary;
 export default function EquipmentPage() {;
-  return (
+  return (;
     <EquipmentErrorBoundary>;
       <EquipmentPageContent />;
     </EquipmentErrorBoundary>;
@@ -422,15 +515,7 @@ export default function EquipmentPage() {;
 <<<<<<< HEAD
 
 
-=======
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 }
 // Main export with error boundary;
@@ -443,13 +528,4 @@ function EquipmentPage() {
       <EquipmentPageContent />;
     </EquipmentErrorBoundary>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

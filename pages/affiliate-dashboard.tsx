@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function getRefCode(): string {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
   useEffect(() => {
@@ -40,26 +32,13 @@ function getRefCode(): string {
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 
-=======
-<<<<<<< HEAD
-
-
-=======
-=======
-=======
 import { useEffect, useMemo, useState } from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function getRefCode(): string {;
   if (typeof window === 'undefined') return '',;
   return localStorage.getItem('ref_code') || '';
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 ;
@@ -110,8 +89,6 @@ export default function AffiliateDashboard(req, res) {
   }
 }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!code) {
     return (
       <div className="space-y-4">
@@ -120,11 +97,7 @@ export default function AffiliateDashboard(req, res) {
       </div>
     )
   }
-
-
 }
-
-
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>
@@ -138,17 +111,16 @@ export default function AffiliateDashboard(req, res) {
         <div className="flex items-center justify-between">
           <div>
             <div className="text-sm text-gray-600 dark:text-gray-300">Estimated Payout</div>
-
-
+            <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency |'USD'}</div>
             <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>
-
-
           </div>
           <div className="flex gap-2">
             <input className="border rounded px-3 py-2" placeholder="Amount (optional)" value={amount} onChange={e=>setAmount(e.target.value)} />
             <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={requestPayout}>Request Payout</button>
-
-
+            <a href={exportUrl} className="px-3 py-2 rounded border">Export CSV</a>
+          </div>
+        </div>
+        {msg && <p className="mt-2 text-sm">{msg}</p>}
             <a href={exportUrl} className="px-3 py-2 rounded border">Export CSV</Link>
           </div>
         </div>
@@ -157,17 +129,6 @@ export default function AffiliateDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       </div>
     </div>
   )
@@ -178,17 +139,8 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 ;
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
@@ -203,7 +155,6 @@ function Stat({ label, value }: { label: string, value: number | string }) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 =======
@@ -296,17 +247,6 @@ if ( {) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-/**
- * Stat - Function description
- */
-function Stat() {
-  return (
-    <div className="p - 4 rounded border border - gray - 200 dark:border - gray - 800">;
-      <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
-      <div className="text - 2xl font - semibold">{value}</div>;
-    </div>);
-=======
 ;
 function Stat({ label, value }: { label: string, value: number | string }) {;
   return (;
@@ -319,18 +259,5 @@ function Stat({ label, value }: { label: string, value: number | string }) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

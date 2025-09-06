@@ -1,43 +1,16 @@
 
-<<<<<<< HEAD
-import {Education} from '@/types / resume';
-import {format} from 'date - fns';
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Education  } from '@/types/resume';
 import { format } from 'date-fns';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
 import {Education} from '@/types/resume';
 import {format} from 'date-fns';
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface EducationSectionProps {
-  education: Education[];
+  education: Education[]
 }
-<<<<<<< HEAD
-
-  const sortedEducation = [...education].sort((a, b) => {;
-
-
-=======
 export function EducationSection({ education }: EducationSectionProps) {
   // Sort education by date (newest first)
-<<<<<<< HEAD
 
   const sortedEducation = [...education].sort((a, b) => {
-=======
   const sortedEducation = [...education].sort((a, b) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -48,21 +21,11 @@ export function EducationSection({ education }: EducationSectionProps) {
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
     }
     return format(date, 'MMM yyyy')
   }
   if (sortedEducation.length === 0) return null;
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { Education } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface EducationSectionProps {;
@@ -82,24 +45,12 @@ export function EducationSection({ education }: EducationSectionProps) {;
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     return format(date, 'MMM yyyy')
   },
 
   if (sortedEducation.length === 0) return null,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Education</h2>

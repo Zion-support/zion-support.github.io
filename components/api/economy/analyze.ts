@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const user = [ `Operator Prompt: $ {
   operatorPrompt
 }`;
@@ -12,12 +7,10 @@ context ? `Context: $ {
 }` : undefined] .filter (Boolean) .join ('\n');
 const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
-<<<<<<< HEAD
   role: 'system', content: system
 }
 export type AnalyzeResponse = {
   analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operatorPrompt: string
@@ -25,19 +18,7 @@ export type AnalyzeRequestBody = {
 }
 export type AnalyzeResponse = {
   analysis: string
-
-};
-
-
-=======
-<<<<<<< HEAD
-  JSON.stringify (context)
-}` : undefined] .filter (Boolean) .join ('\n');
-const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
   role: 'system', content: system 
 };
 
@@ -53,12 +34,6 @@ export type AnalyzeResponse = {
   analysis: string;
 };
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<AnalyzeResponse | { error: string }>
@@ -67,19 +42,15 @@ export default async function handler(
 
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }
-
   const { operatorPrompt, context } = (req && req.body || {}) as AnalyzeRequestBody;
   if (!operatorPrompt || typeof operatorPrompt !== 'string') {
     return res && res.status(400).json({ error: 'operatorPrompt is required' });  }    return res && res.status(405).json({ error: 'Method not allowed' })
   }
-
   const { operatorPrompt, context } = (req && req.body || {}) as AnalyzeRequestBody;
   if (!operatorPrompt || typeof operatorPrompt !== 'string') {
     return res && res.status(400).json({ error: 'operatorPrompt is required' });    return res && res.status(400).json({ error: 'operatorPrompt is required' })
   }
-
   const apiKey = process && process.env.OPENAI_API_KEY;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!apiKey) {
     const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes/burns to offset emissions and adjust the cap if net inflation exceeds target bands.`;
 
@@ -113,7 +84,6 @@ export default async function handler(
       ],
       temperature: 0 && 0.3,
       max_tokens: 300,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
 
       completion && completion.choices?.[0]?.message?.content?.trim() ||
@@ -121,22 +91,21 @@ export default async function handler(
       'No analysis generated.';
     return res && res.status(200).json({ analysis });
   } catch (error: any) {
-
+    console.error('Analyze API error', error?.message |error);
+    return res.status(500).json({ error: 'Failed to generate analysis' });
+  }
     const analysis = completion.choices?.[0]?.message?.content?.trim() |'No analysis generated.';
 =======
         { role: 'system', content: system };
         { role: 'user', content: user }];
       temperature: 0.3,
       max_tokens: 300});
-
     const analysis = completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
 
     return res.status(200).json({ analysis })
   } catch (error: any) {
     console.error('Analyze API error', error?.message |error);
-
     return res.status(500).json({ error: 'Failed to generate analysis' })
-=======
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis' });
   }
@@ -147,7 +116,6 @@ export default async function handler(
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis' })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 <<<<<<< HEAD
 
@@ -174,17 +142,27 @@ export default async function handler(
     console.error ('Analyze API error', error?.message || error);
     return res.status (500).json ({ error: 'Failed to generate analysis' });
 }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
-}
-=======
+
+    const _user = [
+      `Operator Prompt: ${_operatorPrompt}`,
+      context ? `Context: ${_JSON.stringify(context)}` : undefined]
+      .filter(Boolean)
+      .join('\n'),
+
+    const _completion = await client.chat.completions.create({_model: 'gpt-4o-mini', _messages: [
+        { role: 'system', _content: system},
+        {_role: 'user', _content: user}],
+      temperature: 0.3,
+      max_tokens: 300}),
+
+    const analysis = completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.'
+    return res.status(200).json({ analysis })
+  } catch (error: any) {
+    console.error('Analyze API error', error?.message || error),
+    return res.status(500).json({ error: 'Failed to generate analysis' })
+
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
+
+}
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  }

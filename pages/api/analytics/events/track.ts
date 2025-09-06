@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const LOG_DIR = path.join(process.cwd(), 'dataanalytics'),
 const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl'),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
   if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '')
@@ -64,32 +56,19 @@ function handler() {
 
 
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
-<<<<<<< HEAD
-
-=======
-    at: at && typeof at === 'string' ? at : now_iso,
-    ua: req.headers['user - agent'] || '',
-ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as string},
-=======
   } catch (e) {
     // ignore file errors in serverless
   }
-<<<<<<< HEAD
 res.status(200).json({ ok: true })
 }
 
-=======
-=======
 
 res.status(200).json({ ok: true });
 };
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ensureAdmin } from '../../../utils/auth';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   try {
     ensureLogFile (),
     fs.appendFileSync (LOG_FILE, JSON.stringify (event) + '\n');
@@ -101,22 +80,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.status(200).json({ ok: true })
 }
-<<<<<<< HEAD
-
-=======
-res.status (200).json ({ ok: true });
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

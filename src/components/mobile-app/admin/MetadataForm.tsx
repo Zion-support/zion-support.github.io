@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-<<<<<<< HEAD
-
 interface MetadataFormProps {;
   form: UseFormReturn<AppMetadataValues>;
 =======
@@ -52,13 +44,13 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
 
   return (
-    <Card className="bg-zion-blue border-zion-purple/30">;
-      <CardHeader>;
-        <CardTitle>App Metadata</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <Form {...form}>;
-          <div className="space-y-4">;
+    <Card className="bg-zion-blue border-zion-purple/30">
+      <CardHeader>
+        <CardTitle>App Metadata</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Form {...form}>
+          <div className="space-y-4">
             <FormField
               control = {control,}
               name="appTitle"
@@ -71,7 +63,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     <Input
                       placeholder="Enter app title"
                       maxLength = {platform === "ios" ? 30 : 50,}
-=======
 import { Badge } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
@@ -124,7 +115,6 @@ if ( {) {
                     <Input;
                       placeholder="Enter app title";
                       max_length = {platform === "ios" ? 30 : 50, }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
@@ -145,7 +135,6 @@ if ( {) {
                     <Input
                       placeholder="Brief description of your app"
                       maxLength = {platform === "ios" ? 170 : 80,}
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -158,7 +147,6 @@ if ( {) {
                     <Input;
                       placeholder="Brief description of your app";
                       max_length = {platform === "ios" ? 170 : 80, }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
@@ -180,7 +168,6 @@ if ( {) {
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength = {maxDescriptionLength,}
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -194,7 +181,6 @@ if ( {) {
                       placeholder="Detailed description of your app";
                       className="min - h-32";
                       max_length = {maxDescriptionLength, }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
@@ -221,12 +207,12 @@ if ( {) {
                     <button
                       type="button"
                       onClick = {(,) => removeKeyword(keyword),}
-                      className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded";
-                      aria-label="Remove keyword";
-                    >;
-                      <X className="h-3 w-3" />;
-                    </button>;
-                  </Badge>;
+                      className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+                      aria-label="Remove keyword"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  </Badge>
                 ))}
 
               </div>;
@@ -246,27 +232,19 @@ if ( {) {
                       placeholder="e && e.g., 1 && 1.0.0"
 
                       {...field}
-                    />;
-                  </FormControl>;
-                </FormItem>;
+                    />
+                  </FormControl>
+                </FormItem>
               )}
-<<<<<<< HEAD
-=======
             />
           </div>
         </Form>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 }
-=======
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
                     {long_description.length}/{maxDescriptionLength} characters;
                   </FormDescription>;
                 </FormItem>)}
@@ -317,24 +295,7 @@ if ( {) {
       </CardContent>;
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Card>);
 },
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

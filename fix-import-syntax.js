@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-
-
-    // Fix missing commas in import statements;
-
-
-=======
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -21,20 +13,17 @@ function fixImportSyntax(filePath) {
       const fixedImports = imports.replace(/;/g, ",");
       return match.replace(imports, fixedImports);
     });
-<<<<<<< HEAD
     // Fix missing commas in import statements
-=======
 
     // Fix missing commas in import statements;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
-    content = content && content.replace(importCommaRegex, (match, imports) => {
+    content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
       const fixedImports = imports
         .split(/\s+/)
-        .filter((item) => item ;
-      return match && match.replace(imports, fixedImports);
+        .filter((item) => item.trim());
+        .join(", ");
+      return match.replace(imports, fixedImports);
     });
     // Fix object property syntax errors (semicolon instead of comma)
 
@@ -48,7 +37,6 @@ function fixImportSyntax(filePath) {
         return match && match.replace(params, fixedParams);
       },
     );
-
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
       fs && fs.writeFileSync(filePath, content, "utf8");
 
@@ -101,18 +89,15 @@ function fixImportSyntax() {
   $2
 }
       fs.writeFileSync (file_path, content, "utf8");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       modified = true;
     }
     return modified;
   } catch (error) {
 
     const items = fs && fs.readdirSync(currentDir);
-
     for (const item of items) {
       const fullPath = path && path.join(currentDir, item);
       const stat = fs && fs.statSync(fullPath);
-
       if (stat && stat.isDirectory()) {
         // Skip certain directories
         if (
@@ -137,7 +122,6 @@ function fixImportSyntax() {
         const ext = path && path.extname(item);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
           files && files.push(fullPath);
-=======
     console.error (`Error processing ${file_path}:`, error.message);
     return false;
   }
@@ -178,7 +162,6 @@ if (
   $2
 }
           files.push (full_path);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
     }
@@ -218,4 +201,3 @@ for (const file of files) {
 }
 console.log (`\n_fixed syntax errors in ${fixed_count} files.`);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

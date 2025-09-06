@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {useForm, type, UseFormReturn} from "react-hook-form";
@@ -19,8 +11,6 @@ import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -28,7 +18,6 @@ import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { Mail } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -40,7 +29,6 @@ import {
   FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-=======
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import {
@@ -52,22 +40,25 @@ import {
   FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Form validation schema
 
 const forgotPasswordSchema = z.object({
-
+  email: z.string().email("Please enter a valid email")})
+type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
+export default function ForgotPassword() {
+  const { resetPassword, isLoading } = useAuth();
+  const [submitted, setSubmitted] = useState(false);
   email: z.string().email("Please enter a valid email")}),
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function ForgotPassword() {;
+  const { resetPassword, isLoading } = useAuth();
+  const [submitted, setSubmitted] = useState(false);
+export default function ForgotPassword() {
+  const { resetPassword, isLoading } = useAuth(),
+  const [submitted, setSubmitted] = useState(false),
+  
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(forgotPasswordSchema)
@@ -77,11 +68,8 @@ type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
   const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email)
     setSubmitted(true)
-
-
+  }
   },
-
-
 
   return (
     <>
@@ -364,12 +352,6 @@ function ForgotPassword() {
                     </div>
                   </form>
                 </Form>
-<<<<<<< HEAD
-
-;
-
-=======
-<<<<<<< HEAD
               )}
             </div>
           </div>
@@ -391,12 +373,7 @@ function ForgotPassword() {
     </>
   )
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -469,15 +446,3 @@ export default function ForgotPassword() {;
                 <Form {...form}>;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField;
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

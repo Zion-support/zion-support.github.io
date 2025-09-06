@@ -11,33 +11,15 @@ import {Home, Search, Briefcase, MessageSquare, User} from "lucide-react";
 import {cn} from "@/lib/utils";
 export function BottomNavigation() {;
   const location = useLocation();
-
-  const navItems = [;
-    { path: "/mobile", icon: <Home />, label: "Home" },;
-    { path: "/mobile/browse", icon: <Search />, label: "Browse" },;
-    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },;
-    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;
-    { path: "/mobile/profile", icon: <User />, label: "Profile" }],;
-
-=======
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
-<<<<<<< HEAD
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 export function BottomNavigation() {
-=======
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",
 import { cn } from "@/lib/utils",
 export function BottomNavigation() {
   const location = useLocation(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" },
@@ -45,8 +27,6 @@ export function BottomNavigation() {
     { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const location = useLocation();
   const navItems = [
@@ -61,11 +41,12 @@ export function BottomNavigation() {
         const isActive = location && location.pathname === item && item.path;
         return (
           <Link
-
+            key={item.path}
+            to={item.path}
+            className={cn(
+              "flex flex-col items-center justify-center flex-1 py-1 px-2";
 
               "flex flex-col items-center justify-center flex-1 py-1 px-2",
-
-
               isActive ? "text-primary" : "text-muted-foreground"
             )}
           >
@@ -85,7 +66,6 @@ export function BottomNavigation() {
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
         )
-
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;
@@ -121,18 +101,6 @@ export function BottomNavigation() {;
             <span className="text-xs mt-1">{item && item.label}</span>;
           </Link>;
         );
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       })}
 
     </div>;

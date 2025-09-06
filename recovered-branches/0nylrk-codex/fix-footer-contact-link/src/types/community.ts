@@ -1,17 +1,7 @@
 
-<<<<<<< HEAD
-export type ForumCategory = 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export type ForumCategory =
-=======
 export type ForumCategory = 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   | 'getting-hired'
   | 'project-help'
   | 'ai-tools'
@@ -24,13 +14,9 @@ export type ForumCategory =;
   | 'ai - tools';
   | 'feedback';
   | 'announcements';
-<<<<<<< HEAD
-
-
+export interface ForumCategoryInfo {
 
 export interface ForumCategoryInfo {;
-
-
   id: ForumCategory;
   name: string;
   description: string;
@@ -55,17 +41,8 @@ export interface ForumCategoryInfo {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface ForumPost {
-=======
-}
-
 
 export interface ForumPost {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   title: string;
   content: string;
@@ -98,17 +75,8 @@ export interface ForumPost {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface ForumReply {
-=======
-}
-
 
 export interface ForumReply {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -133,14 +101,8 @@ export interface ForumReply {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface Badge {
-=======
-}
-
 
 export interface Badge {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   description: string;
@@ -159,39 +121,16 @@ export interface Badge {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface UserBadge {
-  user_id: string;
-  badge_id: string,
-  awarded_at: string;
-
-}
-export interface CommunityUser {
-=======
 
 
 export interface UserBadge {;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   userId: string;
   badgeId: string
   awardedAt: string
 }
-<<<<<<< HEAD
-
-
-export interface CommunityUser {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
 export interface CommunityUser {
-=======
 
 export interface CommunityUser {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   name: string;
   avatar?: string;
@@ -201,13 +140,8 @@ export interface CommunityUser {;
   reply_count: number;
   badges: Badge[];
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   isModerator: boolean
 }
-=======
 export type ForumCategory =;
   | 'getting-hired';
   | 'project-help';
@@ -286,9 +220,3 @@ export interface CommunityUser {;
   isModerator: boolean;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

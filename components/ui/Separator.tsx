@@ -12,18 +12,14 @@ const Separator: React.FC < SeparatorProps> = ({
   orientation = "horizontal",
 
 }) => {
-=======
-
 interface SeparatorProps {;
   className?: string;
   orientation?: "horizontal" | "vertical";
 }
-
 const Separator: React.FC<SeparatorProps> = ({;
   className = "",;
   orientation = "horizontal",;
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
     <div;

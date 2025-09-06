@@ -1,16 +1,6 @@
 
 <<<<<<< HEAD
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
@@ -47,29 +37,13 @@ if (return null, ) {
     is_submitting;
     create_milestone;
     updateMilestoneStatus;
-<<<<<<< HEAD
-=======
     updateMilestone;
     deleteMilestone;
     uploadDeliverable: handleUploadDeliverable
     refetch
-<<<<<<< HEAD
   }
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-    update_milestone;
-    delete_milestone;
-    upload_deliverable: handleUploadDeliverable,
-    refetch;
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
@@ -102,18 +76,5 @@ export const useMilestones = (projectId?: string) => {;
     deleteMilestone,;
     uploadDeliverable: handleUploadDeliverable;
     refetch;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+};

@@ -22,8 +22,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
+import Head from 'next/head';
 
+export default function LinkedInRedirect() {
 
 =======
 import Head from 'next/head';
@@ -68,28 +69,18 @@ export default function LinkedInRedirect() {;
     </>;
   );
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-export default function LinkedInRedirect() {
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
-		}
-	}, []);
-
+export default function LinkedInRedirect(req, res) {
+  try {
+	useEffect(() => {;
+		if (typeof window !== 'undefined') {;
+			window.location.replace('https: //www.linkedin.com/company/zion-tech-group');
+		  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+	}, []),
 	return (
 		<>
 			<Head>
@@ -106,59 +97,3 @@ export default function LinkedInRedirect() {
 		</>
 	)
 }
-<<<<<<< HEAD
-
-import Head from 'next / head';
-;
-export default /**
- * LinkedInRedirect - Function description
- */
-function LinkedInRedirect() {
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      window.location.replace (
-        'https://www.linkedin.com / company / zion - tech - group');
-    }
-  }, []);
-;
-  return (
-    <>;
-      <Head>;
-        <title > LinkedIn | Zion Tech Group</title>;
-        <link;
-          rel='canonical';
-          href='https: //www.linkedin.com / company / zion - tech - group';
-        />;
-        <meta;
-          http_equiv='refresh';
-          content='0, url = https://www.linkedin.com / company / zion - tech - group';
-        />;
-        <meta name='robots' content='noindex, nofollow' />;
-      </Head>;
-      <div className='min - h-screen bg - black text - white flex items - center justify - center p - 8'>;
-        <a;
-          href='https: //www.linkedin.com / company / zion - tech - group';
-          className='text - cyan - 400 underline';
-        >;
-          Continue to LinkedIn;
-        </a>;
-      </div>;
-    </>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

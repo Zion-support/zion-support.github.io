@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
-<<<<<<< HEAD
 import {
   Table;
   TableBody;
@@ -20,8 +14,6 @@ import {
   DialogFooter;
   DialogHeader;
   DialogTitle;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -33,12 +25,6 @@ import {toast} from "@/hooks/use-toast";
 export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React, { useState } from "react",
 import {
   Table,
@@ -54,15 +40,16 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Badge } from "@/components/ui/badge",
-
-
+import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+export function TeamManagement() {
+  const [isAddingMember, setIsAddingMember] = useState(false);
+  const [newMemberEmail, setNewMemberEmail] = useState("");
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 export function TeamManagement() {
@@ -76,9 +63,6 @@ export function TeamManagement() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Mock team members data
 
   const teamMembers = [
@@ -120,8 +104,11 @@ export function TeamManagement() {
       return
     }
     toast({
-
-
+      title: "Invitation sent"
+      description: `An invitation has been sent to ${newMemberEmail}`})
+    setNewMemberEmail("");
+    setIsAddingMember(false)
+  }
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -129,105 +116,21 @@ export function TeamManagement() {
     setIsAddingMember(false)
   },
 
-
-
   const handleRemoveMember = (memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed"
       description: "The team member has been removed from your workspace."})
-
-
+  }
   },
-
-
 
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent"
       description: `A new invitation has been sent to ${memberEmail}`})
-
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Badge} from "@/components/ui/badge";
-import {PlusCircle, Trash, Mail, UserPlus} from "lucide-react";
-import {toast} from "@/hooks/use-toast";
-export function TeamManagement() {;
-  const [isAddingMember, setIsAddingMember] = useState(false);
-  const [newMemberEmail, setNewMemberEmail] = useState("");
-
-  // Mock team members data;
-  const teamMembers = [;
-    {;
-      id: 1,;
-      name: "Alex Johnson",;
-      email: "alex@example && example.com",;
-      role: "Admin",;
-      status: "active",;
-      lastActive: "2 hours ago"},;
-    {;
-      id: 2,;
-      name: "Jamie Smith",;
-      email: "jamie@example && example.com",;
-      role: "Recruiter",;
-      status: "active",;
-      lastActive: "Yesterday"},;
-    {;
-      id: 3,;
-      name: "Sam Williams",;
-      email: "sam@example && example.com",;
-      role: "Manager",;
-      status: "pending",;
-      lastActive: "Never"},;
-    {;
-      id: 4,;
-      name: "Taylor Brown",;
-      email: "taylor@example && example.com",;
-      role: "Viewer",;
-      status: "active",;
-      lastActive: "3 days ago"}],;
-
-  const handleAddMember = () => {;
-    // In a real app, this would make an API call to add the member;
-    if (!newMemberEmail) {;
-      toast({;
-        title: "Email required",;
-        description: "Please enter an email address for the new team member.",;
-        variant: "destructive"}),;
-      return;
-    }
-
-    toast({;
-      title: "Invitation sent",;
-      description: `An invitation has been sent to ${newMemberEmail}`}),;
-
-    setNewMemberEmail("");
-    setIsAddingMember(false);
-  };
-
-  const handleRemoveMember = (memberId: number) => {;
-    // In a real app, this would make an API call to remove the member;
-    toast({;
-      title: "Team member removed",;
-      description: "The team member has been removed from your workspace."});
-  };
-
-  const handleResendInvite = (memberEmail: string) => {;
-    // In a real app, this would make an API call to resend the invitation;
-    toast({;
-      title: "Invitation resent",;
-      description: `A new invitation has been sent to ${memberEmail}`});
-  };
-
-=======
-
+  }
   },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-6">;
@@ -381,7 +284,6 @@ if ( {) {
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
-
 import React, { useState } from "react",;
 import {;
   Table,;
@@ -585,16 +487,6 @@ export function TeamManagement() {;
                         size="sm";
 
                         className="text-destructive hover:text-destructive";
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         onClick={() => handleRemoveMember(member.id)}
                       >
                         <Trash className="h-4 w-4" />

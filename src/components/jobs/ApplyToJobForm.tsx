@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from "react";
-import { useRouter  } from 'next/router';
-=======
-    import { useRouter } from 'next/router'
-import { useJobApplications } from "@/hooks/useJobApplications"
-import { useResume } from "@/hooks/useResume"
-import { useAuth } from "@/hooks/useAuth"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { AlertCircle, FileText, Loader2 } from 'lucide-react'import { formatDistanceToNow } from "date-fns"
-import { Job } from "@/types/jobs"
-import { toast } from "sonner"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from "react",
-import { useRouter } from 'next/router',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { useResume } from "@/hooks/useResume",
 import { useAuth } from "@/hooks/useAuth",
@@ -35,21 +8,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
-
-
+import { Job } from "@/types/jobs";
+import { toast } from "sonner";
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ApplyToJobFormProps {
 
   job: Job
@@ -59,16 +24,6 @@ interface ApplyToJobFormProps {
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 <<<<<<< HEAD
 
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
   const { resumes, isLoading: isResumesLoading } = useResume()
@@ -83,19 +38,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     if (!user) {
       toast.error("You must be logged in to apply")
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
       return
     }
     if (!coverLetter.trim()) {
       setError("Please provide a cover letter")
       return
     }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       return;
     }
     
@@ -104,37 +52,19 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       return;
     }
     
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     setIsSubmitting(true)
     setError(null)
     try {
       const success = await applyToJob(
         job.id
         coverLetter
-<<<<<<< HEAD
-
-
-        selectedResumeId || undefined
-        resumeFile || undefined
-
-=======
-<<<<<<< HEAD
         selectedResumeId |undefined
         resumeFile |undefined
-=======
         selectedResumeId || undefined
         resumeFile || undefined
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       )
       if (success) {
         toast.success("Your application has been submitted!")
-=======
   const { user } = useAuth(),
   const { applyToJob } = useJobApplications(),
   const { resumes, isLoading: isResumesLoading } = useResume(),
@@ -177,14 +107,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         if (onSuccess) {
           onSuccess()
         }
@@ -192,8 +114,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     } catch (err: any) {
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
-<<<<<<< HEAD
-=======
     import { use_router } from 'next / router';
 import { useJobApplications  } from '@/hooks / useJobApplications';
 import { use_resume  } from '@/hooks / use_resume';
@@ -262,7 +182,6 @@ if ( {) {
     } catch (err: any) {
       set_error (err.message || "Failed to submit application"),
       toast.error ("Failed to submit application");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsSubmitting (false);
     }
@@ -271,61 +190,31 @@ if ( {) {
   },
   
 
-=======
-=======
-    } finally {
-      setIsSubmitting(false)
-    }
-<<<<<<< HEAD
-  }
-<<<<<<< HEAD
-
-=======
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   },
   
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
-
-
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div>
+        <h3 className="text-lg font-medium mb-1">Apply to: {job.title}</h3>
+        <p className="text-sm text-muted-foreground mb-4">
+          Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
+        </p>
+      </div>
       
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-
-
       
-
-
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
     import { useRouter } from 'next/router';
 import { useJobApplications } from "@/hooks/useJobApplications";
@@ -413,26 +302,22 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
       <div className="space-y-4">;
         <div>;
           <Label htmlFor="coverLetter">Cover Letter</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Textarea
             id="coverLetter"
-            value = {coverLetter,}
-            onChange = {(e,) => setCoverLetter(e && e.target.value),}
-            rows = {6,}
-
-
+            value={coverLetter}
+            onChange={(e) => setCoverLetter(e.target.value)}
+            rows={6}
+            placeholder="Introduce yourself and explain why you are a good fit for this job..."
+            className="mt-1"
+          />
+          <p className="text-xs text-muted-foreground mt-1">
+            Provide a brief introduction and highlight your relevant skills and experience.
+          </p>
+        </div>
         
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -442,7 +327,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
             </div>
           ) : resumes && resumes.length > 0 ? (
 
-=======
             <Select
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
@@ -459,7 +343,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
                         {resume.basic_info.title |"Untitled Resume"}
                       </SelectItem>
                     )
-
 import { useState } from "react",;
 import { useRouter } from 'next/router',;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -564,12 +447,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
               <span>Loading your resumes...</span>;
             </div>;
           ) : resumes && resumes.length > 0 ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Select
               value = {selectedResumeId,}
               onValueChange = {setSelectedResumeId,}>;
               <SelectTrigger className="mt-1">;
-=======
     <form on_submit={handle_submit} className="space - y-6">;
       <div>;
         <h3 className="text - lg font - medium mb - 1">Apply to: {job.title}</h3>;
@@ -609,7 +490,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
               onValueChange = {setSelectedResumeId, }
             >;
               <SelectTrigger className="mt - 1">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 <SelectValue placeholder="Select a resume" />;
               </SelectTrigger>;
               <SelectContent>;
@@ -621,14 +501,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                     );
 <<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   }
                   return null;
                 })}
@@ -663,8 +535,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             type="file"
             accept=".pdf"
             className="mt-1"
-
-
+            onChange = {(e,) => setResumeFile(e.target.files?.[0] |null),}
+          />
+        </div>
+      </div>
             onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
           />
         </div>
@@ -672,26 +546,13 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="flex justify-end gap-2">
-=======
             onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
           />;
         </div>;
       </div>;
 
       <div className="flex justify-end gap-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Button
           type="button"
           variant="outline"
@@ -699,22 +560,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           onClick={() => {;
             if (onSuccess) onSuccess();
 
-=======
 
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
 <<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }}
         >;
           Cancel;
@@ -728,16 +579,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           ) : (;
             "Submit Application";
           )}
-<<<<<<< HEAD
-
-
-}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
-}</Button> </div> </form>) ;
-}"};
-
-
-=======
-<<<<<<< HEAD
         </Button>
       </div>
     </form>
@@ -760,27 +601,21 @@ handleSubmit
 }return null
 })
 }</SelectContent> </Select> > Create Resume </Button> </div>) "
-<<<<<<< HEAD
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
 }</Button> </div> </form>)
 }"}
-=======
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+
+
         </Button>;
       </div>;
     </form>;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 {resumes.map ((resume, ) => {
                   // Check condition
 if ( {) {
@@ -871,20 +706,5 @@ handle_submit;
 }</div> <div> <Label html_for="cv_upload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify - end gap - 2" > <Button <> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ("Submit Application");
 }</Button> </div> </form>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

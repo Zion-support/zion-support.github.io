@@ -10,28 +10,13 @@ import {Button} from "@/components/ui/button";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {ShieldAlert} from "lucide-react";
-=======
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
-<<<<<<< HEAD
 import { Footer } from "@/components/Footer";
 import { ShieldAlert } from "lucide-react";
-=======
 import { Footer } from "@/components/Footer",
 import { ShieldAlert } from "lucide-react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function Unauthorized() {
   return (
     <>
@@ -66,17 +51,7 @@ export default function Unauthorized() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
@@ -151,20 +126,7 @@ function Unauthorized() {
         </div>;
       </div>;
       <Footer />;
-
-    </>);
+    </>;
+  );
 }
-<<<<<<< HEAD
-
-=======
 ;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

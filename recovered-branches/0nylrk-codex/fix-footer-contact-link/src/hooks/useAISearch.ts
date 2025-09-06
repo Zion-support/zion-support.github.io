@@ -1,32 +1,14 @@
 
-<<<<<<< HEAD
-
-
-
-
-
-import { useState } from './react';
-import { TALENT_PROFILES } from '@/data / talent_data';
-import { JOB_POSTS } from '@/data / jobs_data';
-import { PROJECTS } from '@/data / projects_data';
-export interface SearchResult {
-=======
-<<<<<<< HEAD
 import { useState } from "react",
 import { TALENT_PROFILES } from "@/data/talentData",
-<<<<<<< HEAD
 import { JOB_POSTS } from "@/data/jobsData";
 import { PROJECTS } from "@/data/projectsData";
 export interface SearchResult {
-=======
-<<<<<<< HEAD
 import {useState} from "react";
 import {TALENT_PROFILES} from "@/data/talentData";
 import {JOB_POSTS} from "@/data/jobsData";
 import {PROJECTS} from "@/data/projectsData";
 export interface SearchResult {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   type: "talent" | "job" | "project";
   title: string,
@@ -38,27 +20,17 @@ interface SearchFilters {
   skills?: string[] | null;
   location?: string | null;
   budget?: { min: number, max: number } | null;
-<<<<<<< HEAD
-  availability?: string | null;
-}
-
-=======
   availability?: string | null
 }
-<<<<<<< HEAD
 export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false);
-=======
-=======
 
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
-=======
 import { useState } from "react",
 import { TALENT_PROFILES } from "@/data/talentData",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { JOB_POSTS } from "@/data/jobsData",
 import { PROJECTS } from "@/data/projectsData",
 export interface SearchResult {
@@ -88,28 +60,20 @@ interface SearchFilters {;
 export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-
-=======
-export /**
- * useAISearch - Function description
- */
-function useAISearch() {
-  const [results, set_results] = useState < SearchResult[]>([]);
-  const [loading, set_loading] = useState (false);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const search = async (query: string) => {
-    set_loading (true);
+    setLoading(true),
     try {
-
-
+      const response = await fetch(
+        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
+        {
+          method: "POST"
+          headers: { "Content-Type": "application/json" }
+          body: JSON.stringify({ query })}
+      );
+      const data = await response.json();
+      const filters: SearchFilters = data.filters |{}
+      const items: SearchResult[] = [];
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query })}
@@ -118,32 +82,16 @@ function useAISearch() {
       const filters: SearchFilters = data.filters || {},
 
       const items: SearchResult[] = [],
-
-
       const matchSkill = (skills: string[] | undefined) => {
         if (!filters.skills |filters.skills.length === 0) return true
-=======
-          method: "POST",
-          headers: { "Content-Type": "application/json" };
-          body: JSON && JSON.stringify({ query })}
-      );
-      const data = await response && response.json();
-      const filters: SearchFilters = data && data.filters || {};
-
-      const items: SearchResult[] = [];
-      const matchSkill = (skills: string[] | undefined) => {
-        if (!filters && filters.skills || filters && filters.skills.length === 0) return true,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return skills?.some((s) =>
-          filters && filters.skills!.some((f) => s && s.toLowerCase().includes(f && f.toLowerCase()))
+          filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()))
         )
-
-
+      }
+      if (!filters.type |filters.type === "talent" |filters.type === "all") {
       },
 
       if (!filters.type || filters.type === "talent" || filters.type === "all") {
-
-
         TALENT_PROFILES.forEach((t) => {
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return;
           if (!matchSkill(t.skills)) return;
@@ -189,38 +137,11 @@ function useAISearch() {
       setResults([])
     } finally {
       setLoading(false)
+    }
+  }
 
-<<<<<<< HEAD
-      const response = await fetch (
-        "https://ziontechgroup.functions.supabase.co / functions / v1 / ai - search";
-        {
-          method: "POST",
-          headers: { "Content - Type": "application / json" }
-          body: JSON.stringify ({ query })}
-      );
-      const data = await response.json ();
-      const filters: SearchFilters = data.filters || {}
-;
-      const items: SearchResult[] = [];
-      const match_skill = (skills: string[] | undefined) =>: any {
-        // Check condition
-if (return true, ) {
-  $2
-=======
-<<<<<<< HEAD
   return { results, loading, search }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
-        return skills?.some ((s) =>;
-          filters.skills!.some ((f) => s.toLowerCase ().includes (f.toLowerCase ())));
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 ;
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]),;
@@ -295,20 +216,7 @@ if ( {) {
     }
 
   };
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return { results, loading, search }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  return { results, loading, search }
-}

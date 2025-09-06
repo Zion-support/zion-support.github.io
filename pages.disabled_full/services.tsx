@@ -1,43 +1,9 @@
-
-=======
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-=======
-
-
-=======
-
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-
-=======
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+main
+main
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+main
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 import React from 'react';
 import Link from 'next/link';
@@ -1544,34 +1510,20 @@ export default function Services() {;
 							<Link
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
-
-								aria-label='Back to homepage'>;
-								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
-							</Link>;
-						</div>;
-					</div>;
-				</div>;
-			</section>;
-		</PageTransition>;
-		</Layout>;
-	),;
-
+								aria-label='Back to homepage'
+							>
+								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+		</PageTransition>
+		</Layout>
+	);
+ursor/integrate-build-improve-and-re-verify-8f7d
 }
->>>>>>> origin/chore/merge-open-prs
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
-}
-
-
-
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+origin/chore/merge-open-prs
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5

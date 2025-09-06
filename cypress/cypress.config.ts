@@ -1,3 +1,7 @@
+import { defineConfig } from 'cypress';
+export default defineConfig({
+  e2e: {
+    baseUrl: 'http://localhost:3000', // Standard Next.js port
 
 import { define_config } from 'cypress';
 export default define_config ({
@@ -10,9 +14,9 @@ export default define_config ({
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
+<<<<<<< HEAD
         if (browser && browser.family === 'chromium') {
           launchOptions && launchOptions.args.push('--disable-ipv6');
-=======
     base_url: 'http://localhost:3000', // Standard Next.js port;
     support_file: 'cypress / support / e2e.ts',
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
@@ -23,7 +27,6 @@ if ( {) {
   $2
 }
           launch_options.args.push ('--disable - ipv6');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
         return launch_options;
       });export default define_config ({
@@ -39,36 +42,25 @@ export default defineConfig({;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors;
     setupNodeEvents(on, config) {;
       on('before:browser:launch', (browser = {}, launchOptions) => {;
-
         if (browser.family === 'chromium') {;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-<<<<<<< HEAD
+      });export default defineConfig({
+  e2e: {
+    baseUrl: 'http://localhost:3000', // Standard Next.js port
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 
-
-=======
-<<<<<<< HEAD
-      });export default defineConfig({
-  e2e: {
-<<<<<<< HEAD
-    baseUrl: 'http://localhost:3000', // Standard Next.js port
 
 =======
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     supportFile: 'cypress/support/e2e.ts';
-=======
-    baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
-    supportFile: 'cypress/support/e2e && e2e.ts';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
-
       on('before:browser:launch', (browser = {}, launchOptions) => {
         if (browser && browser.family === 'chromium') {
           launchOptions && launchOptions.args.push('--disable-ipv6');        }
@@ -111,7 +103,6 @@ export default defineConfig({;
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
   },});    mochaFile: 'cypress/results/junit-[hash].xml';
-=======
     baseUrl: 'http://localhost:3000', // Standard Next.js port
     supportFile: 'cypress/support/e2e.ts', experimentalModifyObstructiveThirdPartyCode: true,
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
@@ -124,7 +115,6 @@ export default defineConfig({;
       })
     };
     env: {
-      
       CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com', CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',
       CYPRESS_TEST_USER_DISPLAY_NAME: process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User', EXISTING_USER_EMAIL: process.env.EXISTING_USER_EMAIL || 'existing@test.com',
       EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD || 'password123', TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User',
@@ -146,20 +136,6 @@ export default defineConfig({;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-
-    base_url: 'http://localhost:3000', // Standard Next.js port;
-    support_file: 'cypress / support / e2e.ts';
-    experimentalModifyObstructiveThirdPartyCode: true;
-    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
-    setupNodeEvents (on, config) {
-      on ('before:browser:launch', (browser = {}, launch_options) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          launch_options.args.push ('--disable - ipv6');        }
-        return launch_options;
-=======
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -173,14 +149,6 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-=======
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       });
     }
     env: {
@@ -223,16 +191,3 @@ export default defineConfig({;
     to_console: true;
   }
 });
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

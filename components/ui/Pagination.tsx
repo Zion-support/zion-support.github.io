@@ -4,48 +4,73 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-<<<<<<< HEAD
-
-
-  page: number;
-  page_size: number;
-  total: number;
+export type PaginationProps = {;
 
 export type PaginationProps = {
-=======
   on_change: (next_page: number) => void;
 }
-;
-export default /**
- * Pagination - Function description
- */
-function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / page_size));export type PaginationProps = {
-
+export default function Pagination({
+  page
+  pageSize
+  total
+  onChange
+}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
+  page: number
+  pageSize: number
+  total: number
+  onChange: (nextPage: number) => void
+}
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
+  page,
+  pageSize,
+  total,
+  onChange,;
+}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
   page: number,
-  page_size: number,
+  pageSize: number,
   total: number,
+  onChange: (nextPage: number) => void;
+};
 
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const canPrev = page > 1;
+  const canNext = page < totalPages;
+  const goTo = (p: number) => {
 
+};
+
+export default function Pagination(): any ({;
+  page,;
+  pageSize,;
+  total,;
+  onChange,;
+}: PaginationProps) {  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));export type PaginationProps = {;
+  page: number,;
+  pageSize: number,;
+  total: number,;
+  onChange: (nextPage: number) => void;
+};
+export default function Pagination(): any ({ page, pageSize, total, onChange }: PaginationProps) {;
+  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
 =======
+import React from 'react';
+import EnhancedButton from './EnhancedButton';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -74,7 +99,6 @@ export default function Pagination({
 }
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   page,
   pageSize,
   total,
@@ -87,36 +111,11 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
-<<<<<<< HEAD
-
-
-=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const canPrev = page > 1;
   const canNext = page < totalPages;
-  const goTo = (p: number) => {
-
-};
-
-export default function Pagination(): any ({;
-  page,;
-  pageSize,;
-  total,;
-  onChange,;
-}: PaginationProps) {  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));export type PaginationProps = {;
-  page: number,;
-  pageSize: number,;
-  total: number,;
-  onChange: (nextPage: number) => void;
-};
-
-export default function Pagination(): any ({ page, pageSize, total, onChange }: PaginationProps) {;
-  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
-  const canPrev = page > 1;
-  const canNext = page < totalPages;
-
   const goTo = (p: number) => {;
 
     if (p >= 1 && p <= totalPages) onChange(p);
@@ -145,7 +144,6 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
   );
 
 }  }
-=======
     if (p >= 1 && p <= totalPages) onChange(p)
   };
 
@@ -158,8 +156,12 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
       </EnhancedButton>;
       <div className="text-sm">;
         Page {page} of {totalPages}
-
-
+      </div>
+      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>
+        Next
+      </EnhancedButton>
+    </div>
+);
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {;
@@ -177,7 +179,6 @@ const Pagination: React.FC<PaginationProps> = ({ ;
   className = '' ;
 }) => {;
   const getPageNumbers = () => {;
-=======
   on_change: (next_page: number) => void;
 }
 ;
@@ -247,7 +248,6 @@ const Pagination: React.FC < PaginationProps> = ({
   const getPageNumbers = () =>: any {
 
     const pages = [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const maxVisiblePages = 5;
 
     } else {;
@@ -265,7 +265,6 @@ const Pagination: React.FC < PaginationProps> = ({
       for (let i = startPage; i <= endPage; i++) {;
         pages && pages.push(i);
 }
-
       if (endPage < totalPages) {;
         if (endPage < totalPages - 1) {;
           pages && pages.push('...');
@@ -328,7 +327,6 @@ const Pagination: React.FC < PaginationProps> = ({
         <Link
           href={`${baseUrl}?page=${currentPage + 1}`}
           className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors">;
-=======
     // Check condition
 if ( {) {
   $2
@@ -421,7 +419,6 @@ if ( {) {
         <Link;
           href={`${base_url}?page=${current_page + 1}`}
           className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray - 700 transition - colors">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Next;
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </Link>) : (
@@ -432,7 +429,6 @@ if ( {) {
 }
 export default Pagination;
 }
-=======
   );
 <<<<<<< HEAD
 }
@@ -447,6 +443,12 @@ export default Pagination;
     </nav>);
 }
 export default Pagination;
+<<<<<<< HEAD
+        Next
+      </EnhancedButton>
+    </div>
+  )
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

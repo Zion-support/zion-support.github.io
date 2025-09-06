@@ -1,58 +1,22 @@
 
-<<<<<<< HEAD
-import React from './react';
-import { complete_sitemap, dynamic_paths  } from '@/config / sitemap';
-import { Link  } from './react-router-dom';
-import { ChevronRight  } from './lucide-react';
-import { SEO  } from './SEO';
-import { AppLayout  } from '@/layout / AppLayout';
-
-export const SitemapPage: React.FC = () => {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react";
 import { completeSitemap, dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 import { AppLayout } from "@/layout/AppLayout";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import {completeSitemap, dynamicPaths} from '@/config/sitemap';
 import {Link} from 'react-router-dom';
 import {ChevronRight} from 'lucide-react';
 import {SEO} from './SEO';
 import {AppLayout} from '@/layout/AppLayout';
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import { Link } from 'react-router-dom',
 import { ChevronRight } from 'lucide-react',
 import { SEO } from './SEO',
 import { AppLayout } from '@/layout/AppLayout',
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export const SitemapPage: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -331,54 +295,18 @@ export const SitemapPage: React.FC = () => {
                   </div>;
                 </li>;
               ))}
-<<<<<<< HEAD
-=======
-
-
-
-=======
-                    </Link>;
-                  </li>))}
-            </ul>;
-          </div>;
-          {/* Dynamic Routes */}
-          <div className="bg - zion - blue - dark p - 6 rounded - lg">;
-            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">;
-              Dynamic Pages;
-            </h2>;
-            <p className="text - sm text - zion - slate mb - 4">;
-              Pages with dynamic parameters;
-            </p>;
-            <ul className="space - y-2">;
-              {Object.entries (dynamic_paths).map (([key, path]) => (
-                <li key={key}>;
-                  <div className="flex items - center text - zion - slate">;
-                    <ChevronRight className="h - 4 w - 4 mr - 2" />;
-                    {path} <span className="ml - 2 text - xs italic">({key})</span>;
-                  </div>;
-                </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
             </ul>
           </div>
         </div>
       </div>
     </AppLayout>
-<<<<<<< HEAD
   );
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </ul>;
           </div>;
         </div>;
       </div>;
-
-    </AppLayout>);
-}
-;
-
+    </AppLayout>;
+  );
+};

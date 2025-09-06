@@ -10,64 +10,33 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 import {SmartContractInfo} from "@/types/smart-contracts";
-interface ContractPreviewProps {;
-  contractContent?: string;
-  generatedContract?: string, // Added to support both naming conventions;
-=======
-<<<<<<< HEAD
-import React from './react';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { TalentProfile } from '@/types / talent';
-import { SmartContractInfo } from '@/types / smart - contracts';
-interface ContractPreviewProps {
-  contract_content?: string;
-  generated_contract?: string, // Added to support both naming conventions;
-
-  status?: 'draft' | 'ready' | 'pending';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  talent?: TalentProfile;
-
-  on_deploy?: () => void;
-  on_sign?: () => void;
-  on_close?: () => void;
-  deploy_status?: string;
-  deployment_info?: SmartContractInfo | null;
-}
-export /**
- * ContractPreview - Function description
- */
-function ContractPreview() {
-  // Use either contract_content or generated_contract, whichever is provided;
-  const display_content = contract_content || generated_contract || "";
-;
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 import { TalentProfile } from "@/types/talent";
 import { SmartContractInfo } from "@/types/smart-contracts";
-=======
 import { TalentProfile } from "@/types/talent",
 import { SmartContractInfo } from "@/types/smart-contracts",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ContractPreviewProps {
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
   status?: 'draft' | 'ready' | 'pending',
+  talent?: TalentProfile;
+  onDeploy?: () => void;
+  onSign?: () => void;
+  onClose?: () => void;
+  deployStatus?: string;
+  deploymentInfo?: SmartContractInfo | null
+}
+export function ContractPreview({
+  contractContent;
 
+  generatedContract
+  status = 'ready'
+  onDeploy
+  onSign;
+  onClose;
+  deployStatus;
   talent?: TalentProfile,
   onDeploy?: () => void,
   onSign?: () => void,
@@ -76,15 +45,23 @@ interface ContractPreviewProps {
   deploymentInfo?: SmartContractInfo | null
 }
 
-
+export function ContractPreview({ ;
+  contractContent;
+export function ContractPreview({ 
+  contractContent,
+  generatedContract, 
+  status = 'ready', 
+  onDeploy, 
+  onSign,
+  onClose,
+  deployStatus,
   deploymentInfo
 }: ContractPreviewProps) {
   // Use either contractContent or generatedContract, whichever is provided
+  const displayContent = contractContent |generatedContract |"";
 
   const displayContent = contractContent || generatedContract || "",
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space - y-4">;
       <div className="flex justify - between items - center mb - 4">;
@@ -115,7 +92,6 @@ export function ContractPreview(): any ({ ;
           </Badge>
         ) : (
           <Badge variant="outline">Draft</Badge>
-
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -167,18 +143,6 @@ export function ContractPreview({;
           </Badge>;
         ) : (;
           <Badge variant="outline">Draft</Badge>;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         )}
 
       </div>;
@@ -211,11 +175,12 @@ export function ContractPreview({;
             Close;
           </Button>;
         )}
-
-
+        {status === 'ready' && onSign && (
+          <Button onClick={onSign}>
+            Sign Contract
+          </Button>
+        )}
         
-
-
         {status === 'ready' && onDeploy && (
           <Button variant="outline" onClick={onDeploy}>
             Deploy on Blockchain

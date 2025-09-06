@@ -1,30 +1,25 @@
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
   const [disputeId, setDisputeId] = useState<string | null>(null),
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
   const [disputeId, setDisputeId] = useState<string | null>(null);
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isLoading, setIsLoading] = useState(true);
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+export function useDisputeCheck(projectId?: string, milestoneId?: string) {
+  const [isUnderDispute, setIsUnderDispute] = useState(false),
+  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
+  const [disputeId, setDisputeId] = useState<string | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+
   useEffect(() => {
 
     const checkDispute = async () => {
@@ -33,8 +28,11 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
         return
       }
       try {
-
-
+        setIsLoading(true);
+        let query = supabase
+          .from("disputes")
+          .select("id, status")
+          .eq("project_id", projectId);
         setIsLoading(true),
         
         let query = supabase
@@ -42,29 +40,20 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
           .select("id, status")
           .eq("project_id", projectId),
         
-
-
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
           query = query && query.eq("milestone_id", milestoneId)
         }
         // Order by status priority: open, under_review, resolved, closed
-
-        query = query && query.order("status", { ascending: true });
-        
-
+        query = query.order("status", { ascending: true });
         const { data, error } = await query;
         if (error) throw error;
-=======
-
         query = query.order("status", { ascending: true }),
         
         const { data, error } = await query,
         
         if (error) throw error,
         
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (data && data.length > 0) {
           // Get the first dispute (highest priority based on status)
           setIsUnderDispute(true);
@@ -148,12 +137,6 @@ if ( {) {
         setDisputeId(null)
       } finally {
         setIsLoading(false)
-<<<<<<< HEAD
-
-    isLoading 
-
-=======
-<<<<<<< HEAD
       }
     }
     checkDispute()
@@ -162,14 +145,9 @@ if ( {) {
     isUnderDispute
     disputeStatus
     disputeId;
-<<<<<<< HEAD
     isLoading
 
-=======
     isLoading 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
@@ -219,17 +197,5 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     disputeStatus;
     disputeId;
     isLoading;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }

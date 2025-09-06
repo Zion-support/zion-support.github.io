@@ -1,89 +1,21 @@
-<<<<<<< HEAD
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
-<<<<<<< HEAD
-=======
-=======
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
-=======
+origin/automation-improvements-final
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-
-import {;
-  Shield,;
-  Lock,;
-  Eye,;
-  Database,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Users,;
-
-=======
 import {
-<<<<<<< HEAD
   Shield
   Lock
   Eye
@@ -92,7 +24,6 @@ import {
   Phone
   MapPin
   Users
-=======
   Shield,
   Lock,
   Eye,
@@ -101,43 +32,71 @@ import {
   Phone,
   MapPin,
   Users,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
-
-
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
+ursor/fix-lint-push-and-merge-to-main-ae4e
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
-=======
-import {
-
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Mail,
-  Phone,
-  MapPin,
-  Users,;
-
-} from "lucide-react";
-import MainLayout from "../components/layout/MainLayout";
-
-
-=======
-
-import { 
-  Shield, Lock, Eye, Database, Globe, 
-  User, Settings, AlertTriangle, CheckCircle, Mail
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';
 
 
-
-
+  const privacySections = [
+    {
+      title: 'Information We Collect',
+      icon: <Database className='w-8 h-8' />,
+      color: 'from-cyan-500 to-blue-500',
+      content: [
+        'Personal information (name, email, phone number, company)',
+        'Business information (company size, industry, project requirements)',
+        'Technical information (IP address, browser type, device information)',
+        'Usage data (website interactions, service usage patterns)',
+        'Communication records (emails, phone calls, support tickets)',
+      ],
+    },
+    {
+      title: 'How We Use Your Information',
+      icon: <Settings className='w-8 h-8' />,
+      color: 'from-purple-500 to-pink-500',
+      content: [
+        'Provide and improve our services',
+        'Communicate with you about our services',
+        'Process payments and manage accounts',
+        'Send marketing communications (with consent)',
+        'Analyze usage patterns and improve user experience',
+        'Comply with legal obligations',
+      ],
+    },
+    {
+      title: 'Information Sharing',
+      icon: <Globe className='w-8 h-8' />,
+      color: 'from-green-500 to-emerald-500',
+      content: [
+        'We do not sell, trade, or rent your personal information',
+        'Share with trusted service providers under strict confidentiality',
+        'Comply with legal requirements and court orders',
+        'Protect our rights, property, and safety',
+        'Business transfers (with notice and choice)',
+      ],
+    },
+    {
+      title: 'Data Security',
+      icon: <Lock className='w-8 h-8' />,
+      color: 'from-orange-500 to-red-500',
+      content: [
+        'Industry-standard encryption for data in transit and at rest',
+        'Regular security audits and vulnerability assessments',
+        'Access controls and authentication measures',
+        'Employee training on data protection',
+        'Incident response and breach notification procedures',
+      ],
+    },
       icon: <Database className="w-8 h-8" />,
       color: 'from-cyan-500 to-blue-500',
       content: [
@@ -168,18 +127,39 @@ import {
         'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
     }
-
-
-
   ];
 
   const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal information',
-
-
-
+      icon: <Eye className='w-6 h-6' />,
+    },
+    {
+      title: 'Correction',
+      description: 'Request correction of inaccurate information',
+      icon: <CheckCircle className='w-6 h-6' />,
+    },
+    {
+      title: 'Deletion',
+      description: 'Request deletion of your personal information',
+      icon: <AlertTriangle className='w-6 h-6' />,
+    },
+    {
+      title: 'Portability',
+      description: 'Request transfer of your data to another service',
+      icon: <Database className='w-6 h-6' />,
+    },
+    {
+      title: 'Objection',
+      description: 'Object to processing of your personal information',
+      icon: <User className='w-6 h-6' />,
+    },
+    {
+      title: 'Restriction',
+      description: 'Request restriction of processing activities',
+      icon: <Settings className='w-6 h-6' />,
+    },
       icon: <Eye className="w-6 h-6" />
     };
     {
@@ -207,12 +187,10 @@ import {
       description: 'Request restriction of processing activities',
       icon: <Settings className="w-6 h-6" />
     }
-
-
   ];
-
-
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
 
 import React from "react";
 import Head from "next/head";
@@ -229,25 +207,15 @@ import {
   Users
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+origin/automation-improvements-final
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function PrivacyPage() {
 =======
 export default function PrivacyPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-
-
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -260,78 +228,36 @@ export default function PrivacyPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-                Privacy Policy;
-              </h1>;
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
-                Your privacy is important to us. Learn how we collect, use, and;
-                protect your information.;
-              </p>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-=======
-
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Privacy Policy
               </h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Your privacy is important to us. Learn how we collect, use, and
                 protect your information.
-=======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Privacy Policy</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Your privacy is important to us. Learn how we collect, use, and protect your information.
->>>>>>> origin/automation-improvements-final
+origin/automation-improvements-final
               </p>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Content Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-
-=======
               transition={{ duration: 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12"
             >
               <div className="prose prose-lg max-w-none">
-<<<<<<< HEAD
                 <h2 className="text-2xl font-bold mb-6">
                   Information We Collect
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEOOptimizer from '../components/SEOOptimizer',
@@ -866,31 +792,15 @@ const PrivacyPage: React.FC = () => {
               >
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as
                   when you create an account, use our services, or contact us
                   for support.
                 </p>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
@@ -898,15 +808,10 @@ const PrivacyPage: React.FC = () => {
                 </p>
                 
                 <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
-=======
-<<<<<<< HEAD
+origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <ul className="list-disc pl-6 mb-6">
                   <li>Name and contact information</li>
                   <li>Email address</li>
@@ -914,29 +819,15 @@ const PrivacyPage: React.FC = () => {
                   <li>Company information</li>
                   <li>Payment information</li>
                 </ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
-=======
-
 
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
-=======
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
-=======
-=======
+origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -950,19 +841,6 @@ const PrivacyPage: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
                 </h2>
@@ -976,21 +854,12 @@ const PrivacyPage: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
                 <p className="mb-6">
                   We use the information we collect to provide, maintain, and improve our services.
                 </p>
                 
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+origin/automation-improvements-final
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -1005,19 +874,6 @@ const PrivacyPage: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -1025,46 +881,40 @@ const PrivacyPage: React.FC = () => {
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
-
+origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
-
+                  We implement appropriate security measures to protect your
+                  personal information against unauthorized access, alteration
+                  disclosure, or destruction.
                   We implement appropriate security measures to protect your personal information against 
                   unauthorized access, alteration, disclosure, or destruction.
-
+origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
                 <p className="mb-6">
-
+                  You have the right to access, update, or delete your personal
+                  information. You may also opt out of certain communications
+                  from us.
                   You have the right to access, update, or delete your personal information. You may also 
                   opt out of certain communications from us.
-
+origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
                 <p className="mb-6">
+                  If you have any questions about this Privacy Policy, please
+                  contact us at:
+                </p>
 
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-<<<<<<< HEAD
-=======
-=======
+origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
@@ -1083,8 +933,6 @@ const PrivacyPage: React.FC = () => {
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -1109,21 +957,10 @@ const PrivacyPage: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <p className="text-sm text-gray-600 mt-8">
-=======
                 <p className="text-sm text-gray-600 mt-8">
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
-=======
-=======
+origin/automation-improvements-final
 <p className="text-sm text-gray-600 mt-8">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   Last updated: January 2024
                 </p>
               </div>
@@ -1131,47 +968,16 @@ const PrivacyPage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-
-              transition={{ duration: 0 && 0.8 }}
-              className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
-              <div className="prose prose-lg max-w-none">;
-                <h2 className="text-2xl font-bold mb-6">;
-                  Information We Collect;
-                </h2>;
-                <p className="mb-6">;
-=======
-import React from './react';
-import Head from './next / head';
-import Link from './next / link';
-import { motion  } from './framer-motion';
-=======
-<<<<<<< HEAD
     </MainLayout>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
-=======
  
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
+ursor/fix-lint-push-and-merge-to-main-ae4e
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {
   Shield,
   Lock,
@@ -1189,46 +995,32 @@ export default /**
  */
 function PrivacyPage() {
   return (
-    <MainLayout;
-      title="Privacy Policy - Zion Tech Group";
-      description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information.";
-      keywords="privacy policy, data protection, personal information, GDPR compliance";
-      canonical="https://ziontechgroup.com / privacy";
-    >;
-      <div className="min - h-screen bg - gray - 50">;
-        {/* Hero Section */}
-        <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;
-          <div className="max - w-7xl mx - auto px - 4">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center";
-            >;
-              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
-                Privacy Policy;
-              </h1>;
-              <p className="text - xl text - blue - 100 mb - 8 max - w-3xl mx - auto">;
-                Your privacy is important to us. Learn how we collect, use, and;
-                protect your information.;
-              </p>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Content Section */}
-        <section className="py - 16 px - 4">;
-          <div className="max - w-4xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg - white rounded - 2xl shadow - lg p - 8 md:p - 12";
-            >;
-              <div className="prose prose - lg max - w-none">;
-                <h2 className="text - 2xl font - bold mb - 6">;
-                  Information We Collect;
-                </h2>;
-                <p className="mb - 6">;
+ursor/integrate-build-improve-and-re-verify-8f7d
+    <ErrorBoundary>
+      <SEOOptimizer />
+      <AnalyticsTracker />
+      <Layout>
+        <main className='relative z-10 pt-8'>
+          {/* Hero Section */}
+          <section className='py-20 px-4'>
+            <div className='max-w-6xl mx-auto text-center'>              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
+                  Privacy Policy
+                </h1>
+                <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+                  Your privacy is our priority. Learn how we protect and handle
+                  your personal information.
+                </p>
+                <div className='flex items-center justify-center gap-4 text-gray-400'>
+                  <Shield className='w-6 h-6' />                  <span>Last updated: {lastUpdated}</span>
+                </div>
+              </motion.div>
+            </div>
+          </section>
 
                   We collect information you provide directly to us, such as;
                   when you create an account, use our services, or contact us;
@@ -1295,8 +1087,6 @@ function PrivacyPage() {
                 </p>;
 
 
-<<<<<<< HEAD
-=======
           {/* Detailed Policy */}
           <section className='py-20 px-4'>
             <div className='max-w-4xl mx-auto'>              <motion.div
@@ -1490,12 +1280,10 @@ function PrivacyPage() {
                   >
                     <User className='w-5 h-5' />                    Contact Form
                   </a>
-=======
     </MainLayout>;
   );
 }
 
-=======
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a
                     href="mailto:kleber@ziontechgroup.com"
@@ -1511,8 +1299,6 @@ function PrivacyPage() {
                     <User className="w-5 h-5" />
                     Contact Form
                   </Link>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </div>
               </motion.div>
             </div>
@@ -1524,15 +1310,6 @@ function PrivacyPage() {
   );
 };
 export default PrivacyPage;
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   )
 };
 
@@ -1540,69 +1317,14 @@ export default PrivacyPage;
 
  
 
-
-
-
  
+ursor/integrate-build-improve-and-re-verify-b76c
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
+origin/main
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-
->>>>>>> origin/main
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-                <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
-                <p className="mb - 6">;
-                  If you have any questions about this Privacy Policy, please;
-                  contact us at:;
-                </p>;
-                <div className="bg - gray - 50 rounded - lg p - 6">;
-                  <div className="flex items - center mb - 4">;
-                    <Mail className="w - 5 h - 5 text - blue - 600 mr - 3" />;
-                    <span > kleber@ziontechgroup.com</span>;
-                  </div>;
-                  <div className="flex items - center mb - 4">;
-                    <Phone className="w - 5 h - 5 text - blue - 600 mr - 3" />;
-                    <span>+1 302 464 0950</span>;
-                  </div>;
-                  <div className="flex items - start">;
-                    <Users className="w - 5 h - 5 text - blue - 600 mr - 3 mt - 1" />;
-                    <div>;
-                      <p > Zion Tech Group</p>;
-                      <p > 364 E Main St STE 1008</p>;
-                      <p > Middletown, DE 19709</p>;
-                    </div>;
-                  </div>;
-                </div>;
-<p className="text - sm text - gray - 600 mt - 8">;
-                  Last updated: January 2024;
-                </p>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,59 +1,11 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
-interface ApiResponse {
 
   nodes: TreeNode[]
 status: {
   gitConnected: boolean, gitBranch?: string
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useEffect, useState } from 'react';
-
-
-
-
-
-import Tree, { TreeNode } from '../../components / ui / Tree';
-interface ApiResponse {
-  nodes: TreeNode[],
-status: {
-  git_connected: boolean, git_branch?: string;
-export default /**
- * DevTreePage - Function description
- */
-function DevTreePage() {
-  const [nodes, set_nodes] = useState < TreeNode[] | null>(null);
-  const [error, set_error] = useState < string | null>(null);
-  const [git, set_git] = useState < ApiResponse['status'] | null>(null);
-  const [admin_token, setAdminToken] = useState < string>('');
-;
-  const fetch_tree = async (token?: string) => {
-    try {
-      const resp = await fetch ('/api / dev / source - map', {
-        headers: token ? { 'x - admin - token': token } : undefined,
-      });
-      // Check condition
-if ( {) {
-  $2
-}
-        const inner_index = await resp.json ().catch (() => ({}));
-        throw new Error (j.error || `HTTP ${resp.status}`);
-
-      }
-      const data: ApiResponse = await resp.json ();
-      set_nodes (data.nodes);
-      set_git (data.status);
-    } catch (e: any) {
-
-import React, { useEffect, useState } from "react";
-import Tree, { TreeNode } from "../../components/ui/Tree";
-
+import Tree, { TreeNode } from '../../components/ui/Tree';
 interface ApiResponse {
   nodes: TreeNode[],
   status: { gitConnected: boolean, gitBranch?: string }
@@ -62,16 +14,9 @@ interface ApiResponse {
 export default function DevTreePage() {
   const [nodes, setNodes] = useState<TreeNode[] | null>(null);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-  const [git, setGit] = useState<ApiResponse["status"] | null>(null);
-  const [adminToken, setAdminToken] = useState<string>("");
-
-=======
   const [git, setGit] = useState<ApiResponse['status'] | null>(null);
   const [adminToken, setAdminToken] = useState<string>('');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
 import React, { useEffect, useState } from "react",
 import Tree, { TreeNode } from "../../components/ui/Tree",
 interface ApiResponse {
@@ -86,16 +31,35 @@ interface ApiResponse {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function DevTreePage() {
   const [nodes, setNodes] = useState<TreeNode[] | null>(null),
   const [error, setError] = useState<string | null>(null),
   const [git, setGit] = useState<ApiResponse["status"] | null>(null),
   const [adminToken, setAdminToken] = useState<string>(""),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const fetchTree = async (token?: string) => {
-
+    try {
+      const resp = await fetch('/api/dev/source-map', {
+        headers: token ? { 'x-admin-token': token } : undefined
+      });
+      if (!resp.ok) {
+        const j = await resp.json().catch(() => ({}));
+        throw new Error(j.error |`HTTP ${resp.status}`);
+      }
+      const data: ApiResponse = await resp.json();
+      setNodes(data.nodes);
+      setGit(data.status);
+    } catch (e: any) {
+      setError(e.message |'Failed to load');    }
+  }
+  useEffect(() => {
+    const stored = localStorage.getItem('ADMIN_TOKEN') |'';
+    setAdminToken(stored);
+    fetchTree(stored);
+  }, []);
+  const handleSaveToken = () => {
+    localStorage.setItem('ADMIN_TOKEN', adminToken);
+    fetchTree(adminToken);  }
+  const onDeploy = async (p: string) => {
     try {
       const resp = await fetch('/api/dev/source-map', {
         method: 'POST'
@@ -112,53 +76,6 @@ export default function DevTreePage() {
       await fetchTree(adminToken);
     } catch (e: any) {
 
-<<<<<<< HEAD
-  const fetchTree = async (token?: string) => {;
-    try {;
-      const resp = await fetch('/api/dev/source-map', {;
-        headers: token ? { 'x-admin-token': token } : undefined,;
-      });
-      if (!resp && resp.ok) {;
-        const j = await resp && resp.json().catch(() => ({}));
-        throw new Error(j && j.error || `HTTP ${resp && resp.status}`);
-      }
-      const data: ApiResponse = await resp && resp.json();
-      setNodes(data && data.nodes);
-      setGit(data && data.status);
-    } catch (e: any) {;
-      setError(e && e.message || 'Failed to load');    }
-  };
-
-  useEffect(() => {;
-    const stored = localStorage && localStorage.getItem('ADMIN_TOKEN') || '';
-    setAdminToken(stored);
-    fetchTree(stored);
-  }, []);
-
-  const handleSaveToken = () => {;
-    localStorage && localStorage.setItem('ADMIN_TOKEN', adminToken);
-    fetchTree(adminToken);  };
-
-  const onDeploy = async (p: string) => {;
-    try {;
-      const resp = await fetch('/api/dev/source-map', {;
-        method: 'POST',;
-        headers: {;
-          'Content-Type': 'application/json',;
-          'x-admin-token': adminToken,;
-        },;
-        body: JSON && JSON.stringify({ path: p }),;
-      });
-      if (!resp && resp.ok) {;
-        const j = await resp && resp.json().catch(() => ({}));
-        throw new Error(j && j.error || `HTTP ${resp && resp.status}`);
-      }
-      await fetchTree(adminToken);
-    } catch (e: any) {;
-      setError(e && e.message || 'Deploy failed');    }
-
-=======
-=======
       const resp = await fetch("/api/dev/source-map", {
         headers: token ? { "x-admin-token": token } : undefined}),
       if (!resp.ok) {
@@ -214,7 +131,6 @@ export default function DevTreePage() {
   }
 }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="p-6 max-w-5xl mx-auto">
       <div className="flex items-center gap-4 mb-4">
@@ -252,24 +168,13 @@ export default function DevTreePage() {
           </button>
         </div>
       </div>
-<<<<<<< HEAD
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       {error && <div className="mb-3 text-sm text-red-600">{error}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {nodes ? (
         <div className="rounded border p-3 bg-white">
           <Tree nodes={nodes} onDeploy={onDeploy} />
@@ -277,11 +182,9 @@ export default function DevTreePage() {
         </div>
       ) : (
         <div>Loading...</div>
-<<<<<<< HEAD
-
-
-            onClick={handleSaveToken}>            Save Token;
-=======
+      )}
+    </div>
+);
 
 =======
 <<<<<<< HEAD
@@ -295,12 +198,6 @@ export default function DevTreePage() {
 }
 }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {;
@@ -510,15 +407,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

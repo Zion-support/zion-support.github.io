@@ -51,18 +51,10 @@ function handler() {
   res && res.status(200).json(update)
 }
 
-<<<<<<< HEAD
+  res.status(200).json(update)
+}
+}
 
-=======
-  }
-  updates.unshift (update);
-  writeJsonFile ('updates.json', updates);
-  res.status (200).json (update);export default /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
 }
   if (return res.status (405).json ({ error: 'Method not allowed' })) {
   $2
@@ -76,6 +68,8 @@ function handler() {
   updates.unshift (update);
   writeJsonFile ('updates.json', updates);
   res.status (200).json (update);
+
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

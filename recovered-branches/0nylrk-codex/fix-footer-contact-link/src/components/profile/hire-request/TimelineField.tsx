@@ -1,25 +1,4 @@
 
-<<<<<<< HEAD
-
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from '@/components / ui / form';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components / ui / select';
-import { UseFormReturn  } from './react - hook - form';
-import { FormValues  } from './useHireRequestForm';
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   FormField
   FormItem
@@ -37,77 +16,36 @@ import {
 
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-interface TimelineFieldProps {
-  form: UseFormReturn < FormValues>;
-}
-
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {UseFormReturn} from "react-hook-form";
-import {FormValues} from "./useHireRequestForm";
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface TimelineFieldProps {
   form: UseFormReturn<FormValues>;
 }
 export function TimelineField({ form }: TimelineFieldProps) {
 
   const timelineOptions = [
-<<<<<<< HEAD
     { value: "Less than 1 week", label: "Less than 1 week" }
     { value: "1-2 weeks", label: "1-2 weeks" }
     { value: "2-4 weeks", label: "2-4 weeks" }
     { value: "1-2 months", label: "1-2 months" }
     { value: "3-6 months", label: "3-6 months" }
     { value: "6+ months", label: "6+ months" }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     { value: "Less than 1 week", label: "Less than 1 week" },
     { value: "1-2 weeks", label: "1-2 weeks" },
     { value: "2-4 weeks", label: "2-4 weeks" },
     { value: "1-2 months", label: "1-2 months" },
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
     { value: "Ongoing", label: "Ongoing" };
   ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     { value: "Ongoing", label: "Ongoing" }
   ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   return (
     <FormField
@@ -128,7 +66,6 @@ export function TimelineField({ form }: TimelineFieldProps) {
               <SelectContent>
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
-
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { UseFormReturn } from "react-hook-form",;
@@ -191,9 +128,6 @@ function TimelineField() {
         <FormItem>;
           <FormLabel className="text-white">Project Timeline</FormLabel>;
           <FormControl>;
-<<<<<<< HEAD
-
-=======
             <Select;
               onValueChange={field.onChange} ;
               value={field.value}
@@ -205,12 +139,6 @@ function TimelineField() {
               <SelectContent>
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     {option.label}
                   </SelectItem>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

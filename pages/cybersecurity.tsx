@@ -5,25 +5,15 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-=======
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
 import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function CybersecurityPage() {
   const features = [
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
@@ -33,9 +23,6 @@ export default function CybersecurityPage() {
     { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
     { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
     { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }],
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
       <Head>
@@ -53,21 +40,10 @@ export default function CybersecurityPage() {
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">From strategy to operations: identity, data, networks, and workloads secured by design.</p>
             <div className="mt-2 text-sm text-gray-400">New: VAPT and MDM offerings below.</div>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-
-
+              <a href="/contact" className="px-8 py-4">Security Assessment</a>
+              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
               <a href="/contact" className="px-8 py-4">Security Assessment</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </div>
           </header>
           <section>
@@ -88,25 +64,14 @@ export default function CybersecurityPage() {
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
-
-
+                </a>
+              ))}
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40 transition-colors">
                 <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>
                 <p className="text-gray-300 text-sm">Learn more</p>
@@ -120,29 +85,8 @@ export default function CybersecurityPage() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-
-=======
-}
-
-=======
-import React from 'react',
-import Head from 'next / head',
-import Layout from '../components / layout / Layout',
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
-;
-export default /**
- * CybersecurityPage - Function description
- */
-function CybersecurityPage() {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import React from 'react';
 import Head from 'next/head';
@@ -150,7 +94,6 @@ import Layout from '../components/layout/Layout';
 import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
 export default function CybersecurityPage(req, res) {
   try {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const features = [;
     'Zero Trust architectures and identity - first segmentation_cloud posture hardening, secrets management, and key rotation_threat detection, incident response playbooks, and tabletop exercises_compliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
   const solutions = [;
@@ -209,27 +152,11 @@ export default function CybersecurityPage(req, res) {
           </section>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </Layout>);
-=======
     </Layout>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

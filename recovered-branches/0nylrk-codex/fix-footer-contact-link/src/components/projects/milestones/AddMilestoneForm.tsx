@@ -1,6 +1,5 @@
 
-import {use_form} from 'react - hook - form';
-import {zod_resolver} from '@hookform / resolvers / zod';
+import React from 'react';
 
 import {z} from 'zod';
 import {CalendarIcon, Loader2} from 'lucide-react';
@@ -31,26 +30,11 @@ interface AddMilestoneFormProps {;
   projectEndDate?: string;
   projectType?: string;
 }
-<<<<<<< HEAD
-
-
-export function AddMilestoneForm(): any ({;
-
-=======
-<<<<<<< HEAD
 export function AddMilestoneForm({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 
 export function AddMilestoneForm({;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   onSubmit;
   isSubmitting;
   onCancel;
@@ -61,16 +45,7 @@ export function AddMilestoneForm({;
 =======
       });
       return
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -144,24 +119,19 @@ export function AddMilestoneForm({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
 
-
+    // If there are multiple milestones, submit them one by one
+    milestones.forEach(milestone => {
+      onSubmit({
+        title: milestone.title
+        description: milestone.description
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+      })
+    })
+  }
   },
-
-
 
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
@@ -170,33 +140,8 @@ export function AddMilestoneForm({;
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
-
-
-    // If there are multiple milestones, submit them one by one;
-    milestones && milestones.forEach(milestone => {;
-      onSubmit({;
-        title: milestone && milestone.title,;
-        description: milestone && milestone.description,;
-        due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
-        amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-      });
-    });
-  };
-
-  const handleAddMilestone = (milestone: GeneratedMilestone) => {;
-    onSubmit({;
-      title: milestone && milestone.title,;
-      description: milestone && milestone.description,;
-      due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
-      amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-    });
-  };
-
-=======
-
+  }
   },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-6">;
@@ -211,10 +156,6 @@ export function AddMilestoneForm({;
           onAddMilestone={handleAddMilestone}
         />;
       )}
-
-
-
-
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">

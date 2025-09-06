@@ -1,21 +1,11 @@
 
 <<<<<<< HEAD
 
-export interface ThemeColors {;
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 export interface ThemeColors {
-=======
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 
 export interface ThemeColors {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -25,8 +15,6 @@ export interface ThemeColors {;
 }
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
-<<<<<<< HEAD
-=======
   switch (preset) {
     case 'dark':
       return {;
@@ -72,35 +60,8 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 }
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
-<<<<<<< HEAD
   const root = document.documentElement
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
-;
-export interface ThemeColors {
-  primary_color: string;
-  background_color: string;
-  text_color: string;
-  accent_color: string;
-  button_color: string,
-  card_background: string;
-}
-// Define theme presets;
-export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  switch (preset) {
-    case 'dark':;
-      return {
-
-
   const root = document.documentElement,;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);
@@ -111,29 +72,7 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   document.body.style.backgroundColor = colors.backgroundColor;
 
   document.body.style.color = colors.textColor
-<<<<<<< HEAD
-
-  const root = document && document.documentElement,
-  root && root.style.setProperty('--primary-color', colors && colors.primaryColor);
-  root && root.style.setProperty('--background-color', colors && colors.backgroundColor);
-  root && root.style.setProperty('--text-color', colors && colors.textColor);
-  root && root.style.setProperty('--accent-color', colors && colors.accentColor);
-  root && root.style.setProperty('--button-color', colors && colors.buttonColor);
-  root && root.style.setProperty('--card-background', colors && colors.cardBackground);
-  
-  // Set background and text colors on body
-  document && document.body.style && style.backgroundColor = colors && colors.backgroundColor;
-  document && document.body.style && style.color = colors && colors.textColor
-=======
-
-
-=======
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -199,21 +138,6 @@ export function applyThemeColors(colors: ThemeColors) {;
   // Set background and text colors on body;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
-  // Set background and text colors on body;
-  document.body.style.background_color = colors.background_color;
-  document.body.style.color = colors.text_color;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

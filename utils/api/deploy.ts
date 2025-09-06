@@ -1,41 +1,19 @@
-<<<<<<< HEAD
-
-
-=======
-
-=======
-<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
-<<<<<<< HEAD
 function toSlug(name: string): string {return name;
-=======
-=======
-<<<<<<< HEAD
 import fs from "fs",;
 import path from "path",;
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion",;
-=======
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 function toSlug(name: string): string {;
   return name;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 }
 function ensureDir(dirPath: string) {if (!fs.existsSync(dirPath)) {;
     fs.mkdirSync(dirPath, { recursive: true });
@@ -144,19 +122,10 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" });
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -541,21 +510,39 @@ if ( {) {
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Schedule launch stream (/summit);
   ensureDir(eventsDir);
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   writeTextFile(;
-
+    summitEventPath;
+    JSON.stringify(;
+      {name: `${input.instanceName} Summit`;
+        route: "/summit";
+        scheduledAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()}
+      null;
+      2;
+    );
+  );
+  assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" });
+  // 4. Activate Public Pages (record intent);
+  const pagesActivationPath = path.join(baseDir, "pages.json");
+  const defaultNationRoute = `/nation/${toSlug(input.defaultLanguage |"default")}`;
+  writeTextFile(;
+    pagesActivationPath;
+    JSON.stringify(;
+      {activate: [;
+          "/about";
+          "/manifesto";
+          "/constitution";
+          "/partners";
+          "/academy";
+          "/marketplace";
+          "/dao";
+          defaultNationRoute]}
+      null;
+      2;
+    );
+  );
     summitEventPath,;
     JSON.stringify(;
       {;
@@ -566,12 +553,6 @@ if ( {) {
       2;
     );
   ),;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" }),;
   // 4. Activate Public Pages (record intent);
   const pagesActivationPath = path.join(baseDir, "pages.json"),;
@@ -583,8 +564,6 @@ if ( {) {
         activate: [;
           "/about",;
           "/manifesto",;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" });
   // 4. Activate Public Pages (record intent);
   const pagesActivationPath = path.join(baseDir, "pages.json");
@@ -596,11 +575,6 @@ if ( {) {
         activate: [;
           "/about";
           "/manifesto";
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           "/constitution",;
           "/partners",;
           "/academy",;
@@ -611,37 +585,22 @@ if ( {) {
       2;
     );
   ),;
-<<<<<<< HEAD
-
-
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
   // Optional modules markers;
   const optionalModules = Object.entries(input.modules);
     .filter(([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key));
-<<<<<<< HEAD
     .map(([key]) => key);
   if (optionalModules.length > 0) {const optionalPath = path.join(baseDir, "optional-modules.json");
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2));
-=======
-<<<<<<< HEAD
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" }),;
-=======
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Optional modules markers;
   const optionalModules = Object.entries(input.modules);
     .filter(([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key));
     .map(([key]) => key),;
   if (optionalModules.length > 0) {;
-<<<<<<< HEAD
     const optionalPath = path.join(baseDir, "optional-modules.json"),;
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
   }
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules);
@@ -656,12 +615,8 @@ if ( {) {
     logs;
     summary;
     version}
-=======
-<<<<<<< HEAD
     .map(([key]) => key),;
   if (optionalModules.length > 0) {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const optionalPath = path.join(baseDir, "optional-modules.json");
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
@@ -692,10 +647,4 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

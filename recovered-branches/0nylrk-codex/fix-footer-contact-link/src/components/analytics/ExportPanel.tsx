@@ -1,63 +1,22 @@
 
-
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-
-=======
-
 import React from "react";
 import {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-
-  const handleExport = (format: "csv" | "json") => {;
-    // Placeholder for actual export functionality;
-    (toast({;
-      title: `Exporting as ${format && format.toUpperCase()}`,;
-      description: "Your export is being prepared and will download shortly.",;
-    }),;
-      // In a real implementation, this would trigger an API call to generate and download the export;
-      setTimeout(() => {;
-        toast({;
-          title: `${format && format.toUpperCase()} Export Ready`,;
-          description: "Your export has been downloaded.",;
-
-        });
-      }, 1500));
-  }
-
-=======
-
+export function ExportPanel() {;
 export function ExportPanel() {
-
   const { toast } = useToast();
 
 import React from "react",
@@ -69,15 +28,32 @@ export function ExportPanel() {
   
   const handleExport = (format: 'csv' | 'json') => {
     // Placeholder for actual export functionality
+    (toast({
+      title: `Exporting as ${format.toUpperCase()}`
+      description: "Your export is being prepared and will download shortly."
+    })
+      // In a real implementation, this would trigger an API call to generate and download the export
+      setTimeout(() => {
+        toast({
+          title: `${format.toUpperCase()} Export Ready`
+          description: "Your export has been downloaded."
+        });
+      }, 1500));
+  }
 
     toast({
       title: `Exporting as ${format.toUpperCase()}`,
+      description: "Your export is being prepared and will download shortly.",
+    }),
+      // In a real implementation, this would trigger an API call to generate and download the export
+      setTimeout(() => {
+        toast({
+          title: `${format.toUpperCase()} Export Ready`,
+          description: "Your export has been downloaded.",;
+        });
+      }, 1500));
+  };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
       description: "Your export is being prepared and will download shortly."}),
     
     // In a real implementation, this would trigger an API call to generate and download the export
@@ -88,12 +64,6 @@ export function ExportPanel() {
     }, 1500)
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
@@ -134,7 +104,16 @@ function ExportPanel() {
           >
             Export as CSV
           </Button>
-
+          <Button
+            variant="outline"
+            className="border-zion-blue-light text-zion-slate-light"
+            onClick={() => handleExport("json")}
+          >
+            Export as JSON
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
           <Button 
             variant="outline" 
             className="border-zion-blue-light text-zion-slate-light"
@@ -193,17 +172,6 @@ export function ExportPanel() {;
       </CardContent>;
 
     </Card>;
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 =======
     </Card>);

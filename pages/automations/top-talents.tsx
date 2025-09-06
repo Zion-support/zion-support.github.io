@@ -1,13 +1,5 @@
 <<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
@@ -20,49 +12,18 @@ type TalentItem = {;
   talentName: string;
   averageRating: number;
   totalReviews: number;
-<<<<<<< HEAD
-
-=======
-
-
-=======
-<<<<<<< HEAD
 }
 type Props = { items: TalentItem[] }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 
 type Props = { items: TalentItem[] };
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
-import type { NextPage, GetServerSideProps } from 'next';
-import fs from 'fs';
-import path from 'path';
-import Link from 'next/link';
+import type { NextPage, GetServerSideProps } from 'next',
+import fs from 'fs',
+import path from 'path',
+import Link from 'next/link',
 type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
 type Props = { items: TalentItem[] },
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">
@@ -82,16 +43,14 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
         {!items.length && <div className="enhanced-card">No data yet.</div>}
       </div>
     </main>
-
-
-};
-
-export const getServerSideProps: GetServerSideProps = async () => {;
-  const p = path && path.join(;
-    process && process.cwd(),;
-    "public",;
-    "automations",;
-    "top-talents && talents.json",;
+  );
+}
+export const getServerSideProps: GetServerSideProps = async () => {
+  const p = path.join(
+    process.cwd()
+    "public"
+    "automations"
+    "top-talents.json"
   );
   let items: TalentItem[] = [];
   try {;
@@ -107,62 +66,19 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 }
 export default TopTalentsPage;
 
-
-=======
-import type { NextPage, GetServerSideProps } from './next';
-import fs from './fs';
-import path from './path';
-import Link from './next / link';
-;
-type TalentItem = {
-  talent_slug: string;
-  talent_name: string;
-  average_rating: number;
-  total_reviews: number;
-}
-;
-type Props = { items: TalentItem[] }
-;
-const TopTalentsPage: NextPage < Props> = ({ items }) => {
-  return (
-    <main className="space - y-6">;
-      <h1 className="text - 2xl font - semibold">Top Talents — Auto Generated</h1>;
-      <div className="grid gap - 3">;
-        {items.map ((t) => (
-          <Link key={t.talent_slug} href={`/talent/${t.talent_slug}`}>;
-            <div className="enhanced - card hover:shadow - lg cursor - pointer flex items - center justify - between">;
-              <div>;
-                <div className="font - medium">{t.talent_name}</div>;
-                <div className="text - sm text - gray - 600">;
-                  {t.average_rating.to_fixed (1)}★ • {t.total_reviews} reviews;
-                </div>;
-              </div>;
-              <span className="pill">Auto</span>;
-            </div>;
-          </Link>))}
-        {!items.length && <div className="enhanced - card">No data yet.</div>}
-      </div>;
-    </main>);
-}
-;
+  )
+},
 export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join (
-    process.cwd (),
+  const p = path.join(
+    process.cwd(),
     "public",
     "automations",
     "top - talents.json",
   );
   let items: TalentItem[] = [];
   try {
-<<<<<<< HEAD
-    const raw = fs.readFileSync (p, "utf8");
-    const data = JSON.parse (raw);
-=======
-<<<<<<< HEAD
-=======
     const raw = fs.readFileSync(p, "utf8");
     const data = JSON.parse(raw);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     items = data.items || [];
   } catch {}
   return { props: { items } }
@@ -170,18 +86,9 @@ export const getServerSideProps: GetServerSideProps = async () => {
 ;
 =======
 
-<<<<<<< HEAD
-  )
-},
-export const getServerSideProps: GetServerSideProps = async () => {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
   const p = path.join(process.cwd(), 'publicautomationstop-talents.json'),
   let items: TalentItem[] = [],
   try {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const raw = fs.readFileSync(p, 'utf8'),
     const data = JSON.parse(raw),
     items = data.items || []
@@ -196,11 +103,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 }
 };
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default TopTalentsPage;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

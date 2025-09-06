@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-
-
-  return (
+return (
     <Card>;
       <CardHeader>;
 
@@ -22,23 +19,24 @@
               {REWARD_OPTIONS && REWARD_OPTIONS.map(option => (;
 
                 <div
-                  key={option && option.id}
-                  className='flex justify-between items-center border-b pb-4'>                  <div>;
-                    <h3 className='font-medium'>{option && option.title}</h3>;
-                    <p className='text-sm text-muted-foreground'>;
-                      {option && option.description}
-                    </p>;
-                  </div>;
-                  <div className='flex flex-col items-end gap-1'>;
-                    <span className='text-sm font-bold'>;
-                      {option && option.cost} ZION$;
-                    </span>;
+                  key={option.id}
+                  className='flex justify-between items-center border-b pb-4'
+                >                  <div>
+                    <h3 className='font-medium'>{option.title}</h3>
+                    <p className='text-sm text-muted-foreground'>
+                      {option.description}
+                    </p>
+                  </div>
+                  <div className='flex flex-col items-end gap-1'>
+                    <span className='text-sm font-bold'>
+                      {option.cost} ZION$
+                    </span>
                     <Button
                       size='sm'
                       variant={
-                        wallet && wallet.balance>= option && option.cost;
-                          ? 'default';
-                          : 'outline';
+                        wallet && wallet.balance >= option.cost
+                          ? 'default'
+                          : 'outline'
                       }
 
                       disabled={!wallet || wallet.balance < option && option.cost}
@@ -245,19 +243,10 @@ export function RedeemTokensCard() {
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
                 Exchange your tokens for these rewards. You currently have{' '}
                 {wallet?.balance |0} ZION$.
               </DialogDescription>
             </DialogHeader>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className='space-y-4 py-4'>
               {REWARD_OPTIONS.map(option => (
                 <div
@@ -283,13 +272,9 @@ export function RedeemTokensCard() {
                       disabled={!wallet |wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}                    >
                       Redeem <ArrowRight className='ml-1 h-3 w-3' />
-=======
-<<<<<<< HEAD
                 Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
               </DialogDescription>
             </DialogHeader>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="space-y-4 py-4">
               {REWARD_OPTIONS.map((option) => (
                 <div key={option.id} className="flex justify-between items-center border-b pb-4">
@@ -306,12 +291,6 @@ export function RedeemTokensCard() {
                       onClick={() => handleRedeem(option)}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     </Button>
                   </div>
                 </div>
@@ -321,7 +300,6 @@ export function RedeemTokensCard() {
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
               <Button variant="ghost" size="sm">
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Button>
             </div>
           </DialogContent>
@@ -329,8 +307,6 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
 
-=======
-<<<<<<< HEAD
         <Dialog open={open} onOpenChange={set_open}>;
           <DialogTrigger as_child>;
             <Button className='w - full'>View Available Rewards</Button>;
@@ -408,40 +384,31 @@ export function RedeemTokensCard() {;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-              <DialogTitle > Available Rewards</DialogTitle>;
+              <DialogTitle>Available Rewards</DialogTitle>;
               <DialogDescription>;
-                Exchange your tokens for these rewards. You currently have{' '}
-                {wallet?.balance || 0} ZION$.;
+                Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.;
               </DialogDescription>;
             </DialogHeader>;
-            <div className='space - y-4 py - 4'>;
-              {REWARD_OPTIONS.map (option => (
-                <div;
-                  key={option.id}
-                  className='flex justify - between items - center border - b pb - 4';
-                >                  <div>;
-                    <h3 className='font - medium'>{option.title}</h3>;
-                    <p className='text - sm text - muted - foreground'>;
-                      {option.description}
-                    </p>;
+            <div className="space-y-4 py-4">;
+              {REWARD_OPTIONS.map((option) => (;
+                <div key={option.id} className="flex justify-between items-center border-b pb-4">;
+                  <div>;
+                    <h3 className="font-medium">{option.title}</h3>;
+                    <p className="text-sm text-muted-foreground">{option.description}</p>;
                   </div>;
-                  <div className='flex flex - col items - end gap - 1'>;
-                    <span className='text - sm font - bold'>;
-                      {option.cost} ZION$;
-                    </span>;
+                  <div className="flex flex-col items-end gap-1">;
+                    <span className="text-sm font-bold">{option.cost} ZION$</span>;
                     <Button;
-                      size='sm';
-                      variant={
-                        wallet && wallet.balance >= option.cost;
-                          ? 'default';
-                          : 'outline';
-                      }
+                      size="sm";
+                      variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
                       disabled={!wallet || wallet.balance < option.cost}
-                      on_click={() => handle_redeem (option)}                    >;
-                      Redeem <ArrowRight className='ml - 1 h - 3 w - 3' />;
+                      onClick={() => handleRedeem(option)}
+                    >;
+                      Redeem <ArrowRight className="ml-1 h-3 w-3" />;
                     </Button>;
                   </div>;
-                </div>))}
+                </div>;
+              ))}
             </div>;
             <div className='flex justify - between'>;
               <Button;
@@ -464,27 +431,8 @@ export function RedeemTokensCard() {;
 <<<<<<< HEAD
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    </Card>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

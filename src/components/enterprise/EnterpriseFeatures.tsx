@@ -1,28 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-<<<<<<< HEAD
-
-
-
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from 'react'
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const features = [
   {
     title: 'Private Hiring Portal'
@@ -61,7 +39,6 @@ const features = [
     icon: Globe
   }
 ]
-=======
 const features = [;
   {;
     title: 'Private Hiring Portal',;
@@ -100,7 +77,6 @@ const features = [;
     icon: Globe,;
   },;
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export function EnterpriseFeatures() {;
   return (
@@ -112,7 +88,6 @@ export function EnterpriseFeatures() {;
             Built for Enterprise Needs;
           </h2>;
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>;
-=======
 import React from 'react';
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
 const features = [;
@@ -175,11 +150,8 @@ function EnterpriseFeatures() {
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {features && features.map(feature => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <div
 
-=======
-=======
             <div
               key={feature.title}
               className='bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md'            >
@@ -191,33 +163,6 @@ function EnterpriseFeatures() {
 <<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-              <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
-            >
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
-                <feature.icon className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-            </div>
-<<<<<<< HEAD
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
             </div>
 
@@ -277,7 +222,6 @@ export function EnterpriseFeatures() {
               <p className="text-muted-foreground">{feature.description}</p>
             </div>
 
-=======
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
 const features = [;
@@ -318,14 +262,26 @@ export function EnterpriseFeatures() {;
           </p>;
 
         </div>;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          {features.map((feature) => (;
+            <div;
+              key={feature.title}
+              className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md";
+            >;
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">;
+                <feature.icon className="h-6 w-6 text-primary" />;
+              </div>;
+              <h3 className="font-bold text-xl mb-3">{feature.title}</h3>;
+              <p className="text-muted-foreground">{feature.description}</p>;
+            </div>;
+          ))}
+        </div>
       </div>;
     </section>;
   );
-
-  );
+};
 }
 
-=======
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
           {features.map (feature => (
             <div;
@@ -354,19 +310,6 @@ export function EnterpriseFeatures() {;
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

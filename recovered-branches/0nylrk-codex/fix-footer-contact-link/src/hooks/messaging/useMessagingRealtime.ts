@@ -1,48 +1,19 @@
 
-<<<<<<< HEAD
-import {useEffect} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {UserProfile, UserDetails} from '@/types / auth';
-import {Message, Conversation} from '@/types / messaging';
-import {toast} from '@/hooks / use - toast';
-// Allow either UserProfile or UserDetails;
-type UserWithProfile = UserProfile | UserDetails | null;
-;
-export function useMessagingRealtime (
-
-=======
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
-<<<<<<< HEAD
-
 // Allow either UserProfile or UserDetails
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-// Allow either UserProfile or UserDetails
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+type UserWithProfile = UserProfile | UserDetails | null;
+export function useMessagingRealtime(
 export function useMessagingRealtime(;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   user: UserWithProfile;
   active_conversation: Conversation | null;
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
@@ -74,17 +45,23 @@ export function useMessagingRealtime(;
       .subscribe();
 
     return () => {
-      supabase && supabase.removeChannel(subscription)
-    }
-  }, [user, activeConversation, fetchConversations, setActiveMessages])
-=======
-  fetch_conversations: () => Promise < void>) {
-  // Setup real - time subscription when user is logged in;
-  useEffect (() => {
-    // Check condition
-if (return, ) {
-  $2
-}
+      supabase.removeChannel(subscription)
+import { useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { UserProfile, UserDetails } from '@/types/auth',;
+import { Message, Conversation } from '@/types/messaging',;
+import { toast } from '@/hooks/use-toast',;
+// Allow either UserProfile or UserDetails;
+type UserWithProfile = UserProfile | UserDetails | null,;
+export function useMessagingRealtime(;
+  user: UserWithProfile,;
+  activeConversation: Conversation | null,;
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void,;
+  fetchConversations: () => Promise<void>;
+) {;
+  // Setup real-time subscription when user is logged in;
+  useEffect(() => {;
+    if (!user) return,;
     // Subscribe to new messages;
     const subscription = supabase;
       .channel ('messages');
@@ -118,18 +95,6 @@ if ( {) {
       .subscribe();
     return () => {;
       supabase.removeChannel(subscription);
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

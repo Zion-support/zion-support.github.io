@@ -1,73 +1,46 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import { Check } from 'lucide-react'
-import { cn } from '@/lib/utils'
-interface FeatureHighlightsProps {
-  className?: string
-  style?: React.CSSProperties
-export function FeatureHighlights({
-  className,
-  style,
-}: FeatureHighlightsProps) {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-  className?: string;
+className?: string;
   style?: React && React.CSSProperties;
 
-export function FeatureHighlights(): any ({;
-  className,;
-  style,;
-}: FeatureHighlightsProps) {;
-  const highlightsData = [;
-    {;
-      title: 'For Talent Seekers',;
-      features: [;
-        'AI-powered talent matching based on your specific project requirements',;
-        'Verified profiles with skills validation and credential checking',;
-        'Transparent pricing and no hidden fees',;
-        'Direct communication with potential candidates',;
-        'Secure payment protection and dispute resolution',;
-        'Post jobs and receive AI-matched applicants',;
-      ],;
-    },;
-    {;
-      title: 'For Talent & Service Providers',;
-      features: [;
-        'Create a professional profile showcasing your skills and experience',;
-        'Get matched with relevant projects that fit your expertise',;
-        'Secure payment processing with on-time disbursements',;
-        'Build your reputation through client reviews and ratings',;
-        'Access to enterprise clients and high-value projects',;
-        'Professional development resources and community support',;
-      ],;
-    },;
-    {;
-      title: 'For Enterprise Clients',;
-      features: [;
-        'White-labeled talent portal with your company branding',;
-        'Dedicated account management and priority support',;
-        'Custom talent pools and preferred provider networks',;
-        'Advanced analytics and reporting capabilities',;
-        'API access for seamless integration with your HR systems',;
-        'Customizable workflow and approval processes',;
-      ],;
-    },;
-  ];
-
-  return (
-
-import React from 'react';
-import { Card, CardContent } from '@/components / ui / card';
-import { Check } from 'lucide-react';
-import { cn } from '@/lib / utils';
+export function FeatureHighlights({
+  className
+  style
+}: FeatureHighlightsProps) {
+  const highlightsData = [
+    {
+      title: 'For Talent Seekers'
+      features: [
+        'AI-powered talent matching based on your specific project requirements'
+        'Verified profiles with skills validation and credential checking'
+        'Transparent pricing and no hidden fees'
+        'Direct communication with potential candidates'
+        'Secure payment protection and dispute resolution'
+        'Post jobs and receive AI-matched applicants'
+      ]
+    }
+    {
+      title: 'For Talent & Service Providers'
+      features: [
+        'Create a professional profile showcasing your skills and experience'
+        'Get matched with relevant projects that fit your expertise'
+        'Secure payment processing with on-time disbursements'
+        'Build your reputation through client reviews and ratings'
+        'Access to enterprise clients and high-value projects'
+        'Professional development resources and community support'
+      ]
+    }
+    {
+      title: 'For Enterprise Clients'
+      features: [
+        'White-labeled talent portal with your company branding'
+        'Dedicated account management and priority support'
+        'Custom talent pools and preferred provider networks'
+        'Advanced analytics and reporting capabilities'
+        'API access for seamless integration with your HR systems'
+        'Customizable workflow and approval processes'
+      ]
+    }
+  ]
+import { cn } from "@/lib/utils",
 interface FeatureHighlightsProps {
   class_name?: string;
   style?: React.CSSProperties;
@@ -76,53 +49,55 @@ export /**
  */
 function FeatureHighlights() {
   const highlights_data = [;
-=======
 
 
-<<<<<<< HEAD
-=======
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const highlightsData = [
 
     {
-<<<<<<< HEAD
-      title: 'For Talent Seekers',
-      features: [;
-        'AI - powered talent matching based on your specific project requirements',
-        'Verified profiles with skills validation and credential checking',
-        'Transparent pricing and no hidden fees',
-        'Direct communication with potential candidates',
-        'Secure payment protection and dispute resolution',
-        'Post jobs and receive AI - matched applicants',
-      ],
+      title: "For Talent Seekers",
+      features: [
+        "AI-powered talent matching based on your specific project requirements",
+        "Verified profiles with skills validation and credential checking",
+        "Transparent pricing and no hidden fees",
+        "Direct communication with potential candidates",
+        "Secure payment protection and dispute resolution",
+        "Post jobs and receive AI-matched applicants"
+      ]
     },
     {
-      title: 'For Talent & Service Providers',
-      features: [;
-        'Create a professional profile showcasing your skills and experience',
-        'Get matched with relevant projects that fit your expertise',
-        'Secure payment processing with on - time disbursements',
-        'Build your reputation through client reviews and ratings',
-        'Access to enterprise clients and high - value projects',
-        'Professional development resources and community support',
-      ],
+      title: "For Talent & Service Providers",
+      features: [
+        "Create a professional profile showcasing your skills and experience",
+        "Get matched with relevant projects that fit your expertise",
+        "Secure payment processing with on-time disbursements",
+        "Build your reputation through client reviews and ratings",
+        "Access to enterprise clients and high-value projects",
+        "Professional development resources and community support"
+      ]
     },
     {
 
-=======
-=======
       title: "For Enterprise Clients",
       features: [
-
-
-
-
-
+        'White-labeled talent portal with your company branding',
+        'Dedicated account management and priority support',
+        'Custom talent pools and preferred provider networks',
+        'Advanced analytics and reporting capabilities',
+        'API access for seamless integration with your HR systems',
+        'Customizable workflow and approval processes',
+      ],
+    },
+  ]
+        "White-labeled talent portal with your company branding",
+        "Dedicated account management and priority support",
+        "Custom talent pools and preferred provider networks",
+        "Advanced analytics and reporting capabilities",
+        "API access for seamless integration with your HR systems",
+        "Customizable workflow and approval processes"
+      ]
+    }
+  ],
 
 =======
       title: "For Talent Seekers",
@@ -180,7 +155,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -189,15 +163,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
         </div>
-<<<<<<< HEAD
-
-
-;
-'"`;
-);
-
-=======
-<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           {highlightsData.map((category, index) => (
             <Card
@@ -374,16 +339,12 @@ export function FeatureHighlights() {
       </div>
     </section>
   )}
-<<<<<<< HEAD
 '"`
 )
-=======
 ;
 '"`;
 );
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+
 
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -788,12 +749,6 @@ export function FeatureHighlights() {;
             <span className="text-2xl">→</span>;
           </div>;
         </motion && motion.div>;
-=======
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
         </div>;
 
       </div>;
@@ -804,7 +759,6 @@ export function FeatureHighlights() {;
 );
 
 
-=======
   );
 }
 
@@ -829,13 +783,4 @@ export function FeatureHighlights() {;
     </section>)}
 '"`);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,9 +1,11 @@
-
-
-
 import * as React from "react"
 import { PanelLeft } from 'lucide-react'
-
+import { Button } from &quot;@/components/ui/button&quot;
+import { cn } from &quot;@/lib/utils&quot;
+import { useSidebar } from &quot;./sidebar-context&quot;
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { useSidebar } from "./sidebar-context"
 
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>
@@ -24,7 +26,7 @@ export const SidebarTrigger = React.forward_ref<;
   const { toggle_sidebar } = use_sidebar ();
 
   return (
-    <Button;
+    <Button
       ref={ref}
       data - sidebar=&quot;trigger & quot;
       variant=&quot;ghost & quot;
@@ -33,7 +35,6 @@ export const SidebarTrigger = React.forward_ref<;
       on_click={(event) => {
         props.on_click?.(event);
         toggle_sidebar ();
-=======
   return (
 
     <Button
@@ -42,11 +43,9 @@ export const SidebarTrigger = React.forward_ref<;
       variant="ghost"
       size="icon"
       className={cn("h-7 w-7", props.className)}
-
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }}
       {...props}
 
@@ -58,8 +57,5 @@ export const SidebarTrigger = React.forward_ref<;
 SidebarTrigger.display_name = &quot;SidebarTrigger & quot;
 ;
 
-=======
 
 SidebarTrigger.displayName = "SidebarTrigger"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

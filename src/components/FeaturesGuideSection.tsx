@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Link from "next/link",
-import { GradientHeading } from "./GradientHeading",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Button } from "./ui/button",
-import { fireEvent } from '@/lib/analytics',
-import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import Link from 'next/link'
 import { GradientHeading } from './GradientHeading'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -47,26 +28,6 @@ export function FeaturesGuideSection() {
 <<<<<<< HEAD
 
 
-=======
-=======
-<<<<<<< HEAD
-      id: 'ai-matcher'
-      title: 'AI Matcher'
-      description:
-        'Find the perfect match for your project needs with our intelligent AI-powered matching system.'
-      icon: <Sparkles className='h-10 w-10 text-zion-cyan' />
-      instructions: [
-<<<<<<< HEAD
-        'Navigate to the AI Matcher page from the homepage or marketplace'
-        'Fill in your project requirements and specifications'
-        'Review the AI-recommended matches tailored to your needs'
-        'Connect with matched talents or services directly'
-      ]
-      link: '/match'
-      buttonText: 'Try AI Matcher'
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         'Navigate to the AI Matcher page from the homepage or marketplace',
         'Fill in your project requirements and specifications',
         'Review the AI-recommended matches tailored to your needs',
@@ -326,7 +287,6 @@ export function FeaturesGuideSection() {
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
-=======
 import Link from "next/link",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -337,11 +297,6 @@ import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, P
 export function FeaturesGuideSection() {
   const features = [
     {
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -596,7 +551,6 @@ export function FeaturesGuideSection() {;
       link: "/help";
       buttonText: "View Resources";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     {
       id: 'talent-directory'
@@ -721,12 +675,7 @@ export function FeaturesGuideSection() {;
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-
-      id: "ai-matcher",
-      title: "AI Matcher",
-      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
-      icon: <Sparkles className = "h-10 w-10 text-zion-cyan" />,
-
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace"
         "Fill in your project requirements and specifications"
@@ -834,8 +783,6 @@ export function FeaturesGuideSection() {;
       ]
       link: "/help"
       buttonText: "View Resources"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Link from 'next/link';
 import { GradientHeading } from './GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -1104,7 +1051,6 @@ export function FeaturesGuideSection() {;
       title: "Help & Resources",;
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,;
-=======
 import Link from 'next / link';
 import { GradientHeading } from './GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
@@ -1375,7 +1321,6 @@ function FeaturesGuideSection() {
       title: "Help & Resources",
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
       icon: <HelpCircle className="h - 10 w - 10 text - zion - purple" />,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       instructions: [;
         "Visit our comprehensive knowledge base";
         "Watch video tutorials on specific features";
@@ -1389,26 +1334,20 @@ function FeaturesGuideSection() {
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {feature.title}
               </TabsTrigger>
             ))}
           </TabsList>
-
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
-
+          <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
             {features.slice(4).map(feature => (
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-=======
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+            {features.slice(4).map(feature => (
+              <TabsTrigger
+                key={feature.id}
+                value={feature.id}
 
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
@@ -1417,15 +1356,6 @@ function FeaturesGuideSection() {
                 value={feature.id}
 <<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
                 {feature.title}
@@ -1498,7 +1428,6 @@ function FeaturesGuideSection() {
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
                   <Button 
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-=======
 
 
                     asChild
@@ -1510,7 +1439,6 @@ function FeaturesGuideSection() {
                   </Button>
                 </div>
                 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
@@ -1598,33 +1526,6 @@ function FeaturesGuideSection() {
                       <li key={idx} className="text-zion-slate-light">;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
                       </li>;
-<<<<<<< HEAD
-
-                    ))}
-                  </ol>;
-                </div>;
-              </div>;
-            </TabsContent>;
-          ))}
-
-
-          <Button
-            variant='outline'
-            className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'
-            asChild>;
-            <Link
-              href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
-              href="/marketplace";
-              onClick = {() => fireEvent('explore_marketplace_click'),}
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     ))}
                   </ol>
                 </div>
@@ -1632,30 +1533,24 @@ function FeaturesGuideSection() {
             </TabsContent>
           ))}
         </Tabs>
-
-
+        <div className='mt-12 text-center'>
         
         <div className="mt-12 text-center">
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             asChild
           >
             <Link
-
-
-
+              href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
+              href="/marketplace"
+              onClick = {() => fireEvent('explore_marketplace_click'),}
+            >
+              Explore Full Marketplace
+              <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />
               href="/marketplace"
               onClick={() => fireEvent('explore_marketplace_click')}
             >
@@ -1665,40 +1560,17 @@ function FeaturesGuideSection() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </Link>
           </Button>
         </div>
       </div>
     </section>
-
-
-            >;
-              Explore Full Marketplace;
-              <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />;
-            </Link>;
-          </Button>;
-        </div>;
-      </div>;
-    </section>;
-  );
-}
   );
 };
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   </p>;
                   <Button;
                     className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple'                    as_child;
@@ -1757,24 +1629,6 @@ function FeaturesGuideSection() {
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   )
 }
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-}
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

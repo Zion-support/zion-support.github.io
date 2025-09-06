@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-
-
-  return (
+return (
     <>;
 =======
 <<<<<<< HEAD
@@ -73,16 +69,6 @@ Dialog,
 }
 
 export function RaiseDisputeButton({ 
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   projectId,
   milestoneId, 
   variant = "outline", 
@@ -92,55 +78,6 @@ export function RaiseDisputeButton({
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const [isDialogOpen, setIsDialogOpen] = useState(false)
-  const router = useRouter()
-  const handleDisputeCreated = (disputeId: string) => {
-    setIsDialogOpen(false)
-    router.push(`/dashboard/disputes/${disputeId}`)
-  }
-  return (
-    <>
-      <Button
-        variant={variant}
-        size={size}
-        className={className}
-        onClick={() => setIsDialogOpen(true)}      >
-        <ShieldAlert className='h-4 w-4 mr-2' />
-        Raise Dispute
-      </Button>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const [isDialogOpen, setIsDialogOpen] = useState(false),
-  const router = useRouter(),
-  
-  const handleDisputeCreated = (disputeId: string) => {
-    setIsDialogOpen(false),
-    router.push(`/dashboard/disputes/${disputeId}`)
-  },
-  
-  return (
-    <>
-      <Button 
-        variant={variant} 
-        size={size} 
-        className={className} 
-        onClick={() => setIsDialogOpen(true)}
-      >
-        <ShieldAlert className="h-4 w-4 mr-2" />
-        Raise Dispute
-      </Button>
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
           <DialogHeader>
@@ -161,7 +98,6 @@ export function RaiseDisputeButton({
         <DialogContent className='sm:max-w-[550px]'>;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
-=======
       <Button;
         variant={variant}
         size={size}
@@ -188,27 +124,9 @@ export function RaiseDisputeButton({
   );
 }
 
-=======
           <DisputeForm;
             project_id={project_id}
             milestone_id={milestone_id}
-            onDisputeCreated={handleDisputeCreated}
-            on_cancel={() => setIsDialogOpen (false)}          />;
-        </DialogContent>;
-      </Dialog>;
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-=======
-<<<<<<< HEAD
-          <DisputeForm
-<<<<<<< HEAD
-            projectId={projectId}
-            milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
@@ -216,10 +134,8 @@ export function RaiseDisputeButton({
     </>
   )
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+
+
           
           <DisputeForm 
 import React, { useState } from "react",;
@@ -274,7 +190,6 @@ export function RaiseDisputeButton({;
             </DialogDescription>;
           </DialogHeader>;
           <DisputeForm;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
@@ -283,17 +198,6 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
-
+};
 }
 ;
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

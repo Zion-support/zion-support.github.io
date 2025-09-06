@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 interface SafeImageProps {
 =======
 <<<<<<< HEAD
@@ -21,7 +18,6 @@ interface SafeImageProps {;
   alt: string;  width?: number;interface SafeImageProps {
 
 
-=======
     }
   }
 
@@ -37,25 +33,13 @@ interface SafeImageProps {;
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
-<<<<<<< HEAD
-
-;
-    />;
-
-=======
-<<<<<<< HEAD
     />
-=======
 ;
     />;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );        aria-label={alt}
-=======
 'use client',;
 import Image from 'next/image',;
 import { useState } from 'react',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { ImageIcon } from 'lucide-react';
 
 interface SafeImageProps {;
@@ -69,14 +53,12 @@ interface SafeImageProps {;
   src: string,;
   alt: string,;
 
-=======
 import { ImageIcon } from 'lucide-react'
 
 interface SafeImageProps {
   src: string,
   alt: string,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   width?: number;
   height?: number;
   className?: string;
@@ -98,7 +80,6 @@ interface SafeImageProps {
         style={{ width, height }}
         role="img"
 
-=======
   quality?: number
 }
 
@@ -130,26 +111,16 @@ export function SafeImage({
       setHasError(true)
     }
   };
-
-
-  // If we have an error and no fallback, show a placeholder
-  if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
-    return (
-      <div 
+  // If we have an error and no fallback, show a placeholder;
+  if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {;
+    return (;
+      <div;
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
         role="img"
         aria-label={alt}
 <<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       >
         <ImageIcon className="w-6 h-6" />
       </div>
@@ -157,25 +128,12 @@ export function SafeImage({
   }
 <<<<<<< HEAD
 
-
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     />
   ); return (
-=======
         aria-label = {alt,}>;
         <ImageIcon className='w-6 h-6' />      </div>;
     );
   }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
     />;
@@ -191,7 +149,6 @@ export function SafeImage({
   );  return (
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <Image
       src = {currentSrc,}
       alt = {alt,}
@@ -202,38 +159,17 @@ export function SafeImage({
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
-<<<<<<< HEAD
-
-
-} 
-
-}
-
-
-}
-=======
     />
   )
-<<<<<<< HEAD
-=======
 } 
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
     />;
   );
 <<<<<<< HEAD
 
 
-=======
-} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   src: string,
   alt: string,
 interface SafeImageProps {
@@ -290,25 +226,15 @@ if ( {) {
   }
     />); return (
     <Image;
-      src = {current_src, }
-      alt = {alt, }
-      width = {width, }
-      height = {height, }
-      class_name = {class_name, }
-      on_error = {handle_error, }
-      priority = {priority, }
+      src={currentSrc}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      onError={handleError}
+      priority={priority}
       // Add unoptimized as fallback for problematic images;
       unoptimized = {has_error, }
     />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 } ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

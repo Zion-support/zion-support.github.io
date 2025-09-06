@@ -1,68 +1,25 @@
 
-<<<<<<< HEAD
-
-
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {ChevronLeft, Bell, Settings} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
-<<<<<<< HEAD
-interface MobileHeaderProps {;
-  title: string,;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { useNavigate } from "react-router-dom",
 import { ChevronLeft, Bell, Settings } from "lucide-react",
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
 
   title: string
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
-<<<<<<< HEAD
-  onSettingsClick?: () => void;
-}
-
-
-export function MobileHeader(): any ({;
-
-  title;
-
-  showBack = false;
-  showNotifications = false;
-  showSettings = false;
-  className;
-  onNotificationsClick;
-  onSettingsClick}: MobileHeaderProps) {;
-  const navigate = useNavigate();
-  return (
-
-=======
-=======
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
@@ -70,16 +27,10 @@ interface MobileHeaderProps {
   showSettings?: boolean,
   className?: string,
   onNotificationsClick?: () => void,
-
   onSettingsClick?: () => void
 }
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 export function MobileHeader({;
   title;
   showBack = false;
@@ -87,15 +38,23 @@ export function MobileHeader({;
   showSettings = false;
   className;
   onNotificationsClick;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function MobileHeader({
-<<<<<<< HEAD
   title;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+  title,
+  showBack = false,
+  showNotifications = false,
+  showSettings = false,
+  className,
+  onNotificationsClick,
+  onSettingsClick}: MobileHeaderProps) {
+  const navigate = useNavigate(),
+
+  return (
+    <header className={cn(
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -140,22 +99,12 @@ export function MobileHeader({
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
             </Button>
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
           )}
         </div>
       </div>
     </header>
   )
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
 import { ChevronLeft, Bell, Settings } from "lucide-react",;
@@ -232,14 +181,6 @@ export function MobileHeader({;
       </div>;
     </header>;
   );
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -263,47 +204,3 @@ export /**
 function MobileHeader() {
   const navigate = use_navigate ();
 ;
-  return (
-    <header className={cn (
-      "sticky top - 0 z - 40 bg - background / 80 backdrop - blur - sm border - b border - border";
-      class_name)}>;
-      <div className="flex items - center justify - between h - 14 px - 4">;
-        <div className="flex items - center">;
-          {show_back && (
-            <Button;
-              variant="ghost";
-              size="icon";
-              className="mr - 2";
-              on_click={() => navigate (-1)}
-            >;
-              <ChevronLeft className="h - 5 w - 5" />;
-              <span className="sr - only">Back</span>;
-            </Button>)}
-          <h1 className="text - lg font - medium leading - none truncate">;
-            {title}
-          </h1>;
-        </div>;
-        <div className="flex items - center space - x-2">;
-          {show_notifications && (
-            <Button;
-              variant="ghost";
-              size="icon";
-              on_click={onNotificationsClick}
-            >;
-              <Bell className="h - 5 w - 5" />;
-              <span className="sr - only">Notifications</span>;
-            </Button>)}
-          {show_settings && (
-            <Button;
-              variant="ghost";
-              size="icon";
-              on_click={onSettingsClick}
-            >;
-              <Settings className="h - 5 w - 5" />;
-              <span className="sr - only">Settings</span>;
-            </Button>)}
-        </div>;
-      </div>;
-    </header>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,25 +1,15 @@
 
 <<<<<<< HEAD
 
-export function useResumeEnhancer() {;
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 export function useResumeEnhancer() {
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 
 export function useResumeEnhancer() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async (
@@ -59,29 +49,24 @@ export function useResumeEnhancer() {;
     isEnhancing;
 
     error
-=======
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-type EnhancementType = 'summary' | 'work - description' | 'skill - categorization' | 'general';
-;
-export /**
- * useResumeEnhancer - Function description
- */
-function useResumeEnhancer() {
-  const [is_enhancing, setIsEnhancing] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-;
-  const enhance_content = async (
-    content: string,
-    type: EnhancementType = 'general';
-    context?: string): Promise < string | null> => {
-    setIsEnhancing (true);
-    set_error (null),
-    try {
-      const { data, error } = await supabase.functions.invoke ('resume - enhancer', {
-        body: {
-          content,
-          enhancement_type: type,
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',;
+export function useResumeEnhancer() {;
+  const [isEnhancing, setIsEnhancing] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const enhanceContent = async (;
+    content: string,;
+    type: EnhancementType = 'general',;
+    context?: string;
+  ): Promise<string | null> => {;
+    setIsEnhancing(true),;
+    setError(null),;
+    try {;
+      const { data, error } = await supabase.functions.invoke('resume-enhancer', {;
+        body: {;
+          content,;
+          enhancementType: type,;
           context;
         }
       });
@@ -106,18 +91,5 @@ if ( {) {
     enhance_content;
     is_enhancing;
     error;
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }

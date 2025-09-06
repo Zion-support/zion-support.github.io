@@ -1,23 +1,12 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 import { getFraudStore } from '../../../../utils/fraud/store';
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getFraudStore } from '../../../../utils/fraud/store',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token']
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
   return token === process.env.ADMIN_TOKEN
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -37,30 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     label: label as any})
 
   res.status(200).json({ items })
-
-=======
-<<<<<<< HEAD
-}
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { getFraudStore } from '../../../../utils / fraud / store',
-function ensure_admin (req: NextApiRequest): boolean {
-  const token = req.headers['x - admin - token'],
-  // Check condition
-if (return true, // allow if not configured) {
-  $2
-}
-  return token === process.env.ADMIN_TOKEN;
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -76,11 +42,6 @@ function ensureAdmin(req: NextApiRequest): boolean {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 export default async /**
  * handler - Function description
@@ -127,16 +88,7 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-<<<<<<< HEAD
 
   const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,
   const store = getFraudStore(),
@@ -147,8 +99,4 @@ if ( {) {
     label: label as any}),
   res.status(200).json({ items });
 };
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

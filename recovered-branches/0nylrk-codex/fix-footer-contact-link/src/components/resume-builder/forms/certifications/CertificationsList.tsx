@@ -1,34 +1,18 @@
 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Edit, Trash2  } from 'lucide-react';
 import { format } from 'date-fns';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {Certification} from '@/types/resume';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {Edit, Trash2} from 'lucide-react';
 import {format} from 'date-fns';
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
-
-=======
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -38,18 +22,6 @@ interface CertificationsListProps {;
   certifications: Certification[],;
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 export function CertificationsList({
   certifications
@@ -74,10 +46,6 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return null;
   }
-
-
-
-
 
   return (
 
@@ -136,7 +104,20 @@ if ( {) {
 =======
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">
-
+                  Issued:{" "}
+                  {cert.issue_date
+                    ? typeof cert.issue_date === "string"
+                      ? cert.issue_date
+                      : format(cert.issue_date, "MMM yyyy")
+                    : "N/A"}
+                  {cert.expiration_date && (
+                    <>
+                      {" "}
+                      · Expires:{" "}
+                      {typeof cert.expiration_date === "string"
+                        ? cert.expiration_date
+                        : format(cert.expiration_date, "MMM yyyy")}
+                    </>
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
                     ? cert.issue_date 
                     : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
@@ -145,8 +126,6 @@ if ( {) {
                       ? cert.expiration_date;
                       : format(cert.expiration_date, 'MMM yyyy')}
                     </>;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </p>;
               </div>;
@@ -243,20 +222,8 @@ if ( {) {
         </Card>
       ))}
     </div>
-<<<<<<< HEAD
-
-  )
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

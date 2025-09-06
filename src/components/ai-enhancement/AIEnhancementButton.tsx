@@ -1,96 +1,4 @@
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer'
-import { toast } from '@/hooks/use-toast'
-interface AIEnhancementButtonProps {
-  options: AIEnhancementOptions
-  onEnhanced: (enhancedContent: string) => void
-  buttonText?: string
-  className?: string;
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
-  size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
-
-<<<<<<< HEAD
-=======
-export function AIEnhancementButton({
-  options
-  onEnhanced
-  buttonText = "Enhance with AI"
-  className
-  variant = "ghost"
-  size = "sm"
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer()
-  const [showActions, setShowActions] = useState(false)
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-import { toast } from '@/hooks/use-toast';
-interface AIEnhancementButtonProps {
-  options: AIEnhancementOptions,
-
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
-import { toast } from '@/hooks/use-toast',
-interface AIEnhancementButtonProps {
-  options: AIEnhancementOptions,
-  onEnhanced: (enhancedContent: string) => void,
-  buttonText?: string,
-  className?: string,
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
-  size?: "default" | "sm" | "lg" | "icon",
-  contentLength?: number
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-export function AIEnhancementButton({
-<<<<<<< HEAD
-
-  options
-  onEnhanced
-  buttonText = "Enhance with AI"
-  className
-  variant = "ghost"
-  size = "sm"
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer()
-  const [showActions, setShowActions] = useState(false)
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null)
-=======
-  options,
-  onEnhanced,
-  buttonText = "Enhance with AI",
-  className,
-  variant = "ghost",
-  size = "sm",
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
-  const [showActions, setShowActions] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
-  
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-  const handleEnhance = async () => {
+const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
       toast({
@@ -100,7 +8,6 @@ export function AIEnhancementButton({
 
   import { useState } from 'react';
 import { Button } from '@/components / ui / button';
-=======
 
       }),
       return
@@ -157,7 +64,6 @@ if ( {) {
       toast ({
         title: "Content applied",
         description: "AI - enhanced content has been applied."});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
   const handle_regenerate = async () => {
@@ -225,26 +131,10 @@ export function AIEnhancementButton(): any ({;
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
-<<<<<<< HEAD
-
-
-=======
-=======
-<<<<<<< HEAD
   }
   const handleRegenerate = async () => {
     await handleEnhance()
@@ -253,12 +143,8 @@ export function AIEnhancementButton(): any ({;
     setShowActions(false)
     setGeneratedContent(null)
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
   },
   
   const handleRegenerate = async () => {
@@ -273,18 +159,8 @@ export function AIEnhancementButton(): any ({;
 <<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (showActions) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
-<<<<<<< HEAD
-=======
       <div className="flex gap-2 items-center">
         <Button
           type="button"
@@ -324,27 +200,18 @@ export function AIEnhancementButton(): any ({;
       </div>
     )
   }
-<<<<<<< HEAD
   return (
     <Button
       type="button"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       variant = {variant,}
       size = {size,}
       className={`gap-1 ${className}`}
       onClick = {handleEnhance,}
       disabled = {isEnhancing,}
-=======
-<<<<<<< HEAD
   
   return (
     <Button
       type="button"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },;
   const handleAccept = () => {;
     if (generatedContent) {;
@@ -365,7 +232,6 @@ export function AIEnhancementButton(): any ({;
   };
   if (showActions) {;
     return (;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="flex gap-2 items-center">;
         <Button
           type="button"
@@ -432,7 +298,6 @@ export function AIEnhancementButton(): any ({;
 }</Button>) ;
 }"}
 
-=======
   // Check condition
 if ( {) {
   $2
@@ -497,9 +362,6 @@ if ( {) {
 }return (<Button) : (<Sparkles className=" h - 4 w - 4" />);
 }</Button>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 =======
@@ -521,38 +383,3 @@ if ( {) {
         <Sparkles className="h-4 w-4" />
       )}
       <span className="text-xs">{buttonText}</span>
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-    </Button>
-  )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    </Button>;
-  );
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-};"
-<Button type="button" variant="ghost" size="sm" onClick={
-  handleAccept "
-}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) "
-}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) "
-}return (<Button) : (<Sparkles className=" h-4 w-4" />)
-}</Button>)
-}"}
-=======
-<<<<<<< HEAD
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-    </Button>
-  )
-}
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

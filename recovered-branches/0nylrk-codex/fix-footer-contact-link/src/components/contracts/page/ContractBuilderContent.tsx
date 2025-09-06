@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { SmartContractBuilder  } from '@/components/contracts/SmartContractBuilder';
 import { ContractBuilder  } from '@/components/contracts/ContractBuilder';
@@ -13,8 +7,6 @@ import { ContractTypeCards  } from './ContractTypeCards';
 import { RecentContractsTable  } from './RecentContractsTable';
 import { TalentProfile  } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
 import {ContractBuilder} from '@/components/contracts/ContractBuilder';
@@ -23,19 +15,8 @@ import {ContractTypeCards} from './ContractTypeCards';
 import {RecentContractsTable} from './RecentContractsTable';
 import {TalentProfile} from '@/types/talent';
 import {useAuth} from '@/hooks/useAuth';
-<<<<<<< HEAD
-
 // Mock data for demo purposes
 
-
-export function ContractBuilderContent() {;
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-// Mock data for demo purposes
-
-<<<<<<< HEAD
 const mockTalent: TalentProfile = {
   id: 'talent-123'
   user_id: 'user-abc-123'
@@ -45,10 +26,7 @@ const mockTalent: TalentProfile = {
   profile_picture_url: ''
   skills: ['ReactNode.jsSmart Contracts']}
 export function ContractBuilderContent() {
-=======
 export function ContractBuilderContent() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
   const [recentContracts, setRecentContracts] = useState([
@@ -69,19 +47,9 @@ export function ContractBuilderContent() {;
       isSmartContract: false
     }
   ]);
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
   const handleContractGenerated = (content: string) => {
     console.log('Contract generated:', content.substring(0, 100) + '...')
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState } from 'react',;
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
 import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
@@ -122,46 +90,22 @@ export function ContractBuilderContent() {;
   ]),
 <<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
   const handleContractGenerated = (content: string) => {
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleViewContract = (contractId: string) => {
     console.log('Viewing contract:', contractId);
     // Future implementation: View specific contract details
-
-
+  }
   },
-
-
 
   return (
     <>
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />
-
-
+      <ContractTypeCards
       
       <ContractTypeCards 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ]),;
   const handleContractGenerated = (content: string) => {;
     // // // console.log('Contract generated:', content.substring(0, 100) + '...');
@@ -174,12 +118,6 @@ export function ContractBuilderContent() {;
     <>;
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />;
       <ContractTypeCards;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         onStandardClick={() => setShowBuilderType('standard')}
         onSmartClick={() => setShowBuilderType('smart')}
       />

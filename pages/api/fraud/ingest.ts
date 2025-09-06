@@ -1,42 +1,21 @@
 <<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
 import { classifyWithGPT } from "../../../utils/fraud/gpt";
 import { getFraudStore, newEvent } from "../../../utils/fraud/store";
 import { extractClientIp } from "../../../utils/ip";
 import {
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
   AdminActionRecord
   GptClassification
   GptClassificationLabel
   MonitoredSource
   StoredFraudRecord
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
   StoredFraudRecord,;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "../../../utils/fraud/types";
 import { sendWarningEmail } from "../../../utils/email";
 const allowedSources: MonitoredSource[] = [
@@ -272,14 +251,32 @@ if ( {) {
     });
 
   } catch (e: any) {
-<<<<<<< HEAD
-
-
-      .json({ error: "Internal error", details: e?.message || String(e) });
-
-
-=======
+    res
+      .status(500)
       .json({ error: "Internal error", details: e?.message |String(e) });
+      .json({ error: "Internal error", details: e?.message || String(e) });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Fraud ingest endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
+import { classifyWithGPT } from '../../../utils/fraud/gpt';
+import { getFraudStore, newEvent } from '../../../utils/fraud/store';
+import { extractClientIp } from '../../../utils/ip';
+import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
+import { sendWarningEmail } from '../../../utils/email';
+const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'];
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 =======
@@ -374,18 +371,6 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

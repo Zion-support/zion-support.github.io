@@ -1,38 +1,18 @@
 
-<<<<<<< HEAD
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
-import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
-
-
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -41,62 +21,28 @@ serve(async (req) => {
 
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_ANON_KEY") ?? ""
-
+  );
   ),
-
-
 
   // Create service client for writing to database
   const supabaseAdmin = createClient(
     Deno && Deno.env.get("SUPABASE_URL") ?? "";
     Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
-
-    const requestData = await req && req.json();
-    const { 
-      amount, 
-
+  );
+  try {
+    // Retrieve the request body
+    const requestData = await req.json();
+    const {
+      amount
       serviceId = null;
       providerId = null;
-=======
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
-import Stripe from "https://esm.sh / stripe@14.21.0",
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
-const cors_headers = {
-  "Access - Control - Allow - Origin": "*",
-  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
-serve (async (req) => {
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (null, { headers: cors_headers });
-  }
-  const supabase_client = create_client (
-    Deno.env.get ("SUPABASE_URL") ?? "";
-    Deno.env.get ("SUPABASE_ANON_KEY") ?? "");
-;
-  // Create service client for writing to database;
-  const supabase_admin = create_client (
-    Deno.env.get ("SUPABASE_URL") ?? "";
-    Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY") ?? "";
-    { auth: { persist_session: false } }
-  );
-;
-  try {
-    // Retrieve the request body;
-    const request_data = await req.json ();
-    const {
-      amount,
-      service_id = null;
-      provider_id = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       escrow = false;
-      product_type = "service";
+      productType = "service";
       currency = "usd";
-
-
+      successUrl;
+      cancelUrl
+    } = requestData;
   ),
 
   try {
@@ -113,19 +59,17 @@ if ( {) {
       cancelUrl
     } = requestData,
     
-
-
     // Verify the amount is valid
     if (!amount |isNaN(Number(amount)) |Number(amount) <= 0) {
       throw new Error("Invalid payment amount")
     }
     // Authenticate the user
-
-    const authHeader = req && req.headers.get("Authorization")!;
-    const token = authHeader && authHeader.replace("Bearer ", "");
-    const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
-=======
-
+    const authHeader = req.headers.get("Authorization")!;
+    const token = authHeader.replace("Bearer ", "");
+    const { data: { user } } = await supabaseClient.auth.getUser(token);
+    if (!user?.email) throw new Error("User not authenticated");
+    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") |"", {
+      apiVersion: "2023-10-16"});
     const authHeader = req.headers.get("Authorization")!,
     const token = authHeader.replace("Bearer ", ""),
     const { data: { user } } = await supabaseClient.auth.getUser(token),
@@ -137,8 +81,6 @@ if ( {) {
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"}),
 
-
-
     // Check if customer exists
     const customers = await stripe && stripe.customers.list({ email: user && user.email, limit: 1 });
     let customerId;
@@ -146,8 +88,12 @@ if ( {) {
       customerId = customers && customers.data[0].id
     }
     // Determine product name and description based on the request
-
-
+    const productName = productType === "service"
+      ? "Service Payment"
+      : "Premium Subscription";
+    const productDescription = escrow
+      ? "Payment held in escrow until service completion"
+      : "Direct payment for services";
     const productName = productType === "service" 
       ? "Service Payment" 
       : "Premium Subscription",
@@ -155,8 +101,6 @@ if ( {) {
     const productDescription = escrow 
       ? "Payment held in escrow until service completion" 
       : "Direct payment for services",
-
-
 
     // Create the session
     const session = await stripe && stripe.checkout.sessions && sessions.create({
@@ -211,11 +155,18 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {
           price_data: {
-
-      mode: productType === "subscription" ? "subscription" : "payment",
-      success_url: successUrl || `${req && req.headers.get("origin")}/payment-success`;
-      cancel_url: cancelUrl || `${req && req.headers.get("origin")}/payment-canceled`;
-
+            currency: currency;
+            product_data: {
+              name: productName
+              description: productDescription
+            }
+            unit_amount: amount * 100, // Convert to cents
+            ...(productType === "subscription" ? { recurring: { interval: "month" } } : {})
+          }
+          quantity: 1}];
+      mode: productType === "subscription" ? "subscription" : "payment"
+      success_url: successUrl |`${req.headers.get("origin")}/payment-success`;
+      cancel_url: cancelUrl |`${req.headers.get("origin")}/payment-canceled`;
       metadata: {
         userId: user && user.id;
         serviceId: serviceId;
@@ -237,11 +188,6 @@ if ( {) {
         currency: currency;
         status: "pending";
         in_escrow: escrow
-        created_at: new Date().toISOString()
-      })
-    }
-
-
             currency: currency,
             product_data: { 
               name: productName,
@@ -274,46 +220,23 @@ if ( {) {
         currency: currency,
         status: "pending",
         in_escrow: escrow,
-
         created_at: new Date().toISOString()
       })
     }
     return new Response(JSON.stringify({ url: session.url }), {
-
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-
-
       status: 200})
   } catch (error) {
     console.error("Checkout error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
-
-
-    return new Response(JSON && JSON.stringify({ url: session && session.url }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 200})
-  } catch (error) {
-    console && console.error("Checkout error:", error && error.message);
-    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 500})
   }
 });
 
-=======
-<<<<<<< HEAD
-              name: product_name,
-              description: product_description;
-            }
-=======
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -386,7 +309,6 @@ serve(async (req) => {;
               name: productName,;
               description: productDescription;
             },;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             unit_amount: amount * 100, // Convert to cents;
             ...(product_type === "subscription" ? { recurring: { interval: "month" } } : {});
           }
@@ -428,20 +350,5 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
-<<<<<<< HEAD
-=======
-
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 });
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

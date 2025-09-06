@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface FilterSidebarProps {
-  className?: string;
-  children?: React.ReactNode
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 
@@ -28,18 +13,19 @@ export const FilterSidebar: React.FC < FilterSidebarProps> = ({
     <div className={`filter - sidebar ${class_name || ''}`}>;
 
       {children}
-    </div>);
+    </div>
+  )
 }
-export default FilterSidebar;
+export default FilterSidebar
 interface FilterOption {
-  value: string;
-  label: string;
-  count?: number;
+  value: string
+  label: string
+  count?: number
 }
 interface FilterGroup {
-  title: string;
-  key: string;
-  options: FilterOption[];
+  title: string
+  key: string
+  options: FilterOption[]
   type: 'checkbox' | 'radio' | 'range'}
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
@@ -84,18 +70,12 @@ export default FilterSidebar;
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
       </div>
     </>
   )}
 '"`
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+
   filters: FilterGroup[];
   selected_filters: Record < string, any>;
   onFilterChange: key: string, value: string, checked: boolean void;
@@ -133,22 +113,15 @@ function FilterSidebar() {
               </div>;
             </div>))}
         </div>;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>;
-    </>)}
+    </>;
+  )};
 '"`;
 <<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from 'react',;
 interface FilterSidebarProps {;
   className?: string,;
@@ -166,15 +139,3 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
   );
 };
 export default FilterSidebar;
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

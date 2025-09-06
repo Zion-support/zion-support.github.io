@@ -1,33 +1,13 @@
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-=======
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ResourceItem {
 
   id: string
@@ -42,10 +22,22 @@ export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
 
-
+      id: 'logo-pack'
+      title: 'Zion AI Logo Pack'
+      description: 'Official logos in various formats (PNG, SVG, JPG)';
+      type: 'image'
+      icon: <FileImage className="h-10 w-10 text-zion-purple" />
+      url: '#'
+    }
       id: 'logo-pack',
-
-
+      title: 'Zion AI Logo Pack',;
+      description: 'Official logos in various formats (PNG, SVG, JPG)';
+      title: 'Zion AI Logo Pack',
+      description: 'Official logos in various formats (PNG, SVG, JPG)',
+      type: 'image',
+      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
+      url: '#'
+    },
     {
       id: 'brand-guidelines'
       title: 'Brand Guidelines'
@@ -53,11 +45,8 @@ export function PartnerResources() {
       type: 'document'
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
-
-
+    }
     },
-
-
     {
       id: 'banner-templates'
       title: 'Social Media Banners'
@@ -65,11 +54,8 @@ export function PartnerResources() {
       type: 'image'
       icon: <FileImage className="h-10 w-10 text-zion-purple" />
       url: '#'
-
-
+    }
     },
-
-
     {
       id: 'promotional-video'
       title: 'Promotional Video'
@@ -77,11 +63,8 @@ export function PartnerResources() {
       type: 'video'
       icon: <FileVideo className="h-10 w-10 text-red-500" />
       url: '#'
-
-
+    }
     },
-
-
     {
       id: 'email-templates'
       title: 'Email Templates'
@@ -89,11 +72,8 @@ export function PartnerResources() {
       type: 'document'
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
-
-
+    }
     },
-
-
     {
       id: 'talking-points'
       title: 'Talking Points'
@@ -102,11 +82,8 @@ export function PartnerResources() {
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
     }
-
-
+  ];
   ],
-
-
 
   const handleDownload = (resource: ResourceItem) => {
     // In a real app, this would download the actual resource
@@ -114,6 +91,8 @@ export function PartnerResources() {
       title: "Download started"
       description: `Downloading ${resource.title}`
       variant: "default"})
+  }
+  },
 
 
   },
@@ -226,7 +205,6 @@ import {toast} from "@/hooks/use-toast";
                     className="w-full flex items-center gap-2"
                   >
                     <Download className="h-4 w-4" />
-
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",;
@@ -328,30 +306,12 @@ export function PartnerResources() {;
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
               </Card>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
-<<<<<<< HEAD
-
-
-};
-
-
-=======
           </div>
         </CardContent>
       </Card>
@@ -404,13 +364,7 @@ export function PartnerResources() {;
       </Card>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
           </div>;
         </CardContent>;
       </Card>;
@@ -490,23 +444,7 @@ export function PartnerResources() {;
           </Button>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-
-    </div>);
-
-=======
     </div>;
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
-=======
-
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
+  const { role = "guest", talent } = req.query as {
   const { role = "guest", talent } = req.query as {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     role?: string;
     talent?: string;
   }
@@ -112,6 +101,7 @@ if ( {) {
   headers["Set - Cookie"] = cookies.join ();
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

@@ -20,7 +20,6 @@ const CardFooter = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
 
   <div
-=======
   />));
 CardDescription.display_name = "CardDescription";
 ;
@@ -36,7 +35,6 @@ const CardFooter = React.forward_ref<;
   React.HTMLAttributes < HTMLDivElement>;
 >(({ class_name, ...props }, ref) => (
   <div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
@@ -47,15 +45,7 @@ const CardFooter = React.forward_ref<;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from 'react';
-=======
-
 import React from 'react',;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface CardProps {
   children: React.ReactNode;
   className?: string;
@@ -87,6 +77,18 @@ const Card: React.FC<CardProps> = ({
 CardFooter.display_name = "CardFooter";
 ;
 import React from 'react',
+=======
+  />;
+));
+CardFooter.displayName = "CardFooter";
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+import React from 'react',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface CardProps {
   children: React.ReactNode,
   class_name?: string,
@@ -94,6 +96,7 @@ interface CardProps {
   on_click?: () => void,
   hover?: boolean;
 }
+<<<<<<< HEAD
 const Card: React.FC < CardProps> = ({
   children,
   class_name = '',
@@ -104,9 +107,23 @@ const Card: React.FC < CardProps> = ({
   const hover_classes = hover ? 'hover: border - blue - 500 / 30 hover:shadow - 2xl hover:shadow - blue - 500 / 10 hover:-translate - y-1 hover:bg - gray - 900 / 80 focus - within:border - blue - 500 / 50 focus - within:shadow - lg focus - within:shadow - blue - 500 / 20' : '',
   const clickable_classes = on_click ? 'cursor - pointer focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:ring - offset - 2 focus:ring - offset - black' : '',
   const classes = `${base_classes} ${hover_classes} ${clickable_classes} ${class_name}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div;
+=======
+const Card: React.FC<CardProps> = ({
+
+  children
+  className = ''
+  style
+  onClick
+  hover = true}) => {
+  const baseClasses = 'bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 transition-all duration-300 relative overflow-hidden'
+  const hoverClasses = hover ? 'hover: border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : ''
+  const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : ''
+  const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`
+  return (
+    <div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       className={classes}
       style={style}
       on_click={on_click}
@@ -146,28 +163,6 @@ export default Card,
 ;
 <<<<<<< HEAD
 
-
-
-=======
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
-
-=======
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-=======
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-=======
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

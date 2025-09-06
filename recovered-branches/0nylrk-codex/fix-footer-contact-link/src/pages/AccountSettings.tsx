@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -17,13 +13,6 @@ import { Switch  } from '@/components/ui/switch';
 import { Label  } from '@/components/ui/label';
 import { toast } from 'sonner';
 export default function AccountSettings() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState, useEffect} from 'react';
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
@@ -37,36 +26,12 @@ import {Separator} from '@/components / ui / separator';
 import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
-<<<<<<< HEAD
-
-
-
-=======
 export default function AccountSettings() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-
-
-
-  useEffect(() => {;
-    try {;
-      const saved = localStorage && localStorage.getItem('account_settings');
-      if (saved) {;
-        const parsed = JSON && JSON.parse(saved);
-        setDisplayWeb3(!!parsed && parsed.displayWeb3);
-        setDidHandle(parsed && parsed.didHandle || '');
-        setEnableBackup(!!parsed && parsed.enableBackup);
-
-=======
-
-=======
-<<<<<<< HEAD
   useEffect(() => {
     try {
 
@@ -76,10 +41,6 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3);
         setDidHandle(parsed.didHandle |'');
         setEnableBackup(!!parsed.enableBackup)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -99,7 +60,6 @@ export default function AccountSettings() {
   const [didHandle, setDidHandle] = useState(''),
   const [enableBackup, setEnableBackup] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   useEffect(() => {
     try {
@@ -109,16 +69,6 @@ export default function AccountSettings() {
         setDisplayWeb3(!!parsed.displayWeb3),
         setDidHandle(parsed.didHandle || ''),
         setEnableBackup(!!parsed.enableBackup)
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -146,44 +96,20 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3),;
         setDidHandle(parsed.didHandle || ''),;
         setEnableBackup(!!parsed.enableBackup);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
   }, []);
-<<<<<<< HEAD
   const handleSave = () => {
     setIsSubmitting(true);
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }, []),
-=======
-=======
   }, []),
 <<<<<<< HEAD
-
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const handleSave = () => {
     setIsSubmitting(true),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Simulate API call
     setTimeout(() => {
       try {
@@ -235,7 +161,32 @@ export default function AccountSettings() {;
         toast.error('Failed to save settings')
       } finally {
         setIsSubmitting(false)
-
+      }
+    }, 1000)
+  }
+  const handleConnectWallet = async () => {
+    try {
+      // Check if wallet is available
+      const ethereum = (window as any).ethereum;
+      if (!ethereum) {
+        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
+        return
+      }
+      // Request accounts
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
+      const address = accounts[0];
+      // Sign message to verify ownership
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`
+      await ethereum.request({
+        method: 'personal_sign'
+        params: [address, message]
+      });
+      // Auto-set DID handle if ENS is available
+      try {
+        const provider = new (window as any).ethers.providers.Web3Provider(ethereum);
+        const ensName = await provider.lookupAddress(address);
+        if (ensName) {
+          setDidHandle(ensName)
   }, []),;
   const handleSave = () => {;
     setIsSubmitting(true),;
@@ -283,18 +234,6 @@ export default function AccountSettings() {;
         const ensName = await provider && provider.lookupAddress(address);
         if (ensName) {;
           setDidHandle(ensName);
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }
       } catch (error) {;
         console && console.error('ENS lookup error:', error);
@@ -306,29 +245,10 @@ export default function AccountSettings() {;
       toast && toast.error(error && error.message || 'Failed to connect wallet');
 
     }
-<<<<<<< HEAD
-
-
-  },
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   };
-=======
   },
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   return (
 
@@ -517,14 +437,24 @@ export default function AccountSettings() {;
                 <Button
                   variant="outline" 
                   className="w-full"
-                  disabled={!enableBackup}>;
-                  Restore Profile from Backup;
-                </Button>;
-                <p className="text-xs text-gray-500 mt-1">;
-                  {enableBackup ;
-                    ? 'Restore your profile data from decentralized storage' ;
-=======
-
+                  disabled={!enableBackup}
+                >
+                  Restore Profile from Backup
+                </Button>
+                <p className="text-xs text-gray-500 mt-1">
+                  {enableBackup
+                    ? 'Restore your profile data from decentralized storage'
+                    : 'Enable backup first to use this feature'}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
+}
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
 
@@ -807,5 +737,3 @@ if ( {) {
 
 =======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

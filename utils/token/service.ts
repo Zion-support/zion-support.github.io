@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -9,7 +5,6 @@ export function getConfig() {
     decimals: 18,
     totalSupply: 1000000
   };
-=======
 export interface TokenTransaction {;
   id: string;
   userId: string;
@@ -17,30 +12,16 @@ export interface TokenTransaction {;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-  id: string;
-  user_id: string;
-  amount: number;
-  type: 'issue' | 'redeem' | 'transfer';
-  reason: string;
-  timestamp: number;
 
 
 
 }
-// Mock data storage - replace with actual database;
+
+// Mock data storage - replace with actual database
 let transactions: TokenTransaction[] = [];
-<<<<<<< HEAD
-
-
-=======
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
-<<<<<<< HEAD
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -48,8 +29,6 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     reason
     timestamp: Date.now()
   }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -58,12 +37,6 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     timestamp: Date.now();
   };
   
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   transactions.push(transaction);
   return transaction;
 }
@@ -72,55 +45,15 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
-<<<<<<< HEAD
-
-;
-export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount,
-    type: 'issue',
-    reason,
-    timestamp: Date.now ();
-=======
-<<<<<<< HEAD
     type: 'redeem'
     reason
     timestamp: Date.now()
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
-;
-  transactions.push (transaction);
-  return transaction;
-}
-export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount: -amount, // Negative for redemption;
-    type: 'redeem',
-    reason,
-    timestamp: Date.now ();
-  }
-;
-  transactions.push (transaction);
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     type: 'redeem',
     reason,
     timestamp: Date.now();
   };
   
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   transactions.push(transaction);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return transaction;
@@ -131,7 +64,9 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
     reason,
     timestamp: Date && Date.now()
   };
-  transactions && transactions.push(transaction);
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  transactions.push(transaction);
   return transaction;
 }
 
@@ -139,109 +74,6 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
 
 =======
-// Token service utilities
-export interface TokenConfig {
-  id: string;
-  name: string;
-  symbol: string;
-  decimals: number;
-  totalSupply: string;
-  contractAddress?: string;
-  network: string;
-  isActive: boolean;
-  createdAt: Date;
-  updatedAt: Date;
-}
-<<<<<<< HEAD
-
-export interface TokenBalance {
-  address: string;
-  balance: string;
-  tokenId: string;
-  lastUpdated: Date;
-}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-// Mock database - in production, this would connect to a real database
-const tokenConfigs: TokenConfig[] = [];
-const tokenBalances: TokenBalance[] = [];
-
-<<<<<<< HEAD
-export async function createTokenConfig(config: Omit<TokenConfig, 'id' | 'createdAt' | 'updatedAt'>): Promise<TokenConfig> {
-  const newConfig: TokenConfig = {
-    ...config,
-    id: `token_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  };
-  tokenConfigs.push(newConfig);
-  return newConfig;
-}
-
-export async function getTokenConfig(id: string): Promise<TokenConfig | null> {
-  return tokenConfigs.find(config => config.id === id) || null;
-}
-
-export async function getAllTokenConfigs(): Promise<TokenConfig[]> {
-  return [...tokenConfigs];
-}
-
-export async function updateTokenConfig(id: string, updates: Partial<TokenConfig>): Promise<TokenConfig | null> {
-  const configIndex = tokenConfigs.findIndex(config => config.id === id);
-  if (configIndex === -1) return null;
-  
-  tokenConfigs[configIndex] = {
-    ...tokenConfigs[configIndex],
-    ...updates,
-    updatedAt: new Date(),
-  };
-  return tokenConfigs[configIndex];
-}
-
-export async function deleteTokenConfig(id: string): Promise<boolean> {
-  const configIndex = tokenConfigs.findIndex(config => config.id === id);
-  if (configIndex === -1) return false;
-  
-  tokenConfigs.splice(configIndex, 1);
-  return true;
-}
-
-export async function getTokenBalance(address: string, tokenId: string): Promise<TokenBalance | null> {
-  return tokenBalances.find(balance => 
-    balance.address === address && balance.tokenId === tokenId
-  ) || null;
-}
-
-export async function updateTokenBalance(address: string, tokenId: string, balance: string): Promise<TokenBalance> {
-  const existingIndex = tokenBalances.findIndex(b => 
-    b.address === address && b.tokenId === tokenId
-  );
-  
-  const balanceData: TokenBalance = {
-    address,
-    balance,
-    tokenId,
-    lastUpdated: new Date(),
-  };
-  
-  if (existingIndex >= 0) {
-    tokenBalances[existingIndex] = balanceData;
-  } else {
-    tokenBalances.push(balanceData);
-  }
-  
-  return balanceData;
-}
-
-export async function getAllTokenBalances(address?: string): Promise<TokenBalance[]> {
-  if (address) {
-    return tokenBalances.filter(balance => balance.address === address);
-  }
-  return [...tokenBalances];
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {

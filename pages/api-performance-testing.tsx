@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
-<<<<<<< HEAD
-=======
   const features = [
     'k6/Gatling-compatible test runner',
     'SLO-aware latency reports',
@@ -19,8 +10,6 @@ export default function ApiPerformanceTestingPage() {
     'CI checks and PR annotations',
     'Synthetic traffic for staging',;
   ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 class ErrorBoundary extends React.Component {
@@ -176,36 +165,8 @@ import {Check, ExternalLink} from 'lucide-react';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
-<<<<<<< HEAD
-<div className='mt - 14 flex flex - wrap items - center gap - 4'>;
-            <Link;
-              href='/contact';
-              className='px - 5 py - 3 rounded - lg bg - cyan - 500 text - black font - semibold';
-            >;
-              Talk to Sales;
-            </Link>;
-            <a;
-              href='mailto:kleber@ziontechgroup.com';
-              className='px - 5 py - 3 rounded - lg border border - white / 20';
-            >;
-              Email: kleber@ziontechgroup.com;
-            </a>;
-            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
-          </div>;
-        </div>;
-      </section>;
-    </div>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+}
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
 export default function ApiPerformanceTestingPage() {
@@ -333,9 +294,3 @@ export default function ApiPerformanceTestingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

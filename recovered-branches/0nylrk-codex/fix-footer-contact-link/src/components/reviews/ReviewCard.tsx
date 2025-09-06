@@ -1,21 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-interface ReviewCardProps {
-  review: Review;
-  onReport: (reviewId: string, reason: string) => Promise<boolean>
-}
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {formatDistanceToNow} from "date-fns";
 import {Star, Flag, User} from "lucide-react";
@@ -25,86 +8,19 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Textarea} from "@/components/ui/textarea";
-<<<<<<< HEAD
-interface ReviewCardProps {;
-  review: Review,;
-  onReport: (reviewId: string, reason: string) => Promise<boolean>;
-}
-
-export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
-
-  const [reportReason, setReportReason] = useState("");
-  const [isReporting, setIsReporting] = useState(false);
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
-
-
-  const handleReport = async () => {;
-    if (!reportReason && reportReason.trim()) return;
-
-
-    setIsReporting(true);
-    const success = await onReport(review && review.id, reportReason);
-    setIsReporting(false);
-
-
-    if (success) {;
-      setReportReason("");
-      setIsReportDialogOpen(false);
-    }
-  };
-
-  const renderStars = (rating?: number) => {;
-    if (!rating) return null;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from "lucide-react",
 import { Review } from "@/types/reviews",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    return (
-      <div className="flex">;
-        {[1, 2, 3, 4, 5].map((star) => (;
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />;
-        ))}
-
-      </div>
-
-    )
-  },
-  
-
-
-  const getInitials = (name: string) => {
-    return name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-      .toUpperCase()
-
-import { useState  } from './react';
-import { formatDistanceToNow  } from './date - fns';
-import { Star, Flag, User  } from './lucide-react';
-import { Review  } from '@/types / reviews';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 import {
   Dialog,
   DialogContent,
@@ -112,59 +28,18 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
-  DialogTrigger,
-} from '@/components / ui / dialog';
-import { Textarea  } from '@/components / ui / textarea';
-=======
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ReviewCardProps {
   review: Review;
   on_report: (review_id: string, reason: string) => Promise < boolean>;
 }
-<<<<<<< HEAD
-export /**
- * ReviewCard - Function description
- */
-function ReviewCard() {
-  const [report_reason, setReportReason] = useState ("");
-  const [is_reporting, setIsReporting] = useState (false);
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState (false);
-;
-  const handle_report = async () => {
-    if () return) {
-  $2
-}
-    setIsReporting (true);
-    const success = await on_report (review.id, report_reason);
-    setIsReporting (false);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      setReportReason ("");
-      setIsReportDialogOpen (false);
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function ReviewCard({ review, onReport }: ReviewCardProps) {;
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
-<<<<<<< HEAD
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
@@ -177,93 +52,57 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     if (success) {
       setReportReason("");
       setIsReportDialogOpen(false);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
-;
-  const render_stars = (rating?: number) =>: any {
-    // Check condition
-if (return null) {
-  $2
-}
+  const renderStars = (rating?: number) => {
+    if (!rating) return null;
+  const [reportReason, setReportReason] = useState(""),
+  const [isReporting, setIsReporting] = useState(false),
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),
+  
+  const handleReport = async () => {
+    if (!reportReason.trim()) return,
+    
+    setIsReporting(true),
+    const success = await onReport(review.id, reportReason),
+    setIsReporting(false),
+    
+    if (success) {
+      setReportReason(""),
+      setIsReportDialogOpen(false)
+    }
+  },
+  
+  const renderStars = (rating?: number) => {
+    if (!rating) return null,
+    
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map ((star) => (
           <Star;
             key={star}
-            className={`h - 4 w - 4 ${star <= rating ? "fill - yellow - 400 text - yellow - 400" : "text - gray - 300"}`}
-          />))}
-      </div>);
-  }
-;
-  const get_initials = (name: string) =>: any {
-    return name;
-      .split (" ");
-      .map ((n) => n[0]);
-      .join ("");
-      .toUpperCase ();
-      .substring (0, 2);
-  }
-;
-
-  return (
-    <div className="border rounded - lg p - 4 bg - card">;
-      <div className="flex justify - between items - start mb - 3">;
-        <div className="flex items - center gap - 3">;
-          {review.is_anonymous ? (
-            <Avatar>;
-              <AvatarFallback className="bg - muted">;
-                <User className="h - 4 w - 4" />;
-              </AvatarFallback>;
-            </Avatar>) : (
-            <Avatar>;
-              {review.reviewer_profile?.avatar_url ? (
-                <AvatarImage;
-                  src={review.reviewer_profile.avatar_url}
-                  alt={review.reviewer_profile.display_name}
-                />) : (
-                <AvatarFallback>;
-                  {review.reviewer_profile?.display_name;
-                    ? get_initials (review.reviewer_profile.display_name);
-                    : "??"}
-
-      </div>;
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          />
+        ))}
+      </div>
     );
-  };
-
-  const getInitials = (name: string) => {;
-    return name;
-      .split(" ");
-      .map((n) => n[0]);
-      .join("");
-      .toUpperCase();
+  }
+    )
+  },
+  
+  const getInitials = (name: string) => {
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase()
       .substring(0, 2);
-  };
-
-  return (
-    <div className="border rounded-lg p-4 bg-card">;
-      <div className="flex justify-between items-start mb-3">;
-        <div className="flex items-center gap-3">;
-          {review && review.is_anonymous ? (;
-            <Avatar>;
-              <AvatarFallback className="bg-muted">;
-                <User className="h-4 w-4" />;
-              </AvatarFallback>;
-            </Avatar>;
-          ) : (;
-            <Avatar>;
-              {review && review.reviewer_profile?.avatar_url ? (;
-                <AvatarImage src={review && review.reviewer_profile.avatar_url} alt={review && review.reviewer_profile.display_name} />;
-              ) : (;
-                <AvatarFallback>;
-                  {review && review.reviewer_profile?.display_name ? ;
-                    getInitials(review && review.reviewer_profile.display_name) : "??"}
-=======
+  }
+;
 
       .substring(0, 2)
   },
   
-
   return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
@@ -283,16 +122,11 @@ if (return null) {
                 />
               ) : (
                 <AvatarFallback>
-
+                  {review.reviewer_profile?.display_name
+                    ? getInitials(review.reviewer_profile.display_name)
+                    : "??"}
+                </AvatarFallback>
                   {review.reviewer_profile?.display_name ? 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { Star, Flag, User } from "lucide-react",;
@@ -366,23 +200,13 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               ) : (;
                 <AvatarFallback>;
                   {review.reviewer_profile?.display_name ?;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     getInitials(review.reviewer_profile.display_name) : "??"}
 
                 </AvatarFallback>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </Avatar>;
           )}
-
-
           
-
-
           <div>
             <div className="font-medium">
               {review.is_anonymous
@@ -390,85 +214,30 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 : review.reviewer_profile?.display_name |"User"}
             </div>
             <div className="text-sm text-muted-foreground">
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
               {formatDistanceToNow(new Date(review.created_at), {
                 addSuffix: true
               })}
             </div>
           </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
             </div>;
           </div>;
         </div>;
         <div className="flex">;
-=======
         </div>
         <div className="flex">
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {renderStars(review.rating)}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
         <div className="flex">{renderStars(review.rating)}</div>
       </div>
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-<<<<<<< HEAD
-
-                </AvatarFallback>)}
-            </Avatar>)}
-          <div>;
-            <div className="font - medium">;
-              {review.is_anonymous;
-                ? "Anonymous";
-                : review.reviewer_profile?.display_name || "User"}
-            </div>;
-            <div className="text - sm text - muted - foreground">;
-              {formatDistanceToNow (new Date (review.created_at), {
-                add_suffix: true,
-              })}
-            </div>;
-          </div>;
-        </div>;
-        <div className="flex">{render_stars (review.rating)}</div>;
-      </div>;
-      <div className="mb - 4">;
-        <p className="text - sm whitespace - pre - wrap">{review.review_text}</p>;
-      </div>;
-      {(review.communication_rating ||;
-        review.quality_rating ||;
-        review.timeliness_rating ||;
-
-        review.would_work_again !== undefined) && (
-        <div className="border - t pt - 3 mt - 3">;
-          <div className="flex flex - wrap gap - 2">;
-=======
-<<<<<<< HEAD
       {(review.communication_rating |
         review.quality_rating |
         review.timeliness_rating |
         review.would_work_again !== undefined) && (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -533,115 +302,15 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 <span className="ml-1 text-yellow-500">{review && review.communication_rating}/5</span>;
               </Badge>;
             )}
-<<<<<<< HEAD
-
-            {review && review.quality_rating && (;
-              <Badge variant="outline" className="flex gap-1 items-center">;
-                Quality;
-                <span className="ml-1 text-yellow-500">{review && review.quality_rating}/5</span>;
-              </Badge>;
-            )}
-
-            {review && review.timeliness_rating && (;
-              <Badge variant="outline" className="flex gap-1 items-center">;
-                Timeliness;
-                <span className="ml-1 text-yellow-500">{review && review.timeliness_rating}/5</span>;
-              </Badge>;
-            )}
-
-            {review && review.would_work_again !== undefined && (;
-              <Badge
-                variant={review && review.would_work_again ? "default" : "secondary"}
-                className={`${review && review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}>;
-                {review && review.would_work_again ? "Would work again" : "Would not work again"}
-              </Badge>;
-
-            )}
-
-
-          </div>;
-        </div>;
-=======
-=======
-          </div>;
-        </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       )}
-
-
-      <div className="mt-3 flex justify-end">;
-        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
-          <DialogTrigger asChild>;
-            <Button variant="ghost" size="sm" className="text-muted-foreground">;
-              <Flag className="h-3 w-3 mr-1" />;
-=======
-              </Badge>)}
-          </div>;
-<<<<<<< HEAD
-        </div>)}
-      <div className="mt - 3 flex justify - end">;
-        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
-          <DialogTrigger as_child>;
-            <Button variant="ghost" size="sm" className="text - muted - foreground">;
-              <Flag className="h - 3 w - 3 mr - 1" />;
-
-              Report;
-            </Button>;
-          </DialogTrigger>;
-          <DialogContent>;
-            <DialogHeader>;
-
-              <DialogTitle > Report Review</DialogTitle>;
-              <DialogDescription>;
-                If you believe this review violates our community guidelines,
-                please provide details below.;
-              </DialogDescription>;
-            </DialogHeader>;
-            <Textarea;
-              placeholder="Why are you reporting this review?";
-              value={report_reason}
-              on_change={(e) => setReportReason (e.target.value)}
-              className="min - h-[100px]";
-            />;
-            <DialogFooter>;
-              <Button;
-                variant="outline";
-                on_click={() => setIsReportDialogOpen (false)}
-              >;
-                Cancel;
-              </Button>;
-              <Button;
-                on_click={handle_report}
-                disabled={!report_reason.trim () || is_reporting}
-              >;
-                {is_reporting ? "Submitting..." : "Submit Report"}
-
-              </Button>;
-            </DialogFooter>;
-          </DialogContent>;
-        </Dialog>;
-      </div>;
-
-    </div>);
-=======
-        </div>;
-=======
-=======
           </div>;
         </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </div>;
+        </div>;
       )}
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -682,26 +351,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         </Dialog>
       </div>
     </div>
-<<<<<<< HEAD
   );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
-
-=======
-
   )
 }
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

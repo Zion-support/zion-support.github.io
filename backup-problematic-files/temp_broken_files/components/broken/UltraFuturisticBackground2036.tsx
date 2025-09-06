@@ -2,22 +2,11 @@ import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
 }
-<<<<<<< HEAD
-
-;
-export default function UltraFuturisticBackground2036({;
-  variant = 'default',;
-
-=======
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
-<<<<<<< HEAD
+:components/broken/UltraFuturisticBackground2036.tsx
 export default function UltraFuturisticBackground2036({variant = 'default';
-=======
 ;
 export default function UltraFuturisticBackground2036({;
   variant = 'default',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   intensity = 'medium';
 }: UltraFuturisticBackground2036Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
@@ -222,19 +211,10 @@ export default function UltraFuturisticBackground2036({;
     animate();
     return () => {if (animationRef.current) {;
         cancelAnimationFrame(animationRef.current);
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
       }
       window.removeEventListener('resize', resizeCanvas);
     }
 }, [variant, intensity])
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 export default function UltraFuturisticBackground2036({ 
   variant = 'default',
@@ -498,35 +478,17 @@ const nebulaGradient = ctx.createRadialGradient(
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
       }
       window.removeEventListener('resize', resizeCanvas)
     }
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      }
-      window.removeEventListener('resize', resizeCanvas)
-    }
-<<<<<<< HEAD
   }, [variant, intensity]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-=======
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+:components/broken/UltraFuturisticBackground2036.tsx
 }, [variant, intensity]),
 
-=======
   }, [variant, intensity]),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
   return (
     <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
       <canvas,
@@ -540,21 +502,12 @@ ref={canvasRef}
         {variant === 'cyber' && (
           <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)1px,transparent1px),linear-gradient(90deg,rgba(0,255,255,0.1)1px,transparent1px)] bg-[size:50px50px]&quot; />
         )}
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+:components/broken/UltraFuturisticBackground2036.tsx
         ;
-
-=======
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
 ;
-=======
         ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
         {/* Quantum field lines */}
 {variant === 'quantum' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -562,41 +515,29 @@ ref={canvasRef}
               <motion.div,
 key={i}
                 className=&quot;absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent&quot;
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
+:components/broken/UltraFuturisticBackground2036.tsx
                 style={{
                   left: `${(i + 1) * 12.5}%`
                   transform: 'translateX(-50%)'
                 }}
-<<<<<<< HEAD
                 animate={{opacity: [0.3, 0.8, 0.3]}}
                 transition={{duration: 3;
                   repeat: Infinity;
-=======
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
+:components/broken/UltraFuturisticBackground2036.tsx
                 animate={{;
                   opacity: [0.3, 0.8, 0.3]}}
                 transition={{;
                   duration: 3,;
                   repeat: Infinity,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   delay: i * 0.5}}
               />;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
-=======
                 style={{                  left: `${(i + 1) * 12.5}%`,
                   transform: 'translateX(-50%)'
                 }}
-=======
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 animate={_{
                   opacity: [0.3, 0.8, 0.3]}}
                 transition={_{
@@ -606,12 +547,8 @@ key={i}
           </div>;
         )}
         ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
         {/* AI neural network overlay */}
 {variant === 'ai' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -619,22 +556,22 @@ key={i}
               <motion.div,
 key={i}
                 className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;
-
+:components/broken/UltraFuturisticBackground2036.tsx
+                style={{
+                  top: `${(i + 1) * 16.67}%`}}
+                animate={{opacity: [0.2, 0.6, 0.2]}}
+                transition={{duration: 4;
+                  repeat: Infinity;
+                  delay: i * 0.8}}
+              />;
                 style={{                  top: `${(i + 1) * 16.67}%`}}
                 animate={_{
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={_{
                   duration: 4, repeat: Infinity, delay: i * 0.8}}
               />
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
             ))}
           </div>;
         )}

@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
-<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import {
@@ -14,19 +9,11 @@ import {
   CardTitle
   CardFooter
 } from "@/components/ui/card";
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
 import {Textarea} from "@/components/ui/textarea";
 import {Check, Pencil} from "lucide-react";
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -34,78 +21,40 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/componen
 import { Textarea } from "@/components/ui/textarea",
 import { Check, Pencil } from "lucide-react",
 
-<<<<<<< HEAD
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
 import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from "lucide-react";
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void
 }
 
-<<<<<<< HEAD
-
-interface GeneratedDescriptionDisplayProps {;
-  description: string,;
-  onSave: (editedDescription: string) => void;
-}
-
-export function GeneratedDescriptionDisplay(): any ({ ;
-  description, ;
-  onSave ;
-=======
-<<<<<<< HEAD
 export function GeneratedDescriptionDisplay({
   description
   onSave
 
-=======
 export function GeneratedDescriptionDisplay({ 
   description, 
   onSave 
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }: GeneratedDescriptionDisplayProps) {;
 
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
-=======
-<<<<<<< HEAD
-
-export function GeneratedDescriptionDisplay({ 
-  description, 
-  onSave 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-  const handleSave = () => {;
-    onSave(editedDescription);
-    setIsEditing(false);
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: GeneratedDescriptionDisplayProps) {
   const { toast } = useToast(),
   const [isEditing, setIsEditing] = useState(false),
   const [editedDescription, setEditedDescription] = useState(description),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+  const handleSave = () => {
+    onSave(editedDescription),
+    setIsEditing(false),
+    toast({
+      title: "Description Saved"
+      description: "Your edited description has been saved."
+    });
+  }
     })
   },
-
-
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -130,7 +79,6 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />
                 Edit
               </>
-
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -181,18 +129,6 @@ export function GeneratedDescriptionDisplay({;
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
               </>;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             )}
 =======
 import React, { useState } from './react';

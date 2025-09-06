@@ -1,160 +1,26 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-import { useState } from "react",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import CodeBlock from "./CodeBlock";
-=======
-<<<<<<< HEAD
-import { useState } from 'react'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
-import CodeBlock from './CodeBlock'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface Param {
-
-  name: string
-type: string
-required?: boolean
-}interface ApiPlaygroundProps {
-  method: string
-  path: string
-  params?: Param[]
-export function ApiPlayground({
-  method
-  path
-  params = []
-}: ApiPlaygroundProps) {
-  const [apiKey, setApiKey] = useState('demo_key_123')
-  const [paramValues, setParamValues] = useState<Record<string, string>>({})
-  const [body, setBody] = useState('{}')
-  const [response, setResponse] = useState<string | null>(null)
-  const [loading, setLoading] = useState(false)
-  const handleParamChange = (name: string, value: string) => {
-    setParamValues(prev => ({ ...prev, [name]: value }))
-  }
-  const sendRequest = async () => {
-    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
-<<<<<<< HEAD
-    const baseUrl =
-      process.env.NEXT_PUBLIC_API_URL |
-=======
-    const baseUrl = null;
-      process.env.NEXT_PUBLIC_API_URL ||
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      (typeof window !== 'undefined' ? window.location.origin : '')
-    let url = `${baseUrl}${path}`
-    const searchParams = new URLSearchParams()
-    if (method === 'GET' |method === 'DELETE') {
-      params.forEach(p => {
-        const val = paramValues[p.name]
-        if (val) searchParams.append(p.name, val)
-      })
-      const query = searchParams.toString()
-      if (query) url += `?${query}` }
-=======
-<<<<<<< HEAD
-=======
-import { useState } from "react",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Button } from "@/components/ui/button",
-import CodeBlock from "./CodeBlock",
-interface Param {
-  name: string,
-  type: string,
-  required?: boolean
-import { useState } from "react",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Button } from "@/components/ui/button",;
-import CodeBlock from "./CodeBlock",;
-interface Param {;
-  name: string,;
-  type: string,;
-  required?: boolean;
-}
-;
-interface ApiPlaygroundProps {;
-  method: string,;
-  path: string,;
-  params?: Param[];
-}
-
-export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
-  const [apiKey, setApiKey] = useState("demo_key_123"),
-  const [paramValues, setParamValues] = useState<Record<string string>>({}),
-  const [body, setBody] = useState("{}"),
-  const [response, setResponse] = useState<string | null>(null),
-  const [loading, setLoading] = useState(false),
-
-  const handleParamChange = (name: string, value: string) => {
-    setParamValues((prev) => ({ ...prev, [name]: value }))
-  },
-
-  const sendRequest = async () => {
-    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : ''),
-    let url = `${baseUrl}${path}`,
-
-    const searchParams = new URLSearchParams(),
-    if (method === "GET" || method === "DELETE") {
-      params.forEach((p) => {
-        const val = paramValues[p.name],
-        if (val) searchParams.append(p.name, val)
-      }),
-      const query = searchParams.toString(),
-      if (query) url += `?${query}`
-    }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-    const options: RequestInit = {
+const options: RequestInit = {
       method
       headers: {
-
+        Authorization: `Bearer ${apiKey}`
+        'Content-Type': 'application/json'
+      }
+      // Add timeout to prevent hanging
+      signal: AbortSignal.timeout(15000)
+    }
+    if (method !== 'GET' && method !== 'DELETE') {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
       signal: AbortSignal.timeout(15000)},
 
-    if (method !== "GET" && method !== "DELETE") {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-      signal: AbortSignal.timeout(15000),
-    }
-    if (method !== 'GET' && method !== 'DELETE') {
-=======
-      signal: AbortSignal.timeout(15000)},
-
-    if (method !== "GET" && method !== "DELETE") {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       try {
         options.body = JSON.stringify (JSON.parse (body));
       } catch {
-
-    set_loading (true);
-    set_response (null);
-
+        options.body = body
+      }
+    }
+    setLoading(true)
+    setResponse(null)
     try {
       const res = await fetch (url, options);
       const content_type = res.headers.get ('content - type');
@@ -217,7 +83,6 @@ export function ApiPlayground(): any ({;
   const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-=======
         options.body = body
 
 ;
@@ -227,7 +92,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   const [body, setBody] = useState("{}"),;
   const [response, setResponse] = useState<string | null>(null),;
   const [loading, setLoading] = useState(false),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleParamChange = (name: string, value: string) => {;
     setParamValues(prev => ({ ...prev, [name]: value }));
   };
@@ -304,7 +168,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       );
     } finally {;
       setLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
@@ -312,57 +175,24 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className='space-y-4'>;
       <Input
         value={apiKey}
-
-
+        onChange={e => setApiKey(e.target.value)}
+        placeholder='API Key'
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       />
       {params.map(p => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Input
-<<<<<<< HEAD
-
-
-          value={paramValues[p.name] || ''}
-
-
-=======
           key={p.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
           value={paramValues[p.name] |''}
-=======
           value={paramValues[p.name] || ''}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           onChange={e => handleParamChange(p.name, e.target.value)}        />
-=======
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
           onChange={e => handleParamChange(p && p.name, e && e.target.value)}        />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ))}
       {method !== 'GET' && method !== 'DELETE' && (;
         <Textarea
@@ -437,7 +267,10 @@ if () {) {
   try {
   /> {
   params.map ( (p) => (<Input key= {
-<<<<<<< HEAD
+  p.name
+}</div>)
+}export default ApiPlayground
+'"
 
 
     </div>;
@@ -471,22 +304,10 @@ if (contentType?.includes ('application/json') ) {;
 }</div>) ;
 }export default ApiPlayground;
 
-=======
   p.name;
 }</div>);
 }export default ApiPlayground;
 '";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-  p.name
-}</div>)
-}export default ApiPlayground
-'"
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   p.name 
 }</div>) ;
 }export default ApiPlayground;
@@ -494,10 +315,6 @@ if (contentType?.includes ('application/json') ) {;
 }
 <<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
@@ -518,15 +335,3 @@ if (contentType?.includes ('application/json') ) {;
 }
 ;
 export default ApiPlayground;
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

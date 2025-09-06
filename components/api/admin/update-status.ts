@@ -24,6 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     : { agents: [] };
 
   const merged = {
+<<<<<<< HEAD
     ...existing,
     ...body,
     updatedAt: new Date().toISOString(),
@@ -57,17 +58,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ ok: true })
 }
 
-<<<<<<< HEAD
+  res.status(200).json({ ok: true })
+}
+}
 
-=======
-import { isInternalAgentRequest } from '../../../utils / admin_auth';
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
 }
     res.status (405).json ({ error: 'Method Not Allowed' });
     return;
@@ -125,6 +119,8 @@ if ( {) {
     updated_at: new Date ().toISOString ()}
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
   res.status (200).json ({ ok: true });
+
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

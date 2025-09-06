@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,8 +54,6 @@ export default function Ecommerce() {
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",;
     "url": "https://app && app.ziontechgroup.com/features/e-commerce";
 
-=======
-<<<<<<< HEAD
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -76,16 +70,13 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Ecommerce() {
   const schema = {
-
-    "@context": "https: //schema.org",
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "E-commerce Platform",
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
     "url": "https://app.ziontechgroup.com/features/e-commerce"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -110,27 +101,14 @@ export default function Ecommerce() {
             </div>;
             <div>;
 
-=======
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
         canonical="https://app.ziontechgroup.com/features/e-commerce"
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -168,12 +146,6 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
@@ -213,13 +185,6 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
@@ -229,19 +194,9 @@ export default function Ecommerce() {
       </main>
     </>
   )
-<<<<<<< HEAD
-
-;
-
-=======
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -269,7 +224,6 @@ export default function Ecommerce() {;
         type="application/ld+json";
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md: px-6">;
@@ -292,20 +246,4 @@ export default function Ecommerce() {;
 <<<<<<< HEAD
 
 
-=======
-    </>;
-  );
-}
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

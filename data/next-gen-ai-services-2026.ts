@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-
 import { ServiceVariant } from '../types/service-variants';
-export interface NextGenAIService2026 {
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants';
-=======
 export interface NextGenAIService2026 {  id: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   name: string;
   tagline: string;
   price: string;
@@ -19,42 +9,24 @@ export interface NextGenAIService2026 {  id: string;
   popular: boolean;
   icon: string;
   color: string;
-  text_color: string;
+  textColor: string;
   link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
   category: string;
-  real_service: boolean;
+  realService: boolean;
   technology: string[];
   integrations: string[];
-  use_cases: string[];
+  useCases: string[];
   roi: string;
   competitors: string[];
-  market_size: string;
-  growth_rate: string;
+  marketSize: string;
+  growthRate: string;
   variant: ServiceVariant;
-<<<<<<< HEAD
-
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-
-  customers: number;
-  rating: number;
-
-
-  reviews: number;    mobile: string
-    email: string
-    address: string
-=======
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+import { ServiceVariant } from '../types/service-variants',
+export interface NextGenAIService2026 {
   id: string,
   name: string,
   tagline: string,
@@ -81,27 +53,27 @@ export interface NextGenAIService2026 {  id: string;
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
-<<<<<<< HEAD
-
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    website: string;
+  }
+
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+
+  reviews: number;    mobile: string
+    email: string
+    address: string
     mobile: string,
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     email: string,
     address: string,
-
-
-
     website: string
   }
   realImplementation: boolean
@@ -119,10 +91,14 @@ export interface NextGenAIService2026 {  id: string;
   customers: number,
   rating: number,
   reviews: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-
-
+const contact = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+};  website: 'https://ziontechgroup.com'
+}
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   {
 
@@ -242,7 +218,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4 && 4.9,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 89
 
 
@@ -319,7 +294,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
 
 =======
     technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
-=======
     competitors: ['Uptake', 'C3.ai', 'PTC', 'Siemens Mindsphere'],    market_size: '$12.3B predictive maintenance market',    technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.js_docker'],
 
     integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],
@@ -331,7 +305,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-03-15',
     customers: 78,
     rating: 4 && 4.7,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 156
 
 
@@ -457,7 +430,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-04-20',
     customers: 92,
     rating: 4 && 4.6,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 203
 
 
@@ -510,7 +482,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
 
 =======
     technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
-=======
     competitors: ['ElevenLabs', 'Play.ht', 'Resemble AI', 'Descript'],    market_size: '$2.1B voice cloning market',    technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
 
     integrations: ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],
@@ -521,7 +492,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-02-10',
     customers: 156,
     rating: 4 && 4.8,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 312
 
 
@@ -625,7 +595,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-01-25',
     customers: 203,
     rating: 4 && 4.7,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 445
   }
 
@@ -638,6 +607,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.7,
     reviews: 445;
   }
+<<<<<<< HEAD
 ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -645,20 +615,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com'
-=======
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',
 };  website: 'https://ziontechgroup.com'
-=======
   website: 'https://ziontechgroup.com'
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 },
 
 export const nextGenAIServices2026: NextGenAIService2026[] = [
@@ -670,16 +630,9 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.',
     features: [
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
       'Real-time emotion detection from video/audioSentiment analysis with emotional contextEmotional response recommendationsMulti-modal emotion fusion (facial, voice, text)Emotional intelligence training modulesCustom emotion models for specific industriesReal-time emotional analytics dashboardAPI for integration with existing systems',
       'Privacy-compliant emotion processingEmotional intelligence scoring and reports'
     ],
-=======
-<<<<<<< HEAD
       'Real-time emotion detection from video/audio',
       'Sentiment analysis with emotional context',
       'Emotional response recommendations',
@@ -693,26 +646,15 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     features: [
       'Real-time emotion detection from video/audioSentiment analysis with emotional contextEmotional response recommendationsMulti-modal emotion fusion (facial, voice, text)Emotional intelligence training modulesCustom emotion models for specific industriesReal-time emotional analytics dashboardAPI for integration with existing systems',
       'Privacy-compliant emotion processingEmotional intelligence scoring and reports'
-=======
       'Real-time emotion detection from video/audioSentiment analysis with emotional contextEmotional response recommendationsMulti-modal emotion fusion (facial, voice, text)Emotional intelligence training modulesCustom emotion models for specific industriesReal-time emotional analytics dashboardAPI for integration with existing systems',
       'Privacy-compliant emotion processingEmotional intelligence scoring and reports'
     ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     popular: true,
     icon: '🧠💙',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-emotional-intelligence',
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     marketPosition: 'Competitive with Affectiva and Realeyes, but with more advanced multi-modal fusion and real-time processing capabilities.',
-=======
-<<<<<<< HEAD
     marketPosition:
       'Competitive with Affectiva and Realeyes, but with more advanced multi-modal fusion and real-time processing capabilities.',
     targetAudience:
@@ -720,24 +662,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '2-3 days',
     category: 'AI & Emotional Intelligence',
     realService: true,    marketPosition: 'Competitive with Affectiva and Realeyes, but with more advanced multi-modal fusion and real-time processing capabilities.',
-=======
     marketPosition: 'Competitive with Affectiva and Realeyes, but with more advanced multi-modal fusion and real-time processing capabilities.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     targetAudience: 'Customer service platforms, HR tech companies, Mental health apps, E-learning platforms, Healthcare providers',
     trialDays: 21,
     setupTime: '2-3 days',
     category: 'AI & Emotional Intelligence',
     realService: true,
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     technology: ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'],
-=======
-<<<<<<< HEAD
     technology: [
       'TensorFlow',
       'OpenCV',
@@ -764,28 +695,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     ],
     roi: 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',
     competitors: ['Affectiva', 'Realeyes', 'Emotient', 'Noldus'],    marketSize: '$3.2B emotional AI market',    technology: ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'],
-=======
     technology: ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     integrations: ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],
     useCases: ['Customer sentiment analysisEmployee wellness monitoringMental health assessmentEducational engagement tracking'],
     roi: 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',
     competitors: ['AffectivaRealeyesEmotientNoldus'],
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     marketSize: '$3.2B emotional AI market',
-=======
-<<<<<<< HEAD
-=======
     marketSize: '$3.2B emotional AI market',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     growthRate: '150% annual growth',
     variant: 'ai-futuristic',
     contactInfo: contact,
@@ -794,26 +710,15 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4.9,
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     reviews: 89
   },
-=======
-<<<<<<< HEAD
     reviews: 89,  },    implementationDetails: 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.',
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4.9,
     reviews: 89
-=======
     reviews: 89
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
     id: 'ai-predictive-maintenance-platform',
     name: 'AI Predictive Maintenance Platform',
@@ -822,16 +727,9 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',
     features: [
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
       'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',
       'Custom alerting and notificationsHistorical performance analytics'
     ],
-=======
-<<<<<<< HEAD
       'Real-time sensor data monitoring',
       'Machine learning failure prediction models',
       'Predictive maintenance scheduling',
@@ -845,26 +743,15 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     features: [
       'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',
       'Custom alerting and notificationsHistorical performance analytics'
-=======
       'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',
       'Custom alerting and notificationsHistorical performance analytics'
     ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     popular: true,
     icon: '⚙️🔮',
     color: 'from-green-600 to-teal-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-predictive-maintenance',
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     marketPosition: 'Competitive with Uptake and C3.ai, offering more affordable pricing for mid-market manufacturers.',
-=======
-<<<<<<< HEAD
     marketPosition:
       'Competitive with Uptake and C3.ai, offering more affordable pricing for mid-market manufacturers.',
     targetAudience:
@@ -872,24 +759,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '1-2 weeks',
     category: 'AI & Industrial IoT',
     realService: true,    marketPosition: 'Competitive with Uptake and C3.ai, offering more affordable pricing for mid-market manufacturers.',
-=======
     marketPosition: 'Competitive with Uptake and C3.ai, offering more affordable pricing for mid-market manufacturers.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     targetAudience: 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Mining operations',
     trialDays: 30,
     setupTime: '1-2 weeks',
     category: 'AI & Industrial IoT',
     realService: true,
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
-=======
-<<<<<<< HEAD
     technology: [
       'Python',
       'TensorFlow',
@@ -916,28 +792,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     ],
     roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',
     competitors: ['Uptake', 'C3.ai', 'PTC', 'Siemens Mindsphere'],    marketSize: '$12.3B predictive maintenance market',    technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
-=======
     technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],
     useCases: ['Equipment failure predictionMaintenance optimizationEnergy efficiencyQuality control'],
     roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',
     competitors: ['UptakeC3.aiPTCSiemens Mindsphere'],
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     marketSize: '$12.3B predictive maintenance market',
-=======
-<<<<<<< HEAD
-=======
     marketSize: '$12.3B predictive maintenance market',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     growthRate: '120% annual growth',
     variant: 'ai-futuristic',
     contactInfo: contact,
@@ -946,26 +807,15 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-03-15',
     customers: 78,
     rating: 4.7,
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     reviews: 156
   },
-=======
-<<<<<<< HEAD
     reviews: 156,  },    implementationDetails: 'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',
     launchDate: '2025-03-15',
     customers: 78,
     rating: 4.7,
     reviews: 156
-=======
     reviews: 156
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
     id: 'ai-content-personalization-engine',
     name: 'AI Content Personalization Engine',
@@ -974,16 +824,9 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Advanced AI engine that personalizes content, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.',
     features: [
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
       'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content delivery',
       'GDPR-compliant data handlingCustom personalization rules engine'
     ],
-=======
-<<<<<<< HEAD
       'Real-time user behavior tracking',
       'Dynamic content personalization',
       'A/B testing automation',
@@ -997,26 +840,15 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     features: [
       'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content delivery',
       'GDPR-compliant data handlingCustom personalization rules engine'
-=======
       'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content delivery',
       'GDPR-compliant data handlingCustom personalization rules engine'
     ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     popular: false,
     icon: '🎯✨',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-content-personalization',
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     marketPosition: 'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',
-=======
-<<<<<<< HEAD
     marketPosition:
       'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',
     targetAudience:
@@ -1024,24 +856,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '3-5 days',
     category: 'AI & Personalization',
     realService: true,    marketPosition: 'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',
-=======
     marketPosition: 'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     targetAudience: 'E-commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',
     trialDays: 14,
     setupTime: '3-5 days',
     category: 'AI & Personalization',
     realService: true,
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     technology: ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'],
-=======
-<<<<<<< HEAD
     technology: [
       'Python',
       'TensorFlow',
@@ -1067,28 +888,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     ],
     roi: 'Average 35% increase in conversion rates and 40% improvement in user engagement.',
     competitors: ['Dynamic Yield', 'Optimizely', 'Evergage', 'Adobe Target'],    marketSize: '$8.7B personalization market',    technology: ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'],
-=======
     technology: ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     integrations: ['ShopifyWooCommerceWordPressHubSpotMailchimpCustom CMS'],
     useCases: ['Product recommendationsContent personalizationEmail marketingWebsite optimization'],
     roi: 'Average 35% increase in conversion rates and 40% improvement in user engagement.',
     competitors: ['Dynamic YieldOptimizelyEvergageAdobe Target'],
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     marketSize: '$8.7B personalization market',
-=======
-<<<<<<< HEAD
-=======
     marketSize: '$8.7B personalization market',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     growthRate: '140% annual growth',
     variant: 'ai-futuristic',
     contactInfo: contact,
@@ -1097,26 +903,15 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-04-20',
     customers: 92,
     rating: 4.6,
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     reviews: 203
   },
-=======
-<<<<<<< HEAD
     reviews: 203,  },    implementationDetails: 'Production-ready personalization engine with real-time processing, comprehensive analytics, and easy integration capabilities.',
     launchDate: '2025-04-20',
     customers: 92,
     rating: 4.6,
     reviews: 203
-=======
     reviews: 203
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
     id: 'ai-voice-cloning-platform',
     name: 'AI Voice Cloning Platform',
@@ -1125,16 +920,9 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Professional voice cloning platform that creates high-quality, natural-sounding voice replicas for content creators, marketers, and businesses.',
     features: [
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
       'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library management',
       'Quality assurance toolsCommercial usage rights'
     ],
-=======
-<<<<<<< HEAD
       'High-quality voice cloning (5+ minutes of audio)',
       'Multiple voice styles and emotions',
       'Real-time voice synthesis',
@@ -1148,26 +936,15 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     features: [
       'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library management',
       'Quality assurance toolsCommercial usage rights'
-=======
       'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library management',
       'Quality assurance toolsCommercial usage rights'
     ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     popular: false,
     icon: '🎤🎭',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-voice-cloning',
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     marketPosition: 'Competitive with ElevenLabs and Play.ht, offering better pricing and more customization options.',
-=======
-<<<<<<< HEAD
     marketPosition:
       'Competitive with ElevenLabs and Play.ht, offering better pricing and more customization options.',
     targetAudience:
@@ -1175,24 +952,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '1 day',
     category: 'AI & Voice Technology',
     realService: true,    marketPosition: 'Competitive with ElevenLabs and Play.ht, offering better pricing and more customization options.',
-=======
     marketPosition: 'Competitive with ElevenLabs and Play.ht, offering better pricing and more customization options.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     targetAudience: 'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',
     trialDays: 7,
     setupTime: '1 day',
     category: 'AI & Voice Technology',
     realService: true,
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
-=======
-<<<<<<< HEAD
     technology: [
       'Python',
       'PyTorch',
@@ -1217,28 +983,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     ],
     roi: 'Average 60% reduction in voice recording costs and 3x faster content production.',
     competitors: ['ElevenLabs', 'Play.ht', 'Resemble AI', 'Descript'],    marketSize: '$2.1B voice cloning market',    technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
-=======
     technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     integrations: ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],
     useCases: ['Podcast productionMarketing videosE-learning contentAudiobook narration'],
     roi: 'Average 60% reduction in voice recording costs and 3x faster content production.',
     competitors: ['ElevenLabsPlay.htResemble AIDescript'],
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     marketSize: '$2.1B voice cloning market',
-=======
-<<<<<<< HEAD
-=======
     marketSize: '$2.1B voice cloning market',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
     contactInfo: contact,
@@ -1247,26 +998,15 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-02-10',
     customers: 156,
     rating: 4.8,
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     reviews: 312
   },
-=======
-<<<<<<< HEAD
     reviews: 312,  },    implementationDetails: 'Professional-grade voice cloning platform with advanced AI models, comprehensive voice management, and easy integration.',
     launchDate: '2025-02-10',
     customers: 156,
     rating: 4.8,
     reviews: 312
-=======
     reviews: 312
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
     id: 'ai-code-review-assistant',
     name: 'AI Code Review Assistant',
@@ -1275,16 +1015,9 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',
     features: [
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
       'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics',
       'Pull request automationMulti-language support'
     ],
-=======
-<<<<<<< HEAD
       'Automated code quality analysis',
       'Security vulnerability detection',
       'Performance optimization suggestions',
@@ -1298,26 +1031,15 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     features: [
       'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics',
       'Pull request automationMulti-language support'
-=======
       'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics',
       'Pull request automationMulti-language support'
     ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     popular: true,
     icon: '💻🔍',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-code-review',
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     marketPosition: 'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',
-=======
-<<<<<<< HEAD
     marketPosition:
       'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',
     targetAudience:
@@ -1325,24 +1047,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '2-3 days',
     category: 'AI & Development',
     realService: true,    marketPosition: 'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',
-=======
     marketPosition: 'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     targetAudience: 'Software development teams, DevOps engineers, Code quality managers, Open source projects',
     trialDays: 14,
     setupTime: '2-3 days',
     category: 'AI & Development',
     realService: true,
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],
-=======
-<<<<<<< HEAD
     technology: [
       'Python',
       'TensorFlow',
@@ -1369,28 +1080,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     ],
     roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.',
     competitors: ['SonarQube', 'CodeClimate', 'DeepCode', 'Snyk'],    marketSize: '$5.4B code quality market',    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],
-=======
     technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     integrations: ['GitHubGitLabBitbucketAzure DevOpsSlackJiraTeams'],
     useCases: ['Code quality improvementSecurity auditingPerformance optimizationTeam collaboration'],
     roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.',
     competitors: ['SonarQubeCodeClimateDeepCodeSnyk'],
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     marketSize: '$5.4B code quality market',
-=======
-<<<<<<< HEAD
-=======
     marketSize: '$5.4B code quality market',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     growthRate: '110% annual growth',
     variant: 'ai-futuristic',
     contactInfo: contact,
@@ -1399,14 +1095,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-01-25',
     customers: 203,
     rating: 4.7,
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     reviews: 445,
   },;
 ];    implementationDetails: 'Production-ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',
@@ -1416,8 +1104,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     reviews: 445
   }
 ],
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     reviews: 445
 import { ServiceVariant } from '../types/service-variants',;
 export interface NextGenAIService2026 {;
@@ -1659,9 +1345,3 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     reviews: 445;
   }
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

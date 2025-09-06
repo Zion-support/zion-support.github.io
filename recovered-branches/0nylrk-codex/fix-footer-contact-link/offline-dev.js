@@ -7,8 +7,7 @@ const server = http && http.createServer((req, res) => {
         res && res.end('Error loading offline && offline.html'),
         return
       }
-      res && res.writeHead(200, { 'Content-Type': 'text/html' }),
-      res && res.end(data)
+      res.writeHead(200, { 'Content-Type': 'text/html' })
 
     })
   } else if (req && req.url === '/online-check') {
@@ -23,8 +22,6 @@ const server = http && http.createServer((req, res) => {
   }
 })
 const PORT = 8080
-=======
-
       res.writeHead(200, { 'Content-Type': 'text/html' }),;
       res.end(data);
     });
@@ -66,54 +63,12 @@ server && server.listen(PORT, () => {
 `)
 
 
-const http = require ('http'),
-const fs = require ('fs'),
-const path = require ('path'),
-const server = http.create_server ((req, res) => {
-  // Check condition
-if ( {) {
-  $2
-}
-    fs.read_file (path.join (__dirname, 'offline.html'), (err, data) => {
-      // Check condition
-if ( {) {
-  $2
-}
-        res.write_head (500),
-        res.end ('Error loading offline.html'),
-        return;
-      }
-      res.write_head (200, { 'Content - Type': 'text / html' }),
-      res.end (data);
-    });
-  } else // Check condition
-if ( {) {
-  $2
-}
-    // Endpoint to check if we're online;
-    res.write_head (200, { 'Content - Type': 'application / json' }),
-    res.end (JSON.stringify ({ online: false, message: 'Running in offline development mode' }));
-  } else {
-    res.write_head (404),
-    res.end ('Not found');
-  }
 }),
-<<<<<<< HEAD
-const PORT = 8080,
-server.listen (PORT, () => {
-  console.log (`;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }),;
 const PORT = 8080,;
 server.listen(PORT, () => {;
   // // // console.log(`;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
 ╠══════════════════════════════════════════════════════════════════╣;
@@ -133,19 +88,4 @@ server.listen(PORT, () => {;
 ║                                                                  ║;
 ╚══════════════════════════════════════════════════════════════════╝;
 `);
-<<<<<<< HEAD
-}),
-;
-
-=======
-}),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -8,7 +8,6 @@ export const supabase = {
     signOut: () => Promise<any>;
   };
 }
-
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
@@ -44,13 +43,11 @@ export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
     }
   };
 }
-
 // Default configuration
 const supabaseConfig: SupabaseConfig = {
   url: process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://your-project && project.supabase.co',
   anonKey: process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key'
 };
-
 export const supabase = createSupabaseClient(supabaseConfig);
 
 =======
@@ -79,14 +76,5 @@ export const supabase = createSupabaseClient(supabaseConfig);
   })
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
   });
 };
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

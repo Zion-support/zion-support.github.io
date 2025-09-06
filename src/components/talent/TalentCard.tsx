@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { useRouter  } from 'next/router';
-=======
-
-export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard'; import React from 'react'
-import { useRouter } from 'next/router'
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import { FavoriteButton } from "@/components/FavoriteButton"
-import { TalentProfile } from "@/types/talent"
-import { RatingStars } from '@/components/RatingStars'
-import { useAuth } from '@/context/auth/AuthProvider'
-import { useCart } from '@/context/CartContext'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from 'react',
-import { useRouter } from 'next/router',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
@@ -42,13 +14,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { FavoriteButton } from "@/components/FavoriteButton";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import { TalentProfile } from "@/types/talent";
 import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
-
-
 import { TalentProfile } from "@/types/talent",
 import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
@@ -56,22 +25,12 @@ import { useCart } from '@/context/CartContext',
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface TalentCardProps {
 
   talent: TalentProfile
   onViewProfile: (id: string,) => void
   onRequestHire: (talent: TalentProfile,) => void
   isAuthenticated: boolean
-
-
 import React from 'react',;
 import { useRouter } from 'next/router',;
 import { Badge } from "@/components/ui/badge",;
@@ -91,14 +50,6 @@ export interface TalentCardProps {;
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 const TalentCardComponent = ({
   talent
@@ -114,10 +65,15 @@ const TalentCardComponent = ({
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
-<<<<<<< HEAD
-
-
-
+  }
+  },;
+  const handleRequestHire = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onRequestHire) {;
+      onRequestHire(talent);
+    }
+  },
 
 =======
 <<<<<<< HEAD
@@ -143,16 +99,12 @@ const TalentCardComponent = ({
     if (onRequestHire) {
       onRequestHire(talent)
     }
-
-
+  }
   },
-
-
 
 
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) |[]
-=======
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string,) => void,;
@@ -177,75 +129,57 @@ const TalentCardComponent = ({;
       onViewProfile(talent && talent.id);
     }
   },;
-
-  const handleRequestHire = (e: React && React.MouseEvent,) => {;
-    e && e.preventDefault(),;
-    e && e.stopPropagation(),;
+  const handleRequestHire = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
     if (onRequestHire) {;
       onRequestHire(talent);
     }
-  },;
+  },
 
-  // Extract skills - limit to 5 for display;
-  const skills = talent && talent.skills?.slice(0, 5) || [],;
+  const handleRequestHire = (e: React.MouseEvent,) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (onRequestHire) {
+      onRequestHire(talent)
+    }
+  },
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
-
-
+      onClick = {handleViewProfile,}
+      tabIndex = {0,}
       onClick={handleViewProfile}
       tabIndex={0}
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     >
       <div className="p-6">
         <div className="flex items-start">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Avatar */}
-          <div className="relative mr-4">;
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
-              {talent && talent.profile_picture_url ? (;
+          <div className="relative mr-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
+              {talent.profile_picture_url ? (
                 <img
-
-
+                  src = {talent.profile_picture_url,}
+                  alt = {talent.full_name,}
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   className="w-full h-full object-cover"
                   loading="lazy"
-
-
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
+                  {talent.full_name?.charAt(0) |"T"}
                   {talent.full_name?.charAt(0) || "T"}
-
-
                 </div>
-=======
                 />;
               ) : (;
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
                   {talent && talent.full_name?.charAt(0) || "T"}
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
             {talent && talent.is_verified && (;
@@ -265,50 +199,33 @@ const TalentCardComponent = ({;
             <p className="text-white font-medium">{talent && talent.professional_title}</p>;
 
 
-=======
 
             
 <<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Location & Availability */}
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">;
-              {talent && talent.location && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <MapPin className="h-4 w-4 mr-1" />;
-                  <span>{talent && talent.location}</span>;
-                </div>;
+            <div className="mt-2 flex flex-wrap gap-3 text-sm">
+              {talent.location && (
+                <div className="flex items-center text-zion-slate-light">
+                  <MapPin className="h-4 w-4 mr-1" />
+                  <span>{talent.location}</span>
+                </div>
               )}
-              {talent && talent.availability_type && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
-                  <span>{talent && talent.availability_type}</span>;
-                </div>;
+              {talent.availability_type && (
+                <div className="flex items-center text-zion-slate-light">
+                  <Clock className="h-4 w-4 mr-1" />
+                  <span>{talent.availability_type}</span>
+                </div>
               )}
-
-
+            </div>
+          </div>
+        </div>
             </div>;
           </div>;
         </div>;
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Skills */}
         {skills.length > 0 && (
           <div className="mt-4">
@@ -317,7 +234,6 @@ const TalentCardComponent = ({;
             </div>;
           </div>;
         </div>;
-
         {/* Skills */}
         {skills && skills.length > 0 && (;
           <div className="mt-4">;
@@ -328,51 +244,24 @@ const TalentCardComponent = ({;
                   key = {index,}
 <<<<<<< HEAD
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
-=======
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
               {skills.map((skill, index) => (
                 <span 
                   key={index}
 <<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
                   {skill}
-                </span>
+                </span>;
               ))}
-              {(talent.skills?.length |0) > 5 && (
+              {(talent.skills?.length || 0) > 5 && (
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length |0) - 5} more
+                  +{(talent.skills?.length || 0) - 5} more
                 </span>
-=======
-              {skills.map((skill, index) => (
-                <span 
-                  key={index}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  {skill}
-                </span>;
-              ))}
-
-              {(talent && talent.skills?.length || 0) > 5 && (;
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
-                  +{(talent && talent.skills?.length || 0) - 5} more;
-                </span>;
-
               )}
-            </div>;
-          </div>;
+            </div>
+          </div>
         )}
 
 
@@ -388,77 +277,35 @@ const TalentCardComponent = ({;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}
-
-
+          </div>
           
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div className="flex items-center gap-2">
             {isAuthenticated && (
-=======
           </div>;
 
           <div className="flex items-center gap-2">;
             {isAuthenticated && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 size="sm"
                 variant="secondary"
-
-
+                onClick = {handleRequestHire,}
                 onClick={handleRequestHire}
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
               </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
             <Button
               size="sm"
               variant="ghost"
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
               onClick={(e,) => {
-<<<<<<< HEAD
                 e.stopPropagation()
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               onClick={(e) => {
-=======
-=======
               onClick={(e) => {
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 e.stopPropagation(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 handleViewProfile()
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
@@ -470,33 +317,21 @@ const TalentCardComponent = ({;
       </div>
     </Card>
   )
-<<<<<<< HEAD
-
-              onClick={(e,) => {;
-                e && e.stopPropagation(),;
-=======
-<<<<<<< HEAD
 }
 export const TalentCard = React.memo(TalentCardComponent)
 TalentCard.displayName = 'TalentCard'
 export const TalentCard = React.memo(TalentCardComponent)
 TalentCard.displayName = 'TalentCard'
 
-<<<<<<< HEAD
-=======
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
-=======
 },
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
-<<<<<<< HEAD
 ;
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mt-5 flex items-center justify-between">;
           <div>;
             {talent.hourly_rate ? (;
@@ -524,13 +359,11 @@ TalentCard.displayName = 'TalentCard';
               variant="ghost";
               onClick={(e) => {;
                 e.stopPropagation(),;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 handleViewProfile();
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
-=======
 export const TalentCard = React.memo (TalentCardComponent);
 TalentCard.display_name = 'TalentCard'; import React from 'react';
 import { use_router } from 'next / router';
@@ -683,37 +516,16 @@ if ( {) {
 <<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Card>);
 },
 export const TalentCard = React.memo (TalentCardComponent),
 TalentCard.display_name = 'TalentCard',
 export const TalentCard = React.memo (TalentCardComponent);
 TalentCard.display_name = 'TalentCard';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
-=======
 },
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    </Card>;
-  );
-},;
-export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

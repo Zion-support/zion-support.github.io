@@ -1,26 +1,9 @@
-<<<<<<< HEAD
-
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface WhitelabelTenant {
-=======
-
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   brand_name: string;
   subdomain: string;
@@ -41,24 +24,13 @@ export interface WhitelabelTenant {;
   account_manager_id: string | null;
 
 
-<<<<<<< HEAD
-
-export function useWhitelabelTenant(externalSubdomain?: string) {;
-  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
-
-
-=======
   email_template_override: Record<string, any> | null
 }
-<<<<<<< HEAD
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null),
-=======
 
 export function useWhitelabelTenant(externalSubdomain?: string) {;
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
@@ -88,9 +60,41 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
         const { data, error: functionError } = await supabase && supabase.functions.invoke(
 
           `${functionName}${params}`;
-=======
-  dns_verified: boolean,
-  email_template_override: Record < string, any> | null;
+          {
+            headers: {
+              'Content-Type': 'application/json'}}
+        );
+        if (functionError) {
+          console.error('Edge Function error:', functionError);
+          setError('Failed to load tenant configuration. Please try again later.');
+          setTenant(null);
+          return
+        }
+        if (!data) {
+          console.warn('No tenant data received');
+          setTenant(null);
+          return
+import { useState, useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+export interface WhitelabelTenant {;
+  id: string,;
+  brand_name: string,;
+  subdomain: string,;
+  custom_domain: string | null,;
+  primary_color: string,;
+  logo_url: string | null,;
+  theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
+  landing_page_copy: {;
+    headline: string,;
+    subtitle: string,;
+    cta: string;
+  },;
+  is_active: boolean,;
+  created_at: string,;
+  updated_at: string,;
+  account_manager_id: string | null,;
+  dns_verified: boolean,;
+  email_template_override: Record<string any> | null;
 }
 export /**
  * useWhitelabelTenant - Function description
@@ -138,17 +142,6 @@ if ( {) {
           console.warn('No tenant data received'),;
           setTenant(null),;
           return;
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (data.tenant) {
@@ -169,26 +162,9 @@ if ( {) {
           set_tenant (null);
           return;
         }
-        // Check condition
-if ( {) {
-  $2
-}
-          console.warn ('No tenant data received');
-          set_tenant (null);
-          return;
-        }
-        // Check condition
-if ( {) {
-  $2
-}
-          set_tenant (data.tenant);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-        } else {
-          set_tenant (null);
-        }
-
-        console && console.error('Error loading tenant:', err);
-        let message = err && err.message || 'An unexpected error occurred while loading tenant configuration';
+      } catch (err: any) {
+        console.error('Error loading tenant:', err);
+        let message = err.message |'An unexpected error occurred while loading tenant configuration';
         if (
           message && message.includes('Failed to send a request to the Edge Function') ||
           message && message.includes('Failed to connect to Supabase') ||
@@ -256,8 +232,6 @@ if (||) {
         setIsLoading (false);
       }
     }
-
-=======
 
       } catch (err: any) {;
         console.error('Error loading tenant:', err),;
@@ -332,16 +306,6 @@ if ( {) {
     };
     checkAdminStatus();
   }, [tenantId]);
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return { isAdmin, isLoading }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

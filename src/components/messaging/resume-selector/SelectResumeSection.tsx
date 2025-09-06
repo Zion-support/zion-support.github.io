@@ -1,61 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { FileText } from 'lucide-react'
-import { ResumeOption } from '../resume-selector/types'
-import { ResumePreviewCard } from './ResumePreviewCard'
-import { Resume } from '@/types/resume'
-interface SelectResumeSectionProps {
-  resumeOptions: ResumeOption[]
-  selectedResume: ResumeOption | null
-  handleResumeSelect: (resumeId: string) => void
-  handleDownloadResume: () => void
-  isLoading: boolean
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-export function SelectResumeSection({
-<<<<<<< HEAD
-  resumeOptions;
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
-=======
-
-  resumeOptions
-  selectedResume
-  handleResumeSelect
-  handleDownloadResume
-
-=======
-import React from 'react',;
-import { FileText } from 'lucide-react';
-import { ResumeOption } from '../resume-selector/types',;
-import { ResumePreviewCard } from './ResumePreviewCard',;
-import { Resume } from '@/types/resume',;
-interface SelectResumeSectionProps {;
-  resumeOptions: ResumeOption[],;
-  selectedResume: ResumeOption | null,;
-  handleResumeSelect: (resumeId: string) => void,;
-  handleDownloadResume: () => void,;
-  isLoading: boolean;
-}
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function SelectResumeSection({
   resumeOptions,
   selectedResume,
   handleResumeSelect,
   handleDownloadResume,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -64,31 +11,27 @@ export function SelectResumeSection({
         <p className="text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
-
-
-
+          {resumeOptions.map(option => (            <button
+              key = {option.id,}
+              className={`w-full text-left p-3 rounded-md transition ${
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
+                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
+              }`}
+              onClick = {(,) => handleResumeSelect(option.id),}
           {resumeOptions.map((option) => (
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <button
               key={option.id}
               className={`w-full text-left p-3 rounded-md transition ${
-                selectedResume?.id === option.id 
-                  ? 'bg-zion-purple/20 border border-zion-purple' 
-                  : 'bg-zion-blue-dark/30 hover: bg-zion-blue-dark/50',
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
+                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick={() => handleResumeSelect(option.id)}
 <<<<<<< HEAD
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <div className="flex items-center">
                 <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
@@ -96,14 +39,7 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
-<<<<<<< HEAD
-
           
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
           
 <<<<<<< HEAD
@@ -129,8 +65,14 @@ export function SelectResumeSection({
           ))}
 
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <ResumePreviewCard
+              resume = {selectedResume.resume as Resume,}
+              onDownload = {handleDownloadResume,}
+              isLoading = {isLoading,}
+            />
+;
+          {selectedResume?.type === 'ai_resume' && selectedResume.resume && (;
+            <ResumePreviewCard;
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
@@ -138,13 +80,6 @@ export function SelectResumeSection({
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-            />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { FileText } from 'lucide-react';
 import { ResumeOption } from '../resume - selector / types';
 import { ResumePreviewCard } from './ResumePreviewCard';
@@ -203,48 +138,21 @@ function SelectResumeSection() {
     </div>);
 }}
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
             />;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </>
       )}
-<<<<<<< HEAD
-
-  );
-}};
-};
-
-=======
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
   )
 }}
 }
-=======
   );
 }};
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

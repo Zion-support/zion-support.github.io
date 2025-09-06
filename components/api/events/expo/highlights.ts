@@ -37,7 +37,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
@@ -81,9 +80,6 @@ if ( {) {
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'Failed to generate highlights' });
 }
+  }
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

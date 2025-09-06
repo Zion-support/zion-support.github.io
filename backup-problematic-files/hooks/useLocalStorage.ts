@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:hooks/useLocalStorage.ts
+:hooks/useLocalStorage.ts
 };
 export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
   const [storedValue, setStoredValue] = useState<T>(() => {;
@@ -20,40 +14,36 @@ export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
 // Get from local storage then parse stored json or return initialValue
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
-<<<<<<< HEAD:backup-problematic-files/hooks/useLocalStorage.ts
+:backup-problematic-files/hooks/useLocalStorage.ts
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === 'undefined') {
       return initialValue;
     }
 
-=======
   // Get from local storage then parse stored json or return initialValue
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useLocalStorage.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+:backup-problematic-files/hooks/useLocalStorage.ts
 
 interface UseLocalStorageProps {
   // Add props here as needed
 }
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
-
-
+:hooks/useLocalStorage.ts
+    try {;
+main:hooks/useLocalStorage.ts
     try {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useLocalStorage.ts
+:backup-problematic-files/hooks/useLocalStorage.ts
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-
+:backup-problematic-files/hooks/useLocalStorage.ts
+      // Error reading localStorage key
+      return initialValue;
       console.error(`Error reading localStorage key "${key}":`, error);
-
+main:hooks/useLocalStorage.ts
     }
   });
 
@@ -67,25 +57,33 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
         window.localStorage.setItem(key, JSON.stringify(valueToStore));
       }
     } catch (error) {
-
+:backup-problematic-files/hooks/useLocalStorage.ts
+      // Error setting localStorage key
+    }
+export const useLocalStorage = <T>(key: string, initialValue: T) => {,
+  const [storedValue, setStoredValue] = useState<T>(() => {,
+    try {,
+      const item = window.localStorage.getItem(key),
+      return item ? JSON.parse(item) : initialValue} catch (error) {,
+      console.error(`Error reading localStorage key "${key}":`, error),
+      return initialValue};
+  }),
+  const setValue = (value: T | ((val: T) => T)) => {,
+    try {,
+      const valueToStore = value instanceof Function ? value(storedValue) : value,
+      setStoredValue(valueToStore),
+      window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {,
+      console.error(`Error setting localStorage key "${key}":`, error)};
       // eslint-disable-next-line no-console
       console.error(`Error setting localStorage key "${key}":`, error);
 
-
+main:hooks/useLocalStorage.ts
   };
 
   return [storedValue, setValue] as const;
 }
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:hooks/useLocalStorage.ts
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD:backup-problematic-files/hooks/useLocalStorage.ts
+:hooks/useLocalStorage.ts
+:backup-problematic-files/hooks/useLocalStorage.ts
 },;
 export const useLocalStorage = <T>(ke: y: string, initialValu: e: T) => {,;
   const [storedValue, setStoredValue] = useState<T>(() => {,;
@@ -107,12 +105,7 @@ export const useLocalStorage = <T>(ke: y: string, initialValu: e: T) => {,;
 }
 }
 };
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useLocalStorage.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+:backup-problematic-files/hooks/useLocalStorage.ts
       console.error(`Error setting localStorage key "${key}":`, error)};
   };
   return [storedValue, setValue] as const};
@@ -120,16 +113,7 @@ export const useLocalStorage = <T>(ke: y: string, initialValu: e: T) => {,;
 };
 };
 };
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> main:hooks/useLocalStorage.ts
-=======
-<<<<<<< HEAD:hooks/useLocalStorage.ts
-=======
->>>>>>> main:hooks/useLocalStorage.ts
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useLocalStorage.ts
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+main:hooks/useLocalStorage.ts
+:hooks/useLocalStorage.ts
+main:hooks/useLocalStorage.ts
+:backup-problematic-files/hooks/useLocalStorage.ts

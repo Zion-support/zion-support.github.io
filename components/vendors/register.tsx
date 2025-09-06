@@ -1,27 +1,8 @@
-
+import { FormEvent, useState } from 'react';
 import {FormEvent, useState} from 'react';
-<<<<<<< HEAD
-
 export default function VendorRegisterPage() {;
-
-=======
-
-import {FormEvent, useState} from 'react';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function VendorRegisterPage() {
-=======
-export default function VendorRegisterPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [loading, setLoading] = useState(false);
-
   const [message, setMessage] = useState<string | null>(null);
-
   async function onSubmit(): any (e: FormEvent<HTMLFormElement>) {;
     e && e.preventDefault();
     setLoading(true);
@@ -65,11 +46,13 @@ export default function VendorRegisterPage() {;
           verificationDocs: String(payload.verificationDocs || '')
             .split()
             .map(s => s.trim())
-            .filter(Boolean);
-          caseStudies: []})}),
+            .filter(Boolean)
+          caseStudies: []
+        })
+      });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed to submit');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setMessage('Application submitted. Await approval.');
       form && form.reset();
     } catch (err: any) {;
@@ -79,23 +62,8 @@ export default function VendorRegisterPage() {;
   }
 <<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
   return (
 
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -156,24 +124,41 @@ function on_submit() {
 }
       set_message ('Application submitted. Await approval.');
       form.reset ();
-    } catch (err: any) {
-      set_message (err.message);
-    } finally {
-      set_loading (false);    }
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (            .map(s => s.trim())
+            .filter(Boolean);
+          teamSize: Number(payload.teamSize |0)
+          about: String(payload.about |'')
+          verificationDocs: String(payload.verificationDocs |'')
+            .split()
+            .map(s => s.trim())
+            .filter(Boolean);
+          caseStudies: []})})
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error |'Failed to submit');
+      setMessage('Application submitted. Await approval.');
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+      form.reset()
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } catch (err: any) {
       setMessage(err.message)
     } finally {
       setLoading(false)
     }
   }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-<<<<<<< HEAD
     <div className='max-w-2xl mx-auto space-y-6'>
       <h1 className='text-2xl font-semibold'>
         Apply to become a Vendor Partner
@@ -242,11 +227,8 @@ function on_submit() {
     </div>
 );
 }
-=======
-<<<<<<< HEAD
 
     }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 
 
@@ -271,17 +253,13 @@ function on_submit() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
       set_loading (false);
     }
   }
@@ -352,6 +330,40 @@ function on_submit() {
       {message && <div className='text - sm'>{message}</div>}
       <div className='text - center text - xs text - gray - 500'>Powered by Zion</div>;
     </div>);
+        <div>
+          <label className=&quot;block text-sm mb-1&quot;>Agency Name</label>
+          <input name=&quot;name&quot; required className=&quot;w-full border rounded px-3 py-2 bg-transparent&quot; />
+        </div>
+        <div>
+          <label className=&quot;block text-sm mb-1&quot;>Unique URL Slug</label>
+          <input name=&quot;slug&quot; required pattern=&quot;[a-z0-9-]+&quot; className=&quot;w-full border rounded px-3 py-2 bg-transparent&quot; />
+          <p className=&quot;text-xs text-gray-500&quot;>Example: acme-ai</p>
+        </div>
+        <div>
+          <label className=&quot;block text-sm mb-1&quot;>Services Offered</label>
+          <input name=&quot;servicesOffered&quot; placeholder=&quot;AI prototyping, Data labeling, MLOps&quot; className=&quot;w-full border rounded px-3 py-2 bg-transparent&quot; />
+        </div>
+        <div>
+          <label className=&quot;block text-sm mb-1&quot;>Team Size</label>
+          <input name=&quot;teamSize&quot; type=&quot;number&quot; min={1} className=&quot;w-full border rounded px-3 py-2 bg-transparent&quot; />
+        </div>
+        <div>
+          <label className=&quot;block text-sm mb-1&quot;>About</label>
+          <textarea name=&quot;about&quot; rows={4} className=&quot;w-full border rounded px-3 py-2 bg-transparent&quot; />
+        </div>
+        <div>
+          <label className=&quot;block text-sm mb-1&quot;>Verification Docs (URLs, comma-separated)</label>
+          <input name=&quot;verificationDocs&quot; className=&quot;w-full border rounded px-3 py-2 bg-transparent&quot; />
+        </div>
+        <button disabled={loading} className=&quot;px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black&quot;>
+          {loading ? 'Submitting...' : 'Submit Application'}
+        </button>
+      </form>
+      {message && <div className=&quot;text-sm&quot;>{message}</div>}
+      <div className=&quot;text-center text-xs text-gray-500&quot;>Powered by Zion</div>
+    </div>
+  )
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

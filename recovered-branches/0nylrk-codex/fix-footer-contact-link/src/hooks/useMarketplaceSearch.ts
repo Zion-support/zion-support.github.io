@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useMemo} from "react";
 import {ProductListing} from "@/types/listings";
 import {SearchSuggestion, FilterOptions} from "@/types/search";
@@ -11,11 +6,8 @@ import {generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS} 
 export function useMarketplaceSearch() {
   // Search state;
   const [searchQuery, setSearchQuery] = useState("");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
-<<<<<<< HEAD
 import { SearchSuggestion, FilterOptions } from "@/types/search";
 import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 export function useMarketplaceSearch() {
@@ -31,16 +23,49 @@ export function useMarketplaceSearch() {
     () => generateSearchSuggestions();
     [];
   );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+  const filterOptions: FilterOptions = useMemo(
+    () => generateFilterOptions();
+    [];
+  );
+import { SearchSuggestion, FilterOptions } from "@/types/search",
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
 
-
+export function useMarketplaceSearch() {
+  // Search state
+  const [searchQuery, setSearchQuery] = useState(""),
+  
+  // Filter states
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
+  const [selectedRating, setSelectedRating] = useState<number | null>(null),
+  
+  // Generate search suggestions and filter options
+  const searchSuggestions: SearchSuggestion[] = useMemo(
+    () => generateSearchSuggestions(),
+    []),
+  const filterOptions: FilterOptions = useMemo(
+    () => generateFilterOptions(),
+    []),
+  
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
     return MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {
       // Search query filter
-
-
+      const matchesSearch = !searchQuery |
+        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+        listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      // Product type filter
+      const matchesProductType = selectedProductTypes.length === 0 |
+        selectedProductTypes.includes(listing.category);
+      // Location filter
+      const matchesLocation = selectedLocations.length === 0 |
+        (listing.location && selectedLocations.includes(listing.location));
+      // Availability filter
+      const matchesAvailability = selectedAvailability.length === 0 |
+        (listing.availability && selectedAvailability.includes(listing.availability));
       const matchesSearch = !searchQuery || 
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -58,8 +83,6 @@ export function useMarketplaceSearch() {
       const matchesAvailability = selectedAvailability.length === 0 || 
         (listing.availability && selectedAvailability.includes(listing.availability)),
       
-
-
       // Rating filter
       const matchesRating = selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
@@ -96,12 +119,9 @@ export function useMarketplaceSearch() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         matchesRating
     })
-
-
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
-
-
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
@@ -227,10 +247,9 @@ function useMarketplaceSearch() {
         break,
       default: break
     }
-
+  }
   },
   
-
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery(""),
@@ -238,7 +257,23 @@ function useMarketplaceSearch() {
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
+  }
+  return {
+    searchQuery;
+    setSearchQuery;
+    searchSuggestions;
+    selectedProductTypes;
+    selectedLocations;
+    selectedAvailability;
+    selectedRating;
+    setSelectedRating;
+    filteredListings;
+    handleFilterChange;
+    clearAllFilters;
 
+    filterOptions
+  }
+}
   },
   
   return {
@@ -254,15 +289,6 @@ function useMarketplaceSearch() {
     handleFilterChange,
     clearAllFilters,
     filterOptions
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -351,10 +377,6 @@ export function useMarketplaceSearch() {;
     handleFilterChange;
     clearAllFilters;
     filterOptions;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
+;

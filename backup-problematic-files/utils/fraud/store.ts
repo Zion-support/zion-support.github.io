@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-
+:utils/fraud/store.ts
 export interface FraudRecord {;
-
-=======
-
-
-=======
-<<<<<<< HEAD:utils/fraud/store.ts
-<<<<<<< HEAD
-=======
-export interface FraudRecord {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD:backup-problematic-files/utils/fraud/store.ts
+:backup-problematic-files/utils/fraud/store.ts
 import fs from 'fs-extra',;
 import path from 'path',;
 import { createClient } from '@supabase/supabase-js',;
@@ -284,14 +272,9 @@ export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent 'source'
     ipAddress: partial.ipAddress ?? null;
     createdAt: partial.createdAt ?? new Date().toISOString()}
 }
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/fraud/store.ts
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+:backup-problematic-files/utils/fraud/store.ts
 export interface FraudRecord {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/store.ts
+:backup-problematic-files/utils/fraud/store.ts
   id: string;
   type: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -302,19 +285,9 @@ export interface FraudRecord {
   adminId?: string;
   resolution?: string;
 }
-<<<<<<< HEAD
-
-
-export interface MonthlyReport {;
-
-=======
-<<<<<<< HEAD
 export interface MonthlyReport {
-=======
 
 export interface MonthlyReport {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   month: string;
   totalCases: number;
   resolvedCases: number;
@@ -364,19 +337,9 @@ class FraudStore {
   }
 }
 export const fraudStore = new FraudStore();
-
+:utils/fraud/store.ts
 export const getFraudStore = () => fraudStore;
-<<<<<<< HEAD
-
-
-
-=======
-=======
 export const getFraudStore = () => fraudStore;
->>>>>>> main:utils/fraud/store.ts
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/fraud/store.ts
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/store.ts
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+main:utils/fraud/store.ts
+:backup-problematic-files/utils/fraud/store.ts
+:backup-problematic-files/utils/fraud/store.ts

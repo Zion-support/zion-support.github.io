@@ -1,7 +1,3 @@
-
-<<<<<<< HEAD
-
-=======
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -35,23 +31,6 @@ interface InterviewCardProps {
   interview: Interview,
   on_refresh: () => Promise < void>;
 }
-<<<<<<< HEAD
-export /**
- * InterviewCard - Function description
- */
-function InterviewCard() {
-  const { user } = use_auth ();
-  const { respondToInterview, cancel_interview } = use_interviews ();
-  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState (false);
-  const [is_loading, setIsLoading] = useState (false);
-  const is_client = user?.id === interview.client_id;
-  const is_talent = user?.id === interview.talent_id;
-  const formattedEndTime = format (end_time, 'h: mm a'),
-  const isInterviewPending = interview.status === 'requested';
-  const isInterviewConfirmed = interview.status === 'confirmed';
-  const isInterviewLive = isInterviewConfirmed && !is_past (interview_date) && is_past (new Date (interview_date.get_time () - 5 * 60000)), // 5 minutes before;
-        return <Badge variant="outline" className="border - destructive text - destructive">Cancelled</Badge>;
-=======
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const { user } = useAuth()
@@ -72,8 +51,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 };
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -85,19 +62,15 @@ import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
-<<<<<<< HEAD
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
-=======
 import { toast } from "@/components/ui/use-toast",
 import { InterviewResponseForm } from "./InterviewResponseForm",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface InterviewCardProps {
 
   interview: Interview
 
   onRefresh: () => Promise<void>
-<<<<<<< HEAD
 }
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 
@@ -118,7 +91,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 
   )
 }
-=======
 import React, { useState } from "react",;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -283,26 +255,8 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
         return <Badge className="bg-green-700">Completed</Badge>,;
       case 'cancelled':;
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       default:;
         return <Badge>{interview.status}</Badge>;
 }
   );
 }
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

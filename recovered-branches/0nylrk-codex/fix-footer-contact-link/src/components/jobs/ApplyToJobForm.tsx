@@ -1,20 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-interface ApplyToJobFormProps {
-
-  job: Job
-
-  onSuccess?: () => void
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -29,10 +13,27 @@ import {AlertCircle, FileText, Loader2} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {Job} from "@/types/jobs";
 import {toast} from "sonner";
-<<<<<<< HEAD
-interface ApplyToJobFormProps {;
-  job: Job,;
-  onSuccess?: () => void;
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { useResume } from "@/hooks/useResume",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { Label } from "@/components/ui/label",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { AlertCircle, FileText, Loader2 } from "lucide-react",
+import { formatDistanceToNow } from "date-fns",
+import { Job } from "@/types/jobs";
+import { toast } from "sonner";
+import { Job } from "@/types/jobs",
+import { toast } from "sonner",
+interface ApplyToJobFormProps {
+
+  job: Job
+
+  onSuccess?: () => void
 }
 =======
 =======
@@ -70,40 +71,35 @@ interface ApplyToJobFormProps {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) {;
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
-<<<<<<< HEAD
-  const { resumes, isLoading: isResumesLoading } = useResume(),;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
-<<<<<<< HEAD
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
 
   const { resumes, isLoading: isResumesLoading } = useResume()
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const navigate = useNavigate();
 
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job && job.title}" position and would like to apply. My skills and experience align well with this role.`);
   const [selectedResumeId, setSelectedResumeId] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-
-    if (!user) {;
-      toast && toast.error("You must be logged in to apply"),;
-      navigate("/login", { state: { returnTo: `/jobs/${job && job.id}` } }),;
-      return;
-=======
-}
-
-
-
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+  const { user } = useAuth(),
+  const { applyToJob } = useJobApplications(),
+  const { resumes, isLoading: isResumesLoading } = useResume(),
+  const navigate = useNavigate(),
+  
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),
+  const [selectedResumeId, setSelectedResumeId] = useState<string>(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    
     if (!user) {
       toast.error("You must be logged in to apply")
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
@@ -116,8 +112,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setError("Please provide a cover letter");
       return;
     }
-
-
+    setIsSubmitting(true);
+    setError(null);
+    try {
+      const success = await applyToJob(job.id, coverLetter, selectedResumeId |undefined);
     
     setIsSubmitting(true),
     setError(null),
@@ -125,8 +123,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     try {
       const success = await applyToJob(job.id, coverLetter, selectedResumeId || undefined),
       
-
-
       if (success) {
         toast.success("Your application has been submitted!");
         if (onSuccess) {
@@ -216,11 +212,10 @@ if ( {) {
     } finally {
       setIsSubmitting(false)
     }
+  }
 
   },
   
-
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -341,7 +336,6 @@ if ( {) {
         <Button
           type="button"
           variant="outline"
-
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -457,19 +451,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
       </div>;
 
       <div className="flex justify-end gap-2">;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         <Button;
           type="button";
           variant="outline";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
@@ -486,7 +470,11 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           ) : (;
             "Submit Application";
           )}
-
+        </Button>
+      </div>
+    </form>
+  )
+}
         </Button>;
       </div>;
     </form>;
@@ -542,5 +530,3 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 
 =======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

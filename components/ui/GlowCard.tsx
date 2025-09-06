@@ -1,6 +1,44 @@
+import React from "react";
 
+import React from "react";
+export default function GlowCard({
+  title
+  children
+}: {
+  title,
+  children,
+}: {;
+  title: string;
+  children: React.ReactNode;
+}) {
+
+  return (
+    <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">
+      <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-cyan-500/0 via-fuchsia-500/0 to-violet-500/0 group-hover:from-cyan-500/20 group-hover:via-fuchsia-500/20 group-hover:to-violet-500/20 blur-xl" />
+      <div className="relative">
+        <h3 className="text-lg font-semibold mb-2 tracking-wide">{title}</h3>
+        <div className="text-sm text-gray-300 leading-relaxed">{children}</div>
+      </div>
+    </div>
+  );
+  return (
+    <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">;
+      <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-cyan-500/0 via-fuchsia-500/0 to-violet-500/0 group-hover:from-cyan-500/20 group-hover:via-fuchsia-500/20 group-hover:to-violet-500/20 blur-xl" />;
+      <div className="relative">;
+        <h3 className="text-lg font-semibold mb-2 tracking-wide">{title}</h3>;
+        <div className="text-sm text-gray-300 leading-relaxed">{children}</div>;
+      </div>;
+    </div>;
+  );
+
+import React from 'react';
+export default function GlowCard({ title, children }: { title: string, children: React.ReactNode }) {
+=======
 <<<<<<< HEAD
 =======
+import React from "react";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import React from "react";
 export default function GlowCard({
 <<<<<<< HEAD
@@ -16,38 +54,17 @@ export default function GlowCard({
   children: React.ReactNode;
 }) {
 <<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-    <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">;
-      <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-cyan-500/0 via-fuchsia-500/0 to-violet-500/0 group-hover:from-cyan-500/20 group-hover:via-fuchsia-500/20 group-hover:to-violet-500/20 blur-xl" />;
-      <div className="relative">;
-        <h3 className="text-lg font-semibold mb-2 tracking-wide">{title}</h3>;
-        <div className="text-sm text-gray-300 leading-relaxed">{children}</div>;
-      </div>;
-    </div>;
-  );
-  return (
-    <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">;
-      <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-cyan-500/0 via-fuchsia-500/0 to-violet-500/0 group-hover:from-cyan-500/20 group-hover:via-fuchsia-500/20 group-hover:to-violet-500/20 blur-xl" />;
-      <div className="relative">;
-        <h3 className="text-lg font-semibold mb-2 tracking-wide">{title}</h3>;
-        <div className="text-sm text-gray-300 leading-relaxed">{children}</div>;
-      </div>;
-    </div>;
-  );
-
-import React from 'react';
-export default function GlowCard({ title, children }: { title: string, children: React.ReactNode }) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">
       <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-cyan-500/0 via-fuchsia-500/0 to-violet-500/0 group-hover:from-cyan-500/20 group-hover:via-fuchsia-500/20 group-hover:to-violet-500/20 blur-xl" />
       <div className="relative">
         <h3 className="text-lg font-semibold mb-2 tracking-wide">{title}</h3>
-        <div className="text-sm text-gray-300 leading-relaxed">{children}</div>
+<<<<<<< HEAD
+<div className="text-sm text-gray-300 leading-relaxed">{children}</div>
       </div>
     </div>
   );
@@ -76,10 +93,8 @@ function GlowCard() {
         <div className="text - sm text - gray - 300 leading - relaxed">{children}</div>;
       </div>;
     </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+      </div>
+    </div>
+  )
 
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

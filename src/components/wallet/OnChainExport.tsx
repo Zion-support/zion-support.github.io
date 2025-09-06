@@ -1,14 +1,9 @@
-
-<<<<<<< HEAD
-
 }
 
 
   )
 }
-=======
 
-=======
 import React, { useState } from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -25,26 +20,9 @@ import {
   Tooltip;
   TooltipContent;
   TooltipProvider;
-<<<<<<< HEAD
-  TooltipTrigger } from '@/components / ui / tooltip'; import { use_toast  } from '@/hooks / use - toast';
-import { use_auth  } from '@/hooks / use_auth';
-export /**
- * OnChainExport - Function description
- */
-function OnChainExport() {
-  const [is_connected, setIsConnected] = useState (false);
-  const [is_exporting, setIsExporting] = useState (false);
-  const [export_status, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
-  const { toast } = use_toast ();
-  const { user } = use_auth ();
-  const handleConnectWallet = async () => {
-    try {
-=======
   TooltipTrigger} from "@/components/ui/tooltip",
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
-=======
-<<<<<<< HEAD
 import React, { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -55,7 +33,6 @@ import {
   TooltipProvider;
   TooltipTrigger} from "@/components/ui/tooltip"; import { useToast } from "@/hooks/use-toast"
 import { useAuth } from "@/hooks/useAuth"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function OnChainExport() {
 
   const [isConnected, setIsConnected] = useState(false)
@@ -67,11 +44,7 @@ export function OnChainExport() {
     try {
       // Check if wallet is available
       const ethereum = (window as any).ethereum
-=======
-<<<<<<< HEAD
-=======
 import React, { useState } from "react",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
@@ -93,19 +66,12 @@ export function OnChainExport() {
     try {
       // Check if wallet is available
       const ethereum = (window as any).ethereum,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (!ethereum) {
         toast({
           title: "Wallet not detected"
           description: "Please install MetaMask or another Ethereum wallet to use this feature"
           variant: "destructive"
-<<<<<<< HEAD
         })
-<<<<<<< HEAD
         return
       }
       // Request accounts
@@ -114,7 +80,6 @@ export function OnChainExport() {
 }
 
   )
-=======
         return;
       }
       
@@ -124,9 +89,7 @@ export function OnChainExport() {
 };
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
         }),
         return
       }
@@ -253,7 +216,6 @@ export function OnChainExport() {;
   const { user } = useAuth(),;
   const handleConnectWallet = async () => {;
     try {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       // Check if wallet is available;
       const ethereum = (window as any).ethereum;
       // Check condition
@@ -275,15 +237,3 @@ if ( {) {
 }
 
 ;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

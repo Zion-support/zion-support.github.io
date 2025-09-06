@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
@@ -15,25 +6,15 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Loader2, Info, ThumbsUp} from "lucide-react";
 import {PricingSuggestion} from "@/services/pricingSuggestionService";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { Loader2, Info, ThumbsUp } from "lucide-react";
 import { PricingSuggestion } from "@/services/pricingSuggestionService";
-=======
 import { Loader2, Info, ThumbsUp } from "lucide-react",
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface PricingSuggestionBoxProps {
 
   suggestion: PricingSuggestion | null
@@ -48,25 +29,17 @@ interface PricingSuggestionBoxProps {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
-import {Card, CardContent} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, Info, ThumbsUp} from "lucide-react";
-import {PricingSuggestion} from "@/services/pricingSuggestionService";
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
-<<<<<<< HEAD
+export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   suggestion;
   isLoading;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
+  suggestion;
+  isLoading;
 
-
-
+  onApplySuggestion
+  suggestion,
+  isLoading,
+  onApplySuggestion,
   rateType}) => {
   if (isLoading) {
     return (
@@ -81,7 +54,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
         </CardContent>
       </Card>
     )
-
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",;
@@ -144,31 +116,12 @@ if ( {) {
             </p>;
           </div>;
         </CardContent>;
-<<<<<<< HEAD
-=======
       </Card>;
     );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   if (!suggestion) {
     return null
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-
-
-
-
 
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
@@ -219,27 +172,9 @@ if ( {) {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-
-
-  if (!suggestion) {;
-    return null;
-  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-=======
 
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 },
 ;
 
@@ -350,15 +285,3 @@ if ( {) {
 =======
 
 export default PricingSuggestionBox;
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

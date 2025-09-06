@@ -1,7 +1,5 @@
 
 
-<<<<<<< HEAD
-=======
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function EnterpriseAIOpsPage() {
@@ -16,16 +14,8 @@ export default function EnterpriseAIOpsPage() {
         <div className="max-w-6xl mx-auto space-y-8">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Enterprise AI Operations Center</h1>
-<<<<<<< HEAD
             <p className="mt-4 text-slate-300">Monitor, optimize, and manage all AI systems across your organization with quantum-enhanced performance.</p>
-=======
             <p className="mt-4 text-slate-300">Monitor, optimize, and manage all AI systems across your organization with quantum-enhanced window.window.window.performance.</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
@@ -36,21 +26,10 @@ export default function EnterpriseAIOpsPage() {
               <div className="text-3xl font-bold text-white text-base font-medium text-gray-400">Starting at $35,999<span >/month</span></div>
               <div className="text-sm text-gray-400 mt-2">Trial: 30 days • Setup: 1–2 weeks</div>
               <div className="mt-6 flex gap-3">
-
-
+                <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>
+                <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
             </div>
           </div>
@@ -58,10 +37,13 @@ export default function EnterpriseAIOpsPage() {
       </div>
     </Layout>
   )
-
 }
-
-
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+export default function EnterpriseAIOpsPage(req, res) {
+  try {
+  return (;
     <Layout>;
       <Head>;
         <title > Enterprise AI Operations Center | Zion Tech Group</title>;
@@ -92,19 +74,6 @@ export default function EnterpriseAIOpsPage() {
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

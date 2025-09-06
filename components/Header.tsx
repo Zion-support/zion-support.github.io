@@ -6,20 +6,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -40,12 +36,32 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 "use client";
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 
+"use client";
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import {
+  Menu,
+
+'use client';
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { 
+  Menu, 
+  X, 
+  Phone, 
+  Mail, 
+  MapPin,
+  Brain,
+  Network,
+  Cloud,
+  ArrowRight
+} from 'lucide-react';
+origin/main
 
 "use client";
 ;
@@ -53,8 +69,13 @@ import React, { useState, useEffect } from './react';
 import Link from './next / link';
 
 import {
-
-
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  ChevronDown, 
+  Menu, 
+origin/automation-improvements-final
   X,
   ChevronDown,
   Code,
@@ -69,16 +90,7 @@ import {
   GraduationCap,
   Factory,
   Truck,
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
   CreditCard,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
-
   Menu
   X
   ChevronDown
@@ -95,8 +107,6 @@ import {
   Factory
   Truck
   CreditCard
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import {;
   Menu,;
   X,;
@@ -114,11 +124,10 @@ import {;
   Factory,;
   Truck,;
   CreditCard,;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+} from "lucide-react";
+
+  CreditCard,;
+
 } from "lucide-react";
 
 export default function Header() {;
@@ -158,38 +167,28 @@ function Header() {
     {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  ];
+  const handleServiceClick = (href: string) => {
+    closeMenu();
+    window.location.href = href;
+  }
+  return (
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
             </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-=======
             <Link href="/" className="flex items-center">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
                 <Brain className="h-5 w-5 text-white" />
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
             <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
             </Link>
@@ -228,41 +227,107 @@ function Header() {
           </button>
         </div>
         {/* Mobile Menu */}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { 
+      name: 'Services', 
+      href: '/services', 
+      dropdown: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Data Analytics', href: '/services/data-analytics' }
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      href: '/solutions', 
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'Healthcare', href: '/solutions/healthcare' },
+        { name: 'Finance', href: '/solutions/finance' },
+        { name: 'Government', href: '/solutions/government' },
+        { name: 'Retail', href: '/solutions/retail' },
+        { name: 'Education', href: '/solutions/education' }
+      ]
+    },
+    { 
+      name: 'Industries', 
+      href: '/industries', 
+      dropdown: [
+        { name: 'Financial Services', href: '/industries/financial' },
+        { name: 'Healthcare', href: '/industries/healthcare' },
+        { name: 'Manufacturing', href: '/industries/manufacturing' },
+        { name: 'Retail', href: '/industries/retail' },
+        { name: 'Government', href: '/industries/government' }
+      ]
+    },
+    { 
+      name: 'Company', 
+      href: '/about', 
+      dropdown: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    { 
+      name: 'Resources', 
+      href: '/resources', 
+      dropdown: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Tutorials', href: '/tutorials' },
+        { name: 'API Documentation', href: '/api-docs' }
+      ]
+    },
+    { name: 'Contact', href: '/contact' }
+  ];
 
-=======
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
+  };
+
+  return (
+    <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm">
             <div className="flex items-center space-x-6 mb-2 md:mb-0">
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
               </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <span className="text-blue-200">24/7 Support Available</span>
-              <div className="flex space-x-2">
-                <a href="#" className="hover:text-blue-300"><Facebook className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Twitter className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Linkedin className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4" />
+              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+            </div>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+          </div>
+        </div>
+      </div>
 
 
 
@@ -276,7 +341,6 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
     window && window.addEventListener("scroll", handleScroll);
     return () => window && window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const servicesDropdown = [;
     {;
       title: "Web Development",;
@@ -315,7 +379,6 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
       icon: Zap,;
     },;
   ];
-
   const solutionsDropdown = [;
     {;
       title: "Enterprise Solutions",;
@@ -342,7 +405,6 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
       icon: GraduationCap,;
     },;
   ];
-
   const industriesDropdown = [;
     { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },;
     { name: "Logistics", href: "/industries/logistics", icon: Truck },;
@@ -351,7 +413,6 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
     { name: "Education", href: "/industries/education", icon: GraduationCap },;
     { name: "Retail", href: "/industries/retail", icon: ShoppingCart },;
   ];
-
   const navigation = [;
     { name: "Home", href: "/" },;
     {;
@@ -369,12 +430,10 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
     { name: "Industries", href: "/industries" },;
     { name: "Contact", href: "/contact" },;
   ];
-
   const handleServiceClick = (href: string) => {;
     closeMenu();
     window && window.location.href = href;
   };
-
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -385,17 +444,17 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
               Zion Tech Group;
             </Link>;
           </div>;
-
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-          <nav className="hidden lg:flex space-x-8">;
-            {navigation && navigation.map((item) => (;
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+origin/automation-improvements-final
+          </div>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+ursor/integrate-build-improve-and-re-verify-8f7d
+          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-8">
+origin/main
+            {navigation.map((item) => (
               <Link
                 key={item && item.name}
                 href={item && item.href}
@@ -403,17 +462,8 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
                 {item && item.name}
               </Link>;
             ))}
-<<<<<<< HEAD
-=======
           </nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
             {/* Services Dropdown */}
             <div className="relative group">
               <button
@@ -444,7 +494,6 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
                                 <p className="text-sm text-gray-600">{service.description}</p>
                               </div>
                             </div>
-=======
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <button
@@ -460,12 +509,35 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
                     />
                   )}
                 </button>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
+                      >
+                        {item.dropdown.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+              </div>
+            ))}
           </div>
 
-<<<<<<< HEAD
-=======
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -476,17 +548,10 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
         </div>
 
         {/* Mobile Navigation */}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-white shadow-lg"
@@ -506,8 +571,6 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
                   href="/contact"
                   onClick={closeMenu}
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden mt-4 border-t border-gray-200 pt-4"
@@ -548,7 +611,6 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
                         </Link>
                       ))}
                     </div>
-<<<<<<< HEAD
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -588,36 +650,64 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
             {/* Regular Navigation Items */}
             {navigation.slice(0, 2).map((item) => (
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> origin/automation-improvements-final
-=======
-          </nav>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+origin/automation-improvements-final
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+          </nav>
+          </div>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-1" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center">
+              <Mail className="h-4 w-4 mr-1" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">;
             <Link
               href="/contact"
 
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
-
-
-
+origin/main
             >
               Get Started
             </Link>
           </div>
-
         </div>
+      </nav>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 
 =======
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">;
@@ -630,8 +720,11 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+            >
+              Get Started
+            </Link>
+          </div>
+
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -641,6 +734,11 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
             ) : (;
               <Menu className="h-6 w-6" />;
             )}
+          </button>
+        </div>
+      </nav>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
           </button>;
         </div>;
@@ -649,7 +747,13 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+              {navigation.map((item) => (
+                <div key={item.name}>
+
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isMenuOpen && (;
@@ -657,7 +761,7 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white shadow-lg">;
+className="lg:hidden bg-white shadow-lg">;
               <div className="px-4 py-6 space-y-4">;
                 {navigation && navigation.map((item) => (;
                   <Link
@@ -667,6 +771,15 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
                     className="block text-gray-700 hover:text-blue-600 font-medium">;
                     {item && item.name}
                   </Link>;
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block text-gray-700 hover:text-blue-600 font-medium"
+                  >
+                    {item.name}
+                  </Link>
+
                 ))}
                 <Link
                   href="/contact"
@@ -843,7 +956,6 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 }
 =======
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-=======
                   )}
                 </div>
               ))}
@@ -852,16 +964,6 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
                   href="/contact"
                   className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
                   onClick={() => setIsMenuOpen(false)}
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   Get Started
                 </Link>
@@ -869,21 +971,13 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
             </motion.div>
           )}
         </AnimatePresence>
-
+      </div>
+    </header>
+  );
+}
       </nav>
     </header>
   );
 };
 
 export default Header;
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -15,21 +15,6 @@ import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import {useAuth} from "@/hooks/useAuth";
 import {ForumPost} from "@/types/community";
-<<<<<<< HEAD
-// Mock data for featured posts;
-const featuredPosts: ForumPost[] = [;
-  {;
-    id: "1",;
-    title: "Best practices for AI model fine-tuning",;
-    content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",;
-    authorId: "user1",;
-    authorName: "Alex Johnson",;
-    authorAvatar: "https://i && i.pravatar.cc/150?img=3",;
-    authorRole: "Verified Talent",;
-    categoryId: "ai-tools",;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -38,7 +23,6 @@ import { SEO } from "@/components/SEO",
 import { AppLayout } from "@/layout/AppLayout",
 import ForumCategories from "@/components/community/ForumCategories",
 import PostCard from "@/components/community/PostCard",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost } from "@/types/community";
 // Mock data for featured posts
@@ -53,7 +37,6 @@ const featuredPosts: ForumPost[] = [
     authorAvatar: "https://i.pravatar.cc/150?img=3"
     authorRole: "Verified Talent"
     categoryId: "ai-tools"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     tags: ["machine-learning", "fine-tuning", "gpt"];
     createdAt: "2025-04-01T12:00:00Z",;
     updatedAt: "2025-04-01T12:00:00Z",;
@@ -82,16 +65,8 @@ const featuredPosts: ForumPost[] = [
 =======
 
 
-<<<<<<< HEAD
-=======
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { ForumPost } from "@/types/community",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
@@ -181,13 +156,13 @@ const recentPosts: ForumPost[] = [;
 
 
 
+export default function CommunityPage() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("categories");
 export default function CommunityPage() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("categories"),
-
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <AppLayout>;
@@ -196,12 +171,6 @@ export default function CommunityPage() {
         title="Community Forum | Zion AI Marketplace"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"
-<<<<<<< HEAD
-
-=======
-
-
-=======
       />
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
@@ -237,7 +206,6 @@ export default function CommunityPage() {
             <div className="space-y-4">
               {recentPosts.map((post) => (
                 <PostCard key={post.id} post={post} />
-<<<<<<< HEAD
               ))}
             </div>
           </TabsContent>
@@ -245,12 +213,7 @@ export default function CommunityPage() {
       </div>
     </AppLayout>
   )
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -521,23 +484,7 @@ function CommunityPage() {
           </TabsContent>;
         </Tabs>;
       </div>;
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </AppLayout>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </AppLayout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

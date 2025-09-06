@@ -1,29 +1,12 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
-<<<<<<< HEAD
 export interface Session {
-=======
 
 export interface Session {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   email: string;
   role: 'admin' | 'user' | 'guest';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-<<<<<<< HEAD
-
-
-  // Check for internal agent headers or IPs;
-  const userAgent = req.headers['user-agent'] || '';
-
-
-=======
 export function getSessionFromReq(req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
   const authHeader = req.headers.authorization;
@@ -37,14 +20,10 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
   return { userId: 'user-1', email: 'user@zion.os', role: 'user' }
 }
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
-<<<<<<< HEAD
   // Check for internal agent headers or IPs
   const userAgent = req.headers['user-agent'] |'';
-=======
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
@@ -199,25 +178,7 @@ export function isInternalAgentRequest (req: NextApiRequest): boolean {
 export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
-<<<<<<< HEAD
-
-
-
-
-=======
-<<<<<<< HEAD
 }
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 };
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

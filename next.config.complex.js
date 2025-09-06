@@ -9,21 +9,34 @@ const next_config = {
   page_extensions: ['tsxtsjsxjs'],
 =======
 /** @type {import('next').NextConfig} */;
-
+const nextConfig = {reactStrictMode: true;
+  compress: true;
+  poweredByHeader: false;
+  eslint: { ignoreDuringBuilds: true }
+  typescript: { ignoreBuildErrors: true }
+  pageExtensions: ['tsxtsjsxjs'];
+  // Image optimization;
+  images: {domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"];
+    formats: ['image/webpimage/avif'];
+  }
+  // Output configuration;
+  output: 'standalone';
+  // Trailing slash;
+  trailingSlash: false;
+  // Base path;
+  basePath: '';
+  // Asset prefix;
+  assetPrefix: '';
+  // Generate ETags;
+  generateEtags: true;
+  // Dist directory;
+  distDir: '.next';
+}
+module.exports = nextConfig;
 const nextConfig = {;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
   reactStrictMode: true;
-=======
-<<<<<<< HEAD
   reactStrictMode: true,;
-=======
   reactStrictMode: true;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;
@@ -46,7 +59,6 @@ const nextConfig = {;
   // Generate ETags;
   generate_etags: true,
   // Dist directory;
-  dist_dir: '.next';
-},
-module.exports = next_config,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  distDir: '.next';
+},;
+module.exports = nextConfig,;

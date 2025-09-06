@@ -1,18 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-
-=======
 import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
   if (req.method !== 'POST')
-=======
   if (req.method !== 'POST');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const {
     slug
     name
@@ -115,6 +107,11 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
+
+=======
+    res.status(500).json({ error: e.message });
+  }    res.status(500).json({ error: e.message })
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

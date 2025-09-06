@@ -1,202 +1,5 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-import React from 'react'
-import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
-import { cn } from '@/lib/utils'
-import {
-  ArrowRight
-  Search
-  Users
-  Briefcase
-  Settings
-  MessageSquare
-  Smartphone
-} from 'lucide-react'
-
-interface QuickAccessProps {
-  className?: string;
-  style?: React.CSSProperties
-export function QuickAccess({ className, style }: QuickAccessProps) {
-<<<<<<< HEAD
-=======
-  const { t } = useTranslation()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-  const { t } = useTranslation()
-  const quickLinks = [
-    {
-      title: t('home.tool_ai_matcher')
-      description: t('home.tool_ai_matcher_desc')
-      icon: <Search className='h-6 w-6 text-zion-cyan' />
-      link: '/marketplace'
-    }
-    {
-      title: t('home.tool_talent')
-      description: t('home.tool_talent_desc')
-      icon: <Users className='h-6 w-6 text-zion-purple' />
-      link: '/talent'
-    }
-    {
-      title: t('home.tool_services')
-      description: t('home.tool_services_desc')
-      icon: <Briefcase className='h-6 w-6 text-zion-cyan' />
-      link: '/services'
-    }
-    {
-      title: t('home.tool_equipment')
-      description: t('home.tool_equipment_desc')
-      icon: <Settings className='h-6 w-6 text-zion-purple' />
-      link: '/equipment'
-    }
-    {
-      title: t('nav.community')
-      description: t('home.tool_chat_desc')
-      icon: <MessageSquare className='h-6 w-6 text-zion-cyan' />
-      link: '/community'
-    }
-    {
-      title: t('home.tool_mobile_app', 'Mobile App')
-      description: t('home.tool_mobile_app_desc', 'Zion on the go')
-      icon: <Smartphone className='h-6 w-6 text-zion-purple' />
-      link: '/mobile-launch'
-    }
-  ]
-  return (
-    <section className={cn('py-12 bg-zion-blue-dark', className)} style={style}>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-8'>
-          <h2 className='text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2'>
-            {t('home.quick_access_title', 'Quick Access')}
-          </h2>
-          <p className='text-zion-slate-light text-lg'>
-            {t(
-              'home.quick_access_subtitle'
-              'Jump directly to our most popular features'
-            )}
-          </p>
-        </div>
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
-=======
-import React from "react",
-import Link from "next/link",
-import { useTranslation } from "react-i18next",
-import { cn } from "@/lib/utils",
-import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react'
-
-interface QuickAccessProps {
-  className?: string,
-  style?: React.CSSProperties
-}
-
-export function QuickAccess({ className, style }: QuickAccessProps) {
-  const { t } = useTranslation(),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const quickLinks = [
-    {
-      title: t('home.tool_ai_matcher'),
-      description: t('home.tool_ai_matcher_desc'),
-      icon: <Search className="h-6 w-6 text-zion-cyan" />,
-      link: "/marketplace"
-    },
-    {
-      title: t('home.tool_talent'),
-      description: t('home.tool_talent_desc'),
-      icon: <Users className="h-6 w-6 text-zion-purple" />,
-      link: "/talent"
-    },
-    {
-      title: t('home.tool_services'),
-      description: t('home.tool_services_desc'),
-      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,
-      link: "/services"
-    },
-    {
-      title: t('home.tool_equipment'),
-      description: t('home.tool_equipment_desc'),
-      icon: <Settings className="h-6 w-6 text-zion-purple" />,
-      link: "/equipment"
-    },
-    {
-      title: t('nav.community'),
-      description: t('home.tool_chat_desc'),
-      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,
-      link: "/community"
-    },
-    {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      title: t('home.tool_mobile_app', 'Mobile App'),
-      description: t('home.tool_mobile_app_desc', 'Zion on the go'),
-      icon: <Smartphone className='h-6 w-6 text-zion-purple' />,
-      link: '/mobile-launch',
-    },
-  ]
-  return (
-    <section className={cn('py-12 bg-zion-blue-dark', className)} style={style}>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-8'>
-          <h2 className='text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      title: t('home.tool_mobile_appMobile App'),
-      description: t('home.tool_mobile_app_descZion on the go'),
-      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
-      link: "/mobile-launch"
-    }
-  ],
-
-  return (
-    <section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
-            {t('home.quick_access_titleQuick Access')}
-          </h2>;
-          <p className="text-zion-slate-light text-lg">;
-            {t('home.quick_access_subtitleJump directly to our most popular features')}
-    <section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            {t('home.quick_access_title', 'Quick Access')}
-          </h2>
-          <p className="text-zion-slate-light text-lg">
-            {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
-          </p>
-        </div>
-<<<<<<< HEAD
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
-=======
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-          {quickLinks.map((link, index) => (
+{quickLinks.map((link, index) => (
             <Link
-=======
 import React from 'react';
 import Link from 'next / link';
 import { use_translation } from 'react - i18next';
@@ -272,7 +75,6 @@ function QuickAccess() {
         <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 4 max - w-6xl mx - auto'>;
           {quick_links.map ((link, index) => (
             <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               key={index}
               href={link.link}
 <<<<<<< HEAD
@@ -293,30 +95,6 @@ function Page() {";
     { name: "Innovation", count: 10, color: "from - green - 500 to - teal - 500" }, ";
     { name: "Business", count: 14, color: "from - indigo - 500 to - purple - 500" }      scale: 1,
 
-=======
-<<<<<<< HEAD
-              className='group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20'            >
-              <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110'>
-                {link.icon}
-              </div>
-              <h3 className='text-white font-medium mb-1'>{link.title}</h3>
-              <p className='text-zion-slate-light text-xs mb-2'>
-                {link.description}
-              </p>
-              <div className='flex items-center text-zion-cyan text-xs mt-auto'>
-                <span>{t('general.explore')}</span>
-                <ArrowRight className='ml-1 h-3 w-3 transition-transform group-hover:translate-x-1' />
-              </div>
-            </Link>
-import React, { useState } from 'react'
-<<<<<<< HEAD
-import { motion  } from 'framer-motion'
-export default function Page() {"
-    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
-    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },"
-    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 import { motion  } from 'framer-motion';
 export default function Page() {";
@@ -325,10 +103,6 @@ export default function Page() {";
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
 <<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       transition: {
         duration: 0.5, ";
         ease: "ease_out"}}}
@@ -717,11 +491,10 @@ export default function Page() {;";
                 </div>
               </div>
               {/* CTA */}
-
-              <motion&& motion.div
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}"
-                className="mt-auto">;
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}"
+                className="mt-auto">
                 <Link
 <<<<<<< HEAD
                   to={link && link.path}`
@@ -730,35 +503,12 @@ export default function Page() {;";
                   <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>;
               </motion && motion.div>;
             </motion && motion.div>;
-=======
-                  to={link.path}`
-                  className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}
-                >
-                  Explore {link.title}"
-                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>
-              </motion.div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-export default QuickAccess }
-<<<<<<< HEAD
-export default QuickAccess
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 export default QuickAccess;
 ;
 <<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
@@ -784,14 +534,7 @@ export default QuickAccess;
 <<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   { opacity: 0,
   scale: 0.8;
 }}
@@ -828,13 +571,3 @@ export default QuickAccess;
     </section>);
 export default QuickAccess }
 export default QuickAccess;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,22 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { useState } from 'react'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
-      id: 'serviceProvider'
+id: 'serviceProvider'
       name: 'Service Provider'
       description: 'I want to offer services on the platform'
       icon: Briefcase
     }
-=======
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Briefcase, Star, User } from 'lucide-react';
 import { Button } from '@/components / ui / button';
@@ -39,7 +25,6 @@ function UserTypeSelection() {
       description: 'I want to offer services on the platform',
       icon: Briefcase,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       id: 'talent'
       name: 'Talent'
@@ -54,19 +39,6 @@ function UserTypeSelection() {
 import { Briefcase, Star, User } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 interface UserTypeOption {
-
-
-=======
-import { useState } from "react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Briefcase, Star, User } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-interface UserTypeOption {
-<<<<<<< HEAD
   id: "serviceProvider" | "talent" | "client";
   name: string;
   description: string;
@@ -74,38 +46,23 @@ interface UserTypeOption {
 interface UserTypeSelectionProps {
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
   selectedType: string | null
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function UserTypeSelection({
   onSelect
   selectedType
 }: UserTypeSelectionProps) {
-<<<<<<< HEAD
   const userTypes: UserTypeOption[] = [
     {
-=======
   id: "serviceProvider" | "talent" | "client",
   name: string,
   description: string,
   icon: React.ElementType
 }
 
-interface UserTypeSelectionProps {
-  onSelect: (userType: "serviceProvider" | "talent" | "client") => void,
-  selectedType: string | null
+
+export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
 }
 
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
-=======
-=======
-}
-
-export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const userTypes: UserTypeOption[] = [
     {
       id: "serviceProvider",
@@ -126,8 +83,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className='space-y-6'>;
@@ -167,21 +122,14 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       description: 'I want to discover and hire talent or services',
       icon: User,
     },
-<<<<<<< HEAD
-  ];
-=======
   ]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       id: "client",
       name: "Client",
       description: "I want to discover and hire talent or services",
       icon: User
     }
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
       id: 'serviceProvider'
       name: 'Service Provider'
       description: 'I want to offer services on the platform'
@@ -200,10 +148,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       icon: User
     }
   ]
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className='space - y-6'>;
       <div className='text - center mb - 6'>;
@@ -241,8 +185,12 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
         })}
 
                 />;
-=======
 
+              onClick={() => onSelect(type.id)}
+              variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
+                isSelected
+                  ? 'border-zion-purple bg-zion-purple/10 text-zion-purple'
+                  : 'border-zion-blue-light hover:border-zion-cyan/50 text-white'
       
       <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
@@ -258,16 +206,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                 isSelected 
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" 
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white"
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
@@ -276,26 +214,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 <<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-              <div className='text-center'>
-                <h4 className='font-medium'>{type.name}</h4>
-                <p className='text-sm text-zion-slate-light mt-1'>
-                  {type.description}
-                </p>
-              </div>
-            </Button>
-          )
-<<<<<<< HEAD
-        })}
-      </div>
-    </div>
-  )
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
@@ -360,43 +278,26 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
             >;
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>;
-              <div className='text-center'>;
-                <h4 className='font-medium'>{type && type.name}</h4>;
-                <p className='text-sm text-zion-slate-light mt-1'>;
-                  {type && type.description}
+              <div className="text-center">;
+                <h4 className="font-medium">{type.name}</h4>;
+                <p className="text-sm text-zion-slate-light mt-1">;
+                  {type.description}
                 </p>;
               </div>;
             </Button>;
           );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         })}
       </div>;
     </div>;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 ;
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

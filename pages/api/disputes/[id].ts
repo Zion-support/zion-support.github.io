@@ -1,37 +1,23 @@
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
-<<<<<<< HEAD
-
-=======
   parseUserFromRequest
   ensureInvolvedOrAdmin
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
-
 } from "../../../utils/auth";
 export default async function handler(
-
+  req: NextApiRequest
+  res: NextApiResponse
+) {
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { id } = req.query;
 
   if (typeof id !== "string")
@@ -60,27 +46,46 @@ export default async function handler(
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  res.setHeader("Allow", "GET");
-  return res.status(405).end("Method Not Allowed");
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Allow', ['GET']);
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getDisputeById } from '../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../utils/auth';
+export default async function handler(req, res) {
+  try {
+  const { id } = req.query;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+    } catch (error) {
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getDisputeById  } from '../../../utils / fsdb';
-import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,
-} from '../../../utils / auth';
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return res.status(200).json({ dispute });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
 export default async /**
  * handler - Function description
@@ -97,16 +102,3 @@ function handler() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

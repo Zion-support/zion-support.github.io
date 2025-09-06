@@ -77,25 +77,21 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
-<<<<<<< HEAD
+    const geoCounts: Record<string, number> = {}
 
 
     const totalUsers = usersData && usersData.length;
     const totalTalents = usersData && usersData.filter(u => u && u.role === 'talent').length;
     const totalClients = usersData && usersData.filter(u => u && u.role === 'client').length;
-
     const jobsPosted = jobsData && jobsData.filter(j => j && j.status === 'posted').length;
     const jobsFilled = jobsData && jobsData.filter(j => j && j.status === 'filled').length;
-
     const quotesSent = quotesData && quotesData.filter(q => q && q.status === 'sent').length;
     const quotesAccepted = quotesData && quotesData.filter(
       q => q && q.status === 'accepted'
     ).length;
-
     const activeProjects = projectsData && projectsData.filter(
       p => p && p.status === 'active'
     ).length;
-
     const categoryCounts: Record<string, number> = {};
 
 =======
@@ -115,12 +111,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 =======
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
-
     const referralConversions = referralsData.filter(r => r.converted).length;
-
     const geoCounts: Record<string, number> = {};
     usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 });
-
     res.status(200).json({
       totals: {
        totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects 
@@ -130,11 +123,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       geo: Object.entries(geoCounts).map(([country, value]) => ({ label: country, value }))})
   } catch (e: any) {
     res.status(200).json({
+<<<<<<< HEAD
       totals: {
        totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 
     },
     topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2,
+=======
+      totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 }
+      topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
+      referralConversions: 2
+
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
 }
@@ -163,25 +164,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       ],
     });
   }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
     const geoCounts: Record<string, number> = {};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
-=======
     const geoCounts: Record<string, number> = {};
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

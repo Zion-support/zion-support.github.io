@@ -1,37 +1,14 @@
-<<<<<<< HEAD
-
-
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
-import { Link } from "react-router-dom",
-
-=======
-<<<<<<< HEAD
 import { NewsletterForm } from "@/components/NewsletterForm",
-<<<<<<< HEAD
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { Link } from "react-router-dom";
-=======
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { Link } from "react-router-dom";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function Footer() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -343,19 +320,9 @@ function Footer() {
           </div>
         </div>
       </div>
-
     </footer>
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import { NewsletterForm } from "@/components/NewsletterForm",;
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",;
@@ -432,11 +399,6 @@ export function Footer() {;
           </div>;
         </div>;
       </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     </footer>;
   );
-=======
-    </footer>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

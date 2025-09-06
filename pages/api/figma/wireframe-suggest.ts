@@ -1,9 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {if (req.method !== 'POST') {;
     res.status(405).json({ error: 'Method not allowed' });
@@ -13,7 +9,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!screenName) {res.status(400).json({ error: 'screenName is required' });
     return;
   }
-<<<<<<< HEAD
   try {const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role |'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({model: 'gpt-4o-mini';
       messages: [;
@@ -25,19 +20,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({ suggestion });
   } catch (e: any) {const message = process.env.OPENAI_API_KEY ? (e?.message |'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
   try {;
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini',;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
@@ -156,15 +143,6 @@ export default async function handler(req, res) {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini';
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       messages: [;
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },;
         { role: 'user', content: prompt }];
@@ -172,22 +150,9 @@ export default async function handler(req, res) {
       max_tokens: 400});
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
     res.status(200).json({ suggestion });
-<<<<<<< HEAD
-
-
-  }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   } catch (e: any) {;
     const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch (error) {
     const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
@@ -215,11 +180,5 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

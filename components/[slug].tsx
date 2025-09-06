@@ -5,30 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useMemo } from 'react';
-
-=======
-
-import React, { useMemo } from 'react';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
@@ -55,19 +45,12 @@ import { nextGenAIServices  } from '../data/next-gen-ai-services';
 import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 export default function DynamicServicePage() {
-=======
 export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
   const service = useMemo(() => {
@@ -171,7 +154,6 @@ if (return undefined) {
       realQ4Services2025 as any,
       real2026Q1Additions as any,
       ultimateFuturisticServices2025 as any);    const by_link = all.find (string => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       try {
         const url = new URL (s.link);
         return url.pathname.replace (/^\/+|\/+$/g, '') === slug.replace (/^\/+|\/+$/g, '');
@@ -181,7 +163,6 @@ if (return undefined) {
 export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
-
   const service = useMemo(() => {;
     if (!slug) return undefined;
     const all: any[] = ([] as any[]).concat(;
@@ -228,13 +209,8 @@ export default function DynamicServicePage() {;
     if (byLink) return byLink;
     const byId = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.id === slug);
     if (byId) return byId;
-
-
+    return undefined;  }, [slug]);    return undefined
   }, [slug]);
-
-
-
-
 
   if (!service) {
     return (
@@ -352,9 +328,7 @@ if ( {) {
         </div>;
       </UltraAdvancedFuturisticBackground>;
     );
-
   const canonicalUrl = `https://ziontechgroup && ziontechgroup.com/${slug}`;
-
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -374,7 +348,6 @@ if ( {) {
               {service && service.tagline}
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>;
             <div className='lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6'>;
               <h2 className='text-2xl font-semibold mb-4'>What you get</h2>;
@@ -437,7 +410,6 @@ if ( {) {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
             </p>;
           </div>;
           <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 12'>;
@@ -502,7 +474,6 @@ if ( {) {
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -534,7 +505,6 @@ function normalizeSlug(value: string): string {
             </h1>
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-4">What you get</h2>
@@ -565,39 +535,10 @@ function normalizeSlug(value: string): string {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD
-}
 
-
-function collectAllServices(): any (): Svc[] {;
-  return enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.concat(;
-    extraServices as Svc[],;
-    additionalEnhancedServices as Svc[],;
-    innovativeAIServices as Svc[],;
-    quantumSpaceServices as Svc[],;
-    enterpriseITServices as Svc[],;
-    newRealServices as Svc[],;
-    marketReadyServices as Svc[],;
-    nextGenerationAIServices as Svc[],;
-    emergingTechnologyServices as Svc[],;
-    comprehensiveITSolutions as Svc[],;
-    marketValidatedServices as Svc[],;
-    newRealInnovations as Svc[],;
-    realMarketServices as Svc[],;
-    realVerifiedServices as unknown as Svc[];
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 // Static export support: generate root-level pages for service slugs;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Static export support: generate root-level pages for service slugs
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices.concat(
@@ -615,52 +556,31 @@ function collectAllServices(): Svc[] {
     newRealInnovations as Svc[]
     realMarketServices as Svc[]
     realVerifiedServices as unknown as Svc[]
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-function normalizeSlug(): any (value: string): string {;
-  return value;
-    .toLowerCase();
-    .replace(/[^a-z0-9]+/g, '-');
-    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(): any (link?: string): string | null {;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+function normalizeSlug(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
   if (!link) return null;
-  try {;
+  try {
     const url = new URL(link);
-
-    const path = url && url.pathname.replace(/^\/+|\/+$/g, '');
-    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/...";
-    if (path && !path && path.includes('/')) return path;
-    return null;
-  } catch {;
-    return null;
-=======
-
-
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    const path = url.pathname.replace(/^\/+|\/+$/g, '');
+    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
+    if (path && !path.includes('/')) return path;
+    return null
+  } catch {
+    return null
+  }
 }
-<<<<<<< HEAD
+  };
+}
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticPaths: GetStaticPaths = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const services = collectAllServices();
 
   const candidateSlugs = new Set<string>(),;
-
   // Gather existing root-level page slugs to avoid conflicts;
   const pagesDir = path && path.join(process && process.cwd(), 'pages');
 
@@ -731,7 +651,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   } catch {}
 <<<<<<< HEAD
       const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     for (const entry of entries) {
       if (&& /\.tsx?$/.test (entry.name)) {) {
   $2
@@ -759,14 +678,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     slug => !staticSlugs.has(slug)
   );
   return {
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } }))
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
     fallback: true,
   };
@@ -780,12 +692,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 
   return {
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     fallback: true
   }
 }
@@ -813,19 +719,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         }
     }
   } catch {}
-
-
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter(;
     slug => !staticSlugs && staticSlugs.has(slug);
   );
-
   return {;
     paths: uniqueNonConflicting && uniqueNonConflicting.map(slug => ({ params: { slug } })),;
     fallback: true,;
   };
 };
-
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed; the component resolves the service client-side.;
   return { props: {} };};
@@ -841,7 +743,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed, the component resolves the service client-side.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return { props: {} }
 
 };
@@ -879,23 +780,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client - side.;
   return { props: {} }
 }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
-  return { props: {} }
-}
 
-=======
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   return { props: {} };
 };
-=======
 
 };
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

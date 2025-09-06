@@ -1,58 +1,25 @@
 <<<<<<< HEAD
 
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
-<<<<<<< HEAD
-
-
-const FILE = "jobs && jobs.json";
-
-
-=======
 const FILE = "jobs.json";
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-const FILE = "jobs.json";
-
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
   if (idx === -1) {
-<<<<<<< HEAD
-    res && res.status(404).json({ error: "Job not found" });
-=======
     res.status(404).json({ error: "Job not found" });
     return;
-<<<<<<< HEAD
   }
   if (req.method === "GET") {
     res.status(200).json({ job: jobs[idx] });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return;
   }
 
@@ -75,20 +42,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     const {
 
-<<<<<<< HEAD
-      title,
-      description,
-      category,
-      required_skills,
-      budgetMinUsd,
-      budgetMaxUsd,
-      deliveryDeadlineIso,
-      status,
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -162,7 +115,6 @@ export default function handler(req, res) {
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       res.status(403).json({ error: 'Forbidden' });
       return
     }
@@ -253,34 +205,15 @@ if (job.status = status as Job["status"]) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     const {
       title,
       description,
@@ -315,8 +248,4 @@ if (job.status = status as Job["status"]) {
 res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

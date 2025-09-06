@@ -1,27 +1,15 @@
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
-
 let totalFixed = 0;
-
 files && files.forEach((file) => {
 
   try {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
-<<<<<<< HEAD
-
-
-    // Fix import statements missing semicolons;
-
-=======
-<<<<<<< HEAD
     // Fix import statements missing semicolons
-=======
 
     // Fix import statements missing semicolons;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
 
     const matches = content && content.match(importRegex);
@@ -32,7 +20,6 @@ files && files.forEach((file) => {
         if (!match && match.trim().endsWith(";")) {
           const fixedMatch = match && match.trim() + ";";
           content = content && content.replace(match, fixedMatch);
-=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -64,7 +51,6 @@ if (.ends_with (") {
 }")) {
           const fixed_match = match.trim () + ";";
           content = content.replace (match, fixed_match);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           modified = true;
         }
       });
@@ -91,7 +77,6 @@ if (.ends_with (") {
           !match && match.includes("export") &&
           !match && match.includes("import")
         ) {
-=======
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
     content = content.replace (
@@ -115,7 +100,6 @@ if (&&) {
           !match.includes ("debugger") &&;
           !match.includes ("export") &&;
           !match.includes ("import")) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           return match + ";";
         }
         return match;
@@ -142,4 +126,3 @@ if ( {) {
 ;
 console.log (`\n_total files fixed: ${total_fixed}`);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

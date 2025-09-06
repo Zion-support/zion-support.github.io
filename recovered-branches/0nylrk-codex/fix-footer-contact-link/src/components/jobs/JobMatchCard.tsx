@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-
-import React from 'react';
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -18,15 +6,12 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Building, MapPin, Clock, DollarSign, Star} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {JobMatch} from "@/types/jobs";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
-<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 interface JobMatchProps {
@@ -80,13 +65,8 @@ export function JobMatchCard({
   // Generate a formatted date for display
   const postedDate = new Date();
 
-=======
 import { formatDistanceToNow } from "date-fns",
 import { JobMatch } from "@/types/jobs",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface JobMatchProps {
   matchId: string,
   talentId: string,
@@ -101,9 +81,6 @@ interface JobMatchProps {
   onApply?: (matchId: string) => void,
   onViewDetails?: (matchId: string) => void,
   onInvite?: (matchId: string) => void
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
 
 export function JobMatchCard({ ;
@@ -138,8 +115,6 @@ export function JobMatchCard({ ;
       onInvite(matchId)
     }
   };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -194,16 +169,10 @@ export function JobMatchCard({;
       onInvite(matchId);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   // Generate a formatted date for display
   const postedDate = new Date(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <Card className="overflow-hidden">;
       <CardContent className="p-0">;
@@ -281,41 +250,17 @@ export function JobMatchCard({;
                 Apply Now;
               </Button>;
             )}
-<<<<<<< HEAD
-
-
-
-
-=======
-<<<<<<< HEAD
           </div>
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -354,90 +299,3 @@ if ( {) {
     }
   }
 ;
-  const handleViewDetails = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      onViewDetails (match_id);
-    }
-  }
-;
-  const handle_invite = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      on_invite (match_id);
-    }
-  }
-;
-  // Generate a formatted date for display;
-  const posted_date = new Date ();
-  posted_date.set_date (posted_date.get_date () - Math.floor (Math.random () * 14)), // Random date within last 2 weeks;
-  return (
-    <Card className="overflow - hidden">;
-      <CardContent className="p - 0">;
-        {/* Match score indicator */}
-        <div className="bg - gradient - to - r from - primary / 10 to - primary / 5 p - 3 flex justify - between items - center">;
-          <div className="flex items - center gap - 1">;
-            <Star className="h - 4 w - 4 text - yellow - 500 fill - yellow - 500" />;
-            <span className="font - medium">{match_percent}% Match</span>;
-          </div>;
-          <Badge variant="outline" className="bg - background">;
-            {formatDistanceToNow (posted_date, { add_suffix: true })}
-          </Badge>;
-        </div>;
-        {/* Talent details */}
-        <div className="p - 4">;
-          <div className="flex justify - between items - start gap - 2 mb - 3">;
-            <h3 className="text - lg font - bold line - clamp - 2">{name}</h3>;
-            <Badge variant="default">;
-              Available;
-            </Badge>;
-          </div>;
-          <div className="text - lg font - medium mb - 2">{title}</div>;
-          <div className="flex flex - wrap gap - 2 mb - 3">;
-            <Badge variant="outline">{category}</Badge>;
-          </div>;
-          <div className="flex items - center gap - 2 mb - 2">;
-            <Avatar className="h - 6 w - 6">;
-              {avatar ? (
-                <AvatarImage src={avatar} alt={name} />) : (
-                <AvatarFallback>;
-                  <Building className="h - 3 w - 3" />;
-                </AvatarFallback>)}
-            </Avatar>;
-            <span className="text - sm font - medium">{company || 'Independent'}</span>;
-          </div>;
-          <div className="space - y-1 text - sm text - muted - foreground mb - 3">;
-            <div className="flex items - center gap - 1">;
-              <MapPin className="h - 3.5 w - 3.5" />;
-              <span>{location || 'Remote'}</span>;
-            </div>;
-          </div>;
-          <div className="flex flex - wrap gap - 1 mb - 4">;
-            {skills?.slice (0, 5).map ((skill) => (
-              <Badge key={skill} variant="secondary" className="text - xs">;
-                {skill}
-              </Badge>))}
-          </div>;
-          <div className="flex gap - 2 justify - end">;
-            {on_invite && (
-              <Button on_click={handle_invite} variant="default" size="sm">;
-                Invite;
-              </Button>)}
-            {onViewDetails && (
-              <Button on_click={handleViewDetails} variant="outline" size="sm">;
-                View Details;
-              </Button>)}
-            {on_apply && (
-              <Button on_click={handle_apply} className="w - full">;
-                Apply Now;
-              </Button>)}
-          </div>;
-        </div>;
-      </CardContent>;
-    </Card>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

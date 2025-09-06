@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { ScrollArea  } from '@/components/ui/scroll-area';
 import { Skeleton  } from '@/components/ui/skeleton';
@@ -11,9 +6,6 @@ import { Button  } from '@/components/ui/button';
 import { NotificationItem  } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 interface NotificationListProps {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   loading: boolean,
   error: string | null,
   notifications: Notification[],
@@ -27,12 +19,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   error;
   notifications;
   onMarkAsRead;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -48,8 +34,6 @@ interface NotificationListProps {;
   onRetry: () => void;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   loading: boolean
   error: string | null
   notifications: Notification[]
@@ -59,53 +43,17 @@ interface NotificationListProps {;
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
-
-import {ScrollArea} from '@/components/ui/scroll-area';
-import {Skeleton} from '@/components/ui/skeleton';
-import {Button} from '@/components/ui/button';
-import {NotificationItem} from './NotificationItem';
-import {Notification} from '@/context/notifications';
-interface NotificationListProps {;
-  loading: boolean,;
-  error: string | null,;
-  notifications: Notification[],;
-  onMarkAsRead: (id: string) => Promise<void>,;
-  onDismiss: (id: string) => Promise<void>,;
-  onRetry: () => void;
-}
-
-export const NotificationList: React.FC<NotificationListProps> = ({;
-
-=======
-import {ScrollArea} from '@/components / ui / scroll - area';
-import {Skeleton} from '@/components / ui / skeleton';
-import {Button} from '@/components / ui / button';
-import {NotificationItem} from './NotificationItem';
-import {Notification} from '@/context / notifications';
-interface NotificationListProps {
-  loading: boolean,
-  error: string | null,
-  notifications: Notification[],
-  onMarkAsRead: (id: string) => Promise < void>,
-  on_dismiss: (id: string) => Promise < void>,
-  on_retry: () => void;
-}
-export const NotificationList: React.FC < NotificationListProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   loading;
   error;
   notifications;
   onMarkAsRead;
 
-
+  onDismiss
   loading,
   error,
   notifications,
   onMarkAsRead,
-
   onDismiss,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onRetry
 =======
   on_dismiss,
@@ -153,67 +101,12 @@ export const NotificationList: React.FC < NotificationListProps> = ({
           />;
         ));
       )}
-<<<<<<< HEAD
-
-
-
-    </ScrollArea>;
-  );
-
-=======
-=======
-    </ScrollArea>;
-  );
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
     </ScrollArea>
   )
-<<<<<<< HEAD
 }
 
-=======
     </ScrollArea>;
   );
-=======
-=======
     </ScrollArea>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-        <div className="p - 8 text - center text - amber - 500">;
-          <p>{error}</p>;
-          <Button;
-            variant="outline";
-            size="sm";
-            className="mt - 2";
-            on_click={on_retry}
-          >;
-            Try Again;
-          </Button>;
-        </div>) : loading ? (
-        <div className="p - 4 space - y-4">;
-          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
-          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
-          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
-        </div>) : notifications.length === 0 ? (
-        <div className="p - 8 text - center text - zion - slate - light">;
-          <p > No notifications yet</p>;
-        </div>) : (
-        notifications.map ((notification) => (
-          <NotificationItem;
-            key={notification.id}
-            notification={notification}
-            onMarkAsRead={onMarkAsRead}
-            on_dismiss={on_dismiss}
-          />)))}
-    </ScrollArea>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

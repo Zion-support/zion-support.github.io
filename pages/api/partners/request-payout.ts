@@ -1,33 +1,17 @@
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
-<<<<<<< HEAD
-
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-
-
-=======
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, amount } = req.body |{}
   if (!code) return res.status($1).json({ $2 });
@@ -45,18 +29,28 @@ export default async function handler(
       "placeholder-key";
   try {
     if (usingPlaceholder) {
-      return res && res.status(200).json({ ok: true, status: "queued", mock: true });
+      return res.status(200).json({ ok: true, status: "queued", mock: true });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../utils/supabase/server';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status($1).json({$2});
+  const { code, amount } = req.body || {};
+  if (!code) return res.status($1).json({$2});
+  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+  try {
+    if (usingPlaceholder) {
+      return res.status(200).json({ ok: true, status: 'queued', mock: true })
     }
     const supabase = getServerSupabase();
+    const { error } = await supabase.from("payout_requests").insert({
+      partner_code: String(code).toLowerCase()
+      amount: Number(amount) |null
+      status: "requested"
+    });
+    if (error) return res.status(500).json({ error: "Database error" });
+    return res.status(200).json({ ok: true, status: "requested" });
 
-<<<<<<< HEAD
-=======
   } catch (e: any) {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -90,15 +84,7 @@ export default async function handler(req, res) {
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     return res.status(200).json({ ok: true, status: 'requested' });
   } catch (error) {
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return res.status(500).json({ error: e?.message });
-=======
     const { error } = await supabase.from('payout_requests').insert({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       partner_code: String(code).toLowerCase(),
@@ -137,7 +123,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ ok: true, status: 'requested' })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
-
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

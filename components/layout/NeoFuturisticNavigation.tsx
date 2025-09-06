@@ -1,37 +1,8 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {
   Menu
   X
@@ -83,9 +54,6 @@ import {
   FlaskConical
   Link as LinkIcon;
 import Button from '../ui/Button';
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import {
   Menu,
   X,
@@ -137,22 +105,34 @@ import {
   FlaskConical,;
   Link as LinkIcon,;
 import Button from '../ui/Button';
-<<<<<<< HEAD
 export default function NeoFuturisticNavigation() {;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function NeoFuturisticNavigation() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const router = useRouter();
-
-
-
-
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
+  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  }
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  }
+  const isActive = (path: string) => router.pathname === path;
 
   const serviceCategories = [
     {
@@ -445,10 +425,6 @@ export default function NeoFuturisticNavigation() {
     }
   ];
 
-
-
-
-
   // Popular quick links to flagship services
   const popularServiceLinks = [
     { name: 'AI Content Generator', href: '/ai-content-generator' }
@@ -461,10 +437,6 @@ export default function NeoFuturisticNavigation() {
     { name: 'AI Sales Automation', href: '/ai-sales-automation' }
     { name: 'AI Market Research', href: '/ai-market-research' }
   ];
-
-
-
-
 
   // Newly added real services quick links
   const newServiceLinks = [
@@ -931,6 +903,7 @@ import {
   Bot,
   ChevronRight as ChevronRightIcon,
   Eye,
+<<<<<<< HEAD
   FlaskConical,
   Link as LinkIcon,
 import Button from '../ui / Button';
@@ -1326,7 +1299,6 @@ function NeoFuturisticNavigation() {
                 Zion Tech Group;
               </div>;
               <div className='text - xs text - gray - 400'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Revolutionary Technology;
               </div>;
             </div>;
@@ -1541,12 +1513,20 @@ function NeoFuturisticNavigation() {
 
             </div>;
           </div>;
+=======
+  FlaskConical,;
+  Link as LinkIcon,;
+import Button from '../ui/Button';
+<<<<<<< HEAD
+export default function NeoFuturisticNavigation() {;
+=======
 
 
           {/* Mobile Menu Button */}
           <button
             className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'
             onClick={() => setIsOpen(!isOpen)}
+<<<<<<< HEAD
           >;
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
 
@@ -1569,31 +1549,18 @@ function NeoFuturisticNavigation() {
                   <span>Services</span>;
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
+                  />
+                </button>
 
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
 =======
                   />;
                 </button>;
-
                 {activeDropdown === 'mobile-services' && (;
                   <div className='ml-4 space-y-3'>;
                     {serviceCategories && serviceCategories.map((category, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <div
                         key={index}
                         className='border-l-2 border-gray-700 pl-4'>;
@@ -1617,10 +1584,70 @@ function NeoFuturisticNavigation() {
                       </div>;
                     ))}
                     <div className='pt-3'>;
+=======
+          >
+            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+          </button>
+        </div>
+      </div>
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50'>
+          <div className='max-w-7xl mx-auto px-4 py-6'>
+            <div className='space-y-6'>
+              {/* Services Section */}
+              <div>
+                <button
+                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4'
+                  onClick={() => toggleDropdown('mobile-services')}
+                >
+                  <span>Services</span>
+                  <ChevronRight
+                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
+                  />
+                </button>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {activeDropdown === 'mobile-services' && (
+                  <div className='ml-4 space-y-3'>
+                    {serviceCategories.map((category, index) => (
+                      <div
+                        key={index}
+                        className='border-l-2 border-gray-700 pl-4'
+                      >
+                        <div className='text-cyan-400 font-medium mb-2'>
+                          {category.name}
+                        </div>
+                        <div className='text-gray-400 text-sm mb-2'>
+                          {category.description}
+                        </div>
+                        <div className='space-y-1'>
+                          {category.services
+                            .slice(0, 2)
+                            .map((service, serviceIndex) => (
+                              <div
+                                key={serviceIndex}
+                                className='text-xs text-gray-500'
+                              >
+                                • {service.name} - {service.price}
+                              </div>
+                            ))}
+                        </div>
+                      </div>
+                    ))}
+                    <div className='pt-3'>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <Button
                         href='/services'
                         variant='quantum'
                         size='sm'
+<<<<<<< HEAD
                         className='w-full'>;
                         View All Services;
                         <ArrowRight className='w-4 h-4 ml-2' />;
@@ -1628,24 +1655,8 @@ function NeoFuturisticNavigation() {
                     </div>;
                   </div>;
                 )}
+              </div>
 
-              </div>;
-
-
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Company Section */}
               <div>;
                 <button
@@ -1658,7 +1669,6 @@ function NeoFuturisticNavigation() {
 
                   />;
                 </button>;
-
                 {activeDropdown === 'mobile-company' && (;
                   <div className='ml-4 space-y-3'>;
                     {companyInfo && companyInfo.map((item, index) => (;
@@ -1689,7 +1699,6 @@ function NeoFuturisticNavigation() {
 
                   />;
                 </button>;
-
                 {activeDropdown === 'mobile-resources' && (;
                   <div className='ml-4 space-y-3'>;
                     {resources && resources.map((item, index) => (;
@@ -1739,16 +1748,24 @@ function NeoFuturisticNavigation() {
                     href='/services'
                     variant='quantum'
                     size='lg'
+<<<<<<< HEAD
                     className='w-full'>;
                     Explore Services;
                     <ArrowRight className='w-5 h-5 ml-2' />;
                   </Button>;
+=======
+                    className='w-full'
+                  >
+                    Explore Services
+                    <ArrowRight className='w-5 h-5 ml-2' />
+                  </Button>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <Button
                     href='/contact'
                     variant='secondary'
                     size='lg'
+<<<<<<< HEAD
                     className='w-full'>;
-=======
                         <ArrowRight className='w - 4 h - 4 ml - 2' />;
                       </Button>;
                     </div>;
@@ -2050,7 +2067,6 @@ function NeoFuturisticNavigation() {
                     size='lg';
                     className='w - full';
                   >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Contact Us;
                   </Button>;
                 </div>;
@@ -2160,45 +2176,55 @@ export default function NeoFuturisticNavigation() {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 	const router = useRouter();
-
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	};
-
+};
 	useEffect(() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 20)
 		};
-
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, []);
-
 	const toggleDropdown = (dropdown: string) => {
 		setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
 	};
-
 	const closeMobileMenu = () => {
 		setIsOpen(false);
 		setActiveDropdown(null)
 	};
-
 	const isActive = (path: string) => router.pathname === path,
+
+		window.addEventListener('scroll', handleScroll),
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, []),
+
+	const toggleDropdown = (dropdown: string) => {
+		setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+	},
+
+	const closeMobileMenu = () => {
+		setIsOpen(false),
+		setActiveDropdown(null)
+	},
+
+	const isActive = (path: string) => router.pathname === path
+
 	const serviceCategories = [
 		{
 			name: 'Quantum Computing',
 			description: 'Revolutionary quantum computing solutions',
-			icon: <Atom className="w-5 h-5" />,
+icon: <Atom className="w-5 h-5" />,
 			color: 'from-purple-500 to-pink-500',
 			services: [
 				{ name: 'Quantum AI Platform', description: 'AI-powered quantum computing', price: '$299/month' },
 				{ name: 'Quantum Optimization', description: 'Quantum algorithms for complex problems', price: '$199/month' },
 				{ name: 'Quantum Simulation', description: 'Advanced quantum simulations', price: '$399/month' }
 			]
-		};
+};
 		{
 			name: 'AI & Machine Learning',
 			description: 'Advanced artificial intelligence and ML platforms',
@@ -2209,7 +2235,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'AI Analytics Platform', description: 'Advanced business intelligence', price: '$99/month' },
 				{ name: 'AI Automation Suite', description: 'Complete business automation', price: '$149/month' }
 			]
-		};
+};
 		{
 			name: 'Cybersecurity',
 			description: 'Next-generation security solutions',
@@ -2220,7 +2246,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'AI Threat Detection', description: 'Intelligent security monitoring', price: '$89/month' },
 				{ name: 'Zero-Trust Platform', description: 'Advanced access control', price: '$129/month' }
 			]
-		};
+};
 		{
 			name: 'Blockchain & Web3',
 			description: 'Future-proof blockchain and decentralized solutions',
@@ -2231,7 +2257,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'DeFi Protocol Suite', description: 'Complete DeFi solutions', price: '$199/month' },
 				{ name: 'NFT Marketplace', description: 'AI-curated NFT platform', price: '$99/month' }
 			]
-		};
+};
 		{
 			name: 'IoT & Smart Cities',
 			description: 'Connected devices and intelligent infrastructure',
@@ -2242,7 +2268,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'Smart City Suite', description: 'Complete urban intelligence', price: '$299/month' },
 				{ name: 'Industrial IoT', description: 'Manufacturing automation', price: '$249/month' }
 			]
-		};
+};
 		{
 			name: 'Metaverse & VR/AR',
 			description: 'Immersive digital experiences and virtual worlds',
@@ -2253,7 +2279,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'VR Development', description: 'Complete VR platform', price: '$299/month' },
 				{ name: 'AR Solutions', description: 'Augmented reality platform', price: '$199/month' }
 			]
-		};
+};
 		{
 			name: 'Robotics & Automation',
 			description: 'Intelligent automation and robotic systems',
@@ -2264,7 +2290,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'Manufacturing AI', description: 'Autonomous manufacturing', price: '$199/month' },
 				{ name: 'Service Robotics', description: 'Intelligent service automation', price: '$349/month' }
 			]
-		};
+};
 		{
 			name: 'Energy & Sustainability',
 			description: 'Green technology and energy optimization',
@@ -2275,7 +2301,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'Smart Grid', description: 'Intelligent energy distribution', price: '$199/month' },
 				{ name: 'Sustainability AI', description: 'Environmental impact optimization', price: '$149/month' }
 			]
-		};
+};
 		{
 			name: 'Financial Technology',
 			description: 'Innovative fintech and trading solutions',
@@ -2286,7 +2312,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'AI Risk Management', description: 'Intelligent financial risk analysis', price: '$399/month' },
 				{ name: 'Blockchain Finance', description: 'DeFi and blockchain solutions', price: '$199/month' }
 			]
-		};
+};
 		{
 			name: 'Biotechnology & Healthcare',
 			description: 'AI-powered healthcare and biotech solutions',
@@ -2298,15 +2324,13 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'Genomic AI', description: 'Advanced genetic analysis', price: '$399/month' }
 			]
 		}
-	];
-
+];
 	const companyInfo = [
 		{ name: 'About Zion Tech Group', description: 'Leading the global micro SaaS revolution', icon: <Rocket className="w-5 h-5" />, link: '/about' },
 		{ name: 'Careers', description: 'Join our revolutionary team', icon: <Star className="w-5 h-5" />, link: '/careers' },
 		{ name: 'News & Updates', description: 'Latest announcements and releases', icon: <TrendingUp className="w-5 h-5" />, link: '/news' },
 		{ name: 'Contact', description: 'Talk to our team 24/7', icon: <Phone className="w-5 h-5" />, link: '/contact' }
 	];
-
 	const resources = [
 		{ name: 'Documentation', description: 'Comprehensive service guides', icon: <BookOpen className="w-5 h-5" />, link: '/docs' },
 		{ name: 'Blog & Insights', description: 'Latest technology trends', icon: <FileText className="w-5 h-5" />, link: '/blog' },
@@ -2326,8 +2350,7 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'AI IoT Platform', href: '/ai-iot-platform' },
 		{ name: 'AI Sales Automation', href: '/ai-sales-automation' },
 		{ name: 'AI Market Research', href: '/ai-market-research' }
-	];
-
+];
 	// Newly added real services quick links
 	const newServiceLinks = [
 		{ name: 'Email Deliverability Monitor', href: '/services/email-deliverability-monitor' },
@@ -2336,14 +2359,13 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'GitHub Ops Health Dashboard', href: '/services/github-ops-health-dashboard' },
 		{ name: 'Error Budget Automation', href: '/services/error-budget-automation' },
 		{ name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
-	];
-
+];
 	return (
 		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 			isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent'
 		}`}> 
 			{/* Scroll Progress Bar */}
-			<div className="absolute top-0 left-0 h-1 w-full bg-transparent">
+<div className="absolute top-0 left-0 h-1 w-full bg-transparent">
 				<div
 					className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600"
 					style={{ width: `${(typeof window !== 'undefined' && document.body.scrollHeight > 0) ? (Math.min(100, (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)) : 0}%` }}
@@ -2366,7 +2388,6 @@ export default function NeoFuturisticNavigation() {
 							<div className="text-xs text-gray-400">Revolutionary Technology</div>
 						</div>
 					</Link>
-
 					{/* Desktop Navigation */}
 					<div className="hidden lg:flex items-center space-x-8">
 						{/* Services Dropdown */}
@@ -2390,7 +2411,7 @@ export default function NeoFuturisticNavigation() {
 														{category.icon}
 													</div>
 													<div>
-														<h3 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
+<h3 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
 															{category.name}
 														</h3>
 														<p className="text-gray-400 text-sm">{category.description}</p>
@@ -2410,7 +2431,7 @@ export default function NeoFuturisticNavigation() {
 											</div>
 									))}
 									</div>
-									<div className="mt-6 pt-6 border-t border-gray-700/50">
+<div className="mt-6 pt-6 border-t border-gray-700/50">
 										<div className="flex items-center justify-between">
 											<div className="text-gray-400 text-sm">
 												<span className="text-cyan-400 font-semibold">500+</span> Revolutionary Services Available
@@ -2424,8 +2445,7 @@ export default function NeoFuturisticNavigation() {
 								</div>
 							)}
 						</div>
-
-						{/* Direct Links */}
+{/* Direct Links */}
 						<Link href="/it-services" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">IT Services</Link>
 						<Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">AI Services</Link>
 						<Link href="/micro-saas" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">Micro SaaS</Link>
@@ -2440,7 +2460,6 @@ export default function NeoFuturisticNavigation() {
 						<Link href="/data-pipeline-health" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">Data Pipeline Health</Link>
 						<Link href="/ai-code-review-copilot" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">AI Code Review</Link>
 						<Link href="/resources" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">Resources</Link>
-
 						{/* Popular Dropdown */}
 						<div className="relative group">
 							<button
@@ -2463,8 +2482,7 @@ export default function NeoFuturisticNavigation() {
 								</div>
 							)}
 						</div>
-
-						{/* New Dropdown */}
+{/* New Dropdown */}
 						<div className="relative group">
 							<button
 								className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
@@ -2487,14 +2505,12 @@ export default function NeoFuturisticNavigation() {
 							)}
 						</div>
 					</div>
-
-					{/* Mobile Menu Button */}
+{/* Mobile Menu Button */}
 					<button className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors" onClick={() => setIsOpen(!isOpen)}>
 						{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 					</button>
 				</div>
 			</div>
-
 			{/* Mobile Menu */}
 			{isOpen && (
 				<div className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50">
@@ -2506,7 +2522,6 @@ export default function NeoFuturisticNavigation() {
 									<span>Services</span>
 									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}/>
 								</button>
-
 								{activeDropdown === 'mobile-services' && (
 									<div className="ml-4 space-y-3">
 										{serviceCategories.map((category, index) => (
@@ -2520,7 +2535,7 @@ export default function NeoFuturisticNavigation() {
 												</div>
 											</div>
 										))}
-										<div className="pt-3">
+<div className="pt-3">
 											<Button href="/services" variant="quantum" size="sm" className="w-full">
 												View All Services
 												<ArrowRight className="w-4 h-4 ml-2" />
@@ -2529,14 +2544,12 @@ export default function NeoFuturisticNavigation() {
 									</div>
 								)}
 							</div>
-
-							{/* Company Section */}
+{/* Company Section */}
 							<div>
 								<button className="flex items-center justify-between w-full text-left text-white font-semibold mb-4" onClick={() => toggleDropdown('mobile-company')}>
 									<span>Company</span>
 									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}/>
 								</button>
-
 								{activeDropdown === 'mobile-company' && (
 									<div className="ml-4 space-y-3">
 										{companyInfo.map((item, index) => (
@@ -2547,14 +2560,12 @@ export default function NeoFuturisticNavigation() {
 									</div>
 								)}
 							</div>
-
-							{/* Resources Section */}
+{/* Resources Section */}
 							<div>
 								<button className="flex items-center justify-between w-full text-left text-white font-semibold mb-4" onClick={() => toggleDropdown('mobile-resources')}>
 									<span>Resources</span>
 									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}/>
 								</button>
-
 								{activeDropdown === 'mobile-resources' && (
 									<div className="ml-4 space-y-3">
 										{resources.map((item, index) => (
@@ -2565,8 +2576,7 @@ export default function NeoFuturisticNavigation() {
 									</div>
 								)}
 							</div>
-
-							{/* Contact Info */}
+{/* Contact Info */}
 							<div className="pt-6 border-t border-gray-700/50">
 								<div className="text-white font-semibold mb-4">Contact Information</div>
 								<div className="space-y-3">
@@ -2587,7 +2597,6 @@ export default function NeoFuturisticNavigation() {
 										<span className="text-gray-300">{contactInfo.website}</span>
 									</div>
 								</div>
-
 								<div className="mt-6 space-y-3">
 
 									<Button href="/services" variant="quantum" size="lg" className="w-full">
@@ -2604,127 +2613,7 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
-
-
-  `w-4 h-4 transition-transform duration-300 $ {;
-  activeDropdown === 'services' ? 'rotate-180' : '' ;
-}` ;
-}/> </button> </div>) ) ;
-}</div> </div>) ) ;
-}</div> <div className="mt-6 pt-6 border-t border-gray-700/50" > <div className="flex items-center justify-between" > <div className="text-gray-400 text-sm" > <span className="text-cyan-400 font-semibold" >500+</span> Revolutionary Services Available </div> <Button href="/services" variant="quantum" size="sm" > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div> </div>) ;
-}</div> > <span>Popular</span> <ChevronDownclassName= {
-  `w-4 h-4 transition-transform duration-300 $ {
-  activeDropdown === 'popular'? 'rotate-180': '' 
-}` 
-}/> </button>) ) ;
-}</div> </div>) ;
-}</div>) ) ;
-}</div> </div>) ;
-}</div> </div> </button> </div> </div> <span>Services</span> <ChevronRightclassName= {
-  `w-5 h-5 transition-transform duration-300 $ {
-  activeDropdown === 'mobile-services'? 'rotate-90': '' 
-}` 
-}/> </button>) ) ;
-}</div> </div>) ) ;
-}<div className="pt-3" > <Button href="/services" variant="quantum" size="sm" className="w-full" > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div>) ;
-}</div> {;
-  /* Company Section */ ;
-}<div> <span>Company</span> <ChevronRightclassName= {
-  `w-5 h-5 transition-transform duration-300 $ {
-  activeDropdown === 'mobile-company'? 'rotate-90': '' 
-}` 
-}/> </button>) ) ;
-}</div>) ;
-}</div> {;
-  /* Resources Section */ ;
-}<div> <span>Resources</span> <ChevronRightclassName= {
-  `w-5 h-5 transition-transform duration-300 $ {
-
-  activeDropdown === 'mobile-resources'? 'rotate-90': '' 
-}` 
-}/> </button>) ) ;
-}</div>) ;
-}</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>) ;
-}</nav>) 								<div className="mt-6 space-y-3">;
-									<Button href="/services" variant="quantum" size="lg" className="w-full">;
-										Explore Services;
-										<ArrowRight className="w-5 h-5 ml-2" />;
-									</Button>;
-									<Button href="/contact" variant="secondary" size="lg" className="w-full">;
-										Contact Us;
-									</Button>;
-								</div>;
-							</div>;
-						</div>;
-					</div>;
-				</div>;
-			)}
-		</nav>;
+);
+}
 	);
 }
-
-
-=======
-        </div>)}
-    </nav>);
-;
-  `w - 4 h - 4 transition - transform duration - 300 $ {
-  active_dropdown === 'services' ? 'rotate - 180' : '';
-}`;
-}/> </button> </div>) );
-}</div> </div>) );
-}</div> <div className="mt - 6 pt - 6 border - t border - gray - 700 / 50" > <div className="flex items - center justify - between" > <div className="text - gray - 400 text - sm" > <span className="text - cyan - 400 font - semibold" >500+</span> Revolutionary Services Available </div> <Button href="/services" variant="quantum" size="sm" > View All Services <ArrowRight className="w - 4 h - 4 ml - 2" /> </Button> </div> </div> </div>);
-}</div> > <span > Popular</span> <ChevronDown className= {
-  `w - 4 h - 4 transition - transform duration - 300 $ {
-  active_dropdown === 'popular'? 'rotate - 180': '';
-}`;
-}/> </button>) );
-}</div> </div>);
-}</div>) );
-}</div> </div>);
-}</div> </div> </button> </div> </div> <span > Services</span> <ChevronRight className= {
-  `w - 5 h - 5 transition - transform duration - 300 $ {
-  active_dropdown === 'mobile - services'? 'rotate - 90': '';
-}`;
-}/> </button>) );
-}</div> </div>) );
-}<div className="pt - 3" > <Button href="/services" variant="quantum" size="sm" className="w - full" > View All Services <ArrowRight className="w - 4 h - 4 ml - 2" /> </Button> </div> </div>);
-}</div> {
-  /* Company Section */;
-}<div> <span > Company</span> <ChevronRight className= {
-  `w - 5 h - 5 transition - transform duration - 300 $ {
-  active_dropdown === 'mobile - company'? 'rotate - 90': '';
-}`;
-}/> </button>) );
-}</div>);
-}</div> {
-  /* Resources Section */;
-}<div> <span > Resources</span> <ChevronRight className= {
-  `w - 5 h - 5 transition - transform duration - 300 $ {
-  active_dropdown === 'mobile - resources'? 'rotate - 90': '';
-}`;
-}/> </button>) );
-}</div>);
-}</div> </div> </div> <div className="mt - 6 space - y-3" > <Button href="/services" variant="quantum" size="lg" className="w - full" > Explore Services <ArrowRight className="w - 5 h - 5 ml - 2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w - full" > Contact Us </Button> </div> </div> </div> </div> </div>);
-}</nav>) 								<div className="mt - 6 space - y-3">;
-        <Button href="/services" variant="quantum" size="lg" className="w - full">;
-          Explore Services;
-          <ArrowRight className="w - 5 h - 5 ml - 2" />;
-        </Button>;
-        <Button href="/contact" variant="secondary" size="lg" className="w - full">;
-          Contact Us;
-        </Button>;
-        </div>;
-      </div>;
-      </div>;
-    </div>;
-    </div>)}
-  </nav>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-	);
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

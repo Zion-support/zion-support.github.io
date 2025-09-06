@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 ;
 export type JobCategory =;
@@ -17,17 +12,7 @@ export type JobCategory =;
   | 'other';
 ;
 export interface JobBudget {
-  min: number;
-  max: number,
-  currency: string;
-
-}
-export interface Job {
-=======
-<<<<<<< HEAD
-=======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export type JobCategory = 
   | 'development' 
@@ -39,29 +24,13 @@ export type JobCategory =
   | 'other';
 
 export interface JobBudget {;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   min: number;
   max: number
   currency: string
 }
-<<<<<<< HEAD
-
-
-export interface Job {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
 export interface Job {
-=======
 
 export interface Job {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   client_id: string;
   title: string;
@@ -84,17 +53,8 @@ export interface Job {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface JobFormData {
-=======
-}
-
 
 export interface JobFormData {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   title: string;
   description: string;
   category: JobCategory;
@@ -134,21 +94,9 @@ export interface JobMatch {
 
   }
 }
-<<<<<<< HEAD
-
-
-
-export interface ResumeAttachment {;
-
-
-=======
-<<<<<<< HEAD
 export interface ResumeAttachment {
-=======
 
 export interface ResumeAttachment {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
@@ -159,23 +107,10 @@ export interface ResumeAttachment {;
   skills?: string[];
 }
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
-<<<<<<< HEAD
-;
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface JobApplication {
-=======
 
 
 export interface JobApplication {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   job_id: string;
   talent_id: string;
@@ -205,19 +140,8 @@ export interface JobApplication {;
     skills_match?: {
       score: number;
 
-<<<<<<< HEAD
-      matching: string[],
-=======
-
-
-=======
   notes?: string,  // New field for client notes
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
   | 'development';
@@ -339,18 +263,5 @@ export interface JobApplication {;
   match_suggestion?: string;
   scored_at?: string;
   notes?: string,  // New field for client notes;
-<<<<<<< HEAD
-
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-
-
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-export default ActiveFiltersBar; import React from 'react'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -28,10 +14,6 @@ interface SearchFilters {
   sort: string
 <<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -43,16 +25,6 @@ interface SearchFilters {;
   maxPrice: number,;
   minRating: number,;
   sort: string;
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
 interface ActiveFiltersBarProps {;
@@ -91,7 +63,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       label: 'Category',;
       value: filters.category;
     });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   
   static getDerivedStateFromError(error) {
@@ -110,7 +81,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 import { X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
@@ -215,53 +185,29 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
   if (activeFilters && activeFilters.length === 0) {;
     return null;
+  }
 
   }
   return (
-<<<<<<< HEAD
-
-
-        <Badge 
-          key = {filter.key,}
-
-=======
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
-<<<<<<< HEAD
       {activeFilters.map(filter => (
-<<<<<<< HEAD
         <Badge
           key = {filter.key,}
           variant="secondary"
-=======
         <Badge 
           key = {filter.key,}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+
       
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           variant="secondary" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className="flex items-center gap-1 pl-2 pr-1"
         >
           <span className="text-xs">
             {filter.label}: {filter.value}
           </span>
-=======
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>;
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;
 
@@ -273,75 +219,41 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
           <span className="text-xs">;
             {filter && filter.label}: {filter && filter.value}
           </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Button
             variant="ghost"
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
-
-
+            onClick = {(,) => removeFilter(filter.key),}
             onClick={() => removeFilter(filter.key)}
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
           </Button>
         </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ))}
       <Button
         variant="ghost"
         size="sm"
-
-
+        onClick = {onClearAll,}
         onClick={onClearAll}
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         className="text-xs h-6 px-2"
       >
         Clear all
       </Button>
     </div>
   )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
 export default ActiveFiltersBar
-=======
 },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-;
-export default ActiveFiltersBar; import React from 'react';
-import { X } from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-interface SearchFilters {
-  types: string[],
-  category: string,
-  min_price: number,
-  max_price: number,
-  min_rating: number,
-  sort: string;
+export default ActiveFiltersBar,
+interface Filter {
+  key: string
+  value: string
+  label: string
 }
 interface ActiveFiltersBarProps {
   filters: SearchFilters,
@@ -486,10 +398,10 @@ if ( {) {
         Clear all;
       </Button>;
     </div>);
-=======
 
 
 },
+
 export default ActiveFiltersBar,
 <<<<<<< HEAD
 
@@ -529,22 +441,11 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
       >
         Clear all
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       </button>
     </div>
   )}
 '"
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-export default ActiveFiltersBar,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   filters: Filter[];
   onRemoveFilter: key: string void;
   onClearAll: : unknown void}
@@ -554,13 +455,3 @@ export default ActiveFiltersBar,
       </button>;
     </div>)}
 '";
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

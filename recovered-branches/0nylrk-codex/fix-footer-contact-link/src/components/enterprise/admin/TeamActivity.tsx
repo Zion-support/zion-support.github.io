@@ -1,20 +1,6 @@
 
-
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-
-=======
-
 import React from "react";
 import {
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 
   Table
@@ -23,20 +9,12 @@ import {
   TableHead
   TableHeader
   TableRow
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
 TableRow,;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
@@ -44,9 +22,6 @@ import { CalendarIcon, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-<<<<<<< HEAD
-
-=======
   const activities = [
     {
       id: 1
@@ -89,7 +64,6 @@ import { Input } from "@/components/ui/input";
       category: "candidates"
     }
     {
-<<<<<<< HEAD
       id: 6
       user: "Jamie Smith"
       action: "Updated budget"
@@ -97,8 +71,6 @@ import { Input } from "@/components/ui/input";
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
       category: "billing"
     }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
@@ -106,13 +78,14 @@ import { Input } from "@/components/ui/input";
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
       category: "billing",
     },;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ];
-
+  // Function to format the date in a readable way
+  const formatDate = (date: Date) => {
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffMins = Math.floor(diffMs / (1000 * 60));
+    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
 import React from "react",
 import {
@@ -179,8 +152,6 @@ export function TeamActivity() {
     const diffMins = Math.floor(diffMs / (1000 * 60)),
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
-
-
 
     if (diffMins < 60) {
 =======
@@ -255,12 +226,10 @@ export function TeamActivity() {;
     } else {;
       return date && date.toLocaleDateString();
     }
-
-  };
-
-  const getCategoryBadge = (category: string) => {;
-    const categoryStyles: Record<;
-      string,;
+  }
+  const getCategoryBadge = (category: string) => {
+    const categoryStyles: Record<
+      string
       { variant: "default" | "outline" | "secondary" | "destructive" }
     > = {;
       jobs: { variant: "default" },;
@@ -272,8 +241,6 @@ export function TeamActivity() {;
 
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
-=======
-
   },
 
   const getCategoryBadge = (category: string) => {
@@ -286,8 +253,6 @@ export function TeamActivity() {;
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -299,9 +264,34 @@ export function TeamActivity() {;
               type="search"
               placeholder="Search activities..."
               className="w-[200px] md:w-[300px] pl-9"
-
-=======
-
+            />
+          </div>
+          <Button variant="outline" size="icon" className="h-10 w-10">
+            <CalendarIcon className="h-4 w-4" />
+          </Button>
+        </div>
+      </div>
+      <div className="rounded-md border">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>User</TableHead>
+              <TableHead>Activity</TableHead>
+              <TableHead>Target</TableHead>
+              <TableHead>Category</TableHead>
+              <TableHead>Time</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {activities.map((activity) => (
+              <TableRow key={activity.id}>
+                <TableCell className="font-medium">{activity.user}</TableCell>
+                <TableCell>{activity.action}</TableCell>
+                <TableCell>
+                  <span className="font-medium">{activity.target}</span>
+                </TableCell>
+                <TableCell>{getCategoryBadge(activity.category)}</TableCell>
+                <TableCell className="text-muted-foreground">
 import React from "react",;
 import {;
   Table,;
@@ -594,15 +584,6 @@ if ( {) {
 =======
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -610,17 +591,7 @@ if ( {) {
           </TableBody>
         </Table>
       </div>
-
       
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -633,18 +604,8 @@ if ( {) {
         </Button>
       </div>
     </div>
-
+  );
+}
   )
 }
 ;
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

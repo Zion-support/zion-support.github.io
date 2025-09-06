@@ -1,90 +1,42 @@
 
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-=======
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function CurrentSubscription() {
   // Mock subscription data
 
   const subscription = {
-
-import React from "react";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-export function CurrentSubscription() {;
-  // Mock subscription data;
-  const subscription = {;
-    plan: "Business",;
-    status: "active",;
+    plan: "Business"
+    status: "active"
+    billingCycle: "Annual"
+    startDate: "May 1, 2025";
+    nextBillingDate: "May 1, 2026";
+    amount: "$1,999.00";
+    plan: "Business",
+    status: "active",
     billingCycle: "Annual",;
     startDate: "May 1, 2025";
     nextBillingDate: "May 1, 2026";
-    amount: "$1,999 && 999.00";
-    teamSeats: {;
-      used: 32,;
-      total: 50;
-
-    }
-  }
-=======
-<<<<<<< HEAD
-
-    plan: "Business",
-    status: "active",
-
-=======
+    amount: "$1,999.00";
     billingCycle: "Annual",
     startDate: "May 1, 2025",
     nextBillingDate: "May 1, 2026",
     amount: "$1,999.00",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     teamSeats: {
       used: 32
       total: 50
     }
-
+  }
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   return (
-<<<<<<< HEAD
-
-=======
-
-
-=======
     <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
@@ -140,13 +92,7 @@ export function CurrentSubscription() {;
       </CardFooter>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -299,15 +245,7 @@ function CurrentSubscription() {
         <Button variant="outline">Change Plan</Button>;
         <Button variant="destructive">Cancel Subscription</Button>;
       </CardFooter>;
-<<<<<<< HEAD
-    </Card>);
-=======
     </Card>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

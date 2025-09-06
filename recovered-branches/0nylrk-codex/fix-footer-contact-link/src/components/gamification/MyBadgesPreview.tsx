@@ -1,26 +1,13 @@
-<<<<<<< HEAD
-
-
-=======
 import React from "react";
 import { BadgeEarned } from "./BadgeEarned";
 import { badgeList, BadgeKey } from "./badgeConfig";
-<<<<<<< HEAD
 // Dummy data for demo: what badges this user earned (with fake dates)
 const earnedBadges: { badge: BadgeKey; date: string }[] = [
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   { badge: "first_listing", date: "2024-12-16" },
   { badge: "profile_complete", date: "2024-11-22" },
   { badge: "first_action", date: "2024-09-08" },
 ];
 <<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 import React from "react",
 import { BadgeEarned } from "./BadgeEarned",
@@ -32,17 +19,6 @@ const earnedBadges: { badge: BadgeKey, date: string }[] = [
   { badge: "profile_complete", date: "2024-11-22" },
   { badge: "first_action", date: "2024-09-08" }],
 <<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   { badge: "first_listing", date: "2024-12-16" }
   { badge: "profile_complete", date: "2024-11-22" }
@@ -76,32 +52,19 @@ import { badge_list, BadgeKey  } from './badge_config';
       <div className="flex flex-wrap gap-2">
         {earnedBadges.map(({ badge, date }) => (
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />
-<<<<<<< HEAD
-
-    </div>;
-);
-};
-
-=======
-<<<<<<< HEAD
         ))}
       </div>
       {/* Example progress for next badge */}
       <div className="mt-3 text-xs text-zion-slate-light">
         <span>Complete your profile for more rewards!</span>
       </div>
-<<<<<<< HEAD
     </div>
   );
 }
 
-=======
     </div>;
 );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from "react",;
 import { BadgeEarned } from "./BadgeEarned",;
 import { badgeList, BadgeKey } from "./badgeConfig",;
@@ -126,15 +89,3 @@ export const MyBadgesPreview: React.FC = () => {
       <div className="flex flex-wrap gap-2">;
         {earnedBadges.map(({ badge, date }) => (;
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

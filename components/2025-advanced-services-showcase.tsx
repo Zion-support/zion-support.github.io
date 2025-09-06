@@ -1,5 +1,7 @@
 
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -34,7 +36,6 @@ const allServices = [
   ...cuttingEdgeITInfrastructureServices
 
 ];
-
 const categories = [
   {
     id: 'all',
@@ -112,7 +113,6 @@ const getServicePricing = (service: any) => {
   Mail,;
   MapPin,;
 } from 'lucide-react';
-
 // Mock service data;
 const advancedEnterpriseServices2025 = [;
   {;
@@ -127,7 +127,6 @@ const advancedEnterpriseServices2025 = [;
     icon: "🤖",;
   },;
 ];
-
 const innovativeMicroSaasExpansion2025 = [;
   {;
     id: "micro-1",;
@@ -141,7 +140,6 @@ const innovativeMicroSaasExpansion2025 = [;
     icon: "⚡",;
   },;
 ];
-
 const cuttingEdgeITInfrastructureServices = [;
   {;
     id: "infra-1",;
@@ -162,23 +160,19 @@ import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-i
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
-=======
   return 'Contact for pricing'
 };
-
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features;
   if (service.keyFeatures) return service.keyFeatures;
   return []
 
 };
-
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
   ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
-
 const allServices = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
@@ -198,7 +192,6 @@ export default function AdvancedServicesShowcase() {
 
   useEffect(() => {;
     let filtered = allServices;
-
     // Filter by category;
     if (selectedCategory !== 'all') {;
       filtered = filtered && filtered.filter(service => {;
@@ -207,10 +200,8 @@ export default function AdvancedServicesShowcase() {
 
 
   }, [selectedCategory, searchTerm]);
-
   const ServiceCard = ({ service }: { service: any }) => (;
     <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0 && 0.5 }}
@@ -260,10 +251,8 @@ export default function AdvancedServicesShowcase() {
   )
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
-=======
           </div>;
         </div>;
-
         <div className='mb-6'>;
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
             ROI & Benefits:;
@@ -272,7 +261,6 @@ export default function AdvancedServicesShowcase() {
             {service && service.roi}
           </p>;
         </div>;
-
         <div className='mb-6'>;
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
             Market Position:;
@@ -281,7 +269,6 @@ export default function AdvancedServicesShowcase() {
             {service && service.marketPosition}
           </p>;
         </div>;
-
         <div className='flex items-center justify-between'>;
           <a
             href={service && service.link}
@@ -289,20 +276,17 @@ export default function AdvancedServicesShowcase() {
             Learn More;
             <ArrowRight className='w-4 h-4' />;
           </a>;
-
           <a
             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
             className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'>            {service && service.roi}
           </p>;
         </div>;
-
         <div className="mb-6">;
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>;
           <p className="text-sm text-gray-600 dark:text-gray-400">;
             {service && service.marketPosition}
           </p>;
         </div>;
-
         <div className="flex items-center justify-between">;
           <a
             href={service && service.link}
@@ -310,11 +294,9 @@ export default function AdvancedServicesShowcase() {
             Learn More;
             <ArrowRight className="w-4 h-4" />;
           </a>;
-
           <a
             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300">;
-=======
 import React, { useState, useEffect } from './react';
 import { motion, AnimatePresence  } from './framer-motion';
   Search,
@@ -787,7 +769,6 @@ if ( {) {
             href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}
             className="inline - flex items - center gap - 2 bg - gray - 100 dark: bg - gray - 700 text - gray - 700 dark:text - gray - 300 px - 4 py - 3 rounded - lg font - semibold hover:bg - gray - 200 dark:hover:bg - gray - 600 transition - all duration - 300";
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Contact;
           </a>;
         </div>;
@@ -898,7 +879,6 @@ if ( {) {
                 />;
               </div>;
             </div>;
-
             <div className='flex items-center gap-4'>;
               <div className='flex items-center gap-2'>;
 
@@ -952,13 +932,13 @@ if ( {) {
               </div>
             </div>
           </div>
-          
+<<<<<<< HEAD
           {/* Category Filters */}
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
+<<<<<<< HEAD
                 <button
-=======
       {/* Main Content */}
       <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12'>;
         {/* Filters and Search */}
@@ -1030,17 +1010,6 @@ if ( {) {
 
                 <button
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -1051,26 +1020,12 @@ if ( {) {
                 >;
                   {category.icon}
                   {category.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
 
-            </div>;
-          </div>;
-        </div>;
-
-
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Results Summary */}
 
 
@@ -1104,45 +1059,25 @@ if ( {) {
                 </div>
               ) : (
                 <div className='space-y-6'>
-
+                  {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                          {filteredServices.map((service) => (
+          <ServiceCard key={service.id} service={service} />
+        ))}
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  {filteredServices.map((service) => (
                   {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />
 
                     <ServiceList key={service.id} service={service} />
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   ))}
                 </div>;
               )}
             </AnimatePresence>;
           )}
+        </div>
 
-        </div>;
-
-
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Call to Action */}
         <div className='mt-16 text-center'>;
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>;
@@ -1164,7 +1099,14 @@ if ( {) {
               <a
 
         </div>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
@@ -1177,11 +1119,10 @@ if ( {) {
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-=======
+<<<<<<< HEAD
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className='inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300'>;
                 <Phone className='w-5 h-5' />                Call Now;
-=======
         {/* Services Grid / List */}
         <div className='space - y-6'>;
           {filtered_services.length === 0 ? (
@@ -1243,7 +1184,6 @@ if ( {) {
                 className='inline - flex items - center gap - 2 bg - transparent border - 2 border - white text - white px - 8 py - 4 rounded - lg font - bold text - lg hover:bg - white hover:text - blue - 600 transition - all duration - 300';
               >;
                 <Phone className='w - 5 h - 5' />                Call Now;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </a>;
             </div>;
           </div>              Ready to Transform Your Business?;
@@ -1263,7 +1203,6 @@ if ( {) {
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300">;
                 <Phone className="w-5 h-5" />;
-=======
             <p className="text - xl text - blue - 100 mb - 8 max - w-3xl mx - auto">;
               Our team of experts is ready to help you implement these cutting - edge solutions.;
               Get in touch today to discuss your specific needs and discover how we can drive your success.;
@@ -1281,7 +1220,6 @@ if ( {) {
                 className="inline - flex items - center gap - 2 bg - transparent border - 2 border - white text - white px - 8 py - 4 rounded - lg font - bold text - lg hover: bg - white hover:text - blue - 600 transition - all duration - 300";
               >;
                 <Phone className="w - 5 h - 5" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Call Now;
               </a>;
             </div>;
@@ -1292,29 +1230,4 @@ if ( {) {
   );
 
 }
-
-=======
-          <button className="px - 8 py - 4 bg - white text - blue - 600 rounded - xl font - semibold hover:bg - gray - 100 transition - all duration - 300">;
-            Get Started Today;
-          </button>;
-        </motion.div>;
-      </div>;
-    </div>);        </div>;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
           </div>
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

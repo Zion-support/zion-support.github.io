@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, {
-  createContext
-  useContext
-  useState
-  useCallback
-  ReactNode
-} from 'react'
-import { toast } from '@/hooks/use-toast'
-import { Button } from '@/components/ui/button'
-
-import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
-import * as Sentry from '@sentry/nextjs';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface ErrorContextType {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-  reportError: (error: Error, context?: any) => void;
+reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
@@ -129,21 +105,19 @@ if ( {) {
             label: 'Log In',
             on_click: login_action,
           }
-        : undefined,
-    });
-  }, []);
-  const clearAllErrors = useCallback (() => {
-    setRetryCount ({});    // Clear any active toasts would go here if the toast system supports it;
-  }, []);
-  const context_value: ErrorContextType = {
-    report_error,
-    showRetryableError,
-    showNetworkError,
-    showAuthError,
-    clearAllErrors,
-
+        : undefined
+    })
+  }, [])
+  const clearAllErrors = useCallback(() => {
+    setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
+  }, [])
+  const contextValue: ErrorContextType = {
+    reportError
+    showRetryableError
+    showNetworkError
+    showAuthError
+    clearAllErrors
   }
-=======
 export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps) {;
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
 
@@ -236,36 +210,6 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
     clearAllErrors,;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-        : undefined
-    })
-  }, [])
-  const showAuthError = useCallback((loginAction?: (,) => void) => {
-    toast({
-      title: 'Authentication Required'
-      description: 'Please log in to continue with this action.'
-      variant: 'destructive'
-      action: loginAction
-        ? {
-            label: 'Log In'
-            onClick: loginAction
-          }
-<<<<<<< HEAD
-        : undefined
-    })
-  }, [])
-  const clearAllErrors = useCallback(() => {
-    setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
-  }, [])
-  const contextValue: ErrorContextType = {
-    reportError
-    showRetryableError
-    showNetworkError
-    showAuthError
-    clearAllErrors
-  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 
     <ErrorContext.Provider value={context_value}>;
@@ -500,7 +444,6 @@ export function useErrorHandler() {;
     handleAsyncOperation}
 } ;
 
-=======
           handleApiError (error, options?.retry_action);
         }
         return null;
@@ -515,12 +458,6 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
         : undefined,;
     });
@@ -530,10 +467,6 @@ export function useErrorHandler() {;
   }, [])
 <<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
@@ -629,22 +562,11 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
 <<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const contextValue: ErrorContextType = {
     reportError,
     showRetryableError,
     showNetworkError,
     showAuthError,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     clearAllErrors,
   }
   return (
@@ -660,10 +582,7 @@ export function useGlobalErrorHandler(): ErrorContextType {
     )
   }
   return context
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     clearAllErrors},
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 <<<<<<< HEAD
@@ -676,198 +595,3 @@ export function useGlobalErrorHandler(): ErrorContextType {
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  if (
-    message.includes('fetch') ||
-    message.includes('network') ||
-    message.includes('connection')
-  ) {
-    return 'Unable to connect to our servers. Please check your internet connection.'
-  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  if (message.includes('forbidden') || message.includes('403')) {
-    return "You don't have permission to perform this action."
-  }
-
-  if (message.includes('not found') || message.includes('404')) {
-    return 'The requested information could not be found.'
-  }
-
-  if (message.includes('timeout')) {
-    return 'Request timed out. Please try again.'
-  }
-
-  if (message.includes('validation') || message.includes('invalid')) {
-    return 'Please check your input and try again.'
-  }
-
-  if (message.includes('server') || message.includes('500')) {
-    return 'Our servers are experiencing issues. Please try again in a moment.'
-  }
-
-  // Fallback for unknown errors
-  return 'An unexpected error occurred. Please try again.'
-// Utility hook for common error scenarios
-export function useErrorHandler() {
-  const { reportError, showRetryableError, showNetworkError, showAuthError } =
-    useGlobalErrorHandler()
-  const handleApiError = useCallback(
-    (error: any, retryAction?: () => void) => {
-      if (error.response?.status === 401 || error.response?.status === 403) {
-        showAuthError()
-      } else if (error.code === 'NETWORK_ERROR' || !navigator.onLine) {
-        showNetworkError(retryAction) } else {
-        showRetryableError(error, retryAction)
-      }
-    },
-    [showRetryableError, showNetworkError, showAuthError]
-  )
-  const handleAsyncOperation = useCallback(
-    async <T,>(
-      operation: () => Promise<T>,
-      options?: {
-        onError?: (error: Error) => void
-        retryAction?: () => void
-        successMessage?: string
-      }
-    ): Promise<T | null> => {
-      try {
-        const result = await operation()
-        if (options?.successMessage) {
-          toast({
-            title: 'Success',
-            description: options.successMessage,
-          })
-        }
-
-        return result
-      } catch (error: any) {
-        reportError(error)
-        if (options?.onError) {
-          options.onError(error)
-        } else {
-          handleApiError(error, options?.retryAction)
-        }
-
-        return null
-      }
-    },
-    [reportError, handleApiError]
-  )
-  return {
-    reportError,
-    handleApiError,;
-    handleAsyncOperation;
-  };    reportError
-    handleApiError
-    handleAsyncOperation}
-}
-
-}
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
-    return "Unable to connect to our servers. Please check your internet connection."
-  }
-;
-  if (message.includes('auth') || message.includes('unauthorized') || message.includes('401')) {;
-    return "Your session has expired. Please log in again.";
-  }
-;
-  if (message.includes('forbidden') || message.includes('403')) {;
-    return "You don't have permission to perform this action.";
-  }
-;
-  if (message.includes('not found') || message.includes('404')) {;
-    return "The requested information could not be found.";
-  }
-;
-  if (message.includes('timeout')) {;
-    return "Request timed out. Please try again.";
-  }
-;
-  if (message.includes('validation') || message.includes('invalid')) {;
-    return "Please check your input and try again.";
-  }
-;
-  if (message.includes('server') || message.includes('500')) {;
-    return "Our servers are experiencing issues. Please try again in a moment.";
-  }
-
-  // Fallback for unknown errors
-  return "An unexpected error occurred. Please try again."
-;
-  // Fallback for unknown errors;
-  return "An unexpected error occurred. Please try again.";
-}
-;
-// Utility hook for common error scenarios;
-export function useErrorHandler() {;
-  const { reportError, showRetryableError, showNetworkError, showAuthError } = useGlobalErrorHandler(),;
-  const handleApiError = useCallback((error: any, retryAction?: () => void) => {;
-    if (error.response?.status === 401 || error.response?.status === 403) {;
-      showAuthError();
-    } else if (error.code === 'NETWORK_ERROR' || !navigator.onLine) {;
-      showNetworkError(retryAction);
-    } else {;
-      showRetryableError(error, retryAction);
-    }
-  }, [showRetryableError, showNetworkError, showAuthError]),;
-  const handleAsyncOperation = useCallback(async <T>(;
-    operation: () => Promise<T>,;
-    options?: {;
-      onError?: (error: Error) => void,;
-      retryAction?: () => void,;
-      successMessage?: string;
-    }
-  ): Promise<T | null> => {
-    try {
-      const result = await operation(),
-      
-      if (options?.successMessage) {
-        toast({
-          title: "Success",
-          description: options.successMessage})
-  ): Promise<T | null> => {;
-    try {;
-      const result = await operation(),;
-      if (options?.successMessage) {;
-        toast({;
-          title: "Success",;
-          description: options.successMessage});
-      }
-;
-      return result;
-    } catch (error: any) {;
-      reportError(error),;
-      if (options?.onError) {;
-        options.onError(error);
-      } else {;
-        handleApiError(error, options?.retryAction);
-      }
-;
-      return null;
-    }
-  }, [reportError, handleApiError]),;
-  return {;
-    reportError;
-    handleApiError;
-    handleAsyncOperation}
-} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

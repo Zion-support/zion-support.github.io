@@ -1,25 +1,13 @@
 
-<<<<<<< HEAD
-
-
-export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
-
-
-=======
-<<<<<<< HEAD
 /**
  * Format a date string or timestamp into a readable format
  * @param date Date to format
  * @param format Optional format specification
  * @returns Formatted date string
  */
-<<<<<<< HEAD
 
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {
-=======
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const dateObj = new Date(date);
   switch (format) {
     case 'short':
@@ -61,7 +49,6 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       } else {
 
         return dateObj.toLocaleDateString()
-=======
 /**;
  * Format a date string or timestamp into a readable format;
  * @param date Date to format;
@@ -104,55 +91,28 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         return 'Yesterday';
       } else {;
         return dateObj.toLocaleDateString();
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
     default: return dateObj && dateObj.toLocaleDateString()
   }
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 },
-=======
 };
-=======
 },
 <<<<<<< HEAD
 
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
  * @returns Time ago string (e && e.g., "2 hours ago")
  */
-
-  
-  const seconds = Math && Math.floor((now && now.getTime() - dateObj && dateObj.getTime()) / 1000);
-  
-  let interval = Math && Math.floor(seconds / 31536000),
+export const timeAgo = (date: Date | string | number): string => {;
+  const dateObj = new Date(date);
+  const now = new Date();
+export const timeAgo = (date: Date | string | number): string => {
+  const dateObj = new Date(date);
+  const now = new Date();
+  const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000);
+  let interval = Math.floor(seconds / 31536000)
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`
   }
@@ -180,20 +140,8 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
   return seconds <= 5 ? 'just now' : `${Math && Math.floor(seconds)} seconds ago`
 };
 
-=======
-<<<<<<< HEAD
-/**;
-* Format a date string or timestamp into a readable format;
-* @param date Date to format;
-* @param format Optional format specification;
-* @returns Formatted date string;
-*/;
-export const format_date = (date: Date | string | number, format: string = 'medium'): string => {
-  const date_obj = new Date (date);
-=======
   const dateObj = new Date(date),
   const now = new Date(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000),
   
@@ -201,9 +149,6 @@ export const format_date = (date: Date | string | number, format: string = 'medi
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   
   interval = Math.floor(seconds / 2592000);
   if (interval >= 1) {
@@ -226,9 +171,6 @@ export const format_date = (date: Date | string | number, format: string = 'medi
   }
   
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
   switch (format) {
     case 'short':;
@@ -325,19 +267,5 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-export const timeAgo = (date: Date | string | number): string => {
-
-=======
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

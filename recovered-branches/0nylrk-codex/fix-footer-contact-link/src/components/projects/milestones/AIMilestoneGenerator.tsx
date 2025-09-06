@@ -1,38 +1,30 @@
 
-import {Button} from '@/components/ui/button';
-import {Card, CardContent} from '@/components/ui/card';
-import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion';
-import {Loader2, Sparkles, Plus, Calendar} from 'lucide-react';
-import {format, parseISO} from 'date-fns';
-import {MilestoneInput, GeneratedMilestone, useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
-import {Badge} from '@/components/ui/badge';
-interface AIMilestoneGeneratorProps {;
-  scope: string,;
-  startDate: string,;
-  endDate: string | null,;
-  projectType: string,;
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
-  onAddMilestone: (milestone: GeneratedMilestone) => void;
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Accordion;
+  AccordionContent;
+  AccordionItem;
+  AccordionTrigger } from '@/components/ui/accordion';
+import { Loader2, Sparkles, Plus, Calendar  } from 'lucide-react';
+import { format, parseISO  } from 'date-fns';
+import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Badge } from '@/components/ui/badge';
+interface AIMilestoneGeneratorProps {
+
+  scope: string
+  startDate: string
+  endDate: string | null
+  projectType: string
+  onAddMilestones: (milestones: GeneratedMilestone[]) => void
+
+  onAddMilestone: (milestone: GeneratedMilestone) => void
 }
-<<<<<<< HEAD
-
-export function AIMilestoneGenerator(): any ({;
-
-=======
-<<<<<<< HEAD
 export function AIMilestoneGenerator({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 
 export function AIMilestoneGenerator({;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   scope;
   startDate;
   endDate;
@@ -42,9 +34,6 @@ export function AIMilestoneGenerator({;
 }: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
 
-<<<<<<< HEAD
-
-=======
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
   const handleGenerateMilestones = async () => {
     if (!scope |!startDate |!projectType) {
@@ -87,19 +76,8 @@ export function AIMilestoneGenerator({;
     } catch (error) {
       return dateString
     }
-<<<<<<< HEAD
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-    }
-
   };
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -185,17 +163,6 @@ export function AIMilestoneGenerator({;
   },
 <<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
@@ -390,52 +357,10 @@ if ( {) {
                     </div>;
 
                       onClick={(e) => {
+                        e.stopPropagation();
 
                         e.stopPropagation(),
-
-
                         handleAddSingleMilestone(milestone)
-=======
-                      onClick={(e) => {;
-                        e && e.stopPropagation();
-                        handleAddSingleMilestone(milestone);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                      }}
-                      className="mr-2";
-                    >;
-                      <Plus className="h-4 w-4" />;
-                    </Button>;
-                  </div>;
-                  <AccordionContent>;
-                    <div className="pl-6 space-y-2">;
-                      <p className="text-sm">{milestone && milestone.description}</p>;
-                      <div className="flex items-center text-sm text-muted-foreground">;
-                        <Calendar className="w-4 h-4 mr-1" />;
-                        Due: {formatDate(milestone && milestone.dueDate)}
-                      </div>;
-                      <div className="text-sm text-muted-foreground">;
-                        Estimated effort: {milestone && milestone.estimatedHours} hours;
-                      </div>;
-                    </div>;
-                  </AccordionContent>;
-                </AccordionItem>;
-              ))}
-            </Accordion>;
-          </CardContent>;
-        </Card>;
-      )}
-
-    </div>;
-  );
-}
-
-=======
-                    <Button;
-                      variant="ghost";
-                      size="sm";
-                      on_click={(e) => {
-                        e.stop_propagation ();
-                        handleAddSingleMilestone (milestone);
                       }}
                       className="mr - 2";
                     >;

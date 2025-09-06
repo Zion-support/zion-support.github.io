@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import fs from 'fs',;
 import path from 'path',;
 import { v4 as uuidv4 } from 'uuid',;
@@ -21,18 +14,13 @@ export type ProposalMeta = {;
   supportingMultiverses: string[],;
   languages: string[],;
   status: ProposalStatus,;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
-<<<<<<< HEAD
 export type ProposalMeta = {id: string;
-=======
 export type ProposalMeta = {
   id: string;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   createdAt: string;
   updatedAt: string;
   title: string;
@@ -43,12 +31,7 @@ export type ProposalMeta = {
   supportingMultiverses: string[];
   languages: string[];
   status: ProposalStatus;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   artifacts: {;
-<<<<<<< HEAD
     markdownPath?: string;
     jsonPath?: string;
     pdfPath?: string;
@@ -103,7 +86,6 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDi
   return meta;
 }
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
   const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
@@ -126,26 +108,13 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
   } catch {return null;
   }
 }
-
-
-=======
-
-
-  artifacts: {;
-
+export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
     markdownPath?: string,;
     jsonPath?: string,;
     pdfPath?: string,;
     ipfsCid?: string,;
     ensRecordHash?: string,;
     signature?: string;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
 },;
 export type ProposalPayload = {;
@@ -238,8 +207,6 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   return `/proposals/${id}/proposal.pdf`;
 }
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -353,55 +320,27 @@ export function getProposal(id: string): ProposalMeta | null {;
 ;
 export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   ensureDirs(),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
+}
+export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
+    ...meta;
+    artifacts: { ...meta.artifacts, ...artifacts }}));
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
   return updateProposalMeta(id, (meta) => ({;
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
-<<<<<<< HEAD
-
-
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

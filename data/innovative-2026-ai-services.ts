@@ -1,24 +1,31 @@
-
-import { ServiceVariant } from '../types / service - variants';
-
-export interface Innovative2026AIService {
-
-  {
-
-=======
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
+import { ServiceVariant } from '../types/service-variants';
+export interface Innovative2026AIService {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
   contactInfo: {
       
     mobile: string, email: string,
@@ -57,23 +64,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     competitors: ['TableauPower BILookerQlikSisense'], marketSize: '$29.9B market',
     growthRate: '220% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-<<<<<<< HEAD
-      
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true,
-    implementation_details: 'Enterprise - grade sales intelligence platform with AI - powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
-    launch_date: '2025 - 06 - 20';
-    customers: 1900;
-    rating: 4.8,
-    reviews: 950;
-
-=======
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -339,19 +329,16 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
     launchDate: '2025-06-20'
     customers: 1900
     rating: 4.8
     reviews: 950
-=======
       'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',
     launchDate: '2025-06-20',
     customers: 1900,
     rating: 4.8,
     reviews: 950,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -365,17 +352,9 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.8
 
     reviews: 950
-<<<<<<< HEAD
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
@@ -646,4 +625,4 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

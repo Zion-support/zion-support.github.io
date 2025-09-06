@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
@@ -22,13 +18,6 @@ import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
 export function ResumeWizard() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState, useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {use_resume} from '@/hooks / use_resume';
@@ -49,14 +38,7 @@ import {ResumeStepContent} from './ResumeStepContent';
 import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 import {RESUME_STEPS} from './constants';
-<<<<<<< HEAD
-
-
-
-=======
 export function ResumeWizard() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const { ;
     isLoading;
@@ -70,9 +52,8 @@ export function ResumeWizard() {;
 
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
+  // Use the extracted hook for progress calculation
 
-<<<<<<< HEAD
-=======
   const progress = useResumeProgress(resume);
   useEffect(() => {
     if (user) {
@@ -97,22 +78,12 @@ export function ResumeWizard() {;
     if (currentIndex > 0) {
       setActiveTab(RESUME_STEPS[currentIndex - 1].id)
     }
-<<<<<<< HEAD
   }
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
   }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
   };
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
@@ -172,27 +143,11 @@ export function ResumeWizard() {;
     if (currentIndex > 0) {;
       setActiveTab(RESUME_STEPS[currentIndex - 1].id);
     }
-<<<<<<< HEAD
-=======
-  },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
   },
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-  const handleResumeChange = (resumeId: string) => {;
-    fetchResume(resumeId);
-  };
-
-  if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  },
+  
+  if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -220,23 +175,9 @@ export function ResumeWizard() {;
         <AlertDescription>{error}</AlertDescription>
       </Alert>
     )
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
   }
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   if (showNewResumeForm) {
 =======
@@ -255,14 +196,7 @@ export function ResumeWizard() {;
       />;
     );
   }
-
-
-
-=======
-
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">;
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
@@ -291,26 +225,25 @@ export function ResumeWizard() {;
 
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
             <ResumeSteps
-              steps={RESUME_STEPS} 
-              activeTab={activeTab} 
-              onChange={setActiveTab} 
-            />;
-
-            {resume && (;
-
+              steps={RESUME_STEPS}
+              activeTab={activeTab}
+              onChange={setActiveTab}
+            />
+            {resume && (
               <ResumeStepContent
-=======
-
               <ResumeStepContent 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 activeTab={activeTab}
                 resume={resume as Resume}
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
               />;
             )}
-
+          </Tabs>
+        </CardContent>
+      </Card>
+    </div>
+  )
+}
           </Tabs>;
         </CardContent>;
       </Card>;
@@ -332,6 +265,3 @@ function ResumeWizard() {
     create_resume;
   } = use_resume ();
 ;
-
-
-

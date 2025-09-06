@@ -1,53 +1,48 @@
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
 import React from 'react';
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+origin/automation-improvements-final
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
 import Layout from '../components/Layout';
-
-
-
-
+const securityFeatures = [
+  {
+    title: 'Data Encryption'
+    description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols'
+    icon: Lock
+    details: ['AES-256 encryption', 'TLS 1.3 for data in transit', 'End-to-end encryption', 'Key management']
+  }
+  {
+    title: 'Access Controls'
+    description: 'Multi-factor authentication and role-based access controls ensure only authorized users can access your data'
+    icon: Users
+    details: ['Multi-factor authentication', 'Role-based permissions', 'Single sign-on (SSO)', 'Session management']
+  }
+  {
+    title: 'Security Monitoring'
+    description: '24/7 security monitoring and threat detection to protect against cyber attacks'
+    icon: Eye
+    details: ['Real-time monitoring', 'Threat detection', 'Incident response', 'Security alerts']
+  }
+  {
+    title: 'Compliance'
+    description: 'We maintain compliance with industry standards and regulations to protect your data'
+    icon: Shield
+    details: ['SOC 2 Type II', 'ISO 27001', 'GDPR compliance', 'HIPAA compliance']
+  }
+  {
+    title: 'Data Backup'
+    description: 'Regular automated backups ensure your data is always protected and recoverable'
+    icon: Database
+    details: ['Automated backups', 'Multiple backup locations', 'Point-in-time recovery', 'Data retention policies']
+  }
+  {
+    title: 'Incident Response'
+    description: 'Comprehensive incident response procedures to quickly address any security issues'
+    icon: AlertTriangle
+    details: ['24/7 incident response', 'Security team on standby', 'Rapid containment', 'Post-incident analysis']
+  }
+];
 
 const securityStats = [
   { number: '99.9%', label: 'Uptime Guarantee' }
@@ -61,59 +56,21 @@ export default function SecurityPage() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
-<<<<<<< HEAD
-
-const securityFeatures = [;
-  {;
-    title: 'Data Encryption',;
-    description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols',;
-    icon: Lock,;
-    details: ['AES-256 encryption', 'TLS 1 && 1.3 for data in transit', 'End-to-end encryption', 'Key management'];
-  },;
-  {;
-    title: 'Access Controls',;
-    description: 'Multi-factor authentication and role-based access controls ensure only authorized users can access your data',;
-    icon: Users,;
-    details: ['Multi-factor authentication', 'Role-based permissions', 'Single sign-on (SSO)', 'Session management'];
-  },;
-  {;
-    title: 'Security Monitoring',;
-    description: '24/7 security monitoring and threat detection to protect against cyber attacks',;
-    icon: Eye,;
-    details: ['Real-time monitoring', 'Threat detection', 'Incident response', 'Security alerts'];
-  },;
-  {;
-    title: 'Compliance',;
-    description: 'We maintain compliance with industry standards and regulations to protect your data',;
-    icon: Shield,;
-    details: ['SOC 2 Type II', 'ISO 27001', 'GDPR compliance', 'HIPAA compliance'];
-  },;
-  {;
-    title: 'Data Backup',;
-    description: 'Regular automated backups ensure your data is always protected and recoverable',;
-    icon: Database,;
-    details: ['Automated backups', 'Multiple backup locations', 'Point-in-time recovery', 'Data retention policies'];
-  },;
-  {;
-    title: 'Incident Response',;
-    description: 'Comprehensive incident response procedures to quickly address any security issues',;
-    icon: AlertTriangle,;
-    details: ['24/7 incident response', 'Security team on standby', 'Rapid containment', 'Post-incident analysis'];
-  }
-];
-
-const securityStats = [;
-  { number: '99 && 99.9%', label: 'Uptime Guarantee' },;
-  { number: '24/7', label: 'Security Monitoring' },;
-  { number: '0', label: 'Security Breaches' },;
-  { number: '100%', label: 'Data Encryption' }
-];
-
-export default function SecurityPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  return (
+    <Layout
+      title="Security - Zion Tech Group"
+      description="Learn about our comprehensive security measures and how we protect your data and systems."
+      keywords="security, data protection, encryption, compliance, cybersecurity"
+    >
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
   return (
     <Layout
       title="Security - Zion Tech Group"
@@ -130,8 +87,6 @@ export default function SecurityPage() {;
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
-
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
@@ -205,7 +160,6 @@ export default function Security(req, res) {
 }
         <section className="pt-32 pb-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
-
             <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -268,7 +222,17 @@ export default function Security(req, res) {
             </motion.p>
           </div>
         </section>
-
+        {/* Security Stats */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {securityStats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
         {/* Security Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -276,12 +240,6 @@ export default function Security(req, res) {
 }
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -648,17 +606,11 @@ function SecurityPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {securityStats.map((stat, index) => (
                 <motion.div
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   key={measure.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -680,22 +632,10 @@ function SecurityPage() {
   }
 }
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className="text-gray-600 font-medium">
                     {stat.label}
                   </div>
@@ -747,8 +687,6 @@ function SecurityPage() {
                           {detail}
                         </li>
                       ))}
-<<<<<<< HEAD
-=======
                     </ul>
                   </div>
                 </motion.div>
@@ -831,7 +769,6 @@ function SecurityPage() {
                 >
                   View Compliance Details
 </Link>
-=======
                   <ul className="space-y-3">
                     {measure.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
@@ -947,7 +884,6 @@ function SecurityPage() {
                       <li>• Automated threat detection</li>
                       <li>• Rapid incident response team</li>
                       <li>• Regular security drills</li>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </ul>
                   </div>
                 </motion.div>
@@ -971,12 +907,10 @@ function SecurityPage() {
                 We maintain compliance with industry standards and regulations to ensure your data is protected.
               </p>
             </motion.div>
-<<<<<<< HEAD
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-green-600" />
-=======
             {/* Contact Security Team */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1013,7 +947,6 @@ function SecurityPage() {
                     <p className="text-white font-semibold">Security Email</p>
                     <p className="text-gray-300">security@ziontechgroup.com</p>
                   </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">SOC 2 Type II</h3>
                 <p className="text-gray-600 text-sm">Service Organization Control 2 Type II compliance</p>
@@ -1022,7 +955,6 @@ function SecurityPage() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lock className="w-8 h-8 text-blue-600" />
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-lg font-bold text-gray-900 mb-2">ISO 27001</h3>
                 <p className="text-gray-600 text-sm">Information Security Management System</p>
               </div>
@@ -1069,21 +1001,10 @@ function SecurityPage() {
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
                   View Compliance Details
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </Link>
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 </Link>
-<<<<<<< HEAD
-=======
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Shield,
   Lock,
@@ -1098,15 +1019,61 @@ import {
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+ursor/integrate-build-improve-and-re-verify-8f7d
+import Head from 'next/head';
+import {motion} from 'framer-motion';
+import {Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin,} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+export default function Security() {
+  const securityMeasures = [
+    {
+      id: 'data-protection',
+      title: 'Data Protection',
+      icon: Database,
+      features: [
+        'End-to-end encryption for all data in transit',
+        'AES-256 encryption for data at rest',
+        'Regular automated backups with encryption',
+        'Secure data centers with 24/7 monitoring',
+        'Data residency compliance for global clients',
+      ],
+    },    {
+      id: 'access-control',
+      title: 'Access Control',
+      icon: Key,
+      features: [
+        'Multi-factor authentication (MFA) required',
+        'Role-based access control (RBAC)',
+        'Principle of least privilege implementation',
+        'Regular access reviews and deprovisioning',
+        'Single sign-on (SSO) integration',
+      ],
+    },    {
+      id: 'infrastructure',
+      title: 'Infrastructure Security',
+      icon: Server,
+      features: [
+        'Network segmentation and firewalls',
+        'Intrusion detection and prevention systems',
+        'Regular vulnerability assessments',
+        'Automated security patching',
+        'DDoS protection and rate limiting',
+      ],
+    },    {
+      id: 'monitoring',
+      title: 'Security Monitoring',
+      icon: Eye,
+      features: [
+        '24/7 security operations center (SOC)',
+        'Real-time threat detection and response',
+        'Comprehensive audit logging',
+        'Security incident response team',
+        'Continuous security monitoring tools',
+      ],
+    },  ];
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-</Link>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
@@ -1367,9 +1334,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
                     <p className='text-white font-semibold'>PGP Key</p>
                     <p className='text-gray-300'>Available on request</p>                  </div>
                 </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
                 
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 text-red-400 mr-3" />
@@ -1379,171 +1344,63 @@ import EnhancedFooter from '../components/EnhancedFooter';
                   </div>
                 </div>
                 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className="flex items-center">
                   <Key className="w-5 h-5 text-red-400 mr-3" />
                   <div>
                     <p className="text-white font-semibold">PGP Key</p>
                     <p className="text-gray-300">Available on request</p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   </div>
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 </Link>
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
+origin/main
+origin/automation-improvements-final
 </Link>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
                   </div>
                 </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </div>
-<<<<<<< HEAD
-    </Layout>
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
     </Layout>
-<<<<<<< HEAD
+      </div>
+    </Layout>
   );
 }  )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
 
         <EnhancedFooter />
       </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
-                  View Compliance Details;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
     </Layout>;
 
 
 
   );
-<<<<<<< HEAD
-
-=======
 }  )
 }
 )
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   )
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
-  );
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
-}  )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
-
-  );
-}
-
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-        {/* CTA Section */}
-        <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
-          <div className="container mx - auto px - 4 text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
-                Questions About Our Security?;
-              </h2>;
-              <p className="text - xl mb - 8 max - w-2xl mx - auto">;
-                Our security team is available to answer any questions about our security measures and compliance.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - white text - blue - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold inline - flex items - center justify - center";
-                >;
-                  Contact Security Team;
-                </Link>;
-                <Link;
-                  href="/compliance";
-                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - blue - 600 transition - all duration - 300 font - semibold";
-                >;
-                  View Compliance Details;
-</Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>);
-}  );
+ursor/integrate-build-improve-and-re-verify-b76c
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-242d
+)
 }
-);
+origin/main
+  )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+ursor/fix-lint-push-and-merge-to-main-ae4e

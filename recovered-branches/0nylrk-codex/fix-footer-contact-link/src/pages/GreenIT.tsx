@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
@@ -18,35 +10,24 @@ export default function GreenIT() {
     {
       title: "Energy-Efficient Hardware",;
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Leaf, Server, Cloud } from "lucide-react",
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
-=======
 import { Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function GreenIT() {
 
   const greenITSolutions = [
     {
-
-
+      title: "Energy-Efficient Hardware"
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
+      icon: Server}
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
-
       icon: Server},
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       title: "Optimized Cooling Systems"
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."
@@ -54,63 +35,17 @@ export default function GreenIT() {
     {
       title: "Renewable Energy Integration"
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."
-=======
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Leaf, Server, Cloud} from "lucide-react";
-import {Link} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-export default function GreenIT() {;
-  const greenITSolutions = [;
-    {;
-      title: "Energy-Efficient Hardware",;
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-      icon: Server},;
-    {;
-      title: "Optimized Cooling Systems",;
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",;
-      icon: Cloud},;
-    {;
-      title: "Renewable Energy Integration",;
-      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import { SEO } from '@/components / SEO';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Button } from '@/components / ui / button';
-import { Leaf, Server, Cloud } from './lucide-react';
-import { Link } from './react-router-dom';
-import { AppLayout } from '@/layout / AppLayout';
-export default /**
- * GreenIT - Function description
- */
-function GreenIT() {
-  const greenITSolutions = [;
-    {
-      title: "Energy - Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-      icon: Server},
-    {
-      title: "Optimized Cooling Systems",
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-      icon: Cloud},
-    {
-      title: "Renewable Energy Integration",
-      description: "Solutions for leveraging on - site renewable generation or virtual power purchase agreements to offset carbon footprint.",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       icon: Leaf}
-  ];
-;
+  ],
+
   return (
-
     <AppLayout>
-
+      <SEO
+        title="Green IT Solutions - Sustainable Technology"
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
       <SEO 
         title="Green IT Solutions - Sustainable Technology" 
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
-
-
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
@@ -202,19 +137,7 @@ function GreenIT() {
       </main>
     </AppLayout>
   )
-<<<<<<< HEAD
-
-=======
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -372,23 +295,7 @@ export default function GreenIT() {;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </AppLayout>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </AppLayout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

@@ -1,33 +1,8 @@
-<<<<<<< HEAD
-
-
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react',;
-export default function AIEthicsAutomation() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import Head from 'next / head';
-import Link from 'next / link';
-import React from 'react',
-export default /**
- * AIEthicsAutomation - Function description
- */
-function AIEthicsAutomation() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  return (
-=======
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link';
-<<<<<<< HEAD
 
-import React from 'react'
 
-=======
-<<<<<<< HEAD
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AIEthicsAutomation() {
   return (
     <>
@@ -272,21 +247,15 @@ export default function AIEthicsAutomation() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-=======
 import Head from 'next/head';
 import Link from 'next/link';
-=======
 };
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 export default function AIEthicsAutomation(req, res) {
   try {
   return (;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     <>;
       <Head>;
         <title>;
@@ -593,16 +562,6 @@ export default function AIEthicsAutomation(req, res) {
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
-
-
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>;
   );
   } catch (error) {
@@ -611,9 +570,3 @@ export default function AIEthicsAutomation(req, res) {
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

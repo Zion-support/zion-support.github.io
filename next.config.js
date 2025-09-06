@@ -77,10 +77,10 @@ const nextConfig = {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
+            chunks: 'all'
+          }
+        }
+      }
     }
 
     // Exclude apps directory from compilation
@@ -88,9 +88,9 @@ const nextConfig = {
       test: /\.(ts|tsx|js|jsx)$/,
       include: /apps\//,
       use: "ignore-loader"
-    });
+    })
 
-    return config;
+    return config
   },
   async headers() {
     return [
@@ -115,8 +115,8 @@ const nextConfig = {
           }
         ]
       }
-    ];
+    ]
   }
-};
+}
 
-export default nextConfig;
+export default nextConfig

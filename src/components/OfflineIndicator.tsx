@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import { useState, useEffect } from 'react';
 
 =======
@@ -31,16 +29,11 @@ export const OfflineIndicator = () => {
 import { useState, useEffect } from 'react',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { WifiOff, Wifi } from 'lucide-react'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
 
-<<<<<<< HEAD
-
-=======
 export const OfflineIndicator = () => {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOnline, setIsOnline] = useState(true),
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),
 
@@ -49,19 +42,12 @@ export const OfflineIndicator = () => {
       const online = navigator.onLine,
       setIsOnline(online),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
 
 import { useState, useEffect } from 'react';
-=======
 
         setTimeout(() => setShowOfflineAlert(false), 3000)
 import { useState, useEffect } from 'react',;
@@ -87,9 +73,7 @@ if ( {) {
         // Show brief "back online" message then hide;
         set_timeout (() => setShowOfflineAlert (false), 3000) }        set_timeout ((, ) => setShowOfflineAlert (false), 3000);
         set_timeout (() => setShowOfflineAlert (false), 3000);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
-=======
 import { Alert, AlertDescription } from '@/components/ui/alert';
 export const OfflineIndicator = () => {;
   const [isOnline, setIsOnline] = useState(true);
@@ -108,16 +92,7 @@ export const OfflineIndicator = () => {;
         setTimeout(() => setShowOfflineAlert(false), 3000);
 <<<<<<< HEAD
 
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
     };
 
@@ -131,14 +106,41 @@ export const OfflineIndicator = () => {;
 
 
     }
-  }, [showOfflineAlert]);
-  // Check condition
-if (return null) {
-  $2
-}
+    // Set initial status
+    updateOnlineStatus()
+    // Listen for online/offline events
+    window.addEventListener('online', updateOnlineStatus)
+    window.addEventListener('offline', updateOnlineStatus);
+    return () => {;
+      window.removeEventListener('online', updateOnlineStatus);
+      window.removeEventListener('offline', updateOnlineStatus);
+    } }, [showOfflineAlert]);      window.removeEventListener('offline', updateOnlineStatus)
+    }
+  }, [showOfflineAlert])
+  if (!showOfflineAlert) return null
   return (
-<<<<<<< HEAD
+    <div className='fixed top-4 right-4 z-50 max-w-sm pointer-events-none'>
+      <Alert variant={isOnline ? 'default' : 'destructive'}>
+        <div className='flex items-center gap-2'>
+            <Wifi className='h-4 w-4' />
+          ) : (
+            <WifiOff className='h-4 w-4' />
+          )}
+          <AlertDescription>
+            {isOnline
+              ? 'Connection restored'
+              : 'You are offline. Some features may not work.'}          </AlertDescription>            {isOnline ? (
+              'Connection restored'
+            ) : (
+              'You are offline. Some features may not work.'
+            )}
+        </div>
+      </Alert>
+    </div>
+  )
+} }
 
+  }, [showOfflineAlert]),
 
 =======
     <div className='fixed top-4 right-4 z-50 max-w-sm pointer-events-none'>
@@ -191,7 +193,6 @@ if (return null) {
       </Alert>
     </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   )
 } }
 
@@ -204,15 +205,7 @@ if (return null) {
 <<<<<<< HEAD
 
 
-=======
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <div className='fixed top - 4 right - 4 z - 50 max - w-sm pointer - events - none'>;
       <Alert variant={is_online ? 'default' : 'destructive'}>;
         <div className='flex items - center gap - 2'>;
@@ -228,14 +221,4 @@ if (return null) {
       </Alert>;
     </div>);
 } }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 };
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

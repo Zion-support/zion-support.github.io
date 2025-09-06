@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Header} from "@/components/Header";
@@ -17,13 +10,8 @@ import {NotificationCenter} from "@/components/NotificationCenter";
 import {useToast} from "@/hooks/use-toast";
 import {Link} from "react-router-dom";
 export default function Dashboard() {;
-<<<<<<< HEAD
-
-=======
   const { user, logout } = useAuth();
   const { toast } = useToast();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -33,16 +21,19 @@ import { Badge } from "@/components/ui/badge",
 import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react",
 import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications",
 import { NotificationCenter } from "@/components/NotificationCenter",
-<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 export default function Dashboard() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
-=======
+import { useToast } from "@/hooks/use-toast",
+import { Link } from "react-router-dom",
+export default function Dashboard() {
+  const { user, logout } = useAuth(),
+  const { toast } = useToast(),
 
+  if (!user) return null,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -61,13 +52,8 @@ export default function Dashboard() {
 
     }
   }
-=======
-    }
-
   },
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <Header />;
@@ -75,13 +61,6 @@ export default function Dashboard() {
         <div className="container mx-auto px-4 py-8">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Sidebar - User Profile */}
-<<<<<<< HEAD
-
-
-                  <Badge 
-
-
-=======
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <div className="flex flex-col items-center text-center">
@@ -90,29 +69,14 @@ export default function Dashboard() {
                   </div>
                   <h2 className="text-xl font-bold text-white">{user.displayName}</h2>
                   <p className="text-zion-slate-light mb-2">{user.email}</p>
-<<<<<<< HEAD
                   <Badge
-=======
                   <Badge 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     className="bg-zion-purple text-white mb-4"
                   >
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
                   </Badge>
-<<<<<<< HEAD
-
-
-                  <Button 
-
-
-=======
-<<<<<<< HEAD
                   <Button
-=======
                   <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     onClick={() => window.location.href = "/profile"}
                   >
@@ -156,31 +120,20 @@ export default function Dashboard() {
                       <Send size={16} className="text-zion-cyan" />
                       Send Test Notification
                     </Button>
-<<<<<<< HEAD
-
-
-                    <Button 
-
-
-=======
-<<<<<<< HEAD
                     <Button
-=======
                     <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
                         await createOnboardingNotification({
-
-
+                          userId: user.id
+                          missingMilestone: 'profile_completed'
+                          userRole: user.userType === 'employer' |user.userType === 'buyer' ? 'client' : 'talent'
+                        });
                           userId: user.id,
                           missingMilestone: 'profile_completed',
                           userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
                         }),
-
-
                         toast({
                           title: "Onboarding notification sent"
                           description: "Check your notification center"
@@ -190,19 +143,8 @@ export default function Dashboard() {
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
                     </Button>
-<<<<<<< HEAD
-
-
-                    <Button 
-
-
-=======
-<<<<<<< HEAD
                     <Button
-=======
                     <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
@@ -312,14 +254,7 @@ export default function Dashboard() {
       <Footer />
     </>
   )
-
-            <div className="lg:col-span-1">;
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">;
-                <div className="flex flex-col items-center text-center">;
-                  <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">;
-                    {user && user.displayName.split(' ').map(name => name[0]).join('')}
-=======
-
+}
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
@@ -773,18 +708,4 @@ if ( {) {
 
     </>);
 }
-<<<<<<< HEAD
-
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

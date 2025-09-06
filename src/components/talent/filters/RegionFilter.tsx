@@ -1,51 +1,15 @@
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import { ChevronDown, ChevronUp } from 'lucide-react'
-import { Checkbox } from "@/components/ui/checkbox",
-import { RegionFilterProps } from "@/types/filters",
-const REGION_OPTIONS = [
-  { id: "North America", label: "North America" },
-  { id: "Europe", label: "Europe" },
-  { id: "Asia", label: "Asia" },
-  { id: "South America", label: "South America" },
-  { id: "Australia", label: "Australia" },
-  { id: "Africa", label: "Africa" }
-],
-
-export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-  return (
+return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
         onClick={toggleSection}
-
-
+        className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
       >
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <span>Region</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
         ) : (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 <<<<<<< HEAD
 
@@ -119,12 +83,9 @@ function RegionFilter() {
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
 
-=======
 
       
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {REGION_OPTIONS.map (region => (
@@ -132,7 +93,6 @@ function RegionFilter() {
                 id={`region-${region.id}`}
 
       </button>;
-=======
 
   { id: "North America", label: "North America" },
   { id: "Europe", label: "Europe" },
@@ -141,8 +101,6 @@ function RegionFilter() {
   { id: "Australia", label: "Australia" },
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -154,8 +112,8 @@ function RegionFilter() {
             <div key={region && region.id} className="flex items-center">;
 
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";
+import { Checkbox } from "@/components/ui/checkbox",;
+import { RegionFilterProps } from "@/types/filters",;
 const REGION_OPTIONS = [;
   { id: "North America", label: "North America" },;
   { id: "Europe", label: "Europe" },;
@@ -167,28 +125,21 @@ const REGION_OPTIONS = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   { id: "Africa", label: "Africa" }
 ]
 
-export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
+export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
   return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium">;
-        <span>Region</span>;
-        {expanded ? (;
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
-        ) : (;
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
+        className="flex w-full items-center justify-between text-white font-medium"
+      >
+        <span>Region</span>
+        {expanded ? (
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
+        ) : (
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
 
 
@@ -206,18 +157,22 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
               </label>;
             </div>;
 
-=======
               <Checkbox
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
-                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
-              />
+                className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`region-${region.id}`}
-
+                className='ml-2 text-sm text-zion-slate-light cursor-pointer'
+              >                {region.label}                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+               htmlFor="input-
+                {region.label}
+              ">
+              </label>
+            </div>
           ))}
-        </div>;
+        </div>
       )}
 
     </div>;
@@ -235,7 +190,6 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
 }</div>) ;
 }"}
 
-=======
                 checked={selected_regions.includes (region.id)}
                 onCheckedChange={() => toggle_region (region.id)}
             <div key={region.id} className="flex items - center">;
@@ -288,27 +242,13 @@ function RegionFilter() {
 }className="flex w - full items - center justify - between text - white font - medium" > <span > Region</span>) : (<ChevronDown className="h - 4 w - 4 text - zion - slate - light" />);
 }</button> {
   REGION OPTIONS.map (region => (<div key= {
-<<<<<<< HEAD
-  region.id ";
-}className="flex items - center" > <Checkbox > {
-  region.label;
-}</label> </div>) );
-}</div>);
-}</div>);
-}"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   region.id "
 }className="flex items-center" > <Checkbox > {
-<<<<<<< HEAD
   region.label
 }</label> </div>) )
 }</div>)
 }</div>)
 }"}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
   region.label 
 }</label> </div>) ) 
@@ -317,10 +257,6 @@ function RegionFilter() {
 }"};
 <<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {region.label}
@@ -333,15 +269,3 @@ function RegionFilter() {
   );
 }
 ;
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

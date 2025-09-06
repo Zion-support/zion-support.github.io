@@ -1,55 +1,4 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Textarea } from '@/components/ui/textarea'
-import {
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogFooter
-  DialogHeader
-  DialogTitle
-} from '@/components/ui/dialog'
-
-import { User, Mail, MapPin, CreditCard } from 'lucide-react'
-import { isProdDomain } from '@/utils/getStripe';
-interface GuestCheckoutModalProps {
-<<<<<<< HEAD
-
-  open: boolean
-  onOpenChange: (open: boolean) => void
-=======
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  onSubmit: (details: { email: string; address: string }) => void
-export default function GuestCheckoutModal({
-  open
-  onOpenChange
-  onSubmit
-}: GuestCheckoutModalProps) {
-  const [email, setEmail] = useState('')
-  const [address, setAddress] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email |!address) {
-      alert('Please fill in all required fields')
-      return;
-    }
-    setIsSubmitting(true)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-    try {
+try {
       on_submit ({ email, address });
     } finally {
 
@@ -58,29 +7,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Label } from '@/components/ui/label',;
+import { Textarea } from '@/components/ui/textarea',;
 import {;
   Dialog,;
   DialogContent,;
@@ -121,22 +52,12 @@ export default function GuestCheckoutModal(): any ({;
     }
   }
 
-=======
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 <<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 
     <Dialog open={open} onOpenChange={onOpenChange}>;
@@ -157,10 +78,8 @@ export default function GuestCheckoutModal(): any ({;
             date.;
           </div>;
         )}
-
-        <form onSubmit={handleSubmit} className='space-y-4'>;
-          <div className='space-y-2'>;
-
+        <form onSubmit={handleSubmit} className='space-y-4'>
+          <div className='space-y-2'>
             <Label
               htmlFor='guest-email'
               className='text-white flex items-center gap-2'>;
@@ -198,7 +117,6 @@ export default function GuestCheckoutModal(): any ({;
 
           <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
             <p className='text-yellow-400 text-sm'>;
-=======
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className='bg - zion - blue border - zion - cyan / 20 max - w-md'>;
         <DialogHeader>;
@@ -266,11 +184,6 @@ export default function GuestCheckoutModal(): any ({;
               Email Address
             </Label>
             <Input
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               id='guest-email'
               type='email'
               value={email || ''}
@@ -313,8 +226,6 @@ export default function GuestCheckoutModal(): any ({;
               type='submit'
               disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               id="guest-email"
               type="email"
               value={email || ''}
@@ -324,11 +235,8 @@ export default function GuestCheckoutModal(): any ({;
               className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light"
             />
           </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-=======
           <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
             <p className="text-yellow-400 text-sm">
               💡 Creating an account allows you to track your order and checkout faster next time.
@@ -349,12 +257,6 @@ export default function GuestCheckoutModal(): any ({;
               disabled={isSubmitting || !email || !address}
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {isSubmitting ? (
                 'Processing...'
               ) : (
@@ -375,29 +277,12 @@ export default function GuestCheckoutModal(): any ({;
                   Continue to Payment;
                 </>;
               )}
-=======
-<<<<<<< HEAD
-            </Button>
-          </DialogFooter>
-        </form>
-      </DialogContent>
-    </Dialog>
-  )
-<<<<<<< HEAD
-}
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 };
 };
 <<<<<<< HEAD
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
           <DialogFooter className='space - x-2'>;
             <Button;
               type='button';
@@ -416,34 +301,15 @@ export default function GuestCheckoutModal(): any ({;
                   <CreditCard className='h - 4 w - 4 mr - 2' />;
                   Continue to Payment;
                 </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
 
 }
-<<<<<<< HEAD
-=======
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
-=======
     </Dialog>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

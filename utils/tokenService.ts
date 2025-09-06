@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-
-  const actualAmount = Math && Math.min(amount, currentBalance);
-  
-
-=======
 import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
 export function issueTokens(userId: string, amount: number, reason: string) {
   return addTransaction({
-<<<<<<< HEAD
     userId
     type: 'earn'
     amount
@@ -15,7 +8,6 @@ export function issueTokens(userId: string, amount: number, reason: string) {
   });
 }
 export function revokeTokens(userId: string, amount: number, reason: string) {
-=======
     userId,
     type: 'earn',
     amount,
@@ -24,16 +16,13 @@ export function revokeTokens(userId: string, amount: number, reason: string) {
 }
 
 export function revokeTokens(userId: string, amount: number, reason: string) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return addTransaction({
     userId
     type: 'spend'
     amount: actualAmount
     description: reason
-=======
 import { add_transaction, getAllTransactions, getUserBalance } from './token_store';
 ;
 export /**
@@ -59,6 +48,5 @@ function revoke_tokens() {
     type: 'spend',
     amount: actual_amount,
     description: reason;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 }

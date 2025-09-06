@@ -1,18 +1,10 @@
 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { FileText  } from 'lucide-react';
 import { ResumeOption  } from '../resume-selector/types';
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
 interface SelectResumeSectionProps {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
@@ -25,12 +17,6 @@ export function SelectResumeSection({;
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
@@ -44,8 +30,6 @@ interface SelectResumeSectionProps {;
   isLoading: boolean;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
   handleResumeSelect: (resumeId: string) => void
@@ -54,14 +38,24 @@ interface SelectResumeSectionProps {;
   isLoading: boolean
 }
 export function SelectResumeSection({
-=======
-import {FileText} from 'lucide-react';
-import {ResumeOption} from '../resume - selector / types';
-import {ResumePreviewCard} from './ResumePreviewCard';
-
-                selectedResume?.id === option && option.id 
-                  ? 'bg-zion-purple/20 border border-zion-purple' 
-
+  resumeOptions,
+  selectedResume,
+  handleResumeSelect,
+  handleDownloadResume,
+  isLoading
+}: SelectResumeSectionProps) {
+  return (
+    <div className="space-y-2">
+      {resumeOptions.length === 0 ? (
+        <p className="text-sm text-zion-slate">No saved resumes found.</p>
+      ) : (
+        <>
+          {resumeOptions.map((option) => (
+            <button
+              key={option.id}
+              className={`w-full text-left p-3 rounded-md transition ${
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick={() => handleResumeSelect(option && option.id)}

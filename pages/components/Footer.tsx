@@ -1,50 +1,7 @@
-
-
-
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-<<<<<<< HEAD
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Facebook,;
-  Twitter,;
-  Linkedin,;
-  Instagram,;
-  Github,;
-
-=======
-<<<<<<< HEAD
   Mail
   Phone
   MapPin
@@ -53,7 +10,6 @@ import {;
   Linkedin
   Instagram
   Github
-=======
   Mail,
   Phone,
   MapPin,
@@ -62,19 +18,176 @@ import {;
   Linkedin,
   Instagram,
   Github,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
 import React from 'react';
 import Link from 'next/link';
+ursor/integrate-build-improve-and-re-verify-8f7d
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
->>>>>>> origin/automation-improvements-final
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  ArrowRight,
+  Brain,
+  Network,
+  Cloud,
+  Shield,
+  BarChart3,
+  Users,
+  Settings,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+  BookOpen,
+  Building,
+  Heart,
+  DollarSign,
+  Target,
+  Zap,
+  Award,
+  Star,
+  CheckCircle,
+  Clock,
+  TrendingUp,
+  Eye,
+  Lock,
+  Code,
+  Home,
+  Camera,
+  Music,
+  Gamepad2,
+  Truck,
+  Calculator,
+  CreditCard,
+  Paintbrush,
+  HardDrive,
+  Activity,
+  Lightbulb,
+  Wrench,
+  PieChart,
+  ClipboardList,
+  Layers;
+} from 'lucide-react';
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Mail
+  Phone
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Github
+} from "lucide-react";
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+origin/main
+const footerSections = [
+  {
+    title: 'Services',
+    links: [
+      { title: 'AI Services', href: '/ai-services', icon: Brain },
+      { title: 'IT Services', href: '/it-services', icon: Network },
+      { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
+      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code },
+      { title: 'Blockchain', href: '/blockchain', icon: Lock },
+      { title: 'IoT Solutions', href: '/iot', icon: Globe },
+      { title: 'AR/VR Solutions', href: '/ar-vr', icon: Eye },
+      { title: 'Space Technology', href: '/space-tech', icon: Settings }
+    ]
+  },
+  {
+    title: 'Solutions',
+    links: [
+      { title: 'Enterprise Solutions', href: '/enterprise', icon: Building },
+      { title: 'Startup Solutions', href: '/startup', icon: Settings },
+      { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
+      { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
+      { title: 'Automation', href: '/automation', icon: Zap },
+      { title: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp },
+      { title: 'Custom Development', href: '/custom-development', icon: Code }
+    ]
+  },
+  {
+    title: 'Industries',
+    links: [
+      { title: 'Healthcare', href: '/industries/healthcare', icon: Heart },
+      { title: 'Finance', href: '/industries/finance', icon: DollarSign },
+      { title: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
+      { title: 'Retail', href: '/industries/retail', icon: ShoppingCart },
+      { title: 'Education', href: '/industries/education', icon: BookOpen },
+      { title: 'Real Estate', href: '/industries/real-estate', icon: Home },
+      { title: 'Agriculture', href: '/industries/agriculture', icon: Target },
+      { title: 'Energy', href: '/industries/energy', icon: Zap }
+    ]
+  },
+  {
+    title: 'Resources',
+    links: [
+      { title: 'Blog', href: '/blog', icon: FileText },
+      { title: 'Case Studies', href: '/case-studies', icon: BarChart3 },
+      { title: 'White Papers', href: '/white-papers', icon: FileText },
+      { title: 'Webinars', href: '/webinars', icon: Calendar },
+      { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
+      { title: 'API Documentation', href: '/api-docs', icon: Code },
+      { title: 'Training', href: '/training', icon: BookOpen },
+      { title: 'FAQ', href: '/faq', icon: MessageSquare }
+    ]
+  },
+  {
+    title: 'Company',
+    links: [
+      { title: 'About Us', href: '/about', icon: Building },
+      { title: 'Team', href: '/team', icon: Users },
+      { title: 'Careers', href: '/careers', icon: Users },
+      { title: 'Partners', href: '/partners', icon: Globe },
+      { title: 'News', href: '/news', icon: FileText },
+      { title: 'Contact', href: '/contact', icon: MessageSquare },
+      { title: 'Privacy Policy', href: '/privacy', icon: Lock },
+      { title: 'Terms of Service', href: '/terms', icon: FileText }
+    ]
+  },
+  {
+    title: 'Support',
+    links: [
+      { title: 'Help Center', href: '/help', icon: MessageSquare },
+      { title: 'Documentation', href: '/docs', icon: FileText },
+      { title: 'API Reference', href: '/api', icon: Code },
+      { title: 'Status Page', href: '/status', icon: BarChart3 },
+      { title: 'Community', href: '/community', icon: Users },
+      { title: 'Training', href: '/training', icon: BookOpen },
+      { title: 'Free Consultation', href: '/consultation', icon: Calendar },
+      { title: 'Get Quote', href: '/quote', icon: FileText }
+    ]
+  }
+];
+
+const microSaasCategories = [
+  { title: 'Marketing Tools', icon: Target, count: 15 },
+  { title: 'Productivity', icon: Settings, count: 12 },
+  { title: 'Analytics', icon: BarChart3, count: 18 },
+  { title: 'Automation', icon: Zap, count: 22 },
+  { title: 'Security', icon: Shield, count: 8 },
+  { title: 'Finance', icon: DollarSign, count: 10 },
+  { title: 'Design', icon: Paintbrush, count: 6 },
+  { title: 'Development', icon: Code, count: 14 }
+];
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -84,8 +197,7 @@ import Link from 'next/link';
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
     ]
-
-
+  };
 
     solutions: [
       { name: "Enterprise Solutions", href: "/enterprise-solutions" }
@@ -120,61 +232,14 @@ import Link from 'next/link';
       { name: "Accessibility", href: "/accessibility" }
     ]
   }
-
-
-
+origin/main
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
     { name: "LinkedIn", href: "#", icon: Linkedin }
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
-
-  const footerLinks = {;
-    services: [;
-      { name: "AI Services", href: "/ai-services" },;
-      { name: "IT Services", href: "/it-services" },;
-      { name: "Micro SaaS", href: "/micro-saas" },;
-      { name: "Cloud Solutions", href: "/cloud-solutions" },;
-      { name: "Cybersecurity", href: "/cybersecurity" },;
-      { name: "Database Solutions", href: "/database-solutions" },;
-    ],;
-    solutions: [;
-      { name: "Enterprise Solutions", href: "/enterprise-solutions" },;
-      { name: "Startup Solutions", href: "/startup-solutions" },;
-      { name: "Industries", href: "/industries" },;
-      { name: "Custom Development", href: "/custom-development" },;
-      { name: "Digital Transformation", href: "/digital-transformation" },;
-      { name: "Consulting", href: "/consulting" },;
-    ],;
-    company: [;
-      { name: "About Us", href: "/about" },;
-      { name: "Our Team", href: "/team" },;
-      { name: "Careers", href: "/careers" },;
-      { name: "Case Studies", href: "/case-studies" },;
-      { name: "News", href: "/news" },;
-      { name: "Partners", href: "/partners" },;
-    ],;
-    resources: [;
-      { name: "Blog", href: "/blog" },;
-      { name: "Documentation", href: "/docs" },;
-      { name: "API Documentation", href: "/docs/api" },;
-      { name: "Tutorials", href: "/tutorials" },;
-      { name: "White Papers", href: "/white-papers" },;
-      { name: "Webinars", href: "/webinars" },;
-    ],;
-    legal: [;
-      { name: "Privacy Policy", href: "/privacy" },;
-      { name: "Terms of Service", href: "/terms" },;
-      { name: "Cookie Policy", href: "/cookies" },;
-      { name: "Security", href: "/security" },;
-      { name: "Compliance", href: "/compliance" },;
-      { name: "Accessibility", href: "/accessibility" },;
-    ],;
-  };
-=======
   ];
-
 const microSaasCategories = [
   { title: 'Marketing Tools', icon: Target, count: 15 },
   { title: 'Productivity', icon: Settings, count: 12 },
@@ -185,18 +250,10 @@ const microSaasCategories = [
   { title: 'Design', icon: Paintbrush, count: 6 },
   { title: 'Development', icon: Code, count: 14 }
 ];
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-  const socialLinks = [;
-    { name: "Facebook", href: "#", icon: Facebook },;
-    { name: "Twitter", href: "#", icon: Twitter },;
-    { name: "LinkedIn", href: "#", icon: Linkedin },;
-    { name: "Instagram", href: "#", icon: Instagram },;
-    { name: "GitHub", href: "#", icon: Github },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  ];
+origin/main
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -322,8 +379,6 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-=======
               </ul>
               <h3 className="text-lg font-semibold mb-6">Legal</h3>
               <ul className="space-y-3">
@@ -341,75 +396,22 @@ const microSaasCategories = [
             </motion.div>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-              </ul>;
-
-              <h3 className="text-lg font-semibold mb-6">Legal</h3>;
-              <ul className="space-y-3">;
-                {footerLinks && footerLinks.legal.map((link, index) => (;
-                  <li key={index}>;
-
-                    <Link
-                      href={link && link.href}
-                      className="text-gray-400 hover:text-white transition-colors">;
-                      {link && link.name}
-                    </Link>;
-                  </li>;
-                ))}
-
-              </ul>;
-            </motion && motion.div>;
-          </div>;
-        </div>;
-
-
-
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-
-=======
-
-
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               transition={{ duration: 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0"
             >
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <motion.div
 =======
               transition={{ duration: 0 && 0.8 }}
@@ -432,8 +434,7 @@ const microSaasCategories = [
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
-
-=======
+            </motion.div>
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -513,11 +514,10 @@ const microSaasCategories = [
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
             
-
-
-
+origin/main
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -535,8 +535,6 @@ const microSaasCategories = [
                 </a>
               ))}
             </motion.div>
-=======
-
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Sitemap
@@ -548,7 +546,7 @@ const microSaasCategories = [
                 Cookie Policy
               </Link>
             </div>
->>>>>>> origin/automation-improvements-final
+origin/automation-improvements-final
           </div>
         </div>
       </div>

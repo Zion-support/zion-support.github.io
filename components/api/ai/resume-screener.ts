@@ -1,31 +1,23 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
-
-=======
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-<<<<<<< HEAD
 ) {
   const method = (req.method |'POST').toUpperCase();
   if (method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method |'POST').toUpperCase();
-=======
 ) {;
   const method = (req.method || 'POST').toUpperCase();
   if (method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const method = (req.method || 'POST').toUpperCase();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { jobDescription, resumes } = req.body |{}
   if (!jobDescription |!Array.isArray(resumes))
-=======
   try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST')
@@ -61,35 +53,10 @@ export default async function handler(
   return res && res.status(200).json({ results: text })
 }
 
-<<<<<<< HEAD
+  return res.status(200).json({ results: text })
+}
+}
 
-=======
-import { authenticate_request } from '@/utils / auth';
-import { generate_text } from '@/utils / ai';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const method = (req.method || 'POST').toUpperCase ();
-  if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}export default async /**
- * handler - Function description
- */
-function handler() {
-  const method = (req.method || 'POST').toUpperCase ();
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}
-  const auth = authenticate_request (req, false);
-  if (return res.status (401).json ({ error: auth.error })) {
-  $2
-}
-  const { job_description, resumes } = req.body || {}
-  if ()) {
-  $2
 }
     return res;
       .status (400);
@@ -110,6 +77,8 @@ function handler() {
 ;
   const text = await generate_text (prompt, 'You are an expert technical recruiter. Output strictly valid JSON.');
   return res.status (200).json ({ results: text });
+
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

@@ -1,10 +1,6 @@
 
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
@@ -13,13 +9,9 @@ import {ApiKeysManager} from "@/components/developers/ApiKeysManager";
 import {WebhooksManager} from "@/components/developers/WebhooksManager";
 import {ApiDocumentation} from "@/components/developers/ApiDocumentation";
 import {ApiLogs} from "@/components/developers/ApiLogs";
-=======
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { 
@@ -33,22 +25,11 @@ import {
 } from "lucide-react",
 <<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
 import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
 import { ApiLogs } from "@/components/developers/ApiLogs",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TabDefinition {
   id: string
   label: string
@@ -61,34 +42,17 @@ interface TabDefinition {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-interface TabDefinition {;
-  id: string,;
-  label: string,;
-  icon: LucideIcon;
-}
-
 export function DeveloperPortal() {;
-<<<<<<< HEAD
-=======
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function DeveloperPortal() {
-<<<<<<< HEAD
   const { user } = useAuth();
 
   const [activeTab, setActiveTab] = useState<string>("documentation");
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-  const { user } = useAuth();
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
+  
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen }
@@ -153,9 +117,9 @@ function DeveloperPortal() {
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
+            const Icon = tab.icon;
 
             const Icon = tab.icon,
-
             return (
               <button
                 key={tab.id}
@@ -166,7 +130,6 @@ function DeveloperPortal() {
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
-
                 <Icon size={16} className="mr-2" />
 import { useState } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -229,16 +192,6 @@ export function DeveloperPortal() {;
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <Icon size={16} className="mr-2" />
                 {tab.label}
               </button>
@@ -260,11 +213,6 @@ export function DeveloperPortal() {;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
@@ -272,10 +220,6 @@ export default function ProtectedDeveloperPortal() {
     </ProtectedRoute>
   )
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
 ;
 
 export default function ProtectedDeveloperPortal() {;
@@ -287,47 +231,4 @@ export default function ProtectedDeveloperPortal() {;
 }
 
 ;
-<<<<<<< HEAD
-
-
-=======
-              <button;
-                key={tab.id}
-                className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
-                  active_tab === tab.id;
-                    ? "text - white border - zion - purple";
-                    : "text - zinc - 500 border - transparent hover:text - zinc - 400 hover:border - zinc - 700";
-                }`}
-                on_click={() => setActiveTab (tab.id)}
-              >;
-                <Icon size={16} className="mr - 2" />;
-                {tab.label}
-              </button>);
-          })}
-        </div>;
-      </div>;
-      {/* Tab content */}
-      <div>;
-        {active_tab === "documentation" && <ApiDocumentation />}
-        {active_tab === "api - keys" && <ApiKeysManager />}
-        {active_tab === "webhooks" && <WebhooksManager />}
-        {active_tab === "logs" && <ApiLogs />}
-      </div>;
-    </div>);
-}
-export default /**
- * ProtectedDeveloperPortal - Function description
- */
-function ProtectedDeveloperPortal() {
-  return (
-    <ProtectedRoute>;
-      <DeveloperPortal />;
-    </ProtectedRoute>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

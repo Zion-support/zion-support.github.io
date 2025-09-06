@@ -6,10 +6,10 @@ import { ThemeProvider } from 'next - themes';
 const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
 
   return (
-    <ThemeProvider attribute="class" default_theme="light">;
+    <ThemeProvider attribute="class" defaultTheme="light">
       {children}
-
-    </ThemeProvider>);
+    </ThemeProvider>
+  );
 }
 ;
 const custom_render = (
@@ -26,24 +26,9 @@ export const mockNextRouter = () =>: any ({
   back: jest.fn (),
   beforePopState: jest.fn (),
   events: {
-<<<<<<< HEAD
-    on: jest.fn (),
-    off: jest.fn (),
-    emit: jest.fn ();
-  },
-  is_fallback: false,
-  is_locale: false,
-  is_ready: true,
-  default_locale: 'en',
-  domain_locales: [],
-  is_preview: false;
-=======
-
-=======
     on: jest.fn()
     off: jest.fn()
     emit: jest.fn()
-<<<<<<< HEAD
   }
   isFallback: false
   isLocale: false
@@ -51,8 +36,6 @@ export const mockNextRouter = () =>: any ({
   defaultLocale: 'en'
   domainLocales: []
   isPreview: false
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   },
   isFallback: false,
   isLocale: false,
@@ -60,22 +43,9 @@ export const mockNextRouter = () =>: any ({
   defaultLocale: 'en',
   domainLocales: [],
   isPreview: false;
-<<<<<<< HEAD
-
 });
 export const createMockProps = (overrides = {}) => ({
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-});
-export const createMockProps = (overrides = {}) => ({
-<<<<<<< HEAD
   ...overrides
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
     </ThemeProvider>;
   );
 },;
@@ -104,18 +74,7 @@ export const mockNextRouter = () => ({;
   isPreview: false;
 
 });
-;
-export const createMockProps = (overrides = {}) =>: any ({
+export const createMockProps = (overrides = {}) => ({;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ...overrides;
-<<<<<<< HEAD
-
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 });

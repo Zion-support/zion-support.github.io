@@ -1,29 +1,12 @@
 
 <<<<<<< HEAD
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone} from './types';
 import {useRecordActivity} from './useRecordActivity';
-<<<<<<< HEAD
-
-          project_id: projectId,
-          created_by: user && user.id})
-
-=======
-<<<<<<< HEAD
 export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,7 +21,6 @@ export const useCreateMilestone = (projectId?: string) => {
           ...milestoneData;
           project_id: projectId
           created_by: user.id})
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         .select()
         .single();
       if (error) throw error;
@@ -99,18 +81,10 @@ if (throw error) {
       setIsSubmitting (false);
     }
 
-=======
-
 export const useCreateMilestone = (projectId?: string) => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -121,7 +95,6 @@ export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
-
   
   const createMilestone = async (milestoneData: Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
     if (!user || !projectId) return null,
@@ -152,22 +125,12 @@ export const useCreateMilestone = (projectId?: string) => {
       return null
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
   };
   
   return {
     createMilestone;
     isSubmitting
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -206,17 +169,5 @@ export const useCreateMilestone = (projectId?: string) => {;
   return {;
     createMilestone;
     isSubmitting;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
-;
-  return {
-    create_milestone;
-    is_submitting;
-  }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+};

@@ -2,18 +2,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
-
-
-=======
 import type {
-<<<<<<< HEAD
   CreateGrantPayload
   GrantApplication;
-=======
   CreateGrantPayload,;
   GrantApplication,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -34,7 +27,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 function readAllGrants(): GrantApplication[] {
@@ -69,20 +61,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   if (req && req.method === 'POST') {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     try {
       const payload = req && req.body as CreateGrantPayload;
       if (
 
   }
-
   if (req.method === 'POST') {
     try {
       const payload = req.body as CreateGrantPayload;
       if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
 
         res.status(400).json({ error: 'Missing required fields' });
-=======
         !payload ||
         !payload && payload.projectName ||
         !payload && payload.teamInfo ||
@@ -96,7 +85,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         return
-=======
   CreateGrantPayload,
   GrantApplication,
 } from '../../../types / grants';
@@ -186,21 +174,46 @@ if ( {) {
 }
         res.status (400).json ({ error: 'Missing required fields' });
         return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       ensure_dir ();
       const id = uuidv4 ();
       const now = new Date ().toISOString ();
       const record: GrantApplication = {
-
-
+        id
+        program: payload.program |'grant'
+        projectName: payload.projectName
+        teamInfo: payload.teamInfo
+        proposalSummary: payload.proposalSummary
+        timeline: payload.timeline
+        budgetAmount: payload.budgetAmount |0
+        budgetCurrency: payload.budgetCurrency |'USDC'
+        supportingLinks: payload.supportingLinks |[]
+        pitchDeckUrl: payload.pitchDeckUrl
+        region: payload.region
+        sector: payload.sector
+        status: payload.submit ? 'Submitted' : 'Draft'
+        createdAt: now
+        updatedAt: now
+        milestones: []
+        fundsReleased: 0
+        updates: []
+        votes: []
+      }
+      fs.writeFileSync(
+        path.join(GRANTS_DIR, `${id}.json`)
+        JSON.stringify(record, null, 2)
+        'utf8'
+      );
+      res.status(201).json({ id, record });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message |'Failed to create grant' });
     }
     return;
   }
+<<<<<<< HEAD
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');    } catch (e: any) {
       res.status (500).json ({ error: e?.message || 'Failed to create grant' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     return;
   }
@@ -213,15 +226,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   res.setHeader('Allow', 'GET, POST');
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
   res.status(405).end('Method Not Allowed');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' })
     }
@@ -235,8 +240,4 @@ if ( {) {
 }
 }
 }
-=======
   res.status(405).end('Method Not Allowed');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

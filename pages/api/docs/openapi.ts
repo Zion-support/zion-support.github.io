@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import v1 from '../../../data/api-docs/v1';
 import { EndpointSpec } from '[^']*';
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 import { EndpointSpec } from "../../../data/api-docs/types";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function toOpenApi() {
   const paths: Record<string, any> = {}
   v1.sections.forEach((section) => {
     section.endpoints.forEach((ep: EndpointSpec) => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
               }
@@ -96,18 +88,11 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 }
 
-<<<<<<< HEAD
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-=======
-=======
-=======
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
 res.setHeader("Content-Type", "application/json");
   res.status(200).json(toOpenApi());
 }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const openapi = {
     openapi: '3.0.3',
@@ -214,40 +199,11 @@ function toOpenApi() {;
 ;
 export default function handler(req, res) {
   try {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(toOpenApi())
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-      security_schemes: {
-        bearer_auth: { type: "http", scheme: "bearer", bearer_format: "JWT" },
-      },
-    },
-  }
-}
-export default /**
- * handler - Function description
- */
-function handler() {
-  res.set_header ("Content - Type", "application / json");
-  res.status (200).json (toOpenApi ());
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

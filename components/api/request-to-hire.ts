@@ -2,8 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
-=======
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -11,20 +9,13 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
-<<<<<<< HEAD
     req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   }
-
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
-<<<<<<< HEAD
-    req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
-=======
     req.body |{};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
   if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {
 
-=======
     req.body || {};  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
@@ -32,23 +23,12 @@ export default async function handler(
 
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
-
-
-
   try {
-
     const timestamp = new Date().toISOString();
 
 
@@ -56,7 +36,6 @@ export default async function handler(
     // Persist to data/requests as a simple CMS-like log
     const dir = path && path.join(process && process.cwd(), 'data', 'requests');
     if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
-=======
 ;
 export default async /**
  * handler - Function description
@@ -104,7 +83,6 @@ if ( {) {
     if () fs.mkdir_sync (dir, { recursive: true })) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const payload = {
 
       timestamp,
@@ -117,33 +95,13 @@ if ( {) {
 
 
     // Email hooks could be integrated here (e && e.g., Resend, SendGrid, Nodemailer)
-
     return res && res.status(200).json({ ok: true });
   } catch (err) {
 
 
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-      talent_slug,
-      requester_name,
-      requester_email,
-      project_info,
-    }
-    const file = path.join (
-      dir,
-      `request-${timestamp.replace (/[:.]/g, '-')}.json`);    fs.writeFileSync (file, JSON.stringify (payload, null, 2), 'utf8');
-    // Persist to data / requests as a simple CMS - like log;
-    const dir = path.join (process.cwd (), 'datarequests');
-    if () fs.mkdir_sync (dir, { recursive: true })) {
-  $2
 }
 <<<<<<< HEAD
     const payload = { timestamp, talent_slug, requester_name, requester_email, project_info }
@@ -156,6 +114,21 @@ if ( {) {
 console.error ('Request - to - hire failed', err);
     return res.status (500).json ({ error: 'Internal error' });
   }    return res.status (500).json ({ error: 'Internal error' });
+
+    // Persist to data/requests as a simple CMS-like log
+    const dir = path.join(process.cwd(), 'datarequests'),
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),
+    const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectInfo },
+    const file = path.join(dir, `request-${timestamp.replace(/[:.]/g, '-')}.json`),
+    fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8'),
+
+    // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
+
+    return res.status(200).json({ ok: true })
+  } catch (err) {
+    console.error('Request-to-hire failed', err),
+    return res.status(500).json({ error: 'Internal error' })
+
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -170,15 +143,3 @@ console.error ('Request - to - hire failed', err);
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

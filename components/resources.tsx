@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO',
-=======
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 export default function ResourcesPage() {
   return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 class ErrorBoundary extends React.Component {
@@ -21,24 +13,21 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-<<<<<<< HEAD
+export default ResourcesPage;
+
 import React from 'react';
 
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
@@ -58,9 +47,6 @@ import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 };
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ResourcesPage;
 
 =======

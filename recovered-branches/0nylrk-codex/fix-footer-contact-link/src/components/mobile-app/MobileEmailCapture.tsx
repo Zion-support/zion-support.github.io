@@ -1,16 +1,8 @@
 
-<<<<<<< HEAD
-import React, { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export const MobileEmailCapture: React.FC = () => {
   const [email, set_email] = useState ("");
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -51,22 +43,6 @@ if (return) {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSuccess(true);
       setEmail("");
-<<<<<<< HEAD
-
-      setTimeout(() => {;
-        setIsSuccess(false);
-      }, 5000);
-    } catch (error) {;
-      console && console.error("Error subscribing:", error);
-    } finally {;
-      setIsSubmitting(false);
-
-    }
-  }
-=======
-
-=======
-=======
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -74,9 +50,6 @@ export const MobileEmailCapture: React.FC = () => {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -84,7 +57,6 @@ export const MobileEmailCapture: React.FC = () => {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSuccess, setIsSuccess] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
@@ -99,7 +71,6 @@ export const MobileEmailCapture: React.FC = () => {
       setIsSuccess(true),
       setEmail(""),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       setTimeout(() => {
         setIsSuccess(false)
       }, 5000)
@@ -108,15 +79,10 @@ export const MobileEmailCapture: React.FC = () => {
     } finally {
       setIsSubmitting(false)
     }
-
+  }
   },
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-<<<<<<< HEAD
-
-=======
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
@@ -150,13 +116,8 @@ export const MobileEmailCapture: React.FC = () => {
       </div>
     </section>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 },
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -185,7 +146,6 @@ export const MobileEmailCapture: React.FC = () => {;
     }
   };
   return (;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">;
       <div className="container mx-auto px-4">;
         <div className="max-w-3xl mx-auto text-center">;
@@ -258,24 +218,6 @@ export const MobileEmailCapture: React.FC = () => {;
           </p>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </section>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </section>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

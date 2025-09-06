@@ -2,37 +2,23 @@
 <<<<<<< HEAD
 
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
-
-=======
 import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
 <<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
-
+export async function createNotification({;
+  userId;
+  title;
+  message;
+  type;
+  relatedId = null;
+  sendEmail = false;
+  actionUrl = null;
 export async function createNotification({
   userId,
   title,
@@ -41,10 +27,15 @@ export async function createNotification({
   relatedId = null,
   sendEmail = false,
   actionUrl = null,
-
   actionText = null
 }: {
-
+  userId: string;
+  title: string;
+  message: string;
+  type: NotificationType;
+  relatedId?: string | null;
+  sendEmail?: boolean;
+  actionUrl?: string | null
   userId: string,
   title: string,
   message: string,
@@ -52,8 +43,6 @@ export async function createNotification({
   relatedId?: string | null,
   sendEmail?: boolean,
   actionUrl?: string | null,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   actionText?: string | null
 }) {
   void actionUrl;
@@ -62,7 +51,13 @@ export async function createNotification({
     // Call the create_notification database function
 
     const { data, error } = await supabase.rpc('create_notification', {
-
+      _user_id: userId;
+      _title: title;
+      _message: message;
+      _type: type
+      _related_id: relatedId
+    });
+    if (error) throw error;
       _user_id: userId,
       _title: title,
       _message: message,
@@ -72,12 +67,10 @@ export async function createNotification({
     
     if (error) throw error,
     
-
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
-
 import { supabase } from "@/integrations/supabase/client",;
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 /**;
@@ -118,62 +111,31 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data,;
       await supabase.functions.invoke('send-notification-email', {;
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
-<<<<<<< HEAD
-
-      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
-      talentNotification,
-
-      adminNotification
-=======
-
-=======
-<<<<<<< HEAD
   } catch (error) {
     console.error('Error creating notification:', error);
-<<<<<<< HEAD
     return { success: false, error }
   }
 }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   } catch (error) {;
     console.error('Error creating notification:', error),;
-=======
-=======
   } catch (error) {;
     console.error('Error creating notification:', error),;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return { success: false, error }
   }
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 /**
  * Creates a hire request notification for admin and talent
  */
-
+export async function createHireRequestNotifications({;
+  talentId;
+  adminId;
+  requesterName;
 export async function createHireRequestNotifications({
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
   talentId;
   adminId;
   requesterName;
@@ -223,11 +185,9 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success;
       talentNotification
       adminNotification
-=======
   talentId,
   adminId,
   requesterName,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   requesterEmail, 
   projectType,
   projectSummary,
@@ -278,11 +238,6 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 /**;
  * Creates a hire request notification for admin and talent;
@@ -337,12 +292,6 @@ export async function createHireRequestNotifications({;
       success: talentNotification.success && adminNotification.success,;
       talentNotification,;
       adminNotification;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
   return {
@@ -354,17 +303,6 @@ export async function createHireRequestNotifications({;
 }
 <<<<<<< HEAD
 
-
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 /**
  * Creates an onboarding notification for a user
  */
@@ -610,19 +548,9 @@ function createTestNotification() {
     'system': { url: '/dashboard', text: 'Learn More' }
   }
 
-<<<<<<< HEAD
-
-
-
-=======
     actionText: actions[randomType].text
   })
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 ;
   return create_notification ({
     user_id;
@@ -694,17 +622,5 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

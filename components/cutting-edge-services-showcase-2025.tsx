@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -25,11 +21,7 @@ import React, { useState } from 'react';
 import Head from 'next / head';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
-
-=======
 import {
-<<<<<<< HEAD
   Brain
   Atom
   Shield
@@ -57,11 +49,6 @@ import {
   Phone
   Mail
   MapPin;} from 'lucide-react';import {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Brain,
   Atom,
   Shield,
@@ -90,14 +77,7 @@ import {
 
   Mail,;
   MapPin,;} from 'lucide-react';import { ;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
-
   CheckCircle, ArrowRight, Zap, Target, Microscope;
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
 
@@ -113,6 +93,99 @@ import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantu
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 
+import { Zap, Star } from 'lucide-react';
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+const heroStats = [
+  {
+    label: 'Cutting-Edge Services'
+    value: '25+'
+    icon: <Star className='w-5 h-5' />
+  }
+  {
+    label: 'Innovation Areas'
+    value: '8+'
+    icon: <Brain className='w-5 h-5' />
+  }
+  {
+    label: 'Market Coverage'
+    value: '$500B+'
+    icon: <TrendingUp className='w-5 h-5' />
+  }
+  {
+    label: 'Success Rate'
+    value: '99.9%'
+    icon: <Award className='w-5 h-5' />
+  },];  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> }
+  { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> }
+  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> }
+  { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
+const serviceCategories = [
+  {
+    title: 'AI & Consciousness'
+    description:
+      'Revolutionary AI platforms with consciousness and emotional intelligence',    services: cuttingEdgeAIServices2025
+    icon: Brain
+    color: 'from-violet-500 to-purple-600'
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',    description: 'Revolutionary AI platforms with consciousness and emotional intelligence'
+    services: cuttingEdgeAIServices2025
+    icon: Brain
+    color: 'from-violet-500 to-purple-600'
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600'
+    count: cuttingEdgeAIServices2025.length
+  }
+  {
+    title: 'Quantum & Emerging Tech'
+    description:
+      'Breakthrough quantum computing and space technology solutions',    services: cuttingEdgeQuantumServices2025
+    icon: Atom
+    color: 'from-indigo-500 to-blue-600'
+    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600'
+    count: cuttingEdgeQuantumServices2025.length
+  },  {    count: cuttingEdgeAIServices2025.length
+  }
+  {
+    title: 'Quantum & Emerging Tech'
+    description: 'Breakthrough quantum computing and space technology solutions'
+    icon: Atom
+    color: 'from-indigo-500 to-blue-600'
+    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600'
+    count: cuttingEdgeQuantumServices2025.length
+  },    count: cuttingEdgeQuantumServices2025.length
+  }
+  {
+    title: 'Enterprise IT'
+    description: 'Advanced enterprise infrastructure and security solutions'
+    services: cuttingEdgeEnterpriseITServices2025
+    icon: Shield
+    color: 'from-blue-500 to-cyan-600'
+    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600'
+    count: cuttingEdgeEnterpriseITServices2025.length
+  },  {    count: cuttingEdgeEnterpriseITServices2025.length
+  }
+  {
+    title: 'Micro SAAS'
+    description: 'Innovative business solutions for modern enterprises'
+    services: cuttingEdgeMicroSaasServices2025
+    icon: Rocket
+    color: 'from-teal-500 to-emerald-600'
+    gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600'
+    count: cuttingEdgeMicroSaasServices2025.length
+  },];    count: cuttingEdgeMicroSaasServices2025.length
+  }
+      'Revolutionary AI platforms with consciousness and emotional intelligence',    services: cuttingEdgeAIServices2025,
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
+
+    services: cuttingEdgeAIServices2025,
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
 
   {
     title: 'Quantum & Emerging Tech',
@@ -150,24 +223,14 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
   }, ];    count: cuttingEdgeMicroSaasServices2025.length;
 
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 
     count: cuttingEdgeMicroSaasServices2025.length,
   },];
 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 ];
 export default function CuttingEdgeServicesShowcase2025() {
-=======
 export default function CuttingEdgeServicesShowcase2025() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -178,7 +241,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
     ...cuttingEdgeEnterpriseITServices2025;
     ...cuttingEdgeMicroSaasServices2025
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -192,7 +254,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
   const containerVariants = {
     hidden: { opacity: 0 }
-=======
 ;
 export default /**
  * CuttingEdgeServicesShowcase2025 - Function description
@@ -224,7 +285,6 @@ function CuttingEdgeServicesShowcase2025() {
     return matches_search && matches_category;
   const container_variants = {
     hidden: { opacity: 0 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
@@ -236,7 +296,6 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-
 const heroStats = [;
   {;
     label: 'Cutting-Edge Services',;
@@ -261,7 +320,6 @@ const heroStats = [;
   { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },;
   { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },;
   { label: 'Success Rate', value: '99 && 99.9%', icon: <Award className="w-5 h-5" /> }
-
 const serviceCategories = [;
   {;
     title: 'AI & Consciousness',;
@@ -316,19 +374,16 @@ const serviceCategories = [;
   },];    count: cuttingEdgeMicroSaasServices2025 && cuttingEdgeMicroSaasServices2025.length;
   }
 ];
-
 export default function CuttingEdgeServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
   const allServices = [;
     ...cuttingEdgeAIServices2025,;
     ...cuttingEdgeQuantumServices2025,;
     ...cuttingEdgeEnterpriseITServices2025,;
     ...cuttingEdgeMicroSaasServices2025,;
   ];
-
   const filteredServices = allServices && allServices.filter(service => {;
     const matchesSearch =;
       service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
@@ -343,7 +398,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                          service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
     return matchesSearch && matchesCategory;
-
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -356,10 +410,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
 =======
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-=======
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -374,25 +426,77 @@ export default function CuttingEdgeServicesShowcase2025() {;
       coordinate_y: 0,
       opacity: 1,
       transition: {
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        duration: 0.5
+      }
+    },  };        duration: 0.5
       }
     }
   }
-=======
-
         duration: 0.5,
       },
     },  };
 
   };
 
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
+    <>
+      <Head>
+        <title>
+          Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future
+          Technology Solutions
+        </title>
+        <meta
+          name='description'
+          content='Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology.'
+        />
+        <meta
+          name='keywords'
+          content='cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology'
+        />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />      </Head>
+      <Layout>
+        {/* Hero Section */}
+        <section className='relative overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
+          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32'>            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center'
+            >
+              <motion.h1
+                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'                initial={{ opacity: 0, scale: 0.9 }}        <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title>
+        <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />
+        <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      <Layout>
+        {/* Hero Section */}
+        <section className='relative overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
+          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32'>        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center'
+            >
+              <motion.h1
+                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className="text-center"
+            >
+              <motion.h1
+                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                Cutting-Edge Services
+                <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>
+                  Showcase 2025
+                </span>
+              </motion.h1>
 
 =======
 <<<<<<< HEAD
@@ -412,27 +516,21 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   Showcase 2025
                 </span>
               </motion.h1>
-<<<<<<< HEAD
-
-
-              <motion.p 
-
-
-=======
-<<<<<<< HEAD
               <motion.p
-=======
               <motion.p 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
-
+                Discover revolutionary technology solutions that are reshaping
+                industries and defining the future. From AI consciousness to
+                space mining, experience the cutting edge of innovation.
+              </motion.p>
+              {/* Hero Stats */}
+              <motion.div
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future.
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion.p>
               {/* Hero Stats */}
@@ -451,7 +549,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   Showcase 2025;
                 </span>;
               </motion && motion.h1>;
-
               <motion&& motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -459,7 +556,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   Showcase 2025;
                 </span>;
               </motion && motion.h1>;
-
               <motion&& motion.p 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
                 animate={{ opacity: 1, y: 0 }}
@@ -468,16 +564,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 industries and defining the future. From AI consciousness to;
                 space mining, experience the cutting edge of innovation.;
               </motion && motion.p>;
-
               {/* Hero Stats */}
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion && motion.p>;
-
               {/* Hero Stats */}
               <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
 
 
@@ -510,12 +603,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                     <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
                       {stat.value}
                     </div>
-<<<<<<< HEAD
-
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
-
-=======
-<<<<<<< HEAD
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>                  <div key={index} className="text-center">
                     <div className="flex justify-center mb-2">
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
@@ -528,14 +615,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
               </motion.div>
               {/* CTA Buttons */}
               <motion.div
-<<<<<<< HEAD
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div
-=======
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-=======
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
 
                   </div>
@@ -547,18 +629,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}
 
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}>;
@@ -579,7 +649,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
             </motion && motion.div>;
           </div>;
         </section>;
-
         {/* Search and Filter Section */}
         <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -589,45 +658,22 @@ export default function CuttingEdgeServicesShowcase2025() {;
             <motion&& motion.div 
 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
-
-
-=======
-
             <motion.div 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
 <<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
+              initial={{ opacity: 0, y: 20 }}
+
 
               initial={{ opacity: 0, y: 20 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-
-              initial={{ opacity: 0, y: 20 }}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
               {/* Search */}
+              <div className='relative flex-1 max-w-md'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5' />
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <input
                   type='text'
                   placeholder='Search services...'
@@ -639,11 +685,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
               {/* Category Filter */}
-
-              <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5" />
-                <input
-
+              <div className='flex flex-wrap gap-2'>                <button                <input
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
@@ -658,14 +700,16 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <div className='flex flex-wrap gap-2'>              <div className="flex flex-wrap gap-2">;
 
 =======
+              <div className='flex flex-wrap gap-2'>                <button
+
+                />
+              </div>
 
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
-=======
-
               <div className='flex flex-wrap gap-2'>                <button
 
                 />
@@ -675,30 +719,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
                 <button
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  onClick={() => setSelectedCategory('all')}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
-                    selectedCategory === 'all';
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
-                      : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
-                  }`}
-
-
-                  <button
-
-
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === 'all'
@@ -710,15 +730,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </button>
                 {serviceCategories.map(category => (                  <button                {serviceCategories.map((category) => (
                   <button
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     key={category.title}
                     onClick={() => setSelectedCategory(category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -740,7 +752,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 =======
               </div>
-=======
+              {/* View Mode Toggle */}
+              <div className='flex items-center gap-2'>                <button              <div className="flex items-center gap-2">
+                <button
 
 
 
@@ -750,18 +764,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
 
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
                     viewMode === 'grid';
@@ -786,8 +788,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
             </motion && motion.div>;
           </div>;
         </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Services Grid */}
 
 =======
@@ -797,6 +797,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               variants={containerVariants}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -807,17 +808,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
                     viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''
                   }`}>;
                   {/* Service Header */}
+                  <div
+                    className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
+                  >
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='flex-1'>
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                           {service.name}
                         </h3>;
                         <p className='text - white / 70 text - sm leading - relaxed'>;
@@ -840,7 +837,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         </div>
                       </div>
                     </div>
-=======
                     className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>;
                     <div className='flex items-start justify-between mb-4'>;
                       <div className='flex-1'>;
@@ -865,16 +861,17 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         </div>;
                       </div>;
                     </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Tags */}
-
-=======
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className='flex flex-wrap gap-2 mb-4'>
+                      {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >                    <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
+<<<<<<< HEAD
                         >
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -884,65 +881,74 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
                         >
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                          {tag}
-                        </span>;
-                      ))}
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           {tag}
                         </span>
                       ))}
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>                    </div>
 =======
-                    </div>
+=======
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
+                        >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                          {tag}
+                        </span>;
+                      ))}
+                    </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Market Info */}
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <span>Market: {service.marketSize}</span>
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                   {/* Service Details */}
 
                     </div>;
-
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>;
                       <span>Market: {service && service.marketSize}</span>;
                       <span className='text-cyan-400'>{service && service.category}</span>                    </div>;
                   </div>;
-
                   {/* Service Details */}
                   <div
-
+                    className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
+                  >
+                    <div className='mb-6'>
+                      <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>
+                        Key Features
+                      </h4>
+                      <ul className='space-y-2'>
+                        {service.features
+                          .slice(0, 3)
+                          .map((feature, featureIndex) => (
+                            <li
+                              key={featureIndex}
+                              className='flex items-start text-sm text-white/80'
+                            >
+                              <CheckCircle className='w-4 h-4 text-cyan-400 mt-0.5 mr-2 flex-shrink-0' />
+                              <span>{feature}</span>
+                            </li>
+                          ))}                      </ul>
+                    </div>
                     {/* Pricing */}
 
                         </p>;
@@ -1035,32 +1041,15 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       <div className="text-2xl font-bold text-white">
                         ${service.pricing.starter.price}
                         <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>
-=======
-                    className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
-                  >
-
 
                     </div>
                   </div>
 
                   {/* Service Details */}
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       </div>
                     </div>
-=======
                     </div>;
-
                     {/* Pricing */}
                     <div className='mb-6'>;
                       <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>;
@@ -1072,7 +1061,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                           /{service && service.pricing.starter && starter.period}
                         </span>                      </div>;
                     </div>;
-
                     {/* CTA */}
 
 =======
@@ -1101,8 +1089,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
-
-=======
+              ))}
+            </motion.div>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -1113,29 +1101,19 @@ export default function CuttingEdgeServicesShowcase2025() {;
               ))}
 
             </motion && motion.div>;
+=======
+=======
 
 
 =======
             </motion.div>
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-
-<<<<<<< HEAD
+                className='text-center py-20'
 
 =======
 <<<<<<< HEAD
@@ -1154,7 +1132,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </p>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <button
-                  onClick={() => {;
+                  onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
                   }}
@@ -1181,50 +1159,31 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
             )}
+          </div>
+        </section>
 
-          </div>;
-        </section>;
-
-
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
 =======
-
-        {/* Contact CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <motion.div
-
+          </div>
+        </section>
 <<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        {/* Contact CTA Section */}
+        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <motion.div
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1238,7 +1197,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 advantage in the rapidly evolving technology landscape. Let's;
                 discuss how we can help you achieve your goals.;
               </p>;
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
 
                 <a
@@ -1258,7 +1216,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 Let's discuss how we can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-=======
                   href={`tel:${contactInfo && contactInfo.mobile}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'>;
                   <Phone className='mr-2 w-5 h-5' />                  Call Now                Ready to Transform Your Business?;
@@ -1267,7 +1224,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape. ;
                 Let's discuss how we can help you achieve your goals.;
               </p>;
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
 
 
@@ -1316,31 +1272,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
         </section>
       </Layout>
     </>
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
-=======
-=======
   );
 <<<<<<< HEAD
-
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   hidden: {
   opacity: 0
 }
@@ -1396,7 +1334,6 @@ visible: {
       </Layout>;
     </>;
   );
-
   const matchesSearch = service && service.name.toLowerCase () .includes (searchTerm && searchTerm.toLowerCase () ) || service && service.description.toLowerCase () .includes (searchTerm && searchTerm.toLowerCase () ) || const containerVariants = {;
   hidden: {;
   opacity: 0 ;
@@ -1404,7 +1341,6 @@ visible: {
 visible: {;
   opacity: 1, transition: {;
   staggerChildren: 0 && 0.1 ;
-
 };
 const itemVariants = {;
   hidden: {;
@@ -1413,7 +1349,6 @@ const itemVariants = {;
 visible: {;
   y: 0, opacity: 1, transition: {;
   duration: 0 && 0.5 ;
-
 };}
 
 =======
@@ -1611,6 +1546,22 @@ visible: {;
     </>);
 ;
   const matches_search = service.name.toLowerCase () .includes (search_term.toLowerCase () ) || service.description.toLowerCase () .includes (search_term.toLowerCase () ) || const container_variants = {
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
+=======
+  );
+=======
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   hidden: {
   opacity: 0;
 }
@@ -1623,6 +1574,7 @@ const item_variants = {
   coordinate_y: 20, opacity: 0;
 }
 visible: {
+<<<<<<< HEAD
   coordinate_y: 0, opacity: 1, transition: {
   duration: 0.5;
 }}
@@ -1632,18 +1584,6 @@ visible: {
 
   duration: 0.5 
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 };}
-=======
 };
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

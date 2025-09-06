@@ -1,13 +1,5 @@
 <<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState, useEffect } from 'react';
 
 import Head from 'next / head';
@@ -73,16 +65,6 @@ const AdminPartnersPage: React.FC = () => {;
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
-<<<<<<< HEAD
-
-    const json = await res.json();
-    setFlags(json.flags |[]);
-=======
-=======
-
-
-
-=======
   useEffect(() => {
     // Simulate loading partners
     setTimeout(() => {
@@ -103,15 +85,10 @@ const AdminPartnersPage: React.FC = () => {;
     const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
-<<<<<<< HEAD
     const json = await res.json();
     setFlags(json.flags |[]);
 
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {
@@ -173,99 +150,15 @@ export default function AdminPartners() {
   async function viewFlags(code: string) {;
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-    <div className='space-y-6'>;
-      <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
-      <div className='overflow-auto'>;
-        <table className='min-w-full text-sm'>;
-          <thead>;
-            <tr className='text-left border-b'>;
-              <th className='py-2 pr-4'>Code</th>;
-              <th className='py-2 pr-4'>Name</th>;
-              <th className='py-2 pr-4'>Status</th>;
-              <th className='py-2 pr-4'>Commission</th>;
-              <th className='py-2 pr-4'>Actions</th>;
-            </tr>;
-          </thead>;
-          <tbody>;
-            {partners && partners.map(p => (;
-              <tr key={p && p.code} className='border-b'>;
-                <td className='py-2 pr-4'>{p && p.code}</td>;
-                <td className='py-2 pr-4'>{p && p.name}</td>;
-                <td className='py-2 pr-4'>{p && p.status}</td>;
-                <td className='py-2 pr-4'>;
-                  <input
-
-
-                    }
-                    className='w-24 border rounded px-2 py-1';
-                  />;
-                </td>;
-                <td className='py-2 pr-4 space-x-2'>;
-                  <button
-                    className='px-2 py-1 rounded border'
-                    onClick={() =>;
-                      updatePartner(p && p.code, { status: 'approved' });
-
-=======
-                    on_blur={e =>;
-                      update_partner (p.code, {
-                        commission_rate: Number (e.target.value),
-                      });
-                    }
-                    className='w - 24 border rounded px - 2 py - 1';
-                  />;
-                </td>;
-                <td className='py - 2 pr - 4 space - x-2'>;
-                  <button;
-                    className='px - 2 py - 1 rounded border';
-                    on_click={() =>;
-                      update_partner (p.code, { status: 'approved' });
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                    }
-                  >;
-                    Approve;
-                  </button>;
-
-
-                    }
-                  >;
-                    Reject;
-                  </button>;
-
-
-=======
-<<<<<<< HEAD
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Admin • Partners</h1>
@@ -288,7 +181,6 @@ export default function AdminPartners() {
                 <td className="py-2 pr-4">{p.status}</td>
                 <td className="py-2 pr-4">
                   <input
-<<<<<<< HEAD
                     type='number'                    defaultValue={p.commission_rate}
                     min={0}
                     max={1}
@@ -299,7 +191,6 @@ export default function AdminPartners() {
                       })
                     }
                     className='w-24 border rounded px-2 py-1'
-=======
                     type="number"
                     defaultValue={p.commission_rate  } catch (error) {
     console.error("Error:", error);
@@ -327,12 +218,6 @@ export default function AdminPartners() {
   }
 }
                     className="w-24 border rounded px-2 py-1"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -341,53 +226,57 @@ export default function AdminPartners() {
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            ))}
-
-          </tbody>;
-        </table>;
-      </div>;
-
-      {selected && (;
-        <div className='p-4 rounded border'>;
-          <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>;
-          <ul className='list-disc pl-6'>;
-            {flags && flags.map((f, idx) => (;
-              <li key={idx}>;
-                <span className='font-medium'>{f && f.type}</span> — {f && f.severity}{' '}
-                {f && f.note && <span className='text-gray-500'>({f && f.note})</span>}
-              </li>;
-
-            ))}
-            {flags && flags.length === 0 && (;
-              <li className='text-gray-500 list-none'>No flags</li>;
-            )}
-
-          </ul>;
-        </div>;
-
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
-          <div className="bg-white rounded-lg shadow p-4">;
-            <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>;
-            <p className="text-2xl font-bold">{totalPartners}</p>;
-          </div>;
-          <div className="bg-white rounded-lg shadow p-4">;
-            <h3 className="text-sm font-medium text-gray-500">Active Partners</h3>;
-            <p className="text-2xl font-bold text-green-600">{activePartners}</p>;
-          </div>;
-          <div className="bg-white rounded-lg shadow p-4">;
-            <h3 className="text-sm font-medium text-gray-500">Total Referrals</h3>;
-            <p className="text-2xl font-bold">{totalReferrals}</p>;
-          </div>;
-          <div className="bg-white rounded-lg shadow p-4">;
-            <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>;
-            <p className="text-2xl font-bold text-blue-600">${totalEarnings && totalEarnings.toLocaleString()}</p>;
-          </div>;
-        </div>;
-
-
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </tbody>
+        </table>
+      </div>
+      {selected && (
+        <div className="p-4 rounded border">
+          <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
+          <ul className="list-disc pl-6">
+            {flags.map((f, idx) => (
+              <li key={idx}>
+                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </li>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </ul>
+        </div>
+{/* Stats Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>
+            <p className="text-2xl font-bold">{totalPartners}</p>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Active Partners</h3>
+            <p className="text-2xl font-bold text-green-600">{activePartners}</p>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Total Referrals</h3>
+            <p className="text-2xl font-bold">{totalReferrals}</p>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>
+            <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
+          </div>
+        </div>
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -657,63 +546,6 @@ export default function AdminPartners() {
                               Activate;
                             </button>;
                           )}
-<<<<<<< HEAD
-                          <button className="text-blue-600 hover:text-blue-900">;
-=======
-                            <>;
-                              <button;
-                                on_click={() => handleStatusChange (partner.id, 'active')}
-                                className="text - green - 600 hover:text - green - 900";
-                              >;
-                                Approve;
-                              </button>;
-                              <button;
-                                on_click={() => handleStatusChange (partner.id, 'inactive')}
-                                className="text - red - 600 hover:text - red - 900";
-                              >;
-                                Reject;
-                              </button>;
-                            </>)}
-                          {partner.status === 'active' && (
-                            <button;
-                              on_click={() => handleStatusChange (partner.id, 'inactive')}
-                              className="text - red - 600 hover:text - red - 900";
-                            >;
-                              Deactivate;
-                            </button>)}
-                          {partner.status === 'inactive' && (
-                            <button;
-                              on_click={() => handleStatusChange (partner.id, 'active')}
-                              className="text - green - 600 hover:text - green - 900";
-                            >;
-                              Activate;
-                            </button>)}
-                          <button className="text - blue - 600 hover:text - blue - 900">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                            Edit;
-                          </button>;
-                        </div>;
-                      </td>;
-
-        </div>;
-      </main>;
-    </>;
-  );
-
-=======
-                    </tr>))}
-                </tbody>;
-              </table>;
-            </div>)}
-        </div>;
-      </main>;
-    </>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-=======
                           <button className="text-blue-600 hover:text-blue-900">
                             Edit
                           </button>
@@ -729,19 +561,10 @@ export default function AdminPartners() {
       </main>
     </>
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }
 }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -754,15 +577,3 @@ export default function AdminPartners() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

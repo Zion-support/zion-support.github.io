@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-
-
-export const monitorContent = async (;
-
-
-=======
-<<<<<<< HEAD
 // Content monitoring functionality
 import { FraudFlag, FraudSeverity  } from '@/types/fraud';
 import { analyzeContent  } from './analyzeContent';
@@ -14,13 +6,9 @@ import { flagContent } from './flagContent';
 /**
  * Create a monitoring system helper to easily monitor any content
  */
-<<<<<<< HEAD
 
 export const monitorContent = async (
-=======
 export const monitorContent = async (;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -41,17 +29,7 @@ export const monitorContent = async (;
 
     )) {
       severity = 'dangerous'
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -76,20 +54,8 @@ export const monitorContent = async (;
       r.includes('bypass');
     )) {;
       severity = 'dangerous';
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     await flagContent(
       userId;
       userEmail;
@@ -99,91 +65,18 @@ export const monitorContent = async (;
       severity;
       analysis && analysis.reasons.join();
       undefined // IP address would be added in a real implementation
-
-
+    );
     ),
     
-
-
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
     if (severity === 'dangerous') {
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
-<<<<<<< HEAD
-
-// Content monitoring functionality;
-import {FraudFlag, FraudSeverity} from '@/types / fraud';
-import {analyze_content} from './analyze_content';
-import {flag_content} from './flag_content';
-/**;
-* Create a monitoring system helper to easily monitor any content;
-*/;
-export const monitor_content = async (
-  user_id: string;
-  user_email: string | undefined;
-  content_type: FraudFlag['content_type'];
-  content_id: string;
-  content: string): Promise < void> => {
-  const analysis = analyze_content (content);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
-    // If contains highly suspicious phrases, mark as dangerous;
-    // Check condition
-if (||) {
-  $2
-}
-      r.includes ('external') ||;
-      r.includes ('bypass'))) {
-      severity = 'dangerous';
-    }
-    await flag_content (
-      user_id;
-      user_email;
-      content_type;
-      content_id;
-      content;
-      severity;
-      analysis.reasons.join ();
-      undefined // IP address would be added in a real implementation);
-=======
-
-
-=======
-
-;
-    // If this is a 'dangerous' flag, automatically hide content;
-    // This would be implemented in a real system with appropriate flags;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.log ('Auto - hiding dangerous content:', content_id);
-      // Code to hide content would go here;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    }
-  }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
   }
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
     await flagContent(;
       userId,;
@@ -200,12 +93,6 @@ if ( {) {
     if (severity === 'dangerous') {;
       // // // console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

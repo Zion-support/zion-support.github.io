@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-
-};
-
-=======
-<<<<<<< HEAD:utils/search/filter.ts
+:utils/search/filter.ts
 // Search filter utilities
 export const filterResults = (results: any[], filters: any) => {
   // Add search filtering functionality here;
@@ -12,12 +7,8 @@ export const filterResults = (results: any[], filters: any) => {
 export const sortResults = (results: any[], sortBy: string) => {
   // Add search sorting functionality here;
   return results;
-<<<<<<< HEAD
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD:backup-problematic-files/utils/search/filter.ts
+:backup-problematic-files/utils/search/filter.ts
 import type { ParsedFilters } from './parser',;
 import { TALENT_PROFILES } from '../../data/talent',;
 import type { TalentProfile } from '../../data/talent',;
@@ -122,9 +113,6 @@ export function suggestDidYouMean(query: string): string | null {;
   if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM';
   if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr';
   return null;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
 export type AccessLevel = 'public' | 'private' | 'admin';
 
 export interface SearchResult {
@@ -300,18 +288,8 @@ export function suggestDidYouMean(query: string): string[] {
   }
   
   return suggestions.slice(0, 3); // Return max 3 suggestions
-<<<<<<< HEAD
-
-
+main:utils/search/filter.ts
+:backup-problematic-files/utils/search/filter.ts
 }
-
-=======
->>>>>>> main:utils/search/filter.ts
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/search/filter.ts
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/search/filter.ts
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/utils/search/filter.ts

@@ -1,21 +1,10 @@
-
+import React from 'react',
 import React from 'react';
-import Link from 'next / link';
-
-=======
-
-import React from 'react';
-
 import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
-import { 
-
-=======
 import {
-<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -38,9 +27,6 @@ import {
   Github
   Youtube
   Instagram;} from 'lucide-react';import {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
   Phone,
   Mail,
   MapPin,
@@ -63,19 +49,12 @@ import {
   Github,
   Youtube,;
   Instagram,;} from 'lucide-react';import { ;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
   Twitter, Linkedin, Github, Youtube, Instagram
 
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -96,20 +75,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -143,14 +118,12 @@ import {;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
   Twitter, Linkedin, Github, Youtube, Instagram;
-
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
 };
-
 const serviceCategories = [;
   {;
     title: 'AI & Consciousness',;
@@ -232,6 +205,40 @@ const serviceCategories = [;
       { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
     ]
 =======
+<<<<<<< HEAD
+import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import {
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Star
+  ArrowRight
+  Brain
+  Atom
+  Shield
+  Rocket
+  Target
+  Microscope
+  Zap
+  Globe
+  Database
+  Lock
+  Cloud
+  BarChart3
+  Twitter
+  Linkedin
+  Github
+  Youtube
+  Instagram;} from 'lucide-react';import {
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Phone,
   Mail,
   MapPin,
@@ -252,6 +259,7 @@ const serviceCategories = [;
   Twitter,
   Linkedin,
   Github,
+<<<<<<< HEAD
   Youtube,
   Instagram,} from 'lucide-react';import {
   Phone, Mail, MapPin, Star, ArrowRight;
@@ -345,27 +353,42 @@ const service_categories = [;
     ],
   }, ];      { name: 'DevOps Automation Studio', href: '/devops - automation - studio' }
     ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 ];
-;
-const company_links = [;
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
-  { name: 'Case Studies', href: '/case - studies' },
-  { name: 'Blog', href: '/blog' },
-
-  { name: 'Resources', href: '/resources' }, ];  { name: 'Resources', href: '/resources' }
-
+const companyLinks = [
+  { name: 'About Us', href: '/about' }
+  { name: 'Careers', href: '/careers' }
+  { name: 'News', href: '/news' }
+  { name: 'Case Studies', href: '/case-studies' }
+  { name: 'Blog', href: '/blog' }
+  { name: 'Resources', href: '/resources' },];  { name: 'Resources', href: '/resources' }
 ];
-;
-const legal_links = [;
-  { name: 'Privacy Policy', href: '/privacy' },
-  { name: 'Terms of Service', href: '/terms' },
-  { name: 'Cookie Policy', href: '/cookies' },
+const legalLinks = [
+  { name: 'Privacy Policy', href: '/privacy' }
+  { name: 'Terms of Service', href: '/terms' }
+  { name: 'Cookie Policy', href: '/cookies' }
+  { name: 'GDPR Compliance', href: '/gdpr' },];  { name: 'GDPR Compliance', href: '/gdpr' }
+];
+const socialLinks = [
+  { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' }
+  { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' }
+  { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
+  { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' }
+  {
+    name: 'Instagram'
+    href: '#'
+    icon: Instagram
+    color: 'hover:text-pink-400'
+  },];  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' }
+];
 
-
+const EnhancedFooter2025: React.FC = () => {
+  const currentYear = new Date().getFullYear()
+  return (
+    <footer className='relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50'>
+      {/* Background Effects */}
+      <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'></div>
+      <div className='relative z-10'>
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">;
@@ -391,20 +414,6 @@ const legal_links = [;
               </div>
             </div>
 
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Service Categories */}
             {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
@@ -413,8 +422,7 @@ const legal_links = [;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
-<<<<<<< HEAD
+                className='space-y-4'
 
 =======
 <<<<<<< HEAD
@@ -437,10 +445,7 @@ const legal_links = [;
                     <Link
                       key={service.name}
                       href={service.href}
-
-                className="space-y-4"
-              >
-
+                      className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'                    >              >
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                     <category.icon className="w-4 h-4 text-white" />
@@ -460,7 +465,6 @@ const legal_links = [;
                     {category && category.title}
                   </h3>;
                 </div>;
-
                 <div className='space-y-2'>;
                   {category && category.services.map(service => (;
                     <Link
@@ -554,74 +558,37 @@ const legal_links = [;
                     <Link;
                       key={service.name}
                       href={service.href}
-                      className='block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200 text - sm'                    >              >;
-                <div className="flex items - center space - x-3">;
-                  <div className="w - 8 h - 8 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - lg flex items - center justify - center">;
-                    <category.icon className="w - 4 h - 4 text - white" />;
-                  </div>;
-                  <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
-                </div>;
-                <div className="space - y-2">;
-                  {category.services.map ((service) => (
-                    <Link;
-
-                      key={service.name}
-                      href={service.href}
-                      className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200 text - sm";
-                    >;
-=======
-
+                      className="block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    >
                       className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'                    >
 
                     >
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       {service.name}
-
-          </div>;
-=======
-
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
           {/* Additional Links */}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Company Links */}
             <div>;
               <h4 className='text-white font-semibold mb-4'>Company</h4>;
               <div className='space-y-2'>;
                 {companyLinks && companyLinks.map(link => (;
                   <Link
-
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50">
-            {/* Company Links */}
+                    key={link.name}
+                    href={link.href}
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >            {/* Company Links */}
             <div>
               <h4 className="text-white font-semibold mb-4">Company</h4>
               <div className="space-y-2">
                 {companyLinks.map((link) => (
                   <Link
-=======
                     </Link>))}
                 </div>;
               </motion.div>))}
@@ -636,34 +603,17 @@ const legal_links = [;
                   <Link;
                     key={link.name}
                     href={link.href}
-                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >            {/* Company Links */}
-            <div>;
-              <h4 className="text - white font - semibold mb - 4">Company</h4>;
-              <div className="space - y-2">;
-                {company_links.map ((link) => (
-                  <Link;
-
-                    key={link.name}
-                    href={link.href}
-                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
-                  >;
-=======
-                    key={link.name}
-                    href={link.href}
-
+                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                  >
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
 
                   >
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {link.name}
-
-              </div>;
-            </div>;
-
+                  </Link>
+                ))}
+              </div>
+            </div>
 
 =======
 <<<<<<< HEAD
@@ -689,47 +639,34 @@ const legal_links = [;
 
 
                   <Link
-                    key={link && link.name}
-                    href={link && link.href}
+                    key={link.name}
+                    href={link.href}
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >              <h4 className="text-white font-semibold mb-4">Legal</h4>
+              <div className="space-y-2">
+                {legalLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     {link.name}
                   </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
+              </div>
+            </div>
 
-              </div>;
-            </div>;
-
-
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Social Links */}
-
-<<<<<<< HEAD
+            <div>
+              <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
+              <div className='flex space-x-4'>
+                {socialLinks.map(social => (                  <a              <h4 className="text-white font-semibold mb-4">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
 
 =======
 <<<<<<< HEAD
@@ -746,101 +683,26 @@ const legal_links = [;
                     <social.icon className="w-5 h-5" />
                   </a>
 
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
-<<<<<<< HEAD
-=======
-                  </Link>))}
-              </div>;
-            </div>;
-            {/* Legal Links */}
-            <div>;
-              <h4 className='text - white font - semibold mb - 4'>Legal</h4>;
-              <div className='space - y-2'>;
-                {legal_links.map (link => (
-                  <Link;
-                    key={link.name}
-                    href={link.href}
-                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >              <h4 className="text - white font - semibold mb - 4">Legal</h4>;
-              <div className="space - y-2">;
-                {legal_links.map ((link) => (
-                  <Link;
-                    key={link.name}
-                    href={link.href}
-                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
-                    {link.name}
-                  </Link>))}
-              </div>;
-            </div>;
-            {/* Social Links */}
-            <div>;
-              <h4 className='text - white font - semibold mb - 4'>Follow Us</h4>;
-              <div className='flex space - x-4'>;
-                {social_links.map (social => (                  <a              <h4 className="text - white font - semibold mb - 4">Follow Us</h4>;
-              <div className="flex space - x-4">;
-                {social_links.map ((social) => (
-                  <a;
-                    key={social.name}
-                    href={social.href}
-                    className={`w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gray - 700 / 50 rounded - lg flex items - center justify - center text - gray - 400 ${social.color} transition - all duration - 200 border border - gray - 700 hover:border - gray - 600`}
-                    aria - label={social.name}
-                  >;
-                    <social.icon className='w - 5 h - 5' />                  </a>                    <social.icon className="w - 5 h - 5" />;
-                  </a>))}
-
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Newsletter Section */}
+        <div className='border-t border-gray-800/50'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+            <div className='text-center'>              <motion.h3        <div className="border-t border-gray-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="text-center">
+              <motion.h3
 
-
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
-
-<<<<<<< HEAD
+                className='text-2xl md:text-3xl font-bold text-white mb-4'              >                className="text-2xl md:text-3xl font-bold text-white mb-4"
+                className='text-2xl md:text-3xl font-bold text-white mb-4'              >
 
 =======
 <<<<<<< HEAD
@@ -857,10 +719,9 @@ const legal_links = [;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
+transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
-
-<<<<<<< HEAD
+                className='text-gray-400 mb-6 max-w-2xl mx-auto'
 
 =======
 <<<<<<< HEAD
@@ -875,13 +736,6 @@ const legal_links = [;
               </motion.p>              >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
-=======
-                className="text-gray-400 mb-6 max-w-2xl mx-auto"
-              >
-                Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
-              </motion.p>
-              
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -891,7 +745,6 @@ const legal_links = [;
               </motion && motion.p>              >;
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.;
               </motion && motion.p>;
-
               <motion&& motion.div
 
 
@@ -900,8 +753,7 @@ const legal_links = [;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
-
-<<<<<<< HEAD
+                className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
 
 =======
 <<<<<<< HEAD
@@ -928,27 +780,6 @@ const legal_links = [;
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-<<<<<<< HEAD
-
-
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-=======
-  )
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-export default EnhancedFooter2025;
-
-
-=======
                 />
                 <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
                   Subscribe
@@ -987,44 +818,11 @@ export default EnhancedFooter2025;
       </div>
     </footer>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-    </footer>);
-}
-;
-export default EnhancedFooter2025);
-}
-;
-export default EnhancedFooter2025;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 };
+export default EnhancedFooter2025;
 
-<<<<<<< HEAD
+export default EnhancedFooter2025;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default EnhancedFooter2025;  )
 }
 export default EnhancedFooter2025;
-
-<<<<<<< HEAD
-=======
-export default EnhancedFooter2025;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-=======
-export default EnhancedFooter2025;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,5 +1,9 @@
-<<<<<<< HEAD
-
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
+import Layout from "../components/Layout";
+export default function RegisterPage() {
 
 export default function RegisterPage() {;
 =======

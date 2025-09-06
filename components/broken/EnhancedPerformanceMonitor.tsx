@@ -1,22 +1,9 @@
 <<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 //FCP recommendations if (metrics.fcp > 2000) {
-=======
  //FCP recommendations if (metrics.fcp > 2000) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 //FCP recommendations if (metrics.fcp > 2000) {
-=======
  //FCP recommendations if (metrics.fcp > 2000) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   recs.push ({
 }return recs;
 }, []);
@@ -84,6 +71,21 @@ if (!performanceData) {;
 if ( {) {
   $2
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+//FCP recommendations if (metrics.fcp > 2000) {
+=======
+ //FCP recommendations if (metrics.fcp > 2000) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+//FCP recommendations if (metrics.fcp > 2000) {
+=======
+ //FCP recommendations if (metrics.fcp > 2000) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   recs.push ({
 }return recs;
 }, []);
@@ -125,33 +127,25 @@ if ( {) {
   metrics.fcp > 2000 ? 'text - red - 400': 'text - green - 400';
 }`;
 }> {
-  metrics.fcp.to_fixed (0);
-}ms </span> </div> </span> </div> </div> </div>);
-}</span> </div> <div className="w - full bg - gray - 700 rounded - full h - 2" > <div width: `$ {
-  (metrics.memory_usage.usedJSHeapSize / metrics.memory_usage.totalJSHeapSize) * 100;
-}%`;
-}/> </div> </div> </div>);
-}</span> </div> </div> </div>);
-}rec.priority === 'high'? 'bg - red - 500 / 20 text - red - 400': rec.priority === 'medium'? 'bg - yellow - 500 / 20 text - yellow - 400': 'bg - green - 500 / 20 text - green - 400';
-}`;
+  metrics.fcp.toFixed (0)
+}ms </span> </div> </span> </div> </div> </div>)
+}</span> </div> <div className="w-full bg-gray-700 rounded-full h-2" > <div width: `$ {
+  (metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100
+}%`
+}/> </div> </div> </div>)
+}</span> </div> </div> </div>)
+}rec.priority === 'high'? 'bg-red-500/20 text-red-400': rec.priority === 'medium'? 'bg-yellow-500/20 text-yellow-400': 'bg-green-500/20 text-green-400'
+}`
 }> {
-  rec.priority;
-}</span> </div> </div>) );
-}</div> </div>);
-}) : (<BarChart3 className="w - 4 h - 4" />);
+  rec.priority
+}</span> </div> </div>) )
+}</div> </div>)
+}) : (<BarChart3 className="w-4 h-4" />)
 }<span> {
-  is_monitoring ? 'Measuring...': 'Measure Performance';
-}</span> </button> </div> </div> </motion.div>);
-}</AnimatePresence> </>);
+  isMonitoring ? 'Measuring...': 'Measure Performance'
+}</span> </button> </div> </div> </motion.div>)
+}</AnimatePresence> </>)
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+export default EnhancedPerformanceMonitor;
 export default EnhancedPerformanceMonitor;
 
-
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

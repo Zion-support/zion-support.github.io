@@ -2,31 +2,11 @@
 <<<<<<< HEAD
 
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
-<<<<<<< HEAD
-
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components / ui / carousel';
-import { Card, CardContent } from '@/components / ui / card';
-import { Avatar } from '@/components / ui / avatar';
-import { Quote } from './lucide-react';
-const testimonials = [;
-
-=======
-<<<<<<< HEAD
 const testimonials = [
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
     author: "Sarah Chen"
@@ -51,17 +31,8 @@ const testimonials = [
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
     author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
-<<<<<<< HEAD
-
-
-
-=======
     avatar: "https://i.pravatar.cc/150?img=67"
     company: "EcoTech"}]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import {
   Carousel,
   CarouselContent,
@@ -71,16 +42,6 @@ import {
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
 import { Quote } from "lucide-react",
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
@@ -107,8 +68,6 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?img=67",
     company: "EcoTech"}],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -184,9 +143,6 @@ function TestimonialCarousel() {
               align: "start"
 
               loop: true}}
-<<<<<<< HEAD
-
-=======
             className="w-full"
           >
             <CarouselContent>
@@ -221,19 +177,8 @@ function TestimonialCarousel() {
       </div>
     </section>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import {;
   Carousel,;
   CarouselContent,;
@@ -348,19 +293,5 @@ export function TestimonialCarousel() {;
 
     </section>);
 }
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

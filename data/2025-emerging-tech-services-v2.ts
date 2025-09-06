@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface EmergingTechService {
-=======
 export interface EmergingTechService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -18,7 +11,6 @@ export interface EmergingTechService {;
     currency: string;
     trialDays: number;
     setupTime: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
   {
@@ -48,7 +40,6 @@ export interface EmergingTechService {;
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform',
-=======
     id: 'quantum - bio - computing - platform',
     name: 'Quantum Bio - Computing Platform',
     tagline: 'Quantum computing meets biological systems',
@@ -130,7 +121,6 @@ export interface EmergingTechService {;
     market_size: '$12B quantum bio - computing market',
     growth_rate: '65% annually',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
@@ -158,7 +148,6 @@ export interface EmergingTechService {;
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
-=======
     id: 'brain - computer - interface - platform',
     name: 'Brain - Computer Interface Platform',
     tagline: 'Direct neural interface for human - computer interaction',
@@ -240,7 +229,6 @@ export interface EmergingTechService {;
     market_size: '$18B BCI market',
     growth_rate: '55% annually',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
@@ -268,7 +256,6 @@ export interface EmergingTechService {;
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-platform',
-=======
     id: 'quantum - energy - platform',
     name: 'Quantum Energy Platform',
     tagline: 'Quantum - enhanced energy optimization and fusion simulation',
@@ -350,7 +337,6 @@ export interface EmergingTechService {;
     market_size: '$25B quantum energy market',
     growth_rate: '45% annually',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
@@ -374,9 +360,6 @@ export interface EmergingTechService {;
     support:
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     compliance: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'
     ]
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
@@ -390,7 +373,6 @@ export interface EmergingTechService {;
     marketSize: '$35B autonomous vehicle market'
     growthRate: '75% annually'
   }
-=======
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -406,18 +388,44 @@ export interface EmergingTechService {;
   },;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform',
-=======
-    id: 'autonomous - vehicle - ai - platform',
-    name: 'Autonomous Vehicle AI Platform',
-    tagline: 'Advanced AI for self - driving vehicles and transportation',
-    description:;
-      'Comprehensive AI platform that powers autonomous vehicles with advanced perception, decision - making, and safety systems for the future of transportation.',
-    category: 'Emerging Tech',
+    ];
+    benefits: [
+      'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
+    ];
+    targetAudience: [
+      'Space agenciesMining companiesInvestment firmsResearch institutionsGovernment agenciesTechnology companies'
+    ];
+    marketPosition: 'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our advantage: Advanced automation, AI optimization, and comprehensive platform.',
+    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+'],
+    techStack: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems'],
+    realImplementation: true;
+    implementationDetails: 'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.',
+    roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.';
+    useCases: [
+      'Asteroid miningResource extractionSpace logisticsResource processingMarket analysisRegulatory compliance'
+    ];
+    integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'],
+    support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.',
+    compliance: ['Space regulations, International treaties, Safety standards, Industry regulations'],
+    link: 'https://ziontechgroup.com/space-mining-platform';
+    icon: '🚀';
+    color: 'from-purple-500 to-pink-600';
+    popular: true;
+    launchDate: '2024-01-05';
+    customers: 120;
+    rating: 4.9;
+    reviews: 45;
+    marketSize: '$3.5B space mining market';
+    growthRate: '85% annually'
+  },
+  {
+    id: 'quantum-bio-computing-platform';
+    name: 'Quantum Bio-Computing Platform';
+    tagline: 'Quantum computing meets biological systems';
+    description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
+    category: 'Quantum & Emerging Tech';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     price: {
       monthly: 799,
       yearly: 7990,
@@ -499,12 +507,10 @@ export interface EmergingTechService {;
   tagline: string, description: string,
   category: string,
   price: {
-      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
     enterprise: number
-  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -523,7 +529,6 @@ export interface EmergingTechService {;
 
 =======
 ];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ];
 
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
@@ -541,28 +546,56 @@ export interface EmergingTechService {;
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually';
 
-<<<<<<< HEAD
-=======
     growthRate: '75% annually'
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 
 ];
 
 =======
-<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string,;
+  name: string,;
+  tagline: string,;
+  description: string,;
+  category: string,;
+  price: {;
+    monthly: number,;
+    yearly: number,;
+    currency: string,;
+    trialDays: number,;
+    setupTime: string,;
+    enterprise: number;
+  },;
+  features: string[],;
+  benefits: string[],;
+  targetAudience: string[],;
+  marketPosition: string,;
+  competitors: string[],;
+  techStack: string[],;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  roi: string,;
+  useCases: string[],;
+  integrations: string[],;
+  support: string,;
+  compliance: string[],;
+  link: string,;
+  icon: string,;
+  color: string,;
+  popular: boolean,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number,;
+  marketSize: string,;
+  growthRate: string;
+}
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 export interface EmergingTechService {;
-
-=======
-export interface EmergingTechService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -836,12 +869,5 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     reviews: 65,;
     marketSize: '$35B autonomous vehicle market',;
     growthRate: '75% annually';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

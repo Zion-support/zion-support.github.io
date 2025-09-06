@@ -2,15 +2,6 @@
 <<<<<<< HEAD
 
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
@@ -20,54 +11,19 @@ type EnhancementType =
   | 'job-post'
   | 'proposal'
   | 'general';
-<<<<<<< HEAD
-
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {toast} from '@/hooks / use - toast';
-type EnhancementType =;
-  | 'resume - summary';
-  | 'work - description';
-  | 'job - post';
-  | 'proposal';
-  | 'general';
-;
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface AIEnhancementOptions {
-  enhancement_type: EnhancementType;
-=======
 
 
 export interface AIEnhancementOptions {;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   enhancementType: EnhancementType;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   content?: string;
-<<<<<<< HEAD
-
-
-
-export function useAIContentEnhancer() {;
-
-
-=======
   context?: string
   instructions?: string
 }
-<<<<<<< HEAD
 export function useAIContentEnhancer() {
-=======
 
 export function useAIContentEnhancer() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async ({
@@ -90,16 +46,9 @@ export function useAIContentEnhancer() {;
         }
       });
       if (error) {
-<<<<<<< HEAD
-
-      
-      return data && data.enhancedContent
-=======
         throw new Error(error.message)
-<<<<<<< HEAD
       }
       return data.enhancedContent
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     } catch (err: any) {
       const errorMessage = err && err.message || 'Failed to enhance content';
 
@@ -107,15 +56,6 @@ export function useAIContentEnhancer() {;
       toast({
         title: "AI Enhancement Failed";
         description: errorMessage
-=======
-<<<<<<< HEAD
-        throw new Error(error.message)
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
@@ -154,15 +94,6 @@ export function useAIContentEnhancer() {;
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
       return data.enhancedContent
@@ -172,39 +103,21 @@ export function useAIContentEnhancer() {;
       toast({
         title: "AI Enhancement Failed",
         description: errorMessage,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         variant: "destructive"
       });
       console && console.error('Enhancement error:', err);
       return null
     } finally {
       setIsEnhancing(false)
-
-<<<<<<< HEAD
-  context?: string,
-  instructions?: string;
-=======
-    error
-<<<<<<< HEAD
+    }
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  return {
+    enhanceContent;
+    isEnhancing;
+
+    error
+  }
 }
-export /**
- * useAIContentEnhancer - Function description
- */
-function useAIContentEnhancer() {
-  const [is_enhancing, setIsEnhancing] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
 ;
   const enhance_content = async ({
     enhancement_type;
@@ -251,23 +164,5 @@ if ( {) {
     enhanceContent;
     isEnhancing;
     error;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 ;
-  return {
-    enhance_content;
-    is_enhancing;
-    error;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  }
-}

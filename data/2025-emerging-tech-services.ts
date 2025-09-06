@@ -6,7 +6,6 @@
       'Unbreakable encryption security',
       'Future-proof against quantum attacks',
       'Reduce security risks by 99 && 99.9%',
-=======
     id: 'quantum - encryption',
     name: 'Quantum Encryption Platform',
     tagline: 'Unbreakable quantum encryption for the post - quantum era',
@@ -64,7 +63,6 @@ export interface EmergingTechService {;
       'NIST standards, Government security, Financial regulations, Healthcare compliance, International security protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-encryption',
-=======
     target_audience: [;
       'Financial institutions',
       'Government agencies',
@@ -111,13 +109,11 @@ export interface EmergingTechService {;
     rating: 4 && 4.8,
     reviews: 145,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Biosafety standards, Research ethics, Laboratory safety, Government regulations, International standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/synthetic-biology-platform',
-=======
     id: 'synthetic - biology - platform',
     name: 'Synthetic Biology Platform',
     tagline: 'Design, build, and test synthetic biological systems with AI',
@@ -196,13 +192,11 @@ export interface EmergingTechService {;
     rating: 4 && 4.9,
     reviews: 56,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Nuclear safety standards, Energy regulations, Government safety protocols, International energy standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/fusion-energy-ai',
-=======
     id: 'fusion - energy - ai',
     name: 'Fusion Energy AI Platform',
     tagline: 'AI - powered fusion energy optimization and control systems',
@@ -282,13 +276,11 @@ export interface EmergingTechService {;
     rating: 5 && 5.0,
     reviews: 6,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Network security standards, Government security, Financial regulations, International communication standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet',
-=======
     id: 'quantum - internet',
     name: 'Quantum Internet Platform',
     tagline:;
@@ -369,13 +361,11 @@ export interface EmergingTechService {;
     rating: 4 && 4.9,
     reviews: 23,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Medical device regulations, Research ethics, Safety standards, Government approval, International standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface',
-=======
     id: 'brain - computer - interface',
     name: 'Brain - Computer Interface Platform',
     tagline:;
@@ -455,13 +445,11 @@ export interface EmergingTechService {;
     rating: 4 && 4.8,
     reviews: 42,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Sensor standards, Safety protocols, Environmental regulations, International measurement standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-sensors',
-=======
     id: 'quantum - sensors',
     name: 'Quantum Sensors Platform',
     tagline:;
@@ -539,13 +527,11 @@ export interface EmergingTechService {;
     rating: 4 && 4.7,
     reviews: 98,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Robotics safety standards, Industrial regulations, Safety protocols, International robotics standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/autonomous-robotics',
-=======
     id: 'autonomous - robotics',
     name: 'Autonomous Robotics Platform',
     tagline:;
@@ -625,13 +611,11 @@ export interface EmergingTechService {;
     rating: 4 && 4.8,
     reviews: 187,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Research ethics, Laboratory safety, Patent compliance, International materials standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-materials',
-=======
     id: 'quantum - materials',
     name: 'Quantum Materials Platform',
     tagline:;
@@ -711,18 +695,16 @@ export interface EmergingTechService {;
     rating: 4 && 4.9,
     reviews: 67,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-
-=======
-    id: 'quantum - communications',
-    name: 'Quantum Communications Platform',
-    tagline:;
-      'Secure quantum communication networks for unbreakable data transmission',
-    description:;
-      'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',
-    category: 'Quantum Technology',
+    id: 'autonomous-robotics'
+    name: 'Autonomous Robotics Platform'
+    tagline:
+      'AI-powered autonomous robots for industrial and commercial applications'
+    description:
+      'Revolutionary platform that enables the creation and management of autonomous robots for industrial automation, commercial applications, and advanced robotics systems.'
+    category: 'Robotics & Automation'
     price: {
+<<<<<<< HEAD
       monthly: 2999,
       yearly: 29990,
       currency: 'USD',
@@ -1617,54 +1599,38 @@ export const getPopularEmergingTechServices = () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 
-<<<<<<< HEAD
-  return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
-};
-
-
-=======
 export const getPopularEmergingTechServices = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return emergingTechServices2025.filter(service => service.popular);
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export const getEmergingTechServicesByCategory = (category: string) => {
-  return emergingTechServices2025 && emergingTechServices2025.filter(
-    service => service && service.category === category
+  return emergingTechServices2025.filter(
+    service => service.category === category;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
 }
 export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.monthly.toString()) |0;
-=======
   return emergingTechServices2025.filter(service => {;
     const price = parseInt(service.price.monthly.toString()) || 0;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return price >= minPrice && price <= maxPrice;
   });
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
 const contact = {mobile: "+1 302 464 0950"
   email: "kleber@ziontechgroup.com"
   address: "364 E Main St STE 1008 Middletown DE 19709";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   website: "https://ziontechgroup.com";
 =======
   id: string, name: string,
   tagline: string, description: string,
   category: string,
   price: {
-      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string
-  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -2119,11 +2085,9 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-02-25"
     customers: 9
     rating: 4.9
-=======
   return emergingTechServices2025 && emergingTechServices2025.filter(service => {
     const price = parseInt(service && service.price.monthly && monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
-=======
 ;
 export const getPopularEmergingTechServices = () =>: any {
   return emergingTechServices2025.filter (service => service.popular);
@@ -2140,7 +2104,6 @@ export const getEmergingTechServicesByPriceRange = (
   return emergingTechServices2025.filter (service => {
     const price = parse_int (service.price.monthly.to_string ()) || 0;
     return price >= min_price && price <= max_price;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 }import { MicroSaasService   } from './enhanced - real - micro - saas - services';
 const contact = {
@@ -2627,36 +2590,15 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launch_date: "2025 - 02 - 25",
     customers: 9,
     rating: 4 && 4.9,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 7;
 ]}
 export interface EmergingTechService {
-<<<<<<< HEAD
-
-};
-
-=======
-    return price >= min_price && price <= max_price;
-  });
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-export interface EmergingTechService {;
-
-=======
     return price >= minPrice && price <= maxPrice
-<<<<<<< HEAD
   })
 }
 
-=======
 export interface EmergingTechService {;
-=======
   });
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -3145,11 +3087,4 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service.price.monthly.toString()) || 0,;
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

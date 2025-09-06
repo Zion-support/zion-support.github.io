@@ -1,86 +1,26 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react',;
 import ServiceLanding from '../components/sections/ServiceLanding',;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
-<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-
-
-
-=======
-<<<<<<< HEAD
-}
-
-=======
-import React from 'react',
-import ServiceLanding from '../components / sections / ServiceLanding',
-export default /**
- * AIPredictiveMaintenancePlatform - Function description
- */
-function AIPredictiveMaintenancePlatform() {
-return (
-  <ServiceLanding;
-  title="AI Predictive Maintenance Platform";
-  description="Predict equipment failures, schedule maintenance proactively, and reduce downtime with sensor analytics and AI models.";
-  subtitle="Reliability at lower cost";
-  pricePerMonthUSD={499}
-    implementation_weeks="2 - 4 weeks";
-  roi_note="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%";
-  features={[;
-    "Sensor ingestion and anomaly detection",
-    "Remaining useful life (RUL) predictions",
-    "Work order automation and CMMS integration",
-    "Root cause analysis",
-    "Digital twin modeling",
-    "Edge and cloud deployment",
-    "Visualizations and alerting",
-    "APIs and event webhooks";
-  ]}
-    industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
-    canonical="https: //ziontechgroup.com / ai - predictive - maintenance - platform";
-  />);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
+				"APIs and event webhooks"
+			]}
+			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
 export default function AIPredictiveMaintenancePlatform() {
   return <div>AI Predictive Maintenance Platform</div>;
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
 			title="AI Predictive Maintenance Platform"
 			description="Predict equipment failures, schedule maintenance proactively, and reduce downtime with sensor analytics and AI models."
 			subtitle="Reliability at lower cost"
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 			pricePerMonthUSD={499}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 			pricePerMonthUSD={499  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -94,11 +34,6 @@ export default function AIPredictiveMaintenancePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 			implementationWeeks="2-4 weeks"
 			roiNote="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%"
 			features={[
@@ -110,22 +45,12 @@ export default function AIPredictiveMaintenancePlatform() {
 				"Edge and cloud deployment",
 				"Visualizations and alerting",
 				"APIs and event webhooks"
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 			]}
 			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
 			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
 		/>
 	)
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -152,10 +77,6 @@ export default function AIPredictiveMaintenancePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
 		/>
 	)
@@ -175,5 +96,3 @@ export default function AIPredictiveMaintenancePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

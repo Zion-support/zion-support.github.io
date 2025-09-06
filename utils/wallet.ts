@@ -1,22 +1,6 @@
-<<<<<<< HEAD
-
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-=======
-<<<<<<< HEAD
 export async function connectMetaMask(): Promise<string[]> {
-<<<<<<< HEAD
   if (typeof window === 'undefined' |!window.ethereum) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
   if (typeof window === 'undefined' || !window.ethereum) {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -38,27 +22,12 @@ if ( {) {
     });
     return accounts;
   } catch (error) {
-    throw new Error ('Failed to connect to MetaMask');
+    throw new Error('Failed to connect to MetaMask');
   }
 }
-<<<<<<< HEAD
-
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-=======
 export async function getAccounts(): Promise<string[]> {
-<<<<<<< HEAD
   if (typeof window === 'undefined' |!window.ethereum) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
   if (typeof window === 'undefined' || !window.ethereum) {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return [];
   }
   try {
@@ -83,24 +52,9 @@ if ( {) {
     return [];
   }
 }
-<<<<<<< HEAD
-
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-=======
 export async function getBalance(address: string): Promise<string> {
-<<<<<<< HEAD
   if (typeof window === 'undefined' |!window.ethereum) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
   if (typeof window === 'undefined' || !window.ethereum) {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -123,27 +77,12 @@ if ( {) {
     });
     return balance;
   } catch (error) {
-    throw new Error ('Failed to get balance');
+    throw new Error('Failed to get balance');
   }
 }
-<<<<<<< HEAD
-
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-=======
 export async function signMessage(message: string, address: string): Promise<string> {
-<<<<<<< HEAD
   if (typeof window === 'undefined' |!window.ethereum) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
   if (typeof window === 'undefined' || !window.ethereum) {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -166,7 +105,7 @@ if ( {) {
     });
     return signature;
   } catch (error) {
-    throw new Error ('Failed to sign message');
+    throw new Error('Failed to sign message');
   }
 }
 
@@ -175,35 +114,12 @@ if ( {) {
 declare global {
   interface Window {
     ethereum?: {
-      request: (args: { method: string; params?: any[] }) => Promise < any>;
+      request: (args: { method: string; params?: any[] }) => Promise<any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
-<<<<<<< HEAD
-
-      remove_listener: (event: string, callback: (accounts: string[]) => void) => void;
-
-=======
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
-=======
-      removeListener: (event: string, callback: (accounts: string[]) => void) => void;
 
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
     };
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }

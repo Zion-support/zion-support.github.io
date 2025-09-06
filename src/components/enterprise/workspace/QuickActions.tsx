@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -110,29 +107,14 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
       description: 'Set up candidate interviews',
       color: 'bg - amber - 100 dark:bg - amber - 900 / 20',
     },
-  ];
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle > Quick Actions</CardTitle>;
-        <CardDescription > Fast access to common tasks</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <div className='grid grid - cols - 1 sm:grid - cols - 2 gap - 4'>;
-          {actions.map (action => (
-            <Button;
-
-              key={action.id}
-              variant='outline'              className={`h - auto justify - start p - 4 ${action.color}`}
-            >;
-              <div className='flex flex - col items - start text - left'>;
-                <div className='flex items - center'>;
-                  {action.icon}
-                  <span>{action.label}</span>;
-                </div>;
-
-                <span className='mt - 1 text - xs text - muted - foreground'>;
-                  {action.description}
+    {
+      id: "schedule",
+      label: "Schedule Interview",
+      icon: <Calendar className="h-5 w-5 mr-2" />,
+      description: "Set up candidate interviews",
+      color: "bg-amber-100 dark:bg-amber-900/20"
+    }
+  ],
 
 <<<<<<< HEAD
 =======
@@ -148,51 +130,32 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
         <CardDescription>Fast access to common tasks</CardDescription>
       </CardHeader>
       <CardContent>
-
-
-
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+          {actions.map(action => (
+            <Button
+              key={action.id}
+              variant='outline'              className={`h-auto justify-start p-4 ${action.color}`}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           {actions.map(action => (
 
             <Button 
               key={action.id}
               variant="outline" 
               className={`h-auto justify-start p-4 ${action.color}`}
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-center">
                   {action.icon}
                   <span>{action.label}</span>
                 </div>
-<<<<<<< HEAD
-
-            <Button 
-
-=======
-<<<<<<< HEAD
                 <span className='mt-1 text-xs text-muted-foreground'>
                   {action.description}
                 </span>              </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
           {actions.map(action => (
-<<<<<<< HEAD
             <Button
-=======
             <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
@@ -244,15 +207,6 @@ export function QuickActions() {;
 <<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
@@ -284,30 +238,8 @@ export function QuickActions() {;
                 <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
               </div>;
             </Button>;
-=======
 
 
-=======
-<<<<<<< HEAD
-              <div className="flex flex-col items-start text-left">
-                <div className="flex items-center">
-                  {action.icon}
-                  <span>{action.label}</span>
-                </div>
-                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
-              </div>
-            </Button>
-          ))}
-        </div>
-<<<<<<< HEAD
-      </CardContent>
-    </Card>
-  )
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
               <div className='flex flex-col items-start text-left'>
                 <div className='flex items-center'>
                   {action.icon}
@@ -320,18 +252,14 @@ export function QuickActions() {;
               </div>
 
             </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
         </div>;
       </CardContent>;
     </Card>;
   );
 }
-
-  );
 }
 
-=======
                 </span>              </div>;
                 <span className="mt - 1 text - xs text - muted - foreground">{action.description}</span>;
           {actions.map (action => (
@@ -352,18 +280,5 @@ export function QuickActions() {;
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 ;
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

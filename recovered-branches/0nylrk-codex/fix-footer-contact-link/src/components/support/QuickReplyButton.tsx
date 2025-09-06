@@ -1,31 +1,12 @@
 
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-=======
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface QuickReplyButtonProps {
   text: string;
   onClick: () => void
@@ -48,22 +29,10 @@ export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProp
       variant="outline"
       size="sm"
       className={cn(
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         "transition-colors duration-200"
-=======
         "border-zion-purple/30 hover:bg-zion-purple hover:text-white",
         "transition-colors duration-200"
 import React from "react",;
@@ -82,66 +51,12 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
       className={cn(;
         "border-zion-purple/30 hover:bg-zion-purple hover:text-white";
         "transition-colors duration-200";
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       )}
       onClick={onClick}>;
       {text}
-<<<<<<< HEAD
-
-    </Button>;
-=======
     </Button>
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 }
-
-=======
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { cn  } from '@/lib / utils';
-interface QuickReplyButtonProps {
-  text: string;
-  on_click: () => void;
-}
-export /**
- * QuickReplyButton - Function description
- */
-function QuickReplyButton() {
-  return (
-    <Button;
-      variant="outline";
-      size="sm";
-      className={cn (
-        "border - zion - purple / 30 hover: bg - zion - purple hover:text - white",
-        "transition - colors duration - 200",
-      )}
-      on_click={on_click}
-    >;
-      {text}
-    </Button>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    </Button>
-
   )
 }
 ;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

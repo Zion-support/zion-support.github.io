@@ -1,21 +1,5 @@
-
-<<<<<<< HEAD
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-=======
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) { const { open, toggleSidebar  } = useSidebar()
-      >
-      {open ? <X className='h-4 w-4' /> : <Menu className='h-4 w-4' />}
-      <span className='sr-only'>Toggle Sidebar</span>
-<<<<<<< HEAD
-
-    </Button>
-  )
-}
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
     </Button>;
   );
@@ -23,10 +7,6 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) { c
 };
 <<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -46,7 +26,6 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
       size="icon"
 import React from "react",;
 import { Button } from "@/components/ui/button",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Menu, X } from 'lucide-react';
 import { useSidebar } from './sidebar-context';
 import { cn } from '@/lib/utils';
@@ -61,24 +40,10 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
     </Button>;
   );
 };
+};
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 <<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

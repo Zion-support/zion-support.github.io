@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import {
@@ -17,12 +14,7 @@ export default async function handler(
 ) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { v4 as uuidv4 } from 'uuid';
 import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore';
 import type { Review } from '../../../types/reviews';
@@ -30,8 +22,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   }
   try {
@@ -70,19 +60,14 @@ if ( {) {
 
       };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+    if (!text |String(text).trim().length === 0) {
+      return res.status(400).json({ error: "Review text is required" });
     const {
       projectId,
     fromRole,
       fromId,
     rating,
       text,
-<<<<<<< HEAD
     categories,
       anonymous} = req.body as {
       projectId: string,
@@ -92,7 +77,6 @@ if ( {) {
       text: string,
       categories?: Review['categories'];
       anonymous?: boolean
-=======
       categories,
       anonymous
     } = req.body as {
@@ -100,7 +84,6 @@ if ( {) {
       fromId: string, rating: number,
       text: string, categories?: Review['categories'],
       anonymous?: boolean;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     };
     if (!projectId || !fromRole || !fromId) {
       return res.status(400).json({ error: 'Missing required fields' })
@@ -110,8 +93,6 @@ if ( {) {
     }
     if (!text || String(text).trim().length === 0) {
       return res.status(400).json({ error: 'Review text is required' })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     const project = await findProjectById(projectId);
     if (!project) {
@@ -123,14 +104,12 @@ if ( {) {
 =======
       return res.status(404).json({ error: 'Project not found' })
     }
+    if (project.status !== "Completed") {
+      return res.status(400).json({
+        error: "Reviews can only be submitted after project completion"
+      });
     if (project.status !== 'Completed') {
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
-=======
-
-    if (project.status !== 'Completed') {
-      return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
-
-
     }
 
     const toRole = counterpartRole(fromRole);
@@ -144,30 +123,38 @@ if ( {) {
     }
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
-
-
-        error: "You have already submitted a review for this project",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      return res.status(409).json({
+        error: "You have already submitted a review for this project"
       });
-=======
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
-      return res.status(409).json({ error: 'You have already submitted a review for this project' })
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
-
-      .json({ message: "Review submitted", reviewId: review && review.id });
+    const now = new Date().toISOString();
+    const review: Review = {
+      id: uuidv4()
+      projectId
+      fromRole
+      fromId
+      toRole
+      toId
+      rating
+      text: String(text).trim()
+      categories
+      anonymous: Boolean(anonymous)
+      approved: false, // requires admin approval
+      reported: false
+      reports: []
+      removed: false
+      createdAt: now
+    }
+    await upsertReview(review);
+    return res
+      .status(201)
+      .json({ message: "Review submitted", reviewId: review.id });
 
   } catch (error: any) {
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
-  }
-}
-=======
       id: uuidv4(),
       projectId,
       fromRole,
@@ -213,14 +200,6 @@ if ( {) {
     return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
   } catch (error: any) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
-<<<<<<< HEAD
-
-      anonymous: Boolean (anonymous),
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Review submitted' });
@@ -389,7 +368,6 @@ export default async function handler(req, res) {
       text: String(text).trim(),;
       categories,;
       anonymous: Boolean(anonymous);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       approved: false, // requires admin approval;
       reported: false,
       reports: [],
@@ -408,11 +386,6 @@ export default async function handler(req, res) {
       .json ({ error: "Internal server error", details: error?.message });
   }
 }
-<<<<<<< HEAD
-
-=======
-
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -429,9 +402,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,46 +1,10 @@
-<<<<<<< HEAD
-
-
-import {useCallback, useMemo, useState} from 'react';
-import Head from 'next/head';
-
-
-import DatePicker from 'react-datepicker';
-
-
-  MediaAsset,;
-  PressReleaseType,;
-} from '../../utils/mediaKit';
-import {;
-  getDefaultAssets,;
-  buildPressRelease,;
-  buildTimeline,;
-
-
-
-} from '../../utils/mediaKit';
-const KitPage = () => {;
-
-=======
-import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
-import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
-
-const KitPage = () => {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useCallback, useMemo, useState  } from 'react';
 import Head from 'next/head',
-=======
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next/head';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import DatePicker from 'react-datepicker';
 
 import type {
-<<<<<<< HEAD
   MediaBundle
   MediaAsset
   PressReleaseType;
@@ -49,47 +13,27 @@ import {
   getDefaultAssets
   buildPressRelease
   buildTimeline;
-=======
   MediaBundle,
   MediaAsset,;
   PressReleaseType,;
 } from '../../utils/mediaKit';
-import {
-  getDefaultAssets,
+import {;
+  getDefaultAssets,;
   buildPressRelease,;
   buildTimeline,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../utils/mediaKit';
 const KitPage = () => {
-=======
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 const KitPage = () => {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(
     []
   );
@@ -132,7 +76,6 @@ const KitPage = () => {;
     const { saveAs } = await import('file-saver');
     saveAs(blob, `zion-media-kit-${bundle}.zip`);  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
   const onGeneratePdf = useCallback(async () => {
-=======
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>([]),;
   const assets: MediaAsset[] = useMemo(() => getDefaultAssets(bundle), [bundle]),;
   const onGenerateTimeline = useCallback(() => {;
@@ -183,35 +126,12 @@ const KitPage = () => {;
     saveAs(blob, `zion-media-kit-${bundle}.zip`);
   }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]),;
   const onGeneratePdf = useCallback(async () => {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-
-
-  const assets: MediaAsset[] = useMemo(;
-    () => getDefaultAssets(bundle),;
-    [bundle];
-  );
-
-  const onGenerateTimeline = useCallback(() => {;
-    setTimeline(buildTimeline(startDate));  }, [startDate]);
-
-  const onDownloadZip = useCallback(async () => {;
-    const JSZip = (await import('jszip')).default;
-    const zip = new JSZip();
-
-    // Add static/dynamic assets;
-     else if (asset && asset.type === 'binary' && asset && asset.path) {;
-        const res = await fetch(asset && asset.path);
-        const blob = await res && res.blob();
-        zip && zip.file(asset && asset.filename, blob);      }
+    const drawText = (text: string, x: number, y: number, size = 12) => {
+      page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
     }
 
     // Add press releases;
@@ -419,18 +339,11 @@ if ( {) {
       tokenName,;
 
     });
-<<<<<<< HEAD
-    const onCopy = () => navigator && navigator.clipboard.writeText(text);
-=======
     const onCopy = () => navigator.clipboard.writeText(text);
-=======
-<<<<<<< HEAD
     const drawText = (text: string, x: number, y: number, size = 12) => {;
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
     },;
     let y = 760;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     drawText('Zion Media Kit', 50, y, 18), y -= 24,;
     drawText(`Bundle: ${bundle}`, 50, y), y -= 16,;
     drawText('Assets:', 50, y), y -= 16,;
@@ -459,29 +372,27 @@ if ( {) {
     const nowStr = new Date().toISOString().substring(0, 10),
     const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName }),
     const onCopy = () => navigator.clipboard.writeText(text),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return (
-      <div className='p-4 border rounded-lg space-y-2'>;
-        <div className='flex items-center justify-between'>;
-          <h4 className='font-semibold'>{title}</h4>;
-          <button
-            className='text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200'
-            onClick={onCopy}>;
-            Copy;
-          </button>;
-        </div>;
-        <pre className='whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto'>;
-          {text}
-
-        </pre>;
-      </div>;
-    );  };
-
+      <div className="p-4 border rounded-lg space-y-2">
+        <div className="flex items-center justify-between">
+          <h4 className="font-semibold">{title}</h4>
+          <button className="text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200" onClick={onCopy}>Copy</button>
+        </div>
+        <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
+      </div>
+    );  }
+    )
+  },
+  return (
+    <div>
+      <Head>
+        <title>Media Kit - Zion</title>
+        <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
+      </Head>
+      <div className='space-y-8'>
+        <header className='flex items-center justify-between'>
+          <h1 className='text-2xl font-bold'>Media Kit</h1>
+          <div className='flex gap-2'>
             <button
               onClick={onDownloadZip}
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700'>;
@@ -506,79 +417,6 @@ if ( {) {
                   </button>;
                 );
               )}
-            </div>;
-            <p className='text-xs text-gray-500 mt-2'>;
-              Toggle to tailor assets and legal docs.;
-            </p>;
-          </div>;
-          <div className='p-4 border rounded-lg'>;
-            <h3 className='font-semibold mb-2'>Organization</h3>;
-            <div className='space-y-2'>;
-              <input
-                className='w-full border rounded px-2 py-1'
-                value={companyName}
-                onChange={e => setCompanyName(e && e.target.value)}
-                placeholder='Company name';
-              />;
-              <input
-                className='w-full border rounded px-2 py-1'
-                value={raiseAmount}
-                onChange={e => setRaiseAmount(e && e.target.value)}
-                placeholder='Seed raise amount';
-              />;
-              <input
-                className='w-full border rounded px-2 py-1'
-                value={tokenName}
-                onChange={e => setTokenName(e && e.target.value)}
-
-=======
-<<<<<<< HEAD
-        <section className='grid md:grid - cols - 3 gap - 6'>;
-          <div className='p - 4 border rounded - lg'>;
-            <h3 className='font - semibold mb - 2'>Bundle</h3>;
-            <div className='flex gap - 2'>;
-              {(['general', 'web3', 'institutional'] as MediaBundle[]).map (
-                boolean => (
-                  <button;
-                    key={b}
-                    on_click={() => set_bundle (b)}
-                    className={`px - 3 py - 1 rounded border ${bundle === b ? 'bg - blue - 600 text - white border - blue - 600' : 'bg - white'}`}
-                  >;
-                    {b}
-                  </button>))}
-            </div>;
-            <p className='text - xs text - gray - 500 mt - 2'>;
-              Toggle to tailor assets and legal docs.;
-            </p>;
-          </div>;
-          <div className='p - 4 border rounded - lg'>;
-            <h3 className='font - semibold mb - 2'>Organization</h3>;
-            <div className='space - y-2'>;
-              <input;
-                className='w - full border rounded px - 2 py - 1';
-                value={company_name}
-                on_change={e => setCompanyName (e.target.value)}
-                placeholder='Company name';
-              />;
-              <input;
-                className='w - full border rounded px - 2 py - 1';
-                value={raise_amount}
-                on_change={e => setRaiseAmount (e.target.value)}
-                placeholder='Seed raise amount';
-              />;
-              <input;
-                className='w - full border rounded px - 2 py - 1';
-                value={token_name}
-                on_change={e => setTokenName (e.target.value)}
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                placeholder='Token name';
-              />;
-            </div>;
-          </div>;
-
-
-=======
       <div className="space-y-8">
         <header className="flex items-center justify-between">
           <h1 className="text-2xl font-bold">Media Kit</h1>
@@ -598,12 +436,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </div>
             <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
           </div>
@@ -625,59 +457,24 @@ if ( {) {
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
                 {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))}
               </ul>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            )}
-
-          </div>;
-        </section>;
-
-        <section className='p-4 border rounded-lg'>;
-          <h3 className='font-semibold mb-3'>Assets Included</h3>;
-          <ul className='grid md:grid-cols-2 gap-3'>;
-            {assets && assets.map(a => (;
-
-              <li
-                key={a && a.filename}
-                className='flex items-center justify-between border rounded p-2'>;
-                <span className='text-sm'>{a && a.filename}</span>;
-                {a && a.path ? (;
-                  <a href={a && a.path} download className='text-blue-600 text-sm'>;
-                    Download;
-                  </a>;
-                ) : (;
-                  <span className='text-gray-400 text-xs'>generated</span>;
-                )}              </li>;
-
-=======
-=======
-
-
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>
+        </section>
+        <section className='p-4 border rounded-lg'>
+          <h3 className='font-semibold mb-3'>Assets Included</h3>
+          <ul className='grid md:grid-cols-2 gap-3'>
         <section className="p-4 border rounded-lg">
           <h3 className="font-semibold mb-3">Assets Included</h3>
           <ul className="grid md:grid-cols-2 gap-3">
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
                 {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
               </li>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            ))}
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -685,7 +482,6 @@ if ( {) {
 }
           </ul>
         </section>
-<<<<<<< HEAD
         <section className='p-4 border rounded-lg space-y-4'>
           <h3 className='font-semibold'>Prewritten Press Releases</h3>
           <div className='grid md:grid-cols-3 gap-4'>
@@ -698,23 +494,9 @@ if ( {) {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 export default KitPage;
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-          </ul>;
-        </section>;
-=======
-=======
-
-};
-
-
-
 
         <section className="p-4 border rounded-lg space-y-4">
           <h3 className="font-semibold">Prewritten Press Releases</h3>
@@ -746,72 +528,4 @@ export default KitPage;
   );
 
 },;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default KitPage;
-
-
-=======
-          <div className='p - 4 border rounded - lg'>;
-            <h3 className='font - semibold mb - 2'>Rollout Timeline</h3>;
-            <div className='space - y-2'>;
-              <DatePicker;
-                selected={start_date}
-                on_change={d => d && setStartDate (d)}
-                className='w - full border rounded px - 2 py - 1';
-              />;
-              <button;
-                on_click={onGenerateTimeline}
-                className='px - 3 py - 1 rounded bg - green - 600 text - white hover:bg - green - 700';
-              >;
-                Generate;
-              </button>;
-            </div>;
-            {timeline.length > 0 && (
-              <ul className='mt - 3 text - sm list - disc list - inside space - y-1'>;
-                {timeline.map (t => (
-                  <li key={t.label}>;
-                    <span className='font - medium'>{t.label}:</span> {t.date}
-                  </li>))}              </ul>)}
-          </div>;
-        </section>;
-        <section className='p - 4 border rounded - lg'>;
-          <h3 className='font - semibold mb - 3'>Assets Included</h3>;
-          <ul className='grid md:grid - cols - 2 gap - 3'>;
-            {assets.map (array => (
-              <li;
-                key={a.filename}
-                className='flex items - center justify - between border rounded p - 2';
-              >;
-                <span className='text - sm'>{a.filename}</span>;
-                {a.path ? (
-                  <a href={a.path} download className='text - blue - 600 text - sm'>;
-                    Download;
-                  </a>) : (
-                  <span className='text - gray - 400 text - xs'>generated</span>)}              </li>))}
-          </ul>;
-        </section>;
-        <section className='p - 4 border rounded - lg space - y-4'>;
-          <h3 className='font - semibold'>Prewritten Press Releases</h3>;
-          <div className='grid md:grid - cols - 3 gap - 4'>;
-            <PressReleaseCard type='seed - round' title='Seed round' />;
-            <PressReleaseCard type='launch' title='Launch' />;
-            {bundle === 'web3' && (
-              <PressReleaseCard type='token - sale' title='Token sale' />)}          </div>;
-        </section>;
-      </div>;
-    </div>);
-}
-;
-export default KitPage;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -2,11 +2,9 @@
 
 
     deployment: 'Cloud-native, hybrid options',
-=======
     support: ['24 / 7 operations support', 'IT experts', 'Implementation team'],
     compliance: ['SOC 2', 'ISO 27001', 'ITIL', 'COBIT'],    scalability: 'Enterprise - grade, multi - tenant support',    roi: '450% within 18 months',
     deployment: 'Cloud - native, hybrid options',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     maintenance: 'Fully autonomous, continuous optimization',
     training: 'IT operations training, certification',
     documentation: 'Operations guides, best practices',
@@ -21,15 +19,6 @@
 =======
 
 export interface EnterpriseITService2029V2 {;
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface EnterpriseITService2029V2 {
-=======
-export interface EnterpriseITService2029V2 {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   description: string;
@@ -340,21 +329,18 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     funding: 'Series B funding, $180M valuation'
     exit: 'IPO or enterprise acquisition'
     contact: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-=======
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
 
     ];
@@ -392,15 +378,10 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       website: 'https://ziontechgroup.com'
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
     }
   }
 ];
-=======
 export interface EnterpriseITService2029V2 {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   description: string,;
@@ -629,13 +610,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
       email: 'kleber@ziontechgroup.com',;
       website: 'https://ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

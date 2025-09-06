@@ -51,21 +51,21 @@ export default function HomePage() {
             icon="⚙️"
           />
           <Card
-            title="Blockchain Solutions"
-            href="/services/blockchain-solutions"
-            description="DeFi protocols, NFTs, smart contracts, and Web3 applications."
+            title="Blockchain"
+            href="/services/blockchain"
+            description="Smart contracts, DeFi protocols, NFT platforms and Web3 solutions."
             icon="⛓️"
           />
           <Card
-            title="Automation Solutions"
-            href="/services/automation-solutions"
-            description="RPA, workflow automation, and AI-powered business process optimization."
-            icon="⚡"
+            title="Cybersecurity"
+            href="/services/cybersecurity"
+            description="Penetration testing, security audits, compliance and incident response."
+            icon="🔒"
           />
           <Card
             title="Data Analytics"
             href="/services/data-analytics"
-            description="Business intelligence, predictive analytics, and data engineering solutions."
+            description="Business intelligence, predictive analytics and data science solutions."
             icon="📊"
           />
         </div>

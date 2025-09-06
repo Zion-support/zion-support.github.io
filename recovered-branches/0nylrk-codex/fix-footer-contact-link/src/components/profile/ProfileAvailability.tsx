@@ -1,31 +1,15 @@
 
-<<<<<<< HEAD
-import { Availability } from '@/types / profile';
-import { Badge } from '@/components / ui / badge';
-import { Calendar, Clock, Check } from './lucide-react';
-
-=======
-<<<<<<< HEAD
 import { Availability } from "@/types/profile",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from "lucide-react";
-=======
-<<<<<<< HEAD
 import {Availability} from "@/types/profile";
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ProfileAvailabilityProps {
-  availability: Availability;
+  availability: Availability
 }
+export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
 
-<<<<<<< HEAD
-import {Availability} from "@/types/profile";
-import {Badge} from "@/components/ui/badge";
-import {Calendar, Clock, Check} from "lucide-react";
-=======
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
     switch(status) {;
       case 'available': return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
@@ -41,18 +25,17 @@ import {Calendar, Clock, Check} from "lucide-react";
       case 'unavailable': return 'Currently Unavailable'
       default: return ''
     }
-<<<<<<< HEAD
   }
-=======
-=======
   };
-=======
 import { Availability } from "@/types/profile",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Badge } from "@/components/ui/badge",
 import { Calendar, Clock, Check } from "lucide-react",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+interface ProfileAvailabilityProps {
+  availability: Availability
+import { Availability } from "@/types/profile",;
+import { Badge } from "@/components/ui/badge",;
+import { Calendar, Clock, Check } from "lucide-react",;
 interface ProfileAvailabilityProps {;
   availability: Availability;
 }
@@ -75,28 +58,16 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
       default: return '';
 
     }
-<<<<<<< HEAD
-  }
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   return (
-
-
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+      <h3 className="text-xl font-bold text-white mb-4">Availability</h3>
+      <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
+        <Badge
+          variant="outline"
         <Badge 
           variant="outline" 
-
-
           className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
         >
           {getStatusText(availability.status)}

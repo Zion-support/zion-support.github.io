@@ -1,5 +1,4 @@
-
-
+import { IntegrationProviderMeta } from "./types";
 
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
@@ -7,7 +6,15 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 import { IntegrationProviderMeta  } from './types';
 ;
 export const PROVIDERS: IntegrationProviderMeta[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+=======
+import { IntegrationProviderMeta } from "./types";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+import { IntegrationProviderMeta } from "./types";
+export const PROVIDERS: IntegrationProviderMeta[] = [
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     id: "salesforce"
     name: "Salesforce"
@@ -83,13 +90,6 @@ export function getProviderById(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
@@ -117,14 +117,17 @@ export function getProviderById (
     category: "ats",
     description: "HRIS & ATS",
   },;
-
 ];
 export function getProviderById(
-
+  id: string
+): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find((p) => p.id === id);
+}
   id: string,
+): IntegrationProviderMeta | undefined {;
+  return PROVIDERS.find((p) => p.id === id);
+}
+): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find(p => p.id === id);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}

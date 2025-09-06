@@ -1,53 +1,27 @@
 
-
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-
-=======
-
 import React from "react";
 import {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
+export function PaymentMethods() {
+  // Mock payment methods
 
-<<<<<<< HEAD
-
-
-=======
   const paymentMethods = [
     {
-<<<<<<< HEAD
       id: "pm-1"
       type: "credit_card"
       brand: "Visa"
@@ -66,8 +40,6 @@ import { CreditCard, Plus, Trash } from "lucide-react";
       isDefault: false
     }
   ];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
@@ -78,26 +50,11 @@ import { CreditCard, Plus, Trash } from "lucide-react";
     },
 <<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
 
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     {
       id: "pm-2",
       type: "credit_card",
@@ -105,18 +62,12 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
-
+      isDefault: false,
+    },;
+  ];
       isDefault: false}
   ],
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <Card>
@@ -168,18 +119,8 @@ import { CreditCard, Plus, Trash } from "lucide-react",
         </Button>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -306,18 +247,7 @@ function PaymentMethods() {
           Add Payment Method;
         </Button>;
       </CardFooter>;
-<<<<<<< HEAD
-    </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
-=======
     </Card>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

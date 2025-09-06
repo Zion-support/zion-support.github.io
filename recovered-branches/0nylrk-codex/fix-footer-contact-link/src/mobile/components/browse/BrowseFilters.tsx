@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-
-import React, { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { Slider } from '@/components / ui / slider';
-import { Switch } from '@/components / ui / switch';
-import { Input } from '@/components / ui / input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { X, Filter } from './lucide-react';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from '@/components / ui / sheet';
-import { Badge } from '@/components / ui / badge';
-import { Label } from '@/components / ui / label';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Slider} from "@/components/ui/slider";
@@ -36,8 +20,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter])
     }
   };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -47,23 +29,26 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { X, Filter } from "lucide-react",
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { Label } from "@/components/ui/label";
 interface BrowseFiltersProps {
   type: "jobs" | "talents"
 }
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+  const addFilter = (filter: string) => {
+    if (!activeFilters.includes(filter)) {
+      setActiveFilters([...activeFilters, filter])
+    }
+  }
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  }
+
+import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
 }
-<<<<<<< HEAD
-
-
-
-=======
 ;
 export function BrowseFilters({ type }: BrowseFiltersProps) {;
   const [activeFilters, setActiveFilters] = useState<string[]>([]),;
@@ -72,18 +57,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter]);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">

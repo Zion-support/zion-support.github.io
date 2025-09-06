@@ -1,28 +1,14 @@
-<<<<<<< HEAD
-
-import React from 'react';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {ProductListing} from "@/types/listings";
 import {Star, DollarSign} from "lucide-react";
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useNavigate } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 import { ProductListing } from "@/types/listings";
 import { Star, DollarSign } from "lucide-react";
 interface ProductListingCardProps {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 interface ProductListingCardProps {;
   listing: ProductListing,;
@@ -40,9 +26,12 @@ export function ProductListingCard(): any ({ ;
 }: ProductListingCardProps) {;
   const isGrid = view === 'grid';
   const navigate = useNavigate();
-
-<<<<<<< HEAD
-
+  // Get the first image or use a placeholder
+  const imageUrl = listing.images && listing.images.length > 0
+    ? listing.images[0]
+    : '/placeholder.svg';
+import { ProductListing } from "@/types/listings",
+import { Star, DollarSign } from "lucide-react",
 
 =======
 <<<<<<< HEAD
@@ -57,10 +46,10 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
-
+  listing, ;
+  view = 'grid';
   listing, 
   view = 'grid',
-
   onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
@@ -71,23 +60,23 @@ export function ProductListingCard({
     ? listing.images[0] 
     : '/placeholder.svg',
     
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Format price display
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
     return `${listing.currency}${listing.price.toLocaleString()}`
-
-import { use_navigate } from './react-router-dom';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { ProductListing } from '@/types / listings';
-import { Star, DollarSign } from './lucide-react';
-interface ProductListingCardProps {
-  listing: ProductListing,
-  view?: 'grid' | 'list';
-=======
-
+  }
+  // Handle image loading errors
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    e.currentTarget.src = '/placeholder.svg'
+  }
+  // Handle navigating to listing detail
+  const handleViewListing = () => {
+    navigate(`/listing/${listing.id}`)
+  }
+  // Handle request quote button click
+  const handleRequestQuote = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation()
   },
 
   // Handle image loading errors
@@ -105,13 +94,15 @@ interface ProductListingCardProps {
     e.preventDefault(),
     e.stopPropagation(),
     
-
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
       // Default behavior if no handler provided
       navigate(`/request-quote?listing=${listing.id}`)
-
+    }
+  }
+  return (
+    <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -208,18 +199,6 @@ if ( {) {
 
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Image */}
 
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;
@@ -258,48 +237,8 @@ if ( {) {
                 )}
               </div>;
             )}
-
-;
-  return (
-    <div className={`bg - zion - blue - dark border border - zion - blue - light rounded - lg overflow - hidden flex ${is_grid ? 'flex - col' : 'flex - row'} cursor - pointer`} on_click={handleViewListing}>;
-      {/* Image */}
-      <div className={is_grid ? 'block w - full' : 'block w - 1/3'} on_click={handleViewListing}>;
-        <div className={`relative ${is_grid ? 'h - 48' : 'h - full'}`}>;
-          <img;
-            src={image_url}
-            alt={listing.title}
-            className="w - full h - full object - cover";
-            on_error={handleImageError}
-          />;
-          {listing.featured && (
-            <Badge className="absolute top - 2 right - 2 bg - zion - purple text - white border - none">;
-              Featured;
-            </Badge>)}
-        </div>;
-      </div>;
-      {/* Content */}
-      <div className={`flex flex - col justify - between ${is_grid ? 'p - 4 flex - 1' : 'p - 4 flex - 1'}`}>;
-        <div>;
-          {/* Category & Rating */}
-          <div className="flex justify - between items - center mb - 2">;
-            <Badge variant="outline" className="bg - zion - blue - light / 20 text - zion - slate - light border - zion - blue - light">;
-              {listing.category}
-            </Badge>;
-            {listing.rating && (
-              <div className="flex items - center text - zion - slate - light">;
-                <Star className="h - 4 w - 4 fill - zion - cyan text - zion - cyan mr - 1" />;
-                <span>{listing.rating}</span>;
-                {listing.review_count && (
-                  <span className="text - xs ml - 1">({listing.review_count})</span>)}
-              </div>)}
+          </div>
           </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
@@ -334,92 +273,17 @@ if ( {) {
             ) : (
               <span className="text-zion-slate-light">
                 {formatPrice()}
-<<<<<<< HEAD
               </span>
-=======
               </span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </div>
           <div className="flex gap-2">
             <Button
               size="sm"
               onClick={(e) => {
-<<<<<<< HEAD
                 e.stopPropagation();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-=======
-
-          </div>;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          {/* Title & Description */}
-          <div on_click={handleViewListing} className="block">;
-            <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition - colors">;
-              {listing.title}
-            </h3>;
-          </div>;
-          <p className="text - sm text - zion - slate line - clamp - 2 mb - 4">;
-            {listing.description}
-
-          </div>;
-
-          {/* Title & Description */}
-          <div onClick={handleViewListing} className="block">;
-            <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">;
-              {listing && listing.title}
-            </h3>;
-          </div>;
-          <p className="text-sm text-zion-slate line-clamp-2 mb-4">;
-            {listing && listing.description}
-          </p>;
-
-          {/* Tags */}
-          {listing && listing.tags && listing && listing.tags.length > 0 && (;
-            <div className="flex flex-wrap gap-1 mb-4">;
-              {listing && listing.tags.map((tag, idx) => (;
-                <span
-                  key={idx} 
-                  className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full">;
-
-                  {tag}
-                </span>;
-              ))}
-            </div>;
-          )}
-
-        </div>;
-
-
-        {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;
-          <div className="text-sm font-medium">;
-            {listing && listing.price !== null ? (;
-              <div className="flex items-center text-zion-purple">;
-                <DollarSign className="h-4 w-4 mr-1" />;
-                {formatPrice()}
-              </div>;
-            ) : (;
-              <span className="text-zion-slate-light">;
-                {formatPrice()}
-
-
-              </span>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            )}
-
 
                 e.stopPropagation(),
-
-
                 navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"

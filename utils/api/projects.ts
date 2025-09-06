@@ -1,42 +1,22 @@
-<<<<<<< HEAD
-
-
-} from '../types/milestones';
-import { CurrentUser } from './auth';
-
-=======
-// Project management utilities
-import { v4 as uuidv4 } from 'uuid';
-
-export interface Project {
-=======
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
 import {
-<<<<<<< HEAD
   Project,
   Milestone,
   MilestoneStatus,
-<<<<<<< HEAD
-=======
   Project
   Milestone
   MilestoneStatus
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   isMilestoneStatus
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 export interface Milestone {
-=======
   isMilestoneStatus,;
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
 export interface Milestone {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   title: string;
   summary: string;
@@ -77,15 +57,20 @@ import { CurrentUser } from './auth';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export interface Milestone {
+} from '../types/milestones';
+import { CurrentUser } from './auth';
+
+export interface Milestone {;
+
   id: string;
   title: string;
   description?: string;
-  due_date: string;
-  amount_usd: number;
+  dueDate: string;
+  amountUsd: number;
   status: 'pending' | 'completed' | 'cancelled';
   attachments?: any[];
-  created_at: string;
-  updated_at: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 =======
@@ -101,8 +86,6 @@ export function getProjectById(id: string): Project | null {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export function getAllProjects(): Project[] {
-=======
-<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -112,27 +95,13 @@ export function getProjectById(id: string): Project | null {;
 }
 
 export function getAllProjects(): Project[] {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return projects;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
-<<<<<<< HEAD
-
-    ...project,
-    id: `project_${Date && Date.now()}`,
-    createdAt: new Date().toISOString(),
-=======
-<<<<<<< HEAD
     ...project
     id: `project_${Date.now()}`
     createdAt: new Date().toISOString()
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     updatedAt: new Date().toISOString()
   };
   projects && projects.push(newProject);
@@ -140,12 +109,6 @@ export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updat
   return newProject;
 }
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
@@ -156,118 +119,46 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const project = projects.find(p => p.id === id);
   if (!project) return null;
 
 
   Object.assign(project, updates, { updatedAt: new Date().toISOString() });
-=======
-  const project = projects && projects.find(p => p && p.id === id);
-  if (!project) return null,
-  
-  Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return project;
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
     ...milestone
     id: `milestone_${Date.now()}`
     status: 'pending'
     createdAt: new Date().toISOString()
     updatedAt: new Date().toISOString()
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
     ...milestone,
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
 
     updatedAt: new Date().toISOString();
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   };
-
-=======
   }
-
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
-=======
-  project && project.milestones[idx] = next;
-  project && project.updatedAt = now;
-  saveProject(project);
-  return next;  
-  project && project.milestones.push(newMilestone);
-  project && project.updatedAt = new Date().toISOString();
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return newMilestone;
 }
-<<<<<<< HEAD
-
-
-
-export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {;
-
-
-=======
-<<<<<<< HEAD
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
-=======
 
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const milestone = project.milestones.find(m => m.id === milestoneId);
   if (!milestone) return null;
 
 
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
-=======
-  const milestone = project && project.milestones.find(m => m && m.id === milestoneId);
-  if (!milestone) return null,
-  
-  Object && Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
-  project && project.updatedAt = new Date().toISOString();
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return milestone;
 }
-<<<<<<< HEAD
-
-
-
-export function deleteMilestone(project: Project, milestoneId: string): boolean {;
-
-
-=======
-<<<<<<< HEAD
 export function deleteMilestone(project: Project, milestoneId: string): boolean {
-=======
 
 export function deleteMilestone(project: Project, milestoneId: string): boolean {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const index = project.milestones.findIndex(m => m.id === milestoneId);
   if (index === -1) return false;
 
@@ -518,20 +409,4 @@ if (return false) {
 ;
   return true;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
 
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

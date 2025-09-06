@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 export const JOB_POSTS: Job[] = [
   {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 ];
@@ -13,26 +8,11 @@ export const JOB_POSTS: Job[] = [
 updated at: "2024-05-05"
 }];
 
-=======
-
-=======
-created at: "2024 - 05 - 05";
-updated at: "2024 - 05 - 05";
-}];
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
-=======
 import { Job } from '@/types/jobs';
-=======
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
     id: "job-1",
     client_id: "client-1",
@@ -46,14 +26,6 @@ export const JOB_POSTS: Job[] = [
     created_at: "2024-05-10",
     updated_at: "2024-05-10"},
   {
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 id: 'job-2',
     client_id: 'client-2',
     title: 'Part-time DevOps Engineer',
@@ -71,8 +43,6 @@ status: "new";
 created at: "2024-05-05";
 updated at: "2024-05-05" 
 }];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     id: "job-2",
     client_id: "client-2",
     title: "Part-time DevOps Engineer",
@@ -112,9 +82,3 @@ export const JOB_POSTS: Job[] = [;
     created_at: "2024-05-05";
     updated_at: "2024-05-05"}
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

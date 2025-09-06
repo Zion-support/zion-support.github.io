@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -43,22 +12,6 @@ import z from "zod";
 import {ChatAssistant} from "@/components/ChatAssistant";
 import {Mail, MessageSquare, MapPin, Phone} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
-<<<<<<< HEAD
-export default function Contact() {;
-  const [formData, setFormData] = useState({;
-    name: "",;
-    email: "",;
-    subject: "",;
-    message: "";
-
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
-
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -71,17 +24,12 @@ import { Card } from "@/components/ui/card",
 import { toast } from "@/components/ui/use-toast",
 import z from "zod",
 import { ChatAssistant } from "@/components/ChatAssistant",
-<<<<<<< HEAD
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
 import { AppLayout } from "@/layout/AppLayout";
-=======
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react",
 import { AppLayout } from "@/layout/AppLayout",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Contact() {
   const [formData, setFormData] = useState({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 <<<<<<< HEAD
@@ -94,39 +42,34 @@ export default function Contact() {
     name: "",
     email: "",
     subject: "",
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
     message: "";
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isChatOpen, setIsChatOpen] = useState(false),
 
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
-
+  }
   },
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
       // Basic validation with Zod
       const schema = z.object({
-
-
+        name: z.string().min(2, "Name must be at least 2 characters");
+        email: z.string().email("Invalid email address")
+        subject: z.string().min(2, "Subject must be at least 2 characters");
+        message: z.string().min(10, "Message must be at least 10 characters")
+      });
+      schema.parse(formData);
+      // Simulate form submission
+      setIsSubmitting(true);
         name: z.string().min(2, "Name must be at least 2 characters"),
         email: z.string().email("Invalid email address"),
         subject: z.string().min(2, "Subject must be at least 2 characters"),
@@ -138,8 +81,6 @@ export default function Contact() {
       // Simulate form submission
       setIsSubmitting(true),
       
-
-
       setTimeout(() => {
         setIsSubmitting(false);
         toast({
@@ -168,11 +109,8 @@ export default function Contact() {
         })
       }
     }
-
-
+  }
   },
-
-
 
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -180,15 +118,15 @@ export default function Contact() {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
-
-
+          "Content-Type": "application/json"}
+        body: JSON.stringify({
+          messages: [{ role: "user", content: message }]
+        })});
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
       
-
-
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -251,65 +189,6 @@ export default function Contact() {
         });
       }
     }
-  };
-
-  // Handle sending messages to the AI chat assistant;
-  const handleSendMessage = async (message: string): Promise<void> => {;
-    try {;
-      const response = await fetch("https://ziontechgroup && ziontechgroup.functions.supabase && supabase.co/functions/v1/ai-chat", {;
-        method: "POST",;
-        headers: {;
-          "Content-Type": "application/json"};
-        body: JSON && JSON.stringify({ ;
-          messages: [{ role: "user", content: message }] ;
-        })});
-
-      if (!response && response.ok) {;
-        throw new Error("Failed to get response from AI assistant");
-      }
-
-      return Promise && Promise.resolve();
-    } catch (error) {;
-      console && console.error("Error in AI chat:", error);
-      toast({;
-        title: "Chat Error",;
-        description: "There was an error communicating with our AI assistant. Please try again.",;
-        variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      });
-      return Promise && Promise.resolve();
-    }
-
-import { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { SEO } from '@/components / SEO';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { Card } from '@/components / ui / card';
-import { toast } from '@/components / ui / use - toast';
-import z from './zod';
-import { ChatAssistant } from '@/components / ChatAssistant';
-import { Mail, MessageSquare, MapPin, Phone } from './lucide-react';
-import { AppLayout } from '@/layout / AppLayout';
-export default /**
- * Contact - Function description
- */
-function Contact() {
-  const [form_data, setFormData] = useState ({
-    name: "",
-    email: "",
-    subject: "",
-    message: "";
-  });
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const [isChatOpen, setIsChatOpen] = useState (false);
-;
-  const handle_change = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>) =>: any {
-    const { name, value } = e.target;
-    setFormData (prev => ({ ...prev, [name]: value }));
   }
 ;
   const handle_submit = (e: React.FormEvent) =>: any {
@@ -413,8 +292,6 @@ if ( {) {
 
     }
   ];
-=======
-
   },
 
   const offices = [
@@ -432,8 +309,6 @@ if ( {) {
     }
   ],
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <AppLayout>;
@@ -519,36 +394,103 @@ if ( {) {
                     className="bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px]"
                     placeholder="Tell us what you'd like to know..."
                     required
-<<<<<<< HEAD
-
-                  />;
-                </div>;
-
-                <Button
-                  type="submit" 
-
-=======
                   />
                 </div>
-<<<<<<< HEAD
                 <Button
                   type="submit"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
                 <Button 
                   type="submit" 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
-
-=======
+                </Button>
+              </form>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
+              <div className="grid grid-cols-1 gap-6">
+                {offices.map((office, index) => (
+                  <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light p-6">
+                    <h3 className="text-xl font-bold text-white mb-3">{office.name}</h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <MapPin className="w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
+                        <span className="text-zion-slate-light">{office.address}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Phone className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                        <span className="text-zion-slate-light">{office.phone}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                        <a href={`mailto:${office.email}`} className="text-zion-cyan hover:underline">
+                          {office.email}
+                        </Link>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+              <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Zion Office Locations"
+                ></iframe>
+              </div>
+              <div className="mt-8">
+                <Card className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6">
+                  <div className="flex items-center">
+                    <div className="bg-zion-purple/20 p-3 rounded-full mr-4">
+                      <MessageSquare className="h-6 w-6 text-zion-purple" />
+                    </div>
+                    <div>
+                      <h3 className="text-white text-lg font-bold">Live AI Support</h3>
+                      <p className="text-zion-slate-light">Get instant answers to your questions</p>
+                    </div>
+                  </div>
+                  <Button
+                    onClick={() => setIsChatOpen(true)}
+                    className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  >
+                    Chat With Our AI Assistant
+                  </Button>
+                </Card>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Need immediate assistance?</h2>
+            <p className="text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto">
+              Our customer support team is available 24/7 to help you with any questions.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button
+                onClick={() => setIsChatOpen(true)}
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+              >
+                <MessageSquare className="mr-2 h-5 w-5" />
+                Chat With AI
+              </Button>
+              <Button
+                variant="outline"
+                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+                asChild
+              >
+                <a href="mailto:support@ziontechgroup.com">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Email Support
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </main>
 
 
 import { useState } from "react",;
@@ -980,18 +922,6 @@ export default function Contact() {;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
         <ChatAssistant
@@ -1008,7 +938,9 @@ export default function Contact() {;
           onSendMessage={handleSendMessage}
         />;
       )}
-
+    </AppLayout>
+  )
+}
     </AppLayout>;
   );
 }
@@ -1031,5 +963,3 @@ export default function Contact() {;
 
 =======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

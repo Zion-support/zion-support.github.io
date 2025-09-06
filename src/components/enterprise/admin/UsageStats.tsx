@@ -1,93 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { toast } from '@/hooks/use-toast'
-import React from "react"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { toast } from "@/hooks/use-toast"
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-<<<<<<< HEAD
-  CardTitle,
-} from '@/components/ui/card'
-import { Sparkles } from 'lucide-react'
-import { Progress } from '@/components/ui/progress'
-export function UsageStats() {
-  const handleSaveChanges = () => {
-    toast({
-      title: 'Limits updated',
-      description: 'The new usage limits have been saved successfully.',
-    })
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-
-import { Sparkles } from 'lucide-react'
-import { Progress } from "@/components/ui/progress";
-=======
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { toast } from "@/hooks/use-toast",
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle} from "@/components/ui/card",
-import { Sparkles } from 'lucide-react'
-import { Progress } from "@/components/ui/progress",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export function UsageStats() {
-
-  const handleSaveChanges = () => {
-    toast({
-<<<<<<< HEAD
-      title: 'Limits updated'
-      description: 'The new usage limits have been saved successfully.'
-    })
-  }
-=======
-      title: "Limits updated",
-      description: "The new usage limits have been saved successfully."})
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-  return (
+return (
 
 
 
@@ -95,14 +6,6 @@ export function UsageStats() {
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -135,20 +38,10 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
-
-
         
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -181,20 +74,10 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
-
-
         
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -225,20 +108,10 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
-
-
         
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -281,8 +154,10 @@ export function UsageStats() {
           </CardFooter>
         </Card>
       </div>
-
-
+      <div className='bg-muted/50 rounded-lg p-6 flex items-center justify-between'>
+        <div className='flex items-center gap-4'>
+          <div className='h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center'>
+            <Sparkles className='h-5 w-5 text-primary' />
       
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -291,14 +166,6 @@ export function UsageStats() {
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </div>
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>
@@ -310,28 +177,17 @@ export function UsageStats() {
         </div>
         <Button>Contact Us</Button>
       </div>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
     </div>;
   );
 }"};
-=======
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }"}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { toast } from "@/hooks/use-toast",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {;
   Card,;
   CardContent,;
@@ -355,7 +211,6 @@ export function UsageStats() {;
       <div>;
         <h3 className='text-xl font-medium mb-4'>Usage Limits & Settings</h3>;
         <p className='text-muted-foreground mb-6'>;
-=======
     <div className='space - y-8'>;
       <div>;
         <h3 className='text - xl font - medium mb - 4'>Usage Limits & Settings</h3>;
@@ -548,32 +403,11 @@ export function UsageStats() {;
 <<<<<<< HEAD
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <Button > Contact Us</Button>;
       </div>;
     </div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     </div>
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-        <Button>Contact Us</Button>;
-      </div>;
-    </div>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

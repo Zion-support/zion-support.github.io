@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
@@ -16,36 +8,16 @@ import {
   ProjectDocument
   ProjectNote
 } from "../../../utils/marketplace/types";
-function bad(res: NextApiResponse, message: string, code = 400) {
-  return res && res.status(code).json({ ok: false, error: message });
-}
-=======
-<<<<<<< HEAD
-
-=======
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {
   Project,
   ProjectDocument,
   ProjectNote,;
 } from "../../../utils/marketplace/types";
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({
@@ -57,27 +29,11 @@ import { v4 as uuidv4 } from "uuid",
 import { getDemoUser } from "../../../utils/marketplace/auth",
 import { getProjectById, saveProject } from "../../../utils/marketplace/store",
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types",
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
 <<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "client" && user && user.id === project && project.clientId) return true;
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
@@ -85,44 +41,18 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   return false;
 <<<<<<< HEAD
 
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const user = getDemoUser(req);
-
-=======
-=======
-
-=======
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user.role === "client" && user.id === project.clientId) return true;
   if (user.role === "talent" && user.talentSlug === project.talentSlug) return true;
   return false
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -135,17 +65,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
   try {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const user = getDemoUser(req);
-<<<<<<< HEAD
     const { id } = (req.method === "GET" ? req.query : req.body) as {
       id?: string;
     }
@@ -168,8 +91,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           content
           createdAtIso: new Date().toISOString()
         }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!id) return bad(res, "Missing project id");
@@ -177,18 +98,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     if (req.method === "PATCH") {
       const { action } = req.body as { action: string };
       if (action === "add_note") {
         const { content } = req.body as { content: string };
         if (!content) return bad(res, "Missing content");
-<<<<<<< HEAD
-=======
-=======
   try {
     if (req.method === 'GET') {
       res.status(200).json({ projects: [] });
@@ -248,38 +162,27 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (action === "add_note") {
         const { content } = req.body as { content: string },
         if (!content) return bad(res, "Missing content"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         const note: ProjectNote = {
           id: uuidv4(),
           authorId: user.id,
           authorRole: user.role,
           content,
-<<<<<<< HEAD
           createdAtIso: new Date().toISOString()
-=======
-<<<<<<< HEAD
           createdAtIso: new Date().toISOString(),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         project.notes.push(note);
         saveProject(project);
         return res.json({ ok: true, project });
       }
-<<<<<<< HEAD
       if (action === "add_document") {
         const { name, url } = req.body as { name: string; url?: string }
         if (!name) return bad(res, "Missing name");
-<<<<<<< HEAD
         const doc: ProjectDocument = {
           id: uuidv4()
           name
           url
           uploadedAtIso: new Date().toISOString()
         }
-=======
-=======
           createdAtIso: new Date().toISOString()},
         project.notes.push(note),
         saveProject(project),
@@ -300,15 +203,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (action === "add_document") {
         const { name, url } = req.body as { name: string, url?: string },
         if (!name) return bad(res, "Missing name"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         const doc: ProjectDocument = {
           id: uuidv4(),
           name,
           url,
-<<<<<<< HEAD
           uploadedAtIso: new Date().toISOString(),
         };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         project.documents.push(doc);
         saveProject(project);
         return res.json({ ok: true, project });
@@ -323,7 +223,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
       if (action === "mark_completed") {
         project.status = "COMPLETED";
-=======
 
       if (action === "add_document") {
         const { name, url } = req.body as { name: string, url?: string };
@@ -342,11 +241,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (action === "update_timeline") {
         const { timeline } = req.body as { timeline: Project["timeline"] };
         project.timeline = Array.isArray(timeline) ? timeline : project.timeline;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         saveProject(project);
         return res.json({ ok: true, project })
       }
-<<<<<<< HEAD
       return bad(res, "Unknown action");
     }
     return bad(res, "Method not allowed", 405);
@@ -356,7 +253,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .status(status)
       .json({ ok: false, error: e?.message |"Server error" });
 
-=======
 
       if (action === "mark_completed") {
         project.status = "COMPLETED";
@@ -367,15 +263,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return bad(res, "Unknown action")
     }
 
-<<<<<<< HEAD
-=======
     return bad(res, "Method not allowed", 405);
   } catch (e: any) {
     const status = e?.statusCode || 500;
     return res
       .status(status)
       .json({ ok: false, error: e?.message || "Server error" });
-=======
           uploadedAtIso: new Date().toISOString()},
         project.documents.push(doc),
         saveProject(project),
@@ -444,16 +337,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return bad(res, "Method not allowed", 405)
   } catch (e: any) {
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
-<<<<<<< HEAD
 }
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -471,8 +360,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

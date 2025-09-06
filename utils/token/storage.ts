@@ -1,28 +1,16 @@
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
-
 export interface TokenConfig {
-<<<<<<< HEAD
-  token_name: string;
-  token_symbol: string;
-=======
 =======
 <<<<<<< HEAD
 export interface TokenConfig {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   tokenName: string;
   tokenSymbol: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   decimals: number;
-  total_supply: number;
-  issue_rate: number;
-  redeem_rate: number;
+  totalSupply: number;
+  issueRate: number;
+  redeemRate: number;
   minIssueAmount: number;
   maxIssueAmount: number;
 }
@@ -62,12 +50,6 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
-<<<<<<< HEAD
-
-  }
-export interface TokenStoreData {
-=======
-<<<<<<< HEAD
   }
 export interface TokenStoreData {
 =======
@@ -75,7 +57,6 @@ export interface TokenStoreData {
 
 export interface TokenStoreData {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -83,32 +64,18 @@ export interface TokenStoreData {;
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
-
-=======
-  set_config (new_config: Partial < TokenConfig>): void {
-    this.config = { ...this.config, ...new_config }
+    if (!fs.existsSync(STORE_FILE)) return null;
+    const raw = fs.readFileSync(STORE_FILE, 'utf8');
+    const parsed = JSON.parse(raw) as TokenStoreData;
+    return parsed;
+  } catch {
+    return null;
+  }
+  setConfig(newConfig: Partial<TokenConfig>): void {
+    this.config = { ...this.config, ...newConfig }
   }
 }
-<<<<<<< HEAD
-export const token_store = new TokenStore ();
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export const tokenStore = new TokenStore();
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

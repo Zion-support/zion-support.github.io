@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface CustomerTicket {
-=======
 export interface CustomerTicket {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   customerId: string;
   subject: string;
@@ -20,7 +13,6 @@ export interface CustomerTicket {;
   resolvedAt?: Date;
   customerSatisfaction?: number;
   tags: string[];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   attachments: string[],
   conversation_history: CustomerMessage[];
@@ -28,14 +20,8 @@ export interface CustomerTicket {;
 }
 <<<<<<< HEAD
 export interface CustomerMessage {
-=======
-<<<<<<< HEAD
-export interface CustomerMessage {
-=======
 
 export interface CustomerMessage {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   ticket_id: string;
   sender_id: string;
@@ -51,14 +37,8 @@ export interface CustomerMessage {;
 }
 <<<<<<< HEAD
 export interface CustomerProfile {
-=======
-<<<<<<< HEAD
-export interface CustomerProfile {
-=======
 
 export interface CustomerProfile {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   email: string;
   name: string;
@@ -76,19 +56,12 @@ export interface CustomerProfile {;
     language: string,
     timezone: string;
   }
-  tags: string[];
-
+  tags: string[]
 }
 <<<<<<< HEAD
 export interface AIResponse {
-=======
-<<<<<<< HEAD
-export interface AIResponse {
-=======
 
 export interface AIResponse {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   ticket_id: string;
   response: string;
@@ -102,20 +75,11 @@ export interface AIResponse {;
 }
 <<<<<<< HEAD
 export interface CustomerServiceMetrics {
-  total_tickets: number;
-  open_tickets: number;
-  resolved_tickets: number;
-=======
-<<<<<<< HEAD
-export interface CustomerServiceMetrics {
-=======
 
 export interface CustomerServiceMetrics {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   totalTickets: number;
   openTickets: number;
   resolvedTickets: number;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   averageResolutionTime: number;
 
     ticketsResolved: number
@@ -123,30 +87,11 @@ export interface CustomerServiceMetrics {;
 
     customerSatisfaction: number
   }>
-<<<<<<< HEAD
-=======
-  customer_satisfaction: number;
-  firstResponseTime: number,
-  ticketVolumeByCategory: Record < string, number>;
-  agent_performance: Record < string, {
-    tickets_resolved: number;
-    averageResolutionTime: number,
-    customer_satisfaction: number;
-  }>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface CustomerServiceRequest {
-  customer_id: string;
-=======
-}
-<<<<<<< HEAD
-export interface CustomerServiceRequest {
-=======
 
 export interface CustomerServiceRequest {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   customerId: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
@@ -158,16 +103,9 @@ export interface CustomerServiceRequest {;
 }
 <<<<<<< HEAD
 export interface CustomerServiceResponse {
-  ticket_id: string;
-=======
-<<<<<<< HEAD
-export interface CustomerServiceResponse {
-=======
 
 export interface CustomerServiceResponse {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ticketId: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
   estimatedResolutionTime: string;
@@ -176,23 +114,17 @@ export interface CustomerServiceResponse {;
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
-<<<<<<< HEAD
-=======
   assignedAgent?: string
 }
-<<<<<<< HEAD
 export class AICustomerServiceService {
-=======
 
 export class AICustomerServiceService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   private apiKey: string;
 
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
@@ -423,21 +355,8 @@ export class AICustomerServiceService {;
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
-<<<<<<< HEAD
-
-export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
-
-=======
-  next_steps: string[],
-  assigned_agent?: string;
-=======
-<<<<<<< HEAD
-=======
 export interface CustomerTicket {;
-=======
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   customerId: string,;
   subject: string,;
@@ -453,7 +372,6 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
   tags: string[],;
   attachments: string[],;
   conversationHistory: CustomerMessage[];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 export class AICustomerServiceService {
   private api_key: string;
@@ -691,18 +609,4 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-export interface CustomerTicket {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,18 +1,21 @@
 
-
+import React from "react",
+import { AdminHeader } from "./AdminHeader",
+import { TeamManagement } from "./TeamManagement",
+import { UsageStats } from "./UsageStats",
 import React from "react";
 import { AdminHeader } from "./AdminHeader";
 import { TeamManagement } from "./TeamManagement";
 import { UsageStats } from "./UsageStats";
-
-
 import { RoleManagement } from "./RoleManagement";
 import { TeamActivity } from "./TeamActivity";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-
-
+export function AdminDashboard() {
+  return (
+    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">
+      <AdminHeader />
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
@@ -25,17 +28,6 @@ import {
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
 
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
@@ -43,8 +35,15 @@ import {
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>
           <TabsTrigger value="activity">Team Activity</TabsTrigger>
         </TabsList>
-
-
+        <TabsContent value="team" className="space-y-8">
+          <TeamManagement />
+        </TabsContent>
+        <TabsContent value="roles" className="space-y-8">
+          <RoleManagement />
+        </TabsContent>
+        <TabsContent value="usage" className="space-y-8">
+          <UsageStats />
+        </TabsContent>
         
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
@@ -58,38 +57,17 @@ import {
           <UsageStats />
         </TabsContent>
         
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
         </TabsContent>
       </Tabs>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-=======
-<<<<<<< HEAD
     </div>;
   );
 }
-=======
     </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import React from "react",;
 import { AdminHeader } from "./AdminHeader",;
@@ -104,7 +82,6 @@ import {;
   TabsTrigger} from "@/components/ui/tabs";
 export function AdminDashboard() {;
   return (;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
       <AdminHeader />;
 
@@ -151,17 +128,4 @@ function AdminDashboard() {
     </div>);
 
 }
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

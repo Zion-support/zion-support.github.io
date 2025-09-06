@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-
-  permissions?: string[];
-  company_id?: string;
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface UserDetails {
-=======
 export interface UserDetails {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string;
   name?: string;
   email?: string;
@@ -22,21 +11,14 @@ export interface UserDetails {;
   role?: string;
   permissions?: string[],
   companyId?: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   bio?: string;
-  created_at?: string;
-  updated_at?: string;
+  createdAt?: string;
+  updatedAt?: string
 }
 <<<<<<< HEAD
 export interface UserProfile {
-=======
-<<<<<<< HEAD
-export interface UserProfile {
-=======
 
 export interface UserProfile {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id?: string;
   display_name?: string;
   email: string;
@@ -53,31 +35,6 @@ export interface UserProfile {;
   permissions?: string[],
   company_id?: string;
 }
-<<<<<<< HEAD
-// Update AuthContextType definition to match implementation;
-export interface AuthContextType {
-  user: UserDetails | null;
-  is_loading: boolean;
-  is_authenticated: boolean,
-  login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
-  signup: (email: string, password: string, user_data?: any) => Promise<{ error?: any }>;
-  logout: () => Promise < void>,
-  reset_password: (email: string) => Promise<{ error?: any }>;
-  update_profile: (data: Partial < UserDetails>) => Promise<{ error?: any }>;
-  loginWithGoogle: () => Promise < void>;
-  loginWithFacebook: () => Promise < void>;
-  loginWithTwitter: () => Promise < void>;
-  loginWithWeb3: () => Promise < void>,
-  sign_in?: (email: string, password: string) => Promise<{ error: any }>;
-  sign_out?: () => Promise < void>;
-  sign_up?: (email: string, password: string, user_data?: Partial < UserDetails>) => Promise<{ error: any }>;
-
-}
-=======
-
-export interface UserDetails {;
-
-=======
 // Update AuthContextType definition to match implementation
 export interface AuthContextType {;
   user: UserDetails | null;
@@ -97,13 +54,8 @@ export interface AuthContextType {;
   signOut?: () => Promise<void>;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
-<<<<<<< HEAD
 }
-=======
 export interface UserDetails {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string,;
   name?: string,;
   email?: string,;
@@ -154,12 +106,5 @@ export interface AuthContextType {;
   signIn?: (email: string, password: string) => Promise<{ error: any }>,;
   signOut?: () => Promise<void>;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

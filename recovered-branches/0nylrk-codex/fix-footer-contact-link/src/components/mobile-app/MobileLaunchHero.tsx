@@ -1,31 +1,18 @@
 
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Link} from "react-router-dom";
 import {ArrowRight, Smartphone} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {AppStoreButtons} from "./AppStoreButtons";
 import {Card, CardContent} from "@/components/ui/card";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, Smartphone } from "lucide-react",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 import { AppStoreButtons } from "./AppStoreButtons";
 import { Card, CardContent } from "@/components/ui/card";
-=======
 import { AppStoreButtons } from "./AppStoreButtons",
 import { Card, CardContent } from "@/components/ui/card",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 <<<<<<< HEAD
 =======
@@ -83,31 +70,11 @@ export const MobileLaunchHero: React.FC = () => {
             <div className="relative">
               {/* Phone mockup with glow effect */}
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
-
-
               
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
-<<<<<<< HEAD
-
-=======
-
-
-=======
-<<<<<<< HEAD
                     {/* In production, replace with actual app screenshot */}
                   </div>
                 </CardContent>
@@ -117,14 +84,9 @@ export const MobileLaunchHero: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, Smartphone } from "lucide-react",;
@@ -255,8 +217,6 @@ export const MobileLaunchHero: React.FC = () => {
           </div>;
         </div>;
       </div>;
-
-    </section>);
-}
-;
-
+    </section>;
+  );
+};

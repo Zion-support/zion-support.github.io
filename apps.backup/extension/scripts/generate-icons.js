@@ -12,28 +12,16 @@ if () mkdir_sync (out_dir, { recursive: true }), ) {
 }
 const sizes = [16, 32, 48, 128];
 for (const size of sizes) {
-  const out = resolve (out_dir, `icon-${size}.png`),
-  await sharp (svg_path).resize (size, size).png ().to_file (out),
-  // eslint - disable - next - line no - console;
-  console.log ('generated', out);
+  const out = resolve(outDir, `icon-${size}.png`)
+  await sharp(svgPath).resize(size, size).png().toFile(out)
 
-}
-=======
-
+  // eslint-disable-next-line no-console
+  console.log('generated', out)
   const out = resolve(outDir, `icon-${size}.png`),
   await sharp(svgPath).resize(size, size).png().toFile(out),
   // eslint-disable-next-line no-console
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   console.log('generated', out)
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // // // console.log('generated', out)
 #!/usr/bin/env node;
 import { mkdirSync, existsSync } from 'node: fs',;
@@ -50,11 +38,5 @@ for (const size of sizes) {;
   await sharp(svgPath).resize(size, size).png().toFile(out);
   // eslint-disable-next-line no-console;
   // // // console.log('generated', out);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

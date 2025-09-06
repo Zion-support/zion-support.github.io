@@ -1,59 +1,29 @@
 
-<<<<<<< HEAD
-import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
-import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
-=======
-
-
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-=======
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 interface CreateKeyRequest {;
   name: string,;
   scopes: string[],;
   expiresAt?: string | null;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
 interface RegenerateKeyRequest {;
   keyId: string;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   expiresAt?: string | null
 =======
@@ -68,18 +38,16 @@ interface CreateKeyRequest {
 interface RegenerateKeyRequest {
   key_id: string;
 }
+// Create a Supabase client
 
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
-=======
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req && req.method === 'OPTIONS') {
@@ -99,10 +67,14 @@ if ( {) {
     return new Response ('ok', {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       headers: {
-
-      return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
-        status: 401,
-
+        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
+  }
+  try {
+    // Extract auth token from request
+    const authHeader = req.headers.get('Authorization');
+    if (!authHeader) {
+      return new Response(JSON.stringify({ error: 'Missing authorization header' }), {
+        status: 401
         headers: { 'Content-Type': 'application/json' }})
     }
     // Verify the token with Supabase auth
@@ -627,9 +599,10 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       .select('id')
       .eq('user_id', userId);
     if (keyError) {
-
-        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-
+      console.error('Error fetching API keys for logs:', keyError);
+      return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {
+        status: 500
+        headers: { 'Content-Type': 'application/json' }})
 ;
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
@@ -885,17 +858,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     if (!keyIds |keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
@@ -908,17 +870,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     }
 <<<<<<< HEAD
 
-
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     // Get logs for those keys
     const ids = keyIds && keyIds.map(k => k && k.id);
     const { data: logs, error: logsError, count } = await supabase
@@ -944,31 +895,8 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       status: 500,
 
       headers: { 'Content-Type': 'application/json' }})
-<<<<<<< HEAD
-=======
-    return new Response (JSON.stringify ({
-      message: 'API key revoked successfully',
-      key: data[0];
-    }), {
-      status: 200,
-      headers: { 'Content - Type': 'application / json' }});
-  } catch (error) {
-    console.error ('Error in revokeApiKey:', error);
-    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
-      status: 500,
-      headers: { 'Content - Type': 'application / json' }});
-=======
-      headers: { 'Content-Type': 'application/json' }})
-
-
-=======
-<<<<<<< HEAD
   }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 ;
     // Get logs for those keys;
     const ids = keyIds.map(k => k.id),;
@@ -993,17 +921,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     return new Response(JSON.stringify({ error: 'Internal server error' }), {;
       status: 500;
       headers: { 'Content-Type': 'application/json' }});
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 async /**
@@ -1017,49 +934,3 @@ function getApiLogs() {
       .select ('id');
       .eq ('user_id', user_id);
 ;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.error ('Error fetching API keys for logs:', key_error);
-      return new Response (JSON.stringify ({ error: 'Failed to fetch API logs' }), {
-        status: 500,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      return new Response (JSON.stringify ({ logs: [], count: 0 }), {
-        status: 200,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-    // Get logs for those keys;
-    const ids = key_ids.map (key => k.id);
-    const { data: logs, error: logs_error, count } = await supabase;
-      .from ('api_logs');
-      .select ('*', { count: 'exact' });
-      .in ('api_key_id', ids);
-      .order ('created_at', { ascending: false });
-      .range (offset, offset + limit - 1);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.error ('Error fetching API logs:', logs_error);
-      return new Response (JSON.stringify ({ error: 'Failed to fetch API logs' }), {
-        status: 500,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-    return new Response (JSON.stringify ({ logs, count }), {
-      status: 200,
-      headers: { 'Content - Type': 'application / json' }});
-  } catch (error) {
-    console.error ('Error in getApiLogs:', error);
-    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
-      status: 500,
-      headers: { 'Content - Type': 'application / json' }});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  }
-}

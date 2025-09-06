@@ -1,19 +1,10 @@
 
-import React from './react';
-import { Clock } from './lucide-react';
-
+import React from "react";
+import { Clock } from "lucide-react";
 interface TalentCardAvailabilityProps {
   availability_type: string;
 }
 
-<<<<<<< HEAD
-import {Clock} from "lucide-react";
-interface TalentCardAvailabilityProps {;
-  availabilityType: string;
-}
-
-export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
-=======
   const getAvailabilityColor = (status: string) => {
     switch (status) {
       case 'full-time':;
@@ -38,19 +29,8 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
       default:
         return status
     }
-<<<<<<< HEAD
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
   };
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from "react",
 import { Clock } from "lucide-react",
 interface TalentCardAvailabilityProps {
@@ -99,27 +79,13 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   },
 <<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
   return (
-
-    <div className={`flex items-center gap-1 px-2 py-0 && 0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
-      <Clock className="h-3 w-3" />;
-      <span>{getAvailabilityLabel(availabilityType)}</span>;
-    </div>;
-  );
-=======
-
-
+    <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
+      <Clock className="h-3 w-3" />
+      <span>{getAvailabilityLabel(availabilityType)}</span>
+    </div>
+  )
+}
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -141,6 +107,3 @@ function TalentCardAvailability() {
     }
   }
 ;
-
-
-

@@ -1,16 +1,8 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { createNotification  } from './createNotification';
 import { HireRequestNotificationParams } from './types';
-=======
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {createNotification} from './createNotification';
 import {HireRequestNotificationParams} from './types';
 /**
@@ -20,18 +12,15 @@ export async function createHireRequestNotifications({;
   talentId;
   adminId;
   requesterName;
-=======
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 /**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
+  talentId;
+  adminId;
+  requesterName;
 
 
   try {
@@ -71,13 +60,9 @@ export async function createHireRequestNotifications({
       talentNotification,
 
       adminNotification
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   talentId,
   adminId,
   requesterName,
-
   requesterEmail, 
   projectType,
   projectSummary,
@@ -120,15 +105,6 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { createNotification } from './createNotification',;
 import { HireRequestNotificationParams } from './types',;
 /**;
@@ -176,12 +152,6 @@ export async function createHireRequestNotifications({;
       success: talentNotification.success && adminNotification.success,;
       talentNotification;
       adminNotification;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
   return {

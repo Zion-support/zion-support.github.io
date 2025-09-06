@@ -26,17 +26,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     label: `Highlight ${i + 1}`;
     start: t,
     end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'}));
-
   episode.highlights = highlights;
   episodes[idx] = episode;
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-return res.status(200).json({ episode });  return res.status(200).json({ episode })
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
   return res.status(200).json({ episode })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -119,6 +111,15 @@ function handler() {
   fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8');
 ;
 return res.status (200).json ({ episode });  return res.status (200).json ({ episode });
+    start: t,
+    end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'})),
+
+  episode.highlights = highlights,
+  episodes[idx] = episode,
+  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8'),
+
+  return res.status(200).json({ episode })
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -130,15 +131,9 @@ return res.status (200).json ({ episode });  return res.status (200).json ({ epi
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
+return res.status(200).json({ episode });  return res.status(200).json({ episode })
+}
 
-
+}
+}
   return res.status(200).json({ episode });
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,5 +1,10 @@
+import React from 'react',
+import SEO from '../components/SEO';
+import Link from 'next/link';
 
-
+import React from 'react';
+import SEO from '../components/SEO';
+import Link from 'next/link';
 
   return (
     <>;
@@ -84,7 +89,6 @@ import Link from 'next / link';
             ))}
 
           </div>;
-
           <div className='mt-12'>;
             <h2 className='text-2xl font-semibold'>Pricing</h2>;
             <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>;
@@ -96,7 +100,6 @@ import Link from 'next / link';
                 <p className='mt-4 text-3xl font-bold'>;
                   $149;
                   <span className='text-base font-normal text-gray-300'>;
-=======
                 title: 'Golden Datasets',
                 desc: 'Curate and run task - specific datasets for repeatable evaluation.',
               },
@@ -168,68 +171,61 @@ import Link from 'next / link';
             </div>;
             <p className='mt - 4 text - sm text - gray - 400'>;
               Market references:{' '}
-              <a;
-                className='underline hover:text - cyan - 300';
-                href='https://humanloop.com';
-                target='_blank';
-                rel='noreferrer';
-              >;
-                Humanloop;
-              </a>;
-              , {' '}
-              <a;
-                className='underline hover:text - cyan - 300';
-                href='https://arize.com';
-                target='_blank';
-                rel='noreferrer';
-              >;
-                Arize;
-              </a>;
-              , {' '}
-              <a;
-                className='underline hover:text - cyan - 300';
-                href='https://promptfoo.dev';
-                target='_blank';
-                rel='noreferrer';
-              >;
-
-                promptfoo;
-              </a>;
-              .;
-            </p>;
-          </div>;
-
-
-=======
-          <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
-            <Link;
-              href='/contact';
-              className='px - 5 py - 3 rounded - lg bg - cyan - 400 text - black font - semibold';
-            >;
-              Start Evaluating;
-            </Link>;
-            <a;
-              href='mailto:kleber@ziontechgroup.com';
-              className='px - 5 py - 3 rounded - lg border border - white / 20';
-            >;
-              Email: kleber@ziontechgroup.com;
-            </a>;
-            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
-          </div>;
-        </div>;
-      </section>;
-    </>);					<div className="mt - 12 flex flex - wrap items - center gap - 4">;
-      <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - cyan - 400 text - black font - semibold">Start Evaluating</Link>;
-      <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded - lg border border - white / 20">Email: kleber@ziontechgroup.com</a>;
-      <span className="text - gray - 400">Call: +1 302 464 0950</span>;
-    </div>;
-    </div>;
-  </section>;
-  </>);
+              <a
+                className='underline hover:text-cyan-300'
+                href='https://humanloop.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Humanloop
+              </a>
+              ,{' '}
+              <a
+                className='underline hover:text-cyan-300'
+                href='https://arize.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Arize
+              </a>
+              ,{' '}
+              <a
+                className='underline hover:text-cyan-300'
+                href='https://promptfoo.dev'
+                target='_blank'
+                rel='noreferrer'
+              >
+                promptfoo
+              </a>
+              .
+            </p>
+          </div>
+          <div className='mt-12 flex flex-wrap items-center gap-4'>
+            <Link
+              href='/contact'
+              className='px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold'
+            >
+              Start Evaluating
+            </Link>
+            <a
+              href='mailto:kleber@ziontechgroup.com'
+              className='px-5 py-3 rounded-lg border border-white/20'
+            >
+              Email: kleber@ziontechgroup.com
+            </a>
+            <span className='text-gray-400'>Call: +1 302 464 0950</span>
+          </div>
+        </div>
+      </section>
+    </>
+  );					<div className="mt-12 flex flex-wrap items-center gap-4">
+						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
+						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
+						<span className="text-gray-400">Call: +1 302 464 0950</span>
+					</div>
+				</div>
+			</section>
+		</>
+	)
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

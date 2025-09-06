@@ -1,6 +1,20 @@
 
-<<<<<<< HEAD
-=======
+import { useEffect  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { useReferrals  } from '@/hooks/useReferrals';
+import { ReferralStats  } from '@/components/referrals/ReferralStats';
+import { ReferralLink  } from '@/components/referrals/ReferralLink';
+import { ReferralTable  } from '@/components/referrals/ReferralTable';
+import { RewardsCard  } from '@/components/referrals/RewardsCard';
+import { ReferralGuide  } from '@/components/referrals/ReferralGuide';
+import { ReferralLeaderboard  } from '@/components/referrals/ReferralLeaderboard';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button  } from '@/components/ui/button';
+import { toast  } from '@/hooks/use-toast';
+import { Share, Users  } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+export default function ReferralsPage() {
 
 import {useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -53,14 +67,7 @@ function ReferralsPage() {
     stats;
     getReferralLink;
     copyReferralLink;
-<<<<<<< HEAD
-
-
-
-=======
     shareOnSocialMedia} = useReferrals();
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useEffect} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {useReferrals} from '@/hooks/useReferrals';
@@ -79,12 +86,6 @@ import {useNavigate} from 'react-router-dom';
 export default function ReferralsPage() {;
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -103,7 +104,6 @@ import { useNavigate } from 'react-router-dom',
 export default function ReferralsPage() {
   const navigate = useNavigate(),
   const { isAuthenticated } = useAuth(),
-
   const {
     isLoading,
     referralCode,
@@ -114,8 +114,6 @@ export default function ReferralsPage() {
     copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     if (!isAuthenticated) {
       toast({
@@ -123,32 +121,14 @@ export default function ReferralsPage() {
         description: "Please login to access the referral program"
         variant: "destructive"})
       navigate("/login")
-=======
-
-  useEffect(() => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please login to access the referral program",;
-        variant: "destructive"}),;
-      navigate("/login");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-
-
+  }, [isAuthenticated, navigate]);
+  const referralLink = getReferralLink();
   }, [isAuthenticated, navigate]),
 
   const referralLink = getReferralLink(),
 
-
-
   return (
-<<<<<<< HEAD
-
-=======
-
-
-=======
     <div className="container max-w-7xl py-10">
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
         <div>
@@ -196,13 +176,7 @@ export default function ReferralsPage() {
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -352,23 +326,7 @@ if ( {) {
           <ReferralLeaderboard />;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

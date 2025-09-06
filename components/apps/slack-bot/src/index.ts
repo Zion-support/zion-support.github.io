@@ -1,8 +1,5 @@
-
-
+import { App  } from '@slack/bolt';
 import { App } from '@slack/bolt';
-
-
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
@@ -90,7 +87,6 @@ if ( {) {
 
         response_type: 'ephemeral',
         text: `Here is a draft job post for *${role}*:\n\n${data && data.description}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
@@ -206,7 +202,6 @@ if ( {) {
 
       response_type: 'ephemeral',
       text: `Error: ${err && err.message || 'unknown'}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });  }      });
 
 =======
@@ -254,15 +249,12 @@ if ( {) {
   }
 });
 
-
-
-
-
 (async () => {
 
   const port = Number(process && process.env.SLACK_PORT || 3001);
   await app && app.start(port);
   // eslint-disable-next-line no-console
+<<<<<<< HEAD
   console && console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();  console && console.log(`⚡️ Zion Slack bot running on port ${port}`)
 
@@ -272,74 +264,7 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
-  console.log(`⚡️ Zion Slack bot running on port ${port}`)
-})();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-      const data = (await res.json ()) as any;
-      await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
-      return;
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      const q = rest.join (' ') || 'AI researcher in Brazil';
-      const res = await fetch (`${api_base}/talent / search?q=${encodeURIComponent (q)}`, {
-        headers: { 'x - user - id': user_id }
-      });
-      const data = (await res.json ()) as any;
-      const lines = (data.results || []).slice (0, 5).map ((t: any) => `• ${t.full_name} – ${t.country} – ${t.skills?.slice (0, 3).join () || ''}`);
-      await respond ({ response_type: 'ephemeral', text: lines.length ? lines.join ('\n') : 'No matches yet.' });
-      return;
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      const name = rest.join (' ') || 'Kleber';
-      const res = await fetch (`${api_base}/projects/${encodeURIComponent (name)}/track`, {
-        headers: { 'x - user - id': user_id }
-      });
-      const data = (await res.json ()) as any;
-      // Check condition
-if ( {) {
-  $2
-}
-        await respond ({ response_type: 'ephemeral', text: 'Project not found.' });
-        return;
-      }
-      await respond ({ response_type: 'ephemeral', text: `*${data.project.name}* – status: ${data.project.status}\n_milestones: ${JSON.stringify (data.project.milestones)}` });
-      return;
-    }
-    await respond ({ response_type: 'ephemeral', text: help_text () });
-  } catch (err: any) {
-    await respond ({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
-  }
-});
-;
-(async () => {
-  const port = Number (process.env.SLACK_PORT || 3001);
-  await app.start (port);
-  // eslint - disable - next - line no - console;
-console.log (`⚡️ Zion Slack bot running on port ${port}`);
-})();  console.log (`⚡️ Zion Slack bot running on port ${port}`);
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

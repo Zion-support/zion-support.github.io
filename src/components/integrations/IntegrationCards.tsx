@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-  ArrowRight,
-  Check,
-  ExternalLink,
-  Slack,
-  Briefcase,
-  Users,
-} from 'lucide-react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import {
-  Card
-  CardContent
-  CardFooter
-  CardHeader
-} from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-  ArrowRight
-  Check
-  ExternalLink
-  Slack
-  Briefcase
-  Users
-} from 'lucide-react'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface IntegrationCardProps {
   title: string
   description: string
@@ -75,26 +25,12 @@ import {;
   Briefcase,;
   Users,;
 } from 'lucide-react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function IntegrationCard({
-  title
-  description
-  icon
-  status = 'disconnected'
-  href
-  onConnect
-}: IntegrationCardProps) {
-=======
-}
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 <<<<<<< HEAD
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 interface IntegrationCardProps {;
   title: string;
@@ -118,8 +54,6 @@ export function IntegrationCard({
   status = "disconnected",
   href,
   onConnect}: IntegrationCardProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className='overflow-hidden'>;
       <CardHeader className='pb-2'>;
@@ -146,30 +80,24 @@ export function IntegrationCard({
           ) : (;
             <Badge variant='outline'>Not Connected</Badge>;
           )}
-        </div>;
-      </CardHeader>;
-      <CardContent className='pb-4'>;
-        <p className='text-sm text-muted-foreground'>{description}</p>;
-      </CardContent>;
-      <CardFooter className='pt-0'>;
-        {status === 'connected' ? (;
-          <Button variant='outline' className='w-full' asChild>;
-            <a
-              href={href}
-              target='_blank'
-              rel='noopener noreferrer'
-
-
-import React from "react";
-import { logDebug } from '@/utils/productionLogger';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
-
+        </div>
+      </CardHeader>
+      <CardContent className="pb-4">
+        <p className="text-sm text-muted-foreground">{description}</p>
+      </CardContent>
+      <CardFooter className="pt-0">
+        {status === "connected" ? (
+          <Button variant="outline" className="w-full" asChild>
+            <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+              <span>Manage</span>
+              <ExternalLink className="h-3.5 w-3.5" />
+            </Link>
+          </Button>
+        ) : (
+          <Button variant="default" className="w-full" onClick={onConnect}>
+            <span>Connect</span>
+            <ArrowRight className='ml-1.5 h-3.5 w-3.5' />          </Button>
+            <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
 interface IntegrationCardProps {
   title: string
   description: string
@@ -177,7 +105,6 @@ interface IntegrationCardProps {
   status?: "connected" | "disconnected" | "pending"
   href?: string
   onConnect?: () => void
-=======
               className='flex items-center gap-1'>;
               <span>Manage</span>;
               <ExternalLink className='h-3 && 3.5 w-3 && 3.5' />;
@@ -188,7 +115,6 @@ interface IntegrationCardProps {
             <span>Connect</span>;
             <ArrowRight className='ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5' />          </Button>;
             <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
-=======
 
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
@@ -198,7 +124,6 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface IntegrationCardProps {;
   title: string,;
   description: string,;
@@ -210,14 +135,6 @@ interface IntegrationCardProps {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 export function IntegrationCard(): any ({;
@@ -272,7 +189,6 @@ export function IntegrationCard(): any ({;
           <Button variant="default" className="w-full" onClick={onConnect}>;
             <span>Connect</span>;
 
-=======
         </div>
       </CardHeader>
       <CardContent className="pb-4">
@@ -292,10 +208,8 @@ export function IntegrationCard(): any ({;
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
 
-=======
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
           </Button>;
         )}
@@ -308,12 +222,10 @@ export function IntegrationCard(): any ({;
 
 
 export function IntegrationCards() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='grid md:grid-cols-3 gap-6'>;
       <IntegrationCard
 
-=======
   );
 }
 
@@ -329,7 +241,6 @@ export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
       <IntegrationCard
-=======
 
 
         title="Slack"
@@ -337,33 +248,18 @@ export function IntegrationCards() {
         icon={<Slack className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Slack clicked')}
       />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <IntegrationCard
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
 
         icon={<Briefcase className="h-5 w-5" />}
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         onConnect={() => logDebug('Connect Salesforce clicked')}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />
     </div>
   )
-=======
       />;
     </div>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }        icon={<Briefcase className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />;
@@ -372,19 +268,17 @@ export function IntegrationCards() {
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Teams clicked')}
-
-
+        icon = {<Users className="h-5 w-5" />,}
+        onConnect = {() => logDebug('Connect Teams clicked'),}
+      />
+    </div>;
+  );
+};
+}
 }
 <<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
       />;
     </div>;
   );
@@ -394,12 +288,6 @@ export function IntegrationCards() {
   );
 }
 
-=======
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import {
@@ -565,13 +453,4 @@ function IntegrationCards() {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

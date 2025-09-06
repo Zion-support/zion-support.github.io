@@ -1,52 +1,24 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { useEffect, useState } from 'react';
-
-
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]),
   const [seo, setSeo] = useState<any>({}),
   const [links, setLinks] = useState<any>({}),
   const [deps, setDeps] = useState<any>({}),
   const [changelog, setChangelog] = useState<any>({}),
-<<<<<<< HEAD
-  const [pagespeed, setPagespeed] = useState<any>({});
-  useEffect(() => {
-    Promise.all([
-
-
-
-
-=======
-=======
 import {useEffect, useState} from 'react';
 export default function Reports() {;
-=======
 import { useEffect, useState } from 'react';
 export default function Reports() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [uptime, setUptime] = useState<any[]>([]);
   const [seo, setSeo] = useState<any>({});
   const [links, setLinks] = useState<any>({});
   const [deps, setDeps] = useState<any>({});
   const [changelog, setChangelog] = useState<any>({});
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [pagespeed, setPagespeed] = useState<any>({});
   useEffect(() => {
     Promise.all([
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       fetch('/api/reports/uptime')
         .then(r => r.json())
         .then(setUptime)
@@ -147,10 +119,6 @@ export default function Reports() {;
           ) : (;
             <div className='text-sm text-gray-500'>No data</div>;
           )}
-<<<<<<< HEAD
-
-        </div>;
-=======
         </div>
         <div className='border rounded p-4'>
           <div className='font-medium mb-1'>SEO (weekly)</div>
@@ -185,24 +153,14 @@ export default function Reports() {;
       </section>
     </div>
 );
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-      fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
-      fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
-      fetch('/api/reports/links').then((r) => r.json()).then(setLinks);
-      fetch('/api/reports/deps').then((r) => r.json()).then(setDeps);
-      fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog);
+      fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime),
+      fetch('/api/reports/seo').then((r) => r.json()).then(setSeo),
+      fetch('/api/reports/links').then((r) => r.json()).then(setLinks),
+      fetch('/api/reports/deps').then((r) => r.json()).then(setDeps),
+      fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog),
       fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
     ]).catch(() => {})
   }, []);
@@ -352,21 +310,3 @@ function Reports() {
     </div>
   )
 }
-<<<<<<< HEAD
-
-    </div>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

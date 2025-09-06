@@ -1,6 +1,4 @@
-
-
-  return (
+return (
 
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
@@ -30,7 +28,6 @@ function ExperienceFilter() {
     setExperienceRange ([values[0] || 0, values[1] || 15]);
 
   }
-=======
       </button>;
 
       {expanded && (;
@@ -43,7 +40,6 @@ function ExperienceFilter() {
         <div className="mt-6">;
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
 
-=======
 
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
@@ -54,27 +50,13 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
     setExperienceRange([values[0] || 0, values[1] || 15])
   },
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
-<<<<<<< HEAD
         className='flex w-full items-center justify-between text-white font-medium'      >
-=======
         className="flex w-full items-center justify-between text-white font-medium"
       >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <span>Years of Experience</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -82,7 +64,6 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-<<<<<<< HEAD
       {expanded && (
         <div className='mt-6'>
           <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>{experienceRange[0]} years</span>
@@ -98,9 +79,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0] |0, values[1] |15])
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -109,7 +88,6 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
         className="flex w-full items-center justify-between text-white font-medium"
       >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <span>Years of Experience</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -117,41 +95,33 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-
+      {expanded && (
       
       {expanded && (
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>{experienceRange[0]} years</span>
             <span>{experienceRange[1]} years</span>
           </div>
           <Slider
-
+            aria-label='Experience range'            aria-label="Experience range"
             aria-label="Experience range"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Slider } from "@/components/ui/slider";
-import { ExperienceFilterProps } from "@/types/filters";
-export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
+import { Slider } from "@/components/ui/slider",;
+import { ExperienceFilterProps } from "@/types/filters",;
+export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
   const handleChange = (values: number[]) => {;
     setExperienceRange([values[0] || 0, values[1] || 15]);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
-      <button
+      <button;
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium">;
+        className="flex w-full items-center justify-between text-white font-medium";
+      >;
         <span>Years of Experience</span>;
         {expanded ? (;
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
@@ -160,20 +130,10 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
         )}
 
 
-=======
           <Slider;
             aria-label="Experience range";
 <<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
@@ -182,9 +142,11 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </div>;
   );
+};
+}
+<<<<<<< HEAD
 }
 
 =======
@@ -207,22 +169,13 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
       )}
 <<<<<<< HEAD
     </div>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
   )
 }
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
+};
 }
 
-=======
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
             <span>{experience_range[0]} years</span>;
@@ -241,18 +194,5 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 ;
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

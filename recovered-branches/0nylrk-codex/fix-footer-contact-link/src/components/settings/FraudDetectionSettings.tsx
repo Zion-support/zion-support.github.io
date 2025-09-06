@@ -1,36 +1,14 @@
 
-<<<<<<< HEAD
-
-
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
-import {Switch} from '@/components/ui/switch';
-import {Button} from '@/components/ui/button';
-import {Label} from '@/components/ui/label';
-import {ShieldAlert, Info} from 'lucide-react';
-import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
-import {toast} from '@/hooks/use-toast';
-import {supabase} from '@/integrations/supabase/client';
-import {useAuth} from '@/hooks/useAuth';
-export function FraudDetectionSettings() {;
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Switch  } from '@/components/ui/switch';
 import { Button  } from '@/components/ui/button';
 import { Label  } from '@/components/ui/label';
 import { ShieldAlert, Info } from 'lucide-react';
 import {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-
-=======
 export function FraudDetectionSettings() {
-=======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Switch} from '@/components/ui/switch';
 import {Button} from '@/components/ui/button';
@@ -41,18 +19,11 @@ import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 export function FraudDetectionSettings() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
-<<<<<<< HEAD
-
-
-
-=======
 <<<<<<< HEAD
 
   const handleSavePreferences = async () => {
@@ -62,10 +33,6 @@ export function FraudDetectionSettings() {;
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
       await new Promise((resolve) => setTimeout(resolve, 1000));
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
@@ -86,7 +53,6 @@ export function FraudDetectionSettings() {
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),
   const [isSaving, setIsSaving] = useState(false),
-
   
   const handleSavePreferences = async () => {
     if (!user?.id) return,
@@ -97,29 +63,23 @@ export function FraudDetectionSettings() {
       // For now, we'll just simulate a successful save
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: "Settings saved"
         description: "Your fraud detection preferences have been updated."
       });
     } catch (error) {
-
-
+      console.error("Error saving preferences:", error);
       console.error('Error saving preferences:', error),
-
-
       toast({
         title: "Error"
         description: "Failed to save your preferences. Please try again."
         variant: "destructive"
       });
     } finally {
-=======
-<<<<<<< HEAD
-=======
+      setIsSaving(false);
+    }
+  }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="mb-8">
@@ -222,18 +182,11 @@ export function FraudDetectionSettings() {
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
-=======
   )
-=======
   )
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -254,7 +207,6 @@ export function FraudDetectionSettings() {;
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),;
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),;
   const [isSaving, setIsSaving] = useState(false),;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const handleSavePreferences = async () => {;
     if (!user?.id) return;
 
@@ -553,20 +505,4 @@ if (return) {
 
     </Card>);
 }
-<<<<<<< HEAD
-
-=======
-
-  )
-=======
-  )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

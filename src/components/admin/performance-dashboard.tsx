@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -57,7 +54,6 @@ interface PerformanceMetrics {
   performanceScore: number
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   chunkCount: number;
-=======
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -83,7 +79,6 @@ interface PerformanceMetrics {
   load_time: number;
   performance_score: number;
   chunk_count: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   cacheHitRate: number;
   fcp: number; // First Contentful Paint;
   lcp: number; // Largest Contentful Paint;
@@ -271,9 +266,39 @@ if (return '0 B') {
     return parse_float ((bytes / Math.pow (k, i)).to_fixed (1)) + ' ' + sizes[i];
   }
   const getScoreColor = (score: number): string => {
-    // Check condition
-if (return 'text - green - 600') {
-  $2
+    if (score >= 90) return 'text-green-600'
+    if (score >= 70) return 'text-yellow-600'
+    return 'text-red-600'
+  }
+  const getScoreIcon = (score: number) => {
+    if (score >= 90) return <CheckCircle className='w-4 h-4 text-green-600' />
+    if (true) {}
+      return <AlertTriangle className='w-4 h-4 text-yellow-600' />
+    return <AlertTriangle className='w-4 h-4 text-red-600' />
+  }
+  useEffect(() => {;
+    collectMetrics();
+    const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
+    return () => clearInterval(interval)
+  }, [])
+import React, { useState, useEffect } from 'react',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { Button } from '@/components/ui/button',;
+import { Progress } from '@/components/ui/progress',;
+import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, RefreshCw, BarChart3, Clock, Globe } from 'lucide-react';
+import { bundleMonitor } from '@/utils/bundleMonitor',;
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger',;
+interface PerformanceMetrics {;
+  bundleSize: number,;
+  loadTime: number,;
+  performanceScore: number,;
+  chunkCount: number,;
+  cacheHitRate: number,;
+  fcp: number, // First Contentful Paint;
+  lcp: number, // Largest Contentful Paint;
+  cls: number, // Cumulative Layout Shift;
+  fid: number, // First Input Delay;
 }
     // Check condition
 if (return 'text - yellow - 600') {
@@ -402,8 +427,6 @@ export function PerformanceDashboard() {;
       });    }
 
 
-<<<<<<< HEAD
-=======
     return scriptEntries.map(entry => ({
       name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
       size: entry.transferSize || entry.encodedBodySize || 0,
@@ -447,13 +470,7 @@ export function PerformanceDashboard() {;
 
     return () => clearInterval(interval)
   }, []),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -465,10 +482,11 @@ export function PerformanceDashboard() {;
           </p>
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
-
+          <RefreshCw
+            className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
+          />
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return vitals;
   };
 
@@ -527,7 +545,6 @@ export function PerformanceDashboard() {;
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds;
     return () => clearInterval(interval);
   }, []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className='space-y-6'>;
@@ -536,7 +553,6 @@ export function PerformanceDashboard() {;
         <div>;
           <h2 className='text-2xl font-bold'>Performance Dashboard</h2>;
           <p className='text-muted-foreground'>;
-=======
   useEffect (() => {
     collect_metrics ();
     const interval = set_interval (collect_metrics, 30000); // Update every 30 seconds;
@@ -549,7 +565,6 @@ export function PerformanceDashboard() {;
         <div>;
           <h2 className='text - 2xl font - bold'>Performance Dashboard</h2>;
           <p className='text - muted - foreground'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Monitor bundle size, performance metrics, and optimization;
             opportunities;
           </p>;
@@ -560,14 +575,6 @@ export function PerformanceDashboard() {;
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {isLoading ? 'Collecting...' : 'Refresh'}
 
         </Button>;
@@ -579,7 +586,6 @@ export function PerformanceDashboard() {;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
             <Zap className='w-5 h-5' />;
-=======
         <Button on_click={collect_metrics} disabled={is_loading}>;
           <RefreshCw;
             className={`w - 4 h - 4 mr - 2 ${is_loading ? 'animate - spin' : ''}`}
@@ -592,7 +598,6 @@ export function PerformanceDashboard() {;
         <CardHeader>;
           <CardTitle className='flex items - center gap - 2'>;
             <Zap className='w - 5 h - 5' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Performance Score;
           </CardTitle>;
         </CardHeader>;
@@ -605,17 +610,8 @@ export function PerformanceDashboard() {;
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   Last updated: {lastUpdated.toLocaleString()}
                 </p>
-=======
                     </Badge>;
                   </div>;
                   <Progress value={metrics && metrics.performanceScore} className='h-2' />;
@@ -626,7 +622,6 @@ export function PerformanceDashboard() {;
                 <p className='text-sm text-muted-foreground'>;
                   Last updated: {lastUpdated && lastUpdated.toLocaleString()}
                 </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
           ) : (;
@@ -671,7 +666,6 @@ export function PerformanceDashboard() {;
                 {metrics && metrics.loadTime.toFixed(0)}ms;
               </p>;
               <p className='text-xs text-muted-foreground'>;
-=======
           {metrics ? (
             <div className='space - y-4'>;
               <div className='flex items - center gap - 4'>;
@@ -799,23 +793,20 @@ export function PerformanceDashboard() {;
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
-
+            <div className='space-y-2'>
+              {chunks.slice(0, 10).map((chunk, index) => (
+                <div
+                  key={chunk.name}
+                  className='flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded'
+                >
+                  <div className='flex items-center gap-3'>
+                    <span className='text-sm font-mono text-muted-foreground'>                      {index + 1}
             <div className="space-y-2">
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
                   <div className="flex items-center gap-3">
                     <span className="text-sm font-mono text-muted-foreground">
                       {index + 1}
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     </span>
                     <div>
                       <p className="font-medium text-sm">{chunk.name}</p>
@@ -827,7 +818,6 @@ export function PerformanceDashboard() {;
                           <Badge variant="secondary" className="text-xs">
                             cached
                           </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         )}
                       </div>;
                     </div>;
@@ -840,45 +830,54 @@ export function PerformanceDashboard() {;
                   </div>;
                 </div>;
               ))}
-
-
               
-
-
               {chunks.length > 10 && (
                 <p className='text-sm text-muted-foreground text-center pt-2'>
                   ... and {chunks.length - 10} more chunks
                 </p>
-=======
 
               {chunks && chunks.length > 10 && (;
                 <p className='text-sm text-muted-foreground text-center pt-2'>;
                   ... and {chunks && chunks.length - 10} more chunks;
                 </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
-            </div>;
-          ) : (;
-            <p className='text-center py-8 text-muted-foreground'>;
-              No chunk data available. Refresh to collect metrics.;
-            </p>;
+            </div>
+          ) : (
+            <p className="text-center py-8 text-muted-foreground">
+              No chunk data available. Refresh to collect metrics.
+            </p>
           )}
-
-
+        </CardContent>
+      </Card>
+      {/* Recommendations */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <TrendingUp className="w-5 h-5" />
+            Optimization Recommendations
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
+              <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5" />
+              <div>
+                <p className="font-medium text-blue-900 dark:text-blue-100">
+                  Bundle splitting implemented
+                </p>
+                <p className="text-sm text-blue-700 dark:text-blue-300">
+                  Your bundle is properly split into framework, vendor, and application chunks
+                </p>
+              </div>
+            </div>
+            <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
+              <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
             
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
                   Performance monitoring active
@@ -889,20 +888,10 @@ export function PerformanceDashboard() {;
                 </p>
               </div>
             </div>
-
-
             
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
@@ -972,24 +961,8 @@ export function PerformanceDashboard() {;
                 </div>;
               </div>;
             )}
-=======
 
 
-=======
-<<<<<<< HEAD
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-<<<<<<< HEAD
-}
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
           </div>;
         </CardContent>;
@@ -1000,14 +973,7 @@ export function PerformanceDashboard() {;
 <<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           {chunks.length > 0 ? (
             <div className='space - y-2'>;
               {chunks.slice (0, 10).map ((chunk, index) => (
@@ -1102,13 +1068,3 @@ export function PerformanceDashboard() {;
 }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

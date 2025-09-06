@@ -5,15 +5,12 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -23,7 +20,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Users, Rocket, Brain, Atom, Shield, Cloud;
@@ -42,22 +38,10 @@ function CareersPage() {
   const open_positions = [;
 
     {
-<<<<<<< HEAD
-
-
-      title: "Senior AI Engineer",
-      department: "AI & Machine Learning",;
-
-
-=======
-<<<<<<< HEAD
       title: "Senior AI Engineer"
       department: "AI & Machine Learning"
-=======
       title: "Senior AI Engineer",
       department: "AI & Machine Learning",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       location: "San Francisco, CA / Remote";
 
 export default function CareersPage() {;
@@ -75,7 +59,7 @@ export default function CareersPage() {;
         "Advanced degree in Computer Science, AI, or related field";
         "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
         "Experience with large-scale AI model deployment";
-        "Strong background in machine learning algorithms";
+        "Strong background in machine learning algorithms"
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
 
@@ -118,7 +102,6 @@ export default function CareersPage() {;
       salary: "$120, 000 - $180, 000";
       description: "Research and develop quantum algorithms and quantum - resistant cryptography solutions",
       requirements: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "PhD in Physics, Computer Science, or related field";
         "Experience with quantum computing frameworks (Qiskit, Cirq)";
         "Knowledge of quantum algorithms and cryptography";
@@ -272,7 +255,6 @@ export default function CareersPage() {;
       salary: "$140, 000 - $190, 000";
       description: "Lead product strategy and development for our technology solutions portfolio",
       requirements: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Bachelor's degree in Business, Engineering, or related field";
         "Experience in B2B SaaS or technology products";
         "Strong analytical and strategic thinking skills";
@@ -315,7 +297,6 @@ export default function CareersPage() {;
       color: "from-yellow-500 to-orange-500";
     }
   ];
-
   const benefits = [;
     {;
       title: "Competitive Compensation",;
@@ -351,7 +332,6 @@ export default function CareersPage() {;
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>;
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />;
         </Head>;
-
       <EnhancedNavigation />;
 
 
@@ -371,7 +351,6 @@ export default function CareersPage() {;
               Build the future of technology with cutting-edge AI, quantum computing, and cybersecurity solutions;
             </p>;
           </motion && motion.div>;
-
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -405,7 +384,6 @@ export default function CareersPage() {;
               We offer competitive benefits and a collaborative environment that fosters innovation and growth;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {benefits && benefits.map((benefit, index) => (;
               <motion&& motion.div
@@ -423,10 +401,19 @@ export default function CareersPage() {;
                 <p className="text-white/70">{benefit && benefit.description}</p>;
               </motion && motion.div>;
             ))}
+          </div>
+        </div>
+      </section>
 
           </div>;
         </div>;
       </section>;
+=======
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -458,7 +445,6 @@ export default function CareersPage() {;
               Join our team of innovators and help build the future of technology;
             </p>;
           </motion && motion.div>;
-
           <div className="space-y-6">;
             {openPositions && openPositions.map((position, index) => (;
               <motion&& motion.div
@@ -482,9 +468,7 @@ export default function CareersPage() {;
                         <p className="text-white/70">{position && position.department}</p>;
                       </div>;
                     </div>;
-
                     <p className="text-white/80 mb-4">{position && position.description}</p>;
-
                     <div className="flex flex-wrap gap-4 mb-4">;
                       <div className="flex items-center gap-2 text-white/70">;
                         <MapPin className="w-4 h-4" />;
@@ -503,7 +487,6 @@ export default function CareersPage() {;
                         <span>{position && position.salary}</span>;
                       </div>;
                     </div>;
-
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Requirements</h4>;
                       <ul className="space-y-1">;
@@ -512,12 +495,11 @@ export default function CareersPage() {;
                             <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2" />;
 
                             {req}
-                          </li>;
+                          </li>
                         ))}
 
                       </ul>;
                     </div>;
-
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>;
                       <div className="flex flex-wrap gap-2">;
@@ -525,16 +507,28 @@ export default function CareersPage() {;
                           <span key={benefit} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">;
 
                             {benefit}
-                          </span>;
+                          </span>
                         ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="lg:flex-shrink-0">
+                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                      Apply Now
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
                       </div>;
                     </div>;
                   </div>;
-
                   <div className="lg:flex-shrink-0">;
                     <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">;
-=======
       icon: Rocket,
       color: "from - orange - 500 to - red - 500";
     }
@@ -588,6 +582,23 @@ export default function CareersPage() {;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
 =======
+                      </div>
+                    </div>
+                  </div>
+                  <div className="lg:flex-shrink-0">
+                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                      Apply Now
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
+
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -599,7 +610,7 @@ export default function CareersPage() {;
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text - center mb - 16";
@@ -745,52 +756,13 @@ export default function CareersPage() {;
     </UltraAdvancedFuturisticBackground>;
   );
 };
-
       <EnhancedFooter />;
     </div>;
   );
 }
 
-=======
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="py - 20 px - 6">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Don't See the Right Role?;
-            </h2>;
-            <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto">;
-              We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our mission.;
-            </p>;
-            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-              <button className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105">;
-                Send Resume;
-              </button>;
-              <button className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10">;
-                Contact Recruiting;
-              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
+      <EnhancedFooter />
+    </div>
+  )
 }
-;
-      <EnhancedFooter />;
-    </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

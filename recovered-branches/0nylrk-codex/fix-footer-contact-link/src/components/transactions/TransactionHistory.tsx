@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -20,10 +10,6 @@ import {Badge} from "@/components/ui/badge";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -33,7 +19,6 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Skeleton } from "@/components/ui/skeleton",
-<<<<<<< HEAD
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 interface Transaction {
@@ -97,13 +82,8 @@ export function TransactionHistory() {
         body: { transactionId, action }
       });
       if (error) throw error;
-=======
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Transaction {
   id: string,
   user_id: string,
@@ -122,9 +102,6 @@ interface Transaction {
   },
   service?: {
     title?: string
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
 }
 
@@ -172,8 +149,6 @@ export function TransactionHistory() {;
       });
       
       if (error) throw error;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -185,7 +160,6 @@ import { Badge } from "@/components/ui/badge",;
 import { Skeleton } from "@/components/ui/skeleton",;
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;
 import { formatDistanceToNow } from "date-fns",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface Transaction {;
   id: string,;
   user_id: string,;
@@ -208,49 +182,6 @@ interface Transaction {;
 }
 
 export function TransactionHistory() {;
-<<<<<<< HEAD
-
-  const { user } = useAuth();
-  const { toast } = useToast();
-
-  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
-
-
-import React, { useState } from './react';
-import { use_query } from '@tanstack / react - query';
-import { supabase } from '@/integrations / supabase / client';
-import { use_auth } from '@/hooks / use_auth';
-import { use_toast } from '@/hooks / use - toast';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Skeleton } from '@/components / ui / skeleton';
-import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from './lucide-react';
-import { formatDistanceToNow } from './date - fns';
-=======
-
-interface Transaction {
-  id: string,
-  user_id: string,
-  provider_id: string,
-  service_id: string,
-  amount: number,
-  currency: string,
-  status: 'pending' | 'completed' | 'refunded' | 'cancelled',
-  in_escrow: boolean,
-  created_at: string,
-  completed_at?: string;
-  refunded_at?: string;
-  cancelled_at?: string;
-  provider?: {
-
-    display_name?: string
-  },
-  service?: {
-    title?: string
-
-
-=======
   const { user } = useAuth(),;
   const { toast } = useToast(),;
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all'),;
@@ -288,14 +219,7 @@ interface Transaction {
       }),
       
       if (error) throw error,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: "Success"
         description: data.message |"Transaction updated successfully"})
@@ -307,12 +231,9 @@ interface Transaction {
         description: error.message |"Failed to update transaction"
         variant: "destructive"})
     }
-
-
+  }
   },
   
-
-
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'pending':
@@ -350,22 +271,16 @@ interface Transaction {
           </Badge>
         )
     }
-
-
+  }
   },
   
-
-
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: currency.toUpperCase()
     }).format(amount)
-
-
+  }
   },
-
-
 
   if (error) {
 =======
@@ -486,8 +401,78 @@ interface Transaction {
     );
   }
   return (
-
-
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden">
+      <div className="p-6">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-white">Transaction History</h2>
+          <div className="flex space-x-2">
+            <Button
+              size="sm"
+              variant={filter === 'all' ? 'default' : 'outline'}
+              onClick={() => setFilter('all')}
+              className={filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+            >
+              All
+            </Button>
+            <Button
+              size="sm"
+              variant={filter === 'pending' ? 'default' : 'outline'}
+              onClick={() => setFilter('pending')}
+              className={filter === 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+            >
+              Pending
+            </Button>
+            <Button
+              size="sm"
+              variant={filter === 'completed' ? 'default' : 'outline'}
+              onClick={() => setFilter('completed')}
+              className={filter === 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+            >
+              Completed
+            </Button>
+            <Button
+              size="sm"
+              variant={filter === 'escrow' ? 'default' : 'outline'}
+              onClick={() => setFilter('escrow')}
+              className={filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+            >
+              Escrow
+            </Button>
+          </div>
+        </div>
+        {isLoading ? (
+          Array(3).fill(0).map((_, i) => (
+            <div key={i} className="mb-4">
+              <Card className="bg-zion-blue-dark border-zion-blue-light">
+                <CardHeader className="pb-2">
+                  <Skeleton className="h-6 w-3/4 bg-zion-blue-light" />
+                  <Skeleton className="h-4 w-1/4 bg-zion-blue-light mt-2" />
+                </CardHeader>
+                <CardContent>
+                  <div className="flex justify-between mb-2">
+                    <Skeleton className="h-5 w-1/3 bg-zion-blue-light" />
+                    <Skeleton className="h-5 w-1/4 bg-zion-blue-light" />
+                  </div>
+                  <Skeleton className="h-4 w-2/3 bg-zion-blue-light" />
+                </CardContent>
+                <CardFooter>
+                  <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md" />
+                </CardFooter>
+              </Card>
+            </div>
+          ))
+        ) : transactions && transactions.length > 0 ? (
+          <div className="space-y-4">
+            {transactions.map((transaction) => {
+              const isClient = user?.id === transaction.user_id;
+              const isPending = transaction.status === 'pending';
+              const isInEscrow = transaction.in_escrow;
+              const canRelease = !isClient && isPending && isInEscrow;
+              const canCancel = isClient && isPending;
+              const canRefund = isClient && transaction.status === 'completed';
+              const counterpartyName = isClient
+                ? transaction.provider?.display_name |'Service Provider'
+                : 'Client';
               const isClient = user?.id === transaction.user_id,
               const isPending = transaction.status === 'pending',
               const isInEscrow = transaction.in_escrow,
@@ -498,8 +483,6 @@ interface Transaction {
               const counterpartyName = isClient 
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client',
-
-
 
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
@@ -514,9 +497,6 @@ interface Transaction {
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>
                           ) : (
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>
-
-=======
-
       }),;
       if (error) throw error,;
       toast({;
@@ -682,17 +662,6 @@ interface Transaction {
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;
                           ) : (;
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                           )}
                         </CardDescription>
                       </div>
@@ -713,17 +682,8 @@ interface Transaction {
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
                     </div>
-<<<<<<< HEAD
-
-                    {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
-
-=======
-<<<<<<< HEAD
                     {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
-=======
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :
@@ -795,7 +755,10 @@ interface Transaction {
             </p>;
           </div>;
         )}
-
+      </div>
+    </div>
+  )
+}
       </div>;
     </div>;
   );
@@ -803,6 +766,3 @@ interface Transaction {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 ;
-
-
-

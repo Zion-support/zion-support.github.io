@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -11,8 +5,6 @@ import { Label  } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Skill  } from '@/types/resume';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
@@ -20,32 +12,14 @@ import {Label} from '@/components/ui/label';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
 import {Skill} from '@/types/resume';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface AddSkillFormProps {
 
   resumeId: string
   onAddSkill: (skill: Skill) => Promise<boolean>
 }
-<<<<<<< HEAD
-
-
-
-export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
-
-
-=======
-<<<<<<< HEAD
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
-=======
 
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
@@ -56,27 +30,16 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       name: skillName.trim()
       category: skillCategory |'Other'
       proficiency: proficiency}
-<<<<<<< HEAD
-=======
-import React from 'react';
-import {useState} from 'react';
-
-=======
     const success = await onAddSkill(newSkill);
     if (success) {
       setSkillName('');
       setProficiency(3)
     }
-<<<<<<< HEAD
   }
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -106,23 +69,11 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       setProficiency(3);
     }
   },
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <form onSubmit={handleSubmit} className="space-y-4">;
       <div className="flex flex-col gap-4 md:flex-row">;
@@ -260,21 +211,6 @@ if ( {) {
               min={1}
               max={5}
               value={proficiency}
-<<<<<<< HEAD
-              on_change={(e) => set_proficiency (Number (e.target.value))}
-              className="w - 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-            />;
-            <Button type="submit">Add</Button>;
-          </div>;
-        </div>;
-      </div>;
-
-    </form>);
-}
-;
-
-=======
               onChange={(e) => setProficiency(Number(e.target.value))}
               className="w-20"
             />
@@ -284,17 +220,8 @@ if ( {) {
       </div>
     </form>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 };
-=======
 },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -2,40 +2,14 @@
 <<<<<<< HEAD
 
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
-<<<<<<< HEAD
-
-import React from './react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { Link } from './react-router-dom';
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from './lucide-react';
-;
-export /**
- * FeatureCTAs - Function description
- */
-function FeatureCTAs() {
-  const features = [;
-=======
-<<<<<<< HEAD
 export function FeatureCTAs() {
   const features = [
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     {
       title: "AI Talent Matching",
       description: "Our AI - powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
@@ -57,20 +31,11 @@ export function FeatureCTAs() {
     {
       title: "Services Marketplace"
       description: "Discover professional tech and AI services for your business needs, from development to consulting.";
-<<<<<<< HEAD
-
-
-
-=======
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />
       link: "/services"
       badge: "New"
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -92,22 +57,13 @@ import {
 } from "lucide-react",
 <<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
 export function FeatureCTAs() {
   const features = [
     {
-
+      title: "AI Talent Matching",;
+      description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
-
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: "/marketplace",
       badge: "Popular",
@@ -128,16 +84,20 @@ export function FeatureCTAs() {
       badge: "New",
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       title: "Equipment Catalog"
       description: "Find specialized hardware and tech equipment for AI development and research."
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />
       link: "/equipment"
       details: "Access cutting-edge technology with flexible options to buy, rent, or lease specialized equipment for your tech projects."
-
-
+    }
+    {
+      title: "Community Hub"
+      description: "Connect with like-minded professionals, share insights, and stay updated with industry trends.";
+      icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />
+      link: "/community"
+      details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."
+    }
     },
     {
       title: "Community Hub",
@@ -146,8 +106,6 @@ export function FeatureCTAs() {
       link: "/community",
       details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."
     },
-
-
     {
       title: "Mobile Experience"
       description: "Take Zion with you on the go with our mobile app for iOS and Android devices."
@@ -155,11 +113,6 @@ export function FeatureCTAs() {
       link: "/mobile-launch"
       badge: "Featured"
       details: "Manage your projects, communicate with clients or talents, and receive real-time updates wherever you are."
-
-      icon: <Zap className="h - 10 w - 10 p - 2 rounded - md bg - cyan - 100 text - cyan - 700" />,
-      link: "/services",
-      badge: "New",
-      details: "From on - demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews.";
     }
     {
       title: "Equipment Catalog",
@@ -212,8 +165,10 @@ export function FeatureCTAs() {
     {
       title: "Project Management"
       description: "Streamlined tools to manage projects, track milestones, and ensure successful delivery.";
-
-
+      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />
+      link: "/dashboard/projects"
+      details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
+    }
     },
     {
       title: "Enterprise Solutions",
@@ -243,8 +198,6 @@ export function FeatureCTAs() {
       link: "/dashboard/projects",
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
     },
-
-
     {
       title: "Zion Hire AI"
       description: "AI-powered recruiting assistant to streamline your hiring process and find better matches."
@@ -371,9 +324,6 @@ export function FeatureCTAs() {;
 
                   {feature.icon}
                   {feature.badge && (
-
-=======
-
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -497,16 +447,6 @@ export function FeatureCTAs() {;
 
                   {feature.icon}
                   {feature.badge && (
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
                       {feature.badge}
                     </Badge>

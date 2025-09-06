@@ -1,53 +1,30 @@
 
-<<<<<<< HEAD
-
-import {supabase} from "@/integrations/supabase/client";
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
-=======
 import {supabase} from "@/integrations/supabase/client";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { supabase } from "@/integrations/supabase/client",
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
-<<<<<<< HEAD
-
-import { supabase } from '@/integrations / supabase / client';
-import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
-
-export const quoteRequestService = {
-  // Get all quote requests (for admin);
-  get_all: async () => {
-    const { data, error } = await supabase;
-      .from ('quote_requests');
-      .select (`;
-        *;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const quoteRequestService = {
   // Get all quote requests (for admin)
   getAll: async () => {
     const { data, error } = await supabase
       .from('quote_requests')
-
+      .select(`;
+        *;
       .select(`
         *,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         talent:talent_id (
-
-    return data && data.map((item: any) => ({
-=======
-
+          display_name
+        )
+      `)
+      .order('created_at', { ascending: false });
+    if (error) throw error;
+    // Format the data to include talent_name
+    return data.map((item: any) => ({
+      ...item
+      talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
+  }
       .order('created_at', { ascending: false }),
     
     if (error) throw error,
@@ -59,39 +36,38 @@ export const quoteRequestService = {
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
   
-
-
-
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
     const { data, error } = await supabase
       .from('quote_requests')
       .select('*')
       .eq('talent_id', talentId)
-
-
+      .order('created_at', { ascending: false });
+    if (error) throw error;
+    return data as QuoteRequest[]
+  }
       .order('created_at', { ascending: false }),
     
     if (error) throw error,
     return data as QuoteRequest[]
   },
   
-
-
   // Get a single quote request by id
-=======
-          display_name);
-      `);
-      .order ('created_at', { ascending: false });
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    // Format the data to include talent_name;
-    return data.map ((item: any) => ({
-      ...item,
-      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[];
+  getById: async (id: string) => {
+    const { data, error } = await supabase
+      .from('quote_requests')
+      .select(`
+        *,
+        talent:talent_id (
+          display_name
+        )
+      `)
+      .eq('id', id)
+      .single();
+    if (error) throw error;
+    return {
+      ...data;
+      talent_name: data.talent?.display_name |'Unknown Talent'} as QuoteRequest
   }
 ;
   // Get quote requests for a specific talent;
@@ -172,63 +148,6 @@ if (throw error) {
   }
 }
 
-=======
-          display_name);
-      `);
-      .eq ('id', id);
-      .single ();
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    return {
-      ...data;
-      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
-  }
-;
-  // Update quote request status;
-  update_status: async (id: string, status: QuoteStatus) => {
-    const updates: any = { status }
-;
-    // If marking as responded, set replied_at;
-    // Check condition
-if ( {) {
-  $2
-}
-      updates.replied_at = new Date ().toISOString ();
-    }
-    // If marking as in_review and viewed_at is null, set viewed_at;
-    // Check condition
-if ( {) {
-  $2
-}
-      const { data } = await supabase;
-        .from ('quote_requests');
-        .select ('viewed_at');
-        .eq ('id', id);
-        .single ();
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        updates.viewed_at = new Date ().toISOString ();
-      }
-    }
-    const { data, error } = await supabase;
-      .from ('quote_requests');
-      .update (updates);
-      .eq ('id', id);
-      .select ();
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    return data[0] as QuoteRequest;
-=======
-
       .single(),
     
     if (error) throw error,
@@ -245,13 +164,6 @@ if (throw error) {
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
     
     // If marking as in_review and viewed_at is null, set viewed_at
@@ -298,8 +210,6 @@ if (throw error) {
     
     if (error) throw error;
     return true
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { supabase } from "@/integrations/supabase/client",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 export const quoteRequestService = {;
@@ -393,41 +303,5 @@ export const quoteRequestService = {;
       .eq('id', id),;
     if (error) throw error;
     return true;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
-;
-  // Archive / Unarchive a quote request;
-  toggle_archive: async (id: string, is_archived: boolean) => {
-    const { data, error } = await supabase;
-      .from ('quote_requests');
-      .update ({ is_archived: is_archived });
-      .eq ('id', id);
-      .select ();
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    return data[0] as QuoteRequest;
-  }
-;
-  // Delete a quote request;
-  delete: async (id: string) => {
-    const { error } = await supabase;
-      .from ('quote_requests');
-      .delete ();
-      .eq ('id', id);
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    return true;
-  }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+};

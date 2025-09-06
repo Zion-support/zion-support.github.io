@@ -1,9 +1,3 @@
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
 ;
 =======
 <<<<<<< HEAD
@@ -35,9 +29,15 @@ if (return null) {
   $2
 
 }
-=======
 const iconMap = {
-
+  Trophy
+  Award
+  BadgeCheck
+  Star
+  MessageSquare
+}
+export const UserBadges = ({ badges }: UserBadgesProps) => {
+  if (!badges?.length) return null
   Trophy,
   Award,
   BadgeCheck,
@@ -50,11 +50,8 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 
 <<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
 
 =======
 <<<<<<< HEAD
@@ -80,10 +77,6 @@ export default UserBadges;
 }
 <<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
         return (
@@ -133,29 +126,9 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
       {badges && badges.map((badge,) => {;
         // Get the correct icon component based on the badge's icon name;
         const IconComponent = iconMap[badge && badge.icon as keyof typeof iconMap] || Trophy;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
-export default UserBadges;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <div className="flex flex - wrap gap - 2">;
       {badges.map ((badge, ) => {
         // Get the correct icon component based on the badge's icon name;
         const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
 export default UserBadges;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

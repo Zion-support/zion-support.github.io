@@ -1,5 +1,3 @@
-
-
 'use client';
 
 import React, {;
@@ -49,11 +47,9 @@ const EnhancedLoading: React.FC<{;
         <div className='relative'>;
           <Loader2 className='h-8 w-8 animate-spin text-primary' />          {showProgress && (;
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className='absolute inset-0 rounded-full border-2 border-primary'
               style={{
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-=======
   progress?: number;
   message?: string;
   show_progress?: boolean;
@@ -69,12 +65,6 @@ const EnhancedLoading: React.FC<{;
         <div className="relative">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
           {showProgress && (
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
@@ -83,38 +73,31 @@ const EnhancedLoading: React.FC<{;
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-            <motion.div
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{
-<<<<<<< HEAD
-                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`,
-=======
-                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+            />
+          )}
+        </div>
+        <div className="text-center">
+          <p className="text-sm font-medium">{message}</p>
+          {showProgress && (
+            <p className="text-xs text-muted-foreground mt-1">
+              {Math.round(progress)}% loaded
+            </p>
+          )}
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+)
 
 <<<<<<< HEAD
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Enhanced Error Component
 const EnhancedError: React.FC<{
   error: Error
@@ -123,8 +106,11 @@ const EnhancedError: React.FC<{
   retryCount: number
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
-
-
+  <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>
+    <CardContent className='p-6'>
+      <div className='flex flex-col items-center space-y-4'>
+        <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>          {isOnline ? (
+            <AlertTriangle className='h-6 w-6 text-red-600' />
   <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
@@ -134,17 +120,8 @@ const EnhancedError: React.FC<{
 <<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           ) : (
             <WifiOff className='h-6 w-6 text-red-600' />
-=======
         </div>;
       </div>;
     </CardContent>;
@@ -166,11 +143,10 @@ const EnhancedError: React.FC<{;
             <AlertTriangle className='h-6 w-6 text-red-600' />;
           ) : (;
             <WifiOff className='h-6 w-6 text-red-600' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           )}
-        </div>;
-        <div className='text-center'>;
-          <h3 className='font-semibold text-red-900 dark:text-red-100'>;
+        </div>
+        <div className="text-center">
+          <h3 className="font-semibold text-red-900 dark:text-red-100">
             {isOnline ? 'Loading Failed' : 'Offline'}
 
           </h3>;
@@ -182,9 +158,14 @@ const EnhancedError: React.FC<{;
           </p>;
           {retryCount > 0 && (;
             <p className='text-xs text-red-600 dark:text-red-300 mt-2'>;
-=======
           </h3>
-
+          <p className='text-sm text-red-700 dark:text-red-200 mt-1'>
+            {isOnline
+              ? error.message |'Failed to load component'
+              : 'Please check your internet connection'}
+          </p>
+          {retryCount > 0 && (
+            <p className='text-xs text-red-600 dark:text-red-300 mt-2'>
           <p className="text-sm text-red-700 dark:text-red-200 mt-1">
             {isOnline 
               ? error.message || 'Failed to load component'
@@ -194,26 +175,18 @@ const EnhancedError: React.FC<{;
           {retryCount > 0 && (
 <<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-            <p className="text-xs text-red-600 dark:text-red-300 mt-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-            <p className='text-xs text-red-600 dark:text-red-300 mt-2'>
-=======
-            <p className="text-xs text-red-600 dark:text-red-300 mt-2">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               Retry {retryCount}/{maxRetries}
             </p>;
           )}
 
         </div>
         {retryCount < maxRetries && (
-
+          <Button
+            onClick={retry}
+            variant='outline'
+            size='sm'
+            className='border-red-300 text-red-700 hover:bg-red-100'          >
+            <RefreshCw className='h-4 w-4 mr-2' />
           <Button 
             onClick={retry} 
             variant="outline" 
@@ -221,82 +194,20 @@ const EnhancedError: React.FC<{;
             className="border-red-300 text-red-700 hover:bg-red-100"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Try Again
           </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
-
-            />)}
-        </div>;
-        <div className='text - center'>;
-          <p className='text - sm font - medium'>{message}</p>;
-          {show_progress && (
-            <p className='text - xs text - muted - foreground mt - 1'>;
-              {Math.round (progress)}% loaded;
-            </p>)}
-        </div>;
-      </div>;
-    </CardContent>;
-  </Card>);
-// Enhanced Error Component;
-const EnhancedError: React.FC<{
-  error: Error;
-  retry: () => void;
-  is_online: boolean;
-  retry_count: number;
-  max_retries: number;
-}> = ({ error, retry, is_online, retry_count, max_retries }) => (
-  <Card className='w - full max - w-md mx - auto border - red - 200 bg - red - 50 dark:bg - red - 900 / 10'>;
-    <CardContent className='p - 6'>;
-      <div className='flex flex - col items - center space - y-4'>;
-        <div className='p - 3 rounded - full bg - red - 100 dark:bg - red - 900 / 20'>          {is_online ? (
-            <AlertTriangle className='h - 6 w - 6 text - red - 600' />) : (
-            <WifiOff className='h - 6 w - 6 text - red - 600' />)}
-        </div>;
-        <div className='text - center'>;
-          <h3 className='font - semibold text - red - 900 dark:text - red - 100'>;
-            {is_online ? 'Loading Failed' : 'Offline'}
-          </h3>;
-          <p className='text - sm text - red - 700 dark:text - red - 200 mt - 1'>;
-            {is_online;
-              ? error.message || 'Failed to load component';
-              : 'Please check your internet connection'}
-          </p>;
-          {retry_count > 0 && (
-            <p className='text - xs text - red - 600 dark:text - red - 300 mt - 2'>;
-              Retry {retry_count}/{max_retries}
-            </p>)}
-        </div>;
-        {retry_count < max_retries && (
-          <Button;
-            on_click={retry}
-            variant='outline';
-            size='sm';
-            className='border - red - 300 text - red - 700 hover:bg - red - 100'          >;
-            <RefreshCw className='h - 4 w - 4 mr - 2' />;
-            Try Again;
-          </Button>)}
-      </div>;
-    </CardContent>;
-  </Card>);
-// Network Status Hook;
-const useNetworkStatus = () =>: any {
-  const [is_online, setIsOnline] = useState (true);
-  useEffect (() => {
-    const updateOnlineStatus = () =>: any setIsOnline (navigator.on_line);
-    window.addEventListener ('online', updateOnlineStatus);
-    window.addEventListener ('offline', updateOnlineStatus);
-
+      </div>
+    </CardContent>
+  </Card>
+)
+// Network Status Hook
+const useNetworkStatus = () => {
+  const [isOnline, setIsOnline] = useState(true)
+  useEffect(() => {
+    const updateOnlineStatus = () => setIsOnline(navigator.onLine)
+    window.addEventListener('online', updateOnlineStatus)
+    window.addEventListener('offline', updateOnlineStatus)
     return () => {
       window.removeEventListener ('online', updateOnlineStatus);
       window.removeEventListener ('offline', updateOnlineStatus);
@@ -304,14 +215,6 @@ const useNetworkStatus = () =>: any {
   }, []);
   return is_online;
 }
-<<<<<<< HEAD
-
-
-    };
-;
-
-
-=======
 // Advanced Dynamic Component Loader
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   importFn
@@ -345,13 +248,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
         })
       }, 100)
       return () => clearInterval(interval)
-<<<<<<< HEAD
     }
-=======
     };
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -426,7 +325,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       })
     }
           >
-=======
       </div>;
     </CardContent>;
   </Card>;
@@ -571,7 +469,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
     }
 
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <EnhancedError
 
           error={loadingState.error}
@@ -586,14 +483,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   // Success state
   if (DynamicComponent) {
@@ -605,10 +494,13 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-
-        />;
-      </motion && motion.div>;
-    );
+            className = {className,}
+          >
+            <DynamicComponent {...props}>{children}</DynamicComponent>
+          </motion.div>
+        </AnimatePresence>
+      </Suspense>
+    )
   }
 
   // Success state;
@@ -624,7 +516,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
             className = {className,}>;
             <DynamicComponent {...props}>{children}</DynamicComponent>;
           </motion && motion.div>;
-=======
 
             className={className}
           >;
@@ -647,7 +538,6 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
   options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>;
 ) => {;
   return (props: React && React.ComponentProps<T> & { children?: React && React.ReactNode },) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     <DynamicComponentLoader
       importFn = {importFn,}
       {...(options |{})}
@@ -657,23 +547,12 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
   );
 }
 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
-
+//   (,) => import('recharts').then(module => ({ default: module.LineChart }))
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -862,23 +741,20 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 // Note: These are examples - uncomment and install types as needed;
 // export const DynamicChartComponent = createDynamicComponent (
 //   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),
-=======
 
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
-
-
 //   {
-//     loading_component: () => (
-//       <div className="w - full h - 64 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
-//         <span className="text - muted - foreground">Loading chart...</span>;
-//       </div>;
-//     ),
-//     prefetch: true;
+//     loadingComponent: () => (
+//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading 3D renderer...</span>
+//       </div>
+//     )
 //   }
+// )
+export default DynamicComponentLoader; export default DynamicComponentLoader
 // );
 // export const DynamicThreeComponent = createDynamicComponent (
 //   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 //   {
 //     loading_component: () => (
 //       <div className="w - full h - 96 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
@@ -919,45 +795,10 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 
 export default DynamicComponentLoader;export default DynamicComponentLoader ;
 
-=======
-<<<<<<< HEAD
-=======
-//   () => import('three').then(module => ({ default: module.WebGLRenderer })),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-//   {
-//     loadingComponent: () => (
-//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>
-//       </div>
-//     )
-//   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// )
-export default DynamicComponentLoader; export default DynamicComponentLoader
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // );
 export default DynamicComponentLoader; export default DynamicComponentLoader;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 
 // );
 
 export default DynamicComponentLoader;
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

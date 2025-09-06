@@ -68,42 +68,14 @@ if ( {) {
 }
     chrome.tabs.create ({ url: `${BASE_URL}/talent` });
   }
-  // Check condition
-if ( {) {
-  $2
-}
-    chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
-
-  }
-
-<<<<<<< HEAD
-}),;
-
-=======
-    return true
-  }
-  if (message.type === 'post-job') {
-    chrome.tabs.create({ url: `${BASE_URL}/jobs/new` })
-  }
-  if (message.type === 'resume-search') {
-    chrome.tabs.create({ url: `${BASE_URL}/talent` })
-  }
   if (message.type === 'view-notifications') {
     chrome.tabs.create({ url: `${BASE_URL}/notifications` })
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-});
+  }
 
-=======
+<<<<<<< HEAD
 }),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 }),
 ;
-=======
 }),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

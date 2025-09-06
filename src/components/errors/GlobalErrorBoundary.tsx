@@ -1,36 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-'use client'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-<<<<<<< HEAD
-import {
-  AlertTriangle
-  RefreshCw
-  Home
-  Bug
-  Send
-  Clipboard
-=======
-=======
-'use client';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
 import {
   AlertTriangle,
   RefreshCw,
   Home,
   Bug,
   Send,
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
   Clipboard,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -50,8 +24,6 @@ interface ErrorBoundaryProps {
   fallback?: ReactNode
   onError?: (error: Error, errorInfo: ErrorInfo) => void
   enableRetry?: boolean
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Clipboard,;
 
 } from 'lucide-react';
@@ -60,7 +32,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Badge } from '@/components / ui / badge';
 import * as Sentry from '@sentry / nextjs';
 import { logErrorToProduction } from '@/utils / production_logger';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ErrorBoundaryState {
   has_error: boolean;
   error: Error | null;
@@ -75,7 +46,6 @@ interface ErrorBoundaryProps {
 
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableRetry?: boolean;
-
   maxRetries?: number;
 
   showReportButton?: boolean;
@@ -86,12 +56,17 @@ interface ErrorBoundaryProps {
 }
 <<<<<<< HEAD
 
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
-      retryCount: 0,
-      userFeedback: '',
+export class GlobalErrorBoundary extends Component<
+  ErrorBoundaryProps
+  ErrorBoundaryState
+> {
+  private retryTimeouts: NodeJS.Timeout[] = []
+  constructor(props: ErrorBoundaryProps) {
+    super(props)
+export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  private retryTimeouts: NodeJS.Timeout[] = []
+  constructor(props: ErrorBoundaryProps) {
+    super(props)
 
 =======
 <<<<<<< HEAD
@@ -149,8 +124,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       userId: this.getUserId(),
 
       buildInfo: this.getBuildInfo()
-<<<<<<< HEAD
-=======
 export class GlobalErrorBoundary extends Component<;
   ErrorBoundaryProps,
   ErrorBoundaryState;
@@ -231,7 +204,6 @@ export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBo
       url: typeof window !== 'undefined' ? window.location.href : 'SSR',
       user_id: this.getUserId (),
       build_info: this.getBuildInfo (),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     // Log to console in development;
     // Check condition
@@ -272,7 +244,6 @@ if ( {) {
                sessionStorage.getItem('userId') || 
                null
 
-=======
     // Report to Sentry;
     Sentry.with_scope (scope => {
       scope.set_tag (
@@ -354,7 +325,6 @@ if ( {) {
           local_storage.get_item ('user_id') ||;
           session_storage.get_item ('user_id') ||;
           null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch {
         return null;
       }
@@ -555,14 +525,12 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
     return null;  }      } catch {;
         return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
     return null;
   }
 
     return null
-=======
         return null;
       }
     }
@@ -576,7 +544,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
 
     return 'This appears to be a temporary issue. Please try again.'
-=======
       build_time: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
     }
   }
@@ -695,7 +662,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       })
     }, retryDelay)
     this.retryTimeouts.push(timeout)
-=======
     if () {) {
   $2
 }
@@ -719,7 +685,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       });
     }, retry_delay);
     this.retry_timeouts.push (timeout);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
     const error_details = {
@@ -755,7 +720,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
 
 
-=======
   private report_error = async () => {
     // Check condition
 if (return) {
@@ -765,7 +729,6 @@ if (return) {
 if (return) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       await navigator.clipboard.write_text (JSON.stringify (error_details, null, 2));
       // Could show a toast notification here;
@@ -806,14 +769,11 @@ if (return) {
 
       if (response.ok) {
         // Show success message
-=======
   private report_error = async () => {
     // Check condition
 if (return) {
   $2
 }
-<<<<<<< HEAD
-=======
 ;
 interface ErrorBoundaryProps {;
   children: ReactNode;
@@ -824,9 +784,6 @@ interface ErrorBoundaryProps {;
   showReportButton?: boolean;
   context?: string;
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {;
   private retryTimeouts: NodeJS.Timeout[] = [];
@@ -886,18 +843,11 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
     // Custom error handler;
     if (this.props.onError) {;
       this.props.onError(error, errorInfo);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
     this.setState({
       errorInfo,
       errorId,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }) }
 
   componentWillUnmount() {
@@ -1102,7 +1052,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       userAgent:
         typeof window !== 'undefined' ? navigator.userAgent : 'unknown',
     }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     try {
       // Report to your error reporting service;
       const response = await fetch ('/api / error - report', {
@@ -1121,9 +1070,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
           context: this.props.context,
           timestamp: new Date ().toISOString (),
         }),
-<<<<<<< HEAD
-      });          timestamp: new Date ().toISOString ();
-=======
       });          timestamp: new Date().toISOString()
         })
       })
@@ -1135,8 +1081,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       logErrorToProduction('Failed to report error:', { data: err })
     }    }
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     });  }
 
   componentWillUnmount() {
@@ -1280,7 +1224,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
           userFeedback: this.state.userFeedback,;
           context: this.props.context;
           timestamp: new Date().toISOString();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         });
       });
       // Check condition
@@ -1288,7 +1231,6 @@ if ( {) {
   $2
 }
         // Show success message;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     } catch (err) {
       logErrorToProduction ('Failed to report error:', { data: err });
@@ -1299,22 +1241,11 @@ if ( {) {
 
     }
 
-<<<<<<< HEAD
-    this.setState({
-      errorInfo,
-      errorId,
-=======
   };
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   private goHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/'
@@ -1329,21 +1260,10 @@ if ( {) {
       if (this.props.fallback) {
 <<<<<<< HEAD
 
-=======
 
         return this.props.fallback;
 
-
-  private getBuildInfo() {;
-    return {;
-      version: process && process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',;
-      environment: process && process.env.NODE_ENV,;
-      buildTime: process && process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',;
-    };
-  }
-
-
-
+        return this.props.fallback;
 
 =======
 <<<<<<< HEAD
@@ -1376,13 +1296,6 @@ if ( {) {
 
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       const canRetry = null;
         this.props.enableRetry !== false &&
         this.state.retryCount < (this.props.maxRetries || 3)
@@ -1391,23 +1304,16 @@ if ( {) {
 
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       const canRetry = this.props.enableRetry !== false && 
                        this.state.retryCount < (this.props.maxRetries || 3)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       return (
-
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
           >
-=======
             transition={{ duration: 0.3 }}
           >
 
@@ -1420,21 +1326,35 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </div>
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                   Oops! Something went wrong
                 </CardTitle>
-
-                    <Badge variant="outline" className="text-xs">
-
+                <div className='flex items-center justify-center gap-2 mt-2'>
+                  <Badge
+                    variant={
+                      severity === 'critical'
+                        ? 'destructive'
+                        : severity === 'high'
+                          ? 'destructive'
+                          : 'secondary'
+                    }                  >
+                    {severity.toUpperCase()}
+                  </Badge>
+                  {this.state.errorId && (
+                    <Badge variant='outline' className='text-xs'>                      ID: {this.state.errorId.slice(-8)}                    variant = {severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary',}
+                </div>
+                <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                  Oops! Something went wrong
+                </CardTitle>
+                <div className="flex items-center justify-center gap-2 mt-2">
+                  <Badge
+                    variant={severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary'}
+                  >
+                    {severity.toUpperCase()}
+                  </Badge>
+                  {this.state.errorId && (
+                    <Badge variant='outline' className='text-xs'>                    <Badge variant="outline" className="text-xs">
                       ID: {this.state.errorId.slice(-8)}
                     </Badge>
                   )}
@@ -1442,36 +1362,13 @@ if ( {) {
               </CardHeader>
 <<<<<<< HEAD
 
-=======
-              <CardContent className='space-y-6'>
-                <div className='text-center'>
-                  <p className='text-gray-600 dark:text-gray-300 mb-4'>
-                    {suggestion}
-                  </p>
-                  {this.state.retryCount > 0 && (
-                    <p className='text-sm text-orange-600 dark:text-orange-400'>
-                      Retry attempt: {this.state.retryCount}/
-<<<<<<< HEAD
-                      {this.props.maxRetries |3}                    </p>                    {suggestion}
-                  </p>
-                  {this.state.retryCount > 0 && (
-                    <p className="text-sm text-orange-600 dark:text-orange-400">
-                      Retry attempt: {this.state.retryCount}/{this.props.maxRetries |3}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
                       {this.props.maxRetries || 3}                    </p>                    {suggestion}
                   </p>
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     </p>
-=======
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <Badge 
                     variant={severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary'}
@@ -1491,7 +1388,6 @@ if ( {) {
                 <div className="text-center">
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
                     {suggestion}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </p>
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
@@ -1572,7 +1468,6 @@ if ( {) {
                       Try Again;
                     </Button>;
 
-=======
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>
                   )}
@@ -1586,48 +1481,23 @@ if ( {) {
                       Try Again
                     </Button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
 
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>;
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   )}
                 </div>
                 {/* Action Buttons */}
-
+                <div className='flex flex-col sm:flex-row gap-3 justify-center'>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {canRetry && (
                     <Button onClick={this.retry} className="flex items-center gap-2">
                       <RefreshCw className="h-4 w-4" />
                       Try Again
                     </Button>
                   )}
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
                   <Button
                     onClick={this.goHome}
                     variant='outline'
@@ -1636,10 +1506,6 @@ if ( {) {
                     <Home className='h-4 w-4' />
                     Go Home
                   </Button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Button
                     onClick={() =>
                       this.setState({ showDetails: !this.state.showDetails })
@@ -1664,7 +1530,6 @@ if ( {) {
                     size="sm"
                     className="flex items-center gap-2"
                   >
-=======
                   
                   <Button onClick={this.goHome} variant="outline" className="flex items-center gap-2">
                     <Home className="h-4 w-4" />
@@ -1676,20 +1541,8 @@ if ( {) {
                     size="sm"
                     className="flex items-center gap-2"
                   >
-=======
 
-                  <Button 
-                    onClick={() => this.setState({ showDetails: !this.state.showDetails })}
-                    variant="ghost" 
-                    size="sm"
-                    className="flex items-center gap-2"
-                  >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
                     <Bug className="h-4 w-4" />
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
@@ -1713,20 +1566,10 @@ if ( {) {
                 </div>;
 
 
-=======
 
 <<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {/* Error Details */}
                 <AnimatePresence>;
                   {this && this.state.showDetails && (;
@@ -1734,66 +1577,19 @@ if ( {) {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-
-
-                    >
-                      <div className='space-y-4'>
-                        <div>
-
+                      className='border-t pt-4'
                       className="border-t pt-4"
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <div className="space-y-4">
                         <div>
-<<<<<<< HEAD
-                          <h4 className='font-semibold text-sm mb-2'>
-                            Error Message:
-                          </h4>
-                          <code className='block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto'>                            {this.state.error.message}
-                          </code>
-                        </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-                    >
-                      <div className="space-y-4">
-                        <div>
-=======
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                           <h4 className="font-semibold text-sm mb-2">Error Message:</h4>
                           <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto">
                             {this.state.error.message}
                           </code>
                         </div>
-<<<<<<< HEAD
-
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         {process.env.NODE_ENV === 'development' &&
-=======
   private go_home = () => {
     // Check condition
 if ( {) {
@@ -1963,7 +1759,6 @@ if ( {) {
                           </code>;
                         </div>;
                         {process.env.NODE_ENV === 'development' &&;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           this.state.error.stack && (
                             <div>;
                               <h4 className='font - semibold text - sm mb - 2'>;
@@ -2005,31 +1800,12 @@ if ( {) {
 <<<<<<< HEAD
 
                         <div className='flex gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                        <div className='flex gap-2'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                           <Button
                             onClick={this && this.copyErrorDetails}
                             variant='outline'
-<<<<<<< HEAD
-
-                            size='sm'>;
-                            <Clipboard className='h-4 w-4 mr-2' />;
-                            Copy Details;
-                          </Button>;
-
-                          {this && this.props.showReportButton !== false && (;
-
-                            <Button
-                              onClick={this && this.reportError}
-                              variant='outline'
-
+                            size='sm'
+                          >
+                            <Clipboard className='h-4 w-4 mr-2' />
 
 =======
                             size='sm'
@@ -2078,8 +1854,6 @@ if ( {) {
                             Copy Details
                           </Button>
                           {this.props.showReportButton !== false && (
-=======
-<<<<<<< HEAD
 
 
 
@@ -2088,20 +1862,10 @@ if ( {) {
                           {this.props.showReportButton !== false && (
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               <Send className="h-4 w-4 mr-2" />
                               Report Issue
                             </Button>
-=======
                               size='sm'>;
                               <Send className='h-4 w-4 mr-2' />                              Report Issue;
                         <div className="flex gap-2">;
@@ -2117,47 +1881,25 @@ if ( {) {
                             </Button>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           )}
                         </div>;
                       </div>;
                     </motion && motion.div>;
                   )}
-<<<<<<< HEAD
-=======
                 </AnimatePresence>
               </CardContent>
             </Card>
           </motion.div>
         </div>
-<<<<<<< HEAD
       )
     return this.props.children
-<<<<<<< HEAD
-=======
-=======
       );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-
-  return WrappedComponent;
-}
-
-
-
-=======
     return this.props.children;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 // Hook for programmatic error boundary
 export const useErrorBoundary = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [error, setError] = React.useState<Error | null>(null)
   React.useEffect((,) => {
     if (error) {
@@ -2169,73 +1911,9 @@ export const useErrorBoundary = () => {
   }, [])
   return { captureError }
 }
-}
-// Higher-order component for adding error boundaries
-export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>
 
-  errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
-,) => {
-  const WrappedComponent = (props: P,) => (
-    <GlobalErrorBoundary {...errorBoundaryProps}>
-      <Component {...props} />
-    </GlobalErrorBoundary>
-  )
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`
-  return WrappedComponent
-}
-export default GlobalErrorBoundary
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`
-  return WrappedComponent
-}
-export default GlobalErrorBoundary
-=======
-      );
 
-<<<<<<< HEAD
-    }
 
-    return this.props.children;
-  }
-
-// Hook for programmatic error boundary
-export const useErrorBoundary = () => {
-=======
-export default GlobalErrorBoundary;
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const [error, setError] = React.useState<Error | null>(null);
-  React.useEffect(() => {;
-    if (error) {;
-      throw error;
-    }
-  }, [error]);
-  const captureError = React.useCallback((error: Error) => {;
-    setError(error);
-  }, []);
-  return { captureError }
-}
-;
-// Higher-order component for adding error boundaries;
-export const withErrorBoundary = <P extends object>(;
-  Component: React.ComponentType<P>;
-  errorBoundaryProps?: Omit<ErrorBoundaryProps 'children'>;
-) => {;
-  const WrappedComponent = (props: P) => (;
-    <GlobalErrorBoundary {...errorBoundaryProps}>;
-      <Component {...props} />;
-    </GlobalErrorBoundary>;
-  );
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  return WrappedComponent;
-}
-;
-export default GlobalErrorBoundary;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 // Higher - order component for adding error boundaries;
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType < P>,
@@ -2253,24 +1931,14 @@ export default GlobalErrorBoundary;
   return WrappedComponent;
 }
 export default GlobalErrorBoundary;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
       );
 
     }
 
     return this.props.children;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
   }
+
 // Hook for programmatic error boundary
 export const useErrorBoundary = () => {
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

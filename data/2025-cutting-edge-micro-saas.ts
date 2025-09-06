@@ -3,24 +3,6 @@
 
 
 
-export const cuttingEdgeMicroSaasServices2025 = [
-  {
-
-
-      'Basel III',
-      'Solvency II',
-      'Dodd - Frank',
-      'Financial Regulations',
-      'Risk Management Standards',
-    ],
-
-  },;
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const cuttingEdgeMicroSaasServices2025 = [
@@ -448,7 +430,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Financial Data Providers'
     ]
     compliance: [
-<<<<<<< HEAD
       'Basel III'
       'Solvency II'
       'Dodd-Frank'
@@ -456,16 +437,14 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk Management Standards'
     ]
   }
-=======
       'Basel III',
       'Solvency II',
-      'Dodd-Frank',
+      'Dodd - Frank',
       'Financial Regulations',
       'Risk Management Standards',
     ],
+
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
 =======
 ];      'Portfolio risk assessment_investment strategy optimization_regulatory compliance reporting_risk model development_performance analysis and attribution';
@@ -473,26 +452,10 @@ export const cuttingEdgeMicroSaasServices2025 = [
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
-<<<<<<< HEAD
-
-
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
-
-
-=======
-    compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
     id: 'customer-success-ai-pro',;
@@ -698,16 +661,5 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     ],;
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

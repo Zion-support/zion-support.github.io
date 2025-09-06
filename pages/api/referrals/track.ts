@@ -1,33 +1,17 @@
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
-<<<<<<< HEAD
-
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-
-
-=======
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, event, url, referrer } = req.body |{}
   if (!code |!event) return res.status($1).json({ $2 });
@@ -64,11 +48,7 @@ export default async function handler(
     return res && res.status(200).json({ saved: true });
 
   } catch (e: any) {
-    return res && res.status(200).json({ saved: false, error: e?.message });
-
-  }
-}
-=======
+    return res.status(200).json({ saved: false, error: e?.message });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -94,38 +74,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (error) return res.status(500).json({ error: error.message });
     return res.status(200).json({ saved: true })
   } catch (e: any) {
-<<<<<<< HEAD
-
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getServerSupabase  } from '../../../utils / supabase / server';
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status ($1).json ({ $2 })) {
-  $2
-}
-  const { code, event, url, referrer } = req.body || {}
-  if (return res.status ($1).json ({ $2 })) {
-  $2
-}
-  const using_placeholder =;
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
-      "placeholder - key";
-=======
-
-=======
-<<<<<<< HEAD
     return res.status(200).json({ saved: false, error: e?.message })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return res.status(200).json({ saved: false, error: e?.message });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -201,12 +153,5 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

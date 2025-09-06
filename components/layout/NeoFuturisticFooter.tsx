@@ -4,80 +4,48 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-
 import { motion } from 'framer-motion';
-
-
-export default function NeoFuturisticFooter() {
-
-
-import {;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  Github,;
+import {
+  Phone
+  Mail
+  MapPin
+  Globe
+  Github
+  Linkedin
+  ExternalLink;
+} from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Github,
   Linkedin,;
   ExternalLink,;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 } from 'lucide-react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-
-<<<<<<< HEAD
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};
-
 export default function NeoFuturisticFooter() {;
   return (  website: 'https://ziontechgroup && ziontechgroup.com';
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export default function NeoFuturisticFooter() {
-<<<<<<< HEAD
-  return (  website: 'https://ziontechgroup.com'
-}
-=======
-<<<<<<< HEAD
-  return (  website: 'https://ziontechgroup.com';
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
 export default function NeoFuturisticFooter() {;
   return (
 
@@ -99,7 +67,6 @@ export default function NeoFuturisticFooter() {;
               </a>;
             </div>;
           </div>;
-
           <div className='space-y-2 text-sm'>;
             <div className='font-semibold text-slate-100 mb-2'>Resources</div>;
 
@@ -132,8 +99,7 @@ export default function NeoFuturisticFooter() {;
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl" />
         <div className="absolute inset-0 bg-neural-dots opacity-20 animate-shimmer" />
-      </div>
-
+</div>
       <div className="relative container mx-auto px-4 py-12 text-slate-200">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
@@ -171,10 +137,8 @@ export default function NeoFuturisticFooter() {;
         </div>
       </div>
     </footer>
-  );
+);
 }
-<<<<<<< HEAD
-=======
                 href='https://www && www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'>;
                 <Linkedin className='w-5 h-5' />;
@@ -307,24 +271,8 @@ export default function NeoFuturisticFooter() {;
     </footer>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-=======
   return (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default function NeoFuturisticFooter() {
   return (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

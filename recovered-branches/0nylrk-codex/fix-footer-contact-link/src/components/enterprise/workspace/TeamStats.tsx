@@ -1,45 +1,53 @@
 
-
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-
-=======
-
 import React from "react";
 import {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "@/components/ui/card";
 
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
   return (
-
-
+    <Card>
+      <CardHeader>
+        <CardTitle>Team Stats</CardTitle>
+        <CardDescription>Performance metrics for your team</CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="space-y-1.5">
+          <div className="flex items-center justify-between text-sm">
+            <span>Team capacity</span>
+            <span className="font-medium">32 / 50 seats used</span>
+          </div>
+          <Progress value={64} className="h-2" />
+          <p className="text-xs text-muted-foreground">18 seats available</p>
+        </div>
+        <div className="space-y-4 pt-2">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-1">
+              <p className="text-xs text-muted-foreground">Active projects</p>
+              <p className="text-xl font-bold">12</p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-xs text-muted-foreground">Job postings</p>
+              <p className="text-xl font-bold">8</p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-xs text-muted-foreground">Avg. time to hire</p>
+              <p className="text-xl font-bold">14d</p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-xs text-muted-foreground">
+                Interviews this month
+              </p>
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -61,61 +69,26 @@ export function TeamStats() {
           <p className="text-xs text-muted-foreground">18 seats available</p>
         </div>
         
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <p className="text-xl font-bold">24</p>
             </div>
           </div>
         </div>
-
-
         
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <div className="pt-4 text-center border-t border-border mt-4">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View Full Analytics
           </button>
         </div>
       </CardContent>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
   return (;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     <Card>;
       <CardHeader>;
         <CardTitle>Team Stats</CardTitle>;
@@ -214,15 +187,8 @@ function TeamStats() {
           </button>;
         </div>;
       </CardContent>;
-
-
-    </Card>
-
-
     </Card>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
-    </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+;

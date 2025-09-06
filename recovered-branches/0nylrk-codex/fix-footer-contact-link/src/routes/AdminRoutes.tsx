@@ -1,20 +1,10 @@
 
-
-
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -23,12 +13,11 @@ import PartnerManager from "@/pages/admin/PartnerManager",
 import AppMetadataManager from "@/pages/admin/AppMetadataManager",
 import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
-
+import TokenManager from "@/pages/admin/TokenManager";
+import IntegrationsPage from "@/pages/admin/IntegrationsPage";
 
 import TokenManager from "@/pages/admin/TokenManager",
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
-
-
 const AdminRoutes = () => {
 =======
 // Admin Pages;
@@ -136,23 +125,15 @@ const AdminRoutes = () => {;
       <Route
         path="/admin/integrations"
         element={
-
-      />;
-    </Routes>;
-  );
-};
-
-
-export default AdminRoutes;
-
-=======
-import { Fragment } from './react';
-import { Route, Routes } from './react-router-dom';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-=======
           <ProtectedRoute adminOnly={true}>
             <IntegrationsPage />
           </ProtectedRoute>
+        }
+      />
+    </Routes>
+  )
+}
+export default AdminRoutes;
 
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -247,15 +228,4 @@ const AdminRoutes = () =>: any {
     </Routes>;
   );
 },;
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default AdminRoutes;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

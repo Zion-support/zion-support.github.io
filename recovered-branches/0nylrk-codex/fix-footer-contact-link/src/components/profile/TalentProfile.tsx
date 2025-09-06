@@ -1,21 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-interface TalentProfileProps {
-
-  profile: TalentProfileType
-  onRequestHire: () => void
-
-  onMessageTalent?: () => void
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import {Handshake, MessageSquare, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -30,14 +13,6 @@ import {ProfileRatings} from "./ProfileRatings";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {Availability} from "@/types/profile";
-<<<<<<< HEAD
-interface TalentProfileProps {;
-  profile: TalentProfileType,;
-  onRequestHire: () => void,;
-  onMessageTalent?: () => void;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -50,108 +25,64 @@ import { ProfileAvailability } from "./ProfileAvailability",
 import { ProfileContact } from "./ProfileContact",
 import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Availability } from "@/types/profile";
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { Availability } from "@/types/profile",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface TalentProfileProps {
 
   profile: TalentProfileType
   onRequestHire: () => void
 
   onMessageTalent?: () => void
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
-
-export function TalentProfile(): any ({ ;
-
+export function TalentProfile({
   profile;
   onRequestHire;
-  onMessageTalent;
-}: TalentProfileProps) {;
+  onMessageTalent
+}: TalentProfileProps) {
   const { isAuthenticated } = useAuth();
 
-}
-
-
-
-
+export function TalentProfile({ ;
+  profile;
+  onRequestHire;
+export function TalentProfile({ 
+  profile,
+  onRequestHire,
+  onMessageTalent
+}: TalentProfileProps) {
+  const { isAuthenticated } = useAuth(),
+  
   // Create proper availability object from talent profile
 
   const availability: Availability = {
     status: profile.availability_type === 'full_time' ? 'available' :
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
-
-
+  }
   },
   
-
-
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill
     level: 3 // Default level since we don't have this data
-
-
+  })) |[];
   })) || [],
   
-
-
   // Create proper projects array for ProfileProjects component
   const projectsArray = profile.key_projects?.map((proj, i) => ({
     id: `project-${i}`
     title: proj.title
     description: proj.description
     date: new Date().toISOString() // Default date since we don't have this data
-
-
-  // Create proper availability object from talent profile;
-  const availability: Availability = {;
-    status: profile && profile.availability_type === 'full_time' ? 'available' : ;
-            profile && profile.availability_type === 'part_time' ? 'limited' : 'unavailable',;
-    message: `${profile && profile.professional_title} with ${profile && profile.years_experience} years of experience`;
-  };
-
-  // Create proper skills array for ProfileSkills component;
-  const skillsArray = profile && profile.skills?.map(skill => ({;
-    name: skill,;
-    level: 3 // Default level since we don't have this data;
-  })) || [];
-
-  // Create proper projects array for ProfileProjects component;
-  const projectsArray = profile && profile.key_projects?.map((proj, i) => ({;
-    id: `project-${i}`,;
-    title: proj && proj.title,;
-    description: proj && proj.description,;
-    date: new Date().toISOString() // Default date since we don't have this data;
-  })) || [];
-
+  })) |[];
 
   return (
-    <div className="container mx-auto px-4 py-8">;
-=======
-
+    <div className="container mx-auto px-4 py-8">
   })) || [],
   
   return (
     <div className="container mx-auto px-4 py-8">
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Handshake, MessageSquare, Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -198,12 +129,6 @@ export function TalentProfile({;
   })) || [];
   return (;
     <div className="container mx-auto px-4 py-8">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Profile Header */}
       <ProfileHero
         name={profile && profile.full_name}
@@ -234,20 +159,13 @@ export function TalentProfile({;
         {/* Right Column - Bio & Projects */}
         <div className="lg:col-span-2 space-y-8">;
           {/* Bio Section */}
-
-
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
+            <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>
+            <div className="prose prose-invert max-w-none">
+              <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>
+            </div>
+          </div>
           
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}
@@ -256,11 +174,8 @@ export function TalentProfile({;
               <Star className="mr-2 h-5 w-5 text-yellow-400" />
               Reviews & Ratings
             </h2>
-
-
+            <ProfileRatings
             <ProfileRatings 
-
-
               userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}

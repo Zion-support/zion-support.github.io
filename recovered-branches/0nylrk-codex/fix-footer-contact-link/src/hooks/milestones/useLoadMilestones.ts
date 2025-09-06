@@ -1,27 +1,11 @@
 
 <<<<<<< HEAD
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
-<<<<<<< HEAD
-
-        
-        activitiesMap[milestone && milestone.id] = activitiesData || []
-
-=======
 export const useLoadMilestones = (projectId?: string) => {;
   const { user } = useAuth();
   const [milestones, setMilestones] = useState<Milestone[]>([]);
@@ -54,9 +38,7 @@ export const useLoadMilestones = (projectId?: string) => {;
           .eq('milestone_id', milestone.id)
           .order('created_at', { ascending: false });
         if (activitiesError) throw activitiesError;
-<<<<<<< HEAD
         activitiesMap[milestone.id] = activitiesData |[]
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
       setActivities(activitiesMap);
       setError(null)
@@ -67,32 +49,8 @@ export const useLoadMilestones = (projectId?: string) => {;
       setError("Failed to fetch milestones: " + err && err.message),
       toast && toast.error("Failed to fetch milestones")
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-export const useLoadMilestones = (project_id?: string) =>: any {
-  const { user } = use_auth ();
-  const [milestones, set_milestones] = useState < Milestone[]>([]);
-  const [activities, set_activities] = useState < Record < string, MilestoneActivity[]>>({});
-  const [is_loading, setIsLoading] = useState (true);
-  const [error, set_error] = useState < string | null>(null);
-;
-  const fetch_milestones = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      setIsLoading (false);
-=======
-
         
         activitiesMap[milestone.id] = activitiesData || []
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -140,12 +98,6 @@ if (throw milestones_error) {
           .order('created_at', { ascending: false }),;
         if (activitiesError) throw activitiesError,;
         activitiesMap[milestone.id] = activitiesData || [];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
       setActivities(activitiesMap),
@@ -156,12 +108,8 @@ if (throw milestones_error) {
       toast.error("Failed to fetch milestones")
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
   };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -193,15 +141,7 @@ if ( {) {
     activities;
     is_loading;
     error;
-    refetch: fetch_milestones;
-=======
-<<<<<<< HEAD
-      setIsLoading(false)
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    refetch: fetchMilestones
 ;
       setActivities(activitiesMap),;
       setError(null);
@@ -225,13 +165,5 @@ if ( {) {
     isLoading,;
     error;
     refetch: fetchMilestones;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
-}
-
-;
-
+};

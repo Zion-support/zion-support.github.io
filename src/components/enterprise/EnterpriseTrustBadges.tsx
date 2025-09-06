@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react";
-import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-import React from 'react'
-import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function EnterpriseTrustBadges() {
   return (
     <section className='py-10 px-4 md:px-6 border-t border-b border-border'>
@@ -46,7 +27,6 @@ export function EnterpriseTrustBadges() {
             <CheckCircle className='h-5 w-5 text-primary' />
             <span className='font-medium'>HIPAA Compliant</span>          </div>
 
-=======
 
 
 
@@ -57,14 +37,6 @@ import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function EnterpriseTrustBadges() {
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
@@ -92,24 +64,14 @@ export function EnterpriseTrustBadges() {
           </div>
         </div>
       </div>
-
-
-
-    </section>
-<<<<<<< HEAD
-
-
-import React from 'react';
-=======
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
+    </section>;
+  );
+};
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    </section>
+  )
+}
 import React from "react";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
   return (
@@ -173,13 +135,8 @@ export function EnterpriseTrustBadges() {;
     </section>;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export /**
@@ -248,15 +205,3 @@ function EnterpriseTrustBadges() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

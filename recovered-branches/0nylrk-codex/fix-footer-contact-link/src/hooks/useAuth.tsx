@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-
-import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
-import { supabase } from '@/integrations / supabase / client';
-import { AuthContext } from '@/context / auth / AuthContext';
-import type { UserDetails as AuthUserDetails } from "@/types / auth";
-// Define types for our context;
-export interface UserDetails {
-
-  id?: string;
-  name?: string;
-  email?: string;
-  user_type?: string;
-  display_name?: string;
-  avatar_url?: string;
-  headline?: string;
-  profile_complete?: boolean;
-  role?: string;
-
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {AuthContext} from "@/context/auth/AuthContext";
@@ -43,11 +18,8 @@ export interface UserDetails {;
   bio?: string;
   createdAt?: string;
   updatedAt?: string
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
 import { AuthContext } from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
 // Define types for our context
@@ -68,7 +40,6 @@ export interface UserDetails {
   updatedAt?: string
 }
 export interface AuthContextType {
-=======
 import { AuthContext } from "@/context/auth/AuthContext",
 import type { UserDetails as AuthUserDetails } from "@/types/auth",
 // Define types for our context
@@ -107,11 +78,6 @@ export interface UserDetails {;
   bio?: string,;
   createdAt?: string,;
   updatedAt?: string;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
 export interface AuthContextType {;
@@ -133,8 +99,6 @@ export interface AuthContextType {;
   loginWithWeb3: () => Promise<void>;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   user: UserDetails | null
   isAuthenticated: boolean
   isLoading: boolean
@@ -154,11 +118,13 @@ export interface AuthContextType {;
   loginWithWeb3: () => Promise<void>
 }
 // Create a provider component
-
-
+export function AuthProvider({ children }: { children: ReactNode }) {;
+  const [user, setUser] = useState<UserDetails | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<UserDetails | null>(null),
-
+  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true),
 
   // Mock auth functions for now - these would connect to Supabase in a real implementation
 
@@ -166,52 +132,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // This would be replaced with actual Supabase auth
     console.log("Sign in attempted with:", email);
     // Mock successful sign-in
-
-
-export interface AuthContextType {;
-  user: UserDetails | null,;
-  isAuthenticated: boolean,;
-  isLoading: boolean,;
-  signIn: (email: string, password: string) => Promise<{ error: any }>,;
-  signOut: () => Promise<void>,;
-  signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
-  // Aliases for compatibility with other components;
-  login: (email: string, password: string) => Promise<{ error: any }>,;
-  logout: () => Promise<void>,;
-  signup: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
-  resetPassword: (email: string) => Promise<{ error: any }>,;
-  updateProfile: (data: Partial<UserDetails>) => Promise<{ error: any }>,;
-  loginWithGoogle: () => Promise<void>,;
-  loginWithFacebook: () => Promise<void>,;
-  loginWithTwitter: () => Promise<void>,;
-  loginWithWeb3: () => Promise<void>;
-}
-
-// Create a provider component;
-export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
-  const [user, setUser] = useState<UserDetails | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Mock auth functions for now - these would connect to Supabase in a real implementation;
-  const signIn = async (email: string, password: string) => {;
-    // This would be replaced with actual Supabase auth;
-    console && console.log("Sign in attempted with:", email);
-    // Mock successful sign-in;
-    setUser({ ;
-      id: "mock-user-id", ;
-      email, ;
-      displayName: "Mock User", ;
-      name: "Mock User",;
-      avatarUrl: "",;
-      profileComplete: true,;
-      role: "enterprise_admin",;
-
+    setUser({
+      id: "mock-user-id"
+      email
+      displayName: "Mock User"
+      name: "Mock User"
+      avatarUrl: ""
+      profileComplete: true
+      role: "enterprise_admin"
       permissions: ["billing_access", "admin_access", "team_management"];
-      companyId: "company-123";
-    });
-    return { error: null }
-
-
     setUser({ 
       id: "mock-user-id", 
       email, 
@@ -221,24 +150,18 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       profileComplete: true,
       role: "enterprise_admin",
       permissions: ["billing_access", "admin_access", "team_management"],
-
       companyId: "company-123"
     }),
     return { error: null }
-
+  }
   },
-
-
 
   const signOut = async () => {
     // This would be replaced with actual Supabase auth
     console.log("Sign out attempted");
     setUser(null)
-
-
+  }
   },
-
-
 
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
@@ -253,21 +176,15 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       profileComplete: false
     });
     return { error: null }
-
-
+  }
   },
-
-
 
   const resetPassword = async (email: string) => {
     // Mock implementation
     console.log("Password reset requested for:", email);
     return { error: null }
-
-
+  }
   },
-
-
 
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
@@ -276,11 +193,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       setUser({ ...user, ...data })
     }
     return { error: null }
-
-
+  }
   },
-
-
 
   const loginWithGoogle = async () => {
     console.log("Google login requested");
@@ -292,11 +206,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Google User"
       profileComplete: true
     })
-
-
+  }
   },
-
-
 
   const loginWithFacebook = async () => {
     console.log("Facebook login requested");
@@ -308,11 +219,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Facebook User"
       profileComplete: true
     })
-
-
+  }
   },
-
-
 
   const loginWithTwitter = async () => {
     console.log("Twitter login requested");
@@ -324,42 +232,13 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Twitter User"
       profileComplete: true
     })
-
-  };
-
-  const signOut = async () => {;
-    // This would be replaced with actual Supabase auth;
-    console && console.log("Sign out attempted");
-    setUser(null);
-  };
-
-  const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {;
-    // This would be replaced with actual Supabase auth;
-    console && console.log("Sign up attempted with:", email, userData);
-    // Mock successful sign-up;
-    setUser({ ;
-      id: "mock-user-id", ;
-      email, ;
-=======
-
+  }
   },
-
 
   const loginWithWeb3 = async () => {
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
-<<<<<<< HEAD
-
-
-// Custom hook to use the auth context
-export function useAuth(): AuthContextType {;
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider")
-
-=======
-<<<<<<< HEAD
       console.warn("No wallet detected");
       return
     }
@@ -408,7 +287,6 @@ export function useAuth(): AuthContextType {;
   }
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
-<<<<<<< HEAD
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
@@ -418,16 +296,12 @@ export function useAuth(): AuthContextType {
   }
   return context
 }
-=======
 
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
       console.warn("No wallet detected"),
       return
 ;
@@ -791,28 +665,7 @@ export function useAuth(): any (): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   return context;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-// Custom hook to use the auth context;
-export function use_auth (): AuthContextType {
-  const context = useContext (AuthContext);
-  // Check condition
-if ( {) {
-  $2
-}
-    throw new Error ("use_auth must be used within an AuthProvider");
-  }
-  return context;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

@@ -1,30 +1,19 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   try {
     if (fs.existsSync(dir)) {
       for (const f of fs.readdirSync(dir)) {
@@ -41,7 +30,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
           const fp = path && path.join(dir, f);
           data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -62,22 +50,16 @@ function handler() {
           const fp = path.join (dir, f);
           data[f.replace (".json", "")] = JSON.parse (
             fs.readFileSync (fp, "utf8"),
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           data[f.replace(".json", "")] = JSON.parse(
             fs.readFileSync(fp, "utf8")
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
           );
           data[f.replace (".json", "")] = JSON.parse (
             fs.readFileSync (fp, "utf8"),
 
           );
-          data[f && f.replace(".json", "")] = JSON && JSON.parse(
+data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           );
 <<<<<<< HEAD
 
@@ -85,24 +67,11 @@ function handler() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
-          data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }
       }
     }
   } catch (e) {
-    // ignore;
+// ignore;
   }
 <<<<<<< HEAD
 
@@ -130,14 +99,12 @@ res.status(200).json({ ok: true, data });
 =======
   res.status (200).json ({ ok: true, data });
   res.status (200).json ({ ok: true, data });
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   res.status(200).json({ ok: true, data });
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+res.status(200).json({ ok: true, data });
+  res.status(200).json({ ok: true, data });
+}
+  res.status(200).json({ ok: true, data });

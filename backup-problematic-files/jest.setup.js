@@ -19,29 +19,24 @@ jest.mock("next/router", () => ({
         off: jest.fn(),
         emit: jest.fn()
       },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:jest.setup.js
+:jest.setup.js
       isFallback: false,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD:backup-problematic-files/jest.setup.js
+:backup-problematic-files/jest.setup.js
       isFallback: false
     }
   }
 }));
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+// Mock Next.js Image component
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: (props) => {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img {...props} />
+  }
+}));
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/jest.setup.js
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+:backup-problematic-files/jest.setup.js
     };
   },
 }));
@@ -52,13 +47,7 @@ jest.mock("next/image", () => {
     return <img src={src} alt={alt} {...props} />;
   };
 });
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:jest.setup.js
+:jest.setup.js
 
 // Mock Next.js Link component
 jest.mock("next/link", () => {
@@ -70,19 +59,18 @@ jest.mock("next/link", () => {
     );
   };
 });
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> main:jest.setup.js
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+main:jest.setup.js
 
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
-
+:backup-problematic-files/jest.setup.js
+    return <a href={href} {...props}>{children}</a>
+  }
 
   },
-
+main:jest.setup.js
 }));
 
 // Mock window.matchMedia
@@ -114,15 +102,6 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-<<<<<<< HEAD
-
 };
-
-=======
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/jest.setup.js
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/jest.setup.js

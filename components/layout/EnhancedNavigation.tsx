@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -52,10 +48,6 @@ import {;
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -77,8 +69,6 @@ import {
   Bot
   Factory
   Car
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Menu,
   X,
   ChevronDown,
@@ -100,21 +90,11 @@ import {
   Bot,
   Factory,
   Car,;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
   className?: string;
 }
-
-
-
-
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
@@ -198,8 +178,17 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       ]
       hasDropdown: true
       dropdownItems: [
-
-
+        { name: "AI & Machine Learning", href: "/services?category=ai-ml" }
+        { name: "Quantum Computing", href: "/services?category=quantum" }
+        { name: "Space Technology", href: "/services?category=space" }
+        { name: "Biotech & Healthcare", href: "/services?category=biotech" }
+        { name: "Financial Services", href: "/services?category=finance" }
+        { name: "Cybersecurity", href: "/services?category=security" }
+        { name: "Edge Computing", href: "/services?category=edge" }
+        { name: "Blockchain", href: "/services?category=blockchain" }
+        { name: "View All Services", href: "/services" }
+      ]
+    }
         { name: "AI & Machine Learning", href: "/services?category=ai-ml" },
         { name: "Quantum Computing", href: "/services?category=quantum" },
         { name: "Space Technology", href: "/services?category=space" },
@@ -211,8 +200,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         { name: "View All Services", href: "/services" },
       ],
     },
-
-
     {
       name: "Solutions"
       href: "/solutions"
@@ -231,10 +218,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     { name: "Contact", href: "/contact" }
   ];
 
-
-
-
-
   const contactInfo = {
     mobile: "+1 302 464 0950"
     email: "kleber@ziontechgroup.com"
@@ -246,15 +229,17 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
   className = "",;
 }) => {;
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
+  className = ""
+}) => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
     };
-
     window && window.addEventListener("scroll", handleScroll);
     return () => window && window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -270,6 +255,30 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
     website: "https://ziontechgroup.com",
+    {
+      name: "Solutions"
+      href: "/solutions"
+      hasDropdown: true
+      dropdownItems: [
+        { name: "Enterprise Solutions", href: "/solutions?type=enterprise" }
+        { name: "Startup Solutions", href: "/solutions?type=startup" }
+        { name: "Government Solutions", href: "/solutions?type=government" }
+        { name: "Healthcare Solutions", href: "/solutions?type=healthcare" }
+        { name: "Financial Solutions", href: "/solutions?type=financial" }
+      ]
+    }
+    { name: "Pricing", href: "/pricing" }
+    { name: "Resources", href: "/resources" }
+    { name: "Blog", href: "/blog" }
+    { name: "Contact", href: "/contact" }
+  ];
+
+  const contactInfo = {
+    mobile: "+1 302 464 0950"
+    email: "kleber@ziontechgroup.com"
+    address: "364 E Main St STE 1008 Middletown DE 19709"
+    website: "https://ziontechgroup.com"
+
   }
 ;
   return (
@@ -310,7 +319,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
 
                       />;
                     </button>;
-
                     <AnimatePresence>;
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
@@ -349,7 +357,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             {/* Search */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
           </motion.div>;
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items - center space - x-8">;
@@ -410,33 +417,16 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             {/* Search */}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
+            >
+              <Search className="w-5 h-5" />
+            </motion.button>
 
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
-              <Search className="w-5 h-5" />;
-            </motion && motion.button>;
-
-
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
             >;
               <Search className="w - 5 h - 5" />;
@@ -444,30 +434,14 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             {/* Notifications */}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative"
+            >
+              <Bell className="w-5 h-5" />
+              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+            </motion.button>
 
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative">;
-              <Bell className="w-5 h-5" />;
-              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />;
-            </motion && motion.button>;
-
-
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -489,26 +463,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </motion.button>
+        </div>
+      </div>
 
-          </motion && motion.button>;
-        </div>;
-      </div>;
-
-
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -551,7 +509,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                           key={dropdownItem && dropdownItem.name}
                           href={dropdownItem && dropdownItem.href}
                           onClick={() => setIsOpen(false)}
-                          className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm";
+className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm";
                         >;
                           {dropdownItem && dropdownItem.name}
                         </Link>;
@@ -575,9 +533,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                 </div>
               ))}
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Contact Info */}
 
               <div className="pt-4 border-t border-cyan-500/20">;
@@ -601,7 +556,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                   onClick={() => setIsOpen(false)}
 <<<<<<< HEAD
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
-=======
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative";
             >;
               <Bell className="w - 5 h - 5" />;
@@ -695,7 +649,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                   href="/contact";
                   on_click={() => setIsOpen (false)}
                   className="block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition - all duration - 300";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   Get Started Today;
                 </Link>;
@@ -724,27 +677,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
 export default EnhancedNavigation;
 ;
 
-=======
-      </AnimatePresence>
-    </nav>
-
 };
 
 export default EnhancedNavigation;
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 );
 };
-
-
 export default EnhancedNavigation;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+export default EnhancedNavigation;

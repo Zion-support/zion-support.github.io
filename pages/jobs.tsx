@@ -1,45 +1,36 @@
 
-
-      currency: 'USD',
-      value: 160000,
-      unit_text: 'YEAR'},
-    hiring_organization: {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const Jobs: NextPage = () => {
+  const job = {
+    title: 'Senior Full-Stack Engineer (Next.js + AI)'
+    description: 'Build modern AI-enabled web apps at Zion Tech Solutions.'
+    datePosted: new Date().toISOString().slice(0, 10)
+    employmentType: 'FULL_TIME'
+    validThrough: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString().slice(0, 10)
+    baseSalary: {
+      currency: 'USD'
+      value: 160000
+      unitText: 'YEAR'}
+    hiringOrganization: {
+      name: 'Zion Tech Solutions'
+      sameAs: 'https://ziontechgroup.netlify.app'
+      logo: 'https://ziontechgroup.netlify.app/logo.png'}
+    jobLocationType: 'TELECOMMUTE'} as const
       name: 'Zion Tech Solutions',
       same_as: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app / logo.png'},
     jobLocationType: 'TELECOMMUTE'} as const,
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
-    <div>;
-      <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />;
-      <JobPostingJsonLd;
-        date_posted={job.date_posted}
-
+    <div>
+      <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />
+      <JobPostingJsonLd
+        datePosted={job.datePosted}
         description={job.description}
         employment_type={job.employment_type}
         hiring_organization={job.hiring_organization}
         jobLocationType={job.jobLocationType}
         title={job.title}
 
-<<<<<<< HEAD
-
-=======
-        valid_through={job.valid_through}
-        base_salary={job.base_salary}
-=======
-<<<<<<< HEAD
-=======
 export default Jobs,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         datePosted={job.datePosted  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -80,7 +71,6 @@ export default Jobs,;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       />;
       <main>;
         <h1 > Jobs</h1>;
@@ -92,15 +82,3 @@ export default Jobs,;
   );
 },;
 export default Jobs;
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

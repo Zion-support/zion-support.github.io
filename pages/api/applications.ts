@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { v4 as uuidv4 } from 'uuid',;
 import { readJsonFile, writeJsonFile } from '../../utils/db',;
 import type { Application } from '../../utils/types',;
 import { rateLimit } from '../../utils/rateLimit',;
 const FILE = 'applications.json',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-=======
   if (req.method === 'GET') {
     const { jobId, talentSlug } = req.query,
     let apps = readJsonFile<Application[]>(FILE, []),
@@ -56,14 +48,11 @@ createdAtIso: now},
   res.setHeader('AllowGET, POST'),
   res.status(405).end('Method Not Allowed');
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { rateLimit } from '../../utils/rate-limit';
 import { readJsonFile, writeJsonFile } from '../../utils/file-utils';
 import { v4 as uuidv4 } from 'uuid';
 
-<<<<<<< HEAD
 import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Application } from '../../utils/types';
 import { rateLimit } from '../../utils/rateLimit';
@@ -91,7 +80,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       existing.status = action === 'apply' ? 'applied' : 'skipped'
       writeJsonFile<Application[]>(FILE, apps)
       res.status(200).json({ application: existing })
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       return
     }
     const app: Application = {
@@ -109,10 +97,14 @@ createdAtIso: now}
   res.status(405).end('Method Not Allowed')
 }
 
+type Application = {
+  id: string;
+  jobId: string;
+  talentSlug: string;
+  status: 'applied' | 'skipped';
+  createdAtIso: string;
+};
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 const FILE = 'applications.json';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -169,14 +161,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

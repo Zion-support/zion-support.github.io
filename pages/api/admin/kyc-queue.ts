@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import type { KycProfile } from '../../../utils/kyc',;
 import fs from 'fs',;
@@ -15,62 +9,36 @@ function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8'),
     return JSON.parse(raw)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
 
 const DATA_DIR = path.join(process.cwd(), 'datakyc')
 const FILE = path.join(DATA_DIR, 'profiles.json')
 function load(): Record<string, KycProfile> {
   try {
 
+const DATA_DIR = path.join(process.cwd(), 'datakyc');
+const FILE = path.join(DATA_DIR, 'profiles.json');
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 function load(): Record<string, KycProfile> {
   try {
     if (!fs.existsSync(FILE)) return {};
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   } catch {
     return {};
   }
 }
 
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
   const db = load()
-=======
-<<<<<<< HEAD
   const db = load(),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method === 'GET') {
     const queue = Object.values(db).filter((p) => p.status === 'submitted' |p.status === 'needs_more_info')
     return res.status(200).json({ ok: true, queue })
@@ -89,23 +57,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     db[userId] = profile
     save(db)
     return res.status(200).json({ ok: true, profile })
-<<<<<<< HEAD
 
   }
   return res.status(405).json({ error: 'Method not allowed' });
 
 }
 
-<<<<<<< HEAD
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
   }
 ;
   return res.status(405).json({ error: 'Method not allowed' });
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   try {
     if (req.method === 'GET') {
       const profiles = load();
@@ -129,9 +91,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

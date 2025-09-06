@@ -1,14 +1,6 @@
 
-<<<<<<< HEAD
-    subtitle: string,
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface TenantInfo {
-=======
 export interface TenantInfo {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   brand_name: string;
   subdomain: string;
@@ -24,7 +16,6 @@ export interface TenantInfo {;
     cta: string
   }
   is_active: boolean
-<<<<<<< HEAD
 }
 export interface TenantResponse {
 
@@ -32,11 +23,7 @@ export interface TenantResponse {
 
   error?: string
 }
-=======
 export interface TenantInfo {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   brand_name: string,;
   subdomain: string,;
@@ -47,12 +34,19 @@ export interface TenantInfo {;
   landing_page_copy: {;
     headline: string,;
     subtitle: string,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     cta: string;
   }
   is_active: boolean;
 <<<<<<< HEAD
 }
+;
+export interface TenantResponse {;
+  tenant: TenantInfo | null;
+  error?: string;
+}
+;
+}
+
 export interface TenantResponse {
   tenant: TenantInfo | null,
   error?: string;
@@ -72,14 +66,4 @@ export interface TenantResponse {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }
-<<<<<<< HEAD
-=======
-
-
-export interface TenantInfo {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

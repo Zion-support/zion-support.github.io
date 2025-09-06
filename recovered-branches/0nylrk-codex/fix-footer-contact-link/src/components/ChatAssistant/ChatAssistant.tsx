@@ -1,47 +1,28 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
-<<<<<<< HEAD
 import { ChatMessage  } from './ChatMessage';
 import { ChatInput  } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 export interface Message {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
-=======
 import React, { useState, useEffect, useRef, ReactNode } from 'react',
 import { ChatMessage } from './ChatMessage',
 import { ChatInput } from './ChatInput',
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
-
 export interface Message {
   id: string,
   role: 'user' | 'assistant',
   message: string,
   timestamp: Date,
   read?: boolean
-<<<<<<< HEAD
-
-    id: string,
-    name: string,;
-
-
-=======
-<<<<<<< HEAD
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   id: string
   role: 'user' | 'assistant'
@@ -55,14 +36,10 @@ export interface ChatAssistantProps {
   isOpen: boolean
   onClose: () => void
   recipient: {
-<<<<<<< HEAD
     id: string
     name: string
-=======
     id: string,
     name: string,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     avatarUrl?: string;
     role?: string
   }
@@ -72,19 +49,9 @@ export interface ChatAssistantProps {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
   contextHeader?: ReactNode
 }
-<<<<<<< HEAD
-
-import {ChatMessage} from './ChatMessage';
-import {ChatInput} from './ChatInput';
-
-=======
-<<<<<<< HEAD
 export function ChatAssistant({
-=======
 
 export function ChatAssistant({;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   isOpen;
   onClose;
   recipient;
@@ -92,8 +59,6 @@ export function ChatAssistant({;
 
   initialMessages = [];
   onSendMessage;
-<<<<<<< HEAD
-=======
   contextHeader
 }: ChatAssistantProps) {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
@@ -103,14 +68,12 @@ export function ChatAssistant({;
       setMessages(initialMessages)
     }
   }, [initialMessages]);
-<<<<<<< HEAD
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
-=======
 import React, { useState, useEffect, useRef, ReactNode } from 'react',
 import { ChatMessage } from './ChatMessage',
 import { ChatInput } from './ChatInput',
@@ -123,9 +86,6 @@ export interface Message {
   message: string,
   timestamp: Date,
   read?: boolean
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect, useRef, ReactNode } from 'react',;
 import { ChatMessage } from './ChatMessage',;
 import { ChatInput } from './ChatInput',;
@@ -162,7 +122,6 @@ export function ChatAssistant({;
   conversationId,;
   initialMessages = [],;
   onSendMessage,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   contextHeader;
 }: ChatAssistantProps) {;
 
@@ -190,16 +149,16 @@ export function ChatAssistant({;
   }, [messages]);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
+  },
+  
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return
     // Add user message to the chat
     const newMessage: Message = {
-
-
-  useEffect(() => {;
-    if (initialMessages && initialMessages.length > 0) {;
-      setMessages(initialMessages);
+      id: Date.now().toString()
+      role: 'user'
+      message;
+      timestamp: new Date()
     }
   }, [initialMessages]);
 
@@ -230,8 +189,6 @@ export function ChatAssistant({;
 
 
   if (!isOpen) return null;
-=======
-
       id: Date.now().toString(),
       role: 'user',
       message,
@@ -245,8 +202,6 @@ export function ChatAssistant({;
   },
 
   if (!isOpen) return null,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;
@@ -296,11 +251,8 @@ export function ChatAssistant({;
           ) : (;
             messages && messages.map((msg) => (;
               <ChatMessage
-
-
+                key={msg.id}
                 key={msg.id} 
-
-
                 role={msg.role}
                 message={msg.message}
               />
@@ -452,18 +404,6 @@ if (return null) {
       </div>
     </div>
   )
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
 };
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

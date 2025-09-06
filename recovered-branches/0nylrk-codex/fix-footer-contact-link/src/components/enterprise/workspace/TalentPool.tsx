@@ -1,47 +1,69 @@
 
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-=======
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function TalentPool() {
   // Mock talent data
 
   const talents = [
     {
-
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-=======
-
+      id: "talent-1"
+      name: "Jessica Lee"
+      role: "UI/UX Designer"
+      skills: ["Figma", "Sketch", "User Testing"];
+      status: "available"
+      match: 95
+    }
+    {
+      id: "talent-2"
+      name: "Marcus Wright"
+      role: "Full Stack Developer"
+      skills: ["React", "Node.js", "MongoDB"];
+      status: "interviewing"
+      match: 92
+    }
+    {
+      id: "talent-3"
+      name: "Aisha Patel"
+      role: "Product Manager"
+      skills: ["Agile", "Roadmapping", "User Research"];
+      status: "available"
+      match: 88
+    }
+  ];
       id: "talent-1",
       name: "Jessica Lee",
+      role: "UI/UX Designer",;
+      skills: ["Figma", "Sketch", "User Testing"];
+      role: "UI/UX Designer",
+      skills: ["Figma", "Sketch", "User Testing"],
+      status: "available",
+      match: 95
+    },
+    {
+      id: "talent-2",
+      name: "Marcus Wright",
+      role: "Full Stack Developer",
+      skills: ["React", "Node.js", "MongoDB"],
+      status: "interviewing",
+      match: 92
+    },
+    {
+      id: "talent-3",
+      name: "Aisha Patel",
+      role: "Product Manager",
+      skills: ["Agile", "Roadmapping", "User Research"],
+      status: "available",
+      match: 88
+    }
+  ],
 
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -53,9 +75,8 @@ import {Button} from "@/components/ui/button";
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-
+  }
   },
-
 
   return (
     <Card>
@@ -86,7 +107,6 @@ import {Button} from "@/components/ui/button";
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
-
                   <Badge key={index} variant="secondary" className="text-xs">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -214,16 +234,6 @@ function TalentPool() {
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <Badge key={index} variant="secondary" className="text-xs">
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {skill}
@@ -236,7 +246,11 @@ function TalentPool() {
               </div>;
             </div>;
           ))}
-
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
         </div>;
       </CardContent>;
     </Card>;
@@ -277,5 +291,3 @@ function TalentPool() {
 
 =======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

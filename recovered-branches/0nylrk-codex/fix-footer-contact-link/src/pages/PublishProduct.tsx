@@ -1,33 +1,4 @@
 
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -37,35 +8,20 @@ import {Navigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
 export default function PublishProduct() {;
   const { isAuthenticated, isLoading } = useAuth();
-
-  // Show loading while checking authentication;
-  if (isLoading) {;
-
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { Navigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth();
-=======
 import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // Show loading while checking authentication
   if (isLoading) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -85,12 +41,6 @@ export default function PublishProduct() {
 
   }
   return (
-<<<<<<< HEAD
-
-=======
-
-
-=======
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO
         title="Publish Your Product"
@@ -112,13 +62,7 @@ export default function PublishProduct() {
       <Footer />
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -215,23 +159,7 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

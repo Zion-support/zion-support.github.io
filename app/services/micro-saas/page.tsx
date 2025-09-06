@@ -1,115 +1,158 @@
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
-  description: 'Complete micro SaaS solutions from MVP to scale. Revenue-generating products with modern tech stack and growth optimization.'
+  description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
+  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
 };
 
 export default function MicroSaaSPage() {
   return (
     <div className="animate-fade-in">
-      <section className="text-center py-12">
+      <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           Micro SaaS Development
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+        <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
           We design, build, launch and operate revenue-generating micro SaaS products end-to-end. 
-          From MVP to scale, we handle everything so you can focus on growth.
+          From AI-powered tools to productivity apps, we create solutions that solve real business problems.
         </p>
       </section>
 
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Micro SaaS Solutions</h2>
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Micro SaaS Solutions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <MicroSaaSCard
-            title="AI-Powered Analytics Dashboard"
-            description="Real-time business intelligence with AI insights and predictive analytics"
-            features={["Custom dashboards", "AI-powered insights", "Real-time data", "Export capabilities", "Team collaboration"]}
-            price="$2,999/month"
-            icon="📊"
-          />
-          <MicroSaaSCard
-            title="Automated Social Media Manager"
-            description="AI-driven social media scheduling, content creation, and engagement optimization"
-            features={["AI content generation", "Multi-platform posting", "Analytics & insights", "Auto-engagement", "Brand voice training"]}
-            price="$1,999/month"
-            icon="📱"
-          />
-          <MicroSaaSCard
-            title="Smart Email Marketing Platform"
-            description="Advanced email automation with AI personalization and behavioral triggers"
-            features={["AI personalization", "Behavioral triggers", "A/B testing", "Advanced segmentation", "Deliverability optimization"]}
-            price="$1,499/month"
-            icon="📧"
-          />
-          <MicroSaaSCard
-            title="Project Management AI Assistant"
-            description="Intelligent project tracking with predictive timelines and resource optimization"
-            features={["AI task prioritization", "Predictive timelines", "Resource optimization", "Risk assessment", "Team productivity insights"]}
-            price="$2,499/month"
-            icon="📋"
-          />
-          <MicroSaaSCard
-            title="Customer Support Automation"
-            description="AI-powered chatbot and ticket management with sentiment analysis"
-            features={["AI chatbot", "Sentiment analysis", "Ticket routing", "Knowledge base", "Multi-language support"]}
-            price="$1,799/month"
+          <ServiceCard
+            title="AI Content Generator"
+            description="Automated content creation for blogs, social media, and marketing materials"
+            features={["GPT-4 integration", "Brand voice training", "SEO optimization", "Multi-language support", "Content calendar"]}
+            price="$2,500-8,000"
             icon="🤖"
           />
-          <MicroSaaSCard
-            title="Financial Analytics & Forecasting"
-            description="AI-driven financial planning, budgeting, and cash flow forecasting"
-            features={["AI forecasting", "Budget optimization", "Cash flow analysis", "Investment insights", "Risk assessment"]}
-            price="$3,499/month"
-            icon="💰"
+          <ServiceCard
+            title="Social Media Scheduler"
+            description="Cross-platform social media management with AI-powered optimal timing"
+            features={["Multi-platform posting", "AI timing optimization", "Analytics dashboard", "Team collaboration", "Content library"]}
+            price="$3,000-10,000"
+            icon="📱"
+          />
+          <ServiceCard
+            title="Email Marketing Automation"
+            description="Advanced email campaigns with behavioral triggers and personalization"
+            features={["Drag-drop builder", "Behavioral triggers", "A/B testing", "Advanced analytics", "CRM integration"]}
+            price="$4,000-12,000"
+            icon="📧"
+          />
+          <ServiceCard
+            title="Project Management Tool"
+            description="Team collaboration platform with time tracking and resource management"
+            features={["Kanban boards", "Time tracking", "Resource planning", "Team chat", "Reporting suite"]}
+            price="$5,000-15,000"
+            icon="📊"
+          />
+          <ServiceCard
+            title="Customer Support Chatbot"
+            description="AI-powered customer service with multi-channel support and ticket management"
+            features={["Natural language processing", "Multi-channel support", "Ticket routing", "Knowledge base", "Analytics"]}
+            price="$3,500-9,000"
+            icon="💬"
+          />
+          <ServiceCard
+            title="Analytics Dashboard"
+            description="Business intelligence platform with real-time data visualization"
+            features={["Real-time dashboards", "Custom reports", "Data integration", "Alerts & notifications", "Export capabilities"]}
+            price="$4,500-13,000"
+            icon="📈"
           />
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Core Development Stack</h2>
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Development Process</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <ProcessStep
+            step="1"
+            title="Discovery & Planning"
+            description="Market research, user personas, feature specification, and technical architecture"
+          />
+          <ProcessStep
+            step="2"
+            title="Design & Prototyping"
+            description="UI/UX design, user flow mapping, and interactive prototypes for validation"
+          />
+          <ProcessStep
+            step="3"
+            title="Development & Testing"
+            description="Agile development with continuous testing, code reviews, and quality assurance"
+          />
+          <ProcessStep
+            step="4"
+            title="Launch & Growth"
+            description="Deployment, user onboarding, marketing setup, and ongoing optimization"
+          />
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Core Technology Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Item 
-            title="Core Features" 
-            details={[
-              "Multi-tenant architecture with data isolation",
-              "Advanced authentication (OAuth, SSO, MFA)",
-              "Stripe billing with subscription management",
-              "Real-time admin dashboard & analytics",
-              "Progressive web app (PWA) capabilities",
-              "API-first architecture with webhooks"
-            ]} 
+          <TechStack
+            title="Frontend"
+            technologies={["React/Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Chart.js"]}
           />
-          <Item 
-            title="Growth & Marketing" 
-            details={[
-              "SEO-optimized marketing website",
-              "Content management system (CMS)",
-              "Email marketing automation",
-              "Referral & affiliate program",
-              "A/B testing framework",
-              "Conversion tracking & analytics"
-            ]} 
+          <TechStack
+            title="Backend"
+            technologies={["Node.js/Express", "Python/FastAPI", "PostgreSQL", "Redis", "Docker"]}
           />
-          <Item 
-            title="Operations & Reliability" 
-            details={[
-              "CI/CD pipeline with automated testing",
-              "Comprehensive monitoring & alerting",
-              "Error tracking & performance metrics",
-              "Automated backups & disaster recovery",
-              "Security hardening & compliance",
-              "24/7 uptime monitoring"
-            ]} 
+          <TechStack
+            title="AI/ML"
+            technologies={["OpenAI GPT-4", "Hugging Face", "LangChain", "Vector DBs", "MLflow"]}
           />
         </div>
       </section>
 
       <Pricing />
-      <ContactSection />
+      
+      <section className="mt-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our Micro SaaS Development?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <BenefitCard
+            title="Rapid Time-to-Market"
+            description="Launch your MVP in 4-8 weeks with our proven development framework"
+            icon="⚡"
+          />
+          <BenefitCard
+            title="Scalable Architecture"
+            description="Built for growth with cloud-native, microservices architecture"
+            icon="🏗️"
+          />
+          <BenefitCard
+            title="Revenue-Focused"
+            description="Every feature designed to drive user engagement and revenue growth"
+            icon="💰"
+          />
+          <BenefitCard
+            title="24/7 Support"
+            description="Round-the-clock monitoring and support for your critical systems"
+            icon="🛡️"
+          />
+          <BenefitCard
+            title="AI Integration"
+            description="Leverage cutting-edge AI to differentiate your product in the market"
+            icon="🧠"
+          />
+          <BenefitCard
+            title="Growth Analytics"
+            description="Built-in analytics and growth tools to optimize user acquisition and retention"
+            icon="📊"
+          />
+        </div>
+      </section>
+
+      <CTASection />
     </div>
   );
 }
 
-function MicroSaaSCard({ title, description, features, price, icon }: { 
+function ServiceCard({ title, description, features, price, icon }: { 
   title: string; 
   description: string; 
   features: string[]; 
@@ -117,110 +160,24 @@ function MicroSaaSCard({ title, description, features, price, icon }: {
   icon: string; 
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+    <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-sm text-gray-600">
-            <span className="text-green-500 mr-2">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function Item({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
-        {details.map((detail, index) => (
-          <li key={index} className="flex items-start text-gray-600">
-            <span className="text-blue-500 mr-2 mt-1">•</span>
-            {detail}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function Pricing() {
-  return (
-    <section className="py-12">
-      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Development Packages</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="MVP Sprint" 
-          price="$8k–$20k" 
-          duration="2–4 weeks"
-          features={[
-            "Core MVP features",
-            "Stripe billing integration", 
-            "Basic analytics dashboard",
-            "User authentication",
-            "Admin panel",
-            "Mobile responsive design"
-          ]} 
-        />
-        <Plan 
-          name="Growth Ready" 
-          price="$20k–$60k" 
-          duration="6–10 weeks"
-          features={[
-            "Full feature set",
-            "SEO-optimized marketing site",
-            "Email marketing automation",
-            "Advanced analytics",
-            "API documentation",
-            "Performance optimization"
-          ]} 
-        />
-        <Plan 
-          name="Enterprise Scale" 
-          price="$60k+" 
-          duration="12+ weeks"
-          features={[
-            "Custom enterprise features",
-            "Advanced security & compliance",
-            "Multi-region deployment",
-            "24/7 monitoring & support",
-            "SLA guarantees",
-            "Dedicated success manager"
-          ]} 
-        />
+      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
+      <div className="mb-4">
+        <div className="text-2xl font-bold text-blue-600 mb-2">{price}</div>
+        <div className="text-sm text-gray-500">Starting price</div>
       </div>
-    </section>
-  );
-}
-
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
-  duration: string;
-  features: string[]; 
-}) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-      <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
-      <div className="text-gray-600 mb-6">{duration}</div>
-      <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-600">
-            <span className="text-green-500 mr-3">✓</span>
-            {feature}
+      <ul className="text-gray-600 space-y-2">
+        {features.map((feature) => (
+          <li key={feature} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {feature}
           </li>
         ))}
       </ul>
       <a 
         href="tel:+13024640950" 
-        className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+        className="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
       >
         Get Started
       </a>
@@ -228,35 +185,145 @@ function Plan({ name, price, duration, features }: {
   );
 }
 
-function ContactSection() {
+function ProcessStep({ step, title, description }: { 
+  step: string; 
+  title: string; 
+  description: string; 
+}) {
   return (
-    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
-      <div className="text-center">
-        <h3 className="text-3xl font-bold text-gray-900 mb-4">
-          Ready to Build Your Micro SaaS?
-        </h3>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Let's discuss your idea and create a custom solution that drives real revenue. 
-          Our team has launched 50+ successful micro SaaS products.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-        <div className="mt-8 text-sm text-gray-500">
-          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-        </div>
+    <div className="text-center p-6">
+      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+        {step}
+      </div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function TechStack({ title, technologies }: { 
+  title: string; 
+  technologies: string[]; 
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <div className="flex flex-wrap gap-2">
+        {technologies.map((tech) => (
+          <span key={tech} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function BenefitCard({ title, description, icon }: { 
+  title: string; 
+  description: string; 
+  icon: string; 
+}) {
+  return (
+    <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function Pricing() {
+  return (
+    <section className="mb-16">
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan 
+          name="MVP Sprint" 
+          price="$8k–$20k" 
+          features={["2–4 weeks", "MVP scope", "Stripe billing", "Basic analytics", "Hosting setup"]} 
+          popular={false}
+        />
+        <Plan 
+          name="Growth" 
+          price="$20k–$60k" 
+          features={["6–10 weeks", "SEO + content", "CRM + email", "Observability", "Advanced features"]} 
+          popular={true}
+        />
+        <Plan 
+          name="Scale" 
+          price="$60k+" 
+          features={["Custom roadmap", "SRE + security", "Multi-region", "SLAs", "Dedicated support"]} 
+          popular={false}
+        />
       </div>
     </section>
+  );
+}
+
+function Plan({ name, price, features, popular }: { 
+  name: string; 
+  price: string; 
+  features: string[]; 
+  popular: boolean; 
+}) {
+  return (
+    <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
+      {popular && (
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+          <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+        </div>
+      )}
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-blue-600 mb-4">{price}</div>
+      <ul className="space-y-3 mb-6">
+        {features.map((feature) => (
+          <li key={feature} className="flex items-center">
+            <span className="text-blue-500 mr-3">✓</span> {feature}
+          </li>
+        ))}
+      </ul>
+      <a 
+        href="tel:+13024640950" 
+        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+          popular 
+            ? 'bg-blue-600 text-white hover:bg-blue-700' 
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+        }`}
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
+
+function CTASection() {
+  return (
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        Ready to Build Your Micro SaaS?
+      </h3>
+      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        Let's discuss your idea and create a custom solution that drives real business value. 
+        Our team of experts is ready to help you launch your next successful micro SaaS product.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:+13024640950"
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Call +1 302 464 0950
+        </a>
+        <a
+          href="mailto:kleber@ziontechgroup.com"
+          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+        >
+          Email Us
+        </a>
+      </div>
+      <div className="mt-6 text-sm text-gray-600">
+        <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+      </div>
+    </div>
   );
 }

@@ -1,8 +1,18 @@
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
-
+type Props = {
+  content: string | null;
+  generatedAt: string | null;}
+export default function ChangelogPage({ content, generatedAt }: Props) {
+  return (
+    <main className='mx-auto max-w-4xl px-4 py-12'>
+      <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>type Props = {
+  content: string | null
+  generatedAt: string | null
+}
+export default function ChangelogPage({ content, generatedAt }: Props) {
+  return (
   content: string | null,
   generated_at: string | null;
 }
@@ -12,41 +22,11 @@ export default /**
  */
 function ChangelogPage() {
   return (
-
-    <main className='mx - auto max - w-4xl px - 4 py - 12'>;
-      <h1 className='text - 2xl font - bold text - gray - 900'>Changelog</h1>;
-      {generated_at && (
-        <p className='mt - 2 text - sm text - gray - 600'>Generated: {generated_at}</p>)}
-=======
-type Props = {
-  content: string | null;
-  generatedAt: string | null;}
-export default function ChangelogPage({ content, generatedAt }: Props) {
-  return (
-    <main className='mx-auto max-w-4xl px-4 py-12'>
-      <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>type Props = {
-<<<<<<< HEAD
-  content: string | null
-  generatedAt: string | null
-}
-export default function ChangelogPage({ content, generatedAt }: Props) {
-  return (
-=======
-  content: string | null,
-  generatedAt: string | null;
-};
-
-export default function ChangelogPage({ content, generatedAt }: Props) {
-  return (
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <main className='mx-auto max-w-4xl px-4 py-12'>
       <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>
-<<<<<<< HEAD
       {generatedAt && (
         <p className='mt-2 text-sm text-gray-600'>Generated: {generatedAt}</p>
       )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {content ? (
         <pre className='mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm'>;
           {content}
@@ -57,46 +37,23 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
       {content ? (
         <pre className="mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm">;
 {content}
-<<<<<<< HEAD
-        </pre>) : (
-        <div className="mt - 6 rounded - xl border border - gray - 200 bg - white p - 6 text - gray - 600">;
-          No changelog generated yet.;
-        </div>)}
-    </main>);
-}
-=======
         </pre>
       ) : (
         <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">
           No changelog generated yet.
         </div>
       )}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-
-=======
 export default function ChangelogPage({ content, generatedAt }: Props) {
   return (
-=======
     </main>;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
           No changelog generated yet.
 
         </div>
       )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </main>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 }
 
@@ -105,20 +62,9 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
   } catch {
 <<<<<<< HEAD
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return { props: { content: null, generatedAt: null }, revalidate: 300 }
-=======
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
-
   } catch {
-=======
-
 export async function getStaticProps() {;
   try {;
     const file = path && path.join(process && process.cwd(), 'CHANGELOG && CHANGELOG.md');
@@ -160,6 +106,20 @@ function getStaticProps() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
+      {generatedAt && (
+        <p className=&quot;mt-2 text-sm text-gray-600&quot;>Generated: {generatedAt}</p>
+      )}
+      {content ? (
+        <pre className=&quot;mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm&quot;>
+{content}
+        </pre>
+      ) : (
+        <div className=&quot;mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600&quot;>
+          No changelog generated yet.
+        </div>
+      )}
+    </main>
+  )
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

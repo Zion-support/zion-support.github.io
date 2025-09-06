@@ -1,21 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-
-=======
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-<<<<<<< HEAD
 ) {
   const method = (req.method |'POST').toUpperCase();
-=======
 ) {;
   const method = (req.method || 'POST').toUpperCase();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
@@ -24,15 +16,8 @@ import { Star } from 'lucide-react';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-
   const method = (req.method |'POST').toUpperCase()
-=======
   const method = (req.method || 'POST').toUpperCase(),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
@@ -60,6 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { candidateName, roleTitle, compensation, startDate, companyName, notes } = req.body || {};
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const prompt = `Draft a professional, friendly job offer email.\n` +
+<<<<<<< HEAD
     `Candidate: ${candidateName || 'Candidate'}\n` +
     `Role: ${roleTitle || 'Software Engineer'}\n` +
     `Compensation: ${compensation || 'Competitive'}\n` +
@@ -67,19 +53,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `Company: ${companyName || 'Your Company'}\n` +
     `Notes: ${notes || ''}\n` +
     `Include signature and next steps.`;
+  const text = await generateText(
+    prompt
+    'You are a recruiting ops specialist with excellent writing skills.'
+  );
+  return res.status(200).json({ email: text });  const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
 
 
   const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status(200).json({ email: text })
-<<<<<<< HEAD
-=======
 }
-<<<<<<< HEAD
-=======
   return res.status(200).json({ email: text });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -138,6 +122,7 @@ function handler() {
     'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });  const text = await generate_text (prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -14,30 +9,17 @@ type EventRow = {
   properties?: Record<string, any>,
   at: string
 },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
       } catch {}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-    }
-    return rows;
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     }
     return rows
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 
 type EventRow = {
-<<<<<<< HEAD
 
   name: string
   page?: string
@@ -64,7 +46,6 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         rows.push(obj)
       } catch {}
 
-=======
   name: string;
   page?: string;
   userType?: string;
@@ -94,28 +75,41 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
       } catch {
         // Skip invalid JSON lines
       }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     return rows;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   } catch {
     return [];
   }
 }
 
-
+function featureFromPath(page?: string): string {
+if (!page) return 'other'
+  const p = page.toLowerCase()
+  if (p.includes('/services') |p.includes('ai')) return 'AI services'
+  if (p.includes('talent') |p.includes('job')) return 'job board'
+  if (p.includes('rental')) return 'rentals'
+  return 'other'
+}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { allowed } = await ensureAdminFromApi(req)
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' })
+  const { start, end, userType } = req.query as { start?: string, end?: string, userType?: string }
+  const rows = parseLines(start, end).filter((r) => !userType |userType === 'all' |(r.userType |'guest') === userType)
+  const byFeature: Record<string, number> = {}
+  const byEvent: Record<string, number> = {}
+  const byDay: Record<string, number> = {}
+  for (const r of rows) {
+    const f = featureFromPath(r.page)
+    byFeature[f] = (byFeature[f] |0) + 1
+    byEvent[r.name] = (byEvent[r.name] |0) + 1
+    const day = r.at.slice(0, 10)
+    byDay[day] = (byDay[day] |0) + 1
+  }
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     .sort((a, b) => b.value - a.value)
   const days = Object.keys(byDay).sort()
   const line = days.map((d) => ({ date: d, value: byDay[d] }))
@@ -123,12 +117,6 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] |0 }))
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-    .sort((a, b) => b.value - a.value);
-=======
-<<<<<<< HEAD
-
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -208,16 +196,6 @@ function handler() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 };
-
-=======
-  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
-  const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
-;
-  res.status(200).json({ pagesMostUsed, events, line, funnel });
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);
@@ -236,15 +214,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
