@@ -37,6 +37,8 @@ async function ensureStore() {
   res && res.status(405).json({ error: "Method not allowed" });
 
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
 import path from './path';
@@ -51,17 +53,6 @@ function ensure_store() {
     if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
   $2
 }
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs-extra";
-import path from "path";
-const FILE_PATH = path.join(process.cwd(), "dataproposalsindex.json");
-async function ensureStore() {
-  await fs.ensureFile(FILE_PATH);
-  try {
-    const raw = await fs.readFile(FILE_PATH, "utf8");
-
-    if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
-
   } catch {
     await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 });
   }
@@ -77,11 +68,6 @@ if ( {) {
 }
     const data = await fs.read_json (FILE_PATH);
     return res.status (200).json (data);
-  await ensureStore();
-  if (req.method === "GET") {
-    const data = await fs.readJson(FILE_PATH);
-    return res.status(200).json(data);
-
   }
   // Check condition
 if ( {) {
@@ -102,8 +88,7 @@ if ( {) {
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
     return res.status (201).json (item);
   }
-res.status (405).json ({ error: "Method not allowed" });
-
+  res.status (405).json ({ error: "Method not allowed" });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
 
 interface SidebarProps {
@@ -12,62 +13,63 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
-      <div className="fixed top-0 right-0 h-full w-80 bg-gray-900 shadow-xl">
-        <div className="flex items-center justify-between p-4 border-b border-gray-700">
-          <h2 className="text-xl font-semibold text-white">Menu</h2>
+      <div className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg">
+        <div className="flex items-center justify-between p-4 border-b">
+          <h2 className="text-lg font-semibold">Menu</h2>
           <button
             onClick={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700"
+            className="p-2 hover:bg-gray-100 rounded-lg"
           >
-            <X size={24} />
+            <X className="h-5 w-5" />
           </button>
         </div>
+        
         <nav className="p-4">
           <ul className="space-y-2">
             <li>
-              <a
-                href="/"
-                className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+              <Link
+                to="/"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
                 onClick={onClose}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/about"
-                className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+              <Link
+                to="/about"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
                 onClick={onClose}
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/services"
-                className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+              <Link
+                to="/services"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
                 onClick={onClose}
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/pricing"
-                className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+              <Link
+                to="/pricing"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
                 onClick={onClose}
               >
                 Pricing
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/contact"
-                className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+              <Link
+                to="/contact"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
                 onClick={onClose}
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
