@@ -7,6 +7,7 @@ export async function getStaticProps() {
 export default function AICustomerSuccessPlatform(props: any) {
 	return <ServicePage {...props} />;
 }
+=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIPredictiveMaintenancePlatform() {

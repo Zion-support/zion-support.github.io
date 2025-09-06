@@ -356,8 +356,14 @@ const Solutions: NextPage = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
       </main>
-    </Layout>  );
+    </Layout>
+=======
+      </div>
+    </UltraAdvancedFuturisticBackground>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+  );
 };
 
 export default Solutions;

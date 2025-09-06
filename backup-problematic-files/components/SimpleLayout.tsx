@@ -1,29 +1,27 @@
 import React, { ReactNode } from 'react';
-interface SimpleLayoutProps {_children: ReactNode;
-  title?: string;}
-import React, { ReactNode } from 'react';
-import Head from 'next/head';
 
 interface SimpleLayoutProps {
   children: ReactNode;
   title?: string;
-  description?: string;
 }
 
-const SimpleLayout: React.FC<SimpleLayoutProps> = ({ 
-  children, 
-  title = 'Zion Tech Group', 
-  description = 'Leading provider of AI services, IT solutions, and micro SaaS development.' 
-}) => {
+const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        {description && <meta name="description" content={description} />}
-      </Head>
-      {children}
-    </>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {title && (
+          <h1 className="text-3xl font-bold text-gray-900 mb-8">{title}</h1>
+        )}
+        {children}
+      </div>
+    </div>
   );
 };
 
 export default SimpleLayout;
+    </>)
+},
+        {description && <meta name="description" content={description} />},;
+      {children},;
+    </>);
+},;
