@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function EnhancedPricingComparison() {return ( <div className="min-h-screen bg-white"> <SEO title="EnhancedPricingComparison.test - Zion Tech Group" description="Professional EnhancedPricingComparison.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">EnhancedPricingComparison.test</h1> <p className="text-gray-300 text-lg"
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,5 +26,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function EnhancedPricingComparison() {return ( <div className="min-h-screen bg-white"> <SEO title="EnhancedPricingComparison && EnhancedPricingComparison.test - Zion Tech Group" description="Professional EnhancedPricingComparison && EnhancedPricingComparison.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">EnhancedPricingComparison && EnhancedPricingComparison.test</h1> <pclassName="text-gray-300 text-lg"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }"
 import React from 'react',','' '''' import {SEO } from '@/components/SEO' export default function EnhancedPricingComparison() {return ( <div className="min-h-screen bg-white"> <SEO title="EnhancedPricingComparison && EnhancedPricingComparison.test - Zion Tech Group" description="Professional EnhancedPricingComparison && EnhancedPricingComparison.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">EnhancedPricingComparison && EnhancedPricingComparison.test</h1> <p className="text-gray-300 text-lg"> Professional EnhancedPricingComparison && EnhancedPricingComparison.test services to help your business grow. </p> </div>'; </div>';'; );';';'}"

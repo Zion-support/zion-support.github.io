@@ -1,4 +1,18 @@
+<<<<<<< HEAD
 import React from "react";
+<<<<<<< HEAD
+=======
+import React from './react';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface LabelProps {
+  children: React.ReactNode;
+  class_name?: string;
+  html_for?: string;
+}
+<<<<<<< HEAD
+const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {
+=======
 
 interface LabelProps {;
   children: React && React.ReactNode;
@@ -7,6 +21,7 @@ interface LabelProps {;
 }
 
 const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <label
       htmlFor={htmlFor}
@@ -14,6 +29,19 @@ const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {
       {children}
     </label>;
   );
-};
-
-export { Label };
+}
+export { Label }
+=======
+const Label: React.FC < LabelProps> = ({ children, class_name = "", html_for }) => {
+  return (
+    <label;
+      html_for={html_for}
+      className={`text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70 ${class_name}`}
+    >;
+      {children}
+    </label>);
+}
+;
+export { Label }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

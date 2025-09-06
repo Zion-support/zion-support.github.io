@@ -1,18 +1,22 @@
 export interface Application {
   id: string;
-  jobId: string;
-  talentSlug: string;
-  status: 'applied' | 'skipped';
+<<<<<<< HEAD
+  name: string;
+  email: string;
+  position: string;
+  experience: number;
+  skills: string[];
+  createdAt: string;
+  updatedAt?: string;
+}
+
+export type UserRole = 'admin' | 'user' | 'guest';
+
+=======
+  job_id: string;
+  talent_slug: string;
+  status: 'applied' | 'skipped' | 'pending';
   createdAtIso: string;
 }
-
-export interface UserDetails {
-  id: string;
-  email: string;
-  displayName?: string;
-  userType?: string;
-}
-
-export interface ModerationStatus {
-  status: 'pending' | 'approved' | 'rejected' | 'removed' | 'warned' | 'banned';
-}
+export type UserRole = 'admin' | 'user' | 'guest';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

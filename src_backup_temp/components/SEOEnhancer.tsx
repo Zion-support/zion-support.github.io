@@ -1,0 +1,40 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+import React from 'react'; import { Helmet  } from 'react-helmet-async'; interface SEOEnhancerProps {
+ title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: string; structuredData?: any; 
+} const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({ title = "Zion Tech Group - Leading Technology Solutions Provider", description = "Transform your business with cutting-edge AI, cloud architecture, and innovative development services.Expert technology solutions for modern enterprises.", keywords = "technology solutions, AI services, cloud architecture, software development, digital transformation, IT consulting, micro-saas, enterprise solutions", image = "https:
+';
+</SEOEnhancerProps>;';;';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+import React from 'react'; import { Helmet  } from 'react-helmet-async'; interface SEOEnhancerProps {;
+ title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: string; structuredData?: any; ;
+} const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ title = "Zion Tech Group - Leading Technology Solutions Provider", description = "Transform your business with cutting-edge AI, cloud architecture, and innovative development services.Expert technology solutions for modern enterprises.", keywords = "technology solutions, AI services, cloud architecture, software development, digital transformation, IT consulting, micro-saas, enterprise solutions", image = "https:;
+</SEOEnhancerProps>;
+import React from 'react'; import { Helmet  } from 'react-helmet-async'; interface SEOEnhancerProps {;
+ title?: "string; description?: string; keywords?: string; image?: string; url?: string; type?: string; structuredData?: any; ;
+"} const "SEOEnhancer": "React.FC<SEOEnhancerProps> = ({ title = "Zion Tech Group - Leading Technology Solutions Provider"", description = "Transform your business with cutting-edge AI, cloud architecture, and innovative development services.Expert technology solutions for modern enterprises.", keywords = "technology solutions, AI services, cloud architecture, software development, digital transformation, IT consulting, micro-saas, enterprise solutions", image = ""https": ";
+</SEOEnhancerProps>;"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import _React from 'react'; import { Helmet } from 'react-helmet-async'; interface SEOEnhancerProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: string; structuredData?: any} const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({ title = "Zion Tech Group - Leading Technology Solutions Provider",description = "Transform your business with cutting-edge AI,cloud architecture,and innovative development services.Expert technology solutions for modern enterprises.",keywords = "technology solutions,AI services,cloud architecture,software development,digital transformation,IT consulting,micro-saas,enterprise solutions",image = "https: </SEOEnhancerProps>;';';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+import React from 'react'; import { Helmet  } from 'react-helmet-async'; interface SEOEnhancerProps {
+ title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: string; structuredData?: any; 
+} const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ title = "Zion Tech Group - Leading Technology Solutions Provider", description = "Transform your business with cutting-edge AI, cloud architecture, and innovative development services.Expert technology solutions for modern enterprises.", keywords = "technology solutions, AI services, cloud architecture, software development, digital transformation, IT consulting, micro-saas, enterprise solutions", image = "https:
+</SEOEnhancerProps>
+import React from &apos;react&apos;; import { Helmet } from &apos;react-helmet-async&apos;; interface SEOEnhancerProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: string; structuredData?: any} const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({ title = &quot;Zion Tech Group - Leading Technology Solutions Provider&quot;,description = &quot;Transform your business with cutting-edge AI,cloud architecture,and innovative development services.Expert technology solutions for modern enterprises.&quot;,keywords = &quot;technology solutions,AI services,cloud architecture,software development,digital transformation,IT consulting,micro-saas,enterprise solutions&quot;,image = &quot;https: </SEOEnhancerProps>;&apos;;&apos;;
+const React from "react"; import { Helmet } from "react-helmet-async"; interface SEOEnhancerProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: string; structuredData?: any} const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({ title = "Zion Tech Group - Leading Technology Solutions Provider",description = "Transform your business with cutting-edge AI,cloud architecture,and innovative development services.Expert technology solutions for modern enterprises.",keywords = "technology solutions,AI services,cloud architecture,software development,digital transformation,IT consulting,micro-saas,enterprise solutions",image = "https: </SEOEnhancerProps>;";";'"'"
+<<<<<<< HEAD
+import _React from 'react'; import { Helmet } from 'react-helmet-async'; interface SEOEnhancerProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: string; structuredData?: any} const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({ title = "Zion Tech Group - Leading Technology Solutions Provider",description = "Transform your business with cutting-edge AI,cloud architecture,and innovative development services.Expert technology solutions for modern enterprises.",keywords = "technology solutions,AI services,cloud architecture,software development,digital transformation,IT consulting,micro-saas,enterprise solutions",image = "https: </SEOEnhancerProps>;';';
+=======
+import _React from 'react'; import { Helmet } from 'react-helmet-async'; interface SEOEnhancerProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: string; structuredData?: any} const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({ title = "Zion Tech Group - Leading Technology Solutions Provider",description = "Transform your business with cutting-edge AI,cloud architecture,and innovative development services.Expert technology solutions for modern enterprises.",keywords = "technology solutions,AI services,cloud architecture,software development,digital transformation,IT consulting,micro-saas,enterprise solutions",image = "https: </SEOEnhancerProps>;';';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

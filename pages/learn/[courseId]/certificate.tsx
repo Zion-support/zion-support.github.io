@@ -1,13 +1,49 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useRouter } from 'next/router';
 import CertificatePreview from '../../../components/learn/CertificatePreview';
 export default function CertificatePage() {
-  const router = useRouter();
-  const { courseId } = router.query as { courseId: string },
-  if (!courseId) return null;
+  const router = useRouter()
+  const { courseId } = router.query as { courseId: string }
+  if (!courseId) return null
+
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Certificate</h1>
       <CertificatePreview courseId={courseId} />
     </div>
   )
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { use_router } from 'next / router',
+import CertificatePreview from '../../../components / learn / CertificatePreview',
+export default /**
+ * CertificatePage - Function description
+ */
+function CertificatePage() {
+  const router = use_router (),
+  const { course_id } = router.query as { course_id: string },
+  // Check condition
+if (return null, ) {
+  $2
+}
+  return (
+    <div className="space - y-4">;
+      <h1 className="text - 2xl font - semibold">Certificate</h1>;
+      <CertificatePreview course_id={course_id} />;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

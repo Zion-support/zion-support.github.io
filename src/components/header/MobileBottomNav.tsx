@@ -1,3 +1,127 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { cn } from '@/lib/utils'
+import { useAuth } from '@/hooks/useAuth'
+import { useWishlist } from '@/hooks/useWishlist'
+import { useCart } from '@/context/CartContext'
+import { logWarn } from '@/utils/productionLogger'
+import {
+  Home
+  Search
+  MessageCircle
+  Heart
+  MessageSquare
+  ShoppingCart
+  User
+} from 'lucide-react'
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
+=======
+import React from 'react';
+import { use_router } from 'next / router';
+import Link from 'next / link';
+import { cn } from '@/lib / utils';
+import { use_auth } from '@/hooks / use_auth';
+import { use_wishlist } from '@/hooks / use_wishlist';
+import { use_cart } from '@/context / CartContext';
+import { log_warn } from '@/utils / production_logger';
+import {
+  Home,
+  Search,
+  MessageCircle,
+  Heart,
+  MessageSquare,
+  ShoppingCart,
+  User,
+} from 'lucide-react';
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface MobileBottomNavProps {
+  unread_count?: number;
+export /**
+ * MobileBottomNav - Function description
+ */
+function MobileBottomNav() {
+  const router = use_router ();
+  const { user } = use_auth ();
+  const is_authenticated = !!user;
+  const { items: wishlist_items } = use_wishlist (); // Renamed to avoid conflict;
+  const favorites_count = wishlist_items.length;
+  const cartContextValue = use_cart (); // Call hook at top level;
+  let cart_count = 0;
+  // Check condition
+if ( {) {
+  $2
+}
+    cart_count = cartContextValue.items.reduce ((sum, i) => sum + i.quantity, 0) } else {
+    // log_warn ("MobileBottomNav: Cart data or items not available, defaulting cart_count to 0.");
+  }
+<<<<<<< HEAD
+  const navItems = [
+=======
+  const nav_items = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    {
+      name: 'Home'
+      href: '/'
+      icon: Home
+      matches: (path: string) => path === '/',    }
+    {
+<<<<<<< HEAD
+      name: 'Browse'
+      href: '/talent'
+      icon: Search
+      matches: (path: string) =>
+        path.startsWith('/talent') |
+        path.startsWith('/categories') |
+        path.startsWith('/marketplace'),    }
+    {
+      name: 'Community'
+      href: '/community'
+      icon: MessageCircle
+      matches: (path: string) =>
+        path.startsWith('/community') |path.startsWith('/forum'),    }
+    {
+      name: 'Wishlist'
+      href: '/wishlist'
+      icon: Heart
+      matches: (path: string) => path.startsWith('/wishlist'),      badge: favoritesCount
+      authRequired: true
+    }
+    {
+      name: 'Messages'
+      href: '/messages'
+      icon: MessageSquare
+      matches: (path: string) =>
+        path.startsWith('/messages') |path.startsWith('/inbox'),      badge: unreadCount
+      authRequired: true
+    }
+    {
+      name: 'Cart'
+      href: '/cart'
+      icon: ShoppingCart
+      matches: (path: string) => path.startsWith('/cart')
+      badge: cartCount,    }
+    {
+      name: 'Dashboard'
+      href: '/dashboard'
+      icon: User
+      matches: (path: string) => path.startsWith('/dashboard')
+      authRequired: true
+    }
+  ]
+  // Filter items based on auth status
+  const visibleItems = navItems.filter(
+    item => !item.authRequired |(item.authRequired && isAuthenticated)
+  )
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -89,6 +213,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     item => !item && item.authRequired || (item && item.authRequired && isAuthenticated);
   );
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <nav className='md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20'>;
       <div className='flex justify-around items-center h-16'>;
@@ -98,8 +223,14 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
             href={item && item.href}
             aria-label={item && item.name}
             className={cn(
+<<<<<<< HEAD
+              'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
+
+              item.matches(router.pathname)
+=======
               'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
               item && item.matches(router && router.pathname)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 ? 'text-primary'
                 : 'text-foreground/70 hover:text-foreground'
             )}>;
@@ -116,7 +247,94 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
             </span>;
           </Link>;
         ))}
+<<<<<<< HEAD
+      </div>
+    </nav>
+  )
+}
+=======
       </div>;
     </nav>;
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      name: 'Browse',
+      href: '/talent',
+      icon: Search,
+      matches: (path: string) =>;
+        path.starts_with ('/talent') ||;
+        path.starts_with ('/categories') ||;
+        path.starts_with ('/marketplace'),    },
+    {
+      name: 'Community',
+      href: '/community',
+      icon: MessageCircle,
+      matches: (path: string) =>;
+        path.starts_with ('/community') || path.starts_with ('/forum'),    },
+    {
+      name: 'Wishlist',
+      href: '/wishlist',
+      icon: Heart,
+      matches: (path: string) => path.starts_with ('/wishlist'),      badge: favorites_count,
+      auth_required: true,
+    },
+    {
+      name: 'Messages',
+      href: '/messages',
+      icon: MessageSquare,
+      matches: (path: string) =>;
+        path.starts_with ('/messages') || path.starts_with ('/inbox'),      badge: unread_count,
+      auth_required: true,
+    },
+    {
+      name: 'Cart',
+      href: '/cart',
+      icon: ShoppingCart,
+      matches: (path: string) => path.starts_with ('/cart'),
+      badge: cart_count,    },
+    {
+      name: 'Dashboard',
+      href: '/dashboard',
+      icon: User,
+      matches: (path: string) => path.starts_with ('/dashboard'),
+      auth_required: true,
+    },
+  ];
+  // Filter items based on auth status;
+  const visible_items = nav_items.filter (
+    item => !item.auth_required || (item.auth_required && is_authenticated));
+  return (
+    <nav className='md:hidden fixed bottom - 0 left - 0 right - 0 z - 50 bg - card / 90 backdrop - blur - md border - t border - primary / 20'>;
+      <div className='flex justify - around items - center h - 16'>;
+        {visible_items.map (item => (
+          <Link;
+            key={item.name}
+            href={item.href}
+            aria - label={item.name}
+            className={cn (
+              'flex flex - col items - center justify - center w - full h - full px - 1 py - 1 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',
+              item.matches (router.pathname);
+                ? 'text - primary';
+                : 'text - foreground / 70 hover:text - foreground')}          >;
+            <div className='relative'>;
+              <item.icon className='h - 5 w - 5 mb - 1' aria - hidden='true' />;
+              {item.badge && item.badge > 0 && (
+                <span className='absolute -top - 2 -right - 2 bg - primary text - primary - foreground text - xs rounded - full h - 4 w - 4 flex items - center justify - center'>;
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>)}
+            </div>;
+            <span className='hidden sm:block text - xs font - medium'>;
+              {item.name}
+            </span>;
+          </Link>))}
+      </div>;
+    </nav>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

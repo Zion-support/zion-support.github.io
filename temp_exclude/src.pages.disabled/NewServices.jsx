@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,4 +29,10 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD
 <<<<<<< HEAD:src && src.pages.disabled/NewServices && NewServices.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/NewServices && NewServices.jsx import React from \'react\'; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [searchTerm,setSearchTerm] = useState (\") ; const [selectedService,setSelectedService] = useState (null) ; import React from \'react\'; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [searchTerm,setSearchTerm] = useState (\") ; const [selectedService,setSelectedService] = useState (null) ;\"";
+<<<<<<< HEAD
 <<<<<<< "HEAD": src && src.pages.disabled/NewServices && NewServices.jsx import _React from 'react'; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory,setSelectedCategory] = useState ("all") ; const [searchTerm,setSearchTerm] = useState (") ; const [selectedService,setSelectedService] = useState (null) ; import _React from 'react'; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory,setSelectedCategory] = useState ("all") ; const [searchTerm,setSearchTerm] = useState (") ; const [selectedService,setSelectedService] = useState (null) ;"";
+=======
+<<<<<<< "HEAD": src && src.pages.disabled/NewServices && NewServices.jsx import _React from 'react'; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory,setSelectedCategory] = useState ("all") ; const [searchTerm,setSearchTerm] = useState (") ; const [selectedService,setSelectedService] = useState (null) ; import _React from 'react'; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory,setSelectedCategory] = useState ("all") ; const [searchTerm,setSearchTerm] = useState (") ; const [selectedService,setSelectedService] = useState (null) ;"";
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

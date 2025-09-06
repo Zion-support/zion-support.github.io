@@ -1,11 +1,31 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import type { TrustPeerReview } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  }
+  const { userId, reviewerId, type, note } = req.body |{}
+  if (!userId |!reviewerId |(type !== 'endorse' && type !== 'flag')) {
+    return res.status(400).json({ error: 'Missing or invalid fields' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST')
+
+    return res.status(405).json({ error: 'Method not allowed' })
+  const { userId, reviewerId, type, note } = req.body |{}
+  if (!userId |!reviewerId |(type !== 'endorse' && type !== 'flag')) {
+    return res.status(400).json({ error: 'Missing or invalid fields' });
+=======
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
     return res && res.status(405).json({ error: 'Method not allowed' });  }
@@ -20,32 +40,112 @@ export default async function handler(
   const { userId, reviewerId, type, note } = req && req.body || {};
   if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
     return res && res.status(400).json({ error: 'Missing or invalid fields' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import type { TrustPeerReview } from '../../../utils / types / trust';
+import { supabase } from '../../../utils / supabase / client';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ('Allow', 'POST');
+    return res.status (405).json ({ error: 'Method not allowed' });  }
+  const { user_id, reviewer_id, type, note } = req.body || {}
+  if () {) {
+  $2
+}
+    return res.status (400).json ({ error: 'Missing or invalid fields' });export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ('AllowPOST'),
+    return res.status (405).json ({ error: 'Method not allowed' });
+  const { user_id, reviewer_id, type, note } = req.body || {}
+  if () {) {
+  $2
+}
+    return res.status (400).json ({ error: 'Missing or invalid fields' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+  const review: TrustPeerReview = {
+<<<<<<< HEAD
+    userId
+    reviewerId
+    type
+    note
+    createdAt: new Date().toISOString()
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const review: TrustPeerReview = {
-    userId,
-    reviewerId,
-    type,
-    note,
-    createdAt: new Date().toISOString(),
-  };
-
+  const { userId, reviewerId, type, note } = req.body || {};
+  if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
+    return res.status(400).json({ error: 'Missing or invalid fields' })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  }
   try {
     await supabase && supabase.from('trust_peer_reviews').insert(review);
   } catch {}
+<<<<<<< HEAD
+  return res.status(200).json({ ok: true, review });  }
+=======
 
   return res && res.status(200).json({ ok: true, review });  }
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    user_id,
+    reviewer_id,
+    type,
+    note,
+    created_at: new Date ().toISOString (),
+  }
+;
+  try {
+    await supabase.from ('trust_peer_reviews').insert (review);
+  } catch {}
+  return res.status (200).json ({ ok: true, review });  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const review: TrustPeerReview = {
-    userId;
-    reviewerId;
+    user_id;
+    reviewer_id;
     type;
     note;
-    createdAt: new Date().toISOString()};
+<<<<<<< HEAD
+    createdAt: new Date().toISOString()}
 
   try {
     await supabase && supabase.from('trust_peer_reviews').insert(review)
   } catch {}
+<<<<<<< HEAD
+return res.status(200).json({ ok: true, review });
+}
+<<<<<<< HEAD
+=======
 
   return res && res.status(200).json({ ok: true, review });
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    created_at: new Date ().toISOString ()}
+;
+  try {
+    await supabase.from ('trust_peer_reviews').insert (review);
+  } catch {}
+return res.status (200).json ({ ok: true, review });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

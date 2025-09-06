@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,6 +29,11 @@ module && module.exports = default function APIPage() { return null}
 module && module.exports = default function APIPage() { return null}
 module && module.exports = default function APIPage() { return null}
 module && module.exports = default function APIPage() { return null}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 interface ApiProps {;
   // Add props here as needed;
@@ -37,6 +46,13 @@ export default function Api(): any ({ }: ApiProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 }

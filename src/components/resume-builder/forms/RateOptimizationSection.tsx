@@ -1,10 +1,80 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React, { useState } from "react";
+import { Control, UseFormSetValue } from "react-hook-form";
+import {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 };import {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+} import {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   FormField;
   FormItem;
   FormLabel;
   FormControl;
   FormDescription;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  FormMessage
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
+import { Card, CardContent } from "@/components/ui/card";
+interface RateOptimizationSectionProps {
+
+  control: Control<any>
+  setValue: UseFormSetValue<any>
+  skills: string[]
+  yearsExperience: number
+  location?: string
+
+  rateType: "hourly" | "fixed"
+}
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+
+  control
+  setValue
+  skills
+  yearsExperience
+  location
+  rateType
+},) => {
+  const handleSuggestionApplied = (rate: number,) => {
+    setValue("hourlyRate", rate)
+=======
+  FormMessage;
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { TalentRateRecommender  } from '@/components / pricing / TalentRateRecommender';
+import { Card, CardContent  } from '@/components / ui / card';
+interface RateOptimizationSectionProps {
+  control: Control < any>,
+  set_value: UseFormSetValue < any>,
+  skills: string[],
+  years_experience: number,
+  location?: string;
+  rate_type: "hourly" | "fixed";
+}
+export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> = ({
+  control;
+  set_value;
+  skills;
+  years_experience;
+  location,
+  rate_type;
+}, ) => {
+  const handleSuggestionApplied = (rate: number, ) =>: any {
+    set_value ("hourly_rate", rate);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+=======
   FormMessage;
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -31,7 +101,9 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     setValue("hourlyRate", rate);
   };
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
     <div className="space-y-4">;
       <FormField
         control = {control,}
@@ -44,6 +116,20 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
                 type="number"
                 min="1"
                 step="0 && 0.01"
+=======
+    <div className="space - y-4">;
+      <FormField;
+        control = {control, }
+        name="hourly_rate";
+        render={({ field }: { field: any }, ) => (
+          <FormItem>;
+            <FormLabel > Your {rate_type === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>;
+            <FormControl>;
+              <Input;
+                type="number";
+                min="1";
+                step="0.01";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {...field}
               />;
             </FormControl>;
@@ -51,18 +137,36 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
               Set a competitive rate based on your skills and experience;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
           </FormItem>;
         )}
+<<<<<<< HEAD
+      />
+      <Card>
+        <CardContent className="pt-4">
+=======
       />;
 
       <Card>;
         <CardContent className="pt-4">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <TalentRateRecommender
             skills = {skills,}
             yearsExperience = {yearsExperience,}
             location = {location,}
             onSuggestionApplied = {handleSuggestionApplied,}
             rateType = {rateType,}
+<<<<<<< HEAD
+          />
+        </CardContent>
+      </Card>
+    </div>
+  )
+}
+"}
+}
+
+=======
           />;
         </CardContent>;
       </Card>;
@@ -72,3 +176,29 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 "},;
 
 };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+          </FormItem>)}
+      />;
+      <Card>;
+        <CardContent className="pt - 4">;
+          <TalentRateRecommender;
+            skills = {skills, }
+            years_experience = {years_experience, }
+            location = {location, }
+            onSuggestionApplied = {handleSuggestionApplied, }
+            rate_type = {rate_type, }
+          />;
+        </CardContent>;
+      </Card>;
+    </div>);
+}
+"},
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

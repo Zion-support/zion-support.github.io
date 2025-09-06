@@ -1,7 +1,6 @@
-
-
+;
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
-
+<<<<<<< HEAD
 export interface SmartContractInfo {
   id: string;
   transactionHash?: string;
@@ -11,23 +10,47 @@ export interface SmartContractInfo {
   contractType: 'escrow' | 'milestone' | 'simpleAgreement';
   metadataUrl?: string;
   createdAt: string;
-  createdBy: string,
+  createdBy: string
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
+=======
+;
+export interface SmartContractInfo {
+  id: string;
+  transaction_hash?: string;
+  network_name?: BlockchainNetwork;
+  block_number?: number;
+  deployed_address?: string;
+  contract_type: 'escrow' | 'milestone' | 'simple_agreement';
+  metadata_url?: string;
+  created_at: string;
+  created_by: string,
+  status: 'draft' | 'deployed' | 'executed' | 'cancelled';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-
 export interface EscrowContractDetails {
   client: string;
   talent: string;
   amount: number;
   currency: string;
   deliverables: string;
-  completionDeadline: string,
+<<<<<<< HEAD
+  completionDeadline: string
   arbitrator?: string
 }
-
 export interface DeploymentOptions {
   network: BlockchainNetwork;
   walletAddress?: string;
-  useEscrow: boolean,
+  useEscrow: boolean
+
   deployToChain: boolean
+=======
+  completion_deadline: string,
+  arbitrator?: string;
+}
+export interface DeploymentOptions {
+  network: BlockchainNetwork;
+  wallet_address?: string;
+  use_escrow: boolean,
+  deployToChain: boolean;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,14 +1,30 @@
 import OpenAI from 'openai';
-type OpenAIClient = OpenAI;
+<<<<<<< HEAD
 
+type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
   return new OpenAI({ apiKey });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export async function generateJobPost(
-  openai: OpenAIClient,
-  role: string,
+  openai: OpenAIClient
+  role: string
   opts: any
 ): Promise<string> {
   const prompt = `Create a concise, compelling job post for a ${role}.
+<<<<<<< HEAD
+Company: ${opts.company |'Confidential'}
+Location: ${opts.location |'Remote'}
+Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
+Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai.responses.create({
+    model: 'gpt-4o-mini'
+    input: prompt
+  });
+  return completion.output_text;Key skills: ${(opts.tags |[]).join() |'N/A'}
+=======
 Company: ${opts && opts.company || 'Confidential'}
 Location: ${opts && opts.location || 'Remote'}
 Key skills: ${(opts && opts.tags || []).join(', ') || 'N/A'}
@@ -18,10 +34,59 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     input: prompt,
   });
   return completion && completion.output_text;Key skills: ${(opts && opts.tags || []).join() || 'N/A'}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}
+
+export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {
+  const prompt = `Create a concise, compelling job post for a ${role}.
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+Key skills: ${(opts.tags || []).join() || 'N/A'}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai && openai.responses.create({
     model: 'gpt-4o-mini';
     input: prompt
   });
+<<<<<<< HEAD
+
+  return completion.output_text
+}
+<<<<<<< HEAD
+=======
   return completion && completion.output_text
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+type OpenAIClient = OpenAI;
+;
+export function createOpenAIClient (api_key: string): OpenAIClient {
+  return new OpenAI ({ api_key });
+export async function generateJobPost (
+  openai: OpenAIClient,
+  role: string,
+  opts: any): Promise < string> {
+  const prompt = `Create a concise, compelling job post for a ${role}.;
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+Key skills: ${(opts.tags || []).join (', ') || 'N / A'}
+Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai.responses.create ({
+    model: 'gpt - 4o - mini',
+    input: prompt,
+  });
+  return completion.output_text;Key skills: ${(opts.tags || []).join () || 'N / A'}
+Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai.responses.create ({
+    model: 'gpt - 4o - mini';
+    input: prompt;
+  });
+  return completion.output_text;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -22,6 +22,73 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function UNBridge() {
+  const [form, setForm] = useState({
+<<<<<<< HEAD
+
+    title: 'Zion DAO x Digital Labor Initiative'
+    targetInstitution: 'UN Development Programme'
+    type: 'Workforce Dev'
+    regionalScope: 'Global South'
+    budgetOrResolution: 'USD 3M over 24 months'
+    supportingMultiverses: 'Digital Labor, AI Ethics'
+    promptAssist:
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
+    language: 'en'
+  });  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null);
+  const [translated, setTranslated] = useState<string>('');
+  const onChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setForm(f => ({ ...f, [name]: value }));  }
+=======
+    title: 'Zion DAO x Digital Labor Initiative',
+    targetInstitution: 'UN Development Programme',
+    type: 'Workforce Dev',
+    regionalScope: 'Global South',
+    budgetOrResolution: 'USD 3M over 24 months',
+    supportingMultiverses: 'Digital Labor, AI Ethics',
+    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+    language: 'en'}),
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null);
+  const [translated, setTranslated] = useState<string>('');
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setForm((f) => ({ ...f, [name]: value }))
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  async function generate() {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/proposals/generate', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+<<<<<<< HEAD
+          ...form
+          supportingMultiverses: form.supportingMultiverses
+            .split(',')
+            .map(s => s.trim())
+            .filter(Boolean)
+        })
+=======
+=======
+          ...form;
+          supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
+      const data = await res.json();
+      setResult(data)
+    } finally { setLoading(false) }
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function UNBridge() {;
   const [form, setForm] = useState({;
@@ -59,12 +126,14 @@ export default function UNBridge() {;
             .map(s => s && s.trim());
             .filter(Boolean),;
         }),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const data = await res && res.json();
       setResult(data);
     } finally {;
       setLoading(false);
     }  }
+<<<<<<< HEAD
 
   async function translate(): any (targetLanguage: string) {;
     if (!result?.markdown) return;
@@ -84,20 +153,105 @@ export default function UNBridge() {;
   async function exportArtifacts() {;
     if (!result?.meta?.id) return;
     setLoading(true);
+=======
+<<<<<<< HEAD
+  async function translate(targetLanguage: string) {
+    if (!result?.markdown) return;
+    setLoading(true)
+    try {
+      const res = await fetch('/api/proposals/translate', {
+<<<<<<< HEAD
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ markdown: result.markdown, targetLanguage })
+=======
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ markdown: result.markdown, targetLanguage })});
+      const data = await res.json();
+      setTranslated(data.translated)
+    } finally { setLoading(false) }
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+  async function translate(): any (targetLanguage: string) {;
+    if (!result?.markdown) return;
+    setLoading(true),;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    try {;
+      const res = await fetch('/api/proposals/translate', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ markdown: result && result.markdown, targetLanguage }),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      });
+      const data = await res && res.json();
+      setTranslated(data && data.translated);
+    } finally {;
+      setLoading(false);
+    }  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  async function exportArtifacts() {
+    if (!result?.meta?.id) return;
+    setLoading(true);
+    try {
+      await fetch('/api/proposals/export', {
+<<<<<<< HEAD
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ id: result.meta.id })
+=======
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: result.meta.id })}),
+      // Refresh meta
+      const list = await fetch('/api/proposals/list');
+      const { proposals } = await list.json();
+      const updated = proposals.find((p: any) => p.id === result.meta.id),
+      setResult((r: any) => ({ ...r, meta: updated }))
+    } finally { setLoading(false) }
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+  async function exportArtifacts() {;
+    if (!result?.meta?.id) return;
+    setLoading(true);
     try {;
       await fetch('/api/proposals/export', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ id: result && result.meta.id }),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       // Refresh meta;
       const list = await fetch('/api/proposals/list');
+<<<<<<< HEAD
+      const { proposals } = await list.json();
+      const updated = proposals.find((p: any) => p.id === result.meta.id)
+=======
       const { proposals } = await list && list.json();
       const updated = proposals && proposals.find((p: any) => p && p.id === result && result.meta.id),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setResult((r: any) => ({ ...r, meta: updated }));
     } finally {;
       setLoading(false);
     }  }
+<<<<<<< HEAD
+  async function submit(channels: string[]) {
+    if (!result?.meta?.id) return;
+    setLoading(true)
+    try {
+      const res = await fetch('/api/proposals/submit', {
+<<<<<<< HEAD
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ id: result.meta.id, channels })
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   async function submit(): any (channels: string[]) {;
     if (!result?.meta?.id) return;
@@ -107,14 +261,15 @@ export default function UNBridge() {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ id: result && result.meta.id, channels }),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const data = await res && res.json();
       setResult((r: any) => ({ ...r, meta: data && data.meta }));
     } finally {;
       setLoading(false);
     }
-  }
 
+  }
   return (
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Global Outreach: UN Bridge</h1>;
@@ -195,6 +350,41 @@ export default function UNBridge() {;
               disabled={loading}
               className='px-4 py-2 bg-black text-white rounded'>;
               {loading ? 'Working…' : 'Generate Proposal'}
+<<<<<<< HEAD
+            </button>
+          </div>
+        </div>
+        <div className='space-y-3'>
+          <div className='text-sm opacity-70'>Output</div>
+          <div className='border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50'>
+            {result?.markdown |'No draft yet'}
+          </div>
+          <div className='flex items-center gap-2'>
+            <button
+              onClick={() => translate('fr')}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Translate FR
+            </button>
+            <button
+              onClick={() => translate('es')}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Translate ES
+            </button>
+            <button
+              onClick={() => translate('ar')}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Translate AR
+            </button>
+          </div>
+          {translated && (
+            <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
+=======
             </button>;
           </div>;
         </div>;
@@ -228,12 +418,31 @@ export default function UNBridge() {;
           </div>;
           {translated && (;
             <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {translated}
             </div>;
           )}
           <div className='flex items-center gap-2'>;
             <button
               onClick={exportArtifacts}
+<<<<<<< HEAD
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Export PDF + Sign + IPFS
+            </button>
+            <button
+              onClick={() => submit(['email'])}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Submit (Email)
+            </button>
+          </div>
+          {result?.meta && (
+            <div className='text-sm space-y-1'>
+              <div>
+=======
               disabled={loading || !result}
               className='px-3 py-2 border rounded'>;
               Export PDF + Sign + IPFS;
@@ -249,6 +458,7 @@ export default function UNBridge() {;
           {result?.meta && (;
             <div className='text-sm space-y-1'>;
               <div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <span className='font-medium'>Status:</span>{' '}
                 {result && result.meta.status}
               </div>;
@@ -282,7 +492,395 @@ export default function UNBridge() {;
                 </div>              )}
             </div>;
           )}
+<<<<<<< HEAD
+        </div>
+      </div>
+    </div>
+);
+=======
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: result.meta.id, channels })});
+      const data = await res.json();
+      setResult((r: any) => ({ ...r, meta: data.meta }))
+    } finally { setLoading(false) }
+  }
+
+  return (
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>
+      <div className="grid md:grid-cols-2 gap-6">
+        <div className="space-y-3">
+          <label className="block">
+            <span className="text-sm">Title</span>
+            <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
+          </label>
+          <label className="block">
+            <span className="text-sm">Target institution</span>
+            <input name="targetInstitution" value={form.targetInstitution} onChange={onChange} className="w-full border rounded p-2" />
+          </label>
+          <label className="block">
+            <span className="text-sm">Type</span>
+            <select name="type" value={form.type} onChange={onChange} className="w-full border rounded p-2">
+              <option>Workforce Dev</option>
+              <option>AI Ethics</option>
+              <option>Digital ID</option>
+              <option>Education</option>
+            </select>
+          </label>
+          <label className="block">
+            <span className="text-sm">Regional scope</span>
+            <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
+          </label>
+          <label className="block">
+            <span className="text-sm">Budget / Resolution goals</span>
+            <input name="budgetOrResolution" value={form.budgetOrResolution} onChange={onChange} className="w-full border rounded p-2" />
+          </label>
+          <label className="block">
+            <span className="text-sm">Supporting multiverse(s) (comma separated)</span>
+            <input name="supportingMultiverses" value={form.supportingMultiverses} onChange={onChange} className="w-full border rounded p-2" />
+          </label>
+          <label className="block">
+            <span className="text-sm">GPT Prompt Assist</span>
+            <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />
+          </label>
+          <div className="flex gap-3">
+            <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
+          </div>
+        </div>
+        <div className="space-y-3">
+          <div className="text-sm opacity-70">Output</div>
+          <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
+            {result?.markdown || 'No draft yet'}
+          </div>
+          <div className="flex items-center gap-2">
+            <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
+            <button onClick={() => translate('es')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate ES</button>
+            <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
+          </div>
+          {translated && (
+            <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
+              {translated}
+            </div>
+          )}
+          <div className="flex items-center gap-2">
+            <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
+            <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
+          </div>
+          {result?.meta && (
+            <div className="text-sm space-y-1">
+              <div><span className="font-medium">Status:</span> {result.meta.status}</div>
+              {result.meta.artifacts?.markdownPath && (
+                <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
+              )}
+              {result.meta.artifacts?.pdfPath && (
+                <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</a></div>
+              )}
+              {result.meta.artifacts?.ipfsCid && (
+                <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>
+              )}
+              {result.meta.artifacts?.signature && (
+                <div>Signature: {result.meta.artifacts.signature.slice(0, 30)}…</div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+export default /**
+ * UNBridge - Function description
+ */
+function UNBridge() {
+  const [form, set_form] = useState ({
+    title: 'Zion DAO x Digital Labor Initiative',
+    target_institution: 'UN Development Programme',
+    type: 'Workforce Dev',
+    regional_scope: 'Global South',
+    budgetOrResolution: 'USD 3M over 24 months',
+    supporting_multiverses: 'Digital Labor, AI Ethics',
+    prompt_assist:;
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO - based governance logic.',
+    language: 'en',
+  });  const [loading, set_loading] = useState (false);
+  const [result, set_result] = useState < any>(null);
+  const [translated, set_translated] = useState < string>('');
+;
+  const on_change = (
+    e: React.ChangeEvent<;
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+    >) =>: any {
+    const { name, value } = e.target;
+    set_form (function => ({ ...f, [name]: value }));  }
+;
+  async /**
+ * generate - Function description
+ */
+function generate() {
+    set_loading (true);
+    try {
+      const res = await fetch ('/api / proposals / generate', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          ...form,
+          supporting_multiverses: form.supporting_multiverses;
+            .split (', ');
+            .map (string => s.trim ());
+            .filter (Boolean),
+        }),
+      });
+      const data = await res.json ();
+      set_result (data);
+    } finally {
+      set_loading (false);
+    }  }
+  async /**
+ * translate - Function description
+ */
+function translate() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_loading (true),
+    try {
+      const res = await fetch ('/api / proposals / translate', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ markdown: result.markdown, target_language }),
+      });
+      const data = await res.json ();
+      set_translated (data.translated);
+    } finally {
+      set_loading (false);
+    }  }
+  async /**
+ * export_artifacts - Function description
+ */
+function export_artifacts() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_loading (true);
+    try {
+      await fetch ('/api / proposals / export', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ id: result.meta.id }),
+      });
+      // Refresh meta;
+      const list = await fetch ('/api / proposals / list');
+      const { proposals } = await list.json ();
+      const updated = proposals.find ((p: any) => p.id === result.meta.id),
+      set_result ((r: any) => ({ ...r, meta: updated }));
+    } finally {
+      set_loading (false);
+    }  }
+  async /**
+ * submit - Function description
+ */
+function submit() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_loading (true),
+    try {
+      const res = await fetch ('/api / proposals / submit', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ id: result.meta.id, channels }),
+      });
+      const data = await res.json ();
+      set_result ((r: any) => ({ ...r, meta: data.meta }));
+    } finally {
+      set_loading (false);
+    }
+  }
+  return (
+    <div className='space - y-6'>;
+      <h1 className='text - 2xl font - semibold'>Global Outreach: UN Bridge</h1>;
+      <div className='grid md:grid - cols - 2 gap - 6'>;
+        <div className='space - y-3'>;
+          <label className='block'>;
+            <span className='text - sm'>Title</span>;
+            <input;
+              name='title';
+              value={form.title}
+              on_change={on_change}
+              className='w - full border rounded p - 2';
+            />;
+          </label>;
+          <label className='block'>;
+            <span className='text - sm'>Target institution</span>;
+            <input;
+              name='target_institution';
+              value={form.target_institution}
+              on_change={on_change}
+              className='w - full border rounded p - 2';
+            />;
+          </label>;
+          <label className='block'>;
+            <span className='text - sm'>Type</span>;
+            <select;
+              name='type';
+              value={form.type}
+              on_change={on_change}
+              className='w - full border rounded p - 2';
+            >              <option > Workforce Dev</option>;
+              <option > AI Ethics</option>;
+              <option > Digital ID</option>;
+              <option > Education</option>;
+            </select>;
+          </label>;
+          <label className='block'>;
+            <span className='text - sm'>Regional scope</span>;
+            <input;
+              name='regional_scope';
+              value={form.regional_scope}
+              on_change={on_change}
+              className='w - full border rounded p - 2';
+            />;
+          </label>;
+          <label className='block'>;
+            <span className='text - sm'>Budget / Resolution goals</span>;
+            <input;
+              name='budgetOrResolution';
+              value={form.budgetOrResolution}
+              on_change={on_change}
+              className='w - full border rounded p - 2';
+            />;
+          </label>;
+          <label className='block'>;
+            <span className='text - sm'>;
+              Supporting multiverse (s) (comma separated);
+            </span>;
+            <input;
+              name='supporting_multiverses';
+              value={form.supporting_multiverses}
+              on_change={on_change}
+              className='w - full border rounded p - 2';
+            />;
+          </label>;
+          <label className='block'>;
+            <span className='text - sm'>GPT Prompt Assist</span>;
+            <textarea;
+              name='prompt_assist';
+              rows={5}
+              value={form.prompt_assist}
+              on_change={on_change}
+              className='w - full border rounded p - 2';
+            />;
+          </label>;
+          <div className='flex gap - 3'>;
+            <button;
+              on_click={generate}
+              disabled={loading}
+              className='px - 4 py - 2 bg - black text - white rounded';
+            >;
+              {loading ? 'Working…' : 'Generate Proposal'}
+            </button>;
+          </div>;
+        </div>;
+        <div className='space - y-3'>;
+          <div className='text - sm opacity - 70'>Output</div>;
+          <div className='border rounded p - 3 h - 96 overflow - auto whitespace - pre - wrap bg - gray - 50'>;
+            {result?.markdown || 'No draft yet'}
+          </div>;
+          <div className='flex items - center gap - 2'>;
+            <button;
+              on_click={() => translate ('fr')}
+              disabled={loading || !result}
+              className='px - 3 py - 2 border rounded';
+            >;
+              Translate FR;
+            </button>;
+            <button;
+              on_click={() => translate ('es')}
+              disabled={loading || !result}
+              className='px - 3 py - 2 border rounded';
+            >;
+              Translate ES;
+            </button>;
+            <button;
+              on_click={() => translate ('ar')}
+              disabled={loading || !result}
+              className='px - 3 py - 2 border rounded';
+            >;
+              Translate AR;
+            </button>;
+          </div>;
+          {translated && (
+            <div className='border rounded p - 3 h - 60 overflow - auto whitespace - pre - wrap bg - gray - 50'>;
+              {translated}
+            </div>)}
+          <div className='flex items - center gap - 2'>;
+            <button;
+              on_click={export_artifacts}
+              disabled={loading || !result}
+              className='px - 3 py - 2 border rounded';
+            >;
+              Export PDF + Sign + IPFS;
+            </button>;
+            <button;
+              on_click={() => submit (['email'])}
+              disabled={loading || !result}
+              className='px - 3 py - 2 border rounded';
+            >;
+              Submit (Email);
+            </button>;
+          </div>;
+          {result?.meta && (
+            <div className='text - sm space - y-1'>;
+              <div>;
+                <span className='font - medium'>Status:</span>{' '}
+                {result.meta.status}
+              </div>;
+              {result.meta.artifacts?.markdown_path && (
+                <div>;
+                  <a;
+                    className='text - blue - 600 underline';
+                    href={result.meta.artifacts.markdown_path}
+                    target='_blank';
+                    rel='noreferrer';
+                  >;
+                    Markdown;
+                  </a>;
+                </div>)}
+              {result.meta.artifacts?.pdf_path && (
+                <div>;
+                  <a;
+                    className='text - blue - 600 underline';
+                    href={result.meta.artifacts.pdf_path}
+                    target='_blank';
+                    rel='noreferrer';
+                  >;
+                    PDF;
+                  </a>;
+                </div>              )}
+              {result.meta.artifacts?.ipfs_cid && (
+                <div > IPFS CID: {result.meta.artifacts.ipfs_cid}</div>)}
+              {result.meta.artifacts?.signature && (
+                <div>;
+                  Signature: {result.meta.artifacts.signature.slice (0, 30)}…;
+                </div>              )}
+            </div>)}
+        </div>;
+      </div>;
+    </div>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

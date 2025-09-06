@@ -1,14 +1,16 @@
-export interface HelpArticle {
-  id: string;
-  title: string;
-  slug: string;
-  content: string;
-  tags: string[];
-  category: string;
-  priority: number;
-  createdAt: Date;
-  updatedAt: Date;
+// Support utilities;
+export const support = {
+<<<<<<< HEAD
+  // Add support functionality here
+  logEvent: (event: any) => null
+  getArticles: () => []
+  getArticleById: (id: string) => null
 }
+<<<<<<< HEAD
+export const logSupportEventToOperator = (event: any) => {
+  // Add support event logging functionality here
+  return null;
+=======
 
 export interface IntentMatch {
   intentMatched: boolean;
@@ -21,10 +23,20 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   const matchedArticles: string[] = [];
   let confidence = 0;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   for (const article of articles) {
     const titleMatch = article && article.title.toLowerCase().includes(queryLower);
     const contentMatch = article && article.content.toLowerCase().includes(queryLower);
     const tagMatch = article && article.tags.some(tag => tag && tag.toLowerCase().includes(queryLower));
+<<<<<<< HEAD
+=======
+=======
+  const keywordToArticle = new Map<string, string[]>();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
     if (titleMatch || contentMatch || tagMatch) {
       matchedArticles && matchedArticles.push(article && article.id);
@@ -38,6 +50,10 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
     confidence: Math && Math.min(confidence, 1)
   };
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export function getArticlesByCategory(articles: HelpArticle[], category: string): HelpArticle[] {
   return articles && articles.filter(article => article && article.category === category);
@@ -54,4 +70,23 @@ export function searchArticles(articles: HelpArticle[], query: string): HelpArti
     article && article.content.toLowerCase().includes(queryLower) ||
     article && article.tags.some(tag => tag && tag.toLowerCase().includes(queryLower))
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  // Add support functionality here;
+  log_event: (event: any) => null,
+  get_articles: () => [],
+  getArticleById: (id: string) => null;
+}
+;
+export const logSupportEventToOperator = (event: any) =>: any {
+  // Add support event logging functionality here;
+  return null;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

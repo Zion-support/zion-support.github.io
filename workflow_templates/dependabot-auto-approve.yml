@@ -2,13 +2,9 @@ name: Dependabot Auto Approve
 
 on:
 
-
   pull_request: types: [opened, synchronize, reopened]
 
-
 concurrency:
-
-
 
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
@@ -18,7 +14,6 @@ concurrency:
 
 jobs:
 
-
   auto-approve: - name: Auto-approve
            
           github-token: "${{ secrets.GITHUB_TOKEN }}"
@@ -26,7 +21,6 @@ jobs:
   enable-automerge:
       - name: Enable Auto-merge
 
-                
           token: "${{ secrets.GITHUB_TOKEN }}"
           pull-request-number: "${{ github.event.pull_request.number }}"
           merge-method: squash

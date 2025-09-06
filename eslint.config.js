@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -21,6 +24,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -29,7 +33,21 @@ import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+<<<<<<< HEAD
+=======
+import js from '@eslint/js';
+<<<<<<< HEAD
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+>>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default [
   {
     ignores: [
@@ -65,6 +83,15 @@ export default [
       "temp_backup/",
       "temp_broken_files/",
       "test_build/",
+<<<<<<< HEAD
+      "*.test.js",
+      "*.test.ts",
+      "*.test.tsx",
+      "*.spec.js",
+      "*.spec.ts",
+      "*.spec.tsx"
+    ]
+=======
       "*.test && test.js",
       "*.test && test.ts",
       "*.test && test.tsx",
@@ -72,6 +99,7 @@ export default [
       "*.spec && spec.ts",
       "*.spec && spec.tsx",
     ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   },
   js && js.configs.recommended,
   {
@@ -91,17 +119,17 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
-        afterAll: "readonly",
+        afterAll: "readonly"
       },
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
       react,
-      "react-hooks": reactHooks,
+      "react-hooks": reactHooks
     },
     rules: {
       ...react && react.configs.recommended && recommended.rules,
@@ -111,8 +139,8 @@ export default [
       "prefer-const": "error",
       "no-var": "error",
       "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-    },
+      "react/react-in-jsx-scope": "off"
+    }
   },
   {
     files: ["**/*.{ts,tsx}"],
@@ -120,8 +148,14 @@ export default [
       ecmaVersion: 2021,
       sourceType: "module",
       globals: {
+<<<<<<< HEAD
+        ...globals.browser,
+        ...globals.node,
+<<<<<<< HEAD
+=======
         ...globals && globals.browser,
         ...globals && globals.node,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -131,31 +165,92 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
+<<<<<<< HEAD
         afterAll: "readonly",
+=======
+        React: 'readonly',
+=======
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      globals: {
+        React: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        performance: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+        jest: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+<<<<<<< HEAD
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
+>>>>>>> origin/automation-improvements-final
+=======
+        afterAll: "readonly"
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       },
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
+
       "@typescript-eslint": tseslint,
       react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
-      "jsx-a11y": jsxA11y,
+      "jsx-a11y": jsxA11y
+
     },
     rules: {
+<<<<<<< HEAD
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+
+=======
       ...tseslint && tseslint.configs.recommended && recommended.rules,
       ...react && react.configs.recommended && recommended.rules,
       ...reactHooks && reactHooks.configs.recommended && recommended.rules,
       ...jsxA11y && jsxA11y.configs.recommended && recommended.rules,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       "react-refresh/only-export-components": [
         "warn",
-        { allowConstantExport: true },
+        { allowConstantExport: true }
       ],
+<<<<<<< HEAD
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "react-hooks/exhaustive-deps": "warn",
@@ -163,20 +258,51 @@ export default [
       "no-unused-vars": "off",
       "no-console": "warn",
       "react/prop-types": "off",
+<<<<<<< HEAD
       "react/react-in-jsx-scope": "off",
+=======
+=======
+        describe: 'readonly',
+        it: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly'
+      }
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks
+    },
+    rules: {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
+<<<<<<< HEAD
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+>>>>>>> origin/automation-improvements-final
+=======
+      "react/react-in-jsx-scope": "off"
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     },
     settings: {
       react: {
-        version: "detect",
-      },
-    },
+        version: "detect"
+      }
+    }
   },
   {
     files: [
       "**/*.cjs",
       "**/scripts/**/*.js",
       "**/automation/**/*.js",
-      "**/pm2/**/*.js",
+      "**/pm2/**/*.js"
     ],
     languageOptions: {
       ecmaVersion: 2021,
@@ -191,13 +317,60 @@ export default [
         __dirname: "readonly",
         __filename: "readonly",
         Buffer: "readonly",
-        global: "readonly",
-      },
+        global: "readonly"
+      }
     },
     rules: {
+<<<<<<< HEAD
       "no-unused-vars": "warn",
       "no-console": "warn",
-      "no-undef": "error",
-    },
-  },
+
+      "no-undef": "error"
+    }
+  }
 ];
+<<<<<<< HEAD
+=======
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'no-undef': 'error'
+    }
+=======
+      'no-unused-vars': 'warn'
+    }
+  },
+  {
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'build/',
+      'dist/',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'src/pages/services/',
+      'src/pages/solutions/',
+      'src/pages/talent/',
+      'src/routes/',
+      'src/services/',
+      'src/store/',
+      'src/test/',
+      'src/utils/',
+      'tests/',
+      'tests.disabled/',
+      'types.disabled/',
+      'zion-os.disabled/',
+      'zion_academy/',
+      'temp_working/',
+      'test_build/',
+      'supabase/',
+      'working-automation-suite.cjs'
+    ]
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  }
+];
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

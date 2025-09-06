@@ -1,4 +1,62 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+<<<<<<< HEAD
+const colorSchemes = {
+  quantum: {
+  resizeCanvas ();
+window.addEventListener ('resize', resizeCanvas);
+// Wrap around edges if (this.x < 0) this.x = canvas.width;
+if (this.x > canvas.width) this.x = 0;
+if (this.y < 0) this.y = canvas.height;
+if (this.y > canvas.height) this.y = 0;
+// Fade out near end of life if (this.life < 20) {
+=======
+const color_schemes = {
+  quantum: {
+  resize_canvas ();
+window.addEventListener ('resize', resize_canvas);
+// Wrap around edges // Check condition
+if (this.coordinate_x = canvas.width) {
+  $2
+}
+// Check condition
+if (this.coordinate_x = 0) {
+  $2
+}
+// Check condition
+if (this.coordinate_y = canvas.height) {
+  $2
+}
+// Check condition
+if (this.coordinate_y = 0) {
+  $2
+}
+// Fade out near end of life // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}let particles: Particle[] = [];
+let connections: Connection[] = [];
+// Initialize particles ctx.fill_style = colors.primary;
+ctx.font = `$ {
+<<<<<<< HEAD
+  fontSize
+}px monospace`;
+const EnhancedFuturisticBackground: React.FC<
+  EnhancedFuturisticBackgroundProps
+> = ({
+  children
+  className = ''
+  intensity = 'medium'
+  colorScheme = 'quantum'
+  particleCount = 100
+  animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +78,17 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
+=======
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface EnhancedFuturisticBackgroundProps {
+  children: React.ReactNode,
+  className?: string;
+  intensity?: 'low' | 'medium' | 'high';
+  colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';
+  particleCount?: number;
+  animationSpeed?: number
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 import React from 'react';
  const colorSchemes = {;
@@ -48,10 +117,299 @@ const EnhancedFuturisticBackground: React.FC<;
   colorScheme = 'quantum',;
   particleCount = 100,;
   animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  font_size;
+}px monospace`;
+;
+const EnhancedFuturisticBackground: React.FC<;
+  EnhancedFuturisticBackgroundProps;
+> = ({
+  children,
+  class_name = '',
+  intensity = 'medium',
+  color_scheme = 'quantum',
+  particle_count = 100,
+  animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   children;
-  className = '';
+  class_name = '';
   intensity = 'medium';
+<<<<<<< HEAD
   colorScheme = 'quantum';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  particleCount = 100
+  animationSpeed = 1
+<<<<<<< HEAD
+=======
+}) => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const animationRef = useRef<number | undefined>(undefined);
+  const colorSchemes = {
+    quantum: {
+<<<<<<< HEAD
+      primary: '#00ffff'
+      secondary: '#ff00ff'
+      accent: '#ffff00'
+      background: 'rgba(0, 0, 0, 0.85)'
+      particles: [
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff00'
+        '#ff0080'
+        '#8000ff'
+      ]
+      glow: '#00ffff',    },    }
+      background: 'rgba(0, 0, 0, 0.85)';
+      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff']
+      glow: '#00ffff'
+    }
+      primary: '#ff0080'
+      secondary: '#00ffff'
+      accent: '#ffff00'
+      background: 'rgba(20, 0, 40, 0.9)'
+      particles: [
+        '#ff0080'
+        '#00ffff'
+        '#ffff00'
+        '#ff4000'
+        '#8000ff'
+        '#00ff80'
+      ]
+=======
+      
+      primary: '#00ffff',
+      secondary: '#ff00ff',
+      accent: '#ffff00',
+      background: 'rgba(0, 0, 0, 0.85)',
+    particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'],
+      glow: '#00ffff'
+    
+    },
+    cyberpunk: {
+      primary: '#ff0080',
+      secondary: '#00ffff',
+      accent: '#ffff00',
+      background: 'rgba(20, 0, 40, 0.9)',
+    particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'],
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+      glow: '#ff0080'
+    }
+    holographic: {      primary: '#00ffff'
+      secondary: '#ff00ff'
+      accent: '#ffff00',    holographic: {
+    particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80']
+      glow: '#ff0080'
+    }
+    holographic: {
+<<<<<<< HEAD
+      primary: '#00ffff'
+      secondary: '#ff00ff'
+      accent: '#ffff00'
+      background: 'rgba(0, 20, 40, 0.85)'
+      particles: [
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff80'
+        '#ff8000'
+        '#8000ff'
+      ]
+      glow: '#00ffff',    },    }
+      background: 'rgba(0, 20, 40, 0.85)';
+      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff']
+      glow: '#00ffff'
+    }
+      primary: '#00ff80'
+      secondary: '#ff0080'
+      accent: '#ffff00'
+      background: 'rgba(0, 40, 20, 0.9)'
+      particles: [
+        '#00ff80'
+        '#ff0080'
+        '#ffff00'
+        '#00ffff'
+        '#ff8000'
+        '#8000ff'
+      ]
+      glow: '#00ff80'
+    },    cosmic: {
+      primary: '#ff6b6b'
+      secondary: '#4ecdc4'
+      accent: '#45b7d1',      background: 'rgba(0, 40, 20, 0.9)';
+      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff']
+      glow: '#00ff80'
+    }
+    cosmic: {
+      primary: '#ff6b6b'
+      secondary: '#4ecdc4'
+      accent: '#45b7d1'
+      background: 'rgba(10, 10, 30, 0.9)'
+      particles: [
+        '#ff6b6b'
+        '#4ecdc4'
+        '#45b7d1'
+        '#96ceb4'
+        '#feca57'
+        '#ff9ff3'
+      ]
+      glow: '#4ecdc4'
+    },  };      background: 'rgba(10, 10, 30, 0.9)';
+      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3']
+      glow: '#4ecdc4'
+    }
+  }
+  const intensitySettings = {
+    low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 }
+    medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 }
+    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 },  };    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
+  }
+=======
+      
+      primary: '#00ffff',
+      secondary: '#ff00ff',
+      accent: '#ffff00',
+      background: 'rgba(0, 20, 40, 0.85)',
+    particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'],
+      glow: '#00ffff'
+    
+    },
+    neural: {
+      primary: '#00ff80',
+      secondary: '#ff0080',
+      accent: '#ffff00',
+      background: 'rgba(0, 40, 20, 0.9)',
+    particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'],
+      glow: '#00ff80'
+    };
+=======
+  color_scheme = 'quantum';
+  particle_count = 100,
+  animation_speed = 1;
+  const canvas_ref = useRef < HTMLCanvasElement>(null);
+  const animation_ref = useRef < number | undefined>(undefined);
+;
+  const color_schemes = {
+    quantum: {
+      primary: '#00ffff',
+      secondary: '#ff00ff',
+      accent: '#ffff00',
+      background: 'rgba (0, 0, 0, 0.85)',
+      particles: [;
+        '#00ffff',
+        '#ff00ff',
+        '#ffff00',
+        '#00ff00',
+        '#ff0080',
+        '#8000ff',
+      ],
+      glow: '#00ffff',    },    },
+      background: 'rgba (0, 0, 0, 0.85)';
+      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'],
+      glow: '#00ffff';
+    }
+      primary: '#ff0080',
+      secondary: '#00ffff',
+      accent: '#ffff00',
+      background: 'rgba (20, 0, 40, 0.9)',
+      particles: [;
+        '#ff0080',
+        '#00ffff',
+        '#ffff00',
+        '#ff4000',
+        '#8000ff',
+        '#00ff80',
+      ],
+      glow: '#ff0080',
+    },
+    holographic: {      primary: '#00ffff',
+      secondary: '#ff00ff',
+      accent: '#ffff00',    holographic: {
+    particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'],
+      glow: '#ff0080';
+    }
+    holographic: {
+      primary: '#00ffff',
+      secondary: '#ff00ff',
+      accent: '#ffff00',
+      background: 'rgba (0, 20, 40, 0.85)',
+      particles: [;
+        '#00ffff',
+        '#ff00ff',
+        '#ffff00',
+        '#00ff80',
+        '#ff8000',
+        '#8000ff',
+      ],
+      glow: '#00ffff',    },    },
+      background: 'rgba (0, 20, 40, 0.85)';
+      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'],
+      glow: '#00ffff';
+    }
+      primary: '#00ff80',
+      secondary: '#ff0080',
+      accent: '#ffff00',
+      background: 'rgba (0, 40, 20, 0.9)',
+      particles: [;
+        '#00ff80',
+        '#ff0080',
+        '#ffff00',
+        '#00ffff',
+        '#ff8000',
+        '#8000ff',
+      ],
+      glow: '#00ff80',
+    },    cosmic: {
+      primary: '#ff6b6b',
+      secondary: '#4ecdc4',
+      accent: '#45b7d1',      background: 'rgba (0, 40, 20, 0.9)';
+      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'],
+      glow: '#00ff80';
+    }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    cosmic: {
+      primary: '#ff6b6b',
+      secondary: '#4ecdc4',
+      accent: '#45b7d1',
+<<<<<<< HEAD
+      background: 'rgba(10, 10, 30, 0.9)',
+    particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
+      glow: '#4ecdc4'
+    }
+  };
+
+  const intensitySettings = {
+    low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 },
+    medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 },
+    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+<<<<<<< HEAD
+      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    const colors = colorSchemes[colorScheme];
+    const settings = intensitySettings[intensity];
+    // Enhanced particle system
+    class Particle {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   particleCount = 100,;
   animationSpeed = 1;
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -172,6 +530,12 @@ const EnhancedFuturisticBackground: React.FC<;
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
+<<<<<<< HEAD
+=======
+=======
+      canvas.height = window.innerHeight
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     };
 
     resizeCanvas();
@@ -180,16 +544,320 @@ const EnhancedFuturisticBackground: React.FC<;
     const colors = colorSchemes[colorScheme];
     const settings = intensitySettings[intensity];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     // Enhanced particle system;
     class Particle {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       x: number;
       y: number;
+=======
+      background: 'rgba (10, 10, 30, 0.9)',
+      particles: [;
+        '#ff6b6b',
+        '#4ecdc4',
+        '#45b7d1',
+        '#96ceb4',
+        '#feca57',
+        '#ff9ff3',
+      ],
+      glow: '#4ecdc4',
+    },  }      background: 'rgba (10, 10, 30, 0.9)';
+      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
+      glow: '#4ecdc4';
+    }
+  }
+;
+  const intensity_settings = {
+    low: { particle_count: 40, speed: 0.45, size: 2, opacity: 0.25 },
+    medium: { particle_count: 90, speed: 0.9, size: 3, opacity: 0.45 },
+    high: { particle_count: 160, speed: 1.25, size: 3.5, opacity: 0.6 },  }    high: { particle_count: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
+  }
+;
+  useEffect (() => {
+    const canvas = canvas_ref.current;
+    // Check condition
+if (return) {
+  $2
+}
+    const ctx = canvas.get_context ('2d');
+    // Check condition
+if (return) {
+  $2
+}
+    const resize_canvas = () =>: any {
+      canvas.width = window.inner_width;
+      canvas.height = window.inner_height;    }      canvas.height = window.inner_height;
+    }
+;
+    resize_canvas ();
+    window.addEventListener ('resize', resize_canvas);
+;
+    const colors = color_schemes[color_scheme];
+    const settings = intensity_settings[intensity];
+;
+    // Enhanced particle system;
+    class Particle {
+      coordinate_x: number;
+      coordinate_y: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
       color: string;
       opacity: number;
       life: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+      maxLife: number;      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      opacity: number
+      life: number
+      maxLife: number
+=======
+    // Enhanced particle system
+    class Particle {
+      x: number,
+      y: number,
+=======
+      max_life: number;      coordinate_x: number,
+      coordinate_y: number,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      opacity: number,
+      life: number,
+<<<<<<< HEAD
+      maxLife: number,
+      constructor() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * settings.speed * animationSpeed;
+        this.vy = (Math.random() - 0.5) * settings.speed * animationSpeed;
+        this.size = Math.random() * settings.size + 1;
+<<<<<<< HEAD
+        this.color =
+          colors.particles[Math.floor(Math.random() * colors.particles.length)];
+        this.opacity = Math.random() * settings.opacity;
+        this.life = Math.random() * 100;
+        this.maxLife = 100;      }        this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
+        this.opacity = Math.random() * settings.opacity;
+        this.life = Math.random() * 100;
+        this.maxLife = 100
+=======
+        this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
+        this.opacity = Math.random() * settings.opacity;
+        this.life = Math.random() * 100;
+        this.maxLife = 100
+      }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life--;
+        // Wrap around edges
+        if (this.x < 0) this.x = canvas.width;
+        if (this.x > canvas.width) this.x = 0;
+        if (this.y < 0) this.y = canvas.height;
+        if (this.y > canvas.height) this.y = 0;
+        // Fade out near end of life
+        if (this.life < 20) {
+<<<<<<< HEAD
+          this.opacity *= 0.95;        }          this.opacity *= 0.95
+=======
+          this.opacity *= 0.95
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        }
+      }
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+<<<<<<< HEAD
+        // Create gradient for particle
+        const gradient = ctx.createRadialGradient(
+          this.x
+          this.y
+          0
+          this.x
+          this.y
+          this.size
+        );
+        gradient.addColorStop(0, this.color);
+        gradient.addColorStop(1, 'transparent');        // Create gradient for particle
+        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
+        gradient.addColorStop(0, this.color);
+        gradient.addColorStop(1, 'transparent');
+=======
+        
+        // Create gradient for particle
+        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
+        gradient.addColorStop(0, this.color);
+        gradient.addColorStop(1, 'transparent');
+        
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+<<<<<<< HEAD
+        ctx.restore();
+      }
+      isDead() {
+        return this.life <= 0 |this.opacity < 0.01;      }
+=======
+        
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        ctx.restore()
+      }
+      isDead() {
+<<<<<<< HEAD
+        return this.life <= 0 |this.opacity < 0.01
+=======
+        return this.life <= 0 || this.opacity < 0.01
+      }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    }
+    // Connection lines between particles
+=======
+      max_life: number,
+        this.coordinate_x = Math.random () * canvas.width;
+        this.coordinate_y = Math.random () * canvas.height;
+        this.vx = (Math.random () - 0.5) * settings.speed * animation_speed;
+        this.vy = (Math.random () - 0.5) * settings.speed * animation_speed;
+        this.size = Math.random () * settings.size + 1;
+        this.color =;
+          colors.particles[Math.floor (Math.random () * colors.particles.length)];
+        this.opacity = Math.random () * settings.opacity;
+        this.life = Math.random () * 100;
+        this.max_life = 100;      }        this.color = colors.particles[Math.floor (Math.random () * colors.particles.length)];
+        this.opacity = Math.random () * settings.opacity;
+        this.life = Math.random () * 100;
+        this.max_life = 100;
+      update () {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life--;
+;
+        // Wrap around edges;
+        // Check condition
+if (this.coordinate_x = canvas.width) {
+  $2
+}
+        // Check condition
+if (this.coordinate_x = 0) {
+  $2
+}
+        // Check condition
+if (this.coordinate_y = canvas.height) {
+  $2
+}
+        // Check condition
+if (this.coordinate_y = 0) {
+  $2
+}
+        // Fade out near end of life;
+        // Check condition
+if ( {) {
+  $2
+}
+          this.opacity *= 0.95;        }          this.opacity *= 0.95;
+        }
+      }
+      draw () {
+        ctx.save ();
+        ctx.global_alpha = this.opacity;
+;
+        // Create gradient for particle;
+        const gradient = ctx.createRadialGradient (
+          this.x,
+          this.y,
+          0,
+          this.x,
+          this.y,
+          this.size);
+        gradient.addColorStop (0, this.color);
+        gradient.addColorStop (1, 'transparent');        // Create gradient for particle;
+        const gradient = ctx.createRadialGradient (this.x, this.y, 0, this.x, this.y, this.size);
+        gradient.addColorStop (0, this.color);
+        gradient.addColorStop (1, 'transparent');
+;
+        ctx.fill_style = gradient;
+        ctx.begin_path ();
+        ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill ();
+;
+        ctx.restore ();
+      }
+      is_dead () {
+        return this.life <= 0 || this.opacity < 0.01;      }
+        ctx.restore ();
+      }
+      is_dead () {
+        return this.life <= 0 || this.opacity < 0.01;
+    }
+    // Connection lines between particles;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    class Connection {
+<<<<<<< HEAD
+      p1: Particle;
+      p2: Particle;
+      opacity: number;
+<<<<<<< HEAD
+      constructor(p1: Particle, p2: Particle) {
+        this.p1 = p1;
+        this.p2 = p2;
+        this.opacity = 0.1;      }
+      draw() {
+        const distance = Math.sqrt(
+          Math.pow(this.p1.x - this.p2.x, 2) +
+            Math.pow(this.p1.y - this.p2.y, 2)        );      p1: Particle
+      p2: Particle
+      opacity: number
+      constructor(p1: Particle, p2: Particle) {
+        this.p1 = p1;
+        this.p2 = p2
+        this.opacity = 0.1
+      draw() {
+        const distance = Math.sqrt(
+          Math.pow(this.p1.x - this.p2.x, 2) +
+            Math.pow(this.p1.y - this.p2.y, 2)          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
+=======
+      p1: Particle,
+      p2: Particle,
+      opacity: number,
+      constructor(p1: Particle, p2: Particle) {
+        this.p1 = p1;
+        this.p2 = p2;
+        this.opacity = 0.1
+      }
+
+      draw() {
+        const distance = Math.sqrt(
+          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        );
+        if (distance < 150) {
+          ctx.save();
+          ctx.globalAlpha = this.opacity * (1 - distance / 150);
+          ctx.strokeStyle = colors.glow;
+          ctx.lineWidth = 0.5;
+          ctx.beginPath();
+          ctx.moveTo(this.p1.x, this.p1.y);
+          ctx.lineTo(this.p2.x, this.p2.y);
+          ctx.stroke();
+<<<<<<< HEAD
+          ctx.restore();        }
+=======
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -304,15 +972,84 @@ const EnhancedFuturisticBackground: React.FC<;
           ctx && ctx.lineTo(this && this.p2.x, this && this.p2.y);
           ctx && ctx.stroke();
           ctx && ctx.restore();        }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
           ctx && ctx.restore();
+<<<<<<< HEAD
+=======
+=======
+          ctx.restore()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+      constructor (p1: Particle, p2: Particle) {
+        this.p1 = p1;
+        this.p2 = p2;
+        this.opacity = 0.1;      }
+      draw () {
+        const distance = Math.sqrt (
+          Math.pow (this.p1.x - this.p2.x, 2) +;
+            Math.pow (this.p1.y - this.p2.y, 2)        );      p1: Particle,
+      p2: Particle,
+      opacity: number,
+      constructor (p1: Particle, p2: Particle) {
+        this.p1 = p1;
+        this.p2 = p2,
+        this.opacity = 0.1;
+      draw () {
+        const distance = Math.sqrt (
+          Math.pow (this.p1.x - this.p2.x, 2) +;
+            Math.pow (this.p1.y - this.p2.y, 2)          Math.pow (this.p1.x - this.p2.x, 2) + Math.pow (this.p1.y - this.p2.y, 2));
+;
+        // Check condition
+if ( {) {
+  $2
+}
+          ctx.save ();
+          ctx.global_alpha = this.opacity * (1 - distance / 150);
+          ctx.stroke_style = colors.glow;
+          ctx.line_width = 0.5;
+          ctx.begin_path ();
+          ctx.move_to (this.p1.x, this.p1.y);
+          ctx.line_to (this.p2.x, this.p2.y);
+          ctx.stroke ();
+          ctx.restore ();        }
+      }
+    }
+          ctx.restore ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         }
       }
     }
-
     let particles: Particle[] = [];
     let connections: Connection[] = [];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // Initialize particles
+    for (let i = 0; i < settings.particleCount; i++) {
+      particles.push(new Particle());    }
+    // Matrix rain effect
+    const matrixRain = () => {
+      const characters =
+        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const fontSize = 12;    let particles: Particle[] = []
+    let connections: Connection[] = []
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    // Initialize particles
+    for (let i = 0, i < settings.particleCount, i++) {
+      particles.push(new Particle())
+    }
+    // Matrix rain effect
+    const matrixRain = () => {
+<<<<<<< HEAD
+      const characters =
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
     // Initialize particles;
     for (let i = 0; i < settings && settings.particleCount; i++) {;
@@ -331,10 +1068,36 @@ const EnhancedFuturisticBackground: React.FC<;
     // Matrix rain effect;
     const matrixRain = () => {;
       const characters =;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 12;
       const columns = canvas && canvas.width / fontSize;
       const drops: number[] = [];
+<<<<<<< HEAD
+      for (let i = 0; i < columns; i++) {
+        drops[i] = 1;      }      for (let i = 0, i < columns, i++) {
+=======
+      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+      const fontSize = 12;
+      const columns = canvas.width / fontSize;
+      const drops: number[] = [];
+
+      for (let i = 0, i < columns, i++) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        drops[i] = 1
+      }
+      const drawMatrix = () => {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = colors.primary;
+        ctx.font = `${fontSize}px monospace`;
+<<<<<<< HEAD
+        for (let i = 0; i < drops.length; i++) {
+          const text =
+            characters[Math.floor(Math.random() * characters.length)];
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+=======
 
       for (let i = 0; i < columns; i++) {;
         drops[i] = 1;      }      for (let i = 0, i < columns, i++) {;
@@ -354,19 +1117,111 @@ const EnhancedFuturisticBackground: React.FC<;
           ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+    // Initialize particles;
+    for (let index = 0; i < settings.particle_count; i++) {
+      particles.push (new Particle ());    }
+    // Matrix rain effect;
+    const matrix_rain = () =>: any {
+      const characters =;
+        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const font_size = 12;    let particles: Particle[] = [],
+    let connections: Connection[] = [],
+    // Initialize particles;
+    for (let index = 0, i < settings.particle_count, i++) {
+      particles.push (new Particle ());
+    }
+    // Matrix rain effect;
+    const matrix_rain = () =>: any {
+      const characters =;
+        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+      const font_size = 12;
+      const columns = canvas.width / font_size;
+      const drops: number[] = [];
+;
+      for (let index = 0; i < columns; i++) {
+        drops[i] = 1;      }      for (let index = 0, i < columns, i++) {
+        drops[i] = 1;
+      }
+      const draw_matrix = () =>: any {
+        ctx.fill_style = 'rgba (0, 0, 0, 0.06)';
+        ctx.fill_rect (0, 0, canvas.width, canvas.height);
+;
+        ctx.fill_style = colors.primary;
+        ctx.font = `${font_size}px monospace`;
+;
+        for (let index = 0; i < drops.length; i++) {
+          const text =;
+            characters[Math.floor (Math.random () * characters.length)];
+          ctx.fill_text (text, i * font_size, drops[i] * font_size);
+;
+          // Check condition
+if (> 0.975) {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             drops[i] = 0;
           }
           drops[i]++;
         }
+<<<<<<< HEAD
+<<<<<<< HEAD
+      }
+      return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+=======
+
+        for (let i = 0, i < drops.length, i++) {
+          const text = characters[Math.floor(Math.random() * characters.length)];
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0
+=======
       };
 
       return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
             drops[i] = 0;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
           drops[i]++;
         }
+<<<<<<< HEAD
+      }
+      return drawMatrix
+<<<<<<< HEAD
+    }
+=======
+    };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    const drawMatrix = matrixRain();
+    // Main animation loop
+    const animate = () => {
+      // Clear canvas with fade effect
+      ctx.fillStyle = colors.background;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Draw matrix rain
+      drawMatrix();
+      // Update and draw particles
+      particles.forEach(particle => {
+        particle.update();
+<<<<<<< HEAD
+        particle.draw();      });        particle.draw()
+=======
+        particle.draw()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+      });
+      // Remove dead particles and add new ones
+      particles = particles.filter(particle => !particle.isDead());
+      while (particles.length < settings.particleCount) {
+<<<<<<< HEAD
+        particles.push(new Particle());      }
+      // Create connections between nearby particles
+=======
       };
 
       return drawMatrix;
@@ -395,29 +1250,201 @@ const EnhancedFuturisticBackground: React.FC<;
         particles && particles.push(new Particle());      }
 
       // Create connections between nearby particles;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {        particles && particles.push(new Particle());
       }
+<<<<<<< HEAD
+      // Create connections between nearby particles
+=======
 
       // Create connections between nearby particles;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {;
           const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
+<<<<<<< HEAD
           );
+=======
+=======
+        particles.push(new Particle())
+=======
+      }
+;
+      return draw_matrix;    }          ctx.fill_text (text, i * font_size, drops[i] * font_size);
+;
+          // Check condition
+if (> 0.975) {) {
+  $2
+}
+            drops[i] = 0;
+          }
+          drops[i]++;
+        }
+      }
+;
+      return draw_matrix;
+    }
+;
+    const draw_matrix = matrix_rain ();
+;
+    // Main animation loop;
+    const animate = () =>: any {
+      // Clear canvas with fade effect;
+      ctx.fill_style = colors.background;
+      ctx.fill_rect (0, 0, canvas.width, canvas.height);
+;
+      // Draw matrix rain;
+      draw_matrix ();
+;
+      // Update and draw particles;
+      particles.for_each (particle => {
+        particle.update ();
+        particle.draw ();      });        particle.draw ();
+      });
+;
+      // Remove dead particles and add new ones;
+      particles = particles.filter (particle => !particle.is_dead ());
+      while (particles.length < settings.particle_count) {
+        particles.push (new Particle ());      }
+      // Create connections between nearby particles;
+      connections = [];
+      for (let index = 0; i < particles.length; i++) {
+        for (let inner_index = i + 1; j < particles.length; j++) {        particles.push (new Particle ());
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
+      // Create connections between nearby particles;
+      connections = [];
+<<<<<<< HEAD
+      for (let i = 0, i < particles.length, i++) {
+        for (let j = i + 1, j < particles.length, j++) {
+          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) + 
+            Math.pow(particles[i].y - particles[j].y, 2)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+          );
+<<<<<<< HEAD
+          if (distance < 150) {
+<<<<<<< HEAD
+            connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+            Math.pow(particles[i].y - particles[j].y, 2)
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           if (distance < 150) {;
             connections && connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) + ;
             Math && Math.pow(particles[i].y - particles[j].y, 2);
+<<<<<<< HEAD
           );
           if (distance < 150) {;
             connections && connections.push(new Connection(particles[i], particles[j]));
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          );
+          if (distance < 150) {;
+            connections && connections.push(new Connection(particles[i], particles[j]));
+=======
+            connections.push(new Connection(particles[i], particles[j]))
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }
         }
       }
+<<<<<<< HEAD
+      // Draw connections
+      connections.forEach(connection => connection.draw());
+      // Add floating geometric shapes
+      if (Math.random() < 0.02) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const size = Math.random() * 20 + 10;
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        ctx.save();
+        ctx.globalAlpha = 0.1;
+        ctx.strokeStyle = colors.accent;
+        ctx.lineWidth = 1;
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        if (Math.random() < 0.5) {
+          // Draw triangle
+          ctx.beginPath();
+          ctx.moveTo(x, y - size);
+          ctx.lineTo(x - size, y + size);
+          ctx.lineTo(x + size, y + size);
+          ctx.closePath();
+<<<<<<< HEAD
+          ctx.stroke();
+=======
+      for (let index = 0; i < particles.length; i++) {
+        for (let inner_index = i + 1; j < particles.length; j++) {
+          const distance = Math.sqrt (
+            Math.pow (particles[i].x - particles[j].x, 2) +;
+              Math.pow (particles[i].y - particles[j].y, 2));
+          // Check condition
+if ( {) {
+  $2
+}
+            connections.push (new Connection (particles[i], particles[j]));          }          const distance = Math.sqrt (
+            Math.pow (particles[i].x - particles[j].x, 2) +;
+            Math.pow (particles[i].y - particles[j].y, 2));
+          // Check condition
+if ( {) {
+  $2
+}
+            connections.push (new Connection (particles[i], particles[j]));
+          }
+        }
+      }
+      // Draw connections;
+      connections.for_each (connection => connection.draw ());
+;
+      // Add floating geometric shapes;
+      // Check condition
+if (< 0.02) {) {
+  $2
+}
+        const coordinate_x = Math.random () * canvas.width;
+        const coordinate_y = Math.random () * canvas.height;
+        const size = Math.random () * 20 + 10;
+;
+        ctx.save ();
+        ctx.global_alpha = 0.1;
+        ctx.stroke_style = colors.accent;
+        ctx.line_width = 1;
+;
+        // Check condition
+if (< 0.5) {) {
+  $2
+}
+          // Draw triangle;
+          ctx.begin_path ();
+          ctx.move_to (x, y - size);
+          ctx.line_to (x - size, y + size);
+          ctx.line_to (x + size, y + size);
+          ctx.close_path ();
+          ctx.stroke ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        } else {
+          // Draw square;
+          ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
+        }
+<<<<<<< HEAD
+        ctx.restore();
+      }
+      // Respect reduced motion
+      const prefersReduced = window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+=======
 
       // Draw connections;
       connections && connections.forEach(connection => connection && connection.draw());
@@ -444,6 +1471,12 @@ const EnhancedFuturisticBackground: React.FC<;
         } else {;
           // Draw square;
           ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
+=======
+          ctx.stroke()
+        } else {
+          // Draw square
+          ctx.strokeRect(x - size, y - size, size * 2, size * 2)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         }
 
         ctx && ctx.restore();
@@ -452,6 +1485,7 @@ const EnhancedFuturisticBackground: React.FC<;
       // Respect reduced motion;
       const prefersReduced = window && window.matchMedia(;
         '(prefers-reduced-motion: reduce)';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ).matches;
       if (prefersReduced) {;
         // Slow down updates;
@@ -463,8 +1497,24 @@ const EnhancedFuturisticBackground: React.FC<;
           // Draw square;
           ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
         }
+<<<<<<< HEAD
+        ctx.restore()
+      }
+      // Respect reduced motion
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (prefersReduced) {
+        // Slow down updates
+        setTimeout(() => {
+          animationRef.current = requestAnimationFrame(animate)
+        }, 100)
+      } else {
+        animationRef.current = requestAnimationFrame(animate)
+<<<<<<< HEAD
+=======
 
         ctx && ctx.restore();
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
 
       // Respect reduced motion;
@@ -476,32 +1526,113 @@ const EnhancedFuturisticBackground: React.FC<;
         }, 100);
       } else {;
         animationRef && animationRef.current = requestAnimationFrame(animate);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
-    };
-
+    }
     animate();
+<<<<<<< HEAD
+    return () => {
+      if (animationRef.current) {
+<<<<<<< HEAD
+        cancelAnimationFrame(animationRef.current);
+=======
+=======
+        cancelAnimationFrame(animationRef.current)
+      }
+      window.removeEventListener('resize', resizeCanvas)
+    }
+  }, [colorScheme, intensity, particleCount, animationSpeed]);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     return () => {;
       if (animationRef && animationRef.current) {;
         cancelAnimationFrame(animationRef && animationRef.current);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       window && window.removeEventListener('resize', resizeCanvas);
     };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
       }
       window && window.removeEventListener('resize', resizeCanvas);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className={`relative min-h-screen ${className}`}>;
       <canvas
         ref={canvasRef}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         className='fixed inset-0 w-full h-full pointer-events-none z-0'
+=======
+        ctx.restore ();
+      }
+      // Respect reduced motion;
+      const prefers_reduced = window.match_media (
+        '(prefers - reduced - motion: reduce)').matches;
+      // Check condition
+if ( {) {
+  $2
+}
+        // Slow down updates;
+        set_timeout (() => {
+          animation_ref.current = requestAnimationFrame (animate);
+        }, 100);
+      } else {
+        animation_ref.current = requestAnimationFrame (animate);      }        } else {
+          // Draw square;
+          ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
+        }
+        ctx.restore ();
+      }
+      // Respect reduced motion;
+      const prefers_reduced = window.match_media ('(prefers - reduced - motion: reduce)').matches,
+      // Check condition
+if ( {) {
+  $2
+}
+        // Slow down updates;
+        set_timeout (() => {
+          animation_ref.current = requestAnimationFrame (animate);
+        }, 100);
+      } else {
+        animation_ref.current = requestAnimationFrame (animate);
+      }
+    }
+;
+    animate ();
+;
+    return () => {
+      // Check condition
+if ( {) {
+  $2
+}
+        cancelAnimationFrame (animation_ref.current);
+      }
+      window.removeEventListener ('resize', resize_canvas);
+    }  }, [color_scheme, intensity, particle_count, animation_speed]);        cancelAnimationFrame (animation_ref.current);
+      }
+      window.removeEventListener ('resize', resize_canvas);
+    }
+  return (
+    <div className={`relative min - h-screen ${class_name}`}>;
+      <canvas;
+        ref={canvas_ref}
+        className='fixed inset - 0 w - full h - full pointer - events - none z - 0';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         style={{ background: 'transparent' }}
       />;
       {/* Overlay gradient */}
-      <div
-        className='fixed inset-0 pointer-events-none z-0'
+      <div;
+        className='fixed inset - 0 pointer - events - none z - 0';
         style={{
+<<<<<<< HEAD
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0 && 0.3) 100%)`,
         }}
       />;
@@ -511,5 +1642,51 @@ const EnhancedFuturisticBackground: React.FC<;
     </div>;
   );
 };
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        style={{ background: 'transparent' }}
+      />
+      
+      {/* Overlay gradient */}
+      <div 
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
+        }}
+      />
+{/* Content */}
+      <div className='relative z-10'>{children}</div>
+    </div>
+=======
+          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0 && 0.3) 100%)`,
+        }}
+      />;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+      {/* Content */}
+      <div className='relative z-10'>{children}</div>;
+    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  );
+}
 export default EnhancedFuturisticBackground;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+          background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
+        }}
+      />;
+{/* Content */}
+      <div className='relative z - 10'>{children}</div>;
+    </div>);
+}
+;
+export default EnhancedFuturisticBackground;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

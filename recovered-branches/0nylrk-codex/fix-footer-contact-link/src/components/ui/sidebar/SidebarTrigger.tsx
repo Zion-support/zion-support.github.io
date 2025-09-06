@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+
+=======
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Menu, X} from "lucide-react";
@@ -23,3 +27,6 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
     </Button>;
   );
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

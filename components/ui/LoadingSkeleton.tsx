@@ -23,23 +23,188 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 interface SkeletonProps {;
   className?: string;
   height?: string;
   width?: string;
+
   rounded?: string;
+<<<<<<< HEAD
+const Skeleton: React.FC<SkeletonProps> = ({
+  className = ''
+  height = 'h-4'
+  width = 'w-full'
+  rounded = 'rounded'
+}) => {
+=======
 const Skeleton: React.FC<SkeletonProps> = ({ ;
   className = '',;
   height = 'h-4', ;
   width = 'w-full', ;
   rounded = 'rounded' ;
 }) => {;
+<<<<<<< HEAD
   return (
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+interface SkeletonProps {
+  class_name?: string;
+  height?: string;
+  width?: string;
+<<<<<<< HEAD
+  rounded?: string
+}
+
+const Skeleton: React.FC<SkeletonProps> = ({ 
+  className = '';
+  height = 'h-4', 
+  width = 'w-full', 
+  rounded = 'rounded' 
+=======
+  rounded?: string;
+const Skeleton: React.FC < SkeletonProps> = ({
+  class_name = '',
+  height = 'h - 4',
+  width = 'w - full',
+  rounded = 'rounded';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}) => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  return (
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <motion&& motion.div
       className={`bg-white/10 animate-pulse ${height} ${width} ${rounded} ${className}`}
+=======
+    <motion.div;
+      className={`bg - white / 10 animate - pulse ${height} ${width} ${rounded} ${class_name}`}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       animate={{
         opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
       transition={{
+<<<<<<< HEAD
+        duration: 1.5
+        repeat: Infinity
+        ease: "easeInOut"}}
+<<<<<<< HEAD
+    />
+  )
+}
+=======
+    />);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface ServiceCardSkeletonProps {
+  class_name?: string;
+}
+<<<<<<< HEAD
+export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {
+  return (
+    <div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>
+      <div className="flex items-center space-x-4 mb-6">
+        <Skeleton className="w-16 h-16 rounded-2xl" />
+        <div className="flex-1">
+          <Skeleton className="h-6 w-3/4 mb-2" />
+          <Skeleton className="h-4 w-1/2" />
+        </div>
+      </div>
+      <Skeleton className="h-4 w-full mb-2" />
+      <Skeleton className="h-4 w-5/6 mb-2" />
+      <Skeleton className="h-4 w-4/6" />
+    </div>
+  )
+}
+=======
+export const ServiceCardSkeleton: React.FC < ServiceCardSkeletonProps> = ({ class_name = '' }) => {
+  return (
+    <div className={`p - 8 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl ${class_name}`}>;
+      <div className="flex items - center space - x-4 mb - 6">;
+        <Skeleton className="w - 16 h - 16 rounded - 2xl" />;
+        <div className="flex - 1">;
+          <Skeleton className="h - 6 w - 3/4 mb - 2" />;
+          <Skeleton className="h - 4 w - 1/2" />;
+        </div>;
+      </div>;
+      <Skeleton className="h - 4 w - full mb - 2" />;
+      <Skeleton className="h - 4 w - 5/6 mb - 2" />;
+      <Skeleton className="h - 4 w - 4/6" />;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface HeroSkeletonProps {
+  class_name?: string;
+}
+<<<<<<< HEAD
+export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) => {
+  return (
+    <div className={`min-h-screen flex items-center justify-center px-6 py-20 ${className}`}>
+      <div className="text-center max-w-6xl mx-auto">
+        <Skeleton className="h-20 w-96 mx-auto mb-6" />
+        <Skeleton className="h-8 w-2/3 mx-auto mb-8" />
+        <Skeleton className="h-6 w-1/2 mx-auto mb-12" />
+        <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <Skeleton className="h-14 w-32" />
+          <Skeleton className="h-14 w-32" />
+        </div>
+      </div>
+    </div>
+  )
+}
+=======
+export const HeroSkeleton: React.FC < HeroSkeletonProps> = ({ class_name = '' }) => {
+  return (
+    <div className={`min - h-screen flex items - center justify - center px - 6 py - 20 ${class_name}`}>;
+      <div className="text - center max - w-6xl mx - auto">;
+        <Skeleton className="h - 20 w - 96 mx - auto mb - 6" />;
+        <Skeleton className="h - 8 w - 2/3 mx - auto mb - 8" />;
+        <Skeleton className="h - 6 w - 1/2 mx - auto mb - 12" />;
+        <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+          <Skeleton className="h - 14 w - 32" />;
+          <Skeleton className="h - 14 w - 32" />;
+        </div>;
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface StatsSkeletonProps {
+  class_name?: string;
+}
+<<<<<<< HEAD
+export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {
+  return (
+    <div className={`py-20 px-6 ${className}`}>
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[...Array(4)].map((_, index) => (
+            <div key={index} className='text-center'>
+              <Skeleton className='w-16 h-16 rounded-full mx-auto mb-4' />
+              <Skeleton className='h-10 w-20 mx-auto mb-2' />
+              <Skeleton className='h-5 w-24 mx-auto' />            <div key={index} className="text-center">
+              <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />
+              <Skeleton className="h-10 w-20 mx-auto mb-2" />
+              <Skeleton className="h-5 w-24 mx-auto" />
+<<<<<<< HEAD
+=======
+            </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+          ))}
+        </div>
+      </div>
+    </div>
+<<<<<<< HEAD
+  );
+}
+export default Skeleton;  )
+}
+=======
         duration: 1 && 1.5,
         repeat: Infinity,
         ease: "easeInOut"}}
@@ -66,6 +231,9 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-4/6" />;
     </div>;
   );
+=======
+  )
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 };
 
 interface HeroSkeletonProps {;
@@ -115,4 +283,34 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
 export default Skeleton;  );
 };
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Skeleton;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+export const StatsSkeleton: React.FC < StatsSkeletonProps> = ({ class_name = '' }) => {
+  return (
+    <div className={`py - 20 px - 6 ${class_name}`}>;
+      <div className="max - w-7xl mx - auto">;
+        <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">;
+          {[...Array (4)].map ((_, index) => (
+            <div key={index} className='text - center'>;
+              <Skeleton className='w - 16 h - 16 rounded - full mx - auto mb - 4' />;
+              <Skeleton className='h - 10 w - 20 mx - auto mb - 2' />;
+              <Skeleton className='h - 5 w - 24 mx - auto' />            <div key={index} className="text - center">;
+              <Skeleton className="w - 16 h - 16 rounded - full mx - auto mb - 4" />;
+              <Skeleton className="h - 10 w - 20 mx - auto mb - 2" />;
+              <Skeleton className="h - 5 w - 24 mx - auto" />))}
+        </div>;
+      </div>;
+    </div>);
+}
+;
+export default Skeleton);
+}
+;
+export default Skeleton;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

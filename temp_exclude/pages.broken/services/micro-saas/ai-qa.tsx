@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -36,3 +37,6 @@ export default function Aiqa(): any ({ }: AiqaProps) {;
   );
 }
 }
+=======
+}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

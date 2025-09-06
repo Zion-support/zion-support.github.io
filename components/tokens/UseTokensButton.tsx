@@ -1,4 +1,21 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from "react";
+import UseTokensModal, { RedemptionType } from "./UseTokensModal";
+export default function UseTokensButton({
+  serviceId
+  defaultType
+}: {
+  serviceId?: string;
+  defaultType?: RedemptionType;
+}) {
+
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,6 +48,7 @@ export default function UseTokensButton(): any ({;
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -48,6 +66,12 @@ export default function UseTokensButton(): any ({;
       />;
     </>;
   );
+<<<<<<< HEAD
+=======
+=======
+export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -65,4 +89,50 @@ export default function UseTokensButton(): any ({;
       />;
     </>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import React, { useState } from './react';
+import UseTokensModal, { RedemptionType } from "./UseTokensModal";
+;
+export default /**
+ * UseTokensButton - Function description
+ */
+function UseTokensButton() {
+  const [open, set_open] = useState (false);
+  return (
+    <>;
+      <button;
+        on_click={() => set_open (true)}
+        className="enhanced - button enhanced - button - primary";
+      >;
+        Use Tokens;
+      </button>;
+      <UseTokensModal;
+        is_open={open}
+        on_close={() => set_open (false)}
+        service_id={service_id}
+        default_type={default_type}
+      />;
+    </>);
+  const [open, set_open] = useState (false);
+  return (
+    <>;
+      <button;
+        on_click={() => set_open (true)}
+        className="enhanced - button enhanced - button - primary";
+      >;
+        Use Tokens;
+      </button>;
+      <UseTokensModal;
+        is_open={open}
+        on_close={() => set_open (false)}
+        service_id={service_id}
+        default_type={default_type}
+      />;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

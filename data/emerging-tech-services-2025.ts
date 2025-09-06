@@ -1,4 +1,8 @@
 export interface EmergingTechService2025 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   id: string;
   name: string;
   tagline: string;
@@ -7,40 +11,121 @@ export interface EmergingTechService2025 {
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
-  contactInfo: {
+  real_implementation: boolean;
+  contact_info: {
     mobile: string;
     email: string;
-    address: string;
-  };
+<<<<<<< HEAD
 
+    address: string;
+  }
 export const emergingTechServices2025: EmergingTechService2025[] = [
   {
-    id: 'metaverse-platform',
+    id: 'metaverse-platform'
+    name: 'Metaverse Development Platform'
+    tagline: 'Create immersive virtual experiences'
+    price: '$249/month'
+    description:
+      'Advanced metaverse development platform for building virtual worlds and experiences.'
+    features: [
+      '3D world building'
+      'Avatar customization'
+      'Virtual commerce'
+      'Social interactions'
+      'Cross-platform support'
+    ]
+    link: '/services/metaverse-platform'
+    category: 'Emerging Tech 2025'
+    realImplementation: true
+    contactInfo: {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];      mobile: "+1 302 464 0950";
+
+      email: "kleber@ziontechgroup.com";
+=======
+=======
+    address: string;
+  }
+;
+export const emergingTechServices2025: EmergingTechService2025[] = [;
+  {
+    id: 'metaverse - platform',
     name: 'Metaverse Development Platform',
     tagline: 'Create immersive virtual experiences',
-    price: '$249/month',
-    description:
+    price: '$249 / month',
+    description:;
       'Advanced metaverse development platform for building virtual worlds and experiences.',
-    features: [
+    features: [;
       '3D world building',
       'Avatar customization',
       'Virtual commerce',
       'Social interactions',
-      'Cross-platform support',
+      'Cross - platform support',
     ],
-    link: '/services/metaverse-platform',
+    link: '/services / metaverse - platform',
     category: 'Emerging Tech 2025',
-    realImplementation: true,
-    contactInfo: {
+    real_implementation: true,
+    contact_info: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
       email: "kleber@ziontechgroup && ziontechgroup.com";
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  description: string, features: string[],
+  link: string, category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string, email: string,
+    address: string
+  }
+}
+
+export const emergingTechServices2025: EmergingTechService2025[] = [
+  {
+    id: "metaverse-platform", name: "Metaverse Development Platform",
+    tagline: "Create immersive virtual experiences", price: "$249/month",
+    description: "Advanced metaverse development platform for building virtual worlds and experiences.",
+    features: [
+      "3D world building";
+      "Avatar customization";
+      "Virtual commerce";
+      "Social interactions";
+      "Cross-platform support"
+    ];
+    link: "/services/metaverse-platform", category: "Emerging Tech 2025",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

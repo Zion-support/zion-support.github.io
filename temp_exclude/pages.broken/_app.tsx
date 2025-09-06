@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,4 +28,10 @@ class ErrorBoundary extends React.Component {
 import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
 import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
 import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
+<<<<<<< HEAD
 import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
+=======
+import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

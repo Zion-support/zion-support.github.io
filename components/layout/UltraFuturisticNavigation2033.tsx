@@ -1,3 +1,113 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import {
+  Phone
+  Mail
+  MapPin
+  Globe
+  Rocket
+  Brain
+  Atom
+  Cpu
+  Target
+  Microscope
+  Shield
+  Zap
+  Sparkles
+  Menu
+  X
+  Search
+  ChevronDown
+  Home
+  Briefcase
+  DollarSign
+  BookOpen
+  Users
+  MessageCircle;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom
+  Cpu, Target, Microscope, Shield, Zap, Sparkles;
+  Menu, X, Search, ChevronDown, Home, Briefcase
+  DollarSign, BookOpen, Users, MessageCircle
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+{
+  name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform', price: '$1, 999/month'
+}
+{
+  name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Creative AI solutions', price: '$1, 499/month'
+}
+{
+  name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3, 999/month'
+}]
+}
+{
+  title: '⚛️ Quantum & Emerging Tech', icon: Atom, color: 'from-indigo-500 to-blue-600', services: [ {
+  name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4, 999/month'
+}
+{
+  name: 'Biotech DNA Computing', href: '/biotech-dna-computing-platform', description: 'DNA computing platform', price: '$3, 999/month'
+}
+{
+  name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum trading', price: '$5, 999/month'
+}
+{
+  name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1, 299/month'
+}
+{
+  name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month'
+}
+{
+  name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Collective robot intelligence', price: '$1, 199/month'
+}]
+}
+{
+  title: '🏙️ Enterprise IT Solutions', icon: Cpu, color: 'from-blue-500 to-cyan-600', services: [ {
+  name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Self-managing DevOps', price: '$2, 499/month'
+}
+{
+  name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Zero trust security', price: '$1, 999/month'
+}
+{
+  name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge computing platform', price: '$1, 799/month'
+}
+{
+  name: 'AI IT Operations Center', href: '/ai-it-operations-center', description: 'AI-powered IT ops', price: '$2, 999/month'
+}]
+}
+{
+  title: '🌌 Space & Metaverse Tech', icon: Rocket, color: 'from-teal-500 to-emerald-600', services: [ {
+  name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Space mining platform', price: '$9, 999/month'
+}
+{
+  name: 'Metaverse Development', href: '/metaverse-development-platform', description: 'Metaverse platform', price: '$3, 999/month'
+}
+{
+  name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events', price: '$2, 499/month'
+}]
+}];
+</div> </div> </div> </div> </div> > <Link href="/" className="flex items-center space-x-3" > <div className="relative" > <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl" > <Rocket className="w-7 h-7 text-white" /> </div> <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse" ></div> </div> <div className="flex flex-col" > <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </span> <span className="text-xs text-purple-300 font-medium" > Future Technology Solutions </span> </div> </a> </motion.div> > <span>Services</span> <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" /> </button> {
+  /* Mega Menu */
+}<AnimatePresence> </div> </a>) )
+}</div> </div>) )
+}</div> </motion.div>)
+}</AnimatePresence> </div> {
+  /* Quick Links */
+}{
+  quickLinks.map ( (link) => (<Link key= {
+  link.name
+}) )
+}{
+  /* Contact Button */
+}<motion.div whileHover= {  {  website: 'https://ziontechgroup.com'
+}
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,8 +132,13 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Phone,;
   Mail,;
@@ -129,203 +244,657 @@ const contactInfo = {;
   /* Contact Button */ 
 }<motion && motion.div whileHover= {  {  website: 'https://ziontechgroup && ziontechgroup.com'
 }
+<<<<<<< HEAD
 
 const serviceCategories = [
     title: '🧠 Revolutionary AI',
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
     services: [
+=======
+=======
+import { 
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
+  Cpu, Target, Microscope, Shield, Zap, Sparkles;
+  Menu, X, Search, ChevronDown, Home, Briefcase, 
+  DollarSign, BookOpen, Users, MessageCircle
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+const serviceCategories = [
+<<<<<<< HEAD
+    title: '🧠 Revolutionary AI'
+    icon: Brain
+    color: 'from-violet-500 to-purple-600'
+    services: [
+      {
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-platform'
+        description: 'Advanced AI consciousness'
+        price: '$2,999/month'
+      }
+      {
+        name: 'AI Emotional Intelligence'
+        href: '/ai-emotional-intelligence-platform'
+        description: 'Emotional AI platform'
+        price: '$1,999/month'
+      }
+      {
+        name: 'AI Creativity Orchestrator'
+        href: '/ai-creativity-orchestrator'
+        description: 'Creative AI solutions'
+        price: '$1,499/month'
+      }
+=======
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Cpu,
+  Target,
+  Microscope,
+  Shield,
+  Zap,
+  Sparkles,
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  Home,
+  Briefcase,
+  DollarSign,
+  BookOpen,
+  Users,
+  MessageCircle,} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom,
+  Cpu, Target, Microscope, Shield, Zap, Sparkles;
+  Menu, X, Search, ChevronDown, Home, Briefcase,
+  DollarSign, BookOpen, Users, MessageCircle;
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+}
+{
+  name: 'AI Emotional Intelligence', href: '/ai - emotional - intelligence - platform', description: 'Emotional AI platform', price: '$1, 999 / month';
+}
+{
+  name: 'AI Creativity Orchestrator', href: '/ai - creativity - orchestrator', description: 'Creative AI solutions', price: '$1, 499 / month';
+}
+{
+  name: 'AI Autonomous Business Manager', href: '/ai - autonomous - business - manager', description: 'Autonomous business AI', price: '$3, 999 / month';
+}];
+}
+{
+  title: '⚛️ Quantum & Emerging Tech', icon: Atom, color: 'from - indigo - 500 to - blue - 600', services: [ {
+  name: 'Quantum Internet Security', href: '/quantum - internet - security - gateway', description: 'Quantum security', price: '$4, 999 / month';
+}
+{
+  name: 'Biotech DNA Computing', href: '/biotech - dna - computing - platform', description: 'DNA computing platform', price: '$3, 999 / month';
+}
+{
+  name: 'Quantum Financial Trading', href: '/quantum - financial - trading - platform', description: 'Quantum trading', price: '$5, 999 / month';
+}
+{
+  name: 'DNA Computing Platform', href: '/dna - computing - platform', description: 'Molecular computing', price: '$1, 299 / month';
+}
+{
+  name: 'Photonic Computing Infrastructure', href: '/photonic - computing - infrastructure', description: 'Light - speed computing', price: '$699 / month';
+}
+{
+  name: 'Swarm Robotics Platform', href: '/swarm - robotics - platform', description: 'Collective robot intelligence', price: '$1, 199 / month';
+}];
+}
+{
+  title: '🏙️ Enterprise IT Solutions', icon: Cpu, color: 'from - blue - 500 to - cyan - 600', services: [ {
+  name: 'Autonomous DevOps Platform', href: '/autonomous - devops - platform', description: 'Self - managing DevOps', price: '$2, 499 / month';
+}
+{
+  name: 'Zero Trust Network Architecture', href: '/zero - trust - network - architecture', description: 'Zero trust security', price: '$1, 999 / month';
+}
+{
+  name: 'Edge Computing Orchestration', href: '/edge - computing - orchestration', description: 'Edge computing platform', price: '$1, 799 / month';
+}
+{
+  name: 'AI IT Operations Center', href: '/ai - it - operations - center', description: 'AI - powered IT ops', price: '$2, 999 / month';
+}];
+}
+{
+  title: '🌌 Space & Metaverse Tech', icon: Rocket, color: 'from - teal - 500 to - emerald - 600', services: [ {
+  name: 'Space Mining Automation', href: '/space - mining - automation - platform', description: 'Space mining platform', price: '$9, 999 / month';
+}
+{
+  name: 'Metaverse Development', href: '/metaverse - development - platform', description: 'Metaverse platform', price: '$3, 999 / month';
+}
+{
+  name: 'Virtual Event Holograms', href: '/virtual - event - hologram - platform', description: 'Holographic events', price: '$2, 499 / month';
+}];
+}];
+</div> </div> </div> </div> </div> > <Link href="/" className="flex items - center space - x-3" > <div className="relative" > <div className="w - 12 h - 12 bg - gradient - to - br from - purple - 500 via - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center shadow - 2xl" > <Rocket className="w - 7 h - 7 text - white" /> </div> <div className="absolute -inset - 1 bg - gradient - to - br from - purple - 500 via - cyan - 500 to - blue - 500 rounded - xl blur opacity - 75 animate - pulse" ></div> </div> <div className="flex flex - col" > <span className="text - 2xl font - bold bg - gradient - to - r from - purple - 400 via - cyan - 400 to - blue - 400 bg - clip - text text - transparent" > Zion Tech Group </span> <span className="text - xs text - purple - 300 font - medium" > Future Technology Solutions </span> </div> </a> </motion.div> > <span > Services</span> <ChevronDown className="w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180" /> </button> {
+  /* Mega Menu */;
+}<AnimatePresence> </div> </a>) );
+}</div> </div>) );
+}</div> </motion.div>);
+}</AnimatePresence> </div> {
+  /* Quick Links */;
+}{
+  quick_links.map ( (link) => (<Link key= {
+  link.name;
+}) );
+}{
+  /* Contact Button */;
+}<motion.div while_hover= {  {  website: 'https://ziontechgroup.com';
+}
+;
+const service_categories = [;
+    title: '🧠 Revolutionary AI',
+    icon: Brain,
+    color: 'from - violet - 500 to - purple - 600',
+    services: [;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {
         name: 'AI Consciousness Evolution',
-        href: '/ai-consciousness-evolution-platform',
+        href: '/ai - consciousness - evolution - platform',
         description: 'Advanced AI consciousness',
-        price: '$2,999/month',
+        price: '$2, 999 / month',
       },
       {
         name: 'AI Emotional Intelligence',
-        href: '/ai-emotional-intelligence-platform',
+        href: '/ai - emotional - intelligence - platform',
         description: 'Emotional AI platform',
-        price: '$1,999/month',
+        price: '$1, 999 / month',
       },
       {
         name: 'AI Creativity Orchestrator',
-        href: '/ai-creativity-orchestrator',
+        href: '/ai - creativity - orchestrator',
         description: 'Creative AI solutions',
-        price: '$1,499/month',
+        price: '$1, 499 / month',
       },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
+<<<<<<< HEAD
+        name: 'AI Autonomous Business Manager'
+        href: '/ai-autonomous-business-manager'
+        description: 'Autonomous business AI'
+        price: '$3,999/month'
+      }
+    ]
+=======
         name: 'AI Autonomous Business Manager',
-        href: '/ai-autonomous-business-manager',
+        href: '/ai - autonomous - business - manager',
         description: 'Autonomous business AI',
-        price: '$3,999/month',
+        price: '$3, 999 / month',
       },
     ],
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   },  {      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Advanced AI consciousness', price: '$2,999/month' }
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform', price: '$1,999/month' }
       { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Creative AI solutions', price: '$1,499/month' }
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3,999/month' }
     ]
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    title: '⚛️ Quantum & Emerging Tech'
+    icon: Atom
+    color: 'from-indigo-500 to-blue-600'
+=======
+=======
+  {
+    title: '🧠 Revolutionary AI',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+    services: [
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Advanced AI consciousness', price: '$2,999/month' };
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform', price: '$1,999/month' };
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Creative AI solutions', price: '$1,499/month' };
+      { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3,999/month' }
+    ]
+  };
+  {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,
     color: 'from-indigo-500 to-blue-600',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     services: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {
+        name: 'Quantum Internet Security'
+        href: '/quantum-internet-security-gateway'
+        description: 'Quantum security'
+        price: '$4,999/month'
+      }
+      {
+        name: 'Biotech DNA Computing'
+        href: '/biotech-dna-computing-platform'
+        description: 'DNA computing platform'
+        price: '$3,999/month'
+      }
+      {
+        name: 'Quantum Financial Trading'
+        href: '/quantum-financial-trading-platform'
+        description: 'Quantum trading'
+        price: '$5,999/month'
+      }
+      {
+        name: 'DNA Computing Platform'
+        href: '/dna-computing-platform'
+        description: 'Molecular computing'
+        price: '$1,299/month'
+      }
+      {
+        name: 'Photonic Computing Infrastructure'
+        href: '/photonic-computing-infrastructure'
+        description: 'Light-speed computing'
+        price: '$699/month'
+      }
+=======
+  },  {      { name: 'AI Consciousness Evolution', href: '/ai - consciousness - evolution - platform', description: 'Advanced AI consciousness', price: '$2, 999 / month' }
+      { name: 'AI Emotional Intelligence', href: '/ai - emotional - intelligence - platform', description: 'Emotional AI platform', price: '$1, 999 / month' }
+      { name: 'AI Creativity Orchestrator', href: '/ai - creativity - orchestrator', description: 'Creative AI solutions', price: '$1, 499 / month' }
+      { name: 'AI Autonomous Business Manager', href: '/ai - autonomous - business - manager', description: 'Autonomous business AI', price: '$3, 999 / month' }
+    ];
+  }
+    title: '⚛️ Quantum & Emerging Tech',
+    icon: Atom,
+    color: 'from - indigo - 500 to - blue - 600',
+    services: [;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {
         name: 'Quantum Internet Security',
-        href: '/quantum-internet-security-gateway',
+        href: '/quantum - internet - security - gateway',
         description: 'Quantum security',
-        price: '$4,999/month',
+        price: '$4, 999 / month',
       },
       {
         name: 'Biotech DNA Computing',
-        href: '/biotech-dna-computing-platform',
+        href: '/biotech - dna - computing - platform',
         description: 'DNA computing platform',
-        price: '$3,999/month',
+        price: '$3, 999 / month',
       },
       {
         name: 'Quantum Financial Trading',
-        href: '/quantum-financial-trading-platform',
+        href: '/quantum - financial - trading - platform',
         description: 'Quantum trading',
-        price: '$5,999/month',
+        price: '$5, 999 / month',
       },
       {
         name: 'DNA Computing Platform',
-        href: '/dna-computing-platform',
+        href: '/dna - computing - platform',
         description: 'Molecular computing',
-        price: '$1,299/month',
+        price: '$1, 299 / month',
       },
       {
         name: 'Photonic Computing Infrastructure',
-        href: '/photonic-computing-infrastructure',
-        description: 'Light-speed computing',
-        price: '$699/month',
+        href: '/photonic - computing - infrastructure',
+        description: 'Light - speed computing',
+        price: '$699 / month',
       },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
+<<<<<<< HEAD
+        name: 'Swarm Robotics Platform'
+        href: '/swarm-robotics-platform'
+        description: 'Collective robot intelligence'
+        price: '$1,199/month'
+      }
+    ]
+=======
         name: 'Swarm Robotics Platform',
-        href: '/swarm-robotics-platform',
+        href: '/swarm - robotics - platform',
         description: 'Collective robot intelligence',
-        price: '$1,199/month',
+        price: '$1, 199 / month',
       },
     ],
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   },  {      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4,999/month' }
       { name: 'Biotech DNA Computing', href: '/biotech-dna-computing-platform', description: 'DNA computing platform', price: '$3,999/month' }
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum trading', price: '$5,999/month' }
       { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/month' }
+<<<<<<< HEAD
+      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' }
+      { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Collective robot intelligence', price: '$1,199/month' }
+    ]
+  }
+    title: '🏙️ Enterprise IT Solutions'
+    icon: Cpu
+    color: 'from-blue-500 to-cyan-600'
+=======
       { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' },
       { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Collective robot intelligence', price: '$1,199/month' }
     ]
   }
+<<<<<<< HEAD
+=======
+=======
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4,999/month' };
+      { name: 'Biotech DNA Computing', href: '/biotech-dna-computing-platform', description: 'DNA computing platform', price: '$3,999/month' };
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum trading', price: '$5,999/month' };
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/month' };
+      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' },
+      { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Collective robot intelligence', price: '$1,199/month' }
+    ]
+  };
+  {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,
     color: 'from-blue-500 to-cyan-600',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     services: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {
+        name: 'Autonomous DevOps Platform'
+        href: '/autonomous-devops-platform'
+        description: 'Self-managing DevOps'
+        price: '$2,499/month'
+      }
+      {
+        name: 'Zero Trust Network Architecture'
+        href: '/zero-trust-network-architecture'
+        description: 'Zero trust security'
+        price: '$1,999/month'
+      }
+      {
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration'
+        description: 'Edge computing platform'
+        price: '$1,799/month'
+      }
+=======
+  },  {      { name: 'Quantum Internet Security', href: '/quantum - internet - security - gateway', description: 'Quantum security', price: '$4, 999 / month' }
+      { name: 'Biotech DNA Computing', href: '/biotech - dna - computing - platform', description: 'DNA computing platform', price: '$3, 999 / month' }
+      { name: 'Quantum Financial Trading', href: '/quantum - financial - trading - platform', description: 'Quantum trading', price: '$5, 999 / month' }
+      { name: 'DNA Computing Platform', href: '/dna - computing - platform', description: 'Molecular computing', price: '$1, 299 / month' }
+      { name: 'Photonic Computing Infrastructure', href: '/photonic - computing - infrastructure', description: 'Light - speed computing', price: '$699 / month' },
+      { name: 'Swarm Robotics Platform', href: '/swarm - robotics - platform', description: 'Collective robot intelligence', price: '$1, 199 / month' }
+    ];
+  }
+    title: '🏙️ Enterprise IT Solutions',
+    icon: Cpu,
+    color: 'from - blue - 500 to - cyan - 600',
+    services: [;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {
         name: 'Autonomous DevOps Platform',
-        href: '/autonomous-devops-platform',
-        description: 'Self-managing DevOps',
-        price: '$2,499/month',
+        href: '/autonomous - devops - platform',
+        description: 'Self - managing DevOps',
+        price: '$2, 499 / month',
       },
       {
         name: 'Zero Trust Network Architecture',
-        href: '/zero-trust-network-architecture',
+        href: '/zero - trust - network - architecture',
         description: 'Zero trust security',
-        price: '$1,999/month',
+        price: '$1, 999 / month',
       },
       {
         name: 'Edge Computing Orchestration',
-        href: '/edge-computing-orchestration',
+        href: '/edge - computing - orchestration',
         description: 'Edge computing platform',
-        price: '$1,799/month',
+        price: '$1, 799 / month',
       },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
+<<<<<<< HEAD
+        name: 'AI IT Operations Center'
+        href: '/ai-it-operations-center'
+        description: 'AI-powered IT ops'
+        price: '$2,999/month'
+      }
+    ]
+=======
         name: 'AI IT Operations Center',
-        href: '/ai-it-operations-center',
-        description: 'AI-powered IT ops',
-        price: '$2,999/month',
+        href: '/ai - it - operations - center',
+        description: 'AI - powered IT ops',
+        price: '$2, 999 / month',
       },
     ],
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   },  {      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Self-managing DevOps', price: '$2,499/month' }
       { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Zero trust security', price: '$1,999/month' }
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge computing platform', price: '$1,799/month' }
       { name: 'AI IT Operations Center', href: '/ai-it-operations-center', description: 'AI-powered IT ops', price: '$2,999/month' }
     ]
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    title: '🌌 Space & Metaverse Tech'
+    icon: Rocket
+    color: 'from-teal-500 to-emerald-600'
+=======
+=======
+      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Self-managing DevOps', price: '$2,499/month' };
+      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Zero trust security', price: '$1,999/month' };
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge computing platform', price: '$1,799/month' };
+      { name: 'AI IT Operations Center', href: '/ai-it-operations-center', description: 'AI-powered IT ops', price: '$2,999/month' }
+    ]
+  };
+  {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     title: '🌌 Space & Metaverse Tech',
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     services: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {
+        name: 'Space Mining Automation'
+        href: '/space-mining-automation-platform'
+        description: 'Space mining platform'
+        price: '$9,999/month'
+      }
+      {
+        name: 'Metaverse Development'
+        href: '/metaverse-development-platform'
+        description: 'Metaverse platform'
+        price: '$3,999/month'
+      }
+=======
+  },  {      { name: 'Autonomous DevOps Platform', href: '/autonomous - devops - platform', description: 'Self - managing DevOps', price: '$2, 499 / month' }
+      { name: 'Zero Trust Network Architecture', href: '/zero - trust - network - architecture', description: 'Zero trust security', price: '$1, 999 / month' }
+      { name: 'Edge Computing Orchestration', href: '/edge - computing - orchestration', description: 'Edge computing platform', price: '$1, 799 / month' }
+      { name: 'AI IT Operations Center', href: '/ai - it - operations - center', description: 'AI - powered IT ops', price: '$2, 999 / month' }
+    ];
+  }
+    title: '🌌 Space & Metaverse Tech',
+    icon: Rocket,
+    color: 'from - teal - 500 to - emerald - 600',
+    services: [;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {
         name: 'Space Mining Automation',
-        href: '/space-mining-automation-platform',
+        href: '/space - mining - automation - platform',
         description: 'Space mining platform',
-        price: '$9,999/month',
+        price: '$9, 999 / month',
       },
       {
         name: 'Metaverse Development',
-        href: '/metaverse-development-platform',
+        href: '/metaverse - development - platform',
         description: 'Metaverse platform',
-        price: '$3,999/month',
+        price: '$3, 999 / month',
       },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
+<<<<<<< HEAD
+        name: 'Virtual Event Holograms'
+        href: '/virtual-event-hologram-platform'
+        description: 'Holographic events'
+        price: '$2,499/month'
+      }
+    ]
+  }
+];
+=======
         name: 'Virtual Event Holograms',
-        href: '/virtual-event-hologram-platform',
+        href: '/virtual - event - hologram - platform',
         description: 'Holographic events',
-        price: '$2,499/month',
+        price: '$2, 499 / month',
       },
     ],
   },
+<<<<<<< HEAD
 ]
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const quickLinks = [
   {
+    name: 'Services Overview'
+    href: '/enhanced-services-overview'
+    icon: Globe
+    color: 'from-cyan-500 to-blue-600'
+  }
+  {
+    name: 'AI Services'
+    href: '/ai-services'
+    icon: Brain
+    color: 'from-violet-500 to-purple-600'
+  }
+  {
+    name: 'Quantum Tech'
+    href: '/quantum-services'
+    icon: Atom
+    color: 'from-indigo-500 to-blue-600'
+  }
+  {
+    name: 'Space Tech'
+    href: '/space-technology'
+    icon: Rocket
+    color: 'from-teal-500 to-emerald-600'
+  }
+  {
+    name: 'Enterprise IT'
+    href: '/enterprise-it'
+    icon: Cpu
+    color: 'from-blue-500 to-cyan-600'
+  }
+=======
+];
+;
+const quick_links = [;
+  {
     name: 'Services Overview',
-    href: '/enhanced-services-overview',
+    href: '/enhanced - services - overview',
     icon: Globe,
-    color: 'from-cyan-500 to-blue-600',
+    color: 'from - cyan - 500 to - blue - 600',
   },
   {
     name: 'AI Services',
-    href: '/ai-services',
+    href: '/ai - services',
     icon: Brain,
-    color: 'from-violet-500 to-purple-600',
+    color: 'from - violet - 500 to - purple - 600',
   },
   {
     name: 'Quantum Tech',
-    href: '/quantum-services',
+    href: '/quantum - services',
     icon: Atom,
-    color: 'from-indigo-500 to-blue-600',
+    color: 'from - indigo - 500 to - blue - 600',
   },
   {
     name: 'Space Tech',
-    href: '/space-technology',
+    href: '/space - technology',
     icon: Rocket,
-    color: 'from-teal-500 to-emerald-600',
+    color: 'from - teal - 500 to - emerald - 600',
   },
   {
     name: 'Enterprise IT',
-    href: '/enterprise-it',
+    href: '/enterprise - it',
     icon: Cpu,
-    color: 'from-blue-500 to-cyan-600',
+    color: 'from - blue - 500 to - cyan - 600',
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
+<<<<<<< HEAD
+    name: 'Micro SAAS'
+    href: '/enhanced-micro-saas-showcase'
+    icon: Target
+    color: 'from-green-500 to-yellow-600'
+  },];  { name: 'Services Overview', href: '/enhanced-services-overview', icon: Globe, color: 'from-cyan-500 to-blue-600' }
+  { name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' }
+  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' }
+  { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' }
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' }
+=======
     name: 'Micro SAAS',
-    href: '/enhanced-micro-saas-showcase',
+    href: '/enhanced - micro - saas - showcase',
     icon: Target,
+<<<<<<< HEAD
     color: 'from-green-500 to-yellow-600',
   },]  { name: 'Services Overview', href: '/enhanced-services-overview', icon: Globe, color: 'from-cyan-500 to-blue-600' },
+<<<<<<< HEAD
+=======
+=======
+      { name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Space mining platform', price: '$9,999/month' };
+      { name: 'Metaverse Development', href: '/metaverse-development-platform', description: 'Metaverse platform', price: '$3,999/month' };
+      { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events', price: '$2,499/month' }
+    ]
+  }
+];
+
+const quickLinks = [
+  { name: 'Services Overview', href: '/enhanced-services-overview', icon: Globe, color: 'from-cyan-500 to-blue-600' },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   { name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' },
   { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' },
   { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+];
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+<<<<<<< HEAD
+  // Close menu on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+<<<<<<< HEAD
+      if (e.key === 'Escape') closeMenu();
+    }
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);  }, []);      if (e.key === 'Escape') closeMenu()
+    }
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape)
+=======
 
   // Close menu on escape key;
   useEffect(() => {;
@@ -337,10 +906,79 @@ export default function UltraFuturisticNavigation2033() {
     };
     document && document.addEventListener('keydown', handleEscape);
     return () => document && document.removeEventListener('keydown', handleEscape);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      if (e.key === 'Escape') closeMenu()
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, []);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <>;
       {/* Top Contact Bar */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div className='bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex items-center justify-between h-10 text-xs text-purple-300'>
+            <div className='flex items-center space-x-4'>
+              <div className='flex items-center space-x-2'>
+                <Phone className='w-3 h-3 text-purple-400' />
+                <span>{contactInfo.mobile}</span>
+              </div>                <span>{contactInfo.mobile}</span>
+=======
+      <div className="bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-10 text-xs text-purple-300">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-3 h-3 text-purple-400" />
+                <span>{contactInfo.mobile}</span>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-3 h-3 text-purple-400" />
+                <span>{contactInfo.email}</span>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-3 h-3 text-purple-400" />
+                <span>{contactInfo.address}</span>
+              </div>
+<<<<<<< HEAD
+              <div className='flex items-center space-x-2'>
+                <Mail className='w-3 h-3 text-purple-400' />
+                <span>{contactInfo.email}</span>
+              </div>
+            </div>
+            <div className='flex items-center space-x-4'>
+              <div className='flex items-center space-x-2'>
+                <MapPin className='w-3 h-3 text-purple-400' />
+                <span>{contactInfo.address}</span>
+              </div>
+              <div className='flex items-center space-x-2'>
+                <Globe className='w-3 h-3 text-purple-400' />                <span>{contactInfo.website}</span>              <div className="flex items-center space-x-2">
+=======
+              <div className="flex items-center space-x-2">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                <Globe className="w-3 h-3 text-purple-400" />
+                <span>{contactInfo.website}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <div className='bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex items-center justify-between h-10 text-xs text-purple-300'>;
@@ -374,16 +1012,95 @@ export default function UltraFuturisticNavigation2033() {
                 <Globe className='w-3 h-3 text-purple-400' />                <span>{contactInfo && contactInfo.website}</span>              <div className="flex items-center space-x-2">;
                 <Globe className="w-3 h-3 text-purple-400" />;
                 <span>{contactInfo && contactInfo.website}</span>;
+=======
+    color: 'from - green - 500 to - yellow - 600',
+  }, ];  { name: 'Services Overview', href: '/enhanced - services - overview', icon: Globe, color: 'from - cyan - 500 to - blue - 600' },
+  { name: 'AI Services', href: '/ai - services', icon: Brain, color: 'from - violet - 500 to - purple - 600' },
+  { name: 'Quantum Tech', href: '/quantum - services', icon: Atom, color: 'from - indigo - 500 to - blue - 600' },
+  { name: 'Space Tech', href: '/space - technology', icon: Rocket, color: 'from - teal - 500 to - emerald - 600' },
+  { name: 'Enterprise IT', href: '/enterprise - it', icon: Cpu, color: 'from - blue - 500 to - cyan - 600' },
+  { name: 'Micro SAAS', href: '/enhanced - micro - saas - showcase', icon: Target, color: 'from - green - 500 to - yellow - 600' }
+export default /**
+ * UltraFuturisticNavigation2033 - Function description
+ */
+function UltraFuturisticNavigation2033() {
+  const [is_open, setIsOpen] = useState (false);
+  const [active_category, setActiveCategory] = useState < string | null>(null);
+  const [search_query, setSearchQuery] = useState ('');
+;
+  const toggle_menu = () =>: any setIsOpen (!is_open);
+  const close_menu = () =>: any setIsOpen (false);
+;
+  // Close menu on escape key;
+  useEffect (() => {
+    const handle_escape = (e: KeyboardEvent) =>: any {
+      if (close_menu ()) {
+  $2
+}
+    }
+    document.addEventListener ('keydown', handle_escape);
+    return () => document.removeEventListener ('keydown', handle_escape);  }, []);      if (close_menu ()) {
+  $2
+}
+    }
+    document.addEventListener ('keydown', handle_escape);
+    return () => document.removeEventListener ('keydown', handle_escape);
+  return (
+    <>;
+      {/* Top Contact Bar */}
+      <div className='bg - gradient - to - r from - black via - purple - 900 / 30 to - black border - b border - purple - 500 / 20'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='flex items - center justify - between h - 10 text - xs text - purple - 300'>;
+            <div className='flex items - center space - x-4'>;
+              <div className='flex items - center space - x-2'>;
+                <Phone className='w - 3 h - 3 text - purple - 400' />;
+                <span>{contact_info.mobile}</span>;
+              </div>                <span>{contact_info.mobile}</span>;
+              </div>;
+              <div className="flex items - center space - x-2">;
+                <Mail className="w - 3 h - 3 text - purple - 400" />;
+                <span>{contact_info.email}</span>;
+              </div>;
+            </div>;
+            <div className="flex items - center space - x-4">;
+              <div className="flex items - center space - x-2">;
+                <MapPin className="w - 3 h - 3 text - purple - 400" />;
+                <span>{contact_info.address}</span>;
+              </div>;
+              <div className='flex items - center space - x-2'>;
+                <Mail className='w - 3 h - 3 text - purple - 400' />;
+                <span>{contact_info.email}</span>;
+              </div>;
+            </div>;
+            <div className='flex items - center space - x-4'>;
+              <div className='flex items - center space - x-2'>;
+                <MapPin className='w - 3 h - 3 text - purple - 400' />;
+                <span>{contact_info.address}</span>;
+              </div>;
+              <div className='flex items - center space - x-2'>;
+                <Globe className='w - 3 h - 3 text - purple - 400' />                <span>{contact_info.website}</span>              <div className="flex items - center space - x-2">;
+                <Globe className="w - 3 h - 3 text - purple - 400" />;
+                <span>{contact_info.website}</span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Main Navigation */}
       <nav className='bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex items-center justify-between h-20'>;
+=======
+
+      {/* Main Navigation */}
+      <nav className="bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {/* Logo */}
             <motion&& motion.div
               className='flex items-center space-x-3'
@@ -401,6 +1118,34 @@ export default function UltraFuturisticNavigation2033() {
                     Zion Tech Group;
                   </span>;
                   <span className='text-xs text-purple-300 font-medium'>                    Future Technology Solutions            {/* Logo */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <motion.div
+              className="flex items-center space-x-3"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <Link href="/" className="flex items-center space-x-3">
+                <div className="relative">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl">
+                    <Rocket className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse"></div>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </span>
+                  <span className="text-xs text-purple-300 font-medium">
+                    Future Technology Solutions
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <motion&& motion.div 
               className="flex items-center space-x-3"
               whileHover={{ scale: 1 && 1.05 }}
@@ -417,14 +1162,72 @@ export default function UltraFuturisticNavigation2033() {
                     Zion Tech Group;
                   </span>;
                   <span className="text-xs text-purple-300 font-medium">;
+<<<<<<< HEAD
+=======
+=======
+      {/* Main Navigation */}
+      <nav className='bg - gradient - to - r from - black via - gray - 900 / 95 to - black border - b border - purple - 500 / 20 backdrop - blur - xl sticky top - 0 z - 50'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='flex items - center justify - between h - 20'>;
+            {/* Logo */}
+            <motion.div;
+              className='flex items - center space - x-3';
+              while_hover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+            >;
+              <Link href='/' className='flex items - center space - x-3'>;
+                <div className='relative'>;
+                  <div className='w - 12 h - 12 bg - gradient - to - br from - purple - 500 via - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center shadow - 2xl'>;
+                    <Rocket className='w - 7 h - 7 text - white' />;
+                  </div>;
+                  <div className='absolute -inset - 1 bg - gradient - to - br from - purple - 500 via - cyan - 500 to - blue - 500 rounded - xl blur opacity - 75 animate - pulse'></div>;
+                </div>;
+                <div className='flex flex - col'>;
+                  <span className='text - 2xl font - bold bg - gradient - to - r from - purple - 400 via - cyan - 400 to - blue - 400 bg - clip - text text - transparent'>;
+                    Zion Tech Group;
+                  </span>;
+                  <span className='text - xs text - purple - 300 font - medium'>                    Future Technology Solutions            {/* Logo */}
+            <motion.div;
+              className="flex items - center space - x-3";
+              while_hover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >;
+              <Link href="/" className="flex items - center space - x-3">;
+                <div className="relative">;
+                  <div className="w - 12 h - 12 bg - gradient - to - br from - purple - 500 via - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center shadow - 2xl">;
+                    <Rocket className="w - 7 h - 7 text - white" />;
+                  </div>;
+                  <div className="absolute -inset - 1 bg - gradient - to - br from - purple - 500 via - cyan - 500 to - blue - 500 rounded - xl blur opacity - 75 animate - pulse"></div>;
+                </div>;
+                <div className="flex flex - col">;
+                  <span className="text - 2xl font - bold bg - gradient - to - r from - purple - 400 via - cyan - 400 to - blue - 400 bg - clip - text text - transparent">;
+                    Zion Tech Group;
+                  </span>;
+                  <span className="text - xs text - purple - 300 font - medium">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     Future Technology Solutions;
                   </span>;
                 </div>;
               </Link>;
+<<<<<<< HEAD
             </motion && motion.div>;
 
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>;
+=======
+<<<<<<< HEAD
+            </motion && motion.div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            {/* Desktop Navigation */}
+            <div className='hidden lg:flex items-center space-x-8'>;
+=======
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Services Mega Menu */}
               <div className='relative group'>;
                 <button
@@ -438,12 +1241,23 @@ export default function UltraFuturisticNavigation2033() {
                 <button
                   onMouseEnter={() => setActiveCategory('services')}
                   onMouseLeave={() => setActiveCategory(null)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                >
+                  <span>Services</span>
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                </button>
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50";
                 >;
                   <span>Services</span>;
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />;
                 </button>;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Mega Menu */}
                 <AnimatePresence>;
                   {activeCategory === 'services' && (;
@@ -454,6 +1268,10 @@ export default function UltraFuturisticNavigation2033() {
                       transition={{ duration: 0 && 0.2 }}
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4';
                     >;
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>;
@@ -513,6 +1331,121 @@ export default function UltraFuturisticNavigation2033() {
                                     <p className="text-sm text-gray-400">{service && service.description}</p>;
                                   </div>;
                                 </Link>;
+<<<<<<< HEAD
+=======
+=======
+                      className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
+                    >
+                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                        {serviceCategories.map((category) => (
+                          <div key={category.title} className="space-y-4">
+                            <div className="flex items-center space-x-3">
+                              <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
+                                <category.icon className="w-5 h-5 text-white" />
+                              </div>
+                              <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                            </div>
+                            <div className="space-y-3">
+                              {category.services.map((service) => (
+                                <Link
+=======
+            </motion.div>;
+            {/* Desktop Navigation */}
+            <div className='hidden lg:flex items - center space - x-8'>;
+              {/* Services Mega Menu */}
+              <div className='relative group'>;
+                <button;
+                  onMouseEnter={() => setActiveCategory ('services')}
+                  onMouseLeave={() => setActiveCategory (null)}
+                  className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50';
+                >;
+                  <span > Services</span>;
+                  <ChevronDown className='w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180' />                </button>              {/* Services Mega Menu */}
+              <div className="relative group">;
+                <button;
+                  onMouseEnter={() => setActiveCategory ('services')}
+                  onMouseLeave={() => setActiveCategory (null)}
+                  className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50";
+                >;
+                  <span > Services</span>;
+                  <ChevronDown className="w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180" />;
+                </button>;
+                {/* Mega Menu */}
+                <AnimatePresence>;
+                  {active_category === 'services' && (
+                    <motion.div;
+                      initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
+                      exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+                      onMouseEnter={() => setActiveCategory ('services')}
+                      onMouseLeave={() => setActiveCategory (null)}
+                      className='absolute top - full left - 0 w - screen max - w-6xl bg - gray - 900 / 95 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl shadow - 2xl p - 8 -ml - 4';
+                    >;
+                      <div className='grid grid - cols - 2 lg:grid - cols - 4 gap - 8'>;
+                        {service_categories.map (category => (
+                          <div key={category.title} className='space - y-4'>;
+                            <div className='flex items - center space - x-3'>;
+                              <div;
+                                className={`w - 10 h - 10 rounded - lg bg - gradient - to - r ${category.color} flex items - center justify - center`}
+                              >;
+                                <category.icon className='w - 5 h - 5 text - white' />;
+                              </div>;
+                              <h3 className='text - lg font - semibold text - white'>;
+                                {category.title}
+                              </h3>;
+                            </div>;
+                            <div className='space - y-3'>;
+                              {category.services.map (service => (
+                                <Link;
+                                  key={service.name}
+                                  href={service.href}
+                                  className='block group';
+                                >;
+                                  <div className='p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 200'>;
+                                    <div className='flex items - center justify - between mb - 2'>;
+                                      <h4 className='font - medium text - white group - hover:text - cyan - 400 transition - colors'>;
+                                        {service.name}
+                                      </h4>;
+                                      <span className='text - sm text - purple - 400 font - medium'>;
+                                        {service.price}
+                                      </span>;
+                                    </div>;
+                                    <p className='text - sm text - gray - 400'>;
+                                      {service.description}
+                                    </p>                                  </div>                    >;
+                      <div className="grid grid - cols - 2 lg:grid - cols - 4 gap - 8">;
+                        {service_categories.map ((category) => (
+                          <div key={category.title} className="space - y-4">;
+                            <div className="flex items - center space - x-3">;
+                              <div className={`w - 10 h - 10 rounded - lg bg - gradient - to - r ${category.color} flex items - center justify - center`}>;
+                                <category.icon className="w - 5 h - 5 text - white" />;
+                              </div>;
+                              <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
+                            </div>;
+                            <div className="space - y-3">;
+                              {category.services.map ((service) => (
+                                <Link;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                                  key={service.name}
+                                  href={service.href}
+                                  className="block group";
+                                >;
+                                  <div className="p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 200">;
+                                    <div className="flex items - center justify - between mb - 2">;
+                                      <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors">;
+                                        {service.name}
+                                      </h4>;
+                                      <span className="text - sm text - purple - 400 font - medium">;
+                                        {service.price}
+<<<<<<< HEAD
+                                      </span>
+                                    </div>
+                                    <p className="text-sm text-gray-400">{service.description}</p>
+                                  </div>
+                                </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                               ))}
                             </div>;
                           </div>;
@@ -520,29 +1453,71 @@ export default function UltraFuturisticNavigation2033() {
                       </div>;
                     </motion && motion.div>;
                   )}
+<<<<<<< HEAD
+                </AnimatePresence>
+              </div>
+=======
                 </AnimatePresence>;
               </div>;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Quick Links */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {quickLinks && quickLinks.map(link => (;
                 <Link
                   key={link && link.name}
                   href={link && link.href}
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'>              {quickLinks && quickLinks.map((link) => (;
+<<<<<<< HEAD
+=======
+=======
+              {quickLinks.map((link) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Link
                   key={link && link.name}
                   href={link && link.href}
                   className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+<<<<<<< HEAD
                   {link && link.name}
                 </Link>;
+=======
+<<<<<<< HEAD
+                  {link && link.name}
+                </Link>;
+=======
+                >
+                  {link.name}
+                </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
-
               {/* Contact Button */}
               <motion&& motion.div
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}>;
                 <Link
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   href='/contact'
+<<<<<<< HEAD
+                  className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg'                >                  href="/contact"
+=======
+                  href="/contact"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"
+                >
+                  Get Started
+                </Link>
+              </motion.div>
+            </div>
+<<<<<<< HEAD
+=======
                   className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg'>                  href="/contact";
                   className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg";
                 >;
@@ -551,8 +1526,14 @@ export default function UltraFuturisticNavigation2033() {
               </motion && motion.div>;
             </div>;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
+=======
+
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <button
                 onClick={toggleMenu}
                 className='text-gray-300 hover:text-white transition-colors duration-200 p-2'>;
@@ -564,11 +1545,80 @@ export default function UltraFuturisticNavigation2033() {
                 onClick={toggleMenu}
                 className="text-gray-300 hover:text-white transition-colors duration-200 p-2">;
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              </button>
+            </div>
+          </div>
+        </div>
+=======
+=======
+                                      </span>;
+                                    </div>;
+                                    <p className="text - sm text - gray - 400">{service.description}</p>;
+                                  </div>;
+                                </Link>))}
+                            </div>;
+                          </div>))}
+                      </div>;
+                    </motion.div>)}
+                </AnimatePresence>;
+              </div>;
+              {/* Quick Links */}
+              {quick_links.map (link => (
+                <Link;
+                  key={link.name}
+                  href={link.href}
+                  className='text - gray - 300 hover:text - white transition - colors duration - 200 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                >              {quick_links.map ((link) => (
+                <Link;
+                  key={link.name}
+                  href={link.href}
+                  className="text - gray - 300 hover:text - white transition - colors duration - 200 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50";
+                  {link.name}
+                </Link>))}
+              {/* Contact Button */}
+              <motion.div;
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+              >;
+                <Link;
+                  href='/contact';
+                  className='px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200 shadow - lg'                >                  href="/contact";
+                  className="px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200 shadow - lg";
+                >;
+                  Get Started;
+                </Link>;
+              </motion.div>;
+            </div>;
+            {/* Mobile Menu Button */}
+            <div className='lg:hidden'>;
+              <button;
+                on_click={toggle_menu}
+                className='text - gray - 300 hover:text - white transition - colors duration - 200 p - 2';
+              >;
+                {is_open ? (
+                  <X className='w - 6 h - 6' />) : (
+                  <Menu className='w - 6 h - 6' />)}              </button>              <button;
+                on_click={toggle_menu}
+                className="text - gray - 300 hover:text - white transition - colors duration - 200 p - 2";
+              >;
+                {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               </button>;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -576,6 +1626,10 @@ export default function UltraFuturisticNavigation2033() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               transition={{ duration: 0 && 0.3 }}
               className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
               <div className='px-4 py-6 space-y-6'>;
@@ -606,13 +1660,46 @@ export default function UltraFuturisticNavigation2033() {
                           >;
                             {service && service.name}
                           </Link>;
+<<<<<<< HEAD
+=======
+=======
+              transition={{ duration: 0.3 }}
+              className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20"
+            >
+              <div className="px-4 py-6 space-y-6">
+                {/* Mobile Services */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white">Services</h3>
+                  {serviceCategories.map((category) => (
+                    <div key={category.title} className="ml-4 space-y-2">
+                      <h4 className="font-medium text-purple-300">{category.title}</h4>
+                      <div className="ml-4 space-y-1">
+                        {category.services.map((service) => (
+                          <Link
+                            key={service.name}
+                            href={service.href}
+                            onClick={closeMenu}
+                            className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+                          >
+                            {service.name}
+                          </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
                       </div>;
                     </div>;
                   ))}
+<<<<<<< HEAD
+                </div>
+=======
                 </div>;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Mobile Quick Links */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <div className='space-y-4'>;
                   <h3 className='text-lg font-semibold text-white'>;
                     Quick Links;
@@ -633,11 +1720,37 @@ export default function UltraFuturisticNavigation2033() {
                       >;
                         {link && link.name}
                       </Link>;
+<<<<<<< HEAD
+=======
+=======
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    {quickLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        onClick={closeMenu}
+                        className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
+<<<<<<< HEAD
+                  </div>
+                </div>
+=======
                   </div>;
                 </div>;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Mobile Contact Button */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <div className='pt-4'>;
                   <Link
                     href='/contact'
@@ -646,12 +1759,121 @@ export default function UltraFuturisticNavigation2033() {
                     href="/contact"
                     onClick={closeMenu}
                     className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200">;
+=======
+        {/* Mobile Menu */}
+        <AnimatePresence>;
+          {is_open && (
+            <motion.div;
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - purple - 500 / 20';
+              <div className='px - 4 py - 6 space - y-6'>;
+                {/* Mobile Services */}
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - semibold text - white'>Services</h3>;
+                  {service_categories.map (category => (
+                    <div key={category.title} className='ml - 4 space - y-2'>;
+                      <h4 className='font - medium text - purple - 300'>;
+                        {category.title}
+                      </h4>;
+                      <div className='ml - 4 space - y-1'>;
+                        {category.services.map (service => (                          <Link;
+                            key={service.name}
+                            href={service.href}
+                            on_click={close_menu}
+                            className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                          >                <div className="space - y-4">;
+                  <h3 className="text - lg font - semibold text - white">Services</h3>;
+                  {service_categories.map ((category) => (
+                    <div key={category.title} className="ml - 4 space - y-2">;
+                      <h4 className="font - medium text - purple - 300">{category.title}</h4>;
+                      <div className="ml - 4 space - y-1">;
+                        {category.services.map ((service) => (
+                            key={service.name}
+                            href={service.href}
+                            on_click={close_menu}
+                            className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                          >;
+                            {service.name}
+                          </Link>))}
+                      </div>;
+                    </div>))}
+                </div>;
+                {/* Mobile Quick Links */}
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - semibold text - white'>;
+                    Quick Links;
+                  </h3>;
+                  <div className='grid grid - cols - 2 gap - 2'>;
+                    {quick_links.map (link => (                      <Link;
+                        key={link.name}
+                        href={link.href}
+                        on_click={close_menu}
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                      >                <div className="space - y-4">;
+                  <h3 className="text - lg font - semibold text - white">Quick Links</h3>;
+                  <div className="grid grid - cols - 2 gap - 2">;
+                    {quick_links.map ((link) => (
+                        key={link.name}
+                        href={link.href}
+                        on_click={close_menu}
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                        className="text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                      >;
+                        {link.name}
+                      </Link>))}
+                  </div>;
+                </div>;
+                {/* Mobile Contact Button */}
+                <div className='pt - 4'>;
+                  <Link;
+                    href='/contact';
+                    on_click={close_menu}
+                    className='block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200'                  >                  <Link;
+                    href="/contact";
+                    on_click={close_menu}
+                    className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
+                  >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Get Started;
                   </Link>;
                 </div>;
               </div>;
+<<<<<<< HEAD
             </motion && motion.div>;
+<<<<<<< HEAD
+=======
+=======
+                <div className="pt-4">
+                  <Link
+                    href="/contact"
+                    onClick={closeMenu}
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200"
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
+<<<<<<< HEAD
+        </AnimatePresence>
+      </nav>
+    </>
+<<<<<<< HEAD
+);
+}whileTap= {
+  {
+  scale: 0.95
+}> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
+  /* Mobile Menu */
+}<AnimatePresence>) )
+}</div> </div>) )
+}</div>) )
+}</div> </div> > Get Started </a> </div> </div> </motion.div>)
+}</AnimatePresence> </nav> </>) }
+=======
         </AnimatePresence>;
       </nav>;
     </>;
@@ -668,3 +1890,28 @@ export default function UltraFuturisticNavigation2033() {
 }</div>) ) ;
 }</div> </div> > Get Started </a> </div> </div> </motion && motion.div>) ;
 }</AnimatePresence> </nav> </>) }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+            </motion.div>)}
+        </AnimatePresence>;
+      </nav>;
+    </>);
+;
+}while_tap= {
+  {
+  scale: 0.95;
+}> <Link href="/contact" className="px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200 shadow - lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
+  /* Mobile Menu */;
+}<AnimatePresence>) );
+}</div> </div>) );
+}</div>) );
+}</div> </div> > Get Started </a> </div> </div> </motion.div>);
+}</AnimatePresence> </nav> </>) }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

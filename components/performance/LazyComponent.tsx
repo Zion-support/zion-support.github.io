@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react'
+}
+import React, { Suspense, lazy } from 'react';
+=======
+import React from 'react';
+}
+import React, { Suspense, lazy } from 'react';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface LazyComponentProps {
+  component: ComponentType < Record < string, unknown>>;
+  fallback?: ReactNode;
+  [key: string]: unknown
+}
+<<<<<<< HEAD
+
+const LazyComponent: React.FC<LazyComponentProps> = ({
+  component: Component
+  fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />
+
+  ...props
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,11 +59,36 @@ const LazyComponent: React.FC<LazyComponentProps> = ({ ;
   component: Component, ;
   fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />,;
   ...props ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Suspense fallback={fallback}>;
       <Component {...props} />;
     </Suspense>;
   );
+}
+export default LazyComponent;
+<<<<<<< HEAD
+
+import React from 'react';
 };
 
+import React from 'react';
+}
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+const LazyComponent: React.FC < LazyComponentProps> = ({
+  component: Component,
+  fallback = <div className="animate - pulse bg - gray - 200 h - 32 rounded" />,
+  ...props;
+  return (
+    <Suspense fallback={fallback}>;
+      <Component {...props} />;
+    </Suspense>);
+}
+;
 export default LazyComponent;
+import React from 'react',
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

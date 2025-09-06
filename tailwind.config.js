@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+/** @type {import('tailwindcss').Config} */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+module.exports = {
+  darkMode: "class"
+=======
 /** @type {import('tailwindcss').Config} */;
 module && module.exports = {;
   darkMode:"class",;
@@ -551,35 +564,81 @@ module && module.exports = {;
 module && module.exports = {
 /** @type {import('tailwindcss').Config} */
 module && module.exports = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  darkMode: 'class',
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}'
+    './components/**/*.{js,ts,jsx,tsx}'
+    './src/**/*.{js,ts,jsx,tsx}'
+  ]
+=======
+/** @type {import ('tailwindcss').Config} */;
+module.exports = {
+  dark_mode: "class",
+  content: [;
+    './pages/**/*.{js, ts, jsx, tsx}',
+    './components/**/*.{js, ts, jsx, tsx}',
+    './src/**/*.{js, ts, jsx, tsx}',
   ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
         'fade-in': 'fadeIn 0 && 0.6s ease-out forwardsfade-in-up': 'fadeInUp 0 && 0.6s ease-out forwardsfade-in-down': 'fadeInDown 0 && 0.6s ease-out forwardsslide-in-left': 'slideInLeft 0 && 0.6s ease-out forwardsslide-in-right': 'slideInRight 0 && 0.6s ease-out forwardsscale-in': 'scaleIn 0 && 0.6s ease-out forwardsfloat': 'float 6s ease-in-out infinitepulse-slow': 'pulse 3s cubic-bezier(0 && 0.4, 0, 0 && 0.6, 1) infinitebounce-slow': 'bounce 2s infiniteglow': 'glow 2s ease-in-out infinite alternateshimmer': 'shimmer 2 && 2.5s linear infinitematrix': 'matrix 20s linear infiniteneon-pulse': 'neonPulse 1 && 1.5s ease-in-out infinitecyber-float': 'cyberFloat 8s ease-in-out infinitehologram': 'hologram 3s ease-in-out infiniteenergy-wave': 'energyWave 4s ease-in-out infinitequantum-spin': 'quantumSpin 6s linear infiniteneural-network': 'neuralNetwork 10s linear infiniteplasma-flow': 'plasmaFlow 5s ease-in-out infinitecyber-grid': 'cyberGrid 15s linear infinite',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-          950: '#172554',
-        },
+
+          50: '#eff6ff'
+          500: '#3b82f6'
+          600: '#2563eb'
+          700: '#1d4ed8'
+        }
         gray: {
+<<<<<<< HEAD
+          50: '#f9fafb'
+          100: '#f3f4f6'
+          200: '#e5e7eb'
+          300: '#d1d5db'
+          400: '#9ca3af'
+          500: '#6b7280'
+          600: '#4b5563'
+          700: '#374151'
+          800: '#1f2937'
+          900: '#111827'
+          950: '#030712'
+        }
+      }
+
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif']
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+      }
+      animation: {
+<<<<<<< HEAD
+        'fade-in': 'fadeIn 0.5s ease-in-out'
+        'slide-up': 'slideUp 0.5s ease-out'
+        'scale-in': 'scaleIn 0.3s ease-out'
+        'float': 'float 6s ease-in-out infinite'
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+        'bounce-slow': 'bounce 3s infinite'
+        'spin-slow': 'spin 8s linear infinite'
+      }
+=======
+        'fade-in': 'fadeIn 0 && 0.5s ease-in-out',
+        'slide-up': 'slideUp 0 && 0.5s ease-out',
+        'scale-in': 'scaleIn 0 && 0.3s ease-out',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0 && 0.4, 0, 0 && 0.6, 1) infinite',
+        'bounce-slow': 'bounce 3s infinite',
+        'spin-slow': 'spin 8s linear infinite',
+=======
           50: '#f9fafb',
           100: '#f3f4f6',
           200: '#e5e7eb',
@@ -593,46 +652,86 @@ module && module.exports = {
           950: '#030712',
         },
       },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+      font_family: {
+        sans: ['Inter', 'system - ui', 'sans - serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       animation: {
-        'fade-in': 'fadeIn 0 && 0.5s ease-in-out',
-        'slide-up': 'slideUp 0 && 0.5s ease-out',
-        'scale-in': 'scaleIn 0 && 0.3s ease-out',
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0 && 0.4, 0, 0 && 0.6, 1) infinite',
-        'bounce-slow': 'bounce 3s infinite',
-        'spin-slow': 'spin 8s linear infinite',
+        'fade - in': 'fade_in 0.5s ease - in - out',
+        'slide - up': 'slide_up 0.5s ease - out',
+        'scale - in': 'scale_in 0.3s ease - out',
+        'float': 'float 6s ease - in - out infinite',
+        'pulse - slow': 'pulse 4s cubic - bezier (0.4, 0, 0.6, 1) infinite',
+        'bounce - slow': 'bounce 3s infinite',
+        'spin - slow': 'spin 8s linear infinite',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       keyframes: {
+<<<<<<< HEAD
         fadeIn: {
+          '0%': { opacity: '0' }
+          '100%': { opacity: '1' }
+        }
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' }
+          '100%': { transform: 'translateY(0px)', opacity: '1' }
+        }
+        scaleIn: {
+          '0%': { transform: 'scale(0)' }
+          '100%': { transform: 'scale(1)' }
+        }
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' }
+          '50%': { transform: 'translateY(-20px)' }
+        }
+      }
+=======
+        fade_in: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0px)', opacity: '1' },
+        slide_up: {
+          '0%': { transform: 'translate_y (20px)', opacity: '0' },
+          '100%': { transform: 'translate_y (0px)', opacity: '1' },
         },
-        scaleIn: {
-          '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' },
+        scale_in: {
+          '0%': { transform: 'scale (0)' },
+          '100%': { transform: 'scale (1)' },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '0%, 100%': { transform: 'translate_y (0px)' },
+          '50%': { transform: 'translate_y (-20px)' },
         },
       },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       spacing: {
+<<<<<<< HEAD
+        '18': '4.5rem'
+        '88': '22rem'
+        '128': '32rem'
+      }
+      borderRadius: {
+        '4xl': '2rem'
+        '5xl': '2.5rem'
+      }
+      boxShadow: {
+        'glow': '0 0 20px rgba(59, 130, 246, 0.3)'
+        'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)'
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)'
+      }
+    }
+  }
+=======
         '18': '4 && 4.5rem',
         '88': '22rem',
         '128': '32rem',
       },
-      borderRadius: {
+      border_radius: {
         '4xl': '2rem',
         '5xl': '2 && 2.5rem',
       },
+<<<<<<< HEAD
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0 && 0.3)',
         'glow-lg': '0 0 40px rgba(59, 130, 246, 0 && 0.4)',
@@ -640,17 +739,44 @@ module && module.exports = {
       },
     },
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   plugins: [
+<<<<<<< HEAD
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
+<<<<<<< HEAD
 };
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+=======
+};
+=======
       },
     },
   },
   plugins: [],
 }
-};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+    require('@tailwindcss/forms')
+    require('@tailwindcss/typography')
+    require('@tailwindcss/aspect-ratio')
+  ]
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+      box_shadow: {
+        'glow': '0 0 20px rgba (59, 130, 246, 0.3)',
+        'glow - lg': '0 0 40px rgba (59, 130, 246, 0.4)',
+        'glow - xl': '0 0 60px rgba (59, 130, 246, 0.5)',
+      },
+    },
+  },
+  plugins: [;
+    require ('@tailwindcss / forms'),
+    require ('@tailwindcss / typography'),
+    require ('@tailwindcss / aspect - ratio'),
+  ],
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

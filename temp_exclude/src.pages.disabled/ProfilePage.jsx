@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,4 +29,10 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD
 <<<<<<< HEAD:src && src.pages.disabled/ProfilePage && ProfilePage.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/ProfilePage && ProfilePage.jsx import React from \'react\'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () { import React from \'react\'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () {\'';
+<<<<<<< HEAD
 <<<<<<< "HEAD": src && src.pages.disabled/ProfilePage && ProfilePage.jsx import _React from 'react'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () { import _React from 'react'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () {'';
+=======
+<<<<<<< "HEAD": src && src.pages.disabled/ProfilePage && ProfilePage.jsx import _React from 'react'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () { import _React from 'react'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () {'';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

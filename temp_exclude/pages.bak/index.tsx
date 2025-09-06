@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -29,18 +30,25 @@ export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1
 module && module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'";
 export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
 module && module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'";
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
-interface IndexProps {;
-  // Add props here as needed;
+
+interface IndexProps {
+  // Add props here as needed
 }
-export default function Index(): any ({ }: IndexProps) {;
+
+export default function Index({ }: IndexProps) {
   return (
-    <div>;
-      <h1>Index</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Index</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 }
 }
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

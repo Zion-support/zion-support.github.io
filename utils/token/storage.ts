@@ -1,15 +1,78 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import fs from 'fs';
 import path from 'path';
-import { TokenConfig, TokenTransaction, Wallet } from './types';
-import { DEFAULT_TOKEN_CONFIG } from './rules';
+=======
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export interface TokenConfig {
+  token_name: string;
+  token_symbol: string;
+  decimals: number;
+  total_supply: number;
+  issue_rate: number;
+  redeem_rate: number;
+  minIssueAmount: number;
+  maxIssueAmount: number;
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export interface Wallet {
+  address: string;
+  balance: number;
+  nonce: number;
+}
+
+export interface TokenTransaction {
+  id: string;
+  from: string;
+  to: string;
+  amount: number;
+  timestamp: number;
+  type: 'issue' | 'redeem' | 'transfer';
+}
+=======
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+class TokenStore {
+  private config: TokenConfig = {
+    token_name: 'ZION$',
+    token_symbol: 'ZION',
+    decimals: 18,
+    total_supply: 1000000000,
+    issue_rate: 1.0,
+    redeem_rate: 1.0,
+    minIssueAmount: 1,
+    maxIssueAmount: 10000;
+  }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface TokenStoreData {
-  wallets: Record<string, Wallet>;
+  wallets: Record < string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
+}
+<<<<<<< HEAD
+
+const DATA_DIR = path.join(process.cwd(), 'data');
+const STORE_FILE = path.join(DATA_DIR, 'token-store.json');
+
+function ensureDataDir(): void {
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  }
+}
 
 function readFromDisk(): TokenStoreData | null {
   try {
@@ -21,10 +84,60 @@ function readFromDisk(): TokenStoreData | null {
   } catch {
     return null;
   }
+}
 
-function writeToDisk(data: TokenStoreData): void {
+=======
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+class TokenStore {
+  private config: TokenConfig = {
+    tokenName: 'ZION$'
+    tokenSymbol: 'ZION'
+    decimals: 18
+    totalSupply: 1000000000
+    issueRate: 1.0
+    redeemRate: 1.0
+    minIssueAmount: 1
+    maxIssueAmount: 10000
+<<<<<<< HEAD
+  };
+
+=======
+  }
+export interface TokenStoreData {
+  wallets: Record<string, Wallet>;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+}
+function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
+<<<<<<< HEAD
+    if (!fs.existsSync(STORE_FILE)) return null;
+    const raw = fs.readFileSync(STORE_FILE, 'utf8');
+    const parsed = JSON.parse(raw) as TokenStoreData;
+=======
+function readFromDisk (): TokenStoreData | null {
+  try {
+    ensureDataDir ();
+    if () return null) {
+  $2
+}
+    const raw = fs.readFileSync (STORE_FILE, 'utf8');
+    const parsed = JSON.parse (raw) as TokenStoreData;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    return parsed;
+  } catch {
+    return null;
+  }
+<<<<<<< HEAD
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+  setConfig(newConfig: Partial<TokenConfig>): void {
+    this.config = { ...this.config, ...newConfig }
+  }
+
+  getConfig(): TokenConfig {
+    return { ...this.config };
+=======
     fs && fs.writeFileSync(STORE_FILE, JSON && JSON.stringify(data, null, 2), 'utf8');
   } catch {}
 
@@ -42,8 +155,13 @@ class InMemoryTokenStore {
 
   getData(): TokenStoreData {
     return this && this.data;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
+}
+export const tokenStore = new TokenStore();
 
+<<<<<<< HEAD
+=======
   save(): void {
     writeToDisk(this && this.data);
   }
@@ -81,4 +199,68 @@ export const tokenStore = {
     if (!userId) return txs;
     return txs && txs.filter(t => t && t.userId === userId);
   },
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+// Token storage utilities
+import { TokenConfig, TokenBalance } from './service';
+
+export interface TokenStorage {
+  configs: TokenConfig[];
+  balances: TokenBalance[];
+  lastUpdated: Date;
+}
+
+export class TokenStorageManager {
+  private storage: TokenStorage = {
+    configs: [],
+    balances: [],
+    lastUpdated: new Date()
+  };
+
+  async saveConfigs(configs: TokenConfig[]): Promise<void> {
+    this.storage.configs = configs;
+    this.storage.lastUpdated = new Date();
+  }
+
+  async loadConfigs(): Promise<TokenConfig[]> {
+    return this.storage.configs;
+  }
+
+  async saveBalances(balances: TokenBalance[]): Promise<void> {
+    this.storage.balances = balances;
+    this.storage.lastUpdated = new Date();
+  }
+
+  async loadBalances(): Promise<TokenBalance[]> {
+    return this.storage.balances;
+  }
+
+  async getStorage(): Promise<TokenStorage> {
+    return this.storage;
+  }
+
+  async clearStorage(): Promise<void> {
+    this.storage = {
+      configs: [],
+      balances: [],
+      lastUpdated: new Date()
+    };
+  }
+}
+
+// Singleton instance
+export const tokenStorage = new TokenStorageManager();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  set_config (new_config: Partial < TokenConfig>): void {
+    this.config = { ...this.config, ...new_config }
+  }
+}
+export const token_store = new TokenStore ();
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

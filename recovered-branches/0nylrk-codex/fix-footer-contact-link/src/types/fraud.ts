@@ -1,6 +1,11 @@
+<<<<<<< HEAD
+
 
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
-
+=======
+export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface FraudFlag {
   id: string;
   user_id: string;
@@ -17,15 +22,25 @@ export interface FraudFlag {
   reviewed_at?: string;
   action_taken?: 'none' | 'warning' | 'suspension' | 'ban';
   gpt_classification?: string;
-  gpt_explanation?: string,
+<<<<<<< HEAD
+  gpt_explanation?: string
   is_false_positive?: boolean
+=======
+  gpt_explanation?: string,
+  is_false_positive?: boolean;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-
 export interface FraudStats {
   total_flags: number;
   pending_flags: number;
   suspicious_count: number;
   dangerous_count: number;
-  false_positives: number,
+<<<<<<< HEAD
+  false_positives: number
+
   actioned_count: number
+=======
+  false_positives: number,
+  actioned_count: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

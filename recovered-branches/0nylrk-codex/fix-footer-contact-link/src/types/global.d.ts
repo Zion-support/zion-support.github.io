@@ -1,18 +1,34 @@
+<<<<<<< HEAD
 
-import {ReactNode} from 'react';
+import { ReactNode } from 'react';
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
+=======
+import {ReactNode} from 'react';
+// Extend FeatureCardProps to include key for mapping;
+declare module '@/components / FeatureCard' {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   export interface FeatureCardProps {
     title: string;
     description: string;
     icon: ReactNode;
-    className?: string,
+<<<<<<< HEAD
+
+    className?: string
+
     key?: number | string
   }
 }
-
 // Extend ListingScoreCardProps to include key for mapping
 declare module '@/components/ListingScoreCard' {
+=======
+    class_name?: string,
+    key?: number | string;
+  }
+}
+// Extend ListingScoreCardProps to include key for mapping;
+declare module '@/components / ListingScoreCard' {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   export interface ListingScoreCardProps {
     title: string;
     description: string;
@@ -20,31 +36,59 @@ declare module '@/components/ListingScoreCard' {
     image?: string;
     tags?: string[];
     author?: string;
-    authorImage?: string;
-    aiScore?: number;
+    author_image?: string;
+    ai_score?: number;
     rating?: number;
+<<<<<<< HEAD
     reviewCount?: number;
-    key?: string | number,
+
+    key?: string | number
+
     variant?: string
   }
 }
-
 // Extend ChatMessageProps to include key for mapping
 declare module '@/components/ChatAssistant/ChatMessage' {
   export interface ChatMessageProps {
     role: 'user' | 'assistant';
     message: string;
-    timestamp?: Date,
+
+    timestamp?: Date
+
     key?: string | number
   }
 }
-
 // Extend ProductListingCardProps to include key for mapping
 declare module '@/components/ProductListingCard' {
   export interface ProductListingCardProps {
     listing: any;
     view: any;
-    onRequestQuote: (listingId: string) => void,
+
+    onRequestQuote: (listingId: string) => void
+
     key?: string | number
+=======
+    review_count?: number;
+    key?: string | number,
+    variant?: string;
+  }
+}
+// Extend ChatMessageProps to include key for mapping;
+declare module '@/components / ChatAssistant / ChatMessage' {
+  export interface ChatMessageProps {
+    role: 'user' | 'assistant';
+    message: string;
+    timestamp?: Date,
+    key?: string | number;
+  }
+}
+// Extend ProductListingCardProps to include key for mapping;
+declare module '@/components / ProductListingCard' {
+  export interface ProductListingCardProps {
+    listing: any;
+    view: any;
+    onRequestQuote: (listing_id: string) => void,
+    key?: string | number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

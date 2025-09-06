@@ -1,4 +1,3 @@
-
 export interface TalentProfile {
   id: string;
   user_id: string;
@@ -17,36 +16,67 @@ export interface TalentProfile {
   rating_count?: number;
   is_verified?: boolean;
   key_projects?: {
-    title: string,
+<<<<<<< HEAD
+
+    title: string
+
     description: string
   }[]
 }
-
+export interface TalentProfileFilters {
+  search?: string;
+  skills?: string[],
+  availabilities?: string[],
+  regions?: string[],
+  priceRange?: [number, number],
+  experienceRange?: [number, number]
+=======
+    title: string,
+    description: string;
+  }[];
+}
 export interface TalentProfileFilters {
   search?: string;
   skills?: string[];
   availabilities?: string[];
   regions?: string[];
-  priceRange?: [number, number];
-  experienceRange?: [number, number]
+  price_range?: [number, number];
+  experience_range?: [number, number];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-
 export interface HireRequest {
   id: string;
-  clientId: string;
-  talentId: string;
-  projectTitle: string;
-  projectDescription: string;
+  client_id: string;
+  talent_id: string;
+  project_title: string;
+  project_description: string;
   budget: {
     min: number;
-    max: number,
+<<<<<<< HEAD
+
+    max: number
+
     currency: string
-  };
+  }
   timeline: {
     startDate: string;
-    endDate?: string,
+
+    endDate?: string
     estimatedDuration?: string
-  };
-  status: 'pending' | 'accepted' | 'rejected' | 'completed',
+  }
+  status: 'pending' | 'accepted' | 'rejected' | 'completed'
+
   createdAt: string
+=======
+    max: number,
+    currency: string;
+  }
+  timeline: {
+    start_date: string;
+    end_date?: string,
+    estimated_duration?: string;
+  }
+  status: 'pending' | 'accepted' | 'rejected' | 'completed',
+  created_at: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,85 +1,58 @@
 const js = require('@eslint/js');
-const reactHooks = require('eslint-plugin-react-hooks');
-const reactRefresh = require('eslint-plugin-react-refresh');
-const typescriptEslint = require('@typescript-eslint/eslint-plugin');
+const typescript = require('@typescript-eslint/eslint-plugin');
 const typescriptParser = require('@typescript-eslint/parser');
+const react = require('eslint-plugin-react');
+const jsxA11y = require('eslint-plugin-jsx-a11y');
 
 module.exports = [
-  {
-    ignores: [
-      'node_modules/**/*',
-      'app-optimizer.js',
-      'zion-os/**/*',
-      'apps.backup/**/*',
-      'zion-website/**/*',
-      'automation/**/*',
-      'advanced-automation-improvements.cjs',
-      'analyze_links.cjs',
-      'app-enhancement-suite.cjs',
-    ],
-  },
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
-    plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      '@typescript-eslint': typescriptEslint,
-    },
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
-        ecmaVersion: 2022,
-        sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
+        ecmaVersion: 'latest',
+        sourceType: 'module',
       },
+      globals: {
+        browser: true,
+        es2021: true,
+        node: true,
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'jsx-a11y': jsxA11y,
     },
     rules: {
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_' }
-      ],
-      '@typescript-eslint/no-explicit-any': 'warn'
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'jsx-a11y/alt-text': 'warn',
+      'jsx-a11y/aria-role': 'warn',
     },
-  },
-  {
-    files: ['**/*.{js,jsx}'],
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        global: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly',
+    settings: {
+      react: {
+        version: 'detect',
       },
     },
   },
   {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
+    ignores: [
+      'node_modules/',
+      'dist/',
+      '.next/',
+      'build/',
+      '*.config.js',
+      '*.config.cjs',
+    ],
   },
 ];

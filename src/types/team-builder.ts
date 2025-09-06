@@ -1,6 +1,13 @@
 export interface ProjectBrief {
-  projectName: string, goals: string,
+<<<<<<< HEAD
+  projectName: string, goals: string
+  timeline: string, budget: string
+  techStack?: string[]
+  talentFilters?: { verifiedOnly?: boolean; regions?: string[] }
+=======
+  project_name: string, goals: string,
   timeline: string, budget: string,
-  techStack?: string[];
-  talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
+  tech_stack?: string[];
+  talent_filters?: { verified_only?: boolean; regions?: string[] }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

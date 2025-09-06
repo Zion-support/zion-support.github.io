@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:src && src.pages.disabled/Login && Login.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/Login && Login.jsx import { useEffect } from \'react\'';\'; import { useNavigate,useLocation } from \'react-router-dom\'';\'; import { useAuth } from \'@/hooks/useAuth\'';\'; import { safeStorage } from \'@/utils/safeStorage\'';\'; import { LoginContent } from \'@/components/auth/login\'';\'; import { ErrorBoundary } from \'react-error-boundary\'';\'; import { useCart } from \'@/context/CartContext\'';\';\''; import { toast } from \'@/hooks/use-toast\'';\'; import { useDispatch } from \'react-redux\'';\'; import { setLoggedIn } from \'@/store/authSlice\'; useEffect ( () => {}; import { useEffect } from \'react\'';\'; import { useNavigate,useLocation } from \'react - router - dom\'';\'; import { useAuth } from \'@/hooks / useAuth\'';\'; import { safeStorage } from \'@/utils / safeStorage\'';\'; import { LoginContent } from \'@/components / auth / login\'';\'; import { ErrorBoundary } from \'react - error - boundary\'';\'; import { useCart } from \'@/context / CartContext\'';\';\''; import { toast } from \'@/hooks / use - toast\'';\'; import { useDispatch } from \'react - redux\'';\'; import { setLoggedIn } from \'@/store / authSlice\'; useEffect ( () => {}\';\'';
@@ -15,6 +19,11 @@
 =======
 <<<<<<< \"HEAD\": src && src.pages.disabled/Login && Login.jsx import { useEffect } from \'react\'';\'; import { useNavigate,useLocation } from \'react-router-dom\'';\'; import { useAuth } from \'@/hooks/useAuth\'';\'; import { safeStorage } from \'@/utils/safeStorage\'';\'; import { LoginContent } from \'@/components/auth/login\'';\'; import { ErrorBoundary } from \'react-error-boundary\'';\'; import { useCart } from \'@/context/CartContext\'';\';\''; import { toast } from \'@/hooks/use-toast\'';\'; import { useDispatch } from \'react-redux\'';\'; import { setLoggedIn } from \'@/store/authSlice\'; useEffect ( () => {}; import { useEffect } from \'react\'';\'; import { useNavigate,useLocation } from \'react - router - dom\'';\'; import { useAuth } from \'@/hooks / useAuth\'';\'; import { safeStorage } from \'@/utils / safeStorage\'';\'; import { LoginContent } from \'@/components / auth / login\'';\'; import { ErrorBoundary } from \'react - error - boundary\'';\'; import { useCart } from \'@/context / CartContext\'';\';\''; import { toast } from \'@/hooks / use - toast\'';\'; import { useDispatch } from \'react - redux\'';\'; import { setLoggedIn } from \'@/store / authSlice\'; useEffect ( () => {}\';\'';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 interface LoginProps {
   // Add props here as needed
@@ -27,6 +36,10 @@ export default function Login({ }: LoginProps) {
     </div>
   );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:src && src.pages.disabled/Login && Login.jsx
 }
@@ -38,5 +51,12 @@ export default function Login({ }: LoginProps) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }
 }
+<<<<<<< HEAD
+=======
+=======
+}
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 }

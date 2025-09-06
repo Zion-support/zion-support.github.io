@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Search,Star,Clock,Globe,TrendingUp,Shield,Brain,Users,CheckCircle,Phone,Mail,MapPin,ExternalLink} \"from\": \'lucide - react\' const [searchQuery,setSearchQuery] = useState (\') const [selectedCategory,setSelectedCategory] = useState (\'all\') const [sortBy,setSortBy] = useState (\'featured\') \'';\";\";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,8 +9,9 @@ Search,Star,Clock,Globe,TrendingUp,Shield,Brain,Users,CheckCircle,Phone,Mail,Map
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 Search,Star,Clock,Globe,TrendingUp,Shield,Brain,Users,CheckCircle,Phone,Mail,MapPin,ExternalLink} "from": 'lucide - react' const [searchQuery,setSearchQuery] = useState (') const [selectedCategory,setSelectedCategory] = useState ('all') const [sortBy,setSortBy] = useState ('featured') '';";";""
-Search,Star,Clock,Globe,TrendingUp,Shield,Brain,Users,CheckCircle,Phone,Mail,MapPin,ExternalLink} "from": 'lucide - react' const [searchQuery,setSearchQuery] = useState (') const [selectedCategory,setSelectedCategory] = useState ('all') const [sortBy,setSortBy] = useState ('featured') '';";";""
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 Search,Star,Clock,Globe,TrendingUp,Shield,Brain,Users,CheckCircle,Phone,Mail,MapPin,ExternalLink} "from": 'lucide - react' const [searchQuery,setSearchQuery] = useState (') const [selectedCategory,setSelectedCategory] = useState ('all') const [sortBy,setSortBy] = useState ('featured') '';";";""
 Search,Star,Clock,Globe,TrendingUp,Shield,Brain,Users,CheckCircle,Phone,Mail,MapPin,ExternalLink} "from": 'lucide - react' const [searchQuery,setSearchQuery] = useState (') const [selectedCategory,setSelectedCategory] = useState ('all') const [sortBy,setSortBy] = useState ('featured') '';";";""
 Search,Star,Clock,Globe,TrendingUp,Shield,Brain,Users,CheckCircle,Phone,Mail,MapPin,ExternalLink} "from": 'lucide - react' const [searchQuery,setSearchQuery] = useState (') const [selectedCategory,setSelectedCategory] = useState ('all') const [sortBy,setSortBy] = useState ('featured') '';";";""

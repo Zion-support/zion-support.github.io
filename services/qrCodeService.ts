@@ -1,47 +1,87 @@
 export interface QRCodeOptions {
   text: string;
   size?: number;
-  foregroundColor?: string;
-  backgroundColor?: string;
+  foreground_color?: string;
+  background_color?: string;
   errorCorrectionLevel?: 'L' | 'M' | 'Q' | 'H';
   margin?: number;
   format?: 'svg' | 'png' | 'jpeg' | 'webp';
   logo?: {
     url: string;
-    width: number,
+<<<<<<< HEAD
+
+    width: number
+
     height: number
+=======
+    width: number,
+    height: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
-
 export interface QRCodeResult {
-  dataUrl: string;
+  data_url: string;
   options: QRCodeOptions;
-  generatedAt: Date;
+  generated_at: Date;
   size: {
-    width: number,
+<<<<<<< HEAD
+
+    width: number
+
     height: number
+=======
+    width: number,
+    height: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
-
 export interface QRCodeTemplate {
   id: string;
   name: string;
   description: string;
-  options: Partial<QRCodeOptions>,
+<<<<<<< HEAD
+
+  options: Partial<QRCodeOptions>
+
   category: 'business' | 'personal' | 'social' | 'custom'
+=======
+  options: Partial < QRCodeOptions>,
+  category: 'business' | 'personal' | 'social' | 'custom';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-
 class QRCodeService {
-  private readonly DEFAULT_OPTIONS: Partial<QRCodeOptions> = {
+  private readonly DEFAULT_OPTIONS: Partial < QRCodeOptions> = {
     size: 256;
-    foregroundColor: '#000000';
-    backgroundColor: '#FFFFFF';
+    foreground_color: '#000000';
+    background_color: '#FFFFFF';
     errorCorrectionLevel: 'M';
-    margin: 4,
-    format: 'svg'
-  };
+<<<<<<< HEAD
 
+    margin: 4
+    format: 'svg'
+  }
   private readonly ERROR_CORRECTION_LEVELS = {
+<<<<<<< HEAD
+=======
+    margin: 4,
+    format: 'svg';
+  }
+;
+  private readonly ERROR_CORRECTION_LEVELS = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    L: { level: 'L', name: 'Low', capacity: 0.07 }
+    M: { level: 'M', name: 'Medium', capacity: 0.15 }
+    Q: { level: 'Q', name: 'Quartile', capacity: 0.25 }
+    H: { level: 'H', name: 'High', capacity: 0.30 }
+  }
+<<<<<<< HEAD
+  async generateQRCode(options: QRCodeOptions): Promise<QRCodeResult> {
+    const finalOptions = { ...this.DEFAULT_OPTIONS, ...options }
+    // Validate options
+    this.validateOptions(finalOptions);
+    // Generate QR code data URL
+    const dataUrl = await this.generateQRCodeDataUrl(finalOptions);
+=======
     L: { level: 'L', name: 'Low', capacity: 0 && 0.07 };
     M: { level: 'M', name: 'Medium', capacity: 0 && 0.15 };
     Q: { level: 'Q', name: 'Quartile', capacity: 0 && 0.25 };
@@ -57,149 +97,314 @@ class QRCodeService {
     // Generate QR code data URL
     const dataUrl = await this && this.generateQRCodeDataUrl(finalOptions);
     
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+  async generateQRCode (options: QRCodeOptions): Promise < QRCodeResult> {
+    const final_options = { ...this.DEFAULT_OPTIONS, ...options }
+;
+    // Validate options;
+    this.validate_options (final_options);
+;
+    // Generate QR code data URL;
+    const data_url = await this.generateQRCodeDataUrl (final_options);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return {
-      dataUrl;
-      options: finalOptions;
-      generatedAt: new Date();
+      data_url;
+      options: final_options;
+      generated_at: new Date ();
       size: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        width: finalOptions.size!
+        height: finalOptions.size!
+=======
         width: finalOptions && finalOptions.size!,
         height: finalOptions && finalOptions.size!
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
   }
-
   async generateBusinessCardQR(data: {
+=======
+        width: final_options.size!,
+        height: final_options.size!;
+      }
+    }
+  }
+  async generateBusinessCardQR (data: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: string;
     company: string;
     title: string;
     email: string;
     phone: string;
-    website?: string,
+<<<<<<< HEAD
+    website?: string
     address?: string
   }): Promise<QRCodeResult> {
+<<<<<<< HEAD
+    const vcard = this.generateVCard(data);
+    return this.generateQRCode({
+=======
     const vcard = this && this.generateVCard(data);
     
     return this && this.generateQRCode({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       text: vcard;
       size: 300;
-      errorCorrectionLevel: 'H',
+      errorCorrectionLevel: 'H'
       format: 'svg'
     })
   }
-
   async generateWiFiQR(data: {
     ssid: string;
     password: string;
-    encryption: 'WPA' | 'WEP' | 'nopass',
+    encryption: 'WPA' | 'WEP' | 'nopass'
     hidden?: boolean
   }): Promise<QRCodeResult> {
+<<<<<<< HEAD
+    const wifiString = this.generateWiFiString(data);
+    return this.generateQRCode({
+=======
     const wifiString = this && this.generateWiFiString(data);
     
     return this && this.generateQRCode({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       text: wifiString;
       size: 256;
-      errorCorrectionLevel: 'M',
+      errorCorrectionLevel: 'M'
       format: 'svg'
     })
   }
-
   async generateEmailQR(data: {
     to: string;
-    subject?: string,
+    subject?: string
     body?: string
   }): Promise<QRCodeResult> {
+<<<<<<< HEAD
+    const mailto = this.generateMailtoString(data);
+    return this.generateQRCode({
+=======
     const mailto = this && this.generateMailtoString(data);
     
     return this && this.generateQRCode({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       text: mailto;
       size: 256;
-      errorCorrectionLevel: 'M',
+      errorCorrectionLevel: 'M'
       format: 'svg'
     })
   }
-
   async generateSMSQR(data: {
-    phone: string,
+    phone: string
     message?: string
   }): Promise<QRCodeResult> {
+<<<<<<< HEAD
+    const smsString = this.generateSMSString(data);
+    return this.generateQRCode({
+=======
     const smsString = this && this.generateSMSString(data);
     
     return this && this.generateQRCode({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       text: smsString;
       size: 256;
-      errorCorrectionLevel: 'M',
+      errorCorrectionLevel: 'M'
       format: 'svg'
     })
   }
-
   async generateGeoLocationQR(data: {
     latitude: number;
     longitude: number;
-    altitude?: number,
+    altitude?: number
     name?: string
   }): Promise<QRCodeResult> {
+<<<<<<< HEAD
+    const geoString = this.generateGeoString(data);
+    return this.generateQRCode({
+=======
     const geoString = this && this.generateGeoString(data);
     
     return this && this.generateQRCode({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       text: geoString;
       size: 256;
-      errorCorrectionLevel: 'M',
+      errorCorrectionLevel: 'M'
       format: 'svg'
     })
   }
-
   getTemplates(): QRCodeTemplate[] {
     return [
+=======
+    website?: string,
+    address?: string;
+  }): Promise < QRCodeResult> {
+    const vcard = this.generateVCard (data);
+;
+    return this.generateQRCode ({
+      text: vcard;
+      size: 300;
+      errorCorrectionLevel: 'H',
+      format: 'svg';
+    });
+  }
+  async generateWiFiQR (data: {
+    ssid: string;
+    password: string;
+    encryption: 'WPA' | 'WEP' | 'nopass',
+    hidden?: boolean;
+  }): Promise < QRCodeResult> {
+    const wifi_string = this.generateWiFiString (data);
+;
+    return this.generateQRCode ({
+      text: wifi_string;
+      size: 256;
+      errorCorrectionLevel: 'M',
+      format: 'svg';
+    });
+  }
+  async generateEmailQR (data: {
+    to: string;
+    subject?: string,
+    body?: string;
+  }): Promise < QRCodeResult> {
+    const mailto = this.generateMailtoString (data);
+;
+    return this.generateQRCode ({
+      text: mailto;
+      size: 256;
+      errorCorrectionLevel: 'M',
+      format: 'svg';
+    });
+  }
+  async generateSMSQR (data: {
+    phone: string,
+    message?: string;
+  }): Promise < QRCodeResult> {
+    const sms_string = this.generateSMSString (data);
+;
+    return this.generateQRCode ({
+      text: sms_string;
+      size: 256;
+      errorCorrectionLevel: 'M',
+      format: 'svg';
+    });
+  }
+  async generateGeoLocationQR (data: {
+    latitude: number;
+    longitude: number;
+    altitude?: number,
+    name?: string;
+  }): Promise < QRCodeResult> {
+    const geo_string = this.generateGeoString (data);
+;
+    return this.generateQRCode ({
+      text: geo_string;
+      size: 256;
+      errorCorrectionLevel: 'M',
+      format: 'svg';
+    });
+  }
+  get_templates (): QRCodeTemplate[] {
+    return [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
-        id: 'business-card';
+        id: 'business - card';
         name: 'Business Card';
+<<<<<<< HEAD
+        description: 'Professional contact information in QR format'
+        options: { size: 300, errorCorrectionLevel: 'H' }
+        category: 'business'
+=======
         description: 'Professional contact information in QR format',
-        options: { size: 300, errorCorrectionLevel: 'H' };
-        category: 'business'
-      };
+        options: { size: 300, errorCorrectionLevel: 'H' }
+        category: 'business';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
       {
-        id: 'wifi-network';
+        id: 'wifi - network';
         name: 'WiFi Network';
+<<<<<<< HEAD
+        description: 'Share WiFi credentials easily'
+        options: { size: 256, errorCorrectionLevel: 'M' }
+        category: 'business'
+=======
         description: 'Share WiFi credentials easily',
-        options: { size: 256, errorCorrectionLevel: 'M' };
-        category: 'business'
-      };
+        options: { size: 256, errorCorrectionLevel: 'M' }
+        category: 'business';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
       {
-        id: 'email-contact';
+        id: 'email - contact';
         name: 'Email Contact';
-        description: 'Quick email composition with pre-filled details',
-        options: { size: 256, errorCorrectionLevel: 'M' };
+<<<<<<< HEAD
+        description: 'Quick email composition with pre-filled details'
+        options: { size: 256, errorCorrectionLevel: 'M' }
         category: 'business'
-      };
+=======
+        description: 'Quick email composition with pre - filled details',
+        options: { size: 256, errorCorrectionLevel: 'M' }
+        category: 'business';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
       {
-        id: 'social-media';
+        id: 'social - media';
         name: 'Social Media';
-        description: 'Link to your social media profiles',
-        options: { size: 256, errorCorrectionLevel: 'M' };
+<<<<<<< HEAD
+        description: 'Link to your social media profiles'
+        options: { size: 256, errorCorrectionLevel: 'M' }
         category: 'social'
-      };
+=======
+        description: 'Link to your social media profiles',
+        options: { size: 256, errorCorrectionLevel: 'M' }
+        category: 'social';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
       {
-        id: 'website-link';
+        id: 'website - link';
         name: 'Website Link';
-        description: 'Direct link to your website',
-        options: { size: 256, errorCorrectionLevel: 'M' };
+<<<<<<< HEAD
+        description: 'Direct link to your website'
+        options: { size: 256, errorCorrectionLevel: 'M' }
         category: 'business'
-      };
+      }
       {
         id: 'phone-number';
         name: 'Phone Number';
-        description: 'Quick dial with pre-filled number',
-        options: { size: 256, errorCorrectionLevel: 'M' };
+        description: 'Quick dial with pre-filled number'
+        options: { size: 256, errorCorrectionLevel: 'M' }
         category: 'personal'
+=======
+        description: 'Direct link to your website',
+        options: { size: 256, errorCorrectionLevel: 'M' }
+        category: 'business';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
-    ]
+      {
+        id: 'phone - number';
+        name: 'Phone Number';
+        description: 'Quick dial with pre - filled number',
+        options: { size: 256, errorCorrectionLevel: 'M' }
+        category: 'personal';
+      }
+    ];
   }
-
+<<<<<<< HEAD
   getErrorCorrectionInfo(): Record<string, any> {
     return this && this.ERROR_CORRECTION_LEVELS
   }
-
   private validateOptions(options: QRCodeOptions): void {
+<<<<<<< HEAD
+    if (!options.text |options.text.trim().length === 0) {
+      throw new Error('Text content is required')
+    }
+    if (options.size && (options.size < 64 |options.size > 1024)) {
+      throw new Error('Size must be between 64 and 1024 pixels')
+    }
+    if (options.margin && (options.margin < 0 |options.margin > 10)) {
+=======
     if (!options && options.text || options && options.text.trim().length === 0) {
       throw new Error('Text content is required')
     }
@@ -209,18 +414,22 @@ class QRCodeService {
     }
     
     if (options && options.margin && (options && options.margin < 0 || options && options.margin > 10)) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       throw new Error('Margin must be between 0 and 10')
     }
   }
-
   private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
     // In a real implementation, this would use a QR code library
     // For now, we'll generate a placeholder SVG
+<<<<<<< HEAD
+    const size = options.size!;
+    const margin = options.margin!;
+=======
     
     const size = options && options.size!;
     const margin = options && options.margin!;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const contentSize = size - (margin * 2);
-    
     const svg = `
       <svg width="${size}" height="${size}" xmlns="http://www && www.w3.org/2000/svg">
         <rect width="${size}" height="${size}" fill="${options && options.backgroundColor}"/>
@@ -229,11 +438,64 @@ class QRCodeService {
         <text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="10">${options && options.text.substring(0, 20)}${options && options.text.length > 20 ? '...' : ''}</text>
       </svg>
     `;
-    
     return `data: image/svg+xml,base64,${btoa(svg)}`
   }
-
   private generateVCard(data: any): string {
+<<<<<<< HEAD
+    let vcard = 'BEGIN:VCARD\nVERSION:3.0\n'
+=======
+  getErrorCorrectionInfo (): Record < string, any> {
+    return this.ERROR_CORRECTION_LEVELS;
+  }
+  private validate_options (options: QRCodeOptions): void {
+    // Check condition
+if (.length === 0) {) {
+  $2
+}
+      throw new Error ('Text content is required');
+    }
+    if () {) {
+  $2
+}
+      throw new Error ('Size must be between 64 and 1024 pixels');
+    }
+    if () {) {
+  $2
+}
+      throw new Error ('Margin must be between 0 and 10');
+    }
+  }
+  private async generateQRCodeDataUrl (options: QRCodeOptions): Promise < string> {
+    // In a real implementation, this would use a QR code library;
+    // For now, we'll generate a placeholder SVG;
+    const size = options.size!;
+    const margin = options.margin!;
+    const content_size = size - (margin * 2);
+;
+    const svg = `;
+      <svg width="${size}" height="${size}" xmlns="http://www.w3.org / 2000 / svg">;
+        <rect width="${size}" height="${size}" fill="${options.background_color}"/>;
+        <rect coordinate_x="${margin}" coordinate_y="${margin}" width="${content_size}" height="${content_size}" fill="${options.foreground_color}"/>;
+        <text coordinate_x="${size / 2}" coordinate_y="${size / 2 + 5}" text - anchor="middle" fill="${options.background_color}" font - family="Arial" font - size="12">QR Code</text>;
+        <text coordinate_x="${size / 2}" coordinate_y="${size / 2 + 25}" text - anchor="middle" fill="${options.background_color}" font - family="Arial" font - size="10">${options.text.substring (0, 20)}${options.text.length > 20 ? '...' : ''}</text>;
+      </svg>;
+    `;
+;
+    return `data: image / svg + xml, base64, ${btoa (svg)}`;
+  }
+  private generateVCard (data: any): string {
+    let vcard = 'BEGIN:VCARD\nVERSION:3.0\n',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    vcard += `FN:${data.name}\n`;
+    vcard += `ORG:${data.company}\n`;
+    vcard += `TITLE:${data.title}\n`;
+    vcard += `EMAIL:${data.email}\n`;
+    vcard += `TEL:${data.phone}\n`;
+<<<<<<< HEAD
+    if (data.website) vcard += `URL:${data.website}\n`;
+    if (data.address) vcard += `ADR:,${data.address},\n`;
+    vcard += 'END: VCARD'
+=======
     let vcard = 'BEGIN:VCARD\nVERSION:3 && 3.0\n',
     vcard += `FN:${data && data.name}\n`;
     vcard += `ORG:${data && data.company}\n`;
@@ -245,10 +507,19 @@ class QRCodeService {
     if (data && data.address) vcard += `ADR:,${data && data.address},\n`;
     
     vcard += 'END: VCARD',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return vcard
   }
-
   private generateWiFiString(data: any): string {
+<<<<<<< HEAD
+    let wifiString = 'WIFI:'
+    wifiString += `S:${data.ssid},`;
+    wifiString += `T:${data.encryption},`;
+    if (data.encryption !== 'nopass') {
+      wifiString += `P:${data.password},`
+    }
+    if (data.hidden) {
+=======
     let wifiString = 'WIFI:',
     wifiString += `S:${data && data.ssid},`;
     wifiString += `T:${data && data.encryption},`;
@@ -258,14 +529,21 @@ class QRCodeService {
     }
     
     if (data && data.hidden) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       wifiString += 'H: true,'
     }
-    
     wifiString += ;
     return wifiString
   }
-
   private generateMailtoString(data: any): string {
+<<<<<<< HEAD
+    let mailto = `mailto:${data.to}`;
+    const params: string[] = []
+    if (data.subject) params.push(`subject=${encodeURIComponent(data.subject)}`);
+    if (data.body) params.push(`body=${encodeURIComponent(data.body)}`);
+    if (params.length > 0) {
+      mailto += `?${params.join('&')}`
+=======
     let mailto = `mailto:${data && data.to}`;
     const params: string[] = [],
     
@@ -274,22 +552,33 @@ class QRCodeService {
     
     if (params && params.length > 0) {
       mailto += `?${params && params.join('&')}`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-    
     return mailto
   }
-
   private generateSMSString(data: any): string {
+<<<<<<< HEAD
+    let smsString = `sms:${data.phone}`;
+    if (data.message) {
+      smsString += `?body=${encodeURIComponent(data.message)}`
+=======
     let smsString = `sms:${data && data.phone}`;
     
     if (data && data.message) {
       smsString += `?body=${encodeURIComponent(data && data.message)}`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-    
     return smsString
   }
-
   private generateGeoString(data: any): string {
+<<<<<<< HEAD
+    let geoString = `geo:${data.latitude},${data.longitude}`;
+    if (data.altitude) {
+      geoString += `,${data.altitude}`
+    }
+    if (data.name) {
+      geoString += `?q=${encodeURIComponent(data.name)}`
+=======
     let geoString = `geo:${data && data.latitude},${data && data.longitude}`;
     
     if (data && data.altitude) {
@@ -298,37 +587,145 @@ class QRCodeService {
     
     if (data && data.name) {
       geoString += `?q=${encodeURIComponent(data && data.name)}`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-    
     return geoString
   }
-
   // Utility methods
   estimateQRCodeCapacity(text: string, errorCorrectionLevel: 'L' | 'M' | 'Q' | 'H'): {
     canFit: boolean;
-    recommendedLevel: string,
+    recommendedLevel: string
     maxCapacity: number
   } {
+<<<<<<< HEAD
+    const textLength = text.length;
+    const level = this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
+    const maxCapacity = Math.floor(level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code
+=======
     const textLength = text && text.length;
     const level = this && this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
     const maxCapacity = Math && Math.floor(level && level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code
     
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return {
       canFit: textLength <= maxCapacity;
-      recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel,
+      recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel
       maxCapacity
     }
   }
-
   getQRCodeHistory(): QRCodeResult[] {
     // In a real app, this would retrieve from storage
     return []
   }
-
   saveQRCode(qrCode: QRCodeResult): void {
     // In a real app, this would save to storage
     console && console.log('QR Code saved:', qrCode && qrCode.options.text)
   }
 }
-
 export const qrCodeService = new QRCodeService();
+
+=======
+;
+    // Check condition
+if (vcard += `URL:${data.website}\n`) {
+  $2
+}
+    // Check condition
+if (vcard += `ADR:, ${data.address}, \n`) {
+  $2
+}
+    vcard += 'END: VCARD',
+    return vcard;
+  }
+  private generateWiFiString (data: any): string {
+    let wifi_string = 'WIFI:',
+    wifi_string += `S:${data.ssid}, `;
+    wifi_string += `T:${data.encryption}, `;
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      wifi_string += `P:${data.password}, `;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      wifi_string += 'H: true, ';
+    }
+    wifi_string += ;
+    return wifi_string;
+  }
+  private generateMailtoString (data: any): string {
+    let mailto = `mailto:${data.to}`;
+    const params: string[] = [],
+    if (params.push (`subject=${encodeURIComponent (data.subject)}`)) {
+  $2
+}
+    if (params.push (`body=${encodeURIComponent (data.body)}`)) {
+  $2
+}
+    // Check condition
+if ( {) {
+  $2
+}
+      mailto += `?${params.join ('&')}`;
+    }
+    return mailto;
+  }
+  private generateSMSString (data: any): string {
+    let sms_string = `sms:${data.phone}`;
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      sms_string += `?body=${encodeURIComponent (data.message)}`;
+    }
+    return sms_string;
+  }
+  private generateGeoString (data: any): string {
+    let geo_string = `geo:${data.latitude}, ${data.longitude}`;
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      geo_string += `, ${data.altitude}`;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      geo_string += `?q=${encodeURIComponent (data.name)}`;
+    }
+    return geo_string;
+  }
+  // Utility methods;
+  estimateQRCodeCapacity (text: string, errorCorrectionLevel: 'L' | 'M' | 'Q' | 'H'): {
+    can_fit: boolean;
+    recommended_level: string,
+    max_capacity: number;
+  } {
+    const text_length = text.length;
+    const level = this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
+    const max_capacity = Math.floor (level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code;
+    return {
+      can_fit: text_length <= max_capacity;
+      recommended_level: text_length > max_capacity ? 'H' : errorCorrectionLevel,
+      max_capacity;
+    }
+  }
+  getQRCodeHistory (): QRCodeResult[] {
+    // In a real app, this would retrieve from storage;
+    return [];
+  }
+  saveQRCode (qr_code: QRCodeResult): void {
+    // In a real app, this would save to storage;
+    console.log ('QR Code saved:', qr_code.options.text);
+  }
+}
+export const qrCodeService = new QRCodeService ();
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

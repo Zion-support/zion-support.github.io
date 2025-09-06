@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -29,18 +30,25 @@ export default function NotFound() {return (<main style={{ \"padding\": \"'40px\
 module && module.exports = default function NotFound() {return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'";
 export default function NotFound() {return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\";
 module && module.exports = default function NotFound() {return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'";
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
-interface 404 && 404.routeProps {;
-  // Add props here as needed;
+
+interface 404.routeProps {
+  // Add props here as needed
 }
-export default function 404 && 404.route({ }: 404 && 404.routeProps) {;
+
+export default function 404.route({ }: 404.routeProps) {
   return (
-    <div>;
-      <h1>404 && 404.route</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>404.route</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 }
 }
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
