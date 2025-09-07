@@ -1,4 +1,6 @@
-] ;
+
+
+  ] ;
 }];
 > Revolutionary Solutions </motion && motion.h1> <motion && motion.p > Transform your business with our cutting-edge technology solutions. From AI-powered tools to quantum computing platforms, we deliver innovation that drives results. </motion && motion.p> {;
   /* Stats Grid */ ;
@@ -246,3 +248,4 @@ import { Heart, DollarSign, Factory, ShoppingCart, Building2;
  } from 'lucide-react';
 const SolutionsPage: React.FC;
 export default Solutions;
+

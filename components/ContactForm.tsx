@@ -1,57 +1,56 @@
 
-import React, { useState } from 'react';
-import LoadingSpinner from './LoadingSpinner';
-import { Mail, Phone, MapPin, Send, CheckCircle  } from 'lucide-react';
-interface FormData  {name: string;
 
 interface FormData {
   name: string;
   email: string;
   company: string;
-  phone: string;service: string;}
-  message: string;}
-}const ContactForm: React.FC = () => {const [formData, setFormData] = useState<FormData    />({name: '',
-  email: '',company: '',
-  phone: '',service: '',}
-  message: '';}
-  })const [isSubmitting, setIsSubmitting] = useState(false)const [submitStatus, setSubmitStatus]  = useState<'idle' | 'success' | 'error'>('idle')const handleInputChange = ({ name, value ) => {
-  return $3;}
-} = e.target;
-    setFormData(prev => ({...prev,[name]: value;}
-    }))}const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setIsSubmitting(true)setSubmitStatus('idle')try {// Simulate form submission;
-      await new Promise(resolve => setTimeout(resolve, 2000))setSubmitStatus('success')setFormData({name: '',
-  email: '',company: '',
-  phone: '',service: '',}
-  message: '';}
-      })} catch {setSubmitStatus('error')message: '';}
-  })const [isSubmitting, setIsSubmitting] = useState(false)const [isSubmitted, setIsSubmitted] = useState(false)const handleChange = ({ name, value ) => {
-  return $3;}
-} = e.target;
-    setFormData(prev => ({...prev,[name]: value;}
-    }))}const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setIsSubmitting(true)try {// Simulate API call;}
-      await new Promise(resolve => setTimeout(resolve, 2000))setIsSubmitted(true)} catch (error) {console.error('Error submitting form: ', error)} finally {setIsSubmitting(false)}
-  }return (<div className=\"max-w-2xl mx-auto bg-white rounded-lgshadow-lgp-8\"    />;
 
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+  service: string;
+  message: string;
 }
 
-const ContactForm: React.FC = () => ;
-  const [formData, setFormData] = useState<FormData    />({name: '',
-  email: '',company: '',
-  phone: '',service: '',}
-  message: '';}
-  })const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus]  = useState<'idle' | 'success' | 'error'>('idle')const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement    />) => ;
-  const { name, value } = e.target;
-    setFormData(prev => ({...prev,[name]: value;}
-    }))}
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
 
-const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setIsSubmitting(true)setSubmitStatus('idle')try {// Simulate form submission;
-      await new Promise(resolve => setTimeout(resolve, 2000))setSubmitStatus('success')setFormData({name: '',
-  email: '',company: '',
-  phone: '',service: '',}
-  message: '';}
-      })} catch {setSubmitStatus('error')message: '';}
-  })const [isSubmitting, setIsSubmitting] = useState(false);
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('success');
+      setFormData({
+        name: '';,
+        email: '';,
+        company: '';,
+        phone: '';,
+        service: '';,
+        message: '';
+      });
+    } catch {
+      setSubmitStatus('error');
+
+    message: '',
+
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const handleChange = ({ name, value ) => {
   return $3;}
@@ -113,34 +112,23 @@ const handleInputChange = (
 }
   const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,}
-      [name]: value}
-    }))
-};
-
-
-const handleSubmit = async (e: React.FormEvent) => {
+      ...prev,
+      [name]: value,
+    }));
+  };
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus('idle');
-
     try {
-      // Simulate form submission;
-await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-  email: '',
-        company: '',
-  phone: '',
-        service: '',
-  message: ''}
-     ,}
-});
-    } catch {}
-      setSubmitStatus('error');}
-    } finally {}
-      setIsSubmitting(false);}
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting form: ';, error);
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -234,12 +222,54 @@ type=\"text\"
               />;
             className=\"w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent\">
 
-            <option value=\"\"    />Select a service</option>;
-            <option value=\"web-development\"    />Web Development</option>;
-            <option value=\"mobile-development\"    />Mobile Development</option>;
-            <option value=\"cloud-solutions\"    />Cloud Solutions</option>;
-            <option value=\"consulting\"    />Consulting</option>;
-            <option value=\"other\"    />Other</option>;
+        <div>
+          <label htmlFor="message" className="block text-sm font-mediumtext-gray-700mb-2">
+            Message *
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            required
+            rows={5}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+            placeholder="Tell us about your project..."
+          />
+        </div>
+
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowedtransition-colorsduration-200"
+        >
+          {isSubmitting ? (
+            <div className="flexitems-centerjustify-center">
+              <LoadingSpinner />
+              <span className="ml-2">Sending...</span>
+            </div>
+          ) : (
+            'Send Message'
+          )}
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default ContactForm;
+pr-12243
+
+      setSubmitStatus('success');
+    } catch {;
+      setSubmitStatus('error');
+    } finally {;
+      setIsSubmitting(false);
+    }
+  }
+  return (
+            <option value="consulting">Consulting</option>;
+            <option value="other">Other</option>;
           </select>;
         </div>;
         <div    />;
@@ -482,51 +512,5 @@ export default ContactForm;
   )}
 
 export default ContactForm;
-            className=\"w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2focus:ring-blue-500focus:border-transparent\"
-          >
-            <option value=\"\"    />Select a service</option>
-            <option value=\"web-development\"    />Web Development</option>
-            <option value=\"mobile-development\"    />Mobile Development</option>
-            <option value=\"cloud-solutions\"    />Cloud Solutions</option>
-            <option value=\"consulting\"    />Consulting</option>
-            <option value=\"other\"    />Other</option>
-          </select>
-        </div>
-
-        <div    />
-          <label htmlFor=\"message\" className=\"block text-sm font-mediumtext-gray-700mb-2\"    />
-            Message *
-          </label>
-          <textarea;
-id=\"message\"
-            name=\"message\"
-            value={formData.message}
-            onChange={handleInputChange}
-            required;
-rows={5}
-            className=\"w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent\"
-            placeholder=\"Tell us about your project...\"
-             />
-        </div>
-
-        <button;
-type=\"submit\"
-          disabled={isSubmitting}
-          className=\"w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowedtransition-colorsduration-200\"
-            />
-          {isSubmitting ? (
-            <div className=\"flexitems-centerjustify-center\"    />
-              <LoadingSpinner    />
-              <span className=\"ml-2\"    />Sending...</span>
-            </div>
-          ) : (}
-            'Send Message'}
-          )}
-        </button>
-      </form>
-    </div>
-  )}
-
-
-export default ContactForm;
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 

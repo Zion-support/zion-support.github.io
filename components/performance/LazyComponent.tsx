@@ -1,3 +1,4 @@
+
 interface LazyComponentProps {
   fallback?: React.ReactNode;
   children: React.ReactNode;
@@ -29,3 +30,4 @@ interface LazyComponentProps {
 };
 
 export default LazyComponent;
+

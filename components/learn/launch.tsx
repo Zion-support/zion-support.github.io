@@ -1,4 +1,5 @@
-destination: '/academy / founder - course',
+
+      destination: '/academy / founder - course',
       permanent: false,
     },
   }      permanent: false}}
@@ -17,3 +18,4 @@ export default function LaunchRedirect() {}
   return null;}
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+

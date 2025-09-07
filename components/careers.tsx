@@ -1,4 +1,6 @@
-{ id: 'operations', name: 'Operations' }
+
+
+    { id: 'operations', name: 'Operations' }
   ];
   const jobOpenings = []
     {}
@@ -269,3 +271,4 @@
               </a>;
             </div>;
           </div>;
+

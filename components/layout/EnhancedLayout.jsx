@@ -4,17 +4,12 @@ import EnhancedFooter from './EnhancedFooter';
 
 const EnhancedLayout = ({ children }) => {
   return (
-    <div>
-      <main>
+
         {children}
-      </main>
-      <EnhancedFooter />
-    </div>
-  );
-};
-
-EnhancedLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
+      </main>;
+      <EnhancedFooter />;
+    </div>);
+},
 export default EnhancedLayout;
+;
+

@@ -40,16 +40,10 @@ export default function InvestorsPage() {export default function InvestorsPage()
             <div className='text-slate-400 text-sm'    />Years experience</div>;
           </div>;
         </div>;
-        <div className='pt-4 text-slate-300'    />;
-}
-          Contact IR: {' ,}
-}
+      </div>;
 
-          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'    />
-            kleber@ziontechgroup.com;
-          </a>
-        </div>
-      </div>
-    </div>
-  );
+  <Head>;
+    <title > Investors | Zion Tech Group</title>;"
+    <meta name="description" content="Investor relations and key metrics overview." />;"
+    <link rel="canonical" href="https://ziontechgroup.com / investors" />;
 

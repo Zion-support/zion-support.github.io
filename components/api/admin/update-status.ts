@@ -21,3 +21,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;
   }
+

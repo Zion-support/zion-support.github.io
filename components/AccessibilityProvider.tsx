@@ -1,26 +1,30 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+
+
+interface AccessibilityContextType {
+
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+import React, { create_context, useContext, useState, ReactNode } from './react';
+;
+
+import React, { createContext, useContext, ReactNode } from "react";
 
 interface AccessibilityContextType {
   announceToScreenReader: (message: string) => void;
   setFocus: (elementId: string) => void;
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  toggleHighContrast: () => void;
-  toggleLargeText: () => void;
-  toggleReducedMotion: () => void;
+
 }
 
-interface AccessibilityProviderProps {
-  children: ReactNode;
 }
 
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
 
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
-  const [highContrast, setHighContrast] = React.useState(false);
-  const [largeText, setLargeText] = React.useState(false);
-  const [reducedMotion, setReducedMotion] = React.useState(false);
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+  children,
+}) => {
 
   const announceToScreenReader = (message: string) => {
     const liveRegion = document.getElementById('live-region');
@@ -34,18 +38,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     if (element) {
       element.focus();
     }
-  };
-
-  const toggleHighContrast = () => {
-    setHighContrast(!highContrast);
-  };
-
-  const toggleLargeText = () => {
-    setLargeText(!largeText);
-  };
-
-  const toggleReducedMotion = () => {
-    setReducedMotion(!reducedMotion);
   };
 
   return (
@@ -66,10 +58,18 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   );
 };
 
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
-  if (context === undefined) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
+    );
   }
   return context;
 };
+
+export const useAccessibility = () => {
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error(
+      "useAccessibility must be used within an AccessibilityProvider",
+    );
+  }
+  return context;
+};
+

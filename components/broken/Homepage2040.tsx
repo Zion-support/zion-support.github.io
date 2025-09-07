@@ -1,3 +1,5 @@
+
+
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { ArrowRight, Star;
@@ -310,3 +312,4 @@ import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-
 }
 
 export default Homepage2040;
+

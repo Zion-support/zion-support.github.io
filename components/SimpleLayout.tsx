@@ -1,3 +1,5 @@
+
+
 interface SimpleLayoutProps {
   children: ReactNode;
   title?: string;
@@ -17,3 +19,4 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 };
 
 export default SimpleLayout;
+

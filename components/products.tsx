@@ -1,3 +1,5 @@
+
+
 export default function Placeholder() {
 pr-12243
 
@@ -133,7 +135,9 @@ export default function Placeholder() {}
     </main>;
     </main>
 
-});export default function Placeholder() {
+}
+
+  );export default function Placeholder() {
   return (
     <main className="min-h-screen p-8">
       <Head>
@@ -151,3 +155,4 @@ export default function Placeholder() {}
 }
 
 }
+

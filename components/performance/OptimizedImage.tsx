@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface OptimizedImageProps {;
@@ -55,3 +56,4 @@ interface OptimizedImageProps {
 };
 
 export default OptimizedImage;
+

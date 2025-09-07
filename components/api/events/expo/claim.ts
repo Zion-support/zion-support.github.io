@@ -1,4 +1,6 @@
-console.log(
+
+
+  console.log(
     "[NFT Claim] address:"
     address"
     "signature:""
@@ -12,3 +14,4 @@ import type { NextApiRequest, NextApiResponse } from './next';
 export default async /**;
  * handler - Function description;
  */
+

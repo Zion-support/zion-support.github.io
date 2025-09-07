@@ -74,7 +74,6 @@ function resolveMergeConflicts(filePath) {}
         let content = fs.readFileSync(filePath, 'utf8');
 
         // Check if file has merge conflicts
-        if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
             return false; // No conflicts to resolve
         }
         // Strategy: Keep HEAD version (current branch) for most conflicts

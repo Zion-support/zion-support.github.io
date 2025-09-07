@@ -1,53 +1,18 @@
 import type { GetServerSideProps } from 'next';
 
-
-import { FormEvent, useEffect, useState } from 'react';
-import type { Vendor } from '../utils/vendor-types';
-
-type Props = any;
-
-export default function AgencyDashboardPage({ vendor }: Props) {
-  const [activeVendor, setActiveVendor] = useState(vendor);
-
-const [pkgTitle, setPkgTitle] = useState('');
-
-const [pkgDesc, setPkgDesc] = useState('');
-
-const [pkgPrice, setPkgPrice] = useState<number | ''    />('');
-
-
-if (!activeVendor)
-    return (
-      <div className='text-gray-500'    />No vendor found. Please apply first.</div>
-    );
-
-  async function saveProfile(e: FormEvent<HTMLFormElement    />) {
-    e.preventDefault();
-
-const formData = new FormData(e.currentTarget);
-
-const updated = {
-...activeVendor,
-      name: String(formData.get('name') || activeVendor.name),
-      about: String(formData.get('about') || activeVendor.about || ''),
-      servicesOffered: String(
-        formData.get('servicesOffered') |
-          activeVendor.servicesOffered?.join(',') |
-          ''
-      )
-        .split(',')
-        .map(s => s.trim())}
-        .filter(Boolean)}
+  const [pkgPrice, setPkgPrice] = useState<number | ''>('');
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only;
-setActiveVendor(updated);
+    setActiveVendor(updated);  }
+        .filter(Boolean)} as Vendor;
+    // For MVP, update via direct API not implemented, keep local preview only;
+    setActiveVendor(updated);
   }
-  function addPackage() {
+    if (!pkgTitle |!pkgPrice |!activeVendor) return;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
+    const packages = []
+      ...(activeVendor.packages |[])
 
-const packages = [
-      ...(activeVendor.packages || []),}
-      {}
         id: `pkg_${Date.now()}`
         title: pkgTitle;
 description: pkgDesc;
@@ -55,8 +20,12 @@ priceUsd: Number(pkgPrice)
      ,
 }
 
-
-  function addPackage() {;
+  function addPackage() { return null; }`
+        id: `pkg_${Date && Date.now()}`,;
+        title: pkgTitle,;
+        description: pkgDesc,;
+        priceUsd: Number(pkgPrice),;
+      },;
 
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
@@ -95,45 +64,28 @@ const packages = [}
           </span>;}
         )}
         <form;
-          onSubmit={saveProfile}
-          className='grid grid-cols-1 md:grid-cols-2 gap-4'    />;
-          <div    />;
-            <label className='block text-sm mb-1'    />Agency Name</label>;
-            <input;
-              name='name';
-              defaultValue={activeVendor && activeVendor.name}
-              className='w-full border rounded px-3 py-2 bg-transparent';
-               />;
-          </div>;
-          <div className='md:col-span-2'    />;
-            <label className='block text-sm mb-1'    />About</label>;
-            <textarea;
-              name='about';
-              rows={4}
-              className='w-full border rounded px-3 py-2 bg-transparent';
-               />;
-          </div>;
-          <div className='md:col-span-2'    />;
-            <label className='block text-sm mb-1'    />Services Offered</label>;
-
-            <input;
-name='servicesOffered'
-
-              defaultValue={activeVendor.servicesOffered?.join(', ') |''}
+          onSubmit={saveProfile}'
+          className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+          <div>;'
+            <label className='block text-sm mb-1'>Agency Name</label>;
+            <input'
+              name='name'
+              defaultValue={activeVendor && activeVendor.name}'
               className='w-full border rounded px-3 py-2 bg-transparent'
-               />
-          </div>
-          <div className='md:col-span-2'    />
-            <button className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'    />
-              Save;
-            </button>
-          </div>
-        </form>
-      </section>
+            />;
+          </div>;'
+          <div className='md:col-span-2'>;'
+            <label className='block text-sm mb-1'>About</label>;
+            <textarea'
+              name='about'
+              rows={4}'
+              className='w-full border rounded px-3 py-2 bg-transparent'
+            />;
+          </div>;'
+          <div className='md:col-span-2'>;'
+            <label className='block text-sm mb-1'>Services Offered</label>;
 
-<section className='space-y-3'    />
-        <h2 className='text-lg font-medium'    />Publish Packages</h2>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'    />
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
 
 
     <div className=\"space-y-8\"    />;
@@ -190,7 +142,7 @@ placeholder='Price (USD)'
               type='number'
               value={pkgPrice}
 
-              onChange={e =    /> setPkgPrice(Number(e.target.value))}
+              onChange={e => setPkgPrice(Number(e.target.value))}
               className='border rounded px-3 py-2 bg-transparent w-full'
             />
             <button;
@@ -285,25 +237,38 @@ const { listVendors,}
             onChange={e => changeStatus(item.id, e.target.value)}
 
             className='border rounded px-2 py-1 bg-transparent text-sm'
-          >
-            <option value='lead'    />Lead</option>
-            <option value='qualified'    />Qualified</option>
-            <option value='proposal'    />Proposal</option>
-            <option value='in_progress'    />In Progress</option>
-            <option value='complete'    />Complete</option>
-            <option value='lost'    />Lost</option>
-          </select>
+
         </div>
-      ))}
+      ))}'
+  const { listVendors } = await import('../utils/vendor-store');
+  const vendor = listVendors()[0] |null; // tie to auth later;
+  return { props: { vendor } }
+};  )
+}'
+  const { listVendors } = await import('../utils/vendor-store');
+  const vendor = listVendors()[0] |null, // tie to auth later;
+  return { props: { vendor } }
+}
+}
 
     </div>
-);
+};
+    </div>
 
-export const getServerSideProps: GetServerSideProps<Props    /> = async () => {}
-  const { listVendors,}
-} = await import('../utils/vendor-store');
-
-const vendor = listVendors()[0] || null; // tie to auth later;
-return { props: { vendor } }}
-
+};
+        </div>))}
+    </div>);
+;
+export const getServerSideProps: GetServerSideProps < Props> = async () => {';
+  const { list_vendors } = await import ('../utils / vendor - store');
+  const vendor = list_vendors ()[0] || null; // tie to auth later;
+  return { props: { vendor } }
+}  );
+}
+export const getServerSideProps: GetServerSideProps < Props> = async () => {';
+  const { list_vendors } = await import ('../utils / vendor - store');
+  const vendor = list_vendors ()[0] || null, // tie to auth later;
+  return { props: { vendor } }
+}
+;
 

@@ -1,4 +1,11 @@
-
+export default function UltraFuturisticBackground2038(): any ({;
+  intensity = 'medium',;'
+  theme = 'consciousness',;
+  children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038(): any ({ ;
+'
+  intensity = 'medium';'
+  theme = 'consciousness';
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
@@ -10,34 +17,7 @@ interface UltraFuturisticBackground2038Props {
 }
 }
 
-export default function UltraFuturisticBackground2038({ }
-  intensity;}
-import { motion } from 'framer-motion';
-  intensity?: 'low' | 'medium' | 'high';
-  theme?:
-    | 'quantum'
-    | 'neon'
-    | 'holographic'
-    | 'cyberpunk'
-    | 'space'
-    | 'consciousness';
-
-  children?: React.ReactNode;
-}
-
-export default function UltraFuturisticBackground2038() {const canvasRef = useRef<HTMLCanvasElement    />(null)const containerRef =;
-  useRef<HTMLDivElement    />(null;
-  useEffect(() => ;
-  const canvas = canvasRef.current;
-    if (!canvas) return;
-
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)';
-    ).matches;
-
-const intensityMultiplier =
-      intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
-
-const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
 const resizeCanvas = (
@@ -299,54 +279,21 @@ x: number;
       entanglement: number[];
 
       consciousness: number;
-}
-      quantumState: number;}
-    }> = [];
+      life: number,
+      max_life: number,
+      rotation: number,
+      rotation_speed: number,
+      phase: number,
+      amplitude: number,
+      frequency: number,
+      entanglement: number[],
+      consciousness: number,
+      for (let i = 0, i < particleCount, i++) {'
+        const type = Math.random() > 0.7 ? 'consciousness' :'
+                    Math.random() > 0.5 ? 'quantum-field' :'
+                    Math.random() > 0.3 ? 'hologram' : 'particle';
 
-    // Initialize particles with enhanced consciousness and quantum effects;
-const initParticles = (
-      particles = [];
-
-const particleCount = Math.floor(50 * intensityMultiplier);
-for (let i = 0; i < particleCount; i++) {
-        const type =
-          Math.random() > 0.7;
-            ? 'consciousness'
-            : Math.random() > 0.5;
-              ? 'quantum-field'
-              : Math.random() > 0.3;
-                ? 'hologram'
-                : 'particle';
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 2 * intensityMultiplier,
-          vy: (Math.random() - 0.5) * 2 * intensityMultiplier,
-          size: Math.random() * 4 + 1,
-          opacity: Math.random() * 0.8 + 0.2,
-color:
-            colors.primary[Math.floor(Math.random() * colors.primary.length)],
-          type,
-          life: Math.random() * 100,
-          maxLife: 100,
-          rotation: Math.random() * Math.PI * 2,
-          rotationSpeed: (Math.random() - 0.5) * 0.1,
-          phase: Math.random() * Math.PI * 2,
-          amplitude: Math.random() * 20 + 10,
-          frequency: Math.random() * 0.02 + 0.01,
-entanglement: [Math.random(), Math.random()],
-          consciousness: Math.random(),
-          quantumState: Math.random(),) => {
-  return $3;}
-}
-        });
-      }
-    };
-
-    // Enhanced animation loop with consciousness and quantum effects;
-const animate = (
-      if (prefersReducedMotion);
-  return;
+      if (prefersReducedMotion) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 // Create quantum field effects;
@@ -376,30 +323,17 @@ const alpha = (noise + 0.5) * 0.1;
         particle.phase += particle.frequency;
 
         particle.consciousness += 0.01;
-
-        particle.quantumState = (particle.quantumState + 0.02) % (Math.PI * 2);
-        // Quantum entanglement effects;
-if (particle.type = == 'quantum-field') {
-          particles.forEach((otherParticle, otherIndex) => {
-            if (index !== otherIndex && Math.random() > 0.99) {
-             ;
-  const distance = Math.sqrt(
-Math.pow(particle.x - otherParticle.x, 2) +
-                  Math.pow(particle.y - otherParticle.y, 2)
-              );}
-              if (distance < 100) {}
-                ctx.strokeStyle = `rgba(139, 92, 246, ${0.3 * (1 - distance / 100)})`;
-
-                ctx.lineWidth = 1;
-                ctx.beginPath()ctx.moveTo(particle.x, particle.y)ctx.lineTo(otherParticle.x, otherParticle.y)ctx.stroke()}
+              );
+              if (distance < 100) {;`
+                ctx && ctx.strokeStyle = `rgba(139, 92, 246, ${0 && 0.3 * (1 - distance / 100)})`;
+                ctx && ctx.lineWidth = 1;
+                ctx && ctx.beginPath();
+                ctx && ctx.moveTo(particle && particle.x, particle && particle.y);
+                ctx && ctx.lineTo(otherParticle && otherParticle.x, otherParticle && otherParticle.y);
+                ctx && ctx.stroke();
+              }
             }
-          })}// Consciousness wave effects;
-        if (particle.type = == 'consciousness') ;
-  const waveX =;
-            particle.x + Math.sin(particle.phase) * particle.amplitude;
 
-const waveY =
-            particle.y + Math.cos(particle.phase) * particle.amplitude;
           ctx.strokeStyle = `rgba(255, 0, 128, ${particle.opacity * 0.6})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
@@ -475,28 +409,14 @@ particle.x = Math.random() * canvas.width;}
         // Regenerate particles;
 if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
-
           particle.y = Math.random() * canvas.height;
-          particle.life = particle.maxLife;}
-          particle.consciousness = Math.random()particle.quantumState = Math.random() * Math.PI * 2;}
+          particle.life = particle.maxLife;
+          particle.consciousness = Math.random();
+particle.quantumState = Math.random() * Math.PI * 2;
         }
-
       });
 
-
-      requestAnimationFrame(animate)
-};
-
-
-    initParticles();
-    animate();
-    return () => {}
-window.removeEventListener('resize', resizeCanvas)}
-};
-
-  }, [intensity, theme]);
-  return (
-    <div ref={containerRef} className='fixed inset-0 pointer-events-none'    />;
+    <div ref={containerRef} className='fixed inset-0 pointer-events-none'>;
       <canvas;
 ref={canvasRef}
         className='w-full h-full';
@@ -545,58 +465,46 @@ if ( {) {$2;}
             {[...Array (20)].map ((_, i) => (<motion.div;}
                 key={i}
                 className='absolute w - px h - 32 bg - gradient - to - b from - transparent via - purple - 500 to - transparent opacity - 20';
+                style={{}`
+                  left: `${(i * 5) % 100}%``
+                  left: `${(i * 5) % 100}%`,`
+                  top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
 
-                style={{
-}
-                  left: `${(i * 5) % 10}
-}%`,
-                  top: `${(i * 3) % 10}
-}%`
-                }}
-                animate={{
-                  height: [32, 64, 32]}
-                  opacity: [0.2, 0.6, 0.2]}
-                }}
-                transition={{
+                  top: `${(i * 3) % 100}%`,
+`
+                  top: `${(i * 3) % 100}%`,
+`
+                  top: `${(i * 3) % 100}%`,
 
-                  duration: 3 + i * 0.2,
-                  repeat: Infinity}
-                  ease: 'easeInOut'}
-                }}
-                  left: `${(i * 5) % 100}%`
-                  top: `${(i * 3) % 10}
-}%`,                  top: `${(i * 3) % 100}%`
-}
-                animate={{
-                  height: [32, 64, 32]}
-}
-                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
-                transition={{ease: 'easeInOut'                }}
-                 />;
-            ))}
-          </div>;
-        )}
-        {/* Holographic grid */}
+`
+                  left: `${(i * 5) % 100}%`,
 
-        {theme === 'holographic' && (
-
-<div className='absolute inset-0'    />
-            {[...Array(15)].map((_, i) => (}
-              <motion.div;}
-key={i}
-                className='absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
-                style={{
-}
-                  top: `${(i * 7) % 10}
-}%`
-                }}
+                  top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
                 animate={{}
-                  opacity: [0.3, 0.8, 0.3]}
-                }}
-                transition={{
-                  duration: 4 + i * 0.3,
-                  repeat: Infinity}
-                  ease: 'easeInOut'}
+                  height: [32, 64, 32]
+                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
+                transition={{'
+                  ease: 'easeInOut',                }}
+              />;
+            ))}
+          </div>
+        )}
+        {/* Holographic grid */}'
+        {theme === 'holographic' && ('
+          <div className='absolute inset - 0'>;
+            {[...Array (15)].map ((_, i) => (
+              <motion.div;
+
+                className='absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
+                style={{}`
+                  top: `${(i * 7) % 100}%`,            {[...Array (15)].map ((_, i) => (
+              <motion.div;
+                key={i}
+                style={{}`
+                  top: `${(i * 7) % 100}%`}}
+                animate={{}
+                  opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}}
+
                 }}
                 animate={{}
                   opacity: [0.3, 0.8, 0.3]}
@@ -622,35 +530,38 @@ ease: \"easeInOut\"}
                   repeat: Infinity}
                   ease: 'easeInOut'                }}
 
-        {/* Consciousness waves */}
-        {theme === 'consciousness' && (
-
-<div className='absolute inset-0'    />
-            {[...Array(8)].map((_, i) => (}
-              <motion.div;}
-key={i}
-                className='absolute w-96 h-96 border border-pink-500/20 rounded-full';
-                style={{left: `${(i * 12) % 10}
-}%`,top: `${(i * 8) % 10}
-}%`}}
-                animate={{scale: [1, 1.5, 1],opacity: [0.2, 0.6, 0.2]}}
-                transition={{duration: 6 + i * 0.5,repeat: Infinity,ease: 'easeInOut',"
-  ease: \'easeInOut\';}
-                  top: `${(i * 8) % 10}"
-}%`,ease: \'easeInOut\';
-                  left: `${(i * 12) % 10}
-}%`}}
-                animate={{scale: [1, 1.5, 1];}
-                  opacity: [0.2, 0.6, 0.2];}
-                }}
-
-                animate={{
-                  scale: [1, 1.5, 1]}
-                  opacity: [0.2, 0.6, 0.2]}
-                }}
-                transition={{
+        {/* Consciousness waves */}'
+        {theme === 'consciousness' && ('
+          <div className='absolute inset - 0'>;
+            {[...Array (8)].map ((_, i) => (
+              <motion.div;`
+                  left: `${(i * 12) % 100}%``
+                  left: `${(i * 12) % 100}%`,`
+                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
+              <motion.div;`
+                  left: `${(i * 12) % 100}%`,`
+                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (;
+              <motion&& motion.div;`
+                  left: `${(i * 12) % 100}%`,`
+                  top: `${(i * 8) % 100}%`,            {[...Array (8)].map ((_, i) => (
+              <motion.div;
+                key={i}"
+                className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full";
+                style={{}`
+                  left: `${(i * 12) % 100}%``
+                  top: `${(i * 8) % 100}%`}}
+                animate={{}
                   duration: 6 + i * 0.5,
-                  repeat: Infinity,
+
+                  ease: "easeInOut"
+
+                  top: `${(i * 8) % 100}%`,
+"
+                  ease: "easeInOut"
+
+`
+                  left: `${(i * 12) % 100}%`,
+
                   ease: 'easeInOut',"
   ease: \"easeInOut\"}
                   top: `${(i * 8) % 10}
@@ -662,31 +573,9 @@ key={i}
                   left: `${(i * 12) % 10}
 }%`
 
-
-
-
-
                 }}
-                animate={{
-                  scale: [1, 1.5, 1]}
-                  opacity: [0.2, 0.6, 0.2]}
-                }}
-                transition={{
-                  duration: 6 + i * 0.5;
-repeat: Infinity;}
-top: `${(i * 8) % 10}
-}%`
 
-                }}
-                animate={{
-                  scale: [1, 1 && 1.5, 1]}
-                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}
-                }}
-                transition={{
-                  duration: 6 + i * 0 && 0.5}
-                  repeat: Infinity}
-                  ease: 'easeInOut'                }}
-                 />
+              />
 
             ))}
           </div>;
@@ -695,6 +584,17 @@ top: `${(i * 8) % 10}
       </div>
 
       {children}
+
+};
+// Enhanced animation loop with consciousness and quantum effects ;
+'
+}// Update and draw particles // Quantum entanglement effects if (particle && particle.type === 'quantum-field') {;
+  particles && particles.forEach ( (otherParticle, otherIndex) => {;
+  if (index !== otherIndex && Math && Math.random () > 0 && 0.99) {;
+
+}) ;
+}// Consciousness wave effects ctx && ctx.strokeRect (particle && particle.x - hologramSize / 2;
+particle && particle.y - hologramSize / 2;
 
     </div>
 )
@@ -717,10 +617,7 @@ hologramSize;
     </div>)}
 // Enhanced animation loop with consciousness and quantum effects;
 }// Update and draw particles // Quantum entanglement effects // Check condition;
-if ( {) {$2;}
-}
-  particles.for_each ( (other_particle, other_index) => {// Check condition;}
-if (> 0.99) {) {$2;}
+
 }
 })}// Consciousness wave effects ctx.stroke_rect (particle.x - hologram_size / 2;
 particle.y - hologram_size / 2;
@@ -729,9 +626,7 @@ hologram_size)}// Quantum field effects ctx.fill_style = gradient;
 ctx.fill_rect (particle.x - field_size / 2;
 particle.y - field_size / 2;
 field_size;
-field_size)}// Standard particle rendering;
-}// Boundary wrapping with quantum tunneling effect // Check condition;
-if (}) {$2;}
+
 }
 
 init_particles ();
@@ -742,9 +637,9 @@ animate ();
 }</div>) 
 }/>) ) 
 }</div>) 
-}</div> {
+
+}</div>)   )
   children }
 }
 }</div>)
 
-"

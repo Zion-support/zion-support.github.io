@@ -16,3 +16,4 @@ const PWARegistration.dynamic = () => ;
 
 pr-12243
 export default PWARegistration.dynamic;
+

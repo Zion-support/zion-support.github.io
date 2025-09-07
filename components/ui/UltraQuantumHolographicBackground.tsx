@@ -1,6 +1,5 @@
 
 
-
 import React, { useEffect, useRef, useState } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -16,12 +15,8 @@ interface UltraQuantumHolographicBackgroundProps {
 
 export default function UltraQuantumHolographicBackground({children;
   intensity;
+            ease: "easeInOut"
 
-            ease: \"easeInOut\"
-useEffect ( () => {
-  const updateDimensions = (
-  setDimensions ({
- ;
   const updateDimensions = () => {;
   setDimensions ({;
   updateDimensions ();
@@ -123,26 +118,12 @@ x: number;
       size: number;
       color: string;
       life: number;
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      life: number,
 
-      maxLife: number;
-
-      type: 'quantum' | 'holographic' | 'energy' | 'matrix';
-      constructor() {this.x = Math.random() * dimensions.width;
-        this.y = Math.random() * dimensions.height;
-        this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
-        this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
-        this.size = Math.random() * 3 * intensityMultiplier + 1;
-this.color = [;
-          colors.primary,colors.secondary,colors.tertiary,colors.accent][Math.floor(Math.random() * 4)];
-        this.life = Math.random() * 100;
-        this.maxLife = 100;
-
-        this.type = ['quantum', 'holographic', 'energy', 'matrix'][
-          Math.floor(Math.random() * 4)}
-        ] as any;}
-      }
-
-      update() {
         this.x += this.vx;
 
         this.y += this.vy;
@@ -171,8 +152,7 @@ if (this.type === 'matrix') {
           this.vy += 0.1;
           if (this.y > dimensions.height) {
             this.y = -10;
-}
-this.vy = Math.random() * 2 + 1;}
+
           }
         }
       }
@@ -197,8 +177,6 @@ ctx.beginPath();
             ctx.fillStyle = this.color;
             ctx.fill();
 
-// Wave function rings;
-for (let i = 1; i <= 3; i++) {
               ctx.beginPath();
               ctx.arc(this.x, this.y, this.size * i, 0, Math.PI * 2);
               ctx.strokeStyle = this.color;
@@ -207,35 +185,17 @@ for (let i = 1; i <= 3; i++) {
 }
 ctx.stroke();}
             }
-
-            break;
-          case 'holographic':;
+            break;'
+          case 'holographic':
             // Holographic projection;
-            ctx.beginPath()ctx.moveTo(this.x - this.size, this.y)ctx.lineTo(this.x + this.size, this.y)ctx.lineTo(this.x, this.y - this.size)ctx.lineTo(this.x - this.size, this.y)ctx.fillStyle = this.color;
-            ctx.fill()// Holographic grid;
-            ctx.strokeStyle = this.color;
-            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(this.x - this.size, this.y);
+            ctx.lineTo(this.x + this.size, this.y);
+            ctx.lineTo(this.x, this.y - this.size);
+            ctx.lineTo(this.x - this.size, this.y);
+            ctx.fillStyle = this.color;
+            ctx.fill();
 
-            ctx.globalAlpha = alpha * 0.5;
-
-ctx.strokeRect(
-              this.x - this.size,
-              this.y - this.size,
-              this.size * 2,
-              this.size * 2;
-            );
-            break;
-          case 'energy':
-            // Energy field;
-const gradient = ctx.createRadialGradient(
-              this.x,
-              this.y,
-              0,
-              this.x,
-              this.y,
-              this.size;
-            );
-            gradient.addColorStop(0, this.color);
             gradient.addColorStop(1, 'transparent');
             ctx.fillStyle = gradient;
             ctx.beginPath();
@@ -325,21 +285,56 @@ cancelAnimationFrame(animationId);}
       <canvas;
 ref={canvasRef}
 
-className='fixed inset-0 w-full h-full pointer-events-none z-0'
-        style={{
-          background: colors.background}
-          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px}
-})`
-        }}
-         />
       {/* Holographic Overlay Effects */}
-<div className='fixed inset-0 z-10 pointer-events-none'    />
-        {/* Quantum Field Lines */}
-        <motion.div;
-className='absolute inset-0'
-          animate={{
-            background: [}
-}
+
+          }}
+        />
+
+        {/* Holographic Scan Lines */}
+
+          }}
+
+        />
+      </div>
+
+      {/* Content Layer */}'
+      <div className='relative z-20'>{children}</div>
+
+      {/* Quantum Noise Effect */}'
+      <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
+
+      {/* Holographic Overlay Effects */}'
+      <div className='fixed inset-0 z-10 pointer-events-none'>
+
+      {/* Holographic Overlay Effects */}'
+      <div className='fixed inset-0 z-10 pointer-events-none'>
+
+          className='absolute inset-0'
+          animate={{}
+            background: []`
+              `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)``
+              `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)``
+              `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)``
+              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
+
+            ],          }}
+          transition={{}
+            duration: 8;
+            repeat: Infinity'
+            ease: 'easeInOut',          }}`
+              `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`;`
+              `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`;`
+              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
+            ]`
+        {/* Holographic Scan Lines */}              `radial-gradient(circle at 20% 20%, ${colors && colors.primary}10 0%, transparent 50%)`;`
+              `radial-gradient(circle at 80% 80%, ${colors && colors.secondary}10 0%, transparent 50%)`;`
+              `radial-gradient(circle at 20% 80%, ${colors && colors.tertiary}10 0%, transparent 50%)`;`
+              `radial-gradient(circle at 80% 20%, ${colors && colors.accent}10 0%, transparent 50%)`;
+            ];
+          transition={{;
+            duration: 8,;
+            repeat: Infinity,;'
+            ease: 'easeInOut',            ease: "easeInOut";
               `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`,
@@ -394,39 +389,38 @@ className='absolute inset-0'
 ease: 'easeInOut'}
           }}
 
-
-
-
-           />
+        />
       </div>
         />;
       </div>;
-      {/* Content Layer */}
+      {/* Content Layer */}'
+      <div className='relative z - 20'>{children}</div>;
 
-<div className='relative z-20'    />{children}</div>
-
-
-      {/* Quantum Noise Effect */}
-      <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'    />;
-        <motion.div;
+      <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;
+        <motion.div;'
           className='absolute inset - 0';
-
-          animate={{
-
-            background: ["
-              `url(\"data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E\")`,"
-              `url(\"data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E\")`}
-            ]}
+          animate={{}
+            background: [;'"`
+              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,'"`
+              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
+            ],          }}
+          transition={{}
+            duration: 4;
+            repeat: Infinity'
+            ease: 'easeInOut',          }}
+        />
+      </div>
+    </div>'"`
+  );              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;'"`
+              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
+            ]
           }}
-          transition={{
-            duration: 4,
-            repeat: Infinity}
-ease: 'easeInOut'}
+
           }}
            />
       </div>
     </div>
+);  )
+}
+    </div>
 
-);
-
-"

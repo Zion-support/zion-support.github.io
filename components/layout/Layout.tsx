@@ -1,5 +1,17 @@
+
+main
 import React, { ReactNode } from 'react';
-import Head from 'next/head';
+React from
+  'react'
+import Header from 'react'
+  './Header';import Footer from 'react'
+  './Footer'
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+import Header from '../Header';
+import Footer from '../Footer';
+
+import React, { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -8,49 +20,88 @@ interface LayoutProps {
   title?: string;
   description?: string;
   keywords?: string;
-  canonical?: string;
-  og_title?: string;
-  og_description?: string;
-  og_image?: string;
-  no_index?: boolean;
+export default function Layout({
+  children
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"
+  canonical
+  ogTitle
+  ogDescription
+  ogImage
+  noIndex = false
+}: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-white">;
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
+  return (
+    <div className="min - h-screen bg - white">;
+      <Header />;
+      <main>;
+
+  "./Footer"import Footer  from "react./Footer,;
+
+  "./Footer"import Footer  from "react./Footer;
+export default function Layout({ children }: LayoutProps) {;
+  return (;
+
+<div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
+    </div>;
+  )"; type: LayoutProps = { children: React.ReactNode;, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode;, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
+}}
+    <div className="min-h-screen bg-white">;
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
+  return (
+    <div className="min - h-screen bg - white">;
+      <Header />;
+      <main>;
+        {children}
+      </main>;
+      <Footer />;
+export default Layout;
+import React from 'react;
+import Header from './Header;
+import Footer from './Footer;
+export: default /**
+ * Layout - Function description
+ */
+function Layout() {
+;
+  return: <div>{children;}</div>;
+React from";
+  "react""import Footer from './react';
+  "./Footer"import Footer  from "react./Footer;
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
+  return (
+<div className="min - h-screen flex flex - col>      <Header />"      <main className="flex - 1 pt - 16>        {children}"      </main><Footer />;
+    </div>)"; type: LayoutProps = { children: React.ReactNode;, } export default /**
+ * Layout - Function description
+ */
+function Layout() { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode;, } export default /**
+ * Layout - Function description
+ */
+function Layout() { return <div>{children}</div> } " ;
+}}
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+
 }
 
-export default function Layout({ 
-  children, 
-  title = "Zion Tech Group - Leading AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
-  canonical = "https://ziontechgroup.com",
-  og_title,
-  og_description,
-  og_image = "https://ziontechgroup.com/og-image.jpg",
-  no_index = false
-}: LayoutProps) {
-  const json_ld = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Zion Tech Group",
-    url: "https://ziontechgroup.com",
-    logo: "https://ziontechgroup.com/logo.png",
-    description: description,
-    address: {
-      "@type": "PostalAddress",
-      street_address: "364 E Main St STE 1008",
-      address_locality: "Middletown",
-      address_region: "DE",
-      postal_code: "19709",
-      address_country: "US"
-    },
-    contact_point: {
-      "@type": "ContactPoint",
-      telephone: "+1-302-464-0950",
-      contact_type: "customer service",
-      email: "kleber@ziontechgroup.com"
-    }
-  };
-
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description}  />
@@ -77,10 +128,10 @@ export default function Layout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(json_ld) }}
          />
       </Head>
-      
-      <Header  />
-      <main>{children}</main>
-      <Footer  />
-    </div>
+      <div className="min-h-screen bg-gray-50">
+        {children}
+      </div>
+    </>
   );
 }
+

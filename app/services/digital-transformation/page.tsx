@@ -1,48 +1,52 @@
-</div>
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Service | Zion Tech Group',
+  description: 'Professional services for your business needs.',
+  keywords: 'services, business, technology',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Service | Zion Tech Group',
+    description: 'Professional services for your business needs.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Zion Tech Group',
+  },
+};
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Service
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              Professional services for your business needs
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-          Digital Transformation Framework
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Item
-            title="Assessment & Strategy"
-            details={[
-              'Current state analysis and digital maturity assessment',
-              'Competitive landscape analysis and market positioning',
-              'Technology stack evaluation and gap analysis',
-              'Digital strategy development and roadmap creation',
-              'Stakeholder alignment and change management planning',
-              'ROI modeling and business case development',
-            ]}
-          />
-          <Item
-            title="Implementation & Execution"
-            details={[
-              'Phased implementation approach with agile methodology',
-              'Technology selection and vendor management',
-              'Custom development and system integration',
-              'Data migration and system modernization',
-              'Testing, quality assurance, and performance optimization',
-              'Deployment and go-live support',
-            ]}
-          />
-          <Item
-            title="Optimization & Growth"
-            details={[
-              'Performance monitoring and continuous improvement',
-              'User adoption tracking and training optimization',
-              'Business process refinement and automation',
-              'Advanced analytics and AI implementation',
-              'Scalability planning and future roadmap',
-              'Ongoing support and maintenance',
-            ]}
-          />
-      </div>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Coming Soon
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            This service page is under development. Please contact us for more information.
+          </p>
+          <a
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+          >
+            Contact Us
+          </a>
+        </div>
       </section>
-
-      <Pricing />
-      <ContactSection />
-      </div>
+    </div>
   );
+}

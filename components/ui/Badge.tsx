@@ -1,4 +1,5 @@
-className: string;
+
+  className: string;
   id: string;
   innerHTML: string;
   textContent: string | null;
@@ -18,7 +19,9 @@ interface HTMLElement {}
 
 interface HTMLDivElement extends HTMLElement {}
   tagName: "DIV";
-});
+}
+
+);
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -32,3 +35,4 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
 export { Badge, badgeVariants };
+

@@ -1,4 +1,5 @@
-return path.join(GRANTS_DIR, `${id}.json`);
+
+  return path.join(GRANTS_DIR, `${id}.json`);
 
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
@@ -173,3 +174,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res.set_header ('Allow', 'GET, PUT');'
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT');'
   res.status (405).end ('Method Not Allowed');
+

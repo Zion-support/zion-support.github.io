@@ -1,118 +1,14 @@
-return (
-    <Layout>;
-      <Head>;
-        <title>API Documentation | Zion Tech Group</title>;
-        <link;
-          rel='canonical'
-'
-          href='https: //ziontechgroup && ziontechgroup.com/api-documentation'
-        />;
-      </Head>;'
-      <section className='container mx-auto px-4 py-24'>;'
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>;
-          API Documentation;
-        </h1>;'
-        <p className='text-gray-300'>REST and SDK references. Coming soon.</p>;
-      </section>;
-    </Layout>;
-  );
+import React from 'react';
 
-'
-import React from 'react';'
-import Head from 'next / head';'
-import Layout from '../components / layout / Layout';
-export default /**;
- * APIDocumentationPage - Function description;
- */
-function APIDocumentationPage() {}
+export default function Page() {
   return (
-    <Layout>;
-      <Head>;
-        <title > API Documentation | Zion Tech Group</title>;
-        <link;'
-          rel='canonical';'
-          href='https: //ziontechgroup.com / api - documentation';
-        />;
-      </Head>;'
-      <section className='container mx - auto px - 4 py - 24'>;'
-        <h1 className='text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6'>;
-          API Documentation;
-        </h1>;'
-        <p className='text - gray - 300'>REST and SDK references. Coming soon.</p>;
-      </section>;
-    </Layout>);
-;
-
-import Head from 'next/head';
-
-import Layout from '../components/layout/Layout';
-export default function APIDocumentationPage() {}
-  return (
-    <Layout>
-      <Head>
-        <title>API Documentation | Zion Tech Group</title>
-        <link'
-          rel='canonical''
-          href='https: //ziontechgroup.com/api-documentation'
-        />
-      </Head>'
-      <section className='container mx-auto px-4 py-24'>'
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>;
-          API Documentation;
-        </h1>'
-        <p className='text-gray-300'>REST and SDK references. Coming soon.</p>
-      </section>
-
-    </Layout>;
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
+        </div>
+      </div>
+    </div>
   );
-
-}'
-import React from 'react','
-import Head from 'next/head','
-import Layout from '../components/layout/Layout',
-export default function APIDocumentationPage() {}
-	return (
-		<Layout>
-			<Head>
-				<title>API Documentation | Zion Tech Group</title>
-				<link rel="canonical" href="https: //ziontechgroup.com/api-documentation" />
-			</Head>"
-			<section className="container mx-auto px-4 py-24">"
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">API Documentation</h1>"
-				<p className="text-gray-300">REST and SDK references. Coming soon.</p>
-			</section>
-		</Layout>;
-	)';
-import React from 'react';'
-import Head from 'next/head';'
-import Layout from '../components/layout/Layout';
-export default function APIDocumentationPage(req, res) {}
-  try {};
-	return (;
-		<Layout>;
-			<Head>;
-				<title>API Documentation | Zion Tech Group</title>;"
-				<link rel="canonical" href="https: //ziontechgroup.com/api-documentation" />;
-			</Head>;"
-			<section className="container mx-auto px-4 py-24">;"
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">API Documentation</h1>;"
-				<p className="text-gray-300">REST and SDK references. Coming soon.</p>;
-			</section>;
-		</Layout>;
-	);
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-  }
 }
-;

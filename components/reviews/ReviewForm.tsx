@@ -1,5 +1,8 @@
 categories?: {
 
+
+  categories?: {
+
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
@@ -304,3 +307,4 @@ export default ReviewForm;    </form>);
 ;
 export default ReviewForm;
 ;
+

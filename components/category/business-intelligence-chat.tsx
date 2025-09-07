@@ -1,3 +1,5 @@
+
+
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -108,3 +110,4 @@ export default BusinessIntelligenceChat;
 
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
+

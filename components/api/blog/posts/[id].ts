@@ -1,4 +1,5 @@
-if (typeof id !== 'string')
+
+  if (typeof id !== 'string')
     return res.status(400).json({ error: 'Invalid id'}
 });
 
@@ -47,3 +48,4 @@ function handler() {}
     const updated = { ...posts[idx], ...req.body, id };
     posts[idx] = updated;
     writePosts(posts);
+

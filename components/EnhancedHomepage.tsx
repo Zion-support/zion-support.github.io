@@ -1,5 +1,4 @@
 
-;
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence   } from 'framer-motion';
 import Link from 'next/link';
@@ -13,16 +12,12 @@ import { ArrowRight;
   Building;
   Phone;
   Mail;
-  MapPin;}
-  ArrowUpRight;}
-  } from 'lucide-react';
-import Head from 'next/head';,// Import our enhanced components;
-import EnhancedNavigation from './layout/EnhancedNavigation';,import EnhancedServiceCard from './ui/EnhancedServiceCard';,import PerformanceMonitor from './PerformanceMonitor';,//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedServiceCard from './ui/EnhancedServiceCard';
-import PerformanceMonitor from './PerformanceMonitor';
-import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
-//Import service data window && window.addEventListener ('mousemove', handleMouseMove)//Import our enhanced components import EnhancedNavigation from './layout / EnhancedNavigation';
-import EnhancedServiceCard from './ui / EnhancedServiceCard';
+  MapPin;
+  ArrowUpRight
+ } from 'lucide-react';
+import Head from 'next/head';
+// Import our enhanced components
+
 import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 //Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
@@ -30,7 +25,8 @@ import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 ...realEnterpriseMicroSaas2025;
 ...innovativeITServicesExpansion2025V3;
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
-...innovative2025AIAutonomousServices ];opacity: 0;
+...innovative2025AIAutonomousServices ];
+
 import React from 'react';
 interface EnhancedHomepageProps  {className?: string;}
 }const EnhancedHomepage: React.FC<EnhancedHomepageProps    /> = ({ className }) => {return (<div className={className || ''}    />;
@@ -177,9 +173,9 @@ const allRevolutionaryServices = [
               ))}
               variants={itemVariants}>;
               Explore Our Revolutionary Services;
-            </motion && motion.h2>;<motion&& motion.div;
-            <motion.div;
-              className=\'flex flex-wrap justify-center gap-4 mb-12\';
+            </motion && motion.h2>;
+
+              className="flex flex-wrap justify-center gap-4 mb-12"
               variants={itemVariants}
                 />;
               {categories.map((category) => (<motion.button;}
@@ -217,17 +213,17 @@ const allRevolutionaryServices = [
           </div>;
         </motion && motion.section>;
         {/* Services Grid */}
-        <motion&& motion.section;
-          className=\'py-16 px-4 lg:px-8\';
-          variants={containerVariants}
-          initial=\'hidden\';
-          animate=\"visible\"    />;
-          <div className=\"max-w-7xl mx-auto\"    />;
-            <motion&& motion.div;
-            <motion.div;
-              className=\'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\';
-              variants={containerVariants}    />;
-              {getFilteredServices().slice(0, 12).map((service, index) => (<EnhancedServiceCard;}
+        <motion&& motion.section "
+          className="py-16 px-4 lg:px-8"
+          variants={containerVariants}"
+          initial="hidden""
+          animate="visible">;"
+          <div className="max-w-7xl mx-auto">;
+
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}>;
+              {getFilteredServices().slice(0, 12).map((service, index) => (;
+                <EnhancedServiceCard;
                   key={service.id}
                   id={service.id}
                   title={service.name}
@@ -288,18 +284,19 @@ const allRevolutionaryServices = [
               variants={itemVariants}    />;
               Featured Revolutionary Services;
             </motion && motion.h2>;
-            <motion&& motion.div;
-            <motion.div;
-              className=\'bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8\';
-              variants={itemVariants}    />;
-              <AnimatePresence mode=\"wait\"    />;
+
+              className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
+              variants={itemVariants}>;"
+              <AnimatePresence mode="wait">;
                 <motion&& motion.div;
                   key={currentServiceIndex}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}<Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}    />;
-                      <motion.button;
-                        className=\'px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300\';
+                  exit={{ opacity: 0, x: -20 }}
+`
+                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
+
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, x: 20 ,}
@@ -335,12 +332,12 @@ const allRevolutionaryServices = [
           </div>;
         </motion.section>;
         {/* Call to Action */}
-        <motion.section;
-          className=\'py-16 px-4 lg:px-8\';
-          variants={containerVariants}
-          initial=\'hidden\';
-            <motion.p;
-              className=\'text-xl text-gray-300 mb-8\';
+        <motion.section"
+          className="py-16 px-4 lg:px-8"
+          variants={containerVariants}"
+          initial="hidden"
+
+              className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
                 />;
               Join the future of technology with Zion Tech Group's revolutionary solutions.;
@@ -417,21 +414,8 @@ const allRevolutionaryServices = [
                 <motion&& motion.button;
                   className=\'px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105\';
       {/* Performance Monitor */}
-      <AnimatePresence    />;
-        {showPerformanceMonitor && (<PerformanceMonitor    />;}
-        )}duration: 0.8, staggerChildren: 0.1;
-}}}}}export default EnhancedHomepage;
-}}}}}
+      <AnimatePresence>;
+        {showPerformanceMonitor && (;
+          <PerformanceMonitor />;
+        )}
 
-export default EnhancedHomepage;
-// Import service data;
-import { revolutionary2044AdvancedMicroSaas   } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices   } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices   } from '../data/revolutionary-2044-ai-services';
-import { realEnterpriseMicroSaas2025   } from '../data/2025-real-enterprise-micro-saas';
-import { innovativeITServicesExpansion2025V3   } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3   } from '../data/2025-innovative-ai-services-expansion-v3';
-import { innovative2025ITInfrastructureServices   } from '../data/2025-innovative-it-infrastructure-services';
-import { innovative2025AIAutonomousServices  } from '../data/2025-innovative-ai-autonomous-services';
-
-const EnhancedHomepage: React.FC;

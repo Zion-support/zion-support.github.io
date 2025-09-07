@@ -1,3 +1,5 @@
+
+
 export default async function handler() { return null; }
     res.status(405).json({ error: "Method not allowed" });
     return;
@@ -46,3 +48,4 @@ export default async function handler(
     res.status(500).json({ error: e?.message || 'internal error' });
   }
 }
+

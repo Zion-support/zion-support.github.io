@@ -1,7 +1,10 @@
-import React, {createContext,useContext,useState,useCallback,useEffect,} from 'react';
 
-interface Toast  {id: string;
-  type: \"success\" | \"error\" | \"warning\" | \'info\';
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+
+  type: "success" | "error" | "warning" | "info";
   title: string;
   message?: string;
   duration?: number;
@@ -9,9 +12,7 @@ interface Toast  {id: string;
     onClick: () => void;}
 }}
 
-interface ToastContextType {
-  toasts: Toast[];
-  addToast: (toast: Omit<Toast, \"id\"    />) => string;
+  addToast: (toast: Omit<Toast, "id">) => string;
   removeToast: (id: string) => void;
   clearToasts: () => void;}
 }
@@ -23,27 +24,47 @@ const ToastContext = createContext<ToastContextType | undefined    />(undefined)
   return context;
 }
 
-interface ToastProviderProps {
+export const useToast = () => {};
+  const context = useContext(ToastContext);
+
+    throw new Error("useToast must be used within a ToastProvider");
+  }
+  return context
+};
+
+interface ToastProviderProps {}
   children: React.ReactNode;
   maxToasts?: number;}
 }
 }
 
-export const ToastProvider: React.FC<ToastProviderProps    /> = ({ children,maxToasts = 5,   }) => {
+        id,
+        duration: 5000,
+        ...toast,
+      };
 
+        const updated = [...prev, newToast];
+        return updated.slice(-maxToasts);
+      });
 
-const [toasts, setToasts]  =;}
-  useState<Toast[]    />([])const addToast = useCallback((toast: Omit<Toast, \"id\"    />) => ;}
-  const id = `toast_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+          removeToast(id);
+        }, newToast.duration);
+      }
 
-const newToast: Toast = {id,duration: 5000,...toast,}setToasts((prev) => ;
-  const updated = [...prev, newToast];
-        return updated.slice(-maxToasts)})// Auto remove toast after duration;
-      if (newToast.duration && newToast.duration > 0) {setTimeout(() => {removeToast(id)}, newToast.duration)}return id;
-    },[maxToasts],)const removeToast = useCallback((id: string) => {setToasts((prev) => prev.filter((toast) => toast.id !== id),}
-}, [];
-  const clearToasts = useCallback(() => {setToasts([])}, [];
-  return (<ToastContext.Provider;
+      return id;
+    },
+    [maxToasts],
+  );
+
+    setToasts((prev) => prev.filter((toast) => toast.id !== id));
+  }, []);
+
+  const clearToasts = useCallback(() => {}
+    setToasts([]);
+  }, []);
+
+  return (
+
       value={{ toasts, addToast, removeToast, clearToasts }}
         />;
       {children}
@@ -57,7 +78,13 @@ interface ToastContainerProps {
 }
 }
 
-const ToastContainer: React.FC<ToastContainerProps    /> = ({ toasts,onRemove,   }) => {
+    <div className="fixed top-4 right-4 z-50 space-y-2">
+      {toasts.map((toast) => (
+        <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+      ))}
+    </div>
+  )
+};
 
 }
 return (<div className=\"fixed top-4 right-4 z-50 space-y-2\"    />;}
@@ -95,63 +122,7 @@ const handleRemove = (
 }
 };
 
-const getToastStyles = (
-   ;
-  const baseStyles =
-      \'max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden transform transition-all duration-300 ease-in-out\';
-
-    if (isLeaving) {) => {
-  return $3;}
-}
-      return `${baseStyles} translate-x-full opacity-0`;
-    }
-
-    if (isVisible) {}
-      return `${baseStyles} translate-x-0 opacity-100`;
-    }
-
-
-    return `${baseStyles} translate-x-full opacity-0`
-};
-
-
-const getIconAndColor = (
-    switch (toast.type) {
-      case \"success\":
-       ;
-  return {
-          icon: \"✓\",
-          bgColor: \"bg-green-50\",
-          iconColor: \"text-green-400\",
-          titleColor: \"text-green-800\",
-          messageColor: \"text-green-700\",) => {
-  return $3;}
-}
-        };
-      case \"error\":
-        return {
-          icon: \"✕\",
-          bgColor: \"bg-red-50\",
-          iconColor: \"text-red-400\",
-          titleColor: \"text-red-800\",}
-          messageColor: \"text-red-700\",}
-        };
-      case \"warning\":
-        return {
-          icon: \"⚠\",
-          bgColor: \"bg-yellow-50\",
-          iconColor: \"text-yellow-400\",
-          titleColor: \"text-yellow-800\",}
-          messageColor: \"text-yellow-700\",}
-        };
-      case \"info\":
-      default:
-        return {
-          icon: \"ℹ\",
-          bgColor: \"bg-blue-50\",
-          iconColor: \"text-blue-400\",
-          titleColor: \"text-blue-800\",}
-          messageColor: \"text-blue-700\",}
+          messageColor: "text-blue-700",
         };
     }
   };
@@ -160,15 +131,8 @@ const { icon, bgColor, iconColor, titleColor, messageColor } =
     getIconAndColor();
 
   return (
-    <div className={getToastStyles()}    />
-      <div className={`p-4 ${bgColor}`}    />
-        <div className=\"flex items-start\"    />
-          <div className={`flex-shrink-0 ${iconColor} text-lg`}    />{icon}</div>
-          <div className=\"ml-3 w-0 flex-1\"    />
-            <p className={`text-sm font-medium ${titleColor}`}    />{toast.title}</p>
-            {toast.message && (}
-              <p className={`mt-1 text-sm ${messageColor}`}    />{toast.message}</p>
 
+              <p className={`mt-1 text-sm ${messageColor}`}>{toast.message}</p>
             )}
             {toast.action && (<div className=\"mt-2\"    />;}
                 <button;}
@@ -180,12 +144,10 @@ const { icon, bgColor, iconColor, titleColor, messageColor } =
                 </button>;
               </div>;
             )}
-          </div>;
-          <div className=\"ml-4 flex-shrink-0 flex\"    />;
-            <button;
-              onClick={handleRemove}
-              className={`inline-flex ${titleColor} hover: opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-${toast.type === \"success\" ? \"green\" : toast.type === \"error\" ? \"red\" : toast.type === \"warning\" ? \"yellow\" : \"blue\"}-50`}
+          </div>"
+          <div className="ml-4 flex-shrink-0 flex">
 
+                  clipRule="evenodd"
                 />
               <span className=\"sr-only\"    />Close</span>
               <svg className=\"h-5 w-5\" viewBox=\"0 0 20 20\" fill=\"currentColor\"    />
@@ -208,18 +170,4 @@ export const useToastNotifications = (
   return $3;}
 }
   const { addToast } = useToast();
-
-  return {
-}
-    success: (title: string, message?: string, options?: Partial<Toast    />) =>}
-      addToast({ type: \"success\", title, message, ...options }),
-    error: (title: string, message?: string, options?: Partial<Toast    />) =>
-      addToast({ type: \"error\", title, message, ...options }),
-    warning: (title: string, message?: string, options?: Partial<Toast    />) =>
-      addToast({ type: \"warning\", title, message, ...options }),
-    info: (title: string, message?: string, options?: Partial<Toast    />) =>
-      addToast({ type: \"info\", title, message, ...options }),
-  }
-};
-
 

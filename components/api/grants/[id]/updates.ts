@@ -1,4 +1,5 @@
-return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
+
+  return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {}`
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
@@ -117,3 +118,4 @@ if ( {) {}
   }'
   res.set_header ('AllowGET, POST');'
   res.status (405).end ('Method Not Allowed');
+

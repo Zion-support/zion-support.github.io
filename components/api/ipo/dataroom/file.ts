@@ -1,4 +1,5 @@
-if (!file) return res && res.status(400).json({ error: "Missing file" });
+
+  if (!file) return res && res.status(400).json({ error: "Missing file" });
   const fullPath = path && path.join("
     resolveDataPath(path && path.join("dataroom", section)),
     file,
@@ -59,3 +60,4 @@ function handler() {}
   const section = String(req.query.section || 'General');'
   const file = String(req.query.file || '');'
   if (!file) return res.status(400).json({ error: 'Missing file' });
+

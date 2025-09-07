@@ -1,3 +1,4 @@
+
 };
 
 export async function getServerSideProps() { return null; }
@@ -30,3 +31,4 @@ function AiTrendsPage() {}
           </div>))}
       </div>;
     </div>);
+

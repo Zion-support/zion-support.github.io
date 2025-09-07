@@ -1,24 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-import { authenticateRequest } from '@/utils/auth';
-import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const method = null;
-import {
-  createTenant;
-getTenants,
-rotateTenantApiKey;}
-updateTenant;}
-} from '@/utils/tenant';import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const method = (req.method |'GET').toUpperCase()
-  if (method === 'GET') {
-   ;}
-  return res && res.status(200).json({ tenants: getTenants(),}
-});
+    return res && res.status(200).json({ tenants: getTenants() });
   }
 
 const auth = authenticateRequest(req, false);
@@ -181,24 +163,19 @@ if (!branding?.name)
 
 const tenant = createTenant(branding);
     return res.status(201).json({ tenant });
+origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+'
+  if (method === 'PUT') {}
+    const { tenantId, update } = req.body || {};'
+    if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
+    const result = updateTenant(tenantId, update || {});'
+  if (method === 'PATCH') {}
+    const { tenantId, rotateKey } = req.body || {};
+    if (!tenantId || !rotateKey)'
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });    return res.status(200).json({ tenant: result })
   }
 
-  if (method = == 'PUT') {}
-   ;}
-  const { tenantId, update } = req.body || {};
-    if (!tenantId) return res.status(400).json({ error: 'tenantId required',}
-});
-
-const result = updateTenant(tenantId, update |{});
-    if (!result) return res.status(404).json({ error: 'Tenant not found',}
-});
-return res.status(200).json({ tenant: result,}
-});
-  }
-
-  if (method = == 'PATCH') {}
-   ;}
-  const { tenantId, rotateKey } = req.body || {};
 if (!tenantId || !rotateKey)
       return res.status(400).json({ error: 'tenantId and rotateKey required',}
 });
@@ -210,12 +187,17 @@ const result = rotateTenantApiKey(tenantId);
 });
   }
 
-  return res.status(405).json({ error: 'Method not allowed',}
-});
-    return res.status(200).json({ tenant: result })
-  }
-return res.status(405).json({ error: 'Method not allowed',}
-});
-}
+  return res.status(405).json({ error: 'Method not allowed' ;});
+origin/cursor/automate-test-improve-and-merge-code-2533
 
+    return res.status(200).json({ tenant: result })
+  }'
+return res.status(405).json({ error: 'Method not allowed' });
+}
+'
+  if (method === 'PATCH') {}
+    const { tenantId, rotateKey } = req.body || {};
+    const { tenantId, rotateKey } = req.body || {};
+
+origin/cursor/automate-test-improve-and-merge-code-2533
 

@@ -70,7 +70,6 @@ for (const file of allFiles) {;
     if (content.includes('') || content.includes('
 }
 }
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
 
       problematicFiles.push(file);
 

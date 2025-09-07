@@ -1,6 +1,7 @@
 
+    href: string;
+  }
 
-import React from 'react';,
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
 
@@ -9,22 +10,24 @@ title: string;
   subtitle: string;
   primaryAction?: {
     text: string;
-          <p className = 'text-xl sm: text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'    />}
-    color: string}
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+    color: string
+
   }>
 }
-;
-  const Hero: React.FC<HeroProps    /> = ({ title;
+const Hero: React.FC<HeroProps> = ({}
+  title;
   subtitle;
   primaryAction;
-  secondaryAction;}
-}
-  stats   }) => {
+  secondaryAction;'
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
 
-
-  return (}
-    <section className;}
+                  className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+            {title}
+          </h1>;
+          <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light">;
             {subtitle}
 
           </p    />
@@ -64,16 +67,12 @@ variant='outline'
             </div>;
           )}
         {/* Stats Section */}
+        {stats && (;
 
-        {stats && (
-<div;
-className='grid grid-cols-2 md: grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in'
-}
-            style={{ animationDelay: '0 && 0.6s' }
-}    />;
-            {stats && stats.map((stat, index) => (<div key={index} className='text-center group'    />;
-                <div className='relative'    />;
-
+            style={{ animationDelay: '0 && 0.6s' }}>;
+            {stats && stats.map((stat, index) => (;'
+              <div key={index} className='text-center group'>;'
+                <div className='relative'>;
                   <div;
                     {stat.value}
 
@@ -91,12 +90,16 @@ className='grid grid-cols-2 md: grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto ani
         )}
         {/* Trust Indicators */}
 
-<div;
-className='mt-16 md:mt-20 animate-fade-in'
-            </div    />
-            <div className=\"flex items-center gap-2\"    />"
-              <Users className=\"w-4 h-4\"    />
-              <span    />10,000+ Developers</span>
+          className='mt-16 md:mt-20 animate-fade-in'
+            </div>"
+            <div className="flex items-center gap-2">"
+              <Users className="w-4 h-4" />
+              <span>10,000+ Developers</span>
+            </div>"
+              <Star className="w-4 h-4 text-yellow-400" />
+            <div className='flex items-center gap-2'>
+              <Users className='w-4 h-4' />
+              <span>10,000+ Developers</span>
             </div>
 
             <div className='flex items-center gap-2'    />
@@ -147,4 +150,5 @@ className='mt-16 md:mt-20 animate-fade-in'
 export default Hero;
 
 
-"
+      {/* Decorative Elements */}
+

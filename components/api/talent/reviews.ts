@@ -255,3 +255,4 @@ const { slug } = req.query as { slug?: string };
 }
 }
     // In a real implementation, validate and insert review into Supabase
+

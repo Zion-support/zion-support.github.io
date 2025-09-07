@@ -9,7 +9,8 @@ export const Playwright.config = () => {};
 trace: on-first-retry' 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-trace: on-first-retry' }
+trace: on-first-retry' ,
+};
 reporter: [ ['list'], ['json', {
 
   outputFile: playwright-logs/test-results && results.json' 
@@ -39,3 +40,4 @@ reporter: [ ['list'], ['json', {
   //     name: chromium',  //     use: { ...devices['Desktop Chrome'] },  //   }
   //   {'
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
+

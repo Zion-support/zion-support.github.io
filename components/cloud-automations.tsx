@@ -21,7 +21,6 @@ export default function CloudAutomationsPage() {
 
     fetch('/api/cloud-automations-status')
 
-  const items = null;
   return (
     <div className='space-y-6'    />
       <h1 className='text-3xl font-bold'    />Cloud Automations</h1>
@@ -57,9 +56,9 @@ key={key}
             ) : null}
           </div>;
         ))}
-
-      </div>
-    </div>
   );
-}
+}'
+              <pre className='mt - 2 text - xs whitespace - pre - wrap'>;
+                {JSON.stringify (value.metrics, null, 2)}
+              </pre>            ) : null}        {items.map (([key, value]: any) => (
 

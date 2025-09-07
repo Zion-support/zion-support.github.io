@@ -1,4 +1,6 @@
-return (
+
+
+  return (
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';'
 import React from 'react';'
 import type { ReviewsSummary } from '../../types/reviews';
@@ -61,3 +63,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default ReviewSummary;
 origin/cursor/automate-test-improve-and-merge-code-2533
+

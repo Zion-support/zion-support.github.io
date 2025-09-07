@@ -1,3 +1,4 @@
+
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -343,3 +344,4 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href="/contact" className="text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
 
 export default Component}
+

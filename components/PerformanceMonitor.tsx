@@ -1,4 +1,5 @@
-memory: {
+
+  memory: {
     used: number;
     total: number;
     limit: number;
@@ -694,3 +695,4 @@ export default PerformanceMonitor;
 
 export default PerformanceMonitor;
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+

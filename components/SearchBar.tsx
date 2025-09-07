@@ -1,3 +1,5 @@
+
+
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 ursor/automate-test-improve-and-merge-code-646c;
@@ -16,6 +18,11 @@ interface SearchResult {
   url: string;
   type: 'service' | 'page' | 'category';}
 }
+
+const SearchBar: React.FC = () => {
+interface SearchResult {;
+  title: string;, description: string;,;
+  url: string;, type: 'service' | 'page' | 'category';,;
 }
 
 const SearchBar: React.FC = () => {interface SearchResult {
@@ -81,19 +88,14 @@ const searchData: SearchResult[] = [
    ,}
 },
     {
-      title: 'IT Services',
-  description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
-      url: '/it-services',
-  type: 'category'}
-   ,}
-},
+
     {
       title: 'Cloud Cost Guard',
   description: 'FinOps Assistant for anomaly detection and cost optimization',
       url: '/services',
-  type: 'service'}
-   ,}
-},
+      type: 'service',
+
+    },
     {
       title: 'Contact Us',
   description: 'Get in touch with our experts for consultation and quotes',
@@ -215,14 +217,17 @@ const handleKeyDown = (if (e.key === 'Escape') {setIsOpen(false)inputRef.current
 
 export default SearchBar;
 
-interface SearchResult  {title: string, description: string;}
-  url: string, type: 'service' | 'page' | 'category';}
-import { useState, useEffect, useCallback, useMemo  } from 'react';
+pr-12243
+import React, { useState } from 'react';
+import { Search, X } from 'lucide-react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+origin/cursor/analyze-improve-and-deploy-application-0a01
 
 interface SearchBarProps {
   onSearch?: (query: string) => void;
-  placeholder?: string;}
-  className?: string;}
+  placeholder?: string;
+  className?: string;
+
 }
 
 const SearchBar: React.FC<SearchBarProps    /> = ({ onSearch,placeholder = 'Search...',className = '';}
@@ -274,7 +279,7 @@ const SearchBar: React.FC<SearchBarProps    /> = ({ onSearch,
  ;
   const [query, setQuery] = useState('');
 
-const handleSubmit = (
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onSearch && query.trim()) {
       onSearch(query.trim());) => {
@@ -298,15 +303,9 @@ const handleSubmit = (
     );
     setResults(filteredResults);
     setIsOpen(true);
-    setIsLoading(false)
-};
+    setIsLoading(false);
 
-
-const handleClear = (
-    setQuery('')) => {
-  return $3;}
-}
-};
+  };
 
 
   return (
@@ -325,7 +324,11 @@ type=\"text\"
           {query && (<button;}
               type=\'button\';}
               onClick={handleClear}
-              className=\'absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600\';
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
 const [results, setResults] = useState<SearchResult[]    />([])const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex]  = useState(-1);
@@ -392,17 +395,9 @@ if (filteredResults.length > 0) {setResults(filteredResults)setIsOpen(true)setSe
               }`}
               role=\'option\';
               aria-selected={index === selectedIndex}
-              tabIndex={-1}    />;
-              <X className=\"w-4 h-4\"    />;
-            </button>;
-          )}
-        </div>;
-      </form>;
-    </div>;
-  )}
+              tabIndex={-1}
+origin/cursor/analyze-improve-and-deploy-application-0a01
 
-export default SearchBar;ursor/automate-test-improve-and-merge-code-646c;
-              className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600\"
             >
               <X className=\"w-4 h-4\"    />
             </button>
@@ -414,3 +409,4 @@ export default SearchBar;ursor/automate-test-improve-and-merge-code-646c;
 
 
 export default SearchBar;
+

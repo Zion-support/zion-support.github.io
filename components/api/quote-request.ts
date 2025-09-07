@@ -1,4 +1,5 @@
-}
+
+    }
     try {}
       let aiSummary: string | null = null;
       let aiTags: string[] = [];
@@ -179,3 +180,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ message: 'Server error' });
 
   }
+

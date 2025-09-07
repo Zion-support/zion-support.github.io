@@ -97,7 +97,6 @@ class MergeConflictResolver {
         continue;
       }
 
-      if (line.startsWith('>>>>>>>')) {
         inConflict = false;
         // Smart merge logic
         const merged = this.mergeBlocks(currentBlock, incomingBlock);

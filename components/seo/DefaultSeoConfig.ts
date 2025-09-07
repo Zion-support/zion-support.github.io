@@ -1,3 +1,5 @@
+
+
 import type { DefaultSeoProps } from 'next-seo';
 
   defaultTitle: 'Zion Tech Solutions';
@@ -49,3 +51,4 @@ import type { DefaultSeoProps } from 'next - seo';
 ;
 export default config;
 ;
+

@@ -1,12 +1,4 @@
 
-
-import React, { useState } from 'react',
-import Head from 'next/head';,
-import Card from '../components/ui/Card';,
-import Button from '../components/ui/Button';
-import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
-
-export default function APIRateLimiterPage() {
   Shield,
   Zap,
   BarChart3,
@@ -48,58 +40,31 @@ import React, { useState } from 'react';
 import {}
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
-export default function APIRateLimiterPage() {;}
-} from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
-
-export default function APIRateLimiterPage() {;
-
-const [endpoint, setEndpoint] = useState('');
-
-const [rateLimit, setRateLimit] = useState('100');
-
-const [timeWindow, setTimeWindow] = useState('1m');
-
-const [testResults, setTestResults] = useState<any[]    />([]),
+  const [testResults, setTestResults] = useState<any[]>([]),
   const [isTesting, setIsTesting] = useState(false);
 
-const [apiKey, setApiKey] = useState('');
-
-const timeWindows = null;
-];
-
-
-const rateLimits = [
-    { value: '10',}
-  label: '10 requests', description: 'Very strict',}
-},
-    { value: '100',}
-  label: '100 requests', description: 'Standard',}
-},
-    { value: '1000',}
-  label: '1000 requests', description: 'High volume',}
-},
-{ value: '10000',}
-  label: '10000 requests', description: 'Enterprise',}
-},
+    { value: '1000', label: '1000 requests', description: 'High volume' },
+'
+    { value: '10000', label: '10000 requests', description: 'Enterprise' }
   ];
 
-const generateApiKey = (
-   ;
-  const key =
-      'zt_' +
-      Math.random().toString(36).substr(2, 9) +
-      '_' +
-      Date.now().toString(36);
-    setApiKey(key)) => {
-  return $3;}
-}
-};
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;'
+    { value: '10000', label: '10000 requests', description: 'Enterprise' }
 
+  ];
 
-const testRateLimiting = async () => {
-    if (!endpoint.trim() || !rateLimit || !timeWindow);
-  return;
-setIsTesting(true);
+  const generateApiKey = () => {'
+    const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
+    setApiKey(key)
+  }
+
+  ];
+
+    setIsTesting(true);
+  const timeWindows = null;
+
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+    setIsTesting(true);
     setTestResults([]);
 
 const limit = parseInt(rateLimit);
@@ -161,11 +126,10 @@ return 'text-yellow-400';) => {
   };
 
   return (
+    <>;
+      <Head>;
+        <title>API Rate Limiter - Zion Tech Group</title>;
 
-    <>
-      <Head><title>API Rate Limiter - Zion Tech Group</title>
-<meta;
-name='description'
           content='Protect your APIs with intelligent rate limiting. Prevent abuse, ensure fair usage, and maintain optimal performance for all users.'
 
            />;
@@ -249,56 +213,54 @@ type='text'
                         }`}
                 {/* Time Window */}
 
-                <div    />
-
-<label className='block text-sm font-medium text-gray-300 mb-3'    />
-                    Rate Limit;
+                      type="text"
+                      value={apiKey}
+                      readOnly"
+                      placeholder="Generate an API key to test rate limiting""
+                      className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400"
+                    />;
+                    <Button;
+                      onClick={generateApiKey}"
+                  className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isTesting ? (
+                    <>"
+                      <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
+                        key={limit.value}
+                        onClick={() => setRateLimit(limit.value)}`
+                        className={`p-3 rounded-lg border text-left transition-all ${}
+                          rateLimit === limit.value'
+                            ? 'border-green-500 bg-green-500/10 text-green-300'
+<label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Rate Limit
                   </label>
-                  <div className='grid grid-cols-2 gap-3'    />
-                    {rateLimits.map(limit => (}
-                      <button;}
-key={limit.value}
-                        onClick={() =    /> setRateLimit(limit.value)}
-                        className={`p-3 rounded-lg border text-left transition-all ${rateLimit === limit.value;
-                            ? 'border-green-500 bg-green-500/10 text-green-300';}
-                            : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white';}
-                        }`}>
+                  <div className='grid grid-cols-2 gap-3'>
+                    {rateLimits.map(limit => (
+                      <button
+origin/cursor/automate-test-improve-and-merge-code-2533
+                        key={limit.value}
+                        onClick={() => setRateLimit(limit.value)}`
+                        className={`p-3 rounded-lg border text-left transition-all ${}
+                          rateLimit === limit.value'
+                            ? 'border-green-500 bg-green-500/10 text-green-300''
+                            : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white'`
+                        }`}
 
-<div className='font-medium'    />{limit.label}</div>;
-                        <div className='text-xs text-gray-400 mt-1'    />;
-                          {limit.description}
-                        </div>;
-                      </button>;
-                {/* Time Window */}
+                  <div className='grid grid-cols-2 gap-3'>
+                    {timeWindows.map(window => (
+                      <button
+origin/cursor/automate-test-improve-and-merge-code-2533
+                        key={window.value}
+                        onClick={() => setTimeWindow(window.value)}`
+                        className={`p-3 rounded-lg border text-left transition-all ${}
+                          timeWindow === window.value'
+                            ? 'border-green-500 bg-green-500/10 text-green-300''
+                            : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white'`
+                        }`}
 
-                <div    />
-<label className='block text-sm font-medium text-gray-300 mb-3'    />
-                    Time Window;
-                  </label>
-                  <div className='grid grid-cols-2 gap-3'    />
-
-                    {timeWindows.map(window => (}
-                      <button;}
-key={window.value}
-                        onClick={() =    /> setTimeWindow(window.value)}
-                        className={`p-3 rounded-lg border text-left transition-all ${timeWindow === window.value;
-                            ? 'border-green-500 bg-green-500/10 text-green-300';}
-                            : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white';}
-                        }`}>
-
-<div className='font-medium'    />{window.label}</div>;
-                        <div className='text-xs text-gray-400 mt-1'    />;
-                          {window.description}
-                        </div>;
-                      </button>;
-                {/* API Key Generation */}
-                <div    />;
-<label className='block text-sm font-medium text-gray-300 mb-2'    />;
-                    API Key;
-                  </label>;
-                  <div className='flex space-x-2'    />;
-                    <input;
-                      type='text';
+                  <div className='flex space-x-2'>
+                    <input'
+                      type='text'
                       value={apiKey}
 
                       readOnly;
@@ -306,38 +268,21 @@ placeholder='Generate an API key to test rate limiting'
                       className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400'
                        />
                     <Button;
-onClick={generateApiKey}
+                      onClick={generateApiKey}'
+                      className='px-6 py-3 bg-green-600 hover:bg-green-700 text-white'                    >                    API Key;
+                  </label>"
+                  <div className="flex space-x-2">
+                    <input"
+                      type="text"
+                      value={apiKey}
+                      readOnly"
+                      placeholder="Generate an API key to test rate limiting""
+                      className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400"
+                    />
+                    <Button;
+                      onClick={generateApiKey}
 
-                      className='px-6 py-3 bg-green-600 hover: bg-green-700 text-white'
-                        />
-                      Generate;
-                    </Button>
-                  </div>
-                </div>
-                <Button;
-onClick={testRateLimitin,}
-}
-disabled={!endpoint.trim() || !rateLimit || !timeWindow || isTesting;}
-                  }
-                  className='w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'    />
-
-                  {isTesting ? (<>;
-                      <RefreshCw className='w-5 h-5 mr-2 animate-spin'    />;
-                      Testing Rate Limiting...;
-                    <   />;
-                  ) : (<>;
-<Zap className='w-5 h-5 mr-2'    />;
-                      Test Rate Limiting;}
-                    <   />;}
-                  )}
-
-                </Button>
-              </div>
-            </Card>
-            {/* Test Results */}
-<Card className='p-8 bg-gray-800 border border-gray-700'    />
-              <div className='flex items-center justify-between mb-6'    />
-                <h3 className='text-2xl font-bold text-white flex items-center'    />
+                  <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />
 
                   <BarChart3 className='w-6 h-6 mr-3 text-blue-400'    />
                   Test Results;
@@ -375,30 +320,9 @@ key={index}
                             Request #{result.request}
 
                           </span>
+
                         </div>
-                        <span className='text-sm text-gray-400'    />
-                          {result.timestamp}
-                        </span>
-                      </div>
-                      <div className='grid grid-cols-2 gap-4 text-sm'    />
-                        <div    />
-                          <span className='text-gray-400'    />Status: </span>
-                          <span;
-className={`ml-2 font-medium ${getStatusColor(result.status)}`}
-                              />
-                            {result.statusCode}{' '}
-                            {result.status === 'success'}
-                              ? 'OK'}
-                              : 'Too Many Requests'}
-                          </span>
-                        </div>
-                        <div    />
-                          <span className='text-gray-400'    />Response Time:</span>
-                          <span className='ml-2 text-white'    />
-                            {result.responseTime.toFixed(0)}ms;
-                          </span>
-                        </div>
-                      </div>
+                      </div>'
                       {result.status === 'rate_limited' && (
 
 <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'    />}
@@ -425,11 +349,7 @@ click \"Test Rate Limiting\" to see how it works.
                 </div>
               )}
 
-      {/* Features */}
-<section className='py-20 bg-gray-800'    />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />
-          <div className='text-center mb-16'    />
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'    />
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
               Advanced Rate Limiting Features;
             </h2>
@@ -543,13 +463,18 @@ const response = await axios.get(\`https: //api.zion.tech\${endpoin,}
 })})`}
                 </pre>;
               </div>;
-
               <Button;
-onClick = {() =    />
-                  copyToClipboard(;
-  const axios = require('axios');}
-}
-const apiKey = '${apiKey || 'your_api_key_here'}';
+                onClick={() =>;'`
+                  copyToClipboard(`const axios = require('axios');}),`}
+                </pre>;
+              </div>;
+              <Button'`
+                onClick={() => copyToClipboard(`const axios = require('axios');`
+}),`}
+                </pre>
+              </div>
+              <Button'`
+                onClick={() => copyToClipboard(`const axios = require('axios');
 
 const endpoint = '${endpoint || '/api/users'}';
 
@@ -566,48 +491,20 @@ const response = await axios.get(\`https: //api.zion.tech\${endpoin,}
 });
                 }
 
-                variant='outline'
-                size='sm'
-                className='mt-4 border-gray-600 text-gray-300 hover: bg-gray-700'
-              >
-                <Copy className='w-4 h-4 mr-2'    />
-                Copy Code;
-              </Button>
-            </Card>
+response = requests.get(;
+'
+    f'https://api.zion.tech{endpoint}';
 
-<Card className='p-6 bg-gray-800 border border-gray-700'    />
-              <h3 className='text-xl font-bold text-white mb-4 flex items-center'    />
-                <Code className='w-5 h-5 mr-2 text-blue-400'    />
-                Python Example;
-              </h3>
-              <div className='bg-gray-900 p-4 rounded-lg overflow-x-auto'    />
-                <pre className='text-sm text-gray-300'    />
-                  {`import requests;}
-api_key = '${apiKey || 'your_api_key_here'}'
-endpoint = '${endpoint || '/api/users'}'
-
-# Make API request with rate limiting;
-headers = {}
-'Authorization': f'Bearer {api_ke,}
-}',
-    'X-RateLimit-Limit': '${rateLimit}',
-    'X-RateLimit-Window': '${timeWindow}'
-response = requests.get(
-    f'https: //api.zion.tech{endpoin,}
-}',
     headers=headers;
-)
-print('Response:', response.json())
-print('Rate Limit Info:', {
-'limit': response.headers.get('x-ratelimit-limit'),
-    'remaining': response.headers.get('x-ratelimit-remaining'),
-    'reset': response.headers.get('x-ratelimit-reset')
-                variant=\'outline\';
+)'
+print('Response:', response.json())'
+print('Rate Limit Info:', {}
+'
+    'limit': response.headers.get('x-ratelimit-limit');
 
-                size=\'sm\';
-                className=\"mt-4 border-gray-600 text-gray-300 hover: bg-gray-700\">
-
-                <Copy className=\"w-4 h-4 mr-2\"    />;
+                className="mt-4 border-gray-600 text-gray-300 hover: bg-gray-700";
+              >;"
+                <Copy className="w-4 h-4 mr-2" />;
               </Button>;
             </Card>;
             <Card className='p-6 bg-gray-800 border border-gray-700'    />;
@@ -630,62 +527,27 @@ api_key = '${apiKey || 'your_api_key_here'}';
 endpoint = '${endpoint || '/api/users'}';
 # Make API request with rate limiting;
 
-headers = {;}
-    'Authorization': f'Bearer {api_key}',;
-    'X-RateLimit-Limit': '${rateLimit}',;
-    'X-RateLimit-Window': '${timeWindow}';
-print('Response:', response && response.json());
-print('Rate Limit Info:', {;
-    'limit': response && response.headers.get('x-ratelimit-limit'),;
-    'remaining': response && response.headers.get('x-ratelimit-remaining'),    'reset': response && response.headers.get('x-ratelimit-reset')    'limit': response && response.headers.get('x-ratelimit-limit');
-    'remaining': response && response.headers.get('x-ratelimit-remaining');}
-    'reset': response && response.headers.get('x-ratelimit-reset');}
-})`}
-
-                </pre>
-              </div>
-              <Button;
-onClick={() =    />}
-                  copyToClipboard(`import requests;}
-api_key = '${apiKey || 'your_api_key_here'}'
-endpoint = '${endpoint || '/api/users'}'
-
+endpoint = '${endpoint || '/api/users'}';
 # Make API request with rate limiting;
-headers = {}
-'Authorization': f'Bearer {api_key}',
-    'X-RateLimit-Limit': '${rateLimit}',
-    'X-RateLimit-Window': '${timeWindow}'
-response = requests.get(
-    f'https: //api.zion.tech{endpoin,}
-}',
-    headers=headers;
-)
-print('Response:', response.json())
-print('Rate Limit Info:', {
-'limit': response.headers.get('x-ratelimit-limit'),
-    'remaining': response.headers.get('x-ratelimit-remaining'),}
-    'reset': response.headers.get('x-ratelimit-reset')}
-})`)
-                }
-                variant='outline'
-                size='sm'
-                className='mt-4 border-gray-600 text-gray-300 hover: bg-gray-700'
-              >
-                <Copy className='w-4 h-4 mr-2'    />
-                Copy Code;
-              </Button>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section *,}
-}
-<section className='py-20 bg-gradient-to-r from-green-600 to-blue-600'    />;
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'    />;
-          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'    />;
-          </h2>;
-          <p className='text-xl text-green-100 mb-8'    />;
+headers = {;'
+    'Authorization': f'Bearer {api_key}',;'
+    'X-RateLimit-Limit': '${rateLimit}',;'
+    'X-RateLimit-Window': '${timeWindow}';'
+print('Response:', response && response.json());'
+print('Rate Limit Info:', {;'
+    'limit': response && response.headers.get('x-ratelimit-limit'),;'
+    'remaining': response && response.headers.get('x-ratelimit-remaining'),;'
+    'reset': response && response.headers.get('x-ratelimit-reset');`
+})`);
+                }'
+                variant='outline';'
+                size='sm';'
+                className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700';
+              >;'
+                <Copy className='w-4 h-4 mr-2' />                Copy Code    'reset': response && response.headers.get('x-ratelimit-reset');`
+})`)}
+          </h2>;'
+          <p className='text - xl text - green - 100 mb - 8'>;
             Join thousands of developers and companies who trust our rate;
             limiting service to protect their APIs.;
           </p>;
@@ -709,7 +571,56 @@ print('Rate Limit Info:', {
           </div>;
         </div>;
       </section>;
-<   />;
-
+}
   );
+}
+    </>);    </>);
+}
+
+    'reset': response.headers.get('x-ratelimit-reset')
+})`)
+                }
+                variant='outline'
+                size='sm'
+                className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700'
+              >
+                <Copy className='w-4 h-4 mr-2' />
+                Copy Code
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+<section className='py-20 bg-gradient-to-r from-green-600 to-blue-600'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+          </h2>
+          <p className='text-xl text-green-100 mb-8'>
+            Join thousands of developers and companies who trust our rate
+            limiting service to protect their APIs.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Button
+              href='/contact'
+              size='lg'
+              className='bg-white text-green-600 hover:bg-gray-100'
+            >
+              Get Started Today
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/pricing'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-green-600'
+            >
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+</>;
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
 

@@ -1,14 +1,41 @@
 
-
-
 import React from 'react';
 import { motion   } from 'framer-motion';
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign  } from 'lucide-react';
 import { motion  } from 'framer-motion';
 
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
-import { motion } from 'framer-motion';
-import {
+
+  DollarSign;
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  ArrowRight,
+  ExternalLink,
+  Check,
+  Users,
+  Clock,;
+  DollarSign,;
+} from 'lucide-react';
+interface QuantumHolographicCardProps {}
+  service: {}
+
+import {;
+  Star,;
+  Zap,;
+  Shield,;
+  TrendingUp,;
+  ArrowRight,;
+  ExternalLink,;
+  Check,;
+  Users,;
+  Clock,;
+  DollarSign,;'
+} from 'lucide-react';
+interface QuantumHolographicCardProps {;
+  service: {;
+    id: string;
   Star;
 Zap,
 Shield;
@@ -38,9 +65,6 @@ interface QuantumHolographicCardProps  {service: {id: string;
 
       address: string;
 
-      website: string}
-   }
-},
     realImplementation: boolean;
 
     implementationDetails: string;
@@ -48,18 +72,8 @@ interface QuantumHolographicCardProps  {service: {id: string;
     customers: number;
     rating: number;
 
-    reviews: number;
- 
-},
-  className?: string;
-}
-
-const QuantumHolographicCard: React.FC<QuantumHolographicCardProps    /> = ({ service, className;
-
-const featureVariants = {}
-    hidden: { opacity: 0, x: -20}
-}
-    visible: (i: number) => ({
+    hidden: { opacity: 0, x: -20 }
+    visible: (i: number) => ({}
       opacity: 1;
 x: 0;
 transition: {
@@ -71,7 +85,7 @@ ease: 'easeOut' as const}
     })
   };
 
-  
+origin/cursor/automate-test-improve-and-merge-code-2533
     >
 
       {/* Holographic glow effect */}
@@ -113,8 +127,40 @@ className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orang
 
               </motion.div>
 
-            
-}
+            )}
+          </div>
+
+            )}
+          </div>
+
+          {/* Price and trial */}"
+          <div className="flex items-center justify-between mb-4">"
+            <div className="flex items-center space-x-2">"
+              <span className="text-3xl font-bold text-white">{service.price}</span>"
+              <span className="text-gray-400">{service.period}</span>
+            </div>"
+            <div className="flex items-center space-x-2 text-sm text-gray-300">"
+              <Clock className="w-4 h-4" />
+            </div>
+          {/* Key metrics */}'
+          <div className='grid grid-cols-2 gap-4 mb-6'>;'
+            <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>;'
+              <div className='flex items-center space-x-2 text-sm text-gray-400 mb-1'>;'
+                <Users className='w-4 h-4' />;
+                <span>Customers</span>;
+              </div>;'
+              <div className='text-xl font-bold text-white'>;
+                {service && service.customers.toLocaleString()}+;
+              </div>;
+            </div>;'
+            <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>;'
+              <div className='flex items-center space-x-2 text-sm text-gray-400 mb-1'>;'
+                <Star className='w-4 h-4 fill-yellow-400 text-yellow-400' />;
+                <span>Rating</span>;
+              </div>;'
+              <div className='text-xl font-bold text-white'>;
+                {service && service.rating}/5 && 5.0;
+              </div>            </div>;
           </div>;
             )}
           </div>;
@@ -390,6 +436,60 @@ key={index}
               <span className=\"text-cyan-300\"    />{service && service.marketSize}</span>;"
               <span className=\"text-green-300\"    />{service && service.growthRate} growth</span>;
           </div>;
+          {/* ROI and competitors */}'
+          <div className='grid grid-cols-2 gap-4 mb-6'>;'
+            <div className='bg-green-900/20 rounded-lg p-3 border border-green-700/30'>;'
+              <div className='text-sm font-semibold text-green-300 mb-1'>;
+                ROI;
+              </div>;'
+              <div className='text-xs text-gray-300'>{service && service.roi}</div>;
+            </div>;'
+            <div className='bg-orange-900/20 rounded-lg p-3 border border-orange-700/30'>;'
+              <div className='text-sm font-semibold text-orange-300 mb-1'>;
+                Competitors;
+              </div>;'
+              <div className='text-xs text-gray-300'>                {service && service.competitors.slice(0, 2).join(', ')}            ;"
+            <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">;"
+              <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>;"
+              <div className="text-xs text-gray-300">;
+              </div>;
+            </div>;
+          </div>;
+          {/* Contact information */}'
+          <div className='bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50'>;'
+            <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;'
+              <Shield className='w-4 h-4 text-blue-400' />;
+              <span>Contact & Support</span>;
+            </h4>;'
+            <div className='space-y-2 text-sm text-gray-300'>;'
+              <div className='flex items-center space-x-2'>;'
+                <span className='text-blue-400'>📱</span>;
+                <span>{service && service.contactInfo.mobile}</span>;
+              </div>;'
+              <div className='flex items-center space-x-2'>;'
+                <span className='text-green-400'>✉️</span>;
+                <span>{service && service.contactInfo.email}</span>;
+              </div>;'
+              <div className='flex items-center space-x-2'>;'
+                <span className='text-purple-400'>📍</span>;'
+                <span className='text-xs'>{service && service.contactInfo.address}</span>              </div>              <span>Contact & Support</span>;
+            </h4>;"
+            <div className="space-y-2 text-sm text-gray-300">;"
+              <div className="flex items-center space-x-2">;"
+                <span className="text-blue-400">📱</span>;
+                <span>{service && service.contactInfo.mobile}</span>;
+              </div>;"
+              <div className="flex items-center space-x-2">;"
+                <span className="text-green-400">✉️</span>;
+                <span>{service && service.contactInfo.email}</span>;
+              </div>;"
+              <div className="flex items-center space-x-2">;"
+                <span className="text-purple-400">📍</span>;"
+                <span className="text-xs">{service && service.contactInfo.address}</span>;
+              </div>;
+            </div>;
+          </div>;
+
           {/* ROI and competitors */}
           <div className='grid grid-cols-2 gap-4 mb-6'    />;
             <div className='bg-green-900/20 rounded-lg p-3 border border-green-700/30'    />;
@@ -449,8 +549,8 @@ key={index}
           <motion.a;
 href={service.link}
 
-className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
-
+className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
+origin/cursor/automate-test-improve-and-merge-code-2533
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }
 }
@@ -473,20 +573,39 @@ className='group relative inline-flex items-center justify-center w-full bg-grad
           <div className='text-center mt-4'    />;
 
             <a;
-href={service.link}
-              className='inline-flex items-center space-x-2 text-sm text-gray-400 hover: text-cyan-400 transition-colors duration-300'
-                />
-              <span    />Learn more about {service.name}</span>
-              <ExternalLink className='w-3 h-3'    />
-            </a>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-)
-};
-
-
+            whileTap={{ scale: 0.98 }}
+          >"
+            <span className="mr-2">Get Started</span>"
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+            {/* Button glow effect */}"
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
+          </motion.a>
+export default QuantumHolographicCard;  )
+}
 export default QuantumHolographicCard;
 
-"
+export default QuantumHolographicCard;
+export default QuantumHolographicCard;
+};
+
+export default QuantumHolographicCard;  );
+};
+
+export default QuantumHolographicCard;"
+              className="inline - flex items - center space - x-2 text - sm text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300";
+            >;
+              <span > Learn more about {service.name}</span>;"
+              <ExternalLink className="w - 3 h - 3" />;
+            </a>;
+          </div>;
+        </div>;
+      </div>;
+    </motion.div>);
+}
+;
+export default QuantumHolographicCard);
+}
+;
+export default QuantumHolographicCard;
+;
+

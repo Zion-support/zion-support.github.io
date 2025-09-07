@@ -1,4 +1,5 @@
-email: string;
+
+  email: string;
   is_valid: boolean;
 interface EmailValidationResult {}
   email: string;
@@ -48,3 +49,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   },
 }
+

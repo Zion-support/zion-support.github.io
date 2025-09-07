@@ -1,4 +1,5 @@
-if (!file) return res && res.status(400).json({ error: "Missing file" });
+
+  if (!file) return res && res.status(400).json({ error: "Missing file" });
   const fullPath = path && path.join("
     resolveDataPath(path && path.join("dataroom", section)),'
 import type { NextApiRequest, NextApiResponse } from './next';'
@@ -50,3 +51,4 @@ function handler() {}
   );"
   appendAuditLog ({ type: "file_download", section, name: file });
   fs.createReadStream (full_path).pipe (res);
+

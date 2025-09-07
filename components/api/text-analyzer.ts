@@ -1,7 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-interface TextAnalysisResult {
+  }
+}
+export default async function handler(
+;
+  req: NextApiRequest;
+  res: NextApiResponse<TextAnalysisResult | { error: string }>
+) {}
+  }
+  try {}
+    const { text } = req && req.body;
 
+    // Basic statistics;
+    const characters = text.length;'
+    const charactersNoSpaces = text.replace(/\s/g, '').length;
 
 text: string;
   statistics: {characters: number;
@@ -54,8 +66,8 @@ return res.status(405).json({ error: 'Method not allowed'}
         .json({ error: 'Text too long (max 10,000 characters)' });
     }
 
-    // Basic statistics;
-const words = text;
+    // Basic statistics
+
       .trim()
       .split(/\s+/)
       .filter(word => word && word.length > 0).length;
@@ -155,16 +167,10 @@ const negativeWords = [
 ];
 
     ).length;
+    const negativeCount = textWords && textWords.filter(word =>
+      negativeWords && negativeWords.includes(word)
+    ).length;
 
-const negativeCount = textWords && textWords.filter(word =>;
-      negativeWords && negativeWords.includes(word)).length;
-
-const sentimentScore = positiveCount - negativeCount;
-    let sentimentLabel: TextAnalysisResult['sentiment']['label'];
-    if (sentimentScore <= -3) sentimentLabel = 'very-negative';
-    else if (sentimentScore <= -1) sentimentLabel = 'negative';
-    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
-    else if (sentimentScore <= 3) sentimentLabel = 'positive';
     else sentimentLabel = 'very-positive';
 
     // Keyword analysis;
@@ -237,33 +243,17 @@ const bigrams = Array && Array.from(bigramCounts && bigramCounts.entries())
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
+      text;
+        characters;
+        charactersNoSpaces;
+        words;
+        sentences;
+        paragraphs;
+        syllables;
+        readingTime;
+        speakingTime;
+      }
 
-const isEnglish = /^[a-zA-Z\s.,!?;:'\"()-]+$/.test(text);
-
-const detectedLanguage = isEnglish ? 'en' : 'unknown';
-
-const confidence = isEnglish ? 0.95 : 0.5;
-
-const result: TextAnalysisResult = {
-text,
-      statistics: {
-        characters,
-        charactersNoSpaces,
-        words,
-        sentences,
-        paragraphs,
-        syllables,
-        readingTime}
-        speakingTime}
-      },
-      readability: {
-        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100;
-fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100;
-gunningFog: Math.round(gunningFog * 100) / 100;
-smog: Math.round(smog * 100) / 100;
-colemanLiau: Math.round(colemanLiau * 100) / 100;
-automatedReadability: Math.round(automatedReadability * 100) / 100;}
-averageGrade}
       }
       sentiment: {
         score: sentimentScore;
@@ -279,8 +269,11 @@ positiveWords: textWords.filter(word => positiveWords.includes(word))}
     res.status(500).json({ error: 'Internal server error'}
 });
   }
-    res.status(500).json({ error: 'Internal server error' })
   }
 }
 
-"
+    res.status(500).json({ error: 'Internal server error' })
+  }
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+

@@ -1,300 +1,89 @@
 
-  Brain,Mail,Phone,MapPin,Globe,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
-import React from 'react';
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div    />Something went wrong.</div>;}
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
-  return <div    />Something went wrong.</div>;}
-    }return this.props.children;
-  }
-}
 import Link from 'next/link';
-import {Brain,Mail,Phone,MapPin,Globe,Github,Linkedin,Twitter,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
-import { Facebook,Twitter,Linkedin,Instagram,Mail,Phone,MapPin,ArrowUp,Globe,Shield,FileText,HelpCircle,} from 'lucide-react';
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div    />Something went wrong.</div>;}
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
-  return <div    />Something went wrong.</div>;}
-    }return this.props.children;
+import {;
+  Brain,;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Globe,;
+  Github,;
+  Linkedin,;
+
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowUp,
+  Globe,
+  Shield,
+  FileText,
+  HelpCircle,
+} from 'lucide-react';
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+    super(props);
+    this.state = { hasError: false ;};
   }
-}
-  Brain,Mail,Phone,MapPin,Globe,Github,Linkedin,Twitter,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
-const EnhancedFooter: React.FC = () => {const currentYear  = new Date().getFullYear(),const footerSections = [;
-    {title: 'Services',}
-  links: [;}
-        { name: 'AI Business Intelligence',}
-  href: '/ai-business-intelligence' },{ name: 'Quantum Cybersecurity',}
-  href: '/quantum-cybersecurity' },{ name: 'Edge Computing',}
-  href: '/edge-computing-orchestration' },{ name: 'Space Technology',}
-  href: '/space-technology' },{name: 'View All Services',}
-  href: '/comprehensive-2025-services-showcase',},],},    {        { name: 'View All Services',}
-  href: '/comprehensive-2025-services-showcase' }import React from 'react';,import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
-const EnhancedFooter: React.FC;
-const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYear()const footerSections = [;
-    {title: 'Services';}
-      links: [;}
-        { name: 'AI Business Intelligence',}
-  href: '/ai-business-intelligence' },{ name: 'Quantum Cybersecurity',}
-  href: '/quantum-cybersecurity' },{ name: 'Edge Computing',}
-  href: '/edge-computing-orchestration' },{ name: 'Space Technology',}
-  href: '/space-technology' },{name: 'View All Services',}
-  href: '/comprehensive-2025-services-showcase',},],},{title: 'Company',}
-  links: [;}
-        { name: 'About Us',}
-  href: '/about' },{ name: 'Our Work',}
-  href: '/portfolio' },{ name: 'Blog & Insights',}
-  href: '/blog' },{ name: 'Careers',}
-  href: '/careers' },{ name: 'Contact',}
-  href: '/contact' },],},{title: 'Resources',}
-  links: [;}
-        { name: 'Documentation',}
-  href: '/docs' },{ name: 'API Reference',}
-  href: '/api' },{ name: 'Support Center',}
-  href: '/support' },{ name: 'Privacy Policy',}
-  href: '/privacy' },{ name: 'Terms of Service',}
-  href: '/terms' },],const footerLinks = {services: [;}
-      { name: 'AI Services',}
-  href: '/services/ai-services' },{ name: 'IT Services',}
-  href: '/services/it-services' },{ name: 'Micro SaaS',}
-  href: '/services/micro-saas' },{ name: 'Web Development',}
-  href: '/services/web-development' },{ name: 'Cloud Services',}
-  href: '/services/cloud-services' },{ name: 'AI Development',}
-  href: '/services/ai-development' },],solutions: [;
-      { name: 'AI Content Creation',}
-  href: '/solutions/ai-content-creation' },{ name: 'Customer Support',}
-  href: '/solutions/customer-support' },{ name: 'Email Automation',}
-  href: '/solutions/email-automation' },{ name: 'Event Management',}
-  href: '/solutions/event-management' },{ name: 'Project Management',}
-  href: '/solutions/project-management' },{ name: 'Workflow Automation',}
-  href: '/solutions/workflow-automation' },],company: [;
-      { name: 'About Us',}
-  href: '/about' },{ name: 'Careers',}
-  href: '/careers' },{ name: 'Partners',}
-  href: '/partners' },{ name: 'Contact',}
-  href: '/contact' },{ name: 'Blog',}
-  href: '/blog' },],resources: [;
-      { name: 'Help Center',}
-  href: '/help' },{ name: 'Pricing Guide',}
-  href: '/pricing-guide' },{ name: 'Search',}
-  href: '/search' },{ name: 'Sitemap',}
-  href: '/sitemap' },],legal: [;
-      { name: 'Privacy Policy',}
-  href: '/privacy' },{ name: 'Terms of Service',}
-  href: '/terms' },{ name: 'Cookie Policy',}
-  href: '/cookies' },],}const socialLinks = [;
-    {name: 'Facebook',}
-  icon: Facebook,href: 'https://facebook.com/ziontechgroup',},{name: 'Twitter',}
-  icon: Twitter,href: 'https://twitter.com/ziontechgroup',},{name: 'LinkedIn',}
-  icon: Linkedin,href: 'https://linkedin.com/company/ziontechgroup',},{name: 'Instagram',}
-  icon: Instagram,href: 'https://instagram.com/ziontechgroup',},];const socialLinks = [;
-    { name: 'GitHub',}
-  href: 'https://github.com/Zion-Holdings', icon: Github },{name: 'LinkedIn',}
-  href: 'https://linkedin.com/company/ziontechgroup',icon: Linkedin,},{name: 'Twitter',}
-  href: 'https://twitter.com/ziontechgroup',icon: Twitter,},];
-  const socialLinks = [;
-    { name: 'GitHub',}
-  href: 'https://github.com/Zion-Holdings', icon: Github }
-    { name: 'GitHub',}
-  href: 'https://github.com/Zion-Holdings', icon: Github },{name: 'LinkedIn';
-      href: 'https://linkedin.com/company/ziontechgroup';}
-      icon: Linkedin;}
+
+      return <div>Something went wrong.</div>;
     }
-    {const socialLinks = [;}
-    { name: 'GitHub',}
-  href: 'https://github && github.com/Zion-Holdings', icon: Github },{name: 'LinkedIn',}
-  href: 'https://linkedin && linkedin.com/company/ziontechgroup',icon: Linkedin,},{name: 'Twitter',}
-  href: 'https://twitter && twitter.com/ziontechgroup',icon: Twitter,},{ name: 'GitHub',}
-  href: 'https://github.com/Zion-Holdings', icon: Github },return (<footer className='bg-slate-950 border-t border-white/10'    />;
+    return this.props.children;
+  }
 
-const EnhancedFooter: React.FC = () => {const currentYear  = new Date().getFullYear();
-  const footerSections = [
-  {title: 'Services',
-  links: [;
-          { name: 'AI Business Intelligence',}
-  href: '/ai-business-intelligence',}
-},
-  { name: 'Quantum Cybersecurity',}
-  href: '/quantum-cybersecurity',}
-},
-  { name: 'Edge Computing',}
-  href: '/edge-computing-orchestration',}
-},
-  { name: 'Space Technology',}
-  href: '/space-technology',}
-},
-{name: 'View All Services',}
-  href: '/comprehensive-2025-services-showcase',},],},    {        { name: 'View All Services',}
-  href: '/comprehensive-2025-services-showcase',}
-}import React from 'react';,import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
+  Brain,;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Globe,;
+  Github,;
+  Linkedin,;
+  Twitter,;'
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 
+const EnhancedFooter: React.FC = () => {;
+  const currentYear = new Date().getFullYear(),;
+
+  const footerSections = [;
+
+        },;
+
+import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 const EnhancedFooter: React.FC;
 
-const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYear(;
-  const footerSections = [
-  {title: 'Services';
-      links: [;
-          { name: 'AI Business Intelligence',}
-  href: '/ai-business-intelligence',}
-},
-  { name: 'Quantum Cybersecurity',}
-  href: '/quantum-cybersecurity',}
-},
-  { name: 'Edge Computing',}
-  href: '/edge-computing-orchestration',}
-},
-  { name: 'Space Technology',}
-  href: '/space-technology',}
-},
-{name: 'View All Services',}
-  href: '/comprehensive-2025-services-showcase',},],},{title: 'Company',
-  links: [;
-          { name: 'About Us',}
-  href: '/about',}
-},
-  { name: 'Our Work',}
-  href: '/portfolio',}
-},
-  { name: 'Blog & Insights',}
-  href: '/blog',}
-},
-  { name: 'Careers',}
-  href: '/careers',}
-},
-  { name: 'Contact',}
-  href: '/contact',}
-},
-],},{title: 'Resources',
-  links: [;
-          { name: 'Documentation',}
-  href: '/docs',}
-},
-  { name: 'API Reference',}
-  href: '/api',}
-},
-  { name: 'Support Center',}
-  href: '/support',}
-},
-  { name: 'Privacy Policy',}
-  href: '/privacy',}
-},
-  { name: 'Terms of Service',}
-  href: '/terms',}
-},
-],const footerLinks = {services: [;
-        { name: 'AI Services',}
-  href: '/services/ai-services',}
-},
-  { name: 'IT Services',}
-  href: '/services/it-services',}
-},
-  { name: 'Micro SaaS',}
-  href: '/services/micro-saas',}
-},
-  { name: 'Web Development',}
-  href: '/services/web-development',}
-},
-  { name: 'Cloud Services',}
-  href: '/services/cloud-services',}
-},
-  { name: 'AI Development',}
-  href: '/services/ai-development',}
-},
-],solutions: [;
-        { name: 'AI Content Creation',}
-  href: '/solutions/ai-content-creation',}
-},
-  { name: 'Customer Support',}
-  href: '/solutions/customer-support',}
-},
-  { name: 'Email Automation',}
-  href: '/solutions/email-automation',}
-},
-  { name: 'Event Management',}
-  href: '/solutions/event-management',}
-},
-  { name: 'Project Management',}
-  href: '/solutions/project-management',}
-},
-  { name: 'Workflow Automation',}
-  href: '/solutions/workflow-automation',}
-},
-],company: [;
-        { name: 'About Us',}
-  href: '/about',}
-},
-  { name: 'Careers',}
-  href: '/careers',}
-},
-  { name: 'Partners',}
-  href: '/partners',}
-},
-  { name: 'Contact',}
-  href: '/contact',}
-},
-  { name: 'Blog',}
-  href: '/blog',}
-},
-],resources: [;
-        { name: 'Help Center',}
-  href: '/help',}
-},
-  { name: 'Pricing Guide',}
-  href: '/pricing-guide',}
-},
-  { name: 'Search',}
-  href: '/search',}
-},
-  { name: 'Sitemap',}
-  href: '/sitemap',}
-},
-],legal: [;
-        { name: 'Privacy Policy',}
-  href: '/privacy',}
-},
-  { name: 'Terms of Service',}
-  href: '/terms',}
-},
-  { name: 'Cookie Policy',}
-  href: '/cookies',}
-},
-],}
-
-const socialLinks = [
-  {name: 'Facebook',}
-  icon: Facebook,href: 'https://facebook.com/ziontechgroup',},{name: 'Twitter',}
-  icon: Twitter,href: 'https://twitter.com/ziontechgroup',},{name: 'LinkedIn',}
-  icon: Linkedin,href: 'https://linkedin.com/company/ziontechgroup',},{name: 'Instagram',}
-  icon: Instagram,href: 'https://instagram.com/ziontechgroup',},];
-
-const socialLinks = [
-  { name: 'GitHub',}
-  href: 'https://github.com/Zion-Holdings', icon: Github,}
-},{name: 'LinkedIn',}
-  href: 'https://linkedin.com/company/ziontechgroup',icon: Linkedin,},{name: 'Twitter',}
-  href: 'https://twitter.com/ziontechgroup',icon: Twitter,},];
-
-const socialLinks = [
-  { name: 'GitHub',}
-  href: 'https://github.com/Zion-Holdings', icon: Github,}
-}
-    { name: 'GitHub',}
-  href: 'https://github.com/Zion-Holdings', icon: Github,}
-},{name: 'LinkedIn';
-      href: 'https://linkedin.com/company/ziontechgroup';}
-      icon: Linkedin;}
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+    {'
+      name: 'LinkedIn''
+      href: 'https://linkedin.com/company/ziontechgroup'
+      icon: Linkedin;
     }
-    {const socialLinks = [
-  { name: 'GitHub',}
-  href: 'https://github && github.com/Zion-Holdings', icon: Github,}
-},{name: 'LinkedIn',}
-  href: 'https://linkedin && linkedin.com/company/ziontechgroup',icon: Linkedin,},{name: 'Twitter',}
-  href: 'https://twitter && twitter.com/ziontechgroup',icon: Twitter,},{ name: 'GitHub',}
-  href: 'https://github.com/Zion-Holdings', icon: Github,}
-};
-  return (<footer className='bg-slate-950 border-t border-white/10'    />;
-      <div className='max-w-7xl mx-auto px-6 py-16'    />;
-        {/* Main Footer Content */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12'    />;
+    {}
+  const socialLinks = [;'
+    { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
+    {;'
+      name: 'LinkedIn',;'
+      href: 'https://linkedin && linkedin.com/company/ziontechgroup',;
+      icon: Linkedin,;
+    },;
+    {;'
+      name: 'Twitter',;'
+      href: 'https://twitter && twitter.com/ziontechgroup',;
+      icon: Twitter,;
+    },;
+
+'
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+
+  return ('
+    <footer className='bg-slate-950 border-t border-white/10'>;'
+      <div className='max-w-7xl mx-auto px-6 py-16'>;
+        {/* Main Footer Content */}'
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12'>;
           {/* Company Info */}
             {/* Contact Info */}
             <div className='space-y-3'    />;
@@ -370,21 +159,17 @@ className='hover:text-white transition-colors';
 }
               </ul>;
             </div>;
-          ))}<div className=\"flex items-center space-x-3 text-gray-400\"    />;
-                <Mail className=\"w-4 h-4\"    />;
-                <a;
-                  href=\'mailto: kleber@ziontechgroup.com\';
-                  className=\'hover:text-white transition-colors\';
-                    />;
-                  className=\"hover:text-white transition-colors\">
+          ))}
 
-                  kleber@ziontechgroup.com;
-                </a>;
-              </div>;
-              <div className=\"flex items-center space-x-3 text-gray-400\"    />;
-                <MapPin className=\"w-4 h-4\"    />;
-                <span    />364 E Main St STE 1008, Middletown DE 19709</span>;
-              </div>;
+          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
+            {/* Copyright */}
+            {/* Social Links */}'
+            <div className='flex items-center space-x-4'>;"
+              {socialLinks && socialLinks.map(social => (        <div className="pt-8 border-t border-white/10">;"
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
+            {/* Copyright */}
+"
+            <div className="text-white/60 text-sm">;
             </div>;
           </div>;
           {/* Services */}
@@ -402,49 +187,7 @@ className='hover:text-white transition-colors';
                     {link.name}
                     className=\"text-gray-400 hover: text-white transition-colors text-sm\">
 
-                    {link.nam,}
-}
-                  </Link>;
-                </li>;
-              ))}
-            </ul>;
-          </div>;
-          {/* Solutions */}
-          <div    />;
-            <h3 className=\"text-lg font-semibold mb-4 flex items-center\"    />;
-              <Shield className=\"w-5 h-5 mr-2 text-green-400\"    />;
-              Solutions;
-            </h3>;
-            <ul className=\"space-y-2\"    />;
-              {footerLinks.solutions.map(link => (<li key={link.name}    />;
-                  <Link;
-                    href={link.href}
-                    className=\'text-gray-400 hover: text-white transition-colors text-sm\';
-                      />;
-                    {link.name}
-                    className=\"text-gray-400 hover: text-white transition-colors text-sm\">
-
-                    {link.nam,}
-}
-                  </Link>;
-                </li>;
-              ))}
-            </ul>;
-          </div>;
-          {/* Company */}
-          <div    />;
-            <h3 className=\"text-lg font-semibold mb-4 flex items-center\"    />;
-              <FileText className=\"w-5 h-5 mr-2 text-purple-400\"    />;
-              Company;
-            </h3>;
-            <ul className=\"space-y-2\"    />;
-              {footerLinks.company.map(link => (<li key={link.name}    />;
-                  <Link;
-                    href={link.href}
-                    className=\'text-gray-400 hover: text-white transition-colors text-sm\';
-                      />;
-                    {link.name}
-                    className=\"text-gray-400 hover: text-white transition-colors text-sm\">
+            {/* Social Links */}
 
                     {link.nam,}
 }
@@ -616,7 +359,11 @@ const scrollToTop = (\';
           </div>;
         </div>;
       </div>;
-    </footer>)}export default EnhancedFooter)})}export default EnhancedFooter;
+    </footer>);
+}export default EnhancedFooter);
+}
+;
+
 import React from './react';
   FileText,HelpCircle} from './lucide-react';
     </footer>)}
@@ -908,18 +655,5 @@ company updates.;
   )}export default EnhancedFooter;  )}</button>;
   )}
 
-export default EnhancedFooter;  )}</button>;
-    </footer>;
-  )}\"';
-      {/* Scroll to Top Button */}
-      <button;
-        onClick={scrollToTop}
-        className=\'fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50\';
-        aria-label=\'Scroll to top\';
-          />;
-        aria-label=\"Scroll to top\">
+};
 
-        <ArrowUp className=\"w-5 h-5\"    />;
-      </button>;
-    </footer>;
-  )}

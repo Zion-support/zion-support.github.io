@@ -1,4 +1,6 @@
-</div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
+
+
+ </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 
 }</div>) import { useEffect, useState } from 'react';
 
@@ -71,10 +73,13 @@ function AutomationStatusPage() {}
         </div>) : ("
         <div className="text - sm text - gray - 500">No status available yet.</div>)}
     </div>);
-});
+}
+
+  );
 }
 
     </div>
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+

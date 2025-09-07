@@ -1,4 +1,6 @@
-return (
+
+
+  return (
       <select;
         className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={category}
@@ -322,3 +324,4 @@ function FilterBar() {}
   );
 }
 }
+

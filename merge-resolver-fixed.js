@@ -186,7 +186,6 @@ async function main() {;
   let fixedCount = 0;
   for (const file of files) {;
       const content = fs.readFileSync(file, 'utf8');
-      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
       if (content.includes() |content.includes()
       } else if (extensions.some(ext => item.endsWith(ext))) {;
     } catch (error) {;

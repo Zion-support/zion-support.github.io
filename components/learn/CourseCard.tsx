@@ -1,3 +1,5 @@
+
+
 import Link from 'next/link';
 
   id: string;
@@ -76,3 +78,4 @@ export default function CourseCard() {return (<div className='border rounded-lg 
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+

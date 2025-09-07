@@ -125,3 +125,4 @@ app.get ('/talent / search', async (req, reply) => {}
     );
     );
 ;
+

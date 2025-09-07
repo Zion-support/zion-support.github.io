@@ -1,8 +1,12 @@
-import fs from 'fs';
-import path from 'path';
-import fse from 'fs - extra';
 
 import { randomUUID } from 'crypto';
+
+// Lazy import to avoid serverless cold start cost unless needed
+async function summarizeAndTag(input: {
+
+  fullName: string;
+async function summarizeAndTag(input: {fullName: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 // Lazy import to avoid serverless cold start cost unless needed;
 async function summarizeAndTag(input: {
@@ -12,15 +16,7 @@ async function summarizeAndTag(input: {fullName: string;
   bio: string;
   projects?: string;
   skills: string;
-// Lazy import to avoid serverless cold start cost unless needed;
-async function summarizeAndTag(input: {
-  fullName: string, professionalTitle: string,
-  bio: string, projects?: string,
-  skills: string,}
-  tools?: string}
-}) {}
-}
-    return { summary, tags: basicTags.slice(0, 24) };
+
   }
   try {}
     const { OpenAI } = await import('openai');
@@ -58,18 +54,41 @@ if (
     } catch (e) {
       // fall through to heuristic;}
     }
-  } catch (e) {
-// ignore and fallback}
+
+  const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
+  return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) }
+}
+export default async function handler() { return null; }
+    return res && res.status(405).json({ error: 'Method not allowed' })
   }
-
-const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
-  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
-
-export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
-) {
-
+    // ignore and fallback;
+  }'`
+  const fallback_summary = `${input.full_name} — ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+  return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
+;
+export default async /**;
+ * handler - Function description;
+ */
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.set_header ('Allow', 'POST');'
+    return res.status (405).json ({ error: 'Method not allowed' });  }  }'`
+  const fallback_summary = `${input.full_name} — ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+  return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
+}
+export default async /**;
+ * handler - Function description;
+ */
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.set_header ('AllowPOST');'
+    return res.status (405).json ({ error: 'Method not allowed' });
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');}
     return res.status(405).json({ error: 'Method not allowed',}
@@ -178,12 +197,45 @@ const aggregatePath = path.join(
       'data',
       'talent-submissions.json'
     );
-
+origin/cursor/automate-test-improve-and-merge-code-2533
     let aggregate: any[] = [];
-    if () {) {$2;}
+    if (fs && fs.existsSync(aggregatePath)) {}
+      try {}
+        const content = await fse && fse.readJSON(aggregatePath);
+        if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content;
+    let aggregate: any[] = [];
+    if () {) {}
+  $2;
 }
 
-      try {
+        // ignore;
+      }
+    }
+  } catch (error) {'
+    return res && res.status(500).json({ error: 'Internal server error' });
+  }    return res && res.status(200).json({ ok: true, id, summary, tags })
+  } catch (error) {}
+}
+    aggregate.push (record);
+    await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
+;
+    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
+    // For now, just return success with AI data;
+    return res.status (200).json ({ ok: true, id, summary, tags });
+  } catch (error) {'
+    return res.status (500).json ({ error: 'Internal server error' });
+  }    return res.status (200).json ({ ok: true, id, summary, tags });
+  } catch (error) {'
+    return res.status (500).json ({ error: 'Internal server error' });
+}
+}
+  }
+  }
+  }
+}
+
+    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
+    // For now, just return success with AI data
 
         const content = await fse.readJSON(aggregatePath);}
 if (Array.isArray(content)) aggregate = content;}
@@ -202,4 +254,5 @@ return res.status(200).json({ ok: true, id, summary, tags });
     return res.status(500).json({ error: 'Internal server error',}
 });
   }
+origin/cursor/automate-test-improve-and-merge-code-2533
 

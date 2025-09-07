@@ -1,6 +1,5 @@
 
 
-import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -33,44 +32,4 @@ const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   const contactInfo = null;
 //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-
- //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
- //Combine all services for comprehensive showcase const allServices  = [ ...nextGenerationAIServices;//Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
-import React from 'react';
- //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-//Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
-...cuttingEdgeITServices;
-...innovativeMicroSaasV2Services;
-...enhancedRealMicroSaasServices;
-...innovativeAIServices;
-...quantumSpaceServices;
-...enterpriseITServices;
-...realMarketServices;
-...newVerifiedServicesQ22025 ];
-return filtered;}
-}
-}, [all_services, selected_category, search_term, sort_by]);
-
-const container_variants = {
-  hidden: {
-  {}
-  opacity: 0, y: 30,}
-}animate= {
-  {}
-  opacity: 1, y: 0,}
-}transition= {
-  {
-  {}
-  opacity: 0, y: 30,}
-}whileInView= {
-  {}
-  opacity: 1, y: 0}
-}transition= {}
-  {}
-}
-}> {
-}
-  children }
-}</button>) }
 

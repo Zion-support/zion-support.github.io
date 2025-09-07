@@ -1,11 +1,5 @@
 import type { GetServerSideProps } from 'next';
 
-
-import { FormEvent, useState } from 'react';
-import type { Vendor } from '../../utils/vendor-types';
-
-type Props = any;
-  async function submitLead(e: FormEvent<HTMLFormElement    />) {
     e.preventDefault();
 
 const form = e.currentTarget;
@@ -15,46 +9,17 @@ const formData = new FormData(form);
 const title = String(formData.get('title') |'New lead');
     setLoading(true);
     setMessage(null)
-    try {
-
-      const res = await fetch('/api/vendors/lead', {
-        method: 'POST',}
-  headers: { 'Content-Type': 'application/json',}
-},
-body: JSON.stringify({ vendorId: vendor.id, title }),
-      });
-      if (!res.ok) throw new Error('Failed to submit');
-      setMessage('Thanks! We will contact you soon.');
-      form.reset();
-    } catch (e) {
-      setMessage(e.message);}
-    } finally {}
-      setLoading(false);}
-    }
-
-  }
-  return (<div className='space-y-8'    />;
-      <div className='flex items-center gap-4'    />;
-        {vendor.logoUrl ? (// eslint-disable-next-line @next/next/no-img-element;}
-          <img;}
-            src={vendor.logoUrl}
-            alt={vendor.name}
-            className='w-16 h-16 rounded';
-             />;
-        ) : (<div className='w-16 h-16 rounded bg-gray-100 dark:bg-gray-900'    />;
+    try {}
+          // eslint-disable-next-line @next/next/no-img-element;
+          <img src={vendor.logoUrl} alt={vendor.name} className="w-16 h-16 rounded" />
+        ) : ("
+          <div className="w-16 h-16 rounded bg-gray-100 dark: bg-gray-900" />
         )}
-        <div    />;
-          <div className='text-2xl font-semibold flex items-center gap-2'    />;
-            {vendor.name}
-            {vendor.verified && (<span className='text-xs px-2 py-0.5 rounded bg-green-100 text-green-700'    />;
-                Verified;}
-              </span>;}
-            )}
+        <div>"
+          <div className="text-2xl font-semibold flex items-center gap-2">
+            {vendor.name}"
+            {vendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
 
-          </div>
-          <div className='text-sm text-gray-500'    />
-            {vendor.servicesOffered?.join(', ')}
-          </div>
         </div>
       </div>
       <div    />
@@ -183,6 +148,29 @@ src={sp.imageUrl}
         </div>;
       )}
 
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+        <form onSubmit={submitLead} className='space-y-3'>
+          <input'
+            name='title'
+            required'
+            placeholder='What do you need?''
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />;
+          <button;
+            disabled={loading}'
+            className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;'
+            {loading ? 'Submitting...' : 'Send'}
+          </button>;'
+          {message && <div className='text-sm'>{message}</div>}
+            ))}
+          </div>
+        </div>
+      )}
         </form>
       </div>
       <div className='text-center text-xs text-gray-500'    />Powered by Zion</div>
@@ -197,5 +185,4 @@ const { getVendorBySlug } = await import('../../utils/vendor-store');
 
 const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } }}
-
 

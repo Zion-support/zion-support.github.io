@@ -1,4 +1,5 @@
-children: React.ReactNode;
+
+  children: React.ReactNode;
   defaultValue?: string;
   value?: string;
   onValueChange?: (value: string) => void;
@@ -70,3 +71,4 @@ export function TabsContent() {if (activeTab !== value) return null;}
       {children}
 
 }
+

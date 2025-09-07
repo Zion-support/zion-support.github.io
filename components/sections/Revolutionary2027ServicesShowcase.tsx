@@ -1,68 +1,44 @@
 
 
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network  } from 'lucide-react';
-import Link from 'next/link';
-
-const Revolutionary2027ServicesShowcase = null;
-
-const containerVariants = {}
-    hidden: { opacity: 0}
-}
-    visible: {
+    hidden: { opacity: 0, y: 20 }
+    visible: {}
       opacity: 1;
-transition: {
-}
-staggerChildren: 0.1}
+      y: 0;
+      transition: {}
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };        staggerChildren: 0 && 0.1;
       }
     }
   };
+'
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20'></div>;'
+      <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0 && 0.1),transparent_50%)]'></div>;'
+      <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0 && 0.1),transparent_50%)]'></div>;
+'
+      <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20"></div>;"
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0 && 0.1),transparent_50%)]"></div>;"
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0 && 0.1),transparent_50%)]"></div>;
+"
+      <div className="max-w-7xl mx-auto relative z-10">;
 
-const itemVariants = {}
-    hidden: { opacity: 0, y: 20}
-}
-    visible: {
-      opacity: 1;
-y: 0;
-transition: {
-
-        duration: 0.6}
-ease: 'easeOut' as const}
-      }
-    }
-  };
-
-  return (
-    <section className='py-24 px-4 sm: px-6 lg:px-8 relative overflow-hidden'    />
-
-      {/* Enhanced Background Effects *}
-}
-      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20'    /></div>;
-      <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]'    /></div>;
-      <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0.1),transparent_50%)]'    /></div>;
-      <div className='max-w-7xl mx-auto relative z-10'    />;
-        {/* Section Header */}
-
-        <motion.div;
-initial={{ opacity: 0, y: 20 }
-}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }
 }
 
-className='text-center mb-20'
-            />
-          <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'    />
-            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
               2027 Revolutionary Services;
             </span>
-          </h2>
-          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'    />
-            Experience the future of technology with our cutting-edge AI;
-quantum computing, and emerging technology services. Transform your;
-business with solutions that were once science fiction.
+          </h2>'
+          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
+
           </p>
         </motion.div>
 
@@ -88,7 +64,8 @@ business with solutions that were once science fiction.
         <motion&& motion.div;
           variants={containerVariants}
 
-initial='hidden'
+        {/* Category Overview */}
+
           whileInView='visible'
           viewport={{ once: true }
 }
@@ -123,43 +100,64 @@ className='relative group'    />
           variants={containerVariants}
 initial='hidden';
           whileInView='visible';
-          viewport={{ once: true }
-}
-
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'
-            />
-          {featuredServices.map((service, index) => (}
-            <motion.div;}
-key={service.id}
-              variants={itemVariants}
-
-className='group relative'
-                />
-              <div className='relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover: shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20'    />
-
-                {/* Service Icon *}
-}
-                <div;
-                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover: shadow-lg hover:shadow-cyan-400/40
-}    />
-
-                  <service.icon className='w-8 h-8 text-white'    />;
+          viewport={{ once: true }}'"
+          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16'        >          initial="hidden";"
+          whileInView="visible";
+          viewport={{ once: true }}"
+          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16";
+          {featured_services.map ((service, index) => (
+            <motion.div;
+              key={service.id}
+              variants={item_variants}'
+              className='group relative';
+            >;'
+              <div className='relative bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 h - full transform transition - all duration - 500 group - hover:shadow - xl hover:shadow - cyan - 500 / 30 group - hover:shadow - 2xl group - hover:shadow - purple - 500 / 20'>;
+                {/* Service Icon */}
+                <div;`
+                  className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6 transform transition - transform duration - 300 group - hover:shadow - lg hover:shadow - cyan - 400 / 40`}
+                >;'
+                  <service.icon className='w - 8 h - 8 text - white' />;
                 </div>;
-                {/* Service Content */}
-                <div className='space-y-4'    />;
-                  <h3 className='text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'    />;
+                {/* Service Content */}'
+                <div className='space - y-4'>;'
+                  <h3 className='text - 2xl font - bold text - white group - hover:text - transparent group - hover:bg - gradient - to - r group - hover:from - cyan - 400 group - hover:to - purple - 400 group - hover:bg - clip - text transition - all duration - 300'>;
                     {service.name}
-                  </h3>;
-                  <p className='text-gray-300 leading-relaxed'    />;
-                    {service.description}
+                  </h3>;'
+                  <p className='text - gray - 300 leading - relaxed'>                    {service.description}
                   </p>;
-                  {/* Features */}
-<div className='space-y-2'    />;
-                    {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className='flex items-center space-x-2'    />;
-                        <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'    /></div>;
-                        <span className='text-sm text-gray-400'    />{feature}</span>;
-                      </div>;
+                  {/* Features */}            >;"
+              <div className="relative bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 h - full transform transition - all duration - 500 group - hover:shadow - xl hover:shadow - cyan - 500 / 30 group - hover:shadow - 2xl group - hover:shadow - purple - 500 / 20">;
+                {/* Service Icon */}`
+                <div className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6 transform transition - transform duration - 300 group - hover:shadow - lg hover:shadow - cyan - 400 / 40`}>;"
+                  <service.icon className="w - 8 h - 8 text - white" />;
+                </div>;
+                {/* Service Content */}"
+                <div className="space - y-4">;"
+                  <h3 className="text - 2xl font - bold text - white group - hover:text - transparent group - hover:bg - gradient - to - r group - hover:from - cyan - 400 group - hover:to - purple - 400 group - hover:bg - clip - text transition - all duration - 300">;
+                    {service.name}
+                  {/* Features */}'
+                  <div className='space-y-2'>;
+                    {service && service.features.slice(0, 3).map((feature, idx) => (;'
+                      <div key={idx} className='flex items-center space-x-2'>;'
+                        <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>;'"
+                        <span className='text-sm text-gray-400'>{feature}</span>                      </div>                  <div className="space-y-2">;
+                    {service && service.features.slice(0, 3).map((feature, idx) => (;"
+                      <div key={idx} className="flex items-center space-x-2">;"
+                        <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>;"
+                        <span className="text-sm text-gray-400">{feature}</span>;
+
+                    <div className='flex justify-between items-center text-sm text-gray-400'>
+                      <span>Market: {service.marketSize}</span>'
+                      <span className='text-green-400'>
+                      </span>                    </div>
+                  </div>
+                  {/* Price and CTA */}'
+                  <div className='pt-4 flex items-center justify-between'>'"
+                    <div className='text-3xl font-bold text-white'>                  <div className="pt-4 border-t border-gray-700/50">"
+                    <div className="flex justify-between items-center text-sm text-gray-400">
+                      <span>Market: {service.marketSize}</span>
                     ))}
+                  </div>
 
                   </div>
                   {/* Market Info */}
@@ -269,10 +267,7 @@ href={`/services/${service.id}`}
 
           viewport={{ once: true }}
 
-className='text-center'
-            />
-          <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'    />
-            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'    />
+            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
             </h3>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'    />
@@ -291,19 +286,14 @@ href='https://ziontechgroup.com/contact'
               <a;
 href='tel:+13024640950'
 
-                className='inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl'
-                  />
-                <span    />Call +1 302 464 0950</span>
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-)
+export default Revolutionary2027ServicesShowcase;  );
 };
-
+export default Revolutionary2027ServicesShowcase;
 
 export default Revolutionary2027ServicesShowcase;
 
-"
+export default Revolutionary2027ServicesShowcase;
+  );
+
+};
+

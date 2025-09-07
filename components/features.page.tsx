@@ -1,3 +1,5 @@
+
+
 import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 
 export default function FeaturesPage() {
@@ -147,3 +149,4 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+

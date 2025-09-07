@@ -1,4 +1,5 @@
-}, []);
+
+  }, []);
 
 "
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
@@ -41,3 +42,4 @@
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+
