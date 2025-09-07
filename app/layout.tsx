@@ -1,16 +1,17 @@
-import './globals.css';
 import type { Metadata } from 'next';
 import React from 'react';
+import './globals.css';
 
 export const metadata: Metadata = {
-	title: 'Zion Tech Group',
-	description: 'Enterprise AI, micro SaaS, and IT solutions.'
+	title: 'Zion Tech Group - Leading AI and Technology Solutions',
+	description:
+		'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body className="font-sans">{children}</body>
 		</html>
 	);
 }

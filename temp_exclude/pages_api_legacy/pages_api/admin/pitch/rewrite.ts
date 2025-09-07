@@ -1,20 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdminFromApi } from '../../../../utils/auth';
 import OpenAI from 'openai';
+import { ensureAdminFromApi } from '../../../../utils/auth';
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
-
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
-
-  const { slide } = req.body || {};
+  const { slide } = (req.body as any) || {};
   if (!slide) return res.status(400).json({ error: 'Missing slide' });
-=======
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY })
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
@@ -40,8 +35,8 @@ Title: ${slide.title}\nContent:\n${slide.content}`;
       // keep original if AI fails
     }
 
-    res.status(200).json({ title, content })
+    res.status(200).json({ title, content });
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Rewrite failed' })
+    res.status(500).json({ error: e?.message || 'Rewrite failed' });
   }
 }
