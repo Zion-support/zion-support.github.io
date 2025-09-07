@@ -1,55 +1,29 @@
-file:///workspace/scripts/auto-fixer.js:3
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';
-^
+# Comprehensive Automation Report
 
-SyntaxError: Invalid or unexpected token
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
+## Summary
+- ✅ Successful: 2
+- ❌ Errors: 6
+- ⚠️ Warnings: 2
 
-Node.js v22.16.0
+## Successful Operations
+- Pre-automation checks passed
+- Build check passed
 
-file:///workspace/scripts/advanced-build-optimizer.js:3
-ursor/integrate-build-improve-and-re-verify-8f7d;
-                                            ^
+## Errors
+- comprehensive-error-fixer.cjs failed
+- auto-fixer.js failed
+- advanced-build-optimizer.js failed
+- optimize-build.js failed
+- performance-monitor-enhanced.js failed
+- performance-optimizer.js failed
 
-SyntaxError: Invalid or unexpected token
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-Node.js v22.16.0
-
-file:///workspace/scripts/performance-monitor-enhanced.js:3
-ursor/fix-syntax-push-and-merge-to-main-40de;
-                                        ^^
-
-SyntaxError: Invalid or unexpected token
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-Node.js v22.16.0
-
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
-
-npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-npm warn config `--include=optional` to include them.
-npm warn config
-npm warn config       Default value does install optional deps unless otherwise omitted.
+## Warnings
+- ESLint had issues
+- TypeScript had issues
 
 ## Recommendations
 - Address all errors before deployment
-
+- Review and address warnings for better code quality
 - Implement continuous integration for automated testing
 - Set up automated deployment pipeline
 - Monitor performance metrics in production
@@ -62,3 +36,5 @@ npm warn config       Default value does install optional deps unless otherwise 
 - Set up monitoring for production environment
 - Schedule regular automation runs
 - Document any custom automation workflows
+
+*Generated on 2025-09-07T09:42:29.025Z*
