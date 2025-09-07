@@ -1,4 +1,3 @@
-=======
 import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -17,6 +16,7 @@ import { EnhancedTestimonials } from "@/components/EnhancedTestimonials";
 import { EnhancedContactCTA } from "@/components/EnhancedContactCTA";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
+import { EnhancedHeader } from "@/components/EnhancedHeader";
 import { 
   ArrowRight, 
   Users, 
@@ -26,7 +26,8 @@ import {
   MessageSquare, 
   Sparkles,
   BarChart3,
-  Smartphone
+  Smartphone,
+  Brain
 } from "lucide-react";
 export default function Index() {
   const { t } = useTranslation();
@@ -79,55 +80,6 @@ export default function Index() {
         canonical="https://ziontechgroup.com/"
       />
               <HeroSection />
-=======
-      {/* Quick Access Tools Section */}
-      <section className="py-16 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">
-              {t("home.explore_tools", "Explore Our Tools & Services")}
-            </h2>
-            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">
-              {t("home.tools_description", "Discover our comprehensive suite of technology tools and services designed to accelerate your business growth.")}
-            </p>
-          </div>
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
-            {toolsFeatures.map((feature, index) => (
-              <Link 
-                key={index} 
-                to={feature.link} 
-                className="group bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-zion-purple/20"
-              >
-                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">{feature.title}</h3>
-                <p className="text-zion-slate-light mb-4">{feature.description}</p>
-                <div className={`flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                  <span className="font-medium">{t("general.explore", "Explore")}</span>
-                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4 group-hover:translate-x-1 transition-transform duration-300`} />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-      <CategoriesSection />
-      <BenefitsSection />
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-      <HowItWorksSection />
-      
-      {/* Enhanced Testimonials */}
-      <EnhancedTestimonials />
-      
-      <TrustedBySection />
-      <BlogSection />
-      {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
-      <WaitlistSection />
-      <FloatingCTA />
-      <Footer />
     </div>
   );
 }
