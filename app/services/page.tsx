@@ -24,11 +24,6 @@ export default function ServicesPage() {
             <p className="text-gray-300">
               Advanced AI solutions for business automation and intelligence.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Professional solutions</li>
-              <li>• 24/7 support</li>
-              <li>• Scalable architecture</li>
-            </ul>
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
@@ -36,11 +31,6 @@ export default function ServicesPage() {
             <p className="text-gray-300">
               Professional web development services for modern applications.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Increased efficiency</li>
-              <li>• Cost savings</li>
-              <li>• Better results</li>
-            </ul>
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
@@ -290,11 +280,6 @@ description="LLM applications, RAG systems, and MLOps pipelines"
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Industry-specific solutions and cutting-edge technologies to address unique business challenges.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Expert consultation</li>
-              <li>• Training and documentation</li>
-              <li>• Ongoing maintenance</li>
-            </ul>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ServiceCard
