@@ -175,6 +175,15 @@ const AILegalDocumentAutomationPlatform: React.FC = () => {
     }
   ];
 
+  const benefits = [
+    "Reduce document review time by 80%",
+    "Improve accuracy by 95%",
+    "Cut legal costs by 40%",
+    "Increase productivity by 300%",
+    "Minimize human error by 90%",
+    "Enable 24/7 document processing"
+  ];
+
   const pricingPlans = [
     {
       name: "Starter",
@@ -481,6 +490,7 @@ const AILegalDocumentAutomationPlatform: React.FC = () => {
                     ))}
                   </ul>
                 </div>
+                <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -593,6 +603,51 @@ const AILegalDocumentAutomationPlatform: React.FC = () => {
               </Link>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center space-y-4">
+                <div className="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center">
+                  <Phone className="w-8 h-8 text-green-400" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                  <a href="tel:+1 302 464 0950" className="text-green-400 hover:text-green-300">
+                    +1 302 464 0950
+                  </a>
+                </div>
+              </div>
+              <div className="flex flex-col items-center space-y-4">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center">
+                  <Mail className="w-8 h-8 text-emerald-400" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-emerald-400 hover:text-emerald-300">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+              </div>
+              <div className="flex flex-col items-center space-y-4">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center">
+                  <MapPinIcon className="w-8 h-8 text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                  <p className="text-blue-400">
+                    364 E Main St STE 1008<br />
+                    Middletown DE 19709
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
