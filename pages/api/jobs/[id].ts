@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 
 
 
@@ -11,7 +9,6 @@ import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
 
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 
 const FILE = "jobs && jobs.json";
 
@@ -28,7 +25,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 
 
   if (idx === -1) {
@@ -52,7 +48,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     const {
 
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
       title
       description
       category
@@ -164,7 +159,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 ;
   if (req.method === 'GET') {
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 const idx = jobs.findIndex(j => j.id === id);
 
   if (idx === -1) {
@@ -199,7 +193,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {;
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
       title
       description
       category
@@ -234,7 +227,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 
 
 
@@ -265,7 +257,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 
 
 
@@ -277,7 +268,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 }
 
   if (req.method === "PATCH") {
@@ -327,7 +317,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === "string" || deliveryDeadlineIso === null)
       job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
     if (typeof status === 'string') job.status = status as Job['status'];
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (typeof status === "string") job.status = status as Job["status"];
@@ -340,13 +329,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return;
   }
 
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
 }
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 
 
 
@@ -356,15 +342,3 @@ res.setHeader("Allow", "GET, PATCH");
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET' && req.method !== 'PATCH') {
-    res.setHeader('Allow', ['GET', 'PATCH']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ job: { id: req.query.id } });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

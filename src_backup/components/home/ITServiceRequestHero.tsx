@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 import { useTranslation } from "react-i18next";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function ITServiceRequestHero() {
@@ -100,13 +98,11 @@ export function ITServiceRequestHero() { return null; }
       <div className="absolute inset-0">";"
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>";"
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>;
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
       </div>;
 
 export function ITServiceRequestHero() { return null; }
   const { toast } = useToast();
   const { t } = useTranslation();
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 
         variant: 'destructive',;
       });
@@ -262,7 +258,6 @@ if ( {) {}
       });
       return;
     }
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
     setIsSubmitting (true);
     setIsSubmitting(true),
 
@@ -324,7 +319,6 @@ if ( {) {}
               <p className='text-xs text-zion-slate-light'>;
                 {t('onsite_form && onsite_form.name_helper','Enter the main contact for this request.';)}
               </p>;
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
               <Input
                 type='email'
                 value={email}
@@ -352,7 +346,6 @@ if ( {) {}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required;
               />;
               <p className='text-xs text-zion-slate-light'>;
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
                 {t(;
                   'onsite_form && onsite_form.email_helper',;
                   "We'll confirm your request here.";
@@ -586,7 +579,6 @@ if ( {) {}
           </p>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
     </section>);
 
 }catch (err: any) {}
@@ -777,7 +769,6 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
   );
 
 }
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 
   setIsSubmitting (false);
 }";
@@ -803,11 +794,9 @@ py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient 
 }Request Service </Button> </form> </div>;
 }'";
 }
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 }
 ;
 
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 

@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
-<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -17,8 +6,6 @@ export interface EmergingTech2026Service  {{address: '364 E Main St STE 1008 Mid
     },realImplementation: boolean, implementationDetails: string,launchDate: string, customers: number,rating: number,reviews: number;
 }
       'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.';
-=======
-<<<<<<< HEAD
 import { ServiceVariant } from '../types / service - variants';
 
 export interface EmergingTech2026Service {
@@ -53,23 +40,8 @@ export interface EmergingTech2026Service {
   growthRate: string;, variant: ServiceVariant;,
 origin/cursor/expand-services-advertise-and-build-project-c28b
   contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-  contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-=======
-=======
-      
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     mobile: string;, email: string;,
     address: string;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     website: string
   
   contactInfo: {;,
@@ -115,7 +87,6 @@ pr-12325
     }
     realImplementation: true
     implementationDetails: 'Advanced quantum energy platform with energy optimization;, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     launchDate: '2026-04-20';
     customers: 180;
     rating: 4.8
@@ -209,10 +180,6 @@ pr-12325
   rating: number;,;
   reviews: number;
 }
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export const emergingTech2026Services: EmergingTech2026Service[] = [
@@ -245,13 +212,8 @@ pr-12325
     competitors: ['Intel LoihiIBM TrueNorthBrainChipQualcomm ZerothSpiNNaker'];, marketSize: '$8.7B market';,
     growthRate: '400% annual growth';, variant: 'ai-futuristic';,
     contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       
-=======
   contactInfo: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     mobile: string, email: string,
     address: string,
     website: string;
@@ -259,7 +221,6 @@ pr-12325
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
-<<<<<<< HEAD
   reviews: number
 }
       'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.'
@@ -284,10 +245,6 @@ pr-12325
     launchDate: '2026-04-20';
     customers: 180;
     rating: 4.8
-=======
-      
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
     reviews: 120
   }
@@ -334,10 +291,8 @@ export interface EmergingTech2026Service {;
   reviews: number;
 }
 }
-=======
   reviews: number;
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export const emergingTech2026Services: EmergingTech2026Service[] = [;
   // Neuromorphic Computing Platform;
@@ -365,69 +320,34 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
       '
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       address: '364 E Main St STE 1008 Middletown DE 19709';,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
 '
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-<<<<<<< HEAD
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,'
     implementation_details: 'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real - time monitoring and predictive analytics.';'
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;,
     implementation_details: 'Advanced quantum energy platform with energy optimization;, renewable energy management, and smart grid capabilities. Includes real - time monitoring and predictive analytics.';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launch_date: '2026 - 04 - 20';
     customers: 180;
     rating: 4.8;,
     reviews: 120;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
 ];
 import { ServiceVariant } from '../types/service-variants',;
 origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
-=======
 
 export const emergingTech2026Services: EmergingTech2026Service[] = [
   // Neuromorphic Computing Platform;
@@ -466,7 +386,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8;,
 
     reviews: 120;'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface EmergingTech2026Service {;
   id: string;,;
   name: string;,;
@@ -519,7 +438,6 @@ pr-12325
 ;
 export const emergingTech2026Services: EmergingTech2026Service[] = [;
   // Neuromorphic Computing Platform;
-<<<<<<< HEAD
   {;'
     id: 'neuromorphic-computing-platform-2026',;'
     name: 'Neuromorphic Computing Platform 2026',;'
@@ -529,22 +447,10 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural architecture for ultra-efficient AI processing and autonomous robotics.',;
     features: [;'
       'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesAutonomous decision makingAdaptive behavior patternsMulti-modal sensory processingContinuous learning algorithmsEnergy-efficient computing',;'
-=======
-  {;
-    id: 'neuromorphic-computing-platform-2026';,;
-    name: 'Neuromorphic Computing Platform 2026';,;
-    tagline: 'Brain-inspired computing for next-generation AI and robotics';,;
-    price: '$2;,499',;
-    period: '/month';,;
-    description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural architecture for ultra-efficient AI processing and autonomous robotics.';,;
-    features: [;
-      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesAutonomous decision makingAdaptive behavior patternsMulti-modal sensory processingContinuous learning algorithmsEnergy-efficient computing',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Real-time pattern recognitionAutonomous robotics control';
       'Real-time pattern recognitionAutonomous robotics control';']
 pr-12325
     ],;
-<<<<<<< HEAD
     popular: true,;'
     icon: '🧠',;'
     color: 'from-purple-600 to-indigo-700',;'
@@ -886,7 +792,6 @@ pr-12325
     customers: 180,;
     rating: 4.8;
     reviews: 120;
-<<<<<<< HEAD
   }
       'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.',launchDate: '2026-04-20',customers: 180,rating: 4.8,reviews: 120;
   }];      mobile: '+1 302 464 0950';
@@ -900,14 +805,6 @@ pr-12325
     customers: 180;
     rating: 4.8;
     reviews: 120;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     popular: true;,;
     icon: '🧠';,;
     color: 'from-purple-600 to-indigo-700';,;
@@ -1603,7 +1500,6 @@ pr-12325
     customers: 180;,;
     rating: 4.8;
     reviews: 120;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ;
 ];
@@ -1659,7 +1555,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 150;
     rating: 4.9;
     reviews: 100;
-<<<<<<< HEAD
   },// DNA Computing Platform;
   {id: 'dna-computing-platform-2026',name: 'DNA Computing Platform 2026',tagline: 'Molecular computing for complex problem solving and data storage',price: '$4,999',period: '/month',description:;
       'Cutting-edge DNA computing platform that leverages molecular biology for ultra-dense data storage and complex computational problems.',features: [;
@@ -1784,13 +1679,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 120;
   }
 ];
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   contactInfo: {
       
-=======
 contactInfo: {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     mobile: string, email: string,
     address: string,
     website: string
@@ -1823,7 +1714,6 @@ contactInfo: {
     customers: 180;
     rating: 4.8
     reviews: 120
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
 import { ServiceVariant } from '../types/service-variants',export interface EmergingTech2026Service  {id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,variant: ServiceVariant,contactInfo: {mobile: string,email: string,address: string,website: string;
@@ -2162,7 +2052,6 @@ export interface EmergingTech2026Service {;
   rating: number,;
   reviews: number;
 }
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
   contactInfo: {
@@ -3008,12 +2897,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
     reviews: 120}
 ],
-=======
-<<<<<<< HEAD
 }
-=======
-  },
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
   // DNA Computing Platform
   {
@@ -3582,9 +3466,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
   }
@@ -3592,13 +3473,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 ;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     implementationDetails: 'Advanced quantum energy platform with energy optimization;, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.',;
     launchDate: '2026-04-20';,;
     customers: 180;,;
@@ -3649,5 +3525,3 @@ pr-12325
 ;
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

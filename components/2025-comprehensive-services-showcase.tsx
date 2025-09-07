@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 
 
 ;
 import React, { useState } from 'react',import SEO from '../components/SEO';
 import { motion  } from 'framer-motion';
-=======
-<<<<<<< HEAD
 // All services combined const allServices = [ ...advancedAIMLServices
 ...advancedCybersecurityServices
 ...advancedCloudDevOpsServices2025
@@ -284,11 +281,6 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 }<section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl md:text-4xl font-bold mb-6"> Ready to Transform Your Business? </h2> <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"> Let's discuss how our innovative services can help you achieve your business goals </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"> <div className="text-center"> <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Call Us</h3> <p className="text-blue-100">+1 302 464 0950</p> </div> <div className="text-center"> <Mail className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Email Us</h3> <p className="text-blue-100">kleber@ziontechgroup.com</p> </div> <div className="text-center"> <MapPin className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Visit Us</h3> <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <a href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2" > <Mail className="w-5 h-5" /> Start Consultation </a> <a href="https://ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2" > <Globe className="w-5 h-5" /> Visit Website </a> </div> </div> </section> </div>) 
 }
 export default ComprehensiveServicesShowcase
-=======
-import React, { useState } from 'react',
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { Brain, Building, Target, Cpu, Shield;
   Check, Phone, Mail, MapPin;
   TrendingUp, Zap, Globe;
@@ -1815,7 +1807,6 @@ export default ComprehensiveServicesShowcase;
     </div>);
 }
 export default ComprehensiveServicesShowcase;
-<<<<<<< HEAD
 }
 }
 }
@@ -1861,6 +1852,3 @@ main
 export default ComprehensiveServicesShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

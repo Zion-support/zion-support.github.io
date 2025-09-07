@@ -24,19 +24,20 @@ export function earnTokens(
   reason: string,
   metadata?: Record<string, any>
 ): TokenTransaction {
-  if (amount <= 0) throw new Error($2);
-  const wallet = tokenStore.getWallet($2);
-  const newBalance = $2;
-  tokenStore.setWalletBalance($2);
+  if (amount <= 0) throw new Error('Amount must be positive');
+  const wallet = tokenStore.getWallet(userId);
+  const newBalance = wallet.balance + amount;
+  tokenStore.setWalletBalance(userId, newBalance);
   const tx: TokenTransaction = {
-    id: randomUUID($2);
+    id: randomUUID(),
     userId,
     type: "earn",
     amount,
     reason,
     metadata,
-    createdAt: new Date().toISOString()},
-  tokenStore.addTransaction($2);
+    createdAt: new Date().toISOString()
+  };
+  tokenStore.addTransaction(tx);
   return tx
 }
 
@@ -119,14 +120,15 @@ let transactions: TokenTransaction[] = [];
   const newBalance = $2;
   tokenStore.setWalletBalance($2);
   const tx: TokenTransaction = {
-    id: randomUUID($2);
+    id: randomUUID(),
     userId,
     type: "burn",
     amount,
     reason,
     metadata,
-    createdAt: new Date().toISOString()},
-  tokenStore.addTransaction($2);
+    createdAt: new Date().toISOString()
+  };
+  tokenStore.addTransaction(tx);
   return tx
 }
 

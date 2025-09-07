@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState } from "../../../lib/integrations/fileStore";
 import { getProviderById } from "../../../lib/integrations/registry";
 import { ProviderConnection, SyncRules } from "../../../lib/integrations/types";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules },
   if (!providerId || !getProviderById(providerId)) {
@@ -56,7 +52,6 @@ function handler() {
 
     );
     const connection: ProviderConnection = {
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
       provider_id: provider_id as any
       status: "connected"
       access_token: "mock_access_token"
@@ -85,7 +80,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     lastSyncAt: undefined
   };
   res.status(200).json({ connection });
->>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
@@ -114,24 +108,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (existingIdx >= 0) state.connections[existingIdx] = connection; else state.connections.push(connection);
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
   });
-<<<<<<< HEAD
   res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
 }
-=======
-
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ connected: true });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GetServerSideProps, GetServerSidePropsContext } from 'next/types'
 import { createServerSideClient } from '../src/utils/supabase/server'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -13,17 +12,9 @@ interface PrivatePageProps {
   user: SupabaseUser}
 
 export default function PrivatePage({ user }: PrivatePageProps) {
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function private() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>Private Profile - Zion Tech Marketplace</title>
         <meta name="description" content="Private user profile page" />
       </Head>
@@ -124,20 +115,3 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     props: {
       user: data.user}}
 } 
-=======
-        <title>Private - Zion Tech Group</title>
-        <meta name="description" content="Private solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Private</h1>
-          <p className="text-lg text-gray-600">
-            Professional private solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

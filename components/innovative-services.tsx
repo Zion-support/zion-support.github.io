@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-<<<<<<< HEAD
 //Search filter if (searchQuery) {
   filteredServices = filteredServices.filter (service => service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.category.toLowerCase () .includes (searchQuery.toLowerCase () ) //Sort services filteredServices.sort ( (a, b) => {
   switch (sortBy) {
@@ -50,16 +47,6 @@ return (<> <Head> <title>Innovative Micro SAAS Services - Zion Tech Group</title
 }</div>) 
 }</div> </section> Ready to Lead the Future? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join the revolution with our breakthrough micro SAAS services. Transform your business with quantum AI, autonomous systems, and cutting-edge technology. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Button > <Mail className="w-5 h-5 mr-2" /> Email Us </Button> </div> </div> </EnhancedFuturisticCard> </div> </section> </div> </QuantumHolographicBackground> </>) 
 }
-=======
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon  } from 'lucide-react';
-import Button from '../components/ui/Button',
-import Card from '../components/ui/Card',
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',
-import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard',
-import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground',
-import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
-import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon  } from 'lucide-react';
 import { Check;
@@ -1627,4 +1614,3 @@ variant='secondary';
 })</>))}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -98,7 +98,6 @@ interface PaginationProps  {currentPage: number;
       </div>;
       {/* Next Button */}
       {currentPage < totalPages ? (<Link;
-=======
 export default function Pagination({
   page
   pageSize
@@ -197,7 +196,6 @@ const isCurrentPage = pageNumber === currentPage
       {/* Next Button */}
       {currentPage < totalPages ? (;
         <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           href={`${baseUrl}?page=${currentPage + 1}`}
           className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors">;
     // Check condition;
@@ -305,15 +303,5 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
     </div>
   )
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 "
-=======
-Next </EnhancedButton> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

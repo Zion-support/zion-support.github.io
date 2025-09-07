@@ -1,7 +1,6 @@
 ;
 }
 
-<<<<<<< HEAD
 const MainLayout: React.FC<MainLayoutProps /> = ({ children,title,description,keywords,image,url,type = 'website',noindex = false,nofollow = false,canonical;}
    }) => {
 
@@ -10,10 +9,7 @@ return (<>;}
         <title />{title || 'Zion Tech Group'}</title>;
         <meta name=\"description\" content={description || 'Leading technology solutions provider'} />;"
         {keywords && <meta name=\"keywords\" content={keywords} />}
-=======
 import React from 'react';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   title,
@@ -32,29 +28,20 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <title>{title || 'Zion Tech Group'}</title>
         <meta name="description" content={description || 'Leading technology solutions provider'} />
         {keywords && <meta name="keywords" content={keywords} />}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import Layout from './Layout';
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
 import React, { ReactNode } from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from './Footer';
 
 interface MainLayoutProps {
-<<<<<<< HEAD
   title: string,
   description: string,
   children: React.ReactNode,
-=======
-<<<<<<< HEAD
   title: string;
   description: string;
   children: React.ReactNode;
->>>>>>> origin/main
   keywords?: string;
   image?: string;
   url?: string;
@@ -64,7 +51,6 @@ interface MainLayoutProps {
   canonical?: string;
 }
 
-<<<<<<< HEAD
 const MainLayout: React.FC<MainLayoutProps> = ({
   children;
   title = "Zion Tech Group - Leading Technology Solutions Provider";
@@ -84,37 +70,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <meta name="description" content={description || 'Leading technology solutions provider'} />
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-=======
-export default function MainLayout({ 
-  title, 
-  description, 
-  children, 
-  keywords = "AI solutions, IT services, micro SaaS, technology consulting",
-  canonical 
-}: MainLayoutProps) {
-
-=======
-  children: ReactNode, title?: string,  description?: string;
-  keywords?: string;
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-  type?: string;
-  image?: string;
-  url?: string;}
-const MainLayout: React.FC<MainLayoutProps> = ({
-
-  children
-  title = 'Zion Tech Group - Technology Solutions'
-  description = 'Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services.'
-  keywords = 'technology, web development, mobile apps, AI, cloud services, software solutions'
-  canonical
-  noindex = false
-  nofollow = false
-  type = 'website'
-  image = '/og-image.jpg'
-  url
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 type = 'website';
   image = '/og-image.jpg';
@@ -307,15 +262,8 @@ export default function MainLayout({
   keywords = "AI solutions, IT services, micro SaaS, technology consulting",
   canonical 
 }: MainLayoutProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 pr-12243
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 
 
@@ -336,8 +284,6 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return (
     <>}
       <Head>}
@@ -391,11 +337,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
   url;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
         <link rel="icon" href="/favicon && favicon.ico" />;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
@@ -411,21 +352,12 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
         <meta name="twitter:title" content={title} />;
         <meta name="twitter:description" content={description} />;
         {image && <meta name="twitter:image" content={image} />}
-<<<<<<< HEAD
-<<<<<<< HEAD
       </Head>;
         <Header />;
         <main className="flex-1">;
-=======
-      </Head>
-        <Header />
-        <main className="flex-1">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
       </Head>;
         <Header />;
         <main className="flex-1">;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           {children}
         </main>;
         <Footer />;
@@ -539,16 +471,13 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
         </main>
         <Footer />
       </div>
-=======
       <main className="min-h-screen bg-gray-50">
         {children}
       </main>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 export default MainLayout;"
+};
+
+export default MainLayout;

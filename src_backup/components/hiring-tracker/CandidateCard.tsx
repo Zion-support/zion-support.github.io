@@ -267,7 +267,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     </h4>;
                     <p className="text-xs text-muted-foreground">;
                       {application.talent_profile?.professional_title || "Applicant"}
-<<<<<<< HEAD:src_backup/components/hiring-tracker/CandidateCard.tsx
                     </p>
                   </div>
                 </div>
@@ -280,7 +279,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-<<<<<<< HEAD:src_backup/components/hiring-tracker/CandidateCard.tsx
                     </p>;
                   </div>;
                 </div>;
@@ -460,7 +458,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
               </div>;
             </CardContent>;
           </Card>;
-<<<<<<< HEAD:src_backup/components/hiring-tracker/CandidateCard.tsx
         )}
 
       </Draggable>;
@@ -670,7 +667,6 @@ function CandidateCard() {const [show_notes, setShowNotes] = useState (false)con
 }<div className="flex flex - wrap gap - 2 items - center text - xs text - muted - foreground mb - 2"> <div className="flex items - center"> <Calendar className="h - 3 w - 3 mr - 1" /> {formatDistanceToNow (new Date (application.created at), {/>;
     </>;/>;
     </>;
-<<<<<<< HEAD:src_backup/components/hiring-tracker/CandidateCard.tsx
       />
     </>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -882,7 +878,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<Textarea placeholder="Add private notes about this candidate..." className="text-xs min-h-[60px]" value= {notes ;
 }onChange= {(e) => setNotes (e.target.value)}/> </div> </div>) ";
 }<Button variant="outline" size="sm" className="flex-1" asChild > </Link> </Button> <Button variant="outline" size="sm" className="flex-1" asChild > <FileText className="h-3 w-3 mr-1" /> Resume </Link>) : (<span> <FileText className="h-3 w-3 mr-1" /> No Resume </span>) ";
-<<<<<<< HEAD:src_backup/components/hiring-tracker/CandidateCard.tsx
 }</Button> <Button variant="default" size="sm" className="flex-1" onClick={;
 origin/cursor/automate-test-improve-and-merge-code-2533
   application && application.match score !== null && application && application.match score !== undefined && (<div className="mb-2"> <ScoreBadgeapplication= {
@@ -933,7 +928,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<Textarea placeholder="Add private notes about this candidate..." className="text - xs min - h-[60px]" value= {notes;
 }on_change= {(e) => set_notes (e.target.value)}/> </div> </div>) ";
 }<Button variant="outline" size="sm" className="flex - 1" as_child > </Link> </Button> <Button variant="outline" size="sm" className="flex - 1" as_child > <FileText className="h - 3 w - 3 mr - 1" /> Resume </Link>) : (<span> <FileText className="h - 3 w - 3 mr - 1" /> No Resume </span>) ";
-<<<<<<< HEAD:src_backup/components/hiring-tracker/CandidateCard.tsx
 }</Button> <Button variant="default" size="sm" className="flex - 1" on_click={() => setShowHireModal (true) ";
 }> <BriefcaseIcon className="h - 3 w - 3 mr - 1" /> Hire </Button> </div> </CardContent> </Card>)}</Draggable> {/* Hire Confirmation Modal */;
 }<HireConfirmationModal is_open= {showHireModal;
@@ -965,7 +959,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         onConfirm={handleHireConfirmed}
       />;
     </>;
-<<<<<<< HEAD:src_backup/components/hiring-tracker/CandidateCard.tsx
   )}}'";
   );
 }

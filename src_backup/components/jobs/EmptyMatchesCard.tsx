@@ -29,7 +29,6 @@ export function EmptyMatchesCard() {return (<Card className='p-6 text-center bor
       </div>;
       <h3 className='text-lg font-medium mb-2'>No talent matches yet</h3>;
       <p className='text-muted-foreground mb-6'>;
-<<<<<<< HEAD:src_backup/components/jobs/EmptyMatchesCard.tsx
         Run AI matching to find talents that match this job&apos;s requirements.
       </p>
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button 
@@ -71,14 +70,12 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
         {isProcessing ? (
           <>
             <RefreshCcw className='mr-2 h-4 w-4 animate-spin' />
-<<<<<<< HEAD:src_backup/components/jobs/EmptyMatchesCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
             Processing...
           </>
         ) : (
           <>
 
-<<<<<<< HEAD:src_backup/components/jobs/EmptyMatchesCard.tsx
 import { Card } from '@/components/ui/ card';
 import { Button } from '@/components/ui/ button';
 import { Sparkles, RefreshCcw } from 'lucide-react';
@@ -144,7 +141,6 @@ function EmptyMatchesCard() {return (<Card className='p - 6 text - center border
             Find AI Matches;
           </>)}
       </Button>;
-<<<<<<< HEAD:src_backup/components/jobs/EmptyMatchesCard.tsx
     </Card>);
 }
 ;

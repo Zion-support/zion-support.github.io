@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 
 
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react';
 interface TeamProps {
   // Add props here as needed
@@ -48,23 +42,13 @@ ursor/automate-test-improve-and-merge-code-646c;
 interface TeamProps {
   // Add props here as needed
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function Team({ }: TeamProps) {
-=======
 export default function Team({}: TeamProps) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return (
     <div>
       <h1>Team</h1>
       <p>This component is currently under development.</p>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   );
 }
 
@@ -72,10 +56,7 @@ export default function Team({}: TeamProps) {
 }
 }
 
-=======
   );}
 
 }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

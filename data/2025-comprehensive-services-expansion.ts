@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   customers: number;
   rating: number;
   reviews: number;
@@ -9,30 +8,13 @@ export interface ComprehensiveService {
 
   real_implementation: boolean;
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   customers: number;
   rating: number;
   reviews: number;
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -44,7 +26,6 @@ export interface ComprehensiveService {
 
   customers: number;
   rating: number;
-<<<<<<< HEAD
   reviews: number;;
 const contact = {features: [;
   mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'}export const comprehensiveServicesExpansion: ComprehensiveService[]  = [;mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'}export const comprehensiveServicesExpansion: ComprehensiveService[]  = [;mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com' }export const comprehensiveServicesExpansion: ComprehensiveService[]  = [;{  mobile: '+1 302 464 0950';
@@ -54,41 +35,16 @@ const contact = {features: [;
 }
   mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com'}website: 'https://ziontechgroup && ziontechgroup.com'}import { ServiceVariant  } from '../types/service-variants';
 export interface ComprehensiveService  {id: string;
-=======
-  reviews: number;
-
-;
-const contact = {
-
-<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
-  customers: number;
-  rating: number;
-  reviews: number;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/expand-services-advertise-and-build-project-c28b
   customers: number;,
   rating: number;
@@ -102,19 +58,6 @@ pr-12325
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 
 
-<<<<<<< HEAD
-=======
-
-
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com', }
-;
-export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
   mobile: '+1 302 464 0950';,
   email: 'kleber@ziontechgroup.com';,
   address: '364 E Main St STE 1008 Middletown DE 19709';,
@@ -123,7 +66,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
   {  mobile: '+1 302 464 0950';
@@ -131,7 +73,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com';
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -139,7 +80,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
   mobile: '+1 302 464 0950','
   email: 'kleber@ziontechgroup.com','
@@ -147,7 +87,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   website: 'https://ziontechgroup.com',};
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -161,38 +100,9 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   email: 'kleber@ziontechgroup && ziontechgroup.com','
   address: '364 E Main St STE 1008 Middletown DE 19709','
   website: 'https://ziontechgroup && ziontechgroup.com',};
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    tagline:
-      'Automated code quality analysis, security scanning, and best practice recommendations'
-    price: '$199'
-    period: '/month'
-    description:
-      'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'
-
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
-  mobile: '+1 302 464 0950';,
-  email: 'kleber@ziontechgroup && ziontechgroup.com';,
-  address: '364 E Main St STE 1008 Middletown DE 19709';,
-  website: 'https://ziontechgroup && ziontechgroup.com';,};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveService {
   id: string;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   name: string;
   tagline: string;
   price: string;
@@ -223,18 +133,12 @@ export interface ComprehensiveService {
     email: string;
     address: string;
     website: string;
-<<<<<<< HEAD
   },realImplementation: boolean;
-=======
-  },
-  realImplementation: boolean;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
 }const contact  = null;tagline:;
       'Automated code quality analysis, security scanning, and best practice recommendations';
     price: '$199';
@@ -256,10 +160,6 @@ export interface ComprehensiveService {
       'Automated security vulnerability detection','Code quality scoring and metrics','Best practice recommendations','Integration with GitHub / GitLab',id: string, name: string,tagline: string, price: string,period: string, description: string,features: string[], popular: boolean,icon: string, color: string,textColor: string, link: string,marketPosition: string, targetAudience: string,trialDays: number, setupTime: string,category: string, realService: boolean,technology: string[], integrations: string[],useCases: string[], roi: string,competitors: string[], marketSize: string,growthRate: string, variant: ServiceVariant,contactInfo: {mobile: string, email: string,address: string,website: string;
     },realImplementation: boolean, implementationDetails: string,launchDate: string, customers: number,rating: number,reviews: number;
 }
-=======
-}
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 const contact = {mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -579,8 +479,6 @@ const contact = {mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',ad
     id: 'ai-powered-sales-intelligence-platform', name: 'AI-Powered Sales Intelligence Platform',tagline: 'Predictive sales analytics, lead scoring, and revenue optimization',price: '$349', period: '/month',description: 'Intelligent sales platform that uses AI to predict customer behavior, score leads, optimize sales processes, and increase revenue through data-driven insights.',features: [;
       'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking';reviews: 15;
   },{'Real-time insights dashboard';
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   customers: number;
   rating: number;
   reviews: number;
@@ -595,40 +493,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com'};
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com'};
-=======
-  website: 'https://ziontechgroup.com',};
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     tagline:
       'Automated code quality analysis, security scanning, and best practice recommendations'
     price: '$199'
     period: '/month'
     description:
       'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'
-<<<<<<< HEAD
-=======
-const contact = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    tagline: 'Automated code quality analysis;, security scanning, and best practice recommendations'
-    price: '$199'
-    period: '/month'
-    description: 'Intelligent code review system that analyzes pull requests;, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Automated security vulnerability detection'
       'Code quality scoring and metrics'
@@ -645,10 +521,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Code quality scoring and metrics',
       'Best practice recommendations',
       'Integration with GitHub / GitLab',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   id: string, name: string,
   tagline: string, price: string,
@@ -677,7 +549,6 @@ const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
-=======
 
   id: string;, name: string;,
   tagline: string;, price: string;,
@@ -705,20 +576,15 @@ const contact = {
 const contact = {
   mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
   address: '364 E Main St STE 1008 Middletown DE 19709';,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
-<<<<<<< HEAD
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
 origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
   address: '364 E Main St STE 1008 Middletown DE 19709';,
   website: 'https://ziontechgroup && ziontechgroup.com';
 };
@@ -730,53 +596,26 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;,
   website: 'https://ziontechgroup.com';, }
 ;]
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 
 
 
-<<<<<<< HEAD
 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com' }
 ;
-=======
-  {  mobile: '+1 302 464 0950';',
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709;,
-  website: 'https://ziontechgroup.com;
-}
-  email: 'kleber@ziontechgroup && ziontechgroup.com';,
-  website: 'https://ziontechgroup && ziontechgroup.com';,};
-    tagline: 'Automated code quality analysis;, security scanning, and best practice recommendations
-    price: '$199;,
-  period: '/month
-    description: 'Intelligent code review system that analyzes pull requests;, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.]
-pr-12325
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'Automated security vulnerability detection',
       'Code quality scoring and metrics',
       'Best practice recommendations',
       'Integration with GitHub/GitLab',
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 pr-12325
 
   customers: number;,
@@ -792,7 +631,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;,'
   address: '364 E Main St STE 1008 Middletown DE 19709';,''
   website: 'https://ziontechgroup.com';, }'
 ;]
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 
 
@@ -803,7 +641,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
@@ -946,67 +783,28 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 
 
 
-=======
-  address: \"address\";,}
-    website: 'https://ziontechgroup.com';}
-}
-  mobile: '+1 302 464 0950';,
-  email: 'kleber@ziontechgroup && ziontechgroup.com';,
-  address: '364 E Main St STE 1008 Middletown DE 19709';,
-  website: 'https://ziontechgroup && ziontechgroup.com';};
-    tagline: 'Automated code quality analysis;, security scanning, and best practice recommendations',
-  price: '$199'
-    period: '/month';,
-  description: 'Intelligent code review system that analyzes pull requests;, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'
-export const comprehensiveServicesExpansion: ComprehensiveService[] = [
-  {
-
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Custom rule configuration',
       'Team performance analytics',
       'Automated PR comments',
       'Compliance checking (SOC2, HIPAA)',
-<<<<<<< HEAD
-=======
-
-export const comprehensiveServicesExpansion: ComprehensiveService[] = []
-  {}
-'
-      'Custom rule configuration','
-      'Team performance analytics','
-      'Automated PR comments','
-      'Compliance checking (SOC2, HIPAA)','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Performance impact analysis',
     ],
     popular: true,'
     icon: '🔍',
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 '
     color: 'from-blue-600 to-indigo-700','
     textColor: 'text-blue-400','
     link: 'https://ziontechgroup.com/ai-code-review-assistant',;
     marketPosition:;'
       'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-code-review-assistant',
     marketPosition:;
       'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     targetAudience: 'Development teams, DevOps engineers, CTOs',
-<<<<<<< HEAD
     trialDays: 14,
     setupTime: '2 hours',
     category: 'Development & DevOps',
@@ -1058,40 +856,12 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = []
     customers: 156,
     rating: 4 && 4.8,
     reviews: 89
-=======
-    trialDays: 14,'
-    setupTime: '2 hours','
-    category: 'Development & DevOps',
-    realService: true,'
-    technology: ['AI/ML, Static Analysis, Security Scanning'],'
-    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
-
-
-    useCases: ['
-      'Code quality improvement, Security compliance, Team productivity'
-    ]'
-    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.''
-    competitors: ['SonarQube, CodeClimate, Snyk']'
-    marketSize: '$8B code quality tools''
-    growthRate: '35% YoY''
-    variant: 'ai-futuristic'
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails:
-<<<<<<< HEAD
   {
 
       'AI-powered analysis engine with custom rule sets and integration APIs.',
     launchDate: '2025-01-15',
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
-=======
-'
-      'AI-powered analysis engine with custom rule sets and integration APIs.','
-    launchDate: '2025-01-15','
-    color: 'from - blue - 600 to - indigo - 700','
-    text_color: 'text - blue - 400','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     link: 'https://ziontechgroup.com / ai - code - review - assistant',
     market_position:;'
       'Competes with SonarQube, CodeClimate; adds AI - powered insights and security focus.','
@@ -1133,7 +903,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = []
       'Comprehensive incident management platform that uses AI to detect anomalies, automate initial response actions, coordinate team communication, and generate detailed post - mortem reports.',
     features: [;'
       'AI - powered anomaly detection',
-<<<<<<< HEAD
 '
       'Automated incident classification','
       'Smart escalation routing','
@@ -1142,13 +911,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = []
       'Post - mortem report generation','
       'Incident timeline tracking','
       'Performance metrics and analytics','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       'Performance impact analysis',
     ],
     popular: true;,
@@ -1286,38 +1049,23 @@ useCases: [
     customers: 156;,
     rating: 4 && 4.8;,
     reviews: 89;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
 pr-12325
 
       'AI-powered anomaly detection',
-<<<<<<< HEAD
     id: 'intelligent - incident - response - platform',
     name: 'Intelligent Incident Response Platform',
     tagline:;
       'AI - driven incident detection, automated response, and post - mortem analysis',
     price: '$349',
     period: '/month',
-=======
-    id: 'intelligent - incident - response - platform';,
-    name: 'Intelligent Incident Response Platform';,
-    tagline:;
-      'AI - driven incident detection, automated response, and post - mortem analysis',
-    price: '$349';,
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'Comprehensive incident management platform that uses AI to detect anomalies, automate initial response actions, coordinate team communication, and generate detailed post - mortem reports.',
     features: [;
       'AI - powered anomaly detection',
 
-<<<<<<< HEAD
   {
-=======
-pr-12325
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Automated incident classification',
       'Smart escalation routing',
       'Real - time team coordination',
@@ -1325,14 +1073,11 @@ pr-12325
       'Post - mortem report generation',
       'Incident timeline tracking',
       'Performance metrics and analytics',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Integration with monitoring tools',
     ],
     popular: true,'
     icon: '🚨',
 
-<<<<<<< HEAD
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / intelligent - incident - response',
@@ -1350,15 +1095,8 @@ pr-12325
     competitors: ['PagerDuty, Opsgenie, VictorOps'],
     market_size: '$15B incident management',
     growth_rate: '28% YoY',
-=======
-<<<<<<< HEAD
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
-=======
-'
-    color: 'from - red - 600 to - pink - 700','
-    text_color: 'text - red - 400','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     link: 'https://ziontechgroup.com / intelligent - incident - response',
     market_position:;'
       'Advanced alternative to PagerDuty, Opsgenie with AI capabilities.','
@@ -1374,22 +1112,14 @@ pr-12325
     competitors: ['PagerDuty, Opsgenie, VictorOps'],'
     market_size: '$15B incident management','
     growth_rate: '28% YoY','
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,
     implementation_details:;
-<<<<<<< HEAD
 '
       'AI incident detection engine with automated response workflows and team coordination.','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'AI incident detection engine with automated response workflows and team coordination.',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     launch_date: '2025 - 02 - 01',
     customers: 89,
     rating: 4 && 4.7,
@@ -1407,7 +1137,6 @@ pr-12325
       'Advanced cryptographic solutions designed to withstand quantum computing attacks, including post - quantum algorithms, quantum key distribution, and hybrid encryption systems.',
     features: [;'
       'Post - quantum cryptographic algorithms',
-<<<<<<< HEAD
 '
       'Quantum key distribution (QKD)','
       'Hybrid encryption systems','
@@ -1416,13 +1145,7 @@ pr-12325
       'Compliance with NIST standards','
       'Performance optimization','
       'Integration APIs','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       'Integration with monitoring tools',
     ],
     popular: true;,
@@ -1468,83 +1191,21 @@ pr-12325
     icon: '🚨',
 
       'AI incident detection engine with automated response workflows and team coordination.',
-<<<<<<< HEAD
     launch_date: '2025 - 02 - 01',
     customers: 89,
     rating: 4 && 4.7,
     reviews: 67
-=======
-    launch_date: '2025 - 02 - 01';,
-'
-      'AI-powered anomaly detection',''
-    id: 'intelligent - incident - response - platform';,''
-    name: 'Intelligent Incident Response Platform';,'
-    tagline:;'
-      'AI - driven incident detection, automated response, and post - mortem analysis',''
-    price: '$349';,''
-    period: '/month';,'
-    description:;'
-      'Comprehensive incident management platform that uses AI to detect anomalies, automate initial response actions, coordinate team communication, and generate detailed post - mortem reports.','
-    features: [;'
-      'AI - powered anomaly detection',''
-      'Automated incident classification',''
-      'Smart escalation routing',''
-      'Real - time team coordination',''
-      'Automated response playbooks',''
-      'Post - mortem report generation',''
-      'Incident timeline tracking',''
-      'Performance metrics and analytics',''
-      'Integration with monitoring tools',']
-    ],
-    popular: true;,'
-    icon: '🚨';,''
-    color: 'from - red - 600 to - pink - 700';,''
-    text_color: 'text - red - 400';,''
-    link: 'https://ziontechgroup.com / intelligent - incident - response';,'
-    market_position:;'
-      'Advanced alternative to PagerDuty, Opsgenie with AI capabilities.',''
-    target_audience: 'SRE teams;, DevOps engineers, IT operations','
-    trial_days: 14;,'
-    setup_time: '1 day';,''
-    category: 'Monitoring & Operations';,'
-    real_service: true;,'
-    technology: ['AI / ML;, Real - time Processing, Automation'],''
-    integrations: ['Datadog;, New Relic, PagerDuty, Slack, Teams'],''
-    use_cases: ['Incident management;, Team coordination, Post - mortem analysis'],''
-    roi: 'Reduce MTTR by 50 - 70% and improve team response efficiency.';,''
-    competitors: ['PagerDuty;, Opsgenie, VictorOps'],''
-    market_size: '$15B incident management';,''
-    growth_rate: '28% YoY';,''
-    variant: 'ai - futuristic';,'
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;
-'
-      'AI incident detection engine with automated response workflows and team coordination.',''
-    launch_date: '2025 - 02 - 01';,'
-    customers: 89;,
-    rating: 4 && 4.7;,
-    reviews: 67;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
 pr-12325
 
 
       'Post-quantum cryptographic algorithms',
-<<<<<<< HEAD
     id: 'quantum - resistant - cryptography - suite',
     name: 'Quantum - Resistant Cryptography Suite',
     tagline: 'Future - proof encryption for post - quantum computing era',
     price: '$599',
     period: '/month',
-=======
-    id: 'quantum - resistant - cryptography - suite';,
-    name: 'Quantum - Resistant Cryptography Suite';,
-    tagline: 'Future - proof encryption for post - quantum computing era';,
-    price: '$599';,
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'Advanced cryptographic solutions designed to withstand quantum computing attacks, including post - quantum algorithms, quantum key distribution, and hybrid encryption systems.',
     features: [;
@@ -1553,7 +1214,6 @@ pr-12325
       'Advanced cryptographic solutions designed to withstand quantum computing attacks, including post - quantum algorithms, quantum key distribution, and hybrid encryption systems.',
       'Post - quantum cryptographic algorithms',
 pr-12325
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'Quantum key distribution (QKD)',
       'Hybrid encryption systems',
       'Quantum - resistant digital signatures',
@@ -1561,13 +1221,10 @@ pr-12325
       'Compliance with NIST standards',
       'Performance optimization',
       'Integration APIs',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Migration tools from classical crypto',
     ],
     popular: false,'
     icon: '🔐',
-<<<<<<< HEAD
 
       'Post-quantum algorithm implementations with hybrid encryption and key management.',
     launchDate: '2025-01-20',
@@ -1588,28 +1245,6 @@ pr-12325
     competitors: ['ISARA, PQShield, Quantum Xchange'],
     market_size: '$2B quantum security',
     growth_rate: '45% YoY',
-=======
-'
-      'Post-quantum algorithm implementations with hybrid encryption and key management.','
-    launchDate: '2025-01-20','
-    color: 'from - purple - 600 to - violet - 700','
-    text_color: 'text - purple - 400','
-    link: 'https://ziontechgroup.com / quantum - resistant - cryptography',
-    market_position:;'
-      'Early mover in post - quantum cryptography; specialized security solution.','
-    target_audience: 'Financial institutions, government agencies, healthcare',
-    trial_days: 30,'
-    setup_time: '1 - 2 weeks','
-    category: 'Security & Compliance',
-    real_service: true,'
-    technology: ['Post - Quantum Cryptography, QKD, Hybrid Systems'],'
-    integrations: ['PKI systems, Cloud platforms, IoT devices'],'
-    use_cases: ['Data protection, Secure communications, Compliance'],'
-    roi: 'Future - proof security investment; avoid costly migrations later.','
-    competitors: ['ISARA, PQShield, Quantum Xchange'],'
-    market_size: '$2B quantum security','
-    growth_rate: '45% YoY','
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     variant: 'quantum - security',
     contact_info: contact,
     real_implementation: true,
@@ -1617,26 +1252,14 @@ pr-12325
       'Post - quantum algorithm implementations with hybrid encryption and key management.','
     launch_date: '2025 - 01 - 20',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 23,
     rating: 4 && 4.9,
     reviews: 18,
   },
-<<<<<<< HEAD
   {
 
     id: 'autonomous - devops - orchestrator',
-=======
-  {}
-'
-    id: 'autonomous - devops - orchestrator','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     name: 'Autonomous DevOps Orchestrator',
     tagline:;'
       'Self - healing infrastructure with intelligent automation and optimization','
@@ -1645,7 +1268,6 @@ pr-12325
     description:;'
       'AI - powered DevOps platform that autonomously manages infrastructure, optimizes performance, handles deployments, and resolves issues without human intervention.',
     features: [;
-<<<<<<< HEAD
 '
       'Autonomous infrastructure management','
       'Self - healing systems','
@@ -1655,13 +1277,7 @@ pr-12325
       'Automated troubleshooting','
       'Cost optimization','
       'Security compliance monitoring','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       'Migration tools from classical crypto',
     ],
     popular: false;,
@@ -1697,84 +1313,20 @@ pr-12325
     real_implementation: true;,
     implementation_details:;
       'Post - quantum algorithm implementations with hybrid encryption and key management.',
-<<<<<<< HEAD
     launch_date: '2025 - 01 - 20',
 
     customers: 23,
     rating: 4 && 4.9,
     reviews: 18
-=======
-    launch_date: '2025 - 01 - 20';,
-
-'
-      'Post-quantum cryptographic algorithms',''
-    id: 'quantum - resistant - cryptography - suite';,''
-    name: 'Quantum - Resistant Cryptography Suite';,''
-    tagline: 'Future - proof encryption for post - quantum computing era';,''
-    price: '$599';,''
-    period: '/month';,'
-    description:;'
-      'Advanced cryptographic solutions designed to withstand quantum computing attacks, including post - quantum algorithms, quantum key distribution, and hybrid encryption systems.','
-    features: [;'
-      'Post - quantum cryptographic algorithms',''
-      'Quantum key distribution (QKD)',''
-      'Hybrid encryption systems',''
-      'Quantum - resistant digital signatures',''
-      'Secure key management',''
-      'Compliance with NIST standards',''
-      'Performance optimization',''
-      'Integration APIs',''
-      'Migration tools from classical crypto',']
-    ],
-    popular: false;,'
-    icon: '🔐';,''
-      'Post-quantum algorithm implementations with hybrid encryption and key management.',''
-    launchDate: '2025-01-20';,''
-    color: 'from - purple - 600 to - violet - 700';,''
-    text_color: 'text - purple - 400';,''
-    link: 'https://ziontechgroup.com / quantum - resistant - cryptography';,'
-    market_position:;'
-      'Early mover in post - quantum cryptography; specialized security solution.',''
-    target_audience: 'Financial institutions;, government agencies, healthcare','
-    trial_days: 30;,'
-    setup_time: '1 - 2 weeks';,''
-    category: 'Security & Compliance';,'
-    real_service: true;,'
-    technology: ['Post - Quantum Cryptography;, QKD, Hybrid Systems'],''
-    integrations: ['PKI systems;, Cloud platforms, IoT devices'],''
-    use_cases: ['Data protection;, Secure communications, Compliance'],''
-    roi: 'Future - proof security investment; avoid costly migrations later.',''
-    competitors: ['ISARA;, PQShield, Quantum Xchange'],''
-    market_size: '$2B quantum security';,''
-    growth_rate: '45% YoY';,''
-    variant: 'quantum - security';,'
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;'
-      'Post - quantum algorithm implementations with hybrid encryption and key management.',''
-    launch_date: '2025 - 01 - 20';,'
-    customers: 23;,
-    rating: 4 && 4.9;,
-    reviews: 18;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
 
     id: 'autonomous - devops - orchestrator',
     name: 'Autonomous DevOps Orchestrator',
-<<<<<<< HEAD
     tagline:;
       'Self - healing infrastructure with intelligent automation and optimization',
     price: '$449',
     period: '/month',
-=======
-    id: 'autonomous - devops - orchestrator';,
-    name: 'Autonomous DevOps Orchestrator';,
-    tagline:;
-      'Self - healing infrastructure with intelligent automation and optimization',
-    price: '$449';,
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'AI - powered DevOps platform that autonomously manages infrastructure, optimizes performance, handles deployments, and resolves issues without human intervention.',
     features: [;
@@ -1784,19 +1336,8 @@ pr-12325
     rating: 4 && 4.9;,
     reviews: 18;,
 
-<<<<<<< HEAD
 
 
-=======
-    id: 'autonomous - devops - orchestrator';,
-    name: 'Autonomous DevOps Orchestrator';,
-      'Self - healing infrastructure with intelligent automation and optimization',
-    price: '$449';,
-      'AI - powered DevOps platform that autonomously manages infrastructure, optimizes performance, handles deployments, and resolves issues without human intervention.',
-pr-12325
-
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Autonomous infrastructure management',
       'Self - healing systems',
       'Intelligent deployment strategies',
@@ -1805,11 +1346,8 @@ pr-12325
       'Automated troubleshooting',
       'Cost optimization',
       'Security compliance monitoring',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Real - time analytics dashboard',
     ],
-<<<<<<< HEAD
     popular: true,
 
     icon: '🤖',
@@ -1835,32 +1373,6 @@ pr-12325
     competitors: ['GitLab CI / CD, Jenkins, CircleCI'],
     market_size: '$20B DevOps tools',
     growth_rate: '32% YoY',
-=======
-    popular: true,'
-    icon: '🤖',
-'
-      'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.','
-    launchDate: '2025-02-10','
-    color: 'from - green - 600 to - emerald - 700','
-    text_color: 'text - green - 400','
-    link: 'https://ziontechgroup.com / autonomous - devops - orchestrator',
-    market_position:;'
-      'Next - generation DevOps automation; competes with traditional CI / CD tools.','
-    target_audience: 'DevOps teams, Platform engineers, SREs',
-    trial_days: 21,'
-    setup_time: '3 - 5 days','
-    category: 'DevOps & Automation',
-    real_service: true,'
-    technology: ['AI / ML, Kubernetes, Terraform, Ansible'],'
-    integrations: ['AWS, GCP, Azure, GitHub, GitLab, Jenkins'],
-    use_cases: [;'
-      'Infrastructure automation, Deployment optimization, Cost management',
-    ],'
-    roi: 'Reduce operational overhead by 60 - 80% and improve system reliability.','
-    competitors: ['GitLab CI / CD, Jenkins, CircleCI'],'
-    market_size: '$20B DevOps tools','
-    growth_rate: '32% YoY','
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     variant: 'ai - autonomous',
     contact_info: contact,
     real_implementation: true,
@@ -1868,26 +1380,14 @@ pr-12325
       'AI - powered orchestration engine with autonomous decision - making and self - healing capabilities.','
     launch_date: '2025 - 02 - 10',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 134,
     rating: 4 && 4.8,
     reviews: 92,
   },
-<<<<<<< HEAD
   {
 
     id: 'edge - ai - inference - platform',
-=======
-  {}
-'
-    id: 'edge - ai - inference - platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     name: 'Edge AI Inference Platform',
     tagline:;'
       'Deploy and manage AI models at the edge for real - time performance','
@@ -1896,7 +1396,6 @@ pr-12325
     description:;'
       'Platform for deploying, managing, and optimizing AI models at the edge, enabling real - time inference with minimal latency and bandwidth usage.',
     features: [;
-<<<<<<< HEAD
 '
       'Edge model deployment','
       'Real - time inference optimization','
@@ -1906,13 +1405,7 @@ pr-12325
       'Bandwidth optimization','
       'Offline capability','
       'Security and privacy controls','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       'Real - time analytics dashboard',
     ],
     popular: true;,
@@ -1952,87 +1445,20 @@ pr-12325
     real_implementation: true;,
     implementation_details:;
       'AI - powered orchestration engine with autonomous decision - making and self - healing capabilities.',
-<<<<<<< HEAD
     launch_date: '2025 - 02 - 10',
 
     customers: 134,
     rating: 4 && 4.8,
     reviews: 92
-=======
-    launch_date: '2025 - 02 - 10';,
-
-'
-    id: 'autonomous - devops - orchestrator';,''
-    name: 'Autonomous DevOps Orchestrator';,'
-    tagline:;'
-      'Self - healing infrastructure with intelligent automation and optimization',''
-    price: '$449';,''
-    period: '/month';,'
-    description:;'
-      'AI - powered DevOps platform that autonomously manages infrastructure, optimizes performance, handles deployments, and resolves issues without human intervention.','
-    features: [;
-'
-      'Autonomous infrastructure management',''
-      'Self - healing systems',''
-      'Intelligent deployment strategies',''
-      'Performance auto - optimization',''
-      'Predictive scaling',''
-      'Automated troubleshooting',''
-      'Cost optimization',''
-      'Security compliance monitoring',''
-      'Real - time analytics dashboard',']
-    ],
-    popular: true;,'
-    icon: '🤖';,''
-      'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.',''
-    launchDate: '2025-02-10';,''
-    color: 'from - green - 600 to - emerald - 700';,''
-    text_color: 'text - green - 400';,''
-    link: 'https://ziontechgroup.com / autonomous - devops - orchestrator';,'
-    market_position:;'
-      'Next - generation DevOps automation; competes with traditional CI / CD tools.',''
-    target_audience: 'DevOps teams;, Platform engineers, SREs','
-    trial_days: 21;,'
-    setup_time: '3 - 5 days';,''
-    category: 'DevOps & Automation';,'
-    real_service: true;,'
-    technology: ['AI / ML;, Kubernetes, Terraform, Ansible'],''
-    integrations: ['AWS;, GCP, Azure, GitHub, GitLab, Jenkins'],'
-    use_cases: [;'
-      'Infrastructure automation, Deployment optimization, Cost management',']
-    ],'
-    roi: 'Reduce operational overhead by 60 - 80% and improve system reliability.';,''
-    competitors: ['GitLab CI / CD;, Jenkins, CircleCI'],''
-    market_size: '$20B DevOps tools';,''
-    growth_rate: '32% YoY';,''
-    variant: 'ai - autonomous';,'
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;'
-      'AI - powered orchestration engine with autonomous decision - making and self - healing capabilities.',''
-    launch_date: '2025 - 02 - 10';,'
-    customers: 134;,
-    rating: 4 && 4.8;,
-    reviews: 92;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
 
     id: 'edge - ai - inference - platform',
     name: 'Edge AI Inference Platform',
-<<<<<<< HEAD
     tagline:;
       'Deploy and manage AI models at the edge for real - time performance',
     price: '$299',
     period: '/month',
-=======
-    id: 'edge - ai - inference - platform';,
-    name: 'Edge AI Inference Platform';,
-    tagline:;
-      'Deploy and manage AI models at the edge for real - time performance',
-    price: '$299';,
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'Platform for deploying, managing, and optimizing AI models at the edge, enabling real - time inference with minimal latency and bandwidth usage.',
     features: [;
@@ -2048,7 +1474,6 @@ pr-12325
       'Platform for deploying, managing, and optimizing AI models at the edge, enabling real - time inference with minimal latency and bandwidth usage.',
 pr-12325
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'Edge model deployment',
       'Real - time inference optimization',
       'Model versioning and updates',
@@ -2057,14 +1482,11 @@ pr-12325
       'Bandwidth optimization',
       'Offline capability',
       'Security and privacy controls',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Scalable edge infrastructure',
     ],
     popular: false,'
     icon: '🌐',
 
-<<<<<<< HEAD
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / edge - ai - inference - platform',
@@ -2082,15 +1504,8 @@ pr-12325
     competitors: ['AWS IoT Greengrass, Azure IoT Edge, Google Edge TPU'],
     market_size: '$12B edge AI',
     growth_rate: '38% YoY',
-=======
-<<<<<<< HEAD
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
-=======
-'
-    color: 'from - cyan - 600 to - blue - 700','
-    text_color: 'text - cyan - 400','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     link: 'https://ziontechgroup.com / edge - ai - inference - platform',
     market_position:;'
       'Specialized edge AI platform; complements cloud AI services.','
@@ -2106,36 +1521,22 @@ pr-12325
     competitors: ['AWS IoT Greengrass, Azure IoT Edge, Google Edge TPU'],'
     market_size: '$12B edge AI','
     growth_rate: '38% YoY','
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     variant: 'edge - computing - enterprise',
     contact_info: contact,
     real_implementation: true,
     implementation_details:;
-<<<<<<< HEAD
 '
       'Edge deployment framework with model optimization and device management capabilities.','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Edge deployment framework with model optimization and device management capabilities.',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     launch_date: '2025 - 01 - 25',
     customers: 67,
     rating: 4 && 4.6,
     reviews: 41,
   },
-<<<<<<< HEAD
   {
 
     id: 'blockchain - governance - automation',
-=======
-  {}
-'
-    id: 'blockchain - governance - automation','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     name: 'Blockchain Governance Automation',
     tagline:;'
       'Automated governance, compliance, and risk management for blockchain networks','
@@ -2144,7 +1545,6 @@ pr-12325
     description:;'
       'Comprehensive governance platform for blockchain networks, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',
     features: [;
-<<<<<<< HEAD
 '
       'Automated compliance monitoring','
       'Risk assessment and scoring','
@@ -2154,13 +1554,7 @@ pr-12325
       'Stakeholder voting systems','
       'Audit trail and transparency','
       'Multi - chain support','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       'Scalable edge infrastructure',
     ],
     popular: false;,
@@ -2206,99 +1600,25 @@ pr-12325
     icon: '🌐',
 
       'Edge deployment framework with model optimization and device management capabilities.',
-<<<<<<< HEAD
     launch_date: '2025 - 01 - 25',
     customers: 67,
     rating: 4 && 4.6,
     reviews: 41
-=======
-    launch_date: '2025 - 01 - 25';,
-'
-    id: 'edge - ai - inference - platform';,''
-    name: 'Edge AI Inference Platform';,'
-    tagline:;'
-      'Deploy and manage AI models at the edge for real - time performance',''
-    price: '$299';,''
-    period: '/month';,'
-    description:;'
-      'Platform for deploying, managing, and optimizing AI models at the edge, enabling real - time inference with minimal latency and bandwidth usage.','
-    features: [;
-'
-      'Edge model deployment',''
-      'Real - time inference optimization',''
-      'Model versioning and updates',''
-      'Edge device management',''
-      'Performance monitoring',''
-      'Bandwidth optimization',''
-      'Offline capability',''
-      'Security and privacy controls',''
-      'Scalable edge infrastructure',']
-    ],
-    popular: false;,'
-    icon: '🌐';,''
-    color: 'from - cyan - 600 to - blue - 700';,''
-    text_color: 'text - cyan - 400';,''
-    link: 'https://ziontechgroup.com / edge - ai - inference - platform';,'
-    market_position:;'
-      'Specialized edge AI platform; complements cloud AI services.',''
-    target_audience: 'IoT developers;, Edge computing teams, AI engineers','
-    trial_days: 14;,'
-    setup_time: '2 - 3 days';,''
-    category: 'AI & Edge Computing';,'
-    real_service: true;,'
-    technology: ['Edge Computing;, AI / ML, IoT, 5G'],''
-    integrations: ['TensorFlow;, PyTorch, AWS IoT, Azure IoT'],''
-    use_cases: ['Real - time AI applications;, IoT intelligence, Edge computing'],''
-    roi: 'Reduce latency by 80 - 90% and enable real - time AI applications.';,''
-    competitors: ['AWS IoT Greengrass;, Azure IoT Edge, Google Edge TPU'],''
-    market_size: '$12B edge AI';,''
-    growth_rate: '38% YoY';,''
-    variant: 'edge - computing - enterprise';,'
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;
-'
-      'Edge deployment framework with model optimization and device management capabilities.',''
-    launch_date: '2025 - 01 - 25';,'
-    customers: 67;,
-    rating: 4 && 4.6;,
-    reviews: 41;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
 
     id: 'blockchain - governance - automation',
     name: 'Blockchain Governance Automation',
-<<<<<<< HEAD
     tagline:;
       'Automated governance, compliance, and risk management for blockchain networks',
     price: '$399',
     period: '/month',
-=======
-    id: 'blockchain - governance - automation';,
-    name: 'Blockchain Governance Automation';,
-    tagline:;
-      'Automated governance, compliance, and risk management for blockchain networks',
-    price: '$399';,
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'Comprehensive governance platform for blockchain networks, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',
     features: [;
 
-<<<<<<< HEAD
 
 
-=======
-    id: 'blockchain - governance - automation';,
-    name: 'Blockchain Governance Automation';,
-      'Automated governance, compliance, and risk management for blockchain networks',
-    price: '$399';,
-      'Comprehensive governance platform for blockchain networks, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',
-pr-12325
-
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Automated compliance monitoring',
       'Risk assessment and scoring',
       'Regulatory reporting automation',
@@ -2307,11 +1627,8 @@ pr-12325
       'Stakeholder voting systems',
       'Audit trail and transparency',
       'Multi - chain support',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Integration with DeFi protocols',
     ],
-<<<<<<< HEAD
     popular: false,
 
     icon: '⛓️',
@@ -2345,56 +1662,14 @@ pr-12325
     customers: 45,
     rating: 4 && 4.7,
     reviews: 33
-=======
-    popular: false,'
-    icon: '⛓️',
-'
-      'Multi-chain governance engine with automated compliance and risk management.','
-    launchDate: '2025-02-05','
-    color: 'from - orange - 600 to - red - 700','
-    text_color: 'text - orange - 400','
-    link: 'https://ziontechgroup.com / blockchain - governance - automation',
-    market_position:;'
-      'Specialized blockchain governance; addresses regulatory compliance needs.','
-    target_audience: 'DeFi protocols, Enterprise blockchain, Regulatory teams',
-    trial_days: 21,'
-    setup_time: '1 week','
-    category: 'Blockchain & DeFi',
-    real_service: true,'
-    technology: ['Blockchain, Smart Contracts, AI / ML, Compliance'],'
-    integrations: ['Ethereum, Polygon, Solana, DeFi protocols'],'
-    use_cases: ['Regulatory compliance, Risk management, Governance automation'],'
-    roi: 'Reduce compliance costs by 40 - 60% and improve regulatory adherence.','
-    competitors: ['OpenZeppelin, ConsenSys, Chainalysis'],'
-    market_size: '$8B blockchain governance','
-    growth_rate: '42% YoY','
-    variant: 'blockchain - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;'
-      'Multi - chain governance engine with automated compliance and risk management.','
-    launch_date: '2025 - 02 - 05',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 45,
     rating: 4 && 4.7,
     reviews: 33,
   },
-<<<<<<< HEAD
   {
 
     id: 'ai - powered - customer - success - platform',
-=======
-  {}
-'
-    id: 'ai - powered - customer - success - platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     name: 'AI - Powered Customer Success Platform',
     tagline:;'
       'Predictive customer health scoring and proactive retention strategies','
@@ -2403,7 +1678,6 @@ pr-12325
     description:;'
       'Intelligent customer success platform that predicts churn risk, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',
     features: [;
-<<<<<<< HEAD
 '
       'Predictive churn risk scoring','
       'Customer health monitoring','
@@ -2413,13 +1687,7 @@ pr-12325
       'Success metric tracking','
       'Integration with CRM systems','
       'Real - time alerts and notifications','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       'Integration with DeFi protocols',
     ],
     popular: false;,
@@ -2510,25 +1778,15 @@ pr-12325
     customers: 45;,
     rating: 4 && 4.7;,
     reviews: 33;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
 
     id: 'ai - powered - customer - success - platform',
     name: 'AI - Powered Customer Success Platform',
-<<<<<<< HEAD
     tagline:;
       'Predictive customer health scoring and proactive retention strategies',
     price: '$249',
     period: '/month',
-=======
-    id: 'ai - powered - customer - success - platform';,
-    name: 'AI - Powered Customer Success Platform';,
-    tagline:;
-      'Predictive customer health scoring and proactive retention strategies',
-    price: '$249';,
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'Intelligent customer success platform that predicts churn risk, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',
     features: [;
@@ -2544,7 +1802,6 @@ pr-12325
       'Intelligent customer success platform that predicts churn risk, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',
 pr-12325
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'Predictive churn risk scoring',
       'Customer health monitoring',
       'Automated engagement workflows',
@@ -2553,11 +1810,8 @@ pr-12325
       'Success metric tracking',
       'Integration with CRM systems',
       'Real - time alerts and notifications',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Performance analytics dashboard',
     ],
-<<<<<<< HEAD
     popular: true,
 
     icon: '🎯',
@@ -2591,56 +1845,14 @@ pr-12325
     customers: 178,
     rating: 4 && 4.8,
     reviews: 124
-=======
-    popular: true,'
-    icon: '🎯',
-'
-      'AI-powered predictive analytics engine with automated engagement workflows.','
-    launchDate: '2025-01-30','
-    color: 'from - emerald - 600 to - teal - 700','
-    text_color: 'text - emerald - 400','
-    link: 'https://ziontechgroup.com / ai - customer - success - platform',
-    market_position:;'
-      'AI - enhanced customer success; competes with Gainsight, Totango.','
-    target_audience: 'Customer success teams, Account managers, Growth teams',
-    trial_days: 14,'
-    setup_time: '1 week','
-    category: 'Customer Success & Growth',
-    real_service: true,'
-    technology: ['AI / ML, Predictive Analytics, Automation'],'
-    integrations: ['Salesforce, HubSpot, Pipedrive, Intercom'],'
-    use_cases: ['Churn prevention, Customer retention, Revenue growth'],'
-    roi: 'Increase customer retention by 15 - 25% and LTV by 20 - 35%.','
-    competitors: ['Gainsight, Totango, ChurnZero'],'
-    market_size: '$6B customer success','
-    growth_rate: '26% YoY','
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;'
-      'AI - powered predictive analytics engine with automated engagement workflows.','
-    launch_date: '2025 - 01 - 30',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 178,
     rating: 4 && 4.8,
     reviews: 124,
   },
-<<<<<<< HEAD
   {
 
     id: 'quantum - machine - learning - platform',
-=======
-  {}
-'
-    id: 'quantum - machine - learning - platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     name: 'Quantum Machine Learning Platform',
     tagline:;'
       'Quantum computing - powered ML for complex optimization and simulation','
@@ -2649,7 +1861,6 @@ pr-12325
     description:;'
       'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems, drug discovery, financial modeling, and scientific simulations.',
     features: [;
-<<<<<<< HEAD
 '
       'Quantum algorithm implementations','
       'Hybrid quantum - classical ML','
@@ -2659,13 +1870,7 @@ pr-12325
       'Scientific computing tools','
       'Quantum circuit design','
       'Performance benchmarking','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       'Performance analytics dashboard',
     ],
     popular: true;,
@@ -2755,25 +1960,15 @@ pr-12325
     customers: 178;,
     rating: 4 && 4.8;,
     reviews: 124;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
 
     id: 'quantum - machine - learning - platform',
     name: 'Quantum Machine Learning Platform',
-<<<<<<< HEAD
     tagline:;
       'Quantum computing - powered ML for complex optimization and simulation',
     price: '$799',
     period: '/month',
-=======
-    id: 'quantum - machine - learning - platform';,
-    name: 'Quantum Machine Learning Platform';,
-    tagline:;
-      'Quantum computing - powered ML for complex optimization and simulation',
-    price: '$799';,
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems, drug discovery, financial modeling, and scientific simulations.',
     features: [;
@@ -2789,7 +1984,6 @@ pr-12325
       'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems, drug discovery, financial modeling, and scientific simulations.',
 pr-12325
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'Quantum algorithm implementations',
       'Hybrid quantum - classical ML',
       'Optimization problem solving',
@@ -2798,11 +1992,8 @@ pr-12325
       'Scientific computing tools',
       'Quantum circuit design',
       'Performance benchmarking',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Integration with classical ML frameworks',
     ],
-<<<<<<< HEAD
     popular: false,
 
     icon: '⚛️',
@@ -2812,70 +2003,16 @@ pr-12325
     color: 'from - violet - 600 to - purple - 700',
     text_color: 'text - violet - 400',
     link: 'https://ziontechgroup.com / quantum - machine - learning - platform',
-=======
-    popular: false,'
-    icon: '⚛️',
-'
-      'Quantum algorithm library with hybrid classical-quantum optimization capabilities.','
-    launchDate: '2025-02-15','
-    color: 'from - violet - 600 to - purple - 700','
-    text_color: 'text - violet - 400','
-    link: 'https://ziontechgroup.com / quantum - machine - learning - platform',
-    market_position:;'
-      'Cutting - edge quantum ML; specialized for complex computational problems.',
-    target_audience:;'
-      'Research institutions, Pharmaceutical companies, Financial services',
-    trial_days: 30,'
-    setup_time: '2 - 3 weeks','
-    category: 'Quantum Computing & AI',
-    real_service: true,'
-    technology: ['Quantum Computing, Machine Learning, Optimization'],'
-    integrations: ['IBM Quantum, Google Quantum, AWS Braket'],'
-    use_cases: ['Drug discovery, Financial modeling, Scientific research'],'
-    roi: 'Solve previously intractable problems; accelerate research and development.','
-    competitors: ['IBM Quantum, Google Quantum, Rigetti'],'
-    market_size: '$3B quantum computing','
-    growth_rate: '55% YoY','
-    variant: 'quantum - ai - enterprise',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;'
-      'Quantum algorithm library with hybrid classical - quantum optimization capabilities.','
-    launch_date: '2025 - 02 - 15',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 28,
     rating: 4 && 4.9,
     reviews: 22,
   },
-<<<<<<< HEAD
   {
-=======
-      'Integration with classical ML frameworks',
-    ],
-    popular: false;,
-    icon: '⚛️';,
-
-      'Integration with classical ML frameworks',']
-    icon: '⚛️';,
-pr-12325
-      'Quantum algorithm library with hybrid classical-quantum optimization capabilities.',
-    launchDate: '2025-02-15';,
-    color: 'from - violet - 600 to - purple - 700';,
-    text_color: 'text - violet - 400';,
-    link: 'https://ziontechgroup.com / quantum - machine - learning - platform';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     market_position:;
       'Cutting - edge quantum ML; specialized for complex computational problems.',
     target_audience:;
       'Research institutions, Pharmaceutical companies, Financial services',
-<<<<<<< HEAD
     trial_days: 30,
     setup_time: '2 - 3 weeks',
     category: 'Quantum Computing & AI',
@@ -2897,84 +2034,6 @@ pr-12325
     customers: 28,
     rating: 4 && 4.9,
     reviews: 22
-=======
-    trial_days: 30;,
-    setup_time: '2 - 3 weeks';,
-    category: 'Quantum Computing & AI';,
-    real_service: true;,
-      'Cutting - edge quantum ML; specialized for complex computational problems.',
-    target_audience:;
-      'Research institutions, Pharmaceutical companies, Financial services',
-    setup_time: '2 - 3 weeks';,
-    category: 'Quantum Computing & AI';,
-pr-12325
-    technology: ['Quantum Computing;, Machine Learning, Optimization'],
-    integrations: ['IBM Quantum;, Google Quantum, AWS Braket'],
-    use_cases: ['Drug discovery;, Financial modeling, Scientific research'],
-    roi: 'Solve previously intractable problems; accelerate research and development.',
-    competitors: ['IBM Quantum;, Google Quantum, Rigetti'],
-    market_size: '$3B quantum computing';,
-    growth_rate: '55% YoY';,
-    variant: 'quantum - ai - enterprise';,
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;
-      'Quantum algorithm library with hybrid classical - quantum optimization capabilities.',
-    launch_date: '2025 - 02 - 15';,
-
-'
-    id: 'quantum - machine - learning - platform';,''
-    name: 'Quantum Machine Learning Platform';,'
-    tagline:;'
-      'Quantum computing - powered ML for complex optimization and simulation',''
-    price: '$799';,''
-    period: '/month';,'
-    description:;'
-      'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems, drug discovery, financial modeling, and scientific simulations.','
-    features: [;
-'
-      'Quantum algorithm implementations',''
-      'Hybrid quantum - classical ML',''
-      'Optimization problem solving',''
-      'Drug discovery simulations',''
-      'Financial risk modeling',''
-      'Scientific computing tools',''
-      'Quantum circuit design',''
-      'Performance benchmarking',''
-      'Integration with classical ML frameworks',']
-    ],
-    popular: false;,'
-    icon: '⚛️';,''
-      'Quantum algorithm library with hybrid classical-quantum optimization capabilities.',''
-    launchDate: '2025-02-15';,''
-    color: 'from - violet - 600 to - purple - 700';,''
-    text_color: 'text - violet - 400';,''
-    link: 'https://ziontechgroup.com / quantum - machine - learning - platform';,'
-    market_position:;'
-      'Cutting - edge quantum ML; specialized for complex computational problems.','
-    target_audience:;'
-      'Research institutions, Pharmaceutical companies, Financial services','
-    trial_days: 30;,'
-    setup_time: '2 - 3 weeks';,''
-    category: 'Quantum Computing & AI';,'
-    real_service: true;,'
-    technology: ['Quantum Computing;, Machine Learning, Optimization'],''
-    integrations: ['IBM Quantum;, Google Quantum, AWS Braket'],''
-    use_cases: ['Drug discovery;, Financial modeling, Scientific research'],''
-    roi: 'Solve previously intractable problems; accelerate research and development.',''
-    competitors: ['IBM Quantum;, Google Quantum, Rigetti'],''
-    market_size: '$3B quantum computing';,''
-    growth_rate: '55% YoY';,''
-    variant: 'quantum - ai - enterprise';,'
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;'
-      'Quantum algorithm library with hybrid classical - quantum optimization capabilities.',''
-    launch_date: '2025 - 02 - 15';,'
-    customers: 28;,
-    rating: 4 && 4.9;,
-    reviews: 22;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Quantum algorithm library with hybrid classical - quantum optimization capabilities.',
@@ -2982,31 +2041,17 @@ pr-12325
     customers: 28;,
     reviews: 22;,
 pr-12325
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
     id: 'intelligent - supply - chain - optimizer',
     name: 'Intelligent Supply Chain Optimizer',
     tagline: 'AI - driven supply chain optimization and risk management',
     price: '$549',
-<<<<<<< HEAD
     period: '/month',
     description:;
-=======
-<<<<<<< HEAD
-=======
-  {}
-'
-    id: 'intelligent - supply - chain - optimizer','
-    name: 'Intelligent Supply Chain Optimizer','
-    tagline: 'AI - driven supply chain optimization and risk management','
-    price: '$549','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     period: '/month',
     description:;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Comprehensive supply chain optimization platform that uses AI to predict demand, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',
     features: [;
-<<<<<<< HEAD
 '
       'Demand forecasting and planning','
       'Inventory optimization','
@@ -3016,13 +2061,7 @@ pr-12325
       'Cost analysis and optimization','
       'Real - time visibility and tracking','
       'Compliance monitoring','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
     period: '/month',
     id: 'intelligent - supply - chain - optimizer';,
     name: 'Intelligent Supply Chain Optimizer';,
@@ -3035,7 +2074,6 @@ pr-12325
       'Comprehensive supply chain optimization platform that uses AI to predict demand, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',
 pr-12325
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'Demand forecasting and planning',
       'Inventory optimization',
       'Risk assessment and mitigation',
@@ -3044,11 +2082,8 @@ pr-12325
       'Cost analysis and optimization',
       'Real - time visibility and tracking',
       'Compliance monitoring',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Performance analytics and reporting',
     ],
-<<<<<<< HEAD
     popular: true,
 
     icon: '📦',
@@ -3082,43 +2117,7 @@ pr-12325
     customers: 89,
     rating: 4 && 4.7,
     reviews: 67
-=======
-    popular: true,'
-    icon: '📦',
-'
-      'AI-powered optimization engine with real-time monitoring and predictive analytics.','
-    launchDate: '2025-02-20','
-    color: 'from - blue - 600 to - cyan - 700','
-    text_color: 'text - blue - 400','
-    link: 'https://ziontechgroup.com / intelligent - supply - chain - optimizer',
-    market_position:;'
-      'AI - powered supply chain; competes with SAP, Oracle, Blue Yonder.','
-    target_audience: 'Manufacturing, Retail, Logistics companies',
-    trial_days: 21,'
-    setup_time: '2 - 3 weeks','
-    category: 'Supply Chain & Logistics',
-    real_service: true,'
-    technology: ['AI / ML, IoT, Blockchain, Analytics'],'
-    integrations: ['ERP systems, WMS, TMS, IoT platforms'],'
-    use_cases: ['Inventory optimization, Risk management, Cost reduction'],'
-    roi: 'Reduce inventory costs by 15 - 25% and improve service levels by 20 - 30%.','
-    competitors: ['SAP SCM, Oracle SCM, Blue Yonder'],'
-    market_size: '$25B supply chain management','
-    growth_rate: '18% YoY','
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;'
-      'AI - powered optimization engine with real - time monitoring and predictive analytics.','
-    launch_date: '2025 - 02 - 20',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 89,
     rating: 4 && 4.7,
     reviews: 67,
@@ -3135,7 +2134,6 @@ pr-12325
       'Advanced cybersecurity platform that provides real - time threat intelligence, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',
     features: [;'
       'Real - time threat detection',
-<<<<<<< HEAD
 '
       'Threat intelligence sharing','
       'Automated incident response','
@@ -3144,13 +2142,7 @@ pr-12325
       'Threat hunting tools','
       'Integration with security tools','
       'Compliance reporting','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       'Performance analytics and reporting',
     ],
     popular: true;,
@@ -3242,7 +2234,6 @@ pr-12325
     customers: 89;,
     rating: 4 && 4.7;,
     reviews: 67;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
 
@@ -3251,19 +2242,11 @@ pr-12325
 
 pr-12325
       'Real-time threat detection',
-<<<<<<< HEAD
     id: 'cybersecurity - threat - intelligence - hub',
     name: 'Cybersecurity Threat Intelligence Hub',
     tagline: 'Real - time threat detection, analysis, and automated response',
     price: '$399',
     period: '/month',
-=======
-    id: 'cybersecurity - threat - intelligence - hub';,
-    name: 'Cybersecurity Threat Intelligence Hub';,
-    tagline: 'Real - time threat detection;, analysis, and automated response',
-    price: '$399';,
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'Advanced cybersecurity platform that provides real - time threat intelligence, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',
     features: [;
@@ -3272,7 +2255,6 @@ pr-12325
       'Advanced cybersecurity platform that provides real - time threat intelligence, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',
       'Real - time threat detection',
 pr-12325
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'Threat intelligence sharing',
       'Automated incident response',
       'Vulnerability assessment',
@@ -3280,11 +2262,8 @@ pr-12325
       'Threat hunting tools',
       'Integration with security tools',
       'Compliance reporting',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       '24 / 7 security monitoring',
     ],
-<<<<<<< HEAD
     popular: true,
 
     icon: '🛡️',
@@ -3318,56 +2297,14 @@ pr-12325
     customers: 156,
     rating: 4 && 4.8,
     reviews: 118
-=======
-    popular: true,'
-    icon: '🛡️',
-'
-      'AI-powered threat detection engine with automated response and intelligence sharing.','
-    launchDate: '2025-02-25','
-    color: 'from - red - 600 to - orange - 700','
-    text_color: 'text - red - 400','
-    link: 'https://ziontechgroup.com / cybersecurity - threat - intelligence',
-    market_position:;'
-      'Comprehensive threat intelligence; competes with CrowdStrike, Palo Alto Networks.','
-    target_audience: 'Security teams, CISOs, IT security professionals',
-    trial_days: 14,'
-    setup_time: '1 week','
-    category: 'Cybersecurity',
-    real_service: true,'
-    technology: ['AI / ML, Threat Intelligence, Automation'],'
-    integrations: ['SIEM systems, EDR, Firewalls, IDS / IPS'],'
-    use_cases: ['Threat detection, Incident response, Risk management'],'
-    roi: 'Reduce security incidents by 40 - 60% and improve response time by 70%.','
-    competitors: ['CrowdStrike, Palo Alto Networks, FireEye'],'
-    market_size: '$35B cybersecurity','
-    growth_rate: '22% YoY','
-    variant: 'security - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;'
-      'AI - powered threat detection engine with automated response and intelligence sharing.','
-    launch_date: '2025 - 02 - 25',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 156,
     rating: 4 && 4.8,
     reviews: 118,
   },
-<<<<<<< HEAD
   {
 
     id: 'ai - powered - content - creation - suite',
-=======
-  {}
-'
-    id: 'ai - powered - content - creation - suite','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     name: 'AI - Powered Content Creation Suite',
     tagline:;'
       'Automated content generation, optimization, and multi - channel distribution','
@@ -3376,7 +2313,6 @@ pr-12325
     description:;'
       'Comprehensive content creation platform that uses AI to generate, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',
     features: [;
-<<<<<<< HEAD
 '
       'AI content generation','
       'Multi - channel content optimization','
@@ -3386,13 +2322,7 @@ pr-12325
       'Brand voice consistency','
       'Content calendar management','
       'Collaboration tools','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       '24 / 7 security monitoring',
     ],
     popular: true;,
@@ -3484,25 +2414,15 @@ pr-12325
     customers: 156;,
     rating: 4 && 4.8;,
     reviews: 118;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
 
     id: 'ai - powered - content - creation - suite',
     name: 'AI - Powered Content Creation Suite',
-<<<<<<< HEAD
     tagline:;
       'Automated content generation, optimization, and multi - channel distribution',
     price: '$179',
     period: '/month',
-=======
-    id: 'ai - powered - content - creation - suite';,
-    name: 'AI - Powered Content Creation Suite';,
-    tagline:;
-      'Automated content generation, optimization, and multi - channel distribution',
-    price: '$179';,
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'Comprehensive content creation platform that uses AI to generate, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',
     features: [;
@@ -3517,7 +2437,6 @@ pr-12325
       'Comprehensive content creation platform that uses AI to generate, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',
 pr-12325
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'AI content generation',
       'Multi - channel content optimization',
       'SEO optimization tools',
@@ -3526,13 +2445,10 @@ pr-12325
       'Brand voice consistency',
       'Content calendar management',
       'Collaboration tools',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Integration with marketing platforms',
     ],
     popular: true,'
     icon: '✍️',
-<<<<<<< HEAD
 
 
     color: 'from - indigo - 600 to - purple - 700',
@@ -3554,25 +2470,8 @@ pr-12325
     competitors: ['Jasper, Copy.ai, Grammarly, Writesonic'],
     market_size: '$12B content creation tools',
     growth_rate: '35% YoY',
-=======
 '
-    color: 'from - indigo - 600 to - purple - 700','
-    text_color: 'text - indigo - 400','
-    link: 'https://ziontechgroup.com / ai - content - creation - suite',
-    market_position:;'
-      'AI - powered content creation; competes with Jasper, Copy.ai, Grammarly.','
-    target_audience: 'Marketing teams, Content creators, Small businesses',
-    trial_days: 7,'
-    setup_time: '1 day',
-<<<<<<< HEAD
-'
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     category: 'Content & Marketing',
     real_service: true,'
     technology: ['AI / ML, NLP, Content Generation'],'
@@ -3583,161 +2482,39 @@ pr-12325
     competitors: ['Jasper, Copy.ai, Grammarly, Writesonic'],'
     market_size: '$12B content creation tools','
     growth_rate: '35% YoY','
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     variant: 'ai - creative',
     contact_info: contact,
     real_implementation: true,
     implementation_details:;
-<<<<<<< HEAD
 '
       'AI content generation engine with optimization and distribution capabilities.','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'AI content generation engine with optimization and distribution capabilities.',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     launch_date: '2025 - 03 - 01',
     customers: 234,
     rating: 4 && 4.7,
     reviews: 167,
   },
-<<<<<<< HEAD
   {
-=======
-      'Integration with marketing platforms',
-    ],
-    popular: true;,
-    icon: '✍️';,
-
-    color: 'from - indigo - 600 to - purple - 700';,
-    text_color: 'text - indigo - 400';,
-    link: 'https://ziontechgroup.com / ai - content - creation - suite';,
-    market_position:;
-      'AI - powered content creation; competes with Jasper, Copy.ai, Grammarly.',
-    target_audience: 'Marketing teams;, Content creators, Small businesses',
-    trial_days: 7;,
-    setup_time: '1 day';,
-
-    category: 'Content & Marketing';,
-    real_service: true;,
-    technology: ['AI / ML;, NLP, Content Generation'],
-    integrations: ['WordPress;, HubSpot, Mailchimp, Social media platforms'],
-
-      'Integration with marketing platforms',']
-    icon: '✍️';,
-    color: 'from - indigo - 600 to - purple - 700';,
-    text_color: 'text - indigo - 400';,
-    link: 'https://ziontechgroup.com / ai - content - creation - suite';,
-      'AI - powered content creation; competes with Jasper, Copy.ai, Grammarly.',
-    target_audience: 'Marketing teams;, Content creators, Small businesses',
-    trial_days: 7;,
-    category: 'Content & Marketing';,
-    technology: ['AI / ML;, NLP, Content Generation'],
-    integrations: ['WordPress;, HubSpot, Mailchimp, Social media platforms'],
-pr-12325
-    use_cases: ['Content marketing;, SEO optimization, Social media management'],
-    roi: 'Increase content production by 300 - 500% and improve engagement by 25 - 40%.';,
-    competitors: ['Jasper;, Copy.ai, Grammarly, Writesonic'],
-    market_size: '$12B content creation tools';,
-    growth_rate: '35% YoY';,
-    variant: 'ai - creative';,
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;
-    variant: 'ai - creative';,
-pr-12325
-
-      'AI content generation engine with optimization and distribution capabilities.',
-<<<<<<< HEAD
     launch_date: '2025 - 03 - 01',
     customers: 234,
     rating: 4 && 4.7,
     reviews: 167
-=======
-    launch_date: '2025 - 03 - 01';,
-'
-    id: 'ai - powered - content - creation - suite';,''
-    name: 'AI - Powered Content Creation Suite';,'
-    tagline:;'
-      'Automated content generation, optimization, and multi - channel distribution',''
-    price: '$179';,''
-    period: '/month';,'
-    description:;'
-      'Comprehensive content creation platform that uses AI to generate, optimize, and distribute content across multiple channels, improving engagement and conversion rates.','
-    features: [;
-'
-      'AI content generation',''
-      'Multi - channel content optimization',''
-      'SEO optimization tools',''
-      'Content performance analytics',''
-      'Automated distribution',''
-      'Brand voice consistency',''
-      'Content calendar management',''
-      'Collaboration tools',''
-      'Integration with marketing platforms',']
-    ],
-    popular: true;,'
-    icon: '✍️';,''
-    color: 'from - indigo - 600 to - purple - 700';,''
-    text_color: 'text - indigo - 400';,''
-    link: 'https://ziontechgroup.com / ai - content - creation - suite';,'
-    market_position:;'
-      'AI - powered content creation; competes with Jasper, Copy.ai, Grammarly.',''
-    target_audience: 'Marketing teams;, Content creators, Small businesses','
-    trial_days: 7;,'
-    setup_time: '1 day';,''
-    category: 'Content & Marketing';,'
-    real_service: true;,'
-    technology: ['AI / ML;, NLP, Content Generation'],''
-    integrations: ['WordPress;, HubSpot, Mailchimp, Social media platforms'],''
-    use_cases: ['Content marketing;, SEO optimization, Social media management'],''
-    roi: 'Increase content production by 300 - 500% and improve engagement by 25 - 40%.';,''
-    competitors: ['Jasper;, Copy.ai, Grammarly, Writesonic'],''
-    market_size: '$12B content creation tools';,''
-    growth_rate: '35% YoY';,''
-    variant: 'ai - creative';,'
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;
-'
-      'AI content generation engine with optimization and distribution capabilities.',''
-    launch_date: '2025 - 03 - 01';,'
-    customers: 234;,
-    rating: 4 && 4.7;,
-    reviews: 167;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
     reviews: 167;,
 pr-12325
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
     id: 'intelligent - data - governance - platform',
     name: 'Intelligent Data Governance Platform',
     tagline: 'Automated data quality, compliance, and lifecycle management',
     price: '$499',
-<<<<<<< HEAD
     period: '/month',
     description:;
-=======
-<<<<<<< HEAD
-=======
-  {}
-'
-    id: 'intelligent - data - governance - platform','
-    name: 'Intelligent Data Governance Platform','
-    tagline: 'Automated data quality, compliance, and lifecycle management','
-    price: '$499','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     period: '/month',
     description:;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Comprehensive data governance platform that automates data quality monitoring, compliance checking, and lifecycle management to ensure data integrity and regulatory compliance.',
     features: [;
-<<<<<<< HEAD
 '
       'Automated data quality monitoring','
       'Compliance and governance rules','
@@ -3747,17 +2524,9 @@ pr-12325
       'Policy enforcement','
       'Audit and reporting','
       'Integration with data platforms','
-=======
-
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
     period: '/month',
     id: 'intelligent - data - governance - platform';,
     name: 'Intelligent Data Governance Platform';,
@@ -3770,8 +2539,6 @@ pr-12325
       'Comprehensive data governance platform that automates data quality monitoring, compliance checking, and lifecycle management to ensure data integrity and regulatory compliance.',
 pr-12325
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Automated data quality monitoring',
       'Compliance and governance rules',
       'Data lineage tracking',
@@ -3780,11 +2547,8 @@ pr-12325
       'Policy enforcement',
       'Audit and reporting',
       'Integration with data platforms',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Real - time monitoring and alerts',
     ],
-<<<<<<< HEAD
     popular: false,
 
     icon: '📊',
@@ -3818,56 +2582,14 @@ pr-12325
     customers: 78,
     rating: 4 && 4.6,
     reviews: 56
-=======
-    popular: false,'
-    icon: '📊',
-'
-      'AI-powered data quality engine with automated compliance and governance workflows.','
-    launchDate: '2025-03-05','
-    color: 'from - teal - 600 to - cyan - 700','
-    text_color: 'text - teal - 400','
-    link: 'https://ziontechgroup.com / intelligent - data - governance',
-    market_position:;'
-      'AI - powered data governance; competes with Collibra, Alation, Informatica.','
-    target_audience: 'Data teams, Compliance officers, Data stewards',
-    trial_days: 21,'
-    setup_time: '2 - 3 weeks','
-    category: 'Data & Analytics',
-    real_service: true,'
-    technology: ['AI / ML, Data Quality, Compliance Automation'],'
-    integrations: ['Snowflake, Databricks, AWS, Azure, GCP'],'
-    use_cases: ['Data quality management, Compliance automation, Data lineage'],'
-    roi: 'Reduce data quality issues by 60 - 80% and compliance costs by 40 - 60%.','
-    competitors: ['Collibra, Alation, Informatica, Talend'],'
-    market_size: '$18B data governance','
-    growth_rate: '24% YoY','
-    variant: 'data - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;'
-      'AI - powered data quality engine with automated compliance and governance workflows.','
-    launch_date: '2025 - 03 - 05',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 78,
     rating: 4 && 4.6,
     reviews: 56,
   },
-<<<<<<< HEAD
   {
 
     id: 'quantum - financial - trading - engine',
-=======
-  {}
-'
-    id: 'quantum - financial - trading - engine','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     name: 'Quantum Financial Trading Engine',
     tagline:;'
       'Quantum computing - powered algorithmic trading and risk management','
@@ -3876,7 +2598,6 @@ pr-12325
     description:;'
       'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior performance.',
     features: [;
-<<<<<<< HEAD
 '
       'Quantum portfolio optimization','
       'Risk assessment algorithms','
@@ -3886,13 +2607,7 @@ pr-12325
       'Backtesting and simulation','
       'Compliance monitoring','
       'Performance analytics','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       'Real - time monitoring and alerts',
     ],
     popular: false;,
@@ -3981,25 +2696,15 @@ pr-12325
     customers: 78;,
     rating: 4 && 4.6;,
     reviews: 56;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
 
     id: 'quantum - financial - trading - engine',
     name: 'Quantum Financial Trading Engine',
-<<<<<<< HEAD
     tagline:;
       'Quantum computing - powered algorithmic trading and risk management',
     price: '$1, 299',
     period: '/month',
-=======
-    id: 'quantum - financial - trading - engine';,
-    name: 'Quantum Financial Trading Engine';,
-    tagline:;
-      'Quantum computing - powered algorithmic trading and risk management',
-    price: '$1;, 299',
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior performance.',
     features: [;
@@ -4015,7 +2720,6 @@ pr-12325
       'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior performance.',
 pr-12325
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'Quantum portfolio optimization',
       'Risk assessment algorithms',
       'Market analysis tools',
@@ -4024,14 +2728,11 @@ pr-12325
       'Backtesting and simulation',
       'Compliance monitoring',
       'Performance analytics',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Integration with trading platforms',
     ],
     popular: false,'
     icon: '💰',
 
-<<<<<<< HEAD
     color: 'from - yellow - 600 to - amber - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / quantum - financial - trading - engine',
@@ -4049,15 +2750,8 @@ pr-12325
     competitors: ['Goldman Sachs Quantum, JP Morgan Quantum, D - Wave'],
     market_size: '$5B quantum finance',
     growth_rate: '48% YoY',
-=======
-<<<<<<< HEAD
     color: 'from - yellow - 600 to - amber - 700',
     text_color: 'text - yellow - 400',
-=======
-'
-    color: 'from - yellow - 600 to - amber - 700','
-    text_color: 'text - yellow - 400','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     link: 'https://ziontechgroup.com / quantum - financial - trading - engine',
     market_position:;'
       'Cutting - edge quantum trading; specialized for institutional investors.','
@@ -4073,22 +2767,14 @@ pr-12325
     competitors: ['Goldman Sachs Quantum, JP Morgan Quantum, D - Wave'],'
     market_size: '$5B quantum finance','
     growth_rate: '48% YoY','
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     variant: 'quantum - financial',
     contact_info: contact,
     real_implementation: true,
     implementation_details:;
-<<<<<<< HEAD
 '
       'Quantum algorithm implementations for financial optimization and risk management.','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum algorithm implementations for financial optimization and risk management.',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     launch_date: '2025 - 03 - 10',
     customers: 34,
     rating: 4 && 4.9,
@@ -4107,7 +2793,6 @@ pr-12325
       'Comprehensive HR automation platform that uses AI to streamline recruitment, employee onboarding, performance management, and workforce optimization.',
     features: [;'
       'AI - powered candidate screening',
-<<<<<<< HEAD
 '
       'Automated interview scheduling','
       'Employee onboarding workflows','
@@ -4116,13 +2801,7 @@ pr-12325
       'Employee engagement monitoring','
       'Compliance and reporting','
       'Integration with HR systems','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       'Integration with trading platforms',
     ],
     popular: false;,
@@ -4166,7 +2845,6 @@ pr-12325
     icon: '💰',
 
       'Quantum algorithm implementations for financial optimization and risk management.',
-<<<<<<< HEAD
     launch_date: '2025 - 03 - 10',
     customers: 34,
     rating: 4 && 4.9,
@@ -4182,84 +2860,11 @@ pr-12325
       'Intelligent recruitment, employee management, and performance optimization',
     price: '$299',
     period: '/month',
-=======
-    launch_date: '2025 - 03 - 10';,
-'
-    id: 'quantum - financial - trading - engine';,''
-    name: 'Quantum Financial Trading Engine';,'
-    tagline:;'
-      'Quantum computing - powered algorithmic trading and risk management',''
-    price: '$1;, 299',''
-    period: '/month';,'
-    description:;'
-      'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior performance.','
-    features: [;
-'
-      'Quantum portfolio optimization',''
-      'Risk assessment algorithms',''
-      'Market analysis tools',''
-      'Algorithmic trading strategies',''
-      'Real - time market data processing',''
-      'Backtesting and simulation',''
-      'Compliance monitoring',''
-      'Performance analytics',''
-      'Integration with trading platforms',']
-    ],
-    popular: false;,'
-    icon: '💰';,''
-    color: 'from - yellow - 600 to - amber - 700';,''
-    text_color: 'text - yellow - 400';,''
-    link: 'https://ziontechgroup.com / quantum - financial - trading - engine';,'
-    market_position:;'
-      'Cutting - edge quantum trading; specialized for institutional investors.',''
-    target_audience: 'Hedge funds;, Investment banks, Institutional investors','
-    trial_days: 45;,'
-    setup_time: '1 month';,''
-    category: 'Quantum Computing & Finance';,'
-    real_service: true;,'
-    technology: ['Quantum Computing;, Financial Algorithms, Risk Management'],''
-    integrations: ['Bloomberg;, Reuters, Trading platforms, Risk systems'],''
-    use_cases: ['Portfolio optimization;, Risk management, Algorithmic trading'],''
-    roi: 'Improve trading performance by 15 - 25% and reduce risk exposure.';,''
-    competitors: ['Goldman Sachs Quantum;, JP Morgan Quantum, D - Wave'],''
-    market_size: '$5B quantum finance';,''
-    growth_rate: '48% YoY';,''
-    variant: 'quantum - financial';,'
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;
-'
-      'Quantum algorithm implementations for financial optimization and risk management.',''
-    launch_date: '2025 - 03 - 10';,'
-    customers: 34;,
-    rating: 4 && 4.9;,
-    reviews: 28;,
-  },
-  {
-    reviews: 28;,
-pr-12325
-
-      'AI-powered candidate screening',
-    id: 'ai - powered - hr - automation - suite';,
-    name: 'AI - Powered HR Automation Suite';,
-    tagline:;
-      'Intelligent recruitment, employee management, and performance optimization',
-    price: '$299';,
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'Comprehensive HR automation platform that uses AI to streamline recruitment, employee onboarding, performance management, and workforce optimization.',
     features: [;
       'AI - powered candidate screening',
 
-<<<<<<< HEAD
-=======
-      'Intelligent recruitment, employee management, and performance optimization',
-      'Comprehensive HR automation platform that uses AI to streamline recruitment, employee onboarding, performance management, and workforce optimization.',
-      'AI - powered candidate screening',
-pr-12325
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Automated interview scheduling',
       'Employee onboarding workflows',
       'Performance tracking and analytics',
@@ -4267,8 +2872,6 @@ pr-12325
       'Employee engagement monitoring',
       'Compliance and reporting',
       'Integration with HR systems',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Predictive analytics dashboard',
     ],
     popular: true,'
@@ -4302,30 +2905,12 @@ pr-12325
       'AI - powered HR automation engine with intelligent workflows and analytics.','
     launch_date: '2025 - 03 - 15',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 189,
     rating: 4 && 4.7,
     reviews: 134,
   },
-<<<<<<< HEAD
   {
-=======
-      'Predictive analytics dashboard',
-    ],
-    popular: true;,
-    icon: '👥';,
-
-      'Predictive analytics dashboard',']
-    icon: '👥';,
-pr-12325
-      'AI-powered HR automation engine with intelligent workflows and analytics.',
-<<<<<<< HEAD
     launchDate: '2025-03-15',
     color: 'from - pink - 600 to - rose - 700',
     text_color: 'text - pink - 400',
@@ -4339,25 +2924,9 @@ pr-12325
     real_service: true,
     technology: ['AI / ML, HR Automation, Analytics'],
     integrations: ['Workday, BambooHR, Greenhouse, Slack, Teams'],
-=======
-    launchDate: '2025-03-15';,
-    color: 'from - pink - 600 to - rose - 700';,
-    text_color: 'text - pink - 400';,
-    link: 'https://ziontechgroup.com / ai - hr - automation - suite';,
-    market_position:;
-      'AI - enhanced HR automation; competes with Workday, BambooHR, Greenhouse.',
-    target_audience: 'HR teams;, Recruiters, People operations',
-    trial_days: 14;,
-    setup_time: '1 - 2 weeks';,
-    category: 'HR & People Operations';,
-    real_service: true;,
-    technology: ['AI / ML;, HR Automation, Analytics'],
-    integrations: ['Workday;, BambooHR, Greenhouse, Slack, Teams'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     use_cases: [;
       'Recruitment automation, Performance management, Employee engagement',
     ],
-<<<<<<< HEAD
     roi: 'Reduce hiring time by 40 - 60% and improve employee retention by 20 - 30%.',
     competitors: ['Workday, BambooHR, Greenhouse, Lever'],
     market_size: '$22B HR software',
@@ -4372,79 +2941,6 @@ pr-12325
     customers: 189,
     rating: 4 && 4.7,
     reviews: 134
-=======
-      'AI - enhanced HR automation; competes with Workday, BambooHR, Greenhouse.',
-    target_audience: 'HR teams;, Recruiters, People operations',
-    category: 'HR & People Operations';,
-    technology: ['AI / ML;, HR Automation, Analytics'],
-    integrations: ['Workday;, BambooHR, Greenhouse, Slack, Teams'],
-      'Recruitment automation, Performance management, Employee engagement',']
-pr-12325
-    roi: 'Reduce hiring time by 40 - 60% and improve employee retention by 20 - 30%.';,
-    competitors: ['Workday;, BambooHR, Greenhouse, Lever'],
-    market_size: '$22B HR software';,
-    growth_rate: '19% YoY';,
-    variant: 'ai - futuristic';,
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;
-      'AI - powered HR automation engine with intelligent workflows and analytics.',
-    launch_date: '2025 - 03 - 15';,
-
-'
-      'AI-powered candidate screening',''
-    id: 'ai - powered - hr - automation - suite';,''
-    name: 'AI - Powered HR Automation Suite';,'
-    tagline:;'
-      'Intelligent recruitment, employee management, and performance optimization',''
-    price: '$299';,''
-    period: '/month';,'
-    description:;'
-      'Comprehensive HR automation platform that uses AI to streamline recruitment, employee onboarding, performance management, and workforce optimization.','
-    features: [;'
-      'AI - powered candidate screening',''
-      'Automated interview scheduling',''
-      'Employee onboarding workflows',''
-      'Performance tracking and analytics',''
-      'Skills gap analysis',''
-      'Employee engagement monitoring',''
-      'Compliance and reporting',''
-      'Integration with HR systems',''
-      'Predictive analytics dashboard',']
-    ],
-    popular: true;,'
-    icon: '👥';,''
-      'AI-powered HR automation engine with intelligent workflows and analytics.',''
-    launchDate: '2025-03-15';,''
-    color: 'from - pink - 600 to - rose - 700';,''
-    text_color: 'text - pink - 400';,''
-    link: 'https://ziontechgroup.com / ai - hr - automation - suite';,'
-    market_position:;'
-      'AI - enhanced HR automation; competes with Workday, BambooHR, Greenhouse.',''
-    target_audience: 'HR teams;, Recruiters, People operations','
-    trial_days: 14;,'
-    setup_time: '1 - 2 weeks';,''
-    category: 'HR & People Operations';,'
-    real_service: true;,'
-    technology: ['AI / ML;, HR Automation, Analytics'],''
-    integrations: ['Workday;, BambooHR, Greenhouse, Slack, Teams'],'
-    use_cases: [;'
-      'Recruitment automation, Performance management, Employee engagement',']
-    ],'
-    roi: 'Reduce hiring time by 40 - 60% and improve employee retention by 20 - 30%.';,''
-    competitors: ['Workday;, BambooHR, Greenhouse, Lever'],''
-    market_size: '$22B HR software';,''
-    growth_rate: '19% YoY';,''
-    variant: 'ai - futuristic';,'
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;'
-      'AI - powered HR automation engine with intelligent workflows and analytics.',''
-    launch_date: '2025 - 03 - 15';,'
-    customers: 189;,
-    rating: 4 && 4.7;,
-    reviews: 134;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'AI - powered HR automation engine with intelligent workflows and analytics.',
@@ -4452,31 +2948,17 @@ pr-12325
     customers: 189;,
     reviews: 134;,
 pr-12325
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
     id: 'intelligent - iot - platform',
     name: 'Intelligent IoT Platform',
     tagline: 'AI - powered IoT device management, analytics, and automation',
     price: '$399',
-<<<<<<< HEAD
     period: '/month',
     description:;
-=======
-<<<<<<< HEAD
-=======
-  {}
-'
-    id: 'intelligent - iot - platform','
-    name: 'Intelligent IoT Platform','
-    tagline: 'AI - powered IoT device management, analytics, and automation','
-    price: '$399','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     period: '/month',
     description:;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Comprehensive IoT platform that provides intelligent device management, real - time analytics, predictive maintenance, and automated workflows for connected devices.',
     features: [;
-<<<<<<< HEAD
 '
       'IoT device management','
       'Real - time data analytics','
@@ -4486,17 +2968,9 @@ pr-12325
       'Edge computing capabilities','
       'Integration with cloud platforms','
       'Custom dashboard creation','
-=======
-
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
     period: '/month',
     id: 'intelligent - iot - platform';,
     name: 'Intelligent IoT Platform';,
@@ -4509,8 +2983,6 @@ pr-12325
       'Comprehensive IoT platform that provides intelligent device management, real - time analytics, predictive maintenance, and automated workflows for connected devices.',
 pr-12325
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'IoT device management',
       'Real - time data analytics',
       'Predictive maintenance',
@@ -4519,11 +2991,8 @@ pr-12325
       'Edge computing capabilities',
       'Integration with cloud platforms',
       'Custom dashboard creation',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'API and webhook support',
     ],
-<<<<<<< HEAD
     popular: false,
 
     icon: '🌐',
@@ -4557,43 +3026,7 @@ pr-12325
     customers: 67,
     rating: 4 && 4.6,
     reviews: 45
-=======
-    popular: false,'
-    icon: '🌐',
-'
-      'IoT device management platform with AI-powered analytics and automation.','
-    launchDate: '2025-03-20','
-    color: 'from - green - 600 to - emerald - 700','
-    text_color: 'text - green - 400','
-    link: 'https://ziontechgroup.com / intelligent - iot - platform',
-    market_position:;'
-      'AI - powered IoT platform; competes with AWS IoT, Azure IoT, Google Cloud IoT.','
-    target_audience: 'IoT developers, Manufacturing, Smart cities',
-    trial_days: 21,'
-    setup_time: '2 - 3 weeks','
-    category: 'IoT & Edge Computing',
-    real_service: true,'
-    technology: ['IoT, AI / ML, Edge Computing, Cloud Platforms'],'
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP'],'
-    use_cases: ['Device management, Predictive maintenance, Smart automation'],'
-    roi: 'Reduce maintenance costs by 25 - 40% and improve operational efficiency by 30 - 50%.','
-    competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, Particle'],'
-    market_size: '$30B IoT platforms','
-    growth_rate: '32% YoY','
-    variant: 'iot - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;'
-      'IoT device management platform with AI - powered analytics and automation.','
-    launch_date: '2025 - 03 - 20',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 67,
     rating: 4 && 4.6,
     reviews: 45,
@@ -4612,7 +3045,6 @@ pr-12325
     features: [;'
       'Quantum - resistant algorithms','
       'Post - quantum cryptography',
-<<<<<<< HEAD
 '
       'Quantum key distribution','
       'Hybrid encryption systems','
@@ -4620,13 +3052,7 @@ pr-12325
       'Compliance monitoring','
       'Performance optimization','
       'Integration with security tools','
-=======
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       'API and webhook support',
     ],
     popular: false;,
@@ -4716,7 +3142,6 @@ pr-12325
     customers: 67;,
     rating: 4 && 4.6;,
     reviews: 45;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
     variant: 'iot - futuristic';,
@@ -4727,37 +3152,25 @@ pr-12325
 
       'Quantum-resistant algorithms',
       'Post-quantum cryptography',
-<<<<<<< HEAD
     id: 'quantum - cybersecurity - platform',
     name: 'Quantum Cybersecurity Platform',
     tagline: 'Quantum - resistant security and post - quantum cryptography',
     price: '$699',
     period: '/month',
-=======
-    id: 'quantum - cybersecurity - platform';,
-    name: 'Quantum Cybersecurity Platform';,
-    tagline: 'Quantum - resistant security and post - quantum cryptography';,
-    price: '$699';,
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'Advanced cybersecurity platform that implements quantum - resistant algorithms, post - quantum cryptography, and quantum key distribution to protect against future quantum attacks.',
     features: [;
       'Quantum - resistant algorithms',
       'Post - quantum cryptography',
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'Quantum key distribution',
       'Hybrid encryption systems',
       'Security assessment tools',
       'Compliance monitoring',
       'Performance optimization',
       'Integration with security tools',
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Migration assistance',
     ],
-<<<<<<< HEAD
     popular: false,
 
     icon: '🔒',
@@ -4767,57 +3180,14 @@ pr-12325
     color: 'from - violet - 600 to - purple - 700',
     text_color: 'text - violet - 400',
     link: 'https://ziontechgroup.com / quantum - cybersecurity - platform',
-=======
-    popular: false,'
-    icon: '🔒',
-'
-      'Quantum-resistant cryptographic implementations with hybrid security systems.','
-    launchDate: '2025-03-25','
-    color: 'from - violet - 600 to - purple - 700','
-    text_color: 'text - violet - 400','
-    link: 'https://ziontechgroup.com / quantum - cybersecurity - platform',
-    market_position:;'
-      'Future - proof quantum security; specialized for high - security environments.',
-    target_audience:;'
-      'Government agencies, Financial institutions, Healthcare organizations',
-    trial_days: 30,'
-    setup_time: '1 month','
-    category: 'Quantum Computing & Security',
-    real_service: true,'
-    technology: ['Quantum Computing, Post - Quantum Cryptography, QKD'],'
-    integrations: ['PKI systems, Security tools, Cloud platforms'],'
-    use_cases: ['Data protection, Secure communications, Compliance'],'
-    roi: 'Future - proof security investment; avoid costly migrations later.','
-    competitors: ['ISARA, PQShield, Quantum Xchange, ID Quantique'],'
-    market_size: '$4B quantum security','
-    growth_rate: '52% YoY','
-    variant: 'quantum - security',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;'
-      'Quantum - resistant cryptographic implementations with hybrid security systems.','
-    launch_date: '2025 - 03 - 25',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 19,
     rating: 4 && 4.9,
     reviews: 15,
   },
-<<<<<<< HEAD
   {
 
     id: 'ai - powered - sales - intelligence - platform',
-=======
-  {}
-'
-    id: 'ai - powered - sales - intelligence - platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     name: 'AI - Powered Sales Intelligence Platform',
     tagline:;'
       'Predictive sales analytics, lead scoring, and revenue optimization','
@@ -4871,24 +3241,10 @@ pr-12325
     reviews: 178,
   },
 
-<<<<<<< HEAD
-=======
-      'Migration assistance',
-    ],
-    popular: false;,
-    icon: '🔒';,
-
-      'Quantum-resistant cryptographic implementations with hybrid security systems.',
-    launchDate: '2025-03-25';,
-    color: 'from - violet - 600 to - purple - 700';,
-    text_color: 'text - violet - 400';,
-    link: 'https://ziontechgroup.com / quantum - cybersecurity - platform';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     market_position:;
       'Future - proof quantum security; specialized for high - security environments.',
     target_audience:;
       'Government agencies, Financial institutions, Healthcare organizations',
-<<<<<<< HEAD
     trial_days: 30,
     setup_time: '1 month',
     category: 'Quantum Computing & Security',
@@ -4910,96 +3266,15 @@ pr-12325
     customers: 19,
     rating: 4 && 4.9,
     reviews: 15
-=======
-    trial_days: 30;,
-    setup_time: '1 month';,
-    category: 'Quantum Computing & Security';,
-    real_service: true;,
-    technology: ['Quantum Computing;, Post - Quantum Cryptography, QKD'],
-    integrations: ['PKI systems;, Security tools, Cloud platforms'],
-    use_cases: ['Data protection;, Secure communications, Compliance'],
-    roi: 'Future - proof security investment; avoid costly migrations later.',
-    competitors: ['ISARA;, PQShield, Quantum Xchange, ID Quantique'],
-    market_size: '$4B quantum security';,
-    growth_rate: '52% YoY';,
-    variant: 'quantum - security';,
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;
-      'Quantum - resistant cryptographic implementations with hybrid security systems.',
-    launch_date: '2025 - 03 - 25';,
-
-'
-      'Quantum-resistant algorithms',''
-      'Post-quantum cryptography',''
-    id: 'quantum - cybersecurity - platform';,''
-    name: 'Quantum Cybersecurity Platform';,''
-    tagline: 'Quantum - resistant security and post - quantum cryptography';,''
-    price: '$699';,''
-    period: '/month';,'
-    description:;'
-      'Advanced cybersecurity platform that implements quantum - resistant algorithms, post - quantum cryptography, and quantum key distribution to protect against future quantum attacks.','
-    features: [;'
-      'Quantum - resistant algorithms',''
-      'Post - quantum cryptography',''
-      'Quantum key distribution',''
-      'Hybrid encryption systems',''
-      'Security assessment tools',''
-      'Compliance monitoring',''
-      'Performance optimization',''
-      'Integration with security tools',''
-      'Migration assistance',']
-    ],
-    popular: false;,'
-    icon: '🔒';,''
-      'Quantum-resistant cryptographic implementations with hybrid security systems.',''
-    launchDate: '2025-03-25';,''
-    color: 'from - violet - 600 to - purple - 700';,''
-    text_color: 'text - violet - 400';,''
-    link: 'https://ziontechgroup.com / quantum - cybersecurity - platform';,'
-    market_position:;'
-      'Future - proof quantum security; specialized for high - security environments.','
-    target_audience:;'
-      'Government agencies, Financial institutions, Healthcare organizations','
-    trial_days: 30;,'
-    setup_time: '1 month';,''
-    category: 'Quantum Computing & Security';,'
-    real_service: true;,'
-    technology: ['Quantum Computing;, Post - Quantum Cryptography, QKD'],''
-    integrations: ['PKI systems;, Security tools, Cloud platforms'],''
-    use_cases: ['Data protection;, Secure communications, Compliance'],''
-    roi: 'Future - proof security investment; avoid costly migrations later.',''
-    competitors: ['ISARA;, PQShield, Quantum Xchange, ID Quantique'],''
-    market_size: '$4B quantum security';,''
-    growth_rate: '52% YoY';,''
-    variant: 'quantum - security';,'
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;'
-      'Quantum - resistant cryptographic implementations with hybrid security systems.',''
-    launch_date: '2025 - 03 - 25';,'
-    customers: 19;,
-    rating: 4 && 4.9;,
-    reviews: 15;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
 
     id: 'ai - powered - sales - intelligence - platform',
     name: 'AI - Powered Sales Intelligence Platform',
-<<<<<<< HEAD
     tagline:;
       'Predictive sales analytics, lead scoring, and revenue optimization',
     price: '$349',
     period: '/month',
-=======
-    id: 'ai - powered - sales - intelligence - platform';,
-    name: 'AI - Powered Sales Intelligence Platform';,
-    tagline:;
-      'Predictive sales analytics, lead scoring, and revenue optimization',
-    price: '$349';,
-    period: '/month';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:;
       'Intelligent sales platform that uses AI to predict customer behavior, score leads, optimize sales processes, and increase revenue through data - driven insights.',
     features: [;
@@ -5046,7 +3321,6 @@ pr-12325
     icon: '📈';,
 
       'AI-powered sales analytics engine with predictive insights and automation.',
-<<<<<<< HEAD
     launchDate: '2025-04-01',
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
@@ -5077,117 +3351,11 @@ pr-12325
     reviews: 178
   },
 
-=======
-    launchDate: '2025-04-01';,
-    color: 'from - blue - 600 to - indigo - 700';,
-    text_color: 'text - blue - 400';,
-    link: 'https://ziontechgroup.com / ai - sales - intelligence - platform';,
-    market_position:;
-      'AI - enhanced sales intelligence; competes with Salesforce Einstein, HubSpot, Pipedrive.',
-    target_audience: 'Sales teams;, Sales managers, Revenue operations',
-    trial_days: 14;,
-    setup_time: '1 week';,
-    category: 'Sales & Revenue';,
-    real_service: true;,
-      'Performance tracking',
-      'Real - time insights dashboard',']
-    icon: '📈';,
-      'AI-powered sales analytics engine with predictive insights and automation.',
-    launchDate: '2025-04-01';,
-    link: 'https://ziontechgroup.com / ai - sales - intelligence - platform';,
-      'AI - enhanced sales intelligence; competes with Salesforce Einstein, HubSpot, Pipedrive.',
-    target_audience: 'Sales teams;, Sales managers, Revenue operations',
-    category: 'Sales & Revenue';,
-pr-12325
-    technology: ['AI / ML;, Predictive Analytics, Sales Automation'],
-    integrations: ['Salesforce;, HubSpot, Pipedrive, Slack, Teams'],
-    use_cases: ['Lead scoring;, Sales optimization, Revenue forecasting'],
-    roi: 'Increase sales conversion rates by 20 - 35% and improve revenue by 25 - 40%.';,
-    competitors: ['Salesforce Einstein;, HubSpot, Pipedrive, Gong'],
-    market_size: '$18B sales intelligence';,
-    growth_rate: '28% YoY';,
-    variant: 'ai - futuristic';,
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;
-      'AI - powered sales analytics engine with predictive insights and automation.',
-    launch_date: '2025 - 04 - 01';,
-
-'
-    id: 'ai - powered - sales - intelligence - platform';,''
-    name: 'AI - Powered Sales Intelligence Platform';,'
-    tagline:;'
-      'Predictive sales analytics, lead scoring, and revenue optimization',''
-    price: '$349';,''
-    period: '/month';,'
-    description:;'
-      'Intelligent sales platform that uses AI to predict customer behavior, score leads, optimize sales processes, and increase revenue through data - driven insights.','
-    features: [;
-'
-      'Predictive lead scoring',''
-      'Customer behavior analysis',''
-      'Sales process optimization',''
-      'Revenue forecasting',''
-      'Pipeline analytics',''
-      'Automated follow - ups',''
-      'Integration with CRM systems',''
-      'Performance tracking',''
-      'Real - time insights dashboard',']
-    ],
-    popular: true;,'
-    icon: '📈';,''
-      'AI-powered sales analytics engine with predictive insights and automation.',''
-    launchDate: '2025-04-01';,''
-    color: 'from - blue - 600 to - indigo - 700';,''
-    text_color: 'text - blue - 400';,''
-    link: 'https://ziontechgroup.com / ai - sales - intelligence - platform';,'
-    market_position:;'
-      'AI - enhanced sales intelligence; competes with Salesforce Einstein, HubSpot, Pipedrive.',''
-    target_audience: 'Sales teams;, Sales managers, Revenue operations','
-    trial_days: 14;,'
-    setup_time: '1 week';,''
-    category: 'Sales & Revenue';,'
-    real_service: true;,'
-    technology: ['AI / ML;, Predictive Analytics, Sales Automation'],''
-    integrations: ['Salesforce;, HubSpot, Pipedrive, Slack, Teams'],''
-    use_cases: ['Lead scoring;, Sales optimization, Revenue forecasting'],''
-    roi: 'Increase sales conversion rates by 20 - 35% and improve revenue by 25 - 40%.';,''
-    competitors: ['Salesforce Einstein;, HubSpot, Pipedrive, Gong'],''
-    market_size: '$18B sales intelligence';,''
-    growth_rate: '28% YoY';,''
-    variant: 'ai - futuristic';,'
-    contact_info: contact;,
-    real_implementation: true;,
-    implementation_details:;'
-      'AI - powered sales analytics engine with predictive insights and automation.',''
-    launch_date: '2025 - 04 - 01';,'
-    customers: 234;,
-    rating: 4 && 4.8;,
-    reviews: 178;,
-  },
-      'AI - powered sales analytics engine with predictive insights and automation.',
-    launch_date: '2025 - 04 - 01';,
-    reviews: 178;,
-pr-12325
-
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     id: 'ai-powered-code-review-assistant', name: 'AI-Powered Code Review Assistant',
     tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',
     price: '$199', period: '/month',
     description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    id: 'ai-powered-code-review-assistant';, name: 'AI-Powered Code Review Assistant';,
-    tagline: 'Automated code quality analysis;, security scanning, and best practice recommendations',
-    price: '$199';, period: '/month';,
-    description: 'Intelligent code review system that analyzes pull requests;, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     features: [
       'Automated security vulnerability detectionCode quality scoring and metricsBest practice recommendationsIntegration with GitHub/GitLabCustom rule configurationTeam performance analyticsAutomated PR commentsCompliance checking (SOC2, HIPAA)';
       'Performance impact analysis'
@@ -5208,37 +3376,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'ai-futuristic', contactInfo: contact,
     realImplementation: true, implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.',
     launchDate: '2025-01-15', customers: 156,
-<<<<<<< HEAD
-=======
-    rating: 4.8,
-<<<<<<< HEAD
-=======
-    popular: true;, icon: '🔍';,
-    color: 'from-blue-600 to-indigo-700';, textColor: 'text-blue-400';,
-    link: 'https://ziontechgroup.com/ai-code-review-assistant';,
-    marketPosition: 'Competes with SonarQube;, CodeClimate, adds AI-powered insights and security focus.',
-    targetAudience: 'Development teams;, DevOps engineers, CTOs',
-    features: [
-      'Automated security vulnerability detectionCode quality scoring and metricsBest practice recommendationsIntegration with GitHub/GitLabCustom rule configurationTeam performance analyticsAutomated PR commentsCompliance checking (SOC2, HIPAA)';
-      'Performance impact analysis]
-    ];
-    popular: true;, icon: '🔍';,
-    color: 'from-blue-600 to-indigo-700';, textColor: 'text-blue-400';,
-    marketPosition: 'Competes with SonarQube;, CodeClimate, adds AI-powered insights and security focus.',
-pr-12325
-    trialDays: 14;, setupTime: '2 hours';,
-    category: 'Development & DevOps';, realService: true;,
-    technology: ['AI/ML;, Static Analysis, Security Scanning'];
-    integrations: ['GitHub;, GitLab, Bitbucket, Jira, Slack'];
-    useCases: ['Code quality improvement;, Security compliance, Team productivity'];
-    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.';,
-    competitors: ['SonarQube;, CodeClimate, Snyk'];
-    marketSize: '$8B code quality tools';, growthRate: '35% YoY';,
-    variant: 'ai-futuristic';, contactInfo: contact;,
-    realImplementation: true;, implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.';,
-    launchDate: '2025-01-15';, customers: 156;,
-    rating: 4.8;,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'Automated security vulnerability detection'
       'Code quality scoring and metrics'
       'Best practice recommendations'
@@ -5254,44 +3391,16 @@ pr-12325
     color: 'from-blue-600 to-indigo-700'
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/ai-code-review-assistant'
-<<<<<<< HEAD
     marketPosition:
       'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.'
     targetAudience: 'Development teams, DevOps engineers, CTOs'
-=======
-    marketPosition: 'Competes with SonarQube;, CodeClimate; adds AI-powered insights and security focus.'
-    targetAudience: 'Development teams;, DevOps engineers, CTOs'
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     trialDays: 14
     setupTime: '2 hours'
     category: 'Development & DevOps'
     realService: true
     technology: ['AI/ML, Static Analysis, Security Scanning']
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack']
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-    features: [
-      'Automated security vulnerability detectionCode quality scoring and metricsBest practice recommendationsIntegration with GitHub/GitLabCustom rule configurationTeam performance analyticsAutomated PR commentsCompliance checking (SOC2, HIPAA)';
-      'Performance impact analysis'
-    ];
-    popular: true, icon: '🔍',
-    color: 'from-blue-600 to-indigo-700', textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-code-review-assistant',
-    marketPosition: 'Competes with SonarQube, CodeClimate, adds AI-powered insights and security focus.',
-    targetAudience: 'Development teams, DevOps engineers, CTOs',
-    trialDays: 14, setupTime: '2 hours',
-    category: 'Development & DevOps', realService: true,
-    technology: ['AI/ML, Static Analysis, Security Scanning'];
-    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'];
-    useCases: ['Code quality improvement, Security compliance, Team productivity'];
-    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.',
-    competitors: ['SonarQube, CodeClimate, Snyk'];
-    marketSize: '$8B code quality tools', growthRate: '35% YoY',
-    variant: 'ai-futuristic', contactInfo: contact,
-    realImplementation: true, implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.',
-    launchDate: '2025-01-15', customers: 156,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     rating: 4.8,
       'Automated security vulnerability detection'
       'Code quality scoring and metrics'
@@ -5304,7 +3413,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance impact analysis'
     ]
     popular: true
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [
     icon: '🔍'
@@ -5321,9 +3429,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['AI/ML, Static Analysis, Security Scanning']
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack']
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
     technology: ['AI/ML;, Static Analysis, Security Scanning']
     integrations: ['GitHub;, GitLab, Bitbucket, Jira, Slack']
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -5338,8 +3443,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance impact analysis
     popular: true;
 pr-12325
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Automated security vulnerability detection',
       'Code quality scoring and metrics',
       'Best practice recommendations',
@@ -5348,49 +3451,20 @@ pr-12325
       'Team performance analytics',
       'Automated PR comments',
       'Compliance checking (SOC2, HIPAA)',
-<<<<<<< HEAD
-=======
-'
-    id: 'ai-powered-code-review-assistant', name: 'AI-Powered Code Review Assistant','
-    tagline: 'Automated code quality analysis, security scanning, and best practice recommendations','
-    price: '$199', period: '/month','
-    description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
-
-    features: []
-'
-      'Automated security vulnerability detection','
-      'Code quality scoring and metrics','
-      'Best practice recommendations','
-      'Integration with GitHub / GitLab','
-      'Custom rule configuration','
-      'Team performance analytics','
-      'Automated PR comments','
-      'Compliance checking (SOC2, HIPAA)','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Performance impact analysis',
     ],
-<<<<<<< HEAD
     popular: true,
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-code-review-assistant',
     marketPosition:;
 
-=======
-    popular: true,'
-    color: 'from-blue-600 to-indigo-700','
-    textColor: 'text-blue-400','
-    link: 'https://ziontechgroup.com/ai-code-review-assistant',
-<<<<<<< HEAD
     marketPosition:;
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     icon: '🔍',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-code-review-assistant',
     marketPosition:
-<<<<<<< HEAD
       'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',
     targetAudience: 'Development teams, DevOps engineers, CTOs',
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
@@ -5411,15 +3485,9 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     link: 'https://ziontechgroup.com/ai-code-review-assistant',
     marketPosition: 'Competes with SonarQube, CodeClimate, adds AI-powered insights and security focus.',
     targetAudience: 'Development teams, DevOps engineers, CTOs',
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',
-=======
     marketPosition:;'
       'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     targetAudience: 'Development teams, DevOps engineers, CTOs',
     trialDays: 14,'
     setupTime: '2 hours','
@@ -5427,13 +3495,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     realService: true,'
     technology: ['AI/ML, Static Analysis, Security Scanning'],'
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
-<<<<<<< HEAD
-<<<<<<< HEAD
     useCases: [
-=======
-
-    useCases: ['
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Code quality improvement, Security compliance, Team productivity'
     ]'
     roi: 'Reduce code review time by 40-60% and improve code quality by 25%.''
@@ -5444,9 +3506,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contactInfo: contact;
     realImplementation: true;
     implementationDetails:
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'AI-powered analysis engine with custom rule sets and integration APIs.'
     launchDate: '2025-01-15'
     customers: 156
@@ -5454,8 +3513,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 89
   };
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
       'Performance impact analysis',
     ],
     popular: true;,
@@ -5471,59 +3528,33 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
       'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',
     targetAudience: 'Development teams, DevOps engineers, CTOs',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     trialDays: 14,
     setupTime: '2 hours',
     category: 'Development & DevOps',
     realService: true,
     technology: ['AI/ML, Static Analysis, Security Scanning'],
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
-<<<<<<< HEAD
 
-=======
-    targetAudience: 'Development teams;, DevOps engineers, CTOs',
-    trialDays: 14;,
-    setupTime: '2 hours';,
-    category: 'Development & DevOps';,
-    realService: true;,
-    technology: ['AI/ML;, Static Analysis, Security Scanning'],
-    integrations: ['GitHub;, GitLab, Bitbucket, Jira, Slack'],
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     useCases: [
       'Code quality improvement, Security compliance, Team productivity'
     ]
     roi: 'Reduce code review time by 40-60% and improve code quality by 25%.'
-<<<<<<< HEAD
     competitors: ['SonarQube, CodeClimate, Snyk']
-=======
-<<<<<<< HEAD
     competitors: ['SonarQube, CodeClimate, Snyk']
-=======
-    competitors: ['SonarQube;, CodeClimate, Snyk']
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$8B code quality tools'
     growthRate: '35% YoY'
     variant: 'ai-futuristic'
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     reviews: 89
   };
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'AI-powered analysis engine with custom rule sets and integration APIs.'
     launchDate: '2025-01-15'
     customers: 156
     rating: 4.8
     reviews: 89
   };
-<<<<<<< HEAD
 
     reviews: 89
   };
@@ -5531,31 +3562,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 89
   };
     reviews: 89
-=======
-    reviews: 89;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   };
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   {
       'Automated incident classification',
       'Smart escalation routing',
       'Real - time team coordination',
       'Automated response playbooks',
       'Post - mortem report generation',
-<<<<<<< HEAD
 
     useCases: [
       'Code quality improvement, Security compliance, Team productivity',
     ],
     useCases: ['Code quality improvement, Security compliance, Team productivity'],
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     useCases: [
       'Code quality improvement, Security compliance, Team productivity',
     ],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     roi: 'Reduce code review time by 40-60% and improve code quality by 25%.',
     competitors: ['SonarQube, CodeClimate, Snyk'],
     marketSize: '$8B code quality tools',
@@ -5563,7 +3585,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.',
     launchDate: '2025-01-15',
     customers: 156,
@@ -5578,48 +3599,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     description: 'Comprehensive incident management platform that uses AI to detect anomalies, automate initial response actions, coordinate team communication, and generate detailed post-mortem reports.',
     features: [
 
-=======
-    implementationDetails:
-      'AI-powered analysis engine with custom rule sets and integration APIs.',
-    launchDate: '2025-01-15',
-    customers: 156,
-    rating: 4.8,
-    reviews: 89,
-  },
-  {
-    id: 'intelligent-incident-response-platform',
-    name: 'Intelligent Incident Response Platform',
-    tagline:
-      'AI-driven incident detection, automated response, and post-mortem analysis',
-    price: '$349',
-    period: '/month',
-    description:
-      'Comprehensive incident management platform that uses AI to detect anomalies, automate initial response actions, coordinate team communication, and generate detailed post-mortem reports.',
-=======
-    useCases: [
-      'Code quality improvement, Security compliance, Team productivity',
-    ],
-    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.';,
-    competitors: ['SonarQube;, CodeClimate, Snyk'],
-    marketSize: '$8B code quality tools';,
-    growthRate: '35% YoY';,
-    variant: 'ai-futuristic';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.';,
-    launchDate: '2025-01-15';,
-    customers: 156;,
-    rating: 4.8;,
-    reviews: 89;,
-  },
-  {
-    id: 'intelligent-incident-response-platform';,
-    name: 'Intelligent Incident Response Platform';,
-    tagline: 'AI-driven incident detection;, automated response, and post-mortem analysis',
-    price: '$349';,
-    period: '/month';,
-    description: 'Comprehensive incident management platform that uses AI to detect anomalies;, automate initial response actions, coordinate team communication, and generate detailed post-mortem reports.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'AI-powered anomaly detection',
       'Automated incident classification',
@@ -5628,13 +3607,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automated response playbooks',
       'Post-mortem report generation',
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Incident timeline tracking',
       'Performance metrics and analytics',
-=======
 
     reviews: 89;
   };
@@ -5647,7 +3621,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Post - mortem report generation','
       'Incident timeline tracking','
       'Performance metrics and analytics','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Integration with monitoring tools',
     ],
     popular: true,'
@@ -5684,7 +3657,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Real - time analytics dashboard',
     ],
     popular: true,
-<<<<<<< HEAD
     customers: 134,
     rating: 4 && 4.8,
     reviews: 92,
@@ -5888,15 +3860,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4 && 4.9,
     reviews: 15,
   },
-<<<<<<< HEAD
   {
     variant: 'ai-futuristic'
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'ai-powered-sales-intelligence-platform', name: 'AI-Powered Sales Intelligence Platform',
     tagline: 'Predictive sales analytics, lead scoring, and revenue optimization',
     price: '$349', period: '/month',
@@ -5905,121 +3873,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-  {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
       'AI incident detection engine with automated response workflows and team coordination.',
     launch_date: '2025 - 02 - 01',
     customers: 89,
     rating: 4 && 4.7,
-<<<<<<< HEAD
     reviews: 67
-=======
-    reviews: 67,
-=======
-      'Incident timeline tracking',
-      'Performance metrics and analytics',
-      'Integration with monitoring tools',
-    ],
-    popular: true;,
-      'AI incident detection engine with automated response workflows and team coordination.',
-    launch_date: '2025 - 02 - 01';,
-'
-    id: 'ai-powered-code-review-assistant';, name: 'AI-Powered Code Review Assistant';,''
-    tagline: 'Automated code quality analysis;, security scanning, and best practice recommendations',''
-    price: '$199';, period: '/month';,''
-    description: 'Intelligent code review system that analyzes pull requests;, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.','
-    features: ['
-      'Automated security vulnerability detectionCode quality scoring and metricsBest practice recommendationsIntegration with GitHub/GitLabCustom rule configurationTeam performance analyticsAutomated PR commentsCompliance checking (SOC2, HIPAA)';''
-      'Performance impact analysis'']
-    ];'
-    popular: true;, icon: '🔍';,''
-    color: 'from-blue-600 to-indigo-700';, textColor: 'text-blue-400';,''
-    link: 'https://ziontechgroup.com/ai-code-review-assistant';,''
-    marketPosition: 'Competes with SonarQube;, CodeClimate, adds AI-powered insights and security focus.',''
-    targetAudience: 'Development teams;, DevOps engineers, CTOs',''
-    trialDays: 14;, setupTime: '2 hours';,''
-    category: 'Development & DevOps';, realService: true;,''
-    technology: ['AI/ML;, Static Analysis, Security Scanning'];''
-    integrations: ['GitHub;, GitLab, Bitbucket, Jira, Slack'];''
-    useCases: ['Code quality improvement;, Security compliance, Team productivity'];''
-    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.';,''
-    competitors: ['SonarQube;, CodeClimate, Snyk'];''
-    marketSize: '$8B code quality tools';, growthRate: '35% YoY';,''
-    variant: 'ai-futuristic';, contactInfo: contact;,''
-    realImplementation: true;, implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.';,''
-    launchDate: '2025-01-15';, customers: 156;,'
-    rating: 4.8;,'
-      'Automated security vulnerability detection'''
-      'Code quality scoring and metrics'''
-      'Best practice recommendations'''
-      'Integration with GitHub/GitLab'''
-      'Custom rule configuration'''
-      'Team performance analytics'''
-      'Automated PR comments'''
-      'Compliance checking (SOC2, HIPAA)'''
-      'Performance impact analysis''
-    ]
-    popular: true;'
-      'Automated security vulnerability detection',''
-      'Code quality scoring and metrics',''
-      'Best practice recommendations',''
-      'Integration with GitHub / GitLab',''
-      'Custom rule configuration',''
-      'Team performance analytics',''
-      'Automated PR comments',''
-      'Compliance checking (SOC2, HIPAA)',''
-      'Performance impact analysis','
-    ],
-    popular: true;,'
-    color: 'from-blue-600 to-indigo-700';,''
-    textColor: 'text-blue-400';,''
-    link: 'https://ziontechgroup.com/ai-code-review-assistant';,'
-    marketPosition:;'
-      'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',''
-    targetAudience: 'Development teams;, DevOps engineers, CTOs','
-    trialDays: 14;,'
-    setupTime: '2 hours';,''
-    category: 'Development & DevOps';,'
-    realService: true;,'
-    technology: ['AI/ML;, Static Analysis, Security Scanning'],''
-    integrations: ['GitHub;, GitLab, Bitbucket, Jira, Slack'],'
-    useCases: ['
-      'Code quality improvement, Security compliance, Team productivity'']
-    ]'
-    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.'';,'
-  competitors: ['SonarQube;, CodeClimate, Snyk']''
-    marketSize: '$8B code quality tools'';,'
-  growthRate: '35% YoY'''
-    variant: 'ai-futuristic'';,
-  contactInfo: contact;
-    realImplementation: true;,
-  implementationDetails:
-    reviews: 89;
-  };
-  {'
-      'Automated incident classification',''
-      'Smart escalation routing',''
-      'Real - time team coordination',''
-      'Automated response playbooks',''
-      'Post - mortem report generation',''
-      'Incident timeline tracking',''
-      'Performance metrics and analytics',''
-      'Integration with monitoring tools','
-    ],
-    popular: true;,'
-      'AI incident detection engine with automated response workflows and team coordination.',''
-    launch_date: '2025 - 02 - 01';,'
-    customers: 89;,
-    rating: 4 && 4.7;,
-    reviews: 67;,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Quantum key distribution (QKD)',
@@ -6030,33 +3889,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance optimization',
       'Integration APIs',
       'Migration tools from classical crypto',
-<<<<<<< HEAD
     ],
     popular: false,
     customers: 23,
     rating: 4 && 4.9,
-<<<<<<< HEAD
     reviews: 18
-=======
-    reviews: 18,
-=======
-  {'
-      'Quantum key distribution (QKD)',''
-      'Hybrid encryption systems',''
-      'Quantum - resistant digital signatures',''
-      'Secure key management',''
-      'Compliance with NIST standards',''
-      'Performance optimization',''
-      'Integration APIs',''
-      'Migration tools from classical crypto','
-
-    ],
-    popular: false;,
-    customers: 23;,
-    rating: 4 && 4.9;,}
-    reviews: 18;}
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Autonomous infrastructure management',
@@ -6068,35 +3905,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Cost optimization',
       'Security compliance monitoring',
       'Real - time analytics dashboard',
-<<<<<<< HEAD
     ],
     popular: true,
     customers: 134,
     rating: 4 && 4.8,
-<<<<<<< HEAD
     reviews: 92
-=======
-    reviews: 92,
-=======
-
-  {'
-      'Autonomous infrastructure management',''
-      'Self - healing systems',''
-      'Intelligent deployment strategies',''
-      'Performance auto - optimization',''
-      'Predictive scaling',''
-      'Automated troubleshooting',''
-      'Cost optimization',''
-      'Security compliance monitoring',''
-      'Real - time analytics dashboard','
-
-    ],
-    popular: true;,
-    customers: 134;,
-    rating: 4 && 4.8;,}
-    reviews: 92;}
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Edge model deployment',
@@ -6109,40 +3922,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Security and privacy controls',
       'Scalable edge infrastructure',
     ],
-<<<<<<< HEAD
     popular: false,
       'Edge deployment framework with model optimization and device management capabilities.',
     launch_date: '2025 - 01 - 25',
     customers: 67,
     rating: 4 && 4.6,
-<<<<<<< HEAD
     reviews: 41
-=======
-    reviews: 41,
-=======
-    popular: false;,
-      'Edge deployment framework with model optimization and device management capabilities.',
-    launch_date: '2025 - 01 - 25';,
-
-  {'
-      'Edge model deployment',''
-      'Real - time inference optimization',''
-      'Model versioning and updates',''
-      'Edge device management',''
-      'Performance monitoring',''
-      'Bandwidth optimization',''
-      'Offline capability',''
-      'Security and privacy controls',''
-      'Scalable edge infrastructure','
-    ],
-    popular: false;,'
-      'Edge deployment framework with model optimization and device management capabilities.',''
-    launch_date: '2025 - 01 - 25';,'
-    customers: 67;,
-    rating: 4 && 4.6;,
-    reviews: 41;,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Automated compliance monitoring',
@@ -6154,34 +3939,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Audit trail and transparency',
       'Multi - chain support',
       'Integration with DeFi protocols',
-<<<<<<< HEAD
     ],
     popular: false,
     customers: 45,
     rating: 4 && 4.7,
-<<<<<<< HEAD
     reviews: 33
-=======
-    reviews: 33,
-=======
-  {'
-      'Automated compliance monitoring',''
-      'Risk assessment and scoring',''
-      'Regulatory reporting automation',''
-      'Smart contract auditing',''
-      'Governance proposal management',''
-      'Stakeholder voting systems',''
-      'Audit trail and transparency',''
-      'Multi - chain support',''
-      'Integration with DeFi protocols','
-
-    ],
-    popular: false;,
-    customers: 45;,
-    rating: 4 && 4.7;,}
-    reviews: 33;}
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Predictive churn risk scoring',
@@ -6193,35 +3955,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Integration with CRM systems',
       'Real - time alerts and notifications',
       'Performance analytics dashboard',
-<<<<<<< HEAD
     ],
     popular: true,
     customers: 178,
     rating: 4 && 4.8,
-<<<<<<< HEAD
     reviews: 124
-=======
-    reviews: 124,
-=======
-
-  {'
-      'Predictive churn risk scoring',''
-      'Customer health monitoring',''
-      'Automated engagement workflows',''
-      'Upsell opportunity identification',''
-      'Customer journey mapping',''
-      'Success metric tracking',''
-      'Integration with CRM systems',''
-      'Real - time alerts and notifications',''
-      'Performance analytics dashboard','
-
-    ],
-    popular: true;,
-    customers: 178;,
-    rating: 4 && 4.8;,}
-    reviews: 124;}
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Quantum algorithm implementations',
@@ -6233,35 +3971,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum circuit design',
       'Performance benchmarking',
       'Integration with classical ML frameworks',
-<<<<<<< HEAD
     ],
     popular: false,
     customers: 28,
     rating: 4 && 4.9,
-<<<<<<< HEAD
     reviews: 22
-=======
-    reviews: 22,
-=======
-
-  {'
-      'Quantum algorithm implementations',''
-      'Hybrid quantum - classical ML',''
-      'Optimization problem solving',''
-      'Drug discovery simulations',''
-      'Financial risk modeling',''
-      'Scientific computing tools',''
-      'Quantum circuit design',''
-      'Performance benchmarking',''
-      'Integration with classical ML frameworks','
-
-    ],
-    popular: false;,
-    customers: 28;,
-    rating: 4 && 4.9;,}
-    reviews: 22;}
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Demand forecasting and planning',
@@ -6273,35 +3987,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Real - time visibility and tracking',
       'Compliance monitoring',
       'Performance analytics and reporting',
-<<<<<<< HEAD
     ],
     popular: true,
     customers: 89,
     rating: 4 && 4.7,
-<<<<<<< HEAD
     reviews: 67
-=======
-    reviews: 67,
-=======
-
-  {'
-      'Demand forecasting and planning',''
-      'Inventory optimization',''
-      'Risk assessment and mitigation',''
-      'Supplier performance monitoring',''
-      'Route optimization',''
-      'Cost analysis and optimization',''
-      'Real - time visibility and tracking',''
-      'Compliance monitoring',''
-      'Performance analytics and reporting','
-
-    ],
-    popular: true;,
-    customers: 89;,
-    rating: 4 && 4.7;,}
-    reviews: 67;}
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Threat intelligence sharing',
@@ -6312,34 +4002,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Integration with security tools',
       'Compliance reporting',
       '24 / 7 security monitoring',
-<<<<<<< HEAD
     ],
     popular: true,
     customers: 156,
     rating: 4 && 4.8,
-<<<<<<< HEAD
     reviews: 118
-=======
-    reviews: 118,
-=======
-
-  {'
-      'Threat intelligence sharing',''
-      'Automated incident response',''
-      'Vulnerability assessment',''
-      'Security analytics and reporting',''
-      'Threat hunting tools',''
-      'Integration with security tools',''
-      'Compliance reporting',''
-      '24 / 7 security monitoring','
-
-    ],
-    popular: true;,
-    customers: 156;,
-    rating: 4 && 4.8;,}
-    reviews: 118;}
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'AI content generation',
@@ -6352,7 +4019,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Collaboration tools',
       'Integration with marketing platforms',
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '✍️',
     category: 'Content & Marketing',
@@ -6363,44 +4029,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launch_date: '2025 - 03 - 01',
     customers: 234,
     rating: 4 && 4.7,
-<<<<<<< HEAD
     reviews: 167
-=======
-    reviews: 167,
-=======
-    popular: true;,
-    icon: '✍️';,
-    category: 'Content & Marketing';,
-    real_service: true;,
-    technology: ['AI / ML;, NLP, Content Generation'],
-    integrations: ['WordPress;, HubSpot, Mailchimp, Social media platforms'],
-      'AI content generation engine with optimization and distribution capabilities.',
-    launch_date: '2025 - 03 - 01';,
-
-  {'
-      'AI content generation',''
-      'Multi - channel content optimization',''
-      'SEO optimization tools',''
-      'Content performance analytics',''
-      'Automated distribution',''
-      'Brand voice consistency',''
-      'Content calendar management',''
-      'Collaboration tools',''
-      'Integration with marketing platforms','
-    ],
-    popular: true;,'
-    icon: '✍️';,''
-    category: 'Content & Marketing';,'
-    real_service: true;,'
-    technology: ['AI / ML;, NLP, Content Generation'],''
-    integrations: ['WordPress;, HubSpot, Mailchimp, Social media platforms'],''
-      'AI content generation engine with optimization and distribution capabilities.',''
-    launch_date: '2025 - 03 - 01';,'
-    customers: 234;,
-    rating: 4 && 4.7;,
-    reviews: 167;,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Automated data quality monitoring',
@@ -6412,34 +4041,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Audit and reporting',
       'Integration with data platforms',
       'Real - time monitoring and alerts',
-<<<<<<< HEAD
     ],
     popular: false,
     customers: 78,
     rating: 4 && 4.6,
-<<<<<<< HEAD
     reviews: 56
-=======
-    reviews: 56,
-=======
-  {'
-      'Automated data quality monitoring',''
-      'Compliance and governance rules',''
-      'Data lineage tracking',''
-      'Privacy and security controls',''
-      'Data catalog and discovery',''
-      'Policy enforcement',''
-      'Audit and reporting',''
-      'Integration with data platforms',''
-      'Real - time monitoring and alerts','
-
-    ],
-    popular: false;,
-    customers: 78;,
-    rating: 4 && 4.6;,}
-    reviews: 56;}
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Quantum portfolio optimization',
@@ -6452,40 +4058,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance analytics',
       'Integration with trading platforms',
     ],
-<<<<<<< HEAD
     popular: false,
       'Quantum algorithm implementations for financial optimization and risk management.',
     launch_date: '2025 - 03 - 10',
     customers: 34,
     rating: 4 && 4.9,
-<<<<<<< HEAD
     reviews: 28
-=======
-    reviews: 28,
-=======
-    popular: false;,
-      'Quantum algorithm implementations for financial optimization and risk management.',
-    launch_date: '2025 - 03 - 10';,
-
-  {'
-      'Quantum portfolio optimization',''
-      'Risk assessment algorithms',''
-      'Market analysis tools',''
-      'Algorithmic trading strategies',''
-      'Real - time market data processing',''
-      'Backtesting and simulation',''
-      'Compliance monitoring',''
-      'Performance analytics',''
-      'Integration with trading platforms','
-    ],
-    popular: false;,'
-      'Quantum algorithm implementations for financial optimization and risk management.',''
-    launch_date: '2025 - 03 - 10';,'
-    customers: 34;,
-    rating: 4 && 4.9;,
-    reviews: 28;,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Automated interview scheduling',
@@ -6496,33 +4074,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Compliance and reporting',
       'Integration with HR systems',
       'Predictive analytics dashboard',
-<<<<<<< HEAD
     ],
     popular: true,
     customers: 189,
     rating: 4 && 4.7,
-<<<<<<< HEAD
     reviews: 134
-=======
-    reviews: 134,
-=======
-  {'
-      'Automated interview scheduling',''
-      'Employee onboarding workflows',''
-      'Performance tracking and analytics',''
-      'Skills gap analysis',''
-      'Employee engagement monitoring',''
-      'Compliance and reporting',''
-      'Integration with HR systems',''
-      'Predictive analytics dashboard','
-
-    ],
-    popular: true;,
-    customers: 189;,
-    rating: 4 && 4.7;,}
-    reviews: 134;}
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'IoT device management',
@@ -6534,35 +4090,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Integration with cloud platforms',
       'Custom dashboard creation',
       'API and webhook support',
-<<<<<<< HEAD
     ],
     popular: false,
     customers: 67,
     rating: 4 && 4.6,
-<<<<<<< HEAD
     reviews: 45
-=======
-    reviews: 45,
-=======
-
-  {'
-      'IoT device management',''
-      'Real - time data analytics',''
-      'Predictive maintenance',''
-      'Automated workflows',''
-      'Device security and monitoring',''
-      'Edge computing capabilities',''
-      'Integration with cloud platforms',''
-      'Custom dashboard creation',''
-      'API and webhook support','
-
-    ],
-    popular: false;,
-    customers: 67;,
-    rating: 4 && 4.6;,}
-    reviews: 45;}
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'Quantum key distribution',
@@ -6572,40 +4104,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance optimization',
       'Integration with security tools',
       'Migration assistance',
-<<<<<<< HEAD
     ],
     popular: false,
     customers: 19,
     rating: 4 && 4.9,
-<<<<<<< HEAD
     reviews: 15
-=======
-    reviews: 15,
-=======
-
-  {'
-      'Quantum key distribution',''
-      'Hybrid encryption systems',''
-      'Security assessment tools',''
-      'Compliance monitoring',''
-      'Performance optimization',''
-      'Integration with security tools',''
-      'Migration assistance','
-
-    ],
-    popular: false;,
-    customers: 19;,
-    rating: 4 && 4.9;,}
-    reviews: 15;}
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
     variant: 'ai-futuristic'
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
     id: 'ai-powered-sales-intelligence-platform', name: 'AI-Powered Sales Intelligence Platform',
     tagline: 'Predictive sales analytics, lead scoring, and revenue optimization',
     price: '$349', period: '/month',
@@ -6626,42 +4135,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     textColor: 'text-blue-400';
 
 
-=======
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Real-time insights dashboard'
     ];
     popular: true;'
     icon: '📈';'
     color: 'from-blue-600 to-indigo-700';'
     textColor: 'text-blue-400';
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-intelligence-platform',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketPosition: 'AI-enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.';
-=======
 '
     marketPosition: 'AI-enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     targetAudience: 'Sales teams, Sales managers, Revenue operations';
     trialDays: 14;'
     setupTime: '1 week';'
     category: 'Sales & Revenue';
-<<<<<<< HEAD
     realService: true;
     technology: ['AI/ML, Predictive Analytics, Sales Automation'];
     integrations: ['Salesforce, HubSpot, Pipedrive, Slack, Teams'];
@@ -6682,27 +4173,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / ai - sales - intelligence - platform',market_position: 'AI - enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.';
     link: 'https://ziontechgroup.com / ai - sales - intelligence - platform',
     market_position: 'AI - enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.';
-=======
-    realService: true'
-    technology: ['AI/ML, Predictive Analytics, Sales Automation'];'
-    integrations: ['Salesforce, HubSpot, Pipedrive, Slack, Teams'];'
-    useCases: ['Lead scoring, Sales optimization, Revenue forecasting'];'
-    roi: 'Increase sales conversion rates by 20-35% and improve revenue by 25-40%.''
-];      'Predictive lead scoring_customer behavior analysis_sales process optimization_revenue forecasting_pipeline analytics_automated follow - ups_integration with CRM systems_performance tracking';'
-      'Real - time insights dashboard';
-    ];
-    popular: true;'
-    icon: '📈';'
-    color: 'from - blue - 600 to - indigo - 700';'
-    text_color: 'text - blue - 400';'
-    link: 'https://ziontechgroup.com / ai - sales - intelligence - platform','
-    market_position: 'AI - enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     target_audience: 'Sales teams, Sales managers, Revenue operations';
     trial_days: 14;'
     setup_time: '1 week';'
     category: 'Sales & Revenue';
-<<<<<<< HEAD
     real_service: true,technology: ['AI / ML, Predictive Analytics, Sales Automation'];
     integrations: ['Salesforce, HubSpot, Pipedrive, Slack, Teams'];
     use_cases: ['Lead scoring, Sales optimization, Revenue forecasting'];
@@ -6963,55 +4437,22 @@ export interface ComprehensiveService  {id: string,name: string,tagline: string,
     customers: 234;
 
 
-=======
-    real_service: true,'
-    technology: ['AI / ML, Predictive Analytics, Sales Automation'];'
-    integrations: ['Salesforce, HubSpot, Pipedrive, Slack, Teams'];'
-    use_cases: ['Lead scoring, Sales optimization, Revenue forecasting'];'
-    roi: 'Increase sales conversion rates by 20 - 35% and improve revenue by 25 - 40%.','
-    competitors: ['Salesforce Einstein, HubSpot, Pipedrive, Gong'];'
-    market_size: '$18B sales intelligence';'
-    growth_rate: '28% YoY';'
-    variant: 'ai - futuristic';
-    contact_info: contact;
-    real_implementation: true;'
-    implementation_details: 'AI - powered sales analytics engine with predictive insights and automation.';'
-    launch_date: '2025 - 04 - 01';
-    customers: 234;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     rating: 4.8,
     reviews: 178;
 
 
 
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
 ;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 
 '
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveService {;
   id: string,;
@@ -7045,681 +4486,9 @@ export interface ComprehensiveService {;
     email: string,;
     address: string,;
     website: string;
-<<<<<<< HEAD
-=======
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-;
-const contact = {;'
-  mobile: '+1 302 464 0950',;'
-  email: 'kleber@ziontechgroup.com',;'
-  address: '364 E Main St STE 1008 Middletown DE 19709',;'
-  website: 'https://ziontechgroup.com';
-},;
-export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
-  {;'
-    id: 'ai-powered-code-review-assistant',;'
-    name: 'AI-Powered Code Review Assistant',;'
-    tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',;'
-    price: '$199',;'
-    period: '/month',;'
-    description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',;
-    features: [;'
-      'Automated security vulnerability detectionCode quality scoring and metricsBest practice recommendationsIntegration with GitHub/GitLabCustom rule configurationTeam performance analyticsAutomated PR commentsCompliance checking (SOC2, HIPAA)',;'
-      'Performance impact analysis';
-    ],;
-    popular: true,;'
-    icon: '🔍',;'
-    color: 'from-blue-600 to-indigo-700',;'
-    textColor: 'text-blue-400',;'
-    link: 'https://ziontechgroup.com/ai-code-review-assistant',;'
-    marketPosition: 'Competes with SonarQube, CodeClimate, adds AI-powered insights and security focus.',;'
-    targetAudience: 'Development teams, DevOps engineers, CTOs',;
-    trialDays: 14,;'
-    setupTime: '2 hours',;'
-    category: 'Development & DevOps',;
-    realService: true,;'
-    technology: ['AI/ML, Static Analysis, Security Scanning'],;'
-    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],;'
-    useCases: ['Code quality improvement, Security compliance, Team productivity'],;'
-    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.',;'
-    competitors: ['SonarQube, CodeClimate, Snyk'],;'
-    marketSize: '$8B code quality tools',;'
-    growthRate: '35% YoY',;'
-    variant: 'ai-futuristic',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.',;'
-    launchDate: '2025-01-15',;
-    customers: 156,;
-    rating: 4.8,;
-    reviews: 89;
-  },;
-  {;'
-    id: 'intelligent-incident-response-platform',;'
-    name: 'Intelligent Incident Response Platform',;'
-    tagline: 'AI-driven incident detection, automated response, and post-mortem analysis',;'
-    price: '$349',;'
-    period: '/month',;'
-    description: 'Comprehensive incident management platform that uses AI to detect anomalies, automate initial response actions, coordinate team communication, and generate detailed post-mortem reports.',;
-    features: [;'
-      'AI-powered anomaly detectionAutomated incident classificationSmart escalation routingReal-time team coordinationAutomated response playbooksPost-mortem report generationIncident timeline trackingPerformance metrics and analytics',;'
-      'Integration with monitoring tools';
-    ],;
-    popular: true,;'
-    icon: '🚨',;'
-    color: 'from-red-600 to-pink-700',;'
-    textColor: 'text-red-400',;'
-    link: 'https://ziontechgroup.com/intelligent-incident-response',;'
-    marketPosition: 'Advanced alternative to PagerDuty, Opsgenie with AI capabilities.',;'
-    targetAudience: 'SRE teams, DevOps engineers, IT operations',;
-    trialDays: 14,;'
-    setupTime: '1 day',;'
-    category: 'Monitoring & Operations',;
-    realService: true,;'
-    technology: ['AI/ML, Real-time Processing, Automation'],;'
-    integrations: ['Datadog, New Relic, PagerDuty, Slack, Teams'],;'
-    useCases: ['Incident management, Team coordination, Post-mortem analysis'],;'
-    roi: 'Reduce MTTR by 50-70% and improve team response efficiency.',;'
-    competitors: ['PagerDuty, Opsgenie, VictorOps'],;'
-    marketSize: '$15B incident management',;'
-    growthRate: '28% YoY',;'
-    variant: 'ai-futuristic',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'AI incident detection engine with automated response workflows and team coordination.',;'
-    launchDate: '2025-02-01',;
-    customers: 89,;
-    rating: 4.7,;
-    reviews: 67;
-  },;
-  {;'
-    id: 'quantum-resistant-cryptography-suite',;'
-    name: 'Quantum-Resistant Cryptography Suite',;'
-    tagline: 'Future-proof encryption for post-quantum computing era',;'
-    price: '$599',;'
-    period: '/month',;'
-    description: 'Advanced cryptographic solutions designed to withstand quantum computing attacks, including post-quantum algorithms, quantum key distribution, and hybrid encryption systems.',;
-    features: [;'
-      'Post-quantum cryptographic algorithmsQuantum key distribution (QKD)Hybrid encryption systemsQuantum-resistant digital signaturesSecure key managementCompliance with NIST standardsPerformance optimizationIntegration APIs',;'
-      'Migration tools from classical crypto';
-    ],;
-    popular: false,;'
-    icon: '🔐',;'
-    color: 'from-purple-600 to-violet-700',;'
-    textColor: 'text-purple-400',;'
-    link: 'https://ziontechgroup.com/quantum-resistant-cryptography',;'
-    marketPosition: 'Early mover in post-quantum cryptography, specialized security solution.',;'
-    targetAudience: 'Financial institutions, government agencies, healthcare',;
-    trialDays: 30,;'
-    setupTime: '1-2 weeks',;'
-    category: 'Security & Compliance',;
-    realService: true,;'
-    technology: ['Post-Quantum Cryptography, QKD, Hybrid Systems'],;'
-    integrations: ['PKI systems, Cloud platforms, IoT devices'],;'
-    useCases: ['Data protection, Secure communications, Compliance'],;'
-    roi: 'Future-proof security investment, avoid costly migrations later.',;'
-    competitors: ['ISARA, PQShield, Quantum Xchange'],;'
-    marketSize: '$2B quantum security',;'
-    growthRate: '45% YoY',;'
-    variant: 'quantum-security',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'Post-quantum algorithm implementations with hybrid encryption and key management.',;'
-    launchDate: '2025-01-20',;
-    customers: 23,;
-    rating: 4.9,;
-    reviews: 18;
-  },;
-  {;'
-    id: 'autonomous-devops-orchestrator',;'
-    name: 'Autonomous DevOps Orchestrator',;'
-    tagline: 'Self-healing infrastructure with intelligent automation and optimization',;'
-    price: '$449',;'
-    period: '/month',;'
-    description: 'AI-powered DevOps platform that autonomously manages infrastructure, optimizes performance, handles deployments, and resolves issues without human intervention.',;
-    features: [;'
-      'Autonomous infrastructure managementSelf-healing systemsIntelligent deployment strategiesPerformance auto-optimizationPredictive scalingAutomated troubleshootingCost optimizationSecurity compliance monitoring',;'
-      'Real-time analytics dashboard';
-    ],;
-    popular: true,;'
-    icon: '🤖',;'
-    color: 'from-green-600 to-emerald-700',;'
-    textColor: 'text-green-400',;'
-    link: 'https://ziontechgroup.com/autonomous-devops-orchestrator',;'
-    marketPosition: 'Next-generation DevOps automation, competes with traditional CI/CD tools.',;'
-    targetAudience: 'DevOps teams, Platform engineers, SREs',;
-    trialDays: 21,;'
-    setupTime: '3-5 days',;'
-    category: 'DevOps & Automation',;
-    realService: true,;'
-    technology: ['AI/ML, Kubernetes, Terraform, Ansible'],;'
-    integrations: ['AWS, GCP, Azure, GitHub, GitLab, Jenkins'],;'
-    useCases: ['Infrastructure automation, Deployment optimization, Cost management'],;'
-    roi: 'Reduce operational overhead by 60-80% and improve system reliability.',;'
-    competitors: ['GitLab CI/CD, Jenkins, CircleCI'],;'
-    marketSize: '$20B DevOps tools',;'
-    growthRate: '32% YoY',;'
-    variant: 'ai-autonomous',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.',;'
-    launchDate: '2025-02-10',;
-    customers: 134,;
-    rating: 4.8,;
-    reviews: 92;
-  },;
-  {;'
-    id: 'edge-ai-inference-platform',;'
-    name: 'Edge AI Inference Platform',;'
-    tagline: 'Deploy and manage AI models at the edge for real-time performance',;'
-    price: '$299',;'
-    period: '/month',;'
-    description: 'Platform for deploying, managing, and optimizing AI models at the edge, enabling real-time inference with minimal latency and bandwidth usage.',;
-    features: [;'
-      'Edge model deploymentReal-time inference optimizationModel versioning and updatesEdge device managementPerformance monitoringBandwidth optimizationOffline capabilitySecurity and privacy controls',;'
-      'Scalable edge infrastructure';
-    ],;
-    popular: false,;'
-    icon: '🌐',;'
-    color: 'from-cyan-600 to-blue-700',;'
-    textColor: 'text-cyan-400',;'
-    link: 'https://ziontechgroup.com/edge-ai-inference-platform',;'
-    marketPosition: 'Specialized edge AI platform, complements cloud AI services.',;'
-    targetAudience: 'IoT developers, Edge computing teams, AI engineers',;
-    trialDays: 14,;'
-    setupTime: '2-3 days',;'
-    category: 'AI & Edge Computing',;
-    realService: true,;'
-    technology: ['Edge Computing, AI/ML, IoT, 5G'],;'
-    integrations: ['TensorFlow, PyTorch, AWS IoT, Azure IoT'],;'
-    useCases: ['Real-time AI applications, IoT intelligence, Edge computing'],;'
-    roi: 'Reduce latency by 80-90% and enable real-time AI applications.',;'
-    competitors: ['AWS IoT Greengrass, Azure IoT Edge, Google Edge TPU'],;'
-    marketSize: '$12B edge AI',;'
-    growthRate: '38% YoY',;'
-    variant: 'edge-computing-enterprise',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'Edge deployment framework with model optimization and device management capabilities.',;'
-    launchDate: '2025-01-25',;
-    customers: 67,;
-    rating: 4.6,;
-    reviews: 41;
-  },;
-  {;'
-    id: 'blockchain-governance-automation',;'
-    name: 'Blockchain Governance Automation',;'
-    tagline: 'Automated governance, compliance, and risk management for blockchain networks',;'
-    price: '$399',;'
-    period: '/month',;'
-    description: 'Comprehensive governance platform for blockchain networks, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',;
-    features: [;'
-      'Automated compliance monitoringRisk assessment and scoringRegulatory reporting automationSmart contract auditingGovernance proposal managementStakeholder voting systemsAudit trail and transparencyMulti-chain support',;'
-      'Integration with DeFi protocols';
-    ],;
-    popular: false,;'
-    icon: '⛓️',;'
-    color: 'from-orange-600 to-red-700',;'
-    textColor: 'text-orange-400',;'
-    link: 'https://ziontechgroup.com/blockchain-governance-automation',;'
-    marketPosition: 'Specialized blockchain governance, addresses regulatory compliance needs.',;'
-    targetAudience: 'DeFi protocols, Enterprise blockchain, Regulatory teams',;
-    trialDays: 21,;'
-    setupTime: '1 week',;'
-    category: 'Blockchain & DeFi',;
-    realService: true,;'
-    technology: ['Blockchain, Smart Contracts, AI/ML, Compliance'],;'
-    integrations: ['Ethereum, Polygon, Solana, DeFi protocols'],;'
-    useCases: ['Regulatory compliance, Risk management, Governance automation'],;'
-    roi: 'Reduce compliance costs by 40-60% and improve regulatory adherence.',;'
-    competitors: ['OpenZeppelin, ConsenSys, Chainalysis'],;'
-    marketSize: '$8B blockchain governance',;'
-    growthRate: '42% YoY',;'
-    variant: 'blockchain-futuristic',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'Multi-chain governance engine with automated compliance and risk management.',;'
-    launchDate: '2025-02-05',;
-    customers: 45,;
-    rating: 4.7,;
-    reviews: 33;
-  },;
-  {;'
-    id: 'ai-powered-customer-success-platform',;'
-    name: 'AI-Powered Customer Success Platform',;'
-    tagline: 'Predictive customer health scoring and proactive retention strategies',;'
-    price: '$249',;'
-    period: '/month',;'
-    description: 'Intelligent customer success platform that predicts churn risk, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',;
-    features: [;'
-      'Predictive churn risk scoringCustomer health monitoringAutomated engagement workflowsUpsell opportunity identificationCustomer journey mappingSuccess metric trackingIntegration with CRM systemsReal-time alerts and notifications',;'
-      'Performance analytics dashboard';
-    ],;
-    popular: true,;'
-    icon: '🎯',;'
-    color: 'from-emerald-600 to-teal-700',;'
-    textColor: 'text-emerald-400',;'
-    link: 'https://ziontechgroup.com/ai-customer-success-platform',;'
-    marketPosition: 'AI-enhanced customer success, competes with Gainsight, Totango.',;'
-    targetAudience: 'Customer success teams, Account managers, Growth teams',;
-    trialDays: 14,;'
-    setupTime: '1 week',;'
-    category: 'Customer Success & Growth',;
-    realService: true,;'
-    technology: ['AI/ML, Predictive Analytics, Automation'],;'
-    integrations: ['Salesforce, HubSpot, Pipedrive, Intercom'],;'
-    useCases: ['Churn prevention, Customer retention, Revenue growth'],;'
-    roi: 'Increase customer retention by 15-25% and LTV by 20-35%.',;'
-    competitors: ['Gainsight, Totango, ChurnZero'],;'
-    marketSize: '$6B customer success',;'
-    growthRate: '26% YoY',;'
-    variant: 'ai-futuristic',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'AI-powered predictive analytics engine with automated engagement workflows.',;'
-    launchDate: '2025-01-30',;
-    customers: 178,;
-    rating: 4.8,;
-    reviews: 124;
-  },;
-  {;'
-    id: 'quantum-machine-learning-platform',;'
-    name: 'Quantum Machine Learning Platform',;'
-    tagline: 'Quantum computing-powered ML for complex optimization and simulation',;'
-    price: '$799',;'
-    period: '/month',;'
-    description: 'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems, drug discovery, financial modeling, and scientific simulations.',;
-    features: [;'
-      'Quantum algorithm implementationsHybrid quantum-classical MLOptimization problem solvingDrug discovery simulationsFinancial risk modelingScientific computing toolsQuantum circuit designPerformance benchmarking',;'
-      'Integration with classical ML frameworks';
-    ],;
-    popular: false,;'
-    icon: '⚛️',;'
-    color: 'from-violet-600 to-purple-700',;'
-    textColor: 'text-violet-400',;'
-    link: 'https://ziontechgroup.com/quantum-machine-learning-platform',;'
-    marketPosition: 'Cutting-edge quantum ML, specialized for complex computational problems.',;'
-    targetAudience: 'Research institutions, Pharmaceutical companies, Financial services',;
-    trialDays: 30,;'
-    setupTime: '2-3 weeks',;'
-    category: 'Quantum Computing & AI',;
-    realService: true,;'
-    technology: ['Quantum Computing, Machine Learning, Optimization'],;'
-    integrations: ['IBM Quantum, Google Quantum, AWS Braket'],;'
-    useCases: ['Drug discovery, Financial modeling, Scientific research'],;'
-    roi: 'Solve previously intractable problems, accelerate research and development.',;'
-    competitors: ['IBM Quantum, Google Quantum, Rigetti'],;'
-    marketSize: '$3B quantum computing',;'
-    growthRate: '55% YoY',;'
-    variant: 'quantum-ai-enterprise',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'Quantum algorithm library with hybrid classical-quantum optimization capabilities.',;'
-    launchDate: '2025-02-15',;
-    customers: 28,;
-    rating: 4.9,;
-    reviews: 22;
-  },;
-  {;'
-    id: 'intelligent-supply-chain-optimizer',;'
-    name: 'Intelligent Supply Chain Optimizer',;'
-    tagline: 'AI-driven supply chain optimization and risk management',;'
-    price: '$549',;'
-    period: '/month',;'
-    description: 'Comprehensive supply chain optimization platform that uses AI to predict demand, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',;
-    features: [;'
-      'Demand forecasting and planningInventory optimizationRisk assessment and mitigationSupplier performance monitoringRoute optimizationCost analysis and optimizationReal-time visibility and trackingCompliance monitoring',;'
-      'Performance analytics and reporting';
-    ],;
-    popular: true,;'
-    icon: '📦',;'
-    color: 'from-blue-600 to-cyan-700',;'
-    textColor: 'text-blue-400',;'
-    link: 'https://ziontechgroup.com/intelligent-supply-chain-optimizer',;'
-    marketPosition: 'AI-powered supply chain, competes with SAP, Oracle, Blue Yonder.',;'
-    targetAudience: 'Manufacturing, Retail, Logistics companies',;
-    trialDays: 21,;'
-    setupTime: '2-3 weeks',;'
-    category: 'Supply Chain & Logistics',;
-    realService: true,;'
-    technology: ['AI/ML, IoT, Blockchain, Analytics'],;'
-    integrations: ['ERP systems, WMS, TMS, IoT platforms'],;'
-    useCases: ['Inventory optimization, Risk management, Cost reduction'],;'
-    roi: 'Reduce inventory costs by 15-25% and improve service levels by 20-30%.',;'
-    competitors: ['SAP SCM, Oracle SCM, Blue Yonder'],;'
-    marketSize: '$25B supply chain management',;'
-    growthRate: '18% YoY',;'
-    variant: 'ai-futuristic',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'AI-powered optimization engine with real-time monitoring and predictive analytics.',;'
-    launchDate: '2025-02-20',;
-    customers: 89,;
-    rating: 4.7,;
-    reviews: 67;
-  },;
-  {;'
-    id: 'cybersecurity-threat-intelligence-hub',;'
-    name: 'Cybersecurity Threat Intelligence Hub',;'
-    tagline: 'Real-time threat detection, analysis, and automated response',;'
-    price: '$399',;'
-    period: '/month',;'
-    description: 'Advanced cybersecurity platform that provides real-time threat intelligence, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',;
-    features: [;'
-      'Real-time threat detectionThreat intelligence sharingAutomated incident responseVulnerability assessmentSecurity analytics and reportingThreat hunting toolsIntegration with security toolsCompliance reporting',;'
-      '24/7 security monitoring';
-    ],;
-    popular: true,;'
-    icon: '🛡️',;'
-    color: 'from-red-600 to-orange-700',;'
-    textColor: 'text-red-400',;'
-    link: 'https://ziontechgroup.com/cybersecurity-threat-intelligence',;'
-    marketPosition: 'Comprehensive threat intelligence, competes with CrowdStrike, Palo Alto Networks.',;'
-    targetAudience: 'Security teams, CISOs, IT security professionals',;
-    trialDays: 14,;'
-    setupTime: '1 week',;'
-    category: 'Cybersecurity',;
-    realService: true,;'
-    technology: ['AI/ML, Threat Intelligence, Automation'],;'
-    integrations: ['SIEM systems, EDR, Firewalls, IDS/IPS'],;'
-    useCases: ['Threat detection, Incident response, Risk management'],;'
-    roi: 'Reduce security incidents by 40-60% and improve response time by 70%.',;'
-    competitors: ['CrowdStrike, Palo Alto Networks, FireEye'],;'
-    marketSize: '$35B cybersecurity',;'
-    growthRate: '22% YoY',;'
-    variant: 'security-futuristic',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'AI-powered threat detection engine with automated response and intelligence sharing.',;'
-    launchDate: '2025-02-25',;
-    customers: 156,;
-    rating: 4.8,;
-    reviews: 118;
-  },;
-  {;'
-    id: 'ai-powered-content-creation-suite',;'
-    name: 'AI-Powered Content Creation Suite',;'
-    tagline: 'Automated content generation, optimization, and multi-channel distribution',;'
-    price: '$179',;'
-    period: '/month',;'
-    description: 'Comprehensive content creation platform that uses AI to generate, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',;
-    features: [;'
-      'AI content generationMulti-channel content optimizationSEO optimization toolsContent performance analyticsAutomated distributionBrand voice consistencyContent calendar managementCollaboration tools',;'
-      'Integration with marketing platforms';
-    ],;
-    popular: true,;'
-    icon: '✍️',;'
-    color: 'from-indigo-600 to-purple-700',;'
-    textColor: 'text-indigo-400',;'
-    link: 'https://ziontechgroup.com/ai-content-creation-suite',;'
-    marketPosition: 'AI-powered content creation, competes with Jasper, Copy.ai, Grammarly.',;'
-    targetAudience: 'Marketing teams, Content creators, Small businesses',;
-    trialDays: 7,;'
-    setupTime: '1 day',;'
-    category: 'Content & Marketing',;
-    realService: true,;'
-    technology: ['AI/ML, NLP, Content Generation'],;'
-    integrations: ['WordPress, HubSpot, Mailchimp, Social media platforms'],;'
-    useCases: ['Content marketing, SEO optimization, Social media management'],;'
-    roi: 'Increase content production by 300-500% and improve engagement by 25-40%.',;'
-    competitors: ['Jasper, Copy.ai, Grammarly, Writesonic'],;'
-    marketSize: '$12B content creation tools',;'
-    growthRate: '35% YoY',;'
-    variant: 'ai-creative',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'AI content generation engine with optimization and distribution capabilities.',;'
-    launchDate: '2025-03-01',;
-    customers: 234,;
-    rating: 4.7,;
-    reviews: 167;
-  },;
-  {;'
-    id: 'intelligent-data-governance-platform',;'
-    name: 'Intelligent Data Governance Platform',;'
-    tagline: 'Automated data quality, compliance, and lifecycle management',;'
-    price: '$499',;'
-    period: '/month',;'
-    description: 'Comprehensive data governance platform that automates data quality monitoring, compliance checking, and lifecycle management to ensure data integrity and regulatory compliance.',;
-    features: [;'
-      'Automated data quality monitoringCompliance and governance rulesData lineage trackingPrivacy and security controlsData catalog and discoveryPolicy enforcementAudit and reportingIntegration with data platforms',;'
-      'Real-time monitoring and alerts';
-    ],;
-    popular: false,;'
-    icon: '📊',;'
-    color: 'from-teal-600 to-cyan-700',;'
-    textColor: 'text-teal-400',;'
-    link: 'https://ziontechgroup.com/intelligent-data-governance',;'
-    marketPosition: 'AI-powered data governance, competes with Collibra, Alation, Informatica.',;'
-    targetAudience: 'Data teams, Compliance officers, Data stewards',;
-    trialDays: 21,;'
-    setupTime: '2-3 weeks',;'
-    category: 'Data & Analytics',;
-    realService: true,;'
-    technology: ['AI/ML, Data Quality, Compliance Automation'],;'
-    integrations: ['Snowflake, Databricks, AWS, Azure, GCP'],;'
-    useCases: ['Data quality management, Compliance automation, Data lineage'],;'
-    roi: 'Reduce data quality issues by 60-80% and compliance costs by 40-60%.',;'
-    competitors: ['Collibra, Alation, Informatica, Talend'],;'
-    marketSize: '$18B data governance',;'
-    growthRate: '24% YoY',;'
-    variant: 'data-futuristic',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'AI-powered data quality engine with automated compliance and governance workflows.',;'
-    launchDate: '2025-03-05',;
-    customers: 78,;
-    rating: 4.6,;
-    reviews: 56;
-  },;
-  {;'
-    id: 'quantum-financial-trading-engine',;'
-    name: 'Quantum Financial Trading Engine',;'
-    tagline: 'Quantum computing-powered algorithmic trading and risk management',;'
-    price: '$1,299',;'
-    period: '/month',;'
-    description: 'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior window.window.window.performance.',;
-    features: [;'
-      'Quantum portfolio optimizationRisk assessment algorithmsMarket analysis toolsAlgorithmic trading strategiesReal-time market data processingBacktesting and simulationCompliance monitoringPerformance analytics',;'
-      'Integration with trading platforms';
-    ],;
-    popular: false,;'
-    icon: '💰',;'
-    color: 'from-yellow-600 to-amber-700',;'
-    textColor: 'text-yellow-400',;'
-    link: 'https://ziontechgroup.com/quantum-financial-trading-engine',;'
-    marketPosition: 'Cutting-edge quantum trading, specialized for institutional investors.',;'
-    targetAudience: 'Hedge funds, Investment banks, Institutional investors',;
-    trialDays: 45,;'
-    setupTime: '1 month',;'
-    category: 'Quantum Computing & Finance',;
-    realService: true,;'
-    technology: ['Quantum Computing, Financial Algorithms, Risk Management'],;'
-    integrations: ['Bloomberg, Reuters, Trading platforms, Risk systems'],;'
-    useCases: ['Portfolio optimization, Risk management, Algorithmic trading'],;'
-    roi: 'Improve trading performance by 15-25% and reduce risk exposure.',;'
-    competitors: ['Goldman Sachs Quantum, JP Morgan Quantum, D-Wave'],;'
-    marketSize: '$5B quantum finance',;'
-    growthRate: '48% YoY',;'
-    variant: 'quantum-financial',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'Quantum algorithm implementations for financial optimization and risk management.',;'
-    launchDate: '2025-03-10',;
-    customers: 34,;
-    rating: 4.9,;
-    reviews: 28;
-  },;
-  {;'
-    id: 'ai-powered-hr-automation-suite',;'
-    name: 'AI-Powered HR Automation Suite',;'
-    tagline: 'Intelligent recruitment, employee management, and performance optimization',;'
-    price: '$299',;'
-    period: '/month',;'
-    description: 'Comprehensive HR automation platform that uses AI to streamline recruitment, employee onboarding, performance management, and workforce optimization.',;
-    features: [;'
-      'AI-powered candidate screeningAutomated interview schedulingEmployee onboarding workflowsPerformance tracking and analyticsSkills gap analysisEmployee engagement monitoringCompliance and reportingIntegration with HR systems',;'
-      'Predictive analytics dashboard';
-    ],;
-    popular: true,;'
-    icon: '👥',;'
-    color: 'from-pink-600 to-rose-700',;'
-    textColor: 'text-pink-400',;'
-    link: 'https://ziontechgroup.com/ai-hr-automation-suite',;'
-    marketPosition: 'AI-enhanced HR automation, competes with Workday, BambooHR, Greenhouse.',;'
-    targetAudience: 'HR teams, Recruiters, People operations',;
-    trialDays: 14,;'
-    setupTime: '1-2 weeks',;'
-    category: 'HR & People Operations',;
-    realService: true,;'
-    technology: ['AI/ML, HR Automation, Analytics'],;'
-    integrations: ['Workday, BambooHR, Greenhouse, Slack, Teams'],;'
-    useCases: ['Recruitment automation, Performance management, Employee engagement'],;'
-    roi: 'Reduce hiring time by 40-60% and improve employee retention by 20-30%.',;'
-    competitors: ['Workday, BambooHR, Greenhouse, Lever'],;'
-    marketSize: '$22B HR software',;'
-    growthRate: '19% YoY',;'
-    variant: 'ai-futuristic',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'AI-powered HR automation engine with intelligent workflows and analytics.',;'
-    launchDate: '2025-03-15',;
-    customers: 189,;
-    rating: 4.7,;
-    reviews: 134;
-  },;
-  {;'
-    id: 'intelligent-iot-platform',;'
-    name: 'Intelligent IoT Platform',;'
-    tagline: 'AI-powered IoT device management, analytics, and automation',;'
-    price: '$399',;'
-    period: '/month',;'
-    description: 'Comprehensive IoT platform that provides intelligent device management, real-time analytics, predictive maintenance, and automated workflows for connected devices.',;
-    features: [;'
-      'IoT device managementReal-time data analyticsPredictive maintenanceAutomated workflowsDevice security and monitoringEdge computing capabilitiesIntegration with cloud platformsCustom dashboard creation',;'
-      'API and webhook support';
-    ],;
-    popular: false,;'
-    icon: '🌐',;'
-    color: 'from-green-600 to-emerald-700',;'
-    textColor: 'text-green-400',;'
-    link: 'https://ziontechgroup.com/intelligent-iot-platform',;'
-    marketPosition: 'AI-powered IoT platform, competes with AWS IoT, Azure IoT, Google Cloud IoT.',;'
-    targetAudience: 'IoT developers, Manufacturing, Smart cities',;
-    trialDays: 21,;'
-    setupTime: '2-3 weeks',;'
-    category: 'IoT & Edge Computing',;
-    realService: true,;'
-    technology: ['IoT, AI/ML, Edge Computing, Cloud Platforms'],;'
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP'],;'
-    useCases: ['Device management, Predictive maintenance, Smart automation'],;'
-    roi: 'Reduce maintenance costs by 25-40% and improve operational efficiency by 30-50%.',;'
-    competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, Particle'],;'
-    marketSize: '$30B IoT platforms',;'
-    growthRate: '32% YoY',;'
-    variant: 'iot-futuristic',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'IoT device management platform with AI-powered analytics and automation.',;'
-    launchDate: '2025-03-20',;
-    customers: 67,;
-    rating: 4.6,;
-    reviews: 45;
-  },;
-  {;'
-    id: 'quantum-cybersecurity-platform',;'
-    name: 'Quantum Cybersecurity Platform',;'
-    tagline: 'Quantum-resistant security and post-quantum cryptography',;'
-    price: '$699',;'
-    period: '/month',;'
-    description: 'Advanced cybersecurity platform that implements quantum-resistant algorithms, post-quantum cryptography, and quantum key distribution to protect against future quantum attacks.',;
-    features: [;'
-      'Quantum-resistant algorithmsPost-quantum cryptographyQuantum key distributionHybrid encryption systemsSecurity assessment toolsCompliance monitoringPerformance optimizationIntegration with security tools',;'
-      'Migration assistance';
-    ],;
-    popular: false,;'
-    icon: '🔒',;'
-    color: 'from-violet-600 to-purple-700',;'
-    textColor: 'text-violet-400',;'
-    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform',;'
-    marketPosition: 'Future-proof quantum security, specialized for high-security environments.',;'
-    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations',;
-    trialDays: 30,;'
-    setupTime: '1 month',;'
-    category: 'Quantum Computing & Security',;
-    realService: true,;'
-    technology: ['Quantum Computing, Post-Quantum Cryptography, QKD'],;'
-    integrations: ['PKI systems, Security tools, Cloud platforms'],;'
-    useCases: ['Data protection, Secure communications, Compliance'],;'
-    roi: 'Future-proof security investment, avoid costly migrations later.',;'
-    competitors: ['ISARA, PQShield, Quantum Xchange, ID Quantique'],;'
-    marketSize: '$4B quantum security',;'
-    growthRate: '52% YoY',;'
-    variant: 'quantum-security',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'Quantum-resistant cryptographic implementations with hybrid security systems.',;'
-    launchDate: '2025-03-25',;
-    customers: 19,;
-    rating: 4.9,;
-    reviews: 15;
-  },;
-  {;'
-    id: 'ai-powered-sales-intelligence-platform',;'
-    name: 'AI-Powered Sales Intelligence Platform',;'
-    tagline: 'Predictive sales analytics, lead scoring, and revenue optimization',;'
-    price: '$349',;'
-    period: '/month',;'
-    description: 'Intelligent sales platform that uses AI to predict customer behavior, score leads, optimize sales processes, and increase revenue through data-driven insights.',;
-    features: [;'
-      'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking',;'
-      'Real-time insights dashboard';
-    ],;
-    popular: true,;'
-    icon: '📈',;'
-    color: 'from-blue-600 to-indigo-700',;'
-    textColor: 'text-blue-400',;'
-    link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',;'
-    marketPosition: 'AI-enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.',;'
-    targetAudience: 'Sales teams, Sales managers, Revenue operations',;
-    trialDays: 14,;'
-    setupTime: '1 week',;'
-    category: 'Sales & Revenue',;
-    realService: true,;'
-    technology: ['AI/ML, Predictive Analytics, Sales Automation'],;'
-    integrations: ['Salesforce, HubSpot, Pipedrive, Slack, Teams'],;'
-    useCases: ['Lead scoring, Sales optimization, Revenue forecasting'],;'
-    roi: 'Increase sales conversion rates by 20-35% and improve revenue by 25-40%.',;'
-    competitors: ['Salesforce Einstein, HubSpot, Pipedrive, Gong'],;'
-    marketSize: '$18B sales intelligence',;'
-    growthRate: '28% YoY',;'
-    variant: 'ai-futuristic',;
-    contactInfo: contact,;
-    realImplementation: true,;'
-    implementationDetails: 'AI-powered sales analytics engine with predictive insights and automation.',;'
-    launchDate: '2025-04-01',;
-    customers: 234,;
-    rating: 4.8;
-    reviews: 178;
-
-
-  }
-];
-<<<<<<< HEAD
 ;
 
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     rating: 4 && 4.8,
-=======
     id: 'ai-powered-sales-intelligence-platform', name: 'AI-Powered Sales Intelligence Platform',
     tagline: 'Predictive sales analytics, lead scoring, and revenue optimization',
     price: '$349', period: '/month',
@@ -7933,7 +4702,6 @@ pr-12325
     email: string;,;
     address: string;,;}
     website: string;}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },;
   realImplementation: boolean;,;
   implementationDetails: string;,;
@@ -9400,43 +6168,20 @@ pr-12325
 ;
 
     rating: 4 && 4.8;,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
     reviews: 178
   }
 ];
 
-<<<<<<< HEAD
-=======
-    rating: 4.8
-    reviews: 178
-
-    rating: 4.8,
-    reviews: 178;
-
-    reviews: 178;
-  }
-];
-
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
     rating: 4.8
     reviews: 178
 
 
 ursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
     rating: 4.8,
     reviews: 178;
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-    rating: 4.8;,
-    reviews: 178;
-origin/cursor/expand-services-advertise-and-build-project-c28b
-pr-12325
-    rating: 4.8;,
-    reviews: 178;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 
 
@@ -9446,13 +6191,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveService {;
   id: string,;
@@ -9492,7 +6230,6 @@ export interface ComprehensiveService {;
   launchDate: string,;
   customers: number,;
   rating: number,;
-=======
 import { ServiceVariant } from '../types/service-variants',;
   }
 ];
@@ -9538,44 +6275,27 @@ export interface ComprehensiveService {;
   launchDate: string;,;
   customers: number;,;
   rating: number;,;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   reviews: number;
 }
 ;
 const contact = {;
-<<<<<<< HEAD
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-  mobile: '+1 302 464 0950';,;
-  email: 'kleber@ziontechgroup.com';,;
-  address: '364 E Main St STE 1008 Middletown DE 19709';,;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   website: 'https://ziontechgroup.com';
 },;
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   {;
-<<<<<<< HEAD
     id: 'ai-powered-code-review-assistant',;
     name: 'AI-Powered Code Review Assistant',;
     tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',;
     price: '$199',;
     period: '/month',;
     description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',;
-=======
-    id: 'ai-powered-code-review-assistant';,;
-    name: 'AI-Powered Code Review Assistant';,;
-    tagline: 'Automated code quality analysis;, security scanning, and best practice recommendations',;
-    price: '$199';,;
-    period: '/month';,;
-    description: 'Intelligent code review system that analyzes pull requests;, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Automated security vulnerability detectionCode quality scoring and metricsBest practice recommendationsIntegration with GitHub/GitLabCustom rule configurationTeam performance analyticsAutomated PR commentsCompliance checking (SOC2, HIPAA)',;
       'Performance impact analysis';
     ],;
-<<<<<<< HEAD
     popular: true,;
     icon: '🔍',;
     color: 'from-blue-600 to-indigo-700',;
@@ -9610,88 +6330,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$349',;
     period: '/month',;
     description: 'Comprehensive incident management platform that uses AI to detect anomalies, automate initial response actions, coordinate team communication, and generate detailed post-mortem reports.',;
-=======
-    popular: true;,;
-    icon: '🔍';,;
-    color: 'from-blue-600 to-indigo-700';,;
-    textColor: 'text-blue-400';,;
-    link: 'https://ziontechgroup.com/ai-code-review-assistant';,;
-    marketPosition: 'Competes with SonarQube;, CodeClimate, adds AI-powered insights and security focus.',;
-    targetAudience: 'Development teams;, DevOps engineers, CTOs',;
-    trialDays: 14;,;
-    setupTime: '2 hours';,;
-    category: 'Development & DevOps';,;
-    realService: true;,;
-    technology: ['AI/ML;, Static Analysis, Security Scanning'],;
-    integrations: ['GitHub;, GitLab, Bitbucket, Jira, Slack'],;
-    useCases: ['Code quality improvement;, Security compliance, Team productivity'],;
-    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.';,;
-    competitors: ['SonarQube;, CodeClimate, Snyk'],;
-    marketSize: '$8B code quality tools';,;
-    growthRate: '35% YoY';,;
-    variant: 'ai-futuristic';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.';,;
-    launchDate: '2025-01-15';,;
-const contact = {;'
-  mobile: '+1 302 464 0950';,;''
-  email: 'kleber@ziontechgroup.com';,;''
-  address: '364 E Main St STE 1008 Middletown DE 19709';,;''
-  website: 'https://ziontechgroup.com';'
-},;
-export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
-  {;'
-    id: 'ai-powered-code-review-assistant';,;''
-    name: 'AI-Powered Code Review Assistant';,;''
-    tagline: 'Automated code quality analysis;, security scanning, and best practice recommendations',;''
-    price: '$199';,;''
-    period: '/month';,;''
-    description: 'Intelligent code review system that analyzes pull requests;, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',;'
-    features: [;'
-      'Automated security vulnerability detectionCode quality scoring and metricsBest practice recommendationsIntegration with GitHub/GitLabCustom rule configurationTeam performance analyticsAutomated PR commentsCompliance checking (SOC2, HIPAA)',;''
-      'Performance impact analysis';']
-    ],;
-    popular: true;,;'
-    icon: '🔍';,;''
-    color: 'from-blue-600 to-indigo-700';,;''
-    textColor: 'text-blue-400';,;''
-    link: 'https://ziontechgroup.com/ai-code-review-assistant';,;''
-    marketPosition: 'Competes with SonarQube;, CodeClimate, adds AI-powered insights and security focus.',;''
-    targetAudience: 'Development teams;, DevOps engineers, CTOs',;'
-    trialDays: 14;,;'
-    setupTime: '2 hours';,;''
-    category: 'Development & DevOps';,;'
-    realService: true;,;'
-    technology: ['AI/ML;, Static Analysis, Security Scanning'],;''
-    integrations: ['GitHub;, GitLab, Bitbucket, Jira, Slack'],;''
-    useCases: ['Code quality improvement;, Security compliance, Team productivity'],;''
-    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.';,;''
-    competitors: ['SonarQube;, CodeClimate, Snyk'],;''
-    marketSize: '$8B code quality tools';,;''
-    growthRate: '35% YoY';,;''
-    variant: 'ai-futuristic';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.';,;''
-    launchDate: '2025-01-15';,;'
-    customers: 156;,;
-    rating: 4.8;,;
-    reviews: 89;
-  },;
-  {;
-    id: 'intelligent-incident-response-platform';,;
-    name: 'Intelligent Incident Response Platform';,;
-    tagline: 'AI-driven incident detection;, automated response, and post-mortem analysis',;
-    price: '$349';,;
-    period: '/month';,;
-    description: 'Comprehensive incident management platform that uses AI to detect anomalies;, automate initial response actions, coordinate team communication, and generate detailed post-mortem reports.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'AI-powered anomaly detectionAutomated incident classificationSmart escalation routingReal-time team coordinationAutomated response playbooksPost-mortem report generationIncident timeline trackingPerformance metrics and analytics',;
       'Integration with monitoring tools';
     ],;
-<<<<<<< HEAD
     popular: true,;
     icon: '🚨',;
     color: 'from-red-600 to-pink-700',;
@@ -9726,81 +6368,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$599',;
     period: '/month',;
     description: 'Advanced cryptographic solutions designed to withstand quantum computing attacks, including post-quantum algorithms, quantum key distribution, and hybrid encryption systems.',;
-=======
-    popular: true;,;
-    icon: '🚨';,;
-    color: 'from-red-600 to-pink-700';,;
-    textColor: 'text-red-400';,;
-    link: 'https://ziontechgroup.com/intelligent-incident-response';,;
-    marketPosition: 'Advanced alternative to PagerDuty;, Opsgenie with AI capabilities.',;
-    targetAudience: 'SRE teams;, DevOps engineers, IT operations',;
-    trialDays: 14;,;
-    setupTime: '1 day';,;
-    category: 'Monitoring & Operations';,;
-    realService: true;,;
-    technology: ['AI/ML;, Real-time Processing, Automation'],;
-    integrations: ['Datadog;, New Relic, PagerDuty, Slack, Teams'],;
-    useCases: ['Incident management;, Team coordination, Post-mortem analysis'],;
-    roi: 'Reduce MTTR by 50-70% and improve team response efficiency.';,;
-    competitors: ['PagerDuty;, Opsgenie, VictorOps'],;
-    marketSize: '$15B incident management';,;
-    growthRate: '28% YoY';,;
-    variant: 'ai-futuristic';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'AI incident detection engine with automated response workflows and team coordination.';,;
-    launchDate: '2025-02-01';,;
-  {;'
-    id: 'intelligent-incident-response-platform';,;''
-    name: 'Intelligent Incident Response Platform';,;''
-    tagline: 'AI-driven incident detection;, automated response, and post-mortem analysis',;''
-    price: '$349';,;''
-    period: '/month';,;''
-    description: 'Comprehensive incident management platform that uses AI to detect anomalies;, automate initial response actions, coordinate team communication, and generate detailed post-mortem reports.',;'
-    features: [;'
-      'AI-powered anomaly detectionAutomated incident classificationSmart escalation routingReal-time team coordinationAutomated response playbooksPost-mortem report generationIncident timeline trackingPerformance metrics and analytics',;''
-      'Integration with monitoring tools';']
-    ],;
-    popular: true;,;'
-    icon: '🚨';,;''
-    color: 'from-red-600 to-pink-700';,;''
-    textColor: 'text-red-400';,;''
-    link: 'https://ziontechgroup.com/intelligent-incident-response';,;''
-    marketPosition: 'Advanced alternative to PagerDuty;, Opsgenie with AI capabilities.',;''
-    targetAudience: 'SRE teams;, DevOps engineers, IT operations',;'
-    trialDays: 14;,;'
-    setupTime: '1 day';,;''
-    category: 'Monitoring & Operations';,;'
-    realService: true;,;'
-    technology: ['AI/ML;, Real-time Processing, Automation'],;''
-    integrations: ['Datadog;, New Relic, PagerDuty, Slack, Teams'],;''
-    useCases: ['Incident management;, Team coordination, Post-mortem analysis'],;''
-    roi: 'Reduce MTTR by 50-70% and improve team response efficiency.';,;''
-    competitors: ['PagerDuty;, Opsgenie, VictorOps'],;''
-    marketSize: '$15B incident management';,;''
-    growthRate: '28% YoY';,;''
-    variant: 'ai-futuristic';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'AI incident detection engine with automated response workflows and team coordination.';,;''
-    launchDate: '2025-02-01';,;'
-    customers: 89;,;
-    rating: 4.7;,;
-    reviews: 67;
-  },;
-  {;
-    id: 'quantum-resistant-cryptography-suite';,;
-    name: 'Quantum-Resistant Cryptography Suite';,;
-    tagline: 'Future-proof encryption for post-quantum computing era';,;
-    price: '$599';,;
-    period: '/month';,;
-    description: 'Advanced cryptographic solutions designed to withstand quantum computing attacks;, including post-quantum algorithms, quantum key distribution, and hybrid encryption systems.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Post-quantum cryptographic algorithmsQuantum key distribution (QKD)Hybrid encryption systemsQuantum-resistant digital signaturesSecure key managementCompliance with NIST standardsPerformance optimizationIntegration APIs',;
       'Migration tools from classical crypto';
     ],;
-<<<<<<< HEAD
     popular: false,;
     icon: '🔐',;
     color: 'from-purple-600 to-violet-700',;
@@ -9835,81 +6406,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$449',;
     period: '/month',;
     description: 'AI-powered DevOps platform that autonomously manages infrastructure, optimizes performance, handles deployments, and resolves issues without human intervention.',;
-=======
-    popular: false;,;
-    icon: '🔐';,;
-    color: 'from-purple-600 to-violet-700';,;
-    textColor: 'text-purple-400';,;
-    link: 'https://ziontechgroup.com/quantum-resistant-cryptography';,;
-    marketPosition: 'Early mover in post-quantum cryptography;, specialized security solution.',;
-    targetAudience: 'Financial institutions;, government agencies, healthcare',;
-    trialDays: 30;,;
-    setupTime: '1-2 weeks';,;
-    category: 'Security & Compliance';,;
-    realService: true;,;
-    technology: ['Post-Quantum Cryptography;, QKD, Hybrid Systems'],;
-    integrations: ['PKI systems;, Cloud platforms, IoT devices'],;
-    useCases: ['Data protection;, Secure communications, Compliance'],;
-    roi: 'Future-proof security investment;, avoid costly migrations later.',;
-    competitors: ['ISARA;, PQShield, Quantum Xchange'],;
-    marketSize: '$2B quantum security';,;
-    growthRate: '45% YoY';,;
-    variant: 'quantum-security';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'Post-quantum algorithm implementations with hybrid encryption and key management.';,;
-    launchDate: '2025-01-20';,;
-  {;'
-    id: 'quantum-resistant-cryptography-suite';,;''
-    name: 'Quantum-Resistant Cryptography Suite';,;''
-    tagline: 'Future-proof encryption for post-quantum computing era';,;''
-    price: '$599';,;''
-    period: '/month';,;''
-    description: 'Advanced cryptographic solutions designed to withstand quantum computing attacks;, including post-quantum algorithms, quantum key distribution, and hybrid encryption systems.',;'
-    features: [;'
-      'Post-quantum cryptographic algorithmsQuantum key distribution (QKD)Hybrid encryption systemsQuantum-resistant digital signaturesSecure key managementCompliance with NIST standardsPerformance optimizationIntegration APIs',;''
-      'Migration tools from classical crypto';']
-    ],;
-    popular: false;,;'
-    icon: '🔐';,;''
-    color: 'from-purple-600 to-violet-700';,;''
-    textColor: 'text-purple-400';,;''
-    link: 'https://ziontechgroup.com/quantum-resistant-cryptography';,;''
-    marketPosition: 'Early mover in post-quantum cryptography;, specialized security solution.',;''
-    targetAudience: 'Financial institutions;, government agencies, healthcare',;'
-    trialDays: 30;,;'
-    setupTime: '1-2 weeks';,;''
-    category: 'Security & Compliance';,;'
-    realService: true;,;'
-    technology: ['Post-Quantum Cryptography;, QKD, Hybrid Systems'],;''
-    integrations: ['PKI systems;, Cloud platforms, IoT devices'],;''
-    useCases: ['Data protection;, Secure communications, Compliance'],;''
-    roi: 'Future-proof security investment;, avoid costly migrations later.',;''
-    competitors: ['ISARA;, PQShield, Quantum Xchange'],;''
-    marketSize: '$2B quantum security';,;''
-    growthRate: '45% YoY';,;''
-    variant: 'quantum-security';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'Post-quantum algorithm implementations with hybrid encryption and key management.';,;''
-    launchDate: '2025-01-20';,;'
-    customers: 23;,;
-    rating: 4.9;,;
-    reviews: 18;
-  },;
-  {;
-    id: 'autonomous-devops-orchestrator';,;
-    name: 'Autonomous DevOps Orchestrator';,;
-    tagline: 'Self-healing infrastructure with intelligent automation and optimization';,;
-    price: '$449';,;
-    period: '/month';,;
-    description: 'AI-powered DevOps platform that autonomously manages infrastructure;, optimizes performance, handles deployments, and resolves issues without human intervention.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Autonomous infrastructure managementSelf-healing systemsIntelligent deployment strategiesPerformance auto-optimizationPredictive scalingAutomated troubleshootingCost optimizationSecurity compliance monitoring',;
       'Real-time analytics dashboard';
     ],;
-<<<<<<< HEAD
     popular: true,;
     icon: '🤖',;
     color: 'from-green-600 to-emerald-700',;
@@ -9944,81 +6444,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$299',;
     period: '/month',;
     description: 'Platform for deploying, managing, and optimizing AI models at the edge, enabling real-time inference with minimal latency and bandwidth usage.',;
-=======
-    popular: true;,;
-    icon: '🤖';,;
-    color: 'from-green-600 to-emerald-700';,;
-    textColor: 'text-green-400';,;
-    link: 'https://ziontechgroup.com/autonomous-devops-orchestrator';,;
-    marketPosition: 'Next-generation DevOps automation;, competes with traditional CI/CD tools.',;
-    targetAudience: 'DevOps teams;, Platform engineers, SREs',;
-    trialDays: 21;,;
-    setupTime: '3-5 days';,;
-    category: 'DevOps & Automation';,;
-    realService: true;,;
-    technology: ['AI/ML;, Kubernetes, Terraform, Ansible'],;
-    integrations: ['AWS;, GCP, Azure, GitHub, GitLab, Jenkins'],;
-    useCases: ['Infrastructure automation;, Deployment optimization, Cost management'],;
-    roi: 'Reduce operational overhead by 60-80% and improve system reliability.';,;
-    competitors: ['GitLab CI/CD;, Jenkins, CircleCI'],;
-    marketSize: '$20B DevOps tools';,;
-    growthRate: '32% YoY';,;
-    variant: 'ai-autonomous';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.';,;
-    launchDate: '2025-02-10';,;
-  {;'
-    id: 'autonomous-devops-orchestrator';,;''
-    name: 'Autonomous DevOps Orchestrator';,;''
-    tagline: 'Self-healing infrastructure with intelligent automation and optimization';,;''
-    price: '$449';,;''
-    period: '/month';,;''
-    description: 'AI-powered DevOps platform that autonomously manages infrastructure;, optimizes performance, handles deployments, and resolves issues without human intervention.',;'
-    features: [;'
-      'Autonomous infrastructure managementSelf-healing systemsIntelligent deployment strategiesPerformance auto-optimizationPredictive scalingAutomated troubleshootingCost optimizationSecurity compliance monitoring',;''
-      'Real-time analytics dashboard';']
-    ],;
-    popular: true;,;'
-    icon: '🤖';,;''
-    color: 'from-green-600 to-emerald-700';,;''
-    textColor: 'text-green-400';,;''
-    link: 'https://ziontechgroup.com/autonomous-devops-orchestrator';,;''
-    marketPosition: 'Next-generation DevOps automation;, competes with traditional CI/CD tools.',;''
-    targetAudience: 'DevOps teams;, Platform engineers, SREs',;'
-    trialDays: 21;,;'
-    setupTime: '3-5 days';,;''
-    category: 'DevOps & Automation';,;'
-    realService: true;,;'
-    technology: ['AI/ML;, Kubernetes, Terraform, Ansible'],;''
-    integrations: ['AWS;, GCP, Azure, GitHub, GitLab, Jenkins'],;''
-    useCases: ['Infrastructure automation;, Deployment optimization, Cost management'],;''
-    roi: 'Reduce operational overhead by 60-80% and improve system reliability.';,;''
-    competitors: ['GitLab CI/CD;, Jenkins, CircleCI'],;''
-    marketSize: '$20B DevOps tools';,;''
-    growthRate: '32% YoY';,;''
-    variant: 'ai-autonomous';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.';,;''
-    launchDate: '2025-02-10';,;'
-    customers: 134;,;
-    rating: 4.8;,;
-    reviews: 92;
-  },;
-  {;
-    id: 'edge-ai-inference-platform';,;
-    name: 'Edge AI Inference Platform';,;
-    tagline: 'Deploy and manage AI models at the edge for real-time performance';,;
-    price: '$299';,;
-    period: '/month';,;
-    description: 'Platform for deploying;, managing, and optimizing AI models at the edge, enabling real-time inference with minimal latency and bandwidth usage.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Edge model deploymentReal-time inference optimizationModel versioning and updatesEdge device managementPerformance monitoringBandwidth optimizationOffline capabilitySecurity and privacy controls',;
       'Scalable edge infrastructure';
     ],;
-<<<<<<< HEAD
     popular: false,;
     icon: '🌐',;
     color: 'from-cyan-600 to-blue-700',;
@@ -10053,81 +6482,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$399',;
     period: '/month',;
     description: 'Comprehensive governance platform for blockchain networks, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',;
-=======
-    popular: false;,;
-    icon: '🌐';,;
-    color: 'from-cyan-600 to-blue-700';,;
-    textColor: 'text-cyan-400';,;
-    link: 'https://ziontechgroup.com/edge-ai-inference-platform';,;
-    marketPosition: 'Specialized edge AI platform;, complements cloud AI services.',;
-    targetAudience: 'IoT developers;, Edge computing teams, AI engineers',;
-    trialDays: 14;,;
-    setupTime: '2-3 days';,;
-    category: 'AI & Edge Computing';,;
-    realService: true;,;
-    technology: ['Edge Computing;, AI/ML, IoT, 5G'],;
-    integrations: ['TensorFlow;, PyTorch, AWS IoT, Azure IoT'],;
-    useCases: ['Real-time AI applications;, IoT intelligence, Edge computing'],;
-    roi: 'Reduce latency by 80-90% and enable real-time AI applications.';,;
-    competitors: ['AWS IoT Greengrass;, Azure IoT Edge, Google Edge TPU'],;
-    marketSize: '$12B edge AI';,;
-    growthRate: '38% YoY';,;
-    variant: 'edge-computing-enterprise';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'Edge deployment framework with model optimization and device management capabilities.';,;
-    launchDate: '2025-01-25';,;
-  {;'
-    id: 'edge-ai-inference-platform';,;''
-    name: 'Edge AI Inference Platform';,;''
-    tagline: 'Deploy and manage AI models at the edge for real-time performance';,;''
-    price: '$299';,;''
-    period: '/month';,;''
-    description: 'Platform for deploying;, managing, and optimizing AI models at the edge, enabling real-time inference with minimal latency and bandwidth usage.',;'
-    features: [;'
-      'Edge model deploymentReal-time inference optimizationModel versioning and updatesEdge device managementPerformance monitoringBandwidth optimizationOffline capabilitySecurity and privacy controls',;''
-      'Scalable edge infrastructure';']
-    ],;
-    popular: false;,;'
-    icon: '🌐';,;''
-    color: 'from-cyan-600 to-blue-700';,;''
-    textColor: 'text-cyan-400';,;''
-    link: 'https://ziontechgroup.com/edge-ai-inference-platform';,;''
-    marketPosition: 'Specialized edge AI platform;, complements cloud AI services.',;''
-    targetAudience: 'IoT developers;, Edge computing teams, AI engineers',;'
-    trialDays: 14;,;'
-    setupTime: '2-3 days';,;''
-    category: 'AI & Edge Computing';,;'
-    realService: true;,;'
-    technology: ['Edge Computing;, AI/ML, IoT, 5G'],;''
-    integrations: ['TensorFlow;, PyTorch, AWS IoT, Azure IoT'],;''
-    useCases: ['Real-time AI applications;, IoT intelligence, Edge computing'],;''
-    roi: 'Reduce latency by 80-90% and enable real-time AI applications.';,;''
-    competitors: ['AWS IoT Greengrass;, Azure IoT Edge, Google Edge TPU'],;''
-    marketSize: '$12B edge AI';,;''
-    growthRate: '38% YoY';,;''
-    variant: 'edge-computing-enterprise';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'Edge deployment framework with model optimization and device management capabilities.';,;''
-    launchDate: '2025-01-25';,;'
-    customers: 67;,;
-    rating: 4.6;,;
-    reviews: 41;
-  },;
-  {;
-    id: 'blockchain-governance-automation';,;
-    name: 'Blockchain Governance Automation';,;
-    tagline: 'Automated governance;, compliance, and risk management for blockchain networks',;
-    price: '$399';,;
-    period: '/month';,;
-    description: 'Comprehensive governance platform for blockchain networks;, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Automated compliance monitoringRisk assessment and scoringRegulatory reporting automationSmart contract auditingGovernance proposal managementStakeholder voting systemsAudit trail and transparencyMulti-chain support',;
       'Integration with DeFi protocols';
     ],;
-<<<<<<< HEAD
     popular: false,;
     icon: '⛓️',;
     color: 'from-orange-600 to-red-700',;
@@ -10162,81 +6520,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$249',;
     period: '/month',;
     description: 'Intelligent customer success platform that predicts churn risk, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',;
-=======
-    popular: false;,;
-    icon: '⛓️';,;
-    color: 'from-orange-600 to-red-700';,;
-    textColor: 'text-orange-400';,;
-    link: 'https://ziontechgroup.com/blockchain-governance-automation';,;
-    marketPosition: 'Specialized blockchain governance;, addresses regulatory compliance needs.',;
-    targetAudience: 'DeFi protocols;, Enterprise blockchain, Regulatory teams',;
-    trialDays: 21;,;
-    setupTime: '1 week';,;
-    category: 'Blockchain & DeFi';,;
-    realService: true;,;
-    technology: ['Blockchain;, Smart Contracts, AI/ML, Compliance'],;
-    integrations: ['Ethereum;, Polygon, Solana, DeFi protocols'],;
-    useCases: ['Regulatory compliance;, Risk management, Governance automation'],;
-    roi: 'Reduce compliance costs by 40-60% and improve regulatory adherence.';,;
-    competitors: ['OpenZeppelin;, ConsenSys, Chainalysis'],;
-    marketSize: '$8B blockchain governance';,;
-    growthRate: '42% YoY';,;
-    variant: 'blockchain-futuristic';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'Multi-chain governance engine with automated compliance and risk management.';,;
-    launchDate: '2025-02-05';,;
-  {;'
-    id: 'blockchain-governance-automation';,;''
-    name: 'Blockchain Governance Automation';,;''
-    tagline: 'Automated governance;, compliance, and risk management for blockchain networks',;''
-    price: '$399';,;''
-    period: '/month';,;''
-    description: 'Comprehensive governance platform for blockchain networks;, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',;'
-    features: [;'
-      'Automated compliance monitoringRisk assessment and scoringRegulatory reporting automationSmart contract auditingGovernance proposal managementStakeholder voting systemsAudit trail and transparencyMulti-chain support',;''
-      'Integration with DeFi protocols';']
-    ],;
-    popular: false;,;'
-    icon: '⛓️';,;''
-    color: 'from-orange-600 to-red-700';,;''
-    textColor: 'text-orange-400';,;''
-    link: 'https://ziontechgroup.com/blockchain-governance-automation';,;''
-    marketPosition: 'Specialized blockchain governance;, addresses regulatory compliance needs.',;''
-    targetAudience: 'DeFi protocols;, Enterprise blockchain, Regulatory teams',;'
-    trialDays: 21;,;'
-    setupTime: '1 week';,;''
-    category: 'Blockchain & DeFi';,;'
-    realService: true;,;'
-    technology: ['Blockchain;, Smart Contracts, AI/ML, Compliance'],;''
-    integrations: ['Ethereum;, Polygon, Solana, DeFi protocols'],;''
-    useCases: ['Regulatory compliance;, Risk management, Governance automation'],;''
-    roi: 'Reduce compliance costs by 40-60% and improve regulatory adherence.';,;''
-    competitors: ['OpenZeppelin;, ConsenSys, Chainalysis'],;''
-    marketSize: '$8B blockchain governance';,;''
-    growthRate: '42% YoY';,;''
-    variant: 'blockchain-futuristic';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'Multi-chain governance engine with automated compliance and risk management.';,;''
-    launchDate: '2025-02-05';,;'
-    customers: 45;,;
-    rating: 4.7;,;
-    reviews: 33;
-  },;
-  {;
-    id: 'ai-powered-customer-success-platform';,;
-    name: 'AI-Powered Customer Success Platform';,;
-    tagline: 'Predictive customer health scoring and proactive retention strategies';,;
-    price: '$249';,;
-    period: '/month';,;
-    description: 'Intelligent customer success platform that predicts churn risk;, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Predictive churn risk scoringCustomer health monitoringAutomated engagement workflowsUpsell opportunity identificationCustomer journey mappingSuccess metric trackingIntegration with CRM systemsReal-time alerts and notifications',;
       'Performance analytics dashboard';
     ],;
-<<<<<<< HEAD
     popular: true,;
     icon: '🎯',;
     color: 'from-emerald-600 to-teal-700',;
@@ -10271,81 +6558,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$799',;
     period: '/month',;
     description: 'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems, drug discovery, financial modeling, and scientific simulations.',;
-=======
-    popular: true;,;
-    icon: '🎯';,;
-    color: 'from-emerald-600 to-teal-700';,;
-    textColor: 'text-emerald-400';,;
-    link: 'https://ziontechgroup.com/ai-customer-success-platform';,;
-    marketPosition: 'AI-enhanced customer success;, competes with Gainsight, Totango.',;
-    targetAudience: 'Customer success teams;, Account managers, Growth teams',;
-    trialDays: 14;,;
-    setupTime: '1 week';,;
-    category: 'Customer Success & Growth';,;
-    realService: true;,;
-    technology: ['AI/ML;, Predictive Analytics, Automation'],;
-    integrations: ['Salesforce;, HubSpot, Pipedrive, Intercom'],;
-    useCases: ['Churn prevention;, Customer retention, Revenue growth'],;
-    roi: 'Increase customer retention by 15-25% and LTV by 20-35%.';,;
-    competitors: ['Gainsight;, Totango, ChurnZero'],;
-    marketSize: '$6B customer success';,;
-    growthRate: '26% YoY';,;
-    variant: 'ai-futuristic';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'AI-powered predictive analytics engine with automated engagement workflows.';,;
-    launchDate: '2025-01-30';,;
-  {;'
-    id: 'ai-powered-customer-success-platform';,;''
-    name: 'AI-Powered Customer Success Platform';,;''
-    tagline: 'Predictive customer health scoring and proactive retention strategies';,;''
-    price: '$249';,;''
-    period: '/month';,;''
-    description: 'Intelligent customer success platform that predicts churn risk;, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',;'
-    features: [;'
-      'Predictive churn risk scoringCustomer health monitoringAutomated engagement workflowsUpsell opportunity identificationCustomer journey mappingSuccess metric trackingIntegration with CRM systemsReal-time alerts and notifications',;''
-      'Performance analytics dashboard';']
-    ],;
-    popular: true;,;'
-    icon: '🎯';,;''
-    color: 'from-emerald-600 to-teal-700';,;''
-    textColor: 'text-emerald-400';,;''
-    link: 'https://ziontechgroup.com/ai-customer-success-platform';,;''
-    marketPosition: 'AI-enhanced customer success;, competes with Gainsight, Totango.',;''
-    targetAudience: 'Customer success teams;, Account managers, Growth teams',;'
-    trialDays: 14;,;'
-    setupTime: '1 week';,;''
-    category: 'Customer Success & Growth';,;'
-    realService: true;,;'
-    technology: ['AI/ML;, Predictive Analytics, Automation'],;''
-    integrations: ['Salesforce;, HubSpot, Pipedrive, Intercom'],;''
-    useCases: ['Churn prevention;, Customer retention, Revenue growth'],;''
-    roi: 'Increase customer retention by 15-25% and LTV by 20-35%.';,;''
-    competitors: ['Gainsight;, Totango, ChurnZero'],;''
-    marketSize: '$6B customer success';,;''
-    growthRate: '26% YoY';,;''
-    variant: 'ai-futuristic';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'AI-powered predictive analytics engine with automated engagement workflows.';,;''
-    launchDate: '2025-01-30';,;'
-    customers: 178;,;
-    rating: 4.8;,;
-    reviews: 124;
-  },;
-  {;
-    id: 'quantum-machine-learning-platform';,;
-    name: 'Quantum Machine Learning Platform';,;
-    tagline: 'Quantum computing-powered ML for complex optimization and simulation';,;
-    price: '$799';,;
-    period: '/month';,;
-    description: 'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems;, drug discovery, financial modeling, and scientific simulations.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Quantum algorithm implementationsHybrid quantum-classical MLOptimization problem solvingDrug discovery simulationsFinancial risk modelingScientific computing toolsQuantum circuit designPerformance benchmarking',;
       'Integration with classical ML frameworks';
     ],;
-<<<<<<< HEAD
     popular: false,;
     icon: '⚛️',;
     color: 'from-violet-600 to-purple-700',;
@@ -10380,81 +6596,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$549',;
     period: '/month',;
     description: 'Comprehensive supply chain optimization platform that uses AI to predict demand, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',;
-=======
-    popular: false;,;
-    icon: '⚛️';,;
-    color: 'from-violet-600 to-purple-700';,;
-    textColor: 'text-violet-400';,;
-    link: 'https://ziontechgroup.com/quantum-machine-learning-platform';,;
-    marketPosition: 'Cutting-edge quantum ML;, specialized for complex computational problems.',;
-    targetAudience: 'Research institutions;, Pharmaceutical companies, Financial services',;
-    trialDays: 30;,;
-    setupTime: '2-3 weeks';,;
-    category: 'Quantum Computing & AI';,;
-    realService: true;,;
-    technology: ['Quantum Computing;, Machine Learning, Optimization'],;
-    integrations: ['IBM Quantum;, Google Quantum, AWS Braket'],;
-    useCases: ['Drug discovery;, Financial modeling, Scientific research'],;
-    roi: 'Solve previously intractable problems;, accelerate research and development.',;
-    competitors: ['IBM Quantum;, Google Quantum, Rigetti'],;
-    marketSize: '$3B quantum computing';,;
-    growthRate: '55% YoY';,;
-    variant: 'quantum-ai-enterprise';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'Quantum algorithm library with hybrid classical-quantum optimization capabilities.';,;
-    launchDate: '2025-02-15';,;
-  {;'
-    id: 'quantum-machine-learning-platform';,;''
-    name: 'Quantum Machine Learning Platform';,;''
-    tagline: 'Quantum computing-powered ML for complex optimization and simulation';,;''
-    price: '$799';,;''
-    period: '/month';,;''
-    description: 'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems;, drug discovery, financial modeling, and scientific simulations.',;'
-    features: [;'
-      'Quantum algorithm implementationsHybrid quantum-classical MLOptimization problem solvingDrug discovery simulationsFinancial risk modelingScientific computing toolsQuantum circuit designPerformance benchmarking',;''
-      'Integration with classical ML frameworks';']
-    ],;
-    popular: false;,;'
-    icon: '⚛️';,;''
-    color: 'from-violet-600 to-purple-700';,;''
-    textColor: 'text-violet-400';,;''
-    link: 'https://ziontechgroup.com/quantum-machine-learning-platform';,;''
-    marketPosition: 'Cutting-edge quantum ML;, specialized for complex computational problems.',;''
-    targetAudience: 'Research institutions;, Pharmaceutical companies, Financial services',;'
-    trialDays: 30;,;'
-    setupTime: '2-3 weeks';,;''
-    category: 'Quantum Computing & AI';,;'
-    realService: true;,;'
-    technology: ['Quantum Computing;, Machine Learning, Optimization'],;''
-    integrations: ['IBM Quantum;, Google Quantum, AWS Braket'],;''
-    useCases: ['Drug discovery;, Financial modeling, Scientific research'],;''
-    roi: 'Solve previously intractable problems;, accelerate research and development.',;''
-    competitors: ['IBM Quantum;, Google Quantum, Rigetti'],;''
-    marketSize: '$3B quantum computing';,;''
-    growthRate: '55% YoY';,;''
-    variant: 'quantum-ai-enterprise';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'Quantum algorithm library with hybrid classical-quantum optimization capabilities.';,;''
-    launchDate: '2025-02-15';,;'
-    customers: 28;,;
-    rating: 4.9;,;
-    reviews: 22;
-  },;
-  {;
-    id: 'intelligent-supply-chain-optimizer';,;
-    name: 'Intelligent Supply Chain Optimizer';,;
-    tagline: 'AI-driven supply chain optimization and risk management';,;
-    price: '$549';,;
-    period: '/month';,;
-    description: 'Comprehensive supply chain optimization platform that uses AI to predict demand;, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Demand forecasting and planningInventory optimizationRisk assessment and mitigationSupplier performance monitoringRoute optimizationCost analysis and optimizationReal-time visibility and trackingCompliance monitoring',;
       'Performance analytics and reporting';
     ],;
-<<<<<<< HEAD
     popular: true,;
     icon: '📦',;
     color: 'from-blue-600 to-cyan-700',;
@@ -10489,81 +6634,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$399',;
     period: '/month',;
     description: 'Advanced cybersecurity platform that provides real-time threat intelligence, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',;
-=======
-    popular: true;,;
-    icon: '📦';,;
-    color: 'from-blue-600 to-cyan-700';,;
-    textColor: 'text-blue-400';,;
-    link: 'https://ziontechgroup.com/intelligent-supply-chain-optimizer';,;
-    marketPosition: 'AI-powered supply chain;, competes with SAP, Oracle, Blue Yonder.',;
-    targetAudience: 'Manufacturing;, Retail, Logistics companies',;
-    trialDays: 21;,;
-    setupTime: '2-3 weeks';,;
-    category: 'Supply Chain & Logistics';,;
-    realService: true;,;
-    technology: ['AI/ML;, IoT, Blockchain, Analytics'],;
-    integrations: ['ERP systems;, WMS, TMS, IoT platforms'],;
-    useCases: ['Inventory optimization;, Risk management, Cost reduction'],;
-    roi: 'Reduce inventory costs by 15-25% and improve service levels by 20-30%.';,;
-    competitors: ['SAP SCM;, Oracle SCM, Blue Yonder'],;
-    marketSize: '$25B supply chain management';,;
-    growthRate: '18% YoY';,;
-    variant: 'ai-futuristic';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'AI-powered optimization engine with real-time monitoring and predictive analytics.';,;
-    launchDate: '2025-02-20';,;
-  {;'
-    id: 'intelligent-supply-chain-optimizer';,;''
-    name: 'Intelligent Supply Chain Optimizer';,;''
-    tagline: 'AI-driven supply chain optimization and risk management';,;''
-    price: '$549';,;''
-    period: '/month';,;''
-    description: 'Comprehensive supply chain optimization platform that uses AI to predict demand;, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',;'
-    features: [;'
-      'Demand forecasting and planningInventory optimizationRisk assessment and mitigationSupplier performance monitoringRoute optimizationCost analysis and optimizationReal-time visibility and trackingCompliance monitoring',;''
-      'Performance analytics and reporting';']
-    ],;
-    popular: true;,;'
-    icon: '📦';,;''
-    color: 'from-blue-600 to-cyan-700';,;''
-    textColor: 'text-blue-400';,;''
-    link: 'https://ziontechgroup.com/intelligent-supply-chain-optimizer';,;''
-    marketPosition: 'AI-powered supply chain;, competes with SAP, Oracle, Blue Yonder.',;''
-    targetAudience: 'Manufacturing;, Retail, Logistics companies',;'
-    trialDays: 21;,;'
-    setupTime: '2-3 weeks';,;''
-    category: 'Supply Chain & Logistics';,;'
-    realService: true;,;'
-    technology: ['AI/ML;, IoT, Blockchain, Analytics'],;''
-    integrations: ['ERP systems;, WMS, TMS, IoT platforms'],;''
-    useCases: ['Inventory optimization;, Risk management, Cost reduction'],;''
-    roi: 'Reduce inventory costs by 15-25% and improve service levels by 20-30%.';,;''
-    competitors: ['SAP SCM;, Oracle SCM, Blue Yonder'],;''
-    marketSize: '$25B supply chain management';,;''
-    growthRate: '18% YoY';,;''
-    variant: 'ai-futuristic';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'AI-powered optimization engine with real-time monitoring and predictive analytics.';,;''
-    launchDate: '2025-02-20';,;'
-    customers: 89;,;
-    rating: 4.7;,;
-    reviews: 67;
-  },;
-  {;
-    id: 'cybersecurity-threat-intelligence-hub';,;
-    name: 'Cybersecurity Threat Intelligence Hub';,;
-    tagline: 'Real-time threat detection;, analysis, and automated response',;
-    price: '$399';,;
-    period: '/month';,;
-    description: 'Advanced cybersecurity platform that provides real-time threat intelligence;, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Real-time threat detectionThreat intelligence sharingAutomated incident responseVulnerability assessmentSecurity analytics and reportingThreat hunting toolsIntegration with security toolsCompliance reporting',;
       '24/7 security monitoring';
     ],;
-<<<<<<< HEAD
     popular: true,;
     icon: '🛡️',;
     color: 'from-red-600 to-orange-700',;
@@ -10598,81 +6672,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$179',;
     period: '/month',;
     description: 'Comprehensive content creation platform that uses AI to generate, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',;
-=======
-    popular: true;,;
-    icon: '🛡️';,;
-    color: 'from-red-600 to-orange-700';,;
-    textColor: 'text-red-400';,;
-    link: 'https://ziontechgroup.com/cybersecurity-threat-intelligence';,;
-    marketPosition: 'Comprehensive threat intelligence;, competes with CrowdStrike, Palo Alto Networks.',;
-    targetAudience: 'Security teams;, CISOs, IT security professionals',;
-    trialDays: 14;,;
-    setupTime: '1 week';,;
-    category: 'Cybersecurity';,;
-    realService: true;,;
-    technology: ['AI/ML;, Threat Intelligence, Automation'],;
-    integrations: ['SIEM systems;, EDR, Firewalls, IDS/IPS'],;
-    useCases: ['Threat detection;, Incident response, Risk management'],;
-    roi: 'Reduce security incidents by 40-60% and improve response time by 70%.';,;
-    competitors: ['CrowdStrike;, Palo Alto Networks, FireEye'],;
-    marketSize: '$35B cybersecurity';,;
-    growthRate: '22% YoY';,;
-    variant: 'security-futuristic';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'AI-powered threat detection engine with automated response and intelligence sharing.';,;
-    launchDate: '2025-02-25';,;
-  {;'
-    id: 'cybersecurity-threat-intelligence-hub';,;''
-    name: 'Cybersecurity Threat Intelligence Hub';,;''
-    tagline: 'Real-time threat detection;, analysis, and automated response',;''
-    price: '$399';,;''
-    period: '/month';,;''
-    description: 'Advanced cybersecurity platform that provides real-time threat intelligence;, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',;'
-    features: [;'
-      'Real-time threat detectionThreat intelligence sharingAutomated incident responseVulnerability assessmentSecurity analytics and reportingThreat hunting toolsIntegration with security toolsCompliance reporting',;''
-      '24/7 security monitoring';']
-    ],;
-    popular: true;,;'
-    icon: '🛡️';,;''
-    color: 'from-red-600 to-orange-700';,;''
-    textColor: 'text-red-400';,;''
-    link: 'https://ziontechgroup.com/cybersecurity-threat-intelligence';,;''
-    marketPosition: 'Comprehensive threat intelligence;, competes with CrowdStrike, Palo Alto Networks.',;''
-    targetAudience: 'Security teams;, CISOs, IT security professionals',;'
-    trialDays: 14;,;'
-    setupTime: '1 week';,;''
-    category: 'Cybersecurity';,;'
-    realService: true;,;'
-    technology: ['AI/ML;, Threat Intelligence, Automation'],;''
-    integrations: ['SIEM systems;, EDR, Firewalls, IDS/IPS'],;''
-    useCases: ['Threat detection;, Incident response, Risk management'],;''
-    roi: 'Reduce security incidents by 40-60% and improve response time by 70%.';,;''
-    competitors: ['CrowdStrike;, Palo Alto Networks, FireEye'],;''
-    marketSize: '$35B cybersecurity';,;''
-    growthRate: '22% YoY';,;''
-    variant: 'security-futuristic';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'AI-powered threat detection engine with automated response and intelligence sharing.';,;''
-    launchDate: '2025-02-25';,;'
-    customers: 156;,;
-    rating: 4.8;,;
-    reviews: 118;
-  },;
-  {;
-    id: 'ai-powered-content-creation-suite';,;
-    name: 'AI-Powered Content Creation Suite';,;
-    tagline: 'Automated content generation;, optimization, and multi-channel distribution',;
-    price: '$179';,;
-    period: '/month';,;
-    description: 'Comprehensive content creation platform that uses AI to generate;, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'AI content generationMulti-channel content optimizationSEO optimization toolsContent performance analyticsAutomated distributionBrand voice consistencyContent calendar managementCollaboration tools',;
       'Integration with marketing platforms';
     ],;
-<<<<<<< HEAD
     popular: true,;
     icon: '✍️',;
     color: 'from-indigo-600 to-purple-700',;
@@ -10707,81 +6710,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$499',;
     period: '/month',;
     description: 'Comprehensive data governance platform that automates data quality monitoring, compliance checking, and lifecycle management to ensure data integrity and regulatory compliance.',;
-=======
-    popular: true;,;
-    icon: '✍️';,;
-    color: 'from-indigo-600 to-purple-700';,;
-    textColor: 'text-indigo-400';,;
-    link: 'https://ziontechgroup.com/ai-content-creation-suite';,;
-    marketPosition: 'AI-powered content creation;, competes with Jasper, Copy.ai, Grammarly.',;
-    targetAudience: 'Marketing teams;, Content creators, Small businesses',;
-    trialDays: 7;,;
-    setupTime: '1 day';,;
-    category: 'Content & Marketing';,;
-    realService: true;,;
-    technology: ['AI/ML;, NLP, Content Generation'],;
-    integrations: ['WordPress;, HubSpot, Mailchimp, Social media platforms'],;
-    useCases: ['Content marketing;, SEO optimization, Social media management'],;
-    roi: 'Increase content production by 300-500% and improve engagement by 25-40%.';,;
-    competitors: ['Jasper;, Copy.ai, Grammarly, Writesonic'],;
-    marketSize: '$12B content creation tools';,;
-    growthRate: '35% YoY';,;
-    variant: 'ai-creative';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'AI content generation engine with optimization and distribution capabilities.';,;
-    launchDate: '2025-03-01';,;
-  {;'
-    id: 'ai-powered-content-creation-suite';,;''
-    name: 'AI-Powered Content Creation Suite';,;''
-    tagline: 'Automated content generation;, optimization, and multi-channel distribution',;''
-    price: '$179';,;''
-    period: '/month';,;''
-    description: 'Comprehensive content creation platform that uses AI to generate;, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',;'
-    features: [;'
-      'AI content generationMulti-channel content optimizationSEO optimization toolsContent performance analyticsAutomated distributionBrand voice consistencyContent calendar managementCollaboration tools',;''
-      'Integration with marketing platforms';']
-    ],;
-    popular: true;,;'
-    icon: '✍️';,;''
-    color: 'from-indigo-600 to-purple-700';,;''
-    textColor: 'text-indigo-400';,;''
-    link: 'https://ziontechgroup.com/ai-content-creation-suite';,;''
-    marketPosition: 'AI-powered content creation;, competes with Jasper, Copy.ai, Grammarly.',;''
-    targetAudience: 'Marketing teams;, Content creators, Small businesses',;'
-    trialDays: 7;,;'
-    setupTime: '1 day';,;''
-    category: 'Content & Marketing';,;'
-    realService: true;,;'
-    technology: ['AI/ML;, NLP, Content Generation'],;''
-    integrations: ['WordPress;, HubSpot, Mailchimp, Social media platforms'],;''
-    useCases: ['Content marketing;, SEO optimization, Social media management'],;''
-    roi: 'Increase content production by 300-500% and improve engagement by 25-40%.';,;''
-    competitors: ['Jasper;, Copy.ai, Grammarly, Writesonic'],;''
-    marketSize: '$12B content creation tools';,;''
-    growthRate: '35% YoY';,;''
-    variant: 'ai-creative';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'AI content generation engine with optimization and distribution capabilities.';,;''
-    launchDate: '2025-03-01';,;'
-    customers: 234;,;
-    rating: 4.7;,;
-    reviews: 167;
-  },;
-  {;
-    id: 'intelligent-data-governance-platform';,;
-    name: 'Intelligent Data Governance Platform';,;
-    tagline: 'Automated data quality;, compliance, and lifecycle management',;
-    price: '$499';,;
-    period: '/month';,;
-    description: 'Comprehensive data governance platform that automates data quality monitoring;, compliance checking, and lifecycle management to ensure data integrity and regulatory compliance.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Automated data quality monitoringCompliance and governance rulesData lineage trackingPrivacy and security controlsData catalog and discoveryPolicy enforcementAudit and reportingIntegration with data platforms',;
       'Real-time monitoring and alerts';
     ],;
-<<<<<<< HEAD
     popular: false,;
     icon: '📊',;
     color: 'from-teal-600 to-cyan-700',;
@@ -10816,81 +6748,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$1,299',;
     period: '/month',;
     description: 'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior window.window.window.performance.',;
-=======
-    popular: false;,;
-    icon: '📊';,;
-    color: 'from-teal-600 to-cyan-700';,;
-    textColor: 'text-teal-400';,;
-    link: 'https://ziontechgroup.com/intelligent-data-governance';,;
-    marketPosition: 'AI-powered data governance;, competes with Collibra, Alation, Informatica.',;
-    targetAudience: 'Data teams;, Compliance officers, Data stewards',;
-    trialDays: 21;,;
-    setupTime: '2-3 weeks';,;
-    category: 'Data & Analytics';,;
-    realService: true;,;
-    technology: ['AI/ML;, Data Quality, Compliance Automation'],;
-    integrations: ['Snowflake;, Databricks, AWS, Azure, GCP'],;
-    useCases: ['Data quality management;, Compliance automation, Data lineage'],;
-    roi: 'Reduce data quality issues by 60-80% and compliance costs by 40-60%.';,;
-    competitors: ['Collibra;, Alation, Informatica, Talend'],;
-    marketSize: '$18B data governance';,;
-    growthRate: '24% YoY';,;
-    variant: 'data-futuristic';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'AI-powered data quality engine with automated compliance and governance workflows.';,;
-    launchDate: '2025-03-05';,;
-  {;'
-    id: 'intelligent-data-governance-platform';,;''
-    name: 'Intelligent Data Governance Platform';,;''
-    tagline: 'Automated data quality;, compliance, and lifecycle management',;''
-    price: '$499';,;''
-    period: '/month';,;''
-    description: 'Comprehensive data governance platform that automates data quality monitoring;, compliance checking, and lifecycle management to ensure data integrity and regulatory compliance.',;'
-    features: [;'
-      'Automated data quality monitoringCompliance and governance rulesData lineage trackingPrivacy and security controlsData catalog and discoveryPolicy enforcementAudit and reportingIntegration with data platforms',;''
-      'Real-time monitoring and alerts';']
-    ],;
-    popular: false;,;'
-    icon: '📊';,;''
-    color: 'from-teal-600 to-cyan-700';,;''
-    textColor: 'text-teal-400';,;''
-    link: 'https://ziontechgroup.com/intelligent-data-governance';,;''
-    marketPosition: 'AI-powered data governance;, competes with Collibra, Alation, Informatica.',;''
-    targetAudience: 'Data teams;, Compliance officers, Data stewards',;'
-    trialDays: 21;,;'
-    setupTime: '2-3 weeks';,;''
-    category: 'Data & Analytics';,;'
-    realService: true;,;'
-    technology: ['AI/ML;, Data Quality, Compliance Automation'],;''
-    integrations: ['Snowflake;, Databricks, AWS, Azure, GCP'],;''
-    useCases: ['Data quality management;, Compliance automation, Data lineage'],;''
-    roi: 'Reduce data quality issues by 60-80% and compliance costs by 40-60%.';,;''
-    competitors: ['Collibra;, Alation, Informatica, Talend'],;''
-    marketSize: '$18B data governance';,;''
-    growthRate: '24% YoY';,;''
-    variant: 'data-futuristic';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'AI-powered data quality engine with automated compliance and governance workflows.';,;''
-    launchDate: '2025-03-05';,;'
-    customers: 78;,;
-    rating: 4.6;,;
-    reviews: 56;
-  },;
-  {;
-    id: 'quantum-financial-trading-engine';,;
-    name: 'Quantum Financial Trading Engine';,;
-    tagline: 'Quantum computing-powered algorithmic trading and risk management';,;
-    price: '$1;,299',;
-    period: '/month';,;
-    description: 'Advanced quantum computing platform for financial trading;, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior window.window.window.performance.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Quantum portfolio optimizationRisk assessment algorithmsMarket analysis toolsAlgorithmic trading strategiesReal-time market data processingBacktesting and simulationCompliance monitoringPerformance analytics',;
       'Integration with trading platforms';
     ],;
-<<<<<<< HEAD
     popular: false,;
     icon: '💰',;
     color: 'from-yellow-600 to-amber-700',;
@@ -10925,81 +6786,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$299',;
     period: '/month',;
     description: 'Comprehensive HR automation platform that uses AI to streamline recruitment, employee onboarding, performance management, and workforce optimization.',;
-=======
-    popular: false;,;
-    icon: '💰';,;
-    color: 'from-yellow-600 to-amber-700';,;
-    textColor: 'text-yellow-400';,;
-    link: 'https://ziontechgroup.com/quantum-financial-trading-engine';,;
-    marketPosition: 'Cutting-edge quantum trading;, specialized for institutional investors.',;
-    targetAudience: 'Hedge funds;, Investment banks, Institutional investors',;
-    trialDays: 45;,;
-    setupTime: '1 month';,;
-    category: 'Quantum Computing & Finance';,;
-    realService: true;,;
-    technology: ['Quantum Computing;, Financial Algorithms, Risk Management'],;
-    integrations: ['Bloomberg;, Reuters, Trading platforms, Risk systems'],;
-    useCases: ['Portfolio optimization;, Risk management, Algorithmic trading'],;
-    roi: 'Improve trading performance by 15-25% and reduce risk exposure.';,;
-    competitors: ['Goldman Sachs Quantum;, JP Morgan Quantum, D-Wave'],;
-    marketSize: '$5B quantum finance';,;
-    growthRate: '48% YoY';,;
-    variant: 'quantum-financial';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'Quantum algorithm implementations for financial optimization and risk management.';,;
-    launchDate: '2025-03-10';,;
-  {;'
-    id: 'quantum-financial-trading-engine';,;''
-    name: 'Quantum Financial Trading Engine';,;''
-    tagline: 'Quantum computing-powered algorithmic trading and risk management';,;''
-    price: '$1;,299',;''
-    period: '/month';,;''
-    description: 'Advanced quantum computing platform for financial trading;, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior window.window.window.performance.',;'
-    features: [;'
-      'Quantum portfolio optimizationRisk assessment algorithmsMarket analysis toolsAlgorithmic trading strategiesReal-time market data processingBacktesting and simulationCompliance monitoringPerformance analytics',;''
-      'Integration with trading platforms';']
-    ],;
-    popular: false;,;'
-    icon: '💰';,;''
-    color: 'from-yellow-600 to-amber-700';,;''
-    textColor: 'text-yellow-400';,;''
-    link: 'https://ziontechgroup.com/quantum-financial-trading-engine';,;''
-    marketPosition: 'Cutting-edge quantum trading;, specialized for institutional investors.',;''
-    targetAudience: 'Hedge funds;, Investment banks, Institutional investors',;'
-    trialDays: 45;,;'
-    setupTime: '1 month';,;''
-    category: 'Quantum Computing & Finance';,;'
-    realService: true;,;'
-    technology: ['Quantum Computing;, Financial Algorithms, Risk Management'],;''
-    integrations: ['Bloomberg;, Reuters, Trading platforms, Risk systems'],;''
-    useCases: ['Portfolio optimization;, Risk management, Algorithmic trading'],;''
-    roi: 'Improve trading performance by 15-25% and reduce risk exposure.';,;''
-    competitors: ['Goldman Sachs Quantum;, JP Morgan Quantum, D-Wave'],;''
-    marketSize: '$5B quantum finance';,;''
-    growthRate: '48% YoY';,;''
-    variant: 'quantum-financial';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'Quantum algorithm implementations for financial optimization and risk management.';,;''
-    launchDate: '2025-03-10';,;'
-    customers: 34;,;
-    rating: 4.9;,;
-    reviews: 28;
-  },;
-  {;
-    id: 'ai-powered-hr-automation-suite';,;
-    name: 'AI-Powered HR Automation Suite';,;
-    tagline: 'Intelligent recruitment;, employee management, and performance optimization',;
-    price: '$299';,;
-    period: '/month';,;
-    description: 'Comprehensive HR automation platform that uses AI to streamline recruitment;, employee onboarding, performance management, and workforce optimization.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'AI-powered candidate screeningAutomated interview schedulingEmployee onboarding workflowsPerformance tracking and analyticsSkills gap analysisEmployee engagement monitoringCompliance and reportingIntegration with HR systems',;
       'Predictive analytics dashboard';
     ],;
-<<<<<<< HEAD
     popular: true,;
     icon: '👥',;
     color: 'from-pink-600 to-rose-700',;
@@ -11034,81 +6824,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$399',;
     period: '/month',;
     description: 'Comprehensive IoT platform that provides intelligent device management, real-time analytics, predictive maintenance, and automated workflows for connected devices.',;
-=======
-    popular: true;,;
-    icon: '👥';,;
-    color: 'from-pink-600 to-rose-700';,;
-    textColor: 'text-pink-400';,;
-    link: 'https://ziontechgroup.com/ai-hr-automation-suite';,;
-    marketPosition: 'AI-enhanced HR automation;, competes with Workday, BambooHR, Greenhouse.',;
-    targetAudience: 'HR teams;, Recruiters, People operations',;
-    trialDays: 14;,;
-    setupTime: '1-2 weeks';,;
-    category: 'HR & People Operations';,;
-    realService: true;,;
-    technology: ['AI/ML;, HR Automation, Analytics'],;
-    integrations: ['Workday;, BambooHR, Greenhouse, Slack, Teams'],;
-    useCases: ['Recruitment automation;, Performance management, Employee engagement'],;
-    roi: 'Reduce hiring time by 40-60% and improve employee retention by 20-30%.';,;
-    competitors: ['Workday;, BambooHR, Greenhouse, Lever'],;
-    marketSize: '$22B HR software';,;
-    growthRate: '19% YoY';,;
-    variant: 'ai-futuristic';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'AI-powered HR automation engine with intelligent workflows and analytics.';,;
-    launchDate: '2025-03-15';,;
-  {;'
-    id: 'ai-powered-hr-automation-suite';,;''
-    name: 'AI-Powered HR Automation Suite';,;''
-    tagline: 'Intelligent recruitment;, employee management, and performance optimization',;''
-    price: '$299';,;''
-    period: '/month';,;''
-    description: 'Comprehensive HR automation platform that uses AI to streamline recruitment;, employee onboarding, performance management, and workforce optimization.',;'
-    features: [;'
-      'AI-powered candidate screeningAutomated interview schedulingEmployee onboarding workflowsPerformance tracking and analyticsSkills gap analysisEmployee engagement monitoringCompliance and reportingIntegration with HR systems',;''
-      'Predictive analytics dashboard';']
-    ],;
-    popular: true;,;'
-    icon: '👥';,;''
-    color: 'from-pink-600 to-rose-700';,;''
-    textColor: 'text-pink-400';,;''
-    link: 'https://ziontechgroup.com/ai-hr-automation-suite';,;''
-    marketPosition: 'AI-enhanced HR automation;, competes with Workday, BambooHR, Greenhouse.',;''
-    targetAudience: 'HR teams;, Recruiters, People operations',;'
-    trialDays: 14;,;'
-    setupTime: '1-2 weeks';,;''
-    category: 'HR & People Operations';,;'
-    realService: true;,;'
-    technology: ['AI/ML;, HR Automation, Analytics'],;''
-    integrations: ['Workday;, BambooHR, Greenhouse, Slack, Teams'],;''
-    useCases: ['Recruitment automation;, Performance management, Employee engagement'],;''
-    roi: 'Reduce hiring time by 40-60% and improve employee retention by 20-30%.';,;''
-    competitors: ['Workday;, BambooHR, Greenhouse, Lever'],;''
-    marketSize: '$22B HR software';,;''
-    growthRate: '19% YoY';,;''
-    variant: 'ai-futuristic';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'AI-powered HR automation engine with intelligent workflows and analytics.';,;''
-    launchDate: '2025-03-15';,;'
-    customers: 189;,;
-    rating: 4.7;,;
-    reviews: 134;
-  },;
-  {;
-    id: 'intelligent-iot-platform';,;
-    name: 'Intelligent IoT Platform';,;
-    tagline: 'AI-powered IoT device management;, analytics, and automation',;
-    price: '$399';,;
-    period: '/month';,;
-    description: 'Comprehensive IoT platform that provides intelligent device management;, real-time analytics, predictive maintenance, and automated workflows for connected devices.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'IoT device managementReal-time data analyticsPredictive maintenanceAutomated workflowsDevice security and monitoringEdge computing capabilitiesIntegration with cloud platformsCustom dashboard creation',;
       'API and webhook support';
     ],;
-<<<<<<< HEAD
     popular: false,;
     icon: '🌐',;
     color: 'from-green-600 to-emerald-700',;
@@ -11143,81 +6862,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$699',;
     period: '/month',;
     description: 'Advanced cybersecurity platform that implements quantum-resistant algorithms, post-quantum cryptography, and quantum key distribution to protect against future quantum attacks.',;
-=======
-    popular: false;,;
-    icon: '🌐';,;
-    color: 'from-green-600 to-emerald-700';,;
-    textColor: 'text-green-400';,;
-    link: 'https://ziontechgroup.com/intelligent-iot-platform';,;
-    marketPosition: 'AI-powered IoT platform;, competes with AWS IoT, Azure IoT, Google Cloud IoT.',;
-    targetAudience: 'IoT developers;, Manufacturing, Smart cities',;
-    trialDays: 21;,;
-    setupTime: '2-3 weeks';,;
-    category: 'IoT & Edge Computing';,;
-    realService: true;,;
-    technology: ['IoT;, AI/ML, Edge Computing, Cloud Platforms'],;
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT, CoAP'],;
-    useCases: ['Device management;, Predictive maintenance, Smart automation'],;
-    roi: 'Reduce maintenance costs by 25-40% and improve operational efficiency by 30-50%.';,;
-    competitors: ['AWS IoT;, Azure IoT, Google Cloud IoT, Particle'],;
-    marketSize: '$30B IoT platforms';,;
-    growthRate: '32% YoY';,;
-    variant: 'iot-futuristic';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'IoT device management platform with AI-powered analytics and automation.';,;
-    launchDate: '2025-03-20';,;
-  {;'
-    id: 'intelligent-iot-platform';,;''
-    name: 'Intelligent IoT Platform';,;''
-    tagline: 'AI-powered IoT device management;, analytics, and automation',;''
-    price: '$399';,;''
-    period: '/month';,;''
-    description: 'Comprehensive IoT platform that provides intelligent device management;, real-time analytics, predictive maintenance, and automated workflows for connected devices.',;'
-    features: [;'
-      'IoT device managementReal-time data analyticsPredictive maintenanceAutomated workflowsDevice security and monitoringEdge computing capabilitiesIntegration with cloud platformsCustom dashboard creation',;''
-      'API and webhook support';']
-    ],;
-    popular: false;,;'
-    icon: '🌐';,;''
-    color: 'from-green-600 to-emerald-700';,;''
-    textColor: 'text-green-400';,;''
-    link: 'https://ziontechgroup.com/intelligent-iot-platform';,;''
-    marketPosition: 'AI-powered IoT platform;, competes with AWS IoT, Azure IoT, Google Cloud IoT.',;''
-    targetAudience: 'IoT developers;, Manufacturing, Smart cities',;'
-    trialDays: 21;,;'
-    setupTime: '2-3 weeks';,;''
-    category: 'IoT & Edge Computing';,;'
-    realService: true;,;'
-    technology: ['IoT;, AI/ML, Edge Computing, Cloud Platforms'],;''
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT, CoAP'],;''
-    useCases: ['Device management;, Predictive maintenance, Smart automation'],;''
-    roi: 'Reduce maintenance costs by 25-40% and improve operational efficiency by 30-50%.';,;''
-    competitors: ['AWS IoT;, Azure IoT, Google Cloud IoT, Particle'],;''
-    marketSize: '$30B IoT platforms';,;''
-    growthRate: '32% YoY';,;''
-    variant: 'iot-futuristic';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'IoT device management platform with AI-powered analytics and automation.';,;''
-    launchDate: '2025-03-20';,;'
-    customers: 67;,;
-    rating: 4.6;,;
-    reviews: 45;
-  },;
-  {;
-    id: 'quantum-cybersecurity-platform';,;
-    name: 'Quantum Cybersecurity Platform';,;
-    tagline: 'Quantum-resistant security and post-quantum cryptography';,;
-    price: '$699';,;
-    period: '/month';,;
-    description: 'Advanced cybersecurity platform that implements quantum-resistant algorithms;, post-quantum cryptography, and quantum key distribution to protect against future quantum attacks.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Quantum-resistant algorithmsPost-quantum cryptographyQuantum key distributionHybrid encryption systemsSecurity assessment toolsCompliance monitoringPerformance optimizationIntegration with security tools',;
       'Migration assistance';
     ],;
-<<<<<<< HEAD
     popular: false,;
     icon: '🔒',;
     color: 'from-violet-600 to-purple-700',;
@@ -11252,81 +6900,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$349',;
     period: '/month',;
     description: 'Intelligent sales platform that uses AI to predict customer behavior, score leads, optimize sales processes, and increase revenue through data-driven insights.',;
-=======
-    popular: false;,;
-    icon: '🔒';,;
-    color: 'from-violet-600 to-purple-700';,;
-    textColor: 'text-violet-400';,;
-    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform';,;
-    marketPosition: 'Future-proof quantum security;, specialized for high-security environments.',;
-    targetAudience: 'Government agencies;, Financial institutions, Healthcare organizations',;
-    trialDays: 30;,;
-    setupTime: '1 month';,;
-    category: 'Quantum Computing & Security';,;
-    realService: true;,;
-    technology: ['Quantum Computing;, Post-Quantum Cryptography, QKD'],;
-    integrations: ['PKI systems;, Security tools, Cloud platforms'],;
-    useCases: ['Data protection;, Secure communications, Compliance'],;
-    roi: 'Future-proof security investment;, avoid costly migrations later.',;
-    competitors: ['ISARA;, PQShield, Quantum Xchange, ID Quantique'],;
-    marketSize: '$4B quantum security';,;
-    growthRate: '52% YoY';,;
-    variant: 'quantum-security';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'Quantum-resistant cryptographic implementations with hybrid security systems.';,;
-    launchDate: '2025-03-25';,;
-  {;'
-    id: 'quantum-cybersecurity-platform';,;''
-    name: 'Quantum Cybersecurity Platform';,;''
-    tagline: 'Quantum-resistant security and post-quantum cryptography';,;''
-    price: '$699';,;''
-    period: '/month';,;''
-    description: 'Advanced cybersecurity platform that implements quantum-resistant algorithms;, post-quantum cryptography, and quantum key distribution to protect against future quantum attacks.',;'
-    features: [;'
-      'Quantum-resistant algorithmsPost-quantum cryptographyQuantum key distributionHybrid encryption systemsSecurity assessment toolsCompliance monitoringPerformance optimizationIntegration with security tools',;''
-      'Migration assistance';']
-    ],;
-    popular: false;,;'
-    icon: '🔒';,;''
-    color: 'from-violet-600 to-purple-700';,;''
-    textColor: 'text-violet-400';,;''
-    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform';,;''
-    marketPosition: 'Future-proof quantum security;, specialized for high-security environments.',;''
-    targetAudience: 'Government agencies;, Financial institutions, Healthcare organizations',;'
-    trialDays: 30;,;'
-    setupTime: '1 month';,;''
-    category: 'Quantum Computing & Security';,;'
-    realService: true;,;'
-    technology: ['Quantum Computing;, Post-Quantum Cryptography, QKD'],;''
-    integrations: ['PKI systems;, Security tools, Cloud platforms'],;''
-    useCases: ['Data protection;, Secure communications, Compliance'],;''
-    roi: 'Future-proof security investment;, avoid costly migrations later.',;''
-    competitors: ['ISARA;, PQShield, Quantum Xchange, ID Quantique'],;''
-    marketSize: '$4B quantum security';,;''
-    growthRate: '52% YoY';,;''
-    variant: 'quantum-security';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'Quantum-resistant cryptographic implementations with hybrid security systems.';,;''
-    launchDate: '2025-03-25';,;'
-    customers: 19;,;
-    rating: 4.9;,;
-    reviews: 15;
-  },;
-  {;
-    id: 'ai-powered-sales-intelligence-platform';,;
-    name: 'AI-Powered Sales Intelligence Platform';,;
-    tagline: 'Predictive sales analytics;, lead scoring, and revenue optimization',;
-    price: '$349';,;
-    period: '/month';,;
-    description: 'Intelligent sales platform that uses AI to predict customer behavior;, score leads, optimize sales processes, and increase revenue through data-driven insights.',;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [;
       'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking',;
       'Real-time insights dashboard';
     ],;
-<<<<<<< HEAD
     popular: true,;
     icon: '📈',;
     color: 'from-blue-600 to-indigo-700',;
@@ -11353,27 +6930,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     customers: 234,;
     rating: 4.8;
     reviews: 178;
-<<<<<<< HEAD
   }
 ];
-=======
-<<<<<<< HEAD
-=======
-  }
-];
-    rating: 4.8,
-    reviews: 178;
-
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
   }
 ];
-<<<<<<< HEAD
 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     icon: '🚨',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
@@ -11410,7 +6974,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Advanced cryptographic solutions designed to withstand quantum computing attacks, including post-quantum algorithms, quantum key distribution, and hybrid encryption systems.',
-=======
     popular: true;,;
     icon: '📈';,;
     color: 'from-blue-600 to-indigo-700';,;
@@ -11472,7 +7035,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     price: '$599';,
     period: '/month';,
     description: 'Advanced cryptographic solutions designed to withstand quantum computing attacks;, including post-quantum algorithms, quantum key distribution, and hybrid encryption systems.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Post-quantum cryptographic algorithms',
       'Quantum key distribution (QKD)',
@@ -11484,7 +7046,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Integration APIs',
       'Migration tools from classical crypto',
     ],
-<<<<<<< HEAD
     popular: false,
     icon: '🔐',
     color: 'from-purple-600 to-violet-700',
@@ -11523,43 +7084,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'AI-powered DevOps platform that autonomously manages infrastructure, optimizes performance, handles deployments, and resolves issues without human intervention.',
-=======
-    popular: false;,
-    icon: '🔐';,
-    color: 'from-purple-600 to-violet-700';,
-    textColor: 'text-purple-400';,
-    link: 'https://ziontechgroup.com/quantum-resistant-cryptography';,
-    marketPosition:
-      'Early mover in post-quantum cryptography; specialized security solution.',
-    targetAudience: 'Financial institutions;, government agencies, healthcare',
-    trialDays: 30;,
-    setupTime: '1-2 weeks';,
-    category: 'Security & Compliance';,
-    realService: true;,
-    technology: ['Post-Quantum Cryptography;, QKD, Hybrid Systems'],
-    integrations: ['PKI systems;, Cloud platforms, IoT devices'],
-    useCases: ['Data protection;, Secure communications, Compliance'],
-    roi: 'Future-proof security investment; avoid costly migrations later.',
-    competitors: ['ISARA;, PQShield, Quantum Xchange'],
-    marketSize: '$2B quantum security';,
-    growthRate: '45% YoY';,
-    variant: 'quantum-security';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'Post-quantum algorithm implementations with hybrid encryption and key management.';,
-    launchDate: '2025-01-20';,
-    customers: 23;,
-    rating: 4.9;,
-    reviews: 18;,
-  },
-  {
-    id: 'autonomous-devops-orchestrator';,
-    name: 'Autonomous DevOps Orchestrator';,
-    tagline: 'Self-healing infrastructure with intelligent automation and optimization';,
-    price: '$449';,
-    period: '/month';,
-    description: 'AI-powered DevOps platform that autonomously manages infrastructure;, optimizes performance, handles deployments, and resolves issues without human intervention.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Autonomous infrastructure management',
       'Self-healing systems',
@@ -11571,7 +7095,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Security compliance monitoring',
       'Real-time analytics dashboard',
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '🤖',
     color: 'from-green-600 to-emerald-700',
@@ -11612,45 +7135,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Platform for deploying, managing, and optimizing AI models at the edge, enabling real-time inference with minimal latency and bandwidth usage.',
-=======
-    popular: true;,
-    icon: '🤖';,
-    color: 'from-green-600 to-emerald-700';,
-    textColor: 'text-green-400';,
-    link: 'https://ziontechgroup.com/autonomous-devops-orchestrator';,
-    marketPosition:
-      'Next-generation DevOps automation; competes with traditional CI/CD tools.',
-    targetAudience: 'DevOps teams;, Platform engineers, SREs',
-    trialDays: 21;,
-    setupTime: '3-5 days';,
-    category: 'DevOps & Automation';,
-    realService: true;,
-    technology: ['AI/ML;, Kubernetes, Terraform, Ansible'],
-    integrations: ['AWS;, GCP, Azure, GitHub, GitLab, Jenkins'],
-    useCases: [
-      'Infrastructure automation, Deployment optimization, Cost management',
-    ],
-    roi: 'Reduce operational overhead by 60-80% and improve system reliability.';,
-    competitors: ['GitLab CI/CD;, Jenkins, CircleCI'],
-    marketSize: '$20B DevOps tools';,
-    growthRate: '32% YoY';,
-    variant: 'ai-autonomous';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.';,
-    launchDate: '2025-02-10';,
-    customers: 134;,
-    rating: 4.8;,
-    reviews: 92;,
-  },
-  {
-    id: 'edge-ai-inference-platform';,
-    name: 'Edge AI Inference Platform';,
-    tagline: 'Deploy and manage AI models at the edge for real-time performance';,
-    price: '$299';,
-    period: '/month';,
-    description: 'Platform for deploying;, managing, and optimizing AI models at the edge, enabling real-time inference with minimal latency and bandwidth usage.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Edge model deployment',
       'Real-time inference optimization',
@@ -11662,7 +7146,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Security and privacy controls',
       'Scalable edge infrastructure',
     ],
-<<<<<<< HEAD
     popular: false,
     icon: '🌐',
     color: 'from-cyan-600 to-blue-700',
@@ -11701,43 +7184,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Comprehensive governance platform for blockchain networks, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',
-=======
-    popular: false;,
-    icon: '🌐';,
-    color: 'from-cyan-600 to-blue-700';,
-    textColor: 'text-cyan-400';,
-    link: 'https://ziontechgroup.com/edge-ai-inference-platform';,
-    marketPosition:
-      'Specialized edge AI platform; complements cloud AI services.',
-    targetAudience: 'IoT developers;, Edge computing teams, AI engineers',
-    trialDays: 14;,
-    setupTime: '2-3 days';,
-    category: 'AI & Edge Computing';,
-    realService: true;,
-    technology: ['Edge Computing;, AI/ML, IoT, 5G'],
-    integrations: ['TensorFlow;, PyTorch, AWS IoT, Azure IoT'],
-    useCases: ['Real-time AI applications;, IoT intelligence, Edge computing'],
-    roi: 'Reduce latency by 80-90% and enable real-time AI applications.';,
-    competitors: ['AWS IoT Greengrass;, Azure IoT Edge, Google Edge TPU'],
-    marketSize: '$12B edge AI';,
-    growthRate: '38% YoY';,
-    variant: 'edge-computing-enterprise';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'Edge deployment framework with model optimization and device management capabilities.';,
-    launchDate: '2025-01-25';,
-    customers: 67;,
-    rating: 4.6;,
-    reviews: 41;,
-  },
-  {
-    id: 'blockchain-governance-automation';,
-    name: 'Blockchain Governance Automation';,
-    tagline: 'Automated governance;, compliance, and risk management for blockchain networks',
-    price: '$399';,
-    period: '/month';,
-    description: 'Comprehensive governance platform for blockchain networks;, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Automated compliance monitoring',
       'Risk assessment and scoring',
@@ -11749,7 +7195,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Multi-chain support',
       'Integration with DeFi protocols',
     ],
-<<<<<<< HEAD
     popular: false,
     icon: '⛓️',
     color: 'from-orange-600 to-red-700',
@@ -11788,43 +7233,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Intelligent customer success platform that predicts churn risk, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',
-=======
-    popular: false;,
-    icon: '⛓️';,
-    color: 'from-orange-600 to-red-700';,
-    textColor: 'text-orange-400';,
-    link: 'https://ziontechgroup.com/blockchain-governance-automation';,
-    marketPosition:
-      'Specialized blockchain governance; addresses regulatory compliance needs.',
-    targetAudience: 'DeFi protocols;, Enterprise blockchain, Regulatory teams',
-    trialDays: 21;,
-    setupTime: '1 week';,
-    category: 'Blockchain & DeFi';,
-    realService: true;,
-    technology: ['Blockchain;, Smart Contracts, AI/ML, Compliance'],
-    integrations: ['Ethereum;, Polygon, Solana, DeFi protocols'],
-    useCases: ['Regulatory compliance;, Risk management, Governance automation'],
-    roi: 'Reduce compliance costs by 40-60% and improve regulatory adherence.';,
-    competitors: ['OpenZeppelin;, ConsenSys, Chainalysis'],
-    marketSize: '$8B blockchain governance';,
-    growthRate: '42% YoY';,
-    variant: 'blockchain-futuristic';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'Multi-chain governance engine with automated compliance and risk management.';,
-    launchDate: '2025-02-05';,
-    customers: 45;,
-    rating: 4.7;,
-    reviews: 33;,
-  },
-  {
-    id: 'ai-powered-customer-success-platform';,
-    name: 'AI-Powered Customer Success Platform';,
-    tagline: 'Predictive customer health scoring and proactive retention strategies';,
-    price: '$249';,
-    period: '/month';,
-    description: 'Intelligent customer success platform that predicts churn risk;, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Predictive churn risk scoring',
       'Customer health monitoring',
@@ -11836,7 +7244,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Real-time alerts and notifications',
       'Performance analytics dashboard',
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '🎯',
     color: 'from-emerald-600 to-teal-700',
@@ -11875,43 +7282,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems, drug discovery, financial modeling, and scientific simulations.',
-=======
-    popular: true;,
-    icon: '🎯';,
-    color: 'from-emerald-600 to-teal-700';,
-    textColor: 'text-emerald-400';,
-    link: 'https://ziontechgroup.com/ai-customer-success-platform';,
-    marketPosition:
-      'AI-enhanced customer success; competes with Gainsight, Totango.',
-    targetAudience: 'Customer success teams;, Account managers, Growth teams',
-    trialDays: 14;,
-    setupTime: '1 week';,
-    category: 'Customer Success & Growth';,
-    realService: true;,
-    technology: ['AI/ML;, Predictive Analytics, Automation'],
-    integrations: ['Salesforce;, HubSpot, Pipedrive, Intercom'],
-    useCases: ['Churn prevention;, Customer retention, Revenue growth'],
-    roi: 'Increase customer retention by 15-25% and LTV by 20-35%.';,
-    competitors: ['Gainsight;, Totango, ChurnZero'],
-    marketSize: '$6B customer success';,
-    growthRate: '26% YoY';,
-    variant: 'ai-futuristic';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'AI-powered predictive analytics engine with automated engagement workflows.';,
-    launchDate: '2025-01-30';,
-    customers: 178;,
-    rating: 4.8;,
-    reviews: 124;,
-  },
-  {
-    id: 'quantum-machine-learning-platform';,
-    name: 'Quantum Machine Learning Platform';,
-    tagline: 'Quantum computing-powered ML for complex optimization and simulation';,
-    price: '$799';,
-    period: '/month';,
-    description: 'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems;, drug discovery, financial modeling, and scientific simulations.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Quantum algorithm implementations',
       'Hybrid quantum-classical ML',
@@ -11923,7 +7293,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Performance benchmarking',
       'Integration with classical ML frameworks',
     ],
-<<<<<<< HEAD
     popular: false,
     icon: '⚛️',
     color: 'from-violet-600 to-purple-700',
@@ -11962,43 +7331,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Comprehensive supply chain optimization platform that uses AI to predict demand, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',
-=======
-    popular: false;,
-    icon: '⚛️';,
-    color: 'from-violet-600 to-purple-700';,
-    textColor: 'text-violet-400';,
-    link: 'https://ziontechgroup.com/quantum-machine-learning-platform';,
-    marketPosition:
-      'Cutting-edge quantum ML; specialized for complex computational problems.',
-    targetAudience: 'Research institutions;, Pharmaceutical companies, Financial services',
-    trialDays: 30;,
-    setupTime: '2-3 weeks';,
-    category: 'Quantum Computing & AI';,
-    realService: true;,
-    technology: ['Quantum Computing;, Machine Learning, Optimization'],
-    integrations: ['IBM Quantum;, Google Quantum, AWS Braket'],
-    useCases: ['Drug discovery;, Financial modeling, Scientific research'],
-    roi: 'Solve previously intractable problems; accelerate research and development.',
-    competitors: ['IBM Quantum;, Google Quantum, Rigetti'],
-    marketSize: '$3B quantum computing';,
-    growthRate: '55% YoY';,
-    variant: 'quantum-ai-enterprise';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'Quantum algorithm library with hybrid classical-quantum optimization capabilities.';,
-    launchDate: '2025-02-15';,
-    customers: 28;,
-    rating: 4.9;,
-    reviews: 22;,
-  },
-  {
-    id: 'intelligent-supply-chain-optimizer';,
-    name: 'Intelligent Supply Chain Optimizer';,
-    tagline: 'AI-driven supply chain optimization and risk management';,
-    price: '$549';,
-    period: '/month';,
-    description: 'Comprehensive supply chain optimization platform that uses AI to predict demand;, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Demand forecasting and planning',
       'Inventory optimization',
@@ -12010,7 +7342,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Compliance monitoring',
       'Performance analytics and reporting',
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '📦',
     color: 'from-blue-600 to-cyan-700',
@@ -12048,43 +7379,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Advanced cybersecurity platform that provides real-time threat intelligence, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',
-=======
-    popular: true;,
-    icon: '📦';,
-    color: 'from-blue-600 to-cyan-700';,
-    textColor: 'text-blue-400';,
-    link: 'https://ziontechgroup.com/intelligent-supply-chain-optimizer';,
-    marketPosition:
-      'AI-powered supply chain; competes with SAP, Oracle, Blue Yonder.',
-    targetAudience: 'Manufacturing;, Retail, Logistics companies',
-    trialDays: 21;,
-    setupTime: '2-3 weeks';,
-    category: 'Supply Chain & Logistics';,
-    realService: true;,
-    technology: ['AI/ML;, IoT, Blockchain, Analytics'],
-    integrations: ['ERP systems;, WMS, TMS, IoT platforms'],
-    useCases: ['Inventory optimization;, Risk management, Cost reduction'],
-    roi: 'Reduce inventory costs by 15-25% and improve service levels by 20-30%.';,
-    competitors: ['SAP SCM;, Oracle SCM, Blue Yonder'],
-    marketSize: '$25B supply chain management';,
-    growthRate: '18% YoY';,
-    variant: 'ai-futuristic';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'AI-powered optimization engine with real-time monitoring and predictive analytics.';,
-    launchDate: '2025-02-20';,
-    customers: 89;,
-    rating: 4.7;,
-    reviews: 67;,
-  },
-  {
-    id: 'cybersecurity-threat-intelligence-hub';,
-    name: 'Cybersecurity Threat Intelligence Hub';,
-    tagline: 'Real-time threat detection;, analysis, and automated response',
-    price: '$399';,
-    period: '/month';,
-    description: 'Advanced cybersecurity platform that provides real-time threat intelligence;, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Real-time threat detection',
       'Threat intelligence sharing',
@@ -12096,7 +7390,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Compliance reporting',
       '24/7 security monitoring',
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-orange-700',
@@ -12135,43 +7428,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Comprehensive content creation platform that uses AI to generate, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',
-=======
-    popular: true;,
-    icon: '🛡️';,
-    color: 'from-red-600 to-orange-700';,
-    textColor: 'text-red-400';,
-    link: 'https://ziontechgroup.com/cybersecurity-threat-intelligence';,
-    marketPosition:
-      'Comprehensive threat intelligence; competes with CrowdStrike, Palo Alto Networks.',
-    targetAudience: 'Security teams;, CISOs, IT security professionals',
-    trialDays: 14;,
-    setupTime: '1 week';,
-    category: 'Cybersecurity';,
-    realService: true;,
-    technology: ['AI/ML;, Threat Intelligence, Automation'],
-    integrations: ['SIEM systems;, EDR, Firewalls, IDS/IPS'],
-    useCases: ['Threat detection;, Incident response, Risk management'],
-    roi: 'Reduce security incidents by 40-60% and improve response time by 70%.';,
-    competitors: ['CrowdStrike;, Palo Alto Networks, FireEye'],
-    marketSize: '$35B cybersecurity';,
-    growthRate: '22% YoY';,
-    variant: 'security-futuristic';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'AI-powered threat detection engine with automated response and intelligence sharing.';,
-    launchDate: '2025-02-25';,
-    customers: 156;,
-    rating: 4.8;,
-    reviews: 118;,
-  },
-  {
-    id: 'ai-powered-content-creation-suite';,
-    name: 'AI-Powered Content Creation Suite';,
-    tagline: 'Automated content generation;, optimization, and multi-channel distribution',
-    price: '$179';,
-    period: '/month';,
-    description: 'Comprehensive content creation platform that uses AI to generate;, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'AI content generation',
       'Multi-channel content optimization',
@@ -12183,7 +7439,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Collaboration tools',
       'Integration with marketing platforms',
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '✍️',
     color: 'from-indigo-600 to-purple-700',
@@ -12221,43 +7476,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Comprehensive data governance platform that automates data quality monitoring, compliance checking, and lifecycle management to ensure data integrity and regulatory compliance.',
-=======
-    popular: true;,
-    icon: '✍️';,
-    color: 'from-indigo-600 to-purple-700';,
-    textColor: 'text-indigo-400';,
-    link: 'https://ziontechgroup.com/ai-content-creation-suite';,
-    marketPosition:
-      'AI-powered content creation; competes with Jasper, Copy.ai, Grammarly.',
-    targetAudience: 'Marketing teams;, Content creators, Small businesses',
-    trialDays: 7;,
-    setupTime: '1 day';,
-    category: 'Content & Marketing';,
-    realService: true;,
-    technology: ['AI/ML;, NLP, Content Generation'],
-    integrations: ['WordPress;, HubSpot, Mailchimp, Social media platforms'],
-    useCases: ['Content marketing;, SEO optimization, Social media management'],
-    roi: 'Increase content production by 300-500% and improve engagement by 25-40%.';,
-    competitors: ['Jasper;, Copy.ai, Grammarly, Writesonic'],
-    marketSize: '$12B content creation tools';,
-    growthRate: '35% YoY';,
-    variant: 'ai-creative';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'AI content generation engine with optimization and distribution capabilities.';,
-    launchDate: '2025-03-01';,
-    customers: 234;,
-    rating: 4.7;,
-    reviews: 167;,
-  },
-  {
-    id: 'intelligent-data-governance-platform';,
-    name: 'Intelligent Data Governance Platform';,
-    tagline: 'Automated data quality;, compliance, and lifecycle management',
-    price: '$499';,
-    period: '/month';,
-    description: 'Comprehensive data governance platform that automates data quality monitoring;, compliance checking, and lifecycle management to ensure data integrity and regulatory compliance.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Automated data quality monitoring',
       'Compliance and governance rules',
@@ -12269,7 +7487,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Integration with data platforms',
       'Real-time monitoring and alerts',
     ],
-<<<<<<< HEAD
     popular: false,
     icon: '📊',
     color: 'from-teal-600 to-cyan-700',
@@ -12308,43 +7525,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior performance.',
-=======
-    popular: false;,
-    icon: '📊';,
-    color: 'from-teal-600 to-cyan-700';,
-    textColor: 'text-teal-400';,
-    link: 'https://ziontechgroup.com/intelligent-data-governance';,
-    marketPosition:
-      'AI-powered data governance; competes with Collibra, Alation, Informatica.',
-    targetAudience: 'Data teams;, Compliance officers, Data stewards',
-    trialDays: 21;,
-    setupTime: '2-3 weeks';,
-    category: 'Data & Analytics';,
-    realService: true;,
-    technology: ['AI/ML;, Data Quality, Compliance Automation'],
-    integrations: ['Snowflake;, Databricks, AWS, Azure, GCP'],
-    useCases: ['Data quality management;, Compliance automation, Data lineage'],
-    roi: 'Reduce data quality issues by 60-80% and compliance costs by 40-60%.';,
-    competitors: ['Collibra;, Alation, Informatica, Talend'],
-    marketSize: '$18B data governance';,
-    growthRate: '24% YoY';,
-    variant: 'data-futuristic';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'AI-powered data quality engine with automated compliance and governance workflows.';,
-    launchDate: '2025-03-05';,
-    customers: 78;,
-    rating: 4.6;,
-    reviews: 56;,
-  },
-  {
-    id: 'quantum-financial-trading-engine';,
-    name: 'Quantum Financial Trading Engine';,
-    tagline: 'Quantum computing-powered algorithmic trading and risk management';,
-    price: '$1;,299',
-    period: '/month';,
-    description: 'Advanced quantum computing platform for financial trading;, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior performance.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Quantum portfolio optimization',
       'Risk assessment algorithms',
@@ -12356,7 +7536,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Performance analytics',
       'Integration with trading platforms',
     ],
-<<<<<<< HEAD
     popular: false,
     icon: '💰',
     color: 'from-yellow-600 to-amber-700',
@@ -12395,43 +7574,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Comprehensive HR automation platform that uses AI to streamline recruitment, employee onboarding, performance management, and workforce optimization.',
-=======
-    popular: false;,
-    icon: '💰';,
-    color: 'from-yellow-600 to-amber-700';,
-    textColor: 'text-yellow-400';,
-    link: 'https://ziontechgroup.com/quantum-financial-trading-engine';,
-    marketPosition:
-      'Cutting-edge quantum trading; specialized for institutional investors.',
-    targetAudience: 'Hedge funds;, Investment banks, Institutional investors',
-    trialDays: 45;,
-    setupTime: '1 month';,
-    category: 'Quantum Computing & Finance';,
-    realService: true;,
-    technology: ['Quantum Computing;, Financial Algorithms, Risk Management'],
-    integrations: ['Bloomberg;, Reuters, Trading platforms, Risk systems'],
-    useCases: ['Portfolio optimization;, Risk management, Algorithmic trading'],
-    roi: 'Improve trading performance by 15-25% and reduce risk exposure.';,
-    competitors: ['Goldman Sachs Quantum;, JP Morgan Quantum, D-Wave'],
-    marketSize: '$5B quantum finance';,
-    growthRate: '48% YoY';,
-    variant: 'quantum-financial';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'Quantum algorithm implementations for financial optimization and risk management.';,
-    launchDate: '2025-03-10';,
-    customers: 34;,
-    rating: 4.9;,
-    reviews: 28;,
-  },
-  {
-    id: 'ai-powered-hr-automation-suite';,
-    name: 'AI-Powered HR Automation Suite';,
-    tagline: 'Intelligent recruitment;, employee management, and performance optimization',
-    price: '$299';,
-    period: '/month';,
-    description: 'Comprehensive HR automation platform that uses AI to streamline recruitment;, employee onboarding, performance management, and workforce optimization.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'AI-powered candidate screening',
       'Automated interview scheduling',
@@ -12443,7 +7585,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Integration with HR systems',
       'Predictive analytics dashboard',
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '👥',
     color: 'from-pink-600 to-rose-700',
@@ -12483,45 +7624,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Comprehensive IoT platform that provides intelligent device management, real-time analytics, predictive maintenance, and automated workflows for connected devices.',
-=======
-    popular: true;,
-    icon: '👥';,
-    color: 'from-pink-600 to-rose-700';,
-    textColor: 'text-pink-400';,
-    link: 'https://ziontechgroup.com/ai-hr-automation-suite';,
-    marketPosition:
-      'AI-enhanced HR automation; competes with Workday, BambooHR, Greenhouse.',
-    targetAudience: 'HR teams;, Recruiters, People operations',
-    trialDays: 14;,
-    setupTime: '1-2 weeks';,
-    category: 'HR & People Operations';,
-    realService: true;,
-    technology: ['AI/ML;, HR Automation, Analytics'],
-    integrations: ['Workday;, BambooHR, Greenhouse, Slack, Teams'],
-    useCases: [
-      'Recruitment automation, Performance management, Employee engagement',
-    ],
-    roi: 'Reduce hiring time by 40-60% and improve employee retention by 20-30%.';,
-    competitors: ['Workday;, BambooHR, Greenhouse, Lever'],
-    marketSize: '$22B HR software';,
-    growthRate: '19% YoY';,
-    variant: 'ai-futuristic';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'AI-powered HR automation engine with intelligent workflows and analytics.';,
-    launchDate: '2025-03-15';,
-    customers: 189;,
-    rating: 4.7;,
-    reviews: 134;,
-  },
-  {
-    id: 'intelligent-iot-platform';,
-    name: 'Intelligent IoT Platform';,
-    tagline: 'AI-powered IoT device management;, analytics, and automation',
-    price: '$399';,
-    period: '/month';,
-    description: 'Comprehensive IoT platform that provides intelligent device management;, real-time analytics, predictive maintenance, and automated workflows for connected devices.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'IoT device management',
       'Real-time data analytics',
@@ -12533,7 +7635,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Custom dashboard creation',
       'API and webhook support',
     ],
-<<<<<<< HEAD
     popular: false,
     icon: '🌐',
     color: 'from-green-600 to-emerald-700',
@@ -12571,43 +7672,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Advanced cybersecurity platform that implements quantum-resistant algorithms, post-quantum cryptography, and quantum key distribution to protect against future quantum attacks.',
-=======
-    popular: false;,
-    icon: '🌐';,
-    color: 'from-green-600 to-emerald-700';,
-    textColor: 'text-green-400';,
-    link: 'https://ziontechgroup.com/intelligent-iot-platform';,
-    marketPosition:
-      'AI-powered IoT platform; competes with AWS IoT, Azure IoT, Google Cloud IoT.',
-    targetAudience: 'IoT developers;, Manufacturing, Smart cities',
-    trialDays: 21;,
-    setupTime: '2-3 weeks';,
-    category: 'IoT & Edge Computing';,
-    realService: true;,
-    technology: ['IoT;, AI/ML, Edge Computing, Cloud Platforms'],
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT, CoAP'],
-    useCases: ['Device management;, Predictive maintenance, Smart automation'],
-    roi: 'Reduce maintenance costs by 25-40% and improve operational efficiency by 30-50%.';,
-    competitors: ['AWS IoT;, Azure IoT, Google Cloud IoT, Particle'],
-    marketSize: '$30B IoT platforms';,
-    growthRate: '32% YoY';,
-    variant: 'iot-futuristic';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'IoT device management platform with AI-powered analytics and automation.';,
-    launchDate: '2025-03-20';,
-    customers: 67;,
-    rating: 4.6;,
-    reviews: 45;,
-  },
-  {
-    id: 'quantum-cybersecurity-platform';,
-    name: 'Quantum Cybersecurity Platform';,
-    tagline: 'Quantum-resistant security and post-quantum cryptography';,
-    price: '$699';,
-    period: '/month';,
-    description: 'Advanced cybersecurity platform that implements quantum-resistant algorithms;, post-quantum cryptography, and quantum key distribution to protect against future quantum attacks.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Quantum-resistant algorithms',
       'Post-quantum cryptography',
@@ -12619,7 +7683,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Integration with security tools',
       'Migration assistance',
     ],
-<<<<<<< HEAD
     popular: false,
     icon: '🔒',
     color: 'from-violet-600 to-purple-700',
@@ -12659,43 +7722,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     period: '/month',
     description:
       'Intelligent sales platform that uses AI to predict customer behavior, score leads, optimize sales processes, and increase revenue through data-driven insights.',
-=======
-    popular: false;,
-    icon: '🔒';,
-    color: 'from-violet-600 to-purple-700';,
-    textColor: 'text-violet-400';,
-    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform';,
-    marketPosition:
-      'Future-proof quantum security; specialized for high-security environments.',
-    targetAudience: 'Government agencies;, Financial institutions, Healthcare organizations',
-    trialDays: 30;,
-    setupTime: '1 month';,
-    category: 'Quantum Computing & Security';,
-    realService: true;,
-    technology: ['Quantum Computing;, Post-Quantum Cryptography, QKD'],
-    integrations: ['PKI systems;, Security tools, Cloud platforms'],
-    useCases: ['Data protection;, Secure communications, Compliance'],
-    roi: 'Future-proof security investment; avoid costly migrations later.',
-    competitors: ['ISARA;, PQShield, Quantum Xchange, ID Quantique'],
-    marketSize: '$4B quantum security';,
-    growthRate: '52% YoY';,
-    variant: 'quantum-security';,
-    contactInfo: contact;,
-    realImplementation: true;,
-    implementationDetails: 'Quantum-resistant cryptographic implementations with hybrid security systems.';,
-    launchDate: '2025-03-25';,
-    customers: 19;,
-    rating: 4.9;,
-    reviews: 15;,
-  },
-  {
-    id: 'ai-powered-sales-intelligence-platform';,
-    name: 'AI-Powered Sales Intelligence Platform';,
-    tagline: 'Predictive sales analytics;, lead scoring, and revenue optimization',
-    price: '$349';,
-    period: '/month';,
-    description: 'Intelligent sales platform that uses AI to predict customer behavior;, score leads, optimize sales processes, and increase revenue through data-driven insights.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Predictive lead scoring',
       'Customer behavior analysis',
@@ -12707,7 +7733,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
       'Performance tracking',
       'Real-time insights dashboard',
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '📈',
     color: 'from-blue-600 to-indigo-700',
@@ -12739,13 +7764,9 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 ;
   }
 ];
@@ -13454,7 +8475,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: '2025-04-01',;
     customers: 234,;
     rating: 4.8;
-<<<<<<< HEAD
     reviews: 178;
   }
 ];
@@ -14787,15 +9807,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
     reviews: 178}
 ],
-=======
-    reviews: 178;
-  }
-];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
     popular: true;,
     icon: '📈';,
     color: 'from-blue-600 to-indigo-700';,
@@ -14869,5 +9880,3 @@ pr-12325
 
 ];
 '
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

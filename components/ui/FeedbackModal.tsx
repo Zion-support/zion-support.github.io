@@ -14,12 +14,7 @@ defaultKind = 'general'}
   defaultKind = 'general',
   userHeaders,
 }: {;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import { useState } from 'react';
 export type FeedbackContext = any;
     onClose(true)
@@ -31,16 +26,11 @@ defaultContext
 defaultKind = 'general'}
   userHeaders}
 }: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
-<<<<<<< HEAD
   userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
-=======
-  userHeaders?: Record<string, string>;}) {export default function FeedbackModal({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   isOpen;
   onClose;
   defaultContext;
@@ -77,25 +67,9 @@ export default function FeedbackModal({
     if (rating < 1) return onClose($2);
     setLoading($2);
     try {
-<<<<<<< HEAD
       await fetch('/api/feedback', {
         method: 'POST',
 
-=======
-      await fetch('/api/feedback', {}
-        method: 'POST'}
-headers: { "Content-Type": "application/json", ...(userHeaders || {}) },
-        body: JSON.stringify({
-          rating
-comment}
-kind;}
-context: defaultContext |{}
-        })
-
-});
-    setLoading(false);
-    onClose(true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     setLoading(false);
     onClose(true);
 
@@ -155,7 +129,6 @@ export type FeedbackContext = any;
               onClick={() => setRating(n)}className={hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300';
 
 className={
-<<<<<<< HEAD
                 hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300'
 
               }

@@ -1,6 +1,5 @@
 // Test setup file for Jest
 import "@testing-library/jest-dom";
-<<<<<<< HEAD:src_backup/test/setup.ts
 // Test setup file for Jest
 require("@testing-library/jest-dom");
 
@@ -8,7 +7,6 @@ require("@testing-library/jest-dom");
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
-<<<<<<< HEAD:src_backup/test/setup.ts
 import '@testing-library/jest-dom';
 
     matches: false,

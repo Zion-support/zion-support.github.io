@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -40,10 +41,14 @@
 #!/usr/bin/env node;
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -54,6 +59,8 @@ console.log()
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 console.log('')
   console.log('� Fixing common linting issues...')
   const filesToFix = ['components/ContactForm.tsx']
@@ -92,6 +99,7 @@ console.log('')
     execSync('npx tsc --noEmit', { "stdio"})
     execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
+<<<<<<< HEAD
     console.error(' Comprehensive Code Fixer "failed")
 <<<<<<< HEAD
 console.log()
@@ -101,3 +109,6 @@ console.log()
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+    console.error(' Comprehensive Code Fixer "failed")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

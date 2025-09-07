@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
@@ -9,11 +8,6 @@ export default function CloudAutomationHub() {
       .then((d) => setLogs(d.logs || []))
       .catch(() => setLogs([]))
   }, []),
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 export default function cloud() {
   return (
@@ -31,7 +25,6 @@ export default function cloud() {
           </p>
         </div>
       </div>
-<<<<<<< HEAD
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <a href="/docs/ROADMAP.md" className="rounded-lg border p-4 hover:bg-gray-50 dark: hover: bg-gray-900">
@@ -67,8 +60,4 @@ export default function cloud() {
       </div>
     </div>
   )
-=======
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

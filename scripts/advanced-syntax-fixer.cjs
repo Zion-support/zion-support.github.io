@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,6 +83,8 @@ module.exports = { fixFile, scanAndFixDirectory }}}}}}
 
 
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -93,8 +96,11 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
+<<<<<<< HEAD
 const fs = require("$1")
 const path = require("$1")
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const { execSync } = require("child_process")
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
@@ -173,6 +179,7 @@ function log(message, color = "reset")
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white")
   if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
     log(\nℹ  No syntax issues found that could be automatically fixed.")
+<<<<<<< HEAD
       "blue"
 <<<<<<< HEAD
 =======
@@ -189,3 +196,6 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+      "blue"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

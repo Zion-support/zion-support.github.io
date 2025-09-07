@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Check, ArrowRight, Sparkles, Star } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -53,26 +52,3 @@ export default function AiWebsitePersonalizationPage() {
   )
 }
 
-=======
-import Layout from '../components/layout/Layout';
-
-export default function aiwebsitepersonalization() {
-  return (
-    <Layout>
-      <Head>
-        <title>Ai Website Personalization - Zion Tech Group</title>
-        <meta name="description" content="Ai Website Personalization solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Website Personalization</h1>
-          <p className="text-lg text-gray-600">
-            Professional ai website personalization solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

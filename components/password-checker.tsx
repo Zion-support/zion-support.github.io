@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   Lock,
   Shield,
   Eye,
@@ -8,8 +7,6 @@
   CheckCircle,
   XCircle,
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-=======
-<<<<<<< HEAD
 noSequential: !hasSequentialChars (pass) 
 }
 setChecks (newChecks)
@@ -108,14 +105,6 @@ setStrength (score)
   /* CTA Section */ 
 }<section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600"> <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6"> Ready to Secure Your Passwords? </h2> <p className="text-xl text-indigo-100 mb-8"> Join thousands of users who trust our password strength checker to improve their account security. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <Button href="/contact" size="lg" className="bg-white text-indigo-600 hover:bg-gray-100" > Get Started Today <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-indigo-600" > View Pricing </Button> </div> </div> </section> </>) 
 }
-=======
-import React, { useState, useEffect } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button';
-import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-import Button from '../components/ui/Button';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 import {
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
@@ -188,53 +177,7 @@ export default function PasswordCheckerPage() {;
     } else {
       resetAnalysis()
     }
-<<<<<<< HEAD
   }, [password]);
-=======
-
-      length: pass.length >= 8,
-      uppercase: /[A-Z]/.test(pass),
-      lowercase: /[a-z]/.test(pass),
-      numbers: /\d/.test(pass),
-symbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pass),
-      noCommon: !isCommonPassword(pass),
-      noSequential: !hasSequentialChars(pass),
-    };
-
-
-    setChecks(newChecks);
-    // Calculate strength score
-    noSequential: false;
-  })const [suggestions, setSuggestions] = useState<string[]>([]),const [generatedPassword, setGeneratedPassword] = useState('')useEffect(() => {if (password) {analyzePassword(password)} else {resetAnalysis()}
-  }, [password])length: pass.length >= 8,uppercase: /[A-Z]/.test(pass),lowercase: /[a-z]/.test(pass),numbers: /\d/.test(pass),symbols: /[!@#$%^&*()_+\-=\[\]{}':"\\|,.<>\/?]/.test(pass),noCommon: !isCommonPassword(pass),noSequential: !hasSequentialChars(pass),}setChecks(newChecks)// Calculate strength score;
-    noSequential: false;
-  })const [suggestions, setSuggestions] = useState<string[]>([]),const [generatedPassword, setGeneratedPassword] = useState('')useEffect(() => {if (password) {analyzePassword(password)} else {resetAnalysis()}
-  }, [password])length: pass.length >= 8,uppercase: /[A-Z]/.test(pass),lowercase: /[a-z]/.test(pass),numbers: /\d/.test(pass),symbols: /[!@#$%^&*()_+\-=\[\]{}':"\\|,.<>\/?]/.test(pass),noCommon: !isCommonPassword(pass),noSequential: !hasSequentialChars(pass),}setChecks(newChecks)// Calculate strength score;
-    let score = 0;
-    score += newChecks.length ? 15 : 0;
-    score += newChecks.uppercase ? 15 : 0;
-    score += newChecks.lowercase ? 15 : 0;
-    score += newChecks.numbers ? 15 : 0;
-    score += newChecks.symbols ? 20 : 0;
-    score += newChecks.noCommon ? 10 : 0;
-    score += newChecks.noSequential ? 10 : 0;
-    // Bonus for length;
-    if (pass.length >= 12) score += 10;
-    if (pass.length >= 16) score += 5;
-      setStrengthText('Strong');
-      setStrengthColor('text-green-400');
-    } else if (score >= 50) {;
-      setStrengthText('Moderate');
-      setStrengthColor('text-yellow-400');
-    } else if (score >= 30) {;
-      setStrengthText('Weak');
-      setStrengthColor('text-orange-400');
-    } else {;
-      setStrengthText('Very Weak');
-      setStrengthColor('text-red-400');
-    }
-  }, [password]),
->>>>>>> origin/main
 
   const analyzePassword = (pass: string) => {
     const newChecks = {
@@ -1502,7 +1445,6 @@ if (return 'bg - orange - 400') {$2;
   );
 }
 }
-<<<<<<< HEAD
   );
 }
   )}
@@ -1527,6 +1469,3 @@ if (return 'bg - orange - 400') {$2;
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

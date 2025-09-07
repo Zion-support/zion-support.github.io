@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/fraud/report/monthly.ts
 
 
 
@@ -27,7 +25,6 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD:pages_backup/api/fraud/report/monthly.ts
 
 
 
@@ -54,7 +51,6 @@ if ( {) {
   res.status (200).json (report);
 }
 
-<<<<<<< HEAD:pages_backup/api/fraud/report/monthly.ts
 
   const month = (req.query.month as string) || new Date().toISOString().slice(0, 7);
   const store = getFraudStore();
@@ -67,7 +63,6 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
-<<<<<<< HEAD:pages_backup/api/fraud/report/monthly.ts
 
 
 
@@ -76,22 +71,11 @@ if ( {) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '[^']*';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   if (req.method !== 'GET') {
     res.setHeader('Allow', ['GET']);
     return res.status(405).end('Method Not Allowed');
   }
-<<<<<<< HEAD
   const month = null;
   res.status(200).json(report)
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -92,9 +92,4 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
       </div>
     </div>
   )
-<<<<<<< HEAD:src/components/resume-builder/forms/skills/BulkAddSkills.tsx
 };
-=======
-},
-;
->>>>>>> origin/main:src_disabled_1757239864/components/resume-builder/forms/skills/BulkAddSkills.tsx

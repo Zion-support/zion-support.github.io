@@ -126,7 +126,6 @@ function QuickAccess() {}
           </h2>;
           <p className="text-zion-slate-light text-lg">;
             {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
           </p>;
         </div>;
           {quickLinks.map((link, index) => (<Link;
@@ -154,7 +153,6 @@ function QuickAccess() {const { t } = use_translation ()const quick_links = [;
           </p>;
         </div>;
         <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 4 max - w-6xl mx - auto'>;
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
           {quick_links.map ((link, index) => (
             <Link;
 
@@ -530,7 +528,6 @@ export default function Page() { return null; }
             </motion.div>))}
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
     </section>);
 
 

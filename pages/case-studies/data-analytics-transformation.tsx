@@ -6,7 +6,6 @@ export default function dataanalyticstransformation() {
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>Data Analytics Transformation - Case Study | Zion Tech Group</title>
         <meta name="description" content="Discover how a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform. Read our detailed case study." />
         <meta name="keywords" content="data analytics, healthcare analytics, predictive modeling, big data, machine learning" />
@@ -275,20 +274,4 @@ export default function dataanalyticstransformation() {
       </div>
     </>
   )
-=======
-        <title>Data Analytics Transformation - Zion Tech Group</title>
-        <meta name="description" content="Data Analytics Transformation solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Data Analytics Transformation</h1>
-          <p className="text-lg text-gray-600">
-            Professional data analytics transformation solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

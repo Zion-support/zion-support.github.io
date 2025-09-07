@@ -58,7 +58,6 @@ export default function ServicePage() {
           </button>
         </div>
       </div>
-=======
   title: 'Service | Zion Tech Group',
   description: 'Professional services for your business needs.',
   keywords: 'services, business, technology',
@@ -95,9 +94,6 @@ export default function ServicePage() {
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             This service page is under development. Please contact us for more information.
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 export const metadata = {
   title: 'AI-Powered CRM | Zion Tech Group',
   description: 'Revolutionary customer relationship management powered by artificial intelligence for enhanced sales and customer satisfaction.',
@@ -176,10 +172,6 @@ export default function ServicePage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive solutions tailored to your business needs.
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
           </p>
           <a
             href="/contact"
@@ -188,12 +180,7 @@ export default function ServicePage() {
             Contact Us
           </a>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
       </section>
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
             title="Professional Service"
@@ -214,11 +201,6 @@ export default function ServicePage() {
       </section>
 
       <ContactSection />
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     </div>
   )
 }

@@ -13,7 +13,6 @@ import { Card;
   CardTitle;
  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
 
@@ -53,7 +52,6 @@ interface PerformanceMetrics  {buildSize: string;
   pageCount: number;
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error';
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
 interface Improvement {;
 
@@ -76,7 +74,6 @@ interface PerformanceMetrics  {buildSize: string;
   description: string;
   status: 'completed' | 'in-progress' | 'planned';
   impact: 'high' | 'medium' | 'low';
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
   category: 'performance' | 'security' | 'ux' | 'build'
 
 import React, { useState } from 'react';
@@ -339,7 +336,6 @@ const PerformanceDashboard: React.FC = () => {
             <p className='text-xs text-gray-500'>Average page load</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
 
 
@@ -353,21 +349,18 @@ const PerformanceDashboard: React.FC = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
             <div className='flex items-center space-x-2'>
               <CheckCircle className='h-5 w-5 text-green-500' />
               <span className='text-sm font-semibold text-green-600'>
                 Healthy
               </span>
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
             </div>
           </CardContent>
         </Card>
       </div>
 
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 
 const PerformanceDashboard: React.FC = () => {;
   const [metrics] = useState<PerformanceMetrics>({;
@@ -407,7 +400,6 @@ interface Improvement {;
     {;
       id: '1',;
       title: 'Fixed Search Bar Issues',;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',;
       status: 'completed',;
@@ -422,7 +414,6 @@ interface Improvement {;
     {;
       id: '2',;
       title: 'Environment Validation System',;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Added comprehensive pre-build checks to prevent deployment with missing environment variables',;
       status: 'completed',;
@@ -437,7 +428,6 @@ interface Improvement {;
     {;
       id: '3',;
       title: 'NextAuth Configuration Fix',;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',;
       status: 'completed',;
@@ -452,7 +442,6 @@ interface Improvement {;
     {;
       id: '4',;
       title: 'API Client Error Handling',;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Improved global error handling with better retry logic and user feedback',;
       status: 'completed',;
@@ -467,7 +456,6 @@ interface Improvement {;
     {;
       id: '5',;
       title: 'Bundle Analyzer Integration',;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
       description:;
         'Added bundle analysis tools to identify and optimize large dependencies',;
       status: 'completed',;
@@ -482,7 +470,6 @@ interface Improvement {;
     {;
       id: '6',;
       title: 'Health Check Endpoint',;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
     }},const completedImprovements = improvements.filter(imp => imp.status === 'completed'),return (<Card>;
           <CardHeader className='pb-2'>;
             <CardTitle className='text-sm font-medium text-gray-600'>;
@@ -589,7 +576,6 @@ interface Improvement {;
       case 'planned':;
         return <TrendingUp className='h-4 w-4 text-blue-500' />;
       default:;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
         return <AlertCircle className='h-4 w-4 text-gray-500' />;
 
       description: 'Created production monitoring endpoint for environment and service health',;
@@ -752,7 +738,6 @@ interface Improvement {;
                         {improvement.impact} impact;
                       </Badge>;
                       {getStatusIcon(improvement.status)}
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
                     </div>
                   </div>
 
@@ -851,7 +836,6 @@ interface Improvement {;
           </CardHeader>;
           <CardContent>;<div className='flex items - center space - x-2'>;
               <CheckCircle className='h - 5 w - 5 text - green - 500' />;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
               <span className='text - sm font - semibold text - green - 600'>;
 
                 Healthy;
@@ -960,9 +944,7 @@ export default PerformanceDashboard,
         </Button>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
   );
-<<<<<<< HEAD:src_backup/components/PerformanceDashboard.tsx
 };
 
 export default PerformanceDashboard;

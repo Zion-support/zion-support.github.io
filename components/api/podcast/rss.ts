@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';
-<<<<<<< HEAD
 function ensureStorage() {
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
 const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml'),
@@ -13,20 +12,14 @@ function ensureStorage() {
 }
 
 
-=======
-<<<<<<< HEAD
 function ensureStorage() {}
 '
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const EPISODES_PATH = null;
   return res.status(200).json({ ok: true });
 }
-<<<<<<< HEAD
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
@@ -38,9 +31,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 function ensureStorage() {}
   const dir = path.dirname(EPISODES_PATH);
-<<<<<<< HEAD
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -48,7 +39,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
   const siteUrl = process.env.SITE_URL |'http://localhost:3000';
-<<<<<<< HEAD
 
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 

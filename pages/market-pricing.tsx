@@ -9,7 +9,6 @@ export default function marketpricing() {
         <title>Market Pricing - Zion Tech Group</title>
         <meta name="description" content="Market Pricing solutions and services." />
       </Head>
-<<<<<<< HEAD
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-8">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Market Pricing & References</h1>
@@ -134,17 +133,3 @@ export default function marketpricing() {
   )
 }
 
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Market Pricing</h1>
-          <p className="text-lg text-gray-600">
-            Professional market pricing solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

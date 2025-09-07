@@ -83,7 +83,6 @@ if ( {) {$2;
 if ( {) {$2;
 }
         // Show brief "back online" message then hide;
-<<<<<<< HEAD:src_backup/components/OfflineIndicator.tsx
         set_timeout (() => setShowOfflineAlert (false), 3000) }        set_timeout ((, ) => setShowOfflineAlert (false), 3000);
         set_timeout (() => setShowOfflineAlert (false), 3000);
 

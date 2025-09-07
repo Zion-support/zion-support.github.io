@@ -1,7 +1,6 @@
 isRoleBased: boolean;
     isFreeProvider: boolean;
   },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
 export default async function handler(
   req: NextApiRequest,
@@ -22,27 +21,9 @@ interface EmailValidationResult {
     hasValidFormat: boolean;
     hasValidDomain: boolean;
     hasValidMX: boolean;
-<<<<<<< HEAD
   }
   try {
     const { email } = req && req.body;
-=======
-    isDisposable: boolean;
-
-    isRoleBased: boolean
-    isFreeProvider: boolean
-  },
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse<EmailValidationResult | { error: string }    />
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
-  }
-  try {
-    const { email } = req.body;
-<<<<<<< HEAD
 
     if (!email |typeof email !== 'string') {
 
@@ -52,7 +33,6 @@ export default async function handler(
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const hasValidFormat = emailRegex.test(email);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     // Extract domain
     const domain = email && email.split('@')[1];
     const hasValidDomain = domain && domain.length > 0;
@@ -101,8 +81,6 @@ export default async function handler() {if (req.method !== 'POST') {return res.
     const freeProviders = [;
       'gmail.com','yahoo.com','hotmail.com','outlook.com','aol.com','icloud.com','protonmail.com','mail.com','yandex.com',];
     const isFreeProvider  = freeProviders.some(provider => domain === provider)// Calculate score (0-100)let score = 100;
-=======
-<<<<<<< HEAD
     if (!email || typeof email !== 'string') {
       return res.status(400).json({ error: 'Email is required' });
     }
@@ -149,13 +127,11 @@ export default async function handler() {if (req.method !== 'POST') {return res.
 origin/cursor/automate-test-improve-and-merge-code-2533
     // Calculate score (0-100)
     let score = 100;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     if (!hasValidFormat) score -= 50;
     if (!hasValidDomain) score -= 20;
     if (isDisposable) score -= 30;
     if (isRoleBased) score -= 15;
     if (isFreeProvider) score -= 10;
-<<<<<<< HEAD
 
   try {
     const { email } = req.body,
@@ -211,21 +187,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         hasValidDomain,
         hasValidMX: true, // Simplified for demo
   } catch (error) {
-<<<<<<< HEAD
     console && console.error('Email validation error:', error);
     res && res.status(500).json({ error: 'Internal server error' });
-=======
-    console.error('Email validation error:', error);
-    res.status(500).json({ error: 'Internal server error' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
     // Generate suggestions;
     const suggestions: string[] = []
     if (!hasValidFormat) {}
   } catch (error) {'
     console && console.error('Email validation error:', error);'
     res && res.status(500).json({ error: 'Internal server error' });
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }      email;
       isValid: score >= 70;
       score: Math && Math.max(0, score);
@@ -239,23 +208,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 ;
     res.status (200).json (result);
-<<<<<<< HEAD
   } catch (error) {
     console.error ('Email validation error:', error);
-=======
-  } catch (error) {'
-    console.error ('Email validation error:', error);'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     res.status (500).json ({ error: 'Internal server error' });
   }      email;
       is_valid: score >= 70;
       score: Math.max (0, score);
       suggestions;
-<<<<<<< HEAD
       details: {
-=======
-      details: {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         hasValidFormat;
         hasValidDomain;
         hasValidMX: true, // Simplified for demo;
@@ -265,7 +225,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 ;
     res.status (200).json (result);
-<<<<<<< HEAD
   } catch (error) {
     console.error ('Email validation error:', error);
     res.status (500).json ({ error: 'Internal server error' });
@@ -310,16 +269,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     res.status(200).json(result)
   } catch (error) {
-<<<<<<< HEAD
     console.error($2);
-=======
-    console.error('Email validation error:', error);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     res.status(500).json({ error: 'Internal server error' })
   }
 }
-=======
   } catch (error) {'
     console.error ('Email validation error:', error);'
     res.status (500).json ({ error: 'Internal server error' });
@@ -352,9 +305,7 @@ suggestions.push('Check email format (should be user@domain.com)');
   } catch (error) {
     console.error('Email validation error:', error);
     res.status(500).json({ error: 'Internal server error' });
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
     res.status(500).json({ error: 'Internal server error' })
 origin/cursor/automate-test-improve-and-merge-code-2533

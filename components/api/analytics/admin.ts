@@ -62,7 +62,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       { id: 32, status: 'completed' }'
       { id: 33, status: 'active' }
     ]);
-<<<<<<< HEAD
     const referralsData = mockIfEmpty(referrals, [
       { id: 41, converted: true, source: 'linkedin' },
       { id: 42, converted: false, source: 'twitter' },

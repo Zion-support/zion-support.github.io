@@ -142,34 +142,4 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       </section>
     </div>
   )
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
 };
-=======
-
-                  </div>;
-                  <div className="text - gray - 600">{stat.label}</div>;
-                </div>))}
-            </div>;
-          </div>;
-        </section>)}
-      <section className="py - 16 px - 4 bg - blue - 600">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <h2 className="text - 3xl font - bold text - white mb - 4">;
-            Ready to Get Started?;
-          </h2>;
-          <p className="text - xl text - blue - 100 mb - 8">;
-            Contact us today to learn more about our services.;
-          </p>;
-          <a;
-            href={cta_link}
-            className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors inline - block";
-          >;
-            {cta_text}
-          </a>;
-        </div>;
-      </section>;
-    </div>);
-}
-
-},
->>>>>>> origin/main:src_disabled_1757239864/components/services/ServiceLandingTemplate.tsx

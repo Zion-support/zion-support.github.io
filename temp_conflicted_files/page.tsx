@@ -1,5 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
 
 export const metadata = {
   title: "AI Customer Insights | Zion Tech Group",
@@ -70,64 +69,6 @@ export default function AICustomerInsightsPage() {
                 "Standard segmentation",
                 "Email support",
                 "Monthly reports"
-=======
-export const metadata = {title: "AI Customer Insights | Zion Tech Group",description: "Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.",}export default function AICustomerInsightsPage() {return (<div className="animate-fade-in">;
-      <div className="text-center mb-16">;
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">;
-          AI Customer Insights;
-        </h1>;
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-          Transform customer data into actionable insights with AI-powered analytics.;
-          Understand customer behavior, preferences, and trends to drive business growth.;
-        </p>;
-      </div>;
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">;
-        <div>;
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>;
-          <div className="space-y-4">;
-            <FeatureItem;
-              icon="🧠";
-              title="Behavioral Analysis";
-              description="AI-powered analysis of customer interactions, purchase patterns, and engagement metrics across all touchpoints.";
-            />;
-            <FeatureItem;
-              icon="📊";
-              title="Predictive Analytics";
-              description="Machine learning models to predict customer lifetime value, churn risk, and future purchase behavior.";
-            />;
-            <FeatureItem;
-              icon="🎯";
-              title="Segmentation Intelligence";
-              description="Automated customer segmentation based on behavior, demographics, and preferences for targeted marketing.";
-            />;
-            <FeatureItem;
-              icon="💬";
-              title="Sentiment Analysis";
-              description="Real-time analysis of customer feedback, reviews, and social media mentions to understand satisfaction levels.";
-            />;
-            <FeatureItem;
-              icon="📈";
-              title="Trend Detection";
-              description="Identify emerging trends, seasonal patterns, and market shifts that impact customer behavior.";
-            />;
-            <FeatureItem;
-              icon="🔮";
-              title="Recommendation Engine";
-              description="Personalized product and content recommendations based on individual customer preferences and behavior.";
-            />;
-          </div>;
-        </div>;
-        <div>;
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>;
-          <div className="space-y-6">;
-            <PricingCard;
-              plan="Starter";
-              price="$199";
-              period="per month";
-              description="Perfect for small businesses getting started with customer analytics";
-              features={[;
-                "Up to 10,000 customer records","Basic behavioral analysis","Standard segmentation","Email support","Monthly reports";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               ]}
               popular={false}
             />;

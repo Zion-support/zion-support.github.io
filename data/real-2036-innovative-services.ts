@@ -1,64 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 ;
 export type Real2036InnovativeService = {id: string, name: string,tagline: string, description: string,category: string, price: string,export type Real2036InnovativeService = {id: string;export type Real2036InnovativeService = {id: string;
 export type Real2036InnovativeService = any;name: string;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
-<<<<<<< HEAD
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export type Real2036InnovativeService = {
-=======
 
 
 
 export type Real2036InnovativeService = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string, name: string,
   tagline: string, description: string,
   category: string, price: string,
 
-<<<<<<< HEAD
 
 
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type Real2036InnovativeService = {
-=======
 export type Real2036InnovativeService = {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
-<<<<<<< HEAD
 export type Real2036InnovativeService = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   tagline: string;
   description: string;
@@ -107,15 +71,9 @@ export type Real2036InnovativeService = {
 pr-12325
   price: string;
   period?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   features: string[], link: string,
   launchDate?: string;
   rating?: number;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   features: string[], link: string,
   launchDate?: string;
   rating?: number;
@@ -127,49 +85,28 @@ features: string[];
 
   features: string[];
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   features: string[];
 origin/cursor/expand-services-advertise-and-build-project-c28b
   link: string;
   launchDate?: string;
   rating?: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   features: string[], link: string,
   launchDate?: string;
   rating?: number;
   features: string[];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
   integration?: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   useCases?: string[]
 };
 
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Advanced AI-powered business intelligence platform that automatically analyzes data patterns, generates predictive insights, and creates interactive dashboards for strategic decision-making.',
   link: string;  launch_date?: string;  rating?: number;
   features: string[], link: string,launchDate?: string;
@@ -188,25 +125,9 @@ pr-12325
   use_cases?: string[];}  use_cases?: string[];
 }export const real2036InnovativeServices: Real2036InnovativeService[] = [;
   // AI - Powered Business Intelligence;
-<<<<<<< HEAD
   {id: 'ai - business - intelligence - platform - pro',name: 'AI Business Intelligence Platform Pro',tagline: 'Transform raw data into actionable business insights with AI',description:;
       'Advanced AI - powered business intelligence platform that automatically analyzes data patterns, generates predictive insights, and creates interactive dashboards for strategic decision - making.',category: 'AI & Data',price: '$299',period: '/month','AI - powered data pattern recognition','Predictive analytics and forecasting','Natural language query interface','Automated report generation','Real - time data visualization','Multi - source data integration','Custom dashboard builder','Mobile - responsive interface';
-=======
-  {
-    id: 'ai - business - intelligence - platform - pro',
-    name: 'AI Business Intelligence Platform Pro',
-    tagline: 'Transform raw data into actionable business insights with AI',
-    description:;
-      'Advanced AI - powered business intelligence platform that automatically analyzes data patterns, generates predictive insights, and creates interactive dashboards for strategic decision - making.',
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-  useCases?: string[]
-};
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -216,7 +137,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     category: 'AI & Data',
     price: '$299',
     period: '/month',
@@ -227,7 +147,6 @@ pr-12325
       'Real - time data visualization',
       'Multi - source data integration',
       'Custom dashboard builder',
-=======
 
 
 
@@ -243,24 +162,12 @@ pr-12325
       'Real - time data visualization','
       'Multi - source data integration','
       'Custom dashboard builder','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Mobile - responsive interface',
     ],
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 
 
@@ -274,16 +181,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     link: 'https://ziontechgroup.com / services / ai - business - intelligence - platform - pro',
-=======
 
 
 
 
 '
     link: 'https://ziontechgroup.com / services / ai - business - intelligence - platform - pro','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 01 - 20',
     rating: 4.8,'
     market_size: '$25.6B','
@@ -298,19 +202,10 @@ pr-12325
       'Azure','
       'Slack',
     ],
-<<<<<<< HEAD
     use_cases: [;'
       'Sales forecasting','
       'Customer behavior analysis','
       'Financial planning','
-=======
-      'Slack',']
-pr-12325
-    use_cases: [;
-      'Sales forecasting',
-      'Customer behavior analysis',
-      'Financial planning',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Market trend analysis',
     ],
       'Market trend analysis',']
@@ -325,21 +220,13 @@ pr-12325
       'Enterprise - grade quantum - secure communication platform that leverages quantum key distribution (QKD) to provide unbreakable encryption for sensitive communications.',    category: 'Quantum Technology','
     price: '$1, 999','
     period: '/month',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     features: [;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     features: [;
 
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
     features: [;
 
 
@@ -356,7 +243,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Quantum key distribution (QKD)',
       'End - to - end quantum encryption',
       'Multi - party secure communication',
@@ -364,7 +250,6 @@ pr-12325
       'Real - time key generation',
       'Compliance certifications',
       '24 / 7 quantum network monitoring',
-=======
 
 
 
@@ -376,17 +261,11 @@ pr-12325
       'Real - time key generation','
       'Compliance certifications','
       '24 / 7 quantum network monitoring','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Custom deployment options',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -400,16 +279,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'AI-powered incident detection',
     link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise',
-=======
 
 '
       'AI-powered incident detection',
 '
     link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 01 - 25',
     rating: 4.9,'
     market_size: '$3.2B',
@@ -417,21 +293,11 @@ pr-12325
       'Government agencies, Financial institutions, Healthcare organizations',
     competitive_advantage:;'
       'True quantum security, Unbreakable encryption, Future - proof technology',
-<<<<<<< HEAD
     integration: [;'
       'Microsoft Teams','
       'Slack','
       'Zoom','
       'Custom APIs','
-=======
-    integration: [;
-      'True quantum security, Unbreakable encryption, Future - proof technology',
-pr-12325
-      'Microsoft Teams',
-      'Slack',
-      'Zoom',
-      'Custom APIs',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'VPN solutions',
     ],
     use_cases: [;'
@@ -455,12 +321,7 @@ pr-12325
       'AI - powered incident detection',
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -484,14 +345,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$799',
       'AI - powered incident detection',
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Automated problem resolution',
       'Self - healing infrastructure',
       'Predictive maintenance',
       'Intelligent scaling',
       'Zero - downtime deployments',
       'Performance optimization',
-=======
 
 '
       'Automated problem resolution','
@@ -500,17 +359,11 @@ pr-12325
       'Intelligent scaling','
       'Zero - downtime deployments','
       'Performance optimization','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Comprehensive monitoring',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -525,21 +378,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     link: 'https://ziontechgroup.com / services / autonomous - devops - platform - enterprise',
-=======
 
 
 '
     link: 'https://ziontechgroup.com / services / autonomous - devops - platform - enterprise','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 01 - 30',
     rating: 4.7,'
     market_size: '$18.4B','
     target_audience: 'DevOps teams, IT operations, Cloud engineers',
     competitive_advantage:;'
       'Autonomous operations, AI - driven optimization, Zero human intervention',
-<<<<<<< HEAD
     integration: [;'
       'AWS','
       'Azure','
@@ -547,17 +396,6 @@ pr-12325
       'Kubernetes','
       'Docker','
       'Jenkins','
-=======
-    integration: [;
-      'AWS',
-      'Azure',
-      'Autonomous operations, AI - driven optimization, Zero human intervention',
-pr-12325
-      'GCP',
-      'Kubernetes',
-      'Docker',
-      'Jenkins',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'GitLab',
     ],
     use_cases: [;'
@@ -568,19 +406,8 @@ pr-12325
     ],
   },
   // Space Technology Analytics Platform;
-<<<<<<< HEAD
   {'
     id: 'space - technology - analytics - platform','
-=======
-  {
-      'GitLab',']
-      'Continuous deployment',
-      'Infrastructure management',
-      'Incident response',']
-  // Space Technology Analytics Platform;
-pr-12325
-    id: 'space - technology - analytics - platform',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     name: 'Space Technology Analytics Platform',
     tagline:;'
       'Advanced analytics for space exploration and satellite operations',
@@ -591,12 +418,7 @@ pr-12325
     features: [;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -611,7 +433,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Satellite performance analytics',
       'Orbital mechanics calculations',
       'Space weather monitoring',
@@ -619,7 +440,6 @@ pr-12325
       'Real - time telemetry analysis',
       'Predictive maintenance',
       '3D visualization tools',
-=======
 
 '
       'Satellite performance analytics','
@@ -629,17 +449,11 @@ pr-12325
       'Real - time telemetry analysis','
       'Predictive maintenance','
       '3D visualization tools','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Custom reporting engine',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -654,16 +468,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'AI-powered threat detection',
     link: 'https://ziontechgroup.com / services / space - technology - analytics - platform',
-=======
 
 '
       'AI-powered threat detection',
 '
     link: 'https://ziontechgroup.com / services / space - technology - analytics - platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 02 - 05',
     rating: 4.6,'
     market_size: '$4.8B','
@@ -697,12 +508,7 @@ pr-12325
       'AI - powered threat detection',
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -730,14 +536,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$899',
       'AI - powered threat detection',
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Behavioral analysis',
       'Automated incident response',
       'Threat intelligence feeds',
       'Vulnerability assessment',
       'Compliance reporting',
       '24 / 7 monitoring',
-=======
 
 '
       'Behavioral analysis','
@@ -746,17 +550,11 @@ pr-12325
       'Vulnerability assessment','
       'Compliance reporting','
       '24 / 7 monitoring','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Custom security policies',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -767,14 +565,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     link: 'https://ziontechgroup.com / services / ai - cybersecurity - suite - enterprise',
-=======
 
 
 '
     link: 'https://ziontechgroup.com / services / ai - cybersecurity - suite - enterprise','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 02 - 10',
     rating: 4.8,'
     market_size: '$45.2B',
@@ -782,28 +577,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Enterprise IT security, Financial institutions, Healthcare organizations',
     competitive_advantage:;'
       'AI - driven detection, Real - time response, Comprehensive coverage',
-<<<<<<< HEAD
     integration: [;'
       'SIEM systems','
       'Firewalls','
       'EDR solutions','
       'Identity providers','
-=======
-    integration: [;
-      'Custom security policies',']
-
-
-    link: 'https://ziontechgroup.com / services / ai - cybersecurity - suite - enterprise',
-    launch_date: '2036 - 02 - 10',
-    market_size: '$45.2B',
-      'Enterprise IT security, Financial institutions, Healthcare organizations',
-      'AI - driven detection, Real - time response, Comprehensive coverage',
-pr-12325
-      'SIEM systems',
-      'Firewalls',
-      'EDR solutions',
-      'Identity providers',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Cloud platforms',
     ],
     use_cases: [;'
@@ -825,12 +603,7 @@ pr-12325
     features: [;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -854,7 +627,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Quantum algorithm optimization',
       'Hybrid quantum - classical ML',
       'Quantum neural networks',
@@ -862,7 +634,6 @@ pr-12325
       'Real - time quantum processing',
       'Custom quantum circuits',
       'Performance benchmarking',
-=======
 
 '
       'Quantum algorithm optimization','
@@ -872,17 +643,11 @@ pr-12325
       'Real - time quantum processing','
       'Custom quantum circuits','
       'Performance benchmarking','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Expert consultation',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -893,14 +658,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     link: 'https://ziontechgroup.com / services / quantum - machine - learning - platform',
-=======
 
 
 '
     link: 'https://ziontechgroup.com / services / quantum - machine - learning - platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 02 - 15',
     rating: 4.9,'
     market_size: '$2.8B',
@@ -908,28 +670,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Research institutions, Pharmaceutical companies, Financial services',
     competitive_advantage:;'
       'Quantum advantage, Exponential speedup, Future - proof technology',
-<<<<<<< HEAD
     integration: [;'
       'TensorFlow','
       'PyTorch','
       'Scikit - learn','
       'Quantum simulators','
-=======
-    integration: [;
-      'Expert consultation',']
-
-
-    link: 'https://ziontechgroup.com / services / quantum - machine - learning - platform',
-    launch_date: '2036 - 02 - 15',
-    market_size: '$2.8B',
-      'Research institutions, Pharmaceutical companies, Financial services',
-      'Quantum advantage, Exponential speedup, Future - proof technology',
-pr-12325
-      'TensorFlow',
-      'PyTorch',
-      'Scikit - learn',
-      'Quantum simulators',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Cloud quantum services',
     ],
     use_cases: [;'
@@ -952,12 +697,7 @@ pr-12325
     features: [;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -982,7 +722,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Intelligent workload distribution',
       'Real - time optimization',
       'Multi - edge coordination',
@@ -990,7 +729,6 @@ pr-12325
       'Resource management',
       'Security enforcement',
       'Monitoring and analytics',
-=======
 
 '
       'Intelligent workload distribution','
@@ -1000,17 +738,11 @@ pr-12325
       'Resource management','
       'Security enforcement','
       'Monitoring and analytics','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Custom edge policies',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1020,16 +752,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'AI-powered personalization',
     link: 'https://ziontechgroup.com / services / edge - computing - orchestration - enterprise',
-=======
 
 '
       'AI-powered personalization',
 '
     link: 'https://ziontechgroup.com / services / edge - computing - orchestration - enterprise','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 02 - 20',
     rating: 4.7,'
     market_size: '$12.6B','
@@ -1064,12 +793,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI - powered personalization',
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1103,14 +827,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$399',
       'AI - powered personalization',
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Omnichannel experience management',
       'Predictive customer behavior',
       'Automated customer service',
       'Sentiment analysis',
       'Customer journey mapping',
       'A / B testing automation',
-=======
 
 '
       'Omnichannel experience management','
@@ -1119,17 +841,11 @@ pr-12325
       'Sentiment analysis','
       'Customer journey mapping','
       'A / B testing automation','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Performance analytics',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1139,16 +855,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Multi-chain support',
     link: 'https://ziontechgroup.com / services / ai - customer - experience - platform',
-=======
 
 '
       'Multi-chain support',
 '
     link: 'https://ziontechgroup.com / services / ai - customer - experience - platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 02 - 25',
     rating: 4.8,'
     market_size: '$32.8B',
@@ -1184,12 +897,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Multi - chain support',
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1224,14 +932,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$1, 199',
       'Multi - chain support',
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Smart contract development',
       'Deployment automation',
       'Security auditing',
       'Performance monitoring',
       'Scalability solutions',
       'Compliance tools',
-=======
 
 '
       'Smart contract development','
@@ -1240,17 +946,11 @@ pr-12325
       'Performance monitoring','
       'Scalability solutions','
       'Compliance tools','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Developer APIs',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1260,16 +960,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'AI-powered quality control',
     link: 'https://ziontechgroup.com / services / blockchain - infrastructure - enterprise',
-=======
 
 '
       'AI-powered quality control',
 '
     link: 'https://ziontechgroup.com / services / blockchain - infrastructure - enterprise','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 03 - 01',
     rating: 4.6,'
     market_size: '$8.9B',
@@ -1277,29 +974,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Financial institutions, Supply chain companies, Healthcare organizations',
     competitive_advantage:;'
       'Multi - chain support, Enterprise features, Security focus',
-<<<<<<< HEAD
     integration: [;'
       'Ethereum','
       'Polygon','
       'Solana','
       'Hyperledger','
-=======
-    integration: [;
-      'Developer APIs',']
-
-
-      'AI-powered quality control',
-    link: 'https://ziontechgroup.com / services / blockchain - infrastructure - enterprise',
-    launch_date: '2036 - 03 - 01',
-    market_size: '$8.9B',
-      'Financial institutions, Supply chain companies, Healthcare organizations',
-      'Multi - chain support, Enterprise features, Security focus',
-pr-12325
-      'Ethereum',
-      'Polygon',
-      'Solana',
-      'Hyperledger',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Cloud platforms',
     ],
     use_cases: [;'
@@ -1322,12 +1001,7 @@ pr-12325
       'AI - powered quality control',
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1337,7 +1011,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Predictive maintenance',
       'DeFi applications',
       'Supply chain tracking',
@@ -1356,7 +1029,6 @@ pr-12325
       'Real - time monitoring',
       'Supply chain integration',
       'Custom workflows',
-=======
 
 '
       'Predictive maintenance','
@@ -1365,17 +1037,11 @@ pr-12325
       'Real - time monitoring','
       'Supply chain integration','
       'Custom workflows','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Performance analytics',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1386,14 +1052,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     link: 'https://ziontechgroup.com / services / autonomous - manufacturing - platform',
-=======
 
 
 '
     link: 'https://ziontechgroup.com / services / autonomous - manufacturing - platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 03 - 05',
     rating: 4.7,'
     market_size: '$15.2B',
@@ -1401,27 +1064,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Manufacturing companies, Industrial automation, Factory operators',
     competitive_advantage:;'
       'AI automation, Predictive capabilities, Real - time optimization',
-<<<<<<< HEAD
     integration: [;'
       'ERP systems','
       'MES platforms','
       'IoT devices','
       'Robotics systems','
-=======
-    integration: [;
-
-
-    link: 'https://ziontechgroup.com / services / autonomous - manufacturing - platform',
-    launch_date: '2036 - 03 - 05',
-    market_size: '$15.2B',
-      'Manufacturing companies, Industrial automation, Factory operators',
-      'AI automation, Predictive capabilities, Real - time optimization',
-pr-12325
-      'ERP systems',
-      'MES platforms',
-      'IoT devices',
-      'Robotics systems',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Cloud services',
     ],
     use_cases: [;'
@@ -1443,12 +1090,7 @@ pr-12325
     features: [;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1458,7 +1100,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Quantum encryption protocols',
       'Quantum - resistant algorithms',
       'Real - time threat detection',
@@ -1466,7 +1107,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance optimization',
       'Compliance certifications',
       '24 / 7 monitoring',
-=======
 
 '
       'Quantum encryption protocols','
@@ -1476,17 +1116,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance optimization','
       'Compliance certifications','
       '24 / 7 monitoring','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Custom security policies',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1496,16 +1130,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'AI-powered image analysis',
     link: 'https://ziontechgroup.com / services / quantum - internet - security - gateway',
-=======
 
 '
       'AI-powered image analysis',
 '
     link: 'https://ziontechgroup.com / services / quantum - internet - security - gateway','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 03 - 10',
     rating: 4.9,'
     market_size: '$5.6B',
@@ -1540,12 +1171,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI - powered image analysis',
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1555,14 +1181,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Symptom assessment',
       'Treatment recommendations',
       'Patient data integration',
       'Compliance management',
       'Real - time monitoring',
       'Custom AI models',
-=======
 
 '
       'Symptom assessment','
@@ -1571,17 +1195,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Compliance management','
       'Real - time monitoring','
       'Custom AI models','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Expert consultation',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1592,14 +1210,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     link: 'https://ziontechgroup.com / services / ai - healthcare - diagnostics - platform',
-=======
 
 
 '
     link: 'https://ziontechgroup.com / services / ai - healthcare - diagnostics - platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 03 - 15',
     rating: 4.8,'
     market_size: '$18.7B','
@@ -1631,12 +1246,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1710,7 +1320,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Resource mapping algorithms',
       'Mining operation management',
       'Robotic control systems',
@@ -1718,7 +1327,6 @@ pr-12325
       'Logistics optimization',
       'Safety monitoring',
       'Environmental impact assessment',
-=======
 
 '
       'Resource mapping algorithms','
@@ -1728,17 +1336,11 @@ pr-12325
       'Logistics optimization','
       'Safety monitoring','
       'Environmental impact assessment','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Custom mining strategies',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1749,14 +1351,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     link: 'https://ziontechgroup.com / services / space - resource - mining - platform',
-=======
 
 
 '
     link: 'https://ziontechgroup.com / services / space - resource - mining - platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 03 - 20',
     rating: 4.7,'
     market_size: '$2.4B',
@@ -1788,12 +1387,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1828,7 +1422,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Quantum market analysis',
       'High - frequency trading',
       'Risk management',
@@ -1836,7 +1429,6 @@ pr-12325
       'Real - time execution',
       'Compliance monitoring',
       'Custom algorithms',
-=======
 
 '
       'Quantum market analysis','
@@ -1846,17 +1438,11 @@ pr-12325
       'Real - time execution','
       'Compliance monitoring','
       'Custom algorithms','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Performance analytics',
     ],
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1867,14 +1453,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     link: 'https://ziontechgroup.com / services / quantum - financial - trading - platform',
-=======
 
 
 '
     link: 'https://ziontechgroup.com / services / quantum - financial - trading - platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launch_date: '2036 - 03 - 25',
     rating: 4.9,'
     market_size: '$7.8B','
@@ -1895,12 +1478,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
   },
   // AI - Powered Supply Chain Optimization;
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     id: 'ai - supply - chain - optimization - platform',
     name: 'AI Supply Chain Optimization Platform',
     tagline: 'Intelligent supply chain management and optimization',
@@ -1910,13 +1488,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$699',
     period: '/month',
     features: [;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     id: 'ai - supply - chain - optimization - platform',
     name: 'AI Supply Chain Optimization Platform',
     tagline: 'Intelligent supply chain management and optimization',
@@ -1927,8 +1500,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     features: [;
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
 
@@ -1959,7 +1530,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$699',
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Demand forecasting',
       'Inventory optimization',
       'Route optimization',
@@ -1967,26 +1537,13 @@ pr-12325
       'Risk assessment',
       'Real - time tracking',
       'Performance analytics',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       'Custom workflows',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     rating: 4 && 4.7;
     marketSize: '$28 && 28.4B',
   useCases?: string[];};  useCases?: string[]
@@ -2384,19 +1941,14 @@ id: 'ai-business-intelligence-platform-pro',
     price: '$1,799',
     period: '/month',
     features: [
-<<<<<<< HEAD
       'AI-powered quality control'
       'Predictive maintenance'
       'Autonomous robotics'
       'Production optimization'
       'Real-time monitoring'
       'Supply chain integration'
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'Custom workflows'
-=======
       'Custom workflows',
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
 'AI-powered quality control',
       'Predictive maintenance',
       'Autonomous robotics',
@@ -2405,7 +1957,6 @@ id: 'ai-business-intelligence-platform-pro',
       'Supply chain integration',
       'Custom workflows',
       'Performance analytics',
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     ],
     link: 'https://ziontechgroup.com/services/autonomous-manufacturing-platform',
     launchDate: '2036-03-05',
@@ -2593,19 +2144,10 @@ id: 'ai-business-intelligence-platform-pro',
   }
   // AI-Powered Supply Chain Optimization
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     id: 'ai-supply-chain-optimization-platform'
     name: 'AI Supply Chain Optimization Platform'
-=======
   {}
 '
       'Demand forecasting','
@@ -2620,7 +2162,6 @@ id: 'ai-business-intelligence-platform-pro',
 '
     id: 'ai-supply-chain-optimization-platform''
     name: 'AI Supply Chain Optimization Platform''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     tagline: 'Intelligent supply chain management and optimization'
     description:'
       'Comprehensive platform that uses AI to optimize supply chain operations, predict demand, manage inventory, and improve logistics efficiency.''
@@ -2652,50 +2193,27 @@ id: 'ai-business-intelligence-platform-pro',
       'IoT devices''
       'Cloud services'
     ]
-<<<<<<< HEAD
     useCases: ['
 ];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
-<<<<<<< HEAD
-=======
-    useCases: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ];
-=======
 
     ];'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-supply-chain-optimization-platform';
 
 
     ];'
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     launchDate: '2036-03-30';
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
     ];
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-supply-chain-optimization-platform';
 
     ];
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
-<<<<<<< HEAD
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launchDate: '2036-03-30';
 
     ];
@@ -2748,7 +2266,6 @@ pr-12325
     useCases: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis']
   };
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // AI-Powered Supply Chain Optimization
   {
     id: 'ai-supply-chain-optimization-platform', name: 'AI Supply Chain Optimization Platform',
@@ -2774,16 +2291,9 @@ pr-12325
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform',
     launch_date: '2036 - 03 - 30',
     rating: 4.7,
@@ -2800,25 +2310,15 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
       'Cloud services',
     ],
     use_cases: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Demand planning',
       'Inventory management',
       'Logistics optimization',
       'Risk management',
     ],
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 ];      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_real - time tracking_performance analytics_custom workflows';
-=======
-<<<<<<< HEAD
 
     rating: 4.7;
     marketSize: '$28.4B'
@@ -2829,9 +2329,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     features: [;
 
 
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_real - time tracking_performance analytics_custom workflows';
     ];
     link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform';
@@ -2859,26 +2356,12 @@ pr-12325
   }
 ];
 ;
-<<<<<<< HEAD
-=======
-
-
-
-origin/cursor/automate-test-improve-and-merge-code-20a4
-    rating: 4.7;
-    marketSize: '$28.4B'
-    targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers';
-    competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage';
-    integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']
-    useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ];
 export type Real2036InnovativeService = {;
 features: [;
     features: [;
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum key distribution (QKD)',
       'End - to - end quantum encryption',
       'Multi - party secure communication',
@@ -2903,7 +2386,6 @@ features: [;
   description:;
       'Advanced AI - powered business intelligence platform that automatically analyzes data patterns, generates predictive insights, and creates interactive dashboards for strategic decision - making.',category: 'AI & Data',
   price: '$299',period: '/month','AI - powered data pattern recognition','Predictive analytics and forecasting','Natural language query interface','Automated report generation','Real - time data visualization','Multi - source data integration','Custom dashboard builder','Mobile - responsive interface';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],'Mobile - responsive interface';
     ],'Mobile - responsive interface';
     ],link: 'https://ziontechgroup.com / services / ai - business - intelligence - platform - pro',launch_date: '2036 - 01 - 20',rating: 4.8,market_size: '$25.6B',target_audience: 'Enterprise businesses, Data analysts, C - suite executives',competitive_advantage:;
@@ -3618,19 +3100,7 @@ useCases?: string[];
     ];
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform', launchDate: '2036-03-30',rating: 4.7, marketSize: '$28.4B',targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers',competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],useCases: ['Demand planningInventory managementLogistics optimizationRisk management'];
   }
-<<<<<<< HEAD
 ];link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform',launch_date: '2036 - 03 - 30',rating: 4.7,market_size: '$28.4B',target_audience:;
-=======
-];
-ursor/fix-website-loading-errors-and-merge-6662
-
-export type Real2036InnovativeService = {;
-;
-export type Real2036InnovativeService = {;
-];link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform',
-  launch_date: '2036 - 03 - 30',rating: 4.7,market_size: '$28.4B',
-  target_audience:;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Manufacturing companies, Retail businesses, Logistics providers',competitive_advantage:;
       'AI optimization, Real - time insights, Comprehensive coverage',integration: [;
       'ERP systems','WMS platforms','TMS solutions','IoT devices','Cloud services';
@@ -3721,7 +3191,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-<<<<<<< HEAD
     category: 'AI & Data',
     price: '$299',
     period: '/month',
@@ -3733,20 +3202,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Multi - source data integration',
       'Custom dashboard builder',
       'Mobile - responsive interface'
-=======
-
-    category: 'AI & Data',''
-    price: '$299',''
-    period: '/month',''
-      'AI - powered data pattern recognition',''
-      'Predictive analytics and forecasting',''
-      'Natural language query interface',''
-      'Automated report generation',''
-      'Real - time data visualization',''
-      'Multi - source data integration',''
-      'Custom dashboard builder',''
-      'Mobile - responsive interface','
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
 
 
@@ -3784,7 +3239,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
   },
   // Quantum - Secure Communication Platform;
-<<<<<<< HEAD
   {
     id: 'quantum - secure - communication - enterprise',
     name: 'Quantum - Secure Communication Enterprise',
@@ -3809,17 +3263,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     features: [;
 
-=======
-  {'
-    id: 'quantum - secure - communication - enterprise',''
-    name: 'Quantum - Secure Communication Enterprise',''
-    tagline: 'Unbreakable communication using quantum cryptography','
-    description:;'
-      'Enterprise - grade quantum - secure communication platform that leverages quantum key distribution (QKD) to provide unbreakable encryption for sensitive communications.',    category: 'Quantum Technology',''
-    price: '$1, 999',''
-    period: '/month','
-    features: [;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       'Quantum key distribution (QKD)',
       'End - to - end quantum encryption',
@@ -3850,15 +3293,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Custom APIs',
       'VPN solutions'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'Government communications',
       'Financial transactions',
       'Healthcare data sharing',
       'Military operations'
     ]
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   // Autonomous DevOps Platform;
   {
@@ -3905,7 +3345,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Jenkins',
       'GitLab'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'Continuous deployment',
       'Infrastructure management',
@@ -3926,20 +3365,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-  },
-  // Space Technology Analytics Platform;
-  {'
-    id: 'space - technology - analytics - platform',''
-    name: 'Space Technology Analytics Platform','
-    tagline:;'
-      'Advanced analytics for space exploration and satellite operations','
-    description:;'
-      'Comprehensive analytics platform for space technology companies, providing insights into satellite performance, orbital mechanics, and space mission optimization.',    category: 'Space Technology',''
-    price: '$1, 499',''
-    period: '/month','
-    features: [;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       'Satellite performance analytics',
       'Orbital mechanics calculations',
@@ -3968,15 +3393,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Satellite ground stations',
       'Weather services'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'Satellite operations',
       'Mission planning',
       'Space weather analysis',
       'Orbital optimization'
     ]
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   // AI - Powered Cybersecurity Suite;
   {
@@ -4022,7 +3444,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Identity providers',
       'Cloud platforms'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'Threat detection',
       'Incident response',
@@ -4042,19 +3463,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-  },
-  // Quantum Machine Learning Platform;
-  {'
-    id: 'quantum - machine - learning - platform',''
-    name: 'Quantum Machine Learning Platform',''
-    tagline: 'Accelerate ML with quantum computing power','
-    description:;'
-      'Revolutionary platform that combines quantum computing with machine learning to solve complex problems faster and more efficiently than classical computing.',    category: 'Quantum Technology',''
-    price: '$2, 499',''
-    period: '/month','
-    features: [;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       'Quantum algorithm optimization',
       'Hybrid quantum - classical ML',
@@ -4086,7 +3494,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum simulators',
       'Cloud quantum services'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'Drug discovery',
       'Financial modeling',
@@ -4107,20 +3514,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-  },
-  // Edge Computing Orchestration Platform;
-  {'
-    id: 'edge - computing - orchestration - enterprise',''
-    name: 'Edge Computing Orchestration Enterprise',''
-    tagline: 'Intelligent edge computing management and optimization','
-    description:;'
-      'Advanced platform for managing and optimizing edge computing infrastructure, enabling real - time processing and low - latency applications across distributed networks.',''
-    category: 'Edge Computing',''
-    price: '$599',''
-    period: '/month','
-    features: [;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       'Intelligent workload distribution',
       'Real - time optimization',
@@ -4150,15 +3543,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '5G networks',
       'Cloud services'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'IoT management',
       '5G optimization',
       'Manufacturing automation',
       'Smart cities'
     ]
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   // AI - Powered Customer Experience Platform;
   {
@@ -4204,15 +3594,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Zendesk',
       'Intercom'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'E - commerce personalization',
       'Customer service automation',
       'Marketing optimization',
       'Customer retention'
     ]
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   // Blockchain Infrastructure Platform;
   {
@@ -4256,15 +3643,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Hyperledger',
       'Cloud platforms'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'DeFi applications',
       'Supply chain tracking',
       'Digital identity',
       'Smart contracts'
     ]
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   // Autonomous Manufacturing Platform;
   {
@@ -4309,7 +3693,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Robotics systems',
       'Cloud services'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'Quality control',
       'Production optimization',
@@ -4329,19 +3712,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-  },
-  // Quantum Internet Security Gateway;
-  {'
-    id: 'quantum - internet - security - gateway',''
-    name: 'Quantum Internet Security Gateway',''
-    tagline: 'Next - generation internet security using quantum technology','
-    description:;'
-      'Advanced security gateway that protects internet communications using quantum encryption and quantum - resistant algorithms, ensuring future - proof security.',    category: 'Quantum Technology',''
-    price: '$1, 399',''
-    period: '/month','
-    features: [;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       'Quantum encryption protocols',
       'Quantum - resistant algorithms',
@@ -4372,15 +3742,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Cloud platforms',
       'CDN services'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'Internet security',
       'Data protection',
       'Network security',
       'Compliance management'
     ]
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   // AI - Powered Healthcare Diagnostics;
   {
@@ -4423,7 +3790,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Lab systems',
       'Telemedicine platforms'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'Medical imaging',
       'Diagnosis support',
@@ -4443,19 +3809,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-  },
-  // Space Resource Mining Platform;
-  {'
-    id: 'space - resource - mining - platform',''
-    name: 'Space Resource Mining Platform',''
-    tagline: 'Advanced platform for space resource exploration and mining','
-    description:;'
-      'Comprehensive platform that enables space resource exploration, mining operations, and resource management using advanced robotics and AI technology.',    category: 'Space Technology',''
-    price: '$3, 999',''
-    period: '/month','
-    features: [;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       'Resource mapping algorithms',
       'Mining operation management',
@@ -4466,8 +3819,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Environmental impact assessment',
       'Custom mining strategies'
     ],
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ];
     link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform';
     launch_date: '2036 - 03 - 30';
@@ -4491,8 +3842,6 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 ];
 export type Real2036InnovativeService = {;
     features: [;
-=======
-=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -4512,7 +3861,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI systems',
       'Ground stations'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'Asteroid mining',
       'Lunar exploration',
@@ -4532,19 +3880,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-  },
-  // Quantum Financial Trading Platform;
-  {'
-    id: 'quantum - financial - trading - platform',''
-    name: 'Quantum Financial Trading Platform',''
-    tagline: 'Revolutionary trading platform powered by quantum computing','
-    description:;'
-      'Advanced financial trading platform that leverages quantum computing to analyze market data, optimize trading strategies, and execute high - frequency trades.',    category: 'Quantum Technology',''
-    price: '$4, 999',''
-    period: '/month','
-    features: [;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       'Quantum market analysis',
       'High - frequency trading',
@@ -4574,15 +3909,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Risk systems',
       'Compliance platforms'
     ],
-<<<<<<< HEAD
     use_cases: [;
       'Algorithmic trading',
       'Risk management',
       'Portfolio optimization',
       'Market analysis'
     ]
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   // AI - Powered Supply Chain Optimization;
   {
@@ -4922,7 +4254,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
 
       'Custom workflows'
     ],
-<<<<<<< HEAD
 
 
     id: 'ai-supply-chain-optimization-platform'
@@ -5083,109 +4414,6 @@ export type Real2036InnovativeService = {features: [;'Quantum key distribution (
     competitive_advantage: 'AI optimization, Real - time insights, Comprehensive coverage';
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devices_cloud services'],
     use_cases: ['Demand planning_inventory management_logistics optimization_risk management'];
-=======
-'
-    id: 'ai-supply-chain-optimization-platform'','
-  name: 'AI Supply Chain Optimization Platform'''
-    tagline: 'Intelligent supply chain management and optimization'',
-  description:'
-      'Comprehensive platform that uses AI to optimize supply chain operations, predict demand, manage inventory, and improve logistics efficiency.'''
-    category: 'AI & Data'','
-  price: '$699'''
-    period: '/month'',
-  features: ['
-      'Demand forecasting'''
-      'Inventory optimization'''
-      'Route optimization'''
-      'Supplier management'''
-      'Risk assessment'''
-      'Real-time tracking'''
-      'Performance analytics'''
-      'Custom workflows'']
-    ]'
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform'','
-  launchDate: '2036-03-30''
-    rating: 4.7;,'
-  marketSize: '$28.4B''
-    targetAudience:'
-      'Manufacturing companies, Retail businesses, Logistics providers''
-    competitiveAdvantage:'
-      'AI optimization, Real-time insights, Comprehensive coverage''
-    integration: ['
-      'ERP systems'''
-      'WMS platforms'''
-      'TMS solutions'''
-      'IoT devices'''
-      'Cloud services'']
-    ]
-    useCases: []'
-];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows''
-    ];'
-    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-supply-chain-optimization-platform';'
-    ];'
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';','
-  launchDate: '2036-03-30';'
-    ];'
-    link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform', launchDate: '2036-03-25',''
-    rating: 4.9, marketSize: '$7.8B',''
-    targetAudience: 'Investment banks, Hedge funds, Trading firms',''
-    competitiveAdvantage: 'Quantum advantage, High-frequency capabilities, Advanced algorithms',''
-    integration: ['Trading platformsMarket data feedsRisk systemsCompliance platforms'],''
-    useCases: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis']'
-  };
-
-  // AI-Powered Supply Chain Optimization;
-  {'
-    id: 'ai-supply-chain-optimization-platform', name: 'AI Supply Chain Optimization Platform',''
-    tagline: 'Intelligent supply chain management and optimization',''
-    description: 'Comprehensive platform that uses AI to optimize supply chain operations, predict demand, manage inventory, and improve logistics efficiency.',''
-    category: 'AI & Data', price: '$699',''
-    period: '/month','
-    features: ['
-      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'']
-    ];'
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform', launchDate: '2036-03-30',''
-    rating: 4.7, marketSize: '$28.4B',''
-    targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers',''
-    competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',''
-    integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],''
-    useCases: ['Demand planningInventory managementLogistics optimizationRisk management']'
-  }
-];'
-    link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform',''
-    launch_date: '2036 - 03 - 30','
-    rating: 4.7,'
-    market_size: '$28.4B','
-    target_audience:;'
-      'Manufacturing companies, Retail businesses, Logistics providers','
-    competitive_advantage:;'
-      'AI optimization, Real - time insights, Comprehensive coverage','
-    integration: [;'
-      'ERP systems',''
-      'WMS platforms',''
-      'TMS solutions',''
-      'IoT devices',''
-      'Cloud services',']
-    ],
-    use_cases: [;'
-      'Demand planning',''
-      'Inventory management',''
-      'Logistics optimization',''
-      'Risk management',']
-    ],
-  },'
-];      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_real - time tracking_performance analytics_custom workflows';'
-    ];'
-    link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform';','
-  launch_date: '2036 - 03 - 30';'
-    rating: 4.7;,'
-  market_size: '$28.4B',''
-    target_audience: 'Manufacturing companies, Retail businesses, Logistics providers';''
-    competitive_advantage: 'AI optimization, Real - time insights, Comprehensive coverage';''
-    integration: ['ERP systemsWMS platformsTMS solutionsIoT devices_cloud services'],''
-    use_cases: ['Demand planning_inventory management_logistics optimization_risk management'];'
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
 ;
@@ -5222,7 +4450,6 @@ export type Real2036InnovativeService = {;
       '24 / 7 quantum network monitoring',''
       'Custom deployment options',']
     ],
-<<<<<<< HEAD
 
       'AI-powered incident detection',
     link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise',
@@ -5274,59 +4501,6 @@ export type Real2036InnovativeService = {;
       'TMS solutions',
       'IoT devices',
       'Cloud services'
-=======
-'
-      'AI-powered incident detection',''
-    link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise',''
-    launch_date: '2036 - 01 - 25','
-    rating: 4.9,'
-    market_size: '$3.2B','
-    target_audience:;'
-      'Government agencies, Financial institutions, Healthcare organizations','
-    competitive_advantage:;'
-      'True quantum security, Unbreakable encryption, Future - proof technology','
-    integration: [;'
-      'Microsoft Teams',''
-      'Slack',''
-      'Zoom',''
-      'Custom APIs',''
-      'VPN solutions',']
-    ],
-    use_cases: [;'
-      'Government communications',''
-      'Financial transactions',''
-      'Healthcare data sharing',''
-      'Military operations',']
-    ],
-  },
-  // Autonomous DevOps Platform;
-  {'
-    id: 'autonomous - devops - platform - enterprise',''
-    name: 'Autonomous DevOps Platform Enterprise',''
-    tagline: 'Self - healing infrastructure with AI - powered automation','
-    description:;'
-      'Next - generation DevOps platform that autonomously manages infrastructure, detects and resolves issues, and optimizes performance using advanced AI and machine learning.',''
-    category: 'IT Infrastructure',''
-    price: '$799',''
-    period: '/month','
-    features: [;
-  }]
-];'
-    link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform',''
-    launch_date: '2036 - 03 - 30','
-    rating: 4.7,'
-    market_size: '$28.4B','
-    target_audience:;'
-      'Manufacturing companies, Retail businesses, Logistics providers','
-    competitive_advantage:;'
-      'AI optimization, Real - time insights, Comprehensive coverage','
-    integration: [;'
-      'ERP systems',''
-      'WMS platforms',''
-      'TMS solutions',''
-      'IoT devices',''
-      'Cloud services',']
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     use_cases: [;'
       'Demand planning',''
@@ -5346,7 +4520,6 @@ export type Real2036InnovativeService = {;
 
   }
 ];
-<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662;
 export type Real2036InnovativeService = {id: string,name: string,tagline: string,description: string,category: string,price: string,period?: string,features: string[],link: string,launchDate?: string,rating?: number,marketSize?: string,targetAudience?: string,competitiveAdvantage?: string,integration?: string[],useCases?: string[];
 },export const real2036InnovativeServices: Real2036InnovativeService[] = [;
@@ -5419,17 +4592,9 @@ ursor/fix-website-loading-errors-and-merge-6662;
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers';
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage';
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
 export type Real2036InnovativeService = {;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
     features: [;
 
 '
@@ -5508,29 +4673,18 @@ export type Real2036InnovativeService = {;
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers';'
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage';'
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
   }
 ];
-<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-
-<<<<<<< HEAD
 
 
 
 
 
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export type Real2036InnovativeService = {;
-=======
   // Autonomous DevOps Platform;
   }]
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers';
@@ -5538,7 +4692,6 @@ export type Real2036InnovativeService = {;
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']',
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string,;
   name: string,;
   tagline: string,;
@@ -5568,33 +4721,17 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',;
     features: [;'
       'AI-powered data pattern recognitionPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time data visualizationMulti-source data integrationCustom dashboard builderMobile-responsive interface';
-<<<<<<< HEAD
     ],;'
     link: 'https://ziontechgroup.com/services/ai-business-intelligence-platform-pro',;'
-=======
-      'AI-powered data pattern recognitionPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time data visualizationMulti-source data integrationCustom dashboard builderMobile-responsive interface';']
-pr-12325
-    ],;
-    link: 'https://ziontechgroup.com/services/ai-business-intelligence-platform-pro',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launchDate: '2036-01-20',;
-<<<<<<< HEAD
     rating: 4.8,;
     marketSize: '$25.6B',;
     targetAudience: 'Enterprise businesses, Data analysts, C-suite executives',;
     competitiveAdvantage: 'Advanced AI algorithms, Real-time processing, Natural language interface',;
     integration: ['SalesforceHubSpotGoogle AnalyticsAWSAzureSlack'],;
-=======
-    rating: 4.8,;'
-    marketSize: '$25.6B',;'
-    targetAudience: 'Enterprise businesses, Data analysts, C-suite executives',;'
-    competitiveAdvantage: 'Advanced AI algorithms, Real-time processing, Natural language interface',;'
-    integration: ['SalesforceHubSpotGoogle AnalyticsAWSAzureSlack'],;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     useCases: ['Sales forecastingCustomer behavior analysisFinancial planningMarket trend analysis'];
   },;
   // Quantum-Secure Communication Platform;
-<<<<<<< HEAD
   {;'
     id: 'quantum-secure-communication-enterprise',;'
     name: 'Quantum-Secure Communication Enterprise',;'
@@ -5602,47 +4739,20 @@ pr-12325
     description: 'Enterprise-grade quantum-secure communication platform that leverages quantum key distribution (QKD) to provide unbreakable encryption for sensitive communications.',;'
     category: 'Quantum Technology',;'
     price: '$1,999',;'
-=======
-  {;
-  // Quantum-Secure Communication Platform;
-pr-12325
-    id: 'quantum-secure-communication-enterprise',;
-    name: 'Quantum-Secure Communication Enterprise',;
-    tagline: 'Unbreakable communication using quantum cryptography',;
-    description: 'Enterprise-grade quantum-secure communication platform that leverages quantum key distribution (QKD) to provide unbreakable encryption for sensitive communications.',;
-    category: 'Quantum Technology',;
-    price: '$1,999',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'Quantum key distribution (QKD)End-to-end quantum encryptionMulti-party secure communicationQuantum-resistant algorithmsReal-time key generationCompliance certifications24/7 quantum network monitoringCustom deployment options';
-<<<<<<< HEAD
     ],;'
     link: 'https://ziontechgroup.com/services/quantum-secure-communication-enterprise',;'
-=======
-    ],;
-      'Quantum key distribution (QKD)End-to-end quantum encryptionMulti-party secure communicationQuantum-resistant algorithmsReal-time key generationCompliance certifications24/7 quantum network monitoringCustom deployment options';']
-pr-12325
-    link: 'https://ziontechgroup.com/services/quantum-secure-communication-enterprise',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launchDate: '2036-01-25',;
-<<<<<<< HEAD
     rating: 4.9,;
     marketSize: '$3.2B',;
     targetAudience: 'Government agencies, Financial institutions, Healthcare organizations',;
     competitiveAdvantage: 'True quantum security, Unbreakable encryption, Future-proof technology',;
     integration: ['Microsoft TeamsSlackZoomCustom APIsVPN solutions'],;
-=======
-    rating: 4.9,;'
-    marketSize: '$3.2B',;'
-    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations',;'
-    competitiveAdvantage: 'True quantum security, Unbreakable encryption, Future-proof technology',;'
-    integration: ['Microsoft TeamsSlackZoomCustom APIsVPN solutions'],;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     useCases: ['Government communicationsFinancial transactionsHealthcare data sharingMilitary operations'];
   },;
   // Autonomous DevOps Platform;
-<<<<<<< HEAD
   {;'
     id: 'autonomous-devops-platform-enterprise',;'
     name: 'Autonomous DevOps Platform Enterprise',;'
@@ -5650,47 +4760,20 @@ pr-12325
     description: 'Next-generation DevOps platform that autonomously manages infrastructure, detects and resolves issues, and optimizes performance using advanced AI and machine learning.',;'
     category: 'IT Infrastructure',;'
     price: '$799',;'
-=======
-  {;
-  // Autonomous DevOps Platform;
-pr-12325
-    id: 'autonomous-devops-platform-enterprise',;
-    name: 'Autonomous DevOps Platform Enterprise',;
-    tagline: 'Self-healing infrastructure with AI-powered automation',;
-    description: 'Next-generation DevOps platform that autonomously manages infrastructure, detects and resolves issues, and optimizes performance using advanced AI and machine learning.',;
-    category: 'IT Infrastructure',;
-    price: '$799',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'AI-powered incident detectionAutomated problem resolutionSelf-healing infrastructurePredictive maintenanceIntelligent scalingZero-downtime deploymentsPerformance optimizationComprehensive monitoring';
-<<<<<<< HEAD
     ],;'
     link: 'https://ziontechgroup.com/services/autonomous-devops-platform-enterprise',;'
-=======
-    ],;
-      'AI-powered incident detectionAutomated problem resolutionSelf-healing infrastructurePredictive maintenanceIntelligent scalingZero-downtime deploymentsPerformance optimizationComprehensive monitoring';']
-pr-12325
-    link: 'https://ziontechgroup.com/services/autonomous-devops-platform-enterprise',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launchDate: '2036-01-30',;
-<<<<<<< HEAD
     rating: 4.7,;
     marketSize: '$18.4B',;
     targetAudience: 'DevOps teams, IT operations, Cloud engineers',;
     competitiveAdvantage: 'Autonomous operations, AI-driven optimization, Zero human intervention',;
     integration: ['AWSAzureGCPKubernetesDockerJenkinsGitLab'],;
-=======
-    rating: 4.7,;'
-    marketSize: '$18.4B',;'
-    targetAudience: 'DevOps teams, IT operations, Cloud engineers',;'
-    competitiveAdvantage: 'Autonomous operations, AI-driven optimization, Zero human intervention',;'
-    integration: ['AWSAzureGCPKubernetesDockerJenkinsGitLab'],;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     useCases: ['Continuous deploymentInfrastructure managementPerformance optimizationIncident response'];
   },;
   // Space Technology Analytics Platform;
-<<<<<<< HEAD
   {;'
     id: 'space-technology-analytics-platform',;'
     name: 'Space Technology Analytics Platform',;'
@@ -5698,47 +4781,20 @@ pr-12325
     description: 'Comprehensive analytics platform for space technology companies, providing insights into satellite performance, orbital mechanics, and space mission optimization.',;'
     category: 'Space Technology',;'
     price: '$1,499',;'
-=======
-  {;
-  // Space Technology Analytics Platform;
-pr-12325
-    id: 'space-technology-analytics-platform',;
-    name: 'Space Technology Analytics Platform',;
-    tagline: 'Advanced analytics for space exploration and satellite operations',;
-    description: 'Comprehensive analytics platform for space technology companies, providing insights into satellite performance, orbital mechanics, and space mission optimization.',;
-    category: 'Space Technology',;
-    price: '$1,499',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'Satellite performance analyticsOrbital mechanics calculationsSpace weather monitoringMission optimization algorithmsReal-time telemetry analysisPredictive maintenance3D visualization toolsCustom reporting engine';
-<<<<<<< HEAD
     ],;'
     link: 'https://ziontechgroup.com/services/space-technology-analytics-platform',;'
-=======
-    ],;
-      'Satellite performance analyticsOrbital mechanics calculationsSpace weather monitoringMission optimization algorithmsReal-time telemetry analysisPredictive maintenance3D visualization toolsCustom reporting engine';']
-pr-12325
-    link: 'https://ziontechgroup.com/services/space-technology-analytics-platform',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launchDate: '2036-02-05',;
-<<<<<<< HEAD
     rating: 4.6,;
     marketSize: '$4.8B',;
     targetAudience: 'Space agencies, Satellite companies, Aerospace firms',;
     competitiveAdvantage: 'Space-specific algorithms, Real-time data processing, Advanced visualization',;
     integration: ['NASA APIsESA systemsSatellite ground stationsWeather services'],;
-=======
-    rating: 4.6,;'
-    marketSize: '$4.8B',;'
-    targetAudience: 'Space agencies, Satellite companies, Aerospace firms',;'
-    competitiveAdvantage: 'Space-specific algorithms, Real-time data processing, Advanced visualization',;'
-    integration: ['NASA APIsESA systemsSatellite ground stationsWeather services'],;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     useCases: ['Satellite operationsMission planningSpace weather analysisOrbital optimization'];
   },;
   // AI-Powered Cybersecurity Suite;
-<<<<<<< HEAD
   {;'
     id: 'ai-cybersecurity-suite-enterprise',;'
     name: 'AI Cybersecurity Suite Enterprise',;'
@@ -5746,24 +4802,12 @@ pr-12325
     description: 'Comprehensive cybersecurity solution that uses artificial intelligence to detect, analyze, and respond to threats in real-time, providing enterprise-grade protection.',;'
     category: 'Cybersecurity',;'
     price: '$899',;'
-=======
-  {;
-  // AI-Powered Cybersecurity Suite;
-pr-12325
-    id: 'ai-cybersecurity-suite-enterprise',;
-    name: 'AI Cybersecurity Suite Enterprise',;
-    tagline: 'Intelligent threat detection and response powered by AI',;
-    description: 'Comprehensive cybersecurity solution that uses artificial intelligence to detect, analyze, and respond to threats in real-time, providing enterprise-grade protection.',;
-    category: 'Cybersecurity',;
-    price: '$899',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'AI-powered threat detectionBehavioral analysisAutomated incident responseThreat intelligence feedsVulnerability assessmentCompliance reporting24/7 monitoringCustom security policies';
     ],;'
     link: 'https://ziontechgroup.com/services/ai-cybersecurity-suite-enterprise',;'
     launchDate: '2036-02-10',;
-<<<<<<< HEAD
     rating: 4.8,;'
     marketSize: '$45.2B',;'
     targetAudience: 'Enterprise IT security, Financial institutions, Healthcare organizations',;'
@@ -5779,36 +4823,12 @@ pr-12325
     description: 'Revolutionary platform that combines quantum computing with machine learning to solve complex problems faster and more efficiently than classical computing.',;'
     category: 'Quantum Technology',;'
     price: '$2,499',;'
-=======
-    rating: 4.8,;
-      'AI-powered threat detectionBehavioral analysisAutomated incident responseThreat intelligence feedsVulnerability assessmentCompliance reporting24/7 monitoringCustom security policies';']
-    link: 'https://ziontechgroup.com/services/ai-cybersecurity-suite-enterprise',;
-    launchDate: '2036-02-10',;
-pr-12325
-    marketSize: '$45.2B',;
-    targetAudience: 'Enterprise IT security, Financial institutions, Healthcare organizations',;
-    competitiveAdvantage: 'AI-driven detection, Real-time response, Comprehensive coverage',;
-    integration: ['SIEM systemsFirewallsEDR solutionsIdentity providersCloud platforms'],;
-    useCases: ['Threat detectionIncident responseCompliance managementSecurity monitoring'];
-  },;
-  // Quantum Machine Learning Platform;
-  {;
-  // Quantum Machine Learning Platform;
-pr-12325
-    id: 'quantum-machine-learning-platform',;
-    name: 'Quantum Machine Learning Platform',;
-    tagline: 'Accelerate ML with quantum computing power',;
-    description: 'Revolutionary platform that combines quantum computing with machine learning to solve complex problems faster and more efficiently than classical computing.',;
-    category: 'Quantum Technology',;
-    price: '$2,499',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'Quantum algorithm optimizationHybrid quantum-classical MLQuantum neural networksAdvanced optimization algorithmsReal-time quantum processingCustom quantum circuitsPerformance benchmarkingExpert consultation';
     ],;'
     link: 'https://ziontechgroup.com/services/quantum-machine-learning-platform',;'
     launchDate: '2036-02-15',;
-<<<<<<< HEAD
     rating: 4.9,;'
     marketSize: '$2.8B',;'
     targetAudience: 'Research institutions, Pharmaceutical companies, Financial services',;'
@@ -5824,37 +4844,12 @@ pr-12325
     description: 'Advanced platform for managing and optimizing edge computing infrastructure, enabling real-time processing and low-latency applications across distributed networks.',;'
     category: 'Edge Computing',;'
     price: '$599',;'
-=======
-    rating: 4.9,;
-    price: '$2,499',;
-      'Quantum algorithm optimizationHybrid quantum-classical MLQuantum neural networksAdvanced optimization algorithmsReal-time quantum processingCustom quantum circuitsPerformance benchmarkingExpert consultation';']
-    link: 'https://ziontechgroup.com/services/quantum-machine-learning-platform',;
-    launchDate: '2036-02-15',;
-pr-12325
-    marketSize: '$2.8B',;
-    targetAudience: 'Research institutions, Pharmaceutical companies, Financial services',;
-    competitiveAdvantage: 'Quantum advantage, Exponential speedup, Future-proof technology',;
-    integration: ['TensorFlowPyTorchScikit-learnQuantum simulatorsCloud quantum services'],;
-    useCases: ['Drug discoveryFinancial modelingOptimization problemsScientific research'];
-  },;
-  // Edge Computing Orchestration Platform;
-  {;
-  // Edge Computing Orchestration Platform;
-pr-12325
-    id: 'edge-computing-orchestration-enterprise',;
-    name: 'Edge Computing Orchestration Enterprise',;
-    tagline: 'Intelligent edge computing management and optimization',;
-    description: 'Advanced platform for managing and optimizing edge computing infrastructure, enabling real-time processing and low-latency applications across distributed networks.',;
-    category: 'Edge Computing',;
-    price: '$599',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'Intelligent workload distributionReal-time optimizationMulti-edge coordinationLatency optimizationResource managementSecurity enforcementMonitoring and analyticsCustom edge policies';
     ],;'
     link: 'https://ziontechgroup.com/services/edge-computing-orchestration-enterprise',;'
     launchDate: '2036-02-20',;
-<<<<<<< HEAD
     rating: 4.7,;'
     marketSize: '$12.6B',;'
     targetAudience: 'IoT companies, Telecommunications, Manufacturing',;'
@@ -5870,36 +4865,12 @@ pr-12325
     description: 'Comprehensive platform that uses artificial intelligence to deliver personalized customer experiences across all touchpoints, improving satisfaction and loyalty.',;'
     category: 'AI & Data',;'
     price: '$399',;'
-=======
-    rating: 4.7,;
-      'Intelligent workload distributionReal-time optimizationMulti-edge coordinationLatency optimizationResource managementSecurity enforcementMonitoring and analyticsCustom edge policies';']
-    link: 'https://ziontechgroup.com/services/edge-computing-orchestration-enterprise',;
-    launchDate: '2036-02-20',;
-pr-12325
-    marketSize: '$12.6B',;
-    targetAudience: 'IoT companies, Telecommunications, Manufacturing',;
-    competitiveAdvantage: 'Intelligent orchestration, Real-time optimization, Multi-edge coordination',;
-    integration: ['KubernetesDockerIoT platforms5G networksCloud services'],;
-    useCases: ['IoT management5G optimizationManufacturing automationSmart cities'];
-  },;
-  // AI-Powered Customer Experience Platform;
-  {;
-  // AI-Powered Customer Experience Platform;
-pr-12325
-    id: 'ai-customer-experience-platform',;
-    name: 'AI Customer Experience Platform',;
-    tagline: 'Personalized customer experiences powered by AI',;
-    description: 'Comprehensive platform that uses artificial intelligence to deliver personalized customer experiences across all touchpoints, improving satisfaction and loyalty.',;
-    category: 'AI & Data',;
-    price: '$399',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'AI-powered personalizationOmnichannel experience managementPredictive customer behaviorAutomated customer serviceSentiment analysisCustomer journey mappingA/B testing automationPerformance analytics';
     ],;'
     link: 'https://ziontechgroup.com/services/ai-customer-experience-platform',;'
     launchDate: '2036-02-25',;
-<<<<<<< HEAD
     rating: 4.8,;'
     marketSize: '$32.8B',;'
     targetAudience: 'E-commerce companies, Retail businesses, Service providers',;'
@@ -5915,37 +4886,12 @@ pr-12325
     description: 'Comprehensive blockchain platform that provides enterprise-grade infrastructure, development tools, and deployment solutions for blockchain applications.',;'
     category: 'Blockchain',;'
     price: '$1,199',;'
-=======
-    rating: 4.8,;
-    price: '$399',;
-      'AI-powered personalizationOmnichannel experience managementPredictive customer behaviorAutomated customer serviceSentiment analysisCustomer journey mappingA/B testing automationPerformance analytics';']
-    link: 'https://ziontechgroup.com/services/ai-customer-experience-platform',;
-    launchDate: '2036-02-25',;
-pr-12325
-    marketSize: '$32.8B',;
-    targetAudience: 'E-commerce companies, Retail businesses, Service providers',;
-    competitiveAdvantage: 'AI personalization, Omnichannel integration, Predictive insights',;
-    integration: ['ShopifyWooCommerceSalesforceHubSpotZendeskIntercom'],;
-    useCases: ['E-commerce personalizationCustomer service automationMarketing optimizationCustomer retention'];
-  },;
-  // Blockchain Infrastructure Platform;
-  {;
-  // Blockchain Infrastructure Platform;
-pr-12325
-    id: 'blockchain-infrastructure-enterprise',;
-    name: 'Blockchain Infrastructure Enterprise',;
-    tagline: 'Enterprise-grade blockchain infrastructure and development',;
-    description: 'Comprehensive blockchain platform that provides enterprise-grade infrastructure, development tools, and deployment solutions for blockchain applications.',;
-    category: 'Blockchain',;
-    price: '$1,199',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'Multi-chain supportSmart contract developmentDeployment automationSecurity auditingPerformance monitoringScalability solutionsCompliance toolsDeveloper APIs';
     ],;'
     link: 'https://ziontechgroup.com/services/blockchain-infrastructure-enterprise',;'
     launchDate: '2036-03-01',;
-<<<<<<< HEAD
     rating: 4.6,;'
     marketSize: '$8.9B',;'
     targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations',;'
@@ -5961,36 +4907,12 @@ pr-12325
     description: 'Revolutionary platform that enables autonomous manufacturing operations using AI, robotics, and advanced automation to improve efficiency and quality.',;'
     category: 'Manufacturing',;'
     price: '$1,799',;'
-=======
-    rating: 4.6,;
-      'Multi-chain supportSmart contract developmentDeployment automationSecurity auditingPerformance monitoringScalability solutionsCompliance toolsDeveloper APIs';']
-    link: 'https://ziontechgroup.com/services/blockchain-infrastructure-enterprise',;
-    launchDate: '2036-03-01',;
-pr-12325
-    marketSize: '$8.9B',;
-    targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations',;
-    competitiveAdvantage: 'Multi-chain support, Enterprise features, Security focus',;
-    integration: ['EthereumPolygonSolanaHyperledgerCloud platforms'],;
-    useCases: ['DeFi applicationsSupply chain trackingDigital identitySmart contracts'];
-  },;
-  // Autonomous Manufacturing Platform;
-  {;
-  // Autonomous Manufacturing Platform;
-pr-12325
-    id: 'autonomous-manufacturing-platform',;
-    name: 'Autonomous Manufacturing Platform',;
-    tagline: 'AI-powered manufacturing automation and optimization',;
-    description: 'Revolutionary platform that enables autonomous manufacturing operations using AI, robotics, and advanced automation to improve efficiency and quality.',;
-    category: 'Manufacturing',;
-    price: '$1,799',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'AI-powered quality controlPredictive maintenanceAutonomous roboticsProduction optimizationReal-time monitoringSupply chain integrationCustom workflowsPerformance analytics';
     ],;'
     link: 'https://ziontechgroup.com/services/autonomous-manufacturing-platform',;'
     launchDate: '2036-03-05',;
-<<<<<<< HEAD
     rating: 4.7,;'
     marketSize: '$15.2B',;'
     targetAudience: 'Manufacturing companies, Industrial automation, Factory operators',;'
@@ -6006,36 +4928,12 @@ pr-12325
     description: 'Advanced security gateway that protects internet communications using quantum encryption and quantum-resistant algorithms, ensuring future-proof security.',;'
     category: 'Quantum Technology',;'
     price: '$1,399',;'
-=======
-    rating: 4.7,;
-      'AI-powered quality controlPredictive maintenanceAutonomous roboticsProduction optimizationReal-time monitoringSupply chain integrationCustom workflowsPerformance analytics';']
-    link: 'https://ziontechgroup.com/services/autonomous-manufacturing-platform',;
-    launchDate: '2036-03-05',;
-pr-12325
-    marketSize: '$15.2B',;
-    targetAudience: 'Manufacturing companies, Industrial automation, Factory operators',;
-    competitiveAdvantage: 'AI automation, Predictive capabilities, Real-time optimization',;
-    integration: ['ERP systemsMES platformsIoT devicesRobotics systemsCloud services'],;
-    useCases: ['Quality controlProduction optimizationPredictive maintenanceSupply chain management'];
-  },;
-  // Quantum Internet Security Gateway;
-  {;
-  // Quantum Internet Security Gateway;
-pr-12325
-    id: 'quantum-internet-security-gateway',;
-    name: 'Quantum Internet Security Gateway',;
-    tagline: 'Next-generation internet security using quantum technology',;
-    description: 'Advanced security gateway that protects internet communications using quantum encryption and quantum-resistant algorithms, ensuring future-proof security.',;
-    category: 'Quantum Technology',;
-    price: '$1,399',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'Quantum encryption protocolsQuantum-resistant algorithmsReal-time threat detectionMulti-layer protectionPerformance optimizationCompliance certifications24/7 monitoringCustom security policies';
     ],;'
     link: 'https://ziontechgroup.com/services/quantum-internet-security-gateway',;'
     launchDate: '2036-03-10',;
-<<<<<<< HEAD
     rating: 4.9,;'
     marketSize: '$5.6B',;'
     targetAudience: 'Internet service providers, Data centers, Government agencies',;'
@@ -6051,37 +4949,12 @@ pr-12325
     description: 'Comprehensive healthcare platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.',;'
     category: 'Healthcare AI',;'
     price: '$2,999',;'
-=======
-    rating: 4.9,;
-    price: '$1,399',;
-      'Quantum encryption protocolsQuantum-resistant algorithmsReal-time threat detectionMulti-layer protectionPerformance optimizationCompliance certifications24/7 monitoringCustom security policies';']
-    link: 'https://ziontechgroup.com/services/quantum-internet-security-gateway',;
-    launchDate: '2036-03-10',;
-pr-12325
-    marketSize: '$5.6B',;
-    targetAudience: 'Internet service providers, Data centers, Government agencies',;
-    competitiveAdvantage: 'Quantum security, Future-proof protection, Advanced algorithms',;
-    integration: ['FirewallsLoad balancersVPN solutionsCloud platformsCDN services'],;
-    useCases: ['Internet securityData protectionNetwork securityCompliance management'];
-  },;
-  // AI-Powered Healthcare Diagnostics;
-  {;
-  // AI-Powered Healthcare Diagnostics;
-pr-12325
-    id: 'ai-healthcare-diagnostics-platform',;
-    name: 'AI Healthcare Diagnostics Platform',;
-    tagline: 'Advanced medical diagnostics powered by artificial intelligence',;
-    description: 'Comprehensive healthcare platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.',;
-    category: 'Healthcare AI',;
-    price: '$2,999',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'AI-powered image analysisSymptom assessmentTreatment recommendationsPatient data integrationCompliance managementReal-time monitoringCustom AI modelsExpert consultation';
     ],;'
     link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics-platform',;'
     launchDate: '2036-03-15',;
-<<<<<<< HEAD
     rating: 4.8,;'
     marketSize: '$18.7B',;'
     targetAudience: 'Hospitals, Medical clinics, Healthcare providers',;'
@@ -6097,36 +4970,12 @@ pr-12325
     description: 'Comprehensive platform that enables space resource exploration, mining operations, and resource management using advanced robotics and AI technology.',;'
     category: 'Space Technology',;'
     price: '$3,999',;'
-=======
-    rating: 4.8,;
-      'AI-powered image analysisSymptom assessmentTreatment recommendationsPatient data integrationCompliance managementReal-time monitoringCustom AI modelsExpert consultation';']
-    link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics-platform',;
-    launchDate: '2036-03-15',;
-pr-12325
-    marketSize: '$18.7B',;
-    targetAudience: 'Hospitals, Medical clinics, Healthcare providers',;
-    competitiveAdvantage: 'Advanced AI algorithms, Medical expertise, Compliance focus',;
-    integration: ['EHR systemsPACS systemsLab systemsTelemedicine platforms'],;
-    useCases: ['Medical imagingDiagnosis supportTreatment planningPatient monitoring'];
-  },;
-  // Space Resource Mining Platform;
-  {;
-  // Space Resource Mining Platform;
-pr-12325
-    id: 'space-resource-mining-platform',;
-    name: 'Space Resource Mining Platform',;
-    tagline: 'Advanced platform for space resource exploration and mining',;
-    description: 'Comprehensive platform that enables space resource exploration, mining operations, and resource management using advanced robotics and AI technology.',;
-    category: 'Space Technology',;
-    price: '$3,999',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'Resource mapping algorithmsMining operation managementRobotic control systemsResource processingLogistics optimizationSafety monitoringEnvironmental impact assessmentCustom mining strategies';
     ],;'
     link: 'https://ziontechgroup.com/services/space-resource-mining-platform',;'
     launchDate: '2036-03-20',;
-<<<<<<< HEAD
     rating: 4.7,;'
     marketSize: '$2.4B',;'
     targetAudience: 'Space mining companies, Government agencies, Research institutions',;'
@@ -6142,37 +4991,12 @@ pr-12325
     description: 'Advanced financial trading platform that leverages quantum computing to analyze market data, optimize trading strategies, and execute high-frequency trades.',;'
     category: 'Quantum Technology',;'
     price: '$4,999',;'
-=======
-    rating: 4.7,;
-    price: '$3,999',;
-      'Resource mapping algorithmsMining operation managementRobotic control systemsResource processingLogistics optimizationSafety monitoringEnvironmental impact assessmentCustom mining strategies';']
-    link: 'https://ziontechgroup.com/services/space-resource-mining-platform',;
-    launchDate: '2036-03-20',;
-pr-12325
-    marketSize: '$2.4B',;
-    targetAudience: 'Space mining companies, Government agencies, Research institutions',;
-    competitiveAdvantage: 'Space expertise, Advanced robotics, AI optimization',;
-    integration: ['Satellite systemsRobotics platformsAI systemsGround stations'],;
-    useCases: ['Asteroid miningLunar explorationResource mappingMining operations'];
-  },;
-  // Quantum Financial Trading Platform;
-  {;
-  // Quantum Financial Trading Platform;
-pr-12325
-    id: 'quantum-financial-trading-platform',;
-    name: 'Quantum Financial Trading Platform',;
-    tagline: 'Revolutionary trading platform powered by quantum computing',;
-    description: 'Advanced financial trading platform that leverages quantum computing to analyze market data, optimize trading strategies, and execute high-frequency trades.',;
-    category: 'Quantum Technology',;
-    price: '$4,999',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'Quantum market analysisHigh-frequency tradingRisk managementPortfolio optimizationReal-time executionCompliance monitoringCustom algorithmsPerformance analytics';
     ],;'
     link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform',;'
     launchDate: '2036-03-25',;
-<<<<<<< HEAD
     rating: 4.9,;'
     marketSize: '$7.8B',;'
     targetAudience: 'Investment banks, Hedge funds, Trading firms',;'
@@ -6188,106 +5012,38 @@ pr-12325
     description: 'Comprehensive platform that uses AI to optimize supply chain operations, predict demand, manage inventory, and improve logistics efficiency.',;'
     category: 'AI & Data',;'
     price: '$699',;'
-=======
-    rating: 4.9,;
-    price: '$4,999',;
-      'Quantum market analysisHigh-frequency tradingRisk managementPortfolio optimizationReal-time executionCompliance monitoringCustom algorithmsPerformance analytics';']
-    link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform',;
-    launchDate: '2036-03-25',;
-pr-12325
-    marketSize: '$7.8B',;
-    targetAudience: 'Investment banks, Hedge funds, Trading firms',;
-    competitiveAdvantage: 'Quantum advantage, High-frequency capabilities, Advanced algorithms',;
-    integration: ['Trading platformsMarket data feedsRisk systemsCompliance platforms'],;
-    useCases: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis'];
-  },;
-  // AI-Powered Supply Chain Optimization;
-  {;
-  // AI-Powered Supply Chain Optimization;
-pr-12325
-    id: 'ai-supply-chain-optimization-platform',;
-    name: 'AI Supply Chain Optimization Platform',;
-    tagline: 'Intelligent supply chain management and optimization',;
-    description: 'Comprehensive platform that uses AI to optimize supply chain operations, predict demand, manage inventory, and improve logistics efficiency.',;
-    category: 'AI & Data',;
-    price: '$699',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',;
     features: [;'
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows';
     ],;'
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform',;'
     launchDate: '2036-03-30',;
-<<<<<<< HEAD
     rating: 4.7,;'
     marketSize: '$28.4B',;'
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers',;'
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',;'
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],;'
-=======
-    rating: 4.7,;
-    price: '$699',;
-      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows';']
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform',;
-    launchDate: '2036-03-30',;
-pr-12325
-    marketSize: '$28.4B',;
-    targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers',;
-    competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',;
-    integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],;
-<<<<<<< HEAD
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management'];
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management'];
 
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type Real2036InnovativeService = {;
 
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 pr-12325
 
   {;'
@@ -6604,14 +5360,12 @@ pr-12325
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],;''
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management'];'
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
 
 export type Real2036InnovativeService = {;
 export type Real2036InnovativeService = {;
 
-<<<<<<< HEAD
 
 
 
@@ -6626,9 +5380,3 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 ],
-=======
-];}
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Shield, Cloud, BarChart3, 
@@ -89,15 +88,9 @@ export default function PortfolioPage() {
   const filteredProjects = selectedCategory === "All" 
     ? projects 
     : projects.filter($2);
-=======
-import Layout from '../components/layout/Layout';
-
-export default function portfolio() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>Our Work - Zion Tech Group</title>
         <meta name="description" content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions." />
         <meta property="og:title" content="Our Work - Zion Tech Group" />
@@ -276,20 +269,3 @@ export default function portfolio() {
     </div>
   )
 }
-=======
-        <title>Portfolio - Zion Tech Group</title>
-        <meta name="description" content="Portfolio solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Portfolio</h1>
-          <p className="text-lg text-gray-600">
-            Professional portfolio solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

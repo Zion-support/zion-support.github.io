@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
@@ -124,23 +123,6 @@ export default function AdminIntegrationsPage() {
     )
   }
 
-=======
-import React, { useState } from 'react'
-import Head from 'next/head'
-interface ProviderMeta {
-  id: string
-  name: string
-  status: string
-}
-
-interface ConnectionMap {
-  [key: string]: boolean
-}
-
-const AdminIntegrationsPage: React.FC = () => {
-  const [providers, setProviders] = useState<ProviderMeta[]>([])
-  const [connections, setConnections] = useState<ConnectionMap>({})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <>
       <Head><title>Admin Integrations • Zion</title></Head>
@@ -208,9 +190,4 @@ function ManualOverrideForm() {
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
-}
-export default AdminIntegrationsPage
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

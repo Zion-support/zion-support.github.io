@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/messaging/ConversationsList.tsx
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react';
 
@@ -139,7 +138,6 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
         width="100%";
       >;
         {ConversationRow}
-<<<<<<< HEAD:src_backup/components/messaging/ConversationsList.tsx
       </List>
     </div>
   );

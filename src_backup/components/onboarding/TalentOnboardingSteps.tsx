@@ -3,7 +3,6 @@ import React from "react",import { useAuth } from "@/hooks/useAuth",import { use
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon  } from 'lucide-react';
 return <OnboardingTracker steps={steps} />;
 import React from 'react';
-<<<<<<< HEAD:src_backup/components/onboarding/TalentOnboardingSteps.tsx
 import { use_auth } from '@/hooks/ use_auth';
 import { useOnboardingStatus } from '@/hooks/ useOnboardingStatus';
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';

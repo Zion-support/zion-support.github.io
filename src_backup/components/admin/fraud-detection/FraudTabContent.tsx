@@ -63,7 +63,6 @@ interface FraudTabContentProps  {tabValue: string;import React from "react",inte
           </p>;
         </div>;
     case 'dangerous':;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
 
   switch (tabValue) {    case 'pending':
 
@@ -133,7 +132,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows high - priority dangerous flags requiring immediate;
             attention.;
           </p>;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
         </div>);
     case 'actioned':;
       return (
@@ -179,7 +177,6 @@ interface FraudTabContentProps  {tabValue: string;export const FraudTabContent: 
       return (<div className='bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center'>;
           <CheckCircle className='mx-auto h-12 w-12 text-green-500 mb-4' />;
           <h3 className='text-xl font-medium mb-4'>Actioned Flags</h3>;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
           <p className='text-muted-foreground'>;
 
     case 'actioned':
@@ -242,7 +239,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
         </div>)default:;
       return null;
   }
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
 }
 
   }

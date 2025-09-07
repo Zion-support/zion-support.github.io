@@ -5,27 +5,8 @@ import {
   MapPin
   Send
   CheckCircle
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-'use client'
-const [isSubmitting, setIsSubmitting] = useState (false)
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'> ('idle')
-> Conversation </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed" > Ready to transform your business? Get in touch with our team of experts to discuss how we can help you achieve your technology goals. </p> </motion.div> > <div> <h3 className="text-2xl font-bold text-white mb-6" >Get in Touch</h3> <p className="text-gray-300 leading-relaxed mb-8" > Our team is here to help you navigate the complex world of technology and find the perfect solutions for your business needs. Reach out to us today. </p> </div> > <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300" > <info.icon className="w-6 h-6 text-white" /> </div> <div> </p> </div> </motion.a>) ) 
-}</div> {
-  /* Additional Info */ 
-}<motion.div > <h4 className="text-lg font-semibold text-white mb-3" >Why Choose Zion Tech?</h4> <ul className="space-y-2 text-gray-300" > <li className="flex items-center space-x-2" > <CheckCircle className="w-5 h-5 text-green-400" /> <span>Expert team with 10+ years experience</span> </li> <li className="flex items-center space-x-2" > <CheckCircle className="w-5 h-5 text-green-400" /> <span>Proven track record of successful projects</span> </li> <li className="flex items-center space-x-2" > <CheckCircle className="w-5 h-5 text-green-400" /> <span>24/7 support and maintenance</span> </li> <li className="flex items-center space-x-2" > <CheckCircle className="w-5 h-5 text-green-400" /> <span>Competitive pricing and flexible solutions</span> </li> </ul> </motion.div> </motion.div> {
-  /* Contact Form */ 
-}<motion.div > <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" /> <h3 className="text-2xl font-bold text-white mb-4" >Message Sent Successfully!</h3> <p className="text-gray-300 mb-6" > Thank you for reaching out. Our team will get back to you within 24 hours. </p> <button > Send Another Message </button> </motion.div> <div> <label htmlFor="name" className="block text-white font-medium mb-2" > Full Name * </label> <input required className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Enter your full name" /> </div> <div> <label htmlFor="email" className="block text-white font-medium mb-2" > Email Address * </label> <input required className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Enter your email" /> </div> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <div> <label htmlFor="company" className="block text-white font-medium mb-2" > Company </label> <input /> </div> <div> <label htmlFor="phone" className="block text-white font-medium mb-2" > Phone Number </label> <input /> </div> </div> <div> <label htmlFor="service" className="block text-white font-medium mb-2" > Service of Interest </label> <select </option>) ) 
-}</select> </div> <div> <label htmlFor="message" className="block text-white font-medium mb-2" > Message * </label> <textarea /> </div> {
-  submitStatus === 'error' && (<motion.div initial= {
-  {
-  opacity: 0, y: -10 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
   AlertCircle,;}
-=======
 'use client';'
 import React, { useState } from 'react';'
 import { motion } from 'framer-motion';
@@ -58,11 +39,8 @@ const ContactForm: React.FC = () => {;
     service: '',;'
     message: '',;
   AlertCircle,;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 } from 'lucide-react';
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   AlertCircle;
   Mail,
   Phone,
@@ -73,7 +51,6 @@ const ContactForm: React.FC = () => {;
   CheckCircle,
   AlertCircle,
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-<<<<<<< HEAD
 
 const ContactForm: React.FC = () => {;
   const [formData, setFormData] = useState({;
@@ -83,24 +60,19 @@ const ContactForm: React.FC = () => {;
     phone: '',;
     service: '',;
     message: '',;
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-<<<<<<< HEAD
     name: ''
     email: ''
     company: ''
     phone: ''
     service: ''
     message: ''
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<;
     'idle' | 'success' | 'error';
   >('idle');
-<<<<<<< HEAD
 'use client',
 
 import React, { useState } from 'react';
@@ -135,30 +107,10 @@ const ContactForm: React.FC = () => {
 };
     // Simulate API call;
     try {;
-=======
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    setFormData({
-<<<<<<< HEAD
       ...formData,
       [e.target.name]: e.target.value,) => {
   return $3;}
 }
-<<<<<<< HEAD
-=======
-      ...formData
-      [e.target.name]: e.target.value
-    });  };  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData;
-      [e.target.name]: e.target.value
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
     })
   }
   const handleSubmit = async (e: React.FormEvent) => {
@@ -166,7 +118,6 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
     // Simulate API call
     try {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({;
@@ -221,7 +172,6 @@ const ContactForm: React.FC = () => {const [formData, setFormData] = useState({n
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
   },
 
   const services = $2;
@@ -229,74 +179,6 @@ const ContactForm: React.FC = () => {const [formData, setFormData] = useState({n
       title: 'Email Us',
       content: 'contact@ziontechgroup.com',
       href: 'mailto:contact@ziontechgroup.com'
-=======
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-message: '',
-origin/cursor/automate-test-improve-and-merge-code-2533
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<;'
-    'idle' | 'success' | 'error';'
-  >('idle');
-      ...formData;
-      [e && e.target.name]: e && e.target.value;
-    })
-};
-    // Simulate API call;
-    try {;
-      await new Promise(resolve => setTimeout(resolve, 2000));'
-      setSubmitStatus('success');
-      setFormData({;'
-        name: '',;'
-        email: '',;'
-        company: '',;'
-        phone: '',;'
-        service: '',;'
-        message: '',;
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate API call
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-message: '',
-origin/cursor/automate-test-improve-and-merge-code-2533
-      });
-    } catch (error) {;'
-      setSubmitStatus('error');
-    } finally {;
-      setIsSubmitting(false);    }
-    } finally {}
-      setIsSubmitting(false)
-    } finally {
-      setIsSubmitting(false);
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-  }
-<<<<<<< HEAD
   const services = [
 'AI Development',
     'Cloud Architecture',
@@ -305,16 +187,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     'Blockchain Solutions',
     'Data Analytics',
     'Other',
-=======
-  const services = ['
-    'AI Development''
-    'Cloud Architecture''
-    'Digital Transformation''
-    'IoT Platforms''
-    'Blockchain Solutions''
-    'Data Analytics''
-    'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const contactInfo = [;
@@ -324,17 +196,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       content: 'contact@ziontechgroup && ziontechgroup.com',;'
       href: 'mailto:contact@ziontechgroup && ziontechgroup.com',;
     },    {;
-<<<<<<< HEAD
       icon: Phone,;
       title: 'Call Us',;
       content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup && ziontechgroup.com'
 };
-=======
-      icon: Phone,;'
-      title: 'Call Us',;'
-      content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup && ziontechgroup.com';
-    };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     {;
       icon: Phone,;'
       title: 'Call Us',;'
@@ -347,12 +212,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       href: '#',;
     },;
 
-<<<<<<< HEAD
   return (
-=======
-
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
       {/* Background Elements */}
 '
@@ -372,28 +232,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       content: 'contact@ziontechgroup.com''
       href: 'mailto:contact@ziontechgroup.com'
 
-<<<<<<< HEAD
       icon: Mail,
       title: 'Email Us',
       content: 'contact@ziontechgroup.com',
 href: 'mailto:contact@ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     {
       icon: Phone,
       title: 'Call Us',
       content: '+1 (555) 123-4567',
-<<<<<<< HEAD
       href: 'tel:+15551234567'
-=======
-href: 'tel:+15551234567',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     {
       icon: MapPin,
       title: 'Visit Us',
       content: '123 Tech Street, Innovation City, IC 12345',
-<<<<<<< HEAD
       href: '#'
     }
   ],
@@ -411,47 +264,8 @@ href: 'tel:+15551234567',
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]' />;
       </div>;
       <div className='relative container mx-auto px-4'>;
-=======
-  }
-  const services = [
-    'AI Development'
-    'Cloud Architecture'
-    'Digital Transformation'
-    'IoT Platforms'
-    'Blockchain Solutions'
-    'Data Analytics'
-    'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
-  ];
-  const contactInfo = [
-    {
-      icon: Mail,;'
-      title: 'Email Us',;'
-      content: 'contact@ziontechgroup && ziontechgroup.com',;'
-      href: 'mailto:contact@ziontechgroup && ziontechgroup.com',
-    },    {
-    {
-      icon: Phone,;'
-      title: 'Call Us',;'
-      content: '+1 (555) 123-4567',;'
-      href: 'tel:+15551234567',
-    },    {
-      icon: MapPin,;'
-      title: 'Visit Us',;'
-      content: '123 Tech Street, Innovation City, IC 12345',;'
-      href: '#',
-    },
-    <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
-      {/* Background Elements */}
-'
-      <div className='absolute inset-0'>;'
-        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;'
-        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0 && 0.1),transparent_50%)]' />
-      </div>
-      <div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className="relative container mx-auto px-4">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         {/* Section Header */}
         <motion.div;
-=======
 href: '#',
     },
   ];
@@ -467,12 +281,10 @@ href: '#',
       <div className='relative container mx-auto px-4'>
         {/* Section Header */}
         <motion.div
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
       icon: Mail
       title: 'Email Us'
       content: 'contact@ziontechgroup.com'
@@ -531,12 +343,10 @@ className='space-y-8'
                   key={info.title}
                   href={info.href}
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
                   href={info.href}initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
@@ -577,85 +387,14 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-1">{info.title}</h4>
                     <p className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300">
-=======
-
-                >"
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">"
-                    <info.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>"
-                    <h4 className="text-lg font-semibold text-white mb-1">{info.title}</h4>"
-                    <p className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300">
-className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'
-                >
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'>
-                    <info.icon className='w-6 h-6 text-white' />
-                  </div>
-                  <div>
-                    <h4 className='text-lg font-semibold text-white mb-1'>
-                      {info.title}
-                    </h4>
-                    <p className='text-gray-300 group-hover:text-blue-400 transition-colors duration-300'>
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       {info.content}
                     </p>
                   </div>
                 </motion.a>
-<<<<<<< HEAD
-=======
               ))}
             </div>
-'
-                  className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'>;'
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'>;'
-                    <info && info.icon className='w-6 h-6 text-white' />;
-                  </div>;
-                  <div>;'
-                    <h4 className='text-lg font-semibold text-white mb-1'>;
-                      {info && info.title}
-                    </h4>;'
-                    <p className='text-gray-300 group-hover:text-blue-400 transition-colors duration-300'>                      {info && info.content}                >;"
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">;"
-                    <info && info.icon className="w-6 h-6 text-white" />;
-                  </div>;
-                  <div>;"
-                    <h4 className="text-lg font-semibold text-white mb-1">{info && info.title}</h4>;"
-                    <p className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300">;
-                      {info && info.content}
-                    </p>;
-                  </div>;
-                </motion && motion.a>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-              ))}
-            </div>
-<<<<<<< HEAD
 
-=======
-                  className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'>
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'    />
-                    <info && info.icon className='w-6 h-6 text-white'    />
-                  </div>
-                  <div    />
-                    <h4 className='text-lg font-semibold text-white mb-1'    />
-                      {info && info.title}
-                    </h4>
-                    <p className='text-gray-300 group-hover: text-blue-400 transition-colors duration-300'    />                      {info && info.conten}
-}                >;"
-                  <div className=\"w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300\"    />;"
-                    <info && info.icon className=\"w-6 h-6 text-white\"    />
-                  </div>
-                  <div    />;"
-                    <h4 className=\"text-lg font-semibold text-white mb-1\"    />{info && info.title}</h4>;"
-                    <p className=\"text-gray-300 group-hover:text-blue-400 transition-colors duration-300\"    />
-                      {info && info.content}
-                    </p>
-                  </div>
-                </motion && motion.a>
-              ))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             {/* Additional Info */}
-<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 20}}
               whileInView={{ opacity: 1, y: 0}}
@@ -679,79 +418,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-=======
-            <motion&& motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
-              viewport={{ once: true }}'
-              className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;'
-              <h4 className='text-lg font-semibold text-white mb-3'>;
-                Why Choose Zion Tech?;
-              </h4>;'
-              <ul className='space-y-2 text-gray-300'>            >;"
-              <h4 className="text-lg font-semibold text-white mb-3">Why Choose Zion Tech?</h4>;"
-              <ul className="space-y-2 text-gray-300">;"
-                <li className="flex items-center space-x-2">;"
-                  <CheckCircle className="w-5 h-5 text-green-400" />;
-                  <span>Expert team with 10+ years experience</span>;
-                </li>;"
-                <li className="flex items-center space-x-2">;"
-                  <CheckCircle className="w-5 h-5 text-green-400" />;
-                  <span>Proven track record of successful projects</span>;
-                </li>;"
-                <li className="flex items-center space-x-2">;"
-                  <CheckCircle className="w-5 h-5 text-green-400" />;
-                  <span>24/7 support and maintenance</span>;
-                </li>;'
-                <li className='flex items-center space-x-2'>;'
-                  <CheckCircle className='w-5 h-5 text-green-400' />;
-                  <span>Expert team with 10+ years experience</span>;
-                </li>;'
-                <li className='flex items-center space-x-2'>;'
-                  <CheckCircle className='w-5 h-5 text-green-400' />;
-                  <span>Proven track record of successful projects</span>;
-                </li>;'
-                <li className='flex items-center space-x-2'>;'
-                  <CheckCircle className='w-5 h-5 text-green-400' />;
-                  <span>24/7 support and maintenance</span>;
-                </li>;'
-                <li className='flex items-center space-x-2'>;'"
-                  <CheckCircle className='w-5 h-5 text-green-400' />                  <span>Competitive pricing and flexible solutions</span>                <li className="flex items-center space-x-2">;"
-                  <CheckCircle className="w-5 h-5 text-green-400" />;
-                  <span>Competitive pricing and flexible solutions</span>;
-                </li>;
-              </ul>;
-            </motion && motion.div>;
-          </motion && motion.div>;
-
-className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'
-            >
-              <h4 className='text-lg font-semibold text-white mb-3'>
-                Why Choose Zion Tech?
-              </h4>
-              <ul className='space-y-2 text-gray-300'>
-                <li className='flex items-center space-x-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400' />
-                  <span>Expert team with 10+ years experience</span>
-                </li>
-                <li className='flex items-center space-x-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400' />
-                  <span>Proven track record of successful projects</span>
-                </li>
-                <li className='flex items-center space-x-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400' />
-                  <span>24/7 support and maintenance</span>
-                </li>
-                <li className='flex items-center space-x-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400' />
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   <span>Competitive pricing and flexible solutions</span>
                 </li>
               </ul>
             </motion.div>
           </motion.div>
-<<<<<<< HEAD
               viewport={{ once: true }}className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
               viewport={{ once: true }}
               className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
@@ -820,9 +491,6 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
           </motion.div>;
           </motion && motion.div>;
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           {/* Contact Form */}
           <motion&& motion.div;
             initial={{ opacity: 0, x: 30 }}
@@ -830,7 +498,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
 
-<<<<<<< HEAD
 
           {/* Contact Form */}
           <motion.div
@@ -854,14 +521,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button
                   onClick={() => setSubmitStatus('idle')}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-=======
-<<<<<<< HEAD
 className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-=======
-          >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {submitStatus === 'success' ? (
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -888,12 +550,10 @@ className='text-center py-12'
                   onClick={() => setSubmitStatus('idle')}
                   className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 >
                   Send Another Message
                 </button>
               </motion.div>
-<<<<<<< HEAD
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1037,34 +697,10 @@ className='text-center py-12';
                   <div>;
                     <label;
                       htmlFor='phone';
-=======
-            ) : ("
-              <form onSubmit={handleSubmit} className="space-y-6">"
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>"
-                    <label htmlFor="name" className="block text-white font-medium mb-2" htmlFor="input-
-                      Full Name *"
-                    ">
-                      Full Name *
-                    </label>
-                    <input"
-                      type="text""
-                      id="name""
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required"
-                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors""
-                      placeholder="Enter your full name"
-<<<<<<< HEAD
                     />
               <form onSubmit={handleSubmit} className='space-y-6'>
 <form onSubmit={handleSubmit} className='space-y-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                    />'
-              <form onSubmit={handleSubmit} className='space-y-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div>
                     <label'
@@ -1092,7 +728,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     />;
                   </div>;
                 </div>;
-<<<<<<< HEAD
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -1123,11 +758,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                     <label
                       htmlFor='phone'
-=======
-                    <label'
-                      htmlFor='phone''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       className='block text-white font-medium mb-2'>;
                       Phone Number;
                     </label>;
@@ -1136,7 +766,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       id='phone''
                       name='phone'
                       value={formData && formData.phone}
-<<<<<<< HEAD
                       onChange={handleChange}
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1212,19 +841,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none';
                     name='message';
                     value={formData.message}
-=======
-                      onChange={handleChange}'
-                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'"
-                      placeholder="Enter phone number";
-                    />;
-                  </div>;
-                </div>;
-                  <select"
-                    id="service""
-                    name="service"
-                    value={formData && formData.service}
-                    onChange={handleChange}
-<<<<<<< HEAD
                   <label
                       placeholder='Enter phone number'
                     />
@@ -1260,17 +876,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <label
 origin/cursor/automate-test-improve-and-merge-code-2533
                     htmlFor='message'
-=======
-                  <label'
-                    htmlFor='message''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className='block text-white font-medium mb-2'>;
                     Message *;
                   </label>;
                   <textarea'
                     id='message''
                     name='message'                    value={formData && formData.message}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     onChange={handleChange}
                     required;
                     rows={5}'
@@ -1280,13 +891,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     onChange={handleChange}
                     required
                     rows={5}
-<<<<<<< HEAD
                     className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
-=======
-className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
-                    placeholder='Tell us about your project or inquiry...'
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   />
                 </div>'
                 {submitStatus === 'error' && (
@@ -1295,15 +900,9 @@ className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-w
                     placeholder='Tell us about your project or inquiry...';
                   />;
                 </div>;
-<<<<<<< HEAD
                 {submitStatus === 'error' && (<motion.div;
                   />;
                 </div>;{submitStatus === 'error' && (<motion&& motion.div;
-=======
-'
-                {submitStatus === 'error' && (;
-                  <motion&& motion.div;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
 className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4'
@@ -1317,7 +916,6 @@ className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-
 type='submit';
                   disabled={isSubmitting}
 
-=======
                 )}
                 <button
 type='submit'
@@ -1335,13 +933,11 @@ type='submit'
                       <span>Send Message</span>
                     </>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   )}
                 </button>;
               </form>;
             )}
 
-<<<<<<< HEAD
 
 export default ContactForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1362,17 +958,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>;
                   <label;
                     html_for='service';
-=======
-export default ContactForm;
-                <div>;
-                  <label;'
-                    html_for='service';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     className='block text - white font - medium mb - 2';
                   >;
                     Service of Interest;
                   </label>;
-<<<<<<< HEAD
                   <select;
                     id='service';
                     name='service';
@@ -1391,81 +980,31 @@ export default ContactForm;
                     id="service";
                     name="service";
                     value={form_data.service}
-=======
-                  <select;'
-                    id='service';'
-                    name='service';
-                    value={form_data.service}
-                    on_change={handle_change}'
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue - 500 transition - colors';
-                  >;'
-                    <option value=''>Select a service</option>;
-                    {services.map (service => (
-                      <option;
-                        key={service}
-                        value={service}'
-                        className='bg - gray - 800 text - white';
-                      >                        {service}                    Service of Interest;
-                  </label>;
-                  <select;"
-                    id="service";"
-                    name="service";
-                    value={form_data.service}
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     on_change={handle_change}
                     className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue-500 transition-colors";
                   >;
                     <option value="">Select a service</option>;
-<<<<<<< HEAD
                     {services.map ((service) => (<option key={service} value={service} className="bg - gray-800 text-white">;
-=======
-                    {services.map ((service) => (
-                      <option key={service} value={service} className="bg - gray-800 text-white">;
-=======
-                    on_change={handle_change}"
-                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue - 500 transition - colors";
-                  >;"
-                    <option value="">Select a service</option>;
-                    {services.map ((service) => ("
-                      <option key={service} value={service} className="bg - gray - 800 text - white">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                         {service}
                       </option>))}
                   </select>;
                 </div>;
                 <div>;
-<<<<<<< HEAD
                   <label;
                     html_for='message';
-=======
-                  <label;'
-                    html_for='message';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     className='block text - white font - medium mb - 2';
                   >;
                     Message *;
                   </label>;
-<<<<<<< HEAD
                   <textarea;
                     id='message';
                     name='message'                    value={form_data.message}
                     on_change={handle_change}
                     required;
-=======
-                  <textarea;'
-                    id='message';'
-                    name='message'                    value={form_data.message}
-                    on_change={handle_change}
-                    required;
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     rows={5}
                     className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
                     placeholder='Tell us about your project or inquiry...'                  />                  <label html_for="message" className="block text - white font-medium mb-2" html_for="input-;
                     Message *;
-<<<<<<< HEAD
                   ">;
                     Message *;
                   </label>;
@@ -1484,13 +1023,6 @@ export default ContactForm;
                     initial={{ opacity: 0, coordinate_y: -10 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4';
-=======
-=======
-                    rows={5}'
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';'"
-                    placeholder='Tell us about your project or inquiry...'                  />                  <label html_for="message" className="block text - white font - medium mb - 2" html_for="input-;
-                    Message *;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   ">;
                     Message *;
                   </label>;
@@ -1499,15 +1031,9 @@ export default ContactForm;
                     name="message";
                     on_change={handle_change}
                     required;
-<<<<<<< HEAD
                     rows={5}
                     className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
                     placeholder='Tell us about your project or inquiry...'                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition-colors resize-none";
-=======
-                    rows={5}'
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';'"
-                    placeholder='Tell us about your project or inquiry...'                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     placeholder="Tell us about your project or inquiry...";
                   />;
                 </div>;'
@@ -1516,13 +1042,10 @@ export default ContactForm;
                     initial={{ opacity: 0, coordinate_y: -10 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}'
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4';
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   >;
                     <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className="flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded-lg p-4";
                   >;
                     <AlertCircle className="w-5 h-5" />;
-<<<<<<< HEAD
                     <span > Something went wrong. Please try again.</span>;
                   </motion.div>)}
                 <button;
@@ -1541,13 +1064,6 @@ export default ContactForm;
                       <span > Sending...</span>;
                     </>) : (<>;
                       <Send className='w - 5 h - 5' />                      <Send className="w-5 h-5" />;
-=======
-=======
-                  >;'"
-                    <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className="flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4";
-                  >;"
-                    <AlertCircle className="w - 5 h - 5" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <span > Something went wrong. Please try again.</span>;
                   </motion.div>)}
                 <button;'
@@ -1559,7 +1075,6 @@ export default ContactForm;
                     <>;'
                       <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />                      <span > Sending...</span>;
                     </>) : (
-<<<<<<< HEAD
                     <>;
                       <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}
                   className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2";
@@ -1571,20 +1086,6 @@ export default ContactForm;
                     </>) : (
                     <>;
                       <Send className='w - 5 h - 5' />                      <Send className="w-5 h-5" />;
-=======
-                    <>;'
-                      <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}"
-                  className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify - center space - x-2";
-                >;
-                  {is_submitting ? (
-                    <>;"
-                      <div className="w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin" />;
-                      <span > Sending...</span>;
-                    </>) : (
-                    <>;'"
-                      <Send className='w - 5 h - 5' />                      <Send className="w - 5 h - 5" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       <span > Send Message</span>;
                     </>)}
                 </button>;
@@ -1592,14 +1093,11 @@ export default ContactForm;
           </motion.div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </section>)}export default ContactForm)}export default ContactForm;)export default ContactForm;  )}
 export default ContactForm;export default ContactForm;</motion.div>;
         </div>;
       </div>;
     </section>;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     </section>);
 }
 ;
@@ -1614,7 +1112,6 @@ export default ContactForm;  )
 export default ContactForm;
 
 export default ContactForm;
-<<<<<<< HEAD
 )}export default ContactForm;
                     id="service"
                     name="service"
@@ -1649,160 +1146,23 @@ export default ContactForm;
 
                 {submitStatus === 'error' && (
                   <motion.div
-<<<<<<< HEAD
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0}}
                     className = $2;
 export default ContactForm,
-=======
-                     />
-                </div>
-                {submitStatus === 'error' && (<motion.div
-                     />
-                </div>;{submitStatus === 'error' && (<motion&& motion.div;}
-                    initial={{ opacity: 0, y: -10 }
-
-                    animate={{ opacity: 1, y: 0 }}
-
-className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4'
-                      />
-                    <AlertCircle className='w-5 h-5'    />
-                    <span    />Something went wrong. Please try again.</span>
-                  </motion.div>
-
-                <button
-type='submit'
-                  disabled={isSubmitting}
-
-                  className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2'
-                    />
-                  {isSubmitting ? (
-                    <>
-                      <div className='w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin'    />
-                      <span    />Sending...</span>
-                    <   />
-                  ) : (
-                    <>
-<Send className='w-5 h-5'    />
-                      <span    />Send Message</span>
-                    <   />}
-
-                </button>
-              </form>
-            )}
-
-export default ContactForm
-                <div>
-                  <label;'
-                    html_for='service';'
-                    className='block text - white font - medium mb - 2'
-                  >
-                    Service of Interest
-                  </label>
-                  <select;'
-                    id='service';'
-                    name='service'
-                    value={form_data.service}
-                    on_change={handle_change}'
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue - 500 transition - colors'
-                  >;'
-                    <option value=''>Select a service</option>
-                    {services.map (service => (
-                      <option
-                        key={service}
-                        value={service}'
-                        className='bg - gray - 800 text - white'
-                      >                        {service}                    Service of Interest
-                  </label>
-                  <select;"
-                    id="service";"
-                    name="service"
-                    value={form_data.service}
-
-                        {service}
-                      </option>))}
-                  </select>
-                </div>
-                <div>
-                  <label;'
-                    html_for='message';'
-                    className='block text - white font - medium mb - 2'
-                  >
-                    Message *
-                  </label>
-                  <textarea;'
-                    id='message';'
-                    name='message'                    value={form_data.message}
-                    on_change={handle_change}
-                    required
-                  ">
-                    Message *
-                  </label>
-                  <textarea;"
-                    id="message";"
-                    name="message"
-                    on_change={handle_change}
-                    required
-                    placeholder="Tell us about your project or inquiry..."
-                  />
-                </div>;'
-                {submit_status === 'error' && (
-                  <motion.div
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}'
-                    className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4'
-                    <span > Something went wrong. Please try again.</span>
-                  </motion.div>)}
-                <button;'
-                  type='submit'
-                  disabled={is_submitting}'
-                  className='w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify - center space - x-2'
-                >
-                  {is_submitting ? (
-                    <>;'
-                      <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />                      <span > Sending...</span>
-                    </>) : (
-
-                      <span > Send Message</span>
-                    </>)}
-                </button>
-              </form>)}
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </motion.div>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 }
 export default ContactForm;  )
 }
 export default ContactForm;
-<<<<<<< HEAD
 
 "
-=======
-}className="flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4" > <AlertCircle className="w-5 h-5" /> <span>Something went wrong. Please try again.</span> </motion.div>) 
-}<button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2" > {
-  isSubmitting ? (<> <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> <span>Sending...</span> </>) : (<> <Send className="w-5 h-5" /> <span>Send Message</span> </>) 
-}</button> </form>) 
-}</motion.div> </div> </div> </section>) 
-}
-export default ContactForm
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 );
 };
 export default ContactForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

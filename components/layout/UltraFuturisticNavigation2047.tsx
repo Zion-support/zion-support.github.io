@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, ChevronDown, X, Phone, Mail, ArrowRight;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import {
   Menu,
   ChevronDown,
@@ -61,16 +59,9 @@ import {
   Linkedin,
   Twitter,
   Github,
-<<<<<<< HEAD
 
 
 import {
-=======
-  Youtube,
-  MapPin,;'
-} from 'lucide-react'
-import {}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   Menu,
   ChevronDown,
   X,
@@ -127,7 +118,6 @@ import {}
   Linkedin,
   Twitter,
   Github,
-<<<<<<< HEAD
   Youtube,;
   MapPin,;
 } from 'lucide-react';
@@ -267,128 +257,6 @@ import Link from 'next / link';
   ChevronDown,X,Phone,Mail,ArrowRight,Brain,Rocket,Target,Atom,Shield,DollarSign,BarChart3,Globe,Grid,Heart,Database,Cpu,Palette,Cloud,Network,TrendingUp,ShoppingCart,Settings,Building,Monitor,Zap,Eye,Infinity,Sparkles,Users,Lock,Code,Server,Layers,Globe2,Star,Award,Clock,CheckCircle,Zap as ZapIcon,Phone as PhoneIcon,Search,User,Bell,Cog,LogOut,Home,Info,FileText,Users as UsersIcon,Bot,MessageCircle,Linkedin,Twitter,Github,Youtube,MapPin,} from 'lucide-react';
 interface NavigationItem  {name: string;
   href: string;  icon?: React.ReactNode;import { href: string;  icon?: React.ReactNode;import {Menu, ChevronDown, X, Phone, Mail, ArrowRight;Brain, Rocket, Target, Atom, Shield;
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-import {
-  Menu
-  ChevronDown
-  X
-  Phone
-  Mail
-  ArrowRight
-  Brain
-  Rocket
-  Target
-  Atom
-  Shield
-  DollarSign
-  BarChart3
-  Globe
-  Grid
-  Heart
-  Database
-  Cpu
-  Palette
-  Cloud
-  Network
-  TrendingUp
-  ShoppingCart
-  Settings
-  Building
-  Monitor
-  Zap
-  Eye
-  Infinity
-  Sparkles
-  Users
-  Lock
-  Code
-  Server
-  Layers
-  Globe2
-  Star
-  Award
-  Clock
-  CheckCircle
-  Zap as ZapIcon
-  Phone as PhoneIcon
-  Search
-  User
-  Bell
-  Cog
-  LogOut
-  Home
-  Info
-  FileText
-  Users as UsersIcon
-  Bot
-  MessageCircle
-  Linkedin
-  Twitter
-  Github
-  Youtube
-  MapPin;
-=======
-import {};
-  Menu;
-  ChevronDown;
-  X;
-  Phone;
-  Mail;
-  ArrowRight;
-  Brain;
-  Rocket;
-  Target;
-  Atom;
-  Shield;
-  DollarSign;
-  BarChart3;
-  Globe;
-  Grid;
-  Heart;
-  Database;
-  Cpu;
-  Palette;
-  Cloud;
-  Network;
-  TrendingUp;
-  ShoppingCart;
-  Settings;
-  Building;
-  Monitor;
-  Zap;
-  Eye;
-  Infinity;
-  Sparkles;
-  Users;
-  Lock;
-  Code;
-  Server;
-  Layers;
-  Globe2;
-  Star;
-  Award;
-  Clock;
-  CheckCircle;
-  Zap as ZapIcon;
-  Phone as PhoneIcon;
-  Search;
-  User;
-  Bell;
-  Cog;
-  LogOut;
-  Home;
-  Info;
-  FileText;
-  Users as UsersIcon;
-  Bot;
-  MessageCircle;
-  Linkedin;
-  Twitter;
-  Github;
-  Youtube;
-  MapPin;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 interface NavigationItem {}
   name: string;
@@ -551,17 +419,13 @@ interface NavigationItem {}
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Brain, Rocket, Target, Atom, Shield;
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
   Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2;
   Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon;
-<<<<<<< HEAD
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin;
   } from 'lucide-react';
 interface NavigationItem  {name: string;
@@ -632,16 +496,6 @@ import {
   Youtube,;
   MapPin,;
 } from 'lucide-react';
-=======
-  Youtube,
-  MapPin,;'
-} from 'lucide-react'
-interface NavigationItem {}
-  name: string
-  href: string;  icon?: React.ReactNode;import {}
-  href: string;  icon?: React.ReactNode;import {
-  Menu, ChevronDown, X, Phone, Mail, ArrowRight;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 
 
@@ -706,7 +560,6 @@ import {
   MapPin,;
 } from 'lucide-react';
 interface NavigationItem {
-=======
 
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin
@@ -717,7 +570,6 @@ interface NavigationItem {
   name: string;
 
   description?: string;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   name: string;
   href: string;  icon?: React.ReactNode;import {
 
@@ -731,7 +583,6 @@ interface NavigationItem {
   title?: string;
   featured?: boolean;
   category?: string;
-<<<<<<< HEAD
   color?: string
 }
   color?: string;
@@ -795,19 +646,13 @@ const navigation_items: NavigationItem[] = [;
         href: '/team',
         description: 'Meet our leadership team',
         icon: <Users className='w - 4 h - 4' />,
-=======
-<<<<<<< HEAD
   color?: string;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   color?: string;
   color?: string;  color?: string;
 }
   color?: string;
 
-<<<<<<< HEAD
 const navigationItems: NavigationItem[] = []
   {}
 '
@@ -864,12 +709,10 @@ const navigation_items: NavigationItem[] = [;
         href: '/team','
         description: 'Meet our leadership team','
         icon: <Users className='w - 4 h - 4' />,'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         color: 'from - orange - 500 to - red - 500',
       },
     ],
   },
-<<<<<<< HEAD
   {
     name: 'Advanced Solutions',
     href: '/solutions',
@@ -954,97 +797,6 @@ const navigation_items: NavigationItem[] = [;
         color: 'from - orange - 500 to - red - 500';
       }
     ];
-=======
-  {'
-    name: 'Advanced Solutions','
-    href: '/solutions','
-    icon: <Rocket className='w-5 h-5' />,    description: 'Cutting-edge technology solutions','
-    category: 'solutions','
-    color: 'from-blue-500 to-cyan-500',
-    children: []
-      {}
-'
-    description: 'Cutting-edge technology solutions','
-    category: 'solutions','
-    color: 'from-blue-500 to-cyan-500',
-    children: []
-'
-    description: 'Knowledge base and insights','
-    category: 'resources','
-    color: 'from-orange-500 to-red-500',
-    children: []
-'
-    description: 'Company information and support','
-    category: 'company','
-    color: 'from-gray-500 to-slate-500',
-    children: []
-      {'
-        href: '/about','
-        description: 'Our story and mission','
-        icon: <Info className='w-4 h-4' />,
-        featured: true,
-      },
-      {'
-        name: 'Careers','
-        href: '/careers','
-        description: 'Join our team','
-        icon: <Users className='w-4 h-4' />,'
-        color: 'from-green-500 to-emerald-500',
-      },
-      {'
-        name: 'Support','
-        href: '/support','
-        description: 'Get help and support','
-        icon: <MessageCircle className='w-4 h-4' />,'
-        color: 'from-blue-500 to-cyan-500',
-      },
-      {'
-        name: 'Privacy Policy','
-        href: '/privacy','
-        description: 'Privacy and data protection','
-        icon: <Shield className='w-4 h-4' />,'
-        color: 'from-red-500 to-pink-500',
-      },
-    ],"
-  },];        icon: <Shield className="w-4 h-4" />,'
-        color: 'from-red-500 to-pink-500''
-    name: 'AI & Technology Services','
-    href: '/services','
-    icon: <Brain className='w - 5 h - 5' />,    description: 'Advanced AI and technology solutions',        name: 'Home','
-        href: '/','
-        description: 'Main homepage',"
-        icon: <Home className="w - 4 h - 4" />,'
-        color: 'from - emerald - 500 to - cyan - 500',
-        featured: true;
-      }
-      {'
-        name: 'About Us','
-        href: '/about','
-        description: 'Company information and mission',"
-        icon: <Info className="w - 4 h - 4" />,'
-        color: 'from - blue - 500 to - cyan - 500';
-      }
-      {'
-        name: 'Contact','
-        href: '/contact','
-        description: 'Get in touch with our team',"
-        icon: <Mail className="w - 4 h - 4" />,'
-        color: 'from - purple - 500 to - pink - 500';
-      }
-      {'
-        name: 'Team','
-        href: '/team','
-        description: 'Meet our leadership team',"
-        icon: <Users className="w - 4 h - 4" />,'
-        color: 'from - orange - 500 to - red - 500';
-      }
-    ];
-    name: 'Home & Core';
-    href: '/';
-    icon: <Home className;
-const UltraFuturisticNavigation2047 = () => {
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -1067,7 +819,6 @@ setActiveDropdown(activeDropdown === name ? null : name),) => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
 
-=======
   const handleDropdownToggle = (name: string) => {
 setActiveDropdown(activeDropdown === name ? null : name);
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1077,14 +828,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const handleResize = () => {}
       if (window.innerWidth >= 1024) {}
         setIsOpen(false);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 setActiveDropdown(null);
       }
     };
 
     window.addEventListener('resize', handleResize);
 return () => window.removeEventListener('resize', handleResize);
-<<<<<<< HEAD
 
   }, []);
   return (
@@ -1165,45 +914,16 @@ const UltraFuturisticNavigation2047 = () => {const [isOpen, setIsOpen] = useStat
               </div>;
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">;
               <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-  }, []);
-  return ('
-    <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>'
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-        <div className='flex justify-between items-center h-16'>
-          {/* Logo */}'
-          <div className='flex-shrink-0'>'
-            <Link href='/' className='flex items-center space-x-2'>'
-              <div className='w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center'>'
-                <Rocket className='w-5 h-5 text-white' />
-              </div>'
-              <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>                Zion Tech Group  }, []);
-  }, []);
-;
-  return ("
-          <div className="flex-shrink-0">"
-            <Link href="/" className="flex items-center space-x-2">"
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">"
-                <Rocket className="w-5 h-5 text-white" />
-              </div>"
-              <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
               <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Zion Tech Group
-=======
-                Zion Tech Group;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </span>
             </Link>
           </div>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 Zion Tech Group;
               </span>;
             </Link>;
           </div>;
-<<<<<<< HEAD
                 Zion Tech Group;
               </span>;
             </Link>;
@@ -1223,12 +943,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>;
                 <AnimatePresence>;
                   {activeDropdown === item.name && (<motion.div;
-=======
-          {/* Desktop Navigation */}'
-          <div className='hidden lg:flex lg:items-center lg:space-x-8'>;
-            {navigationItems && navigationItems.map(item => (;'
-              <div key={item && item.name} className='relative group'>;
-<<<<<<< HEAD
                 <button
 
 <div className='hidden lg:flex lg:items-center lg:space-x-8'>
@@ -1245,12 +959,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <AnimatePresence>
                   {activeDropdown === item.name && (
                     <motion.div
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-<<<<<<< HEAD
           {/* Desktop Navigation */}
           <div className='hidden lg:flex lg:items-center lg:space-x-8'>;
             {navigationItems && navigationItems.map(item => (;
@@ -1584,21 +1296,12 @@ className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border
                                 <span className="font-medium text-white">{child.name}</span>
                                 {child.featured && (
                                   <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full">
-=======
-className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    >
-=======
-                <button;
-                    >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <div className='space-y-4'>
                         {item.children?.map(child => (
                       transition={{ duration: 0 && 0.2 }}'
                       className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'>;'
                       <div className='space-y-4'>;
                         {item && item.children?.map(child => (;
-<<<<<<< HEAD
                           <Link
                             <div
                               className={`p-2 rounded-lg bg-gradient-to-r ${child.color |'from-gray-500 to-slate-500'}`}
@@ -1612,14 +1315,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 </span>
                                 {child.featured && (
                                   <span className='px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full'>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                                     Featured
                                   </span>
                                 )}
 origin/cursor/automate-test-improve-and-merge-code-2533
                               </div>
 <p className='text-sm text-gray-400 mt-1'>
-<<<<<<< HEAD
                                 </span>;
                                 {child.featured && (<span className='px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full'>;
                                     Featured;
@@ -1633,20 +1334,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </div>
                               <p className="text-sm text-gray-400 mt-1">{child.description}</p>
                             </div>
-=======
-                                {child.description}
-                              </p>
-=======
-                          <Link;
-                            <div;
-                              </div>'
-                              <p className='text-sm text-gray-400 mt-1'>
-                                {child.description}"
-                              </p>                              <p className="text-sm text-gray-400 mt-1">{child.description}</p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             </div>
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                           </Link>
                         ))}
                       </div>
@@ -1655,7 +1344,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </AnimatePresence>
               </div>
             ))}
-<<<<<<< HEAD
           {/* Contact Info & CTA */}
 
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>;
@@ -1751,21 +1439,12 @@ href='/contact';
           </div>;
         </div>;
       </div>;
-=======
-          {/* Contact Info & CTA */}'
-          <div className='hidden lg:flex lg:items-center lg:space-x-4'>;'
-            <div className='flex items-center space-x-4 text-sm text-gray-400'>;
-<<<<<<< HEAD
 <div className='hidden lg:flex lg:items-center lg:space-x-4'>
             <div className='flex items-center space-x-4 text-sm text-gray-400'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <a
 
                 href={`tel:${contactInfo.mobile}`}
-=======
-              <a;
-                href={`tel:${contactInfo.mobile}`}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='flex items-center space-x-1 hover:text-white transition-colors'
               >'
                 <Phone className='w-4 h-4' />                <span>{contactInfo.mobile}</span>
@@ -1824,14 +1503,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </button>;
           </div>;
         </div>;
       </div>;
       {/* Mobile Navigation */}
       <AnimatePresence>;
-<<<<<<< HEAD
         {isOpen && (<motion&& motion.div;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
@@ -1851,21 +1528,10 @@ className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/
                     onClick={() => handleDropdownToggle(item && item.name)}
                     className='w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200';
                   >;
-=======
-        {isOpen && (;
-          <motion&& motion.div;
-            initial={{ opacity: 0, height: 0 }}'
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-
-<<<<<<< HEAD
             transition={{ duration: 0.3 }}
 className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-=======
-          >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigationItems.map(item => (
                 <div key={item.name}>
@@ -1873,12 +1539,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={() => handleDropdownToggle(item && item.name)}'
                     className='w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200';
                   >;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     <div className='flex items-center space-x-2'>;
                       {item && item.icon}
                       <span>{item && item.name}</span>;
                     </div>;
-<<<<<<< HEAD
                     <ChevronDown;
                     <ChevronDown
                     <ChevronDown;
@@ -1928,24 +1592,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
           >
-=======
-                    <ChevronDown'`
-                      className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item && item.name ? 'rotate-180' : ''}`}
-                    />;
-                  </button>          >;"
-            <div className="px-2 pt-2 pb-3 space-y-1">;
-              {navigationItems && navigationItems.map((item) => (;
-                <div key={item && item.name}>;
-            transition={{ duration: 0.3 }}"
-            className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
-          >"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigationItems.map((item) => (
                 <div key={item.name}>
-<<<<<<< HEAD
                   <button
-<<<<<<< HEAD
                     onClick={() => handleDropdownToggle(item && item.name)}
                     className="w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200";
                   >;
@@ -1953,14 +1603,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {item && item.icon}
                       <span>{item && item.name}</span>;
                     </div>;
-=======
-                      className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`}
-                    />
-                  </button>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                  <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div;
@@ -1971,26 +1613,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {item && item.icon}
                       <span>{item && item.name}</span>;
                     </div>;'`
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item && item.name ? 'rotate-180' : ''}`} />;
                   </button>;
       {/* Mobile Navigation */}
       <AnimatePresence>;
-<<<<<<< HEAD
         {is_open && (<motion.div;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-=======
-
-                  <AnimatePresence>
-                    {activeDropdown === item.name && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                         className='ml-4 mt-2 space-y-1'
 
                           <Link
@@ -2077,7 +1707,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             onClick={closeMenu}>;
                             {child.name}
                           </Link>;
-=======
         {is_open && (
           <motion.div;
             initial={{ opacity: 0, height: 0 }}'
@@ -2097,14 +1726,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             key={child.name}
                             href={child.href}"
                             className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                         ))}
                       </motion && motion.div>;
                     )}
                   </AnimatePresence>;
                 </div>;
               ))}
-<<<<<<< HEAD
 {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>;
                 <div className='px-3 py-2 text-sm text-gray-400'>;
@@ -2176,7 +1803,6 @@ export default UltraFuturisticNavigation2047;
 export default UltraFuturisticNavigation2047;  )
 }
 export default UltraFuturisticNavigation2047;
-<<<<<<< HEAD
 
 export default UltraFuturisticNavigation2047;
 )}export default UltraFuturisticNavigation2047;
@@ -2198,51 +1824,8 @@ export default UltraFuturisticNavigation2047;
                         exit={{ opacity: 0, height: 0}}
                         transition = $2;
 export default UltraFuturisticNavigation2047,
-=======
-<<<<<<< HEAD
 
 "
-=======
-] 
-}]
-useEffect ( () => {
-  const handleResize = () => {
-  if (window.innerWidth >= 1024) {
-  window.addEventListener ('resize', handleResize)
-return () => window.removeEventListener ('resize', handleResize) 
-}, [])
-</div> <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </span> </a> </div> > <div className= {
-  `p-2 rounded-lg bg-gradient-to-r $ {
-  child.color || 'from-gray-500 to-slate-500' 
-}` 
-}> {
-  child.icon 
-}</div> Featured </span>) 
-}</div> </div> </a>) ) 
-}</div> </motion.div>) 
-}</AnimatePresence> </div>) ) 
-}</div> </a> </div> <Link href="/contact" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200" > Get Started <ArrowRight className="ml-2 w-4 h-4" /> </a> </div>) : (<Menu className="block h-6 w-6" />) 
-}</button> </div> </div> </div> {
-  /* Mobile Navigation */ 
-}<AnimatePresence> </div> <ChevronDown className= {
-  `w-4 h-4 transition-transform duration-200 $ {
-  activeDropdown === item.name ? 'rotate-180' : '' 
-}` 
-}/> </button> <AnimatePresence> > {
-  item.children?.map ( (child) => (<Link key= {
-  child.name 
-}) ) 
-}</motion.div>) 
-}</AnimatePresence> </div>) ) 
-}</div> </div> <div className="px-3 pt-2" > <Link > Get Started <ArrowRight className="ml-2 w-4 h-4" /> </a> </div> </div> </div> </motion.div>) 
-}</AnimatePresence> </nav>) 
-}
-export default UltraFuturisticNavigation2047
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
               {/* Mobile Contact Info */}'
               <div className='pt-4 pb-3 border-t border-slate-700/50'>;'
                 <div className='px-3 py-2 text-sm text-gray-400'>;'
@@ -2315,17 +1898,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </AnimatePresence>
                 </div>
               ))}
-<<<<<<< HEAD
 {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>
                 <div className='px-3 py-2 text-sm text-gray-400'>
                   <div className='flex items-center space-x-2 mb-2'>
-=======
-              {/* Mobile Contact Info */}'
-              <div className='pt-4 pb-3 border-t border-slate-700/50'>'
-                <div className='px-3 py-2 text-sm text-gray-400'>'
-                  <div className='flex items-center space-x-2 mb-2'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <Phone className='w-4 h-4' />
                     <a;`
                       href={`tel:${contactInfo.mobile}`}'
@@ -2375,7 +1951,6 @@ export default UltraFuturisticNavigation2047;  )
 export default UltraFuturisticNavigation2047;
 
 export default UltraFuturisticNavigation2047;
-<<<<<<< HEAD
                     href='/contact'
                     className='w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'
                     onClick={closeMenu}
@@ -2394,13 +1969,7 @@ export default UltraFuturisticNavigation2047;
 };
 export default UltraFuturisticNavigation2047;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 const navigationItems: NavigationItem[] = [
   {
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

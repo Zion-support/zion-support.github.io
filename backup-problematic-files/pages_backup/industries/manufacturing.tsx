@@ -5,7 +5,6 @@ import Layout from '../../components/Layout';
 import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users  } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Settings, 
   Brain, 
@@ -83,7 +82,6 @@ export default function ManufacturingPage() {
               </p>;
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-<<<<<<< HEAD
               {services.map((service, index) => (,
                 <motion.div}),
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
@@ -108,7 +106,6 @@ export default function ManufacturingPage() {
                 Our manufacturing technology solutions deliver measurable improvements in efficiency,quality, and cost reduction.,</p>;
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-<<<<<<< HEAD
               {benefits.map((benefit, index) => (,
                 <motion.div}),
             </div>,

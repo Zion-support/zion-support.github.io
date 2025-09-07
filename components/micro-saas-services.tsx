@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-=======
-<<<<<<< HEAD
 export default function MicroSaasServicesPage () {
   const microSaasServices = [ {
   
@@ -51,10 +48,6 @@ we deliver professional solutions with competitive pricing and exceptional value
 }</div> </div> </div> </div> </div> </div> </div>) ) 
 }</div> </div> </section> Why Choose Zion Tech Group Micro SaaS Services? </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > We combine professional-grade features with competitive pricing to deliver exceptional value for your business. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" > <Card className="card-hover border-gradient-blue text-center" > <div className="p-6" > <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center" > <Star className="w-8 h-8 text-cursor-blue" /> </div> <h3 className="text-xl font-bold text-white mb-3" >Professional Quality</h3> <p className="text-gray-400 text-sm" >Enterprise-grade features and reliability at micro SaaS prices</p> </div> </Card> <Card className="card-hover border-gradient-blue text-center" > <div className="p-6" > <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center" > <TrendingUp className="w-8 h-8 text-cursor-blue" /> </div> <h3 className="text-xl font-bold text-white mb-3" >Competitive Pricing</h3> <p className="text-gray-400 text-sm" >Market-competitive pricing with better value than alternatives</p> </div> </Card> <Card className="card-hover border-gradient-blue text-center" > <div className="p-6" > <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center" > <Users className="w-8 h-8 text-cursor-blue" /> </div> <h3 className="text-xl font-bold text-white mb-3" >Expert Support</h3> <p className="text-gray-400 text-sm" >Professional support and guidance for your business needs</p> </div> </Card> <Card className="card-hover border-gradient-blue text-center" > <div className="p-6" > <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center" > <Globe className="w-8 h-8 text-cursor-blue" /> </div> <h3 className="text-xl font-bold text-white mb-3" >Global Infrastructure</h3> <p className="text-gray-400 text-sm" >Worldwide availability with enterprise-grade reliability</p> </div> </Card> </div> </div> </section> Ready to Get Started? </h2> <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed" > Choose the micro SaaS service that fits your business needs and start transforming your operations today. </p> <Button href="/contact" size="lg" className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow" > Get Started </Button> <Button href="/pricing" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl" > View Pricing </Button> </div> </div> </section> </>) 
 }
-=======
-import React from 'react',
-import Head from 'next/head',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { import Head from 'next / head';
@@ -88,25 +81,7 @@ import {
   Mail, 
   Share2, 
   Check, 
-<<<<<<< HEAD
   Star;
-=======
-  Star,
-  Zap,
-  TrendingUp,
-  Users,
-  Globe,
-  Lock,
-  BarChart3,
-  Brain;
-  Monitor,Search,Shield,Mail,Share2,Check,import { Brain;
-  Monitor;
-  Search;
-  Shield;
-  Mail;
-  Share2;
-  Check;Star;
->>>>>>> origin/main
   Zap;
   TrendingUp;
   Users;
@@ -114,56 +89,6 @@ import {
   Lock;
   BarChart3;
   Calendar;
-<<<<<<< HEAD
-=======
-
-  Target
- } from 'lucide-react';
-export default function MicroSaasServicesPage() {
-  const microSaasServices = null;
-            we deliver professional solutions with competitive pricing and exceptional value.
-      features: [
-        'AI-powered content generation'
-        'Multiple content types (blog, social, email)'
-        'SEO optimization suggestions'
-        'Content templates library'
-        'Plagiarism-free content'
-        'Multi-language support'
-      ]
-      useCases: [
-        'Blog content creation'
-        'Social media posts'
-        'Email marketing campaigns'
-        'Product descriptions'
-        'Landing page copy'
-        'Newsletter content'
-      ]
-
-      pricing: {
-        starter: {
-          price: 19,
-          features: [
-            '5 URLs',
-            '5-min monitoring',
-            'Basic metrics',
-            'Email alerts',
-            '7-day retention',
-          ],
-        },
-        professional: {
-          price: 49,
-          features: [
-            '25 URLs',
-            '1-min monitoring',
-            'Advanced metrics',
-            'Multiple alerts',
-            '30-day retention',
-            'API access',
-          ],
-        },
-        enterprise: {
-  Calendar,
->>>>>>> origin/main
   Target
 } from 'lucide-react';
 
@@ -1552,4 +1477,3 @@ href='/pricing';
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

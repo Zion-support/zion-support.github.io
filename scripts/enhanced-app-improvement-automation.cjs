@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -26,13 +27,9 @@
 
 
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 #!/usr/bin/env node;
-
-
-
-
-
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -64,6 +61,7 @@ console.log('======')
     execSync('npm run build', { "stdio"})
       execSync('npm run export', { "stdio"})
   "status"
+<<<<<<< HEAD
     console.error('� Automation "failed")
 <<<<<<< HEAD
 ///usr/bin/env node
@@ -78,3 +76,6 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+    console.error('� Automation "failed")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

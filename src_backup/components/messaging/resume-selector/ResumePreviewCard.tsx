@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -36,7 +35,6 @@ interface ResumePreviewCardProps  {resume: Resume;
       default:;
         return 'bg-blue-100 text-blue-800';
     }
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx
   };
 
 import React from 'react',
@@ -94,7 +92,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {skill.name}
               </Badge>;
             ))}
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx
             {resume.skills.length > 5 && (
 <Badge
                 variant='outline'
@@ -118,7 +115,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </CardContent>;
     </Card>;
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx
   );
 };
 }

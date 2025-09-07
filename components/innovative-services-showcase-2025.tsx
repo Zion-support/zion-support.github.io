@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion  } from 'framer-motion';
   Search;
   Filter;
@@ -31,8 +30,6 @@ import { motion  } from 'framer-motion';
 import Layout from '../components/layout/Layout';import { Search, Filter, Star, CheckCircle, ArrowRight;
   Search,Filter,Star,CheckCircle,ArrowRight,Brain,Atom,Shield,Rocket,Target,Microscope,Phone,Mail,MapPin,TrendingUp,Users,Award,Zap,Globe,Cpu,Database,Lock,Cloud,Stethoscope,GraduationCap,Leaf,Truck,} from 'lucide-react';
 import Layout from '../components/layout/Layout';import { Search, Filter, Star, CheckCircle, ArrowRight,import { Search, Filter, Star, CheckCircle, ArrowRight;Brain, Atom, Shield, Rocket, Target, Microscope;
-=======
-<<<<<<< HEAD
 const filteredServices = serviceCategories.flatMap (category => category.services.filter (service => (selectedCategory === 'all' || category.id === selectedCategory) && (searchTerm === ''|| service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ) )
 const sortedServices = [...filteredServices].sort ( (a, b) => {
   switch (sortBy) {
@@ -53,10 +50,6 @@ case 'category': return (<Layout> <Head> <title>Innovative Services Showcase 202
   sortedServices.length === 0 && (<motion.div > <div className="text-gray-400 text-xl mb-4" >No services found</div> <div className="text-gray-500" >Try adjusting your search or filter criteria</div> </motion.div>) 
 }</div> </section> > <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth. </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <motion.div > <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4" > <Phone className="w-8 h-8 text-white" /> </div> > <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4" > <Mail className="w-8 h-8 text-white" /> </div> > <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4" > <MapPin className="w-8 h-8 text-white" /> </div> </motion.div> </div> </div> </section> </Layout>) 
 }
-=======
-import React, { useState } from 'react',
-import Head from 'next/head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion } from 'framer-motion';
 
   Search
@@ -1368,7 +1361,6 @@ className='text-center py-20'
     </Layout>
   )
 }
-<<<<<<< HEAD
               viewport={{ once: true }}>;
               className='text-center';
 className='text-center';
@@ -1568,6 +1560,3 @@ className='text-center';
 }
 
     </Layout>)}
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

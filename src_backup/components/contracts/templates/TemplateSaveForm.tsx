@@ -109,7 +109,6 @@ if ( {) {}
   $2;
 }
       return;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
     }
     set_saving (true);
     }set_saving (true)try {// Check condition;
@@ -118,7 +117,6 @@ if ( {) {$2;
         await update_template.mutate_async ({template_id: edit_template.id,title: values.title,template_data: edit_template.template_data,is_default: values.is_default})} else // Check condition;
 if ( {) {$2;
 }
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
         await create_template.mutate_async ({
     try {}
       // Check condition;
@@ -203,7 +201,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormControl>;<Switch;
                   aria-label='Default template';
                   checked={field && field.value}
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
                   onCheckedChange={field && field.onChange}                />;
 
   };
@@ -217,7 +214,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (<FormItem>;
               <FormLabel>Template Name</FormLabel>;
               <FormControl>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
   };
 
   return (;
@@ -263,7 +259,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </FormControl>;
               <FormMessage />;
             </FormItem>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
           )}
         />
         "
@@ -317,7 +312,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
                 Saving...;
               </>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
             ) : (;
               `${editTemplate ? 'Update' : 'Save'} Template`;
 
@@ -368,7 +362,6 @@ if ( {) {$2;
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (`$ {";
   edit_template ? "Update" : "Save";
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
 }Template`);
 }</Button> </div> </form> </Form>);
 }"}
@@ -397,7 +390,6 @@ try {;
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {";
   editTemplate ? "Update" : "Save" ;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }Template`)}</Button> </div> </form> </Form>)}";

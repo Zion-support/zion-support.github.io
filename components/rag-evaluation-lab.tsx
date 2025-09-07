@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 </p> <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
   [ </div>) ) 
 }</div> <div className="mt-12" > <h2 className="text-2xl font-semibold" >Pricing</h2> <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6" > <div className="rounded-2xl border border-cyan-400/30 p-6" > <h3 className="text-xl font-bold" >Starter</h3> <p className="mt-2 text-gray-300" >Offline evals, 3 projects, 10k runs/mo.</p> <p className="mt-4 text-3xl font-bold" >$149<span className="text-base font-normal text-gray-300" >/mo</span></p> </div> <div className="rounded-2xl border border-blue-400/30 p-6" > <h3 className="text-xl font-bold" >Growth</h3> <p className="mt-2 text-gray-300" >Live canaries, alerts, 10 projects, 100k runs/mo.</p> <p className="mt-4 text-3xl font-bold" >$449<span className="text-base font-normal text-gray-300" >/mo</span></p> </div> <div className="rounded-2xl border border-purple-400/30 p-6" > <h3 className="text-xl font-bold" >Enterprise</h3> <p className="mt-2 text-gray-300" >SSO, SOC 2, private networking, custom limits.</p> <p className="mt-4 text-3xl font-bold" >Custom</p> </div> </div> </div> <div className="mt-12 flex flex-wrap items-center gap-4" > <Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold" >Start Evaluating</a> <a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20" >Email: kleber@ziontechgroup.com</a> <span className="text-gray-400" >Call: +1 302 464 0950</span> </div> </div> </section> </>) 
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react',
 import SEO from '../components/SEO';
 
@@ -118,7 +113,6 @@ export default function RAGEvaluationLabPage() {
 		</>
 	)
 }
-<<<<<<< HEAD
     </>);					<div className="mt - 12 flex flex - wrap items-center gap-4">;
       <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - cyan - 400 text-black font-semibold">Start Evaluating</Link>;
       <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded-lg border border-white / 20">Email: kleber@ziontechgroup.com</a>;
@@ -215,6 +209,3 @@ export default function RAGEvaluationLabPage() {
   </>);
 }
   )
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

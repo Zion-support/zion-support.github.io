@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 import Link from "next/link",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -308,9 +306,7 @@ export function FeaturesGuideSection() {
   const features = [
     {
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
       id: "ai-matcher",
       title: "AI Matcher",
@@ -565,8 +561,6 @@ export function FeaturesGuideSection() {;
       ],;
       link: "/help";
       buttonText: "View Resources";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 
 
@@ -695,7 +689,6 @@ export function FeaturesGuideSection() {;
                 key={feature.id}
                 value={feature.id}
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -960,8 +953,6 @@ export function FeaturesGuideSection() {;
     },;
   ];
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -1588,12 +1579,9 @@ function FeaturesGuideSection() {const features = [;
         "Watch video tutorials on specific features";
         "Join community forums to connect with other users";
         "Contact our support team for personalized assistance";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
       ];
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
@@ -1605,9 +1593,7 @@ function FeaturesGuideSection() {const features = [;
             ))}
           </TabsList>
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1616,7 +1602,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
               <TabsTrigger 
@@ -1629,7 +1614,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
               >
@@ -1650,12 +1634,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {feature.title}
               </TabsTrigger>;
             ))}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
           </TabsList>
 
           {features.map(feature => (
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
       link: "/help",
       button_text: "View Resources";
@@ -1704,7 +1685,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {feature.title}
                   </h3>;
                   <p className='text - zion - slate - light mb - 6'>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
                     {feature.description}
 
 
@@ -1717,8 +1697,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
                   <Button 
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
 
@@ -1750,7 +1728,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </h3>;
                   <p className='text-zion-slate-light mb-6'>;
                     {feature.description}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
                   </p>
                   <Button
                     className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
@@ -1761,7 +1738,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     <Link href={feature.link}>
                       {feature.buttonText}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 
                   </p>;
@@ -1791,7 +1767,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {feature.instructions.map((instruction, idx,) => (
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
@@ -1882,10 +1857,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className='text-zion-cyan mr-2'>{idx + 1}.</span>;
                         {instruction}
                       </li>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
                     ))}
                   </ol>;
@@ -1903,11 +1875,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >;
             <Link;
               href="/marketplace";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
               onClick = {() => fireEvent('explore_marketplace_click'),}
 
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 <ArrowRight className='ml-2 h-4 w-4' />
                     </Link>
@@ -1931,11 +1901,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </TabsContent>
           ))}
         </Tabs>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
         
         <div className="mt-12 text-center">
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 
 <div className='mt-12 text-center'>
@@ -1950,14 +1918,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             asChild
           >
             <Link
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
               href="/marketplace"
               onClick={() => fireEvent('explore_marketplace_click')}
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 
 
@@ -1970,15 +1936,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Explore Full Marketplace
               <ArrowRight className='ml-2 h-4 w-4' />
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
             </Link>
           </Button>
         </div>
       </div>
     </section>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 
               onClick={() => fireEvent('explore_marketplace_click')}
@@ -2003,7 +1966,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
   );
 }
@@ -2068,11 +2030,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
     </section>);
 }
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
   );
 }

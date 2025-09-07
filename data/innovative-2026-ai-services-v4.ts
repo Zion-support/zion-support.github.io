@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
@@ -33,32 +22,19 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
   // AI Consciousness Simulation Platform;
   {id: 'ai-consciousness-simulation-platform', name: 'AI Consciousness Simulation Platform',tagline: 'Simulate human consciousness for research and development',import { ServiceVariant  } from '../types/service-variants';
 export interface Innovative2026AIServiceV4  {id: string;
-=======
-<<<<<<< HEAD
 import { ServiceVariant } from '../types / service - variants';
 
 export interface Innovative2026AIServiceV4 {
 
   {
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
       mobile: '+1 302 464 0950','
       email: 'kleber@ziontechgroup && ziontechgroup.com','
       address: '364 E Main St STE 1008 Middletown DE 19709','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       website: 'https://ziontechgroup && ziontechgroup.com',
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
@@ -69,10 +45,6 @@ pr-12325
     },
     real_implementation: true;,
     implementation_details:;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Full AI emotional intelligence platform with emotion recognition, sentiment analysis, and comprehensive emotional response capabilities.',
     launch_date: '2024 - 08 - 01';,
     customers: 89;,
@@ -103,19 +75,10 @@ pr-12325
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     realImplementation: boolean;, implementationDetails: string;,
   launchDate: string;, customers: number;,
   rating: number;,
   reviews: number;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
   // AI Consciousness Simulation Platform
@@ -125,18 +88,11 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
 pr-12325
   {
 
-<<<<<<< HEAD
     id: 'ai-consciousness-simulation-platform', name: 'AI Consciousness Simulation Platform',
     tagline: 'Simulate human consciousness for research and development',
-<<<<<<< HEAD
-=======
-    id: 'ai-consciousness-simulation-platform';, name: 'AI Consciousness Simulation Platform';,
-    tagline: 'Simulate human consciousness for research and development';,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026AIServiceV4 {
   id: string;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   name: string;
   tagline: string;
   price: string;
@@ -162,40 +118,23 @@ export interface Innovative2026AIServiceV4 {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-<<<<<<< HEAD
   contactInfo: {mobile: string;
     email: string;
     address: string;
     website: string;
   },realImplementation: boolean;
-=======
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  },
-  realImplementation: boolean;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
     id: 'ai-consciousness-simulation-platform';
     name: 'AI Consciousness Simulation Platform';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     id: 'ai-consciousness-simulation-platform';
     name: 'AI Consciousness Simulation Platform';
     tagline: 'Simulate human consciousness for research and development';
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     price: '$4,999',
     period: '/month',
-=======
 
 }
 export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
@@ -206,7 +145,6 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     tagline: 'Simulate human consciousness for research and development','
     price: '$4,999','
     period: '/month','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Revolutionary AI platform that simulates human consciousness for research, development, and understanding of human cognition and behavior.',
     features: ['
       'Human consciousness simulationCognitive behavior modelingEmotional intelligence simulationLearning and adaptationResearch tools and analyticsCustom consciousness modelsMulti-dimensional analysisEthical AI frameworks';'
@@ -225,24 +163,11 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     contactInfo: {'
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       address: '364 E Main St STE 1008 Middletown DE 19709',
 '
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
-=======
-=======
-
-=======
-    id: 'ai-consciousness-simulation-platform';
-    name: 'AI Consciousness Simulation Platform';
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     tagline: 'Simulate human consciousness for research and development';price: '$4,999',period: '/month',description: 'Revolutionary AI platform that simulates human consciousness for research, development, and understanding of human cognition and behavior.',features: [;
       'Human consciousness simulationCognitive behavior modelingEmotional intelligence simulationLearning and adaptationResearch tools and analyticsCustom consciousness modelsMulti-dimensional analysisEthical AI frameworks';
       'Research collaboration toolsAcademic and commercial licensing';
@@ -540,23 +465,16 @@ import { ServiceVariant } from '../types/service-variants',export interface Inno
     reviews: 167;
   }
 ];
-<<<<<<< HEAD
 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
       mobile: '+1 302 464 0950',
-=======
 mobile: '+1 302 464 0950',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     real_implementation: true,
     implementation_details:;
@@ -637,7 +555,6 @@ export interface Innovative2026AIServiceV4 {
 export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
   // AI Consciousness Simulation Platform
   {
-<<<<<<< HEAD
     id: 'ai-consciousness-simulation-platform',
     name: 'AI Consciousness Simulation Platform',
     tagline: 'Simulate human consciousness for research and development',
@@ -711,21 +628,6 @@ export interface Innovative2026AIServiceV4 {
     variant: 'ai-consciousness',
     contactInfo: {
 
-=======
-    id: 'ai-consciousness-simulation-platform', name: 'AI Consciousness Simulation Platform',
-    tagline: 'Simulate human consciousness for research and development',
-    price: '$4,999',
-    period: '/month',
-    description: 'Revolutionary AI platform that simulates human consciousness for research, development, and understanding of human cognition and behavior.',
-=======
-    tagline: 'Simulate human consciousness for research and development';
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12325
-    price: '$4;,999',
-    period: '/month';,
-    description: 'Revolutionary AI platform that simulates human consciousness for research;, development, and understanding of human cognition and behavior.',
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Human consciousness simulationCognitive behavior modelingEmotional intelligence simulationLearning and adaptationResearch tools and analyticsCustom consciousness modelsMulti-dimensional analysisEthical AI frameworks';
       'Research collaboration toolsAcademic and commercial licensing'
@@ -745,13 +647,10 @@ pr-12325
     contactInfo: {
       mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     real_implementation: true,
     implementation_details: 'Full AI emotional intelligence platform with emotion recognition, sentiment analysis, and comprehensive emotional response capabilities.';
       address: '364 E Main St STE 1008 Middletown DE 19709';,
@@ -762,7 +661,6 @@ pr-12325
     implementation_details: 'Full AI emotional intelligence platform with emotion recognition;, sentiment analysis, and comprehensive emotional response capabilities.';
     launch_date: '2024 - 08 - 01';
     customers: 89;
-<<<<<<< HEAD
     rating: 4.7,
     reviews: 167;
 
@@ -1049,17 +947,6 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
 
-=======
-      mobile: '+1 302 464 0950';,''
-      email: 'kleber@ziontechgroup && ziontechgroup.com';,''
-      address: '364 E Main St STE 1008 Middletown DE 19709';,''
-      website: 'https://ziontechgroup && ziontechgroup.com';,'
-
-    },
-    real_implementation: true;,
-    implementation_details:;
-}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
   // AI Consciousness Simulation Platform
   {
@@ -1097,15 +984,8 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     rating: 4.7;,
     reviews: 167;
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
     realImplementation: true
     implementationDetails: 'Full autonomous AI agents platform with learning capabilities;, multi-agent coordination, and comprehensive automation features.'
@@ -1114,25 +994,14 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
     rating: 4.8
     reviews: 289;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // AI Healthcare Companion 2026
   {
     id: 'ai-healthcare-companion-2026'
     name: 'AI Healthcare Companion 2026'
     tagline: 'Revolutionary AI healthcare companion for personalized care'
     price: '$399'
-=======
 
   // AI Healthcare Companion 2026;
   {'
@@ -1140,9 +1009,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'AI Healthcare Companion 2026''
     tagline: 'Revolutionary AI healthcare companion for personalized care''
     price: '$399''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     period: '/month'
-<<<<<<< HEAD
     description:'
       'Intelligent AI healthcare companion that provides personalized health monitoring, medication reminders, and health insights for individuals and healthcare providers.'
     features: []
@@ -1152,15 +1019,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Healthcare providers, Patients, Elderly care facilities, Health insurance companies, Wellness companies'
     trialDays: 30'
     setupTime: '1-2 weeks''
-=======
-    description: 'Intelligent AI healthcare companion that provides personalized health monitoring;, medication reminders, and health insights for individuals and healthcare providers.'
-    features: [
-    marketPosition:
-      'Advanced AI healthcare companion. Competes with basic health apps but offers AI-powered personalized care.'
-    targetAudience: 'Healthcare providers;, Patients, Elderly care facilities, Health insurance companies, Wellness companies'
-    trialDays: 30
-    setupTime: '1-2 weeks'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     category: 'AI Healthcare'
     realService: true;
     technology: ['
@@ -1203,7 +1061,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'Unlimited AI content generation for all your needs''
     price: '$599''
     period: '/month'
-<<<<<<< HEAD
     description:'
       'Revolutionary AI content creation platform that generates unlimited high-quality content including articles, videos, images, and social media posts.'
     features: []
@@ -1213,15 +1070,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Content creators, Marketing agencies, Businesses, Publishers, Social media managers'
     trialDays: 14'
     setupTime: '5 minutes''
-=======
-    description: 'Revolutionary AI content creation platform that generates unlimited high-quality content including articles;, videos, images, and social media posts.'
-    features: [
-    marketPosition:
-      'Revolutionary AI content creation platform. Competes with basic AI writers but offers unlimited multi-format content generation.'
-    targetAudience: 'Content creators;, Marketing agencies, Businesses, Publishers, Social media managers'
-    trialDays: 14
-    setupTime: '5 minutes'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     category: 'AI Content Creation'
     realService: true;
     technology: ['
@@ -1264,7 +1112,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'AI that understands and responds to human emotions''
     price: '$799''
     period: '/month'
-<<<<<<< HEAD
     description:'
       'Advanced AI platform that understands, analyzes, and responds to human emotions for improved customer service, mental health support, and human-AI interaction.'
     features: []
@@ -1274,15 +1121,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Customer service companies, Mental health providers, HR departments, Educational institutions, Technology companies'
     trialDays: 30'
     setupTime: '2-3 weeks''
-=======
-    description: 'Advanced AI platform that understands;, analyzes, and responds to human emotions for improved customer service, mental health support, and human-AI interaction.'
-    features: [
-    marketPosition:
-      'Advanced AI emotional intelligence platform. Competes with basic sentiment analysis but offers comprehensive emotional understanding.'
-    targetAudience: 'Customer service companies;, Mental health providers, HR departments, Educational institutions, Technology companies'
-    trialDays: 30
-    setupTime: '2-3 weeks'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     category: 'AI Emotional Intelligence'
     realService: true;
     technology: ['
@@ -1317,12 +1155,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketSize: '$10B emotional AI market''
     growthRate: '280% annual growth''
     variant: 'ai-emotional'
-<<<<<<< HEAD
     contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1343,21 +1176,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7;,
     reviews: 167;,
   },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-      'Full AI emotional intelligence platform with emotion recognition, sentiment analysis, and comprehensive emotional response capabilities.'
-    launchDate: '2024-08-01'
-    customers: 89
-    rating: 4.7
-    reviews: 167
-  }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1370,38 +1188,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7
 
     reviews: 167
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 ];
-=======
-    contactInfo: {}
-'
-];      mobile: '+1 302 464 0950';'
-      email: 'kleber@ziontechgroup.com';'
-      address: '364 E Main St STE 1008 Middletown DE 19709''
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true'
-    implementationDetails: 'Full AI emotional intelligence platform with emotion recognition, sentiment analysis, and comprehensive emotional response capabilities.';'
-    launchDate: '2024-08-01';
-    customers: 89;
-    rating: 4.7;
-    reviews: 167;
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
 
-=======
   }
 ];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  }
-];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ServiceVariant } from '../types/service-variants',;
     reviews: 167;
   }
@@ -1709,25 +1500,12 @@ pr-12325
   rating: number;,;
   reviews: number;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 pr-12325
 export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
   // AI Consciousness Simulation Platform;
-<<<<<<< HEAD
   {;'
     id: 'ai-consciousness-simulation-platform',;'
     name: 'AI Consciousness Simulation Platform',;'
@@ -1737,22 +1515,10 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     description: 'Revolutionary AI platform that simulates human consciousness for research, development, and understanding of human cognition and behavior.',;
     features: [;'
       'Human consciousness simulationCognitive behavior modelingEmotional intelligence simulationLearning and adaptationResearch tools and analyticsCustom consciousness modelsMulti-dimensional analysisEthical AI frameworks',;'
-=======
-  {;
-    id: 'ai-consciousness-simulation-platform';,;
-    name: 'AI Consciousness Simulation Platform';,;
-    tagline: 'Simulate human consciousness for research and development';,;
-    price: '$4;,999',;
-    period: '/month';,;
-    description: 'Revolutionary AI platform that simulates human consciousness for research;, development, and understanding of human cognition and behavior.',;
-    features: [;
-      'Human consciousness simulationCognitive behavior modelingEmotional intelligence simulationLearning and adaptationResearch tools and analyticsCustom consciousness modelsMulti-dimensional analysisEthical AI frameworks',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Research collaboration toolsAcademic and commercial licensing';
       'Research collaboration toolsAcademic and commercial licensing';']
 pr-12325
     ],;
-<<<<<<< HEAD
     popular: true,;'
     icon: '🧠',;'
     color: 'from-purple-600 to-pink-600',;'
@@ -1781,11 +1547,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
   // AI Consciousness Simulation Platform;
   {'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
     reviews: 167
-=======
-    reviews: 167'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -1826,17 +1588,10 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     marketSize: '$12B AI automation market',;'
     growthRate: '250% annual growth',;'
     variant: 'ai-autonomous',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -1877,17 +1632,10 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     marketSize: '$18B digital health market',;'
     growthRate: '200% annual growth',;'
     variant: 'ai-healthcare',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -1928,17 +1676,10 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     marketSize: '$15B content creation market',;'
     growthRate: '220% annual growth',;'
     variant: 'ai-creative',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -1979,17 +1720,10 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     marketSize: '$10B emotional AI market',;'
     growthRate: '280% annual growth',;'
     variant: 'ai-emotional',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -1998,7 +1732,6 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     customers: 89,;
     rating: 4.7;
     reviews: 167;
-<<<<<<< HEAD
 
 
   }
@@ -2203,14 +1936,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
     reviews: 167}
 ],
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     popular: true;,;
     icon: '🧠';,;
     color: 'from-purple-600 to-pink-600';,;
@@ -2642,7 +2367,6 @@ pr-12325
     customers: 89;,;
     rating: 4.7;
     reviews: 167;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ;
 ];
@@ -2959,9 +2683,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
   }
@@ -2969,9 +2690,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
     implementationDetails: 'Full AI emotional intelligence platform with emotion recognition;, sentiment analysis, and comprehensive emotional response capabilities.',;
     launchDate: '2024-08-01';,;
     customers: 89;,;
@@ -3020,15 +2738,8 @@ pr-12325
     customers: 89;,;
     rating: 4.7;,
   reviews: 167;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 
 ;
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

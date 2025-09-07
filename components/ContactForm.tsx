@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React, { useState } from 'react';
@@ -54,17 +52,11 @@ interface FormData {
   message: string;
 }
 
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import LoadingSpinner from './LoadingSpinner'
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 interface FormData {
   name: string;
   email: string;
@@ -86,10 +78,8 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-<<<<<<< HEAD
   service: string
   message: string
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -103,27 +93,19 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-<<<<<<< HEAD
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-<<<<<<< HEAD
 
   const handleSubmit = async (e: React.FormEvent) => {
-<<<<<<< HEAD
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -159,33 +141,15 @@ const ContactForm: React.FC = () => {
             </div>;
           ) : (;
             'Send Message';
-=======
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
-    try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      setSubmitStatus('success')
-      setFormData({
-<<<<<<< HEAD
         name: ''
         email: ''
         company: ''
         phone: ''
         service: ''
-=======
-        name: '';,
-        email: '';,
-        company: '';,
-        phone: '';,
-        service: '';,
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
         message: ''
       })
     } catch {
       setSubmitStatus('error')
-<<<<<<< HEAD
     } finally {
       setIsSubmitting(false)
     }
@@ -205,8 +169,6 @@ const ContactForm: React.FC = () => {
           Sorry, there was an error sending your message. Please try again.
         </div>
       )}
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -379,7 +341,6 @@ const ContactForm: React.FC = () => {
             </>
           ) : (
             'Send Message'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           )}
         </button>;
       </form>;
@@ -591,24 +552,12 @@ const ContactForm: React.FC = () => {
         </form>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 export default ContactForm;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
-  )
-}
-<<<<<<< HEAD
 export default ContactForm
-=======
-export default ContactForm;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
   );
 };
 
 export default ContactForm;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

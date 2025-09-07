@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
@@ -212,7 +209,6 @@ if ( {) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Fraud ingest endpoint' });
->>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
 import { classifyWithGPT } from '../../../utils/fraud/gpt';
@@ -296,29 +292,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
   }
-<<<<<<< HEAD
 }
-=======
-}
-  }
-}
-  }
-}
-  }
-}
-
-  }
-}
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 type DistributionItem = { label: string, percent: number },
@@ -129,26 +128,14 @@ export default function TokenomicsWhitepaperBuilder() {
     alert('Shareable link copied to clipboard')
   }
 
-<<<<<<< HEAD
   const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'];
 
-=======
-  const sections = $2;
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function tokenomics() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
   return (
     <Layout>
       <Head>
         <title>Tokenomics - Zion Tech Group</title>
         <meta name="description" content="Tokenomics solutions and services." />
       </Head>
-<<<<<<< HEAD
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Whitepaper Generator</h1>
@@ -328,17 +315,4 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   return (
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Tokenomics</h1>
-          <p className="text-lg text-gray-600">
-            Professional tokenomics solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

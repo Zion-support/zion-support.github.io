@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes";
@@ -11,20 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
 
-=======
-
-
-
-
-import {Button} from "@/components/ui/button";
-import {Download} from "lucide-react";
-import type { QuoteRequest } from "@/types/quotes";
-import { Button } from "@/components/ui/button",
-import { Download } from "lucide-react";
-import type { QuoteRequest } from "@/types/quotes";
-import { Download } from "lucide-react",
-import type { QuoteRequest } from "@/types/quotes",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
 interface ExportToCSVProps {
   quotes: QuoteRequest[]
   filename?: string
@@ -32,7 +14,6 @@ interface ExportToCSVProps {
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
     const headers = [
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline'
       'StatusCreated Date'
@@ -46,17 +27,12 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       quote.project_name
       quote.project_summary
       quote.budget_display |
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   quotes: QuoteRequest[];
   filename?: string
-=======
 
 interface ExportToCSVProps {;
   quotes: QuoteRequest[],;
   filename?: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
 }
 
 export const ExportToCSV = null;
@@ -66,7 +42,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           : quote.budget_min
             ? `$${quote.budget_min}`
 
-<<<<<<< HEAD
 
           // Escape commas and quotes in cell values
           typeof cell === 'string' && (cell.includes() |cell.includes('"'))
@@ -95,28 +70,6 @@ import { Button } from '@/components / ui / button';
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from '@/types / quotes';
 interface ExportToCSVProps {
-=======
-import { Button  } from '@/components/ui/button';
-import { Download  } from 'lucide-react';
-import type { QuoteRequest } from '@/types/quotes';
-interface ExportToCSVProps  {quotes: QuoteRequest[];
-  filename?: string;
-}
-export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {const handleExport = () => {// Define CSV Headers;
-    const headers = [;
-      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
-      'StatusCreated Date';
-    ];
-    // Format quote data for CSV;
-    const rows = quotes.map(quote => [;
-      quote.id;
-      quote.talent_name |'Unknown';
-      quote.requester_name;
-      quote.requester_email;
-      quote.project_name;
-      quote.project_summary;
-      quote.budget_display |;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/quotes/ExportToCSV.tsx
   quotes: QuoteRequest[];
   filename?: string;
 }export const ExportToCSV  = null;(quote.budget_min && quote.budget_max;
@@ -142,7 +95,6 @@ export const ExportToCSV = ({quotes,filename = 'quote - requests';
     const headers = [;
       'ID','Talent Name','Requester Name','Requester Email','Project Name','Project Summary','Budget','Timeline','Status','Created Date';
     ];
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
     // Format quote data for CSV;
     const rows = quotes.map (quote => [;
       quote.id,quote.talent_name || 'Unknown',quote.requester_name,quote.requester_email,quote.project_name,quote.project_summary,quote.budget_display ||;
@@ -157,7 +109,6 @@ export const ExportToCSV = ({quotes,filename = 'quote - requests';
           .map (cell =>;
             // Escape commas and quotes in cell values;
             typeof cell === 'string' &&;
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
             (cell.includes (', ') || cell.includes ('"'));
               ? `"${cell.replace (/"/g, '""')}"`;
               : cell);
@@ -173,21 +124,14 @@ export const ExportToCSV = ({quotes,filename = 'quote - requests';
       `${filename}-${new Date ().toISOString ().split ('T')[0]}.csv`);
     document.body.append_child (link);
 import { Button  } from '@/components / ui / button';
-=======
-
-import { Button } from '@/components / ui / button';
-import { Download } from './lucide-react';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
 import type { QuoteRequest } from "@/types / quotes";
 interface ExportToCSVProps {
   quotes: QuoteRequest[],
   filename?: string;
-=======
             (cell.includes (', ') || cell.includes ('"'))? `"${cell.replace (/"/g, '""')}"`;
               : cell).join (', '))].join ('\n')// Create download link;
     const blob = new Blob ([csv_content], { type: 'text / csv;charset = utf - 8;' })const url = URL.createObjectURL (blob)const link = document.create_element ('a')link.set_attribute ('href', url)link.set_attribute ('download',`${filename}-${new Date ().toISOString ().split ('T')[0]}.csv`)document.body.append_child (link)import { Button   } from '@/components / ui / button';
 interface ExportToCSVProps  {quotes: QuoteRequest[],filename?: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/quotes/ExportToCSV.tsx
 }
 export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToCSVProps) =>: any {const handle_export = () =>: any {// Define CSV Headers;
     const headers = [;
@@ -196,17 +140,12 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     ];
     // Format quote data for CSV;
     const rows = quotes.map (quote => [;
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
       quote.id;
       quote.talent_name || 'Unknown';
       quote.requester_name;
       quote.requester_email;
       quote.project_name;
       quote.project_summary;
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
       quote.budget_display ||;
         (quote.budget_min && quote.budget_max;
           ? `$${quote.budget_min} - $${quote.budget_max}`;
@@ -229,7 +168,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     </Button>)}
 '";
   } }
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
   return (
 
 
@@ -247,36 +185,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     const headers = [
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
       'StatusCreated Date'
-=======
-
-
-    // Format quote data for CSV;
-    const rows = quotes && quotes.map(quote => [;
-      quote && quote.id;
-      quote && quote.talent_name || 'Unknown';
-      quote && quote.requester_name;
-      quote && quote.requester_email;
-      quote && quote.project_name;
-      quote && quote.project_summary;
-      quote && quote.budget_display || ;
-        (quote && quote.budget_min && quote && quote.budget_max ;
-          ? `$${quote && quote.budget_min} - $${quote && quote.budget_max}` ;
-          : quote && quote.budget_min ;
-            ? `$${quote && quote.budget_min}` ;
-
-            : 'Not specified');
-      quote && quote.timeline;
-      quote && quote.status;
-      new Date(quote && quote.created_at).toLocaleDateString();
-    ]);
-
-
-    const headers = [
-      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
-
-      'StatusCreated Date'
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
     ],
     
     // Format quote data for CSV
@@ -303,27 +211,17 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       headers.join(),
       ...rows.map(row => 
         row.map(cell => 
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
           // Escape commas and quotes in cell values
           typeof cell === 'string' && (cell.includes() || cell.includes('"')) 
             ? `"${cell.replace(/"/g, '""')}"` 
             : cell
         ).join()
       )
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
 '"},;
 ;
   );
 };
 
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
     ].join('\n'),
     
     // Create download link
@@ -334,19 +232,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),
     document.body.appendChild(link),
     
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
-=======
-
-
-    // Download file and clean up
-    link.click();
-    setTimeout(() => {
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url)
-    }, 100)
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
     // Download file and clean up
     link.click(),
     setTimeout(() => {
@@ -370,7 +255,6 @@ interface ExportToCSVProps {;
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {;
   const handleExport = () => {;
     // Define CSV Headers;
-=======
   return (import { Button } from "@/components/ui/button",import type { QuoteRequest } from "@/types/quotes",interface ExportToCSVProps  {quotes: QuoteRequest[],filename?: string;
 }export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {const handleExport = () => {// Define CSV Headers;
     const headers = [;
@@ -394,7 +278,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     link.click(),setTimeout(() => {document.body.removeChild(link),URL.revokeObjectURL(url)}, 100)},return (<Button;
       variant="outline";interface ExportToCSVProps  {quotes: QuoteRequest[],filename?: string;
 }export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {const handleExport = () => {// Define CSV Headers;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/quotes/ExportToCSV.tsx
     const headers = [;
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
       'StatusCreated Date';
@@ -431,87 +314,29 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       onClick = {handleExport}
       className="flex items-center gap-2";
       disabled={quotes && quotes.length === 0}>;
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
-=======
-
-  },
-  
-  return (
-    <Button 
-      variant="outline" 
-
-      onClick={handleExport}
-      className="flex items-center gap-2"
-      disabled={quotes.length === 0}
-
-
-    >;
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
       <Download size={16} />;
       Export CSV;
     </Button>;
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
   );
 };
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
 '"},;
 
 
-=======
-      quote.budget_display ||;
-        (quote.budget_min && quote.budget_max;
-          ? `$${quote.budget_min} - $${quote.budget_max}`;
-          : quote.budget_min;
-            ? `$${quote.budget_min}`;
-      on_click={handle_export}
-      className="flex items - center gap - 2";
-      disabled={quotes.length === 0}
-    >;
-      <Download size={16} />;
-      Export CSV;
-    </Button>);
-}
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
 
     <Button;
       variant="outline";
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
       on_click = {handle_export, }
-=======
-      onClick={handleExport}
-      className="flex items-center gap-2"
-      disabled={quotes.length === 0}
-
-    >;
-      <Download size={16} />;
-      Export CSV;
-    </Button>;
-  );
-};
-      on_click={handle_export}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
-=======
   )}'"},<Button;
       variant="outline";
       on_click = {handle_export }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/quotes/ExportToCSV.tsx
       className="flex items - center gap - 2";
       disabled={quotes.length === 0}
     >;
       <Download size={16} />;
       Export CSV;
     </Button>;
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
   );
 }
-<<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             : 'Not specified'),
       quote.timeline,
       quote.status,
@@ -558,15 +383,8 @@ URL.revokeObjectURL(url);
 );
 };
 '"
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   )}
             : 'Not specified'),quote.timeline,quote.status,new Date(quote.created_at).toLocaleDateString()])// Create CSV content;
     const csvContent = [;
@@ -585,4 +403,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       Export CSV;
     </Button>;
 )}'";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/quotes/ExportToCSV.tsx

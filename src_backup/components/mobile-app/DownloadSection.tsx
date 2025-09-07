@@ -9,7 +9,6 @@ appStoreUrl = {appStoreUrl,}
 
 
               
-<<<<<<< HEAD:src_backup/components/mobile-app/DownloadSection.tsx
 import { AppStoreButtons } from "./AppStoreButtons";
 import { logInfo } from '@/utils/productionLogger';
 export const DownloadSection: React.FC;
@@ -135,8 +134,6 @@ export const DownloadSection: React.FC = () => {;
                 onAppStoreClick={() => logInfo("App Store button clicked")}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />;
-<<<<<<< HEAD:src_backup/components/mobile-app/DownloadSection.tsx
-<<<<<<< HEAD:src_backup/components/mobile-app/DownloadSection.tsx
               <div className="text - sm text - gray - 400">;
 
               <div className="text - sm text - gray - 400">;
@@ -176,7 +173,6 @@ export const DownloadSection: React.FC = () => {;
   )
 };
 
-<<<<<<< HEAD:src_backup/components/mobile-app/DownloadSection.tsx
                 {/* This would be replaced with an actual QR code in production */}
                 <QrCodeIcon className="w - full h - full p - 2" />;{/* This would be replaced with an actual QR code in production */}
               </div>;
@@ -185,7 +181,6 @@ export const DownloadSection: React.FC = () => {;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/DownloadSection.tsx
     </section>);
 }
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">

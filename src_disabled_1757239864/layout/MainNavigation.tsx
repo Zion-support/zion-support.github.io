@@ -1,5 +1,4 @@
 <<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
-<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { useState } from "react",
@@ -225,7 +224,6 @@ interface MainNavigationProps {
                 </Link>;
               </li>;
             )}
-<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
 
                     onClick={handleCartClick}
                     className={cn(
@@ -661,7 +659,6 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
                     {cartCount > 0 && (
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
 >                        {cartCount}
-<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
                       </span>;
 
                     )}

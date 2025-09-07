@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   Search;
   Filter;
@@ -19,8 +18,6 @@
   Search,Filter,Star,TrendingUp,Zap,Brain,Cpu,Shield,Rocket,Globe,Database,Lock,Cloud,Atom,Sparkles,Target,import { motion  } from 'framer-motion';
 import {Search,Filter,Star,TrendingUp,Zap,Brain,Cpu,Shield,Rocket,Globe,Database,Lock,Cloud,Atom,Sparkles,Target,} from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target  } from 'lucide-react';
 import React, { useState, useMemo } from 'react';
-=======
-<<<<<<< HEAD
 // Filter and sort services const filteredServices = allServices .filter (service => {
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || case 'rating': return b.rating - a.rating
 case 'customers': return (<UltraAdvancedFuturisticBackground intensity="extreme" colorScheme="quantum-fusion" particleCount= {
@@ -190,9 +187,6 @@ emerging technologies, and comprehensive IT solutions </p> {
   contactInfo.address 
 }</span> </div> </div> <div className="flex flex-col sm: flex-row gap-4 justify-center"> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Contact Us Now </a> <a href="/pricing" className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300" > View Pricing </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
 }
-=======
-import React, { useState, useMemo } from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
@@ -1171,4 +1165,3 @@ href='/pricing';
     </UltraAdvancedFuturisticBackground>)}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

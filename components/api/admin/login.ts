@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { setSessionCookie } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (req.method !== 'POST') {
-<<<<<<< HEAD
     res.status(405).json($2);
     return
   }

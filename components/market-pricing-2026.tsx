@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import Head from 'next / head';
 import React, { useState } from 'react';
-=======
-<<<<<<< HEAD
 > <div className="min-h-screen" > <Head> <title>Zion Tech Group - 2026 Market Pricing & Competitive Analysis | 1500+ Solutions</title> <meta name="description" content="Comprehensive market pricing analysis for Zion Tech Group's revolutionary 2026 services. Compare prices, ROI, and competitive positioning. Contact: +1 302 464 0950" /> <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, emerging technology pricing, IT solutions pricing, competitive analysis, market positioning, ROI analysis" /> <meta name="author" content="Zion Tech Group" /> <meta name="robots" content="index, follow" /> <meta property="og:title" content="Zion Tech Group - 2026 Market Pricing & Competitive Analysis" /> <meta property="og:description" content="1500+ cutting-edge services with competitive pricing and 1000% ROI guarantee. Contact: +1 302 464 0950" /> <meta property="og:url" content="https://ziontechgroup.com/market-pricing-2026" /> <meta property="og:type" content="website" /> <link rel="canonical" href="https://ziontechgroup.com/market-pricing-2026" /> </Head> {
   /* Navigation */ 
 }<UltraAdvancedNavigation /> <motion.div initial= {
@@ -52,9 +49,6 @@ quantum computing, and emerging technology services </p> </div> </div> </motion.
   filteredServices.length === 0 && (<motion.div > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your category or price range filters</p> </motion.div>) 
 }</div> </section> > <h2 className="text-3xl font-bold text-white mb-6" >Ready to Get Started?</h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services can transform your business with exceptional ROI </p> </div> </div> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Custom Quote </a> <a href="/2026-services-showcase" className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300" > View All Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
 }
-=======
-import React, { useState } from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
@@ -191,40 +185,12 @@ export default function MarketPricing2026() {
   };
 
   // Calculate pricing statistics
-<<<<<<< HEAD
   const pricingStats = {
     totalServices: allServices.length,
     averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length;
     lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ''))));
     highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ''))));
     totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0);
-=======
-export default function MarketPricing2026() {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
-  // Combine all 2026 services
-
-
-  const allServices = [
-    ...revolutionary2026Services
-    ...emergingTech2026Services
-
-  // Combine all 2026 services;
-  const allServices = [;
-    ...revolutionary2026Services,;
-    ...emergingTech2026Services,;
-    ...comprehensiveIT2026Services,    ...revolutionary2026Services;
-    ...emergingTech2026Services;
-    ...comprehensiveIT2026Services;
-  ];
-
-
-  const pricingStats = $2;
-    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length,
-    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
-    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
-    totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0),
->>>>>>> origin/main
     averageRating: allServices.reduce((sum, service) => sum + service.rating, 0) / allServices.length
   };
 
@@ -1762,4 +1728,3 @@ href='/2026-services-showcase';
     </UltraAdvancedFuturisticBackground>)}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

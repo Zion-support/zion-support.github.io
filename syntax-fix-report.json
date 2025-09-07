@@ -1,6 +1,4 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
   "timestamp": "2025-09-06T03:11:23.175Z",
   "duration": "10s",
   "fixedFiles": [],
@@ -13,8 +11,6 @@
     "successRate": null
   }
 }
-=======
-<<<<<<< HEAD
 
 
 
@@ -28,23 +24,14 @@ main
 
 
 
-=======
-
-<<<<<<< HEAD
 
 
 
 
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
   "fixedFiles": 31,
   "errors": 0,
-<<<<<<< HEAD
   "fixedFileList": [
     "/workspace/src/components/Accessibility.js.jsx",
     "/workspace/src/components/Accessibility.jsx",
@@ -357,19 +344,6 @@ main
     "api/quotes.js",
     "api/shipping-rates.js",
     "api/wallet.js",
-=======
-"timestamp": "2025-09-07T09:46:21.975Z",
-  "totalFilesChecked": 2256,
-  "fixedFiles": 2246,
-  "failedFiles": 0,
-  "fixedFileList": [
-    "automation/accessibility-checker.cjs",
-    "automation/ai-intelligent-code-analyzer.cjs",
-    "automation/app-improvement-suite.cjs",
-    "automation/auto-fix-orchestrator.cjs",
-    "automation/automated-test-runner.cjs",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
   "fixedFileList": [
     "/workspace/src/components/Accessibility.js.jsx",
     "/workspace/src/components/Accessibility.jsx",
@@ -929,15 +903,12 @@ main
 
   "errorDetails": []
 
-<<<<<<< HEAD
 
 
 
 
 
 
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   "timestamp": "2025-09-05T02:57:49.742Z",
   "processedFiles": 8556,
   "fixedFiles": 6729,
@@ -1079,7 +1050,6 @@ main
     "api/quotes.js",
     "api/shipping-rates.js",
     "api/wallet.js",
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     "automation/automation-dashboard.js",
     "automation/automation-factory.js",
     "automation/backups/data-sync/2025-08-25T15-27-09-798Z/data/2025-emerging-tech-services.ts",
@@ -7674,17 +7644,10 @@ main
     "zion_academy/static/js/script.js",
     "zion_academy/static/js/script.jsx"
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
   "errorList": []
 }
 
 
-=======
-  "errorList": []
-}
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   "timestamp": "2025-09-03T22:43:17.753Z",
   "fixes": [
     "components/ErrorBoundary.tsx: Remove semicolon after closing brace (2 fixes)",
@@ -7707,7 +7670,6 @@ main
   "issues": [],
   "totalFixes": 16,
   "totalIssues": 0
-<<<<<<< HEAD
 }
 }
 
@@ -9260,16 +9222,5 @@ main
     "/workspace/vite.config-backup.ts"
   ]
 }
-=======
-"errors": []
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 }
 }
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

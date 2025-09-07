@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/sync/publish.ts
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -59,7 +57,6 @@ export default async function handler(req, res) {
     }
     const computed = computeMerkleRootFromVotes($2);
     if (computed !== providedRoot) {
-<<<<<<< HEAD:pages_backup/api/sync/publish.ts
   if (scope;
 origin/cursor/automate-test-improve-and-merge-code-2533
       return res.status(400).json({ error: "Merkle root mismatch" })
@@ -94,7 +91,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const localBody = { ...event, propagate: false }
     const baseSignature = require("../../../utils/sync/signature");
     const sig = baseSignature.signPayload(localBody);
-<<<<<<< HEAD:pages_backup/api/sync/publish.ts
     const headers: Record<string, string> = {}
     const localBody = { ...event, propagate: false }
     const baseSignature = require("../../../utils/sync/signature")
@@ -132,7 +128,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         .filter((p) => !p.paused)
         .map(async (peer) => {
 
-<<<<<<< HEAD:pages_backup/api/sync/publish.ts
           const url = new URL("/api/sync/publish", peer.baseUrl).toString()
 
           try {
@@ -199,7 +194,6 @@ if (headers["x - zion - signature"] = sig) {
           try {
             await axios.post (url, local_body, { headers, timeout: 5000 });
           } catch {
-<<<<<<< HEAD:pages_backup/api/sync/publish.ts
             // ignore peer failure;
           }
         }));
@@ -222,22 +216,9 @@ if (headers["x - zion - signature"] = sig) {
     )
   }
 
-<<<<<<< HEAD:pages_backup/api/sync/publish.ts
   return res.status(200).json({ status: 'accepted', entityId });
 
 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ status: "accepted", entityId })
 }
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

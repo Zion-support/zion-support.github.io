@@ -71,7 +71,3 @@ export function MobileHeader({
     </header>
   )
 }
-<<<<<<< HEAD:src/mobile/components/common/MobileHeader.tsx
-=======
-;
->>>>>>> origin/main:src_disabled_1757239864/mobile/components/common/MobileHeader.tsx

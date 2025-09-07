@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
@@ -504,7 +502,6 @@ export function TalentProfile({}
               </div>;
             </div>;
           )}
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
         </div>
       </div>
     </div>

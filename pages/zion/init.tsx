@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import type { NextPage } from 'next';
 type GovernanceMode = $2;
@@ -76,33 +75,12 @@ const InitPage: NextPage = () => {
       setSubmitting(false)
     }
   },
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
   return (
-<<<<<<< HEAD
     <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold">Genesis Deploy</h1>
         <p className="text-sm text-gray-600 dark:text-gray-400">Initialize a full Zion OS instance from a single control panel.</p>
-=======
-    <Layout>
-      <Head>
-        <title>Init - Zion Tech Group</title>
-        <meta name="description" content="Init solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Init</h1>
-          <p className="text-lg text-gray-600">
-            Professional init solutions tailored to your business needs.
-          </p>
-        </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       </div>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 max-w-4xl">

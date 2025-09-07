@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -84,20 +83,12 @@ export default function AdvancedServicesShowcase2025() {
     return categoryData?.icon || '🚀'
   },
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function 2025advancedservicesshowcase() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>2025 Advanced Services Showcase - Zion Tech Group</title>
         <meta name="description" content="2025 Advanced Services Showcase solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <EnhancedNavigation />
 
@@ -453,17 +444,4 @@ export default function 2025advancedservicesshowcase() {
       <EnhancedFooter />
     </div>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">2025 Advanced Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional 2025 advanced services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

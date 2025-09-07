@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
 import { ApplicationStatus } from '@/types/jobs';
 import { Progress } from '@/components/ui/progress';
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
@@ -12,39 +10,22 @@ import { cn } from "@/lib/utils";
 interface ApplicationProgressProps {
   status: ApplicationStatus;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-interface ApplicationProgressProps {
-
-  status: ApplicationStatus
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationProgress.tsx
   className?: string
 }
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
   // Define the progress value based on status
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const getProgressValue = () => {
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
-=======
 import { ApplicationStatus  } from '@/types/ jobs';
 import { Progress  } from '@/components/ui/ progress';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/jobs/applications/ApplicationProgress.tsx
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn  } from '@/lib / utils';
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   class_name?: string;
-=======
 
 interface ApplicationProgressProps  {status: ApplicationStatus;
 import { ApplicationStatus  } from '@/types/jobs';
@@ -58,7 +39,6 @@ export function ApplicationProgress() {// Define the progress value based on sta
 import { Progress   } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn   } from '@/lib / utils';
 interface ApplicationProgressProps  {status: ApplicationStatus,class_name?: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/jobs/applications/ApplicationProgress.tsx
 }
 export /**;
  * ApplicationProgress - Function description;
@@ -66,7 +46,6 @@ export /**;
 function ApplicationProgress() {// Define the progress value based on status;
   const getProgressValue = () =>: any {switch (status) {case "new": return 20,case "viewed": return 40,case "shortlisted": return 60,case "interview": return 80,case "hired": return 100,case "rejected": return 100,default: return 0;
     }
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
   },
 
   const progressValue = getProgressValue(),
@@ -78,12 +57,6 @@ function ApplicationProgress() {// Define the progress value based on status;
 
 
 
-=======
-
-  const getProgressValue = () => {
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationProgress.tsx
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -111,10 +84,6 @@ function ApplicationProgress() {// Define the progress value based on status;
 }
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationProgress.tsx
 
 
   const statusRank: Record<ApplicationStatus number> = {
@@ -131,7 +100,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
 
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
 
   const currentRank = statusRank[current],
 
@@ -139,12 +107,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
   const getProgressValue = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  const statusRank_ = statusRank[status],
-
-
-  const getProgressValue = null;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationProgress.tsx
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -152,24 +114,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // This is the current step
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
 
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils";
 
-=======
-import { ApplicationStatus } from "@/types/jobs",;
-import { Progress } from "@/components/ui/progress",;
-import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
-import { cn } from "@/lib/utils",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationProgress.tsx
 interface ApplicationProgressProps {;
   status: ApplicationStatus,;
   className?: string;
 }
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationProgress.tsx
 ;
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {;
   // Define the progress value based on status;
@@ -187,9 +138,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   const progressValue = getProgressValue(),;
   return (;
     <div className={cn("w-full space-y-2", className)}>;
-=======
   },const progressValue = getProgressValue(),return (<div className={cn("w-full space-y-2", className)}>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/jobs/applications/ApplicationProgress.tsx
       <Progress value={progressValue} className="h-2" />;
       <div className="flex justify-between text-xs text-muted-foreground">;
         <div className="flex flex-col items-center">;
@@ -304,22 +253,13 @@ if ( {) {$2;
   } else {// This step is upcoming;
     return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
   }
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
 }
 
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
   }
 
 }"
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-}// This step is upcoming;
-    return <Circle className="h-4 w-4 text-muted-foreground/50" />;
-  }}";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/jobs/applications/ApplicationProgress.tsx
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/jobs/applications/ApplicationProgress.tsx

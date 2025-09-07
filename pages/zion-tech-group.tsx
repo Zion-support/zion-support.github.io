@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { 
   Brain, Zap, Target, BarChart3, Users, TrendingUp, 
@@ -21,18 +20,12 @@ import {
 } from 'lucide-react',
 
 export default function ZionTechGroupPage() {
-=======
-import Layout from '../components/layout/Layout';
-
-export default function ziontechgroup() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Zion Tech Group - Zion Tech Group</title>
         <meta name="description" content="Zion Tech Group solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Navigation */}
@@ -420,17 +413,4 @@ export default function ziontechgroup() {
       </div>
     </>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Zion Tech Group</h1>
-          <p className="text-lg text-gray-600">
-            Professional zion tech group solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

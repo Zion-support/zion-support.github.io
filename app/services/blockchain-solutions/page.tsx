@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Metadata } from 'next'
 
@@ -59,10 +58,6 @@ export default function ServicePage() {
       </div>
     </div>
   )
-=======
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -102,9 +97,6 @@ export default function ServicePage() {
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             This service page is under development. Please contact us for more information.
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 import Link from 'next/link';
 
 export const metadata = {
@@ -202,10 +194,6 @@ export default function BlockchainSolutionsPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Blockchain Development Process</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We follow a proven methodology to deliver secure, scalable, and innovative blockchain solutions.
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
           </p>
           <a
             href="/contact"
@@ -214,14 +202,9 @@ export default function BlockchainSolutionsPage() {
             Contact Us
           </a>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
       </section>
     </div>
   )
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ProcessStep
             step={1}
@@ -285,9 +268,4 @@ export default function BlockchainSolutionsPage() {
       <ContactSection />
     </div>
   );
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 }

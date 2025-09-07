@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/profile/ProfileAvailability.tsx
-<<<<<<< HEAD:src_backup/components/profile/ProfileAvailability.tsx
 }
 
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
@@ -459,7 +457,6 @@ interface ProfileAvailabilityProps  {availability: Availability;export function 
               </div>))}
           </div>;
         </div>)}
-<<<<<<< HEAD:src_backup/components/profile/ProfileAvailability.tsx
     </div>)}</div>;
   )
     </div>);

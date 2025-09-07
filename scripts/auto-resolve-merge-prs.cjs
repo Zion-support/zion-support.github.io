@@ -1,13 +1,17 @@
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
 function sh(cmd, opts = {}) {}
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()};
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -17,6 +21,8 @@ function sh(cmd, opts = {}) {}
 
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 function getRepoFromGit() {}
   const remoteUrl = sh('git remote get-url origin');
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
@@ -24,9 +30,9 @@ function getRepoFromGit() {}
   return { "owner": m[1], "repo": m[2] }};"
 function getToken() {}
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
-
     },
     "body": body ? JSON.stringify(body) : undefined;"
+<<<<<<< HEAD
   }
 });
   const text = await res.text();"
@@ -46,6 +52,15 @@ function resolveConflictsFiles() {}
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+})
+  const text = await res.text();"
+  return data}
+async function listOpenPRs(owner, repo) {}`
+  const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`)
+  return prs}
+function resolveConflictsFiles() {}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
   // list conflicted files;
   const output = sh('git diff --name-only --diff-filter=U || true');
   const files = output.split('\n').filter(Boolean);
@@ -65,7 +80,6 @@ function resolveConflictsFiles() {}
 };
 async function main() {}
   const { owner, repo } = getRepoFromGit();
-  
   sh('git fetch origin');
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   // Stash local changes to avoid checkout conflicts;
@@ -119,6 +133,7 @@ async function main() {}
   };
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 // list conflicted files;"
@@ -137,3 +152,6 @@ main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+});
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

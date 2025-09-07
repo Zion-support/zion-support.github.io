@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -20,19 +21,27 @@ const { execSync } = require('child_process');
 <<<<<<< HEAD
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
+=======
+#!/usr/bin/env node,
+  const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 class SecurityAuditor {
   constructor() {
     this.vulnerabilities = [];
     this.recommendations = [];
   }
-
   async auditDependencies() {
     try {
       console.log('Auditing dependencies...');
       const result = execSync('npm audit --json', { encoding: 'utf8' });
       const auditData = JSON.parse(result);
+<<<<<<< HEAD
       
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       if (auditData.vulnerabilities) {
         this.vulnerabilities = Object.values(auditData.vulnerabilities);
         console.log(`Found ${this.vulnerabilities.length} vulnerabilities`);
@@ -299,24 +308,26 @@ class SecurityAuditor {
       console.error('Error auditing dependencies:', error);
     }
   }
-
   async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
       vulnerabilities: this.vulnerabilities,
       recommendations: this.recommendations
     };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
     const reportPath = path.join(process.cwd(), 'security-audit-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`Security audit report generated: ${reportPath}`);
   }
-
   async run() {
     console.log('🔒 Starting Security Audit');
     await this.auditDependencies();
     await this.generateReport();
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -424,10 +435,15 @@ class SecurityAuditor {
   }
 }
 
+=======
+  }
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 if (require.main === module) {
   const auditor = new SecurityAuditor();
   auditor.run()
     .then((report) => {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -442,12 +458,14 @@ if (require.main === module) {
       
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Security Auditor "failed": ', error.message);
       process.exit(1)})}
-
 module.exports = SecurityAuditor;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -466,6 +484,8 @@ module.exports = SecurityAuditor;
 
 
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -503,6 +523,7 @@ const { execSync } = require('child_process')
         "priority"
         "message"
         "impact"
+<<<<<<< HEAD
       console.error('\n� Security Auditor "failed")
 <<<<<<< HEAD
 =======
@@ -511,3 +532,6 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+      console.error('\n� Security Auditor "failed")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

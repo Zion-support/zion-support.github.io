@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-export interface EnterpriseITInfrastructureService  {"id": string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface EnterpriseITInfrastructureService {
   "id": string;
   name: string;

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:src_backup/components/ui/resizable.tsx
 import { GripVertical  } from 'lucide-react';
 const ResizablePanelGroup = ({className;
 import { cn } from "@/lib/utils"

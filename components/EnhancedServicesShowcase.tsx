@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 ;
-=======
-<<<<<<< HEAD
 Our Services </span> </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" > Cutting-edge technology solutions designed to transform your business and accelerate innovation </p> </div> </option>) ) 
 }</select> <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" /> </div> /> <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" /> </div> </div> <div key= {
   service.id 
@@ -13,8 +10,6 @@ Our Services </span> </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto
 }</div> Ready to Transform Your Business? </h3> <p className="text-white/70 mb-6 max-w-2xl mx-auto" > Let's discuss how our cutting-edge technology solutions can accelerate your digital transformation journey. </p> <a href="mailto:kleber@ziontechgroup.com?subject=Consultation Request" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Schedule Consultation </a> <a href="tel:+13024640950" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Call Now </a> </div> </div> </div> </div> </section>) 
 }
 export default EnhancedServicesShowcase
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 import { Brain, Shield, Rocket, Cpu, Database, Atom, Users;
   CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown;
@@ -926,7 +921,6 @@ export default EnhancedServicesShowcase;  )}export default EnhancedServicesShowc
     </section>)}export default EnhancedServicesShowcase)}export default EnhancedServicesShowcase;)export default EnhancedServicesShowcase;  )}
 export default EnhancedServicesShowcase;}
 }
-<<<<<<< HEAD
 export default EnhancedServicesShowcase;href='mailto:kleber@ziontechgroup.com?subject=Consultation Request';
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
               >;
@@ -955,9 +949,3 @@ href='tel:+13024640950';
                     {service.benefits.slice(0, 2).map((benefit, idx) => (
                       <div key = $2;
 export default EnhancedServicesShowcase,
-=======
-export default EnhancedServicesShowcase;  )
-}
-export default EnhancedServicesShowcase;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

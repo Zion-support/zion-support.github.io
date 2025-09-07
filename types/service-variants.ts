@@ -1,34 +1,12 @@
-<<<<<<< HEAD
 export type ServiceVariant =
   | 'default'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:types/service-variants.ts
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
 export type ServiceVariant =;
   | 'default';
   | 'holographic';
@@ -135,20 +113,7 @@ export type ServiceVariant =;
   | 'real-estate-futuristic';
   | 'industrial-futuristic';
   | 'neural-futuristic';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export type ServiceVariant =
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type ServiceVariant = ;
 export type ServiceVariant =;
 origin/main
@@ -259,16 +224,6 @@ origin/main
   | 'neural-futuristic',;
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 module.exports = type ServiceVariant = | "default" | "holographic" | "quantum" | "cyberpunk" | "neural" | "quantum-holographic" | "quantum-advanced" | "holographic-advanced" | "neural-quantum" | "quantum-cyberpunk" | "holographic-neural" | "quantum-holographic-advanced" | "quantum-matrix" | "neural-cyberpunk" | "holographic-quantum" | "quantum-neural-advanced" | "cyberpunk-holographic" | "quantum-space" | "ai-futuristic" | "quantum-entanglement" | "holographic-matrix" | "neural-quantum-cyberpunk" | "quantum-iot" | "quantum-logistics" | "quantum-financial" | "quantum-neural" | "neural-quantum-cyberpunk" | "quantum-energy" | "quantum-futuristic" | "cloud-futuristic" | "devops-futuristic" | "security-futuristic" | "data-futuristic" | "mobility-futuristic" | "network-futuristic" | "backup-futuristic" | "itsm-futuristic" | "monitoring-futuristic" | "blockchain-futuristic" | "metaverse-futuristic" | "iot-futuristic" | "edge-futuristic" | "ar-futuristic" | "digital-twin-futuristic" | "5g-futuristic" | "biometric-futuristic" | "autonomous-futuristic" | "enterprise-futuristic" | "holographic-futuristic" | "biotech-futuristic" | "simulation-futuristic" | "micro-saas-futuristic" | "hr-futuristic" | "marketing-futuristic" | "legal-futuristic" | "customer-service-futuristic" | "project-management-futuristic" | "fintech" | "fintech-futuristic" | "defi-futuristic" | "quantum-bio-enterprise" | "quantum-materials-enterprise" | "supply-chain-futuristic" | "ai-content" | "ai-education" | "it-futuristic" | "ai-consciousness" | "healthcare-futuristic" | "cybersecurity" | "ai-revolutionary" | "quantum-revolutionary" | "ai-quantum-revolutionary" | "quantum-ai-revolutionary" | "quantum-space-revolutionary" | "quantum-iot-revolutionary" | "quantum-energy-revolutionary" | "quantum-logistics-revolutionary" | "quantum-ai-finance" | "ai-emotional" | "ai-multimodal" | "ai-autonomous" | "ai-creative" | "ai-healthcare" | "ai-prediction" | "neural-revolutionary" | "quantum-security" | "quantum-ai-interface" | "ai-autonomous-vehicles" | "space-futuristic" | "consulting-futuristic" | "api-futuristic" | "integration-futuristic" | "monitoring-futuristic" | "backup-futuristic" | "analytics-futuristic" | "emerging-tech" | "space-tech" | "autonomous-systems" | "quantum-futuristic";''"
 import React from 'react';
 interface ServicevariantsProps {
@@ -281,49 +236,20 @@ export default function Servicevariants({ }: ServicevariantsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+
 export type ServiceVariant =
-<<<<<<< HEAD
-=======
-export type ServiceVariant = 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
 
 
@@ -354,29 +280,16 @@ export default function Servicevariants({ }: ServicevariantsProps) {
     </div>)
 export type ServiceVariant = 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   | 'default'
-<<<<<<< HEAD
-=======
-export type ServiceVariant =  | 'default'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   | 'holographic'
   | 'quantum'
   | 'cyberpunk'
   | 'neural'
-<<<<<<< HEAD
   | 'quantum-hologographic'
-=======
-  | 'quantum-holographic'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   | 'quantum-advanced'
   | 'holographic-advanced'
   | 'neural-quantum'
   | 'quantum-cyberpunk'
-<<<<<<< HEAD
   | 'holographic-neural'
   | 'quantum-holographic-advanced'
   | 'quantum-matrix'
@@ -395,16 +308,6 @@ export type ServiceVariant =  | 'default'
   | 'quantum-holographic'
   | 'quantum-neural'
   | 'quantum-cyberpunk'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   | 'neural-quantum-cyberpunk'
   | 'quantum-energy'
   | 'quantum-futuristic'
@@ -482,38 +385,15 @@ export type ServiceVariant =  | 'default'
   | 'real-estate-futuristic'
   | 'industrial-futuristic'
   | 'neural-futuristic',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/service-variants.ts
-=======
-<<<<<<< HEAD
   | 'quantum - hologographic';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-| 'quantum - hologographic';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
 
 
   | 'neural-futuristic';
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
   | 'quantum - hologographic';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
   | 'quantum - hologographic';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 | 'quantum - hologographic';
 
 
@@ -531,7 +411,6 @@ export type ServiceVariant =  | 'default'
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   | 'quantum - advanced';
   | 'holographic - advanced';
   | 'neural - quantum';
@@ -630,16 +509,7 @@ export type ServiceVariant =  | 'default'
   | 'education - futuristic';
   | 'real - estate - futuristic';
   | 'industrial - futuristic';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   | 'neural - futuristic';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 export type ServiceVariant = ;
   | 'default';
   | 'holographic';
@@ -752,15 +622,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
   | 'neural-futuristic';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 export type ServiceVariant = ;
   | 'default';
   | 'holographic';
@@ -882,28 +743,11 @@ origin/automation-improvements-final
   | 'neural - futuristic';
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   | 'neural-holographic'
   | 'cyberpunk-neural'
   | 'advanced'
   | 'premium'
   | 'enterprise'
-<<<<<<< HEAD
-=======
-  | 'default''
-  | 'holographic''
-  | 'quantum''
-  | 'cyberpunk''
-  | 'neural''
-  | 'quantum-holographic''
-  | 'quantum-advanced''
-  | 'quantum-cyberpunk''
-  | 'neural-holographic''
-  | 'cyberpunk-neural''
-  | 'advanced''
-  | 'premium''
-  | 'enterprise'';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   | 'custom';
 
 export interface ServiceVariantConfig {};
@@ -911,7 +755,6 @@ export interface ServiceVariantConfig {};
   description: string;
   features: string[];
   pricing: {}
-=======
   | 'custom';
 
 export interface ServiceVariantConfig {
@@ -919,28 +762,15 @@ export interface ServiceVariantConfig {
   description: string;
   features: string[];
   pricing: {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     monthly: number;
     yearly: number;
   };
   popular?: boolean;
   recommended?: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
   | 'neural - futuristic';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
   | 'neural - futuristic';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 
   | 'holographic-neural'
@@ -1028,5 +858,3 @@ export interface ServiceVariantConfig {
   | 'emerging-tech'
   | 'space-tech'
   | 'autonomous-systems';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

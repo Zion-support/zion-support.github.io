@@ -7,15 +7,12 @@ type Note = {target_type: string; // e.g., 'user' | 'listing';}
   target_id: string; // unique identifier for the target;}
 import React, { useEffect, useMemo, useState } from 'react';
 export type AdminNotesPanelProps = any;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 export type AdminNotesPanelProps = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
 }
 ;
 type Note = {
-=======
 
 export type AdminNotesPanelProps = {;
   targetType: string; // e && e.g., 'user' | 'listing';
@@ -23,21 +20,15 @@ export type AdminNotesPanelProps = {;
 };
 type Note = {;'
   target_type: string; // e.g., 'user' | 'listing';
-<<<<<<< HEAD
   target_id: string; // unique identifier for the target;'
 import React, { useEffect, useMemo, useState } from 'react';'
   targetType: string; // e.g., 'user' | 'listing'
-<<<<<<< HEAD
 export type AdminNotesPanelProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
   targetId: string; // unique identifier for the target
-=======
-  targetId: string; // unique identifier for the target;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
 type Note = {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   id: string;
   targetType: string; // e.g., 'user' | 'listing';
 export type AdminNotesPanelProps = any;targetId: string; // unique identifier for the target;
@@ -72,7 +63,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [loading, setLoading] = useState(false);
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   async function fetchNotes() {
     try {
       setLoading(true);
@@ -80,7 +70,6 @@ const res = await fetch(
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
         {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
-<<<<<<< HEAD
 export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useState(true)const [adminId, setAdminId] = useState('admin-demo')const [notes, setNotes] = useState<Note[]>([])const [loading, setLoading] = useState(false)const [adding, setAdding] = useState(false)const [text, setText]  = useState('')async function fetchNotes() {try {setLoading(true)const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,{headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}
       )if (!res && res.ok) {setNotes([])return;
       }method: 'POST',headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },body: JSON.stringify({ targetType, targetId, text })})const data = await res.json()setNotes(data.notes |[])} finally {setLoading(false)}
@@ -113,11 +102,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       }
       const data = await res.json($2);
       setNotes(data.notes || [])
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export default function AdminNotesPanel() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       );
       if (!res && res.ok) {;
@@ -128,15 +112,12 @@ export default function AdminNotesPanel() { return null; }
         method: 'POST','
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
-<<<<<<< HEAD
       const data = await res.json();
       setNotes(data.notes |[]);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     } finally {
       setLoading(false)
     }
   }
-<<<<<<< HEAD
 
 
         method: 'POST',
@@ -165,14 +146,6 @@ export default function AdminNotesPanel() { return null; }
         body: JSON.stringify({ targetType, targetId, text })
     } finally {
       setAdding(false);    }      if (!res.ok) {
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-  useEffect(() => {
-if (isAdmin) fetchNotes();
-=======
-  useEffect(() => {}
-    if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }, [isAdmin, targetType, targetId]);
   async function addNote() {}
     if (!text.trim()) return;
@@ -186,7 +159,6 @@ if (isAdmin) fetchNotes();
           'X-Admin-User': adminId;
         }
         body: JSON.stringify({ targetType, targetId, text })
-<<<<<<< HEAD
     } finally {
       setAdding(false);    }      if (!res.ok) {
         method: 'POST',
@@ -199,11 +171,6 @@ headers: {
       });
       if (!res.ok) {
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    } finally {}
-      setAdding(false);    }      if (!res.ok) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         alert('Failed to add note');
         return;
       }'
@@ -211,31 +178,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setAdding(false);    }
 
 
-<<<<<<< HEAD
-=======
-      await fetchNotes();
-    } finally {
-      setAdding(false);
-=======
-  target_id: string; // unique identifier for the target;
-import React, { useEffect, useMemo, useState } from 'react';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       await fetchNotes()
     } finally {
       setAdding(false)
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
   }
 
     }
   }
 
-<<<<<<< HEAD
   if (!isAdmin) {
     return (
-<<<<<<< HEAD
         }
         body: JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {method: 'POST',headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId,},body: JSON.stringify({ targetType, targetId, text }),})if (!res.ok) {alert('Failed to add note')return;
       }
@@ -297,46 +251,25 @@ if ( {) {$2;
           <label htmlFor="isAdminToggle">Admin</label>
         </div>
         <div className="text-xs opacity-60 mt-2">Admin-only notes hidden.</div>
-=======
-<<<<<<< HEAD
 <div className='rounded border p-3'>
-=======
-  if (!isAdmin) {}
-    return ('
-      <div className='rounded border p-3'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       <div className='rounded border p-3'>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className='flex items-center gap-2 text-sm'>
           <input'
             id='isAdminToggle''
             type='checkbox'
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
-<<<<<<< HEAD
           />'
           <label htmlFor='isAdminToggle'>Admin</label>'
-=======
-          />
-          <label htmlFor='isAdminToggle'>Admin</label>
-        </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       </div>
     )
   }
-<<<<<<< HEAD
   return ('
     <div className='rounded border p-4 space-y-3'>'
       <div className='flex items-center justify-between'>'
         <h3 className='font-medium'>Admin Notes</h3>'
         <div className='flex items-center gap-3 text-sm'>'
-=======
-
-  return (
-<<<<<<< HEAD
     <div className="rounded border p-4 space-y-3">
       <div className="flex items-center justify-between">
         <h3 className="font-medium">Admin Notes</h3>
@@ -410,7 +343,6 @@ export default function AdminNotesPanel() {}export default function AdminNotesPa
       }
       const data = await res.json ()set_notes (data.notes || [])} finally {set_loading (false)}
   }
-<<<<<<< HEAD
   }, [isAdmin, targetType, targetId])async function addNote() {if (!text.trim()) return;
     setAdding(true)try {const res = await fetch('/api/admin/notes', {const data = await res && res.json()setNotes(data && data.notes || [])} finally {setLoading(false)}
   }useEffect(() => {if (isAdmin) fetchNotes()if (isAdmin) fetchNotes()}, [isAdmin, targetType, targetId])async function addNote() {if (!text && text.trim()) return;
@@ -568,27 +500,6 @@ if ( {) {$2;
     </div>
   )
 }
-=======
-  if (!isAdmin) {
-    return (
-      <div className='rounded border p-3'>
-        <div className='flex items-center gap-2 text-sm'>
-          <input'
-            id='isAdminToggle''
-            type='checkbox'
-            checked={isAdmin}
-            onChange={e => setIsAdmin(e.target.checked)}
-
-        <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>
-      </div>
-    )
-=======
-    <div className='rounded border p-4 space-y-3'>
-      <div className='flex items-center justify-between'>
-        <h3 className='font-medium'>Admin Notes</h3>
-        <div className='flex items-center gap-3 text-sm'>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           <label className='inline-flex items-center gap-2'>
             <input'
               type='checkbox'
@@ -600,29 +511,13 @@ if ( {) {$2;
           <input'
             className='border rounded px-2 py-1'
             value={adminId}
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
         <textarea'
-=======
-            onChange={e => setAdminId(e.target.value)}
-            placeholder='Admin ID'
-          />
-        </div>
-      </div>
-      <div className='space-y-2'>
-        <textarea
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           className='w-full border rounded-md px-3 py-2'
           rows={3}'
           placeholder='Write a private note (abuse, spam, special support)'
           value={text}
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
       </div>;
     </div>;
@@ -791,14 +686,6 @@ if ( {) {}
         <button;
           disabled={!text.trim() |adding}
           onClick={addNote}'
-=======
-          onChange={e => setText(e.target.value)}
-        />
-        <button
-          disabled={!text.trim() || adding}
-          onClick={addNote}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'
         >'
           {adding ? 'Adding…' : 'Add Note'}
@@ -817,44 +704,21 @@ if ( {) {}
             {notes.map(n => ('
               <li key={n.id} className='rounded border p-2 text-sm'>'
                 <div className='opacity-60 text-xs mb-1'>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
                   {new Date(n.createdAt).toLocaleString()} • {n.authorId}
                 </div>
                 <div>{n.text}</div>
-=======
-                  {new Date(n.createdAt).toLocaleString()} • {n.authorId}"
-                </div>                <div>{n.text}</div>          <ul className="space-y-2">
-            {notes.map((n) => ("
-              <li key={n.id} className="rounded border p-2 text-sm">"
-                <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </li>
             ))}
           </ul>
         )}
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-</div> <div className="text-xs opacity-60 mt-2" >Admin-only notes hidden.</div> </div>) 
-}</li>) ) 
-}</ul>) 
-}</div> </div>) 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
-=======
 );
 }
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -866,7 +730,6 @@ class ErrorBoundary extends React.Component {}
   }
   
   componentDidCatch(error, errorInfo) {'
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -876,7 +739,6 @@ class ErrorBoundary extends React.Component {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
 }
@@ -1153,16 +1015,8 @@ if ( {) {}
       </div>;
     </div>);
 }
-<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   );
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

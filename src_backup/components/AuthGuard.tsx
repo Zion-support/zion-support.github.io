@@ -228,7 +228,6 @@ export function useAuthGuard() {;
     isAuthenticated;
     user;
     isLoading}
-<<<<<<< HEAD:src_backup/components/AuthGuard.tsx
 }
 
 }const redirect_to = options?.redirect_to || '/login';

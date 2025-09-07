@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 interface AnalyticsProps {
@@ -24,14 +17,10 @@ declare global {
   }
 }
 
-=======
-import React from 'react'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 interface AnalyticsProps {
   className?: string;
   children?: React.ReactNode;
 }
-<<<<<<< HEAD
 
 const Analytics: React.FC<AnalyticsProps> = ({ 
   className = '', 
@@ -53,14 +42,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
 };
 
 export default Analytics;
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
   useEffect(() => {
     // Google Analytics 4
     if (typeof window !== 'undefined' && trackingId) {
       // Load gtag script
-<<<<<<< HEAD
       const script = document.createElement('script')
       script.async = true
       script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`
@@ -102,26 +88,10 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters)
-=======
-=======
-'use client';
-
-import React, { useEffect } from 'react';
-
-interface AnalyticsProps {
-  trackingId: string;
-}
-
-export default function Analytics({ trackingId }: AnalyticsProps) {
-  useEffect(() => {
-    // Load Google Analytics
-    if (typeof window !== 'undefined' && trackingId) {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
-<<<<<<< HEAD
       // Initialize gtag
       window.dataLayer = window.dataLayer |[];
       function gtag(...args: unknown[]) {
@@ -159,39 +129,25 @@ export default function Analytics({ trackingId }: AnalyticsProps) {
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
     }
   }
   // Track button clicks
   const trackButtonClick = (buttonName: string, location?: string) => {
     trackEvent('button_click', {
-<<<<<<< HEAD
       button_name: buttonName,
       location: location || window.location.pathname,
     })
-=======
-      button_name: buttonName
-      location: location |window.location.pathname
-    });
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   }
   // Track form submissions
   const trackFormSubmission = (formName: string) => {
     trackEvent('form_submit', {
-<<<<<<< HEAD
       form_name: formName,
       page_location: window.location.href,
     })
-=======
-      form_name: formName
-      page_location: window.location.href
-    });
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   }
   // Track external link clicks
   const trackExternalLink = (url: string, linkText: string) => {
     trackEvent('external_link_click', {
-<<<<<<< HEAD
       link_url: url,
       link_text: linkText,
       page_location: window.location.href,
@@ -205,20 +161,6 @@ export default function Analytics({ trackingId }: AnalyticsProps) {
     (window as any).trackExternalLink = trackExternalLink
   }
 
-=======
-      link_url: url
-      link_text: linkText
-      page_location: window.location.href
-    });
-  }
-  // Expose tracking functions globally for use in other components
-  if (typeof window !== 'undefined') {
-    (window as any).trackEvent = trackEvent;
-    (window as any).trackButtonClick = trackButtonClick;
-    (window as any).trackFormSubmission = trackFormSubmission;
-    (window as any).trackExternalLink = trackExternalLink;
-  }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   return (
     <Head>
       <script
@@ -228,7 +170,6 @@ export default function Analytics({ trackingId }: AnalyticsProps) {
             if ('performance' in window) {
               window.addEventListener('load', function() {
                 setTimeout(function() {
-<<<<<<< HEAD
                   const perfData = performance.getEntriesByType('navigation')[0]
                   if (perfData) {
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart
@@ -249,33 +190,6 @@ export default function Analytics({ trackingId }: AnalyticsProps) {
   )
 }
 export default Analytics
-=======
-                  const perfData = performance.getEntriesByType('navigation')[0];
-                  if (perfData) {
-                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-                    if (window.gtag) {
-                      window.gtag('event', 'timing_complete', {
-                        name: 'load'
-                        value: Math.round(loadTime)
-                      });
-                    }
-                  }
-                }, 0);
-              });
-            }
-          `
-        }}
-      />
-    </>
-  )
-}
-export default Analytics;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 
       (window as any).dataLayer = (window as any).dataLayer || [];
       function gtag(...args: any[]) {
@@ -297,4 +211,3 @@ export default Analytics;
 
   return null;
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

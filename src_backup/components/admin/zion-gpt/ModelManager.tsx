@@ -4,7 +4,6 @@
       // Check condition;
 if ( {) {$2;
 }
-<<<<<<< HEAD:src_backup/components/admin/zion-gpt/ModelManager.tsx
         await supabase;
 
           .from('model_versions');
@@ -250,12 +249,10 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                         onClick = {(,) => checkTrainingStatus(model && model.id)}
                         disabled = {activeJobs[model && model.id]}
                       >;
-<<<<<<< HEAD:src_backup/components/admin/zion-gpt/ModelManager.tsx
                         {activeJobs[model && model.id] ? (;
                           <Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
-<<<<<<< HEAD:src_backup/components/admin/zion-gpt/ModelManager.tsx
 
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">
@@ -327,7 +324,6 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                       </Button>;
                     ) : model && model.trainingStatus === 'succeeded' ? (<Button;
                         variant={model.active ? "outline" : "default"}
-<<<<<<< HEAD:src_backup/components/admin/zion-gpt/ModelManager.tsx
                         size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
 
@@ -364,7 +360,6 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
-<<<<<<< HEAD:src_backup/components/admin/zion-gpt/ModelManager.tsx
 
                   </TableCell>;
                 </TableRow>;

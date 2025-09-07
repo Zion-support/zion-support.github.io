@@ -5,12 +5,9 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../uti
 
 ;
 
-=======
 const TALENTS_FILE = null;
   return res.status(200).json({ ok: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 const TALENTS_FILE = null;
   return res.status(200).json({ verified })
 }
@@ -58,7 +55,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 200);
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })
 }
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -66,10 +62,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {};
-export default async function handler() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(401).json({ error: "Unauthorized" });
   }
   authenticate_request,
@@ -167,7 +159,6 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);'
   if (!email) {}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 }
-<<<<<<< HEAD
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
@@ -189,10 +180,4 @@ return res.status(400).json({ error: 'email required' });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
   return res.status(200).json({ verified });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

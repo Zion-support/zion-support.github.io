@@ -29,7 +29,6 @@ function Calendar() {IconLeft: ({ ..._props }) => <ChevronLeft className='h-4 w-
     />;
   )Calendar.displayName = 'Calendar';
 export { Calendar }
-<<<<<<< HEAD:src_backup/components/ui/calendar.tsx
   className, classNames,  showOutsideDays = true, ...props
 }: CalendarProps) {
 }/>)

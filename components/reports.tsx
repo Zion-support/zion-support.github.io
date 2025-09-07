@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
   reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
   index 
@@ -31,8 +28,6 @@
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
 }
 export default ReportsPage
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react',
 
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
@@ -479,46 +474,7 @@ export default ReportsPage;const ReportsPage: React.FC;
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 30}}
               whileInView={{ opacity: 1, y: 0}}
               transition = $2;
 export default ReportsPage,
-=======
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Need Custom Research?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2"
-                >
-                  <span>Request Custom Research</span>
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  href="/services"
-                  className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200 inline-flex items-center space-x-2"
-                >
-                  <span>View All Services</span>
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  )
-}
-export default ReportsPage;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

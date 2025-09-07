@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk';
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
@@ -45,15 +44,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Token error', err);
     return res.status(500).json({ error: 'Failed to create token' })
   }
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
->>>>>>> origin/main
 }

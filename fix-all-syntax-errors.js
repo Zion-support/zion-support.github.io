@@ -3,14 +3,7 @@
     console && console.error('❌ Error fixing accessibility && accessibility.tsx:', error && error.message);
     return false;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     if (!content && content.includes('export default')) {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-    if (!content && content.includes('export default')) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
     }
 

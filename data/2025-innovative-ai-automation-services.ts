@@ -1,23 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeAIAutomationService  {id: string;
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeAIAutomationService  {id: string;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIAutomationService {
   id: string;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   name: string;
   tagline: string;
   price: string;
@@ -48,12 +36,7 @@ export interface InnovativeAIAutomationService {
     email: string;
     address: string;
     website: string;
-<<<<<<< HEAD
   },realImplementation: boolean;
-=======
-  },
-  realImplementation: boolean;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   implementationDetails: string;
   launchDate: string;
   customers: number;
@@ -63,48 +46,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 const contact = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 realImplementation: true;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
 real_implementation: true;
 implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launch_date: '2025 - 01 - 25';
-<<<<<<< HEAD
-=======
-realImplementation: true;
-origin/cursor/automate-test-improve-and-merge-code-2533
-implementationDetails: 'Complete security monitoring platform with AI capabilities;, threat detection, and automated response.';
-launchDate: '2025-01-25';
-real_implementation: true;
-implementation_details: 'Complete security monitoring platform with AI capabilities;, threat detection, and automated response.';
-launch_date: '2025 - 01 - 25';
-
-
-implementationDetails: 'Complete security monitoring platform with AI capabilities;, threat detection, and automated response.';
-launchDate: '2025-01-25';
-real_implementation: true;
-implementation_details: 'Complete security monitoring platform with AI capabilities;, threat detection, and automated response.';
-launch_date: '2025 - 01 - 25';
-origin/cursor/automate-test-improve-and-merge-code-20a4
-customers: 156;
-
-
-implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
-launchDate: '2025-01-25';
-real_implementation: true;
-implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
-launch_date: '2025 - 01 - 25';
-origin/cursor/automate-test-improve-and-merge-code-20a4
-
-customers: 156;
-
-rating: 4 && 4.7;
-<<<<<<< HEAD
 reviews: 89 
 };
 
@@ -112,12 +60,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-=======
-reviews: 89 ;
-};
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 // Autonomous Data Analytics Platform realImplementation: true;
 implementationDetails: 'Complete analytics platform with AI capabilities;, natural language queries, and autonomous insights.';
 launchDate: '2025-01-28';
@@ -126,7 +68,6 @@ reviews: 89;
 // Autonomous Data Analytics Platform real_implementation: true;
 implementation_details: 'Complete analytics platform with AI capabilities;, natural language queries, and autonomous insights.';
 launch_date: '2025 - 01 - 28';
-<<<<<<< HEAD
 
 rating: 4 && 4.8;
 reviews: 167 
@@ -397,61 +338,12 @@ const contact = {mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',ad
       'Compliance and best practices enforcement';
 customers: 234;
 
-=======
-customers: 234;
-
-rating: 4 && 4.8;
-reviews: 167 ;
-
-}];    features: [
-
-import { ServiceVariant } from '../types/service-variants';
-export interface InnovativeAIAutomationService {
-  id: string;, name: string;,
-  tagline: string;, price: string;,
-  period: string;, description: string;,
-  features: string[];, popular: boolean;,
-  icon: string;, color: string;,
-  textColor: string;, link: string;,
-  marketPosition: string;, targetAudience: string;,
-  trialDays: number;, setupTime: string;,
-  category: string;, realService: boolean;,
-  technology: string[];, integrations: string[];,
-  useCases: string[];, roi: string;,
-  competitors: string[];, marketSize: string;,
-  growthRate: string;, variant: ServiceVariant;,
-  contactInfo: {
-    mobile: string;, email: string;,
-    address: string;,
-    website: string;
-    },
-    realImplementation: boolean;, implementationDetails: string;,
-  launchDate: string;, customers: number;,
-  rating: number;,
-  reviews: number;
-}
-const contact = {
-  mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
-  address: '364 E Main St STE 1008 Middletown DE 19709';,
-  website: 'https://ziontechgroup.com';
-};
-export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
-  {
-    id: 'ai-autonomous-code-review';, name: 'AI Autonomous Code Review';,
-    tagline: 'Automated code quality analysis with AI-powered insights and security scanning';, price: '$199';,
-    period: '/month';,
-    description: 'Advanced AI-powered code review system that automatically analyzes code quality;, security vulnerabilities, and performance issues across multiple programming languages.',
-    features: [
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
       'Compliance and best practices enforcement'
 reviews: 167;
 }];    features: [;
       'Multi - language support (Python, JavaScript, Go, Rust, Java)AI - powered security vulnerability detection_performance optimization recommendations_code quality scoring and metrics_integration with GitHub, GitLab, BitbucketCustom rule engine and policies_real - time feedback and suggestions_team collaboration and review workflows';
       'Compliance and best practices enforcement';
-<<<<<<< HEAD
 
 
     ];popular: true, icon: '🔍';
@@ -466,32 +358,6 @@ reviews: 167;
     ];popular: false, icon: '📊';
     ];popular: true, icon: '🛡️';
     ];popular: false, icon: '📈';
-=======
-    ];
-
-    popular: true;, icon: '🔍';,
-
-    ];
-
-    popular: true;, icon: '🤖';,
-
-    ];
-
-    popular: false;, icon: '⚡';,
-
-    ];
-
-    popular: false;, icon: '📊';,
-
-    ];
-
-    popular: true;, icon: '🛡️';,
-
-    ];
-
-    popular: false;, icon: '📈';,
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
 
@@ -504,15 +370,10 @@ reviews: 167;
     setup_time: '2 weeks';
     category: 'AI & Analytics';
     real_service: true;
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'];integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'];
     ];
-=======
-    technology: ['Python;, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'];
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'];
     use_cases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'];
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -527,33 +388,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['Security monitoring;, Threat detection, Incident response, Compliance management'];
     roi: 'Reduce security incident response time by 75% and improve threat detection by 60%';
     competitors: ['Splunk, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'];
-<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-    competitors: ['Splunk;, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'];
-
-    market_size: '$15.8B+ security monitoring market';
-    growth_rate: '95% YoY';
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     variant: 'default';
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Real - time security monitoring platform with AI - powered threat detection and automated response capabilities.';
     launch_date: '2025 - 02 - 05';
-<<<<<<< HEAD
 
     rating: 4.9;
     customers: 112;rating: 4.9;
-=======
-    customers: 112;
-
-    rating: 4.9;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     reviews: 78;
     color: 'from - amber - 600 to - orange - 700';
     text_color: 'text - amber - 400';
@@ -564,15 +410,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1 - 3 weeks';
     category: 'HR AI';
     real_service: true;
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'];integrations: ['Workday, BambooHR, ADP, QuickBooks, Slack, Microsoft Teams, Zoom'];
     customers: 112;
 
-=======
-    technology: ['React;, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     integrations: ['Workday, BambooHR, ADP, QuickBooks, Slack, Microsoft Teams, Zoom'];
     use_cases: ['Recruitment automation, Employee management, Performance tracking, Compliance monitoring, Benefits administration'];
@@ -585,34 +427,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '20% annual growth';
     variant: 'ai - hr';
     variant: 'ai - futuristic';
-<<<<<<< HEAD
     contact_info: {mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';website: 'https://ziontechgroup && ziontechgroup.com';
     }realImplementation: true;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     contact_info: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
 
-<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-      website: 'https://ziontechgroup && ziontechgroup.com';
-    };
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     realImplementation: true;
     implementationDetails: 'Complete analytics platform with AI capabilities;, natural language queries, and autonomous insights.';
     launchDate: '2025-01-28';
     customers: 234;
     rating: 4 && 4.8;
-<<<<<<< HEAD
     reviews: 167;
 ursor/fix-website-loading-errors-and-merge-6662;
     reviews: 167
@@ -657,15 +488,11 @@ import { ServiceVariant } from '../types/service-variants',export interface Inno
     ],popular: true,icon: '🛡️',color: 'from-red-600 to-pink-700',textColor: 'text-red-400',link: 'https://ziontechgroup.com/ai-autonomous-security-monitor',marketPosition: 'Competes with Splunk, ELK Stack, and IBM QRadar, offers AI-powered automation.',targetAudience: 'Security teams, SOC analysts, IT administrators',trialDays: 21,setupTime: '8 hours',category: 'AI & Security',realService: true,technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'],integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'],useCases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'],roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.',competitors: ['Tableau, Power BI, Looker, Qlik, Domo'],marketSize: '$30B business intelligence market',growthRate: '26% annual growth',variant: 'ai-futuristic',contactInfo: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'}
 ];website: 'https://ziontechgroup.com';
     reviews: 167;
-=======
-    reviews: 167
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
@@ -925,8 +752,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
   }
 ];
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1011,18 +836,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
 import { ServiceVariant } from '../types/service-variants',;
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
 import { ServiceVariant } from '../types/service-variants',;
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export interface InnovativeAIAutomationService {;
   id: string;
   name: string;
@@ -1719,7 +1535,6 @@ pr-12325
   reviews: 167;
   }
 ];;
-<<<<<<< HEAD
 export interface InnovativeAIAutomationService  {id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,variant: ServiceVariant,contactInfo: {mobile: string,email: string,address: string,website: string;
   },realImplementation: boolean,implementationDetails: string,launchDate: string,customers: number,rating: number,reviews: number;
 }const contact = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
@@ -1733,57 +1548,6 @@ export interface InnovativeAIAutomationService  {id: string,name: string,tagline
     ],popular: false,icon: '📈',color: 'from-teal-600 to-cyan-700',textColor: 'text-teal-400',link: 'https://ziontechgroup.com/autonomous-data-analytics',marketPosition: 'Competes with Tableau ($70/month), Power BI ($9.99/month), Looker ($5,000/month). Our advantage: AI automation, natural language queries, and autonomous insights.',targetAudience: 'Data analysts, Business intelligence teams, Executives, Marketing teams, Sales teams',trialDays: 30,setupTime: '2 weeks',category: 'AI & Analytics',realService: true,technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'],integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'],useCases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'],roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.',competitors: ['Tableau, Power BI, Looker, Qlik, Domo'],marketSize: '$30B business intelligence market',growthRate: '26% annual growth',technology: ['Python, TensorFlow, OpenAI, Elasticsearch, Redis, PostgreSQL'],integrations: ['SIEM systems, Firewalls, IDS/IPS, Vulnerability scanners'],useCases: ['Security monitoring, Threat detection, Incident response, Compliance management'],roi: 'Reduce security incident response time by 75% and improve threat detection by 60%',competitors: ['Splunk, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'],marketSize: '$15.8B+ security monitoring market',growthRate: '95% YoY',variant: 'default',contactInfo: contact,realImplementation: true,implementationDetails: 'Real-time security monitoring platform with AI-powered threat detection and automated response capabilities.',launchDate: '2025-02-05',customers: 112,rating: 4.9,reviews: 78;
     color: 'from-amber-600 to-orange-700',textColor: 'text-amber-400',link: 'https://ziontechgroup.com/ai-hr-management-system',marketPosition: 'Competes with Workday ($99/month), BambooHR ($6.19/month), ADP ($59/month). Our advantage: AI-first approach, better automation, and predictive analytics.',targetAudience: 'HR departments, Recruiting agencies, Small businesses, Enterprise companies, Non-profits',trialDays: 14,setupTime: '1-3 weeks',category: 'HR AI',realService: true,technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'],integrations: ['Workday, BambooHR, ADP, QuickBooks, Slack, Microsoft Teams, Zoom'],useCases: ['Recruitment automation, Employee management, Performance tracking, Compliance monitoring, Benefits administration'],roi: 'HR teams see 300% ROI through improved efficiency and better hiring decisions.',competitors: ['Workday, BambooHR, ADP, Paychex, Gusto'],marketSize: '$20B HR software market',growthRate: '20% annual growth',variant: 'ai-hr',variant: 'ai-futuristic',contactInfo: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
     },realImplementation: true,implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.',launchDate: '2025-01-28',customers: 234,rating: 4.8;
-=======
-export interface InnovativeAIAutomationService  {id: string;,name: string;,tagline: string;,price: string;,period: string;,description: string;,features: string[];,popular: boolean;,icon: string;,color: string;,textColor: string;,link: string;,marketPosition: string;,targetAudience: string;,trialDays: number;,setupTime: string;,category: string;,realService: boolean;,technology: string[];,integrations: string[];,useCases: string[];,roi: string;,competitors: string[];,marketSize: string;,growthRate: string;,variant: ServiceVariant;,contactInfo: {mobile: string;,email: string;,address: string;,website: string;}
-  },realImplementation: boolean;,implementationDetails: string;,launchDate: string;,customers: number;,rating: number;,reviews: number;
-}const contact = {mobile: '+1 302 464 0950';,
-  email: 'kleber@ziontechgroup.com';,address: '364 E Main St STE 1008 Middletown DE 19709';,}
-  website: 'https://ziontechgroup.com';}
-},export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [;
-  {id: 'ai-autonomous-code-review';,
-  name: 'AI Autonomous Code Review';,tagline: 'Automated code quality analysis with AI-powered insights and security scanning';,
-  price: '$199';,period: '/month';,
-  description: 'Advanced AI-powered code review system that automatically analyzes code quality;, security vulnerabilities, and performance issues across multiple programming languages.',features: [;
-      'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows','Compliance and best practices enforcement';
-    ],popular: true;,icon: '🔍';,
-  color: 'from-emerald-600 to-teal-700';,textColor: 'text-emerald-400';,
-  link: 'https://ziontechgroup.com/ai-autonomous-code-review';,marketPosition: 'Competes with SonarQube;, CodeClimate, and Snyk, offers AI-powered insights and automation.',
-  targetAudience: 'Development teams;, DevOps engineers, Security teams',trialDays: 14;,setupTime: '2 hours';,
-  category: 'AI & Development';,realService: true;,technology: ['PythonTensorFlowOpenAI GPT-4PostgreSQLRedis'];,integrations: ['GitHubGitLabBitbucketJiraSlackTeams'];,useCases: ['Code quality assuranceSecurity scanningPerformance optimizationTeam collaboration'];,roi: 'Reduce code review time by 70% and improve code quality by 40%';,
-  competitors: ['SonarQubeCodeClimateSnykDeepCode'];,marketSize: '$2.5B+ code review and analysis market';,
-  growthRate: '85% YoY';,variant: 'ai-futuristic';,
-  contactInfo: contact;,realImplementation: true;,implementationDetails: 'Complete security monitoring platform with AI capabilities;, threat detection, and automated response.',}
-  launchDate: '2025-01-25';,customers: 156;,rating: 4.7;,reviews: 89;}
-  },// Autonomous Data Analytics Platform;
-  {id: 'autonomous-data-analytics';,
-  name: 'Autonomous Data Analytics Platform';,tagline: 'Self-service analytics with AI-powered insights';,
-  price: '$4;,100',period: '/month';,
-  description: 'Advanced analytics platform that automatically discovers insights;, generates reports, and provides actionable recommendations. Democratizes data access while maintaining security and governance.',features: [;
-      'AI-powered insight discoveryNatural language queriesAutomated report generationPredictive analyticsData visualizationReal-time dashboardsData governanceSecurity controls','API accessCustom model training';
-    ],popular: false;,icon: '📈';,
-  color: 'from-teal-600 to-cyan-700';,textColor: 'text-teal-400';,
-  link: 'https://ziontechgroup.com/autonomous-data-analytics';,marketPosition: 'Competes with Tableau ($70/month);, Power BI ($9.99/month), Looker ($5,000/month). Our advantage: AI automation;, natural language queries, and autonomous insights.',
-  targetAudience: 'Data analysts;, Business intelligence teams, Executives, Marketing teams, Sales teams',trialDays: 30;,setupTime: '2 weeks';,
-  category: 'AI & Analytics';,realService: true;,technology: ['Python;, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'],integrations: ['Salesforce;, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'],useCases: ['Business intelligence;, Performance tracking, Customer analytics, Financial reporting, Operational insights'],roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.';,
-  competitors: ['Tableau;, Power BI, Looker, Qlik, Domo'],marketSize: '$30B business intelligence market';,
-  growthRate: '26% annual growth';,technology: ['Python;, TensorFlow, OpenAI, Elasticsearch, Redis, PostgreSQL'],integrations: ['SIEM systems;, Firewalls, IDS/IPS, Vulnerability scanners'],useCases: ['Security monitoring;, Threat detection, Incident response, Compliance management'],roi: 'Reduce security incident response time by 75% and improve threat detection by 60%';,
-  competitors: ['Splunk;, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'],marketSize: '$15.8B+ security monitoring market';,
-  growthRate: '95% YoY';,variant: 'default';,
-  contactInfo: contact;,realImplementation: true;,implementationDetails: 'Real-time security monitoring platform with AI-powered threat detection and automated response capabilities.';,
-  launchDate: '2025-02-05';,customers: 112;,rating: 4.9;,reviews: 78;
-    color: 'from-amber-600 to-orange-700';,
-  textColor: 'text-amber-400';,link: 'https://ziontechgroup.com/ai-hr-management-system';,
-  marketPosition: 'Competes with Workday ($99/month);, BambooHR ($6.19/month), ADP ($59/month). Our advantage: AI-first approach;, better automation, and predictive analytics.',targetAudience: 'HR departments;, Recruiting agencies, Small businesses, Enterprise companies, Non-profits',
-  trialDays: 14;,setupTime: '1-3 weeks';,
-  category: 'HR AI';,realService: true;,technology: ['React;, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'],integrations: ['Workday;, BambooHR, ADP, QuickBooks, Slack, Microsoft Teams, Zoom'],useCases: ['Recruitment automation;, Employee management, Performance tracking, Compliance monitoring, Benefits administration'],roi: 'HR teams see 300% ROI through improved efficiency and better hiring decisions.';,
-  competitors: ['Workday;, BambooHR, ADP, Paychex, Gusto'],marketSize: '$20B HR software market';,
-  growthRate: '20% annual growth';,variant: 'ai-hr';,
-  variant: 'ai-futuristic';,contactInfo: {mobile: '+1 302 464 0950';,
-  email: 'kleber@ziontechgroup.com';,address: '364 E Main St STE 1008 Middletown DE 19709';,}
-  website: 'https://ziontechgroup.com';}
-    },realImplementation: true;,implementationDetails: 'Complete analytics platform with AI capabilities;, natural language queries, and autonomous insights.',
-  launchDate: '2025-01-28';,customers: 234;,rating: 4.8;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     reviews: 167;
   }
 ];
@@ -1795,11 +1559,6 @@ reviews: 167;
 ];
 ;
 
-<<<<<<< HEAD
-=======
-'
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export interface InnovativeAIAutomationService {;
   id: string;,;
   name: string;,;
@@ -1828,19 +1587,10 @@ export interface InnovativeAIAutomationService {;
   growthRate: string;,;
   variant: ServiceVariant;,;
   contactInfo: {;
-<<<<<<< HEAD
     mobile: string,;
     email: string,;
     address: string,;
     website: string;
-=======
-    mobile: string;,;
-  contactInfo: {;,
-  mobile: string;,;
-    email: string;,;
-    address: string;,;}
-    website: string;}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },;
   realImplementation: boolean;,;
   implementationDetails: string;,;
@@ -1851,15 +1601,9 @@ export interface InnovativeAIAutomationService {;
 }
 ;
 const contact = {;
-<<<<<<< HEAD
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-  mobile: '+1 302 464 0950';,;
-  email: 'kleber@ziontechgroup.com';,;
-  address: '364 E Main St STE 1008 Middletown DE 19709';,;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   website: 'https://ziontechgroup.com';
 },;
 export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [;
@@ -1899,99 +1643,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     launchDate: '2025-01-25',;
     customers: 156,;
     rating: 4.7,;
-<<<<<<< HEAD
     reviews: 89;
-=======
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    };
-    realImplementation: true;
-    implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
-    launchDate: '2025-01-25';
-    customers: 156;
-    rating: 4.7;
-    reviews: 89;
-  };
-  // Autonomous Data Analytics Platform;
-  {;
-    id: 'autonomous-data-analytics';
-    name: 'Autonomous Data Analytics Platform';
-    tagline: 'Self-service analytics with AI-powered insights';
-    price: '$4,100';
-    period: '/month';
-    description: 'Advanced analytics platform that automatically discovers insights, generates reports, and provides actionable recommendations. Democratizes data access while maintaining security and governance.';
-    popular: true;,;
-    icon: '🔍';,;
-    color: 'from-emerald-600 to-teal-700';,;
-    textColor: 'text-emerald-400';,;
-    link: 'https://ziontechgroup.com/ai-autonomous-code-review';,;
-    marketPosition: 'Competes with SonarQube;, CodeClimate, and Snyk, offers AI-powered insights and automation.',;
-    targetAudience: 'Development teams;, DevOps engineers, Security teams',;
-    trialDays: 14;,;
-    setupTime: '2 hours';,;
-    category: 'AI & Development';,;
-    realService: true;,;
-    technology: ['PythonTensorFlowOpenAI GPT-4PostgreSQLRedis'];,;
-    integrations: ['GitHubGitLabBitbucketJiraSlackTeams'];,;
-    useCases: ['Code quality assuranceSecurity scanningPerformance optimizationTeam collaboration'];,;
-    roi: 'Reduce code review time by 70% and improve code quality by 40%';,;
-    competitors: ['SonarQubeCodeClimateSnykDeepCode'];,;
-    marketSize: '$2.5B+ code review and analysis market';,;
-    growthRate: '85% YoY';,;
-    variant: 'ai-futuristic';,;
-    contactInfo: contact;,;
-    realImplementation: true;,;
-    implementationDetails: 'Complete security monitoring platform with AI capabilities;, threat detection, and automated response.',;
-    launchDate: '2025-01-25';,;
-
-const contact = {;'
-  mobile: '+1 302 464 0950';,;''
-  email: 'kleber@ziontechgroup.com';,;''
-  address: '364 E Main St STE 1008 Middletown DE 19709';,;''
-  website: 'https://ziontechgroup.com';'
-
-},;
-export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [;
-  {;'
-    id: 'ai-autonomous-code-review';,;''
-    name: 'AI Autonomous Code Review';,;''
-    tagline: 'Automated code quality analysis with AI-powered insights and security scanning';,;''
-    price: '$199';,;''
-    period: '/month';,;''
-    description: 'Advanced AI-powered code review system that automatically analyzes code quality;, security vulnerabilities, and performance issues across multiple programming languages.',;'
-    features: [;'
-      'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows',;''
-      'Compliance and best practices enforcement';']
-    ],;
-    popular: true;,;'
-    icon: '🔍';,;''
-    color: 'from-emerald-600 to-teal-700';,;''
-    textColor: 'text-emerald-400';,;''
-    link: 'https://ziontechgroup.com/ai-autonomous-code-review';,;''
-    marketPosition: 'Competes with SonarQube;, CodeClimate, and Snyk, offers AI-powered insights and automation.',;''
-    targetAudience: 'Development teams;, DevOps engineers, Security teams',;'
-    trialDays: 14;,;'
-    setupTime: '2 hours';,;''
-    category: 'AI & Development';,;'
-    realService: true;,;'
-    technology: ['PythonTensorFlowOpenAI GPT-4PostgreSQLRedis'];,;''
-    integrations: ['GitHubGitLabBitbucketJiraSlackTeams'];,;''
-    useCases: ['Code quality assuranceSecurity scanningPerformance optimizationTeam collaboration'];,;''
-    roi: 'Reduce code review time by 70% and improve code quality by 40%';,;''
-    competitors: ['SonarQubeCodeClimateSnykDeepCode'];,;''
-    marketSize: '$2.5B+ code review and analysis market';,;''
-    growthRate: '85% YoY';,;''
-    variant: 'ai-futuristic';,;'
-    contactInfo: contact;,;
-    realImplementation: true;,;'
-    implementationDetails: 'Complete security monitoring platform with AI capabilities;, threat detection, and automated response.',;''
-    launchDate: '2025-01-25';,;'
-    customers: 156;,;
-    rating: 4.7;,;}
-    reviews: 89;}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },;
   // Autonomous Data Analytics Platform;
   {;
@@ -2242,7 +1894,6 @@ pr-12325
 
 ];
 '
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
@@ -2251,29 +1902,14 @@ real_implementation: true;
 implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launch_date: '2025 - 01 - 25';
 origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 customers: 156;
 
 rating: 4 && 4.7;
 reviews: 89;
 };
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Autonomous Data Analytics Platform realImplementation: true;
 implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';'
 launchDate: '2025-01-28';
@@ -2283,9 +1919,7 @@ reviews: 89;
 implementation_details: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';'
 launch_date: '2025 - 01 - 28';
 customers: 234;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 rating: 4 && 4.8;
 reviews: 167 
 
@@ -2330,24 +1964,15 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     features: [
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
-=======
 '
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Compliance and best practices enforcement'
 reviews: 167;
 }];    features: [;'
       'Multi - language support (Python, JavaScript, Go, Rust, Java)AI - powered security vulnerability detection_performance optimization recommendations_code quality scoring and metrics_integration with GitHub, GitLab, BitbucketCustom rule engine and policies_real - time feedback and suggestions_team collaboration and review workflows';'
       'Compliance and best practices enforcement';
     ];
-<<<<<<< HEAD
 
     popular: true, icon: '🔍',
 
@@ -2386,12 +2011,6 @@ reviews: 167;
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'];
     use_cases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'];
     roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.';
@@ -2403,40 +2022,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['Security monitoring, Threat detection, Incident response, Compliance management'];
     roi: 'Reduce security incident response time by 75% and improve threat detection by 60%';
     competitors: ['Splunk, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'];
-<<<<<<< HEAD
 
     market_size: '$15.8B+ security monitoring market';
     growth_rate: '95% YoY';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-'
-    integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'];'
-    use_cases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'];'
-    roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.';'
-    competitors: ['Tableau, Power BI, Looker, Qlik, Domo'];'
-    market_size: '$30B business intelligence market';'
-    growth_rate: '26% annual growth';'
-    technology: ['Python, TensorFlow, OpenAI, Elasticsearch, Redis, PostgreSQL'];'
-    integrations: ['SIEM systems, Firewalls, IDS / IPS, Vulnerability scanners'];'
-    use_cases: ['Security monitoring, Threat detection, Incident response, Compliance management'];'
-    roi: 'Reduce security incident response time by 75% and improve threat detection by 60%';'
-    competitors: ['Splunk, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'];
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     variant: 'default';
     contact_info: contact;
     real_implementation: true;'
     implementation_details: 'Real - time security monitoring platform with AI - powered threat detection and automated response capabilities.';'
     launch_date: '2025 - 02 - 05';
     customers: 112;
-<<<<<<< HEAD
 
     rating: 4.9;
     reviews: 78;
@@ -2452,12 +2049,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['Workday, BambooHR, ADP, QuickBooks, Slack, Microsoft Teams, Zoom'];
     use_cases: ['Recruitment automation, Employee management, Performance tracking, Compliance monitoring, Benefits administration'];
     roi: 'HR teams see 300% ROI through improved efficiency and better hiring decisions.';
@@ -2465,7 +2056,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     market_size: '$20B HR software market';
     growth_rate: '20% annual growth';
     variant: 'ai - hr';
-=======
 '
     integrations: ['Workday, BambooHR, ADP, QuickBooks, Slack, Microsoft Teams, Zoom'];'
     use_cases: ['Recruitment automation, Employee management, Performance tracking, Compliance monitoring, Benefits administration'];'
@@ -2474,39 +2064,27 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     market_size: '$20B HR software market';'
     growth_rate: '20% annual growth';'
     variant: 'ai - hr';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: 'ai - futuristic';
     contact_info: {'
       mobile: '+1 302 464 0950';'
       email: 'kleber@ziontechgroup && ziontechgroup.com';'
       address: '364 E Main St STE 1008 Middletown DE 19709';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     realImplementation: true;
     implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
     launchDate: '2025-01-28';
     customers: 234;
     rating: 4 && 4.8;
     reviews: 167
-<<<<<<< HEAD
 
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
     realImplementation: true;'
     implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';'
     launchDate: '2025-01-28';
@@ -2514,10 +2092,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     rating: 4 && 4.8;
     reviews: 167;
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;'
@@ -2530,35 +2104,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
-<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 ];
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIAutomationService {;
   id: string,;
@@ -2959,17 +2512,10 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     growthRate: '20% annual growth',;'
     variant: 'ai-hr',;'
     variant: 'ai-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -2978,7 +2524,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     customers: 234,;
     rating: 4.8;
     reviews: 167;
-<<<<<<< HEAD
 rating: 4.8;
 reviews: 167 
 }];
@@ -2988,17 +2533,12 @@ reviews: 167
 ];
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 ];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 rating: 4.8;
 reviews: 167 
 }];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
   }
 ];
 
@@ -3006,16 +2546,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   }
 ];
-=======
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
   }
 ];
-<<<<<<< HEAD
   // Autonomous Data Analytics Platform
   {
     id: 'autonomous-data-analytics',
@@ -3091,23 +2625,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4.8,
     reviews: 167}
 ],
-=======
-
-
-<<<<<<< HEAD
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 rating: 4.8;
 reviews: 167 
 }];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }
 ];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

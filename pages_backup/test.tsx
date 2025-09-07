@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/test.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/test.tsx
 import MainLayout from '../components/layout/MainLayout';
 
 export default function TestPage() {
@@ -19,10 +13,6 @@ export default function TestPage() {
     </MainLayout>
   );
 }
-<<<<<<< HEAD:pages_backup/test.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 import Head from 'next/head';
@@ -96,17 +86,6 @@ origin/main
 
 
 }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/test.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

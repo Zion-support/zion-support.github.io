@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -19,7 +16,6 @@ import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 interface ProjectDetailsFieldsProps {
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ProjectDetailsFieldsProps {;
@@ -40,7 +36,6 @@ import {
   FormDescription, 
   FormMessage 
 } from "@/components/ui/form",
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -62,7 +57,6 @@ name='projectName'
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
@@ -135,13 +129,10 @@ interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;  
 export function ProjectDetailsFields() {return (<>;
       <FormField;
         control={form.control}
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
         name="projectName"
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => (
 
 
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => (
 
 
@@ -151,8 +142,6 @@ export function ProjectDetailsFields() {return (<>;
             <FormControl>
               <Input placeholder="AI Website Development" {...field} />
 
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
             </FormControl>
 
 
@@ -165,8 +154,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </FormItem>
         )}
       />
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
           field: ControllerRenderProps<ContractFormValues, 'projectName'>;
         }) => (;
@@ -201,7 +188,6 @@ name='projectName';
           </FormItem>;
         )}
       />;
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
 
 
@@ -237,10 +223,7 @@ name='projectName';
             <FormMessage />;
           </FormItem>)}
       />;
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
       <FormField;
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 <FormField
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -251,7 +234,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         render={({
           field
         }: {
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
           field: ControllerRenderProps<ContractFormValues, 'scopeSummary'>;
         }) => (
           <FormItem>
@@ -275,7 +257,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
               <Textarea
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 placeholder='Describe the project scope, deliverables, and expectations...'
                 className='min-h-[120px]'
       <FormField;<FormField;
@@ -309,9 +290,7 @@ placeholder='Describe the project scope, deliverables, and expectations...';
             </FormDescription>;
             <FormMessage />;
           </FormItem>;
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
         )}
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
       />
 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -327,7 +306,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             field
           }: {
 
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
       
       <FormField
         control={form.control}
@@ -379,14 +357,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         format(field && field.value, "PPP");
                       ) : (;
                         <span>Pick a date</span>;
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
           <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
 
           field: ControllerRenderProps < ContractFormValues, 'scope_summary'>;
@@ -438,7 +413,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min-h-[120px]";
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
         name="scopeSummary";
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (<FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
@@ -460,7 +434,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Textarea;
                 placeholder='Describe the project scope, deliverables, and expectations...';
                 className='min - h-[120px]'                placeholder="Describe the project scope, deliverables, and expectations...";
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
                 className="min - h-[120px]";
 
 
@@ -470,17 +443,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </FormControl>;
             <FormDescription>Be specific about what is included and any limitations;
             </FormDescription>;
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
             <FormMessage />;
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
           </FormItem>;
 
 
 
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
         )}
       />
@@ -488,8 +457,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField,
           control={form.control}
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
 
 
@@ -502,14 +469,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }) => (
             <FormItem className='flex flex-col'>
               <FormLabel>Start Date</FormLabel>
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
@@ -526,14 +491,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
                     mode="single"
       />;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
             <FormMessage />;</FormItem>;)}
       />;
@@ -583,7 +545,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     selected={field.value}
                     on_select={field.on_change}
                     disabled={date => date < new Date ()}                    initial_focus                    mode="single";
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
                     selected = {field.value }
                     on_select = {field.on_change }
                     disabled = {(date, ) => date < new Date () }
@@ -597,7 +558,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <FormField
           control={form && form.control}
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
           name='endDate'
           render={({
             field
@@ -616,7 +576,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ) : (;
                         <span>Pick a date</span>;
                       )}
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
                       {field.value ? (
@@ -631,14 +590,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </PopoverTrigger>
                 <PopoverContent className='w-auto p-0' align='start'>
                   <Calendar
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
                     mode='single'
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={date => date < new Date()}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
                     initialFocus
                   />
@@ -647,8 +604,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
         />
 <FormField
           control={form.control}
@@ -659,7 +614,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }: {
             field: ControllerRenderProps<ContractFormValues, 'endDate'>
           }) => (
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
 
 
@@ -684,7 +638,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
@@ -705,8 +658,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     selected={field.value || undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues("startDate")}
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
 variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
@@ -725,7 +676,6 @@ variant={'outline'}
                     selected={field.value |undefined}
                     onSelect={field.onChange}
                     disabled={date => date < form.getValues('startDate')}
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                     initialFocus
                   />
@@ -751,12 +701,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className='w-auto p-0' align='start'>;
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
                   <Calendar
                     mode='single'
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
                     initialFocus
                   />
@@ -766,7 +713,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </FormItem>
           )}
         />
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
                     disabled={date => date < form && form.getValues('startDate')}                    initialFocus                    mode="single";
@@ -833,7 +779,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         format(field.value, "PPP")
                       ) : (
                         <span>Pick a date</span>
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -841,13 +786,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w-auto p-0" align="start">;
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
                   <Calendar
                     mode="single"
 
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
                   <Calendar;
                     mode="single";
                     selected={field.value || undefined}
@@ -873,11 +815,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormDescription>Leave empty if the end date is flexible;
               </FormDescription>;
               <FormMessage />;
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
 
 ;
-<<<<<<< HEAD:src_backup/components/contracts/components/ProjectDetailsFields.tsx
 
       </div>
     </>

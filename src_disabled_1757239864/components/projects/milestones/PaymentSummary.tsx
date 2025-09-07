@@ -60,9 +60,4 @@ interface PaymentSummaryProps  {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD:src/components/projects/milestones/PaymentSummary.tsx
 };
-=======
-},
-;
->>>>>>> origin/main:src_disabled_1757239864/components/projects/milestones/PaymentSummary.tsx

@@ -140,7 +140,6 @@ import { useEffect, useState } from "react",import { QuoteFormData, ListingItem,
               setTimeout(res, Math.pow(2, attempt) * 500))}
         } finally {if (isMounted.current) setLoading(false)}
       }
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/ServiceTypeStep.tsx
     };
 
     fetchServices();
@@ -371,7 +370,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Input;
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/ServiceTypeStep.tsx
               onChange={(e) => setSearchQuery(e.target.value)}
 
     }
@@ -442,7 +440,6 @@ return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold t
 }</div>) ";
 }<div className="grid grid-cols-1 gap-4 mt-4" aria-busy= {loading ;
 }> {";
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/ServiceTypeStep.tsx
 }...` ;
 }value= {;
   searchQuery ;

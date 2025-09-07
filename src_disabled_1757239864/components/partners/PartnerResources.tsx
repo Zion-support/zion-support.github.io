@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 interface ResourceItem {;
   Card,
   CardContent,
@@ -16,10 +14,7 @@ import { Button } from '@/components/ui/ button';
   FileVideo,
   Link,
 } from 'lucide-react';
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 import { toast } from '@/hooks / use - toast';
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
@@ -43,7 +38,6 @@ import { Button } from '@/components/ui/button'
 } from 'lucide-react'
 import { toast } from '@/hooks/use-toast'
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 import { toast } from '@/hooks/ use - toast';
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ResourceItem {
@@ -51,8 +45,6 @@ interface ResourceItem {
   title: string;
   description: string;
   type: 'image' | 'video' | 'document' | 'link';
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
   icon: JSX.Element;
   url: string;
@@ -82,9 +74,7 @@ interface ResourceItem {
 
 export function PartnerResources() {
   const resources: ResourceItem[] = [
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
     {
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
     // In a real app, this would download the actual resource
     toast({
@@ -138,7 +128,6 @@ export function PartnerResources() {
 
   icon: JSX && JSX.Element;
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
 
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
@@ -161,7 +150,6 @@ export function PartnerResources() {
       title: "Download started",
       description: `Downloading ${resource.title}`,
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
       id: 'logo-pack';
       title: 'Zion AI Logo Pack';
       description: 'Official logos in various formats (PNG, SVG, JPG)',
@@ -179,8 +167,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardHeader>
         <CardContent>
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {resources.map((resource) => (
@@ -210,7 +196,6 @@ interface ResourceItem {;
   icon: JSX.Element,;
   url: string;
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
   return (
     <div className="space-y-6">
@@ -249,8 +234,6 @@ interface ResourceItem {;
   type: 'image' | 'video' | 'document' | 'link',;
   icon: JSX.Element,;
   url: string;
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 }
 ;
 export function PartnerResources() {;
@@ -327,8 +310,6 @@ export function PartnerResources() {;
         </CardHeader>;
         <CardContent>;
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
 interface ResourceItem  {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -397,7 +378,6 @@ function PartnerResources() {const resources: ResourceItem[]  = [;import { Butto
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
 
 
@@ -407,9 +387,7 @@ function PartnerResources() {const resources: ResourceItem[]  = [;import { Butto
               </Card>
             ))}
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
 
@@ -433,9 +411,7 @@ function PartnerResources() {const resources: ResourceItem[]  = [;import { Butto
             </ul>
           </div>
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
 
           <div className="space-y-2">
@@ -443,7 +419,6 @@ function PartnerResources() {const resources: ResourceItem[]  = [;import { Butto
             <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">
 
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
               <li>Make unrealistic promises about earnings or results</li>
               <li>Use manipulative or misleading marketing tactics</li>
@@ -455,9 +430,7 @@ function PartnerResources() {const resources: ResourceItem[]  = [;import { Butto
         </CardContent>
       </Card>
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
 
@@ -481,7 +454,6 @@ function PartnerResources() {const resources: ResourceItem[]  = [;import { Butto
       </Card>
     </div>
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
 interface ResourceItem  {id: string,title: string,description: string,type: 'image' | 'video' | 'document' | 'link',icon: JSX.Element,url: string;return (<div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -571,11 +543,8 @@ interface ResourceItem  {id: string,title: string,description: string,type: 'ima
       </Card>;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
           <CardTitle>Promotion Guidelines</CardTitle>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
           <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
             {resources.map (resource => (
               <Card;
@@ -627,17 +596,13 @@ interface ResourceItem  {id: string,title: string,description: string,type: 'ima
       </Card>;
       <Card className='bg - zion - blue - dark border - zion - blue - light'>;
         <CardHeader>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
           <CardTitle > Promotion Guidelines</CardTitle>;
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
           <CardDescription>;
             Best practices for promoting the Zion AI Marketplace;
           </CardDescription>;
         </CardHeader>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
         <CardContent className='space - y-4'>;
           <CardTitle > Promotion Guidelines</CardTitle>;<CardDescription>Best practices for promoting the Zion AI Marketplace;
@@ -663,7 +628,6 @@ interface ResourceItem  {id: string,title: string,description: string,type: 'ima
               <li > Use manipulative or misleading marketing tactics</li>;
               <li > Spam your referral link across unrelated content</li>;
               <li > Modify or alter our brand assets in unauthorized ways</li>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
               <li > Create fake accounts or use bots to generate referrals</li>;
 
 
@@ -672,9 +636,7 @@ interface ResourceItem  {id: string,title: string,description: string,type: 'ima
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
       <Card className='bg - zion - blue - dark border - zion - blue - light'>;
               <li > Create fake accounts or use bots to generate referrals</li>;</ul>;
@@ -688,12 +650,10 @@ interface ResourceItem  {id: string,title: string,description: string,type: 'ima
           <p className='text - zion - slate - light mb - 4'>;Our partner success team is available to help you maximize your;
             partnership with Zion AI Marketplace. Feel free to reach out if you;
             have questions about promotions, resources, or payment.;
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
           </p>;
 
           <Button className='bg - zion - purple hover:bg - zion - purple - dark'>;
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 
             Contact Partner Support;
           </Button>;
@@ -704,15 +664,12 @@ interface ResourceItem  {id: string,title: string,description: string,type: 'ima
 }</div> </CardContent> </Card> <Card className="bg - zion - blue - dark border - zion - blue - light" > <CardHeader> <CardTitle > Promotion Guidelines</CardTitle> <CardDescription> Best practices for promoting the Zion AI Marketplace </CardDescription> </CardHeader> <CardContent className="space - y-4" > <div className="space - y-2" > <h3 className="text - lg font - semibold text - white" >Do's</h3> <ul className="list - disc pl - 5 space - y-1 text - zion - slate - light" > <li > Use our official brand assets from the resources provided</li> <li > Share your unique referral link in your content</li> <li > Highlight the benefits of the Zion AI Marketplace for both talent and clients</li> <li > Be transparent that you're a partner and may earn from referrals</li> <li > Focus on how the platform can help your audience solve their AI talent needs</li> </ul> </div> <div className="space - y-2" > <h3 className="text - lg font - semibold text - white" >Don'ts</h3> <ul className="list - disc pl - 5 space - y-1 text - zion - slate - light" > <li > Make unrealistic promises about earnings or results</li> <li > Use manipulative or misleading marketing tactics</li> <li > Spam your referral link across unrelated content</li> <li > Modify or alter our brand assets in unauthorized ways</li> <li > Create fake accounts or use bots to generate referrals</li> </ul> </div> </CardContent> </Card> <Card className="bg - zion - blue - dark border - zion - blue - light" > <CardHeader> <CardTitle > Partner Support</CardTitle> <CardDescription> Need help with your affiliate marketing? Contact our partner support team. </CardDescription> </CardHeader> <CardContent className="flex flex - col items - center text - center py - 6" > <p className="text - zion - slate - light mb - 4" > Our partner success team is available to help you maximize your partnership with Zion AI Marketplace. Feel free to reach out if you have questions about promotions, resources, or payment. </p> Contact Partner Support </Button> </CardContent> </Card> </div>);
 }'"}
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
   )
 
   );
 
 }</div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Promotion Guidelines</CardTitle> <CardDescription> Best practices for promoting the Zion AI Marketplace </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Do's</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Use our official brand assets from the resources provided</li> <li>Share your unique referral link in your content</li> <li>Highlight the benefits of the Zion AI Marketplace for both talent and clients</li> <li>Be transparent that you're a partner and may earn from referrals</li> <li>Focus on how the platform can help your audience solve their AI talent needs</li> </ul> </div> <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Don'ts</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Make unrealistic promises about earnings or results</li> <li>Use manipulative or misleading marketing tactics</li> <li>Spam your referral link across unrelated content</li> <li>Modify or alter our brand assets in unauthorized ways</li> <li>Create fake accounts or use bots to generate referrals</li> </ul> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Partner Support</CardTitle> <CardDescription> Need help with your affiliate marketing? Contact our partner support team. </CardDescription> </CardHeader> <CardContent className="flex flex-col items-center text-center py-6" > <p className="text-zion-slate-light mb-4" > Our partner success team is available to help you maximize your partnership with Zion AI Marketplace. Feel free to reach out if you have questions about promotions, resources, or payment. </p> Contact Partner Support </Button> </CardContent> </Card> </div>) ;
 }'"
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;<Button className='bg - zion - purple hover:bg - zion - purple - dark'>;Contact Partner Support;
           </Button>;

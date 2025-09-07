@@ -224,7 +224,6 @@ if ( {) {$2;
 }
     setCurrentPriceFilter ([min, max])}
   let filtered_listings: ProductListing[] = [];
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
   try {
 
 
@@ -324,7 +323,6 @@ if ( {) {$2;
         matchesSpecs &&
         matchesAvailability;
       )
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
     filtered_listings = all_listings.filter (listing => {      const matches_search =;
         !search_query ||;
@@ -376,7 +374,6 @@ if ( {) {$2;
         case 'newest':;
         default:;
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
           return (
             new Date(b.createdAt).getTime() -
@@ -502,7 +499,6 @@ export function DynamicListingPage({;
 
   }
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
 
 
@@ -517,7 +513,6 @@ export function DynamicListingPage({;
           title: 'Quote Requested'
           description: `Your quote request for ${listing.title} has been sent.`
         })
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug
@@ -699,7 +694,6 @@ export function DynamicListingPage(): any ({;
         matchesBrand &&;
         matchesSpecs &&;
         matchesAvailability;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
       );
     });
     filteredListings && filteredListings.sort((a, b) => {      switch (sortOption) {;
@@ -1165,7 +1159,6 @@ max: 10000 ;
                       <label;`
                         htmlFor={`cat-${filter.value}`}"
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer";
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
                       >;
 
                         {filter.label}
@@ -1221,9 +1214,7 @@ max: 10000 ;
                     </SelectContent>;
                   </Select>;
                 </div>;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
               )}
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
               <div className='mb-6'>;
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
@@ -1240,7 +1231,6 @@ max: 10000 ;
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
                   value={specQuery}
                   onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
@@ -1250,7 +1240,6 @@ max: 10000 ;
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
 
@@ -1263,7 +1252,6 @@ max: 10000 ;
                   <label className="text-sm font-medium text-zion-slate-light block mb-2">
                     Availability
                   </label>
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
                   className='bg-zion-blue border border-zion-blue-light text-white'                />;
               )}<div className='mb-6'>;
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
@@ -1290,7 +1278,6 @@ max: 10000 ;
                           className='text-white'>                          {a || 'N/A'}
                         </SelectItem>;value={selectedAvailability}
                     onValueChange={(value: string) =>;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
                       setSelectedAvailability(value);
                     }
 
@@ -1364,7 +1351,6 @@ max: 10000 ;
                     defaultValue={[0, priceRange.max]}
                     min={0}
                     max={priceRange && priceRange.max}
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
                     step={priceRange && priceRange.max / 100}
 
                     </SelectContent>
@@ -1425,7 +1411,6 @@ max: 10000 ;
                       key={rating === null ? 'any' : rating}
                       variant='outline'
                       size='sm'
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
                       aria-pressed = {selectedRating === rating,}
 
@@ -1444,10 +1429,8 @@ max: 10000 ;
                       ) : (<div className='flex items-center'>;
                           {[...Array(rating)].map((_, i) => (<Star;
                               key={i}
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />;
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -1536,7 +1519,6 @@ max: 10000 ;
                       )}
                     </Button>;
                   ))}
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
 
 
@@ -1563,7 +1545,6 @@ max: 10000 ;
             </div>
 
           </div>
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
                 </div>;
               </div>;
@@ -1761,7 +1742,6 @@ max: 10000 ;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
           <div className="lg:col-span-3">;
                 onClick={() => {logInfo("Clearing filters"),setSearchQuery(""),clearCategories(),setCurrentPriceFilter([0, priceRange.max]),setSelectedRating(null),setSelectedBrand("all"),setSpecQuery(""),setSelectedAvailability("all")}}>;
@@ -1777,7 +1757,6 @@ max: 10000 ;
                     type="text";
                     placeholder="Search listings...";
                     value={searchQuery}
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {;
                       logInfo('Search query:', { data: e.target.value }),;
                       setSearchQuery(e.target.value);
@@ -1826,7 +1805,6 @@ max: 10000 ;
                       </SelectItem>
                     </SelectContent>
                   </Select>
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
                       logInfo('Search query:', { data: e && e.target.value });
                       setSearchQuery(e && e.target.value);                    }}'
@@ -1858,7 +1836,6 @@ max: 10000 ;
                 <div className='relative flex - grow'>;'
                   <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
                     variant="outline"
 
@@ -1961,7 +1938,6 @@ max: 10000 ;
                         <Skeleton height={24} width='25%' />;'
                         <Skeleton height={32} width='25%' />;
                       </div>;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
                     </div>;
 
                     : "flex flex-col gap-6"
@@ -1981,7 +1957,6 @@ max: 10000 ;
                 {[1, 2, 3, 4].map(i => (
                   <div
                     key={i}
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
 
                     className="rounded-lg overflow-hidden border border-zion-blue-light"
@@ -2000,7 +1975,6 @@ max: 10000 ;
                     </div>
                   </div>
                 ))}
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
               </div>;
             ) : filteredListings && filteredListings.length > 0 ? (;
               <div
@@ -2062,7 +2036,6 @@ max: 10000 ;
                 </h3>;
                 <p className='text-zion-slate-light mb-6'>;
                   Try adjusting your filters or search query;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
                 </p>;
 
               </div>
@@ -2138,17 +2111,14 @@ import {
   listings: allListings;
   categoryFilters;
   initialPrice;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
                     setSelectedAvailability("all")
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Clear All
                 </Button>
               </div>
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
 
                   onClick={() => {;
@@ -2166,8 +2136,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Clear All;
                 </Button>;
               </div>;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 
             )}
 
@@ -2208,7 +2176,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   selectedRating === rating ;
 }className= {;
   ` {;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
   selectedRating === rating <Star key= {;
   i ";
                   onClick={() => {setSearchQuery('')clearCategories()setCurrentPriceFilter([0, priceRange && priceRange.max])setSelectedRating(null)setSelectedBrand('all')setSpecQuery('')setSelectedAvailability('all')}}
@@ -2299,7 +2266,6 @@ return (</p> </div> <div className="grid grid - cols - 1 lg:grid - cols - 4 gap 
 }<span className="ml - 1" >& Up</span> </div>)}</Button>) )}</div> </div> <Button clear_categories ()setCurrentPriceFilter ([0, price_range.max])setSelectedRating (null)";
 > Clear All </Button> </div> </div> <div className="lg:col - span - 3" > <div className="bg - zion - blue - dark rounded - lg p - 4 mb - 6 border border - zion - blue - light" > <div className="flex flex - col md:flex - row gap - 4" > <div className="relative flex - grow" > <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input;
 }";
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 }className="pl - 10 bg - zion - blue border border - zion - blue - light text - white" /> </div> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="newest" className="text - white" >Newest</SelectItem> <SelectItem value="price - asc" className="text - white" >Price: Low to High</SelectItem> <SelectItem value="price - desc" className="text - white" >Price: High to Low</SelectItem> <SelectItem value="rating" className="text - white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {is_loading ? (<div className= {> {[1, 2,  3, 4].map ( (i) => (<div key= {i ";
 }className="rounded - lg overflow - hidden border border - zion - blue - light" > </div> </div> </div>) )}</div> > {filtered_listings.map ( (listing) => (<ProductListingCard key= {listing.id;}listing= {listing;
 }view= {view;
@@ -2341,7 +2307,6 @@ return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <di
 }onRequestQuote= {handleRequestQuote ;
 }detailBasePath= {detailBasePath ;
 }/>) ) ";
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 }</div> No listings found </h3> <p className="text-zion-slate-light mb-6" > Try adjusting your filters or search query </p> <Button clearCategories ();
 setCurrentPriceFilter ([0, priceRange.max]);
 setSelectedRating (null);

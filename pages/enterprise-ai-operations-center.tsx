@@ -19,11 +19,6 @@ export default function enterpriseaioperationscenter() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
   )
 }
 
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

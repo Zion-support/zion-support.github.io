@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (!requireSuperadminApi(req, res)) return;if (req && req.method === 'GET') {const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false })return res && res.status(200).json(offerings)}
     return res.status (200).json (offerings)}
   // Check condition;
@@ -28,42 +26,6 @@ if ( {) {$2;
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false });
     return res && res.status(200).json(offerings)
-=======
-  if (!requireSuperadminApi(req, res)) return;'
-  if (req && req.method === 'GET') {'
-    const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false });
-    return res && res.status(200).json(offerings)
-  }
-    return res.status (200).json (offerings);
-  }
-  // Check condition;
-if ( {) {}
-  $2;
-}
-    const body = req.body || {}
-    const offerings = {}
-      safe: !!body.safe,
-      equity: !!body.equity,
-      token: !!body.token,
-    }'
-    writeJsonFile ('deal / offerings.json', offerings);
-    return res.status (200).json (offerings);
-  }'
-  return res.status (405).json ({ error: 'Method not allowed' });export default /**;
- * handler - Function description;
- */
-function handler() {}
-  if () return) {}
-  $2;
-=======
-
-  if (!requireSuperadminApi(req, res)) return;
-
-}
-  // Check condition
-if ( {) {
-  $2
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   // Check condition;
 if ( {) {}
@@ -86,10 +48,6 @@ if ( {) {}
 }
 '
 return res.status (405).json ({ error: 'Method not allowed' });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return res.status(405).json({ error: 'Method not allowed' });
 
   return res.status(405).json({ error: 'Method not allowed',}
@@ -138,26 +96,13 @@ if ( {) {
   return res.status(405).json({ error: 'Method not allowed' });
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-<<<<<<< HEAD
 return res.status (405).json ({ error: 'Method not allowed' });
 return res.status(405).json({ error: 'Method not allowed' })}
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return,
-=======
-import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   if (req.method === 'GET') {
     const offerings = readJsonFile($2);
     return res.status(200).json(offerings)

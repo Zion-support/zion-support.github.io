@@ -65,8 +65,8 @@ export function FooterNewsletter(): React.ReactElement {
   };
 
   return (
-    <form
-      id="footer-newsletter-form"
+    <form,
+  id="footer-newsletter-form"
       aria-label="Newsletter sign-up"
       onSubmit={handleSubmit}
       className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
@@ -74,8 +74,8 @@ export function FooterNewsletter(): React.ReactElement {
       <label htmlFor="newsletter-email" className="sr-only">
         Email address for newsletter subscription
       </label>
-      <Input
-        type="email"
+      <Input,
+  type="email"
         id="newsletter-email"
         name="newsletterEmail"
         placeholder="Enter your email"

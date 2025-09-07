@@ -3,8 +3,6 @@
 };
 import { ChevronDown, ChevronUp } from "lucide-react",
 <<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
 =import { ChevronDown, ChevronUp } from "lucide-react",
 >import { Slider } from "@/components/ui/slider";
 import { ExperienceFilterProps } from "@/types/filters";
@@ -32,7 +30,6 @@ return (
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
       {expanded && (
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
         <div className='mt - 6'>;
 return (<div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
@@ -71,7 +68,6 @@ function ExperienceFilter() {const handle_change = (values: number[]) =>: any {s
           <Slider;
             aria-label='Experience range'            value={[experienceRange[0], experienceRange[1]]}
         <div className="mt-6">;
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
 
 
@@ -93,7 +89,6 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
   },
 
 
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
         <div className='mt-6'>
           <div className='flex justify-between text-sm text-zion-slate-light mb-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -123,7 +118,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <Slider
 <<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
 import { Slider } from "@/components/ui/slider",;
 import { ExperienceFilterProps } from "@/types/filters",;
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
@@ -154,7 +148,6 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
   };
   return (;
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;import { ChevronDown, ChevronUp  } from 'lucide-react';
 import { Slider } from "@/components/ui/slider",import { ExperienceFilterProps } from "@/types/filters",export function ExperienceFilter() {const handleChange = (values: number[]) => {setExperienceRange([values[0] || 0, values[1] || 15])},<div className='mt-6'>;
           <div className='flex justify-between text-sm text-zion-slate-light mb-2'>;
@@ -184,7 +177,6 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
         className="flex w-full items-center justify-between text-white font-medium";
       >;
 <<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
 
       <button
         onClick={toggleSection}
@@ -209,7 +201,6 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
 <<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
             aria-label="Experience range";
 
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
 aria-label='Experience range'
 origin/cursor/automate-test-improve-and-merge-code-2533
         <span>Years of Experience</span>;
@@ -248,10 +239,8 @@ function ExperienceFilter() {
       {expanded && (
         <div className="mt-6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb-2">;
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
             onValueChange={handleChange}
 <<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
 className='mt-6'
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -271,7 +260,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
 <<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
 };
 }
 
@@ -309,7 +297,6 @@ className='mt-6';
             className="mt - 6";
           />;
         </div>)}
-<<<<<<< HEAD:src_backup/components/talent/filters/ExperienceFilter.tsx
     </div>)}}}
     </div>);
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/developers/ApiLogs.tsx
 :src/components/developers/ApiLogs.tsx
 import { useState, useEffect  } from './react';
 import { format  } from './date - fns';
@@ -7,7 +6,6 @@ import { Button  } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components / ui / select';
 import { Badge  } from '@/components / ui / badge';
-<<<<<<< HEAD:src_backup/components/developers/ApiLogs.tsx
 import { ApiLogsChart  } from './ApiLogsChart';
 export /**
  * ApiLogs - Function description
@@ -242,7 +240,6 @@ export function ApiLogs() {
       </CardContent>
 :src/components/developers/ApiLogs.tsx
     </Card>
-<<<<<<< HEAD:src_backup/components/developers/ApiLogs.tsx
   );
 
 };

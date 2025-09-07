@@ -78,7 +78,6 @@ export const PwaInstallButton: React.FC = () => {const [promptEvent, setPromptEv
   },return (<div className="fixed bottom-4 right-4 z-50">;
       <Button onClick={onClick} disabled={isInstalling}>;
         {isInstalling && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-<<<<<<< HEAD:src_backup/components/PwaInstallButton.tsx
         Install App
       </Button>
     </div>
@@ -116,7 +115,6 @@ export const PwaInstallButton: React.FC = () => {const [promptEvent, setPromptEv
   }return (<div className='fixed bottom-4 right-4 z-50'>;
       <Button onClick={onClick} disabled={isInstalling}>;
         {isInstalling && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-<<<<<<< HEAD:src_backup/components/PwaInstallButton.tsx
         Install App
       </Button>
     </div>

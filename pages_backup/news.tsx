@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/news.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/news.tsx
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -26,12 +18,7 @@ const Page = () => {
 };
 
 export default Page;
-<<<<<<< HEAD:pages_backup/news.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { 
   Newspaper;
   Calendar, 
@@ -462,10 +449,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 </>
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/news.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

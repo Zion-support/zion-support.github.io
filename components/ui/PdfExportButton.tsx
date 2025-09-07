@@ -16,7 +16,6 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
     if (!targetRef.current) return;
     const element = targetRef.current;
     const html2pdf = (await import('html2pdf.js')).default;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     const opt = {
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
 
@@ -54,7 +53,6 @@ export default function PdfExportButton({ targetRef, fileName = $2;
     const opt = {
       margin: [10, 10, 10, 10],
 
-<<<<<<< HEAD
       margin: [10, 10, 10, 10],
       filename: fileName,
       image: { type: 'jpeg', quality: 0.98 },
@@ -64,19 +62,6 @@ export default function PdfExportButton({ targetRef, fileName = $2;
 
 
 
-=======
-      filename: fileName,
-      image: { type: 'jpeg'}
-  quality: 0.98}
-},
-      html2canvas: { scale: 2, useCORS: true}
-},
-      jsPDF: { unit: 'mm'}
-  format: 'a4', orientation: 'portrait'}
-
-    html2pdf().set(opt).from(element).save();
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
     >
       Download as PDF;
@@ -147,17 +132,5 @@ export type PdfExportButtonProps = any;
     </button>
   )
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 "
-=======
-html2pdf () .set (opt) .from (element) .save () 
-}
-return (<button aria-label="Download as PDF" 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

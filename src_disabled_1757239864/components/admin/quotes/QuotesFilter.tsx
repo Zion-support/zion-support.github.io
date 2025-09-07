@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 interface QuotesFilterProps {;
 
 
@@ -20,7 +17,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 import { Button } from "@/components/ui/button",
 import { Calendar as CalendarComponent } from "@/components/ui/calendar",
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 import { format } from "date-fns";
 import type { DateRange } from "react-day-picker";
 import type { QuoteStatus } from "@/types/quotes";
@@ -45,7 +41,6 @@ import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
 
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 
 interface QuotesFilterProps {
   searchQuery: string;
@@ -74,10 +69,7 @@ interface QuotesFilterProps  {searchQuery: string;
   archiveFilter: 'active' | 'archived' | 'all';
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
   setDateRange: (range: DateRange | undefined) => void;
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 
   onReset: () => void;
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
@@ -104,9 +96,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               placeholder='Search quotes...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 
               onChange={e => setSearchQuery(e && e.target.value)}            />;
           </div>;
@@ -169,10 +159,8 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({search_query,setSea
             >;
               <SelectTrigger className='bg - zion - blue border - zion - blue - light text - white'>;
                 <SelectValue placeholder='Status' />              </SelectTrigger>;
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
               <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;
 
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 
                 <SelectItem value='all'>All Statuses</SelectItem>;
               <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;<SelectItem value='all'>All Statuses</SelectItem>;
@@ -196,7 +184,6 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({search_query,setSea
                 <SelectItem value='all'>All Quotes</SelectItem>;
               </SelectContent>;
             </Select>;
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
           </div>;
 
 import React from "react";
@@ -222,7 +209,6 @@ interface QuotesFilterProps {
   onReset: () => void,
 }
 
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery;
           </div>;import { Card, CardContent  } from '@/components/ui/card';
@@ -291,7 +277,6 @@ interface QuotesFilterProps  {searchQuery: string,setSearchQuery: (value: string
                   {dateRange?.from ? (dateRange.to ? (<>;
                         {format(dateRange.from, "LLL dd, y")} -{" "}
                         {format(dateRange.to, "LLL dd, y")}
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
                       </>
                     ) : (
                       format(dateRange.from, "LLL dd, y")
@@ -300,14 +285,12 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                       format(dateRange.from, 'LLL dd, y')
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
                     )
                   ) : (
                     <span>Date range</span>
                   )}
                 </Button>
               </PopoverTrigger>
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 <PopoverContent
                 className='w-auto p-0 bg-zion-blue-dark border-zion-blue-light'
                 align='start'
@@ -330,7 +313,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   selected = {dateRange,}
                   onSelect = {setDateRange,}
                   numberOfMonths = {2,}
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 }
 
 
@@ -403,7 +385,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>);
 }  );
 
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
                 />
               </PopoverContent>
             </Popover>
@@ -422,7 +403,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>
 );
 };
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                       </>;
                     ) : (format(dateRange.from, "LLL dd, y")onReset: () => void;

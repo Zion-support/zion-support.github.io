@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
@@ -25,8 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const event = {
 
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     eventId: uuidv4(), type: "token_transfer" as const
     payload: {
        id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() 
@@ -39,10 +35,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -110,10 +102,6 @@ if (headers["x - zion - signature"] = sig, ) {
 }
 ;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   }
 
@@ -200,10 +188,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
   return res.status(200).json({_status: "created", _version, _eventId: event.eventId});
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
@@ -276,18 +260,8 @@ return res
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/sync/token-transfer.ts
-<<<<<<< HEAD
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/token-transfer.ts
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
 
         try {

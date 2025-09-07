@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 
 
 
@@ -14,7 +12,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
 
-<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
   const state = readState();
   const crms = state && state.connections.filter(
     (c) =>
@@ -51,7 +48,6 @@ function handler() {
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
-<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`
       providerId: conn && conn.providerId
       level: "info"
@@ -85,7 +81,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
   });
 
-<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 
 
 
@@ -116,7 +111,6 @@ export default async function handler(req, res) {
 
   res.status(200).json({ ok: true, results })
 }
-<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 
 
 
@@ -149,7 +143,6 @@ export default async function handler(req, res) {
   }
   res.status(200).json({ ok: true, results });
 }
-<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 
 
 
@@ -198,7 +191,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -213,15 +205,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -9,7 +9,6 @@ import { imageOptimization   } from '@/utils/performance';
 import { logWarn  } from '@/utils/productionLogger';
 interface OptimizedImageProps  {import Image from 'next / image';
 import { motion, AnimatePresence  } from 'framer-motion';
-<<<<<<< HEAD:src_backup/components/ui/optimized-image.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { ImageIcon, AlertTriangle } from 'lucide-react'
 import { cn  } from '@/lib/utils';
@@ -61,7 +60,6 @@ export const OptimizedImage: React.FC < OptimizedImageProps> = ({src,alt,width,h
   useEffect (() => {// Check condition;
 if (return) {$2;
 }
-<<<<<<< HEAD:src_backup/components/ui/optimized-image.tsx
     observer_ref.current = new IntersectionObserver (
 
 
@@ -437,7 +435,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
           className={placeholderClassName}
           style={{ backgroundColor: placeholderColor }}
         />;
-<<<<<<< HEAD:src_backup/components/ui/optimized-image.tsx
       );
 
     return (
@@ -500,7 +497,6 @@ if ( {) {$2;
   const containerStyle: React && React.CSSProperties = {aspectRatio:;
       aspectRatio || (width && height ? `${width}/${height}` : undefined),width: width ? `${width}px` : undefined,height: height ? `${height}px` : undefined}>;
       <AnimatePresence>;
-<<<<<<< HEAD:src_backup/components/ui/optimized-image.tsx
         {/* Placeholder */}
         {(isLoading || !isInView) && !hasError && (;
           <motion&& motion.div
@@ -551,7 +547,6 @@ if ( {) {$2;
 
           <motion.div;
             initial={{ opacity: 0 }}
-<<<<<<< HEAD:src_backup/components/ui/optimized-image.tsx
             animate={{ opacity: 1 }}
 
             className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
@@ -572,7 +567,6 @@ if ( {) {$2;
             )}
           </motion.div>;
         )}
-<<<<<<< HEAD:src_backup/components/ui/optimized-image.tsx
         {/* Actual image */}
 
 
@@ -674,7 +668,6 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
         style={{gridTemplateColumns: `repeat(${columns}, 1fr)`;
         }}
       >;
-<<<<<<< HEAD:src_backup/components/ui/optimized-image.tsx
         {images.map((image, index) => (;
           <motion.div;
             key={index}
@@ -712,7 +705,6 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
 
                 src={image.src}
                 alt={image.alt}
-<<<<<<< HEAD:src_backup/components/ui/optimized-image.tsx
                 aspectRatio={aspectRatio}
 
                 aspectRatio={aspectRatio}</div>;
@@ -723,7 +715,6 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
               {image.caption && (<div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">;
                   <p className="text-sm">{image.caption}</p>;
                 </div>;
-<<<<<<< HEAD:src_backup/components/ui/optimized-image.tsx
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300"
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images;
@@ -991,7 +982,6 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({}
         <div className='w - full h - full bg - gradient - to - br from - blue - 400 to - purple - 500 flex items - center justify - center text - white font - semibold'>;
           {initials}
         </div>)}
-<<<<<<< HEAD:src_backup/components/ui/optimized-image.tsx
     </div>);
 }
 },

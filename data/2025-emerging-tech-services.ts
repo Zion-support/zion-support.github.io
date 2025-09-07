@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 ;
       'Comply with future regulations','Enable quantum - safe communications';
     ],'NIST standards, Government security, Financial regulations, Healthcare compliance, International security protocols';
@@ -1436,10 +1433,6 @@ export const emergingTechServices2025: EmergingTechService[] = [
     name: 'Quantum Encryption Platform',
     tagline: 'Unbreakable quantum encryption for the post-quantum era',
     description: 'Next-generation encryption platform that uses quantum-resistant algorithms and quantum key distribution to provide unbreakable security for the post-quantum computing era.',
-=======
-
-
-<<<<<<< HEAD
       'Unbreakable encryption security',
       'Future-proof against quantum attacks',
       'Reduce security risks by 99 && 99.9%',
@@ -1448,46 +1441,17 @@ export const emergingTechServices2025: EmergingTechService[] = [
     tagline: 'Unbreakable quantum encryption for the post - quantum era',
     description:;
       'Next - generation encryption platform that uses quantum - resistant algorithms and quantum key distribution to provide unbreakable security for the post - quantum computing era.',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     category: 'Cybersecurity',
     price: {
       monthly: 1899,
       yearly: 18990,
       currency: 'USD',
-<<<<<<< HEAD
 export interface EmergingTechService {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      trial_days: 30,
-      setup_time: '1 week',
-    },
-    features: [;
-      'Quantum - resistant algorithms',
-      'Quantum key distribution',
-      'Post - quantum cryptography',
-      'Real - time encryption',
-      'Multi - layer security',
-      'Compliance automation',
-      'Performance monitoring',
-      'API integration',
-      'Mobile security',
-      'Cloud security',
-    ],
-    benefits: [;
-      'Unbreakable encryption security',
-      'Future - proof against quantum attacks',
-      'Reduce security risks by 99.9%',
-  id: string;
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface EmergingTechService {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
   {
@@ -1528,14 +1492,9 @@ pr-12325
       'Future - proof against quantum attacks',
       'Reduce security risks by 99.9%',
   id: string;
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 export interface EmergingTechService {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   name: string;
   tagline: string;
   description: string;
@@ -1545,31 +1504,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     yearly: number;
     currency: string;
     trialDays: number;
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Comply with future regulations',
       'Enable quantum - safe communications'
     ],
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'NIST standards, Government security, Financial regulations, Healthcare compliance, International security protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-encryption',
@@ -1613,7 +1558,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🔐',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
@@ -1707,30 +1651,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 95,
     rating: 4 && 4.9,
     reviews: 67
-=======
-=======
-      'Comply with future regulations','
-      'Enable quantum - safe communications',
-    ],
-
-<<<<<<< HEAD
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,'
     launch_date: '2025 - 02 - 25',
     customers: 250,
     rating: 4 && 4.8,
     reviews: 145,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
 
       'Biosafety standards, Research ethics, Laboratory safety, Government regulations, International standards',
     ],
@@ -1742,7 +1671,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Revolutionary platform that combines synthetic biology with AI to design, build, and test synthetic biological systems for healthcare, agriculture, and industrial applications.',
     category: 'Biotechnology',
     price: {
-<<<<<<< HEAD
 
     id: 'quantum - communications',
     name: 'Quantum Communications Platform',
@@ -1763,13 +1691,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       currency: 'USD',
       trial_days: 45,
       setup_time: '2 weeks'
-=======
-      monthly: 2799,
-      yearly: 27990,
-      currency: 'USD',
-      trial_days: 60,
-      setup_time: '1 month',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     features: [;
       'AI - powered DNA design',
@@ -1781,7 +1702,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Safety assessment tools',
       'Regulatory compliance',
       'Research collaboration',
-<<<<<<< HEAD
       'Regulatory compliance'
     ],
     benefits: [;
@@ -1791,66 +1711,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Enable quantum applications',
       'Reduce security risks by 99 && 99.9%',
       'Comply with future regulations'
-=======
-      'Commercialization support',
-    ],
-    benefits: [;
-      'Accelerate biological research by 1000%',
-      'Create novel biological systems',
-      'Reduce research costs by 80%',
-      'Enable breakthrough discoveries',
-      'Accelerate commercialization',
-    ],
-    target_audience: [;
-      'Biotechnology companies',
-      'Pharmaceutical companies',
-      'Agricultural companies',
-      'Research institutions',
-      'Government labs',
-      'Startup companies',
-    ],
-    market_position:;
-      'Leading synthetic biology platform. Competes with traditional biotechnology tools and emerging synthetic biology companies. Our advantage: AI integration and comprehensive platform.',
-    competitors: [;
-      'Traditional biotechnology tools, Emerging synthetic biology companies',
-    ],
-    tech_stack: [;
-      'Synthetic Biology, AI / ML, Bioinformatics, Python, Laboratory Automation, DNA Synthesis, Gene Editing',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Production - ready synthetic biology platform with comprehensive design tools, laboratory integration, and commercialization support.',
-    roi: 'Companies see 800% ROI through accelerated research and novel discoveries. Average payback period: 12 months.',
-    use_cases: [;
-      'Drug development',
-      'Agricultural improvements',
-      'Industrial biotechnology',
-      'Environmental remediation',
-      'Medical treatments',
-      'Biofuels production',
-    ],
-    integrations: [;
-      'Laboratory systems, Research databases, Academic networks, Government research platforms, Commercial partners',
-    ],
-    support:;
-      '24 / 7 research support, dedicated biology consultants, implementation specialists, and commercialization assistance.',
-    compliance: [;
-      'Biosafety standards, Research ethics, Laboratory safety, Government regulations, International standards',
-    ],
-    link: 'https://ziontechgroup.com / synthetic - biology - platform',
 
-    icon: '🧬',
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-  {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - green - 500 to - teal - 600',
     popular: true,'
     launch_date: '2025 - 03 - 01',
@@ -1858,9 +1719,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 56,
   },
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
 
       'Nuclear safety standards, Energy regulations, Government safety protocols, International energy standards',
     ],
@@ -1938,16 +1797,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '⚡',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-  {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,'
     launch_date: '2025 - 03 - 05',
@@ -1955,9 +1805,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 5 && 5.0,
     reviews: 6,
   },
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
 
       'Network security standards, Government security, Financial regulations, International communication standards',
     ],
@@ -2036,16 +1884,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🌐',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-  {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - cyan - 500 to - blue - 600',
     popular: true,'
     launch_date: '2025 - 03 - 10',
@@ -2053,9 +1892,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 23,
   },
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
 
       'Medical device regulations, Research ethics, Safety standards, Government approval, International standards',
     ],
@@ -2133,16 +1970,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🧠',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-  {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - pink - 500 to - purple - 600',
     popular: true,'
     launch_date: '2025 - 03 - 15',
@@ -2150,9 +1978,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 42,
   },
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
 
       'Sensor standards, Safety protocols, Environmental regulations, International measurement standards',
     ],
@@ -2228,16 +2054,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '📡',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-  {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - indigo - 500 to - purple - 600',
     popular: true,'
     launch_date: '2025 - 03 - 20',
@@ -2245,9 +2062,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.7,
     reviews: 98,
   },
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
 
       'Robotics safety standards, Industrial regulations, Safety protocols, International robotics standards',
     ],
@@ -2325,16 +2140,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🤖',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-  {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - gray - 500 to - slate - 600',
     popular: true,'
     launch_date: '2025 - 03 - 25',
@@ -2342,9 +2148,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 187,
   },
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
 
       'Research ethics, Laboratory safety, Patent compliance, International materials standards',
     ],
@@ -2422,16 +2226,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🔬',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-  {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - teal - 500 to - cyan - 600',
     popular: true,'
     launch_date: '2025 - 03 - 30',
@@ -2439,13 +2234,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 67,
   },
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
     price: {
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     id: 'quantum - communications',
     name: 'Quantum Communications Platform',
@@ -2456,10 +2246,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     category: 'Quantum Technology',
     price: {
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-  {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       monthly: 2999,
       yearly: 29990,'
       currency: 'USD',
@@ -2485,9 +2271,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Enable quantum applications','
       'Reduce security risks by 99 && 99.9%','
       'Comply with future regulations',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
-<<<<<<< HEAD
     targetAudience: [
       'Government agencies'
       'Financial institutions'
@@ -2533,11 +2317,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       yearly: 29990,
       currency: 'USD',
       trial_days: 45,
-<<<<<<< HEAD
       setup_time: '2 weeks'
-=======
-      setup_time: '2 weeks',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     features: [;
       'Quantum key distribution',
@@ -2560,177 +2340,45 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Comply with future regulations'
     ],
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 '
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
     ],'
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-communications',
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-=======
-    price: {
-      monthly: 2999,
-      yearly: 29990,
-      currency: 'USD',
-      trial_days: 45,
-      setup_time: '2 weeks',
-    },
-    features: [;
-      'Quantum key distribution',
-      'Quantum entanglement networks',
-      'Secure communication protocols',
-      'Network infrastructure',
-      'Performance monitoring',
-      'Security validation',
-      'Integration APIs',
-      'Commercial deployment',
-      'Research collaboration',
-      'Regulatory compliance',
-    ],
-    benefits: [;
-
-      'Unbreakable communication security',
-      'Future - proof against quantum attacks',
-      'Enable quantum applications',
-      'Reduce security risks by 99 && 99.9%',
-      'Comply with future regulations',
-    ],
-    targetAudience: [
-      'Government agencies'
-      'Financial institutions'
-      'Healthcare organizations'
-      'Defense contractors'
-      'Technology companies'
-      'Critical infrastructure'
-    ]
-    marketPosition:
-      'Leading quantum communications platform. Competes with traditional communication security and emerging quantum communication companies. Our advantage: Comprehensive quantum security and network infrastructure.'
-    competitors: [
-      'Traditional communication security, Emerging quantum communication companies'
-    ]
-    techStack: [
-      'Quantum Communication, Quantum Networks, Security Protocols, Python, Network Infrastructure, Quantum Hardware'
-    ]
-    realImplementation: true
-    implementationDetails:
-      'Production-ready quantum communications platform with comprehensive security features, network infrastructure, and commercial deployment capabilities.'
-    roi: 'Organizations see 600% ROI through enhanced security and future-proof communications. Average payback period: 8 months.'
-    useCases: [
-      'Government communications'
-      'Financial transactions'
-      'Healthcare data transmission'
-      'Defense communications'
-      'Critical infrastructure'
-      'Research networks'
-    ]
-    integrations: [
-      'Government networks, Financial platforms, Healthcare systems, Defense networks, Critical infrastructure'
-    ]
-    support:
-      '24/7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.'
-    compliance: [
-    color: 'from-blue-500 to-indigo-600'
-    popular: true
-    launchDate: '2025-04-01'
-    customers: 150
-    rating: 4.8
-    reviews: 89
-  }
-      monthly: 2999,
-      yearly: 29990,
-      currency: 'USD',
-      trial_days: 45,
-      setup_time: '2 weeks',
-    },
-    features: [;
-      'Quantum key distribution',
-      'Quantum entanglement networks',
-      'Secure communication protocols',
-      'Network infrastructure',
-      'Performance monitoring',
-      'Security validation',
-      'Integration APIs',
-      'Commercial deployment',
-      'Research collaboration',
-      'Regulatory compliance',
-    ],
-    benefits: [;
-
-      'Unbreakable communication security',
-      'Future - proof against quantum attacks',
-      'Enable quantum applications',
-      'Reduce security risks by 99 && 99.9%',
-      'Comply with future regulations',
-    ],
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
 
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols'
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-communications',
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-=======
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     target_audience: [;
       'Government agencies',
       'Financial institutions',
       'Healthcare organizations',
       'Defense contractors',
       'Technology companies',
-<<<<<<< HEAD
       'Critical infrastructure'
-=======
-=======
-
-    target_audience: [;'
-      'Government agencies','
-      'Financial institutions','
-      'Healthcare organizations','
-      'Defense contractors','
-      'Technology companies','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Critical infrastructure',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     market_position:;'
       'Leading quantum communications platform. Competes with traditional communication security and emerging quantum communication companies. Our advantage: Comprehensive quantum security and network infrastructure.',
-<<<<<<< HEAD
     competitors: [;
       'Traditional communication security, Emerging quantum communication companies'
     ],
     tech_stack: [;
       'Quantum Communication, Quantum Networks, Security Protocols, Python, Network Infrastructure, Quantum Hardware'
-=======
-    competitors: [;'
-      'Traditional communication security, Emerging quantum communication companies',
-    ],
-    tech_stack: [;'
-      'Quantum Communication, Quantum Networks, Security Protocols, Python, Network Infrastructure, Quantum Hardware',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     real_implementation: true,
     implementation_details:;'
       'Production - ready quantum communications platform with comprehensive security features, network infrastructure, and commercial deployment capabilities.','
     roi: 'Organizations see 600% ROI through enhanced security and future - proof communications. Average payback period: 8 months.',
-<<<<<<< HEAD
     use_cases: [;
       'Government communications',
       'Financial transactions',
@@ -2741,22 +2389,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     integrations: [;
       'Government networks, Financial platforms, Healthcare systems, Defense networks, Critical infrastructure'
-=======
-    use_cases: [;'
-      'Government communications','
-      'Financial transactions','
-      'Healthcare data transmission','
-      'Defense communications','
-      'Critical infrastructure','
-      'Research networks',
-    ],
-    integrations: [;'
-      'Government networks, Financial platforms, Healthcare systems, Defense networks, Critical infrastructure',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     support:;'
       '24 / 7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.',
-<<<<<<< HEAD
     compliance: [;
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols'
     ],
@@ -2784,55 +2419,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
     reviews: 89
-=======
-    compliance: [;'
-      'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
-    ],'
-    link: 'https://ziontechgroup.com / quantum - communications',
-'
-    icon: '📡','
-    color: 'from - blue - 500 to - indigo - 600',
-    popular: true,'
-    launch_date: '2025 - 04 - 01',
-    customers: 150,
-    rating: 4 && 4.8,
-    reviews: 89,
-<<<<<<< HEAD
   },
 origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
-<<<<<<< HEAD
 ];
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 ];
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
 };
 
 
-<<<<<<< HEAD
 
     setupTime: string
   },
-=======
-<<<<<<< HEAD
     setupTime: string
   },
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -2853,460 +2459,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
   reviews: number
-=======
-
-  reviews: number
-}
-
-export const emergingTechServices2025: EmergingTechService[] = [
-  {
-    id: 'neuromorphic-computing';
-    name: 'Neuromorphic Computing Platform';
-    tagline: 'Brain-inspired computing that mimics neural networks for ultra-efficient AI';
-    description: 'Revolutionary computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing, enabling edge computing with minimal power consumption and maximum performance.',
-    category: 'Emerging Technology';
-    price: {
-      monthly: 3499;
-      yearly: 34990;
-      currency: 'USD';
-      trialDays: 45;
-      setupTime: '2 weeks'
-    },
-    features: [
-      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesEdge computing optimizationNeuromorphic chip integrationAdaptive neural networksEnergy-efficient AI processingHardware-software co-design';
-      'Scalable neuromorphic systemsResearch collaboration tools'
-    ];
-    benefits: [
-      'Reduce power consumption by 90%Improve AI performance by 500%Enable edge AI deploymentReduce infrastructure costs by 70%Future-proof computing architecture'
-    ];
-    targetAudience: [
-      'IoT device manufacturersEdge computing companiesAI hardware developersResearch institutionsGovernment agenciesAutomotive companies'
-    ];
-    marketPosition: 'Leading neuromorphic computing platform. Competes with Intel Loihi, IBM TrueNorth, and BrainChip. Our advantage: Advanced neural architecture and edge optimization.';
-    competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, Qualcomm, Samsung'],
-    techStack: ['Neuromorphic Architecture, AI/ML, Python, C++, Hardware Design, FPGA, ASIC'],
-    realImplementation: true;
-    implementationDetails: 'Production-ready neuromorphic platform with custom hardware integration, comprehensive development tools, and edge deployment capabilities.',
-    roi: 'Companies see 600% ROI through reduced power costs and improved AI performance. Average payback period: 8 months.';
-    useCases: [
-      'Edge AI processingIoT device intelligenceAutonomous vehiclesSmart citiesIndustrial automationMedical devices'
-    ];
-    integrations: ['IoT platforms, Edge computing infrastructure, AI frameworks, Hardware systems, Cloud platforms'],
-    support: '24/7 technical support, dedicated hardware consultants, implementation specialists, and ongoing optimization.',
-    compliance: ['Hardware standards, Safety protocols, Energy efficiency standards, International computing standards'],
-    link: 'https://ziontechgroup.com/neuromorphic-computing';
-    icon: '🧠';
-    color: 'from-purple-500 to-pink-600';
-    popular: true;
-    launchDate: '2025-02-20';
-    customers: 120;
-    rating: 4.9;
-    reviews: 78
-  },
-  {
-    id: 'quantum-encryption';
-    name: 'Quantum Encryption Platform';
-    tagline: 'Unbreakable quantum encryption for the post-quantum era';
-    description: 'Next-generation encryption platform that uses quantum-resistant algorithms and quantum key distribution to provide unbreakable security for the post-quantum computing era.';
-    category: 'Cybersecurity';
-    price: {
-      monthly: 1899;
-      yearly: 18990;
-      currency: 'USD';
-      trialDays: 30;
-      setupTime: '1 week'
-    },
-    features: [
-      'Quantum-resistant algorithmsQuantum key distributionPost-quantum cryptographyReal-time encryptionMulti-layer securityCompliance automationPerformance monitoringAPI integration';
-      'Mobile securityCloud security'
-    ];
-    benefits: [
-      'Unbreakable encryption securityFuture-proof against quantum attacksReduce security risks by 99.9%Comply with future regulationsEnable quantum-safe communications'
-    ];
-    targetAudience: [
-      'Financial institutionsGovernment agenciesHealthcare organizationsDefense contractorsTechnology companiesCritical infrastructure'
-    ];
-    marketPosition: 'Leading quantum encryption platform. Competes with traditional encryption providers and emerging quantum security companies. Our advantage: Quantum-resistant algorithms and quantum key distribution.';
-    competitors: ['Traditional encryption providers, Emerging quantum security companies'],
-    techStack: ['Quantum-resistant Algorithms, Quantum Key Distribution, Advanced Cryptography, Python, C++, Security Protocols'],
-    realImplementation: true;
-    implementationDetails: 'Production-ready quantum encryption platform with comprehensive security features, real-time encryption, and seamless integration with existing systems.',
-    roi: 'Organizations see 500% ROI through enhanced security and regulatory compliance. Average payback period: 6 months.';
-    useCases: [
-      'Secure communicationsData encryptionFinancial transactionsGovernment communicationsHealthcare data protectionCritical infrastructure security'
-    ];
-    integrations: ['Communication systems, Financial platforms, Government networks, Healthcare systems, Cloud platforms'],
-    support: '24/7 security support, dedicated encryption consultants, implementation specialists, and ongoing optimization.',
-    compliance: ['NIST standards, Government security, Financial regulations, Healthcare compliance, International security protocols'],
-    link: 'https://ziontechgroup.com/quantum-encryption';
-    icon: '🔐';
-    color: 'from-blue-500 to-indigo-600';
-    popular: true;
-    launchDate: '2025-02-25';
-    customers: 250;
-    rating: 4.8;
-    reviews: 145
-
-  },
-  {
-    id: 'synthetic-biology-platform';
-    name: 'Synthetic Biology Platform';
-    tagline: 'Design, build, and test synthetic biological systems with AI',
-
-    description: 'Revolutionary platform that combines synthetic biology with AI to design, build, and test synthetic biological systems for healthcare, agriculture, and industrial applications.',
-    category: 'Biotechnology';
-    price: {
-      monthly: 2799;
-      yearly: 27990;
-      currency: 'USD';
-      trialDays: 60;
-      setupTime: '1 month'
-    },
-    features: [
-      'AI-powered DNA designSynthetic organism creationBiological system testingGene editing toolsMetabolic pathway designBiological circuit designSafety assessment toolsRegulatory compliance';
-      'Research collaborationCommercialization support'
-    ];
-    benefits: [
-      'Accelerate biological research by 1000%Create novel biological systemsReduce research costs by 80%Enable breakthrough discoveriesAccelerate commercialization'
-    ];
-    targetAudience: [
-      'Biotechnology companiesPharmaceutical companiesAgricultural companiesResearch institutionsGovernment labsStartup companies'
-    ];
-    marketPosition: 'Leading synthetic biology platform. Competes with traditional biotechnology tools and emerging synthetic biology companies. Our advantage: AI integration and comprehensive platform.';
-    competitors: ['Traditional biotechnology tools, Emerging synthetic biology companies'],
-    techStack: ['Synthetic Biology, AI/ML, Bioinformatics, Python, Laboratory Automation, DNA Synthesis, Gene Editing'],
-    realImplementation: true;
-    implementationDetails: 'Production-ready synthetic biology platform with comprehensive design tools, laboratory integration, and commercialization support.',
-    roi: 'Companies see 800% ROI through accelerated research and novel discoveries. Average payback period: 12 months.';
-    useCases: [
-      'Drug developmentAgricultural improvementsIndustrial biotechnologyEnvironmental remediationMedical treatmentsBiofuels production'
-    ];
-    integrations: ['Laboratory systems, Research databases, Academic networks, Government research platforms, Commercial partners'],
-    support: '24/7 research support, dedicated biology consultants, implementation specialists, and commercialization assistance.',
-    compliance: ['Biosafety standards, Research ethics, Laboratory safety, Government regulations, International standards'],
-    link: 'https://ziontechgroup.com/synthetic-biology-platform';
-    icon: '🧬';
-    color: 'from-green-500 to-teal-600';
-    popular: true;
-    launchDate: '2025-03-01';
-    customers: 85;
-    rating: 4.9;
-    reviews: 56
-  },
-  {
-    id: 'fusion-energy-ai';
-    name: 'Fusion Energy AI Platform';
-    tagline: 'AI-powered fusion energy optimization and control systems';
-    description: 'Revolutionary platform that uses AI to optimize fusion energy reactions, control plasma stability, and accelerate the development of commercial fusion power.',
-    category: 'Energy Technology';
-    price: {
-      monthly: 5999;
-      yearly: 59990;
-      currency: 'USD';
-      trialDays: 90;
-      setupTime: '2 months'
-    },
-    features: [
-      'AI-powered plasma controlFusion reaction optimizationReal-time monitoring systemsPredictive maintenanceEnergy output optimizationSafety systems integrationPerformance analyticsResearch collaboration';
-      'Commercial deploymentRegulatory compliance'
-    ];
-    benefits: [
-      'Optimize fusion reactions by 500%Improve energy output by 300%Reduce operational costs by 60%Accelerate commercial deploymentEnable clean energy future'
-    ];
-    targetAudience: [
-      'Fusion energy companiesGovernment research labsEnergy utilitiesResearch institutionsInvestment firmsTechnology companies'
-    ];
-    marketPosition: 'Leading fusion energy AI platform. First-to-market in AI-powered fusion optimization. Positioned as the industry standard for fusion energy control.';
-    competitors: ['None - First to marketTraditional fusion research approaches'];
-    techStack: ['AI/ML, Plasma Physics, Fusion Technology, Python, Real-time Systems, Control Systems, Energy Infrastructure'],
-    realImplementation: true;
-    implementationDetails: 'Production-ready fusion energy platform with real-time control systems, comprehensive monitoring, and commercial deployment capabilities.',
-    roi: 'Fusion companies report 1000% ROI through optimized reactions and accelerated commercialization. Average payback period: 18 months.';
-    useCases: [
-      'Fusion reactor controlPlasma stability optimizationEnergy output maximizationSafety system managementResearch accelerationCommercial deployment'
-    ];
-    integrations: ['Fusion reactors, Energy infrastructure, Research networks, Government systems, Commercial energy grids'],
-    support: '24/7 fusion operations support, dedicated energy consultants, implementation specialists, and commercialization assistance.',
-    compliance: ['Nuclear safety standards, Energy regulations, Government safety protocols, International energy standards'],
-    link: 'https://ziontechgroup.com/fusion-energy-ai';
-    icon: '⚡';
-    color: 'from-yellow-500 to-orange-600';
-    popular: true;
-    launchDate: '2025-03-05';
-    customers: 12;
-    rating: 5.0;
-    reviews: 6
-  },
-  {
-    id: 'quantum-internet';
-    name: 'Quantum Internet Platform';
-    tagline: 'Build the quantum internet with secure quantum communication networks';
-    description: 'Revolutionary platform for building quantum internet infrastructure with quantum entanglement, quantum key distribution, and ultra-secure quantum communication networks.',
-    category: 'Quantum Technology';
-    price: {
-      monthly: 3999;
-      yearly: 39990;
-      currency: 'USD';
-      trialDays: 60;
-      setupTime: '1 month'
-    },
-    features: [
-      'Quantum network infrastructureQuantum entanglement networksQuantum key distributionQuantum routing systemsQuantum network securityQuantum internet protocolsNetwork management toolsPerformance monitoring';
-      'API integrationCommercial deployment'
-    ];
-    benefits: [
-      'Unbreakable quantum securityInstant quantum communicationFuture-proof internet infrastructureEnable quantum applicationsFirst-mover advantage'
-    ];
-    targetAudience: [
-      'Telecommunications companiesGovernment agenciesFinancial institutionsResearch institutionsTechnology companiesInternet service providers'
-    ];
-    marketPosition: 'Leading quantum internet platform. First-to-market in commercial quantum internet infrastructure. Positioned as the industry standard for quantum networking.';
-    competitors: ['None - First to marketTraditional internet infrastructure'];
-    techStack: ['Quantum Networks, Quantum Communication, Network Infrastructure, Python, Quantum Hardware, Network Protocols'],
-    realImplementation: true;
-    implementationDetails: 'Production-ready quantum internet platform with comprehensive network infrastructure, quantum communication protocols, and commercial deployment capabilities.',
-    roi: 'Telecommunications companies see 800% ROI through quantum security and future-proof infrastructure. Average payback period: 12 months.';
-    useCases: [
-      'Quantum-secure communicationsGovernment networksFinancial networksResearch networksCommercial applicationsQuantum internet development'
-    ];
-    integrations: ['Traditional networks, Quantum hardware, Government systems, Financial platforms, Research networks'],
-    support: '24/7 quantum network support, dedicated network consultants, implementation specialists, and ongoing optimization.',
-    compliance: ['Network security standards, Government security, Financial regulations, International communication standards'],
-    link: 'https://ziontechgroup.com/quantum-internet';
-    icon: '🌐';
-    color: 'from-cyan-500 to-blue-600';
-    popular: true;
-    launchDate: '2025-03-10';
-    customers: 35;
-    rating: 4.9;
-    reviews: 23
-  },
-  {
-    id: 'brain-computer-interface';
-    name: 'Brain-Computer Interface Platform';
-    tagline: 'Direct brain-to-computer communication for enhanced human capabilities';
-    description: 'Revolutionary platform that enables direct communication between the human brain and computers, opening new possibilities for human-computer interaction, medical applications, and cognitive enhancement.',
-    category: 'Human-Computer Interaction';
-    price: {
-      monthly: 4499;
-      yearly: 44990;
-      currency: 'USD';
-      trialDays: 90;
-      setupTime: '2 months'
-    },
-    features: [
-      'Neural signal processingBrain-computer communicationCognitive enhancement toolsMedical applicationsResearch collaborationSafety monitoringPerformance analyticsUser interface design';
-      'API integrationCommercial applications'
-    ];
-    benefits: [
-      'Enable direct brain controlEnhance human capabilitiesRevolutionize medical treatmentsCreate new interaction methodsAdvance neuroscience research'
-    ];
-    targetAudience: [
-      'Medical device companiesResearch institutionsTechnology companiesHealthcare organizationsGovernment agenciesAcademic researchers'
-    ];
-    marketPosition: 'Leading brain-computer interface platform. Competes with emerging BCI companies and traditional medical devices. Our advantage: Advanced neural processing and comprehensive platform.';
-    competitors: ['Emerging BCI companies, Traditional medical devices, Research prototypes'],
-    techStack: ['Neural Processing, Brain-Computer Interfaces, AI/ML, Python, Signal Processing, Medical Devices, Neuroscience'],
-    realImplementation: true;
-    implementationDetails: 'Production-ready BCI platform with comprehensive neural processing, medical applications, and research collaboration tools.',
-    roi: 'Medical companies see 600% ROI through novel treatments and enhanced capabilities. Average payback period: 15 months.';
-    useCases: [
-      'Medical treatmentsCognitive enhancementHuman-computer interactionNeuroscience researchAssistive technologyGaming and entertainment'
-    ];
-    integrations: ['Medical devices, Research systems, Healthcare platforms, Academic networks, Government research'],
-    support: '24/7 medical support, dedicated BCI consultants, implementation specialists, and research collaboration.',
-    compliance: ['Medical device regulations, Research ethics, Safety standards, Government approval, International standards'],
-    link: 'https://ziontechgroup.com/brain-computer-interface';
-    icon: '🧠';
-    color: 'from-pink-500 to-purple-600';
-    popular: true;
-    launchDate: '2025-03-15';
-    customers: 65;
-    rating: 4.8;
-    reviews: 42
-  },
-  {
-    id: 'quantum-sensors';
-    name: 'Quantum Sensors Platform';
-    tagline: 'Ultra-sensitive quantum sensors for precision measurement and detection';
-    description: 'Revolutionary platform that leverages quantum mechanics to create ultra-sensitive sensors for precision measurement, detection, and monitoring across various applications.',
-    category: 'Quantum Technology';
-    price: {
-      monthly: 1999;
-      yearly: 19990;
-      currency: 'USD';
-      trialDays: 45;
-      setupTime: '2 weeks'
-    },
-    features: [
-      'Quantum sensor arraysUltra-sensitive detectionPrecision measurementReal-time monitoringData analysis toolsIntegration APIsPerformance optimizationCalibration tools';
-      'Research collaborationCommercial applications'
-    ];
-    benefits: [
-      'Improve sensitivity by 1000xEnable new measurement capabilitiesReduce detection limitsImprove precision accuracyEnable quantum advantage'
-    ];
-    targetAudience: [
-      'Manufacturing companiesResearch institutionsGovernment agenciesTechnology companiesHealthcare organizationsEnvironmental monitoring'
-    ];
-    marketPosition: 'Leading quantum sensors platform. Competes with traditional sensors and emerging quantum sensor companies. Our advantage: Quantum sensitivity and comprehensive platform.';
-    competitors: ['Traditional sensors, Emerging quantum sensor companies'],
-    techStack: ['Quantum Sensors, Quantum Mechanics, Signal Processing, Python, Hardware Integration, Data Analysis'],
-    realImplementation: true;
-    implementationDetails: 'Production-ready quantum sensors platform with comprehensive sensor arrays, data analysis tools, and integration capabilities.',
-    roi: 'Companies see 400% ROI through improved sensitivity and new measurement capabilities. Average payback period: 8 months.';
-    useCases: [
-      'Precision manufacturingEnvironmental monitoringMedical diagnosticsSecurity detectionScientific researchQuality control'
-    ];
-    integrations: ['Manufacturing systems, Research platforms, Healthcare systems, Government networks, Environmental monitoring'],
-    support: '24/7 technical support, dedicated sensor consultants, implementation specialists, and ongoing optimization.',
-    compliance: ['Sensor standards, Safety protocols, Environmental regulations, International measurement standards'],
-    link: 'https://ziontechgroup.com/quantum-sensors';
-    icon: '📡';
-    color: 'from-indigo-500 to-purple-600';
-    popular: true;
-    launchDate: '2025-03-20';
-    customers: 180;
-    rating: 4.7;
-    reviews: 98
-  },
-  {
-    id: 'autonomous-robotics';
-    name: 'Autonomous Robotics Platform';
-    tagline: 'AI-powered autonomous robots for industrial and commercial applications';
-    description: 'Revolutionary platform that enables the creation and management of autonomous robots for industrial automation, commercial applications, and advanced robotics systems.',
-    category: 'Robotics & Automation';
-    price: {
-      monthly: 1299;
-      yearly: 12990;
-      currency: 'USD';
-      trialDays: 30;
-      setupTime: '1 week'
-    },
-    features: [
-      'Autonomous robot controlAI-powered decision makingMulti-robot coordinationSafety systems integrationPerformance optimizationRemote monitoringIntegration APIsCustom robot development';
-      'Deployment toolsAnalytics dashboard'
-    ];
-    benefits: [
-      'Reduce operational costs by 50%Improve efficiency by 300%Enable 24/7 autonomous operationReduce human interventionScale operations easily'
-    ];
-    targetAudience: [
-      'Manufacturing companiesWarehouse operationsLogistics companiesHealthcare organizationsService industriesResearch institutions'
-    ];
-    marketPosition: 'Leading autonomous robotics platform. Competes with traditional robotics companies and emerging autonomous robot platforms. Our advantage: AI integration and comprehensive autonomy.';
-    competitors: ['Traditional robotics companies, Emerging autonomous robot platforms'],
-    techStack: ['AI/ML, Robotics, Autonomous Systems, Python, ROS, Computer Vision, Sensor Integration'],
-    realImplementation: true;
-    implementationDetails: 'Production-ready autonomous robotics platform with comprehensive robot control, safety systems, and integration capabilities.',
-    roi: 'Companies see 400% ROI through reduced operational costs and improved efficiency. Average payback period: 6 months.';
-    useCases: [
-      'Industrial automationWarehouse operationsLogistics automationService roboticsResearch roboticsCustom applications'
-    ];
-    integrations: ['Manufacturing systems, Warehouse management, Logistics platforms, Healthcare systems, Research platforms'],
-    support: '24/7 robotics support, dedicated robot consultants, implementation specialists, and ongoing optimization.',
-    compliance: ['Robotics safety standards, Industrial regulations, Safety protocols, International robotics standards'],
-    link: 'https://ziontechgroup.com/autonomous-robotics';
-    icon: '🤖';
-    color: 'from-gray-500 to-slate-600';
-    popular: true;
-    launchDate: '2025-03-25';
-    customers: 320;
-    rating: 4.8;
-    reviews: 187
-  },
-  {
-    id: 'quantum-materials';
-    name: 'Quantum Materials Platform';
-    tagline: 'AI-powered discovery and design of quantum materials for next-generation technology';
-    description: 'Revolutionary platform that uses AI to discover, design, and optimize quantum materials for next-generation electronics, energy storage, and advanced technology applications.',
-    category: 'Materials Science';
-    price: {
-      monthly: 2499;
-      yearly: 24990;
-      currency: 'USD';
-      trialDays: 60;
-      setupTime: '1 month'
-    },
-    features: [
-      'AI-powered material discoveryQuantum material designProperty predictionSynthesis optimizationPerformance testingResearch collaborationCommercialization supportPatent assistance';
-      'Market analysisIntegration support'
-    ];
-    benefits: [
-      'Accelerate discovery by 1000xReduce research costs by 80%Enable breakthrough materialsAccelerate commercializationCreate competitive advantage'
-    ];
-    targetAudience: [
-      'Materials companiesElectronics manufacturersEnergy companiesResearch institutionsTechnology companiesStartup companies'
-    ];
-    marketPosition: 'Leading quantum materials platform. Competes with traditional materials research and emerging quantum materials companies. Our advantage: AI integration and comprehensive platform.';
-    competitors: ['Traditional materials research, Emerging quantum materials companies'],
-    techStack: ['AI/ML, Materials Science, Quantum Physics, Python, Computational Chemistry, Materials Databases'],
-    realImplementation: true;
-    implementationDetails: 'Production-ready quantum materials platform with comprehensive discovery tools, design capabilities, and commercialization support.',
-    roi: 'Companies see 700% ROI through accelerated discovery and novel materials. Average payback period: 10 months.';
-    useCases: [
-      'Electronics materialsEnergy storage materialsQuantum computing materialsAdvanced coatingsNovel alloysBiomaterials'
-    ];
-    integrations: ['Research databases, Laboratory systems, Academic networks, Government research, Commercial partners'],
-    support: '24/7 research support, dedicated materials consultants, implementation specialists, and commercialization assistance.',
-    compliance: ['Research ethics, Laboratory safety, Patent compliance, International materials standards'],
-    link: 'https://ziontechgroup.com/quantum-materials';
-    icon: '🔬';
-    color: 'from-teal-500 to-cyan-600';
-    popular: true;
-    launchDate: '2025-03-30';
-    customers: 95;
-    rating: 4.9;
-    reviews: 67
-  },
-  {
-    id: 'quantum-communications';
-    name: 'Quantum Communications Platform';
-    tagline: 'Secure quantum communication networks for unbreakable data transmission';
-    description: 'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',
-    category: 'Quantum Technology';
-    price: {
-      monthly: 2999;
-      yearly: 29990;
-      currency: 'USD';
-      trialDays: 45;
-      setupTime: '2 weeks'
-    },
-    features: [
-      'Quantum key distributionQuantum entanglement networksSecure communication protocolsNetwork infrastructurePerformance monitoringSecurity validationIntegration APIsCommercial deployment';
-      'Research collaborationRegulatory compliance'
-    ];
-    benefits: [
-      'Unbreakable communication securityFuture-proof against quantum attacksEnable quantum applicationsReduce security risks by 99.9%Comply with future regulations'
-    ];
-    targetAudience: [
-      'Government agenciesFinancial institutionsHealthcare organizationsDefense contractorsTechnology companiesCritical infrastructure'
-    ];
-    marketPosition: 'Leading quantum communications platform. Competes with traditional communication security and emerging quantum communication companies. Our advantage: Comprehensive quantum security and network infrastructure.';
-    competitors: ['Traditional communication security, Emerging quantum communication companies'],
-    techStack: ['Quantum Communication, Quantum Networks, Security Protocols, Python, Network Infrastructure, Quantum Hardware'],
-    realImplementation: true;
-    implementationDetails: 'Production-ready quantum communications platform with comprehensive security features, network infrastructure, and commercial deployment capabilities.',
-    roi: 'Organizations see 600% ROI through enhanced security and future-proof communications. Average payback period: 8 months.';
-    useCases: [
-      'Government communicationsFinancial transactionsHealthcare data transmissionDefense communicationsCritical infrastructureResearch networks'
-    ];
-    integrations: ['Government networks, Financial platforms, Healthcare systems, Defense networks, Critical infrastructure'],
-    support: '24/7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.',
-    compliance: ['Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols'],
-    link: 'https://ziontechgroup.com/quantum-communications';
-    icon: '📡';
-    color: 'from-blue-500 to-indigo-600';
-    popular: true;
-    launchDate: '2025-04-01';
-    customers: 150;
-    rating: 4.8;
-    reviews: 89
-  }
-],
-
-export const getPopularEmergingTechServices = null;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025.filter(
@@ -3329,22 +2482,9 @@ const contact = {mobile: "+1 302 464 0950"
 
   website: "https://ziontechgroup.com";
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-export const getEmergingTechServicesByCategory = (category: string) => {};
-  );
-}
-export const getEmergingTechServicesByPriceRange = (;
-  minPrice: number;
-  maxPrice: number;
-) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
 export const getEmergingTechServicesByCategory = (category: string) => {
   );
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
 
 export const emergingTechServices2025: EmergingTechService[] = [
@@ -3789,11 +2929,7 @@ export const getEmergingTechServicesByCategory = (category: string) => {
 };
 
 export const getEmergingTechServicesByPriceRange = (
-<<<<<<< HEAD
   minPrice: number,
-=======
-  minPrice: number
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   maxPrice: number
 ) => {
     return price >= minPrice && price <= maxPrice;
@@ -3803,7 +2939,6 @@ const contact = {mobile: "+1 302 464 0950"
   email: "kleber@ziontechgroup.com"
   address: "364 E Main St STE 1008 Middletown DE 19709";
   website: "https://ziontechgroup.com";
-<<<<<<< HEAD
 
   website: "https://ziontechgroup.com";
 
@@ -3820,9 +2955,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     currency: string, trialDays: number,
     setupTime: string
   
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -3830,7 +2962,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -3842,7 +2973,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   icon: string, color: string,
   popular: boolean, launchDate: string,
   customers: number, rating: number,
-<<<<<<< HEAD
   reviews: number
 
 
@@ -4300,23 +3430,12 @@ export const getPopularEmergingTechServices = () =>: any {
 ;
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
   return emergingTechServices2025.filter (
-=======
-<<<<<<< HEAD
   reviews: number
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-  reviews: number;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -4767,13 +3886,11 @@ export const getPopularEmergingTechServices = () =>: any {};
 ;
 export const getEmergingTechServicesByCategory = (category: string) =>: any {}
   return emergingTechServices2025.filter (;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     service => service.category === category);
 }
 ;
 export const getEmergingTechServicesByPriceRange = (
   min_price: number,
-<<<<<<< HEAD
   max_price: number) =>: any {
   return emergingTechServices2025.filter (service => {
     const price = parse_int (service.price.monthly.to_string ()) || 0;
@@ -4814,32 +3931,12 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-  max_price: number) =>: any {}
-  return emergingTechServices2025.filter (service => {};
-    const price = parse_int (service.price.monthly.to_string ()) || 0;
-    return price >= min_price && price <= max_price;
-  });'
-}import { MicroSaasService   } from './enhanced - real - micro - saas - services';
-const contact = {"
-  mobile: "+1 302 464 0950","
-  email: "kleber@ziontechgroup && ziontechgroup.com","
-  address: "364 E Main St STE 1008 Middletown DE 19709";
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 ;
   website: "https://ziontechgroup.com";,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -4861,7 +3958,6 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Expert quantum computing consultation","
       "Training and educational resources" ],
     popular: true,
-<<<<<<< HEAD
     icon: "⚛️",
 
     color: "from - purple - 600 to - pink - 700",
@@ -4876,18 +3972,10 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     technology["Qiskit, Cirq, PennyLane, Python, React, Node.js"],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations["IBM Quantum, Google Quantum, AWS Braket, Azure Quantum"],
     use_cases["Drug discovery, Financial modeling, Logistics optimization, Cryptography"],
     roi: "Solve previously intractable problems 1000x faster than classical computers",
     competitors["IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum"],
-<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -4925,27 +4013,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-<<<<<<< HEAD
 
     market_size: "$1.5B Quantum Computing market",
     growth_rate: "45% CAGR",
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-"
-    integrations["IBM Quantum, Google Quantum, AWS Braket, Azure Quantum"],"
-    use_cases["Drug discovery, Financial modeling, Logistics optimization, Cryptography"],"
-    roi: "Solve previously intractable problems 1000x faster than classical computers","
-    competitors["IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum"],
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     variant: "quantum",
     contact_info: contact,
     real_implementation: true,"
@@ -4974,7 +4047,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Mobile and web applications","
       "API and SDK for developers" ],
     popular: true,
-<<<<<<< HEAD
     icon: "🔗",
 
     color: "from - blue - 600 to - cyan - 700",
@@ -4989,20 +4061,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology["Ethereum, Solana, Polkadot, Rust, Go, React, Node.js"],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations["AWS, Azure, GCP, Oracle, SAP, Salesforce"],
     use_cases["Supply chain tracking, Digital identity, Asset tokenization, DeFi protocols"],
     roi: "Reduce transaction costs by 80% and increase transparency by 100%",
     competitors["Hyperledger Fabric, R3 Corda, Ethereum Enterprise, Polygon"],
     market_size: "$19B Blockchain market",
     growth_rate: "87% CAGR",
-<<<<<<< HEAD
     variant: "default",
     contact_info: contact,
     real_implementation: true,
@@ -5036,16 +4100,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-=======
-"
-    integrations["AWS, Azure, GCP, Oracle, SAP, Salesforce"],"
-    use_cases["Supply chain tracking, Digital identity, Asset tokenization, DeFi protocols"],"
-    roi: "Reduce transaction costs by 80% and increase transparency by 100%","
-    competitors["Hyperledger Fabric, R3 Corda, Ethereum Enterprise, Polygon"],"
-    market_size: "$19B Blockchain market","
-    growth_rate: "87% CAGR","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: "default",
     contact_info: contact,
     real_implementation: true,"
@@ -5074,7 +4128,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Real - time data streaming and alerts","
       "Custom analytics and reporting tools" ],
     popular: true,
-<<<<<<< HEAD
     icon: "🛰️",
 
     color: "from - indigo - 600 to - purple - 700",
@@ -5089,18 +4142,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations["NASA APIs, ESA data, commercial satellite providers, GIS systems"],
     use_cases["Precision agriculture, Environmental monitoring, Urban planning, Space operations"],
     roi: "Improve agricultural yields by 25% and reduce environmental monitoring costs by 60%",
     competitors["Planet Labs, Maxar Technologies, Airbus Defence and Space, BlackSky"],
-<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -5133,8 +4178,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-<<<<<<< HEAD
 
     market_size: "$4.5B Space Data market",
     growth_rate: "35% CAGR",
@@ -5145,19 +4188,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launch_date: "2025 - 01 - 20",
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-"
-    integrations["NASA APIs, ESA data, commercial satellite providers, GIS systems"],"
-    use_cases["Precision agriculture, Environmental monitoring, Urban planning, Space operations"],"
-    roi: "Improve agricultural yields by 25% and reduce environmental monitoring costs by 60%","
-    competitors["Planet Labs, Maxar Technologies, Airbus Defence and Space, BlackSky"],
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 12,
     rating: 4 && 4.9,
     reviews: 9;,
@@ -5181,7 +4211,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "API access for third - party integrations","
       "Scalable cloud infrastructure" ],
     popular: true,
-<<<<<<< HEAD
     icon: "🌐",
 
     color: "from - green - 600 to - blue - 700",
@@ -5196,18 +4225,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology["Kubernetes, Docker, Python, React, Node.js, PostgreSQL, Redis"],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations["AWS, Azure, GCP, industrial protocols, enterprise systems"],
     use_cases["Industrial monitoring, Smart cities, Asset tracking, Predictive maintenance"],
     roi: "Reduce operational costs by 30% and improve efficiency by 40%",
     competitors["AWS IoT, Azure IoT Hub, Google Cloud IoT, PTC ThingWorx"],
-<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -5245,27 +4266,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-<<<<<<< HEAD
 
     market_size: "$1.1T IoT market",
     growth_rate: "25% CAGR",
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-"
-    integrations["AWS, Azure, GCP, industrial protocols, enterprise systems"],"
-    use_cases["Industrial monitoring, Smart cities, Asset tracking, Predictive maintenance"],"
-    roi: "Reduce operational costs by 30% and improve efficiency by 40%","
-    competitors["AWS IoT, Azure IoT Hub, Google Cloud IoT, PTC ThingWorx"],
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     variant: "default",
     contact_info: contact,
     real_implementation: true,"
@@ -5294,7 +4300,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Mobile and web applications","
       "Custom content development services" ],
     popular: true,
-<<<<<<< HEAD
     icon: "🥽",
 
     color: "from - pink - 600 to - purple - 700",
@@ -5309,20 +4314,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology["Unity, Unreal Engine, React, Node.js, Python, PostgreSQL"],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations["3D modeling software, enterprise systems, social platforms"],
     use_cases["Employee training, Product design, Customer engagement, Remote collaboration"],
     roi: "Reduce training costs by 50% and improve learning retention by 80%",
     competitors["Unity, Unreal Engine, PTC Vuforia, Magic Leap"],
     market_size: "$45B AR / VR market",
     growth_rate: "30% CAGR",
-<<<<<<< HEAD
     variant: "holographic",
     contact_info: contact,
     real_implementation: true,
@@ -5356,16 +4353,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-=======
-"
-    integrations["3D modeling software, enterprise systems, social platforms"],"
-    use_cases["Employee training, Product design, Customer engagement, Remote collaboration"],"
-    roi: "Reduce training costs by 50% and improve learning retention by 80%","
-    competitors["Unity, Unreal Engine, PTC Vuforia, Magic Leap"],"
-    market_size: "$45B AR / VR market","
-    growth_rate: "30% CAGR","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: "holographic",
     contact_info: contact,
     real_implementation: true,"
@@ -5394,7 +4381,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Custom robotics and drone development","
       "Training and simulation environments" ],
     popular: true,
-<<<<<<< HEAD
     icon: "🤖",
 
     color: "from - gray - 600 to - blue - 700",
@@ -5409,20 +4395,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology["Python, TensorFlow, PyTorch, ROS, React, Node.js"],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations["Industrial robots, drones, autonomous vehicles, IoT sensors"],
     use_cases["Industrial automation, Autonomous logistics, Precision agriculture, Research and development"],
     roi: "Increase operational efficiency by 200% and reduce human error by 90%",
     competitors["NVIDIA DRIVE, ROS, ABB Robotics, KUKA Robotics"],
     market_size: "$65B Autonomous Systems market",
     growth_rate: "40% CAGR",
-<<<<<<< HEAD
     variant: "ai - futuristic",
     contact_info: contact,
     real_implementation: true,
@@ -5456,16 +4434,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-=======
-"
-    integrations["Industrial robots, drones, autonomous vehicles, IoT sensors"],"
-    use_cases["Industrial automation, Autonomous logistics, Precision agriculture, Research and development"],"
-    roi: "Increase operational efficiency by 200% and reduce human error by 90%","
-    competitors["NVIDIA DRIVE, ROS, ABB Robotics, KUKA Robotics"],"
-    market_size: "$65B Autonomous Systems market","
-    growth_rate: "40% CAGR","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: "ai - futuristic",
     contact_info: contact,
     real_implementation: true,"
@@ -5494,7 +4462,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Research collaboration and data sharing","
       "Regulatory compliance and documentation" ],
     popular: true,
-<<<<<<< HEAD
     icon: "🧬",
 
     color: "from - green - 600 to - blue - 700",
@@ -5509,20 +4476,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology["Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL"],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations["Laboratory equipment, DNA synthesis services, research databases"],
     use_cases["Drug discovery, Bioengineering, Agricultural biotechnology, Research automation"],
     roi: "Accelerate drug discovery by 10x and reduce research costs by 70%",
     competitors["Ginkgo Bioworks, Twist Bioscience, Zymergen, Benchling"],
     market_size: "$15B Synthetic Biology market",
     growth_rate: "35% CAGR",
-<<<<<<< HEAD
     variant: "neural",
     contact_info: contact,
     real_implementation: true,
@@ -5556,16 +4515,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-=======
-"
-    integrations["Laboratory equipment, DNA synthesis services, research databases"],"
-    use_cases["Drug discovery, Bioengineering, Agricultural biotechnology, Research automation"],"
-    roi: "Accelerate drug discovery by 10x and reduce research costs by 70%","
-    competitors["Ginkgo Bioworks, Twist Bioscience, Zymergen, Benchling"],"
-    market_size: "$15B Synthetic Biology market","
-    growth_rate: "35% CAGR","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: "neural",
     contact_info: contact,
     real_implementation: true,"
@@ -5594,7 +4543,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Energy trading and market optimization","
       "Sustainability reporting and compliance" ],
     popular: true,
-<<<<<<< HEAD
     icon: "⚡",
 
     color: "from - yellow - 600 to - green - 700",
@@ -5609,20 +4557,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT"],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations["Smart meters, renewable energy systems, grid infrastructure, IoT sensors"],
     use_cases["Renewable energy optimization, Smart grid management, Energy efficiency, Sustainability reporting"],
     roi: "Reduce energy costs by 25% and improve renewable energy utilization by 40%",
     competitors["Schneider Electric, Siemens, GE Digital, ABB"],
     market_size: "$75B Smart Energy market",
     growth_rate: "20% CAGR",
-<<<<<<< HEAD
     variant: "default",
     contact_info: contact,
     real_implementation: true,
@@ -5656,16 +4596,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-=======
-"
-    integrations["Smart meters, renewable energy systems, grid infrastructure, IoT sensors"],"
-    use_cases["Renewable energy optimization, Smart grid management, Energy efficiency, Sustainability reporting"],"
-    roi: "Reduce energy costs by 25% and improve renewable energy utilization by 40%","
-    competitors["Schneider Electric, Siemens, GE Digital, ABB"],"
-    market_size: "$75B Smart Energy market","
-    growth_rate: "20% CAGR","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: "default",
     contact_info: contact,
     real_implementation: true,"
@@ -5694,7 +4624,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Analytics and performance reporting","
       "API access for third - party applications" ],
     popular: true,
-<<<<<<< HEAD
     icon: "🚗",
 
     color: "from - blue - 600 to - green - 700",
@@ -5709,20 +4638,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT"],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations["Traffic signals, public transportation systems, IoT sensors, automotive systems"],
     use_cases["Traffic optimization, Public transportation, Logistics optimization, Autonomous vehicles"],
     roi: "Reduce traffic congestion by 30% and improve transportation efficiency by 40%",
     competitors["Siemens Mobility, Cubic Corporation, Kapsch TrafficCom, TomTom"],
     market_size: "$45B Intelligent Transportation market",
     growth_rate: "18% CAGR",
-<<<<<<< HEAD
     variant: "default",
     contact_info: contact,
     real_implementation: true,
@@ -5756,16 +4677,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-=======
-"
-    integrations["Traffic signals, public transportation systems, IoT sensors, automotive systems"],"
-    use_cases["Traffic optimization, Public transportation, Logistics optimization, Autonomous vehicles"],"
-    roi: "Reduce traffic congestion by 30% and improve transportation efficiency by 40%","
-    competitors["Siemens Mobility, Cubic Corporation, Kapsch TrafficCom, TomTom"],"
-    market_size: "$45B Intelligent Transportation market","
-    growth_rate: "18% CAGR","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: "default",
     contact_info: contact,
     real_implementation: true,"
@@ -5794,7 +4705,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Real - time security monitoring and alerts","
       "Expert cybersecurity consultation" ],
     popular: true,
-<<<<<<< HEAD
     icon: "🔐",
 
     color: "from - red - 600 to - purple - 700",
@@ -5809,52 +4719,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology["Python, Rust, Go, React, Node.js, PostgreSQL"],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations["Existing security infrastructure, identity management systems, communication platforms"],
     use_cases["Post - quantum cryptography, Quantum - resistant security, Advanced threat protection, Compliance"],
     roi: "Future - proof security infrastructure and maintain compliance with emerging standards",
     competitors["ISARA Corporation, PQShield, Crypto Quantique, Qrypt"],
     market_size: "$8B Quantum Cybersecurity market",
     growth_rate: "50% CAGR",
-<<<<<<< HEAD
     variant: "quantum",
     contact_info: contact,
     real_implementation: true,
     implementation_details: "Custom security integration, post - quantum cryptography implementation, and dedicated cybersecurity experts.",
-=======
-=======
-"
-    integrations["Existing security infrastructure, identity management systems, communication platforms"],"
-    use_cases["Post - quantum cryptography, Quantum - resistant security, Advanced threat protection, Compliance"],"
-    roi: "Future - proof security infrastructure and maintain compliance with emerging standards","
-    competitors["ISARA Corporation, PQShield, Crypto Quantique, Qrypt"],"
-    market_size: "$8B Quantum Cybersecurity market","
-    growth_rate: "50% CAGR","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: "quantum",
     contact_info: contact,
     real_implementation: true,"
     implementation_details: "Custom security integration, post - quantum cryptography implementation, and dedicated cybersecurity experts.","
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     launch_date: "2025 - 02 - 25",
     customers: 9,
     rating: 4 && 4.9,
     reviews: 7;
 ]}
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
 export interface EmergingTechService {
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   })
 export interface EmergingTechService {})
 export interface EmergingTechService {})
@@ -6347,7 +5233,6 @@ export const getEmergingTechServicesByCategory = (category: string) => {;
 },;
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return emergingTechServices2025.filter(service => {;
-<<<<<<< HEAD
     const price = parseInt(service.price.monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
   });
@@ -6355,30 +5240,13 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
 
 };
 
-=======
-    const price = parseInt(service.price.monthly.toString()) || 0,;
-    return price >= minPrice && price <= maxPrice;
-  });
-};
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 };
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
-export interface EmergingTechService {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
   })
 }
 
@@ -6873,36 +5741,23 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     return price >= min_price && price <= max_price;
   });
 }
 ;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-=======
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 export interface EmergingTechService {;
 
 };
-<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -6910,22 +5765,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
   });
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 
 export const getPopularEmergingTechServices = $2;
 export const getEmergingTechServicesByCategory = $2;
@@ -6934,19 +5781,9 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     return price >= minPrice && price <= maxPrice
   })
 },
-=======
-=======
-<<<<<<< HEAD
 
 
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

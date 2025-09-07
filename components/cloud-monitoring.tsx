@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -51,8 +50,6 @@ export default function CloudMonitoringPage() {
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
-=======
-<<<<<<< HEAD
 export default function CloudMonitoringPage () {
   const features = [ {
   
@@ -160,11 +157,6 @@ description"content=" Comprehensive cloud monitoring and analytics platform with
 }className=" text-center group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300"> </Card>) ) 
 }</div> </div> </section> <section className="py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10"/> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8"> text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed" > Join thousands of DevOps teams who trust us to monitor their critical infrastructure. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="/contact" variant="secondary" size="lg" className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl" > Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="#demo" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl" > <Play className="w-5 h-5 mr-2" /> Watch Demo </Button> </div> </div> </section> </>) 
 }
-=======
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Button from '../components/ui/Button';
 import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
 
@@ -207,22 +199,10 @@ export default function CloudMonitoringPage() {
       color: 'bg-gradient-to-br from-teal-500 to-blue-600',
       gradient: 'from-teal-400 to-blue-500'}],
 
-<<<<<<< HEAD
   const monitoringCapabilities = [
     {
       category: 'Infrastructure',
       icon: <Server className="w-6 h-6 text-blue-400" />,
-=======
-        'Threat Detection'
-        'Access Logs'
-        'Vulnerability Scans'
-        'Compliance Status'
-        'Audit Trails'
-      ]
-    },  ];      icon: <Shield className="w-6 h-6 text-red-400" />
-  const monitoringCapabilities = $2;
-      icon: <Server className = $2;
->>>>>>> origin/main
       metrics: ['CPU UsageMemory UtilizationDisk I/ONetwork PerformanceContainer Metrics']
     };
     {
@@ -242,20 +222,9 @@ export default function CloudMonitoringPage() {
     }
   ];
 
-<<<<<<< HEAD
   const pricingPlans = [
     {
       name: 'Starter',
-=======
-
-'Up to 10 servers',
-        'Basic monitoring',
-        'Email alerts',
-        '7-day data retention',
-        'Community support',
-        'Mobile app access',
-  const pricingPlans = $2;
->>>>>>> origin/main
       price: '$49',
       period: '/month',
       description: 'Perfect for small teams and startups',
@@ -1258,4 +1227,3 @@ href='/contact';
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

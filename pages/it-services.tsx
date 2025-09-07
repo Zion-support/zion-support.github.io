@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -152,17 +151,9 @@ export default function ITServices() {
   const filteredServices = selectedCategory === 'all' 
     ? services 
     : services.filter($2);
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function itservices() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting." />
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, blockchain, quantum computing, enterprise solutions, infrastructure" />
@@ -359,20 +350,3 @@ export default function itservices() {
     </>
   )
 }
-=======
-        <title>It Services - Zion Tech Group</title>
-        <meta name="description" content="It Services solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">It Services</h1>
-          <p className="text-lg text-gray-600">
-            Professional it services solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

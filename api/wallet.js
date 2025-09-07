@@ -8,7 +8,6 @@ async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
   try {
     const { userId } = req.query || {};
     

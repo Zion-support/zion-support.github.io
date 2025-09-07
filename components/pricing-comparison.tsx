@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
-=======
-<<<<<<< HEAD
 export default function PricingComparisonPage () {
   const serviceComparisons = [ {
   service: 'AI Content Generator', zionPricing: {
@@ -58,11 +55,6 @@ return (<> <Head> <title>Pricing Comparison - Zion Tech Group | How We Stack Up 
 }</div> </div>) ) 
 }</div> </section> <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600"> <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8"> text-xl text-indigo-100 mb-12"> Start your free trial today and see why thousands of businesses choose Zion. </p> <div className=" flex flex-col sm:flex-row gap-4 justify-center"> <Button href=" /ai-content-generator"variant=" secondary"size=" lg"className=" bg-white text-indigo-600 hover:bg-gray-100"> Try AI Content Generator </Button> <Button href=" /cloud-monitoring"variant=" secondary"size=" lg"className=" bg-white text-indigo-600 hover:bg-gray-100"> Try Cloud Monitoring </Button> <Button href=" /devops-automation"variant=" secondary"size=" lg"className=" bg-white text-indigo-600 hover:bg-gray-100" > Try DevOps Automation </Button> </div> </div> </section> </div> </>) 
 }
-=======
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 export default function PricingComparisonPage() {
@@ -1127,4 +1119,3 @@ href='/devops-automation';
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

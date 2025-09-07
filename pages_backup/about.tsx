@@ -1,16 +1,9 @@
 
-<<<<<<< HEAD
 
 import React from "react";
 import Layout from "../components/Layout";
 
 import React from 'react';
-<<<<<<< HEAD:pages_backup/about.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/about.tsx
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -199,11 +192,6 @@ export default function AboutPage() {
         </div>
       </div>
     </MainLayout>
-<<<<<<< HEAD:pages_backup/about.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 import Head from 'next/head';
@@ -232,8 +220,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Lock,
   TrendingUp;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
@@ -515,9 +501,6 @@ export default function About() {;
         </section>
       </div>
     </>
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/about.tsx
   );
       name: 'Kleber',
       role: 'Founder & CEO',
@@ -671,9 +654,6 @@ function About() {
       </div>;
     </Layout>);
 }
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ];
 
   const team = [

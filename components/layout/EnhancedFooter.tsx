@@ -139,7 +139,6 @@ const EnhancedFooter = () => {
                 Terms of Service
               </Link>
               <Link href='/sitemap' className='text-gray-300 hover:text-white text-sm transition-colors'>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 Sitemap
               </Link>
             </div>

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ;
 #!/usr / bin / env node;
@@ -62,7 +58,6 @@ function fixSyntaxErrors() {try {let content = fs.readFileSync(filePath, 'utf8')
     })// Fix broken string literals;
     content = content.replace(/['"]([^'"]*)\s*['"]\s*['"]/g, (match, str) => {modified = true;
       return `"${str}"`;
-<<<<<<< HEAD
     });
 
     // Fix missing commas in arrays and objects
@@ -80,26 +75,14 @@ function fixSyntaxErrors() {try {let content = fs.readFileSync(filePath, 'utf8')
           modified = true;
           return `[${items.join(', ')}]`;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
 
         }
-        return match;
-      },
-    );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-
-        }
-=======
     })// Fix missing commas in arrays and objects;
     content = content.replace(/\[\s*([^\]]*)\s*\]/g, (match, arrayContent) => {if (arrayContent &&;
         !arrayContent.endsWith(',') &&;
         !arrayContent.endsWith(';')) {const items = arrayContent;
           .split(',').map(item => item.trim()).filter(item => item)if (items.length > 1) {modified = true;
           return `[${items.join(', ')}]`;}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return match;
       },);
     // Fix other common syntax issues;
@@ -140,8 +123,6 @@ if (&&) {$2;
           return match + ";";
         }
         return match;
-<<<<<<< HEAD
-<<<<<<< HEAD
       },
     );
 
@@ -149,36 +130,6 @@ if (&&) {$2;
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
-<<<<<<< HEAD
-=======
-}},
-,
-// Run all fixes,
-fixFooter();
-fixAccessibility();
-fixAiServices();
-fixApiDocs();
-fixCareers();
-,
-console.log('🎉 Syntax error fixes completed');
-// Run all fixes,
-fixFooter(),
-fixAccessibility(),
-fixAiServices(),
-fixApiDocs(),
-fixCareers(),
-// // // console.log('🎉 Syntax error fixes completed'),
-}},;
-// Run all fixes,;
-fixFooter(),;
-fixAccessibility(),;
-fixAiServices(),;
-fixApiDocs(),;
-fixCareers(),;
-// // // console.log('🎉 Syntax error fixes completed'),;
-}},
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -228,9 +179,6 @@ const main = () => {
       } else if (item.endsWith('.ts') || item.endsWith('.js')) {
         files.push(fullPath);
       }
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       },);
     // Check condition;
 if ( {) {$2;
@@ -249,10 +197,6 @@ function findFiles() {let files  = [];try {const items  = fs.readdirSync(dir)for
 }// Main execution;
 function main() {console.log('Starting syntax error fixes...')const srcDir = path.join(process.cwd(), 'src')const files  = findFiles(srcDir)let fixedCount = 0;
   let totalCount  = files.length;console.log(`Found ${totalCount} files to check...`)for (const file of files) {if (fixSyntaxErrors(file)) {fixedCount++;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }console.log(`\nFixed syntax errors in ${fixedCount} out of ${totalCount} files.`;
   )// Run linting to check remaining errors;
@@ -273,30 +217,17 @@ const fs = require('fs')const path  = require('path')console.log('🔧 Fixing sy
 }const main = () => {const apiDir = 'pages/api';
   const files  = [];const walkDir = (dir) => {const items = fs.readdirSync(dir)for (const item of items) {const fullPath = path.join(dir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) {walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.js')) {files.push(fullPath)}
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   });
   
   console.log(`\n🎉 Fixed ${fixed}/${files.length} files`);
 };
 
 main();
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-646c
 
-=======
+
+
   }walkDir(apiDir)let fixed = 0;
   files.forEach(file => {if (fixFile(file)) {fixed++;
     }
   })console.log(`\n🎉 Fixed ${fixed}/${files.length} files`)}main()ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-  }walkDir(apiDir)let fixed = 0;
-  files.forEach(file => {if (fixFile(file)) {fixed++;
-    }
-  })console.log(`\n🎉 Fixed ${fixed}/${files.length} files`)}main()ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

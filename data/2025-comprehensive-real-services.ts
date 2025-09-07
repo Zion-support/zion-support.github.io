@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
   id: string;
@@ -11,38 +10,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export interface ComprehensiveService {
 id: string;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   id: string;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface ComprehensiveService {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   id: string;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 ;
   id: string;
 export interface ComprehensiveService  {id: string;name: string;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   id: string;
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-=======
   id: string;
 export interface ComprehensiveService {
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   name: string;
   tagline: string;
   description: string;
@@ -57,7 +38,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   integrations: string[];
   compliance: string[];
   website: string;
-<<<<<<< HEAD
   contact: {phone: string;
     email: string;];      phone: '+1 302 464 0950';email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -81,32 +61,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];      phone: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup.com';
-=======
-  contact: {
-    phone: string;
-    email: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 ];      phone: '+1 302 464 0950';
 '
       email: 'kleber@ziontechgroup.com';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
     trial_days: 60;'
     setup_time: '4 - 6 weeks';
-<<<<<<< HEAD
 
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
     roi: 'Average customer sees 600% ROI through operational improvements';
@@ -120,29 +84,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     reviews: 520
-=======
-'
-    competitors: ['PTCSiemensGE DigitalRockwell Automation'];'
-    roi: 'Average customer sees 600% ROI through operational improvements';'
-    launch_date: '2024 - 01 - 10';
-    customers: 950;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     rating: 4 && 4.9,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviews: 520
-=======
     reviews: 520;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
   id: string, name: string,
@@ -160,7 +107,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   integrations: string[];
   compliance: string[];
   website: string;
-<<<<<<< HEAD
   contact: {phone: string, email: string,address: string;
     },trialDays: number, setupTime: string,competitors: string[], roi: string,launchDate: string, customers: number,rating: number,reviews: number;
 }
@@ -168,36 +114,15 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
   // AI & Machine Learning Services;
   {address: string;
   },trialDays: number;
-=======
-  contact: {}
-    phone: string, email: string,
-    address: string;
-    },
-    trialDays: number, setupTime: string,
-  competitors: string[], roi: string,
-  launchDate: string, customers: number,
-  rating: number,
-<<<<<<< HEAD
   reviews: number
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
-<<<<<<< HEAD
     address: string
   },
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   trialDays: number;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   setupTime: string;
   competitors: string[];
   roi: string;
@@ -208,12 +133,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     id: 'ai-content-factory-pro';
     name: 'AI Content Factory Pro';
     tagline: 'Enterprise-grade AI content generation with brand voice consistency';
-<<<<<<< HEAD
     description: 'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',price: '$49';
-=======
-    description: 'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',
-    price: '$49';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     period: '/month';
     features: [
       'GPT-4 powered content generation with 99.2% accuracyMulti-language support (25+ languages) with cultural adaptationAdvanced SEO optimization with real-time keyword researchBrand voice training and consistency maintenancePlagiarism detection with 99.8% accuracyContent calendar and automated schedulingTeam collaboration with version controlAnalytics dashboard with performance metrics';
@@ -221,20 +141,12 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     ];
     category: 'AI & Content Creation';
     marketSize: '$15.2B';
-<<<<<<< HEAD
     targetAudience: 'Marketing agencies, content creators, enterprise businesses, e-commerce companies',competitiveAdvantage: 'Industry-leading AI accuracy, comprehensive SEO integration, enterprise-grade collaboration tools, and custom model training capabilities',useCases: [;
       'Blog content creation and optimizationSocial media content generationProduct descriptions and marketing copyEmail marketing campaignsTechnical documentation and whitepapers';
-=======
-    targetAudience: 'Marketing agencies, content creators, enterprise businesses, e-commerce companies',
-    competitiveAdvantage: 'Industry-leading AI accuracy, comprehensive SEO integration, enterprise-grade collaboration tools, and custom model training capabilities',
-    useCases: [
-      'Blog content creation and optimizationSocial media content generationProduct descriptions and marketing copyEmail marketing campaignsTechnical documentation and whitepapers'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ];
     integrations: ['WordPressShopifyHubSpotMailchimpGoogle AnalyticsSEMrush'];
     compliance: ['GDPRCCPASOC2ISO 27001'];
     website: 'https://ziontechgroup.com/ai-content-factory-pro';
-<<<<<<< HEAD
     contact: {phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';address: '364 E Main St STE 1008 Middletown DE 19709';
     },trialDays: 14, setupTime: '5 minutes',competitors: ['JasperCopy.aiWritesonicGrammarly Business'], roi: 'Average customer sees 300% ROI within 3 months',launchDate: '2024-01-15', customers: 2500,rating: 4.8,reviews: 1250;
@@ -369,16 +281,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     description: 'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',
     price: '$49';
     period: '/month';
-=======
-    contact: {
-      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     trialDays: 14, setupTime: '5 minutes',
@@ -386,21 +288,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     launchDate: '2024-01-15', customers: 2500,
     rating: 4.8,
     reviews: 1250
-<<<<<<< HEAD
   };
   // Customer Success & Support
   {
-<<<<<<< HEAD
     id: 'ai-customer-success-platform', name: 'AI Customer Success Platform',
     tagline: 'Predictive customer success with AI-powered insights',
     description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',
     price: '$199', period: '/month',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     features: [
       'GPT-4 powered content generation with 99.2% accuracyMulti-language support (25+ languages) with cultural adaptationAdvanced SEO optimization with real-time keyword researchBrand voice training and consistency maintenancePlagiarism detection with 99.8% accuracyContent calendar and automated schedulingTeam collaboration with version controlAnalytics dashboard with performance metrics';
       'API access for enterprise integrationsCustom AI model training for industry-specific content'
     ];
-<<<<<<< HEAD
     category: 'AI & Content Creation';
     marketSize: '$15.2B';
 export interface ComprehensiveService {
@@ -483,9 +381,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     ],
     category: 'Customer Success & Support',
     marketSize: '$8.4B',
-=======
-    category: 'Customer Success & Support', marketSize: '$8.4B',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'SaaS companies, subscription businesses, customer success teams, B2B companies',
     competitiveAdvantage: 'Industry-leading churn prediction accuracy, comprehensive automation capabilities, and deep CRM integrations',
     useCases: [
@@ -495,7 +390,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     compliance: ['GDPRCCPASOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-customer-success-platform',
     contact: {
-<<<<<<< HEAD
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -530,21 +424,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
 
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
-=======
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 21, setupTime: '1-2 days',
-    competitors: ['GainsightTotangoClientSuccessChurnZero'], roi: 'Average customer sees 400% ROI through reduced churn',
-    launchDate: '2024-02-20', customers: 1800,
-    rating: 4.9,
-    reviews: 950
-  };
-=======
-
-  },
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Financial Technology
   {
 
@@ -588,7 +467,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
   // Manufacturing & IoT
   {
-<<<<<<< HEAD
     id: 'ai-manufacturing-optimizer', name: 'AI Manufacturing Optimizer',
     tagline: 'Intelligent manufacturing optimization and predictive maintenance',
     description: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',
@@ -607,7 +485,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -616,12 +493,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     trialDays: 60, setupTime: '4-6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',
     launchDate: '2024-01-10', customers: 950,
-<<<<<<< HEAD
     rating: 4.9
     rating: 4.9
-=======
-    rating: 4.9,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -632,7 +505,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
     roi: 'Average customer sees 600% ROI through operational improvements';
     launchDate: '2024-01-10';
-<<<<<<< HEAD
     customers: 950;rating: 4.9;
     reviews: 520;
   }
@@ -714,8 +586,6 @@ export interface ComprehensiveService  {id: string,name: string,tagline: string,
 ];
     phone: string;
     email: string;address: string;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     customers: 950;
 
     rating: 4.9
@@ -743,23 +613,10 @@ export interface ComprehensiveService {;
     phone: string,;
     email: string,;
     address: string;
-<<<<<<< HEAD
-=======
-  },;
-  trialDays: number,;
-  setupTime: string,;
-  competitors: string[],;
-  roi: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   reviews: number;
 }
 export const comprehensiveRealServices: ComprehensiveService[] = [;
   // AI & Machine Learning Services;
-<<<<<<< HEAD
   {;
     id: 'ai-content-factory-pro',;
     name: 'AI Content Factory Pro',;
@@ -1181,9 +1038,6 @@ export interface ComprehensiveService {;
     name: 'AI Content Factory Pro'
     tagline:
       'Enterprise-grade AI content generation with brand voice consistency'
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'ai-customer-success-platform',
     name: 'AI Customer Success Platform',
     tagline: 'Predictive customer success with AI-powered insights',
@@ -1196,7 +1050,6 @@ export interface ComprehensiveService {;
       'Automated customer health scoring',
       'Intelligent engagement workflows',
       'Real-time customer sentiment analysis',
-=======
     id: 'ai-customer-success-platform', name: 'AI Customer Success Platform',
     tagline: 'Predictive customer success with AI-powered insights',
     description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',
@@ -1484,7 +1337,6 @@ export interface ComprehensiveService {;
     phone: string,;
     email: string,;
     address: string;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },;
   trialDays: number,;
   setupTime: string,;
@@ -1872,7 +1724,6 @@ export interface ComprehensiveService {;
   launch_date: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
     name: 'AI Content Factory Pro',tagline:;
       'Enterprise - grade AI content generation with brand voice consistency',description:;
       'Advanced AI - powered content creation platform that generates high - quality, SEO - optimized content while maintaining your brand voice across all channels. Features include multi - language support, plagiarism detection, and advanced analytics.',price: '$49',period: '/month','Brand voice training and consistency maintenance','Plagiarism detection with 99 && 99.8% accuracy','Content calendar and automated scheduling','Team collaboration with version control','Analytics dashboard with performance metrics','API access for enterprise integrations','Custom AI model training for industry - specific content';
@@ -2177,10 +2028,6 @@ export interface ComprehensiveService {;
 ];;
     name: 'AI Content Factory Pro',
     tagline:;
-=======
-    name: 'AI Content Factory Pro',
-    tagline:;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Enterprise - grade AI content generation with brand voice consistency',
     description:;
       'Advanced AI - powered content creation platform that generates high - quality, SEO - optimized content while maintaining your brand voice across all channels. Features include multi - language support, plagiarism detection, and advanced analytics.',
@@ -2213,28 +2060,19 @@ export interface ComprehensiveService {;
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
-      address: '364 E Main St STE 1008 Middletown DE 19709',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     roi: 'Average customer sees 300% ROI within 3 months',
     launch_date: '2024 - 01 - 15',
     customers: 2500,
     rating: 4 && 4.8,
-<<<<<<< HEAD
     reviews: 1250
-=======
-    reviews: 1250,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
 
     id: 'ai-content-factory-pro'
     name: 'AI Content Factory Pro'
     tagline:
       'Enterprise-grade AI content generation with brand voice consistency'
-<<<<<<< HEAD
 
     id: 'ai-customer-success-platform',
     name: 'AI Customer Success Platform',
@@ -2243,73 +2081,6 @@ export interface ComprehensiveService {;
       'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',
     price: '$199',
     period: '/month',
-=======
-    description:
-      'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.'
-    price: '$49'
-    period: '/month'
-      'GPT-4 powered content generation with 99.2% accuracy'
-      'Multi-language support (25+ languages) with cultural adaptation'
-      'Advanced SEO optimization with real-time keyword research'
-      'Brand voice training and consistency maintenance'
-      'Plagiarism detection with 99.8% accuracy'
-      'Content calendar and automated scheduling'
-      'Team collaboration with version control'
-      'Analytics dashboard with performance metrics'
-      'API access for enterprise integrations'
-      'Custom AI model training for industry-specific content'
-    ]
-    category: 'AI & Content Creation'
-    marketSize: '$15.2B'
-    targetAudience:
-      'Marketing agencies, content creators, enterprise businesses, e-commerce companies'
-    competitiveAdvantage:
-      'Industry-leading AI accuracy, comprehensive SEO integration, enterprise-grade collaboration tools, and custom model training capabilities'
-    useCases: [
-      'Blog content creation and optimization'
-      'Social media content generation'
-      'Product descriptions and marketing copy'
-      'Email marketing campaigns'
-      'Technical documentation and whitepapers'
-    ]
-    integrations: [
-      'WordPress'
-      'Shopify'
-      'HubSpot'
-      'Mailchimp'
-      'Google Analytics'
-      'SEMrush'
-    ]
-    compliance: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001']
-    website: 'https://ziontechgroup.com/ai-content-factory-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-    trialDays: 14
-    setupTime: '5 minutes'
-    competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly Business']
-    roi: 'Average customer sees 300% ROI within 3 months'
-    launchDate: '2024-01-15'
-    customers: 2500
-    rating: 4.8
-    reviews: 1250
-  }
-  // Customer Success & Support
-  {
-    id: 'ai-customer-success-platform'
-    name: 'AI Customer Success Platform'
-    tagline: 'Predictive customer success with AI-powered insights'
-    description:
-      'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.'
-    price: '$199'
-    period: '/month'
-    features: [
-      'Automated customer health scoring',
-      'Intelligent engagement workflows',
-      'Real - time customer sentiment analysis',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Predictive analytics for upsell opportunities',
       'Automated onboarding sequences',
       'Customer journey mapping and optimization',
@@ -2318,7 +2089,6 @@ export interface ComprehensiveService {;
       'Mobile app for customer success managers',
     ],
     category: 'Customer Success & Support',
-<<<<<<< HEAD
     marketSize: '$8.4B',
     targetAudience:
       'SaaS companies, subscription businesses, customer success teams, B2B companies',
@@ -2331,19 +2101,6 @@ export interface ComprehensiveService {;
       'Customer health monitoring',
       'Customer success team productivity',
     ],
-=======
-    targetAudience:
-      'SaaS companies, subscription businesses, customer success teams, B2B companies'
-    competitiveAdvantage:
-      'Industry-leading churn prediction accuracy, comprehensive automation capabilities, and deep CRM integrations'
-    useCases: [
-      'Customer churn prevention'
-      'Upsell and cross-sell optimization'
-      'Customer onboarding automation'
-      'Customer health monitoring'
-      'Customer success team productivity'
-    ]
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: [
       'Salesforce',
       'HubSpot',
@@ -2353,7 +2110,6 @@ export interface ComprehensiveService {;
       'Slack',
     ],
     compliance: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com/ai-customer-success-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -2381,32 +2137,6 @@ export interface ComprehensiveService {;
     period: '/month',
     features: [
       'Real-time risk assessment and scoring',
-=======
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-    trial_days: 21,
-    setup_time: '1 - 2 days',
-    competitors: ['Gainsight', 'Totango', 'ClientSuccess', 'ChurnZero'],
-    roi: 'Average customer sees 400% ROI through reduced churn',
-    launch_date: '2024 - 02 - 20',
-    customers: 1800,
-    rating: 4 && 4.9,
-    reviews: 950,
-  },
-  // Financial Technology
-  {
-    id: 'ai-financial-risk-manager'
-    name: 'AI Financial Risk Manager'
-    tagline: 'Real-time financial risk assessment and compliance'
-    description:
-      'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.'
-    price: '$299'
-    period: '/month'
-    features: [
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Automated compliance monitoring',
       'Regulatory reporting automation',
       'Fraud detection with 95% accuracy',
@@ -2418,7 +2148,6 @@ export interface ComprehensiveService {;
       'Advanced analytics and reporting',
     ],
     category: 'Financial Technology',
-<<<<<<< HEAD
     marketSize: '$12.8B',
     targetAudience:
       'Banks, credit unions, fintech companies, investment firms, insurance companies',
@@ -2431,19 +2160,6 @@ export interface ComprehensiveService {;
       'Market risk management',
       'Operational risk assessment',
     ],
-=======
-    targetAudience:
-      'Banks, credit unions, fintech companies, investment firms, insurance companies'
-    competitiveAdvantage:
-      'Real-time risk assessment, comprehensive compliance coverage, and deep integration capabilities with core banking systems'
-    useCases: [
-      'Credit risk assessment'
-      'Fraud detection and prevention'
-      'Compliance monitoring and reporting'
-      'Market risk management'
-      'Operational risk assessment'
-    ]
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: [
       'Fiserv',
       'Jack Henry',
@@ -2452,7 +2168,6 @@ export interface ComprehensiveService {;
       'Salesforce',
       'Oracle',
     ],
-<<<<<<< HEAD
     compliance: ['Basel III', 'Dodd-Frank', 'SOX', 'GDPR', 'SOC2', 'ISO 27001'],
     website: 'https://ziontechgroup.com/ai-financial-risk-manager',
     contact: {
@@ -2480,32 +2195,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',
     price: '$399',
     period: '/month',
-=======
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-    trial_days: 30,
-    setup_time: '2 - 4 weeks',
-    competitors: ['SAS', 'IBM', 'Oracle', 'SAP'],
-    roi: 'Average customer sees 500% ROI through risk reduction',
-    launch_date: '2024 - 03 - 10',
-    customers: 1200,
-    rating: 4 && 4.7,
-    reviews: 680,
-  },
-  // Healthcare & Biotech
-  {
-    id: 'ai-healthcare-diagnostics'
-    name: 'AI Healthcare Diagnostics Platform'
-    tagline: 'AI-powered medical imaging and diagnostic support'
-    description:
-      'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.'
-    price: '$399'
-    period: '/month'
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     features: [
       'AI-powered churn prediction with 92% accuracy',
       'Automated customer health scoring',
@@ -2519,7 +2208,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Mobile app for customer success managers',
     ],
     category: 'Customer Success & Support',
-<<<<<<< HEAD
     marketSize: '$8.4B',
     targetAudience:
       'SaaS companies, subscription businesses, customer success teams, B2B companies',
@@ -2532,25 +2220,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Customer health monitoring',
       'Customer success team productivity',
     ],
-=======
-      'Medical image analysis with 96% accuracy',
-      'Diagnostic support and recommendations',
-      'Patient data analytics and insights',
-      'Automated report generation',
-      'Integration with PACS and EHR systems',
-<<<<<<< HEAD
       'Real-time alerts and notifications',
       'Multi-modality image support',
-=======
-      'Real - time alerts and notifications',
-      'Multi - modality image support',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Clinical decision support tools',
       'Compliance with medical standards',
       'Advanced security and privacy controls',
     ],
     category: 'Healthcare & Biotech',
-<<<<<<< HEAD
     marketSize: '$18.5B',
 origin/cursor/automate-test-improve-and-merge-code-2533
     targetAudience:
@@ -2564,20 +2240,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Oncology diagnostic assistance',
       'Emergency department support',
     ],
-=======
-    targetAudience:
-      'Hospitals, clinics, diagnostic centers, radiologists, healthcare providers'
-    competitiveAdvantage:
-      'High diagnostic accuracy, comprehensive medical image support, and deep integration with healthcare systems'
-    useCases: [
-      'Radiology image analysis'
-      'Pathology slide analysis'
-      'Cardiology imaging support'
-      'Oncology diagnostic assistance'
-      'Emergency department support'
-    ]
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations: [
       'Salesforce',
       'HubSpot',
@@ -2591,7 +2253,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     trialDays: 21,
@@ -2679,8 +2340,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trial_days: 21,
@@ -2785,7 +2444,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Allscripts',
       'GE Healthcare',
       'Siemens',
-<<<<<<< HEAD
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -2793,8 +2451,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setupTime: '4-6 weeks',
     competitors: [
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Philips',
     ],
     compliance: ['HIPAA', 'FDA', 'CE Mark', 'SOC2', 'ISO 27001', 'ISO 13485'],
@@ -2806,17 +2462,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     trial_days: 60,
     setup_time: '4 - 6 weeks',
     competitors: [;
-<<<<<<< HEAD
-=======
-      'Epic',
-      'Cerner',
-      'Allscripts',
-      'GE Healthcare',
-      'Siemens',
-      'Philips',
-    ],
-    compliance: ['HIPAA', 'FDA', 'CE Mark', 'SOC2', 'ISO 27001', 'ISO 13485'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
     contact: {
       phone: '+1 302 464 0950',
@@ -2827,42 +2472,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setupTime: '4-6 weeks',
     competitors: [
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-    trial_days: 60,
-    setup_time: '4 - 6 weeks',
-    competitors: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'IBM Watson Health',
       'Google Health',
       'Microsoft Healthcare',
       'Philips',
     ],
     roi: 'Average customer sees 600% ROI through improved diagnostic accuracy',
-<<<<<<< HEAD
     rating: 4 && 4.9,
     reviews: 420
   },
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     launch_date: '2024 - 01 - 30',
     customers: 850,
     rating: 4 && 4.9,
     reviews: 420,
   },
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     launchDate: '2024-01-30',
     customers: 850,
     rating: 4.9,
@@ -2870,7 +2495,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   // E-commerce & Retail
   {
     id: 'ai-ecommerce-optimizer',
@@ -2881,53 +2505,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     price: '$149',
     period: '/month',
     features: [
-<<<<<<< HEAD
 
       'AI-powered product recommendations',
 
-=======
-      'AI-powered product recommendations',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    launch_date: '2024 - 01 - 30',
-    customers: 850,
-    rating: 4 && 4.9,
-    reviews: 420,
-  },
-  // E-commerce & Retail
-  {
-    id: 'ai-ecommerce-optimizer'
-    name: 'AI E-commerce Optimizer'
-    tagline: 'Intelligent e-commerce optimization and personalization'
-    description:
-      'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.'
-    price: '$149'
-    period: '/month'
-    features: [
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Dynamic pricing optimization',
       'Customer behavior analysis',
       'Personalized marketing campaigns',
       'Inventory optimization and forecasting',
       'Customer segmentation and targeting',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       'A / B testing automation',
       'Revenue optimization insights',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Integration with major e - commerce platforms',
       'Real - time analytics and reporting',
     ],
-<<<<<<< HEAD
     category: 'E-commerce & Retail',
     marketSize: '$22.1B',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'A/B testing automation',
       'Revenue optimization insights',
       'Integration with major e-commerce platforms',
@@ -2947,15 +2540,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Marketing campaign optimization',
       'Inventory and supply chain optimization',
     ],
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'A / B testing automation',
       'Revenue optimization insights',
       'Integration with major e - commerce platforms',
       'Real - time analytics and reporting',
     ],
     targetAudience:
-<<<<<<< HEAD
       'E-commerce businesses, online retailers, digital marketplaces, D2C brands',
     competitiveAdvantage:
       'Advanced personalization algorithms, comprehensive e-commerce integration, and proven ROI improvement',
@@ -2966,19 +2556,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Marketing campaign optimization',
       'Inventory and supply chain optimization',
     ],
-=======
-      'E-commerce businesses, online retailers, digital marketplaces, D2C brands'
-    competitiveAdvantage:
-      'Advanced personalization algorithms, comprehensive e-commerce integration, and proven ROI improvement'
-    useCases: [
-      'Product recommendation optimization'
-      'Pricing strategy optimization'
-      'Customer experience personalization'
-      'Marketing campaign optimization'
-      'Inventory and supply chain optimization'
-    ]
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations: [
       'Shopify',
       'WooCommerce',
@@ -2988,7 +2565,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Klaviyo',
     ],
     compliance: ['GDPR', 'CCPA', 'PCI DSS', 'SOC2', 'ISO 27001'],
-<<<<<<< HEAD
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -3003,9 +2579,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -3020,11 +2593,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4 && 4.8,
     reviews: 1680,
   },
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     website: 'https://ziontechgroup.com/ai-ecommerce-optimizer',
     contact: {
       phone: '+1 302 464 0950',
@@ -3042,7 +2610,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   // Cybersecurity & Compliance
   {
     id: 'ai-cybersecurity-suite',
@@ -3053,39 +2620,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     price: '$249',
     period: '/month',
     features: [
-<<<<<<< HEAD
 
       'AI-powered threat detection with 98% accuracy',
-=======
-      'AI-powered threat detection with 98% accuracy',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-    trial_days: 14,
-    setup_time: '1 - 2 days',
-    competitors: ['Dynamic Yield', 'Optimizely', 'Klevu', 'Algolia'],
-    roi: 'Average customer sees 350% ROI through increased conversions',
-    launch_date: '2024 - 02 - 15',
-    customers: 3200,
-    rating: 4 && 4.8,
-    reviews: 1680,
-  },
-  // Cybersecurity & Compliance
-  {
-    id: 'ai-cybersecurity-suite'
-    name: 'AI Cybersecurity Suite'
-    tagline: 'Intelligent threat detection and response'
-    description:
-      'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.'
-    price: '$249'
-    period: '/month'
-    features: [
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Automated incident response and remediation',
       'Behavioral analytics and anomaly detection',
       'Vulnerability assessment and management',
@@ -3097,12 +2633,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Advanced security analytics',
     ],
     category: 'Cybersecurity & Compliance',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     marketSize: '$19.8B',
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience:
       'Enterprises, government agencies, healthcare organizations, financial institutions, educational institutions',
     competitiveAdvantage:
@@ -3114,22 +2646,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Vulnerability management',
       'Security operations optimization',
     ],
-<<<<<<< HEAD
-=======
-=======
-    targetAudience:
-      'Enterprises, government agencies, healthcare organizations, financial institutions, educational institutions'
-    competitiveAdvantage:
-      'High threat detection accuracy, comprehensive security coverage, and automated response capabilities'
-    useCases: [
-      'Threat detection and prevention'
-      'Incident response automation'
-      'Compliance monitoring and reporting'
-      'Vulnerability management'
-      'Security operations optimization'
-    ]
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations: [
       'Splunk',
       'ServiceNow',
@@ -3139,7 +2655,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Google Workspace',
     ],
     compliance: ['SOC2', 'ISO 27001', 'NIST', 'GDPR', 'HIPAA', 'PCI DSS'],
-<<<<<<< HEAD
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -3154,9 +2669,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -3171,11 +2683,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4 && 4.9,
     reviews: 1100,
   },
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     website: 'https://ziontechgroup.com/ai-cybersecurity-suite',
     contact: {
       phone: '+1 302 464 0950',
@@ -3193,7 +2700,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   // Data & Analytics
   {
     id: 'ai-data-pipeline-platform',
@@ -3210,7 +2716,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'AI-powered data quality monitoring',
       'Real-time data processing and streaming',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -3238,7 +2743,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Automated data pipeline orchestration',
       'AI - powered data quality monitoring',
       'Real - time data processing and streaming',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Advanced analytics and visualization',
       'Machine learning model deployment',
       'Data governance and compliance',
@@ -3248,14 +2752,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Collaborative data workspace',
     ],
     category: 'Data & Analytics',
-<<<<<<< HEAD
 
     marketSize: '$25.3B',
-=======
-<<<<<<< HEAD
     marketSize: '$25.3B',
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience:
       'Data teams, analytics professionals, data scientists, enterprises, startups',
     competitiveAdvantage:
@@ -3267,22 +2767,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Machine learning operations',
       'Data governance and compliance',
     ],
-<<<<<<< HEAD
-=======
-=======
-    targetAudience:
-      'Data teams, analytics professionals, data scientists, enterprises, startups'
-    competitiveAdvantage:
-      'Advanced automation capabilities, comprehensive data quality management, and scalable cloud infrastructure'
-    useCases: [
-      'Data pipeline automation'
-      'Data quality management'
-      'Real-time analytics'
-      'Machine learning operations'
-      'Data governance and compliance'
-    ]
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations: [
       'Snowflake',
       'Databricks',
@@ -3292,7 +2776,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Tableau',
     ],
     compliance: ['SOC2', 'ISO 27001', 'GDPR', 'CCPA', 'HIPAA'],
-<<<<<<< HEAD
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -3307,9 +2790,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -3324,11 +2804,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4 && 4.8,
     reviews: 1450,
   },
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     website: 'https://ziontechgroup.com/ai-data-pipeline-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -3346,7 +2821,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   // Human Resources
   {
     id: 'ai-hr-recruitment-platform',
@@ -3357,39 +2831,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     price: '$129',
     period: '/month',
     features: [
-<<<<<<< HEAD
 
       'AI-powered candidate matching',
-=======
-      'AI-powered candidate matching',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-    trial_days: 21,
-    setup_time: '1 - 2 weeks',
-    competitors: ['Fivetran', 'Alteryx', 'Talend', 'Informatica'],
-    roi: 'Average customer sees 400% ROI through data automation',
-    launch_date: '2024 - 02 - 01',
-    customers: 2800,
-    rating: 4 && 4.8,
-    reviews: 1450,
-  },
-  // Human Resources
-  {
-    id: 'ai-hr-recruitment-platform'
-    name: 'AI HR Recruitment Platform'
-    tagline: 'Intelligent talent acquisition and HR automation'
-    description:
-      'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.'
-    price: '$129'
-    period: '/month'
-    features: [
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Automated resume screening',
       'Interview scheduling and coordination',
       'Candidate assessment and scoring',
@@ -3401,12 +2844,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Advanced reporting and insights',
     ],
     category: 'Human Resources',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     marketSize: '$16.7B',
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience:
       'HR departments, recruitment agencies, talent acquisition teams, growing companies',
     competitiveAdvantage:
@@ -3418,22 +2857,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Employee onboarding automation',
       'Performance management and tracking',
     ],
-<<<<<<< HEAD
-=======
-=======
-    targetAudience:
-      'HR departments, recruitment agencies, talent acquisition teams, growing companies'
-    competitiveAdvantage:
-      'Advanced candidate matching algorithms, comprehensive HR automation, and proven hiring success rates'
-    useCases: [
-      'Candidate sourcing and screening'
-      'Interview process optimization'
-      'Diversity and inclusion initiatives'
-      'Employee onboarding automation'
-      'Performance management and tracking'
-    ]
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     integrations: [
       'Workday',
       'BambooHR',
@@ -3443,7 +2866,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Microsoft Teams',
     ],
     compliance: ['EEOC', 'OFCCP', 'GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
-<<<<<<< HEAD
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -3458,9 +2880,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -3475,11 +2894,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4 && 4.7,
     reviews: 890,
   },
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     website: 'https://ziontechgroup.com/ai-hr-recruitment-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -3497,7 +2911,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   // Legal & Compliance
   {
     id: 'ai-legal-contract-analyzer',
@@ -3508,39 +2921,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     price: '$199',
     period: '/month',
     features: [
-<<<<<<< HEAD
 
       'AI-powered contract analysis and review',
-=======
-      'AI-powered contract analysis and review',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-    trial_days: 14,
-    setup_time: '1 - 2 days',
-    competitors: ['HireVue', 'Pymetrics', 'HiredScore', 'Entelo'],
-    roi: 'Average customer sees 300% ROI through improved hiring',
-    launch_date: '2024 - 01 - 20',
-    customers: 1900,
-    rating: 4 && 4.7,
-    reviews: 890,
-  },
-  // Legal & Compliance
-  {
-    id: 'ai-legal-contract-analyzer'
-    name: 'AI Legal Contract Analyzer'
-    tagline: 'Intelligent contract analysis and legal automation'
-    description:
-      'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.'
-    price: '$199'
-    period: '/month'
-    features: [
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Risk identification and assessment',
       'Compliance monitoring and reporting',
       'Contract template management',
@@ -3552,12 +2934,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Audit trail and version control',
     ],
     category: 'Legal & Compliance',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     marketSize: '$14.2B',
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience:
       'Law firms, corporate legal departments, compliance teams, contract managers',
     competitiveAdvantage:
@@ -3569,7 +2947,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Legal document automation',
       'Contract lifecycle management',
     ],
-<<<<<<< HEAD
     integrations: [
       'Clio',
       'MyCase',
@@ -3578,50 +2955,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Westlaw',
       'DocuSign',
     ],
-=======
-    integrations: [
-      'Clio',
-      'MyCase',
-      'PracticePanther',
-      'LexisNexis',
-      'Westlaw',
-      'DocuSign',
-    ],
-=======
-    targetAudience:
-      'Law firms, corporate legal departments, compliance teams, contract managers'
-    competitiveAdvantage:
-      'High accuracy contract analysis, comprehensive risk assessment, and deep legal system integration'
-    useCases: [
-      'Contract review and analysis'
-      'Risk assessment and management'
-      'Compliance monitoring'
-      'Legal document automation'
-      'Contract lifecycle management'
-    ]
-    integrations: [
-      'Clio'
-      'MyCase'
-      'PracticePanther'
-      'LexisNexis'
-      'Westlaw'
-      'DocuSign'
-    ]
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     compliance: [
       'SOC2',
       'ISO 27001',
       'GDPR',
       'CCPA',
-<<<<<<< HEAD
       'Attorney - client privilege',
     ],
     website: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     trialDays: 30,
@@ -3641,8 +2985,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trial_days: 30,
@@ -3654,11 +2996,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4 && 4.8,
     reviews: 580,
   },
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Attorney-client privilege',
     ],
     website: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
@@ -3678,7 +3015,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   // Manufacturing & IoT
   {
     id: 'ai-manufacturing-optimizer',
@@ -3689,80 +3025,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',
     price: '$299',
     period: '/month',
-<<<<<<< HEAD
-=======
-=======
-      'Attorney - client privilege',
-    ],
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-    trial_days: 30,
-    setup_time: '1 - 2 weeks',
-    competitors: ['Evisort', 'ContractPodAi', 'Kira Systems', 'Luminance'],
-    roi: 'Average customer sees 500% ROI through contract automation',
-    launch_date: '2024 - 02 - 10',
-    customers: 1100,
-    rating: 4 && 4.8,
-    reviews: 580,
-  },
-  // Manufacturing & IoT
-  {
-    id: 'ai-manufacturing-optimizer'
-    name: 'AI Manufacturing Optimizer'
-    tagline:
-      'Intelligent manufacturing optimization and predictive maintenance'
-    description:
-      'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.'
-    price: '$299'
-    period: '/month'
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     features: [
       'Predictive maintenance with 94% accuracy',
       'Production optimization and scheduling',
       'Quality control and defect detection',
       'Supply chain optimization',
       'Energy consumption optimization',
-<<<<<<< HEAD
       'Real - time monitoring and alerts',
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Real-time monitoring and alerts',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       'Real - time monitoring and alerts',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'IoT device integration and management',
       'Advanced analytics and reporting',
       'Integration with ERP and MES systems',
       'Mobile app for field workers',
     ],
     category: 'Manufacturing & IoT',
-<<<<<<< HEAD
 
     marketSize: '$28.9B',
-=======
-<<<<<<< HEAD
     marketSize: '$28.9B',
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience:
       'Manufacturing companies, industrial facilities, supply chain managers, operations teams',
     competitiveAdvantage:
       'High accuracy predictive maintenance, comprehensive IoT integration, and proven operational improvements',
-<<<<<<< HEAD
-=======
-=======
-    targetAudience:
-      'Manufacturing companies, industrial facilities, supply chain managers, operations teams'
-    competitiveAdvantage:
-      'High accuracy predictive maintenance, comprehensive IoT integration, and proven operational improvements'
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     useCases: [
       'Predictive maintenance optimization',
       'Production efficiency improvement',
@@ -3772,7 +3058,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     integrations: ['SAP', 'Oracle', 'Siemens', 'Rockwell', 'GE Digital', 'PTC'],
     compliance: ['ISO 9001', 'ISO 14001', 'OHSAS 18001', 'SOC2', 'ISO 27001'],
-<<<<<<< HEAD
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -3786,9 +3071,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 520
   }
 ];      phone: '+1 302 464 0950';
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -3804,9 +3086,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 520,
   },
 ];      phone: '+1 302 464 0950';
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {
       phone: '+1 302 464 0950',
@@ -3826,7 +3105,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     trialDays: 60;
     setupTime: '4-6 weeks';
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -3842,24 +3120,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 520,
   },
 ];      phone: '+1 302 464 0950';
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
     trialDays: 60;
     setupTime: '4-6 weeks';
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
     roi: 'Average customer sees 600% ROI through operational improvements';
     launch_date: '2024 - 01 - 10';
     customers: 950;
-<<<<<<< HEAD
-<<<<<<< HEAD
     rating: 4.9;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-<<<<<<< HEAD
 export interface ComprehensiveService {;
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -3874,11 +3144,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 520
 
     reviews: 520
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     reviews: 520
     reviews: 520;
-=======
   {'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },'
@@ -4134,16 +3401,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 '
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
   id: string, name: string,
@@ -4154,17 +3415,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   competitiveAdvantage: string, useCases: string[],
   integrations: string[], compliance: string[],
   website: string,
-<<<<<<< HEAD
   contact: {
       
     phone: string, email: string,
     address: string
   
-=======
-  contact: {}
-    phone: string, email: string,
-    address: string;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     trialDays: number, setupTime: string,
   competitors: string[], roi: string,
@@ -4173,7 +3428,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   reviews: number
 }
 
-<<<<<<< HEAD
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
@@ -4182,318 +3436,19 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     },
     trialDays: 14, setupTime: '5 minutes',
     competitors: ['JasperCopy.aiWritesonicGrammarly Business'], roi: 'Average customer sees 300% ROI within 3 months',
-=======
-export const comprehensiveRealServices: ComprehensiveService[] = [;
-  // AI & Machine Learning Services;
-  {'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    
-    },'
-    trialDays: 14, setupTime: '5 minutes','
-    competitors: ['JasperCopy.aiWritesonicGrammarly Business'], roi: 'Average customer sees 300% ROI within 3 months','
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     launchDate: '2024-01-15', customers: 2500,
     rating: 4.8,
     reviews: 1250
   };
 
-<<<<<<< HEAD
   // Customer Success & Support
   {
-=======
-  // Customer Success & Support;
-  {'
-    id: 'ai-customer-success-platform', name: 'AI Customer Success Platform','
-    tagline: 'Predictive customer success with AI-powered insights','
-    description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.','
-    price: '$199', period: '/month',
-    features: ['
-      'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms';'
-      'Advanced reporting and analyticsMobile app for customer success managers'
-    ];'
-    category: 'Customer Success & Support', marketSize: '$8.4B','
-    targetAudience: 'SaaS companies, subscription businesses, customer success teams, B2B companies','
-    competitiveAdvantage: 'Industry-leading churn prediction accuracy, comprehensive automation capabilities, and deep CRM integrations',
-    useCases: ['
-      'Customer churn preventionUpsell and cross-sell optimizationCustomer onboarding automationCustomer health monitoringCustomer success team productivity'
-    ];'
-    integrations: ['SalesforceHubSpotPipedriveIntercomZendeskSlack'], compliance: ['GDPRCCPASOC2ISO 27001'],'
-    website: 'https://ziontechgroup.com/ai-customer-success-platform',
-    contact: {}
-      '
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    
-    },'
-    trialDays: 21, setupTime: '1-2 days','
-    competitors: ['GainsightTotangoClientSuccessChurnZero'], roi: 'Average customer sees 400% ROI through reduced churn','
-    launchDate: '2024-02-20', customers: 1800,
-    rating: 4.9,
-    reviews: 950;
-  };
-
-  // Financial Technology;
-  {'
-    id: 'ai-financial-risk-manager', name: 'AI Financial Risk Manager','
-    tagline: 'Real-time financial risk assessment and compliance','
-    description: 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.','
-    price: '$299', period: '/month',
-    features: ['
-      'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis';'
-      'Integration with core banking systemsAdvanced analytics and reporting'
-    ];'
-    category: 'Financial Technology', marketSize: '$12.8B','
-    targetAudience: 'Banks, credit unions, fintech companies, investment firms, insurance companies','
-    competitiveAdvantage: 'Real-time risk assessment, comprehensive compliance coverage, and deep integration capabilities with core banking systems',
-    useCases: ['
-      'Credit risk assessmentFraud detection and preventionCompliance monitoring and reportingMarket risk managementOperational risk assessment'
-    ];'
-    integrations: ['FiservJack HenryFISTemenosSalesforceOracle'], compliance: ['Basel IIIDodd-FrankSOXGDPRSOC2ISO 27001'],'
-    website: 'https://ziontechgroup.com/ai-financial-risk-manager',
-    contact: {}
-      '
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    
-    },'
-    trialDays: 30, setupTime: '2-4 weeks','
-    competitors: ['SASIBMOracleSAP'], roi: 'Average customer sees 500% ROI through risk reduction','
-    launchDate: '2024-03-10', customers: 1200,
-    rating: 4.7,
-    reviews: 680;
-  };
-
-  // Healthcare & Biotech;
-  {'
-    id: 'ai-healthcare-diagnostics', name: 'AI Healthcare Diagnostics Platform','
-    tagline: 'AI-powered medical imaging and diagnostic support','
-    description: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.','
-    price: '$399', period: '/month',
-    features: ['
-      'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools';'
-      'Compliance with medical standardsAdvanced security and privacy controls'
-    ];'
-    category: 'Healthcare & Biotech', marketSize: '$18.5B','
-    targetAudience: 'Hospitals, clinics, diagnostic centers, radiologists, healthcare providers','
-    competitiveAdvantage: 'High diagnostic accuracy, comprehensive medical image support, and deep integration with healthcare systems',
-    useCases: ['
-      'Radiology image analysisPathology slide analysisCardiology imaging supportOncology diagnostic assistanceEmergency department support'
-    ];'
-    integrations: ['EpicCernerAllscriptsGE HealthcareSiemensPhilips'], compliance: ['HIPAAFDACE MarkSOC2ISO 27001ISO 13485'],'
-    website: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
-    contact: {}
-      '
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    
-    },'
-    trialDays: 60, setupTime: '4-6 weeks','
-    competitors: ['IBM Watson HealthGoogle HealthMicrosoft HealthcarePhilips'], roi: 'Average customer sees 600% ROI through improved diagnostic accuracy','
-    launchDate: '2024-01-30', customers: 850,
-    rating: 4.9,
-    reviews: 420;
-  };
-
-  // E-commerce & Retail;
-  {'
-    id: 'ai-ecommerce-optimizer', name: 'AI E-commerce Optimizer','
-    tagline: 'Intelligent e-commerce optimization and personalization','
-    description: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.','
-    price: '$149', period: '/month',
-    features: ['
-      'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights';'
-      'Integration with major e-commerce platformsReal-time analytics and reporting'
-    ];'
-    category: 'E-commerce & Retail', marketSize: '$22.1B','
-    targetAudience: 'E-commerce businesses, online retailers, digital marketplaces, D2C brands','
-    competitiveAdvantage: 'Advanced personalization algorithms, comprehensive e-commerce integration, and proven ROI improvement',
-    useCases: ['
-      'Product recommendation optimizationPricing strategy optimizationCustomer experience personalizationMarketing campaign optimizationInventory and supply chain optimization'
-    ];'
-    integrations: ['ShopifyWooCommerceMagentoBigCommerceSalesforceKlaviyo'], compliance: ['GDPRCCPAPCI DSSSOC2ISO 27001'],'
-    website: 'https://ziontechgroup.com/ai-ecommerce-optimizer',
-    contact: {}
-      '
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    
-    },'
-    trialDays: 14, setupTime: '1-2 days','
-    competitors: ['Dynamic YieldOptimizelyKlevuAlgolia'], roi: 'Average customer sees 350% ROI through increased conversions','
-    launchDate: '2024-02-15', customers: 3200,
-    rating: 4.8,
-    reviews: 1680;
-  };
-
-  // Cybersecurity & Compliance;
-  {'
-    id: 'ai-cybersecurity-suite', name: 'AI Cybersecurity Suite','
-    tagline: 'Intelligent threat detection and response','
-    description: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.','
-    price: '$249', period: '/month',
-    features: ['
-      'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response';'
-      'Cloud security monitoringAdvanced security analytics'
-    ];'
-    category: 'Cybersecurity & Compliance', marketSize: '$19.8B','
-    targetAudience: 'Enterprises, government agencies, healthcare organizations, financial institutions, educational institutions','
-    competitiveAdvantage: 'High threat detection accuracy, comprehensive security coverage, and automated response capabilities',
-    useCases: ['
-      'Threat detection and preventionIncident response automationCompliance monitoring and reportingVulnerability managementSecurity operations optimization'
-    ];'
-    integrations: ['SplunkServiceNowJiraSlackMicrosoft 365Google Workspace'], compliance: ['SOC2ISO 27001NISTGDPRHIPAAPCI DSS'],'
-    website: 'https://ziontechgroup.com/ai-cybersecurity-suite',
-    contact: {}
-      '
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    
-    },'
-    trialDays: 30, setupTime: '1-2 weeks','
-    competitors: ['CrowdStrikeSentinelOneCarbon BlackCylance'], roi: 'Average customer sees 450% ROI through threat prevention','
-    launchDate: '2024-03-01', customers: 2100,
-    rating: 4.9,
-    reviews: 1100;
-  };
-
-  // Data & Analytics;
-  {'
-    id: 'ai-data-pipeline-platform', name: 'AI Data Pipeline Platform','
-    tagline: 'Intelligent data processing and analytics automation','
-    description: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.','
-    price: '$179', period: '/month',
-    features: ['
-      'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure';'
-      'Advanced monitoring and alertingCollaborative data workspace'
-    ];'
-    category: 'Data & Analytics', marketSize: '$25.3B','
-    targetAudience: 'Data teams, analytics professionals, data scientists, enterprises, startups','
-    competitiveAdvantage: 'Advanced automation capabilities, comprehensive data quality management, and scalable cloud infrastructure',
-    useCases: ['
-      'Data pipeline automationData quality managementReal-time analyticsMachine learning operationsData governance and compliance'
-    ];'
-    integrations: ['SnowflakeDatabricksAWSGoogle CloudAzureTableau'], compliance: ['SOC2ISO 27001GDPRCCPAHIPAA'],'
-    website: 'https://ziontechgroup.com/ai-data-pipeline-platform',
-    contact: {}
-      '
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    
-    },'
-    trialDays: 21, setupTime: '1-2 weeks','
-    competitors: ['FivetranAlteryxTalendInformatica'], roi: 'Average customer sees 400% ROI through data automation','
-    launchDate: '2024-02-01', customers: 2800,
-    rating: 4.8,
-    reviews: 1450;
-  };
-
-  // Human Resources;
-  {'
-    id: 'ai-hr-recruitment-platform', name: 'AI HR Recruitment Platform','
-    tagline: 'Intelligent talent acquisition and HR automation','
-    description: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.','
-    price: '$129', period: '/month',
-    features: ['
-      'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics';'
-      'Integration with major HR systemsAdvanced reporting and insights'
-    ];'
-    category: 'Human Resources', marketSize: '$16.7B','
-    targetAudience: 'HR departments, recruitment agencies, talent acquisition teams, growing companies','
-    competitiveAdvantage: 'Advanced candidate matching algorithms, comprehensive HR automation, and proven hiring success rates',
-    useCases: ['
-      'Candidate sourcing and screeningInterview process optimizationDiversity and inclusion initiativesEmployee onboarding automationPerformance management and tracking'
-    ];'
-    integrations: ['WorkdayBambooHRGreenhouseLeverSlackMicrosoft Teams'], compliance: ['EEOCOFCCPGDPRCCPASOC2ISO 27001'],'
-    website: 'https://ziontechgroup.com/ai-hr-recruitment-platform',
-    contact: {}
-      '
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    
-    },'
-    trialDays: 14, setupTime: '1-2 days','
-    competitors: ['HireVuePymetricsHiredScoreEntelo'], roi: 'Average customer sees 300% ROI through improved hiring','
-    launchDate: '2024-01-20', customers: 1900,
-    rating: 4.7,
-    reviews: 890;
-  };
-
-  // Legal & Compliance;
-  {'
-    id: 'ai-legal-contract-analyzer', name: 'AI Legal Contract Analyzer','
-    tagline: 'Intelligent contract analysis and legal automation','
-    description: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.','
-    price: '$199', period: '/month',
-    features: ['
-      'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval';'
-      'Collaborative review workflowsAudit trail and version control'
-    ];'
-    category: 'Legal & Compliance', marketSize: '$14.2B','
-    targetAudience: 'Law firms, corporate legal departments, compliance teams, contract managers','
-    competitiveAdvantage: 'High accuracy contract analysis, comprehensive risk assessment, and deep legal system integration',
-    useCases: ['
-      'Contract review and analysisRisk assessment and managementCompliance monitoringLegal document automationContract lifecycle management'
-    ];'
-    integrations: ['ClioMyCasePracticePantherLexisNexisWestlawDocuSign'], compliance: ['SOC2ISO 27001GDPRCCPAAttorney-client privilege'],'
-    website: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
-    contact: {}
-      '
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    
-    },'
-    trialDays: 30, setupTime: '1-2 weeks','
-    competitors: ['EvisortContractPodAiKira SystemsLuminance'], roi: 'Average customer sees 500% ROI through contract automation','
-    launchDate: '2024-02-10', customers: 1100,
-    rating: 4.8,
-    reviews: 580;
-  };
-
-  // Manufacturing & IoT;
-  {'
-    id: 'ai-manufacturing-optimizer', name: 'AI Manufacturing Optimizer','
-    tagline: 'Intelligent manufacturing optimization and predictive maintenance','
-    description: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.','
-    price: '$299', period: '/month',
-    features: ['
-      'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting';'
-      'Integration with ERP and MES systemsMobile app for field workers'
-    ];'
-    category: 'Manufacturing & IoT', marketSize: '$28.9B','
-    targetAudience: 'Manufacturing companies, industrial facilities, supply chain managers, operations teams','
-    competitiveAdvantage: 'High accuracy predictive maintenance, comprehensive IoT integration, and proven operational improvements',
-    useCases: ['
-      'Predictive maintenance optimizationProduction efficiency improvementQuality control automationSupply chain optimizationEnergy consumption reduction'
-    ];'
-    integrations: ['SAPOracleSiemensRockwellGE DigitalPTC'], compliance: ['ISO 9001ISO 14001OHSAS 18001SOC2ISO 27001'],'
-    website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
-    contact: {}
-      '
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    
-    },'
-    trialDays: 60, setupTime: '4-6 weeks','
-    competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements','
-    launchDate: '2024-01-10', customers: 950,
-    rating: 4.9,
-    reviews: 520;
-  }
-];
-;
-
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     reviews: 520
   }
 ];
-=======
   // Manufacturing & IoT;
 
   {'
@@ -4553,7 +3508,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   }
 ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string, name: string,
   tagline: string, description: string,
   price: string, period: string,
@@ -4592,7 +3546,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
 
   // Customer Success & Support
   {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     id: 'ai-customer-success-platform', name: 'AI Customer Success Platform',
     tagline: 'Predictive customer success with AI-powered insights',
     description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',
@@ -4610,15 +3563,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['SalesforceHubSpotPipedriveIntercomZendeskSlack'], compliance: ['GDPRCCPASOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-customer-success-platform',
     contact: {
-<<<<<<< HEAD
       
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     
-=======
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     trialDays: 21, setupTime: '1-2 days',
     competitors: ['GainsightTotangoClientSuccessChurnZero'], roi: 'Average customer sees 400% ROI through reduced churn',
@@ -4646,15 +3594,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['FiservJack HenryFISTemenosSalesforceOracle'], compliance: ['Basel IIIDodd-FrankSOXGDPRSOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-financial-risk-manager',
     contact: {
-<<<<<<< HEAD
       
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     
-=======
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     trialDays: 30, setupTime: '2-4 weeks',
     competitors: ['SASIBMOracleSAP'], roi: 'Average customer sees 500% ROI through risk reduction',
@@ -4674,7 +3617,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Compliance with medical standardsAdvanced security and privacy controls'
     ];
     category: 'Healthcare & Biotech', marketSize: '$18.5B',
-<<<<<<< HEAD
     description: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',
     price: '$399',
     period: '/month',
@@ -4683,8 +3625,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     ],
     category: 'Healthcare & Biotech',
     marketSize: '$18.5B',
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'Hospitals, clinics, diagnostic centers, radiologists, healthcare providers',
     competitiveAdvantage: 'High diagnostic accuracy, comprehensive medical image support, and deep integration with healthcare systems',
     useCases: [
@@ -4694,7 +3634,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     compliance: ['HIPAAFDACE MarkSOC2ISO 27001ISO 13485'],
     website: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
     contact: {
-<<<<<<< HEAD
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -4721,29 +3660,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     ],
     category: 'E-commerce & Retail',
     marketSize: '$22.1B',
-=======
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 60, setupTime: '4-6 weeks',
-    competitors: ['IBM Watson HealthGoogle HealthMicrosoft HealthcarePhilips'], roi: 'Average customer sees 600% ROI through improved diagnostic accuracy',
-    launchDate: '2024-01-30', customers: 850,
-    rating: 4.9,
-    reviews: 420
-  };
-
-  // E-commerce & Retail
-  {
-    id: 'ai-ecommerce-optimizer', name: 'AI E-commerce Optimizer',
-    tagline: 'Intelligent e-commerce optimization and personalization',
-    description: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.',
-    price: '$149', period: '/month',
-    features: [
-      'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights';
-      'Integration with major e-commerce platformsReal-time analytics and reporting'
-    ];
-    category: 'E-commerce & Retail', marketSize: '$22.1B',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'E-commerce businesses, online retailers, digital marketplaces, D2C brands',
     competitiveAdvantage: 'Advanced personalization algorithms, comprehensive e-commerce integration, and proven ROI improvement',
     useCases: [
@@ -4753,7 +3669,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     compliance: ['GDPRCCPAPCI DSSSOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-ecommerce-optimizer',
     contact: {
-<<<<<<< HEAD
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -4780,29 +3695,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     ],
     category: 'Cybersecurity & Compliance',
     marketSize: '$19.8B',
-=======
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 14, setupTime: '1-2 days',
-    competitors: ['Dynamic YieldOptimizelyKlevuAlgolia'], roi: 'Average customer sees 350% ROI through increased conversions',
-    launchDate: '2024-02-15', customers: 3200,
-    rating: 4.8,
-    reviews: 1680
-  };
-
-  // Cybersecurity & Compliance
-  {
-    id: 'ai-cybersecurity-suite', name: 'AI Cybersecurity Suite',
-    tagline: 'Intelligent threat detection and response',
-    description: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.',
-    price: '$249', period: '/month',
-    features: [
-      'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response';
-      'Cloud security monitoringAdvanced security analytics'
-    ];
-    category: 'Cybersecurity & Compliance', marketSize: '$19.8B',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'Enterprises, government agencies, healthcare organizations, financial institutions, educational institutions',
     competitiveAdvantage: 'High threat detection accuracy, comprehensive security coverage, and automated response capabilities',
     useCases: [
@@ -4812,7 +3704,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     compliance: ['SOC2ISO 27001NISTGDPRHIPAAPCI DSS'],
     website: 'https://ziontechgroup.com/ai-cybersecurity-suite',
     contact: {
-<<<<<<< HEAD
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -4839,29 +3730,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     ],
     category: 'Data & Analytics',
     marketSize: '$25.3B',
-=======
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 30, setupTime: '1-2 weeks',
-    competitors: ['CrowdStrikeSentinelOneCarbon BlackCylance'], roi: 'Average customer sees 450% ROI through threat prevention',
-    launchDate: '2024-03-01', customers: 2100,
-    rating: 4.9,
-    reviews: 1100
-  };
-
-  // Data & Analytics
-  {
-    id: 'ai-data-pipeline-platform', name: 'AI Data Pipeline Platform',
-    tagline: 'Intelligent data processing and analytics automation',
-    description: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.',
-    price: '$179', period: '/month',
-    features: [
-      'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure';
-      'Advanced monitoring and alertingCollaborative data workspace'
-    ];
-    category: 'Data & Analytics', marketSize: '$25.3B',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'Data teams, analytics professionals, data scientists, enterprises, startups',
     competitiveAdvantage: 'Advanced automation capabilities, comprehensive data quality management, and scalable cloud infrastructure',
     useCases: [
@@ -4871,7 +3739,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     compliance: ['SOC2ISO 27001GDPRCCPAHIPAA'],
     website: 'https://ziontechgroup.com/ai-data-pipeline-platform',
     contact: {
-<<<<<<< HEAD
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -4898,29 +3765,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     ],
     category: 'Human Resources',
     marketSize: '$16.7B',
-=======
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 21, setupTime: '1-2 weeks',
-    competitors: ['FivetranAlteryxTalendInformatica'], roi: 'Average customer sees 400% ROI through data automation',
-    launchDate: '2024-02-01', customers: 2800,
-    rating: 4.8,
-    reviews: 1450
-  };
-
-  // Human Resources
-  {
-    id: 'ai-hr-recruitment-platform', name: 'AI HR Recruitment Platform',
-    tagline: 'Intelligent talent acquisition and HR automation',
-    description: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.',
-    price: '$129', period: '/month',
-    features: [
-      'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics';
-      'Integration with major HR systemsAdvanced reporting and insights'
-    ];
-    category: 'Human Resources', marketSize: '$16.7B',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'HR departments, recruitment agencies, talent acquisition teams, growing companies',
     competitiveAdvantage: 'Advanced candidate matching algorithms, comprehensive HR automation, and proven hiring success rates',
     useCases: [
@@ -4930,7 +3774,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     compliance: ['EEOCOFCCPGDPRCCPASOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-hr-recruitment-platform',
     contact: {
-<<<<<<< HEAD
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -4957,29 +3800,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     ],
     category: 'Legal & Compliance',
     marketSize: '$14.2B',
-=======
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 14, setupTime: '1-2 days',
-    competitors: ['HireVuePymetricsHiredScoreEntelo'], roi: 'Average customer sees 300% ROI through improved hiring',
-    launchDate: '2024-01-20', customers: 1900,
-    rating: 4.7,
-    reviews: 890
-  };
-
-  // Legal & Compliance
-  {
-    id: 'ai-legal-contract-analyzer', name: 'AI Legal Contract Analyzer',
-    tagline: 'Intelligent contract analysis and legal automation',
-    description: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.',
-    price: '$199', period: '/month',
-    features: [
-      'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval';
-      'Collaborative review workflowsAudit trail and version control'
-    ];
-    category: 'Legal & Compliance', marketSize: '$14.2B',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'Law firms, corporate legal departments, compliance teams, contract managers',
     competitiveAdvantage: 'High accuracy contract analysis, comprehensive risk assessment, and deep legal system integration',
     useCases: [
@@ -4989,7 +3809,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     compliance: ['SOC2ISO 27001GDPRCCPAAttorney-client privilege'],
     website: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
     contact: {
-<<<<<<< HEAD
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -5016,29 +3835,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     ],
     category: 'Manufacturing & IoT',
     marketSize: '$28.9B',
-=======
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 30, setupTime: '1-2 weeks',
-    competitors: ['EvisortContractPodAiKira SystemsLuminance'], roi: 'Average customer sees 500% ROI through contract automation',
-    launchDate: '2024-02-10', customers: 1100,
-    rating: 4.8,
-    reviews: 580
-  };
-
-  // Manufacturing & IoT
-  {
-    id: 'ai-manufacturing-optimizer', name: 'AI Manufacturing Optimizer',
-    tagline: 'Intelligent manufacturing optimization and predictive maintenance',
-    description: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',
-    price: '$299', period: '/month',
-    features: [
-      'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting';
-      'Integration with ERP and MES systemsMobile app for field workers'
-    ];
-    category: 'Manufacturing & IoT', marketSize: '$28.9B',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'Manufacturing companies, industrial facilities, supply chain managers, operations teams',
     competitiveAdvantage: 'High accuracy predictive maintenance, comprehensive IoT integration, and proven operational improvements',
     useCases: [
@@ -5048,7 +3844,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     compliance: ['ISO 9001ISO 14001OHSAS 18001SOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {
-<<<<<<< HEAD
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -5066,295 +3861,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     reviews: 520}
 ],
-=======
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 60, setupTime: '4-6 weeks',
-    competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',
-    launchDate: '2024-01-10', customers: 950,
-  reviews: number;
-}
-export const comprehensiveRealServices: ComprehensiveService[] = [
-  // AI & Machine Learning Services;
-
-  {'
-      address: '364 E Main St STE 1008 Middletown DE 19709''
-    },'
-    trialDays: 14, setupTime: '5 minutes',']'
-    competitors: ['JasperCopy.aiWritesonicGrammarly Business'], roi: 'Average customer sees 300% ROI within 3 months',''
-    launchDate: '2024-01-15', customers: 2500,'
-    rating: 4.8,
-    reviews: 1250;
-  };
-
-  // Customer Success & Support;
-  {'
-    id: 'ai-customer-success-platform', name: 'AI Customer Success Platform',''
-    tagline: 'Predictive customer success with AI-powered insights',''
-    description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',''
-    price: '$199', period: '/month','
-    features: ['
-      'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms';''
-      'Advanced reporting and analyticsMobile app for customer success managers'']
-    ];'
-    category: 'Customer Success & Support', marketSize: '$8.4B',''
-    targetAudience: 'SaaS companies, subscription businesses, customer success teams, B2B companies',''
-    competitiveAdvantage: 'Industry-leading churn prediction accuracy, comprehensive automation capabilities, and deep CRM integrations','
-    useCases: ['
-      'Customer churn preventionUpsell and cross-sell optimizationCustomer onboarding automationCustomer health monitoringCustomer success team productivity'']
-    ];'
-    integrations: ['SalesforceHubSpotPipedriveIntercomZendeskSlack'], compliance: ['GDPRCCPASOC2ISO 27001'],''
-    website: 'https://ziontechgroup.com/ai-customer-success-platform','
-    contact: {,'
-  phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709''
-    },'
-    trialDays: 21, setupTime: '1-2 days',''
-    competitors: ['GainsightTotangoClientSuccessChurnZero'], roi: 'Average customer sees 400% ROI through reduced churn',''
-    launchDate: '2024-02-20', customers: 1800,'
-    rating: 4.9,
-    reviews: 950;
-  };
-
-  // Financial Technology;
-  {'
-    id: 'ai-financial-risk-manager', name: 'AI Financial Risk Manager',''
-    tagline: 'Real-time financial risk assessment and compliance',''
-    description: 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.',''
-    price: '$299', period: '/month','
-    features: ['
-      'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis';''
-      'Integration with core banking systemsAdvanced analytics and reporting'']
-    ];'
-    category: 'Financial Technology', marketSize: '$12.8B',''
-    targetAudience: 'Banks, credit unions, fintech companies, investment firms, insurance companies',''
-    competitiveAdvantage: 'Real-time risk assessment, comprehensive compliance coverage, and deep integration capabilities with core banking systems','
-    useCases: ['
-      'Credit risk assessmentFraud detection and preventionCompliance monitoring and reportingMarket risk managementOperational risk assessment'']
-    ];'
-    integrations: ['FiservJack HenryFISTemenosSalesforceOracle'], compliance: ['Basel IIIDodd-FrankSOXGDPRSOC2ISO 27001'],''
-    website: 'https://ziontechgroup.com/ai-financial-risk-manager','
-    contact: {,'
-  phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709''
-    },'
-    trialDays: 30, setupTime: '2-4 weeks',''
-    competitors: ['SASIBMOracleSAP'], roi: 'Average customer sees 500% ROI through risk reduction',''
-    launchDate: '2024-03-10', customers: 1200,'
-    rating: 4.7,
-    reviews: 680;
-  };
-
-  // Healthcare & Biotech;
-  {'
-    id: 'ai-healthcare-diagnostics', name: 'AI Healthcare Diagnostics Platform',''
-    tagline: 'AI-powered medical imaging and diagnostic support',''
-    description: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',''
-    price: '$399', period: '/month','
-    features: ['
-      'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools';''
-      'Compliance with medical standardsAdvanced security and privacy controls'']
-    ];'
-    category: 'Healthcare & Biotech', marketSize: '$18.5B',''
-    targetAudience: 'Hospitals, clinics, diagnostic centers, radiologists, healthcare providers',''
-    competitiveAdvantage: 'High diagnostic accuracy, comprehensive medical image support, and deep integration with healthcare systems','
-    useCases: ['
-      'Radiology image analysisPathology slide analysisCardiology imaging supportOncology diagnostic assistanceEmergency department support'']
-    ];'
-    integrations: ['EpicCernerAllscriptsGE HealthcareSiemensPhilips'], compliance: ['HIPAAFDACE MarkSOC2ISO 27001ISO 13485'],''
-    website: 'https://ziontechgroup.com/ai-healthcare-diagnostics','
-    contact: {,'
-  phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709''
-    },'
-    trialDays: 60, setupTime: '4-6 weeks',''
-    competitors: ['IBM Watson HealthGoogle HealthMicrosoft HealthcarePhilips'], roi: 'Average customer sees 600% ROI through improved diagnostic accuracy',''
-    launchDate: '2024-01-30', customers: 850,'
-    rating: 4.9,
-    reviews: 420;
-  };
-
-  // E-commerce & Retail;
-  {'
-    id: 'ai-ecommerce-optimizer', name: 'AI E-commerce Optimizer',''
-    tagline: 'Intelligent e-commerce optimization and personalization',''
-    description: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.',''
-    price: '$149', period: '/month','
-    features: ['
-      'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights';''
-      'Integration with major e-commerce platformsReal-time analytics and reporting'']
-    ];'
-    category: 'E-commerce & Retail', marketSize: '$22.1B',''
-    targetAudience: 'E-commerce businesses, online retailers, digital marketplaces, D2C brands',''
-    competitiveAdvantage: 'Advanced personalization algorithms, comprehensive e-commerce integration, and proven ROI improvement','
-    useCases: ['
-      'Product recommendation optimizationPricing strategy optimizationCustomer experience personalizationMarketing campaign optimizationInventory and supply chain optimization'']
-    ];'
-    integrations: ['ShopifyWooCommerceMagentoBigCommerceSalesforceKlaviyo'], compliance: ['GDPRCCPAPCI DSSSOC2ISO 27001'],''
-    website: 'https://ziontechgroup.com/ai-ecommerce-optimizer','
-    contact: {,'
-  phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709''
-    },'
-    trialDays: 14, setupTime: '1-2 days',''
-    competitors: ['Dynamic YieldOptimizelyKlevuAlgolia'], roi: 'Average customer sees 350% ROI through increased conversions',''
-    launchDate: '2024-02-15', customers: 3200,'
-    rating: 4.8,
-    reviews: 1680;
-  };
-
-  // Cybersecurity & Compliance;
-  {'
-    id: 'ai-cybersecurity-suite', name: 'AI Cybersecurity Suite',''
-    tagline: 'Intelligent threat detection and response',''
-    description: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.',''
-    price: '$249', period: '/month','
-    features: ['
-      'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response';''
-      'Cloud security monitoringAdvanced security analytics'']
-    ];'
-    category: 'Cybersecurity & Compliance', marketSize: '$19.8B',''
-    targetAudience: 'Enterprises, government agencies, healthcare organizations, financial institutions, educational institutions',''
-    competitiveAdvantage: 'High threat detection accuracy, comprehensive security coverage, and automated response capabilities','
-    useCases: ['
-      'Threat detection and preventionIncident response automationCompliance monitoring and reportingVulnerability managementSecurity operations optimization'']
-    ];'
-    integrations: ['SplunkServiceNowJiraSlackMicrosoft 365Google Workspace'], compliance: ['SOC2ISO 27001NISTGDPRHIPAAPCI DSS'],''
-    website: 'https://ziontechgroup.com/ai-cybersecurity-suite','
-    contact: {,'
-  phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709''
-    },'
-    trialDays: 30, setupTime: '1-2 weeks',''
-    competitors: ['CrowdStrikeSentinelOneCarbon BlackCylance'], roi: 'Average customer sees 450% ROI through threat prevention',''
-    launchDate: '2024-03-01', customers: 2100,'
-    rating: 4.9,
-    reviews: 1100;
-  };
-
-  // Data & Analytics;
-  {'
-    id: 'ai-data-pipeline-platform', name: 'AI Data Pipeline Platform',''
-    tagline: 'Intelligent data processing and analytics automation',''
-    description: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.',''
-    price: '$179', period: '/month','
-    features: ['
-      'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure';''
-      'Advanced monitoring and alertingCollaborative data workspace'']
-    ];'
-    category: 'Data & Analytics', marketSize: '$25.3B',''
-    targetAudience: 'Data teams, analytics professionals, data scientists, enterprises, startups',''
-    competitiveAdvantage: 'Advanced automation capabilities, comprehensive data quality management, and scalable cloud infrastructure','
-    useCases: ['
-      'Data pipeline automationData quality managementReal-time analyticsMachine learning operationsData governance and compliance'']
-    ];'
-    integrations: ['SnowflakeDatabricksAWSGoogle CloudAzureTableau'], compliance: ['SOC2ISO 27001GDPRCCPAHIPAA'],''
-    website: 'https://ziontechgroup.com/ai-data-pipeline-platform','
-    contact: {,'
-  phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709''
-    },'
-    trialDays: 21, setupTime: '1-2 weeks',''
-    competitors: ['FivetranAlteryxTalendInformatica'], roi: 'Average customer sees 400% ROI through data automation',''
-    launchDate: '2024-02-01', customers: 2800,'
-    rating: 4.8,
-    reviews: 1450;
-  };
-
-  // Human Resources;
-  {'
-    id: 'ai-hr-recruitment-platform', name: 'AI HR Recruitment Platform',''
-    tagline: 'Intelligent talent acquisition and HR automation',''
-    description: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.',''
-    price: '$129', period: '/month','
-    features: ['
-      'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics';''
-      'Integration with major HR systemsAdvanced reporting and insights'']
-    ];'
-    category: 'Human Resources', marketSize: '$16.7B',''
-    targetAudience: 'HR departments, recruitment agencies, talent acquisition teams, growing companies',''
-    competitiveAdvantage: 'Advanced candidate matching algorithms, comprehensive HR automation, and proven hiring success rates','
-    useCases: ['
-      'Candidate sourcing and screeningInterview process optimizationDiversity and inclusion initiativesEmployee onboarding automationPerformance management and tracking'']
-    ];'
-    integrations: ['WorkdayBambooHRGreenhouseLeverSlackMicrosoft Teams'], compliance: ['EEOCOFCCPGDPRCCPASOC2ISO 27001'],''
-    website: 'https://ziontechgroup.com/ai-hr-recruitment-platform','
-    contact: {,'
-  phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709''
-    },'
-    trialDays: 14, setupTime: '1-2 days',''
-    competitors: ['HireVuePymetricsHiredScoreEntelo'], roi: 'Average customer sees 300% ROI through improved hiring',''
-    launchDate: '2024-01-20', customers: 1900,'
-    rating: 4.7,
-    reviews: 890;
-  };
-
-  // Legal & Compliance;
-  {'
-    id: 'ai-legal-contract-analyzer', name: 'AI Legal Contract Analyzer',''
-    tagline: 'Intelligent contract analysis and legal automation',''
-    description: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.',''
-    price: '$199', period: '/month','
-    features: ['
-      'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval';''
-      'Collaborative review workflowsAudit trail and version control'']
-    ];'
-    category: 'Legal & Compliance', marketSize: '$14.2B',''
-    targetAudience: 'Law firms, corporate legal departments, compliance teams, contract managers',''
-    competitiveAdvantage: 'High accuracy contract analysis, comprehensive risk assessment, and deep legal system integration','
-    useCases: ['
-      'Contract review and analysisRisk assessment and managementCompliance monitoringLegal document automationContract lifecycle management'']
-    ];'
-    integrations: ['ClioMyCasePracticePantherLexisNexisWestlawDocuSign'], compliance: ['SOC2ISO 27001GDPRCCPAAttorney-client privilege'],''
-    website: 'https://ziontechgroup.com/ai-legal-contract-analyzer','
-    contact: {,'
-  phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709''
-    },'
-    trialDays: 30, setupTime: '1-2 weeks',''
-    competitors: ['EvisortContractPodAiKira SystemsLuminance'], roi: 'Average customer sees 500% ROI through contract automation',''
-    launchDate: '2024-02-10', customers: 1100,'
-    rating: 4.8,
-    reviews: 580;
-  };
-
-  // Manufacturing & IoT;
-  {'
-    id: 'ai-manufacturing-optimizer', name: 'AI Manufacturing Optimizer',''
-    tagline: 'Intelligent manufacturing optimization and predictive maintenance',''
-    description: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',''
-    price: '$299', period: '/month','
-    features: ['
-      'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting';''
-      'Integration with ERP and MES systemsMobile app for field workers'']
-    ];'
-    category: 'Manufacturing & IoT', marketSize: '$28.9B',''
-    targetAudience: 'Manufacturing companies, industrial facilities, supply chain managers, operations teams',''
-    competitiveAdvantage: 'High accuracy predictive maintenance, comprehensive IoT integration, and proven operational improvements','
-    useCases: ['
-      'Predictive maintenance optimizationProduction efficiency improvementQuality control automationSupply chain optimizationEnergy consumption reduction'']
-    ];'
-    integrations: ['SAPOracleSiemensRockwellGE DigitalPTC'], compliance: ['ISO 9001ISO 14001OHSAS 18001SOC2ISO 27001'],''
-    website: 'https://ziontechgroup.com/ai-manufacturing-optimizer','
-    contact: {,'
-  phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709''
-    },'
-    trialDays: 60, setupTime: '4-6 weeks',''
-    competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',''
-    launchDate: '2024-01-10', customers: 950,'
-
-    rating: 4.9,
-    reviews: 520;
-  }
-];
-;
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -5388,5 +3894,3 @@ pr-12325
 ;
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

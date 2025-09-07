@@ -1,7 +1,6 @@
-
 #!/usr/bin/env node;
-
 main();#!/usr/bin/env node;
+<<<<<<< HEAD
 main();
 
 #!/usr/bin/env node;
@@ -88,6 +87,10 @@ main();#!/usr/bin/env node;
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 const fs = require('fs')
+=======
+///usr/bin/env node,
+  const fs = require('fs')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log('� Enhanced Security Scanner v2.0')
@@ -116,6 +119,7 @@ console.log('======')
     "message"
     "action"
       log('warn', 'Vulnerabilities "found")
+<<<<<<< HEAD
       log('info', 'Security "Recommendations")
 <<<<<<< HEAD
 =======
@@ -128,3 +132,6 @@ console.log('======')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+      log('info', 'Security "Recommendations")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

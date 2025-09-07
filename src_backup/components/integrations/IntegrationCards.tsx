@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
 
 import React from "react";
 import { logDebug  } from '@/utils/productionLogger';
@@ -11,20 +9,10 @@ import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide
 
 interface IntegrationCardProps {
   title: string;
-=======
-;
-import React from 'react';
-import { logDebug   } from '@/utils/productionLogger';
-import { Button } from "@/components/ui/button",import { Card, CardContent, CardFooter, CardHeader  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users  } from 'lucide-react';
-interface IntegrationCardProps  {title: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/IntegrationCards.tsx
   description: string;
   icon: React.ReactNode;
   status?: "connected" | "disconnected" | "pending";
   href?: string;
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
   onConnect?: () => void
 import React from 'react'
 import { Button } from '@/components/ui/button'
@@ -43,10 +31,6 @@ import { Badge } from '@/components/ui/badge'
   Users
 } from 'lucide-react'
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/IntegrationCards.tsx
 interface IntegrationCardProps {
   title: string
   description: string
@@ -72,7 +56,6 @@ import {;
   Slack,;
   Briefcase,;
   Users,;
-=======
   onConnect?: () => void;
 import { Button  } from '@/components/ui/button';
 import { Card;
@@ -86,7 +69,6 @@ import { Card;
   Slack;
   Briefcase;
   Users;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/IntegrationCards.tsx
 } from 'lucide-react';
 interface IntegrationCardProps  {title: string;
   description: string;
@@ -132,10 +114,8 @@ import {Card,CardContent,CardFooter,CardHeader} from '@/components/ui/card';
         {status === 'connected' ? (<Button variant='outline' className='w-full' asChild>;
             <a;
               href={href}
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
               target='_blank'
               rel='noopener noreferrer'
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
               className='flex items-center gap-1'
             >
               <span>Manage</span>
@@ -148,59 +128,6 @@ import {Card,CardContent,CardFooter,CardHeader} from '@/components/ui/card';
             <ArrowRight className='ml-1.5 h-3.5 w-3.5' />
 export function IntegrationCard({
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
-import React from "react";
-import { logDebug } from '@/utils/productionLogger';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
-
-interface IntegrationCardProps {
-  title: string
-  description: string
-  icon: React.ReactNode
-  status?: "connected" | "disconnected" | "pending"
-  href?: string
-  onConnect?: () => void
-              className='flex items-center gap-1'>;
-              <span>Manage</span>;
-              <ExternalLink className='h-3 && 3.5 w-3 && 3.5' />;
-            </a>;
-          </Button>;
-        ) : (;
-          <Button variant='default' className='w-full' onClick={onConnect}>;
-            <span>Connect</span>;
-            <ArrowRight className='ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5' />          </Button>;
-            <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
-
-            <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
-          </Button>
-import React from "react",;
-import { logDebug } from '@/utils/productionLogger',;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react';
-interface IntegrationCardProps {;
-  title: string,;
-  description: string,;
-  icon: React && React.ReactNode,;
-  status?: "connected" | "disconnected" | "pending";
-  href?: string;
-  onConnect?: () => void;
-
-
-
-}
-
-export function IntegrationCard(): any ({;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/IntegrationCards.tsx
   title;
   description;
   icon;
@@ -211,7 +138,6 @@ export function IntegrationCard(): any ({;
 
   return (
     <Card className="overflow-hidden">;
-=======
               target='_blank';
               rel='noopener noreferrer';
 import { logDebug  } from '@/utils/productionLogger';
@@ -244,7 +170,6 @@ import React from "react",import { logDebug } from '@/utils/productionLogger',im
             <span>Connect</span>;
             <ArrowRight className='ml-1.5 h-3.5 w-3.5' />;
 export function IntegrationCard() {return (<Card className="overflow-hidden">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/IntegrationCards.tsx
       <CardHeader className="pb-2">;
         <div className="flex justify-between items-start">;
           <div className="flex items-center gap-3">;
@@ -286,15 +211,8 @@ export function IntegrationCard() {return (<Card className="overflow-hidden">;
           </Button>;
         ) : (<Button variant="default" className="w-full" onClick={onConnect}>;
             <span>Connect</span>;
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
 
 
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/IntegrationCards.tsx
         </div>
       </CardHeader>
       <CardContent className="pb-4">
@@ -311,7 +229,6 @@ export function IntegrationCard() {return (<Card className="overflow-hidden">;
         ) : (
           <Button variant="default" className="w-full" onClick={onConnect}>
             <span>Connect</span>
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 
@@ -320,18 +237,13 @@ export function IntegrationCard() {return (<Card className="overflow-hidden">;
     </Card>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/IntegrationCards.tsx
 export function IntegrationCards() {
   return (
     <div className='grid md:grid-cols-3 gap-6'>;
       <IntegrationCard
 
   );
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/IntegrationCards.tsx
 }
 
 export function IntegrationCards() {
@@ -348,49 +260,16 @@ export function IntegrationCards() {
       <IntegrationCard
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
     </div>
   )
-=======
-            <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
-          </Button>;
-        )}<ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
-          </Button>;
-        )}</CardFooter>;
-    </Card>;
-  )</CardFooter>;
-    </Card>;
-  )export function IntegrationCards() {return (<div className='grid md:grid-cols-3 gap-6'>;
-      <IntegrationCard;
-  )}export function IntegrationCards() {return (<div className="grid md:grid-cols-3 gap-6">;
-      <IntegrationCard;
-        title="Slack";
-        description="Send notifications and interact with Zion from Slack.";
-        icon={<Slack className="h-5 w-5" />}
-        onConnect={() => logDebug('Connect Slack clicked')}
-      />;
-      <IntegrationCard;
-        title="Salesforce";
-        description="Sync leads and opportunities with Salesforce.";
-        icon={<Briefcase className="h-5 w-5" />}onConnect={() => logDebug('Connect Salesforce clicked')}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/IntegrationCards.tsx
       />;
     </div>;
   )/>;
     </div>;
   )}        icon={<Briefcase className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Salesforce clicked')}
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
       />;
 
-=======
-
-        icon={<Briefcase className="h-5 w-5" />}
-
-
-        onConnect={() => logDebug('Connect Salesforce clicked')}
-      />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/IntegrationCards.tsx
       <IntegrationCard
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
@@ -398,23 +277,15 @@ export function IntegrationCards() {
         onConnect={() => logDebug('Connect Teams clicked')}
 
 
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
 }
 
 
 
-=======
-
-}
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/IntegrationCards.tsx
       />;
     </div>;
   );
 }
 
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
   );
 }
 
@@ -436,19 +307,6 @@ import { Badge } from '@/components/ui/ badge';
 } from 'lucide-react';
 interface IntegrationCardProps {
   title: string;
-=======
-      />;<IntegrationCard;
-        title="Microsoft Teams";
-        description="Receive updates through Microsoft Teams.";
-        icon={<Users className="h-5 w-5" />}
-        onConnect={() => logDebug('Connect Teams clicked')}}/>;
-    </div>;
-  )})}import { Button  } from '@/components / ui / button';
-import { Card,CardContent,CardFooter,CardHeader} from '@/components / ui / card';
-import { Badge  } from '@/components / ui / badge';
-  ArrowRight,Check,ExternalLink,Slack,Briefcase,Users} from 'lucide-react';
-interface IntegrationCardProps  {title: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/IntegrationCards.tsx
   description: string;
   icon: React.ReactNode;
   status?: 'connected' | 'disconnected' | 'pending';
@@ -572,13 +430,10 @@ function IntegrationCards() {return (<div className='grid md:grid - cols - 3 gap
         icon = {<Users className="h - 5 w - 5" /> }
         on_connect = {() => log_debug ('Connect Teams clicked') }
       />;
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
     </div>);
 }
 ;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/IntegrationCards.tsx
         icon = {<Briefcase className="h-5 w-5" />,}
         onConnect = {() => logDebug('Connect Salesforce clicked'),}
       />
@@ -593,22 +448,4 @@ function IntegrationCards() {return (<div className='grid md:grid - cols - 3 gap
     </div>
   );
 }
-<<<<<<< HEAD:src_backup/components/integrations/IntegrationCards.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    </div>)}icon = {<Briefcase className="h-5 w-5" />}
-        onConnect = {() => logDebug('Connect Salesforce clicked')}
-      />;
-      <IntegrationCard;
-        title='Microsoft Teams';
-        description='Receive updates through Microsoft Teams.';
-        icon={<Users className='h-5 w-5' />}
-        onConnect={() => logDebug('Connect Teams clicked')}
-        icon = {<Users className="h-5 w-5" />}
-        onConnect = {() => logDebug('Connect Teams clicked')}
-      />;
-    </div>;
-  )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/IntegrationCards.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/IntegrationCards.tsx

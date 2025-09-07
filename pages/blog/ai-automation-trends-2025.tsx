@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/blog/ai-automation-trends-2025.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
@@ -246,30 +244,4 @@ export default function AIAutomationTrends2025() {
     </>
   )
 }
-<<<<<<< HEAD:pages_backup/blog/ai-automation-trends-2025.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function aiautomationtrends2025() {
-  return (
-    <Layout>
-      <Head>
-        <title>Ai Automation Trends 2025 - Zion Tech Group</title>
-        <meta name="description" content="Ai Automation Trends 2025 solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Automation Trends 2025</h1>
-          <p className="text-lg text-gray-600">
-            Professional ai automation trends 2025 solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

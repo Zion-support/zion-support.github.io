@@ -13,7 +13,6 @@ import type { QuoteRequest } from '@/types/quotes';
 import { format  } from 'date-fns';
 interface QuoteDetailsProps  {quote: QuoteRequest | null;
   isOpen: boolean;
-<<<<<<< HEAD:src_backup/components/quotes/QuoteDetails.tsx
   onClose: () => void
 }
 
@@ -33,7 +32,6 @@ import { Separator } from "@/components/ui/separator"
 import { QuoteStatusBadge } from "./QuoteStatusBadge"
 import type { QuoteRequest } from "@/types/quotes"
 import {format} from "date-fns"
-<<<<<<< HEAD:src_backup/components/quotes/QuoteDetails.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from "react";
 import { 

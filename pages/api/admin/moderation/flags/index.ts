@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
@@ -16,18 +15,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
       (!contentType || f.contentType === contentType)
     )
-    return res.status(200).json({ flags: filtered })
-  }
-
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET' && req.method !== 'POST') {
-    res.setHeader('Allow', ['GET', 'POST']);
-    return res.status(405).end('Method Not Allowed');
+    return res.status(200).json({ flags: filtered });
   }
   
-  res.status(200).json({ message: 'Flags endpoint' });
+  return res.status(405).json({ error: 'Method not allowed' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+

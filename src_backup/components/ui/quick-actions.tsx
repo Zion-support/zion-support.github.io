@@ -55,7 +55,6 @@ interface QuickAction  {id: string;
   description: string;
   icon: React.ReactNode;
   action: () => void;
-<<<<<<< HEAD:src_backup/components/ui/quick-actions.tsx
   category: 'performance' | 'development' | 'maintenance';
 
 
@@ -111,7 +110,6 @@ interface QuickAction  {id: string;
   description: string;
   icon: React.ReactNode;
   action: () => void;
-<<<<<<< HEAD:src_backup/components/ui/quick-actions.tsx
   category: 'performance' | 'development' | 'maintenance';
 
 

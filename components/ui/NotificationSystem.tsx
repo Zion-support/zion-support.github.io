@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 interface Notification {
   id: string,
   type: 'success' | 'error' | 'warning' | 'info',
   message: string,
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle  } from 'lucide-react';
 ursor/automate-test-improve-and-merge-code-646c;
@@ -53,41 +49,23 @@ import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
   id: string;
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface Notification {
-=======
-import React from "react";
-export interface Notification {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   id: string;
   type: "success" | "error" | "warning" | "info";
 
   type: "success" | "error" | "warning" | "info";
 
->>>>>>> origin/main
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   id: string;
-<<<<<<< HEAD
   type: "success" | "error" | "warning" | "info";
 
 pr-12243
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 export interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   type: 'success' | 'error' | 'warning' | 'info';
 
   id: string;
@@ -98,15 +76,10 @@ interface Notification {
 
 pr-12243
   type: 'success' | 'error' | 'warning' | 'info';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   title?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 pr-12243
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
@@ -117,19 +90,10 @@ const getNotificationStyles = (type: Notification["type"]): string => {
     info: "bg-blue-50 border-blue-400 text-blue-800"
   }
   return `${baseStyles} ${typeStyles[type]}`;
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface NotificationSystemProps {
-<<<<<<< HEAD
   notifications: Notification[],
   onDismiss?: (id: string) => void,
   className?: string;
-=======
-  notifications: Notification[];
-  onDismiss?: (id: string) => void;
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-<<<<<<< HEAD
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
   const typeStyles = {
@@ -139,25 +103,18 @@ const getNotificationStyles = (type: Notification["type"]): string => {
     info: "bg-blue-50 border-blue-400 text-blue-800"
   }
   return `${baseStyles} ${typeStyles[type]}`;
->>>>>>> origin/main
 }
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
   notifications;
   onDismiss;
   className;
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
   notifications,
   onDismiss,
   position = 'top-right',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }) => {
   const [visibleNotifications, setVisibleNotifications] = useState<Notification[]>([]);
 
@@ -189,7 +146,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
   const getNotificationStyles = (type: Notification['type']) => {
     const baseStyles = 'border-l-4';
     switch (type) {
-<<<<<<< HEAD
       case 'success':
         return 'bg-green-50 border-green-200 text-green-800';
       case 'error':
@@ -200,29 +156,10 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
         return 'bg-blue-50 border-blue-200 text-blue-800';
       default:
         return 'bg-gray-50 border-gray-200 text-gray-800';
-=======
-      case 'success':
-        return `${baseStyles} border-green-500 bg-green-50 text-green-800`;
-      case 'error':
-        return `${baseStyles} border-red-500 bg-red-50 text-red-800`;
-      case 'warning':
-        return `${baseStyles} border-yellow-500 bg-yellow-50 text-yellow-800`;
-      case 'info':
-        return `${baseStyles} border-blue-500 bg-blue-50 text-blue-800`;
-      default:
-        return `${baseStyles} border-gray-500 bg-gray-50 text-gray-800`;
-    }
-  };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 pr-12243
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const getIcon = (type: Notification['type']) => {
     switch (type) {
       case 'success':
@@ -250,14 +187,8 @@ pr-12243
         return 'bottom-4 right-4';
       default:
         return 'top-4 right-4';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
   };
-=======
-          key={notification.id};
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`};
-
-<<<<<<< HEAD
         >;
           <div className="flex items-start justify-between">;
             <div className="flex-1">;
@@ -293,7 +224,6 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       setToasts((prev) => prev.filter((t) => t.id !== id))
     }, 3000)
   }, []);
->>>>>>> pr-11992
 
   return (
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
@@ -312,68 +242,11 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
             {onDismiss && (
               <button
                 onClick={() => onDismiss(notification.id)}
-<<<<<<< HEAD
                 className="ml-4 text-gray-400 hover:text-gray-600"
               >
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
-=======
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
-
-type NotificationContextValue = {
-  notify: (message: string, tone?: 'default' | 'success' | 'error') => void
-},
-
-const NotificationContext = $2;
-export function useToast() {
-  return useContext(NotificationContext)
-}
-
-export function NotificationProvider({ children }: { children: ReactNode}) {
-  const [toasts, setToasts] = useState<Toast[]>([]),
-
-  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
-    const id = Math.random().toString(36).slice($2);
-    setToasts((prev) => [...prev, { id, message, tone }]),
-    setTimeout(() => {
-      setToasts((prev) => prev.filter((t) => t.id !== id))
-    }, 3000)
-  }, [])
-    success: "bg-green-50 border-green-400 text-green-800",
-    error: "bg-red-50 border-red-400 text-red-800",
-    warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
-    info: "bg-blue-50 border-blue-400 text-blue-800",
-
-  };
-  return `${baseStyles} ${typeStyles[type]}`;
-};
-
-const getNotificationStyles = (type: Notification["type"]): string => {
-  const baseStyles = "border-l-4";
-  const typeStyles = {
-    success: "bg-green-50 border-green-400 text-green-800"
-    error: "bg-red-50 border-red-400 text-red-800"
-    warning: "bg-yellow-50 border-yellow-400 text-yellow-800"
-    info: "bg-blue-50 border-blue-400 text-blue-800"
-  }
-  return `${baseStyles} ${typeStyles[type]}`;
-}
-export default function NotificationSystem({
-  notifications
-  onDismiss
-key={notification.id}
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
-        >
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
-              {notification.title && (
-                <h4 className="font-medium mb-1">{notification.title}</h4>)}
-              <p className="text-sm">{notification.message}</p>
-            </div>
-<<<<<<< HEAD
             {onDismiss && (
               <button
                 onClick={() => onDismiss(notification.id)}
@@ -382,63 +255,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' }
 type NotificationContextValue = {
   notify: (message: string, tone?: 'default' | 'success' | 'error') => void
-=======
-            {onDismiss && (<button;}
-                onClick = {() =    /> onDismiss(notification.id)}
-import React, { createContext, useContext,;}
-  useState, useCallback, ReactNode } from 'react'
-import { AnimatePresence, motion  } from 'framer-motion'
-export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error';}
-
-type NotificationContextValue = {notify: (message: string, tone?: 'default' | 'success' | 'error') => void;}
-
-const NotificationContext = createContext<NotificationContextValue    />({ notify: () => {}
-})export function useToast()
-  return useContext(NotificationContext
-export function NotificationProvider() {const [toasts, setToasts] = useState<Toast[]    />([])const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => ;}"
-  const id = Math.random().toString(36).slice(2)setToasts((prev) => [...prev, { id, message, tone }])setTimeout(() => {setToasts((prev) => prev.filter((t) => t.id !== id))}, 3000)}, [])success: \"bg-green-50 border-green-400 text-green-800\",error: \"bg-red-50 border-red-400 text-red-800\",warning: \"bg-yellow-50 border-yellow-400 text-yellow-800\",info: \'bg-blue-50 border-blue-400 text-blue-800\';"
-    info: \'bg-blue-50 border-blue-400 text-blue-800\'
-  }return `${baseStyles} ${typeStyles[type]}`
-}import React from 'react'
-import React, { createContext, useContext, useState, ReactNode } from 'react'
-interface Notification  {id: string;}
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react'
-  title?: string
-  message: string;}
-  duration?: number;}
-
-interface NotificationSystemProps {
-  notifications: Notification[]
-  onDismiss?: (id: string) => void
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
-const NotificationSystem: React.FC<NotificationSystemProps    /> = ({ notifications,
-  onDismiss}
-  position = 'top-right'}
-   }) => {
-
-  const [visibleNotifications, setVisibleNotifications] = useState<Notification[]    />([])
-const handleDismiss = useCallback((id: string) => {
-    setVisibleNotifications(prev => prev.filter(n => n.id !== id));}
-    onDismiss?.(id);}
-  }, [onDismiss])
-  useEffect(() => {
-
-    setVisibleNotifications(notifications);}
-  }, [notifications])
-  useEffect(() => {
-
-    const timers: ReturnType<typeof setTimeout    />[] = []
-    notifications.forEach(notification = > {
-  if($2) {
-
-  const timer = setTimeout(() => {}
-          handleDismiss(notification.id);}
-        }, notification.duration)
-        timers.push(timer)
-    })
-    return () => {}
-      timers.forEach(timer => clearTimeout(timer))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} })
 export function useToast() {
@@ -465,7 +281,6 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
 import React from 'react';
 import React from 'react';
 
-<<<<<<< HEAD
 interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
@@ -639,9 +454,6 @@ const removeNotification = (
 const NotificationContainer: React.FC = () => {}
  ;}
   const { notifications, removeNotification } = useNotifications()
-=======
-pr-12243
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return ("
     <div className=\"fixed top-4 right-4 z-50 space-y-2\"    />
       {notifications.map((notification) => (}
@@ -667,33 +479,16 @@ onClick={() =    /> handleDismiss(notification.id)}"
                 className=\"ml-2 text-gray-400 hover: text-gray-600 transition-colors\"
               >"
                 <X className=\"h-4 w-4\"    />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
               </button>
             )}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/main
       ))}
     </div>
-<<<<<<< HEAD
   );
 };
 
-<<<<<<< HEAD
 export default NotificationSystem;
-=======
-      </div>
-    </NotificationContext.Provider>
-  )
-}
->>>>>>> pr-11992
-=======
   const colors = {
     success: 'bg-green-500',
     error: 'bg-red-500',
@@ -741,7 +536,6 @@ export const useNotifications = () => {
   }
   return context;
 };
-=======
   )
 }
               {notification.title && (
@@ -757,20 +551,9 @@ export const useNotifications = () => {
             )}
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ))}
-<<<<<<< HEAD
     </div>;
   );
-=======
-    </div>
-  )
-};
-export default NotificationSystem;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {notification.title && (
               <p className="text-sm">{notification.message}</p>
             </div>
@@ -823,13 +606,7 @@ pr-12243
   };
 
   const Icon = icons[notification.type];
-<<<<<<< HEAD
-=======
 export default NotificationSystem;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-export default NotificationSystem;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'} />"
@@ -855,33 +632,9 @@ export const useNotifications = (
   if (context === undefined) {
     throw new Error('useNotifications must be used within a NotificationProvider');) => {
   return $3;}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
-<<<<<<< HEAD
   }
   return context;
 };
 
 "
-<<<<<<< HEAD
-=======
-key={notification.id}
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
-        >
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
-              {notification.title && (
-                <h4 className="font-medium mb-1">{notification.title}</h4>)}
-              <p className="text-sm">{notification.message}</p>
-            </div>
-            {onDismiss && (
-              <button
-                onClick={() => onDismiss(notification.id)}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

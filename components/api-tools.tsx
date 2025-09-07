@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-=======
-<<<<<<< HEAD
 export default function ApiToolsPage () {
   const apiTools = [ {
   category: 'Development'
@@ -113,10 +110,6 @@ return (<> <Head> <title>API Tools & Developer Services | Zion Tech Group - Powe
 }</ul> <div className="flex flex-wrap gap-3" > <Button > <ExternalLink className="w-4 h-4 mr-2" /> Visit API </Button> <Button > <BookOpen className="w-4 h-4 mr-2" /> Documentation </Button> <Button > <Github className="w-4 h-4 mr-2" /> GitHub </Button> </div> </div> </div> </Card>) ) 
 }</div> </div> </section> Developer Resources </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Everything you need to get started and build amazing applications with our APIs. </p> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <Card className="text-center border border-gray-700 hover:border-indigo-500/30" > <div className="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6" > <BookOpen className="w-8 h-8 text-indigo-400" /> </div> <h3 className="text-xl font-bold text-white mb-4" >Comprehensive Documentation</h3> <p className="text-gray-400 mb-6" > Detailed API references, code examples, and integration guides for every service. </p> <Button href="/docs" variant="outline" size="sm" > Explore Docs <ArrowRight className="w-4 h-4 ml-2" /> </Button> </Card> <Card className="text-center border border-gray-700 hover:border-indigo-500/30" > <div className="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6" > <Play className="w-8 h-8 text-indigo-400" /> </div> <h3 className="text-xl font-bold text-white mb-4" >Interactive Playground</h3> <p className="text-gray-400 mb-6" > Test APIs directly in your browser with our interactive testing environment. </p> <Button href="/playground" variant="outline" size="sm" > Try Playground <ArrowRight className="w-4 h-4 ml-2" /> </Button> </Card> <Card className="text-center border border-gray-700 hover:border-indigo-500/30" > <div className="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6" > <Github className="w-8 h-8 text-indigo-400" /> </div> <h3 className="text-xl font-bold text-white mb-4" >Open Source SDKs</h3> <p className="text-gray-400 mb-6" > Official SDKs and client libraries for popular programming languages and frameworks. </p> <Button href="/sdk" variant="outline" size="sm" > Browse SDKs <ArrowRight className="w-4 h-4 ml-2" /> </Button> </Card> </div> </div> </section> <section className="py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8"> text-xl text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed"> Start integrating our APIs today and join thousands of developers building the future. </p> <div className=" flex flex-col sm:flex-row gap-6 justify-center"> <Button href=" /contact"variant=" secondary"size=" lg"className=" bg-white text-indigo-600 hover:bg-gray-100 shadow-2xl"> Get API Access <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /docs"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl" > View Documentation </Button> </div> </div> </section> </>) 
 }
-=======
-import React from 'react',
-import Head from 'next/head',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {import Head from 'next / head';
@@ -1603,12 +1596,8 @@ variant='ghost';
   );
 }
 }
-<<<<<<< HEAD
     </>);
 }
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

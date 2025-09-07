@@ -116,7 +116,3 @@ export function PortfolioBuilder() {
     </div>
   )
 }
-<<<<<<< HEAD:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
-=======
-;
->>>>>>> origin/main:src_disabled_1757239864/components/resume-builder/portfolio/PortfolioBuilder.tsx

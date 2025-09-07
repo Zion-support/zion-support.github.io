@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/blog/AuthorBio.tsx
 import React from 'react';
 import type { BlogAuthor } from '@/types/blog';
 interface AuthorBioProps {
@@ -67,7 +66,6 @@ interface AuthorBioProps  {author: BlogAuthor;
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0";
         onError={(e) => {const target = e.currentTarget as HTMLImageElement;
           target.src = '/images/blog-placeholder.svg';
-<<<<<<< HEAD:src_backup/components/blog/AuthorBio.tsx
         }}
         }}import type { BlogAuthor } from '@/types / blog';
 interface AuthorBioProps  {author: BlogAuthor;
@@ -103,7 +101,6 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         )}        <p>{author && author.bio}</p>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/blog/AuthorBio.tsx
 
         <p className='font-medium text-lg'>{author && author.name}</p>;
         {author && author.title && (;
@@ -126,7 +123,6 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
           target && target.src = '/images/blog-placeholder && placeholder.svg';
         }}
       />;
-<<<<<<< HEAD:src_backup/components/blog/AuthorBio.tsx
       <div>;
       <div></div>;
     </div>;
@@ -170,7 +166,6 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
 }<p> {author.bio;
 }</p>;
 }'"}
-<<<<<<< HEAD:src_backup/components/blog/AuthorBio.tsx
 }
 
 }

@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   intensity?: 'low' | 'medium' | 'high';
     | 'space-time';
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
@@ -32,7 +31,6 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
   const particlesRef = useRef<any[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
 
-<<<<<<< HEAD
   const getColorScheme = () => {;
     switch (colorScheme) {;
       case 'quantum-fusion':;
@@ -78,8 +76,6 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           background: 'rgba(0, 0, 0, 0.95)',
           glow: 'rgba(0, 255, 255, 0.3)'
         },
-=======
-<<<<<<< HEAD
   const getColorScheme = () => {;
     switch (colorScheme) {;
       case 'quantum-fusion':;
@@ -131,57 +127,39 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           primary: '#00ffff','
           secondary: '#ff00ff','
           accent: '#ffff00',
-<<<<<<< HEAD
           background: 'rgba(0, 0, 0, 0.95)',
 glow: 'rgba(0, 255, 255, 0.3)',
         };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       case 'neon-cyber':
         return {
           primary: '#ff0080',
           secondary: '#00ff80',
           accent: '#8000ff',
           background: 'rgba(0, 0, 0, 0.9)',
-<<<<<<< HEAD
           glow: 'rgba(255, 0, 128, 0.4)'
         },
-=======
-glow: 'rgba(255, 0, 128, 0.4)',
-        };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       case 'holographic-matrix':
         return {
           primary: '#00ff41',
           secondary: '#ff0040',
           accent: '#0040ff',
           background: 'rgba(0, 0, 0, 0.92)',
-<<<<<<< HEAD
           glow: 'rgba(0, 255, 65, 0.35)'
         },
-=======
-glow: 'rgba(0, 255, 65, 0.35)',
-        };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       case 'space-time':
         return {
           primary: '#ff6b35',
           secondary: '#4ecdc4',
           accent: '#45b7d1',
           background: 'rgba(0, 0, 0, 0.88)',
-<<<<<<< HEAD
           glow: 'rgba(255, 107, 53, 0.3)'
         },
-=======
-glow: 'rgba(255, 107, 53, 0.3)',
-        };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       default:
         return {
           primary: '#00ffff',
           secondary: '#ff00ff',
           accent: '#ffff00',
           background: 'rgba(0, 0, 0, 0.95)',
-<<<<<<< HEAD
           glow: 'rgba(0, 255, 255, 0.3)'
         }
     }
@@ -197,37 +175,7 @@ glow: 'rgba(255, 107, 53, 0.3)',
     const resizeCanvas = () => {canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-=======
-glow: 'rgba(0, 255, 255, 0.3)',
-        };
-    }
-  }
-  const colors = getColorScheme();
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-    };
-
-const ctx = canvas.getContext('2d')if (!ctx);
-  return;
-
-const resizeCanvas = (canvas.width = window.innerWidth;
-canvas.height = window.innerHeight) => {
-  return $3;}
-}
-};
-
-    resizeCanvas();
-=======
-    resizeCanvas();'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     window.addEventListener('resize', resizeCanvas);
-<<<<<<< HEAD
     // Initialize particles
     const initParticles = () => {
       particlesRef.current = [];
@@ -248,33 +196,6 @@ canvas.height = window.innerHeight) => {
     // Initialize particles
     const initParticles = $2;
       for (let i = 0, i < particleCount, i++) {
-=======
-    // Initialize particles;
-    const initParticles = () => {}
-      particlesRef.current = [];
-    };
-
-    resizeCanvas();'
-    window && window.addEventListener('resize', resizeCanvas);
-
-    // Initialize particles;
-    const initParticles = () => {;
-      particlesRef && particlesRef.current = [];
-      for (let i = 0; i < particleCount; i++) {        particlesRef && particlesRef.current.push({      for (let i = 0, i < particleCount, i++) {;
-        particlesRef && particlesRef.current.push({;
-          x: Math && Math.random() * canvas && canvas.width,;
-          y: Math && Math.random() * canvas && canvas.height,;
-          vx: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,;
-          vy: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,;
-          size: Math && Math.random() * 3 + 1,;
-          life: Math && Math.random() * 100 + 50,;
-          maxLife: Math && Math.random() * 100 + 50,;'
-          type: Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal',;
-          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary,;
-        });      }          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
-        });
-for (let i = 0; i < particleCount; i++) {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         particlesRef.current.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -284,7 +205,6 @@ for (let i = 0; i < particleCount; i++) {
           life: Math.random() * 100 + 50,
           maxLife: Math.random() * 100 + 50,
           type: Math.random() > 0.7 ? 'quantum' : 'normal',
-<<<<<<< HEAD
           color: Math.random() > 0.5 ? colors.primary : colors.secondary
         })
       }
@@ -298,20 +218,6 @@ for (let i = 0; i < particleCount; i++) {
     const animate = () => {ctx.fillStyle = colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
       particlesRef.current.forEach((particle, index) => {// Update position;
-=======
-color: Math.random() > 0.5 ? colors.primary : colors.secondary,
-        });
-      }
-    }
-    initParticles();
-    // Animation loop
-    const animate = () => {
-      ctx.fillStyle = colors.background;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      // Update and draw particles
-      particlesRef.current.forEach((particle, index) => {
-        // Update position
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Bounce off edges
@@ -324,7 +230,6 @@ color: Math.random() > 0.5 ? colors.primary : colors.secondary,
           particle.x = Math.random() * canvas.width;
           particle.y = Math.random() * canvas.height;
           particle.life = particle.maxLife;
-<<<<<<< HEAD
     };
 
     resizeCanvas();
@@ -346,15 +251,10 @@ color: Math.random() > 0.5 ? colors.primary : colors.secondary,
           color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary,;
         });      }          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
         });
-=======
-particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
         // Draw particle
 particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';}
         // Draw particle;
-<<<<<<< HEAD
 particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';}
         // Draw particle;
         const alpha = particle.life / particle.maxLife;
@@ -425,31 +325,10 @@ ctx.shadowBlur = 0;
 
 drawHolographicGrid(ctx, colors);
         drawHolographicGrid(ctx, colors)
-=======
-        const alpha = particle.life / particle.maxLife;
-        ctx.globalAlpha = alpha;'
-        if (particle.type === 'quantum' && enableQuantumEffects) {}
-          // Quantum particle effect;
-          ctx.beginPath();
-          ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
-          ctx.fillStyle = colors.accent;
-          ctx.fill();
-          // Quantum glow;
-          ctx.shadowColor = colors.accent;
-          ctx.shadowBlur = 20;
-          ctx.beginPath();
-          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-          ctx.fillStyle = colors.glow;
-          ctx.fill();
-<<<<<<< HEAD
 ctx.shadowBlur = 0;
 origin/cursor/automate-test-improve-and-merge-code-2533
         } else {
           // Normal particle
-=======
-        } else {}
-          // Normal particle;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = particle.color;
@@ -457,25 +336,18 @@ ctx.fill();
 origin/cursor/automate-test-improve-and-merge-code-2533
         }
       });
-<<<<<<< HEAD
       // Draw holographic grid
       if (enableHolographic) {
 drawHolographicGrid(ctx, colors);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       }
 
       // Draw neon effects
       if (enableNeonEffects) {
-<<<<<<< HEAD
         drawNeonEffects(ctx, colors)
-=======
-drawNeonEffects(ctx, colors);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       }
 
       // Draw space-time effects
       if (enableSpaceTime) {
-<<<<<<< HEAD
         drawSpaceTimeEffects(ctx, colors)
       }
 
@@ -519,18 +391,6 @@ drawNeonEffects(ctx, colors);
   }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]);
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {;
     const gridSize = 50;
-=======
-drawSpaceTimeEffects(ctx, colors);
-      }
-
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      // Draw holographic grid;
-      if (enableHolographic) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     animate();
     return () => {'
       window.removeEventListener('resize', resizeCanvas);
@@ -568,42 +428,25 @@ cancelAnimationFrame(animationRef.current);
 for (let x = 0; x < ctx.canvas.width; x += gridSize) {
       ctx.beginPath();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       ctx.moveTo(x, 0);
       ctx.lineTo(x, ctx.canvas.height);
       ctx.stroke();
     }
-<<<<<<< HEAD
 
     for (let y = 0; y < ctx.canvas.height; y += gridSize) {
-=======
-    for (let y = 0, y < ctx.canvas.height, y += gridSize) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       ctx.beginPath();
       ctx.moveTo(0, y);
       ctx.lineTo(ctx.canvas.width, y);
-<<<<<<< HEAD
 
       ctx.stroke();
     }
     // Animated diagonal lines
     ctx.strokeStyle = colors.secondary;
     ctx.globalAlpha = 0.2;
-=======
-      ctx.stroke();
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-    // Animated diagonal lines;
-    ctx.strokeStyle = colors.secondary;
-    ctx.globalAlpha = 0.2;
-for (let i = 0; i < 5; i++) {
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       const offset = (time + i * 0.5) * 100;
       ctx.beginPath();
       ctx.moveTo(offset, 0);
       ctx.lineTo(offset + 200, ctx.canvas.height);
-<<<<<<< HEAD
 
 ctx.stroke();
     }
@@ -623,25 +466,12 @@ ctx.stroke();
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {const time  = Date.now() * 0.001;// Neon orbs;
     for (let i = 0, i < 3, i++) {// Neon orbs;
     for (let i = 0; i < 3; i++) {const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
-=======
-ctx.stroke();
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-  }
-  const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {}
-    const time = Date.now() * 0.001;
-<<<<<<< HEAD
     // Neon orbs
     for (let i = 0, i < 3, i++) {
 // Neon orbs
     for (let i = 0; i < 3; i++) {
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    // Neon orbs;
-    for (let i = 0, i < 3, i++) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
       const size = 30 + Math.sin(time + i) * 10;
       // Glow effect;
@@ -653,7 +483,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.fill();
       // Core;
       ctx.shadowBlur = 0;
-<<<<<<< HEAD
       ctx.beginPath()ctx.arc(x, y, size * 0.6, 0, Math.PI * 2)ctx.fillStyle = colors.primary;for (let i = 0; i < 20; i++) {      const radius = (i / 20) * maxRadius;
       const angle = time * 2 + i * 0 && 0.3;
       const x = centerX + Math && Math.cos(angle) * radius;
@@ -824,21 +653,6 @@ const alpha  = 1 - i / 20;ctx.globalAlpha = alpha * 0.5;
           className="absolute inset-0"
           animate={{
             background: [
-=======
-      ctx.beginPath();
-      ctx.arc(x, y, size * 0.6, 0, Math.PI * 2);
-      ctx.fillStyle = colors.primary;
-    for (let i = 0; i < 20; i++) {      const radius = (i / 20) * maxRadius;
-      const angle = time * 2 + i * 0 && 0.3;
-      const x = centerX + Math && Math.cos(angle) * radius;
-      const y = centerY + Math && Math.sin(angle) * radius;
-      const alpha = 1 - i / 20;    for (let i = 0, i < 20, i++) {;
-      const radius = (i / 20) * maxRadius;
-      const angle = time * 2 + i * 0 && 0.3;
-      const x = centerX + Math && Math.cos(angle) * radius;
-      const y = centerY + Math && Math.sin(angle) * radius;
-      const alpha = 1 - i / 20;      const alpha = 1 - (i / 20);
-<<<<<<< HEAD
 ctx.fill();
     }
   }
@@ -876,9 +690,6 @@ ctx.fill();
       />
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Additional overlay effects */}
-=======
-      {/* Additional overlay effects */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='absolute inset-0 pointer-events-none'>;
         {/* Quantum energy field */}
         <motion&& motion.div'
@@ -897,13 +708,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             duration: 8;
             repeat: Infinity'
             ease: 'easeInOut'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
             ],
           }}
-<<<<<<< HEAD
           transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
@@ -911,28 +720,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />
         
         {/* Holographic scan lines */}
-<<<<<<< HEAD
         <div className="absolute inset-0 opacity-20">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key = $2;
                 color: colors.primary
-=======
-        <div className=\"absolute inset-0 opacity-20\"    />
-          {[...Array(20)].map((_, i) => (<motion&& motion.div;}
-                opacity: [0, 1, 0],scale_x: [0, 1, 0]              }}          }}
-           />
-        {/* Holographic scan lines */}"
-        <div className=\"absolute inset - 0 opacity - 20\"    />
-          {[...Array (20)].map ((_, i) => (<motion.div;}
-              key={i}"
-              className=\'absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent\'
-              style={{}}
-              animate={{opacity: [0, 1, 0]
-                scaleX: [0, 1, 0];}
-                top: `${(i / 20) * 10}
-}%`,color: colors.primary
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               }}
               animate={{
                 opacity: [0, 1, 0]
@@ -942,7 +734,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               }}
               transition = $2;
                 delay: i * 0.1,
-=======
           transition={{
             duration: 8,
             repeat: Infinity,
@@ -982,19 +773,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 delay: i * 0.1,
                 repeat: Infinity,
 ease: 'easeInOut',
-=======
               transition={{}
                 duration: 3;
                 delay: i * 0.1;
                 repeat: Infinity'"
                 ease: 'easeInOut',              }}                ease: "easeInOut"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               }}
 
               transition={{
                 duration: 3,
                 delay: i * 0 && 0.1,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 repeat: Infinity,
 
             />}
@@ -1031,13 +819,9 @@ export default UltraFuturisticBackground2035;
 export default UltraFuturisticBackground2035;
 )}export default UltraFuturisticBackground2035;
 export default UltraFuturisticBackground2035,
-=======
-<<<<<<< HEAD
             />}
 }
           ))}
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
             />
@@ -1068,7 +852,6 @@ export default UltraFuturisticBackground2035;  )
 export default UltraFuturisticBackground2035;
 
 export default UltraFuturisticBackground2035;
-<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -1076,59 +859,8 @@ export default UltraFuturisticBackground2035;
 };
 
 export default UltraFuturisticBackground2035;
-<<<<<<< HEAD
 
 "
-=======
-const getColorScheme = () => {
-  switch (colorScheme) {
-  case 'quantum-fusion': return {
-  
-}
-}
-resizeCanvas ()
-window.addEventListener ('resize', resizeCanvas)
-//Initialize particles 
-}
-}
-initParticles ()
-//Animation loop //Update and draw particles particlesRef.current.forEach ( (particle, index) => {
-  //Update position particle.x += particle.vx
-particle.y += particle.vy
-//Bounce off edges if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1
-if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1
-//Update life particle.life--
-//Regenerate particle if it dies if (particle.life <= 0) {
-  animationRef.current = requestAnimationFrame (animate) 
-}
-animate ()
-ctx.strokeStyle = colors.primary
-ctx.lineWidth = 0.5
-ctx.globalAlpha = 0.3
-return (<div className="fixed inset-0 -z-10 overflow-hidden" > <canvas background: [ `radial-gradient (circle at 20% 20%, $ {
-  colors.glow 
-}0%, transparent 50%) `
-`radial-gradient (circle at 80% 80%, $ {
-  colors.glow 
-}0%, transparent 50%) `
-`radial-gradient (circle at 20% 20%, $ {
-  colors.glow 
-}0%, transparent 50%) ` ] 
-}
-}/>) ) 
-}</div> </div> </div>) 
-}
-export default UltraFuturisticBackground2035
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
               }}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

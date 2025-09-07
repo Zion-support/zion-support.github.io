@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/talent/filters/RegionFilter.tsx
 
         className="flex w-full items-center justify-between text-white font-medium"
       >
@@ -49,7 +48,6 @@ function RegionFilter() {return (<div className='mb - 6 border - b border - zion
                 id={`region-${region && region.id}`}
                 checked={selectedRegions && selectedRegions.includes(region && region.id)}
                 onCheckedChange={() => toggleRegion(region && region.id)}
-<<<<<<< HEAD:src_backup/components/talent/filters/RegionFilter.tsx
             <div key={region && region.id} className="flex items-center">;
 
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -99,7 +97,6 @@ export function RegionFilter() {return (<div className='mb-6 border-b border-zio
         {expanded ? (<ChevronUp className='h-4 w-4 text-zion-slate-light' />;
         ) : (<ChevronDown className='h-4 w-4 text-zion-slate-light' />;
         )}
-<<<<<<< HEAD:src_backup/components/talent/filters/RegionFilter.tsx
   { id: 'North America', label: 'North America' }
   { id: 'Europe', label: 'Europe' }
   { id: 'Asia', label: 'Asia' }
@@ -180,7 +177,6 @@ export function RegionFilter() {return (<div className="mb-6 border-b border-zio
             </div>;<Checkbox;
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
-<<<<<<< HEAD:src_backup/components/talent/filters/RegionFilter.tsx
                 onCheckedChange={() => toggleRegion(region.id)}
 
               <label
@@ -245,7 +241,6 @@ const REGION_OPTIONS = [;
         </div>;
       )}
     </div>;
-<<<<<<< HEAD:src_backup/components/talent/filters/RegionFilter.tsx
   );
 }
 ;
@@ -264,7 +259,6 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
           ))}
         </div>;
       )}
-<<<<<<< HEAD:src_backup/components/talent/filters/RegionFilter.tsx
     </div>
   );
 toggleSection ;

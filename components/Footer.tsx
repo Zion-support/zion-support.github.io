@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
@@ -17,7 +7,6 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight
 import React from "react";
 import Link from "next/link";
 import {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   Phone
   Mail
   MapPin
@@ -228,10 +217,77 @@ import {
   Instagram,
 } from "lucide-react";
 
-<<<<<<< HEAD
 import React from 'react;';
 import Link from 'next/link';
 
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const footerLinks = {
+    services: [
+      { name: 'AI Meeting Assistant', href: '/services/ai-meeting-assistant' },
+      { name: 'Smart Invoice Generator', href: '/services/smart-invoice-generator' },
+      { name: 'Web Development', href: '#' },
+      { name: 'Cloud Services', href: '#' },
+      { name: 'Mobile Apps', href: '#' },
+      { name: 'Data Analytics', href: '#' },
+    ],
+    company: [
+      { name: 'About Us', href: '#about' },
+      { name: 'Our Team', href: '#team' },
+      { name: 'Careers', href: '#careers' },
+      { name: 'Press', href: '#press' },
+      { name: 'Blog', href: '#blog' },
+    ],
+    support: [
+      { name: 'Help Center', href: '#help' },
+      { name: 'Documentation', href: '#docs' },
+      { name: 'API Reference', href: '#api' },
+      { name: 'Status', href: '#status' },
+      { name: 'Contact Support', href: '#contact' },
+    ],
+    legal: [
+      { name: 'Privacy Policy', href: '#privacy' },
+      { name: 'Terms of Service', href: '#terms' },
+      { name: 'Cookie Policy', href: '#cookies' },
+      { name: 'GDPR', href: '#gdpr' },
+    ],
+  };
+
+  const socialLinks = [
+    { name: 'Twitter', href: '#', icon: '🐦' },
+    { name: 'LinkedIn', href: '#', icon: '💼' },
+    { name: 'GitHub', href: '#', icon: '🐙' },
+    { name: 'YouTube', href: '#', icon: '📺' },
+  ];
+
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <Link href="/" className="flex items-center space-x-2 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Zion Tech Group
+              </span>
+            </Link>
+            <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
+              Leading technology solutions provider specializing in web development, 
+              mobile applications, AI integration, and cloud services. Transform your business with cutting-edge technology.
+            </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors duration-200"
+                  aria-label={social.name}
+                >
+                  <span className="text-lg">{social.icon}</span>
                 </a>
               </div>
               <div className="flex items-center>
@@ -251,8 +307,6 @@ import Link from 'next/link';
             {/* Contact Info */}
 import React from 'react';
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
@@ -331,10 +385,11 @@ ursor/automate-test-improve-and-merge-code-646c;
                   </ul>;
                 </div>;
               </div>
+              ))}
             </div>
           </div>
+
           {/* Services */}
-<<<<<<< HEAD
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
@@ -471,7 +526,7 @@ ursor/automate-test-improve-and-merge-code-646c;
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -570,9 +625,6 @@ main
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
               </a>
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -595,21 +647,17 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-<<<<<<< HEAD
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
-<<<<<<< HEAD
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -752,8 +800,6 @@ export default function Footer() {
               >
                 Cookie Policy
               </Link>
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               <li>
                 <Link href="/" className="text-slate-400 hover:text-white transition-colors">
                   Home
@@ -817,7 +863,6 @@ export default function Footer() {
               <Link href="/terms" className="text-slate-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </Link>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </div>
           </div>
 
@@ -912,13 +957,23 @@ export default function Footer() {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex items-center space-x-6 mt-4 md:mt-0">
+              <span className="text-gray-400 text-sm">Made with ❤️ by Zion Tech Group</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 
 export default Footer;
@@ -932,23 +987,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </Link>;
               <Link
 
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
 };
 
 export default Footer;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 }
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+};
+
+export default Footer;

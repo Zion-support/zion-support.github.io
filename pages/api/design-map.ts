@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/api/design-map.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -19,7 +17,6 @@ export default async function handler(
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   try {;
 
-<<<<<<< HEAD:pages_backup/api/design-map.ts
 
 
 export default async function handler(req, res) {
@@ -65,45 +62,15 @@ export default async function handler(req, res) {
     res.status(200).json({
       route: base.route
       products: base.products
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const base = { route: '/', products: [] };
-    const [localTokens, cmsTokens] = await Promise.all([
-      { colors: {}, typography: { fontSizes: {} } },
-      { colors: {}, typography: { fontSizes: {} } }
-    ]);
-    
-    const tokens = {
-      colors: {
-        ...localTokens.colors,
-        ...(cmsTokens?.colors || {})
-      },
-      typography: {
-        fontSizes: {
-          ...localTokens.typography.fontSizes,
-          ...(cmsTokens?.typography?.fontSizes || {})
-        }
-      }
-    };
-    
-    res.status(200).json({
-      route: base.route,
-      products: base.products,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       tokens
     });
   } catch (e: unknown) {
     res.status(500).json({
-<<<<<<< HEAD
       error: e?.message || 'Failed to build design map'
     });
 import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils/design-map';
 export default async function handler(req, res) {
   try {
-<<<<<<< HEAD:pages_backup/api/design-map.ts
 ursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -126,7 +93,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       buildTokenSet();
       fetchLovableTokens()]);
     const tokens = {;
-<<<<<<< HEAD:pages_backup/api/design-map.ts
 
   }
 }
@@ -151,7 +117,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD:pages_backup/api/design-map.ts
 }
   } catch (error) {
     console.error("Error:", error);
@@ -188,8 +153,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/api/design-map.ts
-<<<<<<< HEAD:pages_backup/api/design-map.ts
 
 
     res.status(200).json({ route: base.route, products: base.products, tokens })
@@ -197,7 +160,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     res.status(500).json({ error: e ?.message || 'Failed to build design map' })
   }
 }
-<<<<<<< HEAD:pages_backup/api/design-map.ts
 
 
 
@@ -214,9 +176,3 @@ main
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
-      error: (e as Error)?.message || 'Failed to build design map'
-    });
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

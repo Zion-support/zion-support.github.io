@@ -32,7 +32,6 @@ import { Button  } from '@/components / ui / button';
 import { Facebook  } from 'lucide-react';
 import { sign_in  } from 'next - auth / react';
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
-<<<<<<< HEAD:src_backup/components/AuthButtons.tsx
 interface AuthButtonsProps {;
   providers?: Provider[];
 
@@ -142,7 +141,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
       {providers.includes('facebook') && (
         <Button
-<<<<<<< HEAD:src_backup/components/AuthButtons.tsx
 
 
 
@@ -387,7 +385,6 @@ interface AuthButtonsProps {;
 
             <>Email Login</>)}
         </Button>)}
-<<<<<<< HEAD:src_backup/components/AuthButtons.tsx
     </div>);
 
           ) : (
@@ -435,7 +432,6 @@ interface AuthButtonsProps {;
           )}
         </Button>;
       )}
-<<<<<<< HEAD:src_backup/components/AuthButtons.tsx
 
     </div>;
   );

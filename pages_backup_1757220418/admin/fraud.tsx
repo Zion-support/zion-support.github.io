@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages_backup_1757220418/admin/fraud.tsx
 import React, { useEffect, useMemo, useState } from 'react';
 interface FraudItem {
   id: string,
@@ -72,28 +71,6 @@ export default function FraudAdminPage() {
       </div>
       {loading && <div>Loading...</div>}
       {error && <div className="text-red-600">{error}</div>}
-=======
-import React from 'react'
-import Head from 'next/head'
-const FraudPage: React.FC = () => {
-  return (
-    <div className="p-6 max-w-7xl mx-auto">
-      <Head>
-        <title>Fraud Monitoring - Admin Review</title>
-        <meta name="description" content="Fraud monitoring and detection system" />
-      </Head>
-      
-      <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
-      
-      <div className="flex items-center gap-2 mb-4">
-        <input
-          type="text"
-          placeholder="Search fraud reports..."
-          className="px-3 py-2 border border-gray-300 rounded-md"
-        />
-      </div>
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/admin/fraud.tsx
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -108,7 +85,6 @@ const FraudPage: React.FC = () => {
             </tr>
           </thead>
           <tbody>
-<<<<<<< HEAD:pages_backup_1757220418/admin/fraud.tsx
             {items.map((it) => (
               <tr key={it.id} className="border-t">
                 <td className="p-2 border">{it.userId |'—'}</td>
@@ -141,19 +117,9 @@ const FraudPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-            <tr>
-              <td className="p-2 border">No data available</td>
-            </tr>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/admin/fraud.tsx
           </tbody>
         </table>
       </div>
     </div>
   )
-<<<<<<< HEAD:pages_backup_1757220418/admin/fraud.tsx
 }
-=======
-}
-export default FraudPage
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/admin/fraud.tsx

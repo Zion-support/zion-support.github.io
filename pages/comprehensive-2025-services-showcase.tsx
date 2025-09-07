@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -67,17 +66,9 @@ export default function Comprehensive2025ServicesShowcase() {
     }
   },
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function comprehensive2025servicesshowcase() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>
         <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." />
         <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />
@@ -370,20 +361,4 @@ export default function comprehensive2025servicesshowcase() {
       <EnhancedFooter />
     </div>
   )
-=======
-        <title>Comprehensive 2025 Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive 2025 Services Showcase solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Comprehensive 2025 Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional comprehensive 2025 services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

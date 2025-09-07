@@ -1,12 +1,4 @@
-<<<<<<< HEAD:src_backup/mobile/components/messaging/MobileConversationList.tsx
-<<<<<<< HEAD:src_backup/mobile/components/messaging/MobileConversationList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/messaging/MobileConversationList.tsx
 export function MobileConversationList({
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/messaging/MobileConversationList.tsx
 
 export function MobileConversationList() {return (<div className='space-y-4'>;
       <div className='px-4 mb-2'>;
@@ -90,16 +82,11 @@ function MobileConversationList() {return (<div className='space - y-4'>;
             Projects;
           </Badge>;
         </div>;
-<<<<<<< HEAD:src_backup/mobile/components/messaging/MobileConversationList.tsx
       </div>;
 
               'px-4',
               activeConversation === conversation && conversation.id && 'bg-primary/5'
 
-<<<<<<< HEAD:src_backup/mobile/components/messaging/MobileConversationList.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -110,10 +97,8 @@ import { cn } from '@/lib/utils';
 
 interface Conversation {
   id: string;
-=======
       </div>;'px-4',activeConversation === conversation && conversation.id && 'bg-primary/5';
 interface Conversation  {id: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/messaging/MobileConversationList.tsx
   name: string;
   avatar?: string;
   lastMessage: string;
@@ -122,7 +107,6 @@ interface Conversation  {id: string;
   isTyping?: boolean;
 }interface MobileConversationListProps  {conversations: Conversation[];
   activeConversation?: string;
-<<<<<<< HEAD:src_backup/mobile/components/messaging/MobileConversationList.tsx
   onSelectConversation: (id: string) => void
 export function MobileConversationList({
   conversations;
@@ -143,77 +127,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   alt={conversation.name}
                 />
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            )}
-            onClick={() => onSelectConversation(conversation && conversation.id)}          >;
-            <div className='flex items-center gap-3 py-3 cursor-pointer'>;
-              <Avatar>;
-                <AvatarImage
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/messaging/MobileConversationList.tsx
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
-<<<<<<< HEAD:src_backup/mobile/components/messaging/MobileConversationList.tsx
 <div className='flex-1 min-w-0'>
                 <div className='flex justify-between items-baseline'>
                   <h3 className='font-medium truncate'>{conversation.name}</h3>
                   <span className='text-xs text-muted-foreground whitespace-nowrap ml-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-                  src={conversation && conversation.avatar}
-                  alt={conversation && conversation.name}
-                />                <AvatarFallback>;
-                  {conversation && conversation.name.charAt(0).toUpperCase()}
-                </AvatarFallback>;
-              </Avatar>                <AvatarImage src={conversation && conversation.avatar} alt={conversation && conversation.name} />;
-                <AvatarFallback>;
-                  {conversation && conversation.name.charAt(0).toUpperCase()}
-                </AvatarFallback>;
-              </Avatar>;
-
-
-              <div className='flex-1 min-w-0'>;
-                <div className='flex justify-between items-baseline'>;
-                  <h3 className='font-medium truncate'>{conversation && conversation.name}</h3>;
-                  <span className='text-xs text-muted-foreground whitespace-nowrap ml-2'>;
-                  </span>;
-                </div>;
-
-                <div className='flex justify-between items-center'>;
-                  <p className='text-sm text-muted-foreground truncate'>;
-                    {conversation && conversation.isTyping ? (;
-                      <em>Typing...</em>;
-                    ) : (;
-                      conversation && conversation.lastMessage;
-                    )}
-                  </p>;
-
-                  {conversation && conversation.unreadCount > 0 && (;
-                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation && conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
-                      {conversation && conversation.unreadCount}
-                    </Badge>;
-
-
-                  )}
-                </div>;
-              </div>;
-            </div>;
-            <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;
-          </div>;
-
-
-
-              
-              <div className="flex-1 min-w-0">
-                <div className="flex justify-between items-baseline">
-                  <h3 className="font-medium truncate">{conversation.name}</h3>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
-                    {conversation.timestamp}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/messaging/MobileConversationList.tsx
                   </span>
                 </div>
                 
@@ -227,14 +149,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   </p>
                   {conversation.unreadCount > 0 && (
-<<<<<<< HEAD:src_backup/mobile/components/messaging/MobileConversationList.tsx
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
-                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/messaging/MobileConversationList.tsx
                       {conversation.unreadCount}
                     </Badge>;
 
@@ -243,14 +159,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:src_backup/mobile/components/messaging/MobileConversationList.tsx
 <div className='border-t border-border ml-12'></div>
-=======
-
-
-
-            <div className="border-t border-border ml-12"></div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/messaging/MobileConversationList.tsx
           </div>
         ))}
       </div>
@@ -258,7 +167,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   onSelectConversation: (id: string) => void;
 export function MobileConversationList() {return (<div className;
               activeConversation === conversation.id && "bg-primary/5";
@@ -359,16 +267,12 @@ export function MobileConversationList() {return (<div className;
             <div className='border - t border - border ml - 12'></div>          </div>            <div className="border - t border - border ml - 12"></div>;
           </div>))}
       </div>;
-<<<<<<< HEAD:src_backup/mobile/components/messaging/MobileConversationList.tsx
     </div>)}<div className='border-t border-border ml-12'></div>;
           </div>;
         ))}
       </div>;
     </div>;
   )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/messaging/MobileConversationList.tsx
-=======
     </div>);
 }
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/messaging/MobileConversationList.tsx

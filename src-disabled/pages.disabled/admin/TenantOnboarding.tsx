@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/pages/admin/TenantOnboarding.tsx
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -61,7 +60,6 @@ export default function TenantOnboarding() {
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-<<<<<<< HEAD:src_backup/pages/admin/TenantOnboarding.tsx
     brand_name: "";
     subdomain: "";
     logo_url: "";
@@ -385,7 +383,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </main>
     </>
-<<<<<<< HEAD:src_backup/pages/admin/TenantOnboarding.tsx
   );
 
 };'";
@@ -394,7 +391,3 @@ Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label 
 origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/main

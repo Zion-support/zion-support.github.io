@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import type { GetServerSideProps } from 'next';
-=======
-<<<<<<< HEAD
 import path from 'path';'
-=======
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import path from 'path';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import fs from 'fs';
 import DocsLayout from '../../../components/docs/DocsLayout';
 import CodeBlock from '../../../components/docs/CodeBlock';
@@ -32,13 +25,8 @@ export default function ApiDocsPage({ docs,}
 }: PageProps) {}
       nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}
     >
-<<<<<<< HEAD
       {docs.sections.map(section => ('
         <section key={section.id} id={section.id} className='scroll-mt-24'>'
-=======
-      {docs.sections.map(section => (
-        <section key={section.id} id={section.id} className='scroll-mt-24'>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <h2 className='text-2xl font-semibold'>{section.title}</h2>          {section.html && (
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
           )}
@@ -70,11 +58,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
           )}
           {section.code && section.code.length > 0 && (
-<<<<<<< HEAD
               ))};
-=======
-              ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
           )}
         </section>;

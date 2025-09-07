@@ -12,34 +12,16 @@ function createAdvancedMonitoring() {
   
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 class HealthChecker {
   constructor() {
     this.checks = new Map();
     this.results = new Map();
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 export class HealthChecker {
   constructor() {;
     this.checks = new Map();
     this.results = new Map();  }
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   addCheck(name, checkFunction) {
     this.checks.set(name, checkFunction);
   }
@@ -48,36 +30,17 @@ export class HealthChecker {
     const results = {};
     for (const [name, check] of this.checks) {
       try {
-<<<<<<< HEAD
         const result = await check();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
         const result = await check();
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
       try {
         const result = await checkFunction();
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         results[name] = { status: 'healthy', result };
       } catch (error) {
         results[name] = { status: 'unhealthy', error: error.message };
       }
     }
     this.results = results;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     return results;
   }
 
@@ -510,12 +473,6 @@ module.exports = { QueryOptimizer, queryOptimizer };`,
     
     'database/connection-pool.js': `// Database connection pooling
 class ConnectionPool {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
   }
 }
 
@@ -703,11 +660,6 @@ export const queryOptimizer = new QueryOptimizer();`,
     
     'database/connection-pool.js': `// Database connection pooling
 export class ConnectionPool {
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   constructor(options = {}) {
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
@@ -716,20 +668,9 @@ export class ConnectionPool {
     this.usedConnections = new Set();
   }
 
-<<<<<<< HEAD
   async getConnection() {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   async getConnection() {
-=======
 async getConnection() {
->>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
-async getConnection() {
->>>>>>> main
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     if (this.availableConnections.length > 0) {
       const connection = this.availableConnections.pop();
       this.usedConnections.add(connection);
@@ -759,13 +700,6 @@ async getConnection() {
 });
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   releaseConnection(connection) {
     this.usedConnections.delete(connection);
     this.availableConnections.push(connection);
@@ -792,12 +726,6 @@ async getConnection() {
 
 const connectionPool = new ConnectionPool();
 module.exports = { ConnectionPool, connectionPool };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 
 export function debounce(func, wait) {
   let timeout = null;
@@ -858,11 +786,6 @@ export function preloadCriticalResources() {
 
 
 export const connectionPool = new ConnectionPool();
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   };
 
   Object.entries(dbFiles).forEach(([filename, content]) => {
@@ -872,57 +795,28 @@ export const connectionPool = new ConnectionPool();
     console.log(`[OK] Created ${filename}`);
   });
 });
-<<<<<<< HEAD
 }
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> main
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // Main execution
 async function main() {
   try {
     console.log('🚀 Starting advanced app improvements...');
     
     // Create all improvement systems
-<<<<<<< HEAD
     createAdvancedMonitoring();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     createAdvancedMonitoring();
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // Main execution
 async function main() {
   try {
     console.log('🚀 Starting advanced app improvements...');
     
     // Create all improvement systems
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     // Create PM2 ecosystem configuration
     const pm2Config = {
       apps: [{
@@ -966,12 +860,6 @@ async function main() {
     
   } catch (error) {
     console.error('❌ Error during advanced improvements:', error.message);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
     console.log('\n✅ Advanced app improvements completed successfully!');
     console.log('\n📋 Summary:');
     console.log('  - Advanced monitoring system created');
@@ -981,32 +869,15 @@ async function main() {
     
   } catch (error) {
     console.error('❌ Error during app improvements:', error);
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     process.exit(1);
   }
 }
 
-<<<<<<< HEAD
 main();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 main();
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 main();// Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -60,7 +59,6 @@ default:
     }
   };
 
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
   const articleLd = {
     '@context': 'https://schema.org'
     '@type': 'BlogPosting'
@@ -451,7 +449,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </>
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
 
   );
 
@@ -470,6 +467,5 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
 }</div> </div>) ";
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>) ;
 }'"
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533

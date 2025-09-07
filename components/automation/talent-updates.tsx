@@ -1,7 +1,5 @@
 import fs from 'fs';,
-=======
 import fs from 'fs',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import path from 'path';
 import { TALENT_PROFILES } from '../../data/talent';
 type TalentSummary = any;
@@ -11,14 +9,12 @@ import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
 type TalentSummary = { slug: string, summary: string }
 export async function getServerSideProps() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
 type TalentSummary = { slug: string, summary: string },
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datatalent_ai.json');
-<<<<<<< HEAD
 type TalentSummary = { slug: string, summary: string },;
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'datatalent_ai && datatalent_ai.json');
@@ -43,8 +39,6 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
 
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 
-=======
-<<<<<<< HEAD
 }</div> </div>) import fs from 'fs';'
 import fs from 'fs';'
 import path from 'path';
@@ -71,7 +65,6 @@ export async function getServerSideProps() { return null; }
   return { props: { generatedAt, summaries } }
 }
 
-<<<<<<< HEAD
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
 
@@ -87,18 +80,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>
       <p className="text-gray-600">Profiles are periodically enriched with AI-generated summaries.</p>
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
-=======
-export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {};
-export default function TalentUpdatesPage() { return null; }
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="grid grid-cols-1 gap-4">
         {TALENT_PROFILES.map(t => ("
           <div key={t.slug} className="border rounded p-4 space-y-1">"
             <div className="font-medium">{t.name} — {t.title}</div>'"
             <div className="text-sm text-gray-700">{map.get(t.slug) |'No AI summary yet.'}</div>
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>
@@ -109,7 +95,6 @@ export default function TalentUpdatesPage() { return null; }
           <div key={t.slug} className="border rounded p-4 space-y-1">
             <div className="font-medium">{t.name} — {t.title}</div>
             <div className="text-sm text-gray-700">{map.get(t.slug) |'No AI summary yet.'}</div>
-=======
   let generatedAt = '';
   let summaries: TalentSummary[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
@@ -123,7 +108,6 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 
   return (
-<<<<<<< HEAD
     <div className=\"space-y-6\" />"
       <h1 className=\"text-2xl font-semibold\" />AI Automation: Talent Summaries</h1>"
       <p className=\"text-gray-600\" />Profiles are periodically enriched with AI-generated summaries.</p>"
@@ -133,27 +117,14 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
           <div key={t.slug} className=\"border rounded p-4 space-y-1\" />"
             <div className=\"font-medium\" />{t.name} — {t.title}</div>"
             <div className=\"text-sm text-gray-700\" />{map.get(t.slug) |'No AI summary yet.'}</div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </div>
         ))}
       </div>
-<<<<<<< HEAD
     </div>'
 import {TALENT_PROFILES} from '../../data / talent';
 type TalentSummary = { slug: string, summary: string },
 export async /**;
  * getServerSideProps - Function description;
-=======
-    </div>
-import {TALENT_PROFILES} from '../../data / talent';
-type TalentSummary = { slug: string;, summary: string ;},
-export async /**
- * getServerSideProps - Function description
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  */
 function getServerSideProps() { return null; }
   } catch {}
@@ -164,7 +135,6 @@ export default /**;
  */
 function TalentUpdatesPage() {}
   const map = new Map (summaries.map (string => [s.slug, s.summary]));
-<<<<<<< HEAD
   return (
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>;
@@ -181,26 +151,7 @@ function TalentUpdatesPage() {}
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-  return ("
-    <div className="space - y-6">;"
-      <h1 className="text - 2xl font - semibold">AI Automation: Talent Summaries</h1>;"
-      <p className="text - gray - 600">Profiles are periodically enriched with AI - generated summaries.</p>;'"
-      <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;"
-      <div className="grid grid - cols - 1 gap - 4">;
-        {TALENT_PROFILES.map (t => ("
-          <div key={t.slug} className="border rounded p - 4 space - y-1">;"
-            <div className="font - medium">{t.name} — {t.title}</div>;'"
-            <div className="text - sm text - gray - 700">{map.get (t.slug) || 'No AI summary yet.'}</div>;
-          </div>))}
-      </div>;
-    </div>);
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-<<<<<<< HEAD
 ;
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
@@ -270,24 +221,7 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
     </div>
   )
 }
-=======
-);
-}
-
-"
-<<<<<<< HEAD
-=======
-</div>) ) 
-}</div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>
       <p className="text-gray-600">Profiles are periodically enriched with AI-generated summaries.</p>
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

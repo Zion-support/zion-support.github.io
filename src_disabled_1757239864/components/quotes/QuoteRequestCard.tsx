@@ -183,9 +183,4 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD:src/components/quotes/QuoteRequestCard.tsx
 };
-=======
-},
-;
->>>>>>> origin/main:src_disabled_1757239864/components/quotes/QuoteRequestCard.tsx

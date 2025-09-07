@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
 
@@ -15,8 +14,6 @@ import Button from '../components/ui/Button';
   ArrowRight,
   Play,
   AlertTriangle,
-=======
-<<<<<<< HEAD
 const features = [ {
   setIsTesting (true)
 //Simulate API testing setTimeout ( () => {
@@ -73,23 +70,6 @@ and security testing for REST, GraphQL, and SOAP APIs. Ensure your APIs are reli
 }</ul> <Button > Get Started <ArrowRight className="w-5 h-5 ml-2" /> </Button> </Card>) ) 
 }</div> </div> </section> <section className="section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10" /> <div className="container-cursor text-center relative z-10"> <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg"> text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed"> Join thousands of developers and businesses using our API testing suite to ensure their APIs are reliable and performant. </p> <div className=" flex flex-col sm:flex-row gap-6 justify-center"> <Button href=" /contact"size=" lg"className=" bg-white text-indigo-600 hover:bg-gray-100 shadow-2xl"> Start Free Trial <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /contact"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl" > Schedule Demo </Button> </div> </div> </section> </>) 
 }
-=======
-import React, { useState } from 'react'
-import Head from 'next/head'
-import Card from '../components/ui/Card'
-import Button from '../components/ui/Button'
-import {
-  Code
-  Zap
-  Shield
-  BarChart3
-  CheckCircle
-  ArrowRight
-  Play
-  AlertTriangle
-  Clock
-  Database;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 } from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap, Star } from 'lucide-react';
@@ -1893,4 +1873,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 })}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

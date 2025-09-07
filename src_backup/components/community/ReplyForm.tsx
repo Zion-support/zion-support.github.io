@@ -154,7 +154,6 @@ interface ReplyFormValues {
           </form>;
         </Form>;
       </CardContent>;
-<<<<<<< HEAD:src_backup/components/community/ReplyForm.tsx
     </Card>);
 }
     </Card>))}

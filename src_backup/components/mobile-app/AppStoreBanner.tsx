@@ -139,7 +139,6 @@ export const AppStoreBanner: React.FC = () => {const [isVisible, setIsVisible] =
           <p className="text-xs text-gray-300">Get the full experience on our app</p>;
         </div>;
         <div className="flex items-center gap-3">;
-<<<<<<< HEAD:src_backup/components/mobile-app/AppStoreBanner.tsx
 
           <a;
             href="/open-app";
@@ -211,7 +210,6 @@ if (return null) {
           </button>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/AppStoreBanner.tsx
     </div>);
 }
 '"},

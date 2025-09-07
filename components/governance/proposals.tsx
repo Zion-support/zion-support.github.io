@@ -10,12 +10,10 @@ data;
         {data.proposals?.map((p: any) => (<li key={p.i,}
 } className='border rounded p-3' />;
             <div className='font-medium' />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               #{p.id} {p.title}
             </div>
             <div className='text-sm opacity-70'>
               by {p.author} · {new Date(p.created_at).toLocaleString()}
-<<<<<<< HEAD
             </div>
             <a
               className='text-blue-600 underline'
@@ -26,18 +24,9 @@ data;
               View
             </a>
           </li>
-=======
-            </div>;
-            <a;
-              className='text-blue-600 underline';
-              href={p && p.url}
-              target='_blank';
-              rel='noreferrer' />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               View;
             </a>;
           </li>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         ))}
         )}
 

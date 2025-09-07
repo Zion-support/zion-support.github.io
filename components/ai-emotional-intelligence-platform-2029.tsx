@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-=======
-<<<<<<< HEAD
 return (<> <Head> <title>AI Emotional Intelligence Platform 2029 | Zion Tech Group</title> </Head> <UltraFuturisticNavigation2029 /> <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div > {
   /* Badge */ 
 }<motion.div > <Brain className="w-4 h-4 mr-2" /> 🚀 2029 Revolutionary AI Technology </motion.div> {
@@ -46,10 +43,6 @@ return (<> <Head> <title>AI Emotional Intelligence Platform 2029 | Zion Tech Gro
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" >Transform</span> Your Business? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Contact us today to learn how our AI Emotional Intelligence Platform can revolutionize your customer experience and business outcomes. </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" > <motion.div </motion.div> </div> <motion.div > <Link > <span className="flex items-center" > Get Started Today <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> </span> </a> </motion.div> </div> </section> <UltraFuturisticFooter2028 /> </>) 
 }
 export default AIEmotionalIntelligencePlatform2029
-=======
-import React from 'react',
-import Head from 'next/head',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -1784,7 +1777,6 @@ href='/contact';
 };
 
 export default AIEmotionalIntelligencePlatform2029;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true }}className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'>;
               <Phone className='w-12 h-12 text-purple-400 mx-auto mb-4' />;
@@ -1934,6 +1926,3 @@ export default AIEmotionalIntelligencePlatform2029;
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport = $2;
 export default AIEmotionalIntelligencePlatform2029,
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

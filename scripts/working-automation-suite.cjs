@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,14 +220,17 @@ class WorkingAutomationSuite {
 
 ## Results
 
+=======
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 ### Successful Operations
 ${report.results.success.map(item => `- ${item}`).join("\n")}
-
 ### Errors
 ${report.results.errors.map(item => `- ${item}`).join("\n")}
-
 ### Warnings
 ${report.results.warnings.map(item => `- ${item}`).join("\n")}
+<<<<<<< HEAD
 
 ## Recommendations
 ${report.recommendations.map(item => `- ${item}`).join("\n")}
@@ -363,3 +367,9 @@ console.log('====')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+// console.log(' Zion Tech Group - Working Automation Suite')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

@@ -41,7 +41,6 @@ function MobileBottomNav() {const router = use_router ()const { user } = use_aut
   const favorites_count = wishlist_items.length;
   const cartContextValue = use_cart ()// Call hook at top level;
   let cart_count = 0;
-<<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
   // Check condition
 if ( {) {
   $2
@@ -298,7 +297,6 @@ import { logWarn } from '@/utils/productionLogger',;
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
 interface MobileBottomNavProps {;
   unreadCount?: number;
-<<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
 
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const router = useRouter();
@@ -317,7 +315,6 @@ if ( {) {$2;
   let cartCount = 0;
   if (cartContextValue && cartContextValue.items) {cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0) } else {// logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")}
   const navItems = [;
-<<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
     {;
       name: 'Home',;
       href: '/',;
@@ -450,9 +447,7 @@ import { useWishlist } from "@/hooks/useWishlist",import { useCart } from '@/con
               {item && item.name}
             </span>;
           </Link>;
-<<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
         ))}
-<<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
 
 
 
@@ -488,7 +483,6 @@ import { useWishlist } from "@/hooks/useWishlist",import { useCart } from '@/con
             </span>;
           </Link>))}
       </div>;
-<<<<<<< HEAD:src_backup/components/header/MobileBottomNav.tsx
     </nav>);
 }
 ;

@@ -1,51 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-export default AccessibilityEnhancer;
-ursor/automate-test-improve-and-merge-code-646c;
-import React, { useEffect, useState } from 'react';
-interface AccessibilitySettings  {highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  focusVisible: boolean;
-  screenReader: boolean;
-}export default function AccessibilityEnhancer() {const [settings, setSettings] = useState<AccessibilitySettings>({highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false;
-    screenReader: false;
-    screenReader: false;
-  })useEffect(() => {// Check for reduced motion preference;
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))// Check for high contrast preference;
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')setSettings(prev => ({ ...prev, highContrast: highContrastQuery.matches }))// Detect screen reader usage;
-    const screenReaderDetected =;
-      'speechSynthesis' in window ||;
-      'speechRecognition' in window ||;
-      navigator.userAgent.includes('NVDA') ||;
-      navigator.userAgent.includes('JAWS') ||;
-      navigator.userAgent.includes('VoiceOver')setSettings(prev => ({ ...prev, screenReader: screenReaderDetected }))// Apply initial settings;
-    applyAccessibilitySettings({...settings,reducedMotion: mediaQuery.matches,highContrast: highContrastQuery.matches,screenReader: screenReaderDetected;
-      screenReader: screenReaderDetected;
-      screenReader: screenReaderDetected;
-    })}, [])const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {const root  = document.documentElement;// Apply high contrast;
-    if (newSettings.highContrast) {root.classList.add('high-contrast')} else {root.classList.remove('high-contrast')}// Apply large text;
-    if (newSettings.largeText) {root.classList.add('large-text')} else {root.classList.remove('large-text')}// Apply reduced motion;
-    if (newSettings.reducedMotion) {root.classList.add('reduced-motion')} else {root.classList.remove('reduced-motion')}// Apply focus visible;
-    if (newSettings.focusVisible) {root.classList.add('focus-visible')} else {root.classList.remove('focus-visible')}// Apply screen reader optimizations;
-    if (newSettings.screenReader) {root.classList.add('screen-reader-optimized')} else {root.classList.remove('screen-reader-optimized')}
-  }const toggleSetting = (setting: keyof AccessibilitySettings) => {const newSettings = {...settings,[setting]: !settings[setting];
-      [setting]: !settings[setting];
-      [setting]: !settings[setting];
-    }setSettings(newSettings)applyAccessibilitySettings(newSettings)// Save to localStorage;
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}// Load settings from localStorage on mount;
-  useEffect(() => {const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {try {const parsed = JSON.parse(savedSettings)setSettings(parsed)applyAccessibilitySettings(parsed)} catch (error) {console.warn('Failed to load accessibility settings:', error)}
-    }
-import React, { useEffect, useState } from 'react';
-
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
 import React, { useEffect } from 'react'
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -155,10 +107,6 @@ if (typeof document !== 'undefined') {
 }
 
 export default AccessibilityEnhancer
-=======
-'use client'
-import React, { useState, useEffect } from 'react'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -177,7 +125,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
->>>>>>> origin/main
 
       }
       if (liveRegion && liveRegion.parentNode) {;
@@ -412,7 +359,6 @@ export default AccessibilityEnhancer;
   );
 }
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react';
 
@@ -579,8 +525,6 @@ export default function AccessibilityEnhancer() {
   );
 }
 
-=======
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -703,16 +647,7 @@ if (typeof document !== 'undefined') {;
   styleSheet.textContent = focusStyles;
   document.head.appendChild(styleSheet);
 };
->>>>>>> origin/merge-automation-changes
-=======
 export default AccessibilityEnhancer;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 'use client';
 
 import React, { useEffect } from 'react';
@@ -792,4 +727,3 @@ export default function AccessibilityEnhancer() {
     </>
   );
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

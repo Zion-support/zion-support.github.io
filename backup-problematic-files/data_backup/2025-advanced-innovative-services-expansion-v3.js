@@ -2,7 +2,6 @@ const advancedInnovativeServices2025V3 = [{ id:,ai-business-intelligence-platfor
 import React from 'react';
 interface 2025advancedinnovativeservicesexpansionv3Props  {// Add props here as needed;
 }
-<<<<<<< HEAD
 export default function 2025advancedinnovativeservicesexpansionv3({ }: 2025advancedinnovativeservicesexpansionv3Props) {
   return (
     <div>
@@ -10,14 +9,4 @@ export default function 2025advancedinnovativeservicesexpansionv3({ }: 2025advan
       <p>This component is currently under development.</p>
     </div>
   );
-=======
-export default function 2025advancedinnovativeservicesexpansionv3() {return (<div>;
-      <h1>2025advancedinnovativeservicesexpansionv3</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  )}
-}
-}
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }

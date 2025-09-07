@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React from 'react';
 import Link from 'next/link';
 interface ButtonProps  {children: React.ReactNode;
@@ -22,37 +11,11 @@ interface ButtonProps {
   onClick?: () => void;
   className?: string;
   variant?: 'primary' | 'secondary' | 'outline';
-<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg';
 }export default function Button() {const baseClasses  = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';const variantClasses = {primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-blue-500';
   }const sizeClasses = {sm: 'px-3 py-2 text-sm',md: 'px-4 py-2 text-base',lg: 'px-6 py-3 text-lg';
   }const classes  = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;if (href) {return (<Link href={href} className={classes}>;
         {children}
-=======
-
-  size?: 'sm' | 'md' | 'lg';}
-}
-}
-
-export default function Button() {const baseClasses  = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
-
-const variantClasses = {primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500';}
-  secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500';,outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-blue-500';}
-  }
-
-const sizeClasses = {sm: 'px-3 py-2 text-sm';}
-  md: 'px-4 py-2 text-base';,lg: 'px-6 py-3 text-lg';}
-  }
-
-const classes  = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;if (href) {return (<Link href={href} className={classes} />;
-        {children}
-      </Link>
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?:
     | 'default'
@@ -85,7 +48,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>  {va
         )}
         ref={ref}
         {...props}
-<<<<<<< HEAD
       />;
     )}return (<button onClick={onClick} className={classes}>;
       {children}
@@ -107,38 +69,6 @@ const Button: React.FC<ButtonProps> = ({children,variant = "primary",size = "md"
 }) => {const baseClasses =;
     "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
   const variantClasses = {primary: "bg-blue-600 text-white hover:bg-blue-700",secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300",outline: "border border-gray-300 bg-transparent hover:bg-gray-50",ghost: "hover:bg-gray-100"}const sizeClasses = {sm: "h-8 px-3 text-xs",md: "h-10 px-4 py-2",lg: "h-12 px-8 text-lg"}class_name?: string;
-=======
-      />
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-<<<<<<< HEAD
-=======
-import React from 'react';
-import Link from 'next/link';
-
-interface ButtonProps {
-  children: React.ReactNode;
-  href?: string;
-  onClick?: () => void;
-  className?: string;
-  variant?: 'primary' | 'secondary' | 'outline';
-  size?: 'sm' | 'md' | 'lg';
-}
-export default function Button() {const baseClasses  = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
-
-const variantClasses = {primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500'}
-  secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-blue-500';}
-  }
-
-const sizeClasses = {sm: 'px-3 py-2 text-sm'}
-  md: 'px-4 py-2 text-base',lg: 'px-6 py-3 text-lg';}
-  }
-
-const classes  = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;if (href) {return (<Link href={href} className={classes} />;
-        {children}
-      </Link>
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     );
   }
   return (
@@ -147,16 +77,9 @@ const classes  = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]}
     </button>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 pr-12243
-=======
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -219,7 +142,6 @@ if ( {) {$2;}
       on_click={on_click}
       disabled={disabled}
       type={type}onClick?: () => void;
-=======
 const Button: React.FC < ButtonProps> = ({
   children,
   variant = "primary",
@@ -267,7 +189,6 @@ if ( {) {
       disabled={disabled}
       type={type}
   onClick?: () => void;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   className?: string;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset',
@@ -275,7 +196,6 @@ if ( {) {
   iconPosition?: 'left' | 'right',
   style?: React.CSSProperties
 }
-<<<<<<< HEAD
 const Button: React.FC<ButtonProps> = ({primary:;
       'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 border-0',secondary:;
       'bg-gray-800 hover:bg-gray-700 text-white border border-gray-600 hover:border-gray-500 hover:shadow-lg hover:-translate-y-0.5',ghost:;
@@ -317,7 +237,6 @@ export { Button }
 }
 
 import React from "react";
->>>>>>> origin/main
 
 
 import React from "react";
@@ -325,95 +244,28 @@ import React from "react";
 
 import React from 'react';
 import Link from 'next/link';
-=======
-<<<<<<< HEAD
 import React from 'react'
 import Link from 'next/link'
-=======
-import React from 'react';
-import Link from 'next/link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from "react";
 
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 interface ButtonProps {
-<<<<<<< HEAD
   children: React.ReactNode,
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
-=======
-<<<<<<< HEAD
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
-<<<<<<< HEAD
 interface ButtonProps {;
   children: React && React.ReactNode;
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
-=======
-  onClick?: () => void;
-  className?: string;
-  disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset',
-  icon?: React.ReactNode;
-  iconPosition?: 'left' | 'right',
-  style?: React.CSSProperties
-}
-const Button: React.FC<ButtonProps> = ({
-
-  children
-  variant = "primary"
-  size = "md"
-  className = ""
-  onClick
-  disabled = false
-  type = "button"
-  asChild = false
-  ...props
-}) => {
-  const baseClasses =
-    "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
-  const variantClasses = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700"
-    secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300"
-    outline: "border border-gray-300 bg-transparent hover:bg-gray-50"
-    ghost: "hover:bg-gray-100"
-  }
-  const sizeClasses = {
-    sm: "h-8 px-3 text-xs"
-    md: "h-10 px-4 py-2"
-    lg: "h-12 px-8 text-lg"
-  }
-<<<<<<< HEAD
 
 const classes  = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
 const content = (<>;
-=======
-const Button: React.FC<ButtonProps> = ({
-    primary:
-      'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 border-0',
-    secondary:
-      'bg-gray-800 hover:bg-gray-700 text-white border border-gray-600 hover:border-gray-500 hover:shadow-lg hover:-translate-y-0.5',
-    ghost:
-      'bg-transparent hover:bg-white/5 text-gray-300 hover:text-white hover:shadow-md hover:-translate-y-0.5',
-    outline:
-      'bg-transparent border border-white/20 text-white hover:bg-white/5 hover:border-white/40 hover:shadow-md hover:-translate-y-0.5',
-  };
-  const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
-  };
-const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-
-  const content = (
-    <>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       {/* Shine effect for primary buttons */}
       {variant === 'primary' && (
         <div className='absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-1000' />
@@ -424,43 +276,8 @@ const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} 
           {icon}
         </span>
       )}
-<<<<<<< HEAD
     </>;
   )if (href) {return (<Link href={href} className={classes} style={style} />;
-=======
-  children: React.ReactNode
-  href?: string
-  onClick?: () => void
-  type?: 'button' | 'submit' | 'reset'
-  variant?: 'primary' | 'secondary' | 'outline'
-  className?: string
-  disabled?: boolean
-  style?: React.CSSProperties
-}
-
-const Button: React.FC<ButtonProps> = ({
-  children,
-  href,
-  onClick,
-  type = 'button',
-  variant = 'primary',
-  className = '',
-  disabled = false,
-  style
-}) => {
-  const baseClasses = 'px-4 py-2 rounded-md font-medium transition-colors duration-200'
-  const variantClasses = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400',
-    secondary: 'bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400',
-    outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:bg-gray-100'
-  }
-  const classes = `${baseClasses} ${variantClasses[variant]} ${className}`
-  const content = <>{children}</>
-  if (href) {
-    return (
-      <Link href={href} className={classes} style={style}>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
       <span className='relative z-10'>{children}</span>
       {icon && iconPosition === 'right' && (
         <span className='ml-2 transition-transform duration-200 group-hover:scale-110'>
@@ -473,13 +290,9 @@ const Button: React.FC<ButtonProps> = ({
   if (href) {
     return (
       <Link href={href} className={classes} style={style}>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         {content}
       </Link>
-<<<<<<< HEAD
     )
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
     return React.cloneElement(children as React.ReactElement, {
@@ -514,11 +327,9 @@ const Button: React.FC<ButtonProps> = ({;
   };
   class_name?: string;
   on_click?: () => void;
->>>>>>> origin/main
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
 }
-<<<<<<< HEAD
 
 const Button: React.FC<ButtonProps> = ({
   children;
@@ -559,15 +370,6 @@ const Button: React.FC<ButtonProps> = ({
     >
       {children}
     </motion.button>
-=======
-    );
-  }
-
-  
-    >
-      {content}
-    </button>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   );
 };
 export default Button;"

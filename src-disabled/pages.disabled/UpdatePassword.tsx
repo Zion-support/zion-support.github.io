@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/pages/UpdatePassword.tsx
 
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
@@ -442,7 +441,6 @@ export default function UpdatePassword() {;
                   </form>
                 </Form>
               )}
-<<<<<<< HEAD:src_backup/pages/UpdatePassword.tsx
 :src/pages/UpdatePassword.tsx
 
             </div>

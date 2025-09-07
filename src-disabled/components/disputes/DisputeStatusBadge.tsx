@@ -1,12 +1,9 @@
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import {
   Tooltip
   TooltipContent
   TooltipTrigger
 } from '@/components/ui/tooltip'
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
@@ -53,7 +50,6 @@ export function DisputeStatusBadge() {let variant: "default" | "destructive" | "
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
           <span>Under Dispute</span>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
 status: 'open' | 'under_review' | 'resolved' | 'closed';
 
 export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
@@ -86,7 +82,6 @@ export /**;
 function DisputeStatusBadge() {let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;
     'destructive';
   let message = 'This item has an open dispute';
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
   switch (status) {case 'under_review':;
 
 import { Badge } from '@/components / ui / badge';
@@ -134,7 +129,6 @@ pr-12325
       variant = 'outline';
       message = 'This dispute has been closed';
       break;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
     default:;
       break;interface DisputeStatusBadgeProps  {status: 'open' | 'under_review' | 'resolved' | 'closed';
 }export function DisputeStatusBadge() {let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",let message = "This item has an open dispute",switch (status) {case 'under_review':;
@@ -153,7 +147,6 @@ pr-12325
       <TooltipTrigger as_child>;
         <Badge variant={variant} className='flex items - center gap - 1'>;
           <ShieldAlert className='h - 3 w - 3' />;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
           <span > Under Dispute</span>;
     default:;,
       break;
@@ -258,7 +251,6 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
         <p>{message}</p>;
       </TooltipContent>;
 
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
 
 
 

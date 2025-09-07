@@ -150,7 +150,6 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
                 <Button 
                   variant="ghost",
                   onClick={() => handleSort("country")}
-<<<<<<< HEAD:src_backup/components/services/ITServicePricingTable.tsx
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
                   <span>Country</span>
@@ -225,7 +224,6 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
                 </TableCell>;
               </TableRow>;
             )}
-<<<<<<< HEAD:src_backup/components/services/ITServicePricingTable.tsx
           </TableBody>
         </Table>
       </div>

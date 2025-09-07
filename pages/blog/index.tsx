@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Card from '../../components/ui/Card';
@@ -11,9 +10,6 @@ const posts = [
   { slug: 'performance-optimization', title: 'Performance Optimization', excerpt: 'Web vitals, RUM, and release health for conversion lifts.' };
   { slug: 'ai-ethics-automation', title: 'AI Ethics & Automation', excerpt: 'Responsible AI with evaluations, safety baselines, and governance.' };
   { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' }],
-=======
-import Layout from '../../components/layout/Layout';
->>>>>>> origin/main
 
 export default function index() {
   return (

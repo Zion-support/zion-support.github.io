@@ -1,6 +1,4 @@
 <<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
@@ -138,7 +136,6 @@ main
 
   // Next.js specific
   withSentryConfig: (config: any) => config,
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
   
   // Server-specific methods (Node && Node.js)
   Handlers: {
@@ -189,7 +186,6 @@ const mockSentry = {// Core Sentry methods;
     },Replay: class Replay {constructor() {}
     },Breadcrumbs: class Breadcrumbs {constructor() {}
     }
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
     Http: class Http {
 =    BrowserTracing: class BrowserTracing {,
 >      constructor() {}
@@ -291,7 +287,6 @@ const mock_sentry = {// Core Sentry methods;
         next ()next ()next ()},// Server - specific methods (Node.js)Handlers: {request_handler: () => (_req: any, _res: any, next: (...args: any[], ) => any) => next (),error_handler: () => (_err: any, _req: any, _res: any, next: (...args: any[], ) => any) => next (),tracing_handler: () => (_req: any, _res: any, next: (...args: any[], ) => any) => next ()},// Next.js specific;
   withSentryConfig: (config: any, ) => config,SentryWebpackPlugin: class SentryWebpackPlugin {constructor () {}
     apply () {}
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
   },
   // Tracing;
   Tracing: {
@@ -330,7 +325,6 @@ const mock_sentry = {// Core Sentry methods;
     Debug: "debug",
   },
 };
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
     Fatal: 'fatal',
     Error: 'error',
     Warning: 'warning',
@@ -414,7 +408,6 @@ const mockScope = {;
 
 // Additional exports for compatibility
 >export { mockSentry as Sentry }
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
 // All exports are already defined above
 <<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
 =
@@ -487,8 +480,6 @@ export { mock_sentry as Sentry }
 <<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
 // All exports are already defined above;
 // All exports are already defined above;
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 // All exports are already defined above;

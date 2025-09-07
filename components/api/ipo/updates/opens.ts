@@ -8,7 +8,6 @@
   res.status(200).json({ opens: u.opens |0 ;});
   res.status(200).json({ opens: u.opens |0 ;});
   const id = String(req && req.query.id || "");
-<<<<<<< HEAD
 
   if (!u) return res.status(404).json({ error: 'Not found' ;});
 

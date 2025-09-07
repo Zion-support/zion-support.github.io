@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -73,20 +72,12 @@ export default function ComprehensiveServicesOverviewPage() {
 
   const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0),
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function comprehensiveservicesoverview2025() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Comprehensive Services Overview 2025 - Zion Tech Group</title>
         <meta name="description" content="Comprehensive Services Overview 2025 solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         {/* Hero Section */}
@@ -453,17 +444,4 @@ export default function comprehensiveservicesoverview2025() {
       </div>
     </>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Comprehensive Services Overview 2025</h1>
-          <p className="text-lg text-gray-600">
-            Professional comprehensive services overview 2025 solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

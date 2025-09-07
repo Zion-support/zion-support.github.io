@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
   {{id: string;
@@ -11,37 +10,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export interface AdvancedITService {
 id: string;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   id: string;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface AdvancedITService {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   id: string;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-=======
 
 ;
   {{id: string;
 export interface AdvancedITService  {id: string;name: string;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   id: string;
 export interface AdvancedITService {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   name: string;
   tagline: string;
   price: string;
@@ -67,7 +48,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   marketSize: string;
   growthRate: string;
   variant: string;
-<<<<<<< HEAD
   contactInfo: {mobile: string;
     email: string;
     address: string;website: string;
@@ -1101,14 +1081,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     launchDate: '2024-10-01';
     customers: 89;rating: 4 && 4.8,reviews: 45;
     rating: 4 && 4.8,rating: 4.8;reviews: 45;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
 
-<<<<<<< HEAD
 
 
 
@@ -1169,41 +1146,26 @@ export const advancedITServices: AdvancedITService[] = [
 
   {
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     website: string
   },
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
   reviews: number
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
     id: 'edge - computing - orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge computing management and optimization',
     price: '$1, 999',
-<<<<<<< HEAD
     period: '/month',
     description:;
       'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.',
@@ -1222,14 +1184,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
 
-=======
-=======
-  {}
-    id: 'edge - computing - orchestrator','
-    name: 'Edge Computing Orchestrator','
-    tagline: 'Intelligent edge computing management and optimization','
-    price: '$1, 999','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     period: '/month',
     description:;'
       'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.',
@@ -1248,11 +1202,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / edge - computing - orchestrator',
@@ -1296,7 +1245,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
@@ -1304,92 +1252,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       '24 / 7 support',']
     ],
     popular: true,
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
 '
       mobile: '+1 302 464 0950','
       email: 'kleber@ziontechgroup && ziontechgroup.com','
       address: '364 E Main St STE 1008 Middletown DE 19709','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     real_implementation: true,
     implementation_details:;'
       'Complete edge computing orchestration platform with intelligent resource management and real - time optimization.','
     launch_date: '2024 - 10 - 01',
-<<<<<<< HEAD
     customers: 156,
-=======
-
-  {
-
-
-    id: 'edge - computing - orchestrator',''
-    name: 'Edge Computing Orchestrator',''
-    tagline: 'Intelligent edge computing management and optimization',''
-    price: '$1, 999',''
-    period: '/month','
-    description:;'
-      'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.','
-    features: [;
-'
-      'Intelligent resource allocation',''
-      'Real - time performance optimization',''
-      'Edge device management',''
-      'Load balancing',''
-      'Security and compliance',''
-      'Monitoring and analytics',''
-      'Automated scaling',''
-      'API gateway',''
-      'Integration tools',''
-      '24 / 7 support',']
-    ],
-    popular: true,
-'
-      mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
-    },
-    real_implementation: true,
-    implementation_details:;'
-      'Complete edge computing orchestration platform with intelligent resource management and real - time optimization.',''
-    launch_date: '2024 - 10 - 01','
-    customers: 156,
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     rating: 4 && 4.7,
     reviews: 89
   },
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     id: 'ai-powered-cloud-migration'
     name: 'AI-Powered Cloud Migration'
     tagline: 'Intelligent cloud migration and optimization'
@@ -1465,15 +1352,6 @@ pr-12325
     rating: 4.8
     reviews: 45
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
@@ -1553,20 +1431,9 @@ pr-12325
     rating: 4 && 4.8,
     reviews: 45,
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
     id: 'ai-powered-cloud-migration,
@@ -1668,14 +1535,9 @@ pr-12325
     icon: '⚡',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
-=======
-    icon: '⚡',
-pr-12325
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - powered - devops - platform',
@@ -1729,11 +1591,7 @@ pr-12325
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-      website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     real_implementation: true,
     implementation_details:;
@@ -1745,168 +1603,7 @@ pr-12325
 pr-12325
       'AI - powered DevOps platform with intelligent automation, testing, and monitoring capabilities.',
     launch_date: '2024 - 08 - 01',
-<<<<<<< HEAD
     customers: 234,
-=======
-
-  {'
-    id: 'ai-powered-cloud-migration'','
-  name: 'AI-Powered Cloud Migration'''
-    tagline: 'Intelligent cloud migration and optimization'','
-  price: '$5,999'''
-    period: '/month'',
-  description:'
-      'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.''
-    features: ['
-      'AI migration planning'''
-      'Cost optimization'''
-      'Performance analysis'''
-      'Security assessment'''
-      'Compliance tools'''
-      'Automated migration'''
-      'Real-time monitoring'''
-      'Integration APIs'''
-      'Migration dashboard'''
-      '24/7 support'']
-    ]
-    popular: true;,'
-  icon: '☁️'''
-    color: 'from-blue-600 to-indigo-700'','
-  textColor: 'text-blue-400'''
-    link: 'https://ziontechgroup.com/ai-powered-cloud-migration'',
-  marketPosition:'
-      'AI-enhanced cloud migration competing with Accenture and Deloitte''
-    targetAudience:'
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations''
-    trialDays: 30;,'
-  setupTime: '1 month'''
-    category: 'Cloud Migration'',
-  realService: true;
-    technology: ['
-      'AI/ML'''
-      'Cloud Computing'''
-      'Migration Tools'''
-      'Performance Analysis'''
-      'Cost Optimization'']
-
-    ]
-    integrations: ['
-      'AWS'''
-      'Azure'''
-      'Google Cloud'''
-      'On-premises systems'''
-      'Monitoring tools'']
-    ]
-
-    useCases: ['
-      'Cloud migration'''
-      'Cost optimization'''
-      'Performance improvement'''
-      'Security enhancement'']
-    ]'
-    roi: '600% ROI within 12 months through cost savings and performance improvements'',
-  competitors: ['
-      'Accenture ($50000+/month)'''
-      'Deloitte ($40000+/month)'''
-      'AWS Migration Hub'']
-    ]'
-    marketSize: '$15B cloud migration market'','
-  growthRate: '200% annual growth'''
-    variant: 'ai-migration-futuristic'',
-  contactInfo: {'
-      mobile: '+1 302 464 0950'','
-  email: 'kleber@ziontechgroup.com'''
-      address: '364 E Main St STE 1008 Middletown DE 19709'','
-  website: 'https://ziontechgroup.com''
-    }
-    realImplementation: true;,
-  implementationDetails:'
-      'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'''
-    launchDate: '2024-10-01'',
-  customers: 89;
-    rating: 4.8;,
-  reviews: 45;
-  }
-  },
-  {
-'
-      'AI-powered automation',''
-    id: 'ai - powered - devops - platform',''
-    name: 'AI - Powered DevOps Platform',''
-    tagline: 'Intelligent DevOps automation and optimization',''
-    price: '$2, 499',''
-    period: '/month','
-    description:;'
-      'Revolutionary AI - powered DevOps platform that automates deployment, testing, and monitoring while providing intelligent insights and optimization recommendations.','
-    features: [;'
-      'AI - powered automation',''
-      'Intelligent testing',''
-      'Predictive monitoring',''
-      'Performance optimization',''
-      'Security scanning',''
-      'Compliance automation',''
-      'Real - time analytics',''
-      'Integration APIs',''
-      'Mobile applications',''
-      '24 / 7 support',']
-    ],
-    popular: true,'
-    icon: '⚡',''
-    color: 'from - purple - 600 to - pink - 700',''
-    text_color: 'text - purple - 400',''
-    link: 'https://ziontechgroup.com / ai - powered - devops - platform','
-    market_position:;'
-      'AI - enhanced DevOps platform competing with GitLab and GitHub Actions','
-    target_audience:;'
-      'Development teams, DevOps engineers, IT operations, Software companies','
-    trial_days: 30,'
-    setup_time: '2 weeks',''
-    category: 'DevOps & Automation','
-    real_service: true,
-    technology: [;'
-      'AI / ML',''
-      'DevOps',''
-      'CI / CD',''
-      'Container Orchestration',''
-      'Cloud Computing',']
-    ],
-    integrations: [;'
-      'GitHub',''
-      'GitLab',''
-      'Jenkins',''
-      'Kubernetes',''
-      'Docker',''
-      'AWS',''
-      'Azure',']
-    ],
-    use_cases: [;'
-      'CI / CD automation',''
-      'DevOps optimization',''
-      'Performance monitoring',''
-      'Security automation',']
-    ],'
-    roi: '350% ROI within 6 months through automation and performance improvements','
-    competitors: [;'
-      'GitLab ($99+/month)',''
-      'GitHub Actions ($1000+/month)',''
-      'Jenkins',']
-    ],'
-    market_size: '$8B DevOps market',''
-    growth_rate: '180% annual growth',''
-    variant: 'ai - devops - futuristic','
-    contact_info: {,'
-  mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
-    },
-    real_implementation: true,
-    implementation_details:;'
-      'AI - powered DevOps platform with intelligent automation, testing, and monitoring capabilities.',''
-    launch_date: '2024 - 08 - 01','
-    customers: 234,
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     rating: 4 && 4.6,
     reviews: 123
   },
@@ -1914,12 +1611,8 @@ pr-12325
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-<<<<<<< HEAD
 
 
-=======
-pr-12325
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions and infrastructure',
@@ -1946,12 +1639,9 @@ pr-12325
     icon: '🔗',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
@@ -2009,125 +1699,22 @@ pr-12325
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-      website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     real_implementation: true,
     implementation_details:;
       'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.',
     launch_date: '2024 - 07 - 01',
-<<<<<<< HEAD
     customers: 67,
-=======
-'
-    id: 'blockchain - enterprise - platform',''
-    name: 'Blockchain Enterprise Platform',''
-    tagline: 'Enterprise - grade blockchain solutions and infrastructure',''
-    price: '$4, 999',''
-    period: '/month','
-    description:;'
-      'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.','
-    features: [;
-'
-      'Enterprise blockchain networks',''
-      'Smart contract development',''
-      'Token management',''
-      'Compliance tools',''
-      'Security features',''
-      'Performance optimization',''
-      'Integration APIs',''
-      'Analytics dashboard',''
-      'Mobile applications',''
-      '24 / 7 support',']
-    ],
-    popular: true,'
-    icon: '🔗',''
-    color: 'from - yellow - 600 to - orange - 700',''
-    text_color: 'text - yellow - 400',''
-    link: 'https://ziontechgroup.com / blockchain - enterprise - platform','
-    market_position:;'
-      'Enterprise blockchain platform competing with IBM Blockchain and ConsenSys','
-    target_audience:;'
-      'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies','
-    trial_days: 30,'
-    setup_time: '1 month',''
-    category: 'Blockchain & Web3','
-    real_service: true,
-    technology: [;'
-      'Blockchain',''
-      'Smart Contracts',''
-      'Web3',''
-      'Cryptography',''
-      'Distributed Systems',']
-    ],
-    integrations: [;'
-      'Ethereum',''
-      'Hyperledger',''
-      'Corda',''
-      'Enterprise systems',''
-      'Payment platforms',']
-    ],
-    use_cases: [;'
-      'Supply chain tracking',''
-      'Financial transactions',''
-      'Digital identity',''
-      'Smart contracts',']
-    ],'
-    roi: '500% ROI within 18 months through efficiency improvements and new business models','
-    competitors: [;'
-      'IBM Blockchain ($10000+/month)',''
-      'ConsenSys ($5000+/month)',''
-      'R3 Corda',']
-    ],'
-    market_size: '$20B enterprise blockchain market',''
-    growth_rate: '300% annual growth',''
-    variant: 'blockchain - futuristic','
-    contact_info: {,'
-  mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
-    },
-    real_implementation: true,
-    implementation_details:;'
-      'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.',''
-    launch_date: '2024 - 07 - 01','
-    customers: 67,
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     rating: 4 && 4.7,
     reviews: 34
   },
   {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
-=======
-      'Payment platforms',']
-      'Supply chain tracking',
-      'Financial transactions',
-      'Digital identity',
-      'Smart contracts',']
-    roi: '500% ROI within 18 months through efficiency improvements and new business models',
-      'IBM Blockchain ($10000+/month)',
-      'ConsenSys ($5000+/month)',
-      'R3 Corda',']
-    market_size: '$20B enterprise blockchain market',
-    growth_rate: '300% annual growth',
-    variant: 'blockchain - futuristic',
-      'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.',
-    launch_date: '2024 - 07 - 01',
-    customers: 67,
-    reviews: 34,
-
-pr-12325
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     id: 'quantum - data - center',
     name: 'Quantum Data Center',
     tagline: 'Next - generation quantum - enhanced data center infrastructure',
@@ -2154,12 +1741,9 @@ pr-12325
     icon: '🏢',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / quantum - data - center',
@@ -2205,11 +1789,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-      website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     real_implementation: true,
     implementation_details:;
@@ -2246,85 +1826,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
       'Quantum - enhanced data center with quantum computing integration and AI optimization capabilities.',
     launch_date: '2024 - 11 - 01',
-<<<<<<< HEAD
     customers: 12,
-=======
-'
-    id: 'quantum - data - center',''
-    name: 'Quantum Data Center',''
-    tagline: 'Next - generation quantum - enhanced data center infrastructure',''
-    price: '$15, 999',''
-    period: '/month','
-    description:;'
-      'Revolutionary quantum - enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.','
-    features: [;
-'
-      'Quantum computing integration',''
-      'AI - powered optimization',''
-      'Advanced security',''
-      'Energy efficiency',''
-      'Performance monitoring',''
-      'Scalability',''
-      'Compliance tools',''
-      'Integration APIs',''
-      '24 / 7 support',''
-      'Quantum support team',']
-    ],
-    popular: true,'
-    icon: '🏢',''
-    color: 'from - cyan - 600 to - blue - 700',''
-    text_color: 'text - cyan - 400',''
-    link: 'https://ziontechgroup.com / quantum - data - center','
-    market_position:;'
-      'First quantum - enhanced data center, competing with AWS, Azure, and Google Cloud','
-    target_audience:;'
-      'Large enterprises, Research institutions, Government agencies, Financial institutions','
-    trial_days: 30,'
-    setup_time: '2 months',''
-    category: 'Data Center & Infrastructure','
-    real_service: true,
-    technology: [;'
-      'Quantum Computing',''
-      'AI / ML',''
-      'Data Center Infrastructure',''
-      'Cloud Computing',''
-      'Quantum Networks',']
-    ],
-    integrations: [;'
-      'AWS',''
-      'Azure',''
-      'Google Cloud',''
-      'On - premises systems',''
-      'Quantum computers',']
-    ],
-    use_cases: [;'
-      'High - performance computing',''
-      'Quantum research',''
-      'Enterprise applications',''
-      'Research computing',']
-    ],'
-    roi: '800% ROI within 18 months through performance improvements and competitive advantage','
-    competitors: [;'
-      'AWS ($50000+/month)',''
-      'Azure ($40000+/month)',''
-      'Google Cloud ($45000+/month)',']
-    ],'
-    market_size: '$200B data center market',''
-    growth_rate: '150% annual growth',''
-    variant: 'quantum - infrastructure','
-    contact_info: {,'
-  mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
-    },
-    real_implementation: true,
-    implementation_details:;'
-      'Quantum - enhanced data center with quantum computing integration and AI optimization capabilities.',''
-    launch_date: '2024 - 11 - 01','
-    customers: 12,
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     rating: 4 && 4.9,
     reviews: 6
   },
@@ -2332,12 +1834,8 @@ pr-12325
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-<<<<<<< HEAD
 
 
-=======
-pr-12325
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network security with AI threat detection',
@@ -2364,12 +1862,9 @@ pr-12325
     icon: '🔒',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / ai - powered - network - security',
@@ -2430,123 +1925,22 @@ pr-12325
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-      website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     real_implementation: true,
     implementation_details:;
       'AI - powered network security platform with real - time threat detection and automated response capabilities.',
     launch_date: '2024 - 09 - 15',
-<<<<<<< HEAD
     customers: 178,
-=======
-'
-    id: 'ai - powered - network - security',''
-    name: 'AI - Powered Network Security',''
-    tagline: 'Intelligent network security with AI threat detection',''
-    price: '$2, 999',''
-    period: '/month','
-    description:;'
-      'Advanced AI - powered network security platform providing real - time threat detection, automated response, and intelligent security analytics for enterprise networks.','
-    features: [;
-'
-      'AI threat detection',''
-      'Real - time monitoring',''
-      'Automated response',''
-      'Behavioral analytics',''
-      'Network segmentation',''
-      'Compliance tools',''
-      'Performance analytics',''
-      'Integration APIs',''
-      'Security dashboard',''
-      '24 / 7 security support',']
-    ],
-    popular: true,'
-    icon: '🔒',''
-    color: 'from - indigo - 600 to - purple - 700',''
-    text_color: 'text - indigo - 400',''
-    link: 'https://ziontechgroup.com / ai - powered - network - security','
-    market_position:;'
-      'AI - enhanced network security competing with Cisco and Palo Alto Networks','
-    target_audience:;'
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations','
-    trial_days: 30,'
-    setup_time: '2 weeks',''
-    category: 'Network Security','
-    real_service: true,
-    technology: [;'
-      'AI / ML',''
-      'Network Security',''
-      'Threat Intelligence',''
-      'Behavioral Analytics',''
-      'Automation',']
-    ],
-    integrations: [;'
-      'Cisco',''
-      'Palo Alto Networks',''
-      'Fortinet',''
-      'SIEM systems',''
-      'Firewalls',']
-    ],
-    use_cases: [;'
-      'Network protection',''
-      'Threat detection',''
-      'Compliance',''
-      'Security monitoring',']
-    ],'
-    roi: '400% ROI within 12 months through threat prevention and security improvements','
-    competitors: [;'
-      'Cisco ($8000+/month)',''
-      'Palo Alto Networks ($10000+/month)',''
-      'Fortinet ($5000+/month)',']
-    ],'
-    market_size: '$25B network security market',''
-    growth_rate: '180% annual growth',''
-    variant: 'ai - network - futuristic','
-    contact_info: {,'
-  mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
-    },
-    real_implementation: true,
-    implementation_details:;'
-      'AI - powered network security platform with real - time threat detection and automated response capabilities.',''
-    launch_date: '2024 - 09 - 15','
-    customers: 178,
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     rating: 4 && 4.7,
     reviews: 89
   },
   {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
-=======
-      'Firewalls',']
-      'Network protection',
-      'Threat detection',
-      'Compliance',
-      'Security monitoring',']
-    roi: '400% ROI within 12 months through threat prevention and security improvements',
-      'Cisco ($8000+/month)',
-      'Palo Alto Networks ($10000+/month)',
-      'Fortinet ($5000+/month)',']
-    market_size: '$25B network security market',
-    variant: 'ai - network - futuristic',
-      'AI - powered network security platform with real - time threat detection and automated response capabilities.',
-    launch_date: '2024 - 09 - 15',
-    customers: 178,
-
-pr-12325
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     id: 'quantum - iot - platform',
     name: 'Quantum IoT Platform',
     tagline: 'Quantum - enhanced IoT with AI intelligence',
@@ -2571,12 +1965,9 @@ pr-12325
     icon: '📱',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     color: 'from - green - 600 to - teal - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / quantum - iot - platform',
@@ -2638,95 +2029,13 @@ pr-12325
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-      website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     real_implementation: true,
     implementation_details:;
       'Quantum - enhanced IoT platform with quantum encryption and AI - powered analytics capabilities.',
     launch_date: '2024 - 08 - 15',
-<<<<<<< HEAD
     customers: 234,
-=======
-'
-    id: 'quantum - iot - platform',''
-    name: 'Quantum IoT Platform',''
-    tagline: 'Quantum - enhanced IoT with AI intelligence',''
-    price: '$3, 499',''
-    period: '/month','
-    description:;'
-      'Revolutionary quantum - enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI - powered analytics.','
-    features: [;
-'
-      'Quantum encryption',''
-      'AI - powered analytics',''
-      'Real - time monitoring',''
-      'Device management',''
-      'Security features',''
-      'Performance optimization',''
-      'Integration APIs',''
-      'Analytics dashboard',''
-      'Mobile applications',''
-      '24 / 7 support',']
-    ],
-    popular: true,'
-    icon: '📱',''
-    color: 'from - green - 600 to - teal - 700',''
-    text_color: 'text - green - 400',''
-    link: 'https://ziontechgroup.com / quantum - iot - platform','
-    market_position:;'
-      'Quantum - enhanced IoT platform competing with AWS IoT and Azure IoT','
-    target_audience:;'
-      'IoT companies, Smart cities, Manufacturing, Healthcare, Transportation','
-    trial_days: 30,'
-    setup_time: '2 weeks',''
-    category: 'Quantum IoT','
-    real_service: true,
-    technology: [;'
-      'Quantum Computing',''
-      'IoT',''
-      'AI / ML',''
-      'Quantum Encryption',''
-      'Edge Computing',']
-    ],
-    integrations: [;'
-      'AWS IoT',''
-      'Azure IoT',''
-      'Google Cloud IoT',''
-      'Device manufacturers',''
-      'Analytics platforms',']
-    ],
-    use_cases: [;'
-      'Smart cities',''
-      'Industrial IoT',''
-      'Healthcare monitoring',''
-      'Transportation tracking',']
-    ],'
-    roi: '450% ROI within 12 months through security improvements and operational efficiency','
-    competitors: [;'
-      'AWS IoT ($1000+/month)',''
-      'Azure IoT ($2000+/month)',''
-      'Google Cloud IoT ($1500+/month)',']
-    ],'
-    market_size: '$100B IoT market',''
-    growth_rate: '250% annual growth',''
-    variant: 'quantum - iot - futuristic','
-    contact_info: {,'
-  mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
-    },
-    real_implementation: true,
-    implementation_details:;'
-      'Quantum - enhanced IoT platform with quantum encryption and AI - powered analytics capabilities.',''
-    launch_date: '2024 - 08 - 15','
-    customers: 234,
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     rating: 4 && 4.6,
     reviews: 123
   },
@@ -2773,12 +2082,9 @@ pr-12325
     icon: '☁️',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - powered - cloud - migration',
@@ -2824,11 +2130,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-      website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     real_implementation: true,
     implementation_details:;
@@ -2836,15 +2138,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launch_date: '2024 - 10 - 01',
     customers: 89,
     rating: 4 && 4.8,
-<<<<<<< HEAD
     reviews: 45
   },
 
-=======
-    reviews: 45,
-  },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     id: 'ai-powered-cloud-migration'
     name: 'AI-Powered Cloud Migration'
     tagline: 'Intelligent cloud migration and optimization'
@@ -2920,11 +2216,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8
     reviews: 45
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
   {}
 '
@@ -2952,15 +2243,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,'
     icon: '⚡',
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
-=======
-'
-    color: 'from - purple - 600 to - pink - 700','
-    text_color: 'text - purple - 400','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     link: 'https://ziontechgroup.com / ai - powered - devops - platform',
     market_position:;'
       'AI - enhanced DevOps platform competing with GitLab and GitHub Actions',
@@ -3016,7 +2301,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.6,
     reviews: 123,
   },
-<<<<<<< HEAD
   {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -3024,14 +2308,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions and infrastructure',
     price: '$4, 999',
-=======
-  {}
-'
-    id: 'blockchain - enterprise - platform','
-    name: 'Blockchain Enterprise Platform','
-    tagline: 'Enterprise - grade blockchain solutions and infrastructure','
-    price: '$4, 999','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     period: '/month',
     description:;'
       'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.',
@@ -3051,15 +2327,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,'
     icon: '🔗',
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
-=======
-'
-    color: 'from - yellow - 600 to - orange - 700','
-    text_color: 'text - yellow - 400','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
     market_position:;'
       'Enterprise blockchain platform competing with IBM Blockchain and ConsenSys',
@@ -3113,7 +2383,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.7,
     reviews: 34,
   },
-<<<<<<< HEAD
   {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -3121,14 +2390,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'Quantum Data Center',
     tagline: 'Next - generation quantum - enhanced data center infrastructure',
     price: '$15, 999',
-=======
-  {}
-'
-    id: 'quantum - data - center','
-    name: 'Quantum Data Center','
-    tagline: 'Next - generation quantum - enhanced data center infrastructure','
-    price: '$15, 999','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     period: '/month',
     description:;'
       'Revolutionary quantum - enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.',
@@ -3148,15 +2409,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,'
     icon: '🏢',
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
-=======
-'
-    color: 'from - cyan - 600 to - blue - 700','
-    text_color: 'text - cyan - 400','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     link: 'https://ziontechgroup.com / quantum - data - center',
     market_position:;'
       'First quantum - enhanced data center, competing with AWS, Azure, and Google Cloud',
@@ -3210,7 +2465,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 6,
   },
-<<<<<<< HEAD
   {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -3218,14 +2472,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network security with AI threat detection',
     price: '$2, 999',
-=======
-  {}
-'
-    id: 'ai - powered - network - security','
-    name: 'AI - Powered Network Security','
-    tagline: 'Intelligent network security with AI threat detection','
-    price: '$2, 999','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     period: '/month',
     description:;'
       'Advanced AI - powered network security platform providing real - time threat detection, automated response, and intelligent security analytics for enterprise networks.',
@@ -3245,15 +2491,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,'
     icon: '🔒',
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
-=======
-'
-    color: 'from - indigo - 600 to - purple - 700','
-    text_color: 'text - indigo - 400','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     link: 'https://ziontechgroup.com / ai - powered - network - security',
     market_position:;'
       'AI - enhanced network security competing with Cisco and Palo Alto Networks',
@@ -3307,7 +2547,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.7,
     reviews: 89,
   },
-<<<<<<< HEAD
   {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -3315,14 +2554,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'Quantum IoT Platform',
     tagline: 'Quantum - enhanced IoT with AI intelligence',
     price: '$3, 499',
-=======
-  {}
-'
-    id: 'quantum - iot - platform','
-    name: 'Quantum IoT Platform','
-    tagline: 'Quantum - enhanced IoT with AI intelligence','
-    price: '$3, 499','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     period: '/month',
     description:;'
       'Revolutionary quantum - enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI - powered analytics.',
@@ -3342,15 +2573,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,'
     icon: '📱',
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - green - 600 to - teal - 700',
     text_color: 'text - green - 400',
-=======
-'
-    color: 'from - green - 600 to - teal - 700','
-    text_color: 'text - green - 400','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     link: 'https://ziontechgroup.com / quantum - iot - platform',
     market_position:;'
       'Quantum - enhanced IoT platform competing with AWS IoT and Azure IoT',
@@ -3429,15 +2654,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true,'
     icon: '☁️',
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
-=======
-'
-    color: 'from - blue - 600 to - indigo - 700','
-    text_color: 'text - blue - 400','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     link: 'https://ziontechgroup.com / ai - powered - cloud - migration',
     market_position:;'
       'AI - enhanced cloud migration competing with Accenture and Deloitte',
@@ -3491,18 +2710,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 45,
   },
-<<<<<<< HEAD
     id: 'ai-powered-cloud-migration'
     name: 'AI-Powered Cloud Migration'
     tagline: 'Intelligent cloud migration and optimization'
     price: '$5,999'
-=======
-'
-    id: 'ai-powered-cloud-migration''
-    name: 'AI-Powered Cloud Migration''
-    tagline: 'Intelligent cloud migration and optimization''
-    price: '$5,999''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     period: '/month'
     description:'
       'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.'
@@ -3566,7 +2777,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       address: '364 E Main St STE 1008 Middletown DE 19709''
       website: 'https://ziontechgroup.com'
     }
-<<<<<<< HEAD
     realImplementation: true
     implementationDetails:
       'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
@@ -3575,42 +2785,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8
     reviews: 45
   }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
     launchDate: '2024-10-01',
     customers: 89,
     rating: 4.8,
     reviews: 45,
   },;
-<<<<<<< HEAD
 
 
 
 
 
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'AI - powered cloud migration platform with intelligent planning and automated execution capabilities.';
     launch_date: '2024 - 10 - 01';
     customers: 89;
-<<<<<<< HEAD
     rating: 4.8,reviews: 45;
   }];
 export interface AdvancedITService  {id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,variant: string,contactInfo: {mobile: string,email: string,address: string,website: string;
@@ -3655,8 +2854,6 @@ export interface AdvancedITService  {id: string,name: string,tagline: string,pri
   }export interface AdvancedITService  {}
 ];ursor/fix-website-loading-errors-and-merge-6662;
 ];
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     rating: 4.8,
     reviews: 45;
     website: string;
@@ -3671,7 +2868,6 @@ export interface AdvancedITService  {id: string,name: string,tagline: string,pri
       'Automated scaling',
       'API gateway',
       'Integration tools',
-<<<<<<< HEAD
       '24 / 7 support'
     id: 'quantum-cloud-platform',
     name: 'Quantum Cloud Platform',
@@ -4039,141 +3235,6 @@ export interface AdvancedITService  {id: string,name: string,tagline: string,pri
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
     launchDate: '2024-10-01',
     customers: 89,
-=======
-      '24 / 7 support',
-    ],
-    popular: true,
-    icon: '🌐',
-    marketPosition:
-      'Advanced edge orchestration platform competing with AWS Greengrass and Azure IoT Edge'
-    targetAudience:
-      'IoT companies, Manufacturing, Smart cities, Transportation, Healthcare'
-    trialDays: 30
-    setupTime: '2 weeks'
-    category: 'Edge Computing'
-    realService: true
-    technology: [
-      'Edge Computing'
-      'AI/ML'
-      'IoT'
-      'Container Orchestration'
-      'Real-time Analytics'
-    ]
-    integrations: [
-      'AWS IoT'
-      'Azure IoT'
-      'Google Cloud IoT'
-      'Kubernetes'
-      'Docker'
-    ]
-    useCases: [
-      'IoT management'
-      'Real-time analytics'
-      'Edge AI'
-      'Smart manufacturing'
-    ]
-    roi: '300% ROI within 6 months through reduced latency and improved performance'
-    competitors: [
-      'AWS Greengrass ($1000+/month)'
-      'Azure IoT Edge ($2000+/month)'
-      'Google Cloud IoT'
-    ]
-    marketSize: '$50B edge computing market'
-    growthRate: '250% annual growth'
-    variant: 'edge-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Complete edge computing orchestration platform with intelligent resource management and real - time optimization.',
-    launch_date: '2024 - 10 - 01',
-    customers: 156,
-    rating: 4 && 4.7,
-    reviews: 89,
-  },
-  {
-      'Continuous identity verification',
-      'Micro - segmentation',
-      'Advanced threat detection',
-      'Behavioral analytics',
-      'Compliance tools',
-      'Real - time monitoring',
-      'Automated response',
-      'Integration APIs',
-      'Security dashboard',
-      '24 / 7 security support',
-    ],
-    popular: true,
-    icon: '🛡️',
-    marketPosition:
-      'Comprehensive zero trust platform competing with Palo Alto Networks and CrowdStrike'
-    targetAudience:
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations'
-    trialDays: 30
-    setupTime: '1 month'
-    category: 'Cybersecurity'
-    realService: true
-    technology: [
-      'Zero Trust Architecture'
-      'AI/ML'
-      'Identity Management'
-      'Network Security'
-      'Threat Intelligence'
-    ]
-    integrations: [
-      'Active Directory'
-      'Okta'
-      'Palo Alto Networks'
-      'CrowdStrike'
-      'SIEM systems'
-    ]
-    useCases: [
-      'Enterprise security'
-      'Government compliance'
-      'Financial security'
-      'Healthcare compliance'
-    ]
-    roi: '400% ROI within 12 months through security improvements and compliance benefits'
-    competitors: [
-      'Palo Alto Networks ($10000+/month)'
-      'CrowdStrike ($5000+/month)'
-      'Zscaler'
-    ]
-    marketSize: '$30B zero trust market'
-    growthRate: '200% annual growth'
-    variant: 'zero-trust-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.',
-    launch_date: '2024 - 09 - 01',
-    customers: 89,
-    rating: 4 && 4.8,
-    reviews: 45,
-  },
-  {
-      'Intelligent testing',
-      'Predictive monitoring',
-      'Performance optimization',
-      'Security scanning',
-      'Compliance automation',
-      'Real - time analytics',
-      'Integration APIs',
-      'Mobile applications',
-      '24 / 7 support',
-    ],
-    popular: true,
-    icon: '⚡',
-<<<<<<< HEAD
     marketPosition:
       'AI-enhanced DevOps platform competing with GitLab and GitHub Actions'
     targetAudience:
@@ -4214,13 +3275,8 @@ export interface AdvancedITService  {id: string,name: string,tagline: string,pri
     growthRate: '180% annual growth'
     variant: 'ai-devops-futuristic'
     contactInfo: {
-=======
-
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - powered - devops - platform',
@@ -4265,7 +3321,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'ai - devops - futuristic',
     contact_info: {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4280,14 +3335,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 123,
   },
   {
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions and infrastructure',
@@ -4297,7 +3346,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.',
     features: [;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Enterprise blockchain networks',
       'Smart contract development',
       'Token management',
@@ -4311,7 +3359,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '🔗',
-<<<<<<< HEAD
     marketPosition:
       'Enterprise blockchain platform competing with IBM Blockchain and ConsenSys'
     targetAudience:
@@ -4350,13 +3397,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growthRate: '300% annual growth'
     variant: 'blockchain-futuristic'
     contactInfo: {
-=======
-
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
@@ -4399,7 +3441,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'blockchain - futuristic',
     contact_info: {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4414,14 +3455,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 34,
   },
   {
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     id: 'quantum - data - center',
     name: 'Quantum Data Center',
     tagline: 'Next - generation quantum - enhanced data center infrastructure',
@@ -4431,7 +3466,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Revolutionary quantum - enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.',
     features: [;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Quantum computing integration',
       'AI - powered optimization',
       'Advanced security',
@@ -4445,7 +3479,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '🏢',
-<<<<<<< HEAD
     marketPosition:
       'First quantum-enhanced data center, competing with AWS, Azure, and Google Cloud'
     targetAudience:
@@ -4484,13 +3517,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growthRate: '150% annual growth'
     variant: 'quantum-infrastructure'
     contactInfo: {
-=======
-
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / quantum - data - center',
@@ -4533,7 +3561,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'quantum - infrastructure',
     contact_info: {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4548,14 +3575,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 6,
   },
   {
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network security with AI threat detection',
@@ -4565,7 +3586,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Advanced AI - powered network security platform providing real - time threat detection, automated response, and intelligent security analytics for enterprise networks.',
     features: [;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'AI threat detection',
       'Real - time monitoring',
       'Automated response',
@@ -4579,7 +3599,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '🔒',
-<<<<<<< HEAD
     marketPosition:
       'AI-enhanced network security competing with Cisco and Palo Alto Networks'
     targetAudience:
@@ -4618,13 +3637,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growthRate: '180% annual growth'
     variant: 'ai-network-futuristic'
     contactInfo: {
-=======
-
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / ai - powered - network - security',
@@ -4667,7 +3681,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'ai - network - futuristic',
     contact_info: {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4682,14 +3695,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 89,
   },
   {
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     id: 'quantum - iot - platform',
     name: 'Quantum IoT Platform',
     tagline: 'Quantum - enhanced IoT with AI intelligence',
@@ -4699,7 +3706,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Revolutionary quantum - enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI - powered analytics.',
     features: [;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Quantum encryption',
       'AI - powered analytics',
       'Real - time monitoring',
@@ -4713,7 +3719,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '📱',
-<<<<<<< HEAD
     marketPosition:
       'Quantum-enhanced IoT platform competing with AWS IoT and Azure IoT'
     targetAudience:
@@ -4752,13 +3757,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growthRate: '250% annual growth'
     variant: 'quantum-iot-futuristic'
     contactInfo: {
-=======
-
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     color: 'from - green - 600 to - teal - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / quantum - iot - platform',
@@ -4801,7 +3801,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'quantum - iot - futuristic',
     contact_info: {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4829,14 +3828,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '☁️',
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - powered - cloud - migration',
@@ -4892,10 +3885,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 45,
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     id: 'ai-powered-cloud-migration'
     name: 'AI-Powered Cloud Migration'
     tagline: 'Intelligent cloud migration and optimization'
@@ -4920,7 +3910,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from-blue-600 to-indigo-700'
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/ai-powered-cloud-migration'
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     marketPosition:
       'AI-enhanced cloud migration competing with Accenture and Deloitte'
     targetAudience:
@@ -4959,7 +3948,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growthRate: '200% annual growth'
     variant: 'ai-migration-futuristic'
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4969,47 +3957,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details:;
       'AI - powered cloud migration platform with intelligent planning and automated execution capabilities.',
     launch_date: '2024 - 10 - 01',
-=======
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-<<<<<<< HEAD
       'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
     launchDate: '2024-10-01',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 89,
     rating: 4 && 4.8,
     reviews: 45,
-<<<<<<< HEAD
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
-  },;
-
-
-
-=======
-      'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
-    launchDate: '2024-10-01'
-    customers: 89
-    rating: 4.8
-    reviews: 45
-  }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'quantum-cloud-platform';
     name: 'Quantum Cloud Platform';
@@ -5091,7 +4052,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     realImplementation: true;
     implementationDetails: 'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.';
-<<<<<<< HEAD
     launchDate: '2024-10-01';
     customers: 156;
     rating: 4.7;
@@ -5394,8 +4354,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
     realImplementation: true;
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     launchDate: '2024-10-01';
     customers: 156;
     rating: 4.7;
@@ -5696,12 +4654,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       website: 'https://ziontechgroup.com'
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -6110,729 +5062,6 @@ website: 'https://ziontechgroup.com';
 
 
     rating: 4 && 4.8,
-<<<<<<< HEAD
-=======
-    reviews: 45;
-  },
-  {
-      'Intelligent testing',
-      'Predictive monitoring',
-      'Performance optimization',
-      'Security scanning',
-      'Compliance automation',
-      'Real - time analytics',
-      'Integration APIs',
-      'Mobile applications',
-      '24 / 7 support',
-    ],
-    popular: true,
-    icon: '⚡',
-    marketPosition:
-      'AI-enhanced DevOps platform competing with GitLab and GitHub Actions'
-    targetAudience:
-      'Development teams, DevOps engineers, IT operations, Software companies'
-    trialDays: 30
-    setupTime: '2 weeks'
-    category: 'DevOps & Automation'
-    realService: true
-    technology: [
-      'AI/ML'
-      'DevOps'
-      'CI/CD'
-      'Container Orchestration'
-      'Cloud Computing'
-    ]
-    integrations: [
-      'GitHub'
-      'GitLab'
-      'Jenkins'
-      'Kubernetes'
-      'Docker'
-      'AWS'
-      'Azure'
-    ]
-    useCases: [
-      'CI/CD automation'
-      'DevOps optimization'
-      'Performance monitoring'
-      'Security automation'
-    ]
-    roi: '350% ROI within 6 months through automation and performance improvements'
-    competitors: [
-      'GitLab ($99+/month)'
-      'GitHub Actions ($1000+/month)'
-      'Jenkins'
-    ]
-    marketSize: '$8B DevOps market'
-    growthRate: '180% annual growth'
-    variant: 'ai-devops-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'AI - powered DevOps platform with intelligent automation, testing, and monitoring capabilities.',
-    launch_date: '2024 - 08 - 01',
-
-  {'
-      'Intelligent testing',''
-      'Predictive monitoring',''
-      'Performance optimization',''
-      'Security scanning',''
-      'Compliance automation',''
-      'Real - time analytics',''
-      'Integration APIs',''
-      'Mobile applications',''
-      '24 / 7 support','
-    ],
-    popular: true,'
-    icon: '⚡',''
-    marketPosition: 'AI-enhanced DevOps platform competing with GitLab and GitHub Actions'',
-  targetAudience:'
-      'Development teams, DevOps engineers, IT operations, Software companies''
-    trialDays: 30;,'
-  setupTime: '2 weeks'''
-    category: 'DevOps & Automation'',
-  realService: true;
-    technology: ['
-      'AI/ML'''
-      'DevOps'''
-      'CI/CD'''
-      'Container Orchestration'''
-      'Cloud Computing'']
-
-    ]
-    integrations: ['
-      'GitHub'''
-      'GitLab'''
-      'Jenkins'''
-      'Kubernetes'''
-      'Docker'''
-      'AWS'''
-      'Azure'']
-    ]
-
-    useCases: ['
-      'CI/CD automation'''
-      'DevOps optimization'''
-      'Performance monitoring'''
-      'Security automation'']
-    ]'
-    roi: '350% ROI within 6 months through automation and performance improvements'',
-  competitors: ['
-      'GitLab ($99+/month)'''
-      'GitHub Actions ($1000+/month)'''
-      'Jenkins'']
-    ]'
-    marketSize: '$8B DevOps market'','
-  growthRate: '180% annual growth'''
-    variant: 'ai-devops-futuristic'',
-  contactInfo: {'
-      mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
-    },
-    real_implementation: true,
-    implementation_details:;'
-      'AI - powered DevOps platform with intelligent automation, testing, and monitoring capabilities.',''
-    launch_date: '2024 - 08 - 01','
-    customers: 234,
-
-    rating: 4 && 4.6,
-    reviews: 123;
-  },
-  {
-      'Enterprise blockchain networks',
-      'Smart contract development',
-      'Token management',
-      'Compliance tools',
-      'Security features',
-      'Performance optimization',
-      'Integration APIs',
-      'Analytics dashboard',
-      'Mobile applications',
-      '24 / 7 support',
-    ],
-    popular: true,
-    icon: '🔗',
-    marketPosition:
-      'Enterprise blockchain platform competing with IBM Blockchain and ConsenSys'
-    targetAudience:
-      'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies'
-    trialDays: 30
-    setupTime: '1 month'
-    category: 'Blockchain & Web3'
-    realService: true
-    technology: [
-      'Blockchain'
-      'Smart Contracts'
-      'Web3'
-      'Cryptography'
-      'Distributed Systems'
-    ]
-    integrations: [
-      'Ethereum'
-      'Hyperledger'
-      'Corda'
-      'Enterprise systems'
-      'Payment platforms'
-    ]
-    useCases: [
-      'Supply chain tracking'
-      'Financial transactions'
-      'Digital identity'
-      'Smart contracts'
-    ]
-    roi: '500% ROI within 18 months through efficiency improvements and new business models'
-    competitors: [
-      'IBM Blockchain ($10000+/month)'
-      'ConsenSys ($5000+/month)'
-      'R3 Corda'
-    ]
-    marketSize: '$20B enterprise blockchain market'
-    growthRate: '300% annual growth'
-    variant: 'blockchain-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.',
-    launch_date: '2024 - 07 - 01',
-
-  {'
-      'Enterprise blockchain networks',''
-      'Smart contract development',''
-      'Token management',''
-      'Compliance tools',''
-      'Security features',''
-      'Performance optimization',''
-      'Integration APIs',''
-      'Analytics dashboard',''
-      'Mobile applications',''
-      '24 / 7 support','
-    ],
-    popular: true,'
-    icon: '🔗',''
-    marketPosition: 'Enterprise blockchain platform competing with IBM Blockchain and ConsenSys'',
-  targetAudience:'
-      'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies''
-    trialDays: 30;,'
-  setupTime: '1 month'''
-    category: 'Blockchain & Web3'',
-  realService: true;
-    technology: ['
-      'Blockchain'''
-      'Smart Contracts'''
-      'Web3'''
-      'Cryptography'''
-      'Distributed Systems'']
-
-    ]
-    integrations: ['
-      'Ethereum'''
-      'Hyperledger'''
-      'Corda'''
-      'Enterprise systems'''
-      'Payment platforms'']
-    ]
-
-    useCases: ['
-      'Supply chain tracking'''
-      'Financial transactions'''
-      'Digital identity'''
-      'Smart contracts'']
-    ]'
-    roi: '500% ROI within 18 months through efficiency improvements and new business models'',
-  competitors: ['
-      'IBM Blockchain ($10000+/month)'''
-      'ConsenSys ($5000+/month)'''
-      'R3 Corda'']
-    ]'
-    marketSize: '$20B enterprise blockchain market'','
-  growthRate: '300% annual growth'''
-    variant: 'blockchain-futuristic'',
-  contactInfo: {'
-      mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
-    },
-    real_implementation: true,
-    implementation_details:;'
-      'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.',''
-    launch_date: '2024 - 07 - 01','
-    customers: 67,
-
-    rating: 4 && 4.7,
-    reviews: 34;
-  },
-  {
-      'Quantum computing integration',
-      'AI - powered optimization',
-      'Advanced security',
-      'Energy efficiency',
-      'Performance monitoring',
-      'Scalability',
-      'Compliance tools',
-      'Integration APIs',
-      '24 / 7 support',
-      'Quantum support team',
-    ],
-    popular: true,
-    icon: '🏢',
-    marketPosition:
-      'First quantum-enhanced data center, competing with AWS, Azure, and Google Cloud'
-    targetAudience:
-      'Large enterprises, Research institutions, Government agencies, Financial institutions'
-    trialDays: 30
-    setupTime: '2 months'
-    category: 'Data Center & Infrastructure'
-    realService: true
-    technology: [
-      'Quantum Computing'
-      'AI/ML'
-      'Data Center Infrastructure'
-      'Cloud Computing'
-      'Quantum Networks'
-    ]
-    integrations: [
-      'AWS'
-      'Azure'
-      'Google Cloud'
-      'On-premises systems'
-      'Quantum computers'
-    ]
-    useCases: [
-      'High-performance computing'
-      'Quantum research'
-      'Enterprise applications'
-      'Research computing'
-    ]
-    roi: '800% ROI within 18 months through performance improvements and competitive advantage'
-    competitors: [
-      'AWS ($50000+/month)'
-      'Azure ($40000+/month)'
-      'Google Cloud ($45000+/month)'
-    ]
-    marketSize: '$200B data center market'
-    growthRate: '150% annual growth'
-    variant: 'quantum-infrastructure'
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Quantum - enhanced data center with quantum computing integration and AI optimization capabilities.',
-    launch_date: '2024 - 11 - 01',
-
-  {'
-      'Quantum computing integration',''
-      'AI - powered optimization',''
-      'Advanced security',''
-      'Energy efficiency',''
-      'Performance monitoring',''
-      'Scalability',''
-      'Compliance tools',''
-      'Integration APIs',''
-      '24 / 7 support',''
-      'Quantum support team','
-    ],
-    popular: true,'
-    icon: '🏢','
-    marketPosition:'
-      'First quantum-enhanced data center, competing with AWS, Azure, and Google Cloud''
-    targetAudience:'
-      'Large enterprises, Research institutions, Government agencies, Financial institutions''
-    trialDays: 30;,'
-  setupTime: '2 months'''
-    category: 'Data Center & Infrastructure'',
-  realService: true;
-    technology: ['
-      'Quantum Computing'''
-      'AI/ML'''
-      'Data Center Infrastructure'''
-      'Cloud Computing'''
-      'Quantum Networks'']
-
-    ]
-    integrations: ['
-      'AWS'''
-      'Azure'''
-      'Google Cloud'''
-      'On-premises systems'''
-      'Quantum computers'']
-    ]
-
-    useCases: ['
-      'High-performance computing'''
-      'Quantum research'''
-      'Enterprise applications'''
-      'Research computing'']
-    ]'
-    roi: '800% ROI within 18 months through performance improvements and competitive advantage'',
-  competitors: ['
-      'AWS ($50000+/month)'''
-      'Azure ($40000+/month)'''
-      'Google Cloud ($45000+/month)'']
-    ]'
-    marketSize: '$200B data center market'','
-  growthRate: '150% annual growth'''
-    variant: 'quantum-infrastructure'',
-  contactInfo: {'
-      mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
-    },
-    real_implementation: true,
-    implementation_details:;'
-      'Quantum - enhanced data center with quantum computing integration and AI optimization capabilities.',''
-    launch_date: '2024 - 11 - 01','
-    customers: 12,
-
-    rating: 4 && 4.9,
-    reviews: 6;
-  },
-  {
-      'AI threat detection',
-      'Real - time monitoring',
-      'Automated response',
-      'Behavioral analytics',
-      'Network segmentation',
-      'Compliance tools',
-      'Performance analytics',
-      'Integration APIs',
-      'Security dashboard',
-      '24 / 7 security support',
-    ],
-    popular: true,
-    icon: '🔒',
-    marketPosition:
-      'AI-enhanced network security competing with Cisco and Palo Alto Networks'
-    targetAudience:
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations'
-    trialDays: 30
-    setupTime: '2 weeks'
-    category: 'Network Security'
-    realService: true
-    technology: [
-      'AI/ML'
-      'Network Security'
-      'Threat Intelligence'
-      'Behavioral Analytics'
-      'Automation'
-    ]
-    integrations: [
-      'Cisco'
-      'Palo Alto Networks'
-      'Fortinet'
-      'SIEM systems'
-      'Firewalls'
-    ]
-    useCases: [
-      'Network protection'
-      'Threat detection'
-      'Compliance'
-      'Security monitoring'
-    ]
-    roi: '400% ROI within 12 months through threat prevention and security improvements'
-    competitors: [
-      'Cisco ($8000+/month)'
-      'Palo Alto Networks ($10000+/month)'
-      'Fortinet ($5000+/month)'
-    ]
-    marketSize: '$25B network security market'
-    growthRate: '180% annual growth'
-    variant: 'ai-network-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'AI - powered network security platform with real - time threat detection and automated response capabilities.',
-    launch_date: '2024 - 09 - 15',
-
-  {'
-      'AI threat detection',''
-      'Real - time monitoring',''
-      'Automated response',''
-      'Behavioral analytics',''
-      'Network segmentation',''
-      'Compliance tools',''
-      'Performance analytics',''
-      'Integration APIs',''
-      'Security dashboard',''
-      '24 / 7 security support','
-    ],
-    popular: true,'
-    icon: '🔒',''
-    marketPosition: 'AI-enhanced network security competing with Cisco and Palo Alto Networks'',
-  targetAudience:'
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations''
-    trialDays: 30;,'
-  setupTime: '2 weeks'''
-    category: 'Network Security'',
-  realService: true;
-    technology: ['
-      'AI/ML'''
-      'Network Security'''
-      'Threat Intelligence'''
-      'Behavioral Analytics'''
-      'Automation'']
-
-    ]
-    integrations: ['
-      'Cisco'''
-      'Palo Alto Networks'''
-      'Fortinet'''
-      'SIEM systems'''
-      'Firewalls'']
-    ]
-
-    useCases: ['
-      'Network protection'''
-      'Threat detection'''
-      'Compliance'''
-      'Security monitoring'']
-    ]'
-    roi: '400% ROI within 12 months through threat prevention and security improvements'',
-  competitors: ['
-      'Cisco ($8000+/month)'''
-      'Palo Alto Networks ($10000+/month)'''
-      'Fortinet ($5000+/month)'']
-    ]'
-    marketSize: '$25B network security market'','
-  growthRate: '180% annual growth'''
-    variant: 'ai-network-futuristic'',
-  contactInfo: {'
-      mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
-    },
-    real_implementation: true,
-    implementation_details:;'
-      'AI - powered network security platform with real - time threat detection and automated response capabilities.',''
-    launch_date: '2024 - 09 - 15','
-    customers: 178,
-
-    rating: 4 && 4.7,
-    reviews: 89;
-  },
-  {
-      'Quantum encryption',
-      'AI - powered analytics',
-      'Real - time monitoring',
-      'Device management',
-      'Security features',
-      'Performance optimization',
-      'Integration APIs',
-      'Analytics dashboard',
-      'Mobile applications',
-      '24 / 7 support',
-    ],
-    popular: true,
-    icon: '📱',
-    marketPosition:
-      'Quantum-enhanced IoT platform competing with AWS IoT and Azure IoT'
-    targetAudience:
-      'IoT companies, Smart cities, Manufacturing, Healthcare, Transportation'
-    trialDays: 30
-    setupTime: '2 weeks'
-    category: 'Quantum IoT'
-    realService: true
-    technology: [
-      'Quantum Computing'
-      'IoT'
-      'AI/ML'
-      'Quantum Encryption'
-      'Edge Computing'
-    ]
-    integrations: [
-      'AWS IoT'
-      'Azure IoT'
-      'Google Cloud IoT'
-      'Device manufacturers'
-      'Analytics platforms'
-    ]
-    useCases: [
-      'Smart cities'
-      'Industrial IoT'
-      'Healthcare monitoring'
-      'Transportation tracking'
-    ]
-    roi: '450% ROI within 12 months through security improvements and operational efficiency'
-    competitors: [
-      'AWS IoT ($1000+/month)'
-      'Azure IoT ($2000+/month)'
-      'Google Cloud IoT ($1500+/month)'
-    ]
-    marketSize: '$100B IoT market'
-    growthRate: '250% annual growth'
-    variant: 'quantum-iot-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Quantum - enhanced IoT platform with quantum encryption and AI - powered analytics capabilities.',
-    launch_date: '2024 - 08 - 15',
-
-  {'
-      'Quantum encryption',''
-      'AI - powered analytics',''
-      'Real - time monitoring',''
-      'Device management',''
-      'Security features',''
-      'Performance optimization',''
-      'Integration APIs',''
-      'Analytics dashboard',''
-      'Mobile applications',''
-      '24 / 7 support','
-    ],
-    popular: true,'
-    icon: '📱',''
-    marketPosition: 'Quantum-enhanced IoT platform competing with AWS IoT and Azure IoT'',
-  targetAudience:'
-      'IoT companies, Smart cities, Manufacturing, Healthcare, Transportation''
-    trialDays: 30;,'
-  setupTime: '2 weeks'''
-    category: 'Quantum IoT'',
-  realService: true;
-    technology: ['
-      'Quantum Computing'''
-      'IoT'''
-      'AI/ML'''
-      'Quantum Encryption'''
-      'Edge Computing'']
-
-    ]
-    integrations: ['
-      'AWS IoT'''
-      'Azure IoT'''
-      'Google Cloud IoT'''
-      'Device manufacturers'''
-      'Analytics platforms'']
-    ]
-
-    useCases: ['
-      'Smart cities'''
-      'Industrial IoT'''
-      'Healthcare monitoring'''
-      'Transportation tracking'']
-    ]'
-    roi: '450% ROI within 12 months through security improvements and operational efficiency'',
-  competitors: ['
-      'AWS IoT ($1000+/month)'''
-      'Azure IoT ($2000+/month)'''
-      'Google Cloud IoT ($1500+/month)'']
-    ]'
-    marketSize: '$100B IoT market'','
-  growthRate: '250% annual growth'''
-    variant: 'quantum-iot-futuristic'',
-  contactInfo: {'
-      mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
-    },
-    real_implementation: true,
-    implementation_details:;'
-      'Quantum - enhanced IoT platform with quantum encryption and AI - powered analytics capabilities.',''
-    launch_date: '2024 - 08 - 15','
-    customers: 234,
-
-    rating: 4 && 4.6,
-    reviews: 123;
-  },
-  {
-      'AI migration planning',
-      'Cost optimization',
-      'Performance analysis',
-      'Security assessment',
-      'Compliance tools',
-      'Automated migration',
-      'Real - time monitoring',
-      'Integration APIs',
-      'Migration dashboard',
-      '24 / 7 support',
-    ],
-    popular: true,
-    icon: '☁️',
-    marketPosition:
-      'AI-enhanced cloud migration competing with Accenture and Deloitte'
-    targetAudience:
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations'
-    trialDays: 30
-    setupTime: '1 month'
-    category: 'Cloud Migration'
-    realService: true
-    technology: [
-      'AI/ML'
-      'Cloud Computing'
-      'Migration Tools'
-      'Performance Analysis'
-      'Cost Optimization'
-    ]
-    integrations: [
-      'AWS'
-      'Azure'
-      'Google Cloud'
-      'On-premises systems'
-      'Monitoring tools'
-    ]
-    useCases: [
-      'Cloud migration'
-      'Cost optimization'
-      'Performance improvement'
-      'Security enhancement'
-    ]
-    roi: '600% ROI within 12 months through cost savings and performance improvements'
-    competitors: [
-      'Accenture ($50000+/month)'
-      'Deloitte ($40000+/month)'
-      'AWS Migration Hub'
-    ]
-    marketSize: '$15B cloud migration market'
-    growthRate: '200% annual growth'
-    variant: 'ai-migration-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'AI - powered cloud migration platform with intelligent planning and automated execution capabilities.',
-    launch_date: '2024 - 10 - 01',
-    customers: 89,
-    rating: 4 && 4.8,
-    reviews: 45,
-  },
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     realImplementation: true;
     implementationDetails:
 
@@ -6847,423 +5076,11 @@ website: 'https://ziontechgroup.com';
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';'
     launchDate: '2024-10-01';
     customers: 89;
-<<<<<<< HEAD
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-    id: 'quantum-cloud-platform';
-    name: 'Quantum Cloud Platform';
-    tagline: 'Next-generation quantum computing in the cloud';
-    price: '$9,999',
-
-    period: '/month';
-    description: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.',
-    features: [
-      'Quantum computing resourcesQuantum algorithm libraryHybrid classical-quantum workflowsQuantum machine learningQuantum cryptographyPerformance optimizationReal-time quantum monitoringAdvanced analytics dashboard';
-      'API for integration24/7 quantum support'
-    ];
-    popular: true;
-    icon: '☁️';
-    color: 'from-blue-600 to-indigo-700';
-    textColor: 'text-blue-400';
-    link: 'https://ziontechgroup.com/quantum-cloud-platform';
-    marketPosition: 'First comprehensive quantum cloud platform, competing with IBM Quantum and AWS Braket',
-    targetAudience: 'Research institutions, Financial services, Pharmaceutical companies, Defense contractors',
-    trialDays: 30;
-    setupTime: '1 month';
-    category: 'Quantum Computing';
-    realService: true;
-    technology: ['Quantum ComputingCloud InfrastructureQuantum AlgorithmsAI/MLQuantum Cryptography'];
-    integrations: ['AWSAzureGoogle CloudResearch platformsFinancial systems'];
-    useCases: ['Drug discoveryFinancial modelingCryptographyOptimization problems'];
-    roi: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage';
-    competitors: ['IBM Quantum ($1000+/month)AWS Braket ($5000+/month)Google Quantum AI'];
-    marketSize: '$500M quantum computing market';
-    growthRate: '500% annual growth';
-    variant: 'quantum-cloud';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.',
-    launchDate: '2024-12-01';
-    customers: 8;
-    rating: 4.9;
-    reviews: 4
-
-  },
-  {
-    id: 'edge-computing-orchestrator';
-    name: 'Edge Computing Orchestrator';
-    tagline: 'Intelligent edge computing management and optimization';
-    price: '$1,999',
-
-    period: '/month';
-    description: 'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real-time applications.',
-    features: [
-      'Intelligent resource allocationReal-time performance optimizationEdge device managementLoad balancingSecurity and complianceMonitoring and analyticsAutomated scalingAPI gateway';
-      'Integration tools24/7 support'
-    ];
-    popular: true;
-    icon: '🌐';
-    color: 'from-green-600 to-emerald-700';
-    textColor: 'text-green-400';
-    link: 'https://ziontechgroup.com/edge-computing-orchestrator';
-    marketPosition: 'Advanced edge orchestration platform competing with AWS Greengrass and Azure IoT Edge';
-    targetAudience: 'IoT companies, Manufacturing, Smart cities, Transportation, Healthcare',
-    trialDays: 30;
-    setupTime: '2 weeks';
-    category: 'Edge Computing';
-    realService: true;
-    technology: ['Edge ComputingAI/MLIoTContainer OrchestrationReal-time Analytics'];
-    integrations: ['AWS IoTAzure IoTGoogle Cloud IoTKubernetesDocker'];
-    useCases: ['IoT managementReal-time analyticsEdge AISmart manufacturing'];
-    roi: '300% ROI within 6 months through reduced latency and improved performance';
-    competitors: ['AWS Greengrass ($1000+/month)Azure IoT Edge ($2000+/month)Google Cloud IoT'];
-    marketSize: '$50B edge computing market';
-    growthRate: '250% annual growth';
-    variant: 'edge-futuristic';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.';
-    launchDate: '2024-10-01';
-    customers: 156;
-    rating: 4.7;
-    reviews: 89
-
-  },
-  {
-    id: 'zero-trust-security-platform';
-    name: 'Zero Trust Security Platform';
-    tagline: 'Comprehensive zero trust security implementation';
-    price: '$3,999',
-
-    period: '/month';
-    description: 'Enterprise-grade zero trust security platform implementing the latest security principles with continuous verification, micro-segmentation, and advanced threat detection.',
-    features: [
-      'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsCompliance toolsReal-time monitoringAutomated responseIntegration APIs';
-      'Security dashboard24/7 security support'
-    ];
-    popular: true;
-    icon: '🛡️';
-    color: 'from-red-600 to-orange-700';
-    textColor: 'text-red-400';
-    link: 'https://ziontechgroup.com/zero-trust-security-platform';
-    marketPosition: 'Comprehensive zero trust platform competing with Palo Alto Networks and CrowdStrike';
-    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations',
-    trialDays: 30;
-    setupTime: '1 month';
-    category: 'Cybersecurity';
-    realService: true;
-    technology: ['Zero Trust ArchitectureAI/MLIdentity ManagementNetwork SecurityThreat Intelligence'];
-    integrations: ['Active DirectoryOktaPalo Alto NetworksCrowdStrikeSIEM systems'];
-    useCases: ['Enterprise securityGovernment complianceFinancial securityHealthcare compliance'];
-    roi: '400% ROI within 12 months through security improvements and compliance benefits';
-    competitors: ['Palo Alto Networks ($10000+/month)CrowdStrike ($5000+/month)Zscaler'];
-    marketSize: '$30B zero trust market';
-    growthRate: '200% annual growth';
-    variant: 'zero-trust-futuristic';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.';
-    launchDate: '2024-09-01';
-    customers: 89;
-    rating: 4.8;
-    reviews: 45
-
-  },
-  {
-    id: 'ai-powered-devops-platform';
-    name: 'AI-Powered DevOps Platform';
-    tagline: 'Intelligent DevOps automation and optimization';
-    price: '$2,499',
-
-    period: '/month';
-    description: 'Revolutionary AI-powered DevOps platform that automates deployment, testing, and monitoring while providing intelligent insights and optimization recommendations.',
-    features: [
-      'AI-powered automationIntelligent testingPredictive monitoringPerformance optimizationSecurity scanningCompliance automationReal-time analyticsIntegration APIs';
-      'Mobile applications24/7 support'
-    ];
-    popular: true;
-    icon: '⚡';
-    color: 'from-purple-600 to-pink-700';
-    textColor: 'text-purple-400';
-    link: 'https://ziontechgroup.com/ai-powered-devops-platform';
-    marketPosition: 'AI-enhanced DevOps platform competing with GitLab and GitHub Actions';
-    targetAudience: 'Development teams, DevOps engineers, IT operations, Software companies',
-    trialDays: 30;
-    setupTime: '2 weeks';
-    category: 'DevOps & Automation';
-    realService: true;
-    technology: ['AI/MLDevOpsCI/CDContainer OrchestrationCloud Computing'];
-    integrations: ['GitHubGitLabJenkinsKubernetesDockerAWSAzure'];
-    useCases: ['CI/CD automationDevOps optimizationPerformance monitoringSecurity automation'];
-    roi: '350% ROI within 6 months through automation and performance improvements';
-    competitors: ['GitLab ($99+/month)GitHub Actions ($1000+/month)Jenkins'];
-    marketSize: '$8B DevOps market';
-    growthRate: '180% annual growth';
-    variant: 'ai-devops-futuristic';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'AI-powered DevOps platform with intelligent automation, testing, and monitoring capabilities.',
-    launchDate: '2024-08-01';
-    customers: 234;
-    rating: 4.6;
-    reviews: 123
-
-  },
-  {
-    id: 'blockchain-enterprise-platform';
-    name: 'Blockchain Enterprise Platform';
-    tagline: 'Enterprise-grade blockchain solutions and infrastructure';
-    price: '$4,999',
-
-    period: '/month';
-    description: 'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.',
-    features: [
-      'Enterprise blockchain networksSmart contract developmentToken managementCompliance toolsSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboard';
-      'Mobile applications24/7 support'
-    ];
-    popular: true;
-    icon: '🔗';
-    color: 'from-yellow-600 to-orange-700';
-    textColor: 'text-yellow-400';
-    link: 'https://ziontechgroup.com/blockchain-enterprise-platform';
-    marketPosition: 'Enterprise blockchain platform competing with IBM Blockchain and ConsenSys';
-    targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies',
-    trialDays: 30;
-    setupTime: '1 month';
-    category: 'Blockchain & Web3';
-    realService: true;
-    technology: ['BlockchainSmart ContractsWeb3CryptographyDistributed Systems'];
-    integrations: ['EthereumHyperledgerCordaEnterprise systemsPayment platforms'];
-    useCases: ['Supply chain trackingFinancial transactionsDigital identitySmart contracts'];
-    roi: '500% ROI within 18 months through efficiency improvements and new business models';
-    competitors: ['IBM Blockchain ($10000+/month)ConsenSys ($5000+/month)R3 Corda'];
-    marketSize: '$20B enterprise blockchain market';
-    growthRate: '300% annual growth';
-    variant: 'blockchain-futuristic';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.',
-    launchDate: '2024-07-01';
-    customers: 67;
-    rating: 4.7;
-    reviews: 34
-
-  },
-  {
-    id: 'quantum-data-center';
-    name: 'Quantum Data Center';
-    tagline: 'Next-generation quantum-enhanced data center infrastructure';
-    price: '$15,999',
-
-    period: '/month';
-    description: 'Revolutionary quantum-enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.',
-    features: [
-      'Quantum computing integrationAI-powered optimizationAdvanced securityEnergy efficiencyPerformance monitoringScalabilityCompliance toolsIntegration APIs';
-      '24/7 supportQuantum support team'
-    ];
-    popular: true;
-    icon: '🏢';
-    color: 'from-cyan-600 to-blue-700';
-    textColor: 'text-cyan-400';
-    link: 'https://ziontechgroup.com/quantum-data-center';
-    marketPosition: 'First quantum-enhanced data center, competing with AWS, Azure, and Google Cloud',
-    targetAudience: 'Large enterprises, Research institutions, Government agencies, Financial institutions',
-    trialDays: 30;
-    setupTime: '2 months';
-    category: 'Data Center & Infrastructure';
-    realService: true;
-    technology: ['Quantum ComputingAI/MLData Center InfrastructureCloud ComputingQuantum Networks'];
-    integrations: ['AWSAzureGoogle CloudOn-premises systemsQuantum computers'];
-    useCases: ['High-performance computingQuantum researchEnterprise applicationsResearch computing'];
-    roi: '800% ROI within 18 months through performance improvements and competitive advantage';
-    competitors: ['AWS ($50000+/month)Azure ($40000+/month)Google Cloud ($45000+/month)'];
-    marketSize: '$200B data center market';
-    growthRate: '150% annual growth';
-    variant: 'quantum-infrastructure';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Quantum-enhanced data center with quantum computing integration and AI optimization capabilities.';
-    launchDate: '2024-11-01';
-    customers: 12;
-    rating: 4.9;
-    reviews: 6
-
-  },
-  {
-    id: 'ai-powered-network-security';
-    name: 'AI-Powered Network Security';
-    tagline: 'Intelligent network security with AI threat detection';
-    price: '$2,999',
-
-    period: '/month';
-    description: 'Advanced AI-powered network security platform providing real-time threat detection, automated response, and intelligent security analytics for enterprise networks.',
-    features: [
-      'AI threat detectionReal-time monitoringAutomated responseBehavioral analyticsNetwork segmentationCompliance toolsPerformance analyticsIntegration APIs';
-      'Security dashboard24/7 security support'
-    ];
-    popular: true;
-    icon: '🔒';
-    color: 'from-indigo-600 to-purple-700';
-    textColor: 'text-indigo-400';
-    link: 'https://ziontechgroup.com/ai-powered-network-security';
-    marketPosition: 'AI-enhanced network security competing with Cisco and Palo Alto Networks';
-    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations',
-    trialDays: 30;
-    setupTime: '2 weeks';
-    category: 'Network Security';
-    realService: true;
-    technology: ['AI/MLNetwork SecurityThreat IntelligenceBehavioral AnalyticsAutomation'];
-    integrations: ['CiscoPalo Alto NetworksFortinetSIEM systemsFirewalls'];
-    useCases: ['Network protectionThreat detectionComplianceSecurity monitoring'];
-    roi: '400% ROI within 12 months through threat prevention and security improvements';
-    competitors: ['Cisco ($8000+/month)Palo Alto Networks ($10000+/month)Fortinet ($5000+/month)'];
-    marketSize: '$25B network security market';
-    growthRate: '180% annual growth';
-    variant: 'ai-network-futuristic';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'AI-powered network security platform with real-time threat detection and automated response capabilities.';
-    launchDate: '2024-09-15';
-    customers: 178;
-    rating: 4.7;
-    reviews: 89
-
-  },
-  {
-    id: 'quantum-iot-platform';
-    name: 'Quantum IoT Platform';
-    tagline: 'Quantum-enhanced IoT with AI intelligence';
-    price: '$3,499',
-
-    period: '/month';
-    description: 'Revolutionary quantum-enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI-powered analytics.',
-    features: [
-      'Quantum encryptionAI-powered analyticsReal-time monitoringDevice managementSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboard';
-      'Mobile applications24/7 support'
-    ];
-    popular: true;
-    icon: '📱';
-    color: 'from-green-600 to-teal-700';
-    textColor: 'text-green-400';
-    link: 'https://ziontechgroup.com/quantum-iot-platform';
-    marketPosition: 'Quantum-enhanced IoT platform competing with AWS IoT and Azure IoT';
-    targetAudience: 'IoT companies, Smart cities, Manufacturing, Healthcare, Transportation',
-    trialDays: 30;
-    setupTime: '2 weeks';
-    category: 'Quantum IoT';
-    realService: true;
-    technology: ['Quantum ComputingIoTAI/MLQuantum EncryptionEdge Computing'];
-    integrations: ['AWS IoTAzure IoTGoogle Cloud IoTDevice manufacturersAnalytics platforms'];
-    useCases: ['Smart citiesIndustrial IoTHealthcare monitoringTransportation tracking'];
-    roi: '450% ROI within 12 months through security improvements and operational efficiency';
-    competitors: ['AWS IoT ($1000+/month)Azure IoT ($2000+/month)Google Cloud IoT ($1500+/month)'];
-    marketSize: '$100B IoT market';
-    growthRate: '250% annual growth';
-    variant: 'quantum-iot-futuristic';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Quantum-enhanced IoT platform with quantum encryption and AI-powered analytics capabilities.';
-    launchDate: '2024-08-15';
-    customers: 234;
-    rating: 4.6;
-    reviews: 123
-
-  },
-  {
-    id: 'ai-powered-cloud-migration';
-    name: 'AI-Powered Cloud Migration';
-    tagline: 'Intelligent cloud migration and optimization';
-    price: '$5,999',
-
-    period: '/month';
-    description: 'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.',
-    features: [
-      'AI migration planningCost optimizationPerformance analysisSecurity assessmentCompliance toolsAutomated migrationReal-time monitoringIntegration APIs';
-      'Migration dashboard24/7 support'
-    ];
-    popular: true;
-    icon: '☁️';
-    color: 'from-blue-600 to-indigo-700';
-    textColor: 'text-blue-400';
-    link: 'https://ziontechgroup.com/ai-powered-cloud-migration';
-    marketPosition: 'AI-enhanced cloud migration competing with Accenture and Deloitte';
-    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations',
-    trialDays: 30;
-    setupTime: '1 month';
-    category: 'Cloud Migration';
-    realService: true;
-    technology: ['AI/MLCloud ComputingMigration ToolsPerformance AnalysisCost Optimization'];
-    integrations: ['AWSAzureGoogle CloudOn-premises systemsMonitoring tools'];
-    useCases: ['Cloud migrationCost optimizationPerformance improvementSecurity enhancement'];
-    roi: '600% ROI within 12 months through cost savings and performance improvements';
-    competitors: ['Accenture ($50000+/month)Deloitte ($40000+/month)AWS Migration Hub'];
-    marketSize: '$15B cloud migration market';
-    growthRate: '200% annual growth';
-    variant: 'ai-migration-futuristic';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-
-    realImplementation: true;
-    implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';
-    launchDate: '2024-10-01';
-    customers: 89;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
     rating: 4 && 4.8,
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-<<<<<<< HEAD
     rating: 4.8;
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     reviews: 45
       website: 'https://ziontechgroup.com';
     }
@@ -8451,12 +6268,9 @@ pr-12325
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
-<<<<<<< HEAD
 
     rating: 4 && 4.8,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     reviews: 45
       website: 'https://ziontechgroup.com';
     }
@@ -8899,13 +6713,8 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4.8,;
     reviews: 45;
   }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
-=======
     reviews: 45;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface AdvancedITService {;
 
 ;
@@ -8917,7 +6726,6 @@ export interface AdvancedITService {;
 
   }
 ];
-<<<<<<< HEAD
 ];
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -8933,36 +6741,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4.8,
     reviews: 45}
 ],
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     variant: 'ai-migration-futuristic',;
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',;
 
 
 pr-12325
 '
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -113,7 +113,6 @@ function PromptCard() {const [copied, set_copied] = useState (false)const handle
           <Send className="w - 4 h - 4" />;
         </Button>;
       </div>;
-<<<<<<< HEAD:src_backup/components/prompts/PromptCard.tsx
     </div>);
     </div>)}</Button>;
         <Button;

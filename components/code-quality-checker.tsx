@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
-=======
-<<<<<<< HEAD
 const features = [ {
   setIsAnalyzing (true)
 //Simulate code analysis setTimeout ( () => {
@@ -58,11 +55,6 @@ security scanning, and detailed improvement recommendations. Write better, safer
 }</ul> <Button > Get Started <ArrowRight className="w-5 h-5 ml-2" /> </Button> </Card>) ) 
 }</div> </div> </section> Ready to Improve Your Code Quality? </h2> <p className="text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed" > Join thousands of developers using our code quality checker to write better, safer, and more maintainable code. </p> <Button href="/contact" size="lg" className="bg-white text-teal-600 hover:bg-gray-100 shadow-2xl" > Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl" > Schedule Demo </Button> </div> </div> </section> </>) 
 }
-=======
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Button from '../components/ui/Button';
 import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
 
@@ -75,118 +67,7 @@ export default function CodeQualityCheckerPage() {
     {
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Multi-Language Support',
-<<<<<<< HEAD
       description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.';
-=======
-import { Code,CheckCircle,AlertTriangle,Zap,BarChart3,ArrowRight,Play,Shield,Clock,TrendingUp,export default function CodeQualityCheckerPage() {} from 'lucide-react';
-export default function CodeQualityCheckerPage() {const [isAnalyzing, setIsAnalyzing] = useState(false)const [analysisResults, setAnalysisResults] = useState(null)const [codeInput, setCodeInput]  = useState(''){ name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },{ name: 'C++', icon: '⚙️', features: ['Clang - tidy_static analysis_memory leak detection'] },{ name: 'Go', icon: '🟢', features: ['Golangci - lint_go vet_performance analysis'] },{ name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp  } from 'lucide-react';
-export default function CodeQualityCheckerPage() {const [isAnalyzing, setIsAnalyzing] = useState(false)const [analysisResults, setAnalysisResults] = useState(null)const [codeInput, setCodeInput] = useState('')icon: <Code className='w-8 h-8 text-white' />,title: 'Multi-Language Support',description:;
-        'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.';
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600';
-      gradient: 'from-teal-400 to-cyan-500';
-    }
-    {icon: <CheckCircle className='w-8 h-8 text-white' />;
-      title: 'Code Quality Metrics';
-      description:;
-        'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
-      gradient: 'from-green-400 to-emerald-500';
-    }
-    {icon: <Zap className='w-8 h-8 text-white' />;
-      title: 'Real-Time Analysis';
-      description:;
-        'Instant code quality feedback with detailed explanations and improvement suggestions.';
-      color: 'bg-gradient-to-br from-orange-500 to-red-600';
-      gradient: 'from-orange-400 to-red-500';
-    }
-    {icon: <Shield className='w-8 h-8 text-white' />;
-      title: 'Security Scanning';
-      description:;
-        'Automated detection of security vulnerabilities, dependency issues, and best practice violations.';
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600';
-      gradient: 'from-purple-400 to-indigo-500';
-    }
-  ];
-  const supportedLanguages = [;
-    {name: 'JavaScript/TypeScript';
-      icon: '⚡';
-      features: ['ESLint rules', 'TypeScript checks', 'React best practices'];
-    }
-    {name: 'Python';
-      icon: '🐍';
-      features: ['PEP 8 compliance', 'Type hints', 'Security scanning'];
-    }
-    {name: 'Java';
-      icon: '☕';
-      features: ['PMD rules', 'Checkstyle', 'SonarQube integration'];
-    }
-    {name: 'C++';
-      icon: '⚙️';
-      features: ['Clang-tidy', 'Static analysis', 'Memory leak detection'];
-    }
-    {name: 'Go';
-      icon: '🟢';
-      features: ['Golangci-lint', 'Go vet', 'Performance analysis'];
-    }
-
-import {
-
-  Code,
-  CheckCircle,
-  AlertTriangle,
-  Zap,
-  BarChart3,
-  ArrowRight,
-  Play,
-  Shield,
-  Clock,;
-  TrendingUp,;
-export default function CodeQualityCheckerPage() {;
-} from 'lucide-react';
-
-
-export default function CodeQualityCheckerPage() {;
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-  const [codeInput, setCodeInput] = useState('');
-
-    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },
-    { name: 'C++', icon: '⚙️', features: ['Clang - tidy_static analysis_memory leak detection'] },
-    { name: 'Go', icon: '🟢', features: ['Golangci - lint_go vet_performance analysis'] },
-    { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
-  const pricing = [
-    {
-      name: 'Developer'
-      price: '$29'
-      period: '/month'
-      description: 'Perfect for individual developers and small projects'
-      features: [
-        '100 code analyses/monthBasic quality metrics5 programming languagesEmail supportBasic reportingCommunity rules'
-      ];
-      popular: false
-    };
-    {
-  const pricing = [;
-    {
-      name: 'Developer',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for individual developers and small projects',
-      features: [;
-        '100 code analyses / month',
-        'Basic quality metrics',
-        '5 programming languages',
-        'Email support',
-        'Basic reporting',
-        'Community rules',
-      ],
-      popular: false,
-    },    {        '100 code analyses / month_basic quality metrics5 programming languages_email support_basic reporting_community rules';
-      ];
-      popular: false;
-    }
-      description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',
->>>>>>> origin/main
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
       gradient: 'from-teal-400 to-cyan-500'},
     {
@@ -1691,4 +1572,3 @@ href='/contact';
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

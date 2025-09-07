@@ -223,7 +223,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       First Name *
                     </label>
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
 
 
 
@@ -551,7 +550,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         Full Name *
                       </label>
                       <input type=\"text\"
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
 
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -726,7 +724,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         Phone Number
                       </label>
                       <input type=\"tel\"
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
 
                         placeholder=\"your && your.email@example && example.com\"
                        />;
@@ -780,7 +777,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
                       Message *
                     </label>
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
 
 
                        />;
@@ -958,7 +954,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
 
                           placeholder=\"your@email && email.com\"
                         />;
@@ -1076,7 +1071,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
 
 
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
           {/* Services Overview */}
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;

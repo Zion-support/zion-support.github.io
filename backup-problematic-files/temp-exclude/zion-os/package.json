@@ -1,10 +1,4 @@
 {
-<<<<<<< HEAD
-=======
-
-:clean-build/package.json
-ursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   "name": "clean-build",
   "version": "0.1.0",
   "private": true,
@@ -27,11 +21,6 @@ ursor/automate-test-improve-and-merge-code-646c
     "eslint-config-next": "15.5.2"
   }
 }
-<<<<<<< HEAD
-=======
-
-:backup-problematic-files/temp-exclude/zion-os/package.json
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   "name": "zion-tech-group-website",
   "version": "1.0.0",
   "private": true,
@@ -66,10 +55,6 @@ ursor/automate-test-improve-and-merge-code-646c
     "typescript": "5.4.5"
   }
 }
-<<<<<<< HEAD
-=======
-:backup-problematic-files/temp-exclude/zion-os/package.json
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   "name": "clean-build",
   "version": "0.1.0",
   "private": true,
@@ -92,8 +77,4 @@ ursor/automate-test-improve-and-merge-code-646c
     "eslint-config-next": "15.5.2"
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> main:clean-build/package.json
 ursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

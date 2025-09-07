@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 { purchase: 0, post: 0, referral: 0 }
   );
   const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
@@ -17,7 +14,6 @@ if ( {) {$2;
 }
       e.prevent_default ()setLoginOpen (true)}
   }
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
     e.preventDefault();
     e.stopPropagation();
@@ -76,8 +72,6 @@ export function PointsBadge() {;
       logErrorToProduction('Failed to refresh points:', { data: error });
     } finally {;
       setIsRefreshing(false);
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
     }
   },
@@ -147,7 +141,6 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
             </Link>;
           </TooltipTrigger>;
           <TooltipContent>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
     }
   },
@@ -155,7 +148,6 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
 
 
 
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
   return (
     <TooltipProvider>
@@ -164,9 +156,7 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
           <TooltipTrigger asChild>
             <Link
 
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
               href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}
@@ -202,10 +192,7 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
               </>;
             ) : (<>;
                 <p className='text-sm font-medium'>Zion Rewards Program</p>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
                 <p className='text-xs mt-1 text-muted-foreground'>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
             {is_authenticated ? (
               <>;
                 <p className='text-xs mt-1 text-muted-foreground'>;Sign up: 50 pts;{is_authenticated ? (<>;
@@ -224,7 +211,6 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
               </>) : (<>;
                 <p className='text - sm font - medium'>Zion Rewards Program</p>;
                 <p className='text - xs mt - 1 text - muted - foreground'>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
                   • Sign up: 50 pts;
 
                    Sign up: 50 pts;
@@ -243,11 +229,8 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                 <p className="text-xs mt-2 text-muted-foreground border-t pt-1">;
                   Click to view full rewards program;
                 </p>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
         
 
 
@@ -298,14 +281,11 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
         </Tooltip>;
         {isAuthenticated && (<Tooltip>;
             <TooltipTrigger asChild>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
           </TooltipContent>;
         </Tooltip>;{isAuthenticated && (<Tooltip>;
@@ -345,7 +325,6 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
 
 
@@ -357,8 +336,6 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
 
 
@@ -382,8 +359,6 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
       )}
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
 }
 

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 export type IntegrationCategory = 'crm' | 'ats';
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type IntegrationProviderId =
-=======
-<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
 
@@ -89,22 +86,15 @@ export interface IntegrationsState  {export interface ManualOverride  {jobId: st
 export type IntegrationCategory = 'crm' | 'ats';
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type IntegrationProviderId =
-=======
-export type IntegrationProviderId = 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
   | 'salesforce'
   | 'hubspot'
   | 'zoho'
   | 'pipedrive'
   | 'greenhouse'
-<<<<<<< HEAD
   | 'lever'
   | 'workable'
   | 'bamboohr',
 
-=======
-<<<<<<< HEAD
   | 'lever'
 
 
@@ -213,61 +203,11 @@ export interface SyncLogEntry {
 export interface SyncLogEntry {;
 
 
-=======
-  | 'workable';
-
-export type IntegrationCategory = 'crm' | 'ats' | 'email' | 'calendar';
-
-export interface IntegrationConfig {
-  id: IntegrationProviderId;
-  type: string;
-  name: string;
-  category: IntegrationCategory;
-  description?: string;
-  oauthScopes?: string[];
-  icon?: string;
-}
-
-export interface IntegrationsState {
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];
-}
-
-export interface ProviderConnection {
-  id: string;
-  provider_id: IntegrationProviderId;
-  name: string;
-  status: 'active' | 'inactive' | 'error';
-  lastSync?: string;
-  autoCreateContacts?: boolean;
-}
-
-export interface ManualOverride {
-  id: string;
-  connectionId: string;
-  field: string;
-  value: any;
-  reason: string;
-}
-
-export interface ZapierEvent {
-  id: string;
-  timestamp: number;
-  provider_id: IntegrationProviderId;
-  event_type: string;
-  data: Record<string, any>;
-}
-
-export interface SyncLogEntry {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   id: string;
   timestamp: number;
   provider_id: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
-<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -345,7 +285,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export type IntegrationCategory = $2;
 export type IntegrationProviderId = $2;
->>>>>>> origin/main
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId, name: string,
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
@@ -389,37 +328,8 @@ export interface ZapierEvent {
   payload: Record<string, any>;
 
 export interface IntegrationsState {
-<<<<<<< HEAD
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];  events: ZapierEvent[]
-=======
-  connections: ProviderConnection[],
-  logs: SyncLogEntry[],
-  overrides: ManualOverride[],
-  events: ZapierEvent[]
-  events: ZapierEvent[];
-origin/cursor/automate-test-improve-and-merge-code-20a4
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-  events: ZapierEvent[];
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-
-
-  events: ZapierEvent[];
-
-=======
-  details: Record<string, any>;
-}
-
-export interface BaseConnector {
-  connect(config: any): Promise<boolean>;
-  disconnect(): Promise<boolean>;
-  sync(data: any): Promise<any>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
 }

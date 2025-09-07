@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 ]
 
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
@@ -98,13 +95,6 @@ return (<> <Head> <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group |
 }
 }> <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/80 mb-8 leading-relaxed" > Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape. Let's discuss how we can help you achieve your goals. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" > <a href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25" > Start Your Journey <ArrowRight className="ml-2 w-5 h-5" /> </a> <a > <Phone className="mr-2 w-5 h-5" /> Call Now </a> </div> </a> </div> <div className="flex flex-col items-center" > <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3" > <Mail className="w-6 h-6 text-cyan-400" /> </div> </a> </div> <div className="flex flex-col items-center" > <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3" > <MapPin className="w-6 h-6 text-cyan-400" /> </div> </div> </div> </motion.div> </div> </section> </Layout> </>) 
 }
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
-import {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   Brain
   Atom
   Shield
@@ -283,50 +273,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory
-<<<<<<< HEAD
   });
-=======
-  Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
- } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
-import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
-import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
-import { cuttingEdgeMicroSaasServices2025  } from '../data/2025-cutting-edge-micro-saas';
-  {title: 'Quantum & Emerging Tech',description: 'Breakthrough quantum computing and space technology solutions',services: cuttingEdgeQuantumServices2025,icon: Atom,{title: 'Enterprise IT',description: 'Advanced enterprise infrastructure and security solutions',services: cuttingEdgeEnterpriseITServices2025,icon: Shield,{title: 'Micro SAAS',description: 'Innovative business solutions for modern enterprises',services: cuttingEdgeMicroSaasServices2025,icon: Rocket,const contactInfo = null;
-];
-export default function CuttingEdgeServicesShowcase2025() {const [searchTerm, setSearchTerm] = useState('')const [selectedCategory, setSelectedCategory] = useState('all')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')const allServices = [;
-    ...cuttingEdgeAIServices2025;
-    ...cuttingEdgeQuantumServices2025;
-    ...cuttingEdgeEnterpriseITServices2025;
-    ...cuttingEdgeMicroSaasServices2025;
-...cuttingEdgeAIServices2025,...cuttingEdgeQuantumServices2025,...cuttingEdgeEnterpriseITServices2025,...cuttingEdgeMicroSaasServices2025,];const filteredServices = allServices.filter(service => {const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-    const matchesSearch =;
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |;
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |;
-      service.tags.some(tag =>;
-        tag.toLowerCase().includes(searchTerm.toLowerCase()))const matchesCategory =;
-      selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  })const containerVariants = {hidden: { opacity: 0 }export default /**;
- * CuttingEdgeServicesShowcase2025 - Function description;
- */;
-function CuttingEdgeServicesShowcase2025() {const [search_term, setSearchTerm] = useState ('')const [selected_category, setSelectedCategory] = useState ('all')const [view_mode, setViewMode]  = useState<'grid' | 'list'>('grid')const all_services = [;
-    ...cuttingEdgeAIServices2025,...cuttingEdgeQuantumServices2025,...cuttingEdgeEnterpriseITServices2025,...cuttingEdgeMicroSaasServices2025,];const filtered_services = all_services.filter (service => {const matches_search =;
-      service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      service.tags.some (tag =>;
-        tag.toLowerCase ().includes (search_term.toLowerCase ()))const matches_category =;
-      selected_category === 'all' || service.category === selected_category;
-    return matches_search && matches_category;  })const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                        service.tags.some (tag => tag.toLowerCase ().includes (search_term.toLowerCase ()))const matches_category = selected_category === 'all' || service.category === selected_category;
-    return matches_search && matches_category;
-  }),
->>>>>>> origin/main
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -564,156 +511,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
               
               <motion.p 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-=======
-                From AI consciousness to space mining, experience the cutting edge of innovation.
-              </motion.p>
-              {/* Hero Stats */}
-              <motion.div
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center'>;
-              <motion&& motion.h1
-                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className="text-center">;
-              <motion&& motion.h1 
-                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0 && 0.2 }}>;
-                Cutting-Edge Services;
-                <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>;
-                  Showcase 2025;
-                </span>;
-              </motion && motion.h1>;
-              <motion&& motion.p
-                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">;
-                  Showcase 2025;
-                </span>;
-              </motion && motion.h1>;
-              <motion&& motion.p 
-                className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
-                Discover revolutionary technology solutions that are reshaping;
-                industries and defining the future. From AI consciousness to;
-                space mining, experience the cutting edge of innovation.;
-              </motion && motion.p>;
-              {/* Hero Stats */}
-              <motion&& motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
-                From AI consciousness to space mining, experience the cutting edge of innovation.
-              </motion && motion.p>;
-                animate={{ opacity: 1, y: 0 }}
-  const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0 && 0.1,},},  }staggerChildren: 0 && 0.1;
-    visible: {coordinate_y: 0,opacity: 1,transition: {duration: 0.5,},},  }}return (<meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />;
-        <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />;
-        <meta name="viewport" content="width=device-width, initial-scale=1" />;
-        <link rel="icon" href="/favicon.ico" />;
-            >;
-              <motion.h1;
-                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6";
-staggerChildren: 0.1,},},}const itemVariants = {hidden: { y: 20, opacity: 0 },visible: {y: 0,opacity: 1,transition: {duration: 0.5,},},}return (<>;
-      <Head>;
-<title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future;
-          Technology Solutions;
-        </title>;
-        <meta;
-          name='description';
-          content='Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology.';
-        />;
-        <meta;
-          name='keywords';
-          content='cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology';
-        />;
-        <meta name='viewport' content='width=device-width, initial-scale=1' />;
-        <link rel='icon' href='/favicon.ico' />;
-      </Head>;
-      <Layout>;
-        {/* Hero Section */}
-<section className='relative overflow-hidden'>;
-          <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>;
-          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32'>;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-className='text-center';
-            >;
-              <motion.h1;
-                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6';
-                initial={{ opacity: 0, scale: 0.9 }}animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
-              >;
-                Cutting-Edge Services;
-              <motion.p;
-                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">;
-                  Showcase 2025;
-                </span>;
-              </motion.h1>;
-              <motion.p;
-                className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed";
-<span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>;
-                  Showcase 2025;
-                </span>;
-              </motion.h1>;
-              <motion.p;
-                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed';
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >;
-                From AI consciousness to space mining, experience the cutting edge of innovation.;
-              </motion.p>;
-              {/* Hero Stats */}
-              <motion.div;
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center'>;
-              <motion&& motion.h1;
-                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className="text-center">;
-              <motion&& motion.h1;
-                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6";
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0 && 0.2 }}>;
-                Cutting-Edge Services;
-                <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>;
-                  Showcase 2025;
-                </span>;
-              </motion && motion.h1>;
-              <motion&& motion.p;
-                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">;
-                  Showcase 2025;
-                </span>;
-              </motion && motion.h1>;
-              <motion&& motion.p;
-                className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed";
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
-                Discover revolutionary technology solutions that are reshaping;
-                industries and defining the future. From AI consciousness to;
-                space mining, experience the cutting edge of innovation.;
-              </motion && motion.p>;
-              {/* Hero Stats */}
-              <motion&& motion.div;
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future.;
-                From AI consciousness to space mining, experience the cutting edge of innovation.;
-              </motion && motion.p>;Discover revolutionary technology solutions that are reshaping;
-                industries and defining the future. From AI consciousness to;
-                space mining, experience the cutting edge of innovation.;
-              </motion.p>;
-              {/* Hero Stats */}
-              <motion.div;
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12';
-                initial={{ opacity: 0, y: 20 }}animate={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
->>>>>>> origin/main
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 Discover revolutionary technology solutions that are reshaping industries and defining the future. 
@@ -1408,57 +1207,7 @@ className='text-center';
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
                 <button
                   onClick={() => {
-<<<<<<< HEAD
                     setSearchTerm('');
-=======
-                  </div>;{/* Hover Effect Overlay */}{/* Hover Effect Overlay */}
-                  <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
-                </motion && motion.div>;<div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />;
-                </motion.div>;
-              ))}</motion && motion.div>;{/* No Results */}
-            {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}className='text-center py-20';
-              >;
-                <div className='text-6xl mb-4'>🔍</div>;
-                <h3 className='text-2xl font-bold text-white mb-2'>;
-                  No services found;
-                </h3>;
-                <p className='text-white/70 mb-6'>;
-                  Try adjusting your search terms or category filter;
-                </p>;
-                <button;
-                  onClick={() => {setSearchTerm('')setSelectedCategory('all')}}className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                >              >;
-                <div className="text-6xl mb-4">🔍</div>;
-                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
-                <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>;
-                <button;
-                  onClick={() => {setSearchTerm('')className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300';
-                    setSelectedCategory('all')}}
-                  className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                >              >;
-                <div className="text-6xl mb-4">🔍</div>;
-                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
-                <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>;
-                <button
-                  onClick={() => {;
-                    setSearchTerm('');
-                  }}
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
-                >;
-                  Clear Filters;
-                </button>;
-              </motion && motion.div>;
-            )}
-        {/* Contact CTA Section */}
-        <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
-        {/* Contact CTA Section */}<section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
-          <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-        {/* Contact CTA Section */}
-
-                    setSearchTerm($2);
->>>>>>> origin/main
                     setSelectedCategory('all')
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -1861,12 +1610,8 @@ const item_variants = {hidden: {coordinate_y: 20, opacity: 0;
   duration: 0.5 
 
 };}
-<<<<<<< HEAD
 };
 
 }
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

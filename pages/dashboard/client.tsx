@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
@@ -27,13 +26,6 @@ export default function ClientDashboard() {
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function client() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
@@ -48,7 +40,6 @@ export default function client() {
             Professional client solutions tailored to your business needs.
           </p>
         </div>
-<<<<<<< HEAD
         <div className="mt-3 h-2 w-full bg-gray-100 dark:bg-gray-800 rounded">
           <div className="h-2 rounded bg-blue-600" style={{ width: `${progress}%` }} />
         </div>
@@ -74,9 +65,4 @@ export default function client() {
       </EnhancedCard>
     </div>
   )
-=======
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

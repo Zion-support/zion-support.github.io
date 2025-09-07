@@ -34,7 +34,3 @@ export function PromptCard({ prompt }: PromptCardProps) {
     </div>
   )
 }
-<<<<<<< HEAD:src/components/prompts/PromptCard.tsx
-=======
-;
->>>>>>> origin/main:src_disabled_1757239864/components/prompts/PromptCard.tsx

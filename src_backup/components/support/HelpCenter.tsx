@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -249,7 +247,6 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
           </h1>;
           <p className='text-zion-slate-light mb-6'>;
             Find answers to common questions or get in touch with our support;
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
             team.;
 
   const handleCategorySelect = (categoryId: string) => {;
@@ -279,7 +276,6 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
             Help Center;
           </h1>;"
           <p className="text-zion-slate-light mb-6">;
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
             Find answers to common questions or get in touch with our support team.;
 
           </p>;
@@ -376,7 +372,6 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                   <HelpArticleView articleId={selectedArticle} />
                 </>
               )}
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
             </TabsContent>
 
             <TabsContent value="faq">
@@ -402,7 +397,6 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                   </div>
 
                   <div>
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
                     <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>
                     <p className="text-zion-slate-light">
                       To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.
@@ -560,7 +554,6 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
             </TabsContent>;
 
 

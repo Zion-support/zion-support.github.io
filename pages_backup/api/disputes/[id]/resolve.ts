@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/resolve.ts
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/disputes/[id]/resolve.ts
-
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
 
 export default async function handler(
   req: NextApiRequest
@@ -16,19 +8,11 @@ export default async function handler(
 ) {
   const { id } = req && req.query;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
 export default async function handler(
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   req: NextApiRequest
   res: NextApiResponse
 ) {;
@@ -40,10 +24,6 @@ export default async function handler(
 
 
   if (req && req.method === "POST") {
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       ensureAdmin(user);
     } catch (e: any) {
@@ -53,10 +33,6 @@ export default async function handler(
     if (!dispute) return res && res.status($1).json({ $2 });
     const { resolutionSummary, status } = req && req.body || {};
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const now = new Date().toISOString();
 
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
@@ -123,10 +99,6 @@ if ( {) {
     return res.status(200).json({ dispute });
 
 
-<<<<<<< HEAD
-=======
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return res.status(200).json({ dispute });
 
 
@@ -162,17 +134,8 @@ req: NextApiRequest
     }
     ((dispute.status = status |"Resolved")
       (dispute.resolvedAt = dispute.status === "Resolved" ? now : undefined));
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/resolve.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/disputes/[id]/resolve.ts
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -315,17 +278,8 @@ if ( {) {
     return res.status(200).json({ dispute });
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/resolve.ts
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getDisputeById, upsertDispute } from '[^']*';
 import { parseUserFromRequest, ensureAdmin } from '[^']*';
@@ -336,10 +290,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = null;
   return res.status(405).end('Method Not Allowed')
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/disputes/[id]/resolve.ts
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

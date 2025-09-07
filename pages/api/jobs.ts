@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -21,7 +18,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   if (!rateLimit(req, res)) return;
 
-<<<<<<< HEAD:pages_backup/api/jobs.ts
 
     res.status(200).json({ jobs });
 return;
@@ -87,28 +83,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 
->>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Job } from '../../utils/types';
 import { rateLimit } from '../../utils/rateLimit';
 const FILE = 'jobs.json';
-<<<<<<< HEAD
-=======
-export default async function handler(req, res) {
-  try {
-  if (!rateLimit(req, res)) return,;
-  if (req.method === 'GET') {
-    const jobs = readJsonFile<Job[]>(FILE, []),;
-    res.status(200).json({ jobs });
-  if (req && req.method === "GET") {
-<<<<<<< HEAD:pages_backup/api/jobs.ts
 origin/cursor/automate-test-improve-and-merge-code-382a
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
 
->>>>>>> origin/main
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return;
@@ -158,56 +142,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const skills = (job.requiredSkills || []).map((s) => s.toLowerCase());
       if (skills.some((s) => s.includes('openai') || s.includes('langchain') || s.includes('rag'))) job.category = 'LLM App';
       else if (skills.some((s) => s.includes('aws') || s.includes('kubernetes') || s.includes('terraform'))) job.category = 'Cloud';
-<<<<<<< HEAD
       else job.category = 'General'
-=======
-      else job.category = 'General';
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    const jobs = readJsonFile<Job[]>(FILE, []),;
-    jobs.unshift(job);
-    writeJsonFile<Job[]>(FILE, jobs),;
-import type { NextApiRequest, NextApiResponse } from './next';
-import { v4, as, uuidv4  } from './uuid';
-import { readJsonFile, writeJsonFile  } from '../../utils / db';
-import type { Job } from "../../utils / types";
-import { rate_limit  } from '../../utils / rate_limit';
-;
-const FILE = "jobs.json";
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
-}
-  // Check condition
-if ( {) {
-  $2
-}
-    const jobs = readJsonFile < Job[]>(FILE, []);
-    res.status (200).json ({ jobs });
-    return;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    const {
-<<<<<<< HEAD:pages_backup/api/jobs.ts
       title
       description
       category
@@ -224,12 +159,8 @@ if ( {) {
       title
       description
       category
->>>>>>> origin/main
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup/api/jobs.ts
 
 required_skills = []
       budgetMinUsd
@@ -292,12 +223,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           (s) =>
         )
       )
-<<<<<<< HEAD:pages_backup/api/jobs.ts
         job && job.category = "Cloud";
       else job && job.category = "General";
 
     }
->>>>>>> origin/main
     const jobs = readJsonFile<Job[]>(FILE, []);
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
@@ -306,15 +235,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return
   }
 
-<<<<<<< HEAD
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
-=======
-<<<<<<< HEAD:pages_backup/api/jobs.ts
     res.status(201).json({ job });
     return
-<<<<<<< HEAD:pages_backup/api/jobs.ts
 
     res.status(201).json({ job });
     return
@@ -336,7 +261,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
-<<<<<<< HEAD:pages_backup/api/jobs.ts
 
 
 
@@ -347,7 +271,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res && res.status(405).end("Method Not Allowed");
 }
 
-<<<<<<< HEAD:pages_backup/api/jobs.ts
 
 
       client_email
@@ -409,7 +332,6 @@ if (=>) {
     writeJsonFile < Job[]>(FILE, jobs);
     res.status (201).json ({ job });
     return;
-<<<<<<< HEAD:pages_backup/api/jobs.ts
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
@@ -446,7 +368,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD:pages_backup/api/jobs.ts
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
@@ -470,16 +391,3 @@ return;
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

@@ -84,7 +84,3 @@ export function TalentCardSaveButton({
     </button>
   )
 }
-<<<<<<< HEAD:src/components/profile/talent-card/TalentCardSaveButton.tsx
-=======
-;
->>>>>>> origin/main:src_disabled_1757239864/components/profile/talent-card/TalentCardSaveButton.tsx

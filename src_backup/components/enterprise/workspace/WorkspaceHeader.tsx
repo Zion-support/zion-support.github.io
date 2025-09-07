@@ -137,7 +137,6 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           </div>;
           <div>src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/WorkspaceHeader.tsx
               className="max-h-10 max-w-10"
 "
               src={company.logoUrl || "/placeholder.svg"}

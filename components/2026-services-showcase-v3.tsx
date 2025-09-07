@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-<<<<<<< HEAD
 return (<UltraQuantumHolographicBackground intensity="extreme" colorScheme="neural-network" particleCount= {
   500 
 }animationSpeed= {
@@ -97,9 +94,6 @@ s challenges. </p> <div className="flex flex-col sm:flex-row items-center justif
   contactInfo.address 
 }</div> <div className="text-gray-400 text-sm">Address</div> </div> </div> </div> </motion.div> </div> </section> </div> </UltraQuantumHolographicBackground>) 
 }
-=======
-import React from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',  }const contactInfo  = null;return (<UltraQuantumHolographicBackground;
       intensity="extreme";
@@ -493,4 +487,3 @@ className='flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 t
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

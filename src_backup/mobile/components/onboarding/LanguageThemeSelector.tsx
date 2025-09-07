@@ -94,8 +94,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 : 'border-border hover:border-primary/40'
             }`}
             onClick = {() => setTheme('dark'),}
-<<<<<<< HEAD
-<<<<<<< HEAD
           >;
             <CardContent className='p-3 flex flex-col items-center justify-center'>;
               <Moon className='h-8 w-8 mb-2' />;
@@ -300,9 +298,6 @@ function LanguageThemeSelector() {
     </div>);
 }
 ;
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           >
             <CardContent className='p-3 flex flex-col items-center justify-center'>
               <Moon className='h-8 w-8 mb-2' />

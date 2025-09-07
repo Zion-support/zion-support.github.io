@@ -10,7 +10,6 @@ export interface AdvancedInnovativeService2032  {id: string;
    benefits: string[];
    useCases: string[];
    targetAudience: string[];
-<<<<<<< HEAD:src_backup/data/advancedInnovativeServices2032.ts
    tags: string[];
    estimatedDelivery: string;"";
    supportLevel: 'basic' | 'premium' | 'enterprise' | 'dedicated';

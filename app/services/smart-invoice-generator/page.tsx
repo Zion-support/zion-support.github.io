@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Metadata } from 'next'
 
@@ -60,10 +59,6 @@ export default function ServicePage() {
     </div>
   )
 }
-=======
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -78,19 +73,12 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 import Link from 'next/link';
 
 export const metadata = {
   title: 'Smart Invoice Generator | Zion Tech Group',
   description: 'AI-powered invoice automation with smart templates, payment tracking, and financial analytics. Reduce billing time by 80% and get paid 30% faster.',
   keywords: 'smart invoice generator, invoice automation, AI billing, payment tracking, financial analytics, invoice templates'
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 };
 
 interface FeatureCardProps {
@@ -148,8 +136,6 @@ const ContactSection: React.FC = () => (
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -183,9 +169,6 @@ export default function ServicePage() {
     </div>
   );
 }
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
@@ -272,8 +255,3 @@ export default function ServicePage() {
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

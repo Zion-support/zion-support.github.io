@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
-=======
-<<<<<<< HEAD
 const filteredServices = ultimateFuturisticServices2025.filter (service => {
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const sortedServices = [...filteredServices].sort ( (a, b) => {
   switch (sortBy) {
@@ -104,10 +101,6 @@ return (<Layout> <Head> <title>Ultimate Futuristic Services Showcase 2025 | Zion
 }
 }> Ready to Experience the Future? </h2> <p className="text-xl text-gray-300 mb-8" > Transform your business with our revolutionary futuristic services. Get in touch with our experts to discuss your specific needs and implementation strategy. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105" > Contact Our Experts </a> <Link href="/pricing" className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors" > View Pricing </a> </div> </motion.div> </div> </section> </Layout>) 
 }
-=======
-import React, { useState } from 'react',
-import Head from 'next/head',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -348,36 +341,16 @@ const stats = [
 ];
 
 export default function UltimateFuturisticServicesShowcase2025() {
-<<<<<<< HEAD
-=======
-  BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
-
-export default function UltimateFuturisticServicesShowcase2025() {;
-
-
-export default function UltimateFuturisticServicesShowcase2025() {;
-
-export default function UltimateFuturisticServicesShowcase2025() {;
->>>>>>> origin/main
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState('grid');
-<<<<<<< HEAD
 
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-=======
-  const [searchTerm, setSearchTerm] = useState($2);
-  const [selectedCategory, setSelectedCategory] = useState($2);
-  const [sortBy, setSortBy] = useState($2);
-  const [viewMode, setViewMode] = useState($2);
-  const filteredServices = $2;
-    const matchesCategory = $2;
->>>>>>> origin/main
     return matchesSearch && matchesCategory
   });
 
@@ -1674,4 +1647,3 @@ href='/pricing';
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

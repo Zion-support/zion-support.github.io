@@ -24,7 +24,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
-<<<<<<< HEAD:src_backup/components/admin/performance-dashboard.tsx
 
 ;
 
@@ -322,7 +321,6 @@ export function PerformanceDashboard() {;
             if (entry.entryType === 'first-input') {;
               vitals.fid = (entry as any).processingStart - entry.startTime;
             }
-<<<<<<< HEAD:src_backup/components/admin/performance-dashboard.tsx
           });
         }),;
         observer.observe({ entryTypes: ['paintlargest-contentful-paintlayout-shiftfirst-input'] }),;
@@ -332,7 +330,6 @@ export function PerformanceDashboard() {;
           resolve(vitals);
         }, 2000);
 
-<<<<<<< HEAD:src_backup/components/admin/performance-dashboard.tsx
 
   chunkCount: number
   cacheHitRate: number
@@ -464,17 +461,14 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
             Monitor bundle size, performance metrics, and optimization;
             opportunities;
           </p>;
-<<<<<<< HEAD:src_backup/components/admin/performance-dashboard.tsx
         </div>;
 
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
 
-<<<<<<< HEAD:src_backup/components/admin/performance-dashboard.tsx
 
           {isLoading ? 'Collecting...' : 'Refresh'}
 
-<<<<<<< HEAD:src_backup/components/admin/performance-dashboard.tsx
         </div>;<Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;{isLoading ? 'Collecting...' : 'Refresh'}
         </Button>;
@@ -739,7 +733,6 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD:src_backup/components/admin/performance-dashboard.tsx
 
 
 :src/components/admin/performance-dashboard.tsx
@@ -932,7 +925,6 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
                   <div className='flex items-center gap-3'>
                     <span className='text-sm font-mono text-muted-foreground'>                      {index + 1}
 
-<<<<<<< HEAD:src_backup/components/admin/performance-dashboard.tsx
 
                     </span>
                     <div>
@@ -984,7 +976,6 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
           ) : (<p className='text-center py-8 text-muted-foreground'>;
               No chunk data available. Refresh to collect metrics.;
             </p>;
-<<<<<<< HEAD:src_backup/components/admin/performance-dashboard.tsx
           )}
 
 
@@ -1253,7 +1244,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD:src_backup/components/admin/performance-dashboard.tsx
     </div>)}
 }}</div>;
         </CardContent>;

@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-=======
-import React from "react";"
-import Link from "next/link";"
-import { motion } from "framer-motion";
-import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   X,
   Home,
   Users,
@@ -52,25 +41,17 @@ import {}
   Server,
   Shield,
   Zap,
-<<<<<<< HEAD
 
 } from "lucide-react"
 interface SidebarProps {
   isOpen: boolean
   onClose: () => void;}
-=======
-<<<<<<< HEAD
   Lock,
-=======
-  Lock,";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from "lucide-react";
-=======
 import React from 'react';
 import Link from 'next/link';
 import { motion  } from 'framer-motion';
 import { X,Home,Users,Briefcase,Phone,Mail,MapPin,Clock,Star,CheckCircle,ArrowRight,Building2,Rocket,Factory,Cpu,Network,Target,Code,Brain,Workflow,MessageCircle,ArrowUp,Sparkles,Truck,BookOpen,BarChart3,Leaf,Satellite,HelpCircle,Building,DollarSign,ShoppingCart,Heart,Eye,Database,Cloud,Server,Shield,Zap,Lock} from 'lucide-react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface SidebarProps {}
   isOpen: boolean;
@@ -78,8 +59,6 @@ interface SidebarProps {}
 }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const quickLinks = [
     { name: "Home", href: "/", icon: Home },
@@ -88,98 +67,22 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: "About", href: "/about", icon: Users },
     { name: "Contact", href: "/contact", icon: Phone },
   ];
-=======
-const Sidebar: React.FC<SidebarProps /> = ({ isOpen, onClose    }) => {
-
-const quickLinks = [}
-  { name: \"Home\", href: \"/\", icon: Home}"
-},{ name: \"Services\", href: \"/services\", icon: Briefcase}"
-},{ name: \"Solutions\", href: \"/solutions\", icon: Target}"
-},{ name: \"About\", href: \"/about\", icon: Users}"
-},{ name: \"Contact\", href: \"/contact\", icon: Phone}
-}]
-const serviceLinks = ["
-  { name: \"AI Services\", href: \"/ai-services\", icon: Brain}"
-},{ name: \"IT Services\", href: \"/it-services\", icon: Server}"
-},{ name: \"Micro SaaS\", href: \"/micro-saas\", icon: Zap}"
-},{ name: \"Security\", href: \"/security\", icon: Shield}"
-},{ name: \"Cloud Solutions\", href: \"/cloud-solutions\", icon: Cloud}"
-},{ name: \"Database Solutions\", href: \"/database-solutions\", icon: Database}
-<<<<<<< HEAD
 }]
     { name: "Contact", href: "/contact", icon: Phone },
   ]
-=======
-}];
-
-<<<<<<< HEAD
   const companyLinks = [
     { name: "About Us", href: "/about", icon: Users },
     { name: "Our Team", href: "/team", icon: Users },
     { name: "Careers", href: "/careers", icon: Briefcase },
     { name: "Partners", href: "/partners", icon: Handshake },
     { name: "News", href: "/news", icon: Newspaper },
-=======
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {}
-  const quickLinks = ["
-    { name: "Home", href: "/", icon: Home },"
-    { name: "Services", href: "/services", icon: Briefcase },"
-    { name: "Solutions", href: "/solutions", icon: Target },"
-    { name: "About", href: "/about", icon: Users },"
     { name: "Contact", href: "/contact", icon: Phone },
   ];
-
-  const serviceLinks = ["
-    { name: "AI Services", href: "/ai-services", icon: Brain },"
-    { name: "IT Services", href: "/it-services", icon: Server },"
-    { name: "Micro SaaS", href: "/micro-saas", icon: Zap },"
-    { name: "Security", href: "/security", icon: Shield },"
-    { name: "Cloud Solutions", href: "/cloud-solutions", icon: Cloud },"
-    { name: "Database Solutions", href: "/database-solutions", icon: Database },
-  ];
-
-  const solutionLinks = []
-    {"
-      name: "Enterprise Solutions","
-      href: "/enterprise-solutions",
-      icon: Building2,
-    },"
-    { name: "Startup Solutions", href: "/startup-solutions", icon: Rocket },
-    {"
-      name: "Digital Transformation","
-      href: "/solutions/digital-transformation",
-      icon: Workflow,
-    },
-    {"
-      name: "Cloud Migration","
-      href: "/solutions/cloud-migration",
-      icon: Cloud,
-    },
-    {"
-      name: "AI Implementation","
-      href: "/solutions/ai-implementation",
-      icon: Brain,
-    },"
-    { name: "Cybersecurity", href: "/solutions/cybersecurity", icon: Shield },
-  ];
-
-  const companyLinks = ["
-    { name: "About Us", href: "/about", icon: Users },"
-    { name: "Our Team", href: "/team", icon: Users },"
-    { name: "Careers", href: "/careers", icon: Briefcase },"
-    { name: "Partners", href: "/partners", icon: Handshake },"
-    { name: "News", href: "/news", icon: Newspaper },"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    { name: "Contact", href: "/contact", icon: Phone },
-  ];
-=======
 const solutionLinks = ["
   {name: \"Enterprise Solutions\",href: \"/enterprise-solutions\",icon: Building2},{ name: \"Startup Solutions\", href: \"/startup-solutions\", icon: Rocket}"
 },{name: \"Digital Transformation\",href: \"/solutions/digital-transformation\",icon: Workflow},{name: \"Cloud Migration\",href: \"/solutions/cloud-migration\",icon: Cloud},{name: \"AI Implementation\",href: \"/solutions/ai-implementation\",icon: Brain},{ name: \"Cybersecurity\", href: \"/solutions/cybersecurity\", icon: Shield}
 }];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 const companyLinks = ["
   { name: \"About Us\", href: \"/about\", icon: Users}"
 },{ name: \"Our Team\", href: \"/team\", icon: Users}"
@@ -189,13 +92,10 @@ const companyLinks = ["
 },{ name: \"Contact\", href: \"/contact\", icon: Phone}
 }];return (<>
       {/* Overlay */}
-<<<<<<< HEAD
 
         className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
       >"
         <div className="p-6">
-=======
-<<<<<<< HEAD
       {isOpen && (
         <motion.div;
           initial={{ opacity: 0 }}
@@ -207,17 +107,10 @@ const companyLinks = ["
       )}
 
       {/* Sidebar */}
-<<<<<<< HEAD
       <motion.div
         initial={{ x: "-100%" }}
         animate={{ x: isOpen ? 0 : "-100%" }}
         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-=======
-      <motion.div"
-        initial={{ x: "-100%" }}"
-        animate={{ x: isOpen ? 0 : "-100%" }}"
-        transition={{ type: "spring", damping: 25, stiffness: 200 }}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
       >"
         <div className="p-6">
@@ -226,15 +119,9 @@ const companyLinks = ["
             <div className="flex items-center">"
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"
                 <span className="text-white font-bold text-lg">Z</span>
-<<<<<<< HEAD
               </div>
               <span className="ml-3 text-xl font-bold text-gray-900">
                 Zion Tech Group
-=======
-              </div>"
-              <span className="ml-3 text-xl font-bold text-gray-900">
-                Zion Tech Group;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </span>
             </div>
             <button;
@@ -321,7 +208,6 @@ const companyLinks = ["
                   <link.icon className="h-5 w-5 mr-3 text-blue-500" />"
                   <span className="font-medium">{link.name}</span>
                 </Link>
-=======
       {isOpen && (<motion.div;}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -340,7 +226,6 @@ const companyLinks = ["
         className=\"fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto\" />
 "
         <div className=\"p-6\" />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           {/* Header */}"
           <div className="flex items-center justify-between mb-8">"
             <div className="flex items-center">"
@@ -429,19 +314,11 @@ const companyLinks = ["
                   href={link.href}"
                   className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
                   onClick={onClose}
-<<<<<<< HEAD
                 >"
                   <link.icon className="h-5 w-5 mr-3 text-blue-500" />"
                   <span className="font-medium">{link.name}</span>
                 </Link>
 
-=======
-                 />;"
-                  <link.icon className=\"h-5 w-5 mr-3 text-blue-500\" />;"
-                  <span className=\"font-medium\" />{link.name}</span>;
-                </Link>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               ))}
             </div>
           </div>

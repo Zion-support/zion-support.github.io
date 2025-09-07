@@ -13,7 +13,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Globe
   Brain
   Rocket
-=======
   ArrowRight;
   Star;
   TrendingUp;
@@ -22,7 +21,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Globe;
   Brain;
   Rocket;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   CheckCircle;
 } from 'lucide-react';
 
@@ -38,20 +36,11 @@ interface EnhancedHero2026Props {;
 
 '
 } from 'lucide-react';
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 ;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
-<<<<<<< HEAD
 import { motion   } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle   } from 'lucide-react';
 import Button from '../ui/Button';
@@ -77,19 +66,13 @@ interface EnhancedHero2026Props {
     email: string,
     address: string,
     website: string},
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface EnhancedHero2026Props {
   contact_info: {
-=======
 interface EnhancedHero2026Props {}
   contact_info: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
     website: string;
   };
   serviceStats: {;
@@ -104,10 +87,6 @@ interface EnhancedHero2026Props {}
     website: string;
     website: string
   },
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   serviceStats: {
 
 interface EnhancedHero2026Props {;
@@ -127,7 +106,6 @@ interface EnhancedHero2026Props {;
     emergingTech: number;
     itSolutions: number;
     microSaas: number;
-<<<<<<< HEAD
       }
     }
   }
@@ -140,7 +118,6 @@ interface EnhancedHero2026Props {;
     }
   }
 ;
-<<<<<<< HEAD
   const stats_variants = {
     hidden: { scale: 0.8, opacity: 0 },
     totalServices: number,
@@ -150,72 +127,33 @@ interface EnhancedHero2026Props {;
     microSaas: number,
     revolutionaryServices: number}
 }
-=======
-<<<<<<< HEAD
-=======
-}export default function EnhancedHero2026 ({
-  contactInfo, serviceStats 
-}: EnhancedHero2026Props) {
-  const containerVariants = {
-  hidden: {
-  opacity: 0 
-}
-visible: {
-  opacity: 1, transition: {
-  staggerChildren: 0.2 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   const stats_variants = {}
     hidden: { scale: 0.8, opacity: 0 },
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     revolutionaryServices: number
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
     revolutionaryServices: number}
-=======
     revolutionaryServices: number
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   }
 }
 export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
-<<<<<<< HEAD
   const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
-=======
-  const containerVariants = null;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
     visible: {
       y: 0
       opacity: 1
       transition: {
-=======
-    visible: {}
-      y: 0;
-      opacity: 1;
-      transition: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   const itemVariants = {;
     hidden: { y: 30, opacity: 0 },;
     visible: {;
       y: 0,;
       opacity: 1,;
       transition: {;
-<<<<<<< HEAD
         duration: 0 && 0.8,;
         ease: 'easeOut' as const,;
       },;
-=======
-        duration: 0 && 0.8,;'
-        ease: 'easeOut' as const,;
-      },;"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },  };        ease: "easeOut" as const;
       }
     }
@@ -226,16 +164,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       scale: 1,;
       opacity: 1,;
       transition: {;
-<<<<<<< HEAD
         duration: 0 && 0.6,;
-=======
-        duration: 0 && 0.6,;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         ease: 'easeOut' as const,;
       },;
     },;
   };
-<<<<<<< HEAD
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
 import { motion  } from 'framer-motion';
@@ -331,8 +264,6 @@ interface EnhancedHero2026Props  {contactInfo: {ArrowRight,Star,TrendingUp,Zap,S
             transition={{
               duration: 3 + Math && Math.random() * 2,
               repeat: Infinity,
-=======
-<<<<<<< HEAD
         duration: 0.6,
 ease: 'easeOut' as const,
       },
@@ -341,9 +272,6 @@ ease: 'easeOut' as const,
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-=======
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
       {/* Enhanced Background Elements */}
       {/* Floating Elements */}'
@@ -378,13 +306,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{}
               duration: 3 + Math && Math.random() * 2,
               repeat: Infinity,'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               ease: 'easeInOut',
               delay: Math && Math.random() * 2,            }}  }
 
 
 
-<<<<<<< HEAD
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
       {/* Enhanced Background Elements */}
@@ -440,95 +366,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`}}
             animate={{
-=======
-  return ("
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
-      {/* Enhanced Background Elements */}
-      {/* Floating Elements */}"
-      <div className="absolute inset-0 pointer-events-none">;
-        {Array && Array.from({ length: 20 }).map((_, i) => (;
-          <motion&& motion.div;`
-              left: `${Math.random () * 100}%`,`
-              top: `${Math.random () * 100}%`,
-            }}
-            animate={{}
-              coordinate_y: [0, -30, 0],
-              opacity: [0.3, 0.8, 0.3],
-              scale: [1, 1.5, 1],            }}
-            transition={{}
-              duration: 3 + Math.random () * 2,
-              repeat: Infinity,'
-              ease: 'easeInOut',
-              delay: Math.random () * 2,            }}  }
-;
-  return ("
-    <section className="relative min - h-screen flex items - center justify - center overflow - hidden">;
-      {/* Enhanced Background Elements */}"
-      <div className="absolute inset - 0 bg - gradient - to - br from - slate - 900 via - purple - 900 / 20 to - slate - 900" />;"
-      <div className="absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%, rgba (120, 119, 198, 0.4), transparent_50%)]" />;"
-      <div className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (120, 119, 198, 0.4), transparent_50%)]" />;
-      {/* Floating Elements */}"
-      <div className="absolute inset - 0 pointer - events - none">;
-        {Array.from ({ length: 20 }).map ((_, i) => (
-          <motion.div;
-            key={i}"
-            className="absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full";
-            style={{}
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,'
-              ease: 'easeInOut',
-              delay: Math.random() * 2,            }}  };
-
-  return ("
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Enhanced Background Elements */}"
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900" />"
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.4),transparent_50%)]" />"
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.4),transparent_50%)]" />
-      {/* Floating Elements */}"
-      <div className="absolute inset-0 pointer-events-none">
-        {Array.from({ length: 20 }).map((_, i) => (
-          <motion.div;
-            key={i}"
-            className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
-            style={{}`
-              left: `${Math.random() * 100}%``
-              top: `${Math.random() * 100}%`}}
-            animate={{}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               y: [0, -30, 0];
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1]
             }}
-<<<<<<< HEAD
             transition={{
               duration: 3 + Math.random () * 2,
               repeat: Infinity,
-=======
-            transition={{}
-              duration: 3 + Math.random () * 2,
-              repeat: Infinity,
-            }}
-            transition={{}
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-            }}
-            transition={{}
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-'
-              ease: 'easeInOut',"
-              delay: Math.random() * 2,              ease: "easeInOut",
-<<<<<<< HEAD
               delay: Math.random() * 2
               opacity: [0.3, 0.8, 0.3],
               scale: [1, 1.5, 1],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-<<<<<<< HEAD
             }}
             transition={{
               duration: 3 + Math.random() * 2,
@@ -537,14 +388,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ease: 'easeInOut',
               delay: Math.random() * 2,              ease: "easeInOut",
               delay: Math.random() * 2
-=======
-ease: 'easeInOut',
-              delay: Math.random() * 2,
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              delay: Math.random() * 2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             }}
 
             }}
@@ -554,12 +397,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }}
           />;
         ))}
-<<<<<<< HEAD
       </div>
 
 <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <motion.div
-<<<<<<< HEAD
         {Array.from ({ length: 20 }).map ((_, i) => (<motion.div;
             key={i}left: `${Math && Math.random() * 100}%`,top: `${Math && Math.random() * 100}%`,}}
             animate={{y: [0, -30, 0],opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],scale: [1, 1 && 1.5, 1],            }}
@@ -679,16 +520,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Transform your business with our revolutionary AI, Quantum, and IT;
               infrastructure services.;
               <span className='text-cyan-400 font-semibold'>;
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-          variants={containerVariants}
-          initial='hidden';
-          animate='visible';
-=======
-          variants={containerVariants}'
-          initial='hidden';'
-          animate='visible';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className='space-y-8';
         >;
           {/* Main Headline */}
@@ -741,7 +572,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Transform your business with our revolutionary AI, Quantum, and IT
               infrastructure services.
               <span className='text-cyan-400 font-semibold'>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 {' '}
                 1000+ cutting-edge solutions
               </span>{' '}
@@ -751,7 +581,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Enhanced Stats Grid */}
 <motion.div
             variants={itemVariants}
-<<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto';
           >;
             {[;
@@ -782,53 +611,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               }
               {label: 'Revolutionary',value: serviceStats.revolutionaryServices,icon: Star,color: 'from-pink-500 to-purple-500',},].map((stat, index) => ({ label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
               <motion.div;
-=======
-            className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto'
-          >
-            {[
-              {
-                label: 'Total Services'
-                value: serviceStats.totalServices
-                icon: Rocket
-                color: 'from-blue-500 to-cyan-500'
-              }
-              {
-                label: 'AI Solutions'
-                value: serviceStats.aiServices
-                icon: Brain
-                color: 'from-purple-500 to-pink-500'
-              }
-              {
-                label: 'Emerging Tech'
-                value: serviceStats.emergingTech
-                icon: TrendingUp
-                color: 'from-green-500 to-emerald-500'
-              }
-              {
-                label: 'IT Infrastructure'
-                value: serviceStats.itSolutions
-                icon: Globe
-                color: 'from-orange-500 to-red-500'
-              }
-              {
-                label: 'Micro SaaS'
-                value: serviceStats.microSaas
-                icon: Zap
-                color: 'from-yellow-500 to-orange-500'
-              }
-              {
-                label: 'Revolutionary',
-                value: serviceStats.revolutionaryServices,
-                icon: Star,
-                color: 'from-pink-500 to-purple-500',
-              },
-            ].map((stat, index) => (
-              { label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
-              <motion.div
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 key={stat.label}
                 variants={statsVariants}
                 whileHover={{ scale: 1.05, y: -5 }}
@@ -888,16 +670,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </motion.div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
           {/* Enhanced CTA Section */}
 <motion.div variants={itemVariants} className='space-y-6'>
-=======
-          {/* Enhanced CTA Section */}'
-          <motion.div variants={itemVariants} className='space-y-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Button'
                 href='/services''
@@ -910,13 +684,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Explore All Services;
                 </span>"
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
-=======
             )
 }
           </motion.div>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           {/* Enhanced CTA Section */}
-<<<<<<< HEAD
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
@@ -928,20 +699,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="flex items-center">
                   <Rocket className="mr-3 w-7 h-7 group-hover:rotate-12 transition-transform" />
                   Explore All Services
-=======
-          <motion.div variants={itemVariants} className='space-y-6'>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-              <Button'
-                href='/services''
-                variant='primary''
-                size='xl''
-                className='text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group'
-              >              >"
-                <span className="flex items-center">"
-                  <Rocket className="mr-3 w-7 h-7 group-hover:rotate-12 transition-transform" />
-                  Explore All Services
-                </span>"
-<<<<<<< HEAD
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
 
               </Button>
@@ -954,11 +711,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='flex items-center'>
                   <Rocket className='mr-3 w-7 h-7 group-hover:rotate-12 transition-transform' />
                   Explore All Services
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 </span>
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
-<<<<<<< HEAD
               
               <Button 
                 href="/contact" 
@@ -969,14 +724,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Shield className="mr-3 w-7 h-7" />
                 <span className="flex items-center">
                   <Shield className="mr-3 w-7 h-7" />
-=======
-              <Button
-                href='/contact'
-                variant='secondary'
-                size='xl'
-=======
-                <ArrowRight className=\"ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform\" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </Button>
 
           {/* Enhanced CTA Section */}
@@ -997,21 +744,14 @@ href='/contact'
                 size='xl'
                   <Shield className="mr-3 w-7 h-7" />
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'
                />
                 <span className='flex items-center' />
                   <Shield className='mr-3 w-7 h-7' />
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   Get Expert Consultation
-=======
                   Get Expert Consultation
-=======
                   Get Expert Consultation;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </span>
               </Button>
             </div>
@@ -1019,7 +759,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400'>
               <div className='flex items-center space-x-2'>
                   Get Expert Consultation;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </span>
               </Button>
             </div>
@@ -1028,42 +767,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex items-center space-x-2'>
                 <CheckCircle className='w-5 h-5 text-green-400' />
 
-<<<<<<< HEAD
             {/* Trust Indicators */}
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>5000+ Happy Customers</span>
-=======
-<div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400'    />
-              <div className='flex items-center space-x-2'    />
-                <CheckCircle className='w-5 h-5 text-green-400'    />
-                <span    />5000+ Happy Customers</span>
-              </div>                <span    />5000+ Happy Customers</span>
-              </div>"
-              <div className=\"flex items-center space-x-2\"    />"
-                <CheckCircle className=\"w-5 h-5 text-green-400\"    />
-                <span    />99.9% Uptime Guarantee</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>99.9% Uptime Guarantee</span>
               </div>
-<<<<<<< HEAD
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>24/7 Expert Support</span>
-=======
-              <div className='flex items-center space-x-2' />
-                <CheckCircle className='w-5 h-5 text-green-400' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-                <span>24/7 Expert Support</span>
-                <span />24/7 Expert Support</span>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>
             </div>
-<<<<<<< HEAD
           </motion.div>'
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'>;'
                 <span className='flex items-center'>;'"
@@ -1097,9 +815,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </motion && motion.div>;
           {/* Contact Information */}"
-=======
-          </motion.div>
-<<<<<<< HEAD
             ))}
           </motion.div>;
           {/* Enhanced CTA Section */}
@@ -1188,14 +903,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </motion && motion.div>;
           {/* Contact Information */}
-=======
-          {/* Contact Information */}
-          <motion.div
-            variants={itemVariants}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
           {/* Contact Information */}
-<<<<<<< HEAD
           <motion.div 
             variants={itemVariants}
             className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"
@@ -1203,8 +912,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="text-center mb-4">
               <h3 className="text-lg font-semibold text-white mb-2">Ready to Get Started?</h3>
               <p className="text-gray-300 text-sm">Contact our team of experts today</p>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"
           >"
             <div className="text-center mb-4">"
@@ -1237,7 +944,6 @@ variants={itemVariants}
               <p className='text-gray-300 text-sm' />
                 Contact our team of experts today;
               </p>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
               <div className="text-center">
@@ -1248,28 +954,15 @@ variants={itemVariants}
                 <div className="text-cyan-400 font-medium">Email</div>
                 <div className="text-white">{contactInfo.email}</div>
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="text-cyan-400 font-medium">Website</div>
                 <div className="text-white">{contactInfo.website}</div>
-=======
-              <div className='text-center'>
-                <div className='text-cyan-400 font-medium'>Website</div>
-                <div className='text-white'>{contactInfo.website}</div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <div className='text-center' />
-                <div className='text-cyan-400 font-medium' />Website</div>
-                <div className='text-white' />{contactInfo.websit}
-}</div>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>
             </div>
           </motion.div>
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
           {/* Contact Information */}className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto";
           >;
             <div className="text-center mb-4">;
@@ -1355,50 +1048,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >;
                 <span className='flex items - center'>;
                   <Shield className='mr - 3 w - 7 h - 7' />                  Get Expert Consultation                <span className="flex items - center">;
-=======
-  )
-}'
-          <motion.div variants={item_variants} className='space - y-6'>;'
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
-              <Button;'
-                href='/services';'
-                variant='primary';'
-                size='xl';'
-                className='text - xl px - 12 py - 6 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 600 hover:to - purple - 700 shadow - 2xl hover:shadow - purple - 500 / 30 border - 0 group';
-              >              >;"
-                <span className="flex items - center">;"
-                  <Rocket className="mr - 3 w - 7 h - 7 group - hover:rotate - 12 transition - transform" />;
-                  Explore All Services;
-                </span>;"
-                <ArrowRight className="ml - 3 w - 6 h - 6 group - hover:translate - x-1 transition - transform" />;
-              </Button>;
-              <Button;"
-                href="/contact";"
-                variant="secondary";"
-                size="xl";"
-                className="text - xl px - 12 py - 6 bg - gradient - to - r from - slate - 800 to - slate - 700 hover:from - slate - 700 hover:to - slate - 600 border - slate - 600 hover:border - slate - 500 shadow - 2xl";
-              >;'
-                <span className='flex items - center'>;'
-                  <Rocket className='mr - 3 w - 7 h - 7 group - hover:rotate - 12 transition - transform' />;
-                  Explore All Services;
-                </span>;'
-                <ArrowRight className='ml - 3 w - 6 h - 6 group - hover:translate - x-1 transition - transform' />;
-              </Button>;
-              <Button;'
-                href='/contact';'
-                variant='secondary';'
-                size='xl';'
-                className='text - xl px - 12 py - 6 bg - gradient - to - r from - slate - 800 to - slate - 700 hover:from - slate - 700 hover:to - slate - 600 border - slate - 600 hover:border - slate - 500 shadow - 2xl';
-              >;'
-                <span className='flex items - center'>;'"
-                  <Shield className='mr - 3 w - 7 h - 7' />                  Get Expert Consultation                <span className="flex items - center">;"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   <Shield className="mr - 3 w - 7 h - 7" />;
                   Get Expert Consultation;
                 </span>;
               </Button>;
             </div>;
-<<<<<<< HEAD
             {/* Trust Indicators */}
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-8 text - sm text - gray - 400'>;
               <div className='flex items - center space - x-2'>;
@@ -1416,25 +1070,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
               <div className='flex items - center space - x-2'>;
                 <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > 24 / 7 Expert Support</span>              <div className="flex items - center space - x-2">;
-=======
-            {/* Trust Indicators */}'
-            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-8 text - sm text - gray - 400'>;'
-              <div className='flex items - center space - x-2'>;'
-                <CheckCircle className='w - 5 h - 5 text - green - 400' />;
-                <span > 5000+ Happy Customers</span>;
-              </div>                <span > 5000+ Happy Customers</span>;
-              </div>;"
-              <div className="flex items - center space - x-2">;"
-                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
-                <span > 99.9% Uptime Guarantee</span>;
-              </div>;'
-              <div className='flex items - center space - x-2'>;'
-                <CheckCircle className='w - 5 h - 5 text - green - 400' />;
-                <span > 99.9% Uptime Guarantee</span>;
-              </div>;'
-              <div className='flex items - center space - x-2'>;'"
-                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > 24 / 7 Expert Support</span>              <div className="flex items - center space - x-2">;"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 <CheckCircle className="w - 5 h - 5 text - green - 400" />;
                 <span > 24 / 7 Expert Support</span>;
               </div>;
@@ -1442,7 +1077,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>;
           {/* Contact Information */}
           <motion.div;
-<<<<<<< HEAD
             variants={item_variants}
             className='bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 6 max - w-2xl mx - auto';
           >;
@@ -1483,48 +1117,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
               <div className="text - center">;
                 <div className="text - cyan - 400 font - medium">Website</div>;
-=======
-            variants={item_variants}'
-            className='bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 6 max - w-2xl mx - auto';
-          >;'
-            <div className='text - center mb - 4'>;'
-              <h3 className='text - lg font - semibold text - white mb - 2'>;
-                Ready to Get Started?;
-              </h3>;'
-              <p className='text - gray - 300 text - sm'>;
-                Contact our team of experts today;
-              </p>;
-            </div>;'
-            <div className='grid grid - cols - 1 sm:grid - cols - 3 gap - 4 text - sm'>;'
-              <div className='text - center'>;'
-                <div className='text - cyan - 400 font - medium'>Phone</div>;'
-                <div className='text - white'>{contact_info.mobile}</div>;
-              </div>;'
-              <div className='text - center'>;'
-                <div className='text - cyan - 400 font - medium'>Email</div>;'
-                <div className='text - white'>{contact_info.email}</div>;
-              </div>;'
-              <div className='text - center'>;'
-                <div className='text - cyan - 400 font - medium'>Website</div>;'
-                <div className='text - white'>{contact_info.website}</div>              </div>            variants={item_variants}"
-            className="bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 6 max - w-2xl mx - auto";
-          >;"
-            <div className="text - center mb - 4">;"
-              <h3 className="text - lg font - semibold text - white mb - 2">Ready to Get Started?</h3>;"
-              <p className="text - gray - 300 text - sm">Contact our team of experts today</p>;
-            </div>;"
-            <div className="grid grid - cols - 1 sm:grid - cols - 3 gap - 4 text - sm">;"
-              <div className="text - center">;"
-                <div className="text - cyan - 400 font - medium">Phone</div>;"
-                <div className="text - white">{contact_info.mobile}</div>;
-              </div>;"
-              <div className="text - center">;"
-                <div className="text - cyan - 400 font - medium">Email</div>;"
-                <div className="text - white">{contact_info.email}</div>;
-              </div>;"
-              <div className="text - center">;"
-                <div className="text - cyan - 400 font - medium">Website</div>;"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 <div className="text - white">{contact_info.website}</div>;
               </div>;
             </div>;
@@ -1535,67 +1127,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
   );
-<<<<<<< HEAD
     </section>))}))
   )
 }
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 );
 
 "
-<<<<<<< HEAD
-=======
-}
-}
-}
-}
-}
-return (/>) ) 
-}</div> <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div </div> <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight" > <span className="bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent" > Future-Ready </span> <br /> <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent" > Solutions </span> </h1> <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Transform your business with our revolutionary AI, Quantum, and IT infrastructure services. <span className="text-cyan-400 font-semibold" > 1000+ cutting-edge solutions</span> delivering unprecedented ROI. </p> </motion.div> {
-  /* Enhanced Stats Grid */ 
-}<motion.div > {
-  [ {
-  label: 'Total Services', value: serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' 
-}
-{
-  label: 'AI Solutions', value: serviceStats.aiServices, icon: Brain, color: 'from-purple-500 to-pink-500' 
-}
-{
-  label: 'Emerging Tech', value: serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' 
-}
-{
-  label: 'IT Infrastructure', value: serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' 
-}
-{
-  label: 'Micro SaaS', value: serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' 
-}
-{
-  label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' 
-}].map ( (stat, index) => (<motion.div </div> </motion.div>) ) 
-}</motion.div> <Button href="/services" variant="primary" size="xl" className="text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group" > <span className="flex items-center" > <Rocket className="mr-3 w-7 h-7 group-hover:rotate-12 transition-transform" /> Explore All Services </span> <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" /> </Button> <Button href="/contact" variant="secondary" size="xl" className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl" > <span className="flex items-center" > <Shield className="mr-3 w-7 h-7" /> Get Expert Consultation </span> </Button> </div> <span>5000+ Happy Customers</span> </div> <div className="flex items-center space-x-2" > <CheckCircle className="w-5 h-5 text-green-400" /> <span>99.9% Uptime Guarantee</span> </div> <div className="flex items-center space-x-2" > <CheckCircle className="w-5 h-5 text-green-400" /> <span>24/7 Expert Support</span> </div> </div> </motion.div> {
-  /* Contact Information */ 
-}<motion.div > <div className="text-center mb-4" > <h3 className="text-lg font-semibold text-white mb-2" >Ready to Get Started?</h3> <p className="text-gray-300 text-sm" >Contact our team of experts today</p> </div> </div> </div> </motion.div> </motion.div> </div> </section>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 );  )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

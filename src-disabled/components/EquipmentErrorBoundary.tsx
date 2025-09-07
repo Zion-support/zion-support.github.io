@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
@@ -13,7 +11,6 @@ interface Props {;
 ;
   static getDerivedStateFromError(error: Error): State {;
 
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
@@ -24,13 +21,11 @@ interface Props {
   children: React.ReactNode
 }
 interface State {
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
   hasError: boolean;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   hasError: boolean
 
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
   hasError: boolean;
 origin/cursor/automate-test-improve-and-merge-code-2533
   error?: Error
@@ -73,8 +68,6 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                   variant='default'
 
                 >
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -204,8 +197,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </CardContent>
           </Card>
         </div>
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 
 
 
@@ -217,9 +208,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
 } ;
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 
 
 
@@ -327,7 +316,6 @@ interface Props  {children: React && React.ReactNode;
             </CardContent>;
           </Card>;
         </div>;
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
       )}return this && this.props.children;
   }      )}return this && this.props.children;
   }static getDerivedStateFromError (error: Error): State {return { has_error: true, error }
@@ -393,16 +381,12 @@ if ( {) {
           </Card>;
         </div>)}
     return this.props.children;
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
   }      );
   });
     }
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
     return this.props.children;
   }
 
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 } ;
 
 
@@ -415,9 +399,7 @@ if ( {) {
     }
 
     return this.props.children;
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
   }
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   }      )}return this.props.children;
   }})}return this.props.children;

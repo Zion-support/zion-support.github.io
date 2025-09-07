@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Brain, Cpu, Database, Zap, Shield, Rocket, 
@@ -49,15 +48,9 @@ export default function AIMLServicesPage() {
     { number: "2500%", label: "Average ROI", icon: TrendingUp}
   ],
 
-=======
-import Layout from '../components/layout/Layout';
-
-export default function aiml() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>AI & Machine Learning Services - Zion Tech Group</title>
         <meta name="description" content="Cutting-edge AI and machine learning solutions from Zion Tech Group. Custom AI applications, automation, and intelligent systems that drive business growth." />
         <meta property="og:title" content="AI & Machine Learning Services - Zion Tech Group" />
@@ -207,20 +200,4 @@ export default function aiml() {
       <EnhancedFooter />
     </div>
   )
-=======
-        <title>Ai Ml - Zion Tech Group</title>
-        <meta name="description" content="Ai Ml solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Ml</h1>
-          <p className="text-lg text-gray-600">
-            Professional ai ml solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

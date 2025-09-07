@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default function AIDiagnosticPlatform () {
   return (<Layout> <Head> <title>AI Diagnostic Pro Platform | Zion Tech Group</title> </Head> {
   /* Hero Section */ 
@@ -34,10 +31,6 @@ export default function AIDiagnosticPlatform () {
 }</ul> <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300" > Get Started </button> </motion.div>) ) 
 }</div> </div> </section> > <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Healthcare? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Contact our team to learn more about how AI Diagnostic Pro Platform can revolutionize your medical practice. </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <motion.div > <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4" > <Phone className="w-8 h-8 text-white" /> </div> > <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4" > <Mail className="w-8 h-8 text-white" /> </div> > <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4" > <MapPin className="w-8 h-8 text-white" /> </div> </motion.div> </div> </div> </section> </Layout>) 
 }
-=======
-import React from 'react',
-import Head from 'next/head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion } from 'framer-motion';
 
 import {
@@ -1385,4 +1378,3 @@ plan.popular;
     </Layout>
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -76,7 +76,6 @@ required?: boolean ;
       setResponse(statusInfo + responseText)} catch (err: any) {let errorMessage  = 'Request failed';if (err && err.name === 'AbortError') {errorMessage = 'Request timed out (15s)';
       } else if (err && err.message?.includes('Failed to fetch')) {errorMessage =;
           'Network error - check CORS configuration or API endpoint';
-<<<<<<< HEAD:src_backup/components/developers/ApiPlayground.tsx
       } else {;
         errorMessage = err && err.message || 'Unknown error occurred';
       }
@@ -234,7 +233,6 @@ if (contentType?.includes ('application/json') ) {try {/> {params && params.map 
         {loading ? "Sending..." : "Send Request"}
       </Button>;
       {response && <CodeBlock code={response} language="json" />}
-<<<<<<< HEAD:src_backup/components/developers/ApiPlayground.tsx
     </div>
   )
 }

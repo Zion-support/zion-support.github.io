@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
 
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
@@ -57,18 +56,6 @@ if ( {) {
     try {
       setIsLoading (true);
       // Check if Ethereum provider (e.g., MetaMask) is available;
-=======
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { useAuth  } from '@/hooks/useAuth';
-import { useWallet as useAppWallet } from "../../../context/WalletContext ;
-import { Wallet } from 'lucide-react'import { toast  } from 'sonner';
-import { logErrorToProduction } from '@/utils/productionLogger';
-export function Web3Login() {const handleWeb3Login = async () => {if (!isWalletSystemAvailable) {toast("Web3 login unavailable", {description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})return;
-  const handleWeb3Login = async () => {if (!isWalletSystemAvailable) {toast("Web3 login unavailable", {description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})return;
-  const handleWeb3Login = async () => {if (!isWalletSystemAvailable) {toast("Web3 login unavailable", {description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),return;}
-    try {setIsLoading(true)// Check if Ethereum provider (e.g., MetaMask) is available;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/auth/login/Web3Login.tsx
       const ethereum = (window as any).ethereum;
     }
     try {setIsLoading(true),// Check if Ethereum provider (e.g., MetaMask) is available;
@@ -98,7 +85,6 @@ if ( {) {$2;
         toast ("Web3 wallet not found", {description: "Please install MetaMask or another compatible wallet."}),return;
       }
       await loginWithWeb3 (), // This is from use_auth, assumed to be a separate flow;
-<<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
     } catch (error: any) {
       toast ("Login failed", {
         description: error.message || "Failed to connect wallet. Please try again."}),
@@ -152,13 +138,6 @@ if ( {) {$2;
   };
 
   const buttonDisabled = isLoading || !isWalletSystemAvailable;
-=======
-    } catch (error: any) {toast ("Login failed", {description: error.message || "Failed to connect wallet. Please try again."}),logErrorToProduction ('Web3 login error:', { data: error })} finally {setIsLoading (false)}const { loginWithWeb3 } = useAuth()const { isWalletSystemAvailable } = useAppWallet()const [isLoading, setIsLoading]  = useState(false): "";
-})}},const handleWeb3Login = async () => {if (!isWalletSystemAvailable) {toast("Web3 login unavailable", {description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),return;
-    }try {setIsLoading(true)// Check if Ethereum provider (e && e.g., MetaMask) is available;
-      const ethereum  = (window as any).ethereum;if (!ethereum) {toast("Web3 wallet not found", {description: "Please install MetaMask or another compatible wallet."}),return;
-      }await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow;} catch (error: any) {toast("Login failed", {description: error && error.message || "Failed to connect wallet. Please try again."}),logErrorToProduction('Web3 login error:', { data: error })} finally {setIsLoading(false)}}const buttonDisabled = isLoading || !isWalletSystemAvailable;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/auth/login/Web3Login.tsx
   const buttonTitle = !isWalletSystemAvailable;
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";
     : "";)}
@@ -167,7 +146,6 @@ if ( {) {$2;
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";
     : "";
 }
-<<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
   );
 }
 
@@ -192,18 +170,9 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 export function Web3Login() {
   );
 }return;
-=======
-  )}import { useWallet as useAppWallet } from '../../../context/WalletContext.tsx'; // Renamed to avoid conflict if useWallet hook is defined locally;
-import { Wallet  } from 'lucide-react';
-import { toast  } from 'sonner';
-import { logErrorToProduction  } from '@/utils/productionLogger';
-import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally;
-export function Web3Login() {)}return;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/auth/login/Web3Login.tsx
 }await loginWithWeb3 (), //This is from useAuth, assumed to be a separate flow ;
 }finally {setIsLoading (false)}const buttonDisabled = isLoading || !isWalletSystemAvailable;
 const buttonTitle = !isWalletSystemAvailable ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured." : "";";
-<<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
 >Sign in with Web3</span> </> 
 }//Ensure title is not an empty string if not needed > {;
   buttonContent ;
@@ -212,9 +181,3 @@ const buttonTitle = !isWalletSystemAvailable ? "Web3 login is currently unavaila
   )
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->Sign in with Web3</span> </>;
-}//Ensure title is not an empty string if not needed > {buttonContent ;
-}</Button>)}";
-  )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/auth/login/Web3Login.tsx

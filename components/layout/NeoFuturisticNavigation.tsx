@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react',
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu;
@@ -292,7 +290,6 @@ export default function NeoFuturisticNavigation() {const [isOpen, setIsOpen] = u
 			isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent'
 		}`}> 
 			{/* Scroll Progress Bar */}
-<<<<<<< HEAD
 			<div className="absolute top-0 left-0 h-1 w-full bg-transparent">
 				<div
 					className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600"
@@ -301,16 +298,6 @@ export default function NeoFuturisticNavigation() {const [isOpen, setIsOpen] = u
 			</div>
 			<div className="max-w-7xl mx-auto px-4">
 				<div className="flex items-center justify-between h-20">
-=======
-			<div className=\"absolute top-0 left-0 h-1 w-full bg-transparent\" />;
-				<div;"
-					className=\"h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600\";
-					style={{ width: `${(typeof window !== 'undefined' && document.body.scrollHeight  /> 0) ? (Math.min(100;, (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)) : 0}%` }}
-				/>;
-			</div>;"
-			<div className=\"max-w-7xl mx-auto px-4\" />;"
-				<div className=\"flex items-center justify-between h-20\" />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 					{/* Logo */}
 					<Link href="/" className="flex items-center space-x-3 group">
 						<div className="relative">
@@ -327,12 +314,8 @@ export default function NeoFuturisticNavigation() {const [isOpen, setIsOpen] = u
 						</div>
 					</Link>
 
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import {
   Menu
   X
@@ -382,7 +365,6 @@ import {
   ChevronRight as ChevronRightIcon
   Eye
   FlaskConical
-<<<<<<< HEAD
 					<Link href="/" className="flex items-center space-x-3 group">;
 						<div className="relative">;
 							<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
@@ -398,11 +380,6 @@ import {
 						</div>;
 					</Link>;
 import {Menu;
-=======
-=======
-import {};
-  Menu;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   X;
   ChevronDown;
   ChevronRight;
@@ -450,7 +427,6 @@ import {};
   ChevronRight as ChevronRightIcon;
   Eye;
   FlaskConical;
-<<<<<<< HEAD
   Link as LinkIcon;
   Menu,X,ChevronDown,ChevronRight,Phone,Mail,MapPin,Globe,ArrowRight,Sparkles,Brain,Atom,Shield,DollarSign,FileText,BarChart3,MessageSquare,Truck,Users,Database,Cpu,Cloud,Play,Search,ShieldCheck,TrendingUp,Rocket,Zap,Check,Star,Clock,Target,Building,Award,ChartBar,Lock,Smartphone,Palette,Calendar,CreditCard,Settings,Code,BookOpen,Activity,Bot,ChevronRight as ChevronRightIcon,Eye,FlaskConical,Link as LinkIcon,export default function NeoFuturisticNavigation() {export default function NeoFuturisticNavigation() {const [isOpen, setIsOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const router = useRouter()const serviceCategories = [;
     {name: 'Quantum Computing';
@@ -469,8 +445,6 @@ import {};
         {name: 'Quantum Simulation';
           description: 'Advanced quantum simulations';
           price: '$399/month';
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Link as LinkIcon;
 import Button from '../ui/Button';
 import {}
@@ -551,11 +525,9 @@ export default function NeoFuturisticNavigation() {};
           name: 'Quantum Simulation''
           description: 'Advanced quantum simulations''
           price: '$399/month'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
       ]
     }
-<<<<<<< HEAD
     {name: 'AI & Machine Learning';
       description: 'Advanced artificial intelligence and ML platforms';
       icon: <Brain className='w-5 h-5' />;
@@ -572,32 +544,9 @@ export default function NeoFuturisticNavigation() {};
         {name: 'AI Automation Suite';
           description: 'Complete business automation';
           price: '$149/month';
-=======
-    {'
-      name: 'AI & Machine Learning''
-      description: 'Advanced artificial intelligence and ML platforms''
-      icon: <Brain className='w-5 h-5' />'
-      color: 'from-blue-500 to-cyan-500'
-      services: []
-        {'
-          name: 'AI Content Generator''
-          description: 'Professional AI content creation''
-          price: '$49/month'
-        }
-        {'
-          name: 'AI Analytics Platform''
-          description: 'Advanced business intelligence''
-          price: '$99/month'
-        }
-        {'
-          name: 'AI Automation Suite''
-          description: 'Complete business automation''
-          price: '$149/month'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
       ]
     }
-<<<<<<< HEAD
     {name: 'Cybersecurity';
       description: 'Next-generation security solutions';
       icon: <Shield className='w-5 h-5' />;
@@ -614,32 +563,9 @@ export default function NeoFuturisticNavigation() {};
         {name: 'Zero-Trust Platform';
           description: 'Advanced access control';
           price: '$129/month';
-=======
-    {'
-      name: 'Cybersecurity''
-      description: 'Next-generation security solutions''
-      icon: <Shield className='w-5 h-5' />'
-      color: 'from-red-500 to-orange-500'
-      services: []
-        {'
-          name: 'Quantum Cybersecurity''
-          description: 'Post-quantum era security''
-          price: '$159/month'
-        }
-        {'
-          name: 'AI Threat Detection''
-          description: 'Intelligent security monitoring''
-          price: '$89/month'
-        }
-        {'
-          name: 'Zero-Trust Platform''
-          description: 'Advanced access control''
-          price: '$129/month'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
       ]
     }
-<<<<<<< HEAD
     {name: 'Blockchain & Web3';
       description: 'Future-proof blockchain and decentralized solutions';
       icon: <LinkIcon className='w-5 h-5' />;
@@ -656,32 +582,9 @@ export default function NeoFuturisticNavigation() {};
         {name: 'NFT Marketplace';
           description: 'AI-curated NFT platform';
           price: '$99/month';
-=======
-    {'
-      name: 'Blockchain & Web3''
-      description: 'Future-proof blockchain and decentralized solutions''
-      icon: <LinkIcon className='w-5 h-5' />'
-      color: 'from-indigo-500 to-purple-500'
-      services: []
-        {'
-          name: 'Quantum Blockchain''
-          description: 'Post-quantum blockchain platform''
-          price: '$349/month'
-        }
-        {'
-          name: 'DeFi Protocol Suite''
-          description: 'Complete DeFi solutions''
-          price: '$199/month'
-        }
-        {'
-          name: 'NFT Marketplace''
-          description: 'AI-curated NFT platform''
-          price: '$99/month'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
       ]
     }
-<<<<<<< HEAD
     {name: 'IoT & Smart Cities';
       description: 'Connected devices and intelligent infrastructure';
       icon: <Globe className='w-5 h-5' />;
@@ -698,32 +601,9 @@ export default function NeoFuturisticNavigation() {};
         {name: 'Industrial IoT';
           description: 'Manufacturing automation';
           price: '$249/month';
-=======
-    {'
-      name: 'IoT & Smart Cities''
-      description: 'Connected devices and intelligent infrastructure''
-      icon: <Globe className='w-5 h-5' />'
-      color: 'from-teal-500 to-green-500'
-      services: []
-        {'
-          name: 'Quantum IoT Platform''
-          description: 'Quantum-secured IoT solutions''
-          price: '$199/month'
-        }
-        {'
-          name: 'Smart City Suite''
-          description: 'Complete urban intelligence''
-          price: '$299/month'
-        }
-        {'
-          name: 'Industrial IoT''
-          description: 'Manufacturing automation''
-          price: '$249/month'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
       ]
     }
-<<<<<<< HEAD
     {name: 'Metaverse & VR/AR';
       description: 'Immersive digital experiences and virtual worlds';
       icon: <Eye className='w-5 h-5' />;
@@ -740,32 +620,9 @@ export default function NeoFuturisticNavigation() {};
         {name: 'AR Solutions';
           description: 'Augmented reality platform';
           price: '$199/month';
-=======
-    {'
-      name: 'Metaverse & VR/AR''
-      description: 'Immersive digital experiences and virtual worlds''
-      icon: <Eye className='w-5 h-5' />'
-      color: 'from-pink-500 to-rose-500'
-      services: []
-        {'
-          name: 'Quantum Metaverse''
-          description: 'Quantum-enhanced virtual reality''
-          price: '$499/month'
-        }
-        {'
-          name: 'VR Development''
-          description: 'Complete VR platform''
-          price: '$299/month'
-        }
-        {'
-          name: 'AR Solutions''
-          description: 'Augmented reality platform''
-          price: '$199/month'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
       ]
     }
-<<<<<<< HEAD
     {name: 'Robotics & Automation';
       description: 'Intelligent automation and robotic systems';
       icon: <Cpu className='w-5 h-5' />;
@@ -782,32 +639,9 @@ export default function NeoFuturisticNavigation() {};
         {name: 'Service Robotics';
           description: 'Intelligent service automation';
           price: '$349/month';
-=======
-    {'
-      name: 'Robotics & Automation''
-      description: 'Intelligent automation and robotic systems''
-      icon: <Cpu className='w-5 h-5' />'
-      color: 'from-orange-500 to-red-500'
-      services: []
-        {'
-          name: 'Quantum Robotics''
-          description: 'AI-powered robotics platform''
-          price: '$799/month'
-        }
-        {'
-          name: 'Manufacturing AI''
-          description: 'Autonomous manufacturing''
-          price: '$199/month'
-        }
-        {'
-          name: 'Service Robotics''
-          description: 'Intelligent service automation''
-          price: '$349/month'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
       ]
     }
-<<<<<<< HEAD
     {name: 'Energy & Sustainability';
       description: 'Green technology and energy optimization';
       icon: <Zap className='w-5 h-5' />;
@@ -824,32 +658,9 @@ export default function NeoFuturisticNavigation() {};
         {name: 'Sustainability AI';
           description: 'Environmental impact optimization';
           price: '$149/month';
-=======
-    {'
-      name: 'Energy & Sustainability''
-      description: 'Green technology and energy optimization''
-      icon: <Zap className='w-5 h-5' />'
-      color: 'from-yellow-500 to-orange-500'
-      services: []
-        {'
-          name: 'Quantum Energy''
-          description: 'AI-optimized energy management''
-          price: '$299/month'
-        }
-        {'
-          name: 'Smart Grid''
-          description: 'Intelligent energy distribution''
-          price: '$199/month'
-        }
-        {'
-          name: 'Sustainability AI''
-          description: 'Environmental impact optimization''
-          price: '$149/month'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
       ]
     }
-<<<<<<< HEAD
     {name: 'Financial Technology';
       description: 'Innovative fintech and trading solutions';
       icon: <DollarSign className='w-5 h-5' />;
@@ -866,32 +677,9 @@ export default function NeoFuturisticNavigation() {};
         {name: 'Blockchain Finance';
           description: 'DeFi and blockchain solutions';
           price: '$199/month';
-=======
-    {'
-      name: 'Financial Technology''
-      description: 'Innovative fintech and trading solutions''
-      icon: <DollarSign className='w-5 h-5' />'
-      color: 'from-violet-500 to-purple-500'
-      services: []
-        {'
-          name: 'Quantum Trading''
-          description: 'Quantum-enhanced algorithmic trading''
-          price: '$899/month'
-        }
-        {'
-          name: 'AI Risk Management''
-          description: 'Intelligent financial risk analysis''
-          price: '$399/month'
-        }
-        {'
-          name: 'Blockchain Finance''
-          description: 'DeFi and blockchain solutions''
-          price: '$199/month'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
       ]
     }
-<<<<<<< HEAD
     {name: 'Biotechnology & Healthcare';
       description: 'AI-powered healthcare and biotech solutions';
       icon: <FlaskConical className='w-5 h-5' />;
@@ -908,33 +696,10 @@ export default function NeoFuturisticNavigation() {};
         {name: 'Genomic AI';
           description: 'Advanced genetic analysis';
           price: '$399/month';
-=======
-    {'
-      name: 'Biotechnology & Healthcare''
-      description: 'AI-powered healthcare and biotech solutions''
-      icon: <FlaskConical className='w-5 h-5' />'
-      color: 'from-emerald-500 to-teal-500'
-      services: []
-        {'
-          name: 'Biotech AI''
-          description: 'AI-powered drug discovery''
-          price: '$599/month'
-        }
-        {'
-          name: 'Healthcare Analytics''
-          description: 'Medical data intelligence''
-          price: '$299/month'
-        }
-        {'
-          name: 'Genomic AI''
-          description: 'Advanced genetic analysis''
-          price: '$399/month'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
       ]
     }
   ];
-<<<<<<< HEAD
   const companyInfo = [;
     {name: 'About Zion Tech Group';
       description: 'Leading the global micro SaaS revolution';
@@ -1182,104 +947,6 @@ const newServiceLinks = [
           </Link>;
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>;
-=======
-  const companyInfo = []
-    {'
-      name: 'About Zion Tech Group''
-      description: 'Leading the global micro SaaS revolution''
-      icon: <Rocket className='w-5 h-5' />'
-      link: '/about'
-    }
-    {'
-      name: 'Careers''
-      description: 'Join our revolutionary team''
-      icon: <Star className='w-5 h-5' />'
-      link: '/careers'
-    }
-    {'
-      name: 'News & Updates''
-      description: 'Latest announcements and releases''
-      icon: <TrendingUp className='w-5 h-5' />'
-      link: '/news'
-    }
-    {'
-      name: 'Contact''
-      description: 'Talk to our team 24/7''
-      icon: <Phone className='w-5 h-5' />'
-      link: '/contact'
-    }
-  ];
-  const resources = []
-    {'
-      name: 'Documentation''
-      description: 'Comprehensive service guides''
-      icon: <BookOpen className='w-5 h-5' />'
-      link: '/docs'
-    }
-    {'
-      name: 'Blog & Insights''
-      description: 'Latest technology trends''
-      icon: <FileText className='w-5 h-5' />'
-      link: '/blog'
-    }
-    {'
-      name: 'Case Studies''
-      description: 'Real-world success stories''
-      icon: <BarChart3 className='w-5 h-5' />'
-      link: '/case-studies'
-    }
-    {'
-      name: 'Pricing''
-      description: 'Transparent and flexible plans''
-      icon: <CreditCard className='w-5 h-5' />'
-      link: '/pricing'
-    }
-    {'
-      name: 'Reports''
-      description: 'Live performance and audits''
-      icon: <Activity className='w-5 h-5' />'
-      link: '/reports'
-    }
-  ];
-  // Popular quick links to flagship services;
-  const popularServiceLinks = ['
-    { name: 'AI Content Generator', href: '/ai-content-generator' }'
-    { name: 'AI Blockchain Analytics', href: '/ai-blockchain-analytics' }'
-    { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' }'
-    { name: 'AI HR Recruitment', href: '/ai-hr-recruitment' }'
-    { name: 'AI Video Editing', href: '/ai-video-editing' }'
-    { name: 'AI SEO Optimization', href: '/ai-seo-optimization' }'
-    { name: 'AI IoT Platform', href: '/ai-iot-platform' }'
-    { name: 'AI Sales Automation', href: '/ai-sales-automation' }'
-    { name: 'AI Market Research', href: '/ai-market-research' }
-  ];
-  // Newly added real services quick links;
-  const newServiceLinks = []
-    {'
-      name: 'Email Deliverability Monitor''
-      href: '/services/email-deliverability-monitor'
-    }
-    {'
-      name: 'Landing Page Experimentation''
-      href: '/services/landing-page-experimentation'
-    }
-    {'
-      name: 'Invoice Reconciliation Automation''
-      href: '/services/invoice-reconciliation-automation'
-    }
-    {'
-      name: 'GitHub Ops Health Dashboard''
-      href: '/services/github-ops-health-dashboard'
-    }
-    {'
-      name: 'Error Budget Automation''
-      href: '/services/error-budget-automation'
-    }'
-    { name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
-  ];
-    >
-
-<<<<<<< HEAD
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -1293,21 +960,6 @@ const newServiceLinks = [
 };
 
     window && window.addEventListener('scroll', handleScroll);
-=======
-  const contactInfo = {;'
-    mobile: '+1 302 464 0950',;'
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;'
-    address: '364 E Main St STE 1008 Middletown DE 19709',;'
-    website: 'https://ziontechgroup && ziontechgroup.com',;
-  };
-
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setIsScrolled(window && window.scrollY > 20);
-    };
-'
-    window && window.addEventListener('scroll', handleScroll);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -1323,7 +975,6 @@ const newServiceLinks = [
   const isActive = (path: string) => router && router.pathname === path;
 
   const serviceCategories = [;
-<<<<<<< HEAD
     {;
       name: 'Quantum Computing',,
   description: 'Revolutionary quantum computing solutions',;
@@ -1343,32 +994,10 @@ const newServiceLinks = [
         {;
           name: 'Quantum Simulation',,
   description: 'Advanced quantum simulations',;
-=======
-    {;'
-      name: 'Quantum Computing',;'
-      description: 'Revolutionary quantum computing solutions',;'
-      icon: <Atom className='w-5 h-5' />,;'
-      color: 'from-purple-500 to-pink-500',;
-      services: [;
-        {;'
-          name: 'Quantum AI Platform',;'
-          description: 'AI-powered quantum computing',;'
-          price: '$299/month',;
-        },;
-        {;'
-          name: 'Quantum Optimization',;'
-          description: 'Quantum algorithms for complex problems',;'
-          price: '$199/month',;
-        },;
-        {;'
-          name: 'Quantum Simulation',;'
-          description: 'Advanced quantum simulations',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           price: '$399/month',;
         },;
       ],;
     },;
-<<<<<<< HEAD
     {;
       name: 'AI & Machine Learning',,
   description: 'Advanced artificial intelligence and ML platforms',;
@@ -1388,32 +1017,10 @@ const newServiceLinks = [
         {;
           name: 'AI Automation Suite',,
   description: 'Complete business automation',;
-=======
-    {;'
-      name: 'AI & Machine Learning',;'
-      description: 'Advanced artificial intelligence and ML platforms',;'
-      icon: <Brain className='w-5 h-5' />,;'
-      color: 'from-blue-500 to-cyan-500',;
-      services: [;
-        {;'
-          name: 'AI Content Generator',;'
-          description: 'Professional AI content creation',;'
-          price: '$49/month',;
-        },;
-        {;'
-          name: 'AI Analytics Platform',;'
-          description: 'Advanced business intelligence',;'
-          price: '$99/month',;
-        },;
-        {;'
-          name: 'AI Automation Suite',;'
-          description: 'Complete business automation',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           price: '$149/month',;
         },;
       ],;
     },;
-<<<<<<< HEAD
     {;
       name: 'Cybersecurity',,
   description: 'Next-generation security solutions',;
@@ -1433,32 +1040,10 @@ const newServiceLinks = [
         {;
           name: 'Zero-Trust Platform',,
   description: 'Advanced access control',;
-=======
-    {;'
-      name: 'Cybersecurity',;'
-      description: 'Next-generation security solutions',;'
-      icon: <Shield className='w-5 h-5' />,;'
-      color: 'from-red-500 to-orange-500',;
-      services: [;
-        {;'
-          name: 'Quantum Cybersecurity',;'
-          description: 'Post-quantum era security',;'
-          price: '$159/month',;
-        },;
-        {;'
-          name: 'AI Threat Detection',;'
-          description: 'Intelligent security monitoring',;'
-          price: '$89/month',;
-        },;
-        {;'
-          name: 'Zero-Trust Platform',;'
-          description: 'Advanced access control',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           price: '$129/month',;
         },;
       ],;
     },;
-<<<<<<< HEAD
     {;
       name: 'Blockchain & Web3',,
   description: 'Future-proof blockchain and decentralized solutions',;
@@ -1478,32 +1063,10 @@ const newServiceLinks = [
         {;
           name: 'NFT Marketplace',,
   description: 'AI-curated NFT platform',;
-=======
-    {;'
-      name: 'Blockchain & Web3',;'
-      description: 'Future-proof blockchain and decentralized solutions',;'
-      icon: <LinkIcon className='w-5 h-5' />,;'
-      color: 'from-indigo-500 to-purple-500',;
-      services: [;
-        {;'
-          name: 'Quantum Blockchain',;'
-          description: 'Post-quantum blockchain platform',;'
-          price: '$349/month',;
-        },;
-        {;'
-          name: 'DeFi Protocol Suite',;'
-          description: 'Complete DeFi solutions',;'
-          price: '$199/month',;
-        },;
-        {;'
-          name: 'NFT Marketplace',;'
-          description: 'AI-curated NFT platform',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           price: '$99/month',;
         },;
       ],;
     },;
-<<<<<<< HEAD
     {;
       name: 'IoT & Smart Cities',,
   description: 'Connected devices and intelligent infrastructure',;
@@ -1523,32 +1086,10 @@ const newServiceLinks = [
         {;
           name: 'Industrial IoT',,
   description: 'Manufacturing automation',;
-=======
-    {;'
-      name: 'IoT & Smart Cities',;'
-      description: 'Connected devices and intelligent infrastructure',;'
-      icon: <Globe className='w-5 h-5' />,;'
-      color: 'from-teal-500 to-green-500',;
-      services: [;
-        {;'
-          name: 'Quantum IoT Platform',;'
-          description: 'Quantum-secured IoT solutions',;'
-          price: '$199/month',;
-        },;
-        {;'
-          name: 'Smart City Suite',;'
-          description: 'Complete urban intelligence',;'
-          price: '$299/month',;
-        },;
-        {;'
-          name: 'Industrial IoT',;'
-          description: 'Manufacturing automation',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           price: '$249/month',;
         },;
       ],;
     },;
-<<<<<<< HEAD
     {;
       name: 'Metaverse & VR/AR',,
   description: 'Immersive digital experiences and virtual worlds',;
@@ -1568,32 +1109,10 @@ const newServiceLinks = [
         {;
           name: 'AR Solutions',,
   description: 'Augmented reality platform',;
-=======
-    {;'
-      name: 'Metaverse & VR/AR',;'
-      description: 'Immersive digital experiences and virtual worlds',;'
-      icon: <Eye className='w-5 h-5' />,;'
-      color: 'from-pink-500 to-rose-500',;
-      services: [;
-        {;'
-          name: 'Quantum Metaverse',;'
-          description: 'Quantum-enhanced virtual reality',;'
-          price: '$499/month',;
-        },;
-        {;'
-          name: 'VR Development',;'
-          description: 'Complete VR platform',;'
-          price: '$299/month',;
-        },;
-        {;'
-          name: 'AR Solutions',;'
-          description: 'Augmented reality platform',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           price: '$199/month',;
         },;
       ],;
     },;
-<<<<<<< HEAD
     {;
       name: 'Robotics & Automation',,
   description: 'Intelligent automation and robotic systems',;
@@ -1613,32 +1132,10 @@ const newServiceLinks = [
         {;
           name: 'Service Robotics',,
   description: 'Intelligent service automation',;
-=======
-    {;'
-      name: 'Robotics & Automation',;'
-      description: 'Intelligent automation and robotic systems',;'
-      icon: <Cpu className='w-5 h-5' />,;'
-      color: 'from-orange-500 to-red-500',;
-      services: [;
-        {;'
-          name: 'Quantum Robotics',;'
-          description: 'AI-powered robotics platform',;'
-          price: '$799/month',;
-        },;
-        {;'
-          name: 'Manufacturing AI',;'
-          description: 'Autonomous manufacturing',;'
-          price: '$199/month',;
-        },;
-        {;'
-          name: 'Service Robotics',;'
-          description: 'Intelligent service automation',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           price: '$349/month',;
         },;
       ],;
     },;
-<<<<<<< HEAD
     {;
       name: 'Energy & Sustainability',,
   description: 'Green technology and energy optimization',;
@@ -1658,32 +1155,10 @@ const newServiceLinks = [
         {;
           name: 'Sustainability AI',,
   description: 'Environmental impact optimization',;
-=======
-    {;'
-      name: 'Energy & Sustainability',;'
-      description: 'Green technology and energy optimization',;'
-      icon: <Zap className='w-5 h-5' />,;'
-      color: 'from-yellow-500 to-orange-500',;
-      services: [;
-        {;'
-          name: 'Quantum Energy',;'
-          description: 'AI-optimized energy management',;'
-          price: '$299/month',;
-        },;
-        {;'
-          name: 'Smart Grid',;'
-          description: 'Intelligent energy distribution',;'
-          price: '$199/month',;
-        },;
-        {;'
-          name: 'Sustainability AI',;'
-          description: 'Environmental impact optimization',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           price: '$149/month',;
         },;
       ],;
     },;
-<<<<<<< HEAD
     {;
       name: 'Financial Technology',,
   description: 'Innovative fintech and trading solutions',;
@@ -1703,32 +1178,10 @@ const newServiceLinks = [
         {;
           name: 'Blockchain Finance',,
   description: 'DeFi and blockchain solutions',;
-=======
-    {;'
-      name: 'Financial Technology',;'
-      description: 'Innovative fintech and trading solutions',;'
-      icon: <DollarSign className='w-5 h-5' />,;'
-      color: 'from-violet-500 to-purple-500',;
-      services: [;
-        {;'
-          name: 'Quantum Trading',;'
-          description: 'Quantum-enhanced algorithmic trading',;'
-          price: '$899/month',;
-        },;
-        {;'
-          name: 'AI Risk Management',;'
-          description: 'Intelligent financial risk analysis',;'
-          price: '$399/month',;
-        },;
-        {;'
-          name: 'Blockchain Finance',;'
-          description: 'DeFi and blockchain solutions',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           price: '$199/month',;
         },;
       ],;
     },;
-<<<<<<< HEAD
     {;
       name: 'Biotechnology & Healthcare',,
   description: 'AI-powered healthcare and biotech solutions',;
@@ -1748,27 +1201,6 @@ const newServiceLinks = [
         {;
           name: 'Genomic AI',,
   description: 'Advanced genetic analysis',;
-=======
-    {;'
-      name: 'Biotechnology & Healthcare',;'
-      description: 'AI-powered healthcare and biotech solutions',;'
-      icon: <FlaskConical className='w-5 h-5' />,;'
-      color: 'from-emerald-500 to-teal-500',;
-      services: [;
-        {;'
-          name: 'Biotech AI',;'
-          description: 'AI-powered drug discovery',;'
-          price: '$599/month',;
-        },;
-        {;'
-          name: 'Healthcare Analytics',;'
-          description: 'Medical data intelligence',;'
-          price: '$299/month',;
-        },;
-        {;'
-          name: 'Genomic AI',;'
-          description: 'Advanced genetic analysis',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           price: '$399/month',;
         },;
       ],;
@@ -1776,7 +1208,6 @@ const newServiceLinks = [
   ];
 
   const companyInfo = [;
-<<<<<<< HEAD
     {;
       name: 'About Zion Tech Group',,
   description: 'Leading the global micro SaaS revolution',;
@@ -1799,36 +1230,11 @@ const newServiceLinks = [
       name: 'Contact',,
   description: 'Talk to our team 24/7',;
       icon: <Phone className='w-5 h-5' />,;
-=======
-    {;'
-      name: 'About Zion Tech Group',;'
-      description: 'Leading the global micro SaaS revolution',;'
-      icon: <Rocket className='w-5 h-5' />,;'
-      link: '/about',;
-    },;
-    {;'
-      name: 'Careers',;'
-      description: 'Join our revolutionary team',;'
-      icon: <Star className='w-5 h-5' />,;'
-      link: '/careers',;
-    },;
-    {;'
-      name: 'News & Updates',;'
-      description: 'Latest announcements and releases',;'
-      icon: <TrendingUp className='w-5 h-5' />,;'
-      link: '/news',;
-    },;
-    {;'
-      name: 'Contact',;'
-      description: 'Talk to our team 24/7',;'
-      icon: <Phone className='w-5 h-5' />,;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       link: '/contact',;
     },;
   ];
 
   const resources = [;
-<<<<<<< HEAD
     {;
       name: 'Documentation',,
   description: 'Comprehensive service guides',;
@@ -1857,36 +1263,6 @@ const newServiceLinks = [
       name: 'Reports',,
   description: 'Live performance and audits',;
       icon: <Activity className='w-5 h-5' />,;
-=======
-    {;'
-      name: 'Documentation',;'
-      description: 'Comprehensive service guides',;'
-      icon: <BookOpen className='w-5 h-5' />,;'
-      link: '/docs',;
-    },;
-    {;'
-      name: 'Blog & Insights',;'
-      description: 'Latest technology trends',;'
-      icon: <FileText className='w-5 h-5' />,;'
-      link: '/blog',;
-    },;
-    {;'
-      name: 'Case Studies',;'
-      description: 'Real-world success stories',;'
-      icon: <BarChart3 className='w-5 h-5' />,;'
-      link: '/case-studies',;
-    },;
-    {;'
-      name: 'Pricing',;'
-      description: 'Transparent and flexible plans',;'
-      icon: <CreditCard className='w-5 h-5' />,;'
-      link: '/pricing',;
-    },;
-    {;'
-      name: 'Reports',;'
-      description: 'Live performance and audits',;'
-      icon: <Activity className='w-5 h-5' />,;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       link: '/reports',;
     },;
   ];
@@ -1940,7 +1316,6 @@ const newServiceLinks = [
       </div>;'
       <div className='max-w-7xl mx-auto px-4'>;'
         <div className='flex items-center justify-between h-20'>;
-<<<<<<< HEAD
           {/* Logo */}
           <Link href='/' className='flex items-center space-x-3 group'>
             <div className='relative'>
@@ -1960,14 +1335,6 @@ const newServiceLinks = [
           </Link>
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
-=======
-
-
-          {/* Desktop Navigation *}
-}
-          <div className='hidden lg:flex items-center space-x-8' />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             {/* Services Dropdown */}
             <div className='relative group'>;
               <button;
@@ -2204,31 +1571,14 @@ const newServiceLinks = [
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
           {/* Logo */}
 
-<<<<<<< HEAD
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
-=======
-                  />
-                </button>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                {activeDropdown === 'mobile-services' && (
-<<<<<<< HEAD
-=======
-          {/* Logo */}'
-                {activeDropdown === 'mobile-services' && ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className='ml-4 space-y-3'>
-=======
                   <div className='ml-4 space-y-3' />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     {serviceCategories.map((category, index) => (
                   />;
                 </button>;
-<<<<<<< HEAD
                 {activeDropdown === 'mobile-services' && (<div className='ml-4 space-y-3'>;
-=======
-<<<<<<< HEAD
 '
                 {activeDropdown === 'mobile-services' && (;'
                   <div className='ml-4 space-y-3'>;
@@ -2249,9 +1599,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               <div;
                                 key={serviceIndex}'
                                 className='text-xs text-gray-500'>;
-=======
-                {activeDropdown === 'mobile-services' && (<div className='ml-4 space-y-3' />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     {serviceCategories.map((category, index) => (/>;
                 </button>;{activeDropdown === 'mobile-services' && (<div className='ml-4 space-y-3'>;
                     {serviceCategories && serviceCategories.map((category, index) => (<div;
@@ -2267,12 +1614,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {category && category.services;
                             .slice(0, 2).map((service, serviceIndex) => (<div;
                                 key={serviceIndex}
-<<<<<<< HEAD
                                 className='text-xs text-gray-500'>;
-=======
-                                className='text-xs text-gray-500' />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                                 • {service && service.name} - {service && service.price}
                               </div>;
                             ))}
@@ -2301,48 +1643,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {item && item.name}
                       </Link>;
                     ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='pt-3'>;
-=======
-                  </div>;
-                )}
-              {/* Resources Section */}
-              <div>;
-                <button'
-                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4''
-                  onClick={() => toggleDropdown('mobile-resources')}
-                >;
-                  <span>Resources</span>;
-                  <ChevronRight'`
-                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}
-                      <Link;
-                        key={index}
-                        href={item && item.link}'
-                        className='block text-gray-300 hover:text-white transition-colors'
-                        onClick={closeMobileMenu}>;
-                        {item && item.name}
-                      </Link>;
-                    ))}
-                  </div>;
-                )}
-                  <Button'
-                    href='/services''
-                    variant='quantum''
-                    size='lg'
-<<<<<<< HEAD
                   <Button'
                     href='/contact''
                     variant='secondary''
                     size='lg''
                     className='w-full'>;'
-=======
-                  <Button
-                    href='/contact'
-                    variant='secondary'
-                    size='lg'
-                    className='w-full'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <ArrowRight className='w - 4 h - 4 ml - 2' />;
                       </Button>;
                     </div>;
@@ -2543,7 +1849,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       </div>))}'
                     <div className='pt - 3'>;
-<<<<<<< HEAD
                       <Button;'
                         href='/services';'
                         variant='quantum';'
@@ -2643,47 +1948,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href='/contact';'
                     variant='secondary';'
                     size='lg';'
-=======
-                    <div className='pt-3' />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       <Button;
                         href='/services';
                         variant='quantum';
                         size='sm';
-=======
                   </div>
                 )}
-<<<<<<< HEAD
-=======
-              {/* Resources Section */}
-              <div />;
-                <button;
-                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4';
-                  onClick={() = /> toggleDropdown('mobile-resources')}
-                >;
-                  <span />Resources</span>;
-                  <ChevronRight;
-                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}
-                      <Link;
-                        key={index}
-                        href={item && item.link}
-                        className='block text-gray-300 hover:text-white transition-colors';
-                        onClick={closeMobileMenu} />;
-                        {item && item.name}
-                      </Link>;
-                    ))}
-                  </div>;
-                )}
-
-                  <Button;
-href='/services'
-                    variant='quantum'
-                    size='lg'
-                  <Button;
-                    href='/contact';
-                    variant='secondary';
-                    size='lg';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className='w - full';
                   >;
                     Contact Us;
@@ -2706,22 +1976,12 @@ href='/services'
 				</div>
 			)}
 		</nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-href='/contact'
-                    variant='secondary'
-                    size='lg'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className='w-full'
                    />
                     Contact Us;
                   </Button>
                 </div>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>
-<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -2762,55 +2022,14 @@ href='/contact'
 }<div /> <span />Resources</span> <ChevronRight className= {
   `w-5 h-5 transition-transform duration-300 $ {}
   activeDropdown === 'mobile-resources'? 'rotate-90': '' }
-=======
-window.addEventListener ('scroll', handleScroll)
-return () => window.removeEventListener ('scroll', handleScroll) 
-}, [])
-] 
-}]
-]
-const resources = [ {
-  name: 'Documentation', description: 'Comprehensive service guides', icon: <BookOpen className="w-5 h-5" />, link: '/docs' 
-}
-{
-  name: 'Blog & Insights', description: 'Latest technology trends', icon: <FileText className="w-5 h-5" />, link: '/blog' 
-}
-{
-  name: 'Case Studies', description: 'Real-world success stories', icon: <BarChart3 className="w-5 h-5" />, link: '/case-studies' 
-}
-{
-  name: 'Pricing', description: 'Transparent and flexible plans', icon: <CreditCard className="w-5 h-5" />, link: '/pricing' 
-}
-{
-  name: 'Reports', description: 'Live performance and audits', icon: <Activity className="w-5 h-5" />, link: '/reports' 
-}]
-
-  `w-4 h-4 transition-transform duration-300 $ {
-  activeDropdown === 'services' ? 'rotate-180' : '' 
-}` 
-}/> </button> </div>) ) 
-}</div> </div>) ) 
-}</div> <div className="mt-6 pt-6 border-t border-gray-700/50" > <div className="flex items-center justify-between" > <div className="text-gray-400 text-sm" > <span className="text-cyan-400 font-semibold" >500+</span> Revolutionary Services Available </div> <Button href="/services" variant="quantum" size="sm" > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div> </div>) 
-}</div> > <span>Popular</span> <ChevronDown className= {
-  `w-4 h-4 transition-transform duration-300 $ {
-  activeDropdown === 'popular'? 'rotate-180': '' 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }` 
 }/> </button>) ) 
 }</div>) "
 }</div> </div> </div> <div className=\"mt-6 space-y-3\"  /> <Button href=\"/services\" variant=\"quantum\" size=\"lg\" className=\"w-full\"  /> Explore Services <ArrowRight className=\"w-5 h-5 ml-2\" /> </Button> <Button href=\"/contact\" variant=\"secondary\" size=\"lg\" className=\"w-full\"  /> Contact Us </Button> </div> </div> </div> </div> </div>) 
 }</nav>)
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               {/* Company Section */}
               <div>;
                 <button;
@@ -3427,14 +2646,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				</div>
 			)}
 		</nav>
-<<<<<<< HEAD
 	)
 }
-=======
-);
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

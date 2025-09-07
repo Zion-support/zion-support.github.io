@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -29,6 +30,8 @@ suite.runComprehensiveSuite().catch(console.error);
 
 
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 #!/usr/bin/env node;
 <<<<<<< HEAD
 =======
@@ -43,10 +46,10 @@ const { execSync } = require('child_process')
 // console.log(' Comprehensive Test & Deploy Suite')
 console.log('=')
   log(message, type = 'info')
-
       recommendations.push('Fix failing tests before deployment')
       recommendations.push('Fix build issues before deployment')
       recommendations.push('Address multiple errors before deployment')
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       recommendations.push('All checks passed - ready for deployment')
@@ -57,10 +60,13 @@ console.log('=')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
     this.log('Starting comprehensive test & deploy suite...')
     this.log('\\n COMPREHENSIVE SUITE SUMMARY')
     this.log('===')
     this.log('\n Recommendations:')
+<<<<<<< HEAD
     this.log('\\n� Comprehensive test & deploy suite completed!')
 <<<<<<< HEAD
       recommendations.push('All checks passed - ready for deployment')
@@ -70,3 +76,6 @@ console.log('=')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+    this.log('\\n� Comprehensive test & deploy suite completed!')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

@@ -7,7 +7,6 @@ import { AppStoreButtons  } from './AppStoreButtons';
 export const QrCodeDownload: React.FC;
 :src/components/mobile-app/QrCodeDownload.tsx
 }
-<<<<<<< HEAD:src_backup/components/mobile-app/QrCodeDownload.tsx
 import React from "react"
 import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
 
@@ -200,7 +199,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}";
 ";
                   {/* This would be replaced with an actual QR code in production */}
-<<<<<<< HEAD:src_backup/components/mobile-app/QrCodeDownload.tsx
                 </div>;
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">;
                   Scan to download;

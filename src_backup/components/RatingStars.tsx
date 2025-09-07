@@ -3,7 +3,6 @@ export function RatingStars({ value;
   return (<div className="flex items-center text-zion-slate">;
       {[...Array(total)].map((_, i) => {if (i < filled) {return (<Star;
               key={i}
-<<<<<<< HEAD:src_backup/components/RatingStars.tsx
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
           )
@@ -27,8 +26,6 @@ export function RatingStars({ value;
         <span className="text-xs ml-1">({count})</span>
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/RatingStars.tsx
               className="h-4 w-4 fill-zion-cyan text-zion-cyan";
             />;
           )}if (i === filled && half) {return (<StarHalf;key={i}
@@ -53,7 +50,6 @@ export function RatingStars({ value;
 }}const half = value - filled >= 0.5;
   const total = 5;
 }
-<<<<<<< HEAD:src_backup/components/RatingStars.tsx
 }
 
 ;
@@ -68,9 +64,3 @@ export function RatingStars({ value;
 }</div>) ;
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-})})}{";
-  typeof count === 'number' && (<span className="text-xs ml-1" > ({count ;
-}) </span> ;
-}</div>)}'";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/RatingStars.tsx

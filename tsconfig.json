@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
     "target": "ES2020",
     "lib": [
       "dom",
@@ -13,93 +12,33 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-<<<<<<< HEAD
     "module": "ESNext",
-=======
-    "module": "esnext",
->>>>>>> origin/main
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-<<<<<<< HEAD
-=======
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/lib/*": [
-        "./src/lib/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ]
-    },
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "sourceMap": true,
-    "declaration": false,
-    "declarationMap": false,
-    "removeComments": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "noFallthroughCasesInSwitch": false,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     "plugins": [
       {
         "name": "next"
       }
-<<<<<<< HEAD
     ],
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/lib/*": ["./lib/*"],
-<<<<<<< HEAD
       "@/utils/*": ["./utils/*"],
       "@/hooks/*": ["./hooks/*"],
       "@/types/*": ["./types/*"]
     },
     "allowSyntheticDefaultImports": true
-=======
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/types/*": ["./src/types/*"],
-      "@/styles/*": ["./src/styles/*"],
-      "@/assets/*": ["./src/assets/*"]
-    },
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
-    "tsBuildInfoFile": ".next/tsconfig.tsbuildinfo"
->>>>>>> origin/main
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules", "apps/**", "apps.backup/**", "api-backup/**", "backup-merge-conflicts/**", "browserstack.config.ts", "cypress.config.ts", "jest.config.*", "*.config.ts", "types/**", "netlify/**", "components/**"]
-=======
     ]
   },
   "include": [
-=======
       "@/app/*": ["./app/*"],
       "@/styles/*": ["./styles/*"],
       "@/public/*": ["./public/*"]

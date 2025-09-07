@@ -22,7 +22,6 @@ import { useState  } from 'react';
 
 ;
 
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
 
 import { useState } from 'react',
 import { useState } from 'react',
@@ -203,7 +202,6 @@ interface ServiceQuoteModalProps {;
   service: ProductListing | null;
 }
 ;
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
 
 const BUDGET_RANGES = [;
   { label: "Less than $5,000", value: "0-5000" },;
@@ -487,7 +485,6 @@ const TIMELINE_OPTIONS = [;"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                 >"
                   {isSubmitting ? "Submitting..." : "Submit Request"}
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
                 </Button>
               )}
 :src/components/ServiceQuoteModal.tsx
@@ -536,7 +533,6 @@ else if (currentStep === 'contact') setCurrentStep ('timeline')}}> <DialogConten
   currentStep !== 'contact' ? (<Button type=" button"onClick={nextStep ";
 }className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Next </Button>) : (<Button </Button>)}</div> </DialogFooter> </form> </DialogContent> </Dialog>)}'";
 }
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 }

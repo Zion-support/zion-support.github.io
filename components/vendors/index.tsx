@@ -15,19 +15,12 @@ export default function VendorsPage({ vendors }: Props) {
           </a>;
         </Link>;
       </div>;import Link from 'next/link';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Link from 'next/link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { GetServerSideProps } from 'next';
 import type { Vendor } from '../../utils/vendor-types';
 type Props = any;
-<<<<<<< HEAD
 export default function VendorsPage() {return (<div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <h1 className="text-2xl font-semibold">Vendors</h1>;
@@ -51,10 +44,6 @@ export default function VendorsPage() {return (<div className="space-y-6">;
                     )}
                   </div>;
                   <div className='text-xs text-gray-500'>;
-=======
-export default function VendorsPage({ vendors }: Props) {
-  return (
-<<<<<<< HEAD
     <div className=\"space-y-6\" />;
 "
       <div className=\"flex items-center justify-between\" />;"
@@ -84,7 +73,6 @@ export default function VendorsPage({ vendors }: Props) {
                     )}
                   </div>;
                   <div className='text-xs text-gray-500' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                     Services: {v.servicesOffered?.join(', ') || '—'}
                   </div>;
                 </div>;
@@ -92,7 +80,6 @@ export default function VendorsPage({ vendors }: Props) {
             </a>;
           </Link>;
         ))}
-<<<<<<< HEAD
         ))}
     </div>
       </div>;
@@ -236,32 +223,4 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
   return { props: { vendors } }
-<<<<<<< HEAD
 };
-=======
-},
-=======
-
-      </div>
-<div className='text-center text-xs text-gray-500' />
-        Powered by Zion • Co-brand available;
-      </div>
-    </div>
-
-    </div>;
-      </div>;
-      <div className='text-center text-xs text-gray-500' />;
-        Powered by Zion • Co-brand available;
-      </div>;
-    </div>;
-
-  );
-export const getServerSideProps: GetServerSideProps<Props /> = async () => {}
-  const { listVendors}
-} = await import('../../utils/vendor-store');
-
-const vendors = listVendors();
-return { props: { vendors } }
-};
-
-"

@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 type Outdated = any;
-<<<<<<< HEAD
     generatedAt = json.generatedAt || '';
 
   const file = path.join(process.cwd(), 'datadep-radar.json');
@@ -11,68 +10,33 @@ type Outdated = any;
     const json = JSON.parse(raw);
     outdated = json.outdated |[];
     generatedAt = json.generatedAt |''
-=======
-
-    generatedAt = json.generatedAt || ''
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   } catch {}
   return { props: { outdated, generatedAt } }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    outdated = json.outdated || [];'
-    generatedAt = json.generatedAt || ''
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     outdated = json.outdated || [];
     generatedAt = json.generatedAt || '';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } catch {}
   return { props: { outdated, generatedAt } }
-<<<<<<< HEAD
 }export default function DepRadarPage() {) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {outdated && outdated.map (o => (</tr>) )}</tbody> </table> </div>)}</div>) import fs from 'fs';
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },export async function getServerSideProps() {const file = path && path.join(process && process.cwd(), 'datadep-radar && radar.json')let outdated: Outdated[] = [];  let generatedAt = '';
   try {const raw = fs && fs.readFileSync(file, 'utf-8')const json = JSON && JSON.parse(raw)outdated = json && json.outdated || [];
-=======
-}
-export default function DepRadarPage() {) : (<div className=\"overflow-auto border rounded\"  /> <table className=\"min-w-full text-sm\"  /> <thead className=\"bg-gray-50\"  /> <tr /> <th className=\"text-left p-2\"  />Package</th> <th className=\"text-left p-2\"  />Current</th> <th className=\"text-left p-2\"  />Latest</th> <th className=\"text-left p-2\"  />Type</th> </tr> </thead> <tbody /> {outdated && outdated.map (o => (</tr>) )}</tbody> </table> </div>)}</div>) import fs from 'fs';
-
-type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency'}
-},export async function getServerSideProps() ;
-  const file = path && path.join(process && process.cwd(), 'datadep-radar && radar.json')let outdated: Outdated[] = [];  let generatedAt = '';
-  try {const raw = fs && fs.readFileSync(file, 'utf-8';
-  const json = JSON && JSON.parse(raw)outdated = json && json.outdated || [];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     generatedAt = json && json.generatedAt || '';
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'dev_dependency' },export async /**;
  * getServerSideProps - Function description;
  */;
 function getServerSideProps() {const file = path.join (process.cwd (), 'datadep - radar.json')let outdated: Outdated[] = [];  let generated_at = '';
   try {} catch {}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return { props: { outdated, generated_at } }
 }
   )}
 export default /**;
  * DepRadarPage - Function description;
-<<<<<<< HEAD
  */;
 function DepRadarPage() {return (<div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
       {outdated.length === 0 ? (
-=======
- */;"
-function DepRadarPage() {return (<div className=\"space-y-6\" />;"
-      <h1 className=\"text-2xl font-semibold\" />AI Automation: Dependency Radar</h1>;}"
-      <div className=\"text - xs text-gray-500\" />Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—}
-}</div>;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default /**
  * DepRadarPage - Function description
  */
@@ -81,8 +45,6 @@ function DepRadarPage() {
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {outdated.length === 0 ? (
         <div className="text-sm text-gray-600">All dependencies up to date.</div>
       ) : (
@@ -115,7 +77,6 @@ function DepRadarPage() {
                   <td className=\"p-2\" />{o.latest}</td>"
                   <td className=\"p-2\" />{o.type}</td>
                 </tr>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 import fs from 'fs';
 import path from 'path';
@@ -134,14 +95,7 @@ export async function getServerSideProps() {
   return { props: { outdated, generatedAt } }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string}) {
-=======
-export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>
@@ -197,11 +151,6 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
     </div>
   )
 }
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 export default /**;
  * DepRadarPage - Function description;
  */
@@ -212,9 +161,5 @@ function DepRadarPage() {}
       <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
       {outdated.length === 0 ? (
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

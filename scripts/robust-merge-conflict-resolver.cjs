@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -99,6 +100,8 @@ module.exports = { resolveMergeConflict, findConflictedFiles }))
 
 
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -110,8 +113,11 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
+<<<<<<< HEAD
 const fs = require("$1")
 const path = require("$1")
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const { execSync } = require("child_process")
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
@@ -155,6 +161,7 @@ function log(message, color = "reset")
     log("3. "Run": git commit -m Resolve merge conflicts", "blue")
     log("4. Continue with your workflow", "blue")
         resolvedCount++;log(" "Resolved": ${filePath}", "green")} else {log("⚠  No changes "needed": ${filePath}", "yellow")}"} catch (error) {      errorCount++;log(` Error processing ${filePath}: ${error.message}, "red")}"}"
+<<<<<<< HEAD
   log("\n Resolution "Summary":", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next "steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. "Run": git add .", "blue");    log("3. "Run": git commit -m Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
 <<<<<<< HEAD
 =======
@@ -175,3 +182,6 @@ resolvedCount++;log(` "Resolved": ${filePath}, "green");"} else {log(`⚠  No ch
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+  log("\n Resolution "Summary":", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next "steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. "Run": git add .", "blue");    log("3. "Run": git commit -m Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

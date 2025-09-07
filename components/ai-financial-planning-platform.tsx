@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 
   DollarSign,TrendingUp,Shield,Zap,Target,BarChart3,CheckCircle,Star,Globe,Lock,Smartphone,Monitor,Award,MessageCircle,Calculator,} from 'lucide-react';import {MessageCircle,Calculator,} from 'lucide-react';import {DollarSign, TrendingUp, Shield, Zap, Target, BarChart3,CheckCircle, Star, Globe, Lock, Smartphone, Monitor,Award, MessageCircle, Calculator;
 export default function AIFinancialPlanningPlatform() {const features = [;
     {'Live financial data, market analysis, and personalized recommendations updated in real-time.',},import React from 'react',import Head from 'next/head';
 import { motion  } from 'framer-motion';
-=======
-<<<<<<< HEAD
 export default function AIFinancialPlanningPlatform () {
   const features = [ {
   <div className="mt-12" > <h2 className="text-2xl font-semibold" >Pricing</h2> <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6" > <div className="rounded-2xl border border-emerald-400/30 p-6" > <h3 className="text-xl font-bold" >Starter</h3> <p className="mt-2 text-gray-300" >Up to 5 users, core models, board pack.</p> <p className="mt-4 text-3xl font-bold" >$390<span className="text-base font-normal text-gray-300" >/mo</span></p> </div> <div className="rounded-2xl border border-cyan-400/30 p-6" > <h3 className="text-xl font-bold" >Growth</h3> <p className="mt-2 text-gray-300" >25 users, consolidation, Snowflake/NetSuite.</p> <p className="mt-4 text-3xl font-bold" >$1, 290<span className="text-base font-normal text-gray-300" >/mo</span></p> </div> <div className="rounded-2xl border border-amber-400/30 p-6" > <h3 className="text-xl font-bold" >Enterprise</h3> <p className="mt-2 text-gray-300" >Advanced governance, custom models, SSO.</p> <p className="mt-4 text-3xl font-bold" >Custom</p> </div> </div> <p className="mt-4 text-sm text-gray-400" >Market references: <a className="underline hover:text-cyan-300" href="https://www.workday.com/en-us/products/planning/adaptive-planning.html" target="blank" rel="noreferrer" >Workday Adaptive</a>, <a className="underline hover:text-cyan-300" href="https://www.anaplan.com/pricing/" target="blank" rel="noreferrer" >Anaplan</a>, <a className="underline hover:text-cyan-300" href="https://pigment.com/pricing" target="blank" rel="noreferrer" >Pigment</a>.</p> </div> return (<> <Head> <title>AI Financial Planning Platform | Zion Tech Group</title> > <div className="flex items-center justify-center mb-6" > <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center mb-4" > <DollarSign className="w-8 h-8 text-white" /> </div> </div> <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent mb-6" > AI Financial Planning Platform </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Start Free Trial </motion.button> <motion.button > Watch Demo </motion.button> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Powerful Financial Planning Features </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Our AI platform combines advanced financial modeling with machine learning to deliver comprehensive financial planning and wealth management solutions. </p> </motion.div> </motion.div>) ) 
@@ -25,11 +22,6 @@ export default function AIFinancialPlanningPlatform () {
 }
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Financial Planning? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of individuals that have already revolutionized their financial planning with AI automation. Start your free trial today. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Get Started Now </motion.button> <motion.button 
 }
-=======
-import React from 'react',
-import Head from 'next/head';
-import { motion } from 'framer-motion';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { DollarSign, TrendingUp, Shield, Zap, Target, BarChart3;
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor;
   Award, MessageCircle, Calculator;
@@ -107,59 +99,7 @@ export default function AIFinancialPlanningPlatform() {
       description: 'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'
     };
     {
-<<<<<<< HEAD
       icon: <TrendingUp className="w-6 h-6" />,
-=======
-  ];
-  <div className='mt-12'>;
-    <h2 className='text-2xl font-semibold'>Pricing</h2>;
-    <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>;
-      <div className='rounded-2xl border border-emerald-400/30 p-6'>;
-        <h3 className='text-xl font-bold'>Starter</h3>;
-        <p className='mt-2 text-gray-300'>;
-          Up to 5 users, core models, board pack.;
-        </p>;
-        <p className='mt-4 text-3xl font-bold'>;
-          $390<span className='text-base font-normal text-gray-300'>/mo</span>;
-        </p>;
-      </div>;
-      <div className='rounded-2xl border border-cyan-400/30 p-6'>;
-        <h3 className='text-xl font-bold'>Growth</h3>;
-        <p className='mt-2 text-gray-300'>;
-          25 users, consolidation, Snowflake/NetSuite.;
-        </p>;
-        <p className='mt-4 text-3xl font-bold'>;
-          $1,290<span className='text-base font-normal text-gray-300'>/mo</span>;
-        </p>;
-      </div>;
-      <div className='rounded-2xl border border-amber-400/30 p-6'>;
-        <h3 className='text-xl font-bold'>Enterprise</h3>;
-        <p className='mt-2 text-gray-300'>;
-          Advanced governance, custom models, SSO.;
-        </p>;
-        <p className='mt-4 text-3xl font-bold'>Custom</p>;
-      </div>;
-    </div>;
-    <p className='mt-4 text-sm text-gray-400'>;
-      Market references:{' '}
-      <a;
-        className='underline hover:text-cyan-300';
-        href='https://www && www.workday.com/en-us/products/planning/adaptive-planning && planning.html';
-        target='_blank';
-        rel='noreferrer'>;
-        Workday Adaptive;
-      </a>;
-      ,{' '}
-      <a;
-        className='underline hover:text-cyan-300';
-        href='https://www && www.anaplan.com/pricing/';
-        target='_blank';
-        rel='noreferrer'>;
-        Anaplan;
-      </a>;
-      ,{' '}
-      icon: <TrendingUp className = $2;
->>>>>>> origin/main
       title: 'Predictive Financial Planning',
       description: 'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'
     };
@@ -975,4 +915,3 @@ className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl fo
     </>))}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

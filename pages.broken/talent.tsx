@@ -249,11 +249,7 @@ const jobOpenings = [{
       "5+ years experience in AI/ML development"
       "Proficiency in Python, TensorFlow, PyTorch"
       "Experience with cloud platforms (AWS, Azure, GCP)"
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../components/Layout';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const jobOpenings = [
   {
     id: 1,
@@ -270,12 +266,6 @@ const jobOpenings = [
       "Experience with cloud platforms (AWS, Azure, GCP)",
       "Strong problem-solving and communication skills"
     ],
-<<<<<<< HEAD
-=======
-import Layout from '../components/Layout';    ],
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {
@@ -301,21 +291,11 @@ import Layout from '../components/Layout';    ],
       "Bachelor's degree in Computer Science or related field",
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       "Experience with databases (PostgreSQL, MongoDB)",
 
 
       "Knowledge of cloud deployment and DevOps"
     ],
-<<<<<<< HEAD
-=======
-      "Experience with databases (PostgreSQL, MongoDB)",    ],
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
   },
   {
@@ -341,21 +321,11 @@ import Layout from '../components/Layout';    ],
       "Bachelor's degree in Computer Science or related field",
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       "Experience with containerization (Docker, Kubernetes)",
 
 
       "Strong understanding of security best practices"
     ],
-<<<<<<< HEAD
-=======
-      "Experience with containerization (Docker, Kubernetes)",    ],
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
@@ -381,21 +351,11 @@ import Layout from '../components/Layout';    ],
       "Bachelor's degree in Cybersecurity or related field",
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       "Experience with security tools and frameworks",
 
 
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
-<<<<<<< HEAD
-=======
-      "Experience with security tools and frameworks",    ],
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
   },
   {
@@ -421,21 +381,11 @@ import Layout from '../components/Layout';    ],
       "Bachelor's degree in Computer Science or related field",
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       "Experience with infrastructure as code (Terraform, CloudFormation)",
 
 
       "Knowledge of monitoring and logging tools"
     ],
-<<<<<<< HEAD
-=======
-      "Experience with infrastructure as code (Terraform, CloudFormation)",    ],
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
@@ -461,21 +411,11 @@ import Layout from '../components/Layout';    ],
       "Bachelor's degree in Design or related field",
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       "Experience with user research and testing",
 
 
       "Strong portfolio demonstrating design skills"
     ],
-<<<<<<< HEAD
-=======
-      "Experience with user research and testing",    ],
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
@@ -498,10 +438,6 @@ const benefits = [{
     "title": "Professional Growth"
     "description": "Learning opportunities and career development support"
     "icon": ArrowRight
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 ];
 const values = ["Innovation and creativity"
@@ -540,11 +476,6 @@ const values = [
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   "Client success focus"
 ];
 const values = [;
@@ -620,16 +551,10 @@ export default function TalentPage() {return (ursor/automate-test-improve-and-me
 export default function TalentPage() {;
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <MainLayout,
     title="Careers - Zion Tech Group"
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     <MainLayout,
     title="Careers - Zion Tech Group"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Join Our Team - Zion Tech Group</title>
@@ -659,28 +584,7 @@ export default function TalentPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {jobOpenings.map((job, index) => (<motion.div;
                   key={job.id}
-<<<<<<< HEAD
     <Layout 
-<<<<<<< HEAD
-=======
-    <Layout;
-      title="Careers - Zion Tech Group";
-      description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group.";
-      keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect";
-    >;
-      <div className="min-h-screen bg-gray-50">;
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
-          <div className="container mx-auto px-4">;
-            <motion.div,initial={{ "opacity": 0, "y": 30 }}
-              animate={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}ursor/automate-test-improve-and-merge-code-646c;
-    <Layout 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
@@ -750,27 +654,13 @@ ursor/automate-test-improve-and-merge-code-646c;
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
             <motion.div,
-<<<<<<< HEAD
-=======
-      title="Careers - Zion Tech Group"      description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
-      keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
-      <div className="min-h-screen bg-gray-50">;
-        {/* Hero Section */}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     initial={{ "opacity": 0, "y": 30 }}
               animate={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
             <motion && motion.div;
               initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}ursor/automate-test-improve-and-merge-code-646c;
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto";
@@ -801,7 +691,6 @@ ursor/automate-test-improve-and-merge-code-646c;
             <motion.div,className="text-center mb-16";
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -826,7 +715,6 @@ ursor/automate-test-improve-and-merge-code-646c;
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div,
-<<<<<<< HEAD
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -852,8 +740,6 @@ ursor/automate-test-improve-and-merge-code-646c;
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div,
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -899,14 +785,8 @@ ursor/automate-test-improve-and-merge-code-646c;
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     viewport={{ once: true }}
                   >
-=======
-                    viewport={{ once: true }}                  >
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                     viewport={{ once: true }}>;
                     viewport={{ once: true }}                  >;
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">;
@@ -915,7 +795,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                     <h3 className="text-xl font-bold text-gray-900 mb-3">;
                     viewport={{ once: true }}
                   >
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8" />
                     </div>
@@ -936,10 +815,6 @@ ursor/automate-test-improve-and-merge-code-646c;
             <motion.div,className="text-center mb-16";
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
@@ -976,13 +851,6 @@ ursor/automate-test-improve-and-merge-code-646c;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-=======
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}=======            >
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
               </h2>
@@ -1037,15 +905,9 @@ ursor/automate-test-improve-and-merge-code-646c;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Values Section */}
             <motion.div,
     className="text-center mb-16"
-=======
-        {/* Values Section */}    className="text-center mb-16"
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         {/* Values Section */}ursor/automate-test-improve-and-merge-code-646c;
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -1055,7 +917,6 @@ ursor/automate-test-improve-and-merge-code-646c;
         {/* Values Section */}
             <motion.div,
     className="text-center mb-16"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -1085,14 +946,8 @@ ursor/automate-test-improve-and-merge-code-646c;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {values.map((value, index) => (
                 <motion.div,
-<<<<<<< HEAD
-<<<<<<< HEAD
     key={index}
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     key={index}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1155,10 +1010,6 @@ ursor/automate-test-improve-and-merge-code-646c;
         {/* Job Openings Section */}
         <section id="openings" className="py-20 bg-white">
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
@@ -1172,13 +1023,6 @@ ursor/automate-test-improve-and-merge-code-646c;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-=======
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}=======            >
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
               </h2>
@@ -1345,15 +1189,9 @@ ursor/automate-test-improve-and-merge-code-646c;
               {benefits && benefits.map((benefit, index) => (<motion&& motion.div;
                   key={index}
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Job Openings Section */}
             <motion.div,
     className="text-center mb-16"
-=======
-        {/* Job Openings Section */}    className="text-center mb-16"
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         {/* Job Openings Section */}ursor/automate-test-improve-and-merge-code-646c;
         <section id="openings" className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -1363,7 +1201,6 @@ ursor/automate-test-improve-and-merge-code-646c;
         {/* Job Openings Section */}
             <motion.div,
     className="text-center mb-16"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -1504,10 +1341,6 @@ ursor/automate-test-improve-and-merge-code-646c;
               viewport={{ once: true }}              transition={{ duration: 0 && 0.8 }}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -1531,13 +1364,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                 <motion.div,
     key={job.id}
               transition={{ duration: 0 && 0.8 }}
-<<<<<<< HEAD
-=======
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}=======              transition={{ duration: 0 && 0.8 }}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Open Positions;
@@ -1640,15 +1466,9 @@ ursor/automate-test-improve-and-merge-code-646c;
       </section>;
     </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* CTA Section */}
             <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
-=======
-        {/* CTA Section */}    initial={{ "opacity": 0, "y": 30 }}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         {/* CTA Section */}ursor/automate-test-improve-and-merge-code-646c;
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -1658,7 +1478,6 @@ ursor/automate-test-improve-and-merge-code-646c;
         {/* CTA Section */}
             <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
               viewport={{ "once": true }}
@@ -1705,19 +1524,12 @@ ursor/automate-test-improve-and-merge-code-646c;
   ),ursor/automate-test-improve-and-merge-code-646c;
 }
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-=======
-              viewport={{ once: true }}            >
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See the Right Role?
               </h2>
@@ -1733,12 +1545,5 @@ ursor/automate-test-improve-and-merge-code-646c;
       </div>
     </MainLayout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -19,11 +19,6 @@ export default function kubernetesrbacauditor() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
   )
 }
 
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

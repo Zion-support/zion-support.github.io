@@ -175,7 +175,3 @@ profile.id || '' ;
     </>
   )
 }
-<<<<<<< HEAD:src/components/profile/talent-card/TalentCardFooter.tsx
-=======
-;
->>>>>>> origin/main:src_disabled_1757239864/components/profile/talent-card/TalentCardFooter.tsx

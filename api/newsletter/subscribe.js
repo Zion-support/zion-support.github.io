@@ -29,28 +29,7 @@ async function handler(req, res) {
   try {
     const { email } = req.body || {};
     
-<<<<<<< HEAD
     if (!email) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
   // TODO: Implement
     if (!email) {
       res.statusCode = 400;

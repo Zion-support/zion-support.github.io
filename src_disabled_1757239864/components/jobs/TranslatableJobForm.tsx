@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/jobs/TranslatableJobForm.tsx
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -284,7 +283,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
                 />;
               </TabsContent>;
             ))}
-<<<<<<< HEAD:src_backup/components/jobs/TranslatableJobForm.tsx
           </Tabs>;
         </div>;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -315,7 +313,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               type="date";
               value={deadline}
               onChange={(e) => setDeadline(e.target.value)}
-<<<<<<< HEAD:src_backup/components/jobs/TranslatableJobForm.tsx
               className="w-full";
             />;
           </div>;
@@ -340,7 +337,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
           {isSubmitting ? (<>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               {t('jobs.submitting')}
-<<<<<<< HEAD:src_backup/components/jobs/TranslatableJobForm.tsx
             </>;
           ) : (t('jobs.post_job_button'))}
         </Button>;

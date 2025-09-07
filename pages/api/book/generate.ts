@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/book/generate.ts
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -32,16 +30,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
-<<<<<<< HEAD
         { role: 'system', content: system },
         { role: 'user', content: prompt }
       ],
       temperature: 0.7
     });
     const text = completion.choices?.[0]?.message?.content || '';
-=======
-
-<<<<<<< HEAD:pages_backup/api/book/generate.ts
 
     res.status(405).json({ error: 'Method not allowed' });
     return
@@ -64,16 +58,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ chapters: drafted });
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
     drafted.push({ title: ch.title, content: text })
   }
 
   res.status(200).json({ chapters: drafted })
-<<<<<<< HEAD
 }
-=======
-}
-<<<<<<< HEAD:pages_backup/api/book/generate.ts
 import type { NextApiRequest, NextApiResponse } from 'next'
 import OpenAI from 'openai'
 
@@ -93,7 +82,6 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-<<<<<<< HEAD:pages_backup/api/book/generate.ts
 
 
 
@@ -122,7 +110,6 @@ if ( {) {
   }
   res.status (200).json ({ chapters: drafted });
 }
-<<<<<<< HEAD:pages_backup/api/book/generate.ts
 
 
 
@@ -133,27 +120,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD:pages_backup/api/book/generate.ts
 
   res.status(200).json({ chapters: drafted });
 };
 }
 
-<<<<<<< HEAD:pages_backup/api/book/generate.ts
 
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ generated: true });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

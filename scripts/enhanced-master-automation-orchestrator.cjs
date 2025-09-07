@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 main
@@ -54,9 +55,12 @@ main();
 
 
 
+=======
 #!/usr/bin/env node;
-
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+#!/usr/bin/env node;
 main();#!/usr/bin/env node;
+<<<<<<< HEAD
 
 main();
 
@@ -67,6 +71,8 @@ main();
 
 main();#!/usr/bin/env node;
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
@@ -122,6 +128,7 @@ console.log('======')
       { "name": 'Test Suite', "command": 'npm test || echo "No tests configured"}
     const phase5Tasks = [{ name: 'Metrics Generation', "command": 'echo "Generating final metrics..."}]
       { "name": 'Report Generation', "command": 'echo "Generating comprehensive report..."}
+<<<<<<< HEAD
       log('info', '"Recommendations")
 <<<<<<< HEAD
 main
@@ -154,3 +161,6 @@ const os = require('os')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+      log('info', '"Recommendations")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

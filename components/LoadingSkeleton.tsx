@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 interface SkeletonProps {
   className?: string;
@@ -85,9 +83,6 @@ export default function LoadingSkeleton() {
     </div>
   );
 }
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 interface LoadingSkeletonProps  {className?: string;
   height?: string;
   width?: string;
@@ -111,9 +106,5 @@ interface LoadingSkeletonProps  {className?: string;
       <LoadingSkeleton height="h-12" width="w-48" className="mx-auto" />;
     </div>;
   </div>;
-<<<<<<< HEAD
 )export default LoadingSkeleton;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 )export default LoadingSkeleton;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

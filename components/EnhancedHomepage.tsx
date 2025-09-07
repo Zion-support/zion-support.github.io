@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 
 ;
 
 ;
-=======
-<<<<<<< HEAD
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation'
 import EnhancedServiceCard from './ui/EnhancedServiceCard'
 import PerformanceMonitor from './PerformanceMonitor'
@@ -24,8 +21,6 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground'
 visible: {
   opacity: 1, transition: {
   duration: 0.8, staggerChildren: 0.1 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -45,7 +40,6 @@ import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 ...realEnterpriseMicroSaas2025;
 ...innovativeITServicesExpansion2025V3;
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
-<<<<<<< HEAD
 ...innovative2025AIAutonomousServices ];opacity: 0;
 import React from 'react';
 interface EnhancedHomepageProps  {className?: string;
@@ -54,26 +48,11 @@ interface EnhancedHomepageProps  {className?: string;
       <p>This component is under development.</p>;
     </div>;
   )}visible: {opacity: 1, transition: {duration: 0.8, staggerChildren: 0.1;
-=======
-...innovative2025AIAutonomousServices ];
-//Filter services by category //Animation variants const containerVariants = {
-  hidden: {
-  opacity: 0
-}
-};
-visible: {
-  opacity: 1, transition: {
-  duration: 0.8, staggerChildren: 0.1
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 }
 }
 }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
 }
 }
@@ -132,11 +111,6 @@ return (<> <Head> <title>Zion Tech Group - Revolutionary 2045 Technology Solutio
 }</AnimatePresence> </>) 
 }
 export default EnhancedHomepage
-=======
-export default EnhancedHomepage;import EnhancedServiceCard from './ui/EnhancedServiceCard';
-import PerformanceMonitor from './PerformanceMonitor';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       clearInterval(interval)clearTimeout(performanceTimer)window && window.removeEventListener('mousemove', handleMouseMove)}
   }, [])//Filter services by category //Animation variants const container_variants = {hidden: {opacity: 0;
 }
@@ -606,19 +580,13 @@ const EnhancedHomepage: React.FC;
                     
                     <div className="flex flex-wrap gap-4 mb-6">
                       {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                         <span key = $2;
 export default EnhancedHomepage,
-=======
->>>>>>> origin/main
                         <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">
                           {feature}
                         </span>
                       ))}
                     </div>
-<<<<<<< HEAD
                     
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
                       <motion.button
@@ -639,37 +607,6 @@ export default EnhancedHomepage,
                           <Rocket className="w-8 h-8 text-white" />
                         </div>
                         <p className="text-cyan-400 font-medium">Revolutionary Technology</p>
-=======
-                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug |featuredServices[currentServiceIndex]?.id}`}>
-                      <motion.button
-                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0, x: 20 ,}
-
-                  animate={{ opacity: 1, x: 0 ,}
-
-                  exit={{ opacity: 0, x: -20 }}<Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id},
-}    />
-                      <motion.button
-                        className=\'px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300\'
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 ,}
-
-                          />
-                        Learn More
-                        <ArrowRight className=\"inline-block ml-2 w-4 h-4\"    />
-                      </motion.button>
-                    </Link>
-                  </div>
-                  <div className=\"relative\"    />
-                    <div className=\"w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center\"    />
-                      <div className=\"text-center\"    />
-                        <div className=\"w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4\"    />
-                          <Rocket className=\"w-8 h-8 text-white\"    />
-                        </div>
-                        <p className=\"text-cyan-400 font-medium\"    />Revolutionary Technology</p>
->>>>>>> origin/main
                       </div>
                     </div>
                   </div>
@@ -678,33 +615,21 @@ export default EnhancedHomepage,
             </motion.div>
           </div>
         </motion.section>
-<<<<<<< HEAD
 
         {/* Call to Action */}
         <motion.section 
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
-=======
-        {/* Call to Action */}
-        <motion.section"
-          className="py-16 px-4 lg:px-8"
-          variants={containerVariants}"
->>>>>>> origin/main
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
             <motion.h2 
-=======
-            <motion.h2
->>>>>>> origin/main
               className="text-3xl md:text-4xl font-bold text-white mb-6"
               variants={itemVariants}
             >
               Ready to Transform Your Business?
             </motion.h2>
-<<<<<<< HEAD
             
             <motion.p 
               className="text-xl text-gray-300 mb-8"
@@ -715,16 +640,6 @@ export default EnhancedHomepage,
             </motion.p>
             
             <motion.div 
-=======
-            <motion.p
-              className="text-xl text-gray-300 mb-8"
-              variants={itemVariants}
-                />
-              Join the future of technology with Zion Tech Group's revolutionary solutions.
-              Get started today and experience the power of AI consciousness and quantum computing.
-            </motion.p>
-            <motion.div
->>>>>>> origin/main
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}
             >
@@ -738,10 +653,7 @@ export default EnhancedHomepage,
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </motion.button>
               </Link>
-<<<<<<< HEAD
               
-=======
->>>>>>> origin/main
               <Link href="/contact">
                 <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
@@ -756,10 +668,7 @@ export default EnhancedHomepage,
           </div>
         </motion.section>
       </UltraFuturisticBackground>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
       {/* Performance Monitor */}
       <AnimatePresence>
         {showPerformanceMonitor && (
@@ -768,13 +677,6 @@ export default EnhancedHomepage,
       </AnimatePresence>
     </>
   )
-<<<<<<< HEAD
 };
 
 export default EnhancedHomepage;
-=======
-}
-export default EnhancedHomepage;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

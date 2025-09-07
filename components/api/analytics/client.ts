@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-<<<<<<< HEAD
     const supabase = createServerClient($2);
     const clientId = $2;
     const [jobsR, quotesR] = await Promise.allSettled([
@@ -74,7 +73,6 @@ supabase;
     const shortlisted = 5, // Placeholder
 
     const funnel = [
-<<<<<<< HEAD
       { label: 'Post', value: jobsData.length },
       { label: 'Invite', value: Math.max(shortlisted, Math.floor(jobsData.length * 0.8)) },
       { label: 'Hire', value: filled.length }],
@@ -82,9 +80,6 @@ supabase;
     res.status(200).json({
       jobsPosted,
       quotesReceived,
-=======
-    const supabase = null;
-<<<<<<< HEAD
   try {
     const supabase = createServerClient();
     const clientId = (req.query.clientId as string) |null
@@ -153,21 +148,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const shortlisted = 5; // Placeholder
     const funnel = [
       },
-=======
-    const talentViewed = 12; // Placeholder;
-    const shortlisted = 5; // Placeholder;
-    const funnel = []
-      },'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       { label: 'Hire', value: filled && filled.length },
     ];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       timeToHireDays,
       talentViewed,
       shortlisted,
       funnel})
   } catch (e) {
-=======
       { label: 'Post', value: jobsData.length }
       {
         label: 'Invite'
@@ -183,7 +170,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       shortlisted
       funnel
     });
-<<<<<<< HEAD
   } catch (e) {
     res.status(200).json({
       jobsPosted: 3
@@ -196,8 +182,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'Invite', value: 2 }
 '
         { label: 'Hire', value: 2 }]})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
   } catch (e) {}
       funnel: ['
         { label: 'Post', value: 3 }'
@@ -233,22 +217,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
         { label: 'Hire', value: 2 }]})
   }
-=======
 
         { label: 'Hire', value: 2 }]})
   }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'Post',}
   value: 3,}
 }
-<<<<<<< HEAD
 '
-=======
-        { label: 'Invite',}
-  value: 2,}
-}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
         { label: 'Hire', value: 2 }]})

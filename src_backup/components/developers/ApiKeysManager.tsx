@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
 
@@ -13,7 +11,6 @@ export function ApiKeysManager() {const {keys;
     createApiKey;
     regenerateApiKey;
     revokeApiKey;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
     clearNewApiKey
   } = useApiKeys();
   const [showCreateDialog, setShowCreateDialog] = useState(false);
@@ -92,7 +89,6 @@ keys,
     if (keyName.trim() === '' || selectedScopes.length === 0) return;
 
 
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 
     await createApiKey(keyName, selectedScopes)
 
@@ -200,12 +196,10 @@ function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,createApiK
     await createApiKey (key_name, selected_scopes)setShowCreateDialog (false)setKeyName ('')setSelectedScopes ([]) }
   const handleRegenerateKey = async (key_id: string) => {await regenerateApiKey (key_id)setShowRegenerateConfirm (null)useState (() => {fetchApiKeys ()})const handleCreateKey = async () => {if (=== "" || selected_scopes.length === 0) return) {$2;
 }
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
     await createApiKey (key_name, selected_scopes);
     setShowCreateDialog (false);
     setKeyName ("");
     setSelectedScopes ([]);
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
   }),
   
   const handleCreateKey = null;
@@ -232,7 +226,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     label: string
     description: string
   }[] = [
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 
 
   }
@@ -260,7 +253,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     label: string;
     description: string;
   }[] = [;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 
 
     {
@@ -357,7 +349,6 @@ import { useState } from "react",import { AlertDialog, AlertDialogAction, AlertD
   // Reset form when dialog closes;
   const handleDialogClose = () =>: any {setKeyName ('')-H "Content - Type: application / json"`;}
   // Reset form when dialog closes;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
   const handleDialogClose = () =>: any {
     setKeyName ('');
     setShowCreateDialog (false);
@@ -487,7 +478,6 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                     {scopeOptions && scopeOptions.map(scope => (<div;
                         key={scope && scope.value}
                         className='flex items-center space-x-2'>;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
                         <Checkbox
     setSelectedScopes([])
   },
@@ -704,7 +694,6 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                           id={scope.value} 
 
 
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
                           id={scope.value}
                           checked={selectedScopes.includes(scope.value)}
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -810,7 +799,6 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                           {scope.label}
                           <span className='block text-xs text-zinc-400 mt-1'>;
                             {scope.description}
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
                           </span>
                         </Label>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -958,7 +946,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >                  Create Key;
               <DialogFooter>;
                 <Button variant="outline" on_click={handleDialogClose}>Cancel</Button>;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
                 <Button on_click={handleCreateKey} disabled={key_name.trim () === "" || selected_scopes.length === 0}>;
 
 
@@ -1082,9 +1069,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span className="font-medium flex items-center">;
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated;
               </span>;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
               <Button
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
                 variant='ghost'
                 size='icon'
                 className='h-6 w-6'
@@ -1128,7 +1113,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <h3 className="font - medium">{key.name}</h3>;
                       <div className="flex items - center space - x-2 mt - 1">;
                         <span className="text - sm text - zinc - 400 font - mono">{key.key_prefix}••••••••••••</span>;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
         {/* API Keys List */}
         <div className="space-y-4">;
           {loading ? (
@@ -1152,7 +1136,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <X size={14} />
               </Button>
             </div>
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
             <p className="text-sm text-zinc-300 mb-2">
 
             <p className="text-sm text-zinc-300 mb-2">
@@ -1263,13 +1246,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           >
                             Revoked
                           </Badge>
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                         )}
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button
@@ -1444,9 +1425,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <DropdownMenuContent;
                       align='end';
                       className='bg-zinc-900 border-zinc-800 text-white'>;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
                       <DropdownMenuItem
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
                       <DropdownMenuItem;
                         onClick={() => setShowRegenerateConfirm(key && key.id)}
                         className='cursor-pointer';
@@ -1456,12 +1435,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         disabled = {!key && key.is_active}
                       >;
                         <RefreshCw size={14} className='mr-2' /> Regenerate;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
                       </DropdownMenuItem>;<DropdownMenuItem;
                         onClick={() => setShowDeleteConfirm(key.id)}
                         className='cursor-pointer text-red-500';
                         disabled={!key.is_active}
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
                       >
                         <X size={14} className='mr-2' /> Revoke
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1473,7 +1450,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 
                 
 
@@ -1503,7 +1479,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       variant='secondary';
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'>                ;
                 <div className="mt-3 flex flex-wrap gap-2">;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
                   {key && key.scopes.map((scope,) => (;
 
 
@@ -1585,7 +1560,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Clock size={12} className='mr-1' />;
                       Last used:{' '}
                       {key && key.last_used_at;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
                         ? format(new Date(key && key.last_used_at), 'MMM d, yyyy');
                         : 'Never'}
 
@@ -1657,7 +1631,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           ? format(new Date(key && key.last_used_at), 'MMM d, yyyy HH:mm:ss')</p>;
                     </PopoverContent>;
                   </Popover>;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
                   {key && key.expires_at && (;
                     <span>;
                       Expires: {format(new Date(key && key.expires_at), 'MMM d, yyyy')}
@@ -1673,7 +1646,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             ));
           )}
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
         </div>
       </CardContent>
 <CardFooter className='justify-between border-t border-zinc-800 py-4'>
@@ -1745,11 +1717,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>;
         </Button>;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
       </CardFooter>;
 
       {/* Regenerate Key Confirmation Dialog */}
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 <AlertDialog
         open={showRegenerateConfirm !== null}
         onOpenChange={open => !open && setShowRegenerateConfirm(null)}
@@ -1916,7 +1886,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               one. Any applications using this key will need to be updated.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
           <AlertDialogFooter>;className="bg-blue-600 hover:bg-blue-700";
       <AlertDialog;
         open={showRegenerateConfirm !== null}onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}>;
@@ -2012,14 +1981,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <AlertDialogHeader>;
             <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
 
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 
               This action will invalidate the existing key and generate a new one.;
               Any applications using this key will need to be updated.;
@@ -2032,7 +1998,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogAction;
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700";
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 <AlertDialog;
         open={showRegenerateConfirm !== null}
         onOpenChange={open => !open && setShowRegenerateConfirm(null)}
@@ -2076,7 +2041,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 
 
       >;
@@ -2105,8 +2069,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD:src_backup/components/developers/ApiKeysManager.tsx
 
 
 ;

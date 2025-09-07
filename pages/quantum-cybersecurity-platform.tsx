@@ -18,11 +18,6 @@ export default function quantumcybersecurityplatform() {
           </p>
         </div>
       </div>
-<<<<<<< HEAD
     </>
   )
-=======
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

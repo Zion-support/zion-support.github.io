@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/layout/Sidebar.tsx
 import React from 'react';
 main
 
@@ -166,7 +165,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       initial={false};
       animate={{ x: isOpen ? 0 : -320 }};"
       transition={{ duration: 0.3, ease: 'easeInOut' }};
-<<<<<<< HEAD:src_backup/components/layout/Sidebar.tsx
       className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`};
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -590,7 +588,6 @@ export default Sidebar;
       </div>;
     </motion.aside>;
   );
-<<<<<<< HEAD:src_backup/components/layout/Sidebar.tsx
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 };

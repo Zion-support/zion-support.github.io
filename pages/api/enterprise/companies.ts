@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/enterprise/companies.ts
 }
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
@@ -27,7 +25,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.set_header ("Allow", "GET, POST");
   return res.status (405).end ("Method Not Allowed");
 }
-<<<<<<< HEAD:pages_backup/api/enterprise/companies.ts
 
 
 
@@ -128,7 +125,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 }
 
-<<<<<<< HEAD:pages_backup/api/enterprise/companies.ts
 
 }
     return res.status (201).json (created);
@@ -150,15 +146,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   return res.status(405).json({ error: 'method_not_allowed' });
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

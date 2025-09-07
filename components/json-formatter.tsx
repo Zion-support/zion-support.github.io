@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const formatJSON = () => {
   if (!inputJson.trim () ) {
   ]
@@ -38,22 +35,6 @@ return (<> <Head> <title>JSON Formatter - Zion Tech Group</title> Professional J
 }KB</p> </div>) 
 }</div> </Card> </div> </div> </section> Professional JSON Formatting Features </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Everything you need to work with JSON data efficiently and professionally. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" > <Card className="text-center p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >✨</div> <h3 className="text-xl font-bold text-white mb-4" >Smart Formatting</h3> <p className="text-gray-400" > Intelligent JSON formatting with customizable indentation and spacing options. </p> </Card> <Card className="text-center p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >✅</div> <h3 className="text-xl font-bold text-white mb-4" >Real-time Validation</h3> <p className="text-gray-400" > Instant JSON validation with detailed error messages and syntax highlighting. </p> </Card> <Card className="text-center p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >📦</div> <h3 className="text-xl font-bold text-white mb-4" >Minification</h3> <p className="text-gray-400" > Compress JSON data by removing unnecessary whitespace and formatting. </p> </Card> <Card className="text-center p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >🔢</div> <h3 className="text-xl font-bold text-white mb-4" >Line Numbers</h3> <p className="text-gray-400" > Optional line numbering for easier navigation and debugging of large JSON files. </p> </Card> <Card className="text-center p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >💾</div> <h3 className="text-xl font-bold text-white mb-4" >Export Options</h3> <p className="text-gray-400" > Download formatted JSON files or copy to clipboard with a single click. </p> </Card> <Card className="text-center p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >⚙️</div> <h3 className="text-xl font-bold text-white mb-4" >Customizable</h3> <p className="text-gray-400" > Adjust indentation size, toggle compact mode, and customize display options. </p> </Card> </div> </div> </section> Perfect For Every JSON Need </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > From development to data analysis, our JSON formatter serves all your formatting needs. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-8" > <Card className="p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >👨‍💻</div> <h3 className="text-2xl font-bold text-white mb-4" >Developers</h3> <p className="text-gray-400 mb-6" > Format API responses, debug JSON data, and prepare configuration files with professional formatting. </p> <ul className="space-y-2 text-gray-300" > <li>• API development and testing</li> <li>• Configuration file management</li> <li>• Debug and troubleshooting</li> </ul> </Card> <Card className="p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >📊</div> <h3 className="text-2xl font-bold text-white mb-4" >Data Analysts</h3> <p className="text-gray-400 mb-6" > Clean and format JSON datasets for analysis, reporting, and data visualization projects. </p> <ul className="space-y-2 text-gray-300" > <li>• Data cleaning and preparation</li> <li>• Report generation</li> <li>• Data validation</li> </ul> </Card> <Card className="p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >🔧</div> <h3 className="text-2xl font-bold text-white mb-4" >DevOps Engineers</h3> <p className="text-gray-400 mb-6" > Manage configuration files, validate deployment manifests, and format infrastructure as code. </p> <ul className="space-y-2 text-gray-300" > <li>• Configuration management</li> <li>• Infrastructure validation</li> <li>• Deployment automation</li> </ul> </Card> <Card className="p-8 bg-gray-700 border border-gray-600" > <div className="text-4xl mb-4" >📝</div> <h3 className="text-2xl font-bold text-white mb-4" >Technical Writers</h3> <p className="text-gray-400 mb-6" > Format JSON examples for documentation, tutorials, and technical specifications. </p> <ul className="space-y-2 text-gray-300" > <li>• Documentation examples</li> <li>• API documentation</li> <li>• Technical specifications</li> </ul> </Card> </div> </div> </section> <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600"> <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6"> text-xl text-teal-100 mb-8"> Join thousands of developers and professionals who trust our JSON formatter for their data needs. </p> <div className=" flex flex-col sm:flex-row gap-4 justify-center"> <Button href=" /contact"size=" lg"className=" bg-white text-teal-600 hover:bg-gray-100"> Get Started Today <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /pricing"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-teal-600" > View Pricing </Button> </div> </div> </section> </>) 
 }
-=======
-import Head from 'next / head'
-import Card from '../components / ui / Card'
-import Button from '../components / ui / Button'
-import {
-  Code
-  Copy
-  RefreshCw
-  CheckCircle
-  XCircle
-  ArrowRight
-  Download
-  Upload
-  Settings
-  Eye;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
@@ -1414,4 +1395,3 @@ variant='outline';
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

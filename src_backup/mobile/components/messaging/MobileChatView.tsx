@@ -44,8 +44,6 @@ interface MobileChatViewProps {;
   messages: Message[];
   onBack: () => void;
   onSendMessage: (content: string) => void
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React, { useState } from 'react';
@@ -456,9 +454,6 @@ export function MobileChatView(): any ({;
                     ? 'text - primary - foreground / 80';
                     : 'text - muted - foreground')}
               >;
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {

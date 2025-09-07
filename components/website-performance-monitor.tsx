@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const features = [ {
   //Simulate website analysis setTimeout ( () => {
   setAnalysisResults ({
@@ -34,18 +31,6 @@ and AI-powered optimization recommendations. Never let performance issues impact
 }</ul> <Button > Get Started <ArrowRight className="w-5 h-5 ml-2" /> </Button> </Card>) ) 
 }</div> </div> </section> <section className="section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10" /> <div className="container-cursor text-center relative z-10"> <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg"> text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"> Join thousands of businesses using our monitoring platform to keep their websites fast and reliable. </p> <div className=" flex flex-col sm:flex-row gap-6 justify-center"> <Button href=" /contact"size=" lg"className=" bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"> Start Free Trial <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /contact"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl" > Schedule Demo </Button> </div> </div> </section> </>) 
 }
-=======
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button';
-import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
-export default function WebsitePerformanceMonitorPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-  const features = null;
-            and AI-powered optimization recommendations. Never let performance issues impact your users again.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 } from 'lucide-react';
 
 import {
@@ -1437,7 +1422,6 @@ href='/contact';
   );
 }
 }
-<<<<<<< HEAD
   );
 }
               Schedule Demo;
@@ -1449,6 +1433,3 @@ href='/contact';
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

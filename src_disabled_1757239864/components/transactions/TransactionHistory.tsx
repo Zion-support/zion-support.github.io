@@ -255,7 +255,6 @@ export function TransactionHistory() {
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client';
 
-<<<<<<< HEAD:src/components/transactions/TransactionHistory.tsx
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
                   <CardHeader className="pb-3">
@@ -362,7 +361,4 @@ export function TransactionHistory() {
       </div>
     </div>
   )
-=======
-  );
->>>>>>> origin/main:src_disabled_1757239864/components/transactions/TransactionHistory.tsx
 }

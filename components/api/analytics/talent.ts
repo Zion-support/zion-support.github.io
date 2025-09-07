@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 import { createServerClient } from '../../../utils/supabase/server';
-<<<<<<< HEAD
 
 import { createServerClient } from '../../../utils/supabase/server';
 
@@ -14,11 +12,6 @@ import { createServerClient } from '../../../utils/supabase/server';
       supabase
 
 import { createServerClient } from '../../../utils/supabase/server';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { createServerClient } from '../../../utils/supabase/server';
 
 import { createServerClient } from '../../../utils/supabase/server';
@@ -26,27 +19,14 @@ pr-12243
 
       supabase
 import { createServerClient } from '../../../utils/supabase/server';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = null;
         { label: 'ai', value: 1 }]})
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   try {
     const supabase = createServerClient();
     const talentId = (req.query.talentId as string) |null
     const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
-<<<<<<< HEAD
-<<<<<<< HEAD
 supabase
 import { createServerClient  } from '../../../utils/supabase/server';
       supabase;
@@ -83,15 +63,7 @@ function handler() {try {const supabase = createServerClient ()const talent_id =
       supabase;
         .from('profile_views')
         .select('id, talent_id')
-=======
-
-
-      supabase'
-        .from('profile_views')'
-        .select('id, talent_id')'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .eq('talent_id', talentId)
-<<<<<<< HEAD
       supabase
         .from('quotes')
         .select('id, talent_id, status')
@@ -103,58 +75,30 @@ function handler() {try {const supabase = createServerClient ()const talent_id =
       supabase
         .from('search_matches')
         .select('talent_id, tag')
-=======
-      supabase'
-        .from('quotes')'
-        .select('id, talent_id, status')'
-        .eq('talent_id', talentId)
-      supabase'
-        .from('applications')'
-        .select('id, talent_id, status')'
-        .eq('talent_id', talentId)
-      supabase'
-        .from('search_matches')'
-        .select('talent_id, tag')'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         .eq('talent_id', talentId)
     ]);
     const views =
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([label, value]) => ({ label, value }))
-<<<<<<< HEAD
     });
-<<<<<<< HEAD
   } catch (e) {
       topTags: [
         { label: 'react', value: 2 }
         { label: 'node', value: 1 }
-=======
-    })
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   } catch (e) {}
       topTags: ['
         { label: 'react', value: 2 }'
         { label: 'node', value: 1 }'
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         { label: 'ai', value: 1 }
       ]
-<<<<<<< HEAD
-<<<<<<< HEAD
 pr-12243
 
     });
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   }
 
 }
-<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
 }
@@ -162,18 +106,14 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
   }
-<<<<<<< HEAD
 
 }
 
 }
 
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 
 
 
@@ -236,8 +176,6 @@ function handler() {
         { label: 'node', value: 1},
         { label: 'ai', value: 1}]})
   }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 }
 
@@ -245,19 +183,10 @@ function handler() {
 
   }
 }
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 pr-12243
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
 
-=======
-}
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**;

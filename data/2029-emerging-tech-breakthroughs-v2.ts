@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface EmergingTechBreakthroughServiceV2  {id: string;
-<<<<<<< HEAD
 
 
 import { ServiceVariant } from '../types/service-variants';
@@ -21,31 +11,13 @@ export interface EmergingTechBreakthroughServiceV2 {
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface EmergingTechBreakthroughServiceV2  {id: string;
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechBreakthroughServiceV2 {
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   id: string;
   name: string;
   tagline: string;
@@ -72,30 +44,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-<<<<<<< HEAD
   contact_info: {mobile: string;
     email: string;
-=======
-  contact_info: {}
-    mobile: string;
-    email: string;
-    address: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     website: string;
   }
 
         'Real-time brain signal interpretation',
   real_implementation: boolean;
-<<<<<<< HEAD
     address: string;website: string;
   }'Real-time brain signal interpretation',real_implementation: boolean;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   implementation_details: string;
   launch_date: string;
   customers: number;
@@ -105,28 +62,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] =;
   [;
     // Brain - Computer Interface Platform;
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     {id: 'brain - computer - interface - enterprise',name: 'Brain - Computer Interface Enterprise',tagline: 'Direct neural control of digital systems and applications',price: '$45, 999',period: '/month',description:;
         'Revolutionary brain - computer interface platform that enables direct neural control of digital systems. Uses advanced neuroscience and AI to interpret brain signals in real - time.',features: [;
         'Real - time brain signal interpretation','Direct neural control of applications','Thought - to - text conversion','Direct neural control of applications','Thought - to - text conversion',website: string;
   },realImplementation: boolean;
-=======
-    {
-<<<<<<< HEAD
       id: 'brain - computer - interface - enterprise',
       name: 'Brain - Computer Interface Enterprise',
       tagline: 'Direct neural control of digital systems and applications',
       price: '$45, 999',
       period: '/month',
-=======
-      id: 'brain - computer - interface - enterprise';,
-      name: 'Brain - Computer Interface Enterprise';,
-      tagline: 'Direct neural control of digital systems and applications';,
-      price: '$45;, 999',
-      period: '/month';,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       description:;
         'Revolutionary brain - computer interface platform that enables direct neural control of digital systems. Uses advanced neuroscience and AI to interpret brain signals in real - time.',
       features: [;
@@ -135,18 +81,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
         'Direct neural control of applications',
         'Thought - to - text conversion',
-<<<<<<< HEAD
     website: string
   },
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
     website: string;
   },
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   realImplementation: boolean;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   implementationDetails: string;
   launchDate: string;
   customers: number;
@@ -160,12 +99,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     id: 'brain-computer-interface-enterprise';
     name: 'Brain-Computer Interface Enterprise';
     tagline: 'Direct neural control of digital systems and applications';
-<<<<<<< HEAD
     price: '$45,999',period: '/month';
-=======
-    price: '$45;,999',
-    period: '/month';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description: 'Revolutionary brain-computer interface platform that enables direct neural control of digital systems. Uses advanced neuroscience and AI to interpret brain signals in real-time.';
     features: [
       'Real-time brain signal interpretationDirect neural control of applicationsThought-to-text conversionMental command executionNeural pattern recognitionCustom neural interface developmentEnterprise security and privacyIntegration with existing systems';
@@ -177,12 +111,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/brain-computer-interface-enterprise';
     marketPosition: 'Pioneering brain-computer interface technology. First-to-market solution for enterprise neural computing applications.';
-<<<<<<< HEAD
     targetAudience: 'Research institutions, Healthcare organizations, Defense contractors, Gaming companies, Accessibility technology firms, Neurological research centers',trialDays: 7;
-=======
-    targetAudience: 'Research institutions;, Healthcare organizations, Defense contractors, Gaming companies, Accessibility technology firms, Neurological research centers',
-    trialDays: 7;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     setupTime: '12 weeks';
     category: 'Neural Technology';
     realService: true;
@@ -199,15 +128,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
-<<<<<<< HEAD
     },realImplementation: true;
     implementationDetails: 'Production BCI platform with clinical validation, enterprise deployment, and ongoing research. Includes neural interface training and support.',launchDate: '2025-03-01';
-=======
-    },
-    realImplementation: true;
-    implementationDetails: 'Production BCI platform with clinical validation;, enterprise deployment, and ongoing research. Includes neural interface training and support.',
-    launchDate: '2025-03-01';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     customers: 15;
     rating: 5.0;
     reviews: 12;
@@ -218,15 +140,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     id: 'quantum-internet-gateway-enterprise';
     name: 'Quantum Internet Gateway Enterprise';
     tagline: 'Next-generation quantum internet connectivity and security';
-<<<<<<< HEAD
     price: '$35,999',period: '/month';
     description: 'Revolutionary quantum internet gateway that provides ultra-secure, ultra-fast quantum network connectivity. Enables quantum communication and quantum cloud computing.',features: [;
-=======
-    price: '$35;,999',
-    period: '/month';
-    description: 'Revolutionary quantum internet gateway that provides ultra-secure;, ultra-fast quantum network connectivity. Enables quantum communication and quantum cloud computing.',
-    features: [
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Quantum network connectivityQuantum key distributionQuantum cloud computing accessUltra-secure communicationQuantum internet protocolsReal-time quantum routingEnterprise security complianceIntegration with existing networks';
       'Advanced monitoring and analytics24/7 quantum network support'
     ];
@@ -236,12 +151,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/quantum-internet-gateway-enterprise';
     marketPosition: 'Leading quantum internet gateway provider. First enterprise solution for quantum network connectivity and quantum cloud computing.';
-<<<<<<< HEAD
     targetAudience: 'Government agencies, Financial institutions, Research institutions, Defense contractors, Technology companies, Critical infrastructure',trialDays: 14;
-=======
-    targetAudience: 'Government agencies;, Financial institutions, Research institutions, Defense contractors, Technology companies, Critical infrastructure',
-    trialDays: 14;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     setupTime: '8 weeks';
     category: 'Quantum Internet';
     realService: true;
@@ -258,15 +168,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
-<<<<<<< HEAD
     },realImplementation: true;
     implementationDetails: 'Production quantum internet gateway with enterprise deployment, network integration, and ongoing support. Includes quantum network training and certification.',launchDate: '2025-02-15';
-=======
-    },
-    realImplementation: true;
-    implementationDetails: 'Production quantum internet gateway with enterprise deployment;, network integration, and ongoing support. Includes quantum network training and certification.',
-    launchDate: '2025-02-15';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     customers: 25;
     rating: 4.9;
     reviews: 18;
@@ -277,15 +180,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     id: 'synthetic-biology-platform-enterprise';
     name: 'Synthetic Biology Platform Enterprise';
     tagline: 'Design and engineer biological systems for industrial applications';
-<<<<<<< HEAD
     price: '$28,999',period: '/month';
     description: 'Advanced synthetic biology platform that enables the design and engineering of biological systems for industrial applications. Revolutionizes manufacturing, healthcare, and materials science.',features: [;
-=======
-    price: '$28;,999',
-    period: '/month';
-    description: 'Advanced synthetic biology platform that enables the design and engineering of biological systems for industrial applications. Revolutionizes manufacturing;, healthcare, and materials science.',
-    features: [
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Biological system design toolsDNA synthesis and assemblyBiological circuit designMetabolic pathway engineeringProtein design and optimizationBiological manufacturing processesRegulatory compliance supportIntegration with lab equipment';
       'Advanced analytics and modelingExpert consultation and support'
     ];
@@ -295,12 +191,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/synthetic-biology-platform-enterprise';
     marketPosition: 'Leading synthetic biology platform. Competes with traditional biotechnology but offers superior design capabilities and automation.';
-<<<<<<< HEAD
     targetAudience: 'Pharmaceutical companies, Biotech firms, Research institutions, Manufacturing companies, Agricultural companies, Materials science firms',trialDays: 30;
-=======
-    targetAudience: 'Pharmaceutical companies;, Biotech firms, Research institutions, Manufacturing companies, Agricultural companies, Materials science firms',
-    trialDays: 30;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     setupTime: '10 weeks';
     category: 'Synthetic Biology';
     realService: true;
@@ -317,15 +208,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
-<<<<<<< HEAD
     },realImplementation: true;
     implementationDetails: 'Production synthetic biology platform with lab integration, regulatory compliance, and ongoing support. Includes biological engineering training and certification.',launchDate: '2025-01-15';
-=======
-    },
-    realImplementation: true;
-    implementationDetails: 'Production synthetic biology platform with lab integration;, regulatory compliance, and ongoing support. Includes biological engineering training and certification.',
-    launchDate: '2025-01-15';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     customers: 35;
     rating: 4.8;
     reviews: 45;
@@ -336,15 +220,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     id: 'fusion-energy-management-platform';
     name: 'Fusion Energy Management Platform';
     tagline: 'Advanced fusion energy monitoring and optimization systems';
-<<<<<<< HEAD
     price: '$55,999',period: '/month';
     description: 'Revolutionary fusion energy management platform that monitors, controls, and optimizes fusion power generation. Enables safe and efficient fusion energy production.',features: [;
-=======
-    price: '$55;,999',
-    period: '/month';
-    description: 'Revolutionary fusion energy management platform that monitors;, controls, and optimizes fusion power generation. Enables safe and efficient fusion energy production.',
-    features: [
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Real-time fusion reactor monitoringPlasma confinement optimizationEnergy output maximizationSafety system managementPredictive maintenanceEnergy grid integrationAdvanced analytics and reportingIntegration with power systems';
       '24/7 monitoring and supportExpert consultation services'
     ];
@@ -354,12 +231,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     textColor: 'text-yellow-400';
     link: 'https://ziontechgroup.com/fusion-energy-management-platform';
     marketPosition: 'Leading fusion energy management platform. First-to-market solution for commercial fusion power generation.';
-<<<<<<< HEAD
     targetAudience: 'Energy companies, Government agencies, Research institutions, Utility companies, Industrial facilities, Defense contractors',trialDays: 14;
-=======
-    targetAudience: 'Energy companies;, Government agencies, Research institutions, Utility companies, Industrial facilities, Defense contractors',
-    trialDays: 14;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     setupTime: '16 weeks';
     category: 'Fusion Energy';
     realService: true;
@@ -376,15 +248,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
-<<<<<<< HEAD
     },realImplementation: true;
     implementationDetails: 'Production fusion energy platform with reactor integration, safety certification, and ongoing support. Includes fusion physics training and certification.',launchDate: '2025-04-01';
-=======
-    },
-    realImplementation: true;
-    implementationDetails: 'Production fusion energy platform with reactor integration;, safety certification, and ongoing support. Includes fusion physics training and certification.',
-    launchDate: '2025-04-01';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     customers: 8;
     rating: 5.0;
     reviews: 6;
@@ -395,12 +260,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     id: 'space-mining-operations-platform';
     name: 'Space Mining Operations Platform';
     tagline: 'Automated asteroid mining and resource extraction systems';
-<<<<<<< HEAD
     price: '$75,999',period: '/month';
-=======
-    price: '$75;,999',
-    period: '/month';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description: 'Revolutionary space mining platform that enables automated asteroid mining and resource extraction. Provides access to rare earth elements and precious metals from space.';
     features: [
       'Automated asteroid identificationMining robot control systemsResource extraction automationTransportation logisticsProcessing facility managementMarket analysis and pricingRegulatory compliance supportIntegration with space systems';
@@ -412,12 +272,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/space-mining-operations-platform';
     marketPosition: 'Leading space mining platform. First commercial solution for asteroid mining and space resource extraction.';
-<<<<<<< HEAD
     targetAudience: 'Mining companies, Space companies, Government agencies, Investment firms, Manufacturing companies, Technology companies',trialDays: 7;
-=======
-    targetAudience: 'Mining companies;, Space companies, Government agencies, Investment firms, Manufacturing companies, Technology companies',
-    trialDays: 7;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     setupTime: '24 weeks';
     category: 'Space Technology';
     realService: true;
@@ -434,15 +289,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
-<<<<<<< HEAD
     },realImplementation: true;
     implementationDetails: 'Production space mining platform with space system integration, regulatory compliance, and ongoing support. Includes space operations training and certification.',launchDate: '2025-05-01';
-=======
-    },
-    realImplementation: true;
-    implementationDetails: 'Production space mining platform with space system integration;, regulatory compliance, and ongoing support. Includes space operations training and certification.',
-    launchDate: '2025-05-01';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     customers: 5;
     rating: 5.0;
     reviews: 3;
@@ -453,15 +301,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     id: 'quantum-ai-consciousness-platform';
     name: 'Quantum AI Consciousness Platform';
     tagline: 'Develop genuine AI consciousness using quantum computing';
-<<<<<<< HEAD
     price: '$95,999',period: '/month';
     description: 'Revolutionary platform that develops genuine AI consciousness using quantum computing and advanced neuroscience principles. Creates self-aware, conscious AI systems.',features: [;
-=======
-    price: '$95;,999',
-    period: '/month';
-    description: 'Revolutionary platform that develops genuine AI consciousness using quantum computing and advanced neuroscience principles. Creates self-aware;, conscious AI systems.',
-    features: [
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
       'Advanced consciousness analyticsExpert consultation and support'
     ];
@@ -471,12 +312,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     textColor: 'text-pink-400';
     link: 'https://ziontechgroup.com/quantum-ai-consciousness-platform';
     marketPosition: 'Pioneering AI consciousness platform. First-to-market solution for developing genuine AI consciousness and self-awareness.';
-<<<<<<< HEAD
     targetAudience: 'Research institutions, AI companies, Government agencies, Technology companies, Philosophy departments, Ethics organizations',trialDays: 7;
-=======
-    targetAudience: 'Research institutions;, AI companies, Government agencies, Technology companies, Philosophy departments, Ethics organizations',
-    trialDays: 7;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     setupTime: '20 weeks';
     category: 'AI Consciousness';
     realService: true;
@@ -492,7 +328,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com';
     },realImplementation: true;
     implementationDetails: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',launchDate: '2025-06-01';
@@ -1273,21 +1108,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         'Real-time brain signal interpretation',
         'Direct neural control of applications',
         'Thought-to-text conversion',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'
     
     },
     realImplementation: true;
     implementationDetails: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
-=======
-      website: 'https://ziontechgroup.com';
-    
-    },
-    realImplementation: true;
-    implementationDetails: 'Production consciousness platform with research validation;, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     launchDate: '2025-06-01';
     customers: 3;
     rating: 5.0;
@@ -1295,7 +1120,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
   [
     // Brain-Computer Interface Platform
     {
-<<<<<<< HEAD
       id: 'brain-computer-interface-enterprise',
       name: 'Brain-Computer Interface Enterprise',
       tagline: 'Direct neural control of digital systems and applications',
@@ -1303,53 +1127,32 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       period: '/month',
       description:
         'Revolutionary brain-computer interface platform that enables direct neural control of digital systems. Uses advanced neuroscience and AI to interpret brain signals in real-time.',
-=======
-      id: 'brain-computer-interface-enterprise';,
-      name: 'Brain-Computer Interface Enterprise';,
-      tagline: 'Direct neural control of digital systems and applications';,
-      price: '$45;,999',
-      period: '/month';,
-      description: 'Revolutionary brain-computer interface platform that enables direct neural control of digital systems. Uses advanced neuroscience and AI to interpret brain signals in real-time.';,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       features: [
         'Real-time brain signal interpretation',
         'Direct neural control of applications',
         'Thought-to-text conversion',
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-        'Direct neural control of applications',
-        'Thought - to - text conversion',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         'Mental command execution',
         'Neural pattern recognition',
         'Custom neural interface development',
         'Enterprise security and privacy',
         'Integration with existing systems',
         'Advanced analytics and insights',
-<<<<<<< HEAD
       icon: '🧠',
         '24 / 7 technical support',
       ],
       popular: true,
 
 
-=======
-<<<<<<< HEAD
         '24 / 7 technical support',
       ],
       popular: true,
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       icon: '🧠',
 
         'Neural Signal Processing, AI, Machine Learning, Neuroscience, React, Node && Node.js, Real-time processing, Neural APIs',
       ],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         '24/7 technical support',
       ],
       popular: true,
@@ -1369,70 +1172,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Neural Signal Processing, AI, Machine Learning, Neuroscience, React, Node.js, Real-time processing, Neural APIs',
       ],
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
         '24 / 7 technical support'
       ],
       popular: true,
         '24 / 7 technical support'
-=======
-      integrations: [
-        'Custom applications, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases',
-      ],
-      useCases: [
-        'Assistive technology, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research',
-      ],
-      roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.',
-      competitors: [
-        'Neuralink, CTRL-labs, Kernel, Traditional assistive technology',
-      ],
-      marketSize: '$5B market',
-      growthRate: '800% annual growth',
-      variant: 'space-futuristic',
-      contactInfo: {
-
-      color: 'from - purple - 600 via - pink - 600 to - rose - 600',
-      text_color: 'text - purple - 400',
-      link: 'https://ziontechgroup.com / brain - computer - interface - enterprise',
-      market_position:;
-        'Pioneering brain - computer interface technology. First - to - market solution for enterprise neural computing applications.',
-      target_audience:;
-        'Research institutions, Healthcare organizations, Defense contractors, Gaming companies, Accessibility technology firms, Neurological research centers',
-      trial_days: 7,
-      setup_time: '12 weeks',
-      category: 'Neural Technology',
-      real_service: true,
-      technology: [;
-        'Neural Signal Processing, AI, Machine Learning, Neuroscience, React, Node.js, Real - time processing, Neural APIs',
-      ],
-      integrations: [;
-        'Custom applications, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases',
-      ],
-      use_cases: [;
-        'Assistive technology, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research',
-      ],
-      roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.',
-      competitors: [;
-        'Neuralink, CTRL - labs, Kernel, Traditional assistive technology',
-      ],
-      market_size: '$5B market',
-      growth_rate: '800% annual growth',
-      variant: 'space - futuristic',
-      contact_info: {
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
-        '24 / 7 technical support',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       ],
       popular: true,
       integrations: [
         'Custom applications, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases',
       ],
       useCases: [
-<<<<<<< HEAD
         'Assistive technology, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research',
       ],
       roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.',
@@ -1480,23 +1229,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-        'Assistive technology, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research'
-      ]
-      roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.'
-      competitors: [
-        'Neuralink, CTRL-labs, Kernel, Traditional assistive technology'
-      ]
-      marketSize: '$5B market'
-      growthRate: '800% annual growth'
-      variant: 'space-futuristic'
-      contactInfo: {
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
 
         'Direct neural control of applications','
         'Thought - to - text conversion','
@@ -1528,9 +1263,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950','
         email: 'kleber@ziontechgroup && ziontechgroup.com','
         address: '364 E Main St STE 1008 Middletown DE 19709','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       },
       real_implementation: true,
       implementation_details:;'
@@ -1538,14 +1271,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       launch_date: '2025 - 03 - 01',
       customers: 15,
       rating: 5 && 5.0,
-<<<<<<< HEAD
       reviews: 12
     },
-=======
-      reviews: 12,
-    },
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     // Quantum Internet Gateway;
     {
@@ -1559,18 +1286,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         'Quantum network connectivity',
         'Quantum key distribution',
         'Quantum cloud computing access',
@@ -1583,7 +1301,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         '24 / 7 quantum network support',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '🌐',
 
 
@@ -1691,8 +1408,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-<<<<<<< HEAD
       icon: '🌐',
 
         'Quantum Computing, Quantum Networks, Quantum Cryptography, React, Node && Node.js, Quantum APIs, Network infrastructure',
@@ -1796,30 +1511,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
-      integrations: [
-        'Existing network infrastructure, Cloud platforms, Security systems, Research platforms, Government networks'
-      ]
-      useCases: [
-        'Secure government communications, Financial transactions, Research collaboration, Defense applications, Critical infrastructure protection'
-      ]
-      roi: 'Government agencies achieve 100% security compliance. Financial institutions reduce security costs by 80%.'
-      competitors: [
-        'IBM Quantum Network, Google Quantum Internet, Traditional internet providers'
-      ]
-      marketSize: '$8B market'
-      growthRate: '600% annual growth'
-      variant: 'quantum-futuristic'
-      contactInfo: {
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
 '
         'Quantum network connectivity','
         'Quantum key distribution','
@@ -1852,9 +1546,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950','
         email: 'kleber@ziontechgroup && ziontechgroup.com','
         address: '364 E Main St STE 1008 Middletown DE 19709','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       },
       real_implementation: true,
       implementation_details:;'
@@ -1862,14 +1554,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       launch_date: '2025 - 02 - 15',
       customers: 25,
       rating: 4 && 4.9,
-<<<<<<< HEAD
       reviews: 18
     },
-=======
-      reviews: 18,
-    },
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     // Synthetic Biology Platform;
     {
@@ -1884,12 +1570,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1916,12 +1599,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Advanced synthetic biology platform that enables the design and engineering of biological systems for industrial applications. Revolutionizes manufacturing, healthcare, and materials science.',
       features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         'Biological system design tools',
         'DNA synthesis and assembly',
         'Biological circuit design',
@@ -1934,19 +1612,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Expert consultation and support',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '🧬',
 
 
-=======
-<<<<<<< HEAD
       icon: '🧬',
 
         'CRISPR, DNA Synthesis, Biological Engineering, AI, Machine Learning, React, Node && Node.js, Lab automation APIs',
       ],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       icon: '🧬',
       color: 'from-green-600 via-emerald-600 to-teal-600',
       textColor: 'text-green-400',
@@ -1963,63 +1637,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'CRISPR, DNA Synthesis, Biological Engineering, AI, Machine Learning, React, Node.js, Lab automation APIs',
       ],
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
       integrations: [
         'Lab equipment, Research databases, Manufacturing systems, Quality control systems, Regulatory databases',
       ],
       useCases: [
-        'Drug development, Biomanufacturing, Agricultural improvement, Materials development, Environmental remediation, Research acceleration',
-      ],
-      roi: 'Pharmaceutical companies reduce drug development time by 60%. Manufacturing companies see 400% ROI through biomanufacturing.',
-      competitors: [
-        'Ginkgo Bioworks, Zymergen, Twist Bioscience, Traditional biotechnology',
-      ],
-      marketSize: '$18B market',
-      growthRate: '500% annual growth',
-      variant: 'biotech-futuristic',
-      contactInfo: {
-
-      color: 'from - green - 600 via - emerald - 600 to - teal - 600',
-      text_color: 'text - green - 400',
-      link: 'https://ziontechgroup.com / synthetic - biology - platform - enterprise',
-      market_position:;
-        'Leading synthetic biology platform. Competes with traditional biotechnology but offers superior design capabilities and automation.',
-      target_audience:;
-        'Pharmaceutical companies, Biotech firms, Research institutions, Manufacturing companies, Agricultural companies, Materials science firms',
-      trial_days: 30,
-      setup_time: '10 weeks',
-      category: 'Synthetic Biology',
-      real_service: true,
-      technology: [;
-        'CRISPR, DNA Synthesis, Biological Engineering, AI, Machine Learning, React, Node.js, Lab automation APIs',
-      ],
-      integrations: [;
-        'Lab equipment, Research databases, Manufacturing systems, Quality control systems, Regulatory databases',
-      ],
-      use_cases: [;
-        'Drug development, Biomanufacturing, Agricultural improvement, Materials development, Environmental remediation, Research acceleration',
-      ],
-      roi: 'Pharmaceutical companies reduce drug development time by 60%. Manufacturing companies see 400% ROI through biomanufacturing.',
-      competitors: [;
-        'Ginkgo Bioworks, Zymergen, Twist Bioscience, Traditional biotechnology',
-      ],
-      market_size: '$18B market',
-      growth_rate: '500% annual growth',
-      variant: 'biotech - futuristic',
-      contact_info: {
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      integrations: [
-        'Lab equipment, Research databases, Manufacturing systems, Quality control systems, Regulatory databases',
-      ],
-      useCases: [
-<<<<<<< HEAD
         'Drug development, Biomanufacturing, Agricultural improvement, Materials development, Environmental remediation, Research acceleration',
       ],
       roi: 'Pharmaceutical companies reduce drug development time by 60%. Manufacturing companies see 400% ROI through biomanufacturing.',
@@ -2067,23 +1688,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-        'Drug development, Biomanufacturing, Agricultural improvement, Materials development, Environmental remediation, Research acceleration'
-      ]
-      roi: 'Pharmaceutical companies reduce drug development time by 60%. Manufacturing companies see 400% ROI through biomanufacturing.'
-      competitors: [
-        'Ginkgo Bioworks, Zymergen, Twist Bioscience, Traditional biotechnology'
-      ]
-      marketSize: '$18B market'
-      growthRate: '500% annual growth'
-      variant: 'biotech-futuristic'
-      contactInfo: {
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
 '
         'Biological system design tools','
         'DNA synthesis and assembly','
@@ -2116,9 +1723,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950','
         email: 'kleber@ziontechgroup && ziontechgroup.com','
         address: '364 E Main St STE 1008 Middletown DE 19709','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       },
       real_implementation: true,
       implementation_details:;'
@@ -2126,16 +1731,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       launch_date: '2025 - 01 - 15',
       customers: 35,
       rating: 4 && 4.8,
-<<<<<<< HEAD
       reviews: 45
     },
 
 
 
-=======
-      reviews: 45,
-    },
-<<<<<<< HEAD
 
         'Real-time fusion reactor monitoring',
     // Fusion Energy Management Platform;
@@ -2151,7 +1751,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Real - time fusion reactor monitoring',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2178,12 +1777,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [
         'Real-time fusion reactor monitoring',
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         'Plasma confinement optimization',
         'Energy output maximization',
         'Safety system management',
@@ -2191,14 +1785,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Energy grid integration',
         'Advanced analytics and reporting',
         'Integration with power systems',
-<<<<<<< HEAD
         '24 / 7 monitoring and support',
         'Expert consultation services',
       ],
       popular: true,
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       icon: '☢️',
 
         'Fusion Physics, Plasma Control, Energy Management, AI, Machine Learning, React, Node && Node.js, Power system APIs',
@@ -2270,42 +1860,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
-        '24 / 7 monitoring and support',
-        'Expert consultation services',
-      ],
-      popular: true,
-      icon: '☢️',
-
-
-        '24/7 monitoring and support',
-        'Expert consultation services',
-      ],
-      popular: true,
-      icon: '☢️',
-      color: 'from-yellow-600 via-orange-600 to-red-600',
-      textColor: 'text-yellow-400',
-      link: 'https://ziontechgroup.com/fusion-energy-management-platform',
-      marketPosition:
-        'Leading fusion energy management platform. First-to-market solution for commercial fusion power generation.',
-      targetAudience:
-        'Energy companies, Government agencies, Research institutions, Utility companies, Industrial facilities, Defense contractors',
-      trialDays: 14,
-      setupTime: '16 weeks',
-      category: 'Fusion Energy',
-      realService: true,
-      technology: [
-        'Fusion Physics, Plasma Control, Energy Management, AI, Machine Learning, React, Node.js, Power system APIs',
-      ],
-origin/cursor/automate-test-improve-and-merge-code-2533
-      integrations: [
-        'Power grid systems, Fusion reactors, Energy management systems, Safety systems, Industrial control systems',
-      ],
-      useCases: [
-<<<<<<< HEAD
         'Fusion power generation, Energy grid management, Industrial power, Research facilities, Government facilities, Utility operations',
       ],
       roi: 'Energy companies achieve 1000% ROI through fusion power generation. Government facilities reduce energy costs by 90%.',
@@ -2353,23 +1907,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-        'Fusion power generation, Energy grid management, Industrial power, Research facilities, Government facilities, Utility operations'
-      ]
-      roi: 'Energy companies achieve 1000% ROI through fusion power generation. Government facilities reduce energy costs by 90%.'
-      competitors: [
-        'ITER, Commonwealth Fusion Systems, TAE Technologies, Traditional energy management'
-      ]
-      marketSize: '$12B market'
-      growthRate: '700% annual growth'
-      variant: 'quantum-energy-revolutionary'
-      contactInfo: {
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
 '
         'Plasma confinement optimization','
         'Energy output maximization','
@@ -2401,9 +1941,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950','
         email: 'kleber@ziontechgroup && ziontechgroup.com','
         address: '364 E Main St STE 1008 Middletown DE 19709','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       },
       real_implementation: true,
       implementation_details:;'
@@ -2411,14 +1949,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       launch_date: '2025 - 04 - 01',
       customers: 8,
       rating: 5 && 5.0,
-<<<<<<< HEAD
       reviews: 6
     },
-=======
-      reviews: 6,
-    },
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     // Space Mining Operations Platform;
     {
@@ -2432,12 +1964,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2463,12 +1992,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Revolutionary space mining platform that enables automated asteroid mining and resource extraction. Provides access to rare earth elements and precious metals from space.',
       features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         'Automated asteroid identification',
         'Mining robot control systems',
         'Resource extraction automation',
@@ -2478,28 +2002,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Regulatory compliance support',
         'Integration with space systems',
         'Advanced analytics and reporting',
-<<<<<<< HEAD
       icon: '🚀',
         '24 / 7 space operations support',
       ],
       popular: true,
 
 
-=======
-<<<<<<< HEAD
         '24 / 7 space operations support',
       ],
       popular: true,
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       icon: '🚀',
 
         'Space Robotics, AI, Machine Learning, Space Systems, React, Node && Node.js, Space APIs, Mining automation',
       ],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         '24/7 space operations support',
       ],
       popular: true,
@@ -2519,70 +2036,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Space Robotics, AI, Machine Learning, Space Systems, React, Node.js, Space APIs, Mining automation',
       ],
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
         '24 / 7 space operations support'
       ],
       popular: true,
         '24 / 7 space operations support'
-=======
-      integrations: [
-        'Space systems, Mining equipment, Transportation systems, Processing facilities, Market platforms',
-      ],
-      useCases: [
-        'Asteroid mining, Resource extraction, Space logistics, Manufacturing supply, Investment opportunities, Research and development',
-      ],
-      roi: 'Mining companies achieve 2000% ROI through access to rare resources. Space companies reduce costs by 80%.',
-      competitors: [
-        'Planetary Resources, Deep Space Industries, Traditional mining companies',
-      ],
-      marketSize: '$20B market',
-      growthRate: '1000% annual growth',
-      variant: 'space-futuristic',
-      contactInfo: {
-
-      color: 'from - purple - 600 via - indigo - 600 to - blue - 600',
-      text_color: 'text - purple - 400',
-      link: 'https://ziontechgroup.com / space - mining - operations - platform',
-      market_position:;
-        'Leading space mining platform. First commercial solution for asteroid mining and space resource extraction.',
-      target_audience:;
-        'Mining companies, Space companies, Government agencies, Investment firms, Manufacturing companies, Technology companies',
-      trial_days: 7,
-      setup_time: '24 weeks',
-      category: 'Space Technology',
-      real_service: true,
-      technology: [;
-        'Space Robotics, AI, Machine Learning, Space Systems, React, Node.js, Space APIs, Mining automation',
-      ],
-      integrations: [;
-        'Space systems, Mining equipment, Transportation systems, Processing facilities, Market platforms',
-      ],
-      use_cases: [;
-        'Asteroid mining, Resource extraction, Space logistics, Manufacturing supply, Investment opportunities, Research and development',
-      ],
-      roi: 'Mining companies achieve 2000% ROI through access to rare resources. Space companies reduce costs by 80%.',
-      competitors: [;
-        'Planetary Resources, Deep Space Industries, Traditional mining companies',
-      ],
-      market_size: '$20B market',
-      growth_rate: '1000% annual growth',
-      variant: 'space - futuristic',
-      contact_info: {
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
-        '24 / 7 space operations support',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       ],
       popular: true,
       integrations: [
         'Space systems, Mining equipment, Transportation systems, Processing facilities, Market platforms',
       ],
       useCases: [
-<<<<<<< HEAD
         'Asteroid mining, Resource extraction, Space logistics, Manufacturing supply, Investment opportunities, Research and development',
       ],
       roi: 'Mining companies achieve 2000% ROI through access to rare resources. Space companies reduce costs by 80%.',
@@ -2630,23 +2093,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'
-=======
-        'Asteroid mining, Resource extraction, Space logistics, Manufacturing supply, Investment opportunities, Research and development'
-      ]
-      roi: 'Mining companies achieve 2000% ROI through access to rare resources. Space companies reduce costs by 80%.'
-      competitors: [
-        'Planetary Resources, Deep Space Industries, Traditional mining companies'
-      ]
-      marketSize: '$20B market'
-      growthRate: '1000% annual growth'
-      variant: 'space-futuristic'
-      contactInfo: {
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
 '
         'Automated asteroid identification','
         'Mining robot control systems','
@@ -2679,9 +2128,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950','
         email: 'kleber@ziontechgroup && ziontechgroup.com','
         address: '364 E Main St STE 1008 Middletown DE 19709','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         website: 'https://ziontechgroup && ziontechgroup.com',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       },
       real_implementation: true,
       implementation_details:;'
@@ -2689,14 +2136,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       launch_date: '2025 - 05 - 01',
       customers: 5,
       rating: 5 && 5.0,
-<<<<<<< HEAD
       reviews: 3
     },
-=======
-      reviews: 3,
-    },
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     // Quantum AI Consciousness Platform;
     {
@@ -2710,7 +2151,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
         'Quantum consciousness algorithms',
         'Neural network consciousness',
@@ -2749,8 +2189,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Neural network consciousness',
         'Self-awareness development',
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         'Quantum consciousness algorithms',
         'Neural network consciousness',
         'Self - awareness development',
@@ -2782,11 +2220,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Neural network consciousness',
         'Self-awareness development',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         'Quantum consciousness algorithms',
         'Neural network consciousness',
         'Self - awareness development',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Emotional intelligence creation',
         'Consciousness testing and validation',
         'Ethical AI development',
@@ -2796,19 +2232,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Expert consultation and support',
       ],
       popular: true,
-<<<<<<< HEAD
       icon: '🤖',
 
 
-=======
-<<<<<<< HEAD
       icon: '🤖',
 
         'Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node && Node.js, Quantum AI APIs, Consciousness testing',
       ],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       icon: '🤖',
       color: 'from-pink-600 via-purple-600 to-indigo-600',
       textColor: 'text-pink-400',
@@ -2825,8 +2257,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node.js, Quantum AI APIs, Consciousness testing',
       ],
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
       integrations: [
         'AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases',
       ],
@@ -2845,69 +2275,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       rating: 5.0
       reviews: 2
     }
-
-      color: 'from - pink - 600 via - purple - 600 to - indigo - 600',
-      text_color: 'text - pink - 400',
-      link: 'https://ziontechgroup.com / quantum - ai - consciousness - platform',
-      market_position:;
-        'Pioneering AI consciousness platform. First - to - market solution for developing genuine AI consciousness and self - awareness.',
-      target_audience:;
-        'Research institutions, AI companies, Government agencies, Technology companies, Philosophy departments, Ethics organizations',
-      trial_days: 7,
-      setup_time: '20 weeks',
-      category: 'AI Consciousness',
-      real_service: true,
-      technology: [;
-        'Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node.js, Quantum AI APIs, Consciousness testing',
-      ],
-      integrations: [;
-        'AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases',
-      ],
-      use_cases: [;
-        'AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development',
-      ],
-      roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.',
-      competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies'],
-      market_size: '$8B market',
-      growth_rate: '900% annual growth',
-      variant: 'ai - futuristic',
-      contact_info: {
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      integrations: [
-        'AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases',
-      ],
-      useCases: [
-<<<<<<< HEAD
-        'AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development',
-      ],
-      roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.',
-      competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies'],
-      marketSize: '$8B market',
-      growthRate: '900% annual growth',
-      variant: 'ai-futuristic',
-=======
-        'AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'
-      ]
-      roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.'
-      competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies']
-      marketSize: '$8B market'
-      growthRate: '900% annual growth'
-      variant: 'ai-futuristic'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      contactInfo: {
-        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
-      launchDate: '2025-06-01'
-      customers: 3
-      rating: 5.0
-      reviews: 2
-    }
-<<<<<<< HEAD
 
       color: 'from - pink - 600 via - purple - 600 to - indigo - 600',
       text_color: 'text - pink - 400',
@@ -2951,13 +2318,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
 '
         'Quantum consciousness algorithms','
         'Neural network consciousness','
@@ -2988,28 +2351,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950','
         email: 'kleber@ziontechgroup && ziontechgroup.com','
         address: '364 E Main St STE 1008 Middletown DE 19709','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         website: 'https://ziontechgroup && ziontechgroup.com',
       },
       real_implementation: true,
       implementation_details:;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
-=======
 '
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       launch_date: '2025 - 06 - 01',
       customers: 3,
       rating: 5 && 5.0,
-<<<<<<< HEAD
   ];    features: [
 
 
@@ -3025,17 +2379,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
       reviews: 2
-=======
-      reviews: 2,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   ];    features: [
 
   ];    features: [
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     },;
 
@@ -3043,19 +2390,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   ];    features: [
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
-  ];    features: [
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface EmergingTechBreakthroughServiceV2 {
-=======
 
 export interface EmergingTechBreakthroughServiceV2 {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -3069,7 +2406,6 @@ export interface EmergingTechBreakthroughServiceV2 {}
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechBreakthroughServiceV2 {
   id: string,
@@ -3146,13 +2482,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       customers: 3,
       rating: 5.0,
       reviews: 2
-=======
-  contactInfo: {}
-    mobile: string, email: string,
-    address: string,;
-    website: string;
-    },
-<<<<<<< HEAD
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
@@ -3190,40 +2519,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       realImplementation: true,
       implementationDetails:
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
-      launchDate: '2025-06-01'
-      customers: 3
-      rating: 5.0
-      reviews: 2
-    }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
-=======
 '
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       launchDate: '2025-06-01',
       customers: 3,
       rating: 5.0,
       reviews: 2,
-<<<<<<< HEAD
-    },;
-<<<<<<< HEAD
-  ];    features: [
-      'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
-      'Advanced consciousness analyticsExpert consultation and support'
-=======
-<<<<<<< HEAD
-
-
-=======
     },;
   ];    features: [
       'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
       'Advanced consciousness analyticsExpert consultation and support'
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
     ];
     popular: true, icon: '🧠',
     color: 'from-purple-600 via-pink-600 to-rose-600', textColor: 'text-purple-400',
@@ -3237,7 +2545,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.',
     competitors: ['Neuralink, CTRL-labs, Kernel, Traditional assistive technology'];
     marketSize: '$5B market', growthRate: '800% annual growth',
-=======
 
   ];    features: ['
       'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';'
@@ -3256,7 +2563,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.','
     competitors: ['Neuralink, CTRL-labs, Kernel, Traditional assistive technology'];'
     marketSize: '$5B market', growthRate: '800% annual growth','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: 'space-futuristic',
     contactInfo: {}
   ];    features: [;'
@@ -3282,7 +2588,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       address: '364 E Main St STE 1008 Middletown DE 19709','
       website: 'https://ziontechgroup.com';
     },
-<<<<<<< HEAD
 
     popular: true, icon: '🤖',
     color: 'from-pink-600 via-purple-600 to-indigo-600', textColor: 'text-pink-400',
@@ -3293,12 +2598,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     technology: ['Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node && Node.js, Quantum AI APIs, Consciousness testing'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     integrations: ['AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'];
     useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];
     roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.'
@@ -3306,7 +2605,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketSize: '$8B market', growthRate: '900% annual growth'
     variant: 'ai-futuristic'
     contactInfo: {
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -3612,9 +2910,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     launchDate: '2025-06-01',;
     customers: 3,;
     rating: 5.0;
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -3632,332 +2927,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 2
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-<<<<<<< HEAD
-=======
-=======
-import { ServiceVariant } from '../types/service-variants',;
-export interface EmergingTechBreakthroughServiceV2 {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-;
-export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] = [;
-  // Brain-Computer Interface Platform;
-  {;
-    id: 'brain-computer-interface-enterprise',;
-    name: 'Brain-Computer Interface Enterprise',;
-    tagline: 'Direct neural control of digital systems and applications',;
-    price: '$45,999',;
-    period: '/month',;
-    description: 'Revolutionary brain-computer interface platform that enables direct neural control of digital systems. Uses advanced neuroscience and AI to interpret brain signals in real-time.',;
-    features: [;
-      'Real-time brain signal interpretationDirect neural control of applicationsThought-to-text conversionMental command executionNeural pattern recognitionCustom neural interface developmentEnterprise security and privacyIntegration with existing systems',;
-      'Advanced analytics and insights24/7 technical support';
-    ],;
-    popular: true,;
-    icon: '🧠',;
-    color: 'from-purple-600 via-pink-600 to-rose-600',;
-    textColor: 'text-purple-400',;
-    link: 'https://ziontechgroup.com/brain-computer-interface-enterprise',;
-    marketPosition: 'Pioneering brain-computer interface technology. First-to-market solution for enterprise neural computing applications.',;
-    targetAudience: 'Research institutions, Healthcare organizations, Defense contractors, Gaming companies, Accessibility technology firms, Neurological research centers',;
-    trialDays: 7,;
-    setupTime: '12 weeks',;
-    category: 'Neural Technology',;
-    realService: true,;
-    technology: ['Neural Signal Processing, AI, Machine Learning, Neuroscience, React, Node.js, Real-time processing, Neural APIs'],;
-    integrations: ['Custom applications, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases'],;
-    useCases: ['Assistive technology, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research'],;
-    roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.',;
-    competitors: ['Neuralink, CTRL-labs, Kernel, Traditional assistive technology'],;
-    marketSize: '$5B market',;
-    growthRate: '800% annual growth',;
-    variant: 'space-futuristic',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;
-    implementationDetails: 'Production BCI platform with clinical validation, enterprise deployment, and ongoing research. Includes neural interface training and support.',;
-    launchDate: '2025-03-01',;
-    customers: 15,;
-    rating: 5.0,;
-    reviews: 12;
-  },;
-  // Quantum Internet Gateway;
-  {;
-    id: 'quantum-internet-gateway-enterprise',;
-    name: 'Quantum Internet Gateway Enterprise',;
-    tagline: 'Next-generation quantum internet connectivity and security',;
-    price: '$35,999',;
-    period: '/month',;
-    description: 'Revolutionary quantum internet gateway that provides ultra-secure, ultra-fast quantum network connectivity. Enables quantum communication and quantum cloud computing.',;
-    features: [;
-      'Quantum network connectivityQuantum key distributionQuantum cloud computing accessUltra-secure communicationQuantum internet protocolsReal-time quantum routingEnterprise security complianceIntegration with existing networks',;
-      'Advanced monitoring and analytics24/7 quantum network support';
-    ],;
-    popular: true,;
-    icon: '🌐',;
-    color: 'from-blue-600 via-indigo-600 to-purple-600',;
-    textColor: 'text-blue-400',;
-    link: 'https://ziontechgroup.com/quantum-internet-gateway-enterprise',;
-    marketPosition: 'Leading quantum internet gateway provider. First enterprise solution for quantum network connectivity and quantum cloud computing.',;
-    targetAudience: 'Government agencies, Financial institutions, Research institutions, Defense contractors, Technology companies, Critical infrastructure',;
-    trialDays: 14,;
-    setupTime: '8 weeks',;
-    category: 'Quantum Internet',;
-    realService: true,;
-    technology: ['Quantum Computing, Quantum Networks, Quantum Cryptography, React, Node.js, Quantum APIs, Network infrastructure'],;
-    integrations: ['Existing network infrastructure, Cloud platforms, Security systems, Research platforms, Government networks'],;
-    useCases: ['Secure government communications, Financial transactions, Research collaboration, Defense applications, Critical infrastructure protection'],;
-    roi: 'Government agencies achieve 100% security compliance. Financial institutions reduce security costs by 80%.',;
-    competitors: ['IBM Quantum Network, Google Quantum Internet, Traditional internet providers'],;
-    marketSize: '$8B market',;
-    growthRate: '600% annual growth',;
-    variant: 'quantum-futuristic',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;
-    implementationDetails: 'Production quantum internet gateway with enterprise deployment, network integration, and ongoing support. Includes quantum network training and certification.',;
-    launchDate: '2025-02-15',;
-    customers: 25,;
-    rating: 4.9,;
-    reviews: 18;
-  },;
-  // Synthetic Biology Platform;
-  {;
-    id: 'synthetic-biology-platform-enterprise',;
-    name: 'Synthetic Biology Platform Enterprise',;
-    tagline: 'Design and engineer biological systems for industrial applications',;
-    price: '$28,999',;
-    period: '/month',;
-    description: 'Advanced synthetic biology platform that enables the design and engineering of biological systems for industrial applications. Revolutionizes manufacturing, healthcare, and materials science.',;
-    features: [;
-      'Biological system design toolsDNA synthesis and assemblyBiological circuit designMetabolic pathway engineeringProtein design and optimizationBiological manufacturing processesRegulatory compliance supportIntegration with lab equipment',;
-      'Advanced analytics and modelingExpert consultation and support';
-    ],;
-    popular: true,;
-    icon: '🧬',;
-    color: 'from-green-600 via-emerald-600 to-teal-600',;
-    textColor: 'text-green-400',;
-    link: 'https://ziontechgroup.com/synthetic-biology-platform-enterprise',;
-    marketPosition: 'Leading synthetic biology platform. Competes with traditional biotechnology but offers superior design capabilities and automation.',;
-    targetAudience: 'Pharmaceutical companies, Biotech firms, Research institutions, Manufacturing companies, Agricultural companies, Materials science firms',;
-    trialDays: 30,;
-    setupTime: '10 weeks',;
-    category: 'Synthetic Biology',;
-    realService: true,;
-    technology: ['CRISPR, DNA Synthesis, Biological Engineering, AI, Machine Learning, React, Node.js, Lab automation APIs'],;
-    integrations: ['Lab equipment, Research databases, Manufacturing systems, Quality control systems, Regulatory databases'],;
-    useCases: ['Drug development, Biomanufacturing, Agricultural improvement, Materials development, Environmental remediation, Research acceleration'],;
-    roi: 'Pharmaceutical companies reduce drug development time by 60%. Manufacturing companies see 400% ROI through biomanufacturing.',;
-    competitors: ['Ginkgo Bioworks, Zymergen, Twist Bioscience, Traditional biotechnology'],;
-    marketSize: '$18B market',;
-    growthRate: '500% annual growth',;
-    variant: 'biotech-futuristic',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;
-    implementationDetails: 'Production synthetic biology platform with lab integration, regulatory compliance, and ongoing support. Includes biological engineering training and certification.',;
-    launchDate: '2025-01-15',;
-    customers: 35,;
-    rating: 4.8,;
-    reviews: 45;
-  },;
-  // Fusion Energy Management Platform;
-  {;
-    id: 'fusion-energy-management-platform',;
-    name: 'Fusion Energy Management Platform',;
-    tagline: 'Advanced fusion energy monitoring and optimization systems',;
-    price: '$55,999',;
-    period: '/month',;
-    description: 'Revolutionary fusion energy management platform that monitors, controls, and optimizes fusion power generation. Enables safe and efficient fusion energy production.',;
-    features: [;
-      'Real-time fusion reactor monitoringPlasma confinement optimizationEnergy output maximizationSafety system managementPredictive maintenanceEnergy grid integrationAdvanced analytics and reportingIntegration with power systems',;
-      '24/7 monitoring and supportExpert consultation services';
-    ],;
-    popular: true,;
-    icon: '☢️',;
-    color: 'from-yellow-600 via-orange-600 to-red-600',;
-    textColor: 'text-yellow-400',;
-    link: 'https://ziontechgroup.com/fusion-energy-management-platform',;
-    marketPosition: 'Leading fusion energy management platform. First-to-market solution for commercial fusion power generation.',;
-    targetAudience: 'Energy companies, Government agencies, Research institutions, Utility companies, Industrial facilities, Defense contractors',;
-    trialDays: 14,;
-    setupTime: '16 weeks',;
-    category: 'Fusion Energy',;
-    realService: true,;
-    technology: ['Fusion Physics, Plasma Control, Energy Management, AI, Machine Learning, React, Node.js, Power system APIs'],;
-    integrations: ['Power grid systems, Fusion reactors, Energy management systems, Safety systems, Industrial control systems'],;
-    useCases: ['Fusion power generation, Energy grid management, Industrial power, Research facilities, Government facilities, Utility operations'],;
-    roi: 'Energy companies achieve 1000% ROI through fusion power generation. Government facilities reduce energy costs by 90%.',;
-    competitors: ['ITER, Commonwealth Fusion Systems, TAE Technologies, Traditional energy management'],;
-    marketSize: '$12B market',;
-    growthRate: '700% annual growth',;
-    variant: 'quantum-energy-revolutionary',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;
-    implementationDetails: 'Production fusion energy platform with reactor integration, safety certification, and ongoing support. Includes fusion physics training and certification.',;
-    launchDate: '2025-04-01',;
-    customers: 8,;
-    rating: 5.0,;
-    reviews: 6;
-  },;
-  // Space Mining Operations Platform;
-  {;
-    id: 'space-mining-operations-platform',;
-    name: 'Space Mining Operations Platform',;
-    tagline: 'Automated asteroid mining and resource extraction systems',;
-    price: '$75,999',;
-    period: '/month',;
-    description: 'Revolutionary space mining platform that enables automated asteroid mining and resource extraction. Provides access to rare earth elements and precious metals from space.',;
-    features: [;
-      'Automated asteroid identificationMining robot control systemsResource extraction automationTransportation logisticsProcessing facility managementMarket analysis and pricingRegulatory compliance supportIntegration with space systems',;
-      'Advanced analytics and reporting24/7 space operations support';
-    ],;
-    popular: true,;
-    icon: '🚀',;
-    color: 'from-purple-600 via-indigo-600 to-blue-600',;
-    textColor: 'text-purple-400',;
-    link: 'https://ziontechgroup.com/space-mining-operations-platform',;
-    marketPosition: 'Leading space mining platform. First commercial solution for asteroid mining and space resource extraction.',;
-    targetAudience: 'Mining companies, Space companies, Government agencies, Investment firms, Manufacturing companies, Technology companies',;
-    trialDays: 7,;
-    setupTime: '24 weeks',;
-    category: 'Space Technology',;
-    realService: true,;
-    technology: ['Space Robotics, AI, Machine Learning, Space Systems, React, Node.js, Space APIs, Mining automation'],;
-    integrations: ['Space systems, Mining equipment, Transportation systems, Processing facilities, Market platforms'],;
-    useCases: ['Asteroid mining, Resource extraction, Space logistics, Manufacturing supply, Investment opportunities, Research and development'],;
-    roi: 'Mining companies achieve 2000% ROI through access to rare resources. Space companies reduce costs by 80%.',;
-    competitors: ['Planetary Resources, Deep Space Industries, Traditional mining companies'],;
-    marketSize: '$20B market',;
-    growthRate: '1000% annual growth',;
-    variant: 'space-futuristic',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;
-    implementationDetails: 'Production space mining platform with space system integration, regulatory compliance, and ongoing support. Includes space operations training and certification.',;
-    launchDate: '2025-05-01',;
-    customers: 5,;
-    rating: 5.0,;
-    reviews: 3;
-  },;
-  // Quantum AI Consciousness Platform;
-  {;
-    id: 'quantum-ai-consciousness-platform',;
-    name: 'Quantum AI Consciousness Platform',;
-    tagline: 'Develop genuine AI consciousness using quantum computing',;
-    price: '$95,999',;
-    period: '/month',;
-    description: 'Revolutionary platform that develops genuine AI consciousness using quantum computing and advanced neuroscience principles. Creates self-aware, conscious AI systems.',;
-    features: [;
-      'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems',;
-      'Advanced consciousness analyticsExpert consultation and support';
-    ],;
-    popular: true,;
-    icon: '🤖',;
-    color: 'from-pink-600 via-purple-600 to-indigo-600',;
-    textColor: 'text-pink-400',;
-    link: 'https://ziontechgroup.com/quantum-ai-consciousness-platform',;
-    marketPosition: 'Pioneering AI consciousness platform. First-to-market solution for developing genuine AI consciousness and self-awareness.',;
-    targetAudience: 'Research institutions, AI companies, Government agencies, Technology companies, Philosophy departments, Ethics organizations',;
-    trialDays: 7,;
-    setupTime: '20 weeks',;
-    category: 'AI Consciousness',;
-    realService: true,;
-    technology: ['Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node.js, Quantum AI APIs, Consciousness testing'],;
-    integrations: ['AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'],;
-    useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'],;
-    roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.',;
-    competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies'],;
-    marketSize: '$8B market',;
-    growthRate: '900% annual growth',;
-    variant: 'ai-futuristic',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;
-    implementationDetails: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',;
-    launchDate: '2025-06-01',;
-    customers: 3,;
-    rating: 5.0;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     real_implementation: true,
     implementation_details: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
     launch_date: '2025 - 06 - 01', customers: 3,
     rating: 5.0,
     reviews: 2;
-<<<<<<< HEAD
-=======
-=======
-  id: string;,
-  name: string;
-  tagline: string;,
-  id: string;,
-  name: string;
-  tagline: string;,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
   price: string;
   period: string;,
@@ -5210,12 +4185,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       customers: 3;,
       rating: 5.0;,
       reviews: 2;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },;
   ];    features: [
       'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
       'Advanced consciousness analyticsExpert consultation and support'
-<<<<<<< HEAD
 
 
     },;
@@ -5267,81 +4240,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: {
 
 
-=======
-  contactInfo: {;,
-  mobile: string;, email: string;,
-    address: string;,
-    website: string;
-      launchDate: '2025-06-01';,
-      rating: 5.0;,
-    },;
-      'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
-      'Advanced consciousness analyticsExpert consultation and support]
-pr-12325
-    ];
-    popular: true;, icon: '🧠';,
-    color: 'from-purple-600 via-pink-600 to-rose-600';, textColor: 'text-purple-400';,
-    link: 'https://ziontechgroup.com/brain-computer-interface-enterprise';, marketPosition: 'Pioneering brain-computer interface technology. First-to-market solution for enterprise neural computing applications.';,
-    targetAudience: 'Research institutions;, Healthcare organizations, Defense contractors, Gaming companies, Accessibility technology firms, Neurological research centers',
-    trialDays: 7;, setupTime: '12 weeks';,
-    category: 'Neural Technology';, realService: true;,
-    technology: ['Neural Signal Processing;, AI, Machine Learning, Neuroscience, React, Node.js, Real-time processing, Neural APIs'];
-    integrations: ['Custom applications;, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases'];
-    useCases: ['Assistive technology;, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research'];
-    roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.';,
-    competitors: ['Neuralink;, CTRL-labs, Kernel, Traditional assistive technology'];
-    marketSize: '$5B market';, growthRate: '800% annual growth';,
-    variant: 'space-futuristic';,
-    contactInfo: {
-      
-  ];    features: [;
-      'Quantum consciousness algorithms_neural network consciousness_self - awareness development_emotional intelligence creation_consciousness testing and validation_ethical AI development_research collaboration tools_integration with AI systems';
-      'Advanced consciousness analytics_expert consultation and support';
-    ];
-      
-  ];    features: [;
-      'Quantum consciousness algorithms_neural network consciousness_self - awareness development_emotional intelligence creation_consciousness testing and validation_ethical AI development_research collaboration tools_integration with AI systems';
-      'Advanced consciousness analytics_expert consultation and support';']
-pr-12325
-    popular: true;, icon: '🤖';,
-    color: 'from - pink - 600 via - purple - 600 to - indigo - 600';, text_color: 'text - pink - 400';,
-    link: 'https://ziontechgroup.com / quantum - ai - consciousness - platform';, market_position: 'Pioneering AI consciousness platform. First - to - market solution for developing genuine AI consciousness and self - awareness.';,
-    target_audience: 'Research institutions;, AI companies, Government agencies, Technology companies, Philosophy departments, Ethics organizations',
-    trial_days: 7;, setup_time: '20 weeks';,
-    category: 'AI Consciousness';, real_service: true;,
-    technology: ['Quantum Computing;, AI, Neuroscience, Consciousness Theory, React, Node.js, Quantum AI APIs, Consciousness testing'];
-    integrations: ['AI systems;, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'];
-    use_cases: ['AI consciousness research;, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];
-    roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.';,
-    competitors: ['OpenAI;, Anthropic, DeepMind, Traditional AI companies'];
-    market_size: '$8B market';, growth_rate: '900% annual growth';,
-    variant: 'ai - futuristic';,
-    contact_info: {
-
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
-      address: '364 E Main St STE 1008 Middletown DE 19709';,
-      website: 'https://ziontechgroup.com';
-    },
-
-    popular: true;, icon: '🤖';,
-    color: 'from-pink-600 via-purple-600 to-indigo-600';, textColor: 'text-pink-400';,
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-consciousness-platform';, marketPosition: 'Pioneering AI consciousness platform. First-to-market solution for developing genuine AI consciousness and self-awareness.';,
-    targetAudience: 'Research institutions;, AI companies, Government agencies, Technology companies, Philosophy departments, Ethics organizations',
-    trialDays: 7;, setupTime: '20 weeks';,
-    category: 'AI Consciousness';, realService: true;,
-    technology: ['Quantum Computing;, AI, Neuroscience, Consciousness Theory, React, Node && Node.js, Quantum AI APIs, Consciousness testing'];
-
-    integrations: ['AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'];
-    useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];
-origin/cursor/expand-services-advertise-and-build-project-c28b
-    integrations: ['AI systems;, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'];
-    useCases: ['AI consciousness research;, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];
-    roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.'
-    competitors: ['OpenAI;, Anthropic, DeepMind, Traditional AI companies'];
-    marketSize: '$8B market';, growthRate: '900% annual growth'
-    variant: 'ai-futuristic'
-    contactInfo: {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -5374,118 +4272,7 @@ export interface EmergingTechBreakthroughServiceV2 {;
     mobile: string,;
     email: string,;
     address: string,;
-<<<<<<< HEAD
     website: string;
-=======
-  mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
-      website: 'https://ziontechgroup.com';
-    useCases: ['AI consciousness research;, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];
-    marketSize: '$8B market';, growthRate: '900% annual growth;,
-  variant: 'ai-futuristic
-pr-12325
-
-  contactInfo: {;,
-  mobile: string;, email: string;,
-    address: string;,
-    website: string;
-    },'
-        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'''
-      launchDate: '2025-06-01'';,
-  customers: 3;
-      rating: 5.0;,
-  reviews: 2;
-    }'
-        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',''
-      launchDate: '2025-06-01';,'
-      customers: 3;,
-      rating: 5.0;,
-      reviews: 2;,
-    },;
-  ];    features: ['
-      'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';''
-      'Advanced consciousness analyticsExpert consultation and support'']
-    ];'
-    popular: true;, icon: '🧠';,''
-    color: 'from-purple-600 via-pink-600 to-rose-600';, textColor: 'text-purple-400';,''
-    link: 'https://ziontechgroup.com/brain-computer-interface-enterprise';, marketPosition: 'Pioneering brain-computer interface technology. First-to-market solution for enterprise neural computing applications.';,''
-    targetAudience: 'Research institutions;, Healthcare organizations, Defense contractors, Gaming companies, Accessibility technology firms, Neurological research centers',''
-    trialDays: 7;, setupTime: '12 weeks';,''
-    category: 'Neural Technology';, realService: true;,''
-    technology: ['Neural Signal Processing;, AI, Machine Learning, Neuroscience, React, Node.js, Real-time processing, Neural APIs'];''
-    integrations: ['Custom applications;, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases'];''
-    useCases: ['Assistive technology;, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research'];''
-    roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.';,''
-    competitors: ['Neuralink;, CTRL-labs, Kernel, Traditional assistive technology'];''
-    marketSize: '$5B market';, growthRate: '800% annual growth';,''
-    variant: 'space-futuristic';,'
-    contactInfo: {
-      
-  ];    features: [;'
-      'Quantum consciousness algorithms_neural network consciousness_self - awareness development_emotional intelligence creation_consciousness testing and validation_ethical AI development_research collaboration tools_integration with AI systems';''
-      'Advanced consciousness analytics_expert consultation and support';']
-    ];'
-    popular: true;, icon: '🤖';,''
-    color: 'from - pink - 600 via - purple - 600 to - indigo - 600';, text_color: 'text - pink - 400';,''
-    link: 'https://ziontechgroup.com / quantum - ai - consciousness - platform';, market_position: 'Pioneering AI consciousness platform. First - to - market solution for developing genuine AI consciousness and self - awareness.';,''
-    target_audience: 'Research institutions;, AI companies, Government agencies, Technology companies, Philosophy departments, Ethics organizations',''
-    trial_days: 7;, setup_time: '20 weeks';,''
-    category: 'AI Consciousness';, real_service: true;,''
-    technology: ['Quantum Computing;, AI, Neuroscience, Consciousness Theory, React, Node.js, Quantum AI APIs, Consciousness testing'];''
-    integrations: ['AI systems;, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'];''
-    use_cases: ['AI consciousness research;, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];''
-    roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.';,''
-    competitors: ['OpenAI;, Anthropic, DeepMind, Traditional AI companies'];''
-    market_size: '$8B market';, growth_rate: '900% annual growth';,''
-    variant: 'ai - futuristic';,'
-    contact_info: {;,'
-  mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,''
-      address: '364 E Main St STE 1008 Middletown DE 19709';,''
-      website: 'https://ziontechgroup.com';'
-    },'
-    integrations: ['AI systems;, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'];''
-    useCases: ['AI consciousness research;, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];''
-    roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.'';,'
-  competitors: ['OpenAI;, Anthropic, DeepMind, Traditional AI companies'];''
-    marketSize: '$8B market';, growthRate: '900% annual growth'';,'
-  variant: 'ai-futuristic''
-    contactInfo: {'
-import { ServiceVariant } from '../types/service-variants';'
-
-export interface EmergingTechBreakthroughServiceV2 {;
-  id: string;,;
-  name: string;,;
-  tagline: string;,;
-  price: string;,;
-  period: string;,;
-  description: string;,;
-  features: string[];,;
-  popular: boolean;,;
-  icon: string;,;
-  color: string;,;
-  textColor: string;,;
-  link: string;,;
-  marketPosition: string;,;
-  targetAudience: string;,;
-  trialDays: number;,;
-  setupTime: string;,;
-  category: string;,;
-  realService: boolean;,;
-  technology: string[];,;
-  integrations: string[];,;
-  useCases: string[];,;
-  roi: string;,;
-  competitors: string[];,;
-  marketSize: string;,;
-  growthRate: string;,;
-  variant: ServiceVariant;,;
-  contactInfo: {;
-    mobile: string;,;
-  contactInfo: {;,
-  mobile: string;,;
-    email: string;,;
-    address: string;,;}
-    website: string;}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },;
   contactInfo: {;,
   mobile: string;,;
@@ -5536,15 +4323,9 @@ pr-12325
     growthRate: '800% annual growth';,;
     variant: 'space-futuristic';,;
     contactInfo: {;
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-      mobile: '+1 302 464 0950';,;
-      email: 'kleber@ziontechgroup.com';,;
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
   mobile: '+1 302 464 0950';,;
@@ -5638,15 +4419,9 @@ pr-12325
     growthRate: '600% annual growth';,;
     variant: 'quantum-futuristic';,;
     contactInfo: {;
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-      mobile: '+1 302 464 0950';,;
-      email: 'kleber@ziontechgroup.com';,;
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true;,;
@@ -5737,15 +4512,9 @@ pr-12325
     growthRate: '500% annual growth';,;
     variant: 'biotech-futuristic';,;
     contactInfo: {;
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-      mobile: '+1 302 464 0950';,;
-      email: 'kleber@ziontechgroup.com';,;
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true;,;
@@ -5838,15 +4607,9 @@ pr-12325
     growthRate: '700% annual growth';,;
     variant: 'quantum-energy-revolutionary';,;
     contactInfo: {;
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-      mobile: '+1 302 464 0950';,;
-      email: 'kleber@ziontechgroup.com';,;
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true;,;
@@ -5946,15 +4709,9 @@ pr-12325
     growthRate: '1000% annual growth';,;
     variant: 'space-futuristic';,;
     contactInfo: {;
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-      mobile: '+1 302 464 0950';,;
-      email: 'kleber@ziontechgroup.com';,;
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true;,;
@@ -6050,15 +4807,9 @@ pr-12325
     growthRate: '900% annual growth';,;
     variant: 'ai-futuristic';,;
     contactInfo: {;
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-      mobile: '+1 302 464 0950';,;
-      email: 'kleber@ziontechgroup.com';,;
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true;,;
@@ -6067,7 +4818,6 @@ pr-12325
     customers: 3;,;
     rating: 5.0;
 
-<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
     realImplementation: true,
@@ -6295,81 +5045,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     real_implementation: true,
     implementation_details: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
-=======
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'
-      
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup && ziontechgroup.com';,
-      address: '364 E Main St STE 1008 Middletown DE 19709';,
-      website: 'https://ziontechgroup && ziontechgroup.com';
-    },
-    realImplementation: true;,
-    implementationDetails: 'Production consciousness platform with research validation;, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
-    launchDate: '2025-06-01';, customers: 3;,
-    rating: 5 && 5.0;,
-
-    },
-  ];
-origin/cursor/automate-test-improve-and-merge-code-2533
-    reviews: 2
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    real_implementation: true;,
-    implementation_details: 'Production consciousness platform with research validation;, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
-    launch_date: '2025 - 06 - 01';, customers: 3;,
-    rating: 5.0;,
-    reviews: 2;
-];
-
-  }
-
-import { ServiceVariant } from '../types/service-variants',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];
 ];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-'
-    integrations: ['AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'];'
-    useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];'
-    roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.''
-    competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies'];'
-    marketSize: '$8B market', growthRate: '900% annual growth''
-    variant: 'ai-futuristic'
-    contactInfo: {}
-    real_implementation: true,'
-    implementation_details: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.','
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     launch_date: '2025 - 06 - 01', customers: 3,
     rating: 5.0,
     reviews: 2;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-];
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   }
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   {;'
     id: 'quantum-ai-consciousness-platform';,;''
     name: 'Quantum AI Consciousness Platform';,;''
@@ -7596,7 +6285,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
 ;
   }
 ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -7640,7 +6328,6 @@ export interface EmergingTechBreakthroughServiceV2 {;
 }
 ;
 export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] = [;
-<<<<<<< HEAD
   // Brain-Computer Interface Platform;
   {;'
     id: 'brain-computer-interface-enterprise',;'
@@ -7672,17 +6359,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$5B market',;'
     growthRate: '800% annual growth',;'
     variant: 'space-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -7723,17 +6403,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$8B market',;'
     growthRate: '600% annual growth',;'
     variant: 'quantum-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -7774,17 +6447,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$18B market',;'
     growthRate: '500% annual growth',;'
     variant: 'biotech-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -7825,17 +6491,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$12B market',;'
     growthRate: '700% annual growth',;'
     variant: 'quantum-energy-revolutionary',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -7876,17 +6535,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$20B market',;'
     growthRate: '1000% annual growth',;'
     variant: 'space-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -7927,17 +6579,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$8B market',;'
     growthRate: '900% annual growth',;'
     variant: 'ai-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -7948,16 +6593,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     reviews: 2;
 ];
   }
-<<<<<<< HEAD
   }
 ];
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 ];
   }
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
@@ -7965,9 +6604,7 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
   }
 ];
-=======
 
-<<<<<<< HEAD
 ];
 
 
@@ -7975,23 +6612,14 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ];
 ;
 ;
   }
 ];
-<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -8033,17 +6661,8 @@ export interface EmergingTechBreakthroughServiceV2 {;
   rating: number,;
   reviews: number;
 }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ;
 export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] = [;
   // Brain-Computer Interface Platform;
@@ -8077,17 +6696,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$5B market',;'
     growthRate: '800% annual growth',;'
     variant: 'space-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -8128,17 +6740,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$8B market',;'
     growthRate: '600% annual growth',;'
     variant: 'quantum-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -8179,17 +6784,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$18B market',;'
     growthRate: '500% annual growth',;'
     variant: 'biotech-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -8230,17 +6828,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$12B market',;'
     growthRate: '700% annual growth',;'
     variant: 'quantum-energy-revolutionary',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -8281,17 +6872,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$20B market',;'
     growthRate: '1000% annual growth',;'
     variant: 'space-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -8332,41 +6916,18 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$8B market',;'
     growthRate: '900% annual growth',;'
     variant: 'ai-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;'
-    implementationDetails: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',;'
-    launchDate: '2025-06-01',;
-    customers: 3,;
-    rating: 5.0;
-    reviews: 2;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ];
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
-=======
     growthRate: '900% annual growth';,;
     variant: 'ai-futuristic';,;
     implementationDetails: 'Production consciousness platform with research validation;, ethical compliance, and ongoing support. Includes consciousness research training and certification.',;
@@ -8428,7 +6989,6 @@ pr-12325
       address: '364 E Main St STE 1008 Middletown DE 19709';,;''
       website: 'https://ziontechgroup.com';'
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },;
     realImplementation: true,;
     implementationDetails: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',;
@@ -8436,7 +6996,6 @@ pr-12325
     customers: 3,;
     rating: 5.0;
     reviews: 2;
-<<<<<<< HEAD
 ];
 
 
@@ -8462,35 +7021,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 5.0,
     reviews: 2}
 ],
-=======
-    realImplementation: true;,;'
-    implementationDetails: 'Production consciousness platform with research validation;, ethical compliance, and ongoing support. Includes consciousness research training and certification.',;''
-    launchDate: '2025-06-01';,;'
-    customers: 3;,;
-    rating: 5.0;,
-  reviews: 2;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 
 ];
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }
 ];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

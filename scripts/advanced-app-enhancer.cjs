@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -14,6 +15,9 @@
 ///usr/bin/env node
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -36,6 +40,7 @@ export const "Spinner"
     "md"
     "lg"
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1")]
+<<<<<<< HEAD
 console.log('\n New Features "Added")
 
 
@@ -51,3 +56,6 @@ console.log('\n New Features "Added")
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+console.log('\n New Features "Added")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

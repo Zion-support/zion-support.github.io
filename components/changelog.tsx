@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   generatedAt && (<p className="mt-2 text-sm text-gray-600" >Generated: {
   generatedAt 
@@ -10,17 +9,8 @@
 }
 }
 }
-=======
-import fs from 'fs';
-import path from 'path';
-<<<<<<< HEAD
 type Props = {
   content: string | null,
-=======
-
-  content: string | null
-type Props = $2;
->>>>>>> origin/main
   generatedAt: string | null
 };
 
@@ -111,16 +101,7 @@ export async function getStaticProps() {
     const content = fs.readFileSync(file, 'utf8');
     return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
   } catch {
-<<<<<<< HEAD
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
-=======
-  }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
-
-  } catch {
-    return { props: { content: null, generatedAt: null }, revalidate: 300 }
-}
-}
-<<<<<<< HEAD
 }}
   } catch {return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
@@ -132,9 +113,5 @@ export async function getStaticProps() {
 }}
   } catch {return { props: { content: null, generatedAt: null }, revalidate: 300 }
     return { props: { content: null, generatedAt: null}, revalidate: 300}
->>>>>>> origin/main
   }
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

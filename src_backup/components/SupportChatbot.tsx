@@ -96,7 +96,6 @@ const FALLBACK_RESPONSES = [
         setMessages(prev => [;
           ...prev;
           { id: botId, role: 'assistant', message: '' }
-<<<<<<< HEAD:src_backup/components/SupportChatbot.tsx
         ])
         const reader = res.body.getReader()
         const decoder = new TextDecoder()
@@ -286,7 +285,6 @@ export function SupportChatbot() {;
             Math.floor (Math.random () * FALLBACK_RESPONSES.length)] ||;
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
         set_messages (prev =>;
-<<<<<<< HEAD:src_backup/components/SupportChatbot.tsx
           prev.map (m => (m.id === bot_id ? { ...m, message: final } : m)));
       }
       setMessages(prev => [...prev, errorMsg])
@@ -336,7 +334,6 @@ export function SupportChatbot() {;
             Math && Math.floor(Math && Math.random() * FALLBACK_RESPONSES && FALLBACK_RESPONSES.length)] ||;
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup && ziontechgroup.com for assistance.";
         setMessages(prev =>;
-<<<<<<< HEAD:src_backup/components/SupportChatbot.tsx
           prev && prev.map(m => (m && m.id === botId ? { ...m, message: final } : m));
         );
 
@@ -577,7 +574,6 @@ message: fallback_response;
 set_messages (prev => [...prev, error_msg])}finally {set_loading (false)set_typing (false)}
   () => set_open (true) ";
 }> <MessageSquare className="h - 5 w - 5" /> </Button>) '";
-<<<<<<< HEAD:src_backup/components/SupportChatbot.tsx
 }> <X className="h - 5 w - 5" /> </Button> </div> <ChatMessage role="assistant" message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" />);
 }{
   messages.map (m => (<ChatMessage key= {

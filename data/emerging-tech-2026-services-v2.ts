@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
-<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -17,8 +6,6 @@ export interface EmergingTech2026ServiceV2  {{address: '364 E Main St STE 1008 M
     },realImplementation: boolean, implementationDetails: string,launchDate: string, customers: number,rating: number,reviews: number;
 }
       'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.';
-=======
-<<<<<<< HEAD
 import { ServiceVariant } from '../types / service - variants';
 
 export interface EmergingTech2026ServiceV2 {
@@ -53,23 +40,8 @@ export interface EmergingTech2026ServiceV2 {
   growthRate: string;, variant: ServiceVariant;,
 origin/cursor/expand-services-advertise-and-build-project-c28b
   contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-  contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-=======
-=======
-      
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     mobile: string;, email: string;,
     address: string;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     website: string
   
   contactInfo: {;,
@@ -115,7 +87,6 @@ pr-12325
     }
     realImplementation: true
     implementationDetails: 'Production-ready quantum internet platform with quantum networking;, communication protocols, and research tools.';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     launchDate: '2026-06-15';
     customers: 65;
     rating: 4.9
@@ -209,10 +180,6 @@ pr-12325
   rating: number;,;
   reviews: number;
 }
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
@@ -246,13 +213,8 @@ pr-12325
     competitors: ['Intel LoihiIBM TrueNorthBrainChipSpiNNakerTrueNorth'];, marketSize: '$8.2B market';,
     growthRate: '450% annual growth';, variant: 'ai-futuristic';,
     contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       
-=======
   contactInfo: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     mobile: string, email: string,
     address: string,
     website: string;
@@ -260,7 +222,6 @@ pr-12325
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
-<<<<<<< HEAD
   reviews: number
 }
       'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.'
@@ -285,10 +246,6 @@ pr-12325
     launchDate: '2026-06-15';
     customers: 65;
     rating: 4.9
-=======
-      
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
     reviews: 45
   }
@@ -335,10 +292,8 @@ export interface EmergingTech2026ServiceV2 {;
   reviews: number;
 }
 }
-=======
   reviews: number;
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
   // Neuromorphic Computing Platform;
@@ -367,69 +322,34 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
       '
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       address: '364 E Main St STE 1008 Middletown DE 19709';,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
 '
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-<<<<<<< HEAD
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,'
     implementation_details: 'Production - ready quantum internet platform with quantum networking, communication protocols, and research tools.';'
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;,
     implementation_details: 'Production - ready quantum internet platform with quantum networking;, communication protocols, and research tools.';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launch_date: '2026 - 06 - 15';
     customers: 65;
     rating: 4.9;,
     reviews: 45;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
 ];
 import { ServiceVariant } from '../types/service-variants',;
 origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
-=======
 
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Neuromorphic Computing Platform;
@@ -469,7 +389,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9;,
 
     reviews: 45;'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface EmergingTech2026ServiceV2 {;
   id: string;,;
   name: string;,;
@@ -522,7 +441,6 @@ pr-12325
 ;
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
   // Neuromorphic Computing Platform;
-<<<<<<< HEAD
   {;'
     id: 'neuromorphic-computing-platform',;'
     name: 'Neuromorphic Computing Platform',;'
@@ -532,22 +450,10 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing. Perfect for research institutions, AI companies, and organizations requiring brain-like computing capabilities.',;
     features: [;'
       'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesSpiking neural networksHardware accelerationCustom chip designAdvanced simulation toolsResearch collaboration platform',;'
-=======
-  {;
-    id: 'neuromorphic-computing-platform';,;
-    name: 'Neuromorphic Computing Platform';,;
-    tagline: 'Brain-inspired computing for next-generation AI applications';,;
-    price: '$1;,299',;
-    period: '/month';,;
-    description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing. Perfect for research institutions;, AI companies, and organizations requiring brain-like computing capabilities.',;
-    features: [;
-      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesSpiking neural networksHardware accelerationCustom chip designAdvanced simulation toolsResearch collaboration platform',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'API for developersEnterprise deployment';
       'API for developersEnterprise deployment';']
 pr-12325
     ],;
-<<<<<<< HEAD
     popular: true,;'
     icon: '🧠',;'
     color: 'from-violet-600 to-purple-700',;'
@@ -889,7 +795,6 @@ pr-12325
     customers: 65,;
     rating: 4.9;
     reviews: 45;
-<<<<<<< HEAD
   }
       'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.',launchDate: '2026-06-15',customers: 65,rating: 4.9,reviews: 45;
   }];      mobile: '+1 302 464 0950';
@@ -903,14 +808,6 @@ pr-12325
     customers: 65;
     rating: 4.9;
     reviews: 45;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     popular: true;,;
     icon: '🧠';,;
     color: 'from-violet-600 to-purple-700';,;
@@ -1607,7 +1504,6 @@ pr-12325
     customers: 65;,;
     rating: 4.9;
     reviews: 45;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ;
 ];
@@ -1663,7 +1559,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 120;
     rating: 4.9;
     reviews: 85;
-<<<<<<< HEAD
   },// Quantum Internet Security Platform;
   {id: 'quantum-internet-security-platform',name: 'Quantum Internet Security Platform',tagline: 'Secure the future internet with quantum-resistant cryptography',price: '$899',period: '/month',description:;
       'Next-generation quantum internet security platform that protects against quantum attacks and ensures long-term security for critical infrastructure. Perfect for government agencies, financial institutions, and enterprises.',features: [;
@@ -1784,13 +1679,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 45;
   }
 ];
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   contactInfo: {
       
-=======
 contactInfo: {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     mobile: string, email: string,
     address: string,
     website: string
@@ -1823,7 +1714,6 @@ contactInfo: {
     customers: 65;
     rating: 4.9
     reviews: 45
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
 import { ServiceVariant } from '../types/service-variants',export interface EmergingTech2026ServiceV2  {id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,variant: ServiceVariant,contactInfo: {mobile: string,email: string,address: string,website: string;
@@ -2158,7 +2048,6 @@ export interface EmergingTech2026ServiceV2 {;
   rating: number,;
   reviews: number;
 }
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
   contactInfo: {
@@ -2976,12 +2865,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
     reviews: 45}
 ],
-=======
-<<<<<<< HEAD
 }
-=======
-  },
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
   // Quantum Internet Security Platform
   {
@@ -3524,9 +3408,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
   }
@@ -3534,13 +3415,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 ;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     implementationDetails: 'Production-ready quantum internet platform with quantum networking;, communication protocols, and research tools.',;
     launchDate: '2026-06-15';,;
     customers: 65;,;
@@ -3591,5 +3467,3 @@ pr-12325
 ;
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

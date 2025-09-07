@@ -29,29 +29,16 @@ interface PerformanceMetrics  {fcp: number;
   impact: string;
   solution: string;
 
-<<<<<<< HEAD
   recs.push ({
-=======
-  category: 'performance' | 'accessibility' | 'seo' | 'user-experience'}
-}
-}
-
-const EnhancedPerformanceMonitor: React.FC;
-<<<<<<< HEAD
 //FCP recommendations if (metrics.fcp > 2000) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   recs.push ({
-=======
-  recs.push ({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }return recs;
 }, []);
 //Wait for page to be fully loaded if (document.readyState !== 'complete') {
   await new Promise (resolve => {
 }//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) );
 if (metrics.fcp > 2000) score -= 20;
-<<<<<<< HEAD
   category: 'performance' | 'accessibility' | 'seo' | 'user-experience';
 }const EnhancedPerformanceMonitor: React.FC;
 //FCP recommendations if (metrics.fcp > 2000) {recs.push ({}return recs;
@@ -59,7 +46,6 @@ if (metrics.fcp > 2000) score -= 20;
 if (metrics.lcp > 2500) score -= 25;
 if (metrics.cls > 0.1) score -= 15;
 if (metrics.ttfb > 600) score -= 20;
-<<<<<<< HEAD
 if (!performanceData) {}> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>)//FCP recommendations if (metrics && metrics.fcp > 2000) {recs && recs.push ({}return recs;
 }, [])//Wait for page to be fully loaded if (document && document.readyState !== 'complete') {await new Promise (resolve => {}//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) )if (metrics && metrics.fcp > 2000) score -= 20;
 if (metrics && metrics.lcp > 2500) score -= 25;
@@ -110,8 +96,6 @@ if ( {) {$2;
 if ( {) {
   $2
 }
-=======
-<<<<<<< HEAD
 if (!performanceData) {}> <div className = \"animate-pulse\"  /> <div className=\"h-4 bg-gray-700 rounded w-1/3 mb-4\"  /></div> <div className=\"space-y-3\"  /> <div className=\"h-3 bg-gray-700 rounded\"  /></div> <div className=\"h-3 bg-gray-700 rounded w-5/6\"  /></div> <div className=\"h-3 bg-gray-700 rounded w-4/6\"  /></div> </div> </div> </div>)//FCP recommendations if (metrics && metrics.fcp > 2000) {recs && recs.push ({;}
   return recs;}
 }, [])//Wait for page to be fully loaded if (document && document.readyState !== 'complete') {await new Promise (resolve => {}//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) )if (metrics && metrics.fcp > 2000) score -= 20;
@@ -121,8 +105,6 @@ if (metrics && metrics.ttfb > 600) score -= 20;"
 if (!performanceData) {}> <div className=\"animate-pulse\"  /> <div className=\"h-4 bg-gray-700 rounded w-1/3 mb-4\"  /></div> <div className=\"space-y-3\"  /> <div className=\"h-3 bg-gray-700 rounded\"  /></div> <div className=\"h-3 bg-gray-700 rounded w-5/6\"  /></div> <div className=\"h-3 bg-gray-700 rounded w-4/6\"  /></div> </div> </div> </div>)}"
 }> </p> </div> </div> <div className=\"flex items-center space-x-2\"  /> <button  /> <BarChart3 className=\"w-4 h-4\" /> </button> <button  /> <RefreshCwclassName= {`w-4 h-4 $ {//FCP recommendations // Check condition;}
 if ( {) {$2;}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 //FCP recommendations if (metrics.fcp > 2000) {
  //FCP recommendations if (metrics.fcp > 2000) {
   recs.push ({
@@ -133,7 +115,6 @@ if ( {) {
   $2
 }
   await new Promise (resolve => {
-<<<<<<< HEAD
 }//Wait a bit more for any async operations await new Promise (resolve => set_timeout (resolve, 1000) );
 // Check condition
 if (score -= 20) {
@@ -155,64 +136,6 @@ if (score -= 20) {
 if ( {) {
   $2
 }
-=======
-if (metrics.lcp > 2500) score -= 25;
-if (metrics.cls > 0.1) score -= 15;
-if (metrics.ttfb > 600) score -= 20;
-if (!performanceData) {}
-}> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>)
- //FCP recommendations if (metrics && metrics.fcp > 2000) {;
-  recs && recs.push ({;
-
-}return recs;
-}, []);'
-//Wait for page to be fully loaded if (document && document.readyState !== 'complete') {;
-  await new Promise (resolve => {;
-
-}//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) );
-if (metrics && metrics.fcp > 2000) score -= 20;
-if (metrics && metrics.lcp > 2500) score -= 25;
-if (metrics && metrics.cls > 0 && 0.1) score -= 15;
-if (metrics && metrics.ttfb > 600) score -= 20;
-if (!performanceData) {;
-"
-}> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>) ;
-}"
-}> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCwclassName= {}
-  `w-4 h-4 $ {}
-//FCP recommendations // Check condition;
-if ( {) {}
-  $2;
-}
-//FCP recommendations if (metrics.fcp > 2000) {}
- //FCP recommendations if (metrics.fcp > 2000) {}
-  recs.push ({}
-}return recs;
-}, []);
-//Wait for page to be fully loaded // Check condition;
-if ( {) {}
-  $2;
-}
-  await new Promise (resolve => {}
-}//Wait a bit more for any async operations await new Promise (resolve => set_timeout (resolve, 1000) );
-// Check condition;
-if (score -= 20) {}
-  $2;
-}
-// Check condition;
-if (score -= 25) {}
-  $2;
-}
-// Check condition;
-if (score -= 15) {}
-  $2;
-}
-// Check condition;
-if (score -= 20) {}
-  $2;
-}
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }> <div className="animate-pulse" > <div className="h - 4 bg - gray - 700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h - 3 bg-gray-700 rounded" ></div> <div className="h - 3 bg - gray-700 rounded w-5/6" ></div> <div className="h - 3 bg - gray-700 rounded w-4/6" ></div> </div> </div> </div>);
 }
 }> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCw className= {
@@ -225,7 +148,6 @@ if (score -= 20) {}
   metrics.fcp > 2000 ? 'text - red - 400': 'text - green - 400';
 }`;
 }> {
-<<<<<<< HEAD
 }</span> </button> </div> </div> </motion.div>)}</AnimatePresence> </>)}export default EnhancedPerformanceMonitor;
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -448,7 +370,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
     >
       {/* Header */}
-<<<<<<< HEAD
       <div className="p-4 bg-gray-800/50 border-b border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
@@ -642,39 +563,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 };
 
 export default EnhancedPerformanceMonitor;
-=======
-      <div className = $2;
-export default EnhancedPerformanceMonitor,
-=======
-  
-}//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) )
-if (metrics.fcp > 2000) score -= 20
-if (metrics.lcp > 2500) score -= 25
-if (metrics.cls > 0.1) score -= 15
-if (metrics.ttfb > 600) score -= 20
-if (!performanceData) {
-  return (<div className= {
-  `p-4 bg-gray-900 rounded-lg border border-gray-700 $ {
-  className 
-}` 
-}> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>) 
-}return (<motion.div className= {
-  `bg-gray-900 rounded-lg border border-gray-700 overflow-hidden $ {
-  className 
-}` 
-}initial= {
-  {
-  opacity: 0, y: 20 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 if (!performanceData) {
 }> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>)
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }
 }> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCw className= {
   `w-4 h-4 $ {
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   isLoading ? 'animate-spin' : ''
 }`
 }/> </button> <button > <Settings className="w-4 h-4" /> </button> </div> </div> </div> performanceData.overallScore >= 70 ? 'Good': 'Needs Improvement'
@@ -695,52 +588,17 @@ if (!performanceData) {
 }> {
   rec.priority
 }</span> </div> </div>) )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }</div> </div>)"
 }) : (<BarChart3 className=\"w-4 h-4\" />)
 }<span /> {}
   isMonitoring ? 'Measuring...': 'Measure Performance' }
-=======
-}</div> </div>)
-}) : (<BarChart3 className="w-4 h-4" />)
-}<span> {
-  isMonitoring ? 'Measuring...': 'Measure Performance' 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }</span> </button> </div> </div> </motion.div>) 
 }</AnimatePresence> </>) 
-<<<<<<< HEAD
 };
 export default EnhancedPerformanceMonitor;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-// Check condition;
-if ( {) {}
-  $2;
-}"
-}> <div className="animate - pulse" > <div className="h - 4 bg - gray - 700 rounded w - 1/3 mb - 4" ></div> <div className="space - y-3" > <div className="h - 3 bg - gray - 700 rounded" ></div> <div className="h - 3 bg - gray - 700 rounded w - 5/6" ></div> <div className="h - 3 bg - gray - 700 rounded w - 4/6" ></div> </div> </div> </div>);
-}"
-}> </p> </div> </div> <div className="flex items - center space - x-2" > <button > <BarChart3 className="w - 4 h - 4" /> </button> <button > <RefreshCw className= {}`
-  `w - 4 h - 4 $ {'
-  is_loading ? 'animate - spin' : '';`
-}`;'"
-}/> </button> <button > <Settings className="w - 4 h - 4" /> </button> </div> </div> </div> performance_data.overall_score >= 70 ? 'Good': 'Needs Improvement';
-}</p> </div> <span className= {}`
-  `font - mono $ {'
-  metrics.fcp > 2000 ? 'text - red - 400': 'text - green - 400';`
-}`;
-}> {}
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-<<<<<<< HEAD
 "
-=======
-}
-export default EnhancedPerformanceMonitor
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 }</div> </div>)
 }) : (<BarChart3 className="w-4 h-4" />)
 }<span> {
@@ -750,9 +608,3 @@ export default EnhancedPerformanceMonitor
 }
 export default EnhancedPerformanceMonitor;
 export default EnhancedPerformanceMonitor;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

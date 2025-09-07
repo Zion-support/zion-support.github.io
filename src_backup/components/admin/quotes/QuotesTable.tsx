@@ -146,7 +146,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
                 </TableCell>
 
                 <TableCell className="text-white">
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 
   quotes;
   is_archived = false;'
@@ -238,7 +237,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({};
                       <span className="sr-only">View Details</span>
                     </Button>
 
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
                     
 
 
@@ -437,15 +435,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                   <div className="flex items-center gap-2">;
 
                       <span className="sr-only">View Details</span>;
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
                     </Button>;
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
                         <Button
                           variant="ghost" 
                           size="icon"
@@ -660,7 +655,6 @@ interface QuotesTableProps  {quotes: QuoteRequest[];
   deleteQuote: (id: string,) => void;
   onViewDetails: (quote: QuoteRequest,) => void;
 }
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesTable.tsx
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 origin/cursor/automate-test-improve-and-merge-code-2533
 export const QuotesTable: React.FC<QuotesTableProps> = ({

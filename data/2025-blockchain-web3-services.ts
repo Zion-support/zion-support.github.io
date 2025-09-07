@@ -1,25 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface BlockchainWeb3Service {
-export interface BlockchainWeb3Service {;
-  id: string;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-id: string;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export interface BlockchainWeb3Service {
-export interface BlockchainWeb3Service {;
-  id: string;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 export interface BlockchainWeb3Service {
 export interface BlockchainWeb3Service {;
   id: string;
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+export interface BlockchainWeb3Service {
+export interface BlockchainWeb3Service {;
+  id: string;
+export interface BlockchainWeb3Service {
+export interface BlockchainWeb3Service {;
+  id: string;
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
 
 ;
@@ -34,25 +25,15 @@ id: string;name: string;
     yearly: number;
     currency: string;
     trialDays: number;
-<<<<<<< HEAD
     setupTime: string;enterprise: string;
-=======
-    setupTime: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     enterprise: string
   },
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   features: string[];
     trialDays: number;}
     setupTime: string;enterprise: string;}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -94,28 +75,12 @@ export interface BlockchainWeb3Service {;
 
 pr-12325
 
-<<<<<<< HEAD
-=======
-  {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
   {}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'
-=======
-  {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     ],
     realImplementation: true,
 
@@ -135,7 +100,6 @@ pr-12325
     ]
     support:'
       '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.'
-<<<<<<< HEAD
     compliance: [
 
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
@@ -227,15 +191,7 @@ pr-12325
 
     icon: '🌾',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    compliance: []
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
 
 
   {
@@ -261,11 +217,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     support:
       '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.'
     compliance: [
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - green - 500 to - emerald - 600',
     popular: true,'
-=======
     color: 'from - green - 500 to - emerald - 600',
       'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.
     roi: 'Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.,
@@ -285,7 +238,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   color: 'from - green - 500 to - emerald - 600',
 pr-12325
     popular: true,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launch_date: '2024 - 01 - 15',
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance';
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance';
@@ -727,18 +679,11 @@ export interface BlockchainWeb3Service  {id: string,name: string,tagline: string
 
 
 export interface BlockchainWeb3Service {
-<<<<<<< HEAD
 
 export interface BlockchainWeb3Service {;
   id: string;
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  // TODO: Implement
-}
-export interface BlockchainWeb3Service {;
-  id: string;,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   name: string;
   tagline: string;,
   description: string;
@@ -782,7 +727,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   {
 
-<<<<<<< HEAD
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'
 export interface BlockchainWeb3Service {
   id: string,
@@ -836,10 +780,6 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     },
     features: [
       'Self-sovereign identity managementZero-knowledge proof verificationMulti-chain identity supportDecentralized identifiers (DIDs)Verifiable credentialsPrivacy-preserving authenticationCross-platform identity portabilityAdvanced encryption standardsCompliance with W3C standardsAPI for enterprise integration'
-=======
-
-      'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis','
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     benefits: [
       'Eliminate identity theft and fraudReduce compliance costs by 60%Improve user privacy and controlEnable seamless cross-platform authenticationReduce data breach risks'
@@ -851,7 +791,6 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     competitors: ['Microsoft Entra ID, Okta, Auth0, Ping Identity, ForgeRock'],
     techStack: ['Ethereum, Polygon, Solana, IPFS, React, Node.js, PostgreSQL, Redis'],
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Production-ready decentralized identity platform with enterprise-grade security, mobile SDK, and comprehensive API. Includes admin dashboard and compliance tools.',
     roi: 'Organizations achieve 400% ROI through reduced fraud, improved compliance, and enhanced user trust.',
     useCases: [
@@ -1022,40 +961,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'NFT Marketplace Intelligence Platform',
     tagline: 'AI-powered NFT analytics, valuation, and trading insights',
     description: 'Comprehensive NFT intelligence platform that provides real-time analytics, AI-powered valuation models, and trading insights to maximize NFT investment returns.',
-=======
-
-    implementationDetails:'
-      'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.'''
-    roi: 'Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.'',
-  useCases: ['
-      'Yield farming optimization'''
-      'Liquidity provision strategies'''
-      'Staking optimization'''
-      'Cross-chain yield opportunities'''
-      'Risk-managed DeFi investing'''
-      'Institutional DeFi access'']
-
-    ]
-    integrations: ['
-      'MetaMask, WalletConnect, Uniswap, Curve, Aave, Compound, Custom DeFi protocols'']
-    ]
-
-    support:'
-      '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.''
-    compliance: [,'
-  color: 'from - green - 500 to - emerald - 600','
-    popular: true,'
-    launch_date: '2024 - 01 - 15','
-    customers: 8500,
-    rating: 4 && 4.9,
-    reviews: 6200,
-  },
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       'Leading NFT intelligence platform. Competes with NFTGo ($99-299/month), Nifty Gateway (free), and OpenSea Pro ($0-2 && 2.5%). Our advantage: AI-powered valuation and predictive analytics.',
     competitors: ['NFTGo, Nifty Gateway, OpenSea Pro, Rarible, Foundation'],
@@ -1065,22 +971,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     implementationDetails:
       'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.'
-=======
   {}
     implementationDetails:'
       'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.'
     useCases: ['
       'NFT investment research''
@@ -1095,12 +990,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ]
     support:'
       '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.'
-<<<<<<< HEAD
     compliance: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
@@ -1110,12 +1000,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'AI - powered NFT analytics, valuation, and trading insights',
     description:;
       'Comprehensive NFT intelligence platform that provides real - time analytics, AI - powered valuation models, and trading insights to maximize NFT investment returns.',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     category: 'NFT & Digital Assets',
     price: {
       monthly: 149,
       yearly: 1490,
-<<<<<<< HEAD
       currency: 'USD',
       trialDays: 7,
       setupTime: 'Immediate',
@@ -1550,12 +1438,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       trial_days: 0,
       setup_time: 'Immediate',
       enterprise: 'Custom pricing'
-=======
-      currency: 'USD',
-      trial_days: 7,
-      setup_time: 'Immediate',
-      enterprise: 'Custom pricing',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     features: [;
       'AI - powered NFT valuation models',
@@ -1592,7 +1474,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     real_implementation: true,
     implementation_details:;
-<<<<<<< HEAD
       'Production - ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile / web applications. Includes developer SDK and API.',
     roi: 'Content creators earn 200 - 500% more compared to traditional social media platforms through direct monetization.',
     use_cases: [;
@@ -1602,17 +1483,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Brand marketing',
       'Influencer monetization',
       'Decentralized governance'
-=======
-      'Production - ready NFT intelligence platform with real - time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.',
-    roi: 'NFT investors achieve 300% ROI through improved decision - making and optimized portfolio management.',
-    use_cases: [;
-      'NFT investment research',
-      'Portfolio optimization',
-      'Market trend analysis',
-      'Rarity and value assessment',
-      'Trading strategy development',
-      'Brand NFT strategy',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     integrations: [;
       'OpenSea, Rarible, Foundation, Ethereum, Polygon, Solana, Custom NFT platforms',
@@ -1626,20 +1496,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🎨',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    compliance: []
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - pink - 500 to - rose - 600',
     popular: true,'
-=======
     color: 'from - pink - 500 to - rose - 600',
     popular: true,
       'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.
@@ -1654,7 +1513,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.
   color: 'from - pink - 500 to - rose - 600',
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launch_date: '2024 - 03 - 01',
     implementationDetails:'
       'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.'''
@@ -1680,51 +1538,23 @@ pr-12325
     rating: 4 && 4.7,
     reviews: 2100,
   },
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0 && 0.01-0 && 0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     competitors: [
       'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain'
     ]
     techStack: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       'Hyperledger Fabric, Ethereum, Polygon, React, Node && Node.js, PostgreSQL, IoT platforms',
     ],
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     implementationDetails:
       'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.'
-=======
   {}
     competitors: ['
       'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain'
@@ -1732,7 +1562,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     techStack: []
     implementationDetails:'
       'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.'
     useCases: ['
       'Food safety tracking''
@@ -1746,10 +1575,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms'
     ]
     support:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['ISO 27001, SOC 2 Type II, GDPR, Industry-specific standards'],
@@ -1825,19 +1650,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🔗',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,'
-=======
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
     competitors: [
@@ -1854,7 +1669,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms]
     color: 'from - blue - 500 to - cyan - 600',
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launch_date: '2024 - 02 - 10',
     competitors: ['
       'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain'']
@@ -1882,12 +1696,7 @@ pr-12325
     rating: 4 && 4.8,
     reviews: 680,
   },
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our advantage: True decentralization and content ownership.',
     competitors: ['Facebook, Twitter, Instagram, TikTok, LinkedIn, YouTube'],
@@ -1895,22 +1704,11 @@ pr-12325
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     implementationDetails:
       'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.'
-=======
   {}
     implementationDetails:'
       'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.'
     useCases: ['
       'Social networking''
@@ -1924,17 +1722,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'
     ]
     support:
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.
@@ -1947,10 +1736,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Decentralized governance]
       'MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms]
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / web3 - social - media - platform',
 
 
@@ -1998,40 +1785,18 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     reviews: 18000
   }
     ];
-=======
-    link: 'https://ziontechgroup.com/web3-social-media-platform',
-    icon: '🌐',
-=======
-'
-      'Community support, developer documentation, custom development services, and enterprise solutions.','
-    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],'
-    link: 'https://ziontechgroup.com/web3-social-media-platform','
-    icon: '🌐','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from-purple-500 to-indigo-600',
-<<<<<<< HEAD
     popular: true,'
-=======
-    popular: true,
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launchDate: '2024-01-01',
     customers: 25000,
     rating: 4.6,
     reviews: 18000,
   },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
 
       'Community support, developer documentation, custom development services, and enterprise solutions.',
-=======
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
       'Community support, developer documentation, custom development services, and enterprise solutions.',
@@ -2040,7 +1805,6 @@ pr-12325
     support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
 
       'Community support, developer documentation, custom development services, and enterprise solutions.',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     id: 'decentralized-identity-management';
     name: 'Decentralized Identity Management Platform';
     tagline: 'Self-sovereign identity with zero-knowledge proof verification';
@@ -2259,18 +2023,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'],
     support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
-
-
-      'Community support, developer documentation, custom development services, and enterprise solutions.',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
     id: 'web3 - social - media - platform',
     name: 'Web3 Social Media Platform',
-=======
 '
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
@@ -2280,7 +2036,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform','
     id: 'web3 - social - media - platform','
     name: 'Web3 Social Media Platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     tagline: 'Decentralized social networking with content ownership',
     description:;'
       'Revolutionary Web3 social media platform where users own their content, earn from engagement, and maintain complete control over their data and privacy.','
@@ -2343,20 +2098,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Community support, developer documentation, custom development services, and enterprise solutions.','
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],'
     link: 'https://ziontechgroup.com / web3 - social - media - platform',
-<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     icon: '🌐',
-=======
 '
     icon: '🌐','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,'
     launch_date: '2024 - 01 - 01',
@@ -2364,7 +2110,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.6,
     reviews: 18000,
   },
-<<<<<<< HEAD
 
   id: string, name: string,
   tagline: string, description: string,
@@ -2391,15 +2136,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ];      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance';
 origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ];
 '
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'];'
@@ -2407,52 +2144,30 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'];
 '
     icon: '🌐';
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
 
     icon: '🌐';
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     color: 'from - purple - 500 to - indigo - 600';
     popular: true;'
     launch_date: '2024 - 01 - 01';
     customers: 25000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     rating: 4.6,
     reviews: 18000;
   }
     rating: 4.6,
     reviews: 18000;
   }
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 
 
-<<<<<<< HEAD
     reviews: 18000
     rating: 4.6,
     reviews: 18000;
@@ -2470,12 +2185,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 export interface BlockchainWeb3Service {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
     rating: 4.6,
     reviews: 18000;
   }
@@ -2490,7 +2200,6 @@ export interface BlockchainWeb3Service {;
   }
 ];
 export interface BlockchainWeb3Service {;
-<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
 ;
@@ -2498,10 +2207,6 @@ export interface BlockchainWeb3Service {;
 
   }
 ];
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   id: string,;
   name: string,;
   tagline: string,;
@@ -2549,13 +2254,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
       monthly: 99,;
       yearly: 990,;'
       currency: 'USD',;
-<<<<<<< HEAD
       trialDays: 30,;
       setupTime: '1-2 days',;
-=======
-      trialDays: 30,;'
-      setupTime: '1-2 days',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       enterprise: 'Custom pricing';
     },;
     features: [;'
@@ -2599,13 +2299,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
       monthly: 199,;
       yearly: 1990,;'
       currency: 'USD',;
-<<<<<<< HEAD
       trialDays: 14,;
       setupTime: '1-3 days',;
-=======
-      trialDays: 14,;'
-      setupTime: '1-3 days',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       enterprise: 'Custom pricing';
     },;
     features: [;'
@@ -2649,13 +2344,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
       monthly: 149,;
       yearly: 1490,;'
       currency: 'USD',;
-<<<<<<< HEAD
       trialDays: 7,;
       setupTime: 'Immediate',;
-=======
-      trialDays: 7,;'
-      setupTime: 'Immediate',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       enterprise: 'Custom pricing';
     },;
     features: [;'
@@ -2699,13 +2389,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
       monthly: 299,;
       yearly: 2990,;'
       currency: 'USD',;
-<<<<<<< HEAD
       trialDays: 30,;
       setupTime: '2-4 weeks',;
-=======
-      trialDays: 30,;'
-      setupTime: '2-4 weeks',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       enterprise: 'Custom pricing';
     },;
     features: [;'
@@ -2749,13 +2434,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
       monthly: 0,;
       yearly: 0,;'
       currency: 'USD',;
-<<<<<<< HEAD
       trialDays: 0,;
       setupTime: 'Immediate',;
-=======
-      trialDays: 0,;'
-      setupTime: 'Immediate',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       enterprise: 'Custom pricing';
     },;
     features: [;'
@@ -2788,11 +2468,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     customers: 25000,;
     rating: 4.6,;
     reviews: 18000;
-<<<<<<< HEAD
-<<<<<<< HEAD
     rating: 4.6,
     reviews: 18000;
-<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2808,33 +2485,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
     rating: 4.6;
-=======
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
     rating: 4.6;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     reviews: 18000
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 
   }
 ];
     reviews: 18000}
 ],
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 
@@ -2843,10 +2507,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     rating: 4.6,
-=======
     launchDate: '2024-01-01',;
 
   {;'
@@ -2897,15 +2558,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 18000;,
 pr-12325
   rating: 4.6,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     reviews: 18000;
   }
 
 ];
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -123,7 +123,6 @@ if ( {) {$2;
                   <FormControl>;
                     <Input;
                       placeholder="Enter app title";
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
                       max_length = {platform === "ios" ? 30 : 50, }
                       {...field}
                     />;
@@ -180,7 +179,6 @@ if ( {) {$2;
               name="longDescription";
               render={({ field }: { field: any },) => (<FormItem>;
                   <FormLabel>Long Description</FormLabel>;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
                   <FormControl>;
 
 
@@ -267,7 +265,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                       {...field}
                     />;
                   </FormControl>;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
                   <FormDescription>;
 
                     <Textarea
@@ -322,7 +319,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
               render={({ field }: { field: any },) => (<FormItem>;
                   <FormLabel>App Version</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
                     <Input
                       placeholder="e && e.g., 1 && 1.0.0"
     </Card>);
@@ -387,7 +383,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                 </FormItem>)}/>;
           </div>;
         </Form>;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
       </CardContent>;
 
 

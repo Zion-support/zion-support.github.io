@@ -1,8 +1,8 @@
 const fs = require($2);
 const path = require($2);
 console.log($2);
-// Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {
+// Function to fix merge conflicts in a file,
+  function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync (file_path, 'utf8'),
     const original_content = content,
@@ -40,9 +40,8 @@ function fixMergeConflicts(filePath) {;
     return false
   }
 }
-
-// Function to get all files recursively
-function getAllFiles(dir, extensions) {
+// Function to get all files recursively,
+  function getAllFiles(dir, extensions) {
   let files = $2;
   try {
     const items = fs.readdirSync($2);
@@ -102,7 +101,6 @@ async function main() {
       // Skip files that can't be read
     }
   }
-  
   console.log($2);
   console.log('🎉 Merge conflict resolution completed!')
 }

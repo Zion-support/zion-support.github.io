@@ -1,19 +1,9 @@
 {
-<<<<<<< HEAD
   "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
-=======
-  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   "env": {
     "browser": true,
     "node": true,
     "es6": true,
-<<<<<<< HEAD
-=======
-    "es2021": true,
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     "jest": true
   },
   "globals": {
@@ -37,7 +27,6 @@
     ".next/",
     "out/",
     "dist/",
-<<<<<<< HEAD
     "components-disabled/",
     "src-disabled/",
     "src_backup/",
@@ -66,10 +55,6 @@
     "providers/",
     "scripts/",
     "components/",
-=======
-    "build/",
-    "coverage/",
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     "*.config.js",
     "*.config.cjs",
     "*.config.mjs",
@@ -83,7 +68,6 @@
     "app-improvement-*.cjs",
     "analyze-*.cjs",
     "code-quality-*.js",
-<<<<<<< HEAD
     "automation/**",
     "*.report.json",
     "temp_*/",
@@ -99,9 +83,6 @@
     "solutions.disabled/",
     "zion-os.disabled/",
     "zion_academy/",
-=======
-    "automation/",
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     "automation_backup/",
     "backup/",
     "lib_backup/",
@@ -117,26 +98,6 @@
     "test-results/",
     "security-reports/",
     "pages.__backup/",
-<<<<<<< HEAD
-=======
-    "pages-disabled/",
-    "pages.disabled_auto/",
-    "zion_academy/",
-    "pm2-automation/",
-    "scripts/",
-    "*.report.json",
-    "temp_*/",
-    "test_build/",
-    "tests.disabled/",
-    "pages.disabled/",
-    "src.disabled/",
-    "components.disabled/",
-    "hooks.disabled/",
-    "types.disabled/",
-    "contracts.disabled/",
-    "solutions.disabled/",
-    "zion-os.disabled/",
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     "src_backup_temp/",
     "temp-backup/",
     "tests/",
@@ -155,7 +116,6 @@
     "vite.config.ts",
     "types/empty.ts",
     "pages_backup_conflicts/",
-<<<<<<< HEAD
     "pages_backup_conflict/",
     "pages_disabled/",
     "pages-disabled-2/",
@@ -171,12 +131,6 @@
     "scripts/",
     "providers/",
     "protocol/",
-=======
-    "pages_disabled/",
-    "src.broken/",
-    "src.corrupted/",
-    "src.pages.disabled/",
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     "performance-monitor.js",
     "performance-optimization.js",
     "playwright.config.ts",
@@ -261,7 +215,6 @@
     "app-optimizer.js",
     "apps.backup/**",
     "automated-merge-conflict-resolver.cjs",
-<<<<<<< HEAD
     "backup-problematic-files/**",
     "blog/",
     "app/",
@@ -313,9 +266,5 @@
     "components/iam-access-review.tsx",
     "components/incident-automation-suite.tsx",
     "pages_api.disabled/"
-=======
-    "automation/**",
-    "backup-problematic-files/**"
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   ]
 }

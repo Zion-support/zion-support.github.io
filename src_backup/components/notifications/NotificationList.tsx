@@ -1,55 +1,16 @@
-<<<<<<< HEAD:src_backup/components/notifications/NotificationList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:src_backup/components/notifications/NotificationList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 ;
 ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/notifications/NotificationList.tsx
 import React from 'react';
 import { ScrollArea  } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
-<<<<<<< HEAD:src_backup/components/notifications/NotificationList.tsx
 import { Button } from '@/components/ui/button';
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Bell } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/notifications/NotificationList.tsx
 
 
-<<<<<<< HEAD:src_backup/components/notifications/NotificationList.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/notifications/NotificationList.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
@@ -58,35 +19,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
 import { Bell } from 'lucide-react';
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 main
 
-<<<<<<< HEAD
 interface NotificationListProps {
   loading: boolean;
-=======
-import { Button  } from '@/components/ui/button';
-import { NotificationItem  } from './NotificationItem';
-import { Notification  } from '@/context/notifications';
-import { EmptyState  } from '@/components/ui/empty-state';
-import { Bell  } from 'lucide-react';
-interface Notification  {id: string;
-  title: string;
-  message: string;
-  timestamp: string;
-  read: boolean;
-  type: 'info' | 'warning' | 'error' | 'success';
-}interface NotificationListProps  {loading: boolean;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/notifications/NotificationList.tsx
   notifications: Notification[];
   onMarkAsRead: (id: string) => void;
   onMarkAllAsRead: () => void;
@@ -161,24 +103,11 @@ interface Notification  {id: string;
               </div>;
             </div>;
           ))}
-<<<<<<< HEAD:src_backup/components/notifications/NotificationList.tsx
         </div>
       </ScrollArea>
     </div>
   );
 };
-<<<<<<< HEAD:src_backup/components/notifications/NotificationList.tsx
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/notifications/NotificationList.tsx
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -186,7 +115,6 @@ import { Bell } from 'lucide-react'
 interface NotificationListProps {
 
 
-<<<<<<< HEAD
 onRetry
 },) => {
 } import React from 'react';
@@ -197,7 +125,6 @@ import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context / notifications';
 import { EmptyState } from '@/components/ui/ empty - state';
 import { Bell } from 'lucide-react';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
@@ -208,7 +135,6 @@ interface NotificationListProps {
 }
 export const NotificationList: React.FC < NotificationListProps> = ({
   loading;
-=======
         </div>;
       </ScrollArea>;
     </div>;
@@ -218,7 +144,6 @@ interface NotificationListProps {}import React from 'react';
 interface NotificationListProps {}import React from 'react';
 interface NotificationListProps  {loading: boolean,error: string | null,notifications: Notification[],onMarkAsRead: (id: string,) => Promise<void>,onDismiss: (id: string,) => Promise<void>,onRetry: () => void;
 }export const NotificationList: React.FC<NotificationListProps> = ({loading;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/notifications/NotificationList.tsx
   error;
   notifications;
   onMarkAsRead;
@@ -323,40 +248,15 @@ export const NotificationList: React.FC<NotificationListProps> = ({onDismiss,onR
           />;
         )))}
     </ScrollArea>;
-<<<<<<< HEAD:src_backup/components/notifications/NotificationList.tsx
   );
 };
-<<<<<<< HEAD:src_backup/components/notifications/NotificationList.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/notifications/NotificationList.tsx
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Bell } from 'lucide-react';
 
 interface NotificationListProps {
-=======
   )}interface NotificationListProps  {loading: boolean;
   error: string | null;
   notifications: Notification[];
@@ -401,7 +301,6 @@ interface NotificationListProps {
     </ScrollArea>;
   )}ursor/integrate-build-improve-and-re-verify-9d47;
 ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/notifications/NotificationList.tsx
   loading: boolean;
   error: string | null;
   notifications: Notification[];
@@ -409,7 +308,6 @@ ursor/automate-test-improve-and-merge-code-646c;
   onDismiss: (id: string) => Promise<void>;
   onRetry: () => void;
 }
-<<<<<<< HEAD:src_backup/components/notifications/NotificationList.tsx
 
 export const NotificationList: React.FC<NotificationListProps> = ({
   loading,
@@ -474,22 +372,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </ScrollArea>
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD:src_backup/components/notifications/NotificationList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
@@ -498,7 +380,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   loading: boolean;
   error: string | null;
   notifications: Notification[];
@@ -507,13 +388,5 @@ main
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/notifications/NotificationList.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export const NotificationList: React.FC<NotificationListProps> = ({
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/notifications/NotificationList.tsx

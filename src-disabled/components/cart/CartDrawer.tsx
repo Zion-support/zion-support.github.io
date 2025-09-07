@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/cart/CartDrawer.tsx
-<<<<<<< HEAD:src_backup/components/cart/CartDrawer.tsx
 }
 
 }
@@ -18,7 +16,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 export function CartDrawer() {
   const items = null;
-<<<<<<< HEAD:src_backup/components/cart/CartDrawer.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (!isAuthenticated) {
       e.preventDefault()
@@ -65,7 +62,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <ShoppingCart className="h-5 w-5 text-foreground hover:text-primary" />
         {count > 0 && (
 
-<<<<<<< HEAD:src_backup/components/cart/CartDrawer.tsx
 
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
           <span className='absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center'>
@@ -74,7 +70,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </span>;
         )}
 
-<<<<<<< HEAD:src_backup/components/cart/CartDrawer.tsx
 
       </Link>;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -82,7 +77,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 });
 }
-<<<<<<< HEAD:src_backup/components/cart/CartDrawer.tsx
 
   );
 }
@@ -118,7 +112,6 @@ export function CartDrawer() {const items  = null;if (!isAuthenticated) {e.preve
         className='relative p - 1';
         on_click={handle_click} />;
         <ShoppingCart className='h - 5 w - 5 text - foreground hover:text - primary' />;
-<<<<<<< HEAD:src_backup/components/cart/CartDrawer.tsx
         {count > 0 && (<span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}
           <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;
         {count > 0 && (
@@ -129,7 +122,6 @@ export function CartDrawer() {const items  = null;if (!isAuthenticated) {e.preve
           </span>)}
       </Link>;
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-<<<<<<< HEAD:src_backup/components/cart/CartDrawer.tsx
     </>);
 }
 
@@ -139,7 +131,6 @@ export function CartDrawer() {const items  = null;if (!isAuthenticated) {e.preve
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
-<<<<<<< HEAD:src_backup/components/cart/CartDrawer.tsx
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     </>)}</Link>;

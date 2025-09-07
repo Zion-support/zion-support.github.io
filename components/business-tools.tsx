@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default function BusinessToolsPage () {
   const businessTools = [ {
   category: 'Project Management', tools: [ {
@@ -47,16 +44,6 @@ communicate effectively, market their products, and grow their operations. Real 
 }</div> </section> Productivity Tips & Best Practices </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Maximize the value of your business tools with these proven strategies and best practices. </p> </div> </Card>) ) 
 }</div> </div> </section> Ready to Transform Your Business Operations? </h2> <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed" > These business tools can streamline your operations, improve team collaboration, and drive growth. Start with the essentials and build your tech stack strategically. </p> <Button href="/micro-saas" variant="secondary" size="lg" className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl" > Explore Micro SaaS </Button> <Button href="/contact" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl" > Get Business Consultation </Button> </div> </div> </section> </>) 
 }
-=======
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button';
-import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
-export default function BusinessToolsPage() {
-  const businessTools = null;
-            communicate effectively, market their products, and grow their operations. Real pricing and features.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 } from 'lucide-react';
 
 import {
@@ -1181,4 +1168,3 @@ href='/contact';
     </>
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

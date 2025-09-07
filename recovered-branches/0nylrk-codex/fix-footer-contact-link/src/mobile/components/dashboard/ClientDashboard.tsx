@@ -1,6 +1,4 @@
 <<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
 
 export function ClientDashboard() {return (<div className='space-y-6 px-4 pb-24'>;
       <section className='mt-4'>;
@@ -12,7 +10,6 @@ import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import { ChevronRight, Plus, UserCheck, FileText, Bell  } from 'lucide-react';
 import Link from 'next/link';
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
 
 =>import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -35,7 +32,6 @@ export function ClientDashboard() {
         <Button className="w-full py-6" size="lg">
           <Plus className="mr-2 h-5 w-5" /> Post a New Job
 <<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
 
 =>        </Button>
       </section>
@@ -83,7 +79,6 @@ export function ClientDashboard() {
         </Card>
       </section>
 <<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
 <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Suggested Talents</h2>
@@ -157,7 +152,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
 <<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
               <div className='mt-3 flex gap-1 flex-wrap'>
                 <Badge variant='outline' className='text-xs'>
                   React
@@ -191,7 +185,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 <<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
 <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Recent Updates</h2>
@@ -226,7 +219,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <FileText className="h-5 w-5 text-primary" />
               </div>
               <div>
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
                 <p className="text-sm">
                   <strong>Mobile App Development:</strong> 3 new applicants for your job post
                 </p>
@@ -302,7 +294,6 @@ import { Link } from "react-router-dom";
 
     <div className="space-y-6 px-4 pb-24">;
 <<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
 
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from "next/link";
@@ -757,7 +748,6 @@ function ClientDashboard() {return (<div className="space - y-6 px - 4 pb - 24">
             </CardContent>;
           </Card>;
         </div>;
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
       </section>;
 
   );
@@ -827,7 +817,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardContent>;
         </Card>;
       </section>;
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
     </div>)})}
     </div>);
 }

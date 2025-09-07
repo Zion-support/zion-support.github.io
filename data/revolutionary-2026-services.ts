@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
-<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -17,8 +6,6 @@ export interface Revolutionary2026Service  {{address: '364 E Main St STE 1008 Mi
     },realImplementation: boolean, implementationDetails: string,launchDate: string, customers: number,rating: number,reviews: number;
 }
       'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.';
-=======
-<<<<<<< HEAD
 import { ServiceVariant } from '../types / service - variants';
 
 export interface Revolutionary2026Service {
@@ -53,23 +40,8 @@ export interface Revolutionary2026Service {
   growthRate: string;, variant: ServiceVariant;,
 origin/cursor/expand-services-advertise-and-build-project-c28b
   contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-  contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-=======
-=======
-      
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     mobile: string;, email: string;,
     address: string;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     website: string
   
   contactInfo: {;,
@@ -115,7 +87,6 @@ pr-12325
     }
     realImplementation: true
     implementationDetails: 'Space-grade quantum platform with satellite integration;, mission planning tools, and comprehensive space operations support.';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     launchDate: '2026-03-01';
     customers: 45;
     rating: 4.8
@@ -209,10 +180,6 @@ pr-12325
   rating: number;,;
   reviews: number;
 }
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export const revolutionary2026Services: Revolutionary2026Service[] = [
@@ -245,13 +212,8 @@ pr-12325
     competitors: ['TableauPower BILookerQlikDomo'];, marketSize: '$29.5B market';,
     growthRate: '220% annual growth';, variant: 'ai-futuristic';,
     contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       
-=======
   contactInfo: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     mobile: string, email: string,
     address: string,
     website: string;
@@ -259,7 +221,6 @@ pr-12325
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
-<<<<<<< HEAD
   reviews: number
 }
       'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.'
@@ -284,10 +245,6 @@ pr-12325
     launchDate: '2026-03-01';
     customers: 45;
     rating: 4.8
-=======
-      
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
     reviews: 25
   }
@@ -334,10 +291,8 @@ export interface Revolutionary2026Service {;
   reviews: number;
 }
 }
-=======
   reviews: number;
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export const revolutionary2026Services: Revolutionary2026Service[] = [;
   // AI-Powered Business Intelligence & Analytics;
@@ -365,69 +320,34 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
       '
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       address: '364 E Main St STE 1008 Middletown DE 19709';,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
 '
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-<<<<<<< HEAD
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,'
     implementation_details: 'Space - grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.';'
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;,
     implementation_details: 'Space - grade quantum platform with satellite integration;, mission planning tools, and comprehensive space operations support.';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launch_date: '2026 - 03 - 01';
     customers: 45;
     rating: 4.8;,
     reviews: 25;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
 ];
 import { ServiceVariant } from '../types/service-variants',;
 origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
-=======
 
 export const revolutionary2026Services: Revolutionary2026Service[] = [
   // AI-Powered Business Intelligence & Analytics;
@@ -466,7 +386,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8;,
 
     reviews: 25;'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface Revolutionary2026Service {;
   id: string;,;
   name: string;,;
@@ -519,7 +438,6 @@ pr-12325
 ;
 export const revolutionary2026Services: Revolutionary2026Service[] = [;
   // AI-Powered Business Intelligence & Analytics;
-<<<<<<< HEAD
   {;'
     id: 'ai-business-intelligence-suite-2026',;'
     name: 'AI Business Intelligence Suite 2026',;'
@@ -529,22 +447,10 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     description: 'Revolutionary AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated decision-making capabilities. Features advanced machine learning algorithms, natural language querying, and real-time dashboard customization.',;
     features: [;'
       'AI-powered predictive analyticsNatural language data queryingReal-time data visualizationAutomated anomaly detectionCustom dashboard builderMulti-source data integrationAdvanced reporting automationMobile-first responsive design',;'
-=======
-  {;
-    id: 'ai-business-intelligence-suite-2026';,;
-    name: 'AI Business Intelligence Suite 2026';,;
-    tagline: 'Next-generation AI-powered business analytics and decision intelligence';,;
-    price: '$299';,;
-    period: '/month';,;
-    description: 'Revolutionary AI-powered business intelligence platform that transforms raw data into actionable insights;, predictive analytics, and automated decision-making capabilities. Features advanced machine learning algorithms, natural language querying, and real-time dashboard customization.',;
-    features: [;
-      'AI-powered predictive analyticsNatural language data queryingReal-time data visualizationAutomated anomaly detectionCustom dashboard builderMulti-source data integrationAdvanced reporting automationMobile-first responsive design',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'API-first architectureEnterprise-grade security';
       'API-first architectureEnterprise-grade security';']
 pr-12325
     ],;
-<<<<<<< HEAD
     popular: true,;'
     icon: '🧠',;'
     color: 'from-blue-600 to-indigo-700',;'
@@ -1150,7 +1056,6 @@ pr-12325
     customers: 45,;
     rating: 4.8;
     reviews: 25;
-<<<<<<< HEAD
   }
       'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.',launchDate: '2026-03-01',customers: 45,rating: 4.8,reviews: 25;
   }];      mobile: '+1 302 464 0950';
@@ -1164,14 +1069,6 @@ pr-12325
     customers: 45;
     rating: 4.8;
     reviews: 25;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     popular: true;,;
     icon: '🧠';,;
     color: 'from-blue-600 to-indigo-700';,;
@@ -2457,7 +2354,6 @@ pr-12325
     customers: 45;,;
     rating: 4.8;
     reviews: 25;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ;
 ];
@@ -2513,7 +2409,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 1500;
     rating: 4.9;
     reviews: 890;
-<<<<<<< HEAD
   },// AI-Powered Legal Document Automation;
   {id: 'ai-legal-document-automation-2026',name: 'AI Legal Document Automation 2026',tagline:;
       'Intelligent legal document creation, review, and compliance automation',price: '$199',period: '/month',description:;
@@ -2741,13 +2636,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 25;
   }
 ];
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   contactInfo: {
       
-=======
 contactInfo: {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     mobile: string, email: string,
     address: string,
     website: string
@@ -2780,7 +2671,6 @@ contactInfo: {
     customers: 45;
     rating: 4.8
     reviews: 25
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
 import { ServiceVariant } from '../types/service-variants',export interface Revolutionary2026Service  {id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,variant: ServiceVariant,contactInfo: {mobile: string,email: string,address: string,website: string;
@@ -3252,7 +3142,6 @@ export interface Revolutionary2026Service {;
   rating: number,;
   reviews: number;
 }
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
   contactInfo: {
@@ -4620,12 +4509,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
     reviews: 25}
 ],
-=======
-<<<<<<< HEAD
 }
-=======
-  },
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
   // AI-Powered Legal Document Automation
   {
@@ -5701,9 +5585,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
   }
@@ -5711,13 +5592,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 ;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     implementationDetails: 'Space-grade quantum platform with satellite integration;, mission planning tools, and comprehensive space operations support.',;
     launchDate: '2026-03-01';,;
     customers: 45;,;
@@ -5768,5 +5644,3 @@ pr-12325
 ;
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -13,7 +13,6 @@ export default function SolutionsPage() {
     </MainLayout>
   );
 }
-<<<<<<< HEAD:pages_backup/solutions/index.tsx
 
 import type { NextPage } from 'next';
 import Head from 'next/head';

@@ -64,7 +64,6 @@ export function AuthConfigurationError(): any ({;
     if (onRetry) {;
       onRetry();
     } else {;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
 }
 
@@ -157,7 +156,6 @@ if ( {) {}
             </ul>
           </div>
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
@@ -276,7 +274,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               resolved.;
             </AlertDescription>;
           </Alert>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
 
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -285,7 +282,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
 
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
@@ -294,7 +290,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
 
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
   };
   return (;
@@ -353,9 +348,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-gray-600">;
               The sign-up system needs to be configured before users can create accounts;
             </p>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
           </div>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
 
           <Alert variant="destructive" className="mb-6">;
@@ -407,7 +400,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Alert>;
 
             <ul className="text - sm text - gray - 700 space - y-1">;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
               <li>• AUTH0_SECRET</li>;
             <ul className="text - sm text - gray - 700 space - y-1">;<li>• AUTH0_SECRET</li>;
@@ -422,10 +414,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >;'
                 <Settings className='w-4 h-4 mr-2' />;
                 Setup Guide;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
               </Button>;
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
             )}
 
@@ -439,7 +429,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <RefreshCw className="w-4 h-4 mr-2" />
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
               className='flex-1'
             >
               <RefreshCw className='w-4 h-4 mr-2' />
@@ -479,11 +468,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <RefreshCw className='w-4 h-4 mr-2' />              Check Again              <RefreshCw className="w-4 h-4 mr-2" />;
               Check Again;
             </Button>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
           </div>;
 
           {/* Quick Setup Steps */}
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
 
 
@@ -506,7 +493,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   1
                 </span>
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 <div className='border-t pt-6'>
             <h3 className='font-semibold text-gray-900 mb-3'>
               Quick Setup Steps:
@@ -546,7 +532,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
                   2
                 </span>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>
                   <strong>Create Application:</strong>
@@ -554,7 +539,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Create a "Regular Web Application" named "Zion AI Marketplace"
                 </div>
               </li>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
               
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
@@ -568,7 +552,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
                   3
                 </span>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>
                   <strong>Configure Environment:</strong>
@@ -758,7 +741,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </li>"
               <li className="flex items-start gap-3">
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
               
               <li className="flex items-start gap-3">
@@ -783,7 +765,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ol>
           </div>
         </div>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
                   </code>{' '}<li className="flex items-start gap-3">;
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>;
                 <div>;
@@ -863,7 +844,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </li>;
             </ol>;
           </div>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
         </div>;
 
         <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
@@ -1006,7 +986,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span>Browse Marketplace</span>            >;
               <span>Browse Marketplace</span>;"
               <ExternalLink className="w-4 h-4" />;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
             </Link>;
 
             <Link 
@@ -1211,9 +1190,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         )}
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
         {/* Footer */}
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 <div className='mt-6 text-center text-sm text-gray-500'>
           <p>
             For detailed instructions, see{' '}
@@ -1242,7 +1219,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 export default AuthConfigurationError };
 ;
 export default AuthConfigurationError;
@@ -1267,7 +1243,6 @@ export default AuthConfigurationError;
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
 
               className="text-blue-600 hover: underline";
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
               AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md;
 
         {/* Footer */}<div className="mt-6 text-center text-sm text-gray-500">;
@@ -1292,7 +1267,6 @@ export default AuthConfigurationError;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
   );
 
   );
@@ -1402,7 +1376,6 @@ export default AuthConfigurationError;
           </p>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
     </div>);
 export default AuthConfigurationError }
 export default AuthConfigurationError,

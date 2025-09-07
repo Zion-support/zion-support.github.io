@@ -1,12 +1,9 @@
-<<<<<<< HEAD:temp_backup/pages/docs/api.tsx
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
 export default function APIDocsPage() {
   
     >
-=======
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../../components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -204,15 +201,9 @@ const rateLimits = [
   }
 ];
 
-=======
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../../components/Layout'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 export default function APIDocsPage() {
   return (
     <MainLayout>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/docs/api.tsx
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -586,16 +577,8 @@ export default function APIDocsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD:temp_backup/pages/docs/api.tsx
     </Layout>
   )
-=======
-<<<<<<< HEAD
     </MainLayout>
   );
-=======
-    </Layout>
-  )
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/docs/api.tsx
 }

@@ -15,44 +15,8 @@ await ack()const text = (command.text |'').trim()const [sub, ...rest] = text.spl
 });
 function helpText(): string {
   return [
-<<<<<<< HEAD
         response_type: 'ephemeral',
         text: `Here is a draft job post for *${role}*:\n\n${data && data.description}`,
-=======
-    '*Zion Assistant Commands*'
-    '`/zion post-job [role]` – generate a job post'
-    '`/zion suggest-talent [query]` – AI match talent'
-    '`/zion track-project [name]` – milestone status'
-    '`/zion help` – command list'
-  ].join('\n');
-    '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'
-  ].join('\n');
-}
-app.command('/zion', async ({ command, ack, respond }) => {
-  await ack();
-  const text = (command.text |'').trim();
-  const [sub, ...rest] = text.split(' ');
-  const userId = command.user_id;
-  try {
-    if (!sub |sub.toLowerCase() === 'help') {
-      await respond({ response_type: 'ephemeral', text: helpText() });
-      return;    }
-    if (sub === 'post-job') {
-      const role = rest.join(' ') |'Cloud Engineer';
-      const res = await fetch(`${apiBase}/jobs/generate`, {      return
-    }
-    if (sub === 'post-job') {
-      const role = rest.join(' ') |'Cloud Engineer';
-      const res = await fetch(`${apiBase}/jobs/generate`, {
-        method: 'POST'
-        headers: { 'content-type': 'application/json', 'x-user-id': userId }
-        body: JSON.stringify({ role })
-      });
-      const data = (await res.json()) as any;
-      await respond({
-        response_type: 'ephemeral'
-        text: `Here is a draft job post for *${role}*:\n\n${data.description}`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       });
       return;
     if (sub === 'post-job') {const role = rest.join(' ') |'Cloud Engineer';
@@ -74,7 +38,6 @@ app.command('/zion', async ({ command, ack, respond }) => {
           text: 'Project not found.';
         })return;
       }
-<<<<<<< HEAD
       await respond({})return;
     }
     await respond({ response_type: 'ephemeral', text: helpText() })} catch (err: any) {await respond({const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {headers: { 'x-user-id': userId }
@@ -86,13 +49,6 @@ app.command('/zion', async ({ command, ack, respond }) => {
     await respond({ response_type: 'ephemeral', text: helpText() })} catch (err: any) {}
 })(async () => {})()console.log(`⚡️ Zion Slack bot running on port ${port}`)})()console.log(`⚡️ Zion Slack bot running on port ${port}`)})()const data = (await res.json ()) as any;
       await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` })return;
-=======
-      await respond({
-        response_type: 'ephemeral'
-        text: `*${data.project.name}* – status: ${data.project.status}\nMilestones: ${JSON.stringify(data.project.milestones)}`
-      });
-      return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     }
     // Check condition;
 if ( {) {$2;
@@ -131,10 +87,6 @@ console.log (`⚡️ Zion Slack bot running on port ${port}`)})()console.log (`�
     }
     await respond({ response_type: 'ephemeral', text: helpText() })
   } catch (err: any) {
-<<<<<<< HEAD
-=======
-    await respond({ response_type: 'ephemeral', text: `Error: ${err.message |'unknown'}` })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   }
 });
 (async () => {
@@ -248,8 +200,6 @@ console.log(`⚡️ Zion Slack bot running on port ${port}`)})()
   // eslint-disable-next-line no-console
   console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })(),
-=======
-<<<<<<< HEAD
 
   socketMode: true,});
 function helpText(): string {}
@@ -403,7 +353,6 @@ if ( {) {}
 console.log (`⚡️ Zion Slack bot running on port ${port}`);`
 })();  console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();
-<<<<<<< HEAD
       response_type: 'ephemeral',
       text: `Error: ${err.message || 'unknown'}`,
     });

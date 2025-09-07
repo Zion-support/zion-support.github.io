@@ -83,8 +83,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({ summary: [], error: 'Failed to compute summary' })
   }
 }
-=======
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const r = null;
@@ -146,25 +144,13 @@ function handler() {}
     ];
 ;
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () });
-<<<<<<< HEAD
     res.status(200).json({ summary, timestamp: new Date().toISOString() });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-  } catch (e) {'
-    res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
-  }
-}
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
     res.status(200).json({ summary, timestamp: new Date().toISOString(),}
 });

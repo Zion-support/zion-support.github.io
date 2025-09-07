@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/community.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/community.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, Calendar, Users, Award } from 'lucide-react';
@@ -144,12 +137,7 @@ export default function CommunityPage() {
     </Layout>
   );
 }
-<<<<<<< HEAD:pages_backup/community.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -197,10 +185,4 @@ export default function CommunityPage() {
 
     </div>
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/community.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

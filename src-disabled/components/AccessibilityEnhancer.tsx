@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -77,7 +73,6 @@ interface AccessibilitySettings  {highContrast: boolean;
   focusIndicator: boolean;
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'normal' | 'large' | 'xlarge';
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
 }
 
 export function AccessibilityEnhancer({ 
@@ -299,10 +294,8 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
   useEffect(() => {localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings))}, [settings])// Load settings from localStorage on mount;
   useEffect(() => {const savedSettings = localStorage.getItem('zion-accessibility-settings')if (savedSettings) {try {const parsed = JSON.parse(savedSettings)setSettings(parsed)} catch (error) {console.warn('Failed to parse accessibility settings:', error)}
     }
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
   }, []);
 origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -377,8 +370,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   return (
     <>
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
       <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4 border">
         <h3 className="text-sm font-semibold mb-2">Accessibility</h3>
         <div className="space-y-2">
@@ -640,7 +631,6 @@ export default AccessibilityEnhancer;
             </motion.div>;
           </motion.div>;
         )}
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
       </AnimatePresence>
     </>
   );
@@ -650,13 +640,11 @@ import React, { useState, useEffect } from 'react' interface AccessibilityEnhanc
   children: React.ReactNode} const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState ({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true })  useEffect ( () => {'';""
 }}
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
       </AnimatePresence>;
     </>;
   )}import React, { useState, useEffect } from 'react' interface AccessibilityEnhancerProps {"";
   children: React.ReactNode} const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState ({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true })  useEffect ( () => {'';"";
 }}
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
       <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4 border">
         <h3 className="text-sm font-semibold mb-2">Accessibility</h3>
         <div className="space-y-2">

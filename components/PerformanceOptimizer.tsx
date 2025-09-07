@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 
 ;
 
-=======
-<<<<<<< HEAD
 setMetrics (newMetrics) 
 }
 }, [])
@@ -56,8 +53,6 @@ if (metrics.timeToInteractive > 3500) score -= 20
 }</div> <li>• Use WebP images for better compression</li> <li>• Implement lazy loading for images</li> <li>• Minimize CSS and JavaScript bundles</li> <li>• Use CDN for static assets</li> <li>• Enable gzip compression</li> </ul> </div> </div>) 
 }
 export default PerformanceOptimizer
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion   } from 'framer-motion';
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network  } from 'lucide-react';
@@ -157,42 +152,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     largestContentfulPaint: 0,
     cumulativeLayoutShift: 0,
     firstInputDelay: 0,
-<<<<<<< HEAD
     timeToInteractive: 0
   });
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizationStatus, setOptimizationStatus] = useState<string>('idle');
   const [showMetrics, setShowMetrics] = useState(false);
 
-=======
-}
-interface PerformanceOptimizerProps {
-  class_name?: string;
-}
-    firstContentfulPaint: 0,
-    largestContentfulPaint: 0,
-    cumulativeLayoutShift: 0,
-    firstInputDelay: 0,
-      const newMetrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart
-        firstContentfulPaint: fcp ? fcp.startTime : 0
-        largestContentfulPaint: lcp ? lcp.startTime : 0
-        cumulativeLayoutShift: 0, // Would need to be measured with CLS API
-        firstInputDelay: 0, // Would need to be measured with FID API
-
-timeToInteractive:
-          navigation.domContentLoadedEventEnd - navigation.navigationStart,
-      };
-
-      setMetrics(newMetrics);
-    }
-
-  }, []);
-    timeToInteractive: 0}),
-  const [isOptimizing, setIsOptimizing] = useState($2);
-  const [optimizationStatus, setOptimizationStatus] = useState<string>('idle'),
-  const [showMetrics, setShowMetrics] = useState($2);
->>>>>>> origin/main
   // Measure performance metrics
   const measurePerformance = useCallback(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -227,56 +192,8 @@ timeToInteractive:
       for (const img of Array.from(images)) {
         if (img.complete && img.naturalWidth > 0) {
           // Add lazy loading
-<<<<<<< HEAD
           img.loading = 'lazy';
           
-=======
-//Add responsive sizes if not present // Check condition;
-if ( {) {$2;
-}
-  optimized_count++;
-const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({class_name = '',}) => {  const [metrics, set_metrics] = useState < PerformanceMetrics>({interface PerformanceMetrics  {load_time: number,firstContentfulPaint: number,largestContentfulPaint: number,cumulativeLayoutShift: number,firstInputDelay: number,className = '',const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({preloadImages = [], preloadFonts = [;
-    'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap';
-  ], criticalCSS;
-}) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({loadTime: 0,firstContentfulPaint: 0,largestContentfulPaint: 0,cumulativeLayoutShift: 0,firstInputDelay: 0,timeToInteractive: 0,timeToInteractive: number;
-}
-interface PerformanceOptimizerProps  {class_name?: string;
-}firstContentfulPaint: 0,largestContentfulPaint: 0,cumulativeLayoutShift: 0,firstInputDelay: 0,const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className;
-  })const [isOptimizing, setIsOptimizing] = useState(false)const [optimizationStatus, setOptimizationStatus] = useState<string>('idle')const [showMetrics, setShowMetrics] = useState(false)// Measure performance metrics;
-  const measurePerformance = useCallback(() => {if (typeof window !== 'undefined' && 'performance' in window) {const navigation = performance.getEntriesByType('navigation';
-      )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint')const paintEntries = performance.getEntriesByType('paint')const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint';
-      )const lcp  = performance.getEntriesByType('largest-contentful-paint')[0];const newMetrics: PerformanceMetrics = {loadTime: navigation.loadEventEnd - navigation.loadEventStart;
-        firstContentfulPaint: fcp ? fcp.startTime : 0;
-        largestContentfulPaint: lcp ? lcp.startTime : 0;
-        cumulativeLayoutShift: 0, // Would need to be measured with CLS API;
-        firstInputDelay: 0, // Would need to be measured with FID API;
-timeToInteractive:;
-          navigation.domContentLoadedEventEnd - navigation.navigationStart,}setMetrics(newMetrics)}}, [])// Optimize images;
-  const optimizeImages = useCallback(async () => {setIsOptimizing(true)setOptimizationStatus('Optimizing images...')try {const images = document.querySelectorAll('img')let optimizedCount = 0;
-      for (const img of Array.from(images)) {if (img.complete && img.naturalWidth > 0) {// Add lazy loading;
-          img.loading  = 'lazy';}
-          }
-          optimized_count++;        }
-      }
-      setOptimizationStatus (`Optimized ${optimized_count} images`)// Add responsive sizes if not present;
-          // Check condition;
-if ( {) {$2;
-}
-            img.sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw';
-          }
-          optimized_count++;
-        }
-      }// Add responsive sizes if not present;
-          if (!img.sizes) {img.sizes =;
-              '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
-          }optimizedCount++;
-        }
-      }
-      }
-          img.loading = $2;
->>>>>>> origin/main
           // Add responsive sizes if not present
           if (!img.sizes) {
             img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -480,27 +397,9 @@ interface PerformanceOptimizerProps {preload_images?: string[];
             }
           }
         }
-<<<<<<< HEAD
       });
       
       observer.observe({ entryTypes: ['largest-contentful-paint'] }),
-=======
-      const addResourceHint = (href: string, as: string, type?: string) => {;
-        const link = document && document.createElement('link');
-        Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
-          if (key === 'crossorigin') {;
-            link && link.setAttribute(key, value as string);
-          } else {;
-            (link as any)[key] = value;
-          }
-        });
-            }
-          }
-        }
-      });
-
-      }),
->>>>>>> origin/main
       
       return () => {
         window.removeEventListener('load', measurePerformance);
@@ -516,42 +415,13 @@ observer.observe({ entryTypes: ['largest-contentful-paint'] });
     }
   }, [measurePerformance]);
 
-<<<<<<< HEAD
   const getPerformanceScore = (): number => {
     let score = 100;
     
-=======
->>>>>>> origin/main
     if (metrics.firstContentfulPaint > 1800) score -= 20;
     if (metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics.loadTime > 3000) score -= 15;
     if (metrics.timeToInteractive > 3500) score -= 20;
-<<<<<<< HEAD
-=======
-  };
-
-  const getPerformanceGrade = (score: number): string => {;
-    if (score >= 90) return 'A';
-    if (score >= 80) return 'B';
-    if (score >= 70) return 'C';
-    if (score >= 60) return 'D';
-
-return 'F';
-  };
-
-  const performanceScore = getPerformanceScore();
-  const performanceGrade = getPerformanceGrade(performanceScore);
-
->
-      <div className='flex items-center justify-between mb-6'>
-        <h3 className='text-xl font-bold text-white flex items-center gap-2'>
-          <Gauge className='w-5 h-5 text-cyan-400' />
-  const getPerformanceScore = $2;
-    if (metrics.firstContentfulPaint > 1800) score -= 20,
-    if (metrics.largestContentfulPaint > 2500) score -= 25,
-    if (metrics.loadTime > 3000) score -= 15,
-    if (metrics.timeToInteractive > 3500) score -= 20,
->>>>>>> origin/main
     
     return Math.max(0, score)
   };
@@ -1044,7 +914,6 @@ if (return 'D') {$2;
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
-<<<<<<< HEAD
           exit={{ opacity: 0, height: 0 }}
           className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
         >
@@ -1133,31 +1002,6 @@ if (return 'D') {$2;
 };
 
 export default PerformanceOptimizer;
-=======
-    </Head>);
-}
-  );
-}
-;
-export default PerformanceOptimizer;
-;
-interface PerformanceMetrics {
-  fcp: number;
-    </Head>)}
-  )})}export default PerformanceOptimizer;interface PerformanceMetrics  {fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  memory?: {used: number;
-    total: number;
-    limit: number;
-  }
-}
-interface PerformanceOptimizerProps  {onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enable_reporting?: boolean;
-}
-<<<<<<< HEAD
       measureWebVitals()} else {window && window.addEventListener('load', measureWebVitals)}
 export default PerformanceOptimizer;)
 
@@ -1171,70 +1015,3 @@ export default PerformanceOptimizer;)
           exit={{ opacity: 0, height: 0}}
           className = $2;
 export default PerformanceOptimizer,
-=======
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  onMetricsUpdate
-  enableReporting = false
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' |!('performance' in window)) return;
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paint = performance.getEntriesByType('paint');
-    // Core Web Vitals
-    const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime |0;
-    const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime |0;
-    const ttfb = navigation.responseStart - navigation.requestStart;
-    // Memory usage (if available)
-    const memory = (performance as any).memory ? {
-      used: (performance as any).memory.usedJSHeapSize
-      total: (performance as any).memory.totalJSHeapSize
-      limit: (performance as any).memory.jsHeapSizeLimit
-    } : undefined;
-    const newMetrics: PerformanceMetrics = {
-      fcp
-      lcp
-      fid: 0, // First Input Delay - would need user interaction to measure
-      cls: 0, // Cumulative Layout Shift - would need observer
-      ttfb
-      memory
-    }
-    setMetrics(newMetrics);
-    if (onMetricsUpdate) {
-      onMetricsUpdate(newMetrics);
-    }
-    if (enableReporting && process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', newMetrics);
-    }
-  }, [onMetricsUpdate, enableReporting]);
-  useEffect(() => {
-    if (document.readyState === 'complete') {
-      measureWebVitals();
-    } else {
-      window.addEventListener('load', measureWebVitals);
-    }
-    return () => {
-      window.removeEventListener('load', measureWebVitals);
-    }
-  }, [measureWebVitals]);
-  // Monitor for performance issues
-  useEffect(() => {
-    if (!metrics) return;
-    const warnings: string[] = [];
-    if (metrics.fcp > 1800) warnings.push('First Contentful Paint is slow (>1.8s)');
-    if (metrics.lcp > 2500) warnings.push('Largest Contentful Paint is slow (>2.5s)');
-    if (metrics.ttfb > 600) warnings.push('Time to First Byte is slow (>600ms)');
-    if (metrics.memory) {
-      const memoryUsage = (metrics.memory.used / metrics.memory.limit) * 100;
-      if (memoryUsage > 80) warnings.push('High memory usage detected');
-    }
-    if (warnings.length > 0 && enableReporting) {
-      console.warn('Performance Issues Detected:', warnings);
-    }
-  }, [metrics, enableReporting]);
-  return null;
-}
-export default PerformanceOptimizer;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

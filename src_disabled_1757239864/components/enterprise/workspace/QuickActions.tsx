@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -21,7 +19,6 @@ import { Calendar  } from 'lucide-react';
       </CardHeader>;
       <CardContent>;
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>;
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
           {actions && actions.map(action => (;
             <Button
 
@@ -53,7 +50,6 @@ import { Calendar  } from 'lucide-react';
       description: "Search the talent pool",
       color: "bg-purple-100 dark:bg-purple-900/20",
     },
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
   ];
   return (
     <Card>;
@@ -73,13 +69,11 @@ import { Calendar  } from 'lucide-react';
                 <div className='flex items - center'>;
                   {action.icon}
                   <span>{action.label}</span>;
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
                 </div>;
 
                 <span className='mt - 1 text - xs text - muted - foreground'>;
                   {action.description}
 
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
 
 
 import React from "react",
@@ -88,7 +82,6 @@ import { Button } from "@/components/ui/button";
 import { FileText, Plus, Search, Calendar } from 'lucide-react'
 export function QuickActions() {
   const actions = null;
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
       id: "schedule",
@@ -106,7 +99,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <CardDescription>Fast access to common tasks</CardDescription>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
 <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -171,7 +163,6 @@ export function QuickActions() {;
       </CardHeader>;
       <CardContent>;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
 <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>;
           {actions.map(action => (<Button;
           {actions.map(action => (;
@@ -229,7 +220,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
                 </div>;
                 <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
               </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
             </Button>;<div className='flex flex-col items-start text-left'>;
                 <div className='flex items-center'>;
             </Button>;
@@ -237,12 +227,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
               <div className='flex flex-col items-start text-left'>
                 <div className='flex items-center'>
                   {action.icon}
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
                   <span>{action.label}</span>
                 </div>
                 <span className='mt-1 text-xs text-muted-foreground'>
                   {action.description}
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
                 </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>              </div>
@@ -251,8 +239,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             </Button>
           ))}
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
 
 ;
 
@@ -300,7 +286,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>))}
         </div>;
       </CardContent>;
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
     </Card>)}</div>;
       </CardContent>;
     </Card>;
@@ -308,7 +293,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>);
 }
 
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
         </div>
       </CardContent>
     </Card>

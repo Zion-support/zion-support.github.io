@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:src_backup/components/contracts/ContractBuilder.tsx
   const handleLoadTemplate = (templateData: ContractFormValues,) => {;
     setFormValues(templateData);
   };
@@ -61,7 +60,6 @@ interface ContractBuilderProps  {isOpen: boolean;
   clientName: string;
   onContractGenerated?: (contractContent: string) => void;
 }
-<<<<<<< HEAD:src_backup/components/contracts/ContractBuilder.tsx
 export function ContractBuilder({
   isOpen;
   onClose;
@@ -139,7 +137,6 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
               <TabsTrigger value="form">Contract Details</TabsTrigger>;
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
             </TabsList>;
-<<<<<<< HEAD:src_backup/components/contracts/ContractBuilder.tsx
 
             <div className="flex gap-2">;
               <Button
@@ -159,7 +156,6 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
                 <Save className="h-4 w-4" />;
                 Templates;
               </Button>;
-<<<<<<< HEAD:src_backup/components/contracts/ContractBuilder.tsx
 
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
@@ -192,7 +188,6 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD:src_backup/components/contracts/ContractBuilder.tsx
 
           <TabsContent value="form" className="pt-4">;
 
@@ -222,7 +217,6 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
               onContractGenerated = {handleContractGenerated}/>;
           </TabsContent>;
           <TabsContent value="preview" className="pt-4">;
-<<<<<<< HEAD:src_backup/components/contracts/ContractBuilder.tsx
             {generatedContract && (;
 
               <ContractPreview
@@ -248,7 +242,6 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
             )}
           </TabsContent>;
         </Tabs>;
-<<<<<<< HEAD:src_backup/components/contracts/ContractBuilder.tsx
 
 
 

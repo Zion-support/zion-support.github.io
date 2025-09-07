@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 	return (
@@ -29,9 +28,6 @@ return (
   </>);
 }
 
-=======
-import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Users, Play, ArrowRight, ExternalLink, Star } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
@@ -152,14 +148,9 @@ const stats = [
   { value: "4.8/5", label: "Average Rating" },
   { value: "95%", label: "Satisfaction Rate" }
 ];
-=======
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 
 export default function webinars() {
   return (
-<<<<<<< HEAD
     <MainLayout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -503,23 +494,7 @@ export default function webinars() {
             </motion.div>
           </div>
         </section>
-=======
-    <Layout>
-      <Head>
-        <title>Webinars - Zion Tech Group</title>
-        <meta name="description" content="Webinars solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Webinars</h1>
-          <p className="text-lg text-gray-600">
-            Professional webinars solutions tailored to your business needs.
-          </p>
-        </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
       </div>
     </MainLayout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

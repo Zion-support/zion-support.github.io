@@ -69,8 +69,3 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
     </div>
   )
 }
-<<<<<<< HEAD:src/components/services/PaymentSection.tsx
-=======
-  )}";
-;
->>>>>>> origin/main:src_disabled_1757239864/components/services/PaymentSection.tsx

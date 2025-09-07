@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 import React, { useState } from 'react';
@@ -22,7 +19,6 @@ interface GeneratedDescriptionDisplayProps  {description: string;
   onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps  {description: string;
   onSave: (editedDescription: string,) => void;
 }
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
 
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -43,7 +39,6 @@ export function GeneratedDescriptionDisplay(): any ({;
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
   const handleSave = null;
 import React, { useState } from 'react'
 import { useToast } from '@/hooks/use-toast'
@@ -123,7 +118,6 @@ import { Check, Pencil } from 'lucide-react';
               <>
                 <Pencil className="h-4 w-4 mr-1" />
                 Edit
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
               </>
 
 import React, { useState } from "react",;
@@ -235,7 +229,6 @@ import React, { useState } from "react",import { useToast } from "@/hooks/use-to
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
 
             {editedDescription}
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
           </div>
         )}
 
@@ -268,7 +261,6 @@ import React, { useState } from "react",import { useToast } from "@/hooks/use-to
 }</CardContent> {;
   isEditing && (<CardFooter> <ButtononClick={
   handleSave "
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)
 }</Card>)
 }'"
@@ -306,7 +298,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Save Changes;
           </Button>;
         </CardFooter>)}
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
     </Card>)is_editing ? (<> <Check className="h - 4 w - 4 mr - 1" /> Done </>) : (<> <Pencil className="h - 4 w - 4 mr - 1" /> Edit </>)}</Button> </CardTitle> </CardHeader> <CardContent> {is_editing ? (<Textarea value= {edited_description;
 }</div>)}</CardContent> {is_editing && (<CardFooter> <Button on_click={handle_save ";
 }className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white" > Save Changes </Button> </CardFooter>)}</Card>)}'";
@@ -324,6 +315,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</Card>);
 }'";
 }
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
 ;
 ;

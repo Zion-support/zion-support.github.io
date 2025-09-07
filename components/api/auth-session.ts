@@ -14,10 +14,7 @@ import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminA
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = null;
     return
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
    ;
   return;

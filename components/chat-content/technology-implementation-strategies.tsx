@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 
@@ -59,7 +56,6 @@ export default function TechnologyImplementationStrategiesPage() {return (<div c
 
   );
 
->>>>>>> origin/main
 import React from 'react';
 export default function TechnologyImplementationStrategiesPage() {
   return (
@@ -77,29 +73,7 @@ function TechnologyImplementationStrategiesPage() {return (<div className='conta
     </div>
   )
 }
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-  )
-}
-
-
-
-
-=======
-<<<<<<< HEAD
 <div className="container mx-auto px-4 py-10"> <h1 className="text-2xl font-semibold">Technology Implementation Strategies</h1> <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
-=======
-import React from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function TechnologyImplementationStrategiesPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -123,7 +97,6 @@ export default function TechnologyImplementationStrategiesPage() {
 }
 
 }
-<<<<<<< HEAD
     </div>
   );
 }
@@ -146,7 +119,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

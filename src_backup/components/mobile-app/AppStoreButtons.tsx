@@ -129,7 +129,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({className;
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleAppStoreClick}
 
-<<<<<<< HEAD:src_backup/components/mobile-app/AppStoreButtons.tsx
 }className,appStoreUrl = "#",googlePlayUrl = "#",onAppStoreClick,onGooglePlayClick;
 },) => {const handleAppStoreClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {if (!appStoreUrl || appStoreUrl === "#") {e && e.preventDefault(),logInfo("App Store download clicked"),onAppStoreClick?.()}
   },const handleGooglePlayClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {if (!googlePlayUrl || googlePlayUrl === "#") {e && e.preventDefault(),logInfo("Google Play download clicked"),onGooglePlayClick?.()}
@@ -158,7 +157,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({className;
         </div>;
       </a>;<a;
         href={googlePlayUrl}
-<<<<<<< HEAD:src_backup/components/mobile-app/AppStoreButtons.tsx
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
 
@@ -186,7 +184,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({className;
           xmlns="http: //www.w3.org/2000/svg"
           className="h-8 w-8 mr-3 fill-current"
           aria-hidden="true"
-<<<<<<< HEAD:src_backup/components/mobile-app/AppStoreButtons.tsx
 
 
           focusable="false">;
@@ -307,7 +304,6 @@ export const AppStoreButtons: React.FC < AppStoreButtonsProps> = ({
   class_name;
   appStoreUrl = "#";
   googlePlayUrl = "#";
-<<<<<<< HEAD:src_backup/components/mobile-app/AppStoreButtons.tsx
 }  class_name,
   appStoreUrl = "#",
   googlePlayUrl = "#",
@@ -389,7 +385,6 @@ if ( {) {$2;
           <div className="text-xs">GET IT ON</div>;
           <div className="text-xl font-semibold">Google Play</div>;
         </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/AppStoreButtons.tsx
       </a>;
     </div>;
   );

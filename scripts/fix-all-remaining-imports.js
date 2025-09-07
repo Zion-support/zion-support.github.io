@@ -812,7 +812,6 @@ async function main() {;
     'automation_backup',
     'src.disabled',
     'pages.disabled',
-<<<<<<< HEAD:scripts/fix-all-remaining-imports.js
   
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -848,7 +847,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   console.log(`   Total import "fixes": ${totalFixes}`);
   console.log("\n✨ Comprehensive missing imports fix completed!")}
 // Run the script
-<<<<<<< HEAD:scripts/fix-all-remaining-imports.js
 
 
 

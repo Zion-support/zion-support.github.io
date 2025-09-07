@@ -79,7 +79,6 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: all2026Services.filter(s = $2;
     { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s = $2;
     { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s = $2;
-========
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')
@@ -144,7 +143,6 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s => s.category.includes('Financial') |s.category.includes('Trading')).length }
     { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT')).length }
   ]
->>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages_backup_conflict_1757239547/2026-services-showcase-enhanced.tsx
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' }
     { id: 'low', name: 'Under $1K/month', range: 'Under $1K' }
@@ -154,9 +152,7 @@ export default function Services2026ShowcaseEnhancedPage() {
 <<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
   ],
 
-========
   ]
->>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages_backup_conflict_1757239547/2026-services-showcase-enhanced.tsx
   const sortOptions = [
     { id: 'name', name: 'Name A-Z' }
     { id: 'price-low', name: 'Price Low to High' }
@@ -169,12 +165,10 @@ export default function Services2026ShowcaseEnhancedPage() {
 
   // Filter and sort services
   const filteredServices = $2;
-========
   ]
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = all2026Services
->>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages_backup_conflict_1757239547/2026-services-showcase-enhanced.tsx
     // Search filter
     if (searchTerm) {
       filtered = filtered.filter(service =>
@@ -200,7 +194,6 @@ export default function Services2026ShowcaseEnhancedPage() {
         filtered = filtered.filter(service => service.category.includes('Financial') || service.category.includes('Trading'))
       } else if (selectedCategory === 'manufacturing') {
         filtered = filtered.filter(service => service.category.includes('Manufacturing') || service.category.includes('IoT'))
-========
         filtered = filtered.filter(service => service.category.includes('Quantum') |service.category.includes('Emerging'))
       } else if (selectedCategory === 'enterprise') {
         filtered = filtered.filter(service => service.category.includes('Enterprise') |service.category.includes('IT'))
@@ -212,7 +205,6 @@ export default function Services2026ShowcaseEnhancedPage() {
         filtered = filtered.filter(service => service.category.includes('Financial') |service.category.includes('Trading'))
       } else if (selectedCategory === 'manufacturing') {
         filtered = filtered.filter(service => service.category.includes('Manufacturing') |service.category.includes('IoT'))
->>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages_backup_conflict_1757239547/2026-services-showcase-enhanced.tsx
       }
     }
     // Price filter
@@ -224,13 +216,11 @@ export default function Services2026ShowcaseEnhancedPage() {
         if (selectedPriceRange = $2;
         if (selectedPriceRange = $2;
         if (selectedPriceRange = $2;
-========
         const price = parseInt(service.price.replace(/[^0-9]/g, ''))
         if (selectedPriceRange === 'low') return price < 1000
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000
         if (selectedPriceRange === 'premium') return price >= 20000
->>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages_backup_conflict_1757239547/2026-services-showcase-enhanced.tsx
         return true
       })
     }
@@ -254,7 +244,6 @@ export default function Services2026ShowcaseEnhancedPage() {
 
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
-========
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''))
         case 'price-high':
           return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''))
@@ -280,7 +269,6 @@ export default function Services2026ShowcaseEnhancedPage() {
     financialServices: all2026Services.filter(s => s.category.includes('Financial') |s.category.includes('Trading')).length
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT')).length
   }
->>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages_backup_conflict_1757239547/2026-services-showcase-enhanced.tsx
 
     }),
     return filtered
@@ -295,7 +283,6 @@ export default function Services2026ShowcaseEnhancedPage() {
     healthcareServices: all2026Services.filter(s = $2;
     financialServices: all2026Services.filter(s = $2;
     manufacturingServices: all2026Services.filter(s = $2;
-========
   const serviceStats = {
     totalServices: all2026Services.length,
     aiServices: all2026Services.filter(s => s.category.includes('AI')).length,
@@ -306,7 +293,6 @@ export default function Services2026ShowcaseEnhancedPage() {
     financialServices: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
   },
->>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages_backup_conflict_1757239547/2026-services-showcase-enhanced.tsx
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen">
@@ -323,8 +309,6 @@ export default function Services2026ShowcaseEnhancedPage() {
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
 <<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
           
-========
->>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages_backup_conflict_1757239547/2026-services-showcase-enhanced.tsx
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
@@ -340,7 +324,6 @@ export default function Services2026ShowcaseEnhancedPage() {
               initial={{ opacity: 0, y: 20}}
               animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-========
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -356,7 +339,6 @@ export default function Services2026ShowcaseEnhancedPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages_backup_conflict_1757239547/2026-services-showcase-enhanced.tsx
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Enhanced 2026 Services Showcase
@@ -687,7 +669,6 @@ export default function Services2026ShowcaseEnhancedPage() {
   )
 <<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
 }
-========
 }
   )
   } catch (error) {
@@ -695,4 +676,3 @@ export default function Services2026ShowcaseEnhancedPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages_backup_conflict_1757239547/2026-services-showcase-enhanced.tsx

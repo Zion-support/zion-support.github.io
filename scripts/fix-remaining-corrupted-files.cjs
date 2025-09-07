@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -32,6 +33,9 @@
 ///usr/bin/env node
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
 // console.log(' Fixing Remaining Corrupted Files...')
@@ -40,6 +44,7 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
   'pages/docs/sdk.tsx
   'pages/enterprise.tsx
   'pages/help.tsx
+<<<<<<< HEAD
   'pages/login.tsx
     let content = 
     if (filePath === 'pages/docs/integration-examples.tsx')
@@ -66,3 +71,8 @@ content = """
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+  'pages/login.tsx,
+  let content =
+    if (filePath === 'pages/docs/integration-examples.tsx')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

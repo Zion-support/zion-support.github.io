@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';
-<<<<<<< HEAD
 import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
 
@@ -10,30 +9,16 @@ function grantPath(id: string) {
 }
 
 function readGrant(id: string): GrantApplication | null {
-<<<<<<< HEAD
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync($2);
   const p = grantPath($2);
   if (!fs.existsSync(p)) return null,
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
-=======
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-
-  const p = grantPath(id);
-  if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
-=======
-<<<<<<< HEAD
 function grantPath() { return null; }
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';'
-=======
-function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {}`
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
-<<<<<<< HEAD
 function readGrant(id: string): GrantApplication | null {}
 }
 function writeGrant(record: GrantApplication) {}
@@ -43,13 +28,8 @@ function writeGrant(record: GrantApplication) {}
 function isAuthorized(req: NextApiRequest) {}
   return (
   return path.join(GRANTS_DIR, `${id}.json`);
-=======
-function readGrant(id: string): GrantApplication | null {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs.writeFileSync(
@@ -60,7 +40,6 @@ function writeGrant(record: GrantApplication) {
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |'';
   const token = header.replace('Bearer ', '');  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 
 function writeGrant(record: GrantApplication) {
@@ -69,7 +48,6 @@ function writeGrant(record: GrantApplication) {
 }
 
 function isAuthorized(req: NextApiRequest) {
-<<<<<<< HEAD
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -84,18 +62,11 @@ function writeGrant(record: GrantApplication) {
 }
 function isAuthorized(req: NextApiRequest) {
   return (
-=======
-  const header = req.headers.authorization |''
-  const token = header.replace('Bearer ', '');
-return (
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     token &&
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)}
 function readGrant(id: string): GrantApplication | null {}
@@ -131,7 +102,6 @@ return;
     res.status(404).json({ error: 'Not found' });
 return;
   }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 const payload = req.body as StatusUpdatePayload;
   existing.status = payload.status;
   existing.updatedAt = new Date().toISOString();

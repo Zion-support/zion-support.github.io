@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -46,20 +45,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {
   },
 
   const staggerContainer = $2;
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function innovative2025servicesshowcase() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Innovative 2025 Services Showcase - Zion Tech Group</title>
         <meta name="description" content="Innovative 2025 Services Showcase solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-black text-white overflow-hidden">
         {/* Animated Background */}
@@ -331,17 +322,3 @@ export default function innovative2025servicesshowcase() {
           >
             <div className = $2;
 export default Innovative2025ServicesShowcase,
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Innovative 2025 Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional innovative 2025 services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

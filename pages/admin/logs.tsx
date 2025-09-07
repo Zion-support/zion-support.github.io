@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import fs from 'fs';
@@ -76,84 +75,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
   useEffect(() => {
     let filtered = $2;
     // Search filter
-=======
-import React, { useState, useEffect } from 'react'
-import Head from 'next/head'
-interface LogEntry {
-  id: string
-  level: 'debug' | 'info' | 'warn' | 'error' | 'critical'
-  message: string
-  category: string
-  component?: string
-  timestamp: string
-  sessionId?: string
-  userId?: string
-  error?: {
-    name: string
-    stack?: string
-  }
-  performance?: {
-    duration: number
-    memory?: number
-  }
-}
-
-const mockLogs: LogEntry[] = [
-  {
-    id: '1',
-    level: 'info',
-    message: 'User logged in successfully',
-    category: 'authentication',
-    component: 'LoginForm',
-    timestamp: '2025-01-15T10:00:00Z',
-    sessionId: 'sess_123',
-    userId: 'user_456'
-  },
-  {
-    id: '2',
-    level: 'error',
-    message: 'Failed to process payment',
-    category: 'payment',
-    component: 'PaymentProcessor',
-    timestamp: '2025-01-15T10:05:00Z',
-    sessionId: 'sess_124',
-    userId: 'user_789',
-    error: {
-      name: 'PaymentError',
-      stack: 'Error: Payment failed\n    at PaymentProcessor.process...'
-    }
-  },
-  {
-    id: '3',
-    level: 'warn',
-    message: 'High memory usage detected',
-    category: 'performance',
-    component: 'MemoryMonitor',
-    timestamp: '2025-01-15T10:10:00Z',
-    performance: {
-      duration: 1500,
-      memory: 85
-    }
-  }
-]
-const AdminLogsPage: React.FC = () => {
-  const [logs, setLogs] = useState<LogEntry[]>([])
-  const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>([])
-  const [loading, setLoading] = useState(true)
-  const [searchTerm, setSearchTerm] = useState('')
-  const [levelFilter, setLevelFilter] = useState('all')
-  const [categoryFilter, setCategoryFilter] = useState('all')
-  useEffect(() => {
-    // Simulate loading logs
-    setTimeout(() => {
-      setLogs(mockLogs)
-      setFilteredLogs(mockLogs)
-      setLoading(false)
-    }, 1000)
-  }, [])
-  useEffect(() => {
-    let filtered = [...logs]
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     if (searchTerm) {
       filtered = filtered.filter(log =>
         log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -172,7 +93,6 @@ const AdminLogsPage: React.FC = () => {
       filtered = filtered.filter(log => log.category === categoryFilter)
     }
 
-<<<<<<< HEAD
     // Source filter
     if (sourceFilter !== 'all') {
       filtered = filtered.filter(log => log.source === sourceFilter)
@@ -223,30 +143,6 @@ const AdminLogsPage: React.FC = () => {
     return parts.length > 0 ? parts.join() : null
   },
 
-=======
-    setFilteredLogs(filtered)
-  }, [logs, searchTerm, levelFilter, categoryFilter])
-  const getLevelColor = (level: string) => {
-    switch (level) {
-      case 'debug': return 'bg-blue-100 text-blue-800'
-      case 'info': return 'bg-green-100 text-green-800'
-      case 'warn': return 'bg-yellow-100 text-yellow-800'
-      case 'error': return 'bg-red-100 text-red-800'
-      case 'critical': return 'bg-red-200 text-red-900'
-      default: return 'bg-gray-100 text-gray-800'
-    }
-  }
-  const formatPerformance = (performance: LogEntry['performance']) => {
-    if (!performance) return null
-    const parts = []
-    if (performance.duration) parts.push(`${performance.duration}ms`)
-    if (performance.memory) parts.push(`${performance.memory}% memory`)
-    return parts.length > 0 ? parts.join(', ') : null
-  }
-  const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length
-  const warningCount = logs.filter(log => log.level === 'warn').length
-  const totalCount = logs.length
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -447,7 +343,6 @@ const AdminLogsPage: React.FC = () => {
               </div>
             )}
           </div>
-<<<<<<< HEAD
         </CardContent>
       </Card>
     </div>
@@ -507,11 +402,3 @@ export const getServerSideProps: GetServerSideProps = async () => {
         lastUpdated: new Date().toISOString()}}
   }
 }, 
-=======
-        </div>
-      </main>
-    </>
-  )
-}
-export default AdminLogsPage
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

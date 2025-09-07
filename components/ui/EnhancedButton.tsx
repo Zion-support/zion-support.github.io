@@ -39,10 +39,8 @@ const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;
   sm: "text-sm px-3 py-2",;
   md: "text-sm px-4 py-3",;
   lg: "text-base px-5 py-3",;
->>>>>>> origin/main
 };
 
-<<<<<<< HEAD
 const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus: outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]',
 const sizeStyles: Record<NonNullable<EnhancedButtonProps['size']>, string> = {
   sm: 'text-sm px-3 py-2',
@@ -67,27 +65,9 @@ export default function EnhancedButton({
     />
   )
 }
-=======
-import React from 'react';
-export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: 'primary' | 'secondary' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
-  fullWidth?: boolean
-};
-const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus: outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]';
-const sizeStyles: Record<NonNullable<EnhancedButtonProps['size']>, string> = {
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 pr-12243
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -105,11 +85,7 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
-<<<<<<< HEAD
 }import React from 'react';
-=======
-import React from 'react';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import clsx from 'clsx';
 export type EnhancedButtonProps = any;
 import React from "react";
@@ -238,40 +214,22 @@ export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement /
 }
 const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus: outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]'
 const sizeStyles: Record<NonNullable<EnhancedButtonProps['size']    />, string> = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 }
-<<<<<<< HEAD
 pr-12243
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
-=======
 
 
 import React from "react";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import clsx from "clsx";
 export type EnhancedButtonProps =;
   React && React.ButtonHTMLAttributes<HTMLButtonElement> & {;"
     variant?: "primary" | "secondary" | "ghost";"
     size?: "sm" | "md" | "lg";
     fullWidth?: boolean;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
 pr-12243
   };
 const baseStyles =;
@@ -279,13 +237,6 @@ const baseStyles =;
 const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;
   sm: "text-sm px-3 py-2",;
   md: "text-sm px-4 py-3",;
-=======
-const baseStyles =;"
-  "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";"
-const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;"
-  sm: "text-sm px-3 py-2",;"
-  md: "text-sm px-4 py-3",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   lg: "text-base px-5 py-3",;
 };
 const variantStyles: Record<;"
@@ -305,19 +256,9 @@ export default function EnhancedButton(): any ({;
   fullWidth,;
   ...props;
 }: EnhancedButtonProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     <button
       className={clsx(
-=======
-=======
-
-  return (
-    <button
-      className={clsx(
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import clsx from 'clsx';
 export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -327,7 +268,6 @@ export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> 
 };
 const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus: outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]';
 const sizeStyles: Record<NonNullable<EnhancedButtonProps['size']>, string> = {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   sm: 'text-sm px-3 py-2',
   md: 'text-sm px-4 py-3',
   lg: 'text-base px-5 py-3'
@@ -345,10 +285,6 @@ export default function EnhancedButton({
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   React.ButtonHTMLAttributes<HTMLButtonElement> & {;
     variant?: "primary" | "secondary" | "ghost";
     size?: "sm" | "md" | "lg";
@@ -376,83 +312,41 @@ export default function EnhancedButton({
   variant = "primary"
   size = "md"
   fullWidth
-<<<<<<< HEAD
-=======
-  React.ButtonHTMLAttributes<HTMLButtonElement    /> & {;"
-    variant?: \"primary\" | \"secondary\" | \'ghost\';"
-    size?: \"sm\" | \"md\" | \'lg\';}
-    fullWidth?: boolean;}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 import React from 'react';
 import clsx from 'clsx';
 export type EnhancedButtonProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ...props
 }: EnhancedButtonProps) {
   return (
     <button
 className={clsx(
-<<<<<<< HEAD
-<<<<<<< HEAD
 pr-12243
-=======
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         baseStyles
-=======
 
 
 
         baseStyles;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         sizeStyles[size]
         variantStyles[variant]"
         fullWidth && "w-full"
         className;
       )}
       {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-}
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 }
 
-<<<<<<< HEAD
 pr-12243
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from './react';
 export type EnhancedButtonProps =;
   React.ButtonHTMLAttributes < HTMLButtonElement> & {
@@ -470,7 +364,6 @@ const size_styles: Record < NonNullable < EnhancedButtonProps["size"]>;, string>
 }
 const variant_styles: Record<;
   NonNullable < EnhancedButtonProps["variant"]>,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 const baseStyles ="
   \"inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]\";
 "
@@ -497,13 +390,9 @@ variant = \"primary\"
   fullWidth;
 }
   ...props}
-=======
 export default function EnhancedButton ({
   className, variant = 'primary', size = 'md', fullWidth, ...props 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   ...props
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }: EnhancedButtonProps) {
   return (
     <button
@@ -522,23 +411,6 @@ className={clsx(
         className
       )}
       {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    />);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 }
 
@@ -597,16 +469,12 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     />;
 );
 }
 
-<<<<<<< HEAD
     />
   );
 ursor/fix-website-loading-errors-and-merge-6662
@@ -615,28 +483,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     />
   );
 main
 pr-12243
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 ursor/fix-website-loading-errors-and-merge-6662
     />
   );
-=======
     />;
 );
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {}
@@ -648,39 +503,16 @@ const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {}
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedButton;
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 
 
-=======
-pr-12243
-=======
-
-
-}
-
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export default EnhancedButton;
-}
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     />;
 );
 />
@@ -689,7 +521,6 @@ export default EnhancedButton;
   );
 main
 pr-12243
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     />;
 );
 }
@@ -701,23 +532,15 @@ const EnhancedButton: React.FC<EnhancedButtonProps /> = ({ className    }) => {
     <div className={className || ''} />
       <h1 />EnhancedButton</h1>
       <p />This component is under development.</p>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     </div>
-=======
     />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   );
 };
 export default EnhancedButton;
 }
 
-<<<<<<< HEAD
 
->>>>>>> origin/main
-=======
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

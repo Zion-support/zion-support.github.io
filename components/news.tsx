@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 featured: true 
 }
 {
@@ -384,10 +381,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 }</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) ) 
 }</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>) 
 }
-=======
-import React from 'react';
-  const featuredNews = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 };
 {
  featured: true 
@@ -1978,65 +1971,7 @@ author: "Prof. Maria Garcia";{/* Upcoming Events Section */}
       readTime: "7 min read",
       image: "📚"
     }
-<<<<<<< HEAD
   ];
-=======
-  ];const categories  = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];readTime: "7 min read";
-image: "📚";
-}];
-min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className=" container mx-auto px-6 py-12"> <section className=" text-center mb-16"> <h1 className=" text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Latest News </h1> > {category;
-}</button>) )}</div> <span>•</span> <span> {article.date;
-}</span> <span>•</span> <span> {article.readTime;
-}</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) )}</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) )}</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>)return (<meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />;
-  ];
-;
-  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
-;
-  return (
-        <meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />;
-        <meta property="og:title" content="News - Zion Tech Group" />;
-        <meta property="og:description" content="Latest company news, partnerships, and technology insights." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;{/* Featured Article */}
-            {newsArticles && newsArticles.filter(article => article && article.featured).map((article) => (<div key={article && article.id} className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 mb-12 border border-cyan-400/30">;
-                <div className="flex items-start gap-6">;
-                  <div className="text-6xl">{article && article.image}</div>;
-                  <div className="flex-1">;
-                    <div className="flex items-center gap-2 mb-3">;
-                      <span className="px-3 py-1 bg-cyan-400/30 text-cyan-300 text-sm rounded-full border border-cyan-400/50">;
-                        Featured;
-                      </span>;
-                      <span className="px-3 py-1 bg-white/20 text-white/80 text-sm rounded-full border border-white/30">;
-                        {article && article.category}
-                      </span>;
-                    </div>;
-                    <h2 className="text-3xl font-bold mb-4 text-white hover:text-cyan-400 transition-colors">;
-                      {article && article.title}
-                    </h2>;
-                    <p className="text-white/80 mb-4 text-lg leading-relaxed">;
-                      {article && article.excerpt}
-                    </p>;
-                    <div className="flex items-center gap-4 text-sm text-white/60 mb-4">;
-                      <span>By {article && article.author}</span>;
-                      <span>•</span>;
-                      <span>{article && article.date}</span>;
-                      <span>•</span>;
-                      <span>{article && article.readTime}</span>;
-                    </div>;
-                    <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">;
-      <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate-950 text-white">;
-        <main className="container mx - auto px-6 py-12">;
-          <section className="text-center mb-16">;
-            <h1 className="text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip-text text-transparent">;
-              Latest News;
-            </h1>;
-            <p className="text - xl text - white / 80 max-w-3xl mx-auto">;
-              Stay updated with company news, partnerships, innovations, and industry insights;
-            </p>;
-          </section>;
-          <section className="mx-auto max-w-6xl">;
-  ],
->>>>>>> origin/main
 
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
 
@@ -2168,7 +2103,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
     </>
   )
 }
-<<<<<<< HEAD
                   <input;
                     type="email";
                     placeholder="Enter your email";
@@ -2192,6 +2126,3 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       </div>;
     </>;
   )}
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

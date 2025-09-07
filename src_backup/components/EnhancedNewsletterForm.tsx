@@ -1,19 +1,5 @@
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     setIsSubmitting(true),
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/EnhancedNewsletterForm.tsx
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useState, useRef } from 'react'
@@ -21,9 +7,6 @@ import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState, useRef } from 'react';
@@ -35,32 +18,12 @@ export function EnhancedNewsletterForm() {
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [email, setEmail] = useState("");
-<<<<<<< HEAD
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
-<<<<<<< HEAD
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
-=======
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useState, useRef } from 'react';
-import { Mail } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-export function EnhancedNewsletterForm() {
-  const [email, setEmail] = useState('');
-
-main
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
-
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const lastSubmit = useRef(0);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -68,32 +31,18 @@ main
     const now = Date.now();
     if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now;
-<<<<<<< HEAD
     const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
       toast.error("Invalid email");
     const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
       toast.error("Invalid email");
-=======
-
-    const trimmed = email.trim();
-    if (!EMAIL_REGEX.test(trimmed)) {
-      toast({
-        title: 'Invalid email',
-        description: 'Please enter a valid email address.',
-        variant: 'destructive'
-      });
-
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return;
     }
 
     setIsSubmitting(true);
 
     try {
-<<<<<<< HEAD
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -131,9 +80,6 @@ main
       setIsSubmitting(false)
     }
   }
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           toast.success(data.message || "Thanks for subscribing!")
         }
         setIsSubmitted(true),;
@@ -151,24 +97,12 @@ main
     }
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   const EMAIL_REGEX = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/EnhancedNewsletterForm.tsx
-=======
 
 
 
   const EMAIL_REGEX = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -183,23 +117,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
       </div>
-<<<<<<< HEAD
-      
-=======
-
-      {isSubmitted ? (
-        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
-          <p className="text-white font-medium">Thank you for subscribing!</p>
-          <p className="text-zion-slate-light mt-1">
-            We&apos;ll keep you updated with the latest from Zion.
-          </p>
-
       
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-
-=======
 
 ;
     setIsSubmitting(true),import { Button  } from '@/components/ui/button';
@@ -243,14 +163,12 @@ export function EnhancedNewsletterForm() {const [email, setEmail]  = useState(""
           <p className="text-zion-slate-light mt-1">;
             We&apos;ll keep you updated with the latest from Zion.;
           </p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/EnhancedNewsletterForm.tsx
       <div className='mt-4 flex items-center text-xs text-zion-slate-light'>;
         <div className='flex -space-x-1 mr-2'>;
           {[...Array(3)].map((_, i) => (<div;
               key={i}
               className='h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan'>              {String && String.fromCharCode(65 + i)}
             </div>;
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
           ))}
 
             We&apos;ll keep you updated with the latest from Zion.
@@ -258,22 +176,13 @@ export function EnhancedNewsletterForm() {const [email, setEmail]  = useState(""
 
       
 
-<<<<<<< HEAD
-=======
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
-<<<<<<< HEAD
-=======
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>
       ) : (
         <form
-=======
           ))}We&apos;ll keep you updated with the latest from Zion.;
           </p>;
       {isSubmitted ? (<div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">;
@@ -281,7 +190,6 @@ main
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>;
         </div>;
       ) : (<form;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/EnhancedNewsletterForm.tsx
           onSubmit={handleSubmit}
           className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2";
         >;
@@ -320,31 +228,21 @@ main
             >;
               {" "}
               {String.fromCharCode(65 + i)}
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
             </div>
           ))}
         </div>
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
 
 
-=======
-
-
-
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             type="email"
             id="enhanced-newsletter-email"
             name="email"
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
-=======
             </div>;
           ))}</div>;
         <span>Join 10,000+ tech professionals who already subscribe</span>;
@@ -355,7 +253,6 @@ main
             name="email";
             placeholder="Enter your email";
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/EnhancedNewsletterForm.tsx
             value={email}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             autoComplete="email";
@@ -420,24 +317,14 @@ main
         <span>Join 10,000+ tech professionals who already subscribe</span>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
   );
-<<<<<<< HEAD
 }
-=======
-
-
-}
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
       {is_submitted ? (
         <div className='text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40'>;
-=======
   )}}{is_submitted ? (<div className='text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/EnhancedNewsletterForm.tsx
           <p className='text - white font - medium'>Thank you for subscribing!</p>;
           <p className='text - zion - slate - light mt - 1'>;
             We & apos;ll keep you updated with the latest from Zion.;
@@ -478,20 +365,10 @@ main
         </div>;
         <span > Join 10, 000+ tech professionals who already subscribe</span>;
       </div>;
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
     </div>);
 
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
->>>>>>> main
-<<<<<<< HEAD
-=======
-=======
-=======
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -549,7 +426,6 @@ main
           You'll receive our latest updates and exclusive content.
         </p>
         <Button
-=======
     </div>)}const res = await fetch('/api/newsletter', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ email: trimmed })})const data  = await res.json().catch(() => ({}))if (res.ok) {// Handle different success statuses;
         if (data.status === 'already_subscribed') {toast({title: 'Already subscribed',description: data.message || "You're already subscribed!";
             description: data.message || "You're already subscribed!";
@@ -572,7 +448,6 @@ main
           You'll receive our latest updates and exclusive content.;
         </p>;
         <Button;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/EnhancedNewsletterForm.tsx
           onClick={() => setIsSubmitted(false)}
           variant="outline";
           size="sm";
@@ -614,7 +489,6 @@ main
                 <span>Subscribe</span>;
               </div>;
             )}
-<<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
           </Button>
         </div>
         
@@ -629,14 +503,7 @@ main
 main
 
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/EnhancedNewsletterForm.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
           </Button>;
         </div>;
         <p className="text-xs text-gray-500 text-center">;
@@ -687,4 +554,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <span > Join 10, 000+ tech professionals who already subscribe</span>;
       </div>;
     </div>)})
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/EnhancedNewsletterForm.tsx

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { updatePipelineItemStatus } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}

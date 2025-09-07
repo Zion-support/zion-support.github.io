@@ -1,13 +1,7 @@
-<<<<<<< HEAD:temp_backup/pages/ai-autonomous-marketing-platform.tsx
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-=======
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/ai-autonomous-marketing-platform.tsx
 const AIAutonomousMarketingPlatform: React.FC = () => {
   return (
     <Layout>
@@ -80,13 +74,7 @@ const AIAutonomousMarketingPlatform: React.FC = () => {
         </div>
       </main>
     </Layout>
-<<<<<<< HEAD:temp_backup/pages/ai-autonomous-marketing-platform.tsx
   );
 };
 
 export default AIAutonomousMarketingPlatform;
-=======
-  )
-}
-export default AIAutonomousMarketingPlatform
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/ai-autonomous-marketing-platform.tsx

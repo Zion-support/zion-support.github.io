@@ -9,8 +9,6 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft } from 'lucide-react'
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
     <div className='min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4'>;
@@ -36,9 +34,6 @@ interface ProfileErrorStateProps {
 
         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">
           <ArrowLeft className="mr-2 h-4 w-4" />
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ProfileErrorStateProps {
   error: string | null
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {

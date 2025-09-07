@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 import {Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,Rocket;
   Brain;
@@ -41,8 +40,6 @@ import {Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,Rocket;
   Gamepad;
   Cpu as CpuIcon;} from 'lucide-react';import {Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Crown,Star,TrendingUp,ArrowRight,CheckCircle,DollarSign,Users,Clock,Award,Zap as ZapIcon,Search,Phone,Mail,MapPin,Heart,Leaf,Car,GraduationCap,Scale,Building,Factory,Camera,Video,Music,Gamepad2,Eye,Globe2,Satellite,Dna,Battery,Gamepad,Cpu as CpuIcon,} from 'lucide-react';import {Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;Target, Crown, Star, TrendingUp, ArrowRight;
-=======
-<<<<<<< HEAD
 const filteredServices = allServices.filter (service => {
   const matchesCategory = selectedCategory === 'all' || (selectedCategory === 'cutting-edge' && cuttingEdge2028MicroSaas.includes (service) ) || (selectedCategory === 'business' && practicalBusinessSolutions2028.includes (service) ) || (selectedCategory === 'ai-autonomous' && advancedAIAutonomousServices2028.includes (service) ) || (selectedCategory === 'quantum-space' && quantumSpaceInnovations2028.includes (service) ) || (selectedCategory === 'ai' && service.category.some (c => c.includes ('AI') || c.includes ('Machine Learning') ) ) || (selectedCategory === 'quantum' && service.category.some (c => c.includes ('Quantum') ) ) || (selectedCategory === 'enterprise' && service.category.some (c => c.includes ('Enterprise') ) )
 const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.some (c => c.toLowerCase () .includes (searchTerm.toLowerCase () ) )
@@ -217,57 +214,6 @@ space technology, and autonomous systems. Transform your business with innovatio
   contactInfo.email 
 }</span> </div> </div> </div> </motion.div> </div> </section> <UltraFuturisticFooter2029 /> </>) 
 }
-=======
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-import {
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Target
-  Crown
-  Star
-  TrendingUp
-  ArrowRight
-  CheckCircle
-  DollarSign
-  Users
-  Clock
-  Award
-  Zap as ZapIcon
-  Search
-  Phone
-  Mail
-  MapPin
-  Heart
-  Leaf
-  Car
-  GraduationCap
-  Scale
-  Building
-  Factory
-  Camera
-  Video
-  Music
-  Gamepad2
-  Eye
-  Globe2
-  Satellite
-  Dna
-  Battery
-  Gamepad
-  Cpu as CpuIcon;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-
-  Target, Crown, Star, TrendingUp, ArrowRight;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -1261,4 +1207,3 @@ href='/pricing';
     </>
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

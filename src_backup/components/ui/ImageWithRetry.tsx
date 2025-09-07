@@ -94,7 +94,6 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'>  {src: str
 }/**;
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.;
  */;
-<<<<<<< HEAD:src_backup/components/ui/ImageWithRetry.tsx
 export function ImageWithRetry(): any ({;
   src,;
   alt = '',;
@@ -214,7 +213,6 @@ export function ImageWithRetry(): any ({src,alt = '',fallbackSrc = '/images/imag
         onError={handleError}
         className={cn(className)}
         fill={fill}
-<<<<<<< HEAD:src_backup/components/ui/ImageWithRetry.tsx
       />
       {failed && (
       />;
@@ -256,7 +254,6 @@ export function ImageWithRetry(): any ({src,alt = '',fallbackSrc = '/images/imag
           Retry;
         </button>;
       )}
-<<<<<<< HEAD:src_backup/components/ui/ImageWithRetry.tsx
     </div>
   );
 export default ImageWithRetry;

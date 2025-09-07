@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ReferralStatsProps {
   stats: ReferralStatsType
   isLoading: boolean
@@ -127,9 +125,6 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
         <Card key={i}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   stats: ReferralStatsType;
   isLoading: boolean
 }

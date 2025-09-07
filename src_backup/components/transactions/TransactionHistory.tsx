@@ -137,7 +137,6 @@ if (return []) {
 
   );
 
-<<<<<<< HEAD:src_backup/components/transactions/TransactionHistory.tsx
   );
 }
 import React, { useState, useEffect } from 'react';
@@ -218,7 +217,6 @@ default: return (<Badge variant="outline" className="bg-gray-500/20 text-gray-50
 }> <XCircle className="mr-1 h-4 w-4" /> Cancel </Button>)}</CardFooter> </Card>)}) '";
 }</div>) : (<div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg" > <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4" > <ArrowRight className="h-8 w-8 text-zion-slate-light" /> <ArrowLeft className="h-8 w-8 text-zion-slate-light -ml-4" /> </div> ? `You don't have any $ {filter '";
 }transactions. Try changing the filter or make a new transaction.` : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here." ;
-<<<<<<< HEAD:src_backup/components/transactions/TransactionHistory.tsx
 }</p> </div>) ;
 }</div> </div>) ;
 }'"

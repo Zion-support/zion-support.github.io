@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 } from 'lucide-react';
-=======
-<<<<<<< HEAD
 const filteredServices = selectedCategory === 'all' ? allServices : allServices.filter (service => service.category === selectedCategory)
 const containerVariants = {
   hidden: {
@@ -112,12 +109,6 @@ return (<> <Head> <title>Cutting-Edge Pricing 2025 - Zion Tech Group | Future Te
 }
 }> <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" > Ready to Get Started? </h2> <p className="text-xl text-white/80 mb-8 leading-relaxed" > Our team of experts is ready to help you choose the perfect plan and get you started with our cutting-edge technology solutions. Contact us today for a personalized consultation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" > <a href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25" > Start Your Journey <ArrowRight className="ml-2 w-5 h-5" /> </a> <a > <Phone className="mr-2 w-5 h-5" /> Call Now </a> </div> </a> </div> <div className="flex flex-col items-center" > <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3" > <Mail className="w-6 h-6 text-cyan-400" /> </div> </a> </div> <div className="flex flex-col items-center" > <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3" > <MapPin className="w-6 h-6 text-cyan-400" /> </div> </div> </div> </motion.div> </div> </section> </Layout> </>) 
 }
-=======
-import { motion  } from 'framer-motion';
-import { Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
- } from 'lucide-react';
-import Head from 'next/head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 import { motion } from 'framer-motion';
 import {
@@ -1941,4 +1932,3 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
     </>)})}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

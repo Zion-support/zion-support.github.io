@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-<<<<<<< HEAD
 return (<> <Head> <title>Technology Insights | Zion Tech Group - Research & Innovation</title> </Head> <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white" > <main className="container mx-auto px-6 py-12" > <section className="text-center mb-16" > <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent" > Technology Insights </h1> > Read More <span className="ml-1" >→</span> </a> </div>) ) 
 }</div> </div> </li>) ) 
 }</ul> </div>) ) 
@@ -9,9 +6,6 @@ return (<> <Head> <title>Technology Insights | Zion Tech Group - Research & Inno
 }</div> </div> <div> <h3 className="text-2xl font-bold mb-4 text-cyan-400" >Cutting-Edge Research</h3> <p className="text-white/80 mb-6" > Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems
 AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art. </p> <ul className="space-y-2 text-white/70" > <li>• Advanced AI research and development</li> <li>• Autonomous system prototyping</li> <li>• Ethical AI framework development</li> <li>• Industry collaboration and partnerships</li> </ul> </div> <div className="text-center" > <div className="text-6xl mb-4" >🧪</div> <p className="text-white/60 text-sm" >Innovation Lab</p> </div> </div> </div> </div> Stay updated with the latest technology insights and research from Zion Tech Group </p> <div className="flex flex-wrap justify-center gap-4" > <Link > Get in Touch </a> <Link href="/blog" className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200" > Read Our Blog </a> </div> </div> </section> </main> </div> </>) 
 }
-=======
-import React from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import Link from 'next/link';
 export default function TechnologyInsightsPage() {
@@ -540,7 +534,6 @@ export default function TechnologyInsightsPage() {
   );
 }
 }
-<<<<<<< HEAD
     </>);
 }
   );
@@ -550,6 +543,3 @@ export default function TechnologyInsightsPage() {
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
@@ -152,9 +151,6 @@ export default function CookiePolicyPage() {;
   const savePreferences = () => {;
     // In a real implementation, this would save to localStorage and update cookie settings;
     alert('Cookie preferences saved!');
-=======
-import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Cookie, Settings, Shield, Eye, Database, AlertCircle } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
@@ -242,7 +238,6 @@ const cookieSettings = [
     description: "Used for advertising purposes",
     enabled: false,
     disabled: true
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   }
 ];
 
@@ -282,14 +277,11 @@ const rights = [
     description: "You can request information about the cookies we have stored about you."
   }
 ];
-=======
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 
 export default function cookies() {
   return (
-<<<<<<< HEAD
     <MainLayout
       title="Cookie Policy - Zion Tech Group"
       description="Learn about how Zion Tech Group uses cookies on our website. Understand what cookies we use and how you can manage your preferences."
@@ -461,8 +453,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     </UltraAdvancedFuturisticBackground>
   )
 }
-=======
-<<<<<<< HEAD
     <MainLayout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -809,23 +799,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         </section>
       </div>
     </MainLayout>
-=======
-    <Layout>
-      <Head>
-        <title>Cookies - Zion Tech Group</title>
-        <meta name="description" content="Cookies solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cookies</h1>
-          <p className="text-lg text-gray-600">
-            Professional cookies solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

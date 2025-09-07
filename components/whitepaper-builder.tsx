@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
-=======
-<<<<<<< HEAD
 </div> <div className="flex flex-wrap gap-3 items-center" > <label className="font-medium" >Edition</label> <select > <option value="full" >Full</option> <option value="investor" >Investor</option> <option value="developer" >Developer</option> </select> Download PDF </a> </a> </div> </section>) ) 
 }</div> </div>) 
 }
-=======
-import { getWhitepaperSections, OPERATOR_PROMPT  } from '../utils/whitepaper/zionWhitepaper';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {
 
@@ -159,7 +153,6 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;
         </Link>
       </div>
 
-<<<<<<< HEAD
       <div className="rounded border p-4 bg-gray-50 dark:bg-gray-900">
         <h2 className="text-xl font-semibold mb-2">Operator Prompt</h2>
         <pre className="whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-200">{OPERATOR_PROMPT}</pre>
@@ -203,6 +196,3 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;
     </div>))}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

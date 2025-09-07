@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-<<<<<<< HEAD
 //Search filter if (searchQuery) {
   filteredServices = filteredServices.filter (service => service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.category.toLowerCase () .includes (searchQuery.toLowerCase () ) //Sort services filteredServices.sort ( (a, b) => {
   switch (sortBy) {
@@ -126,96 +123,6 @@ visible: {
 }</div> </div> </div> </div> </div> </div> <div className=" flex gap-4"> <Button > Visit Service <ExternalLink className=" ml-2 w-4 h-4"/> </Button> <Button ml-2 w-4 h-4" /> </Button> </div> </div> </div> </div> </motion.div> </motion.div>) 
 }</AnimatePresence> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the Future? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already transforming their business with our revolutionary micro SaaS services. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Button ml-2 w-5 h-5"/> </Button> <Button ml-2 w-5 h-5" /> </Button> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center" > <div> </div> </div> </motion.div> </div> </section> </div> </UltraFuturisticBackground>) 
 }
-=======
-class ErrorBoundary extends React.Component {}
-  constructor($2) {}
-    super(props)
-    this.state = { hasError: false ;}
-  render($2) {}
-  if($2) {}
-      return <div>Something went wrong.</div>
-    return this.props.children
-import React, { useState } from 'react'
-  Check
-  Star
-  Zap
-  Shield
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Clock
-  Target
-  Building
-  Rocket
-  Award
-  DollarSign
-  ChartBar
-  Lock
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Zap as ZapIcon
-  Code
-  BookOpen
-  Activity
-  Database as DatabaseIcon
-  Play
-  Mail
-  Phone
-  MapPin
-  Filter
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  Sparkles
-  FlaskConical
-  Dna
-  Car
-  Leaf
-  Factory
-  Truck
-  Microscope
-  GraduationCap
-  ShieldCheck
-  Brain
-  Atom
-  Globe2
-  Bot
-  Eye
-  Trophy
-  FlaskConical as FlaskIcon
-  Dna as DnaIcon
-  Car as CarIcon
-  Leaf as LeafIcon
-  Factory as FactoryIcon
-  Truck as TruckIcon
-  Microscope as MicroscopeIcon
-  GraduationCap as GraduationCapIcon
-  ShieldCheck as ShieldCheckIcon;
-} from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import {
-  revolutionaryMicroSaasServices
-  revolutionaryServiceCategories
-  getRevolutionaryServicesByCategory
-  getPopularRevolutionaryServices
-  getRevolutionaryServicesByPriceRange;
-} from '../data/revolutionary-micro-saas-services';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 
 import Head from 'next/head';
@@ -2391,4 +2298,3 @@ className='text-gray-400 hover:text-white text-2xl';
     </UltraFuturisticBackground>))}))
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

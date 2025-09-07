@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -14,6 +15,9 @@
 ///usr/bin/env node
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
 // console.log(' Ultimate Syntax Fixer...')
@@ -34,6 +38,7 @@ const filesToFix = ['pages/api/health.ts']
     content = content.replace(/\{"([^"]*?)\"\s*"\}/g, '{"$1"}
     content = content.replace(/"([^"]*?)"\s*"([^"]*?)"/g, '"$1$2"
     content = content.replace(/(\w+):\s*'([^']*?)',\s*(\w+):\s*'([^']*?)'/g, '$"1": \'$2\',\n    $"3"
+<<<<<<< HEAD
     content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
 
 
@@ -49,3 +54,6 @@ const filesToFix = ['pages/api/health.ts']
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+    content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

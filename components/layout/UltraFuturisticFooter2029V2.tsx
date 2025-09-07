@@ -1,23 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, ArrowRight;
   Brain, Rocket, Target, Shield, Cpu;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Facebook, Twitter, Linkedin, Instagram, Youtube;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 import {
   Phone,
@@ -133,7 +121,6 @@ import {Phone;
   MessageSquare, Calendar;
   GraduationCap, ShieldCheck, Eye, Code, Wrench;
   Smartphone, BarChart3, Palette, Camera, Video;
-<<<<<<< HEAD
   Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind;},{name: 'Smart Supply Chain',href: '/services / smart - supply - chain - optimization',Droplets, Mountain, Globe2, Bot, Crown, Infinity;
  } from 'lucide-react';
 const contactInfo = null;
@@ -282,36 +269,20 @@ const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
 },
 
 const serviceCategories = $2;
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
-=======
-}
-<<<<<<< HEAD
-=======
-
-  Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind;
-      },
-<<<<<<< HEAD
       {'
         name: 'Smart Supply Chain','
         href: '/services / smart - supply - chain - optimization',
-=======
-      {
-        name: 'Smart Supply Chain';,
-        href: '/services / smart - supply - chain - optimization';,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Droplets, Mountain, Globe2, Bot, Crown, Infinity
 
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
  } from 'lucide-react';
 
 const contactInfo = null;
-<<<<<<< HEAD
 {
   name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform'
 }
@@ -444,157 +415,13 @@ const footerSections = [ {
   name: 'Research', href: '/research'
 }]
 }];
-<<<<<<< HEAD
 
-=======
-const serviceCategories = [ {
-  title: 'AI & Consciousness', icon: Brain, color: 'from-violet-600 via-purple-600 to-indigo-600', services: [ {
-  name: 'AI Consciousness Evolution', href: '/services/ai-consciousness-evolution-platform' 
-}
-{
-  name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform' 
-}
-{
-  name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator' 
-}
-{
-  name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager' 
-}] 
-}
-{
-  title: 'Quantum Technology', icon: Globe, color: 'from-indigo-600 via-blue-600 to-cyan-600', services: [ {
-  name: 'Quantum Internet Security', href: '/services/quantum-internet-security-gateway' 
-}
-{
-  name: 'Biotech DNA Computing', href: '/services/biotech-dna-computing-platform' 
-}
-{
-  name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform' 
-}
-{
-  name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio' 
-}] 
-}
-{
-  title: 'Space & Metaverse', icon: Rocket, color: 'from-teal-600 via-emerald-600 to-green-600', services: [ {
-  name: 'Space Mining Automation', href: '/services/space-mining-automation-platform' 
-}
-{
-  name: 'Metaverse Digital Reality', href: '/services/metaverse-digital-reality-platform' 
-}
-{
-  name: 'AI Predictive Health', href: '/services/ai-predictive-health-analytics' 
-}
-{
-  name: 'Virtual Event Holograms', href: '/services/virtual-event-hologram-platform' 
-}] 
-}
-{
-  title: 'Enterprise IT', icon: Cpu, color: 'from-blue-600 via-cyan-600 to-teal-600', services: [ {
-  name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-suite' 
-}
-{
-  name: 'Smart Supply Chain', href: '/services/smart-supply-chain-optimization' 
-}
-{
-  name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system' 
-}
-{
-  name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' 
-}] 
-}]
-const footerSections = [ {
-  title: 'Services', links: [ {
-  name: 'AI & Machine Learning', href: '/services/ai-ml' 
-}
-{
-  name: 'Quantum Computing', href: '/services/quantum-computing' 
-}
-{
-  name: 'Space Technology', href: '/services/space-technology' 
-}
-{
-  name: 'Enterprise IT', href: '/services/enterprise-it' 
-}
-{
-  name: 'Micro SAAS', href: '/services/micro-saas' 
-}
-{
-  name: 'Cybersecurity', href: '/services/cybersecurity' 
-}] 
-}
-{
-  title: 'Solutions', links: [ {
-  name: 'AI Consciousness', href: '/solutions/ai-consciousness' 
-}
-{
-  name: 'Quantum Security', href: '/solutions/quantum-security' 
-}
-{
-  name: 'Space Mining', href: '/solutions/space-mining' 
-}
-{
-  name: 'Metaverse Platform', href: '/solutions/metaverse' 
-}
-{
-  name: 'Business Intelligence', href: '/solutions/business-intelligence' 
-}
-{
-  name: 'Supply Chain AI', href: '/solutions/supply-chain-ai' 
-}] 
-}
-{
-  title: 'Industries', links: [ {
-  name: 'Healthcare', href: '/industries/healthcare' 
-}
-{
-  name: 'Finance', href: '/industries/finance' 
-}
-{
-  name: 'Manufacturing', href: '/industries/manufacturing' 
-}
-{
-  name: 'Retail', href: '/industries/retail' 
-}
-{
-  name: 'Education', href: '/industries/education' 
-}
-{
-  name: 'Government', href: '/industries/government' 
-}] 
-}
-{
-  title: 'Resources', links: [ {
-  name: 'Documentation', href: '/docs' 
-}
-{
-  name: 'API Reference', href: '/api' 
-}
-{
-  name: 'Case Studies', href: '/case-studies' 
-}
-{
-  name: 'White Papers', href: '/white-papers' 
-}
-{
-  name: 'Blog', href: '/blog' 
-}
-{
-  name: 'Research', href: '/research' 
-}] 
-}]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 <motion.div initial= {
   {
     title: 'AI & Consciousness',
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
-<<<<<<< HEAD
   services: [
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 {
   name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform'
 }
@@ -733,7 +560,6 @@ const serviceCategories = [
     title: 'AI & Consciousness'
     icon: Brain
     color: 'from-violet-600 via-purple-600 to-indigo-600'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     services: [
       { name: 'AI Consciousness Evolution', href: '/services/ai-consciousness-evolution-platform' },
       { name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform' },
@@ -778,7 +604,6 @@ const serviceCategories = [
 ];
 ;
 const company = [;
-=======
     services: [
 {
         name: 'AI Consciousness Evolution',
@@ -945,7 +770,6 @@ const company = [;'
   { name: 'Investors', href: '/investors', icon: Star },'
   { name: 'Press', href: '/press', icon: BookOpen },'
   { name: 'Legal', href: '/legal', icon: Shield },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Our Team', href: '/team', icon: Users },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
@@ -953,7 +777,6 @@ const company = [;'
   { name: 'Investors', href: '/investors', icon: Star },
   { name: 'Press', href: '/press', icon: BookOpen },
   { name: 'Legal', href: '/legal', icon: Shield },
-<<<<<<< HEAD
 
 const footerSections = [
   {
@@ -1022,66 +845,7 @@ const footerSections = $2;
       { name: 'Enterprise IT', href: '/services/enterprise-it' },
       { name: 'Micro SAAS', href: '/services/micro-saas' },
       { name: 'Cybersecurity', href: '/services/cybersecurity' }
-=======
-{ name: 'Privacy', href: '/privacy', icon: ShieldCheck },
-];
-
-const socialLinks = [
-  {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com/company/ziontechgroup',
-    icon: Linkedin,
-    color: 'hover:text-blue-500',
-  },
-  {
-    name: 'Twitter',
-    href: 'https://twitter.com/ziontechgroup',
-    icon: Twitter,
-    color: 'hover:text-blue-400',
-  },
-  {
-    name: 'Facebook',
-    href: 'https://facebook.com/ziontechgroup',
-    icon: Facebook,
-    color: 'hover:text-blue-600',
-  },
-  {
-    name: 'Instagram',
-    href: 'https://instagram.com/ziontechgroup',
-    icon: Instagram,
-    color: 'hover:text-pink-500',
-  },
-  {
-    name: 'YouTube',
-    href: 'https://youtube.com/@ziontechgroup',
-    icon: Youtube,
-    color: 'hover:text-red-500',
-  },
-  {
-    name: 'GitHub',
-    href: 'https://github.com/Zion-Holdings',
-    icon: Github,
-    color: 'hover:text-gray-400',
-  },
-];
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-const footerSections = []
-  {'
-    title: 'Services'
-    links: []
-    links: ['
-      { name: 'Healthcare', href: '/industries/healthcare' }'
-      { name: 'Finance', href: '/industries/finance' }'
-      { name: 'Manufacturing', href: '/industries/manufacturing' }'
-      { name: 'Retail', href: '/industries/retail' }'
-      { name: 'Education', href: '/industries/education' }'
-      { name: 'Government', href: '/industries/government' }
-    ]'
-  },  {      { name: 'Government', href: '/industries/government' }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ]
-<<<<<<< HEAD
   }
       { name: 'AI & Machine Learning', href: '/services/ai-ml' },
       { name: 'Quantum Computing', href: '/services/quantum-computing' },
@@ -1120,24 +884,17 @@ const footerSections = []
 
     ]
   },  {      { name: 'Government', href: '/industries/government' }
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       { name: 'AI Consciousness', href: '/solutions/ai-consciousness' },
       { name: 'Quantum Security', href: '/solutions/quantum-security' },
       { name: 'Space Mining', href: '/solutions/space-mining' },
       { name: 'Metaverse Platform', href: '/solutions/metaverse' },
-<<<<<<< HEAD
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 {
         name: 'Business Intelligence',
         href: '/solutions/business-intelligence',
       },
       { name: 'Supply Chain AI', href: '/solutions/supply-chain-ai' },
     ],
-<<<<<<< HEAD
   },
   {
     title: 'Industries',
@@ -1169,20 +926,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       { name: 'Business Intelligence', href: '/solutions/business-intelligence' },
       { name: 'Supply Chain AI', href: '/solutions/supply-chain-ai' }
     ]
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }'
       { name: 'AI Consciousness', href: '/solutions/ai-consciousness' },'
       { name: 'Quantum Security', href: '/solutions/quantum-security' },'
       { name: 'Space Mining', href: '/solutions/space-mining' },'
       { name: 'Metaverse Platform', href: '/solutions/metaverse' },'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     title: 'Industries',
-<<<<<<< HEAD
     links: [
       { name: 'Healthcare', href: '/industries/healthcare' },
       { name: 'Finance', href: '/industries/finance' },
@@ -1190,26 +942,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       { name: 'Retail', href: '/industries/retail' },
       { name: 'Education', href: '/industries/education' },
       { name: 'Government', href: '/industries/government' }
-=======
-    links: ['
-      { name: 'Healthcare', href: '/industries/healthcare' },'
-      { name: 'Finance', href: '/industries/finance' },'
-      { name: 'Manufacturing', href: '/industries/manufacturing' },'
-      { name: 'Retail', href: '/industries/retail' },'
-      { name: 'Education', href: '/industries/education' },
-  }
-  {'
-    title: 'Resources',
-    links: [;'
-      { name: 'Documentation', href: '/docs' },'
-      { name: 'API Reference', href: '/api' },'
-      { name: 'Case Studies', href: '/case - studies' },'
-      { name: 'White Papers', href: '/white - papers' },'
-      { name: 'Blog', href: '/blog' },
-  return ('
-    <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>;'
-      { name: 'Research', href: '/research' }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ]
   }, ];
 ;
@@ -1219,7 +951,6 @@ export default /**;
 function UltraFuturisticFooter2029V2() {}
   },];
 
-<<<<<<< HEAD
 { name: 'Government', href: '/industries/government' },
     ],
   },
@@ -1231,7 +962,6 @@ function UltraFuturisticFooter2029V2() {}
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'White Papers', href: '/white-papers' },
       { name: 'Blog', href: '/blog' },
-<<<<<<< HEAD
   }
 ];
 export default function UltraFuturisticFooter2029V2() {
@@ -1251,19 +981,11 @@ export default function UltraFuturisticFooter2029V2() {
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12">
           {/* Company Info */}
 
-=======
-{ name: 'Research', href: '/research' },
-    ],
-  },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ];
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export default function UltraFuturisticFooter2029V2() {
   return (
-<<<<<<< HEAD
 
             <motion.div
 
@@ -1354,36 +1076,19 @@ function UltraFuturisticFooter2029V2() {return (<div className="absolute inset-0
                   <span className="text-sm">{contactInfo.website}</span>;
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
             >;
 <Link href='/' className='flex items-center space-x-3 mb-6 group'>;
                 <div className='relative'>;
                   <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
-=======
-<footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-<footer className = 'relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20' />
-export default function UltraFuturisticFooter2029V2() {
- ;
-  return (
-<<<<<<< HEAD
     <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20'>      { name: 'Research', href: '/research' }
-=======
-export default function UltraFuturisticFooter2029V2() {}
-  return ('
-    <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20'>      { name: 'Research', href: '/research' };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20' />      { name: 'Research';}
   href: '/research';}
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
   }
 ];
 export default function UltraFuturisticFooter2029V2() {
   return (
-<<<<<<< HEAD
 
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
@@ -1393,17 +1098,10 @@ export default function UltraFuturisticFooter2029V2() {
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 
-<<<<<<< HEAD
-=======
-;
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-=======
               initial={{ opacity: 0;, y: 20 ;}}
               whileInView={{ opacity: 1;, y: 0 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
               <Link href="/" className="flex items-center space-x-3 mb-6 group">"
                 <div className="relative">"
@@ -1447,13 +1145,8 @@ function UltraFuturisticFooter2029V2() {}
                 <div className="flex items-center space-x-3 text-gray-300">"
                   <Globe className="w-4 h-4 text-cyan-400" />"
                   <span className="text-sm">{contactInfo.website}</span>
-<<<<<<< HEAD
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-=======
-              transition={{ duration: 0.6 ;}}
-              viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
 <Link href='/' className='flex items-center space-x-3 mb-6 group'>
                 <div className='relative'>
@@ -1498,71 +1191,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
               viewport={{ once: true }}>;'
               <Link href='/' className='flex items-center space-x-3 mb-6 group'>;'
                 <div className='relative'>;'
                   <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;'
-=======
-              viewport={{ once: true ;}}>;
-              <Link href='/' className='flex items-center space-x-3 mb-6 group'>;
-                <div className='relative'>;
-                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
-    <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20' />}
-}
-      {/* Main Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16' />
-        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12' />
-          {/* Company Info *}
-}
-          <div className='lg:col-span-2 xl:col-span-1' />
-            <motion.div;
-initial={{ opacity: 0;, y: 20 ;}
-}
-              whileInView={{ opacity: 1;, y: 0 ;}}
-
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }
-}
-             />;
-<Link href='/' className='flex items-center space-x-3 mb-6 group' />;
-                <div className='relative' />;
-                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300' />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     <Rocket className='w-7 h-7 text-white' />;
                   </div>;'
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' />;
                 </div>;
-<<<<<<< HEAD
                 <div>;
                   <h3 className='text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                     Zion Tech Group;
                   </h3>;
                   <p className='text-sm text-gray-400'>;
-=======
-<<<<<<< HEAD
                 <div>;'
                   <h3 className='text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                     Zion Tech Group;
                   </h3>;'
                   <p className='text-sm text-gray-400'>;
-=======
-                <div />;
-                  <h3 className='text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' />;
-                    Zion Tech Group;
-                  </h3>;
-                  <p className='text-sm text-gray-400' />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     Future Technology Solutions;
                   </p>;
                 </div>;
               </Link>;
-<<<<<<< HEAD
               <p className='text-gray-300 mb-6 leading-relaxed'>;
-=======
-<<<<<<< HEAD
 '
               <p className='text-gray-300 mb-6 leading-relaxed'>;
                 Leading the future with cutting-edge AI, quantum computing,;
@@ -1625,9 +1276,6 @@ initial={{ opacity: 0;, y: 20 ;}
           {/* Service Categories */}
           {footerSections && footerSections.map((section, index) => (;
             <motion&& motion.div;
-=======
-              <p className='text-gray-300 mb-6 leading-relaxed' />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 Leading the future with cutting-edge AI, quantum computing;
                 space technology, and innovative micro SAAS solutions.;
                 Transforming businesses through next-generation technology.;
@@ -1678,7 +1326,6 @@ initial={{ opacity: 0;, y: 20 ;}
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Globe className="w-4 h-4 text-cyan-400" />
                   <span className="text-sm">{contactInfo.website}</span>
-=======
             >
 <Link href='/' className='flex items-center space-x-3 mb-6 group'>
                 <div className='relative'>
@@ -1719,13 +1366,10 @@ initial={{ opacity: 0;, y: 20 ;}
                   <Globe className='w-4 h-4 text-cyan-400' />
                   <span className='text-sm'>{contactInfo.website}</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 </div>
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='space-y-3'>;
                 <div className='flex items-center space-x-3 text-gray-300'>;
                   <Phone className='w-4 h-4 text-cyan-400' />;
@@ -1750,14 +1394,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link href='/' className='flex items-center space-x-3 mb-6 group'>;
                 <div className='relative'>;
                   <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
-=======
-
-              viewport={{ once: true ;}
-}>;
-              <Link href='/' className='flex items-center space-x-3 mb-6 group' />;
-                <div className='relative' />;
-                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300' />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     <Rocket className='w-7 h-7 text-white' />;
                   </div>;
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' />;
@@ -1825,7 +1461,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </motion && motion.div>;
           </div>;{/* Service Categories */}
-<<<<<<< HEAD
           {footerSections && footerSections.map((section, index) => (<motion&& motion.div;
               key={section && section.title}
               initial={{ opacity: 0, y: 20 }}
@@ -1837,9 +1472,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true }}
             >;
 <h4 className='text-lg font-semibold text-white mb-6 flex items-center'>;
-=======
-          {footerSections && footerSections.map((section, index) => (<motion&& motion.div;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               key={section && section.title}
               initial={{ opacity: 0;, y: 20 ;}}
               whileInView={{ opacity: 1;, y: 0 ;}}
@@ -1855,11 +1487,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
              />;
 <h4 className='text-lg font-semibold text-white mb-6 flex items-center' />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mr-3' />;
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           {/* Service Categories */}
           {footerSections.map((section, index) => (
             <motion.div
@@ -1888,16 +1517,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </li>;
                     </Link>
                   </li>
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 ))}
               </ul>
             </motion.div>
           ))}
-<<<<<<< HEAD
           viewport={{ once: true }}
 
         >
@@ -1965,22 +1588,10 @@ className='group';
                 <div;
                   className={`p-4 rounded-xl bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>;
                   <div className='flex items-center space-x-3 mb-3'>;
-=======
-        {/* Service Showcase */}
-        <motion&& motion.div;
-<<<<<<< HEAD
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
-=======
-          initial={{ opacity: 0;, y: 20 ;}
-}
-          whileInView={{ opacity: 1;, y: 0 ;}
-}
-          transition={{ duration: 0 && 0.6;, delay: 0 && 0.3 ;}}
-          viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         >"
           <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -1996,29 +1607,15 @@ className='group';
         </div>;
         {/* Service Showcase */}
         <motion.div;
-<<<<<<< HEAD
           initial={{ opacity: 0, coordinate_y: 20 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}'
-=======
-          initial={{ opacity: 0;, coordinate_y: 20 ;}}
-          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
-          transition={{ duration: 0.6;, delay: 0.3 ;}}
-          viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           className='mt - 16 pt - 12 border - t border - gray - 800';
         >;'
           <h3 className='text - 2xl font - bold text - white text - center mb - 8'>;
             Featured 2029 Services;
           </h3>;
-<<<<<<< HEAD
-=======
-
-          viewport={{ once: true ;}
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='mt-16 pt-12 border-t border-gray-800'
          />
           <h3 className='text-2xl font-bold text-white text-center mb-8' />
@@ -2039,7 +1636,6 @@ key={category.title}
 className='group'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-<<<<<<< HEAD
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}'
@@ -2051,22 +1647,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className={`p-2 rounded-lg bg-gradient-to-r ${category && category.color}`}>;'
                       <category && category.icon className='w-5 h-5 text-white' />;
                           href={service.href}"
-=======
-                whileInView={{ opacity: 1;, scale: 1 ;}}
-               />
-
-                whileInView={{ opacity: 1;, scale: 1 ;}
-}
-                transition={{ duration: 0 && 0.5;, delay: index * 0 && 0.1 ;}}
-                viewport={{ once: true ;}
-}
-                className='group'>;
-                <div;
-                  className={`p-4 rounded-xl bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-cyan-500/20 hover: border-cyan-500/40 transition-all duration-300;
-} />
-
-                  <div className='flex items-center space-x-3 mb-3' />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     <div;
                       className={`p-2 rounded-lg bg-gradient-to-r ${category && category.color}`}>;
                       <category && category.icon className='w-5 h-5 text-white' />;
@@ -2074,12 +1654,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         >;className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block';
                         >;
                           href={service.href}
-<<<<<<< HEAD
                           className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block";
                         >;
                           {service.name}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block";
                         >;
                           className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block'
@@ -2092,7 +1669,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                           {service.nam}
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </div>;
         </motion && motion.div>;
       </div>;))}
@@ -2100,7 +1676,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
       {/* Bottom Footer */}<div className='border-t border-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>            {/* Copyright */}      <div className="border-t border-gray-800">;
@@ -2120,67 +1695,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-=======
-<<<<<<< HEAD
       {/* Bottom Footer */}'
       <div className='border-t border-gray-800'>;'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;'"
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>            {/* Copyright */}      <div className="border-t border-gray-800">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;"
-=======
-
-      {/* Bottom Footer */}
-      <div className='border-t border-gray-800'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
-          <div className='flex flex-col md: flex-row justify-between items-center space-y-4 md:space-y-0'>            {/* Copyright */;}      <div className="border-t border-gray-800">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
 <div className='border-t border-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Copyright */}
-<<<<<<< HEAD
             <motion&& motion.div;
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-            <motion&& motion.div
-              initial={{ opacity: 0;, x: -20 ;}}
-              whileInView={{ opacity: 1;, x: 0 ;}}
-              transition={{ duration: 0 && 0.6 ;}}
-              viewport={{ once: true ;}}
-
-<div className='border-t border-gray-800' />
-        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8' />
-          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0' />
-
-            {/* Copyright *}
-}
-            <motion&& motion.div;
-              initial={{ opacity: 0;, x: -20 ;}
-}
-              whileInView={{ opacity: 1;, x: 0 ;}}
-              transition={{ duration: 0 && 0.6 ;}}
-
-              viewport={{ once: true ;}
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='text-gray-400 text-sm'
              />
               © 2025 Zion Tech Group. All rights reserved.
 origin/cursor/automate-test-improve-and-merge-code-2533
               <Link
                 href='/privacy'
-=======
               <Link'
                 href='/privacy''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'>;
                 Privacy Policy;'
               </Link>{' '}
@@ -2203,19 +1741,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Social Links */}
-<<<<<<< HEAD
             <motion&& motion.div;
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-=======
-            <motion&& motion.div
-              initial={{ opacity: 0;, x: 20 ;}}
-              whileInView={{ opacity: 1;, x: 0 ;}}
-              transition={{ duration: 0 && 0.6 ;}}
-              viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 className='flex items-center space-x-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -2226,11 +1756,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href={social && social.href}'
                   target='_blank''
                   rel='noopener noreferrer'
-<<<<<<< HEAD
                 <Link;
-=======
-                <Link
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   key={social && social.name}
                   href={social && social.href}"
                   target="_blank""
@@ -2242,28 +1768,8 @@ href='/privacy'
                 Privacy Policy;
               </Link>{' '}
 
-<<<<<<< HEAD
                   className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}
                 >
-=======
-              <Link;
-href='/terms'
-                className='hover: text-cyan-400 transition-colors duration-300 ml-2'
-               />
-                Terms of Service;
-              </Link>
-            </motion.div>
-
-            {/* Social Links *}
-}
-            <motion&& motion.div;
-              initial={{ opacity: 0;, x: 20 ;}
-}
-              whileInView={{ opacity: 1;, x: 0 ;}}
-              transition={{ duration: 0 && 0.6 ;}}
-
-              viewport={{ once: true ;}}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 className='text-gray-400 text-sm'
             >
@@ -2372,14 +1878,8 @@ className='text-gray-400 text-sm'
                   rel="noopener noreferrer"
                   <social.icon className='w-4 h-4' />                </Link>
 
-<<<<<<< HEAD
-=======
-                  className={`p-2 rounded-lg bg-gray-800/50 hover: bg-cyan-500/20 text-gray-400 ${social.color;} transition-all duration-300 hover: scale-110`;}
-                 />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <social.icon className='w-4 h-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </Link>
 
               )
@@ -2394,16 +1894,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;))}
       {/* Newsletter Signup */}
       <motion&& motion.div;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
         viewport={{ once: true }}
 
-<<<<<<< HEAD
                   key={social.name}
                   href={social.href}
                   target="_blank"
@@ -2417,29 +1912,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
-=======
-<<<<<<< HEAD
-=======
-        initial={{ opacity: 0;, y: 20 ;}
-}
-        whileInView={{ opacity: 1;, y: 0 ;}
-}
-        transition={{ duration: 0 && 0.6;, delay: 0 && 0.4 ;}}
-        viewport={{ once: true ;}}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='text-center'>
-=======
       >'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>'
           <div className='text-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h3 className='text-2xl font-bold text-white mb-4'>
-<<<<<<< HEAD
               Stay Ahead with Future Tech;
             </h3>'
             <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
@@ -2455,12 +1936,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <input"
                 type="email""
                 placeholder="Enter your email""
-=======
-              Stay Ahead with Future Tech
-
-        viewport={{ once: true ;}
-}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       {/* Newsletter Signup */}
       <motion.div
@@ -2478,7 +1953,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Get the latest updates on AI breakthroughs, quantum computing advances, space technology innovations, and cutting-edge micro SAAS solutions.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
@@ -2487,38 +1961,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               />
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 Subscribe
-=======
-            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto' />
-              <input;
-type='email'
-                placeholder='Enter your email'
-                className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'
-              <input
-                type="email"
-                placeholder="Enter your email"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
               />"
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               />
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Subscribe
-<<<<<<< HEAD
-=======
-                Subscribe;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
               />
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105' />
                 Subscribe;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </button>
             </div>
           </div>
@@ -2566,7 +2019,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </motion.div>;
-<<<<<<< HEAD
     </footer>);
                 Subscribe;
               </button>
@@ -2574,24 +2026,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </motion.div>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 }
-<<<<<<< HEAD
     </footer>;
   )})}</footer>;
   )}}
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     </footer>
   );
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   );
 
 }

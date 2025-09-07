@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 
 
 
 
 
 
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 ursor/fix-website-loading-errors-and-merge-6662
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -13,7 +11,6 @@ import { store } from "../../../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
 
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 
   }
   const company = store && store.getCompanyById(companyId);
@@ -21,7 +18,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   return res && res.status(200).json(company && company.activity);
 }
 
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
@@ -42,7 +38,6 @@ if ( {) {
 }
   return res.status (200).json (company.activity);
 }
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -53,7 +48,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
   const company = store.getCompanyById(companyId);
 
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   } catch (error) {
@@ -69,7 +63,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 ursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -82,15 +75,3 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

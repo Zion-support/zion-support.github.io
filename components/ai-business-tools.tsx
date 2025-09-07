@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-=======
-<<<<<<< HEAD
 export default function AIBusinessToolsPage () {
   const aiTools = [ {
   const filteredTools = selectedCategory === 'All' ? aiTools : aiTools.filter (tool => tool.category === selectedCategory)
@@ -24,10 +21,6 @@ return (<> <Head> <title>AI Business Tools - Zion Tech Group</title> <meta name=
 }</div> </div> </div> <div className="flex items-center justify-between" > <Button > Visit Website <ExternalLink className="w-4 h-4 ml-2" /> </Button> </div> </div> </div> </div> </Card>) ) 
 }</div> </div> </section> Why Choose AI Tools? </h2> <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" > AI-powered tools are revolutionizing how businesses operate, create content, and serve customers. </p> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600" > <Zap className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >10x Productivity</h3> <p className="text-gray-400" > AI tools can automate repetitive tasks, generate content, and provide insights that would take humans hours or days to complete. </p> </Card> <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600" > <TrendingUp className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Data-Driven Decisions</h3> <p className="text-gray-400" > AI analytics provide deep insights into customer behavior, market trends, and business performance for better decision-making. </p> </Card> <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600" > <Users className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Enhanced Customer Experience</h3> <p className="text-gray-400" > AI-powered chatbots, personalization, and automation create seamless, personalized experiences for your customers. </p> </Card> </div> </div> </section> Ready to Transform Your Business with AI? </h2> <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed" > Our AI experts can help you identify the right tools, implement them effectively, and maximize their impact on your business. </p> <Button href="/contact" variant="secondary" size="lg" className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl" > Get AI Strategy Session <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/saas-marketplace" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl" > Explore More Tools </Button> </div> </div> </section> </>) 
 }
-=======
-import React from 'react',
-import Head from 'next/head',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {import Head from 'next / head';
@@ -1206,12 +1199,8 @@ function AIBusinessToolsPage() {const ai_tools = [;
   );
 }
 }
-<<<<<<< HEAD
     </>);
 }
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

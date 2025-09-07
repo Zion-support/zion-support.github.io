@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/components/ProductCard.tsx
 import Link from 'next/link';
 import { Heart } from 'lucide-react'
 import { useWishlist } from '@/hooks/useWishlist';
@@ -22,8 +21,6 @@ import { toast } from '@/hooks/use-toast';
 import { captureException } from '@/utils/sentry';
 interface ProductCardProps {
   product: Product,
-=======
-<<<<<<< HEAD
 
 ;
 const stockStatus =;
@@ -32,13 +29,6 @@ const stockStatus =;
     product && product.stock === undefined;
   const productTitle  = product && product.title;const imageUrl = Array && Array.isArray(product && product.images) && product && product.images.length > 0 ? product && product.images[0] : null;
   const imageAltText  = productTitle;const isMobile = useMediaQuery('(max-width: 768px)'),const isTablet  = useMediaQuery('(max-width: 1200px)'),const imageSizes  = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';)}product.stock === undefined;
-=======
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
-
-  );
-}
-    product.stock === undefined;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       ? 'success';
       : product.stock <= 0;
       ? 'destructive';
@@ -143,7 +133,6 @@ const stockStatus =;
         )}
       </div>;
     </div>;
-<<<<<<< HEAD
   )})}const stock_status =;
     product.stock === undefined;
       : 'In stock';
@@ -158,24 +147,12 @@ import { Heart  } from 'lucide-react';
 import { useWishlist   } from '@/hooks/useWishlist';
 import { Button   } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
-=======
-  );
-}
-;
-
-import Link from 'next/link';
-import { Heart } from 'lucide-react'
-import { useWishlist  } from '@/hooks/useWishlist';
-import { Button  } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { Tooltip;
   TooltipContent;
   TooltipProvider;
   TooltipTrigger  } from '@/components/ui/tooltip';
 import { useDispatch   } from 'react-redux';
 import type { AppDispatch } from '@/store';
-<<<<<<< HEAD
 import { addItem   } from '@/store/cartSlice';
 import Image from 'next/image',import React, { useState, useEffect } from 'react';
 import { useAuth   } from '@/context/auth/AuthProvider';
@@ -199,26 +176,12 @@ interface ProductCardProps  {product: Product;
   isRedirecting ? (<> <span className="animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full" role="status" aria-hidden="true" ></span> Processing... </>) : ('Buy Now')}</Button> </TooltipTrigger> {!isAuthenticated && !isRedirecting && (<TooltipContent>Login required</TooltipContent>)}</Tooltip> </TooltipProvider>)}</div> </div>)}'";
   )}
   )}
-=======
-import { addItem  } from '@/store/cartSlice';
-import Image from 'next/image',
-import React, { useState, useEffect } from 'react';
-import { useAuth  } from '@/context/auth/AuthProvider';
-import { useRouter  } from 'next/router';
-import { Product  } from '@/services/marketplace';
-import { useMediaQuery  } from 'usehooks-ts';
-import { toast } from '@/hooks/use-toast';
-import { captureException } from '@/utils/sentry';
-interface ProductCardProps {
-  product: Product;
->>>>>>> origin/main:src_disabled_1757239864/components/ProductCard.tsx
   onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure
   onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail)
   /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */
   buyDisabled?: boolean
 }
 
-<<<<<<< HEAD:src/components/ProductCard.tsx
 export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyDisabled = false }: ProductCardProps) {
   const { isAuthenticated } = useAuth();
   const { isWishlisted, toggle } = useWishlist();
@@ -418,48 +381,3 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
     </div>
   )
 }
-=======
-  );
-
-}onError= {;
-  (e) => handleImageError (e) ;
-}priority= {;
-  false ;
-}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center" > <span className="text-gray-500" >No Image</span> </div>) ;
-}src= {;
-  imageUrl ;
-}alt= {;
-  imageAltText ;
-}style= {;
-  {';
-  objectFit: 'cover' ;
-
-}onError= {;
-  (e) => handleImageError (e) ;
-}priority= {;
-  false ";
-}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center" > <span className="text-gray-500" >No Image</span> </div>) ;
-}{;
-  product.currency ;
-}{;
-  product.price ;
-}</p>) ;
-}Add to Cart </Button> {;
-  onBuy && (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button onClick={;
-  (e) => {;
-  e.stopPropagation ();
-if (onBuy) {;
-  setIsRedirecting (true);
-onBuy () > {'";
-  isRedirecting ? (<> <span className="animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full" role="status" aria-hidden="true" ></span> Processing... </>) : ('Buy Now') ;
-}</Button> </TooltipTrigger> {;
-  !isAuthenticated && !isRedirecting && (<TooltipContent>Login required</TooltipContent>) ;
-}</Tooltip> </TooltipProvider>) ;
-}</div> </div>) ;
-}'"
-  )
-}
-  )
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
->>>>>>> origin/main:src_disabled_1757239864/components/ProductCard.tsx

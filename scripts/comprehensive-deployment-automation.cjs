@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -14,6 +15,9 @@
 ///usr/bin/env node
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -33,6 +37,7 @@ runDeploymentStep('Create Robots.txt', 'echo "User-"agent": *\nAllow: /\nSitemap
 // console.log('\n� Phase "7")
 console.log('\n� Phase "8")
   "criticalFailures"
+<<<<<<< HEAD
 console.log('� Deployment summary saved "to")
 
 
@@ -48,3 +53,6 @@ console.log('� Deployment summary saved "to")
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+console.log('� Deployment summary saved "to")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

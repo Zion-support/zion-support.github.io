@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -25,27 +21,14 @@ interface SmartchurnProps {
 
 
 }
-<<<<<<< HEAD
 export default function Smartchurn({ }: SmartchurnProps) {
-=======
-export default function SmartChurn() {; return (; <Article; title=\"Smart Churn Predictor\"; subtitle=\"ML-based churn scoring with prescriptive save plays\"; price=\"from $299/mo\"; bullets={[; \'Real-time churn scoring using product usage + billing + support\',; \'Sends save offers and playbooks to Intercom,Zendesk,or email\',; \'Cohort analysis and revenue-at-risk dashboards\',; \'Export to BigQuery/Snowflake; webhooks and REST API\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
-import React from 'react';
-interface SmartchurnProps {
-  // Add props here as neededexport default function Smartchurn({ }: SmartchurnProps) {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export default function Smartchurn({}: SmartchurnProps) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return (
     <div>
       <h1>Smartchurn</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 }
@@ -54,8 +37,3 @@ export default function Smartchurn({}: SmartchurnProps) {
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

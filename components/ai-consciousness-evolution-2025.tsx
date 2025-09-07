@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   Brain;
   Star;
@@ -25,8 +24,6 @@
   MapPin;
   Globe as GlobeIcon;} from 'lucide-react';import {Brain, Star, Users, TrendingUp, Zap, Shield;
   Brain,Star,Users,TrendingUp,Zap,Shield,CheckCircle,Clock,Award,Target,Globe,Sparkles,Cpu,Lock,Cloud,BarChart3,Eye,Heart,Lightbulb,ArrowRight,Phone,Mail,MapPin,Globe as GlobeIcon,} from 'lucide-react';import {Brain, Star, Users, TrendingUp, Zap, Shield,CheckCircle, Clock, Award, Target, Globe, Sparkles;
-=======
-<<<<<<< HEAD
 export default function AIConsciousnessEvolution2025 () {
   return (<Layout> <Head> <title>AI Consciousness Evolution Platform 2025 - Zion Tech Group</title> left: `$ {
   Math.random () * 100 
@@ -104,19 +101,6 @@ top: `$ {
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Evolve Your <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" > Consciousness?</span> </h2> <p className="text-xl text-purple-200 mb-8" > Join thousands of users who have already transformed their lives with our revolutionary AI platform. Start your consciousness evolution journey today. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6" > <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105" > Start Free Trial </button> <button className="border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200" > Schedule Demo </button> </div> </motion.div>) ) 
 }</div> </motion.div> </div> </section> </Layout>) 
 }
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import { Brain, Star, Users, TrendingUp, Zap, Shield;
-  CheckCircle, Clock, Award, Target, Globe, Sparkles;
-  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
-  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
- } from 'lucide-react';
-const contactInfo = null;
-import {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   Brain
   Star
   Users
@@ -2214,7 +2198,6 @@ className='text-center group';
   )}
 );  )
 }
-<<<<<<< HEAD
   )
 }
                     </span>;
@@ -2329,6 +2312,3 @@ className='text-center group';
     </Layout>))}))
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

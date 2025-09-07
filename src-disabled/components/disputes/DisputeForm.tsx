@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
 
 ;
 import React, { useState } from 'react';
@@ -30,8 +28,6 @@ import {
   FormField;
   FormItem;
   FormLabel;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
   FormMessage} from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea";
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -61,7 +57,6 @@ import { useDisputes } from "@/hooks/useDisputes",
 import { toast } from "sonner",
 import { FileText } from 'lucide-react'
 
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
 if (onDisputeCreated) {
 
   Form
@@ -195,7 +190,6 @@ export function DisputeForm({
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
 
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
 const formSchema = null;
       toast.error("Failed to submit dispute. Please try again.")
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -224,7 +218,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
 
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
@@ -248,7 +241,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
 
                     {Object.entries(disputeReasonLabels).map(
                       ([value, label]) => (
@@ -298,7 +290,6 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
   FormMessage,;
 } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';import {;
@@ -307,7 +298,6 @@ import { Textarea } from '@/components/ui/textarea';import {;
   SelectContent,;
   SelectItem,;
   SelectTrigger,;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
   SelectValue,;
 } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
@@ -389,7 +379,6 @@ const formSchema = z && z.object({reason_code: z;
       }
     } catch (error) {logErrorToProduction('Error submitting dispute:', { data: error })toast && toast.error('Failed to submit dispute. Please try again.')} finally {setIsSubmitting(false)}
   }
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
   return (
 
 
@@ -507,7 +496,6 @@ if ( {) {
         // Check condition;
 if ( {) {$2;
 }
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
           // log_info (`Would upload ${files.length} files for dispute ${dispute.id}`)}
         toast.success ('Your dispute has been submitted')// Check condition;
 if ( {) {$2;
@@ -532,7 +520,6 @@ if ( {) {
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
           <FormField;
             control={form.control}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
             name='reason_code';
             render={({field;
             }: {z && z.infer<typeof formSchema>,'reason_code';
@@ -556,7 +543,6 @@ if ( {) {
                       <SelectValue placeholder="Select a reason" />;
                     </SelectTrigger>;
                   </FormControl>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
                   <SelectContent>;/>;<FormField;
             control={form && form.control}
             name='description';
@@ -578,7 +564,6 @@ if ( {) {
           <FormField;
             control={form.control}
             name='description';
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
             render={({field;
             }: {z && z.infer<typeof formSchema>,'description';
               >;
@@ -615,7 +600,6 @@ if ( {) {
                     {...field}
                   />;
                 </FormControl>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
                 <FormMessage />;/>;<FormItem>;
             <FormLabel>Attachments (optional)</FormLabel>;
             <FormControl>;
@@ -646,12 +630,10 @@ if ( {) {
                         <li
                           key={index}
                           className='flex items-center justify-between text-sm bg-muted/30 p-2 rounded'>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
                           <span>;
                             {file && file.name} ({(file && file.size / 1024).toFixed(1)} KB);
                           </span>;
                           <Button
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
                             type='button'
                             variant='ghost'
                             size='sm'
@@ -665,7 +647,6 @@ if ( {) {
                             Remove;
                           </Button>;
                         </li>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
                   <Textarea
 
 
@@ -678,7 +659,6 @@ if ( {) {
                 <FormMessage />;
               </FormItem>;
             )}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
           />;
                       ))}
                     </ul>;
@@ -710,9 +690,7 @@ if ( {) {
                   type='file';
                   multiple;
                   on_change={handleFileChange}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
                   className='cursor - pointer'                />;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
 
               <div className='space-y-4'>
                 <Input
@@ -749,7 +727,6 @@ if ( {) {
                   type="file";
                   multiple;
                   onChange={handleFileChange}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
                   className="cursor-pointer";
                 />;
                 {files.length > 0 && (<div className="space-y-2">;
@@ -784,7 +761,6 @@ if ( {) {
                     </ul>;
                   </div>;
                 )}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
             {onCancel && (<Button type='button' variant='outline' onClick={onCancel}>;
                 Cancel;
               </Button>;
@@ -832,7 +808,6 @@ if ( {) {
         </form>;
       </Form>;
     </div>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
   );
 
 };
@@ -905,7 +880,6 @@ const removeFile = (index: number) => {;
         </form>
       </Form>
     </div>
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
   );
 
 
@@ -953,7 +927,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   try {;
   setIsSubmitting (true);
 const dispute = await createDispute ({;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
   project id: projectId;
 milestone id: milestoneId;
 reason code: values.reason code;
@@ -976,7 +949,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }finally {;
   setIsSubmitting (false) ;
 }";
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
 
 }return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {;
   field.onChange ;
@@ -999,7 +971,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
 }'"}
 
 
@@ -1030,7 +1001,6 @@ description: values.description;
 })//Future enhancement: Upload attachments //For now we just log the files that would be uploaded // Check condition;
 if ( {) {$2;
 }
-<<<<<<< HEAD:src_backup/components/disputes/DisputeForm.tsx
 }finally {
   setIsSubmitting (false);
 }";

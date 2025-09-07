@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/index.tsx
-<<<<<<< HEAD
 import React from 'react';
 origin/main
 import Link from 'next/link';
@@ -29,26 +26,16 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import React, { useState, useEffect, Suspense } from 'react';
 import Head from 'next/head';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
 import Link from 'next/link';
 import Head from 'next/head';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
-<<<<<<< HEAD
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false;
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // import PerformanceMonitor from '../components/PerformanceMonitor';
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
@@ -77,7 +64,6 @@ export default function Home() {
       </div>
     );
   }
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -127,12 +113,6 @@ export default function HomePage() {
             <h2 className="text-2xl font-bold mb-4">AI Services</h2>
             <p className="text-gray-600 mb-4">
               Advanced artificial intelligence solutions for your business needs.
-<<<<<<< HEAD:pages_backup/index.tsx
-=======
-=======
-main
-import React from 'react';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 origin/main
 import Link from 'next/link';
 import Image from 'next/image';
@@ -160,10 +140,6 @@ import {ContactInfo, AnimationState} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
 import { ChevronRightIcon, SparklesIcon, CpuChipIcon, CloudIcon } from '@heroicons/react/24/outline';
 
 export default function Home() {
@@ -174,7 +150,6 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-=======
 import React, { useState, useEffect, Suspense } from 'react';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
@@ -189,7 +164,6 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setAnimationState(prev => ({ ...prev, isLoaded: true }))
     }, 100);
     return () => clearTimeout(timer)
@@ -207,12 +181,8 @@ main
           </button>
         </div>
       </div>
-<<<<<<< HEAD
     );
   }
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import EnhancedHeader from '../components/EnhancedHeader';
 import EnhancedFooter from '../components/EnhancedFooter';
 import {
@@ -319,16 +289,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   return (
     <>
       <Head>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
         <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
         <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions" />
-=======
         <title>
           Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions
         </title>
@@ -341,7 +304,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions"
         />
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
@@ -349,46 +311,21 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         <link rel="canonical" href={contact.site} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<<<<<<< HEAD
         <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
         <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-=======
-        <meta
-          property="og:title"
-          content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions"
-        />
-        <meta
-          property="og:description"
-          content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
-        />
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <meta property="og:url" content={contact.site} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-<<<<<<< HEAD
         <meta name="twitter:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
         <meta name="twitter:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-=======
-        <meta
-          name="twitter:title"
-          content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions"
-        />
-        <meta
-          name="twitter:description"
-          content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
-        />
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-<<<<<<< HEAD
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
@@ -421,12 +358,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
           <div className="max-w-4xl mx-auto">
             <h1
-<<<<<<< HEAD:pages_backup/index.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ),
   };
-<<<<<<< HEAD
   return (;
     <>;
       <Head>;
@@ -496,9 +429,6 @@ function HomePage() {
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
           <div className="max-w-4xl mx-auto">
             <h1 
->>>>>>> main
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
               id="hero-title"
               className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             >
@@ -507,7 +437,6 @@ function HomePage() {
             <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
-<<<<<<< HEAD
             <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               We deliver cutting-edge technology solutions with 150+ micro SaaS products,
               100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization
@@ -517,20 +446,6 @@ function HomePage() {
             <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-1000 delay-600 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} role="navigation" aria-label="Main navigation">
               <Link
                 href="/services"
-=======
-
-    ),
-  };
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
-              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, quantum computing to blockchain solutions, we help businesses scale 
-              efficiently and securely in the digital age.
-            </p>
-            <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-1000 delay-600 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} role="navigation" aria-label="Main navigation">
-              <Link 
-                href="/services" 
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
                 aria-label="View all our services"
                 tabIndex={animationState.isLoaded ? 0 : -1}
@@ -657,26 +572,12 @@ origin/cursor/analyze-improve-and-deploy-application-0a01
               >
                 View All Services
               </Link>
-<<<<<<< HEAD
               <Link
                 href="/services-catalog"
-<<<<<<< HEAD:pages_backup/index.tsx
-=======
-              <Link 
-                href="/services-catalog" 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
-=======
               <Link 
                 href="/services-catalog" 
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
                 aria-label="Browse our services catalog"
                 tabIndex={animationState.isLoaded ? 0 : -1}
@@ -686,26 +587,12 @@ origin/cursor/analyze-improve-and-deploy-application-0a01
               >
                 Services Catalog
               </Link>
-<<<<<<< HEAD
               <Link
                 href="/contact"
-<<<<<<< HEAD:pages_backup/index.tsx
-=======
-              <Link 
-                href="/contact" 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
-=======
               <Link 
                 href="/contact" 
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
                 aria-label="Get a quote for our services"
                 tabIndex={animationState.isLoaded ? 0 : -1}
@@ -749,7 +636,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 origin/cursor/analyze-improve-and-deploy-application-0a01
 origin/cursor/analyze-improve-and-deploy-application-d34d
                 <p className="text-slate-300">IT Solutions</p>
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className="relative py-20 px-4 text-center overflow-hidden" role="banner" aria-labelledby="hero-title">
           {/* Animated Background */}
@@ -941,46 +827,6 @@ origin/cursor/analyze-improve-and-deploy-application-d34d
                 <Link href="/ai-services" className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:translate-x-1 transition-transform">
                   View All AI Services
                   <ChevronRightIcon className="w-5 h-5 ml-2" />
-=======
-=======
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Zion Tech Group',
-              url: contact.site,
-              logo: `${contact.site}/favicon.svg`,
-              description:
-                'Leading provider of micro SaaS products, AI services, and IT solutions',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: '364 E Main St STE 1008',
-                addressLocality: 'Middletown',
-                addressRegion: 'DE',
-                postalCode: '19709',
-                addressCountry: 'US',
-              },
-              contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: contact.phone,
-                contactType: 'customer service',
-                email: contact.email,
-              },
-              sameAs: [contact.site],
-            }),
-          }}
-        /> */}
-      </ErrorBoundary>;
-    </>;
-  );}
-import React from 'react';
-
-      <ErrorBoundary level="page">
-        <Suspense
-          fallback={
-            <LoadingSpinner fullScreen text="Loading Zion Tech Group..." />
-          }
-        >
-          <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <title>Zion Tech Group - Leading Technology Solutions Provider</title>
         <meta
           name="description"
@@ -1059,15 +905,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   View All IT Services
                   <ChevronRightIcon className="w-5 h-5 ml-2" />
                 </Link>
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Services Overview */}
         <section className="py-16 px-4" role="main">
           <div className="max-w-6xl mx-auto">
@@ -1080,91 +921,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 <p className="text-slate-300 mb-6">
                   Innovative, focused software solutions including AI-Powered Video Clip Maker,
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
-=======
-
-        {/* Contact Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-indigo-900/20"></div>
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
-          
-          <div className="relative max-w-6xl mx-auto text-center">
-            <div className="mb-8">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Get in touch with our experts to discuss your project requirements and discover 
-                how our innovative solutions can drive your business forward.
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
-              <a 
-                href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-                className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-glow"
-              >
-                <span className="flex items-center">
-                  Call {contact.phone}
-                  <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </a>
-              <a 
-                href={`mailto:${contact.email}`} 
-                className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-glow"
-              >
-                <span className="flex items-center">
-                  Email {contact.email}
-                  <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </a>
-              <Link 
-                href="/contact" 
-                className="group px-8 py-4 bg-slate-800/50 hover:bg-slate-700/50 border border-white/20 hover:border-white/30 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-glow backdrop-blur-sm"
-              >
-                <span className="flex items-center">
-                  Contact Form
-                  <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-            </div>
-            
-            <div className="p-8 bg-slate-900/40 rounded-2xl border border-white/10 backdrop-blur-sm">
-              <div className="text-slate-300 space-y-2">
-                <p className="text-lg font-medium">{contact.address}</p>
-                <p className="text-slate-400">
-                  Visit us at <a href={contact.site} className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">{contact.site}</a>
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </p>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-            {/* Hero Section */}
-            <section
-              className="py-20 px-4 text-center"
-              role="banner"
-              aria-labelledby="hero-title"
-            >
-              <div className="max-w-4xl mx-auto">
-                <h1
-                  id="hero-title"
-                  className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                >
-                  Zion Tech Group
-                </h1>
-                <p
-                  className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                >
-                  Innovative Micro SaaS, AI Services & IT Solutions
-
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <h1 ;
               id="hero - title";
               className={`text - 5xl md:text - 6xl font - extrabold tracking - tight mb - 6 transition - all duration - 1000 ${animation_state.is_loaded ? 'opacity - 100 translate - y-0' :'opacity - 0 translate - y-8'}`}
@@ -1228,10 +989,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   Innovative, focused software solutions including AI-Powered Video Clip Maker, 
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
                 </p>
-<<<<<<< HEAD
-=======
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <ul className="text-slate-400 space-y-2 mb-6">
                   <li>• AI-Powered Video Clip Maker</li>
                   <li>• Smart Contract Analyzer</li>
@@ -1246,12 +1003,7 @@ main
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
                 <p className="text-slate-300 mb-6">
-<<<<<<< HEAD
                   Advanced artificial intelligence solutions including autonomous AI agents,
-=======
-                  Advanced artificial intelligence solutions including autonomous AI agents, 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
@@ -1268,12 +1020,7 @@ main
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>
                 <p className="text-slate-300 mb-6">
-<<<<<<< HEAD
                   Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions,
-=======
-                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   DevSecOps automation, and 40+ more enterprise-grade services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
@@ -1287,10 +1034,6 @@ main
                   View All IT Services →
                 </Link>
               </div>
-<<<<<<< HEAD
-=======
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>
           </div>
         </section>
@@ -1301,12 +1044,7 @@ main
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
-<<<<<<< HEAD
               Get in touch with our experts to discuss your project requirements and discover
-=======
-              Get in touch with our experts to discuss your project requirements and discover 
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               how our innovative solutions can drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -1326,28 +1064,17 @@ main
             </div>
           </div>
         </section>
-<<<<<<< HEAD
           </main>
         </Suspense>
         {/* <PerformanceMonitor
           </main>
         </Suspense>
         <PerformanceMonitor 
-=======
-            </section>
-origin/main
-main
-          </main>
-        </Suspense>
-        <PerformanceMonitor 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn('Performance thresholds exceeded:', metrics)
           }}
-<<<<<<< HEAD
         /> */}
       </ErrorBoundary>
     </>
@@ -1358,150 +1085,6 @@ main
 
         {/* Features Section */}
         <section className="py-20 bg-slate-900/50">
-=======
-        />
-      </ErrorBoundary>
-    </>
-  )
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Core Services
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to accelerate your business growth
-            >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Empowering businesses with cutting-edge AI technology, robust cybersecurity, 
-                and innovative cloud solutions for the digital future.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Button size="lg" className="group">
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="outline" size="lg">
-                  Learn More
-                </Button>
-              </div>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-400 text-sm md:text-base">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-
-
-ursor/merge-pull-requests-and-resolve-conflicts-bf80
-          </div>
-        </section>
-
-
-          </div>
-        </section>
-origin/main
-}
-          </div>
-}          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Our <span className="text-cyan-400">Services</span>
-              </h2>
-              </p>
-            </motion.div>
-
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to accelerate your business growth
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-        <section className="py-16 bg-gray-50">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-12">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Our Core Services;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-                Comprehensive technology solutions designed to accelerate your business growth;
-              </p>;
-            </motion && motion.div>;
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {services && services.map((service, index) => (;
-                <motion&& motion.div
-                  key={index}
-                  className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
-                  <div className="text-4xl mb-4">;
-                    <service && service.icon className="w-12 h-12 text-blue-600" />;
-                  </div>;
-                  <h3 className="text-xl font-semibold mb-4 text-gray-900">{service && service.title}</h3>;
-                  <p className="text-gray-600 mb-4">{service && service.description}</p>;
-                  <ul className="text-sm text-gray-500 space-y-2 mb-6">;
-                    {service && service.features.map((feature, idx) => (;
-                      <li key={idx} className="flex items-center">;
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                        {feature}
-                      </li>;
-                    ))}
-                  </ul>;
-                  <Link
-                    href={service && service.href}
-                    className="text-blue-600 hover:text-blue-700 font-semibold flex items-center">;
-                    Learn More;
-                    <ArrowRight className="w-4 h-4 ml-1" />;
-                  </Link>;
-                </motion && motion.div>;
-              ))}
-        {/* Featured Services */}
-        <section className="py-16 bg-white">
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Services</h2>
@@ -1510,12 +1093,6 @@ main
               </p>
             </div>
             
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/index.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="card text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -1563,8 +1140,6 @@ main
         {/* Featured Services */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1581,9 +1156,6 @@ main
 
 
 
->>>>>>> main
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
@@ -1646,9 +1218,6 @@ main
                     </ul>
                   </Card>
                 </motion.div>
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -1667,7 +1236,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 main
 
-<<<<<<< HEAD
 
 
 
@@ -1693,27 +1261,10 @@ origin/automation-improvements-final
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD:pages_backup/index.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
             </motion.div>
 
-<<<<<<< HEAD:pages_backup/index.tsx
-=======
-
-
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 gradient-text">Our Services</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -1753,17 +1304,8 @@ origin/automation-improvements-final
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/index.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   <p className="text-gray-600">{item.description}</p>
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -1830,14 +1372,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   </Card>
 <p className="text-gray-600">{item.description}</p>
 origin/main
-<<<<<<< HEAD
->>>>>>> main
-=======
                   <p className="text-gray-600">{item.description}</p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
-=======
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </motion.div>
               ))}
             </div>
@@ -1940,13 +1476,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 </Link>;
                 <Link
                   href="tel:+13024640950"
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/index.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
@@ -1954,10 +1483,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 </Link>
               </div>
             </motion.div>
-<<<<<<< HEAD:pages_backup/index.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -1988,17 +1513,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 <Button variant="outline" size="lg">
                   Schedule Consultation
                 </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
-=======
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold mb-6 gradient-text">Ready to Transform Your Business?</h2>
@@ -2013,16 +1529,7 @@ main
                 Learn More About Us
               </Link>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/index.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 </Link>
     );
@@ -2067,10 +1574,6 @@ main
   return (
     <>
       <Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
         <title>Zion Tech Group - AI-Powered IT Services</title>
         <meta name="description" content="Leading provider of AI-powered IT services and solutions for modern businesses" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -2104,7 +1607,6 @@ main
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-white/10 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -2126,9 +1628,6 @@ main
                 <div className="text-4xl mb-4">🔒</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Secure & Reliable</h3>
                 <p className="text-blue-200">Enterprise-grade security and 99.9% uptime guarantee</p>
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -2276,8 +1775,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -2311,10 +1808,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     </MainLayout>
   );
 }
-<<<<<<< HEAD:pages_backup/index.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </section>
         <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
         <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
@@ -2538,17 +2031,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
-=======
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>
         </section>
           </div>
@@ -2558,22 +2042,8 @@ origin/automation-improvements-final
     </MainLayout>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/index.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </main>
     </>
 
@@ -2592,12 +2062,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571
     </MainLayout>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/index.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </main>;
     </>;
     </div>);
@@ -2798,10 +2262,4 @@ main
     </>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/index.tsx
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

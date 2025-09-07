@@ -109,27 +109,18 @@ redeemed_at: now,
 }
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 
-<<<<<<< HEAD
   records.push(record);
   await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id, redeemedAt: now });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextApiRequest, NextApiResponse } from "next",
 import fs from "fs-extra";
 import path from "path";
 import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 const REDEMPTIONS_FILE = null;
-<<<<<<< HEAD
   return res.status(201).json({ id: record.id, redeemedAt: now })
 }
 
@@ -198,7 +189,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest($2);
     return res.status(405).json({ error: "Method Not Allowed" })
   }
-<<<<<<< HEAD
   const { studentEmail, grantCode, courseId } = req.body || {},
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest($2);
@@ -208,29 +198,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const records = $2;
   const now = new Date().toISOString($2);
   const record = {
-=======
-  const { studentEmail, grantCode, courseId } = req.body |{}
-  if (!studentEmail |!grantCode |!courseId) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: 'Missing required fields' });
-  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
-  const records = (await fs.pathExists(REDEMPTIONS_FILE))
-    ? await fs.readJSON(REDEMPTIONS_FILE)
-"
-  if (req.method !== \"POST\") {"
-    res.setHeader(\"Allow\", \"POST\");}
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);}"
-    return res.status(405).json({ error: \"Method Not Allowed\" })
-
-}
-
-  const { studentEmail, grantCode, courseId } = req.body || {}
-  if($2) {}
-    : []
-  const now = new Date().toISOString()
-  const record = {}
-    id: uuidv4(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     partnerId: auth && auth.partner.id,
     studentEmail,
     grantCode,
@@ -443,9 +410,6 @@ redeemed_at: now,
   await recordRequest($2);
   return res.status(201).json({ id: record.id, redeemedAt: now})
 }
-=======
   return res.status(201).json({ id: record.id;, redeemedAt: now ;})
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

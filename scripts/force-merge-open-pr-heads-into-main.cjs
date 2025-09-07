@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -12,6 +13,11 @@ const { execSync } = require('child_process')
 const fs = require('fs')
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+#!/usr/bin/env node;
+const { execSync } = require('child_process');
+const fs = require('fs');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 function sh(cmd) {}
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8' }).trim()};
 function getToken() {}
@@ -34,6 +40,7 @@ async function gh(path, method = 'GET') {}
       Authorization: `token ${token}`,`
       "Accept": 'application/vnd.github.v3+json',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       'User-Agent': 'force-merge-script'
 
@@ -48,6 +55,8 @@ async function gh(path, method = 'GET') {}
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data};
@@ -69,7 +78,6 @@ function autoResolveConflicts() {}
 };
 async function main() {}
   const { owner, repo } = getRepo();
-  
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   sh('git fetch origin');
   sh('git checkout main');
@@ -79,6 +87,7 @@ async function main() {}
   for (const pr of prs) {}
     attempted++;
     const head = pr.head && pr.head.ref;
+<<<<<<< HEAD
 <<<<<<< HEAD
 "User-Agent": "force-merge-script"
 =======
@@ -96,6 +105,17 @@ async function main() {}
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+    }
+})
+  const text = await res.text()
+  const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`)
+  let mergedCount = 0; let attempted = 0,
+  for($2) {}
+    attempted++
+    const head = pr.head && pr.head.ref,
+  console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       try {}
         sh(`git merge --no-ff --no-edit origin/${head}`)} catch (e) {`}
         console.log('Conflicts detected. Attempting auto-resolution...');
@@ -112,6 +132,7 @@ async function main() {}
   try { sh(`git checkout ${startBranch}`)} catch {};
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 try {}`
@@ -122,3 +143,6 @@ try {}`
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+});
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

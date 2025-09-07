@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
 export const SitemapPage: React.FC = () => {
@@ -95,7 +93,6 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                       href = {resolve_path (route.path) }
                       className="flex items - center hover:text - zion - purple";
                     >;
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
 
 
@@ -168,7 +165,6 @@ const pathMap: Record<string string> = {
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
             </ul>;
           </div>;
 
@@ -208,10 +204,8 @@ const pathMap: Record<string string> = {
 
                       {route.label}
                     </Link>;
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
                   </li>));
               }
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
@@ -230,7 +224,6 @@ const pathMap: Record<string string> = {
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
             </ul>;
           </div>;
 
@@ -267,10 +260,8 @@ const pathMap: Record<string string> = {
 
                       {route.label}
                     </Link>;
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
                   </li>));
               }
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
@@ -289,7 +280,6 @@ const pathMap: Record<string string> = {
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
             </ul>;
           </div>;
 
@@ -418,9 +408,7 @@ const pathMap: Record<string string> = {
         { name: 'White Papers', url: '/white - papers' },        { name: 'Webinars', url: '/webinars' }
         { name: 'Documentation', url: '/docs' }
         { name: 'API Reference', url: '/api' }
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
       ]}
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
 
         { name: 'Case Studies', url: '/case - studies' }, ';
@@ -453,11 +441,9 @@ const pathMap: Record<string string> = {
                     <a;
                       href={link.url}
                       className="text - zinc - 300 hover:text - cyan - 400 transition - colors duration - 200 block py - 1">;
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
                       {link.name}
 
 
-<<<<<<< HEAD:src_backup/components/SitemapPage.tsx
 
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">

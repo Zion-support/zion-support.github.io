@@ -7,31 +7,17 @@ import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
 type Tx = any;
       refresh()type Tx = {type Tx = {id: string;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 type Tx = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
-=======
-
-<<<<<<< HEAD
-=======
-import React, { useEffect, useMemo, useState } from "react";
-import Badges from "./Badges";
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
 
 
 
 type Tx = {}
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
     this.state = { hasError: false };
   }
@@ -47,24 +33,17 @@ class ErrorBoundary extends React.Component {}
     }
     return this.props.children;
   }
-<<<<<<< HEAD
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useMemo, useState } from "react";
 import Badges from "./Badges";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 type Tx = any;
       refresh()
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
 import Badges from './Badges';
 
 type Tx = {
   id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
   amount: number;
   reason: string;
@@ -161,7 +140,6 @@ export default function WalletPanel() {
     ['burn', 'revoke', 'redeem'].includes(t.type))const nextBadgeThreshold = useMemo(() => {if (balance < 50) return 50;
     if (balance < 200) return 200;
     if (balance < 500) return 500;
-<<<<<<< HEAD
     if (balance < 1000) return 1000;}
     }
   }
@@ -218,15 +196,9 @@ if ( {) {$2;
 const res = await fetch('/api/wallet/redeem', {method: 'POST'}
   headers: { 'Content-Type': 'application/json'}
 },body: JSON.stringify({ userId, amount })})if (data.error) {alert(data.error)} else {alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`)refresh()}
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   }
-=======
-=======
 }'
 import React, { useEffect, useMemo, useState } from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Badges from './Badges';
 type Tx = {;
 type Tx = {}
@@ -241,7 +213,6 @@ type Tx = {}
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
 
-<<<<<<< HEAD
 export default function WalletPanel() {;
 
   const [summary, setSummary] = useState<Summary | null>(null);
@@ -249,13 +220,6 @@ export default function WalletPanel() {;
     'earnings'
   );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {
   id: string
-=======
-
-
-export default function WalletPanel() { return null; }
-  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {}
-  id: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   type: "earn" | "burn" | "issue" | "revoke" | "redeem"
   amount: number;
   reason: string;
@@ -263,7 +227,6 @@ export default function WalletPanel() { return null; }
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
   amount: number,
   reason: string,
-<<<<<<< HEAD
 export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(;
@@ -274,9 +237,6 @@ export default function WalletPanel() {;
   amount: number,;
   reason: string,;
   createdAt: string
-=======
-export default function WalletPanel() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
 
 type Summary = {;
@@ -391,7 +351,6 @@ if ( {) {}
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
 return balance;
   }, [balance]);
   const progress = Math.min(
@@ -424,9 +383,6 @@ const res = await fetch('/api/wallet/redeem', {
     } else {
       alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`);
       refresh();
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   }
   return (
@@ -445,7 +401,6 @@ const res = await fetch('/api/wallet/redeem', {
           <button;
             onClick={connectWallet}
             className='px-3 py-1 text-sm rounded border' />
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   async function redeem(amount: number) {
     if (!amount || amount <= 0) return,
@@ -488,7 +443,6 @@ const res = await fetch('/api/wallet/redeem', {
         </div>
       </div>
 
-<<<<<<< HEAD
           </div>;
           <button
           </div>;
@@ -499,28 +453,16 @@ const res = await fetch('/api/wallet/redeem', {
       </div>;
 <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>;
         <div className='flex gap-3 mb-4 text-sm'>;
-=======
-<div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
-        <div className='flex gap-3 mb-4 text-sm'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          <button
-            onClick={() => setTab('earnings')}
-=======
-          <button'
-            onClick={() => setTab('earnings')}'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}`}
           >;
 <div className='p-4 border rounded-lg bg-white dark: bg-zinc-900' />
         <div className='flex gap-3 mb-4 text-sm' />
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           <button;
             onClick={() => setTab('earnings')}
             className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}`}
           >;
             Earnings;
           </button>;
-<<<<<<< HEAD
           <button'
             onClick={() => setTab('spending')}'`
             className={`px-3 py-1 rounded border ${tab === 'spending' ? 'bg-gray-100' : ''}`}
@@ -554,57 +496,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;'
             <div className='text-gray-600'>;
               Rate: 1 {symbol} = $;'
-=======
-          <button;
-            onClick={() => setTab('spending')}
-            className={`px-3 py-1 rounded border ${tab === 'spending' ? 'bg-gray-100' : ''}`}
-          >;
-            Spending;
-          </button>;
-          <button;
-            onClick={() => setTab('redeem')}
-            className={`px-3 py-1 rounded border ${tab === 'redeem' ? 'bg-gray-100' : ''}`}
-          >;
-            Redeem;
-          </button>;
-        {tab !== 'redeem' && (<div className='space-y-2'>;
-            {(tab === 'earnings' ? earnings : spending).map(t => (<div;
-                key={t && t.id}
-                className='flex justify-between text-sm border rounded p-2'>;
-                <div className='flex gap-2 items-center'>;
-                  <span;
-      <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
-        <div className="flex gap-3 mb-4 text-sm">
-          <button onClick={() => setTab("earnings")} className={`px-3 py-1 rounded border ${tab === "earnings" ? "bg-gray-100" : ""}`}>Earnings</button>
-          <button onClick={() => setTab("spending")} className={`px-3 py-1 rounded border ${tab === "spending" ? "bg-gray-100" : ""}`}>Spending</button>
-          <button onClick={() => setTab("redeem")} className={`px-3 py-1 rounded border ${tab === "redeem" ? "bg-gray-100" : ""}`}>Redeem</button>
-        </div>
-        {tab !== "redeem" && (
-          <div className="space-y-2">
-            {(tab === "earnings" ? earnings : spending).map((t) => (
-              <div key={t.id} className="flex justify-between text-sm border rounded p-2">
-                <div className="flex gap-2 items-center">
-                  <span className={`px-2 py-0.5 rounded text-xs ${t.type === "earn" || t.type === "issue" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{t.type}</span>
-                  <span className="text-gray-600">{t.reason.split('_').join(' ')}</span>
-                </div>
-                <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} {symbol}</div>
-              </div>
-            ))}
-            {((tab === "earnings" ? earnings : spending).length === 0) && (
-              <div className="text-sm text-gray-500">No transactions yet.</div>
-            )}
-<<<<<<< HEAD
-=======
-          </div>;
-        )}
-        {tab === 'redeem' && (<div className='space-y-3 text-sm' />;}
-            <div className='text-gray-600' />;}
-              Convert your {symbol} into credits.;
-            </div>;
-            <div className='text-gray-600' />;
-              Rate: 1 {symbo}
-} = $;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {summary?.config && config.usdPerToken?.toFixed(2) ?? '0 && 0.00'}
             </div>;'
             <div className='flex gap-2 items-center'>;
@@ -645,13 +536,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;'
         <div className='mt - 4'>          <Badges balance={balance} />;
         </div>;
-<<<<<<< HEAD
       </div>;
         <div className="mt-4">;
-=======
-      </div>;"
-        <div className="mt - 4">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Badges balance={balance} />;
         </div>;
       </div>;'
@@ -710,7 +596,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {summary?.config.usdPerToken?.to_fixed (2) ?? '0.00'}
             </div>;'
             <div className='flex gap - 2 items - center'>;
-<<<<<<< HEAD
               <button;'
                 className='px - 3 py - 1 rounded border';
                 on_click={() => redeem (100)}
@@ -735,9 +620,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 }
-=======
-            <div className='flex gap-2 items-center' />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               <button;
                 className='px-3 py-1 rounded border';
                 onClick={() => redeem(500)}<button;
@@ -835,7 +717,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Redeem 250;
               </button>;
               <button;
-<<<<<<< HEAD
                 className='px - 3 py - 1 rounded border';
                 on_click={() => redeem (500)}
               >;
@@ -864,21 +745,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
 }
 
-=======
-className='px-3 py-1 rounded border'
-                onClick={() = /> redeem(500)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   );
 }'
             <div className='text - xs text - gray - 500'>;
-<<<<<<< HEAD
               Coming soon: Redeem for branded perks and courses.;
             </div>          </div>            <div className="text - xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>;
-=======
-              Coming soon: Redeem for branded perks and courses.;"
-            </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>)}
       </div>;
     </div>);
@@ -892,14 +764,12 @@ className='px-3 py-1 rounded border'
               Coming soon: Redeem for branded perks and courses.
             </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </div>
 
 }
       </div>
     </div>
 );
-<<<<<<< HEAD
 }
 
 }
@@ -923,20 +793,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   )
 }
-=======
-}
-
-}
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-}
-<<<<<<< HEAD
 '"`
-=======
-
-  );
-}
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

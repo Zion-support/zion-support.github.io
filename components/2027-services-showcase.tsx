@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 import {Search;
   Star;
@@ -28,8 +27,6 @@ import {Search;
   Phone;
   Mail;
   MapPin;} from 'lucide-react';import {Search, Star, Users, TrendingUp, DollarSign, Clock;
-=======
-<<<<<<< HEAD
 const allServices = [ ...cuttingEdge2027Innovations
 ...practicalMicroSaas2027 ]
 //Filter services based on search and category const filteredServices = allServices.filter (service => {
@@ -191,13 +188,6 @@ case 'price': return (<UltraFuturisticMatrixBackground2027> <Head> <title>2027 S
   contactInfo.address 
 }</span> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25" > Get Started Today </a> <Link href="/pricing" className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300" > View Pricing Plans </a> </div> </div> </div> </section> <div className="max-w-7xl mx-auto text-center"> <div className="mb-8"> <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 shadow-2xl shadow-cyan-500/50"> Z </div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2"> Zion Tech Group </h3> <p className="text-cyan-300">2027 Innovation Hub</p> </div> <div className="text-cyan-300 text-sm"> <p>&copy, 2027 Zion Tech Group. All rights reserved.</p> <p className="mt-2"> 
 }
-=======
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Star, Users, TrendingUp, DollarSign, Clock;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud;
   Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ShieldCheck,Eye,Heart,Share2,Download,Phone,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
@@ -1224,4 +1214,3 @@ href='/pricing';
 )
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

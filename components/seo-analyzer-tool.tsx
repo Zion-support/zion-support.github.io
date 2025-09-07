@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
-=======
-<<<<<<< HEAD
 const features = [ {
   setIsAnalyzing (true)
 //Simulate SEO analysis setTimeout ( () => {
@@ -69,11 +66,6 @@ keyword research, and optimization recommendations to improve your search rankin
 }</ul> <Button > Get Started <ArrowRight className="w-5 h-5 ml-2" /> </Button> </Card>) ) 
 }</div> </div> </section> <section className="section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10" /> <div className="container-cursor text-center relative z-10"> <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg"> text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed"> Join thousands of businesses using our SEO analyzer to improve their search rankings and drive more organic traffic. </p> <div className=" flex flex-col sm:flex-row gap-6 justify-center"> <Button href=" /contact"size=" lg"className=" bg-white text-green-600 hover:bg-gray-100 shadow-2xl"> Start Free Trial <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /contact"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-green-600 shadow-2xl" > Schedule Demo </Button> </div> </div> </section> </>) 
 }
-=======
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Button from '../components/ui/Button';
 import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 
@@ -325,16 +317,10 @@ export default function SEOAnalyzerToolPage() {const [isAnalyzing, setIsAnalyzin
     }
   ];
 
-<<<<<<< HEAD
   const handleAnalyzeSEO = async () => {
     if (!url.trim()) return;
     
     setIsAnalyzing(true);
-=======
-    setIsAnalyzing(true);
-  const handleAnalyzeSEO = $2;
-    setIsAnalyzing($2);
->>>>>>> origin/main
     // Simulate SEO analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -1787,7 +1773,6 @@ href='/contact';
   );
 }
 }
-<<<<<<< HEAD
   );
 }
               Schedule Demo;
@@ -1799,6 +1784,3 @@ href='/contact';
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

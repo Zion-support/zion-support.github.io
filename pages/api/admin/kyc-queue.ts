@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -17,8 +16,6 @@ const DB_FILE = path.join(process.cwd(), 'data', 'kyc-queue.json');
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(DB_FILE, 'utf8');
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -42,7 +39,6 @@ function load(): Record<string, KycProfile> {
   try {
     if (!fs.existsSync(FILE)) return {};
     const raw = fs.readFileSync(FILE, 'utf8');
->>>>>>> origin/main
     return JSON.parse(raw);
   } catch {
     return {};
@@ -50,28 +46,11 @@ function load(): Record<string, KycProfile> {
 }
 
 function save(db: Record<string, KycProfile>) {
-<<<<<<< HEAD
   fs.mkdirSync(path.dirname(DB_FILE), { recursive: true });
   fs.writeFileSync(DB_FILE, JSON.stringify(db, null, 2));
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-  const dir = path.dirname(FILE);
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
-}
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    await ensureAdminFromApi(req);
-  } catch (e: any) {
-    return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
-  }
-
->>>>>>> origin/main
   const db = load();
   
   if (req.method === 'GET') {
@@ -105,17 +84,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       profile.status = 'needs_more_info';
     }
     
-<<<<<<< HEAD
     profile.reviewedAt = now;
     profile.reason = reason;
-=======
-    profile.lastUpdatedAt = now;
-    profile.auditTrail.push({
-      action,
-      reason,
-      timestamp: now
-    });
->>>>>>> origin/main
     
     db[userId] = profile;
     save(db);
@@ -124,13 +94,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
-<<<<<<< HEAD
-=======
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'KYC Queue endpoint' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
 }

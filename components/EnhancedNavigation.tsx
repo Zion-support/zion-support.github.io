@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Link from 'next/link'
 useEffect ( () => {
   const handleScroll = () => {
@@ -12,10 +9,6 @@ return (<nav className= {
   `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
   isScrolled ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' <div className="max-w-7xl mx-auto px-6"> <div className="flex items-center justify-between h-20"> <Link href="/" className="flex items-center space-x-3"> <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center"> <Brain className="w-6 h-6 text-white" /> </div> <span className="text-xl font-bold text-white">Zion Tech Group</span> </Link> <div className="hidden md:flex items-center space-x-8"> <Link href="/services" className="text-white hover:text-cyan-400 transition-colors"> Services </Link> <Link href="/about" className="text-white hover:text-cyan-400 transition-colors"> About </Link> <Link href="/contact" className="text-white hover:text-cyan-400 transition-colors"> Contact </Link> </div> </div> 
 }
-=======
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -187,7 +180,6 @@ const EnhancedNavigation: React.FC = () => {
         </div>
 
         {/* Mobile Menu */}
-<<<<<<< HEAD
 const EnhancedNavigation: React.FC;
 const EnhancedNavigation: React.FC;
         {isOpen && (
@@ -197,33 +189,3 @@ const EnhancedNavigation: React.FC;
             exit={{ opacity: 0, y: -20 }}
             className = $2;
 export default EnhancedNavigation,
-=======
-        {is_open && (<motion.div;}
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-
-                      </div>
-                    </Link>))}
-                </div>
-              </div>
-              {/* Mobile Company */}
-
-                      </div>
-                    </Link>))}
-                </div>
-              </div>
-                  on_click={closeAllDropdowns}
-                    />
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </div>
-    </nav>
-  );
-}
-export default EnhancedNavigation;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

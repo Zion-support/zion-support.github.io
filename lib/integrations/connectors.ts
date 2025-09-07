@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from "./types";
@@ -13,7 +10,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -220,160 +216,9 @@ export const ats = {
     return simulateAction(connection, 'ats.uploadResume', { resumeMeta: { name: resume?.name } });
   },
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-<<<<<<< HEAD
     return simulateAction(connection, 'ats.updateStatus', { change });
   }
 };
-=======
-    return simulateAction(connection, 'ats.updateStatus', { change })
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-async pushApplicant(
-    connection: ProviderConnection,
-    applicant: Record<string, any>
-  ) {
-    return simulateAction(connection, 'ats.pushApplicant', { applicant });
-  },
-  async uploadResume(
-    connection: ProviderConnection,
-    resume: Record<string, any>
-  ) {
-    return simulateAction(connection, 'ats.uploadResume', {
-      resumeMeta: { name: resume?.name },
-    });
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
-  async updateStatus(
-    connection: ProviderConnection
-    status: Record<string, any>
-  ) {
-    connection: ProviderConnection,
-    status: Record<string, any>,
-  ) {;
-    return mockProviderCall(connection, "update_status", { status });
-  }
-}
-
-
-  async sync_contact (
-    connection: ProviderConnection,
-    contact: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "sync_contact", { contact });
-  },
-  async addEmailTouchpoint (
-    connection: ProviderConnection,
-    touchpoint: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "add_email_touchpoint", { touchpoint });
-  },
-  async addProjectNote (
-    connection: ProviderConnection,
-    note: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "add_project_note", { note });
-  const log: SyncLogEntry = {
-    id: uuidv4()
-    timestamp: Date.now()
-    providerId: connection.providerId
-    level: "info"
-    action
-    details
-  }
-  // In a real implementation, call provider SDK/API here using connection.accessToken
-  return { log, result: { ok: true } as unknown as T }
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-  },
-
-
-}
-;
-// ATS actions;
-export const ats = {
-  async update_status (
-    connection: ProviderConnection,
-    status: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "update_status", { status });
-  },
-}
-  }
-}
-;
-// ATS actions;
-export const ats = {
-  async update_status (
-    connection: ProviderConnection,
-    status: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "update_status", { status });
-  }
-}
-;
-}
-;
-// ATS actions;
-export const ats = {
-  async update_status (
-    connection: ProviderConnection,
-    status: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "update_status", { status });
-  }
-}
-;
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-
-
-
-
-
-  async createCandidate(
-    connection: ProviderConnection,
-    candidate: Record<string, any>
-  ) {
-    return executeProviderAction(connection, 'createCandidate', { candidate });
-  }
-};
-
-
-
-
-
-
-
-// Email actions
-export const email = {
-  async sendNotification(
-    connection: ProviderConnection,
-    notification: Record<string, any>
-  ) {
-=======
-  async update_status(connection: ProviderConnection, status: Record<string, any>) {
-    return mockProviderCall(connection, 'update_status', status);
-  }
-};
-
-export async function executeProviderAction<T>(
-  connection: ProviderConnection,
-  action: string,
-  details: Record<string, any>
-): Promise<{ log: SyncLogEntry; result: T }> {
-  return mockProviderCall(connection, action, details);
-}
-
-export const notificationConnector = {
-  async sendNotification(connection: ProviderConnection, notification: any) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     return executeProviderAction(connection, 'sendNotification', { notification });
   }
 };
@@ -399,4 +244,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
   }},
->>>>>>> origin/main

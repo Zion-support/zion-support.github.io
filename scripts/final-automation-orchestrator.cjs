@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -22,6 +23,9 @@ main
 
 #!/usr/bin/env node;
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -40,6 +44,7 @@ console.log('=====')
       execSync('git push origin main', { "stdio"})
 // console.log('\n Final Automation "Summary")
       console.log('\n "Recommendations")
+<<<<<<< HEAD
     console.error(' Final automation orchestrator "failed")
 <<<<<<< HEAD
 ///usr/bin/env node
@@ -53,3 +58,6 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+    console.error(' Final automation orchestrator "failed")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

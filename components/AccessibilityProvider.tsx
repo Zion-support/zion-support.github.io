@@ -1,49 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-import React, { createContext, useContext, ReactNode } from "react";
-
-interface AccessibilityContextType {
-  announceToScreenReader: (message: string) => void;
-  setFocus: (elementId: string) => void;
->>>>>>> origin/main
 }
-
 const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
 >(undefined);
-
 interface AccessibilityProviderProps {
   children: ReactNode;
 }
 
-<<<<<<< HEAD
-=======
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-  children,
-}) => {
-  const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById("live-region");
-    if (liveRegion) {
-      liveRegion.textContent = message;
-    }
-  };
-
-  const setFocus = (elementId: string) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.focus();
-    }
-  };
-
->>>>>>> origin/main
-=======
 import React, { createContext, useContext, useState } from 'react'
 interface AccessibilityContextType {
   highContrast: boolean
@@ -59,7 +22,6 @@ export const useAccessibility = () => {
   const context = useContext(AccessibilityContext)
   if (context === undefined) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider')
-=======
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
@@ -79,7 +41,6 @@ export function useAccessibility() {
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
   return context
 }
@@ -88,7 +49,6 @@ interface AccessibilityProviderProps {
   children: React.ReactNode
 }
 
-<<<<<<< HEAD
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
   const [highContrast, setHighContrast] = useState(false)
   const [largeText, setLargeText] = useState(false)
@@ -113,13 +73,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   )
 }
 export default AccessibilityProvider
-=======
 import React, { createContext, useContext, useState, ReactNode } from "react";
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-=======
   return (
     <AccessibilityContext.Provider
       value={{
@@ -149,8 +104,6 @@ export const useAccessibility = () => {
   return context
 }
 export default AccessibilityProvider;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
@@ -178,7 +131,6 @@ interface AccessibilityProviderProps {
   children: React.ReactNode;
 }
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 export default function AccessibilityProvider({ children }: AccessibilityProviderProps) {
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -221,30 +173,12 @@ export default function AccessibilityProvider({ children }: AccessibilityProvide
     setFontSize,
   };
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return (
     <AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
 
-=======
-};
-
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
-  if (context === undefined) {
-    throw new Error(
-      "useAccessibility must be used within an AccessibilityProvider",
-    );
-  }
-  return context;
-};
->>>>>>> origin/main
-=======
   )
 }
     )
@@ -259,9 +193,6 @@ export const useAccessibility = () => {
   return context
 }
 export default AccessibilityProvider;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
   );
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+  );

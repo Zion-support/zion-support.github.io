@@ -1,5 +1,4 @@
 <<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
 
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -49,7 +48,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react',import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Badge } from "@/components/ui/badge",import { Button  } from '@/components/ui/button';
 import { format   } from 'date-fns';
 import React from 'react';
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
 
 =import React from 'react';
 >import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -219,7 +217,6 @@ interface MilestoneCardProps {
         <div className="flex justify-between items-start">;
           <div>;
             <CardTitle className="text-xl">{title}</CardTitle>;
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
             {dueDate && (;
               <p className="text-sm text-muted-foreground">;
   dueDate?: string,
@@ -305,7 +302,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className={`capitalize ${getStatusBadgeColor()} text-white`}
             >;
               {status.replace('_', ' ')}
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
             </Badge>
 <<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
             {isUnderDispute && disputeStatus && (
@@ -383,7 +379,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <RaiseDisputeButton
 >              projectId={projectId}
               milestoneId={id}
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
               variant='ghost'
               size='sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -477,7 +472,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}{status === 'pending' && onApprove && !isUnderDispute && (<Button variant="default" size="sm" onClick={() => onApprove(id)}>;
               <Check className="h-4 w-4 mr-1" /> Approve;
             </Button>;
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
           )}
 ;
           {isUnderDispute && (;
@@ -552,7 +546,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>)}
         </div>;
       </CardFooter>;
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
     </Card>);
 }
         </div>

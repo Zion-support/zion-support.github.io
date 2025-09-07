@@ -15,7 +15,6 @@ export const AppScreenshots: React.FC = () => {
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount
         behavior: "smooth"})
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 
 
 :src/components/mobile-app/AppScreenshots.tsx
@@ -113,7 +112,6 @@ export const AppScreenshots: React.FC = () => {
           </p>;
         </div>;
         <div className="relative">;
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 
         <div className="relative">
           <Button
@@ -134,7 +132,6 @@ export const AppScreenshots: React.FC = () => {
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 
           <div
             ref = {scrollContainerRef,}
@@ -164,7 +161,6 @@ export const AppScreenshots: React.FC = () => {
                 <img
                   src={screenshot.src}
                   alt={screenshot.alt}
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -193,7 +189,6 @@ export const AppScreenshots: React.FC = () => {
                 />;
               </div>;
             ))}
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
           </div>
 
           
@@ -325,7 +320,6 @@ if ( {) {$2;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
     </section>);
 }
 '"},
@@ -342,7 +336,6 @@ import { Button } from "@/components/ui/button";
 };
 };
 '"
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
     </section>)}
 '"}}))// These would be replaced with actual screenshots;

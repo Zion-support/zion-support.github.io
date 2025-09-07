@@ -1,39 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV2 {
 export interface EnterpriseIt2026ServiceV2 {
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 export interface EnterpriseIt2026ServiceV2 {};
 export interface EnterpriseIt2026ServiceV2 {;
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 export interface EnterpriseIt2026ServiceV2 {
 
-export interface EnterpriseIt2026ServiceV2 {;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-export interface EnterpriseIt2026ServiceV2 {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-export interface EnterpriseIt2026ServiceV2 {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export interface EnterpriseIt2026ServiceV2 {;
 export interface EnterpriseIt2026ServiceV2 {
 export interface EnterpriseIt2026ServiceV2 {
@@ -41,15 +17,10 @@ export interface EnterpriseIt2026ServiceV2 {
 export interface EnterpriseIt2026ServiceV2 {;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 ursor/fix-website-loading-errors-and-merge-6662
 
 export interface EnterpriseIt2026ServiceV2 {
@@ -60,19 +31,9 @@ import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV2 {
 export interface EnterpriseIt2026ServiceV2 {
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -117,13 +78,8 @@ export interface EnterpriseIt2026ServiceV2 {
 export interface EnterpriseIt2026ServiceV2 {;
 
 export interface EnterpriseIt2026ServiceV2 {
-<<<<<<< HEAD
 
 
-=======
-  // TODO: Implement;
-}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export interface EnterpriseIt2026ServiceV2 {;
 
 
@@ -131,7 +87,6 @@ export interface EnterpriseIt2026ServiceV2 {
 
 
 export interface EnterpriseIt2026ServiceV2 {;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   id: string;
   name: string;
   tagline: string;
@@ -162,22 +117,14 @@ export interface EnterpriseIt2026ServiceV2 {;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: string;
   }
     website: string
   },
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
     website: string;
   }
     website: string;
   },
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   realImplementation: boolean;
   contact_info: {mobile: string;
     email: string;
@@ -192,15 +139,8 @@ export interface EnterpriseIt2026ServiceV2 {;
   rating: number;
     id: 'zero-trust-network-architecture-pro';
     name: 'Zero Trust Network Architecture Pro';
-<<<<<<< HEAD
     tagline: 'Never trust, always verify - comprehensive zero trust security',price: '$1,199',period: '/month';
     description: 'Advanced zero trust network architecture platform that implements comprehensive security controls and continuous verification. Perfect for enterprises, government agencies, and organizations requiring maximum security.',features: [;
-=======
-    tagline: 'Never trust;, always verify - comprehensive zero trust security',
-  price: '$1;,199',period: '/month';
-    description: 'Advanced zero trust network architecture platform that implements comprehensive security controls and continuous verification. Perfect for enterprises;, government agencies, and organizations requiring maximum security.',
-  features: [;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Identity verificationDevice trust scoringContinuous monitoringMicro-segmentationLeast privilege accessReal-time threat detectionCompliance frameworksAdvanced analytics';
       'API for integrationEnterprise deployment';
     ];
@@ -209,12 +149,7 @@ export interface EnterpriseIt2026ServiceV2 {;
     color: 'from-red-600 to-orange-700';
     textColor: 'text-red-400';
     link: 'https://ziontechgroup.com/zero-trust-network-architecture';
-<<<<<<< HEAD
     marketPosition: 'Competitive with Palo Alto Networks ($1000+/month), Cisco ($800+/month), and Fortinet ($600+/month). Our advantage: Zero trust focus, better pricing, and comprehensive security features.',targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Fortune 500 companies',trialDays: 21;
-=======
-    marketPosition: 'Competitive with Palo Alto Networks ($1000+/month);, Cisco ($800+/month), and Fortinet ($600+/month). Our advantage: Zero trust focus;, better pricing, and comprehensive security features.',
-  targetAudience: 'Enterprises;, Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Fortune 500 companies',trialDays: 21;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     setupTime: '2 weeks';
     category: 'Cybersecurity & Networking';
     realService: true;
@@ -231,7 +166,6 @@ export interface EnterpriseIt2026ServiceV2 {;
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
     },realImplementation: true;
-<<<<<<< HEAD
     implementationDetails: 'Production-ready zero trust platform with comprehensive security controls, monitoring, and enterprise deployment.',launchDate: '2026-01-10';
     customers: 850;
     rating: 4.8;
@@ -515,38 +449,20 @@ export interface EnterpriseIt2026ServiceV2 {;
     customers: 850;
     rating: 4.8;
     reviews: 520
-=======
-    implementationDetails: 'Production-ready zero trust platform with comprehensive security controls;, monitoring, and enterprise deployment.',
-  launchDate: '2026-01-10';
-    customers: 850;
-    rating: 4.8;
-    reviews: 520;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   {
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   {
 
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export interface EnterpriseIT2026ServiceV2 {
-=======
 
 export interface EnterpriseIT2026ServiceV2 {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -560,43 +476,26 @@ export interface EnterpriseIT2026ServiceV2 {}
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   contactInfo: {
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       
     mobile: string, email: string,
     address: string,
     website: string
   
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
     },
   contactInfo: {},
   contactInfo: {},
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
 }
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
     launchDate: '2026-05-01'
@@ -604,9 +503,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9
     reviews: 180
   }
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
     tagline: 'Seamlessly manage and orchestrate across all cloud providers',
@@ -687,7 +583,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 1200,
     rating: 4.7,
     reviews: 750,
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface EnterpriseIT2026ServiceV2 {
@@ -695,9 +590,6 @@ export interface EnterpriseIT2026ServiceV2 {
 }
 export interface EnterpriseIt2026ServiceV2 {;
 
-<<<<<<< HEAD
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
   // TODO: Implement
     reviews: 520;
   },{export interface EnterpriseIT2026ServiceV2  {id: string;, name: string;,tagline: string;, price: string;,period: string;, description: string;,features: string[];, popular: boolean;,icon: string;, color: string;,textColor: string;, link: string;,marketPosition: string;, targetAudience: string;,trialDays: number;, setupTime: string;,category: string;, realService: boolean;,technology: string[];, integrations: string[];,useCases: string[];, roi: string;,competitors: string[];, marketSize: string;,growthRate: string;, variant: ServiceVariant;,contactInfo: {;},contactInfo: {mobile: string;, email: string;,address: string;,website: string;}
@@ -771,13 +663,11 @@ pr-12325
   launchDate: string;, customers: number;,
   rating: number;,
   reviews: number;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
     launchDate: '2026-05-01'
     customers: 280
     rating: 4.9
-<<<<<<< HEAD
     reviews: 180
   }
 import { ServiceVariant } from '../types/service-variants';
@@ -1167,86 +1057,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
 
   // Quantum Cybersecurity Platform
   {
-=======
-    reviews: 180;
-  }
-    id: 'multi-cloud-orchestration-platform';,
-    name: 'Multi-Cloud Orchestration Platform';,
-    tagline: 'Seamlessly manage and orchestrate across all cloud providers';,
-    price: '$899';,
-    period: '/month';,
-    description: 'Comprehensive multi-cloud orchestration platform that enables enterprises to manage;, monitor, and optimize workloads across AWS, Azure, Google Cloud, and private clouds. Perfect for enterprises with multi-cloud strategies.',
-    features: [
-      'Multi-cloud management',
-      'Workload orchestration',
-      'Cost optimization',
-      'Performance monitoring',
-      'Security compliance',
-      'Automated scaling',
-      'Resource optimization',
-      'Advanced analytics',
-      'API for integration',
-      'Enterprise support',
-    ],
-    popular: true;,
-    icon: '☁️';,
-    color: 'from-blue-600 to-cyan-700';,
-    textColor: 'text-blue-400';,
-    link: 'https://ziontechgroup.com/multi-cloud-orchestration';,
-    marketPosition: 'Competitive with HashiCorp ($0-1000);, Terraform Cloud ($0-500), and CloudBolt ($0-1000). Our advantage: Multi-cloud focus;, better pricing, and comprehensive orchestration.',
-    targetAudience: 'Enterprises;, Cloud architects, DevOps teams, IT managers, Technology companies, Multi-cloud organizations',
-    trialDays: 30;,
-    setupTime: '1 week';,
-    category: 'Cloud & DevOps';,
-    realService: true;,
-    technology: [
-      'Multi-Cloud',
-      'Kubernetes',
-      'React',
-      'Node.js',
-      'PostgreSQL',
-      'AWS',
-    ],
-    integrations: [
-      'AWS',
-      'Azure',
-      'Google Cloud',
-      'Kubernetes',
-      'Terraform',
-      'Ansible',
-    ],
-    useCases: [
-      'Multi-cloud management',
-      'Workload orchestration',
-      'Cost optimization',
-      'Performance monitoring',
-      'Security compliance',
-      'Resource optimization',
-    ],
-    roi: 'Average customer sees 500% ROI through reduced cloud costs and improved efficiency.';,
-    competitors: [
-      'HashiCorp',
-      'Terraform Cloud',
-      'CloudBolt',
-      'RightScale',
-      'Scalr',
-    ],
-    marketSize: '$28.9B market';,
-    growthRate: '280% annual growth';,
-    variant: 'cloud-futuristic';,
-    contactInfo: {
-      mobile: '+1 302 464 0950';,
-      email: 'kleber@ziontechgroup.com';,
-      address: '364 E Main St STE 1008 Middletown DE 19709';,
-      website: 'https://ziontechgroup.com';,
-    },
-    realImplementation: true;,
-    implementationDetails: 'Production-ready multi-cloud platform with orchestration;, monitoring, and optimization capabilities.',
-    launchDate: '2026-01-20';,
-    customers: 1200;,
-    rating: 4.7;,
-    reviews: 750;,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   },
 
   // AI-Powered IT Operations Center
@@ -1713,30 +1523,15 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
 
   // Quantum Cybersecurity Platform
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     id: 'quantum-cybersecurity-platform',
     name: 'Quantum Cybersecurity Platform',
     tagline: 'Protect against quantum threats with quantum-resistant security',
     price: '$1,599',
     period: '/month',
-<<<<<<< HEAD
     description: 'Advanced quantum cybersecurity platform that provides protection against quantum threats and ensures long-term security. Perfect for government agencies, financial institutions, and enterprises requiring quantum-resistant security.',
     features: [
       'Post-quantum cryptographyQuantum-resistant algorithmsThreat detectionSecurity monitoringCompliance frameworksAdvanced analyticsCustom security policiesAPI for integrationEnterprise deployment24/7 monitoring'
     ],
-=======
-    description:
-      'Advanced quantum cybersecurity platform that provides protection against quantum threats and ensures long-term security. Perfect for government agencies, financial institutions, and enterprises requiring quantum-resistant security.',
-=======
-    id: 'quantum-cybersecurity-platform';,
-    name: 'Quantum Cybersecurity Platform';,
-    tagline: 'Protect against quantum threats with quantum-resistant security';,
-    price: '$1;,599',
-    period: '/month';,
-    description: 'Advanced quantum cybersecurity platform that provides protection against quantum threats and ensures long-term security. Perfect for government agencies;, financial institutions, and enterprises requiring quantum-resistant security.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     features: [
       'Post-quantum cryptography',
       'Quantum-resistant algorithms',
@@ -1749,46 +1544,22 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       'Enterprise deployment',
       '24/7 monitoring',
     ],
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     popular: true,
     icon: '🛡️',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity-platform',
-<<<<<<< HEAD
     marketPosition: 'Competitive with specialized quantum security companies. Our advantage: Comprehensive platform, better pricing, and quantum expertise.',
     targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Critical infrastructure, Fortune 500 companies',
-=======
-    marketPosition:
-      'Competitive with specialized quantum security companies. Our advantage: Comprehensive platform, better pricing, and quantum expertise.',
-    targetAudience:
-      'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Critical infrastructure, Fortune 500 companies',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     trialDays: 14,
     setupTime: '1 month',
     category: 'Quantum & Cybersecurity',
     realService: true,
-<<<<<<< HEAD
     technology: ['Post-Quantum CryptographyQuantum AlgorithmsReactNode.jsPostgreSQLAWS'],
     integrations: ['Security systemsCompliance platformsCustom security toolsEnterprise platforms'],
     useCases: ['Quantum threat protectionSecurity monitoringComplianceRisk managementThreat detectionSecurity automation'],
     roi: 'Average customer sees 700% ROI through enhanced security and quantum readiness.',
     competitors: ['Specialized quantum security companiesGovernment initiativesResearch projects'],
-=======
-=======
-    popular: true;,
-    icon: '🛡️';,
-    color: 'from-yellow-600 to-orange-700';,
-    textColor: 'text-yellow-400';,
-    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform';,
-    marketPosition: 'Competitive with specialized quantum security companies. Our advantage: Comprehensive platform;, better pricing, and quantum expertise.',
-    targetAudience: 'Government agencies;, Financial institutions, Healthcare organizations, Defense contractors, Critical infrastructure, Fortune 500 companies',
-    trialDays: 14;,
-    setupTime: '1 month';,
-    category: 'Quantum & Cybersecurity';,
-    realService: true;,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     technology: [
       'Post-Quantum Cryptography',
       'Quantum Algorithms',
@@ -1811,18 +1582,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       'Threat detection',
       'Security automation',
     ],
-<<<<<<< HEAD
     roi: 'Average customer sees 700% ROI through enhanced security and quantum readiness.',
-=======
-    roi: 'Average customer sees 700% ROI through enhanced security and quantum readiness.';,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     competitors: [
       'Specialized quantum security companies',
       'Government initiatives',
       'Research projects',
     ],
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$8.9B market',
     growthRate: '450% annual growth',
     variant: 'quantum-futuristic',
@@ -1830,38 +1595,16 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-=======
-      website: 'https://ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-}
-      'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
-    launchDate: '2026-05-01'
-    customers: 280
-    rating: 4.9
-    reviews: 180
-  }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.',
     launchDate: '2026-05-01',
     customers: 280,
     rating: 4.9,
-<<<<<<< HEAD
     reviews: 180
     reviews: 180,
     reviews: 180
-=======
-    reviews: 180,
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -1874,7 +1617,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 280;
     rating: 4.9
 
-<<<<<<< HEAD
 
 }
 
@@ -1887,52 +1629,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     price: '$1,199',
     period: '/month',
     description: 'Advanced zero trust network architecture platform that implements comprehensive security controls and continuous verification. Perfect for enterprises, government agencies, and organizations requiring maximum security.',
-=======
-    reviews: 180
-  }
-=======
-  contactInfo: {}
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,;
-  reviews: number;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
 
-=======
-=======
-    marketSize: '$8.9B market';,
-    growthRate: '450% annual growth';,
-    variant: 'quantum-futuristic';,
-    contactInfo: {
-      mobile: '+1 302 464 0950';,
-      email: 'kleber@ziontechgroup.com';,
-      address: '364 E Main St STE 1008 Middletown DE 19709';,
-      website: 'https://ziontechgroup.com';,
-    },
-    realImplementation: true;,
-    implementationDetails:
-origin/cursor/automate-test-improve-and-merge-code-2533
-  reviews: number;
-      'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.
-    launchDate: '2026-05-01;,
-  customers: 280;
-    rating: 4.9;,
-  reviews: 180;
-pr-12325
-      'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.',
-    launchDate: '2026-05-01';,
-    customers: 280;,
-    rating: 4.9;,
-    reviews: 180;,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'
     }
     realImplementation: true
@@ -1943,8 +1644,6 @@ pr-12325
 
     reviews: 180
   }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
@@ -1974,29 +1673,15 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       '
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
-<<<<<<< HEAD
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 180'
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,'
     implementation_details: 'Production - ready quantum security platform with post - quantum algorithms, monitoring, and enterprise deployment.';'
-=======
-=======
       website: 'https://ziontechgroup.com';
     }
     realImplementation: true
@@ -2004,7 +1689,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2026-05-01';
     customers: 280;
     rating: 4.9
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
     reviews: 180;
   }
@@ -2030,14 +1714,12 @@ pr-12325
     price: '$1;,199',
     period: '/month';,
     description: 'Advanced zero trust network architecture platform that implements comprehensive security controls and continuous verification. Perfect for enterprises;, government agencies, and organizations requiring maximum security.',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     features: [
       'Identity verificationDevice trust scoringContinuous monitoringMicro-segmentationLeast privilege accessReal-time threat detectionCompliance frameworksAdvanced analytics';
       'API for integrationEnterprise deployment'
       'API for integrationEnterprise deployment]
 pr-12325
     ];
-<<<<<<< HEAD
     popular: true, icon: '🔒',
     color: 'from-red-600 to-orange-700', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/zero-trust-network-architecture',
@@ -2059,37 +1741,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
-    popular: true;, icon: '🔒';,
-    color: 'from-red-600 to-orange-700';, textColor: 'text-red-400';,
-    link: 'https://ziontechgroup.com/zero-trust-network-architecture';,
-    marketPosition: 'Competitive with Palo Alto Networks ($1000+/month);, Cisco ($800+/month), and Fortinet ($600+/month). Our advantage: Zero trust focus;, better pricing, and comprehensive security features.',
-    targetAudience: 'Enterprises;, Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Fortune 500 companies',
-    trialDays: 21;, setupTime: '2 weeks';,
-    category: 'Cybersecurity & Networking';, realService: true;,
-    technology: ['Zero TrustNetwork SecurityReactNode.jsPostgreSQLAWS'];, integrations: ['Active DirectoryLDAPSAMLOAuthCustom identity systems'];,
-    useCases: ['Network securityAccess controlThreat preventionComplianceRisk managementSecurity monitoring'];, roi: 'Average customer sees 400% ROI through enhanced security and reduced breach risks.';,
-    competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper'];, marketSize: '$67.8B market';,
-    growthRate: '220% annual growth';, variant: 'security-futuristic';,
-    contactInfo: {
-      
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
-
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      address: '364 E Main St STE 1008 Middletown DE 19709';,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     reviews: 180
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;,
     implementation_details: 'Production - ready quantum security platform with post - quantum algorithms;, monitoring, and enterprise deployment.';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launch_date: '2026 - 05 - 01';
     customers: 280;
     rating: 4.9;,
     reviews: 180;
-<<<<<<< HEAD
 ];
 ];
 
@@ -2102,35 +1762,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ];
 ];
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ];
 origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
-<<<<<<< HEAD
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 ];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ];
 
 ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
@@ -2313,7 +1957,6 @@ pr-12325
 ;
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
   // Zero Trust Network Architecture;
-<<<<<<< HEAD
   {;'
     id: 'zero-trust-network-architecture-pro',;'
     name: 'Zero Trust Network Architecture Pro',;'
@@ -2323,22 +1966,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     description: 'Advanced zero trust network architecture platform that implements comprehensive security controls and continuous verification. Perfect for enterprises, government agencies, and organizations requiring maximum security.',;
     features: [;'
       'Identity verificationDevice trust scoringContinuous monitoringMicro-segmentationLeast privilege accessReal-time threat detectionCompliance frameworksAdvanced analytics',;'
-=======
-  {;
-    id: 'zero-trust-network-architecture-pro';,;
-    name: 'Zero Trust Network Architecture Pro';,;
-    tagline: 'Never trust;, always verify - comprehensive zero trust security',;
-    price: '$1;,199',;
-    period: '/month';,;
-    description: 'Advanced zero trust network architecture platform that implements comprehensive security controls and continuous verification. Perfect for enterprises;, government agencies, and organizations requiring maximum security.',;
-    features: [;
-      'Identity verificationDevice trust scoringContinuous monitoringMicro-segmentationLeast privilege accessReal-time threat detectionCompliance frameworksAdvanced analytics',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'API for integrationEnterprise deployment';
       'API for integrationEnterprise deployment';']
 pr-12325
     ],;
-<<<<<<< HEAD
     popular: true,;'
     icon: '🔒',;'
     color: 'from-red-600 to-orange-700',;'
@@ -2358,17 +1989,10 @@ pr-12325
     marketSize: '$67.8B market',;'
     growthRate: '220% annual growth',;'
     variant: 'security-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -2409,17 +2033,10 @@ pr-12325
     marketSize: '$28.9B market',;'
     growthRate: '280% annual growth',;'
     variant: 'cloud-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -2460,17 +2077,10 @@ pr-12325
     marketSize: '$35.2B market',;'
     growthRate: '240% annual growth',;'
     variant: 'ai-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -2511,17 +2121,10 @@ pr-12325
     marketSize: '$12.8B market',;'
     growthRate: '380% annual growth',;'
     variant: 'quantum-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -2562,17 +2165,10 @@ pr-12325
     marketSize: '$15.7B market',;'
     growthRate: '320% annual growth',;'
     variant: 'edge-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -2613,17 +2209,10 @@ pr-12325
     marketSize: '$23.4B market',;'
     growthRate: '260% annual growth',;'
     variant: 'ai-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -2664,17 +2253,10 @@ pr-12325
     marketSize: '$19.9B market',;'
     growthRate: '280% annual growth',;'
     variant: 'blockchain-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -2715,17 +2297,10 @@ pr-12325
     marketSize: '$18.7B market',;'
     growthRate: '300% annual growth',;'
     variant: 'ai-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -2766,17 +2341,10 @@ pr-12325
     marketSize: '$8.9B market',;'
     growthRate: '450% annual growth',;'
     variant: 'quantum-futuristic',;
-<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;'
@@ -2785,18 +2353,9 @@ pr-12325
     customers: 280,;
     rating: 4.9;
     reviews: 180;
-<<<<<<< HEAD
 
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     popular: true;,;
     icon: '🔒';,;
     color: 'from-red-600 to-orange-700';,;
@@ -3590,7 +3149,6 @@ pr-12325
     customers: 280;,;
     rating: 4.9;
     reviews: 180;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ];
   }
@@ -3602,9 +3160,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
   }
@@ -3613,15 +3168,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 ];
   }
 ;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     implementationDetails: 'Production-ready quantum security platform with post-quantum algorithms;, monitoring, and enterprise deployment.',;
     launchDate: '2026-05-01';,;
     customers: 280;,;
@@ -3670,13 +3220,11 @@ pr-12325
     customers: 280;,;
     rating: 4.9;,
   reviews: 180;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
   }
 ;
 
-<<<<<<< HEAD
 
   }
 ];
@@ -3697,9 +3245,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4.9,
     reviews: 180}
 ],
-=======
-;
-'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

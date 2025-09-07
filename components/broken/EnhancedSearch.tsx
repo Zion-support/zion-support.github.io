@@ -23,7 +23,6 @@ interface SearchResult  {id: string;
   onResultSelect: (result: SearchResult) => void;
   placeholder?: string;
   className?: string;
-<<<<<<< HEAD
   showFilters?: boolean;
 }const EnhancedSearch: React.FC<SearchProps> = ({onSearch;
   onResultSelect;
@@ -45,7 +44,6 @@ setIsSearching (true);
   }
 }
 
-<<<<<<< HEAD
 interface SearchProps {
   onSearch: (query: string) => void,
   onResultSelect: (result: SearchResult) => void,
@@ -116,25 +114,6 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   ];
 
 
-=======
-//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
-  
-}];
-setIsSearching (true);
-//Simulate API call delay setTimeout ( () => {
-  const filteredResults = mockSearchResults.filter (result => {
-  const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) |result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) |result.category.toLowerCase () .includes (searchQuery.toLowerCase () );
-const matchesFilters = selectedFilters.length === 0 |selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) |result.type.toLowerCase () .includes (filter.toLowerCase () ) );
-setResults (sortedResults);
-setShowResults (true);
-setIsSearching (false)
-}, 300)
-=======
-  showFilters?: boolean;}
-}
-}
-
-<<<<<<< HEAD
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch;
   onResultSelect;
@@ -150,9 +129,7 @@ setShowResults (true);
 setIsSearching (false) 
 }, 300) 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }, 300);
-<<<<<<< HEAD
 }, 300);
 [selected_filters]);
 [selected_filters]);
@@ -164,7 +141,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ,) => {
   return $3;}
 }
-<<<<<<< HEAD
 }, []);
 //Handle filter toggle const toggleFilter = (
   setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId) ) => {
@@ -185,15 +161,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<button type=\"submit\" className=\"absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50\"  /> Search </button> </div> </form> {}
   /* Search Results Dropdown */ }
 }<AnimatePresence /> {
-=======
-}, [])
-//Handle filter toggle const toggleFilter = (filterId: string) => {
-  setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId) return (<div className= {
-  `relative $ {
-  className 
-}` 
-=======
-<<<<<<< HEAD
 //Close search on outside click useEffect ( () => {
   const handleClickOutside = (event: MouseEvent) => {
   if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
@@ -202,7 +169,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }, []);
 //Handle filter toggle const toggleFilter = (filterId: string) => {
   setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId) 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }> {
   /* Search Form */ 
 }<form onSubmit= {
@@ -218,9 +184,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<button type="submit" className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50" > Search </button> </div> </form> {
   /* Search Results Dropdown */ 
 }<AnimatePresence> {
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 }, []);
 //Handle filter toggle const toggleFilter = (filterId: string) => {
   setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId)
@@ -239,7 +202,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<button type="submit" className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50" > Search </button> </div> </form> {
   /* Search Results Dropdown */
 }<AnimatePresence> {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   showResults && (<motion.div initial= {
   {
   opacity: 0, y: -10, scale: 0.95
@@ -278,7 +240,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</button> </div> </div> {
   /* Search Suggestions */
 }<AnimatePresence> {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 function debounce<T extends (...args: any[]) => any>(
   func: T
   wait: number
@@ -638,52 +599,8 @@ function debounce<T extends (...args: any[]) => any>(
     timeout = setTimeout(() => func(...args), wait)
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 export default EnhancedSearch;
-=======
-export default EnhancedSearch,
-=======
-<<<<<<< HEAD
-=======
-  showResults && (<motion.div initial= {
-  {
-  opacity: 0, y: -10, scale: 0.95 
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-}animate= {
-  {
-  opacity: 1, y: 0, scale: 1 
-
-}exit= {
-  {
-}{
-  show_filters && (<div className="p - 4 border - b border-gray-700"> <div className="flex items - center gap-2 mb-3"> <Filter className="w - 4 h - 4 text-gray-400" /> <span className="text - sm font - medium text-gray-300">Filter by Category</span> </div> <div className="flex flex-wrap gap-2"> {
-  categories.map ( (category) => (<button key= {
-
-  opacity: 0, y: -10, scale: 0 && 0.95 
-
-}transition= {
-  {
-  duration: 0 && 0.2 
-
-=======
-//Close search on outside click useEffect ( () => {}
-}animate= {}
-  {}
-  opacity: 1, y: 0, scale: 1;
-}exit= {}
-  {}
-}{}
-  show_filters && (<div className="p - 4 border - b border - gray - 700"> <div className="flex items - center gap - 2 mb - 3"> <Filter className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Filter by Category</span> </div> <div className="flex flex - wrap gap - 2"> {}
-  categories.map ( (category) => (<button key= {}
-  opacity: 0, y: -10, scale: 0 && 0.95;
-}transition= {}
-  {}
-  duration: 0 && 0.2;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"> {;
   /* Filters */ ;
 }{;"
@@ -710,7 +627,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</button> </div> </div> {;
   /* Search Suggestions */ ;
 }<AnimatePresence> {;
-<<<<<<< HEAD
   showSuggestions && suggestions && suggestions.length > 0 && (<motion&& motion.div initial= {
 
   opacity: 0, y: -10, scale: 0.95 
@@ -750,7 +666,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
   opacity: 0, y: -10 
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }animate= {
   {
   opacity: 1, y: 0 
@@ -758,7 +673,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }exit= {
   {
 // Debounce utility function
-=======
   showSuggestions && suggestions && suggestions.length > 0 && (<motion&& motion.div initial= {}
   {}
   opacity: 0, y: -10;
@@ -768,7 +682,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }exit= {}
   {}
 // Debounce utility function;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 function debounce<T extends (...args: any[]) => any>(
   func: T;
   wait: number;
@@ -873,7 +786,6 @@ export default EnhancedSearch;
   category.id;
 }on_click= {}
   () => toggle_filter (category.id);
-<<<<<<< HEAD
 }className= {
   `flex items - center gap - 2 px - 3 py - 1.5 rounded - full text - xs font - medium transition - all duration - 300 $ {
   selected_filters.includes (category.id) ? `bg - gradient - to - r $ {
@@ -888,22 +800,6 @@ export default EnhancedSearch;
 }disabled= {
   is_searching || !query.trim ();
 }className="px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - medium hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300 disabled:opacity - 50 disabled:cursor-not-allowed" > {
-=======
-}className= {}`
-  `flex items - center gap - 2 px - 3 py - 1.5 rounded - full text - xs font - medium transition - all duration - 300 $ {}`
-  selected_filters.includes (category.id) ? `bg - gradient - to - r $ {}
-  category.color;'`
-}text - white`: 'bg - gray - 700 / 50 text - gray - 300 hover:bg - gray - 600 / 50';`
-}`;"
-}> <category.icon className="w - 3 h - 3" /> {}
-  category.name;
-}</button>);"
-}<div className="flex - shrink - 0 pr - 4"> <button on_click= {}
-  () => handle_search ();
-}disabled= {}
-  is_searching || !query.trim ();"
-}className="px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - medium hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300 disabled:opacity - 50 disabled:cursor - not - allowed" > {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   is_searching ? 'Searching...' : 'Search';
 }</button> </div> </div> {}
   /* Search Suggestions */;
@@ -914,7 +810,6 @@ export default EnhancedSearch;
 }animate= {}
   {}
   opacity: 1, coordinate_y: 0;
-<<<<<<< HEAD
 }exit= {
   {
   opacity: 0, coordinate_y: -10;
@@ -926,24 +821,10 @@ export default EnhancedSearch;
 }on_click= {
   () => handleQuickAction (action.action);
 }className="flex items - center space - x-2 p - 2 text - sm text - gray - 300 hover:text - white hover:bg - gray - 800 rounded-lg transition-colors" > {
-=======
-}exit= {}
-  {}
-  opacity: 0, coordinate_y: -10;"
-}className="absolute top - full left - 0 right - 0 mt - 2 bg - gray - 900 border border - gray - 700 rounded - xl shadow - 2xl overflow - hidden z - 10" > {}
-  /* Quick Actions */;"
-}<div className="p - 4 border - b border - gray - 700"> <h3 className="text - sm font - medium text - gray - 400 mb - 3">Quick Actions</h3> <div className="grid grid - cols - 2 gap - 2"> {}
-  quick_actions.map ( (action) => (<button key= {}
-  action.name;
-}on_click= {}
-  () => handleQuickAction (action.action);"
-}className="flex items - center space - x-2 p - 2 text - sm text - gray - 300 hover:text - white hover:bg - gray - 800 rounded - lg transition - colors" > {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   action.icon;
 }<span> {}
   action.name;
 }</span> </button>) );
-<<<<<<< HEAD
 }</div> </div> {
   /* Suggestions */;
 }<div className="max-h-64 overflow-y-auto"> {
@@ -1006,70 +887,6 @@ export default EnhancedSearch;
 }on_click= {
   () => set_query (term);
 }className="px - 3 py - 1.5 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 text - cyan - 400 text - sm rounded - lg hover:from - cyan - 500 / 30 hover:to - blue - 500 / 30 transition - all duration - 300 border border-cyan-400 / 30" > {
-=======
-}</div> </div> {}
-  /* Suggestions */;"
-}<div className="max - h-64 overflow - y-auto"> {}
-  suggestions.map ( (suggestion) => (<button key= {}
-  suggestion.id;
-}on_click= {}
-  () => handleSuggestionClick (suggestion);"
-}className="w - full flex items - center space - x-3 p - 3 text - left hover:bg - gray - 800 transition - colors" > <div className="text - gray - 400"> {}
-  suggestion.icon;"
-}</div> <div className="flex - 1"> <div className="text - white"> {}
-  suggestion.text;"
-}</div> <div className="text - sm text - gray - 400 capitalize"> {}
-  suggestion.type;
-}• {}
-  suggestion.category;"
-}</div> </div> <ArrowRight className="w - 4 h - 4 text - gray - 400" /> </button>) );
-}</div> </motion.div>);
-}</AnimatePresence> </div>);
-}{}
-  /* Search Results */;"
-}<div className="p - 4"> {"
-  is_searching ? (<div className="flex items - center justify - center py - 8"> <div className="animate - spin rounded - full h - 8 w - 8 border - b-2 border - cyan - 400"></div> <span className="ml - 3 text - gray - 400">Searching...</span> </div>) : results.length > 0 ? (<div className="space - y-3"> {}
-  results.map ( (result) => (<motion.div key= {}
-  result.id;
-}while_hover= {}
-  {}
-  scale: 1.02;"
-}className="p - 3 bg - gray - 800 / 50 rounded - lg cursor - pointer hover:bg - gray - 700 / 50 transition - all duration - 300 border border - transparent hover:border - cyan - 400 / 30" on_click= {}
-  () => handleResultSelect (result);"
-}> <div className="flex items - start justify - between"> <div className="flex - 1"> <h4 className="font - medium text - white mb - 1"> {}
-  result.name;"
-}</h4> <p className="text - sm text - gray - 300 mb - 2 line - clamp - 2"> {}
-  result.description;"
-}</p> <div className="flex items - center gap - 2"> <span className="px - 2 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs rounded - full"> {}
-  result.category;
-}</span> {"
-  result.pricing?.starter && (<span className="px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full"> From {}
-  result.pricing.starter;
-}</span>);"
-}</div> </div> <div className="flex items - center gap - 1 text - cyan - 400"> <Star className="w - 4 h - 4 fill - current" /> <span className="text - xs"> {}
-  result.relevance;
-}</span> </div> </div> </motion.div>) );"
-}</div>) : query.trim () .length > 0 ? (<div className="text - center py - 8"> <div className="text - sm text - gray - 500">Try adjusting your search terms or filters</div> </div>) : (<div className="space - y-4"> {}
-  /* Search History */;
-}{"
-  search_history.length > 0 && (<div> <div className="flex items - center gap - 2 mb - 3"> <Clock className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Recent Searches</span> </div> <div className="flex flex - wrap gap - 2"> {}
-  search_history.map ( (term, index) => (<button key= {}
-  index;
-}on_click= {}
-  () => set_query (term);"
-}className="px - 3 py - 1.5 bg - gray - 700 / 50 text - gray - 300 text - sm rounded - lg hover:bg - gray - 600 / 50 transition - colors" > {}
-  term;
-}</button>) );
-}</div> </div>);
-}{}
-  /* Popular Searches */;"
-}<div> <div className="flex items - center gap - 2 mb - 3"> <TrendingUp className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Popular Searches</span> </div> <div className="flex flex - wrap gap - 2"> {}
-  popular_searches.map ( (term, index) => (<button key= {}
-  index;
-}on_click= {}
-  () => set_query (term);"
-}className="px - 3 py - 1.5 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 text - cyan - 400 text - sm rounded - lg hover:from - cyan - 500 / 30 hover:to - blue - 500 / 30 transition - all duration - 300 border border - cyan - 400 / 30" > {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   term;
 }</button>) );
 }</div> </div> </div>);
@@ -1089,7 +906,6 @@ function debounce < T extends (...args: any[]) => any>(
     timeout = set_timeout (() => func (...args), wait);
   }
 }
-<<<<<<< HEAD
   opacity: 0, y: -10 
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10" > {
@@ -1172,7 +988,6 @@ function debounce < T extends (...args: any[]) => any>(
 }</div> </div> </div>) 
 }</div> </motion.div>) 
 }</AnimatePresence> </div>) 
-<<<<<<< HEAD
 };
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
 wait: number 
@@ -1180,17 +995,4 @@ wait: number
 export default EnhancedSearch;
 
 "
-=======
-}
-// Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T
-wait: number 
-}export default EnhancedSearch
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 export default EnhancedSearch;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 return (<UltraFuturisticBackground2030> <Head> <title>2030 Revolutionary Technology Services | Zion Tech Group | AI Consciousness, Quantum Computing, Space Mining</title> <meta name="description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing, we're building tomorrow's solutions today." /> <meta name="keywords" content="2030 technology, AI consciousness, quantum computing, space mining, DNA computing, revolutionary services, Zion Tech Group" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="icon" href="/favicon.ico" /> {
   /* Open Graph */ 
 }<meta property="og:title" content="2030 Revolutionary Technology Services | Zion Tech Group" /> <meta property="og:description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https://ziontechgroup.com/2030-revolutionary-services" /> <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" /> {
@@ -209,17 +206,6 @@ return (<UltraFuturisticBackground2030> <Head> <title>2030 Revolutionary Technol
   /* Footer */ 
 }<UltraFuturisticFooter2030 /> </UltraFuturisticBackground2030>) 
 }
-=======
-import { motion  } from 'framer-motion';
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
-import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030',
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
-import { innovative2030Services } from '../data/2030-innovative-services';
-export default function Revolutionary2030ServicesPage() {
-  const contactInfo = null;
-import Head from 'next/head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
@@ -1156,4 +1142,3 @@ className='text-center';
     </UltraFuturisticBackground2030>
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

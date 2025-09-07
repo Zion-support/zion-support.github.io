@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {readOrgData, writeOrgData} from '../../../utils/org-data';
 import type { OrgData, BasePerson } from '../../../types/org';
@@ -38,32 +37,23 @@ const key = req && req.headers['x-admin-key'];
 
 ;
 
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const key = req.headers['x-admin-key'];
 '
   const key = req && req.headers['x-admin-key'];
   if (key !== ADMIN_KEY) {'
     return res && res.status(401).json({ error: 'Unauthorized' });
   }
-<<<<<<< HEAD
     // @ts-expect-error Indexing into dynamic section
 const arr: BasePerson[] = data[section] || [];
     // prevent duplicates
     if (arr.some(p => p.id === action.person.id)) {
       return res.status(400).json({ error: 'ID already exists' });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    // @ts-expect-error Indexing into dynamic section;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     arr && arr.push({ ...action && action.person, active: true });
     // @ts-expect-error write back dynamic section;
     data[section] = arr as any;
     writeOrgData(data);
-<<<<<<< HEAD
   }
 return res.status(200).json({ ok: true });
   }
@@ -73,9 +63,6 @@ return res.status(200).json({ ok: true });
 const arr: BasePerson[] = data[section] || [];
     const idx = arr.findIndex(p => p.id === action.id);
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], ...action.updates }
 '
@@ -88,7 +75,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     arr[idx] = { ...arr[idx], ...action && action.updates };
     // @ts-expect-error write back dynamic section;
     data[section] = arr as any;
-<<<<<<< HEAD
     writeOrgData(data);
 return res.status(200).json({ ok: true });
   }
@@ -98,9 +84,6 @@ return res.status(200).json({ ok: true });
 const arr: BasePerson[] = data[section] || [];
     const idx = arr.findIndex(p => p.id === action.id);
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    writeOrgData(data);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], active: false }
     // @ts-expect-error write back dynamic section;
@@ -108,31 +91,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     writeOrgData(data);
     return res.status(200).json({ ok: true });
   }
-<<<<<<< HEAD
-=======
-
-  }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 return res.status(200).json({ ok: true });
   }
 
   return res.status(400).json({ error: 'Unknown action' });
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
-=======
   }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }'
   return res.status(400).json({ error: 'Unknown action' });
 }
-<<<<<<< HEAD
 '
   if (action && action.type === 'deactivate') {}
-=======
-
-  if (action && action.type === 'deactivate') {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const section = action && action.section;
     // @ts-expect-error Indexing into dynamic section;
     const arr: BasePerson[] = data[section] || [];'
@@ -191,7 +162,6 @@ if ( {) {}
     const section = action.section;
     // @ts - expect - error Indexing into dynamic section;
     const arr: BasePerson[] = data[section] || [];
-<<<<<<< HEAD
     // prevent duplicates;'
     if () {      return res.status (400).json ({ error: 'ID already exists' })) {}
   $2;
@@ -199,9 +169,6 @@ if ( {) {}
   $2;
 }'
       return res.status (400).json ({ error: 'ID already exists' });
-=======
-const key = req.headers['x-admin-key'];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -212,7 +179,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (key !== ADMIN_KEY) {
     return res.status(401).json({ error: 'Unauthorized' })
   }
-<<<<<<< HEAD
 
 const arr: BasePerson[] = data[section] || [];
     // prevent duplicates
@@ -249,18 +215,11 @@ type AdminAction =;
     // @ts-expect-error Indexing into dynamic section;
 const arr: BasePerson[] = data[section] || [];
     // prevent duplicates;
-<<<<<<< HEAD
     if (arr.some(p => p.id === action.person.id)) {return res.status(400).json({ error: 'ID already exists' })}
     arr && arr.push({ ...action && action.person, active: true })// @ts-expect-error write back dynamic section;
     data[section] = arr as any;
     writeOrgData(data)}return res.status(200).json({ ok: true })}
   if (action.type === 'promote') {const section = action.section;
-=======
-if (arr.some(p = > p.id === action.person.id)) {
-     ;}
-  return res.status(400).json({ error: 'ID already exists',}
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
     arr && arr.push({ ...action && action.person, active: true,}
 });
@@ -271,7 +230,6 @@ data[section] = arr as any;
 return res.status(200).json({ ok: true,}
 });
   }
-<<<<<<< HEAD
   // Check condition;
 if ( {) {}
   $2;
@@ -285,18 +243,6 @@ if ( {) {}
     if (return res.status (404).json ({ error: 'Not found' })) {}
   $2;
 }
-=======
-  if (action.type = == 'promote') {
-   ;
-  const section = action.section;
-    // @ts-expect-error Indexing into dynamic section;
-const arr: BasePerson[] = data[section] || [];
-
-const idx = arr.findIndex(p => p.id === action.id);
-    if (idx = == -1);}
-  return res.status(404).json({ error: 'Not found',}
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     arr[idx] = { ...arr[idx], ...action.updates }
 
   if (action && action.type = == 'promote') {
@@ -318,7 +264,6 @@ const idx = arr && arr.findIndex(p => p && p.id === action && action.id)if (idx 
 return res.status(200).json({ ok: true,}
 });
   }
-<<<<<<< HEAD
   // Check condition;
 if ( {) {}
   $2;
@@ -342,16 +287,10 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
   }'
   return res.status (400).json ({ error: 'Unknown action' });
 }
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   if (action.type = == 'deactivate') {
    ;
   const section = action.section;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     // @ts-expect-error Indexing into dynamic section;
 const arr: BasePerson[] = data[section] || [];
     const idx  = arr.findIndex(p => p.id === action.id)if (idx === -1) return res.status(404).json({ error: 'Not found' })arr[idx] = { ...arr[idx], ...action.updates }if (action && action.type === 'promote') {const section = action && action.section;
@@ -367,11 +306,9 @@ const arr: BasePerson[] = data[section] || [];
 return res.status(200).json({ ok: true });
   }
   if (action.type === 'deactivate') {
-=======
   const action = req.body as AdminAction;
   const data = readOrgData();
   if (action.type === 'invite') {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     const section = action.section;
     // @ts-expect-error Indexing into dynamic section
 const arr: BasePerson[] = data[section] || [];

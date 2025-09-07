@@ -1,5 +1,4 @@
 <<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
 totalSize: number;
   gzippedSize: number;
   chunkCount: number;
@@ -81,7 +80,6 @@ export function BundleAnalyzer() {
     const show =;
       process.env.NODE_ENV === 'development' ||;
       local_storage.get_item ('bundle - analyzer') === 'true';
-<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
     setShouldShow (show);
     // Check condition
 if (return) {
@@ -154,7 +152,6 @@ totalSize += size;
           cached;
         })})// Estimate gzipped size (roughly 70% of original)const gzippedSize = totalSize * 0.7;
       const cacheHitRate = null;
-<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({
     setIsVisible (true);
@@ -214,7 +211,6 @@ totalSize += size;
     if (size < 500000) return 'bg-yellow-500'; // < 500KB;
     return 'bg-red-500'; // > 500KB;
   }
-<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
   const toggleAnalyzer = () => {
     const current = localStorage.getItem('bundle-analyzer') === 'true'
     localStorage.setItem('bundle-analyzer', (!current).toString())
@@ -327,7 +323,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },const getSizeColor = (size: number) => {if (size < 100000) return 'bg-green-500', // < 100KB;
     if (size < 500000) return 'bg-yellow-500', // < 500KB;
     return 'bg-red-500', // > 500KB;
-<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
   },;
   const toggleAnalyzer = () => {;
     const current = localStorage.getItem('bundle-analyzer') === 'true',;
@@ -418,7 +413,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 variant="ghost";
                 size="sm";
                 onClick={toggleAnalyzer}
-<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
                 className="h-6 w-6 p-0"
               >
 
@@ -462,7 +456,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>Gzipped:</span>
                   <Badge variant="outline">,
 >                    {formatSize(bundleInfo.gzippedSize)}
-<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
                   </Badge>
                 </div>
                 <div className="flex justify-between">
@@ -549,7 +542,6 @@ if ( {) {$2;
                 variant='ghost';
                 size='sm';
                 on_click={toggle_analyzer}
-<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
                 className='h - 6 w - 6 p - 0'              >;
 
                 ✕;
@@ -611,7 +603,6 @@ if ( {) {$2;
               </div>;{bundleInfo && bundleInfo.totalSize > 1000000 && (<div className='flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs'>;
                   <AlertTriangle className='w-3 h-3 text-yellow-600' />;
                   <span>Bundle size is large. Consider code splitting.</span>;
-<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
                 </div>;
 
 =                        {formatSize(chunk.size)}
@@ -726,7 +717,6 @@ if ( {) {$2;
             </div>)}
         </CardContent>;
       </Card>;
-<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
     </div>);
 <<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
 }

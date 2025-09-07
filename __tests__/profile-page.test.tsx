@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export {};
 module.exports = {};
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 describe('Profile Page', () => {
   test('renders profile page', () => {
     // Add profile page tests here
     expect(true).toBe(true);
-<<<<<<< HEAD
-=======
-  });
-});
-=======
-<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('profile-page', () => {
@@ -26,28 +11,8 @@ describe('profile-page', () => {
     expect(true).toBe(true);
   });
 });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
 
 
@@ -76,7 +41,6 @@ module.exports = {};
 
 module.exports = {};
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Mock test for profile page
 describe('Profile Page', () => {
   it('should render without crashing', () => {
@@ -87,11 +51,5 @@ describe('Profile Page', () => {
 module.exports = {};
 module.exports = {};
 module.exports = {};
-<<<<<<< HEAD
   });
 });
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
->>>>>>> origin/main
->>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

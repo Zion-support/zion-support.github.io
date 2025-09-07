@@ -43,7 +43,6 @@ export function FeatureCTAs() {const { t } = useTranslation()const features = nu
         <Clock className='h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700' />;
       ),      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />;
       link: '/project-milestones';
-<<<<<<< HEAD:src_backup/components/home/FeatureCTAs.tsx
     };
     {;
       key: 'zion_hire_ai',;
@@ -298,7 +297,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <CardHeader className="pb-2">;
                 <div className="flex justify-between items-start">;
                   {feature && feature.icon}
-<<<<<<< HEAD:src_backup/components/home/FeatureCTAs.tsx
                   {feature && feature.badge && (;
                     <Badge variant="secondary" className="bg-primary/20 text-primary">;
 
@@ -407,7 +405,6 @@ import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from 
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 import Link from 'next / link';
-<<<<<<< HEAD:src_backup/components/home/FeatureCTAs.tsx
         </div>;
       </div>;
     </section>;
@@ -604,7 +601,6 @@ export /**;
             </Card>))}
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/home/FeatureCTAs.tsx
     </section>));
 }
 

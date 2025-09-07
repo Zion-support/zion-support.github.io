@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 // In-memory demo store per process
 const store: Record<string, any> = (global as any).ZION_DID_STORE || {};
 (global as any).ZION_DID_STORE = store;
 
-<<<<<<< HEAD
   return res.status(200).json({ ok: true });
 };
 
@@ -35,13 +30,3 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ linked: true });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

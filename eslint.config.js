@@ -281,7 +281,6 @@ export default [
       },
     },
     plugins: {
-<<<<<<< HEAD
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -19,10 +18,6 @@ const Page = () => {
 };
 
 export default Page;
-<<<<<<< HEAD:pages_backup/search.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -960,10 +955,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 </>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/search.tsx
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

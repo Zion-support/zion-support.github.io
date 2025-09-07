@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 export default function CaseStudyPage() {
   const caseStudy = $2;
@@ -17,11 +16,6 @@ export default function CaseStudyPage() {
     teamSize: '5 engineers + 3 content specialists',
     featured: false},
 
-=======
-import Layout from '../../components/layout/Layout';
-
-export default function contentgenerationscale() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
@@ -29,7 +23,6 @@ export default function contentgenerationscale() {
         <meta name="description" content="Content Generation Scale solutions and services." />
       </Head>
       
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
         <main className="pt-20 pb-16">
           <div className="max-w-4xl mx-auto px-6">
@@ -129,16 +122,4 @@ export default function contentgenerationscale() {
       </div>
     </>
   )
-=======
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Content Generation Scale</h1>
-          <p className="text-lg text-gray-600">
-            Professional content generation scale solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -81,20 +80,12 @@ export default function ComprehensiveServicesShowcase2025() {
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function ComprehensiveServicesShowcase2025() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>
         <meta name="description" content="Comprehensive Services Showcase 2025 solutions and services." />
       </Head>
-<<<<<<< HEAD
 
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
@@ -478,17 +469,3 @@ export default function ComprehensiveServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0}}
               transition = $2;
 export default ComprehensiveServicesShowcase2025,
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Comprehensive Services Showcase 2025</h1>
-          <p className="text-lg text-gray-600">
-            Professional comprehensive services showcase 2025 solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -17,45 +17,18 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k]
   });
   return {
-<<<<<<< HEAD
     search;
     sort;
     order: (order as any) || 'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
     filters;
-=======
-<<<<<<< HEAD
     search,
     sort,
     order: (order as any) || 'desc',
     page: page ? Number(page) : 0,
     pageSize: pageSize ? Number(pageSize) : 20,
     filters,
-=======
-    search;
-  return (
-    !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
-    process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co'
-  )
-function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv'}
-} {}
-  const { search, sort, order, page, pageSize, format, ...rest } =
-    req.query as Record<string, string    />
-const filters: Record<string, any    /> = {}
-  Object.keys(rest).forEach(k => {}
-    if (k.startsWith('f_')) filters[k.slice(2)] = rest[k];}
-  })
-  return {
-    search
-    sort
-    order: (order as any) |'desc'
-    page: page ? Number(page) : 0
-    pageSize: pageSize ? Number(pageSize) : 20
-    filters
-    format: (format as any) |undefined
-  };    search;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
     sort;
     order: (order as any) |'desc';
@@ -104,7 +77,6 @@ export default async function handler(
   res: NextApiResponse
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
->>>>>>> origin/main
     format: (format as any) || undefined}
 }
 
@@ -120,21 +92,9 @@ function toCsv(rows: any[]): string {
   return lines.join('\n')
 }
 
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
-=======
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  const { type } = req.query as { type: AdminType };
-
-  if (!Object.values(ADMIN_TYPES).includes(type)) {
-    return res.status(400).json({ error: 'Invalid type' });
-  }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   const useSupabase = isSupabaseConfigured();
 
@@ -145,7 +105,6 @@ export default async function handler(
       let query = client.from(table).select('*', { count: 'exact' });
       if (params.search) {
         // heuristic: search name/title/email
-<<<<<<< HEAD
   }const lines = [headers.join(',')].concat(rows.map(r => headers.map(h => escape(r[h])).join(',')))return lines.join('\n')export default async function handler(req: NextApiRequest;
   res: NextApiResponse;
   if (!ADMIN_TYPES.includes(type))return res.status(400).json({ error: 'Invalid type' })}
@@ -174,34 +133,6 @@ export default async function handler(
       }
       }
       return res && res.status(200).json({ items: data || [], total: count || 0 });
-=======
-query = query.or(
-          'name.ilike.%' +
-            params.search +
-            '%,title.ilike.%' +
-            params.search +
-            '%,email.ilike.%' +
-            params.search +
-            '%'
-        );}
-
-      if (params.sort)query = query.order(params.sort, { ascending: params.order === 'asc'}
-}
-  const from = params.page * params.pageSize
-const to = from + params.pageSize - 1
-const { data, error, count } = await query.range(from, to)
-      if (error) return res.status(500).json({ error: error.message}
-})
-  if($2) {
-res.setHeader('Content-Type', 'text/csv')
-        res.setHeader(}
-          'Content-Disposition'}"
-          `attachment; filename=\"${type}.csv\"`
-        )
-        return res.status(200).send(toCsv(data || []))
-      return res.status(200).json({ items: data |[], total: count |0}
-})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     } else {
       // fallback
       const all = (MOCK_DATA[type] |[]).slice();
@@ -235,24 +166,6 @@ if ( {) {
 
         });
       }
-<<<<<<< HEAD
-=======
-      const total = filtered.length;
-      const start = params.page * params.pageSize;
-      const end = start + params.pageSize;
-      const pageItems = filtered.slice(start, end);
-      if (params.format === 'csv') {
-        res.setHeader('Content-Type', 'text/csv');
-        res.setHeader(
-          'Content-Disposition'
-          `attachment; filename="${type}.csv"`
-        );
-        return res.status(200).send(toCsv(pageItems));
-      return res.status(200).json({ items: pageItems, total });
-   
-}
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       return res.status(200).json({ items: pageItems, total });
     }
   }

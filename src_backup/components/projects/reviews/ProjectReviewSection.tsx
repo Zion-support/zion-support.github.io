@@ -194,8 +194,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
         />
 
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </Card>;
   );
@@ -342,9 +340,6 @@ function ProjectReviewSection() {
 }
 
 ;
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </Card>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533

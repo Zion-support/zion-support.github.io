@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 return (<UltraAdvancedFuturisticBackground> <Head> <title>Holographic AI Communication Platform - Zion Tech Group</title> <meta name="description" content="AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control." /> <link rel="canonical" href="https://ziontechgroup.com/holographic-ai-communication-platform" /> </Head> <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-6xl mx-auto" > <div className="text-center mb-10" > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-violet-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3" > <Eye className="w-10 h-10" />Holographic AI Communication Platform </h1> <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto" >Revolutionary holographic communication platform powered by AI that creates lifelike 3D projections for immersive remote interactions.</p> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
 }
-=======
-import React from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye   } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const contactInfo = null;
   return (
     <UltraAdvancedFuturisticBackground>
@@ -20,64 +11,8 @@ import Button from '../components/ui/Button';
         <title>Holographic AI Communication Platform - Zion Tech Group</title>
 <meta
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export default function HolographicAICommunicationPage() {
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  }
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-};
-
-export default function HolographicAICommunicationPage() {
-
-  const contactInfo = {
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  }
-  const features = [
-    'AI-powered 3D holographic projection'
-    'Real-time holographic rendering'
-    'Multi-user holographic meetings'
-    'Gesture and voice control'
-    'Cross-platform WebXR support'
-    'Enterprise-grade security',    address: '364 E Main St STE 1008 Middletown DE 19709'
-  }
-  const features = [
-    'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
-export default function HolographicAICommunicationPage() {;
-  const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-};
-
-  const features = [;
-    'AI-powered 3D holographic projection',;
-    'Real-time holographic rendering',;
-    'Multi-user holographic meetings',;
-    'Gesture and voice control',;
-    'Cross-platform WebXR support',;
-    'Enterprise-grade security',    address: '364 E Main St STE 1008 Middletown DE 19709'
-};
-
-  const features = [;
-    'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security';
-
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <Head>;
-        <title>Holographic AI Communication Platform - Zion Tech Group</title>;
-        <meta
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           name='description'
           content='AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control.'
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function HolographicAICommunicationPage() {const contactInfo = {mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -108,10 +43,6 @@ export default function HolographicAICommunicationPage() {const contactInfo = {m
 <meta;
           name='description';
           content='AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control.';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <link;
           rel='canonical';
@@ -150,13 +81,10 @@ export default function HolographicAICommunicationPage() {const contactInfo = {m
               <div className='text-slate-400'>;
                 30-day free trial • Setup: 1 week;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Button
                 href='/contact'
                 variant='quantum'
                 size='lg'
-<<<<<<< HEAD
                 className='w-full mt-4'
               >
                 Start Free Trial
@@ -184,21 +112,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </UltraAdvancedFuturisticBackground>
   );
 }
-<<<<<<< HEAD
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Button;
                 href='/contact';
                 variant='quantum';
                 size='lg';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='w-full mt-4'>;
                 Start Free Trial;
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -248,10 +167,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
                 {features.map((feat) => (<li key={feat} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-fuchsia-400 mt-0.5" /><span>{feat}</span></li>;
                 ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit">;
@@ -293,10 +208,7 @@ import Button from '../components / ui / Button';
 export default /**;
  * HolographicAICommunicationPage - Function description;
  */;
-<<<<<<< HEAD
 function HolographicAICommunicationPage() {const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}})}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit">
@@ -330,10 +242,4 @@ function HolographicAICommunicationPage() {
   }
 ;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 function HolographicAICommunicationPage() {const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}})}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -281,7 +281,6 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
   variant: 'error' ;
 })}(v) => setOpen (v ?? false)}> <PopoverTrigger asChild> {';
   unreadCount > 9 ? '9+' : unreadCount ;
-<<<<<<< HEAD:src_backup/components/NotificationCenter.tsx
   variant: 'error' ;
 });
 

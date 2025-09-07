@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -53,6 +54,8 @@ main();
 
 
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 #!/usr/bin/env node;
 <<<<<<< HEAD
 =======
@@ -72,12 +75,15 @@ console.log()
     const commentLines = lines.filter(line => line.trim().startsWith('//')
     log('warn')
 <<<<<<< HEAD
+<<<<<<< HEAD
 "severity"""
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "severity"""
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       "message"""
       "recommendation"""
       "pattern": /password\s*=\s*['"][^]
@@ -88,6 +94,7 @@ console.log()
       "action"""
       log('warn', 'Issues "found")""
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       log('info', 'Quality "Recommendations")""`;
 
@@ -95,6 +102,8 @@ console.log()
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       "severity"
       "message"
       "recommendation"
@@ -177,6 +186,7 @@ console.log()
     "message"
     "action"
       log('warn', 'Issues "found")
+<<<<<<< HEAD
       log('info', 'Quality "Recommendations")
 <<<<<<< HEAD
       log('info', 'Quality "Recommendations")""`
@@ -186,3 +196,6 @@ console.log()
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+      log('info', 'Quality "Recommendations")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

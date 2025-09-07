@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }//Search filter if (searchQuery) {
   filteredServices = filteredServices.filter (service => service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.category.toLowerCase () .includes (searchQuery.toLowerCase () ) //Sort services filteredServices.sort ( (a, b) => {
   switch (sortBy) {
@@ -99,15 +96,6 @@ visible: {
 }</motion.div> > <div className=" text-6xl mb-4">🔍</div> <h3 className=" text-2xl font-bold text-white mb-2">No Services Found</h3> <p className=" text-gray-400 mb-6">Try adjusting your search criteria or filters.</p> <Button > Clear Filters </Button> </motion.div>) 
 }</div> </section> > <h2 className=" text-4xl md:text-5xl font-bold text-white mb-6"> Ready to Get Started? </h2> <p className=" text-xl text-gray-300 mb-8"> Contact our sales team to discuss pricing, custom plans, and implementation options. </p> <div className=" flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"> <Button ml-2 w-5 h-5" /> </Button> <Button ml-2 w-5 h-5"/> </Button> </div> <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 text-center" > <div> </div> </div> </motion.div> </div> </section> </div> </UltraFuturisticBackground>) 
 }
-=======
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond  } from 'lucide-react';
-import Button from '../components/ui/Button',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { revolutionaryMicroSaasServices, revolutionaryServiceCategories  } from '../data/revolutionary-micro-saas-services';
-import { enhancedMicroSaasServices  } from '../data/enhanced-micro-saas-services';
-import Head from 'next/head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -2489,4 +2477,3 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
     </UltraFuturisticBackground>))}))
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

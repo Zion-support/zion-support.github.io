@@ -119,9 +119,4 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       </div>
     </div>
   )
-<<<<<<< HEAD:src/components/projects/milestones/MilestonesList.tsx
 };
-=======
-},
-;
->>>>>>> origin/main:src_disabled_1757239864/components/projects/milestones/MilestonesList.tsx

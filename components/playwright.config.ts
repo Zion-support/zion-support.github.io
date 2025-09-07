@@ -2,12 +2,6 @@ trace: on-first-retry' ,
 };
 reporter: [ ['list'], ['json', {
 
-<<<<<<< HEAD
-=======
-};'
-reporter: [ ['list'], ['json', {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   outputFile: playwright-logs/test-results && results.json' 
 '
 }], ['html', {'
@@ -27,10 +21,8 @@ reporter: [ ['list'], ['json', {}
 // {'
   // name: webkit', // use: {}
     timeout: 120 * 1000, // 2 minutes timeout for server to start'
-=======
   outputFile: playwright-logs/test-results && results.json' }
 ,}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }], ['html', {
   outputFolder: playwright-logs/html-report', open: never'
 
@@ -49,7 +41,6 @@ export const Playwright.config = () => {// Implementation here;
 // {// name: firefox', // use: {...devices['Desktop Firefox'];
 }, //;
 }
-<<<<<<< HEAD
 // {// name: webkit', // use: {timeout: 120 * 1000, // 2 minutes timeout for server to start;
     stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  }
   // Optional: Define projects for different browsers;
@@ -70,12 +61,6 @@ export const Playwright.config = () => {// Implementation here;
   // ];
 import { defineConfig } from @playwright/test';
 default defineConfig($2);
-=======
-
-// {
-  // name: webkit', // use: {
-    timeout: 120 * 1000, // 2 minutes timeout for server to start
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  }
   // Optional: Define projects for different browsers;
   // projects: []
@@ -83,14 +68,12 @@ default defineConfig($2);
   //     name: chromium',  //     use: { ...devices['Desktop Chrome'] },  //   }
   //   {'
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
-<<<<<<< HEAD
   //   {
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   };
 }
   //     name: webkit',  //     use: { ...devices['Desktop Safari'],}
 },  //   };
   // ]
-<<<<<<< HEAD
 });
   //     name: webkit',  //     use: { ...devices['Desktop Safari'],}
 },  //   }

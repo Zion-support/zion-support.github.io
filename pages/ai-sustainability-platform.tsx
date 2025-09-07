@@ -18,11 +18,6 @@ export default function aisustainabilityplatform() {
           </p>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
   )
-=======
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

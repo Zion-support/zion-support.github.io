@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-=======
-<<<<<<< HEAD
 export default function SaaSMarketplacePage () {
   const microSaasServices = [ {
   const filteredServices = selectedCategory === 'All' ? microSaasServices : microSaasServices.filter (service => service.category === selectedCategory)
@@ -24,10 +21,6 @@ return (<> <Head> <title>SaaS Marketplace - Zion Tech Group</title> <meta name="
 }</div> </div> <div className="flex items-center justify-between" > <Button > Visit Website <ExternalLink className="w-4 h-4 ml-2" /> </Button> </div> </div> </div> </div> </Card>) ) 
 }</div> </div> </section> <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8"> text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"> Our team of experts can help you select the perfect SaaS tools for your business needs. Get personalized recommendations and implementation support. </p> <div className=" flex flex-col sm:flex-row gap-6 justify-center"> <Button href=" /contact"variant=" secondary"size=" lg"className=" bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"> Get Expert Advice <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /services"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl" > View Our Services </Button> </div> </div> </section> </>) 
 }
-=======
-import React from 'react',
-import Head from 'next/head',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { import Head from 'next / head';
@@ -954,4 +947,3 @@ export default function SaaSMarketplacePage() {const microSaasServices = null;
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

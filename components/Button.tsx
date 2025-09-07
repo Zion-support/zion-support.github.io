@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
 return (<button type= {
   type 
 }className= {
@@ -15,11 +12,6 @@ return (<button type= {
   children 
 }</button>) 
 }
-=======
-import React from 'react';
-interface ButtonProps {
-  children: React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
 export default function Button(): any ({children,variant = 'primary',size = 'md',className = '',onClick,type = 'button',disabled = false,}: ButtonProps) {const baseClasses =;
@@ -154,10 +146,5 @@ export default function Button({
   )}</button>)}
   )}</button>)}
     </button>
-<<<<<<< HEAD
   )
 }
-=======
-  );
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

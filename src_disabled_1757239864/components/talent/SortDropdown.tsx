@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
@@ -97,12 +96,6 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
   DropdownMenuTrigger } from '@/components/ui/ dropdown - menu';
 interface SortDropdownProps {
   sort_option: string,
-=======
-import {DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",interface SortDropdownProps  {sortOption: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   setSortOption: (option: string) => void;
 }
 export function SortDropdown() {return (<DropdownMenu>;
@@ -135,7 +128,6 @@ export function SortDropdown() {return (<DropdownMenu>;
           </DropdownMenuItem>;
         ))}
       </DropdownMenuContent>;
-<<<<<<< HEAD
     </DropdownMenu>);
 }
       <DropdownMenuContent;
@@ -146,7 +138,3 @@ export function SortDropdown() {return (<DropdownMenu>;
           <DropdownMenuItem;
             key={option.value}
             onClick={() => setSortOption(option.value)}
-=======
-    </DropdownMenu>;
-  )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

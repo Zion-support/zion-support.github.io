@@ -9,7 +9,6 @@ const SecurityHeaders: React.FC = () => {useEffect(() => {// Add security header
         meta.content = tag.content;
 
 
-<<<<<<< HEAD:components.disabled/components/SecurityHeaders.tsx
 
 }
 

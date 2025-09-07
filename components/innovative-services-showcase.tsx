@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 import {
@@ -53,8 +52,6 @@ import { motion } from 'framer-motion';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import React from 'react';
-=======
-<<<<<<< HEAD
 const containerVariants = {
   hidden: {
   opacity: 0 
@@ -125,9 +122,6 @@ visible: {
 }
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the Future? </h2> <p className="text-xl text-gray-300 mb-8" > Join the revolution and transform your business with our cutting-edge services </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Get Started Today </a> <a href="/services" className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300" > Explore All Services </a> </div> </div> </div> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
 }
-=======
-import React from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -1893,4 +1887,3 @@ href='/services';
     </UltraAdvancedFuturisticBackground>)}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

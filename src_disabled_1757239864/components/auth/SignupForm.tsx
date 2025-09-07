@@ -1,5 +1,4 @@
 <<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
-<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
 passwordStrength.strength >= 4 ? 'text-green-600' :
 =>
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
@@ -18,7 +17,6 @@ passwordStrength.strength >= 4 ? 'text-green-600' :;
               <div;
                 className={cn('h-2 rounded-full transition-all duration-300', passwordStrength.color)}
                 style={{ width: `${passwordStrength.percentage}%` }}
-<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
               />
             </div>
             <div className="text-xs text-gray-600 space-y-1">
@@ -181,7 +179,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
     let strength = 0;
     const labels = ['Very WeakWeakFairGoodStrong'];
     const colors = ['bg - red - 500bg - orange - 500bg - yellow - 500bg - blue - 500bg - green - 500'];
-<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
       logErrorToProduction ('Unexpected signup error:', { data: error }),
       fire_event ('signup_error', { message: error.message || 'unexpected' }),
       const error_message = 'An unexpected error occurred during signup. Please try again.';
@@ -259,7 +256,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
 <<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
       </Button>;
     </form>;
-<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
   );
 }
 ;
@@ -281,7 +277,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
 }</p>)}</div> {errors.root.message ;
 }</div>)}{/* Submit Button */ ;
 }<Button > {'";
-<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
 }</Button> </form>) ;
 }'"

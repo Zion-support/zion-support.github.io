@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
 import React, { useState, useEffect } from 'react';
 :src/pages/ProjectDetails.tsx
 import React, { useState, useEffect } from "react",
@@ -10,7 +9,6 @@ import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { Project, ProjectStatus } from "@/types/projects",
-<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
 import { Button } from "@/components/ui/button";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
@@ -359,7 +357,6 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
 
 function ProjectDetailsContent() {
   const router = null;
-<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
@@ -1613,7 +1610,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </main>
     </>
-<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
 :src/pages/ProjectDetails.tsx
   )
 }

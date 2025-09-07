@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -27,21 +24,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }
 
 export default LoadingSpinner
-=======
-import React from 'react';
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg'
-  className?: string
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  className = ''
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4';,
-    md: 'w-8 h-8';,
-    lg: 'w-12 h-12'
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md', text,
   className = '', }) => {
@@ -183,9 +165,5 @@ export default function LoadingSpinner() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

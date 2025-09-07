@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -203,11 +202,6 @@ const SolutionsPage: NextPage = () => {
       ]
     }
   ];
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
->>>>>>> origin/main
 
 export default function index() {
   return (
@@ -224,7 +218,6 @@ export default function index() {
             Professional index solutions tailored to your business needs.
           </p>
         </div>
-<<<<<<< HEAD
 
         {/* Solutions Grid */}
         <div className="space-y-16">
@@ -395,9 +388,3 @@ export default function index() {
 };
 
 export default SolutionsPage;
-=======
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/main

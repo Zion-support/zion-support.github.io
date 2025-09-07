@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
@@ -38,17 +37,9 @@ export async function getServerSideProps() {;
   let items: Trend[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
     items = JSON && JSON.parse(raw);
-=======
-<<<<<<< HEAD
 </div> </div>) ) 
 }</div> </div>) 
 }
-=======
-import fs from 'fs';
-import path from 'path';
-export type Trend = any;
-</div> </div>) )
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -165,7 +156,3 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

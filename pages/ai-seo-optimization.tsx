@@ -1,16 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AISEOOptimizationPage() {
   const service = $2;
   if (!service) return null,
 
-=======
-
-export default function aiseooptimization() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
@@ -27,9 +22,5 @@ export default function aiseooptimization() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
   )
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

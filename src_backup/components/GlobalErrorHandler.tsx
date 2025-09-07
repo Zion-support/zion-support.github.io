@@ -16,7 +16,6 @@ import { toast  } from '@/hooks/use-toast';
 import { Button  } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield  } from 'lucide-react';
 import * as Sentry from '@sentry/nextjs';
-<<<<<<< HEAD:src_backup/components/GlobalErrorHandler.tsx
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
@@ -514,7 +513,6 @@ export function useErrorHandler() { return null; }
   }    report_error;
     handleApiError;
     handleAsyncOperation}
-<<<<<<< HEAD:src_backup/components/GlobalErrorHandler.tsx
 }
 
         : undefined,;

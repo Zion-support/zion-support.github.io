@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 'use client';
 
@@ -1640,14 +1639,7 @@ const Navigation = () => {
               </div>
 import React, { useState } from 'react';
 import Link from 'next/link';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
-import React, { useState } from 'react';
-import Link from 'next/link';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -2584,7 +2576,6 @@ const Navigation = () => {
           )}
         </AnimatePresence>
       </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -2605,7 +2596,6 @@ const Navigation: React.FC = () => {
             </Link>
           </div>
 
-<<<<<<< HEAD
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
@@ -2702,46 +2692,6 @@ const Navigation: React.FC = () => {
 export default Navigation;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-=======
-          {/* Mobile Menu Button */}
-          <motion.button
-            className="md:hidden p-2 rounded-lg transition-colors duration-200"
-            onClick={() => setIsOpen(!isOpen)}
-            whileTap={{ scale: 0.95 }}
-          >
-            <AnimatePresence mode="wait">
-              {isOpen ? (
-                <motion.div
-                  key="close"
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <X className={`w-6 h-6 ${
-                    scrolled ? 'text-gray-700' : 'text-white'
-                  }`}    />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="menu"
-                  initial={{ rotate: 90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: -90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Menu className={`w-6 h-6 ${
-                    scrolled ? 'text-gray-700' : 'text-white'
-                  }`}    />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.button>
-        </div>
-      )}
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-<<<<<<< HEAD
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
@@ -2784,12 +2734,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 };
 
 export default Navigation;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
     </nav>
   )
 }
 export default Navigation
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

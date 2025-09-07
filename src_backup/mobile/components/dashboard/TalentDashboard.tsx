@@ -90,7 +90,6 @@ import { Button } from "@/components/ui/button",
                   <span className="text-xs text-muted-foreground mt-1">4 hours ago</span>
                 </div>
               </div>
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
               <div className='flex gap-2 mt-3'>
                 <Button size='sm'>Apply Now</Button>
                 <Button size='sm' variant='outline'>
@@ -595,7 +594,6 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             </Button>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
       </section>;
 
             <FileText className="h-5 w-5 mb-1" aria-hidden="true" />;
@@ -618,7 +616,6 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             variant="outline";
             className="h-auto py-4 flex flex-col gap-1";
             aria-label="View Portfolio";
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
           >;
 
           <Button;
@@ -682,7 +679,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
         </div>
       </section>
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
 <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Learning Hub</h2>
@@ -846,7 +842,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
       </section>;
     </div>;
   );

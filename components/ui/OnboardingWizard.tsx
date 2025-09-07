@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { useEffect, useState } from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 export default function OnboardingWizard() {;
@@ -14,7 +6,6 @@ export default function OnboardingWizard() {
   const { role, setRole } = useRole();
   const [open, setOpen] = useState(false);
           : 'true';
-<<<<<<< HEAD
       if (!has) {;
         setOpen(true);      const has = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_has_onboarded') : 'true';
       if (!has) {;
@@ -94,17 +85,10 @@ if (return null) {$2;
             Done;
           </button>        </div>;
       </div>;const has = null;
-=======
-      if (!has) {
-        setOpen(true);      const has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true';
-      if (!has) {
-        setOpen(true)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       }
     } catch {}
   }, [])function completeOnboarding() {try {if (typeof window !== 'undefined') {window.localStorage.setItem('zion_has_onboarded', '1')}
     } catch {}
-<<<<<<< HEAD
     setOpen(false)}if (!open) return null;
   return (<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4'>;
       <div className='w-full max-w-xl rounded-lg bg-white dark:bg-zinc-900 border border-gray-200 dark:border-gray-800 shadow-xl'>;
@@ -203,9 +187,6 @@ export default function OnboardingWizard() {
     try {
       if (typeof window !== 'undefined') {
         window.localStorage.setItem('zion_has_onboarded1')
-=======
-    setOpen(false);  }        window.localStorage.setItem('zion_has_onboarded1')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       }
     } catch {}
     setOpen(false)
@@ -254,25 +235,10 @@ export default function OnboardingWizard() {
             </div>
           )}
         </div>
-<<<<<<< HEAD
         <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">
           <button onClick={completeOnboarding} className="px-3 py-1.5 rounded-md border">Done</button>
         </div>
       </div>
     </div>
   )
-}
-=======
-<div className='p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end'    />
-          <button
-            onClick={completeOnboarding}
-
-            className='px-3 py-1.5 rounded-md border'
-              />
-            Done
-          </button>
-        </div>
-      </div>
-    </div>
-  );
 }

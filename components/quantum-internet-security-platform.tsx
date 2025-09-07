@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   Phone,
   Mail,
   MapPin,
@@ -6,31 +5,11 @@
   ArrowRight,
   Shield,;
   Star,;
-=======
-<<<<<<< HEAD
 return (<UltraAdvancedFuturisticBackground> <Head> <title> {
   service.name 
 }- Zion Tech Group</title>) ) 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
 }
-=======
-import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function QuantumInternetSecurityPage() {
-  const service = null;
-import Head from 'next/head';
-
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Shield
-  Star;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';
@@ -293,4 +272,3 @@ export default function QuantumInternetSecurityPage() {;
     </UltraAdvancedFuturisticBackground>)}}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

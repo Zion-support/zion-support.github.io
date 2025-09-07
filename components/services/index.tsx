@@ -3,12 +3,6 @@ import Head from 'next/head',
 import React from 'react',
 import SEO from '../../components/SEO',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
 import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
@@ -27,34 +21,18 @@ import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-
 
 const mapLocalToServiceItem = null;
 export default function ServicesIndexPage () {
-<<<<<<< HEAD
  export default function ServicesIndexPage () {}
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (}
 }React;
   useEffect ( () => {
-=======
 export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-export default function ServicesIndexPage () {
-  const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
-}React.useEffect ( () => {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   const next = services.filter ( (s) => {
   //Category const handleSubmit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api/quote-request', {
-<<<<<<< HEAD
-<<<<<<< HEAD
   method: 'POST',
   headers: {
-=======
-  method: 'POST', headers: {
-  'Content-Type': 'application/json'
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
@@ -67,27 +45,12 @@ budgetRange: values.budgetRange;
 }onClose= {}
   () => setModalOpen (false)
 }service= {}
-<<<<<<< HEAD
   selected}
-=======
-  method: 'POST', headers: {
-  'Content-Type': 'application/json' 
-}
-body: JSON.stringify ({
-  service: values.serviceTitle, description: values.projectDescription, timeline: {
-  start: values.timelineStart, end: values.timelineEnd 
-}
-budgetRange: values.budgetRange
-}
-}
-<Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) ) 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }</div> </div> </div> </div> <QuoteRequestModal open= {
   modalOpen
 }onClose= {
   () => setModalOpen (false)
 }service= {
-<<<<<<< HEAD
   selected
 }onSubmit= {
 
@@ -130,26 +93,16 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({slug: item.slug;
   priceRangeUSD: item.priceRangeUSD;
   categories: [item.category];
   rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10})const ServicesPage: NextPage = () => {const [services, setServices] = React.useState<ServiceItem[]>([])const [filtered, setFiltered] = React.useState<ServiceItem[]>([])const [filters, setFilters] = React.useState<Filters>({ categories: [] })const [modalOpen, setModalOpen] = React.useState(false)const [selected, setSelected] = React.useState<ServiceItem | null>(null)export default function ServicesIndexPage() {const all = (enhancedRealMicroSaasServices as unknown[])extraServices as any[];
-=======
-  selected 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }onSubmit= {
 }
   handleSubmit }
 }/> </div>) 
-<<<<<<< HEAD
 };
 export default ServicesPage;
 
 "
-=======
-}
-export default ServicesPage
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   selected
 }onSubmit= {}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   handleSubmit
 }/> </div>)
 };export default ServicesPage;
@@ -266,16 +219,10 @@ if ( {) {$2;
         service={selected}
         onSubmit={handleSubmit}
 export default ServicesPage;export default ServicesPage;<QuoteRequestModal;
-=======
 const mapLocalToServiceItem = null;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {
-=======
-export default function ServicesIndexPage () {}
- export default function ServicesIndexPage () {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {}
   const next = services.filter ( (s) => {}
@@ -471,7 +418,6 @@ if ( {) {}
       <Head>;
         <title > Zion AI Marketplace - Services</title>;"
         <meta name="description" content="Discover curated IT services. Request quotes with AI - assisted summaries." />;
-<<<<<<< HEAD
       </Head>;
       <div className="relative">;
         <div className="absolute -z - 10 -top - 40 -left - 40 w - 96 h - 96 rounded - full blur - 3xl opacity - 40 bg - gradient - to - tr from - cyan - 400 via - blue - 500 to-purple-500" />;
@@ -483,19 +429,6 @@ if ( {) {}
               <div className="text-sm text-white / 70">{filtered.length} results</div>;
             </div>;
             <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols-3 gap-5">;
-=======
-      </Head>;"
-      <div className="relative">;"
-        <div className="absolute -z - 10 -top - 40 -left - 40 w - 96 h - 96 rounded - full blur - 3xl opacity - 40 bg - gradient - to - tr from - cyan - 400 via - blue - 500 to - purple - 500" />;"
-        <div className="flex flex - col sm: flex - row gap - 6">;
-          <MarketplaceFilters available_categories={available_categories} value={filters} on_change={set_filters} />;"
-          <div className="flex - 1">;"
-            <div className="mb - 4 flex items - center justify - between">;"
-              <h1 className="text - 2xl font - semibold text - white">Services</h1>;"
-              <div className="text - sm text - white / 70">{filtered.length} results</div>;
-            </div>;"
-            <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 5">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {filtered.map ((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
 
@@ -504,15 +437,7 @@ if ( {) {}
         </div>;
       </div>;
 
-<<<<<<< HEAD
       <QuoteRequestModal
-=======
-
-
-
-
-      <QuoteRequestModal;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
@@ -522,7 +447,6 @@ export default ServicesPage;
 export default ServicesPage;
 
       <QuoteRequestModal;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         open={modal_open}
         on_close={() => setModalOpen (false)}
         service={selected}
@@ -530,15 +454,12 @@ export default ServicesPage;
       />;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 export default ServicesPage;
 ;
     </div>)}export default ServicesPage;handleSubmit;
 }/> </div>)}export default ServicesPage;
 const mapLocalToServiceItem = $2;
->>>>>>> origin/main
   title: item.name,
   description: item.description,
   provider: 'Zion Provider',
@@ -627,7 +548,6 @@ export default function ServicesIndexPage() {
   };
 
   return (
-<<<<<<< HEAD
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
       <Head>
         <title>Zion AI Marketplace - Services</title>
@@ -662,28 +582,12 @@ export default function ServicesIndexPage() {
 };
 
 export default ServicesPage;
-=======
-    <UltraFuturisticBackground variant = $2;
-export default ServicesPage,
-=======
-export default ServicesPage;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
 ;
 export default ServicesPage;
 ;
-<<<<<<< HEAD
   handleSubmit 
 }/> </div>) 
 };
 export default ServicesPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

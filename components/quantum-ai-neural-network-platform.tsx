@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 ;
-=======
-<<<<<<< HEAD
 min-h-screen bg-black text-white"> <SEO <div className=" relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <motion.div > <div className=" flex justify-center mb-6"> <div className=" w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center"> <Atom className=" w-10 h-10 text-white"/> </div> </div> <h1 className=" text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent"> Quantum AI Neural Network Platform 2045 </h1> <p className=" text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"> Experience the future of AI with quantum-powered neural networks that deliver exponential computational power
 quantum advantage, and unprecedented learning capabilities. </p> <div className=" flex flex-col sm:flex-row gap-4 justify-center"> <motion.button > Start Free Trial </motion.button> <motion.button > Schedule Demo </motion.button> </div> </motion.div> </div> </section> > <h2 className=" text-4xl md:text-5xl font-bold mb-6"> Quantum-Powered Features </h2> <p className=" text-xl text-gray-400 max-w-3xl mx-auto"> Harness the power of quantum mechanics to revolutionize AI neural network performance and capabilities. </p> </motion.div> > <div className=" w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4"> <Check className=" w-6 h-6 text-white"/> </div> </motion.div>) ) 
 }</div> </div> </section> > <h2 className=" text-4xl md:text-5xl font-bold mb-6"> Quantum Advantage Benefits </h2> </motion.div> > <div className=" w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"> <Star className=" w-8 h-8 text-white"/> </div> </motion.div>) ) 
@@ -48,8 +45,6 @@ quantum advantage, and unprecedented learning capabilities. </p> <div className=
 }> <h2 className=" text-4xl md:text-5xl font-bold mb-6"> Ready for Quantum AI Revolution? </h2> <p className=" text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the quantum computing revolution and experience exponential AI performance improvements. </p> <motion.button 
 }
 export default QuantumAINeuralNetworkPlatform
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
 import { motion   } from 'framer-motion';
 import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network   } from 'lucide-react';
@@ -902,7 +897,6 @@ className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-
 export default QuantumAINeuralNetworkPlatform;  )
 }
 export default QuantumAINeuralNetworkPlatform;
-<<<<<<< HEAD
 
 export default QuantumAINeuralNetworkPlatform;
 export default QuantumAINeuralNetworkPlatform;
@@ -1041,7 +1035,6 @@ export default QuantumAINeuralNetworkPlatform;
 ;
     </div>)}export default QuantumAINeuralNetworkPlatform)}export default QuantumAINeuralNetworkPlatform;)}export default QuantumAINeuralNetworkPlatform;
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1068,12 +1061,3 @@ export default QuantumAINeuralNetworkPlatform;
 };
 
 export default QuantumAINeuralNetworkPlatform;
-=======
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            viewport = $2;
-export default QuantumAINeuralNetworkPlatform,
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

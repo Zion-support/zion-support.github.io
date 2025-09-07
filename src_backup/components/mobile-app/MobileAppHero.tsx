@@ -22,7 +22,6 @@ export const MobileAppHero: React.FC = () => {
             </div>
             <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
 <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
 
@@ -119,7 +118,6 @@ export const MobileAppHero: React.FC = () => {// These would come from environme
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
     </section>);
 
 }

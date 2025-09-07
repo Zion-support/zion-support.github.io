@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src_backup/components/search/ActiveFiltersBar.tsx
 
-<<<<<<< HEAD
 import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -73,9 +71,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 }
 
 import { X } from 'lucide-react'
-=======
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }import { X  } from 'lucide-react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/search/ActiveFiltersBar.tsx
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 interface SearchFilters  {types: string[],category: string,minPrice: number,maxPrice: number,minRating: number,sort: string;
@@ -253,14 +248,6 @@ if ( {) {$2;
       </button>;
     </div>)}
 '";
-<<<<<<< HEAD:src_backup/components/search/ActiveFiltersBar.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/search/ActiveFiltersBar.tsx
 import React from 'react';
 export default ActiveFiltersBar; import React from 'react';
 interface SearchFilters  {types: string[];
@@ -275,9 +262,5 @@ interface ActiveFiltersBarProps  {filters: SearchFilters;
   onClearAll: () => void;
   className?: string;
 }
-<<<<<<< HEAD:src_backup/components/search/ActiveFiltersBar.tsx
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/search/ActiveFiltersBar.tsx

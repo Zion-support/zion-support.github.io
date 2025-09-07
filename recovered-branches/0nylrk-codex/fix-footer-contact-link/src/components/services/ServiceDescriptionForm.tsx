@@ -1,7 +1,4 @@
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
 
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
   const { toast } = useToast(),
   const [isLoading, setIsLoading] = useState(false),
@@ -97,7 +94,6 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
 import { Loader, Sparkles } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
@@ -172,7 +168,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     }
   },
 
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
 const form_schema = z.object ({
   title: z.string ().min (3, "Title must be at least 3 characters");
   key_features: z.string (),
@@ -261,7 +256,6 @@ const formSchema  = null;return (<Card className="border border-zion-blue-light 
             <FormField;
               control={form.control}
               name="title";
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
               render={({ field }: { field: any }) => (<FormItem>;
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>;
                   <FormControl>;
@@ -306,7 +300,6 @@ const formSchema  = null;return (<Card className="border border-zion-blue-light 
             />;
             <FormField;
               control={form.control}
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
               name="keyFeatures";
               render={({ field }: { field: any }) => (<FormItem>;
                   <FormLabel className="text-zion-slate-light">Key Features</FormLabel>;
@@ -330,7 +323,6 @@ const formSchema  = null;return (<Card className="border border-zion-blue-light 
             />
             <FormField
               control={form.control}
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
               name="targetAudience";
               render={({ field }: { field: any }) => (<FormItem>;
                   <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>;
@@ -351,7 +343,6 @@ const formSchema  = null;return (<Card className="border border-zion-blue-light 
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
             />;
             <Button;
               type="submit";
@@ -366,9 +357,7 @@ const formSchema  = null;return (<Card className="border border-zion-blue-light 
                   <Sparkles className="h-4 w-4 mr-2" />;
                   Generate Description;
                 </>;
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
               )}
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
             />
             <Button
               type="submit"
@@ -391,7 +380,6 @@ const formSchema  = null;return (<Card className="border border-zion-blue-light 
         </Form>
       </CardContent>
     </Card>
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
   );
 
 }catch (error) {';
@@ -424,7 +412,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Form>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
   )}catch (error) {';
   logErrorToProduction ('Error generating description:', {data: error ;
 })toast ({}finally {setIsLoading (false)}>Service Title</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";

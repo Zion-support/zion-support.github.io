@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
@@ -28,18 +27,12 @@ export default function ApiMockContractTestingPage() {
     { name: 'Enterprise', price: 'Custom', items: ['SAML/SSORBACPrivate cloud/VPCPremium support'] }
   ],
 
-=======
-import Layout from '../components/layout/Layout';
-
-export default function apimockcontracttesting() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Api Mock Contract Testing - Zion Tech Group</title>
         <meta name="description" content="Api Mock Contract Testing solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <ServiceAds heading="API Quality Fast-Track" subheading="Mock, validate, and ship with confidence." items={adItems} />
@@ -78,17 +71,3 @@ export default function apimockcontracttesting() {
   )
 }
 
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Api Mock Contract Testing</h1>
-          <p className="text-lg text-gray-600">
-            Professional api mock contract testing solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

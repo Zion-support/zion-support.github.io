@@ -86,7 +86,6 @@ const categories: ForumCategoryInfo[] = [;
                 <CardDescription className="text - base">{category.description}</CardDescription>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD:src_backup/components/community/ForumCategories.tsx
           </Link>);
       })}
     </div>);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -14,6 +15,9 @@
 ///usr/bin/env node
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -43,6 +47,7 @@ const { execSync } = require('child_process')
       return { "status": 'completed', "message"}
         "status"
         "status"
+<<<<<<< HEAD
     console.error(' Improved automation "failed")
 
 
@@ -58,3 +63,6 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+    console.error(' Improved automation "failed")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954

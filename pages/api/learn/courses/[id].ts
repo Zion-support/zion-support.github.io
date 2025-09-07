@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/learn/courses/[id].ts
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const dataPath = path.join(process.cwd(), 'datalearncourses.json'),
-<<<<<<< HEAD:pages_backup/api/learn/courses/[id].ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -23,7 +20,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
-<<<<<<< HEAD:pages_backup/api/learn/courses/[id].ts
 const dataPath = path.join(process.cwd(), 'datalearncourses.json')
 
     res.status(200).json({ course })
@@ -51,25 +47,11 @@ function handler() {
 }
 
     res.status (200).json ({ course });
-<<<<<<< HEAD:pages_backup/api/learn/courses/[id].ts
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
   } catch (e: any) {
     res.status(500).json({ error: e ?.message ?? 'Failed to load course' })
   }
 };
-<<<<<<< HEAD:pages_backup/api/learn/courses/[id].ts
 main
 
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 
                   </a>;
                 </li>;
                 <li>;import React from 'react';
-=======
-<<<<<<< HEAD
 )
 
   /* Quick contact */ 
@@ -584,9 +581,6 @@
   ext ('https://valimail.com/pricing/') 
 }</li> </ul> <div><a className=" text-cyan-400 underline"href=" /services/email-dmarc-monitor">Learn more</a></div> </section> </section> <a href="tel:+13024640950"className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com"className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a> <a href="/pricing"className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a> 
 }
-=======
-import React from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import SEO from '../components/SEO';
 const ext = null;
                 { name: 'Customer Support Helpdesk Pro', price: '$79/mo', href: '/services/customer-support-helpdesk-pro' }
@@ -4512,4 +4506,3 @@ export default function ServicesAdvertisingPage() {
 		</div>
 	)
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

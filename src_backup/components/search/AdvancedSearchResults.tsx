@@ -55,7 +55,6 @@ import { logErrorToProduction, log_info  } from '@/utils / production_logger';
   SheetTitle;
   SheetTrigger;
 } from '@/components/ui/sheet';
-<<<<<<< HEAD:src_backup/components/search/AdvancedSearchResults.tsx
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data/marketplaceData';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
@@ -174,7 +173,6 @@ interface SearchResult  {id: string;
   totalCount: number;
   page: number;
   limit: number;
-<<<<<<< HEAD:src_backup/components/search/AdvancedSearchResults.tsx
   query: string;
 
     return <span className={className}>{text}</span>;
@@ -409,7 +407,6 @@ const SearchResultCard: React.FC<{;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/search/AdvancedSearchResults.tsx
   );
 
 },;
@@ -938,7 +935,6 @@ if ( {) {}
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/search/AdvancedSearchResults.tsx
   );
 
   const [filters, setFilters] = useState<SearchFilters>({;
@@ -1282,7 +1278,6 @@ export const AdvancedSearchResults: React.FC = () => {const router = useRouter()
                   </div>;
                 </SheetContent>;
               </Sheet>;
-<<<<<<< HEAD:src_backup/components/search/AdvancedSearchResults.tsx
             </div>;
           </div>;
 
@@ -1337,7 +1332,6 @@ export const AdvancedSearchResults: React.FC = () => {const router = useRouter()
                 availableCategories={availableCategories}
               />;
             </div>;
-<<<<<<< HEAD:src_backup/components/search/AdvancedSearchResults.tsx
           </div>;
           {/* Main Content */}
 

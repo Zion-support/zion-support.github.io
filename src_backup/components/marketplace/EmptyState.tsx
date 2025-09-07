@@ -42,7 +42,6 @@ export interface EmptyStateProps  {type: 'products' | 'categories' | 'talent' | 
   action?: {label: string;
     onClick: () => void;
   }
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
   icon?: React.ReactNode
   icon?: React.ReactNode;
 import React from 'react';
@@ -59,7 +58,6 @@ export interface EmptyStateProps  {type:;
     | 'search';
     | 'error';
     | 'network';
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
     | 'loading';
 
 
@@ -189,7 +187,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >;
           <RefreshCw className="w-4 h-4" />;
           {action.label}
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
         </Button>
       )}
           {action.label}
@@ -259,7 +256,6 @@ function EmptyState() {const { t } = use_translation ()const content = default_c
             .;
           </p>;
         </div>)}
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
     </div>);
 // Specific empty state variants for quick use;
 export function ProductsEmptyState ({
@@ -290,7 +286,6 @@ export function ProductsEmptyState ({on_retry,onAddProduct,is_authenticated = fa
       }
     : onRetry;
       ? { label: 'Try Again', onClick: onRetry }
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
 
         <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
           <p>If this issue continues, please contact our support team.</p>;
@@ -493,7 +488,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {}
       type="error"'
       action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined};
     />;
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
   );
 
 
@@ -508,7 +502,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {}
   const custom_description = is_authenticated;'"
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";'"
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-<<<<<<< HEAD:src_backup/components/marketplace/EmptyState.tsx
       />);
 export function CategoriesEmptyState ({ on_retry }: { on_retry?: () => void }) {};
       />);

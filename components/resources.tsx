@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
-=======
-<<<<<<< HEAD
 </div> <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
-=======
-import React from 'react',
-import SEO from '../components/SEO',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 export default function ResourcesPage() {return (class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
@@ -25,7 +18,6 @@ export default function ResourcesPage() {return (class ErrorBoundary extends Rea
             {{ name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' }{ name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },{ name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
           ].map((it) => (<Link key={it && it.href} href={it && it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover: border-cyan-500/50 transition-colors block">;
 
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -156,7 +148,6 @@ export default function ResourcesPage() {
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
           ].map((it) => (
-<<<<<<< HEAD
             <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block">
               <div className="text-sm text-gray-400">Resource</div>
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>
@@ -171,12 +162,6 @@ export default function ResourcesPage() {
 };
 
 export default ResourcesPage;
-=======
-            <Link key = $2;
-export default ResourcesPage,
-=======
- </div> <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   [ {
   name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' 
 }, {
@@ -191,13 +176,5 @@ export default ResourcesPage,
   name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' 
 }].map ( (it) => () ) 
 }</div> </div> </UltraFuturisticBackground>) 
-<<<<<<< HEAD
 }
 export default ResourcesPage
-=======
-};
-
-export default Resources;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

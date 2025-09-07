@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/api/disputes/[id].ts
 
 
 
@@ -37,7 +35,6 @@ export default async function handler(
 
     return res && res.status(400).json({ error: "Invalid id" });
 
-<<<<<<< HEAD:pages_backup/api/disputes/[id].ts
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -57,7 +54,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const dispute = await getDisputeById(id);
     if (!dispute) return res.status(404).json({ error: "Dispute not found" });
     try {
-<<<<<<< HEAD:pages_backup/api/disputes/[id].ts
   res.setHeader("Allow", "GET");
   return res.status(405).end("Method Not Allowed");
   res.setHeader("Allow", "GET");
@@ -108,7 +104,6 @@ if ( {) {
   $2
 }
 
-<<<<<<< HEAD:pages_backup/api/disputes/[id].ts
 
 
     const dispute = await getDisputeById (id);
@@ -191,7 +186,6 @@ if ( {) {
   $2
 }
 
-<<<<<<< HEAD:pages_backup/api/disputes/[id].ts
 
 
 
@@ -209,15 +203,3 @@ ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ dispute: { id: req.query.id } });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

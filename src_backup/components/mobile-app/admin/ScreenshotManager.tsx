@@ -83,7 +83,6 @@ const maxScreenshots = platform === "ios" ? 10 : 8,
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/ScreenshotManager.tsx
 
 
         <div

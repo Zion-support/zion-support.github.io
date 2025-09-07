@@ -9,32 +9,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const started = null;}
   return res.status(200).json({ ok: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
 export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
   const started = null;
   return res.status(201).json({ id: record.id ;})
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs - extra';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import path from 'path';
-<<<<<<< HEAD
 import {
 } from '../../utils/api/partnerAuth';
-=======
-import {';
-} from '../../utils/api/partnerAuth';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
 
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -62,27 +50,10 @@ const TALENTS_FILE = path.join(process.cwd()'data';
  */;
 function handler() {const auth = await authenticate_request (req)// Check condition;
 if ( {) {$2;
-=======
-const TALENTS_FILE = path.join(
-  process.cwd()
-  'data'
-  'talents'
-  'talents.json'
-);
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {;
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res.status(401).json({ error: 'Unauthorized' });
- 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
     return res.status (401).json ({ error: 'Unauthorized' })}
   if ()) {) {$2;
 }
-<<<<<<< HEAD
     await record_request (req, res, auth.partner, auth.api_key, started, 429)return res.status (429).json ({ error: 'Rate limit exceeded' })}
   // Check condition;
 if ( {) {$2;
@@ -160,43 +131,7 @@ created_at: now,
   await fs.writeJSON($2);
   await recordRequest($2);
   return res.status(201).json({ id: record.id })
-=======
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-    return res.status(405).json({ error: 'Method Not Allowed' });
- 
 }
-  const { name, email, skills, programTrack, certificationStatus } =
-    req.body |{}
-  if (!name |!email) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: 'Missing required fields' });
- 
-}
-  await fs.ensureDir(path.dirname(TALENTS_FILE));
-  const records = (await fs.pathExists(TALENTS_FILE))
-    ? await fs.readJSON(TALENTS_FILE)
-    : [];
-  const now = new Date().toISOString();
-  const record = {
-    id: uuidv4()
-    name
-    email
-    skills: skills |[]
-    programTrack: programTrack |null
-    certificationStatus: certificationStatus |'pending'
-    partnerId: auth.partner.id
-createdAt: now
-  }
-  };
-  records.push(record);
-  await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
-  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-  return res.status(201).json({ id: record.id });  return res.status(201).json({ id: record.id })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-}
-=======
 const TALENTS_FILE = path.join(
   process.cwd()'
   'data''
@@ -282,9 +217,7 @@ if ( {) {}
     skills: skills || [],
     programTrack: programTrack || null,'
     certificationStatus: certificationStatus || 'pending',
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import type { NextApiRequest, NextApiResponse } from \"next\";"
 import fs from \"fs-extra\";"
@@ -345,13 +278,6 @@ created_at: now,
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
 }
-<<<<<<< HEAD
   return res.status(201).json({ id: record.id });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

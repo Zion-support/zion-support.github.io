@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
-=======
-return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-  service.name 
-}- Zion Tech Group</title>) ) 
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { Phone, Mail, MapPin, Check, ArrowRight, Sparkles, Star  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
@@ -27,7 +15,6 @@ import {
   Sparkles
   Star;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   Phone,
   Mail,
   MapPin,
@@ -35,7 +22,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ArrowRight,
   Sparkles,;
   Star,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -43,7 +29,6 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 export default function MetaverseAIPlatformPage() {
 export default function MetaverseAIPlatformPage() {
-<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/metaverse-ai-development-platform')
   );
@@ -62,9 +47,6 @@ export default function MetaverseAIPlatformPage() {
           <div className='text-center mb-10'>
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
               <Sparkles className='w-10 h-10' />
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Phone,Mail,MapPin,Check,ArrowRight,Sparkles,Star,import React from 'react',import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Sparkles, Star   } from 'lucide-react';
@@ -95,7 +77,6 @@ export default function MetaverseAIPlatformPage() {const service = enhancedRealM
           <div className='text-center mb-10'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>;
               <Sparkles className='w-10 h-10' />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               {service.name}
             </h1>;
             <p className='mt-4 text-xl text-slate-300 max-w-3xl mx-auto'>;
@@ -136,21 +117,13 @@ export default function MetaverseAIPlatformPage() {const service = enhancedRealM
                 <div className='flex items-center text-yellow-400'>;
                   <Star className='w-4 h-4 mr-1' />;
                   {service.rating.toFixed(1)}
-<<<<<<< HEAD
                 </div>
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function MetaverseAIPlatformPage() {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Button
                 href='/contact'
                 variant='quantum'
                 size='lg'
-<<<<<<< HEAD
                 className='w-full'
               >
                 Request a Demo
@@ -170,12 +143,6 @@ export default function MetaverseAIPlatformPage() {;
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </div>
             </div>
           </div>
@@ -185,52 +152,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                </div>;
-              </div>;
-              <Button;
-                href='/contact';
-                variant='quantum';
-                size='lg';
-              <div className="mt-6 space-y-3 text-sm text-slate-300">;
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>;
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>;
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>;
-                className='w-full';
-              >;
-                Request a Demo;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </Button>;
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
-                <div className='flex items-center space-x-2'>;
-                  <Phone className='w-4 h-4 text-cyan-400' />;
-                  <span>{service.contactInfo.mobile}</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <Mail className='w-4 h-4 text-purple-400' />;
-                  <span>{service.contactInfo.email}</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <MapPin className='w-4 h-4 text-green-400' />;
-                  <span className='text-xs'>{service.contactInfo.address}</span>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>;
-  )}return (<UltraAdvancedFuturisticBackground>;
-<<<<<<< HEAD
-=======
-  return (
-    <UltraAdvancedFuturisticBackground>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;
         <meta name='description' content={service.description} />;
@@ -314,11 +236,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>)}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </UltraAdvancedFuturisticBackground>);
 }
 
@@ -327,10 +245,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     </UltraAdvancedFuturisticBackground>)}}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

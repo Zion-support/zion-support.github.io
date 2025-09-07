@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 const apiFeatures = [
   {
     icon: Code,
@@ -37,9 +29,6 @@ const apiFeatures = [
     features: ['Interactive docs', 'Code examples', 'SDK libraries', 'Developer support']
   }
 ];
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function API() {
   const apiEndpoints = [
     {
@@ -418,13 +407,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   Code,
   Check,
   Globe,
@@ -704,11 +687,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api.tsx
       </div>
     </Layout>
         {/* CTA Section */}
@@ -748,9 +726,6 @@ export default function APIPage() {
       </div>;
     </MainLayout>);
 }
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </main>
 </>
   );
