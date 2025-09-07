@@ -18,11 +18,7 @@ export default function AIContentGeneratorPage() {
             Transform your content marketing with our advanced AI-powered platform. Generate high-quality, 
             SEO-optimized content for blogs, social media, and marketing materials at scale.
           </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" >
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-e453
             <a
               href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Inquiry"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
