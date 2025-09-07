@@ -20,7 +20,7 @@ class PRManagementAutomation {
     console.log(logMessage);
     
     const logFile = path.join(this.logsDir, 'pr-management.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, `${logMessage  }\n`);
   }
 
   async runCommand(command, description) {

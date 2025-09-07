@@ -20,7 +20,7 @@ class AutomatedTestRunner {
     console.log(logMessage);
 
     const logFile = path.join(this.logsDir, 'test-runner.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, `${logMessage  }\n`);
   }
 
   async runCommand(command, description) {

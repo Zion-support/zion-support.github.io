@@ -20,7 +20,7 @@ class IntelligentCodeAnalyzer {
     console.log(logMessage);
     
     const logFile = path.join(this.logsDir, 'intelligent-code-analyzer.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, `${logMessage  }\n`);
   }
 
   async analyzeCodebase() {

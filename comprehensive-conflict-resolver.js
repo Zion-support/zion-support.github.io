@@ -35,7 +35,7 @@ const CONFIG = {
     'cache'
   ],
   // Backup directory
-  backupDir: './conflict-backup-' + Date.now()
+  backupDir: `./conflict-backup-${  Date.now()}`
 };
 
 // Create backup directory

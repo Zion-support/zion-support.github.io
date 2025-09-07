@@ -22,7 +22,7 @@ class UltimatePRMerger {
     console.log(logMessage);
     
     const logFile = path.join(this.logsDir, 'ultimate-pr-merger.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, `${logMessage  }\n`);
   }
 
   async runCommand(command, description) {

@@ -20,7 +20,7 @@ class SecurityAuditor {
     console.log(logMessage);
 
     const logFile = path.join(this.logsDir, 'security-auditor.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, `${logMessage  }\n`);
   }
 
   async runCommand(command, description) {
@@ -76,7 +76,7 @@ class SecurityAuditor {
           matches.forEach(match => {
             secrets.push({
               type,
-              match: match.substring(0, 50) + '...',
+              match: `${match.substring(0, 50)  }...`,
               line: content.substring(0, content.indexOf(match)).split('\n').length
             });
           });
@@ -114,7 +114,7 @@ class SecurityAuditor {
             vulnerabilities.push({
               type,
               severity,
-              match: match.substring(0, 50) + '...',
+              match: `${match.substring(0, 50)  }...`,
               line: content.substring(0, content.indexOf(match)).split('\n').length
             });
           });

@@ -21,7 +21,7 @@ class MasterAutomation {
 
     // Write to log file
     const logFile = path.join(this.logsDir, 'master-automation.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, `${logMessage  }\n`);
   }
 
   async runCommand(command, description) {

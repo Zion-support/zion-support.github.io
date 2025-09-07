@@ -20,7 +20,7 @@ class SmartMergeResolver {
     console.log(logMessage);
     
     const logFile = path.join(this.logsDir, 'smart-merge-resolver.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, `${logMessage  }\n`);
   }
 
   async resolveMergeConflicts() {

@@ -19,7 +19,12 @@
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
-    "prepare": "echo 'Husky prepare script disabled'"
+    "prepare": "echo 'Husky prepare script disabled'",
+    "analyze": "ANALYZE=true npm run build",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
+    "perf:audit": "npm run build && npm run lighthouse",
+    "perf:analyze": "npm run analyze",
+    "perf:test": "npm run build && npm run test:smoke && npm run lighthouse"
   },
   "dependencies": {
     "@babel/core": "^7.28.4",

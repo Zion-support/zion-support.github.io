@@ -19,7 +19,7 @@ class AICodeAnalyzer {
     console.log(logMessage);
 
     const logFile = path.join(this.logsDir, 'ai-code-analyzer.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, `${logMessage  }\n`);
   }
 
   analyzeCodeQuality(filePath) {

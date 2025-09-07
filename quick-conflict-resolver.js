@@ -38,7 +38,7 @@ for (const file of criticalFiles) {
         console.log(`🔧 Resolving conflicts in: ${file}`);
         
         // Create backup
-        const backupPath = file + '.backup.' + Date.now();
+        const backupPath = `${file  }.backup.${  Date.now()}`;
         fs.writeFileSync(backupPath, content);
         
         // Resolve conflicts
@@ -87,7 +87,7 @@ function scanAndResolveDir(dir, maxFiles = 50) {
               console.log(`🔧 Resolving conflicts in: ${fullPath}`);
               
               // Create backup
-              const backupPath = fullPath + '.backup.' + Date.now();
+              const backupPath = `${fullPath  }.backup.${  Date.now()}`;
               fs.writeFileSync(backupPath, content);
               
               // Resolve conflicts

@@ -23,7 +23,7 @@ function fixAllRemaining(filePath) {
     // Fix ITServices.tsx
     if (filePath.includes('ITServices.tsx')) {
       if (!content.trim().endsWith('}')) {
-        content = content.trim() + '\n}';
+        content = `${content.trim()  }\n}`;
       }
     }
     

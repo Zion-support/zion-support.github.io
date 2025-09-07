@@ -56,7 +56,7 @@ for (const file of criticalFiles) {
         console.log(`🔧 Resolving conflicts in: ${file}`);
         
         // Create backup
-        const backupPath = file + '.backup.' + Date.now();
+        const backupPath = `${file  }.backup.${  Date.now()}`;
         const backupDir = path.dirname(backupPath);
         if (!fs.existsSync(backupDir)) {
           fs.mkdirSync(backupDir, { recursive: true });
@@ -117,7 +117,7 @@ for (const dir of keyDirs) {
                 console.log(`🔧 Resolving conflicts in: ${fullPath}`);
                 
                 // Create backup
-                const backupPath = fullPath + '.backup.' + Date.now();
+                const backupPath = `${fullPath  }.backup.${  Date.now()}`;
                 const backupDir = path.dirname(backupPath);
                 if (!fs.existsSync(backupDir)) {
                   fs.mkdirSync(backupDir, { recursive: true });

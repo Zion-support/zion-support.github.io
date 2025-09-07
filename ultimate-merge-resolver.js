@@ -35,7 +35,7 @@ const CONFIG = {
   // File extensions to process
   extensions: ['.tsx', '.ts', '.jsx', '.js', '.json', '.md'],
   // Backup directory
-  backupDir: './merge-backup-' + Date.now()
+  backupDir: `./merge-backup-${  Date.now()}`
 };
 
 // Create backup directory

@@ -20,7 +20,7 @@ class IntelligentGitWorkflow {
     console.log(logMessage);
 
     const logFile = path.join(this.logsDir, 'git-workflow.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, `${logMessage  }\n`);
   }
 
   async runCommand(command, description) {

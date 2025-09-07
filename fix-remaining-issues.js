@@ -30,7 +30,7 @@ function fixFile(filePath) {
     if (filePath.includes('MicroSAAS.tsx')) {
       // Ensure proper closing
       if (!content.trim().endsWith('}')) {
-        content = content.trim() + '\n}';
+        content = `${content.trim()  }\n}`;
       }
     }
     
@@ -38,7 +38,7 @@ function fixFile(filePath) {
     if (filePath.includes('_document.tsx')) {
       // Ensure proper closing
       if (!content.trim().endsWith('}')) {
-        content = content.trim() + '\n}';
+        content = `${content.trim()  }\n}`;
       }
     }
     
