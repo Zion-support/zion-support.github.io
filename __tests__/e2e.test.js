@@ -1,18 +1,17 @@
-const { test, expect } = require('@playwright/test')'
-test.describe('"E2E"
-  test('"homepage"
-    "await"
-    "await"
-  test('"contact"
-    "await"
-    await page.fill('input[name="name"
-    "await": page.fill('input[name="email"
-    "await": page.fill('textarea[name="message"
-    await page.click('button[type="submit"
-    "await"
-    "await"
-    "await"
-    "await"
-    await page.fill('input[name="name"
-    await page.fill('input[name="email"
-    await page.fill('textarea[name="message"
+import { test, expect } from '@playwright/test';
+
+test.describe('E2E Tests', () => {
+  test('homepage loads correctly', async ({ page }) => {
+    await page.goto('/');
+    await expect(page).toHaveTitle(/Zion Tech Group/);
+  });
+
+  test('contact form works', async ({ page }) => {
+    await page.goto('/contact');
+    await page.fill('input[name="name"]', 'Test User');
+    await page.fill('input[name="email"]', 'test@example.com');
+    await page.fill('textarea[name="message"]', 'Test message');
+    await page.click('button[type="submit"]');
+    await expect(page.locator('.success-message')).toBeVisible();
+  });
+});
