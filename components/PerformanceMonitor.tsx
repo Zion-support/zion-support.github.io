@@ -16,9 +16,10 @@ const PerformanceMonitor: React.FC = () => {
         const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
         
         if (navigationEntry) {
+          const navEntry = navigationEntry as PerformanceNavigationTiming;
           setMetrics({
-            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
+            loadTime: (navEntry.loadEventEnd || 0) - (navEntry.loadEventStart || 0),
+            renderTime: (navEntry.domContentLoadedEventEnd || 0) - (navEntry.domContentLoadedEventStart || 0),
             memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0
           });
         }

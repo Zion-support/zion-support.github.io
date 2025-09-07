@@ -4,11 +4,8 @@ const createJestConfig = nextJest({
   dir: './',
 });
 
-<<<<<<< HEAD
 const config = {
   testEnvironment: 'jsdom',
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
@@ -41,11 +38,11 @@ const config = {
     '<rootDir>/backup*/',
     '<rootDir>/corrupted_backup/',
     '<rootDir>/temp_*/',
+    '<rootDir>/.next/',
+    '<rootDir>/backup*/',
+    '<rootDir>/temp*/',
+    '<rootDir>/corrupted*/'
   ],
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   coverageThreshold: {
     global: {
       branches: 70,
@@ -55,17 +52,15 @@ const config = {
     },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-<<<<<<< HEAD
+  modulePathIgnorePatterns: [
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/backup*/',
+    '<rootDir>/temp*/',
+    '<rootDir>/corrupted*/'
+  ],
   verbose: true,
   collectCoverage: false,
   testTimeout: 30000,
 };
 
 module.exports = createJestConfig(config);
-=======
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
-};
-
-module.exports = createJestConfig(config);
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
