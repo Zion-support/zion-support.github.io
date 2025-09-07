@@ -6,6 +6,10 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+<<<<<<< HEAD
+=======
+import nextPlugin from '@next/eslint-plugin-next';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
 import globals from 'globals';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -14,6 +18,7 @@ const __dirname = dirname(__filename);
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
+<<<<<<< HEAD
 // import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
 import globals from 'globals';
 
@@ -36,11 +41,32 @@ const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all,
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
   allConfig: js.configs.all
 });
 
 export default [
+<<<<<<< HEAD
   ...compat.extends('next/core-web-vitals'),
+=======
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
     }
 
       '*.config.js',
@@ -377,6 +403,7 @@ export default [
       '.next/**/*',
       'dist/**',
       'build/**',
+      'coverage/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -384,7 +411,7 @@ export default [
       'automation/**',
       'backup-problematic-files/**',
       'src.disabled/**',
-      'components.disabled/**',
+      'components/**',
       'pages.disabled/**',
       'api.disabled.temp/**',
       'api-backup/**',
@@ -464,7 +491,6 @@ export default [
       'test_build/**',
       'tests/**',
       '__tests__/**',
-      'components/apps/extension/**',
       'lib.broken/**',
       'middleware/**',
       'netlify/**',
@@ -508,6 +534,7 @@ export default [
       'system-*.js',
       'ultimate-*.js',
       '*.js',
+<<<<<<< HEAD
       'public/**',
       'services-broken.tsx',
       'services/**/*.ts',
@@ -680,13 +707,14 @@ export default [
         require: 'readonly',
         exports: 'readonly',
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
       'public/**',
       'services-broken.tsx',
       'services/**/*.ts',
       'vitest.config.ts',
       'playwright.config.ts',
       'setupTests.ts',
-      'components/**',
       'data/**',
       'hooks/**',
       'lib/**',
@@ -705,6 +733,7 @@ export default [
       'pages-disabled/**',
       'pages-quarantine/**',
       'app/**'
+<<<<<<< HEAD
       'src_backup_temp/**',
       'temp-backup/**',
       'temp_exclude/**',
@@ -725,6 +754,41 @@ export default [
       'src.pages.disabled/**',
       'vite.config-backup.ts'
       },
+=======
+    ]
+  },
+  {
+    files: ['app/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
+      },
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
     },
     rules: {
       'react/display-name': 'off',
@@ -993,6 +1057,7 @@ export default [
       'no-console': 'off'
     }
   }
+<<<<<<< HEAD
       'no-console': 'off'
     }
   }
@@ -1017,3 +1082,6 @@ export default [
 
 
 ];
+=======
+];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e

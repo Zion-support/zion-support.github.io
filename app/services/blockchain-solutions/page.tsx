@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+=======
+import type { Metadata } from 'next';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
 
 export const metadata = {
   title: 'Blockchain Solutions - Zion Tech Group',

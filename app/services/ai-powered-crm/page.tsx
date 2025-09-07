@@ -157,6 +157,7 @@ function PricingTier({
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
       <a
         href="mailto:kleber@ziontechgroup.com?subject=AI CRM Platform - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
@@ -172,6 +173,19 @@ function PricingTier({
 }
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+=======
+      <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+        popular 
+          ? 'bg-white text-blue-600 hover:bg-gray-100' 
+          : 'bg-blue-600 text-white hover:bg-blue-700'
+      }`}>
+        {popular ? 'Get Started' : 'Choose Plan'}
+      </button>
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
 
 export default function AIPoweredCRMPage() {
   return (
