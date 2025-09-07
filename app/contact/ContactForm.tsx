@@ -11,6 +11,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 export default function ContactForm() {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,19 +19,23 @@ export default function ContactForm() {
     service: '',
     budget: '',
     message: ''
-  });
+  
+});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+
+    const { name, value 
+} = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent)  => {
+
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -45,7 +50,8 @@ export default function ContactForm() {
         service: '',
         budget: '',
         message: ''
-      });
+      
+});
     } catch {
       setSubmitStatus('error');
     } finally {
@@ -62,7 +68,8 @@ export default function ContactForm() {
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Ready to transform your business with cutting-edge technology? 
-          Let&apos;s discuss your project and create a custom solution.
+          Let&apos;
+s discuss your project and create a custom solution.
         </p>
       </div>
 
@@ -95,7 +102,7 @@ export default function ContactForm() {
                 <MapPinIcon className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-medium text-gray-900">Address</p>
-                  <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-gray-600">364 E Main St STE 1008 < br />Middletown DE 19709</p>
                 </div>
               </div>
               
@@ -134,7 +141,8 @@ export default function ContactForm() {
                 <div className="flex items-center">
                   <CheckCircleIcon className="w-5 h-5 text-green-600 mr-2" />
                   <p className="text-green-800">
-                    Thank you! Your message has been sent successfully. We&apos;ll get back to you within one business day.
+                    Thank you! Your message has been sent successfully. We&apos;
+ll get back to you within one business day.
                   </p>
                 </div>
               </div>

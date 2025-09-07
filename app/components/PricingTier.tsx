@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface PricingTierProps {
-  name: string;
+name: string;
   price: string;
   period?: string;
   description: string;
@@ -23,13 +23,15 @@ export default function PricingTier({
   buttonHref = '/contact',
   color = 'blue'
 }: PricingTierProps) {
+
   const colorClasses = {
     blue: {
       bg: 'bg-blue-600',
       hover: 'hover:bg-blue-700',
       border: 'border-blue-200',
       text: 'text-blue-600'
-    },
+    
+},
     purple: {
       bg: 'bg-purple-600',
       hover: 'hover:bg-purple-700',

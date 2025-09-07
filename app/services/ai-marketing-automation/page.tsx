@@ -7,6 +7,7 @@ export const metadata = {
 };
 
 export default function AiMarketingAutomationPage() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
@@ -21,7 +22,8 @@ export default function AiMarketingAutomationPage() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          {/* Features Grid */}
+          {/* Features Grid */
+}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -84,4 +86,5 @@ export default function AiMarketingAutomationPage() {
       </div>
     </div>
   );
+
 }

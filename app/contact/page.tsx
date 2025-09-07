@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function ContactPage() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
@@ -18,7 +19,8 @@ export default function ContactPage() {
 
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
+            {/* Contact Information */
+}
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2>
