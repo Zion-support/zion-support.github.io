@@ -1,20 +1,16 @@
-
-export const metadata = {
-  title: 'App | Zion Tech Group',
-  description: 'Professional services for your business needs.',
-  keywords: 'services, business, technology'
-};
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            App
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Ai Analytics Dashboard
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional services designed to meet your business requirements.
+            Professional ai analytics dashboard services for your business.
           </p>
         </div>
         <div className="max-w-6xl mx-auto">
@@ -22,8 +18,8 @@ export default function ServicePage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss your requirements and get a custom solution.
+            <p className="text-lg text-gray-600 mb-8">
+              Contact us today to learn more about our ai analytics dashboard services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
@@ -34,7 +30,6 @@ export default function ServicePage() {
                 View All Services
               </Link>
             </div>
-
           </div>
         </div>
       </div>

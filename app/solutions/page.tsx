@@ -1,7 +1,8 @@
-
-
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
+  title: 'Solutions - Zion Tech Group',
+  description: 'Comprehensive technology solutions for modern businesses.'
+};
 
 export default function SolutionsPage() {
   return (
@@ -12,8 +13,8 @@ export default function SolutionsPage() {
             Our Solutions
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-
-          </div>
+            Comprehensive technology solutions tailored to your business needs.
+          </p>
         </div>
       </div>
     </div>

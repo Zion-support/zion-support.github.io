@@ -1,12 +1,70 @@
-pages.broken/**
-pages.corrupted.*/**
-pages.disabled/**
-pages.disabled_auto/**
-pages.old/**
-pages_disabled/**
-pages_minimal/**
-pm2-automation/**
-services/**
-*.js
-*.cjs
-*.mjs
+# Dependencies
+node_modules/
+.next/
+out/
+dist/
+
+# Backup and temporary directories
+temp_*/
+temp-*/
+backup*/
+*backup*/
+*_backup*/
+*_archive*/
+*_quarantine*/
+*_disabled*/
+*.disabled*/
+*_broken*/
+*_corrupted*/
+*_old*/
+*_temp*/
+*_exclude*/
+*_working*/
+*_minimal*/
+*_test*/
+test-*/
+test_*/
+
+# Build outputs
+build/
+.next/
+out/
+dist/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env*
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files with issues
+tests/
+__tests__/
+
+# Utility files
+utils/
+tools/
+
+# Type definitions
+types/
+
+# Zion OS (separate project)
+zion-os/
+
+# Zion AI Assistant (separate project)
+zion-ai-assistant/
+
+# Zion Academy (separate project)
+zion_academy/
+
+# Working directories
+working-*/
