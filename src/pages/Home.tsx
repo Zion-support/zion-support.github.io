@@ -39,6 +39,22 @@ export default function Home() {
       description: "Project completion success"
     },
     {
+      icon: FileText,
+      title: "AI Document Processing",
+      description: "Advanced AI-powered document intelligence and automation",
+      href: "/services/ai-intelligent-document-processing",
+      color: "from-blue-500 to-cyan-500",
+      features: ["OCR & Data Extraction", "Intelligent Classification", "Process Automation", "Compliance & Security"]
+    },
+    {
+      icon: Video,
+      title: "AI Video Analytics",
+      description: "Real-time video intelligence and behavioral analytics",
+      href: "/services/ai-video-analytics-platform",
+      color: "from-purple-500 to-pink-500",
+      features: ["Object Detection", "Behavioral Analysis", "Anomaly Detection", "Real-time Processing"]
+    },
+    {
       icon: Zap,
       value: "24/7",
       label: "Support",
