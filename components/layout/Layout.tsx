@@ -1,25 +1,35 @@
-<<<<<<< HEAD
-{children}; </div>)};
-=======
 import React, { ReactNode } from 'react';
+import Head from 'next/head';
 import Header from '../Header';
-import Footer from './Footer';
+import Footer from '../Footer';
 
 interface LayoutProps {
   children: ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group", 
+  description = "Leading technology solutions provider" 
+}: LayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        {children}
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </>
   );
-};
-
-export default Layout;
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+}

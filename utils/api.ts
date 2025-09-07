@@ -1,15 +1,56 @@
-<<<<<<< HEAD
-}};
-export const apiClient = new ApiClient();
-=======
+export interface ApiResponse<T = any> {
+  data: T;
+  success: boolean;
+  message?: string;
+  error?: string;
+}
 
-};
-<<<<<<< HEAD
-};
+export interface RequestOptions {
+  method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
+  headers?: Record<string, string>;
+  body?: any;
+}
+
+class ApiClient {
+  private baseUrl: string;
+
+  constructor(baseUrl: string = '/api') {
+    this.baseUrl = baseUrl;
+  }
+
+  async request<T>(endpoint: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    try {
+      const response = await fetch(`${this.baseUrl}${endpoint}`, {
+        method: options.method || 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          ...options.headers,
+        },
+        body: options.body ? JSON.stringify(options.body) : undefined,
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        return {
+          data: null,
+          success: false,
+          error: data.message || 'Request failed',
+        };
+      }
+
+      return {
+        data,
+        success: true,
+      };
+    } catch (error) {
+      return {
+        data: null,
+        success: false,
+        error: error instanceof Error ? error.message : 'Unknown error',
+      };
+    }
+  }
+}
+
 export const apiClient = new ApiClient();
-=======
-export const apiClient = new ApiClient(),
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
-export type { ApiResponse, RequestOptions };
-;

@@ -1,24 +1,8 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import App from './App';
-<<<<<<< HEAD
-;
-describe('App Smoke Tests', () = > {; it('should render without crashing', () = > {; expect(() = > render(<App />)).not.toThrow()});
-; it('should render a basic structure', () = > {; const { container } = render(<App />); expect(container.firstChild).toBeTruthy()})});
-=======
 
-describe('App Smoke Tests', () => {
-  it('should render without crashing', () => {
-    expect(() => render(<App />)).not.toThrow();
-  });
-
-  it('should render a basic structure', () => {
-    const { container } = render(<App />);
-    expect(container.firstChild).toBeTruthy();
-  });
-<<<<<<< HEAD
+it('renders without crashing', () => {
+  render(<App />);
+  expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
 });
-=======
-});
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31

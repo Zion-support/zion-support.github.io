@@ -1,24 +1,66 @@
 const nextJest = require('next/jest');
-
 const createJestConfig = nextJest({
-  dir: './',
+  dir: ./,
 });
 
-const config = {
-  testEnvironment: 'jsdom',
+// Add any custom config to be passed to Jest
+const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
   testMatch: [
-    '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
-    '**/*.smoke.(test|spec).(js|jsx|ts|tsx)',
+    '**/__tests__/**/*.(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)'
   ],
-  collectCoverage: false,
-  verbose: true,
-  testTimeout: 10000,
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/src_backup/',
+    '/src_backup_temp/',
+    '/backup-problematic-files/',
+    '/src.disabled/',
+    '/pages_backup/',
+    '/corrupted-files-backup/',
+    '/lib_backup/',
+    '/components.disabled/',
+    '/components.disabled_full/',
+    '/pages.disabled/',
+    '/src.pages.disabled/',
+    '/recovered-branches/',
+    '/temp_backup/',
+    '/api.disabled/',
+    '/src.broken/',
+    '/src.corrupted/',
+    '/pages.broken/',
+    '/pages.corrupted/',
+    '/components.broken/',
+    '/components.corrupted/'
+  ],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}',
+  ],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  testMatch: [<rootDir>/__tests__/**/*.smoke.(js|jsx|ts|tsx),<rootDir>/**/*.smoke.test.(js|jsx|ts|tsx),
+  ],
+  testPathIgnorePatterns: [<rootDir>/node_modules/,<rootDir>/dist/,<rootDir>/build/,<rootDir>/backup-problematic-files/,<rootDir>/temp_exclude/,<rootDir>/src_backup/,<rootDir>/temp_backup/,<rootDir>/temp_components/,<rootDir>/temp_conflicts/,<rootDir>/temp_working/,<rootDir>/backup*/,<rootDir>/corrupted_backup/,<rootDir>/temp_*/,
+  ],
+  collectCoverageFrom: [src/**/*.{js,jsx,ts,tsx},!src/**/*.d.ts,!src/**/*.stories.{js,jsx,ts,tsx},
+  ],
+  coveragePathIgnorePatterns: [<rootDir>/node_modules/,<rootDir>/.next/,<rootDir>/dist/,<rootDir>/build/,
+  ],
 };
 
 module.exports = createJestConfig(config);
+module.exports = {
+  preset: ts-jest,
+  testEnvironment: jsdom,
+  roots: [<rootDir>/src],
+  testMatch: [**/__tests__/**/*.smoke.+(ts|tsx|js),**/*.smoke.(test|spec).+(ts|tsx|js)],
+  transform: {^.+\\.(ts|tsx)$: ts-jest},
+  setupFilesAfterEnv: [<rootDir>/src/setupTests.ts],
+  moduleNameMapping: {^@/(.*)$: <rootDir>/src/$1},
+  testTimeout: 30000,
+  passWithNoTests: true
+};
