@@ -250,6 +250,117 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Newsletter Section */}
+      <div className="bg-slate-800 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get the latest insights on AI, technology trends, and business automation delivered to your inbox.
+            </p>
+            <div className="max-w-md mx-auto flex gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Pricing Section */}
+      <div className="py-16 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
+            <p className="text-gray-300">Choose the plan that fits your business needs</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-800 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-white mb-4">Starter</h3>
+              <div className="text-3xl font-bold text-blue-400 mb-6">$2,999<span className="text-lg text-gray-400">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  Basic AI automation
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  Email support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  Monthly reports
+                </li>
+              </ul>
+              <button className="w-full bg-slate-700 text-white py-3 rounded-lg hover:bg-slate-600 transition-colors">
+                Get Started
+              </button>
+            </div>
+            
+            <div className="bg-blue-600 rounded-xl p-8 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Professional</h3>
+              <div className="text-3xl font-bold text-white mb-6">$7,999<span className="text-lg text-blue-200">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="h-5 w-5 text-green-300 mr-3" />
+                  Advanced AI solutions
+                </li>
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="h-5 w-5 text-green-300 mr-3" />
+                  Priority support
+                </li>
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="h-5 w-5 text-green-300 mr-3" />
+                  Custom integrations
+                </li>
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="h-5 w-5 text-green-300 mr-3" />
+                  Weekly reports
+                </li>
+              </ul>
+              <button className="w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                Get Started
+              </button>
+            </div>
+            
+            <div className="bg-slate-800 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3>
+              <div className="text-3xl font-bold text-blue-400 mb-6">Custom<span className="text-lg text-gray-400">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  Full AI suite
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  24/7 dedicated support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  Custom development
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  Real-time monitoring
+                </li>
+              </ul>
+              <button className="w-full bg-slate-700 text-white py-3 rounded-lg hover:bg-slate-600 transition-colors">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* CTA Section */}
       <div className="bg-blue-600">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
