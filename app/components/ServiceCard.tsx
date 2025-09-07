@@ -1,8 +1,6 @@
 'use client';
-
 import React from 'react';
 import Link from 'next/link';
-
 interface ServiceCardProps {
 title: string;
   href: string;
@@ -11,7 +9,6 @@ title: string;
   icon?: string;}
   className?: string;}
 }
-
 export default function ServiceCard({
   title,
   href,
@@ -36,17 +33,17 @@ href={href}
           {title}
         </h3>
       </div>
-      "
-      <p className=\"text-gray-600 mb-4 group-hover:text-gray-700 transition-colors duration-300\" />
+
+      <p className="text-gray-600 mb-4 group-hover:text-gray-700 transition-colors duration-300">
         {description}
       </p>
-      {bullets.length > 0 && ("
-        <ul className=\"space-y-2\" />}
-          {bullets.map((bullet, index) => (}
-            <li key={index} className=\"flex items-start group-hover:translate-x-1 transition-transform duration-300\" style={{ transitionDelay: `${index * 50}
-ms` }} />"
-              <span className=\"text-green-500 mr-3 mt-0.5 group-hover:text-green-600 transition-colors duration-300\" />✓</span>
-              <span className=\"text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300\" />{bullet}</span>
+      {bullets.length > 0 && (
+        <ul className="space-y-2">
+          {bullets.map((bullet, index) => (
+            <li key={index} className="flex items-start group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${index * 50}ms` }}>
+              <span className="text-green-500 mr-3 mt-0.5 group-hover:text-green-600 transition-colors duration-300">✓</span>
+              <span className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{bullet}</span>
+
             </li>
           ))}
         </ul>
@@ -59,5 +56,5 @@ ms` }} />"
         </svg>
       </div>
     </Link>
-  );"
-}
+
+

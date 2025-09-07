@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface CaseStudyProps {
 company: string;
   industry: string;
@@ -7,7 +6,6 @@ company: string;
   description: string;}
   metrics: string[];}
 }
-
 export default function CaseStudy({
   company,
   industry,
@@ -34,5 +32,7 @@ export default function CaseStudy({
         ))}
       </div>
     </div>
-  );"
+
+  );
 }
+
