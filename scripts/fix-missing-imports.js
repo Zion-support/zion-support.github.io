@@ -1,2101 +1,2099 @@
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} }    } main().catch(console.error)ursor/automate-test-improve-and-merge-code-646c;
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} }    } main().catch(console.error)ursor/automate-test-improve-and-merge-code-646c;
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})}    } main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})}    } main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} }    } main().catch(console.error)ursor/automate-test-improve-and-merge-code-646c;
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} }    } main().catch(console.error)ursor/automate-test-improve-and-merge-code-646c;
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} }    } main().catch(console.error)#!/usr/bin/env node;
-import fs from 'fs';
-import path from 'path';
-import { glob  } from 'glob';
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} }    } main().catch(console.error)#!/usr/bin/env node;
+import fs from 'fs';'
+import path from 'path';'
+import { glob  } from 'glob';'
 // Common Lucide React icons that are frequently used;
 
-const commonIcons = ['ArrowRight';
-  const commonIcons = [
-  'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle'
+const commonIcons = ['ArrowRight';'
+const commonIcons = [;
+  'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle''
 ];
-
 let totalFixes = 0;
 let filesProcessed = 0;
 // Find missing imports in a file;
-function findMissingImports() {const missingImports  = [];// Check for each common icon;}
-  commonIcons.forEach(icon = > {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g')const matches  = content.match(iconRegex)commonIcons.forEach(icon => {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g')const matches  = content.match(iconRegex)commonIcons && commonIcons.forEach(icon => {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g')const matches = content && content.match(iconRegex)commonIcons && commonIcons.forEach(icon => {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g')const matches = content && content.match(iconRegex)commonIcons.forEach(icon => {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g';
-  const matches  = content.match(iconRegex)ursor/automate-test-improve-and-merge-code-646c;
-  commonIcons.forEach(icon = > {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g';
-  const matches  = content.match(iconRegex)if (matches && matches.length > 0) {// Check if the icon is already imported;}
+function findMissingImports() {const missingImports  = [];// Check for each common icon;
+  }
+  commonIcons.forEach(icon = > {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g')const matches  = content.match(iconRegex)commonIcons.forEach((icon) => {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g')const matches  = content.match(iconRegex)commonIcons && commonIcons.forEach((icon) => {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g')const matches = content && content.match(iconRegex)commonIcons && commonIcons.forEach((icon) => {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g')const matches = content && content.match(iconRegex)commonIcons.forEach((icon) => {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g';'  const matches  = content.match(iconRegex)ursor/automate-test-improve-and-merge-code-646c;
+  commonIcons.forEach(icon = > {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g';'  const matches  = content.match(iconRegex)if (matches && matches.length > 0) {// Check if the icon is already imported;
+
 }
-const importRegex = new RegExp(`import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g';
-      )const existingImport = content.match(importRegex)const existingImport  = content.match(importRegex)if (!existingImport) {missingImports.push(icon)}
+
+const importRegex = new RegExp(`import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g';'      )const existingImport = content.match(importRegex)const existingImport  = content.match(importRegex)if (!existingImport) {missingImports.push(icon)}
 
 const existingImport = content.match(importRegex)if (!existingImport) {missingImports.push(icon)}
 
-const existingImport = content && content.match(importRegex)if (!existingImport) {missingImports && missingImports.push(icon;}
+const existingImport = content && content.match(importRegex)if (!existingImport) {missingImports && missingImports.push(icon;
 }
 
-const existingImport = content && content.match(importRegex)if (!existingImport) {missingImports && missingImports.push(icon)}
-;
-  const existingImport = content.match(importRegex)if (!existingImport) {missingImports.push(icon)}ursor/automate-test-improve-and-merge-code-646c;
+const existingImport = content.match(importRegex)if (!existingImport) {missingImports.push(icon)}ursor/automate-test-improve-and-merge-code-646c;
 
 const existingImport = content.match(importRegex)if (!existingImport) {missingImports.push(icon)}
     }
-  };
-  return missingImports}
+  })return missingImports}
 // Fix missing imports in a file;
-function fixMissingImports() {const missingImports  = findMissingImports(content, filePath)if (missingImports.length === 0) {if (missingImports.length === 0) {if (missingImports && missingImports.length === 0) {if (missingImports && missingImports.length === 0) {if (missingImports.length === 0) {ursor/automate-test-improve-and-merge-code-646c;}
-  if (missingImports.length = == 0) {if (missingImports && missingImports.length === 0) {if (missingImports.length === 0) ;}
-  return { content, \"changes\": 0 }}
+function fixMissingImports() {const missingImports  = findMissingImports(content, filePath)if (missingImports.length === 0) {if (missingImports.length === 0) {if (missingImports && missingImports.length === 0) {if (missingImports && missingImports.length === 0) {if (missingImports.length === 0) {ursor/automate-test-improve-and-merge-code-646c;
+  }
+  if (missingImports.length = == 0) {if (missingImports && missingImports.length === 0) {if (missingImports.length === 0) ;
+  }
+  return { content, 'changes': 0 }'
   let fixedContent = content;
   let changes = 0;
   // Find existing lucide-react import;
 
 const existingImportRegex =;
-    /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+    /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
 const existingImport = fixedContent.match(existingImportRegex;
   return missingImports;
 }// Fix missing imports in a file;
-function fixMissingImports() {const missingImports = findMissingImports(content, filePath)if (missingImports.length === 0) ;}
-  return { content, changes: 0 ,}
+function fixMissingImports() {const missingImports = findMissingImports(content, filePath)if (missingImports.length === 0) ;
+}
+return { content, 'changes': 0 ,;
 }let fixedContent = content;
   let changes  = 0;// Find existing lucide-react import;
 
 const existingImportRegex =;
-    /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+    /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
 const existingImport  = fixedContent.match(existingImportRegex)if (existingImport) {// Add missing icons to existing import;
 
-const existingIcons =;}
-      existingImport[0];}
+}
+
+const existingIcons =;
+      existingImport[0];
         .match(/{([^}]*)}/)?.[1];
-        ?.split(',').map(icon => icon.trim()) || [];
+        ?.split(',').map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons, ...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(', ')} } from 'lucide-react';`;
-    fixedContent = fixedContent.replace(existingImportRegex, newImport)changes++} else {// Create new import statement;}
-}
-const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;// Find the best place to insert the import;
+  const newImport = `import { ${allIcons.join(', ')} } from 'lucide-react';`;`    fixedContent = fixedContent.replace(existingImportRegex, newImport)changes++} else {// Create new import statement;
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) ;
-  const nextLineIndex = fixedContent.indexOf('\n', importIndex)fixedContent =;
+}
+
+const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;// Find the best place to insert the import;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) ;'
+  const nextLineIndex = fixedContent.indexOf('\n', importIndex)fixedContent =;'
         fixedContent.slice(0, nextLineIndex) +;
-        '\n' +;
+        '\n' +;'
         newImport +;
-        fixedContent.slice(nextLineIndex)} else {const existingImportRegex =;}
-    /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+        fixedContent.slice(nextLineIndex)} else {const existingImportRegex =;
+    /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
 const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {// Add missing icons to existing import;
-  const existingIcons =;}
-      existingImport[0];}
+  }
+  const existingIcons =;
+      existingImport[0];
         .match(/{([^}]*)}/)?.[1];
 ursor/automate-test-improve-and-merge-code-646c;
-        ?.split(',').map(icon => icon.trim()) || [];fixedContent.slice(nextLineIndex)} else {fixedContent = newImport + fixedContent;}
+        ?.split(',').map(icon => { return icon.trim()) || []; }fixedContent.slice(nextLineIndex)} else {fixedContent = newImport + fixedContent;'
     }
     changes++;
-  }return { content: fixedContent, changes }}?.split(',').map(icon => icon ;?.split(',').map(icon => icon.trim()) || [];
+  }return { 'content': fixedContent, changes }?.split(',').map(icon => { return icon ; }?.split(',').map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons, ...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`;}
-    fixedContent = fixedContent && fixedContent.replace(existingImportRegex, newImport)changes++} else {// Create new import statement;}
-}
-const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;
-    // Find the best place to insert the import;
+  const newImport = `import { ${allIcons ;`;`    }
+    fixedContent = fixedContent && fixedContent.replace(existingImportRegex, newImport)changes++} else {// Create new import statement;
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) ;
-  const nextLineIndex = fixedContent && fixedContent.indexOf('\n', importIndex)fixedContent =;
+}
+
+const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;`    // Find the best place to insert the import;
+
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) ;'
+  const nextLineIndex = fixedContent && fixedContent.indexOf('\n', importIndex)fixedContent =;'
         fixedContent && fixedContent.slice(0, nextLineIndex) +;
-        '\n' +;
+        '\n' +;'
         newImport +;
-        fixedContent && fixedContent.slice(nextLineIndex)} else {const existingImportRegex =;}
-    /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+        fixedContent && fixedContent.slice(nextLineIndex)} else {const existingImportRegex =;
+    /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
 const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {// Add missing icons to existing import;
 
-const existingIcons =;}
-      existingImport[0];}
+}
+
+const existingIcons =;
+      existingImport[0];
         .match(/{([^}]*)}/)?.[1];
-        ?.split(',').map(icon => icon.trim()) || [];
+        ?.split(',').map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons, ...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(', ')} } from 'lucide-react';`;
-    fixedContent = fixedContent.replace(existingImportRegex, newImport)changes++} else {// Create new import statement;}
-}
-const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;
-    // Find the best place to insert the import;
+  const newImport = `import { ${allIcons.join(', ')} } from 'lucide-react';`;`    fixedContent = fixedContent.replace(existingImportRegex, newImport)changes++} else {// Create new import statement;
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) ;
-  const nextLineIndex = fixedContent.indexOf('\n', importIndex)fixedContent =;
+}
+
+const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;`    // Find the best place to insert the import;
+
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) ;'
+  const nextLineIndex = fixedContent.indexOf('\n', importIndex)fixedContent =;'
         fixedContent.slice(0, nextLineIndex) +;
-        '\n' +;
+        '\n' +;'
         newImport +;
-        fixedContent.slice(nextLineIndex)} else {ursor/automate-test-improve-and-merge-code-646c;}
+        fixedContent.slice(nextLineIndex)} else {ursor/automate-test-improve-and-merge-code-646c;
+      }
       fixedContent = newImport + fixedContent}
     changes++}
  ;
-  return { \"content\": fixedContent, changes }}
+  return { 'content': fixedContent, changes }'
 // Process individual file;
-function processFile() {try {const content = fs.readFileSync(filePath, 'utf8';}
-  const result = fixMissingImports(content, filePath)if (result.changes > 0) {fs.writeFileSync(filePath, result.content, 'utf8')totalFixes += result.changes;}
-      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}
-    filesProcessed++} catch (error) {console.error(`❌ Error processing ${filePath}:`, error.message)}if (result.changes > 0) {fs.writeFileSync(filePath, result.content, 'utf8')totalFixes += result.changes;}
-      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}filesProcessed++;
-  } catch (error) {console.error(`❌ Error processing ${filePath}:`, error.message)}}
-// Main function;
-async function main() {console.log('🔧 Starting missing imports fix...\n')const content = fs && fs.readFileSync(filePath, 'utf8';}
-  const result = fixMissingImports(content, filePath)if (result && result.changes > 0) {fs && fs.writeFileSync(filePath, result && result.content, 'utf8')totalFixes += result && result.changes;}
-      console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)}
-    filesProcessed++} catch (error) {ursor/automate-test-improve-and-merge-code-646c;}
-    console.error(`❌ Error processing ${filePath}:`, error.message)}// Main function;
-async function main() {console.log('🔧 Starting missing imports fix...\n')const content = fs.readFileSync(filePath, 'utf8';}
-  const result = fixMissingImports(content, filePath)if (result.changes > 0) {fs.writeFileSync(filePath, result.content, 'utf8')totalFixes += result.changes;}
-      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}
-    filesProcessed++} catch (error) {console.error(`❌ Error processing ${filePath}:`, error.message)}
-}
-// Main function;
-async function main() {console.log('🔧 Starting missing imports fix...\n')ursor/automate-test-improve-and-merge-code-646c;}
-}
-const patterns = ['pages/**/*.{tsx,jsx}','src/**/*.{tsx,jsx}','components/**/*.{tsx,jsx}'
-];
-
-
-const excludeDirs = ['node_modules';
-  const patterns = [
-  'pages/**/*.{tsx,jsx}','src/**/*.{tsx,jsx}','components/**/*.{tsx,jsx}'
-];
-
-
-const excludeDirs = [
-  'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled'
-];
-
-  for (const pattern of patterns) {const files = await glob(pattern, {\"ignore\": excludeDirs.map(dir => `**/${dir}/**`)})for (const pattern of patterns) {const files = await glob(pattern, {ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) {processFile(file)}
+function processFile() {try {const content = fs.readFileSync(filePath, 'utf8';'
   }
-  console.log(\"\n📊 Missing Imports Fix \"Summary\": \")console.log(`\n📊 Missing Imports Fix Summary: `)console.log(`   Files processed: ${filesProcessed}`)console.log(`   Total import \"fixes\": ${totalFixes}`)console.log(\"\n✨ Missing imports fix completed!\",
+  const result = fixMissingImports(content, filePath)if (result.changes > 0) {fs.writeFileSync(filePath, result.content, 'utf8')totalFixes += result.changes;'
+      }
+      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}`    filesProcessed++} catch (error) {console.error(`❌ Error processing ${filePath}:`, error.message)}if (result.changes > 0) {fs.writeFileSync(filePath, result.content, 'utf8')totalFixes += result.changes;'      }
+      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}filesProcessed++;`  } catch (error) {console.error(`❌ Error processing ${filePath}:`, error.message)}`// Main function;
+async function main() {console.log('🔧 Starting missing imports fix...\n')const content = fs && fs.readFileSync(filePath, 'utf8';'
+  }
+  const result = fixMissingImports(content, filePath)if (result && result.changes > 0) {fs && fs.writeFileSync(filePath, result && result.content, 'utf8')totalFixes += result && result.changes;'
+      }
+      console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)}`    filesProcessed++} catch (error) {ursor/automate-test-improve-and-merge-code-646c;
+    }
+    console.error(`❌ Error processing ${filePath}:`, error.message)}// Main function;`async function main() {console.log('🔧 Starting missing imports fix...\n')const content = fs.readFileSync(filePath, 'utf8';'
+  }
+  const result = fixMissingImports(content, filePath)if (result.changes > 0) {fs.writeFileSync(filePath, result.content, 'utf8')totalFixes += result.changes;'
+      }
+      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}`    filesProcessed++} catch (error) {console.error(`❌ Error processing ${filePath}:`, error.message)}`}
+// Main function;
+async function main() {console.log('🔧 Starting missing imports fix...\n')ursor/automate-test-improve-and-merge-code-646c;'
+
 }
+
+const patterns = ['pages/**/*.{tsx,jsx}','src/**/*.{tsx,jsx}','components/**/*.{tsx,jsx}';'
+];
+
+
+const excludeDirs = ['node_modules';'
+const patterns = [;
+  'pages/**/*.{tsx,jsx}','src/**/*.{tsx,jsx}','components/**/*.{tsx,jsx}''
+];
+
+
+const excludeDirs = [;
+  'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled''
+];
+
+  for (const pattern of patterns) {const file of files) {processFile(file)}
+  }
+  console.log('\n📊 Missing Imports Fix 'Summary': ')console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(`   Files 'processed': ${filesProcessed}`)console.log(`   Total import 'fixes': ${totalFixes}`)console.log('\n✨ Missing imports fix completed!','}
 // Run the script;
-main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: '0' ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: '0' ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: '0' ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: '0' ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)'src && src.disabled','pages && pages.disabled','components && components.disabled'
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)'src && src.disabled','pages && pages.disabled','components && components.disabled''
 ];
 
 ursor/automate-test-improve-and-merge-code-646c;
-  /**`)})}
-  console && console.log(\"\n📊 Missing Imports Fix \"Summary\": \")console && console.log(`   Files processed: ${filesProcessed}`)console && console.log(`   Total import \"fixes\": ${totalFixes}`)console && console.log(\"\n✨ Missing imports fix completed!\",
-}
+  /**`)})}`  console && console.log('\n📊 Missing Imports Fix 'Summary': ')console && console.log(`   Files 'processed': ${filesProcessed}`)console && console.log(`   Total import 'fixes': ${totalFixes}`)console && console.log('\n✨ Missing imports fix completed!','}
 // Run the script;
-main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: '0' ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)ursor/add-new-services-and-deploy-updates-0462;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: '0' ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;}
-  return { content,changes: '0' ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;
+}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
+const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;
-  const newImport = `import { ${missingImports ;\n`;}
+  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports ;\n`;`
 }
-const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
+
+const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try { const content = fs && fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
 }
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary: `)console && console.log(` Files processed: ${filesProcessed}`)console && console.log(` Total import fixes: ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary': `)console && console.log(` Files 'processed': ${filesProcessed}`)console && console.log(` Total import 'fixes': ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
+const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;
-  const newImport = `import { ${missingImports ;\n`;}
+  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports ;\n`;`
 }
-const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
+
+const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs && fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
 }
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary: `)console && console.log(` Files processed: ${filesProcessed}`)console && console.log(` Total import fixes: ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary': `)console && console.log(` Files 'processed': ${filesProcessed}`)console && console.log(` Total import 'fixes': ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
+const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;
-  const newImport = `import { ${missingImports ;\n`;}
+  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports ;\n`;`
 }
-const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
+
+const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs && fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
 }
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary: `)console && console.log(` Files processed: ${filesProcessed}`)console && console.log(` Total import fixes: ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary': `)console && console.log(` Files 'processed': ${filesProcessed}`)console && console.log(` Total import 'fixes': ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
+const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;
-  const newImport = `import { ${missingImports ;\n`;}
+  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports ;\n`;`
 }
-const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
+
+const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs && fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
 }
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary: `)console && console.log(` Files processed: ${filesProcessed}`)console && console.log(` Total import fixes: ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary': `)console && console.log(` Files 'processed': ${filesProcessed}`)console && console.log(` Total import 'fixes': ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
+const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;
-  const newImport = `import { ${missingImports ;\n`;}
+  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports ;\n`;`
 }
-const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
+
+const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs && fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
 }
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary: `)console && console.log(` Files processed: ${filesProcessed}`)console && console.log(` Total import fixes: ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary': `)console && console.log(` Files 'processed': ${filesProcessed}`)console && console.log(` Total import 'fixes': ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
+const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;
-  const newImport = `import { ${missingImports ;\n`;}
+  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports ;\n`;`
 }
-const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
+
+const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs && fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
 }
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary: `)console && console.log(` Files processed: ${filesProcessed}`)console && console.log(` Total import fixes: ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console && console.error)origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-    'src.disabled','pages.disabled','components.disabled';
-    'src.disabled','pages.disabled','components.disabled';
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary': `)console && console.log(` Files 'processed': ${filesProcessed}`)console && console.log(` Total import 'fixes': ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console && console.error)origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+    'src.disabled','pages.disabled','components.disabled';'
+    'src.disabled','pages.disabled','components.disabled';'
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
 
-const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs.readFileSync(filePath,'utf8');'
 
-const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs.readFileSync(filePath,'utf8');}
+const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} }    } main().catch(console.error);
+
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import {glob} from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;
 }
-const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} }    } main().catch(console.error);
-
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import {glob} from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
+const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
 
-const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;}
+const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;`
 }
-const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs && fs.readFileSync(filePath,'utf8');}
+
+const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs && fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; `)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} }    } main().catch(console && console.error);
+
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;
 }
-const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; `)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} }    } main().catch(console && console.error);
-
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
 
-const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs.readFileSync(filePath,'utf8');'
 
-const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} }    } main().catch(console.error);
-#!/usr/bin/env node;
-import { glob } from 'glob';
-// Common Lucide React icons that are frequently used;
-const commonIcons = ['ArrowRight',
-  'CheckCircle',
-  'Star',
-  'Users',
-  'Zap',
-  'Shield',
-  'Globe',
-  'TrendingUp',
-  'Award',
-  'Clock',
-  'Brain',
-  'Cloud',
-  'Database',
-  'Network',
-  'Target',
-  'Phone',
-  'Mail',
-  'MessageSquare',
-  'FileText',
-  'Search',
-  'Menu',
-  'X',
-  'ChevronDown',
-  'ChevronUp',
-  'ChevronLeft',
-  'ChevronRight',
-  'Plus',
-  'Minus',
-  'Edit',
-  'Trash',
-  'Save',
-  'Download',
-  'Upload',
-  'Settings',
-  'User',
-  'Lock',
-  'Unlock',
-  'Eye',
-  'EyeOff',
-  'Heart',
-  'Share',
-  'Copy',
-  'ExternalLink',
-  'Home',
-  'Info',
-  'AlertCircle',
-  'Check',
-  'XCircle'
+const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} }    } main().catch(console.error);
+#!/usr/bin/env node,
+import { glob } from 'glob';'
+// Common Lucide React icons that are frequently used,
+const commonIcons = ['ArrowRight',;'
+  'CheckCircle','
+  'Star','
+  'Users','
+  'Zap','
+  'Shield','
+  'Globe','
+  'TrendingUp','
+  'Award','
+  'Clock','
+  'Brain','
+  'Cloud','
+  'Database','
+  'Network','
+  'Target','
+  'Phone','
+  'Mail','
+  'MessageSquare','
+  'FileText','
+  'Search','
+  'Menu','
+  'X','
+  'ChevronDown','
+  'ChevronUp','
+  'ChevronLeft','
+  'ChevronRight','
+  'Plus','
+  'Minus','
+  'Edit','
+  'Trash','
+  'Save','
+  'Download','
+  'Upload','
+  'Settings','
+  'User','
+  'Lock','
+  'Unlock','
+  'Eye','
+  'EyeOff','
+  'Heart','
+  'Share','
+  'Copy','
+  'ExternalLink','
+  'Home','
+  'Info','
+  'AlertCircle','
+  'Check','
+  'XCircle''
 ];
 let totalFixes = 0;
 let filesProcessed = 0;
-// Find missing imports in a file;
-function findMissingImports(content, filePath) {
+// Find missing imports in a file,
+function findMissingImports() {
+  }
   const missingImports = [];
-  // Check for each common icon;
-commonIcons.forEach(icon = > {}
-   ;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`, 'g');
-
+  // Check for each common icon,
+commonIcons.forEach(icon = > {
+   ;
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`, 'g');'
 const matches = content.match(iconRegex);
-  commonIcons && commonIcons.forEach(icon = > {}
-   ;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`, 'g');
-
+  commonIcons && commonIcons.forEach(icon = > {
+   ;
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`, 'g');'
 const matches = content && content.match(iconRegex);
-  commonIcons.forEach(icon = > {}
-   ;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`, 'g');
-
+  commonIcons.forEach(icon = > {
+   ;
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`, 'g');'
 const matches = content.match(iconRegex);
     if (matches && matches.length > 0) {
-      // Check if the icon is already imported;}
-const importRegex = new RegExp(}
-        `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,
-        'g'
+    const iconRegex = new RegExp(`\\b${icon}\\b`, 'g')
+    const matches = content.match(iconRegex)
+  if($2) {
+
+      // Check if the icon is already imported
+}
+const importRegex = new RegExp(;
+        `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,`        'g''
       );
 
-const existingImport = content.match(importRegex);
-      if (!existingImport) {}
+      const existingImport = content.match(importRegex);
+      const existingImport = content.match(importRegex);
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+      const existingImport = content.match(importRegex);
+
+
+      const existingImport = content.match(importRegex);
+      if (!existingImport) {
+        }
         missingImports.push(icon)}
 
 const existingImport = content && content.match(importRegex);
-      if (!existingImport) {}
+      if (!existingImport) {
+        }
         missingImports && missingImports.push(icon)}
 
 const existingImport = content.match(importRegex);
-      if (!existingImport) {}
+      if (!existingImport) {
+        }
         missingImports.push(icon)}
-    }
-  });
   return missingImports}
-// Fix missing imports in a file;
-function fixMissingImports(content, filePath) {
+// Fix missing imports in a file,
+function fixMissingImports() {
+  }
   const missingImports = findMissingImports(content, filePath);
   if (missingImports.length = == 0) {
+  }
   if (missingImports && missingImports.length === 0) {
-  if (missingImports.length === 0) {}
-   ;}
-  return { content, \"changes\": 0 }}
+  }
+  if (missingImports.length === 0) {
+   ;
+  }
+  return { content, 'changes': 0 }'
   let fixedContent = content;
   let changes = 0;
-  // Find existing lucide-react import;
-const existingImportRegex =
-    /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+  // Find existing lucide-react import,
+const existingImportRegex =;
+    /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
 const existingImport = fixedContent.match(existingImportRegex);
   if (existingImport) {
     // Add missing icons to existing import;
-const existingIcons =}
-      existingImport[0]}
+}
+const existingIcons =;
+      existingImport[0]
         .match(/{([^}]*)}/)?.[1]
-        ?.split(',')
-        .map(icon => icon.trim()) || [];
+        ?.split(',')'
+        .map(icon => { return icon.trim()) || []; }
 
-const allIcons = [...new Set([...existingIcons, ...missingImports])].sort();
 
-const newImport = `import { ${allIcons.join(', ')} } from 'lucide-react';`;
-    fixedContent = fixedContent.replace(existingImportRegex, newImport);
-    changes++} else {}
-    // Create new import statement;}
-const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;
-    // Find the best place to insert the import;
-const importIndex = fixedContent.indexOf('import');
+const newImport = `import { ${allIcons.join(', ')} } from 'lucide-react';`;`    fixedContent = fixedContent.replace(existingImportRegex, newImport);
+    changes++} else {
+    // Create new import statement
+}
+const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;`    // Find the best place to insert the import,
+const importIndex = fixedContent.indexOf('import');'
     if (importIndex !== -1) {
-      const nextLineIndex = fixedContent.indexOf('\n', importIndex);
+      }
+      const nextLineIndex = fixedContent.indexOf('\n', importIndex);'
       fixedContent = fixedContent.slice(0, nextLineIndex) +
-        '\n' +}
-        newImport +}
+        '\n' +'
+        newImport +
         fixedContent.slice(nextLineIndex)} else {
- ;}
-  const existingImportRegex =;}
-    /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+ ;
+  }
+  const existingImportRegex =;
+    /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
 const existingImport = fixedContent && fixedContent.match(existingImportRegex);
   if (existingImport) {
-    // Add missing icons to existing import const existingIcons =}
-      existingImport[0]}
+    // Add missing icons to existing import const existingIcons =
+      }
+      existingImport[0]
         .match(/{([^}]*)}/)?.[1]
 
-        ?.split(',')
-        .map(icon => icon ;
+        ?.split(',')'
+        .map(icon => { return icon ; }
 
 const allIcons = [...new Set([...existingIcons, ...missingImports])].sort();
 
-const newImport = `import { ${allIcons ;`;}
-    fixedContent = fixedContent && fixedContent.replace(existingImportRegex, newImport);}
+const newImport = `import { ${allIcons ;`;`    }
+    fixedContent = fixedContent && fixedContent.replace(existingImportRegex, newImport);
     changes++} else {
 
-    // Create new import statement;
-const newImport = `import { ${missingImports ;\n`;
-    // Find the best place to insert the import const importIndex = fixedContent ;
+    // Create new import statement
+}
+const newImport = `import { ${missingImports ;\n`;`    // Find the best place to insert the import const importIndex = fixedContent ;
+
+    }
 
     if (importIndex !== -1) {
-      const nextLineIndex = fixedContent && fixedContent.indexOf('\n', importIndex);
+      }
+      const nextLineIndex = fixedContent && fixedContent.indexOf('\n', importIndex);'
       fixedContent = fixedContent && fixedContent.slice(0, nextLineIndex) +
-        '\n' +}
-        newImport +}
+        '\n' +'
+        newImport +
         fixedContent && fixedContent.slice(nextLineIndex)} else {
- ;}
-  const existingImportRegex =}
-    /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+ ;
+}
+const existingImportRegex =;
+    /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
 const existingImport = fixedContent.match(existingImportRegex);
   if (existingImport) {
     // Add missing icons to existing import;
-const existingIcons =}
-      existingImport[0]}
+}
+const existingIcons =;
+      existingImport[0]
         .match(/{([^}]*)}/)?.[1]
-        ?.split(',')
-        .map(icon => icon.trim()) || [];
+        ?.split(',')'
+        .map(icon => { return icon.trim()) || []; }
 
 const allIcons = [...new Set([...existingIcons, ...missingImports])].sort();
 
-const newImport = `import { ${allIcons.join(', ')} } from 'lucide-react';`;
-    fixedContent = fixedContent.replace(existingImportRegex, newImport);
-    changes++} else {}
-    // Create new import statement;}
-const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;
-    // Find the best place to insert the import;
-const importIndex = fixedContent.indexOf('import');
+const newImport = `import { ${allIcons.join(', ')} } from 'lucide-react';`;`    fixedContent = fixedContent.replace(existingImportRegex, newImport);
+    changes++} else {
+    // Create new import statement
+}
+const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;`    // Find the best place to insert the import,
+const importIndex = fixedContent.indexOf('import');'
     if (importIndex !== -1) {
-      const nextLineIndex = fixedContent.indexOf('\n', importIndex);
+      }
+      const nextLineIndex = fixedContent.indexOf('\n', importIndex);'
       fixedContent = fixedContent.slice(0, nextLineIndex) +
-        '\n' +}
-        newImport +}
-        fixedContent.slice(nextLineIndex)} else {}
+        '\n' +'
+        newImport +
+        fixedContent.slice(nextLineIndex)} else {
+      }
       fixedContent = newImport + fixedContent}
     changes++}
  ;
-  return { \"content\": fixedContent, changes }}
-// Process individual file;
-function processFile(filePath) {
+  return { 'content': fixedContent, changes }'
+// Process individual file,
+function processFile() {
+  }
   try {
    ;
-  const content = fs.readFileSync(filePath, 'utf8');
+  }
+  const content = fs.readFileSync(filePath, 'utf8');'
 
 const result = fixMissingImports(content, filePath);
     if (result.changes > 0) {
-      fs.writeFileSync(filePath, result.content, 'utf8');}
-      totalFixes += result.changes;}
-      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}
-    filesProcessed++} catch (error) {}
-    console.error(`❌ Error processing ${filePath}:`, error.message)}
-}
-// Main function;
+      }
+      fs.writeFileSync(filePath, result.content, 'utf8');'
+      totalFixes += result.changes;
+      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}`    filesProcessed++} catch (error) {
+    }
+    console.error(`❌ Error processing ${filePath}:`, error.message)}`}
+// Main function,
 async function main() {
-  console.log('🔧 Starting missing imports fix...\n');
+  }
+  console.log('🔧 Starting missing imports fix...\n');'
 
-const content = fs && fs.readFileSync(filePath, 'utf8');
+const content = fs && fs.readFileSync(filePath, 'utf8');'
 
-const result = fixMissingImports(content, filePath);
+
+    const content = fs && fs.readFileSync(filePath, 'utf8');
+    const result = fixMissingImports(content, filePath);
     if (result && result.changes > 0) {
-      fs && fs.writeFileSync(filePath, result && result.content, 'utf8');}
-      totalFixes += result && result.changes;}
-      console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)}
-    filesProcessed++} catch (error) {}
-}
-    console && console.error(`❌ Error processing ${filePath}:`, error && error.message)}
-}
-// Main function;
+      }
+      fs && fs.writeFileSync(filePath, result && result.content, 'utf8');'
+      totalFixes += result && result.changes;
+      console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)}`    filesProcessed++} catch (error) {
+
+    }
+
+    console && console.error(`❌ Error processing ${filePath}:`, error && error.message)}`}
+// Main function,
 async function main() {
+  }
   console ;
 
-const content = fs.readFileSync(filePath, 'utf8');
+const content = fs.readFileSync(filePath, 'utf8');'
 
 const result = fixMissingImports(content, filePath);
     if (result.changes > 0) {
-      fs.writeFileSync(filePath, result.content, 'utf8');}
-      totalFixes += result.changes;}
-      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}
-    filesProcessed++} catch (error) {}
-    console.error(`❌ Error processing ${filePath}:`, error.message)}
-}
-// Main function;
+      }
+      fs.writeFileSync(filePath, result.content, 'utf8');'
+      totalFixes += result.changes;
+      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}`    filesProcessed++} catch (error) {
+    }
+    console.error(`❌ Error processing ${filePath}:`, error.message)}`}
+// Main function,
 async function main() {
-  console.log('🔧 Starting missing imports fix...\n');}
-}
-const patterns = ['pages/**/*.{tsx,jsx}',
+  }
+  console.log('🔧 Starting missing imports fix...\n');'
+
+const patterns = ['pages/**/*.{tsx,jsx}',;'
+    'src/**/*.{tsx,jsx}','
+    'components/**/*.{tsx,jsx}''
+  ];
+  const excludeDirs = ['node_modules',
+
+  console.log('🔧 Starting missing imports fix...\n')
+  const patterns = ['pages/**/*.{tsx,jsx}',
+
     'src/**/*.{tsx,jsx}',
-    'components/**/*.{tsx,jsx}'
-  ];
+    'components/**/*.{tsx,jsx}',']
+  const excludeDirs = ['node_modules',
 
-const excludeDirs = ['node_modules',
-    '.next',
-    'build',
-    'dist',
-    'scripts',
-    'automation',
-    'automation_backup',
-    'src.disabled',
-    'pages.disabled',
-    'components.disabled'
+  const patterns = [
+    'pages/**/*.{tsx,jsx}',
+    'src/**/*.{tsx,jsx}',
+    'components/**/*.{tsx,jsx}',
+  ]
+  const excludeDirs = [
+    'node_modules',
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+const excludeDirs = ['node_modules',;'
+    '.next','
+    'build','
+    'dist','
+    'scripts','
+    'automation','
+    'automation_backup','
+    'src.disabled','
+    'pages.disabled','
+    'components.disabled''
   ];
-  for (const pattern of patterns) {}
-    const files = await glob(pattern, {}
-      \"ignore\": excludeDirs.map(dir => `**/${dir}/**`)});
-    for (const file of files) {}
+  for (const pattern of patterns) {
+    }
+    const files = await glob(pattern, {
+      'ignore': excludeDirs.map(dir => `**/${dir}/**`)});`    for (const file of files) {
+      }
       processFile(file)}
   }
-  console.log(\"\n📊 Missing Imports Fix \"Summary\": \");
-  console.log(`   Files processed: ${filesProcesse,}
-}`);
-  console.log(`   Total import \"fixes\": ${totalFixes}`);
-  console.log(\"\n✨ Missing imports fix completed!\")}
-// Run the script;
+  console.log('\n📊 Missing Imports Fix 'Summary': ');'
+  console.log(`   Files 'processed': ${filesProcesse,`}`);`  console.log(`   Total import 'fixes': ${totalFixes}`);`  console.log('\n✨ Missing imports fix completed!')}'
+// Run the script,
 main().catch(console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;}
-  return { content,changes: '0' ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;
+}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
 
-const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try {;'
+  }
+  const content = fs.readFileSync(filePath,'utf8');'
 
-const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try {;
-  const content = fs.readFileSync(filePath,'utf8');}
+const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');'
 }
-const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary':`); console.log(` Files 'processed': ${filesProcesse,`}`); console.log(` Total import 'fixes': ${totalFixe,`}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;
 }
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary:`); console.log(` Files processed: ${filesProcesse,}
-}`); console.log(` Total import fixes: ${totalFixe,}
-}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
 
-const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs.readFileSync(filePath,'utf8');'
 
-const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs.readFileSync(filePath,'utf8');}
+const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');'
 }
-const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary:`); console.log(` Files processed: ${filesProcesse,}
-}`); console.log(` Total import fixes: ${totalFixe,}
-}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);
-    'src && src.disabled',
-    'pages && pages.disabled',
-    'components && components.disabled'
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary':`); console.log(` Files 'processed': ${filesProcesse,`}`); console.log(` Total import 'fixes': ${totalFixe,`}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);`    'src && src.disabled','
+    'pages && pages.disabled','
+    'components && components.disabled''
   ];
 
-  for (const pattern of patterns) {}
-    const files = await glob(pattern, {}
-      \"ignore\": excludeDirs && excludeDirs.map(dir => `**/${dir}/**`)});
-    for (const file of files) {}
+  for (const pattern of patterns) {
+    }
+    const files = await glob(pattern, {
+      'ignore': excludeDirs && excludeDirs.map(dir => `**/${dir}/**`)});`    for (const file of files) {
+      }
       processFile(file)}
 
   }
-  console && console.log(\"\n📊 Missing Imports Fix \"Summary\": \");
-  console && console.log(`   Files processed: ${filesProcesse,}
-}`);
-  console && console.log(`   Total import \"fixes\": ${totalFixes}`);
-  console && console.log(\"\n✨ Missing imports fix completed!\")}
-// Run the script;
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+  console && console.log('\n📊 Missing Imports Fix 'Summary': ');'
+  console && console.log(`   Files 'processed': ${filesProcesse,`}`);`  console && console.log(`   Total import 'fixes': ${totalFixes}`);`  console && console.log('\n✨ Missing imports fix completed!')}'
+// Run the script
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;}
-  return { content,changes: '0' ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
-
-const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try {;
-  const content = fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)});  } console.log(`\n📊 Missing Imports Fix Summary:`); console.log(` Files processed: ${filesProcesse,}
-}`); console.log(` Total import fixes: ${totalFixe,}
-}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
-
-const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)});  } console.log(`\n📊 Missing Imports Fix Summary:`); console.log(` Files processed: ${filesProcesse,}
-}`); console.log(` Total import fixes: ${totalFixe,}
-}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
-
-const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)});  } console.log(`\n📊 Missing Imports Fix Summary:`); console.log(` Files processed: ${filesProcesse,}
-}`); console.log(` Total import fixes: ${totalFixe,}
-}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
-
-const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)});  } console.log(`\n📊 Missing Imports Fix Summary:`); console.log(` Files processed: ${filesProcesse,}
-}`); console.log(` Total import fixes: ${totalFixe,}
-}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
-
-const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)});  } console.log(`\n📊 Missing Imports Fix Summary:`); console.log(` Files processed: ${filesProcesse,}
-}`); console.log(` Total import fixes: ${totalFixe,}
-}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);
-
-main().catch(console && console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;}
-  return { content,changes: '0' ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
-
-const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;}
-}
-const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try {;
-  const content = fs && fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary:`); console && console.log(` Files processed: ${filesProcesse,}
-}`); console && console.log(` Total import fixes: ${totalFixe,}
-}`); console && console.log(`\n✨ Missing imports fix completed!`)} main().catch(console && console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
-
-const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;}
-}
-const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs && fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary:`); console && console.log(` Files processed: ${filesProcesse,}
-}`); console && console.log(` Total import fixes: ${totalFixe,}
-}`); console && console.log(`\n✨ Missing imports fix completed!`)} main().catch(console && console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
-
-const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;}
-}
-const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs && fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary:`); console && console.log(` Files processed: ${filesProcesse,}
-}`); console && console.log(` Total import fixes: ${totalFixe,}
-}`); console && console.log(`\n✨ Missing imports fix completed!`)} main().catch(console && console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
-
-const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;}
-}
-const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs && fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary:`); console && console.log(` Files processed: ${filesProcesse,}
-}`); console && console.log(` Total import fixes: ${totalFixe,}
-}`); console && console.log(`\n✨ Missing imports fix completed!`)} main().catch(console && console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
-
-const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;}
-}
-const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs && fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary:`); console && console.log(` Files processed: ${filesProcesse,}
-}`); console && console.log(` Total import fixes: ${totalFixe,}
-}`); console && console.log(`\n✨ Missing imports fix completed!`)} main().catch(console && console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
-
-const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;}
-}
-const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs && fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary:`); console && console.log(` Files processed: ${filesProcesse,}
-}`); console && console.log(` Total import fixes: ${totalFixe,}
-}`); console && console.log(`\n✨ Missing imports fix completed!`)} main().catch(console && console.error);
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-    'src.disabled',
-    'pages.disabled',
-    'components.disabled'
-  ];
-  for (const pattern of patterns) {const files = await glob(pattern, {\"ignore\": excludeDirs.map(dir => `**/${dir}/**`)})for ;
-  const file of files) {processFile(file)}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > {;'
   }
-  console.log(\"\n📊 Missing Imports Fix \"Summary\": \")console.log(`   Files processed: ${filesProcessed}`)console.log(`   Total import \"fixes\": ${totalFixes}`)console.log(\"\n✨ Missing imports fix completed!\",
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;
 }
+return { content,'changes': '0' ,;'
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
+
+const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try {;'
+  }
+  const content = fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');'
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)});  } console.log(`\n📊 Missing Imports Fix 'Summary':`); console.log(` Files 'processed': ${filesProcesse,;`}`); console.log(` Total import 'fixes': ${totalFixe,`}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
+
+const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');'
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)});  } console.log(`\n📊 Missing Imports Fix 'Summary':`); console.log(` Files 'processed': ${filesProcesse,;`}`); console.log(` Total import 'fixes': ${totalFixe,`}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
+
+const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');'
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)});  } console.log(`\n📊 Missing Imports Fix 'Summary':`); console.log(` Files 'processed': ${filesProcesse,;`}`); console.log(` Total import 'fixes': ${totalFixe,`}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
+
+const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');'
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)});  } console.log(`\n📊 Missing Imports Fix 'Summary':`); console.log(` Files 'processed': ${filesProcesse,;`}`); console.log(` Total import 'fixes': ${totalFixe,`}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
+
+const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');'
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)});  } console.log(`\n📊 Missing Imports Fix 'Summary':`); console.log(` Files 'processed': ${filesProcesse,;`}`); console.log(` Total import 'fixes': ${totalFixe,`}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);`
+main().catch(console && console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;
+}
+return { content,'changes': '0' ,;'
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
+
+const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;`
+}
+
+const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try {;'
+  }
+  const content = fs && fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary':`); console && console.log(` Files 'processed': ${filesProcesse,`}`); console && console.log(` Total import 'fixes': ${totalFixe,`}`); console && console.log(`\n✨ Missing imports fix completed!`)} main().catch(console && console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
+
+const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;`
+}
+
+const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs && fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary':`); console && console.log(` Files 'processed': ${filesProcesse,`}`); console && console.log(` Total import 'fixes': ${totalFixe,`}`); console && console.log(`\n✨ Missing imports fix completed!`)} main().catch(console && console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
+
+const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;`
+}
+
+const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs && fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary':`); console && console.log(` Files 'processed': ${filesProcesse,`}`); console && console.log(` Total import 'fixes': ${totalFixe,`}`); console && console.log(`\n✨ Missing imports fix completed!`)} main().catch(console && console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
+
+const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;`
+}
+
+const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs && fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary':`); console && console.log(` Files 'processed': ${filesProcesse,`}`); console && console.log(` Total import 'fixes': ${totalFixe,`}`); console && console.log(`\n✨ Missing imports fix completed!`)} main().catch(console && console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
+
+const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;`
+}
+
+const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs && fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary':`); console && console.log(` Files 'processed': ${filesProcesse,`}`); console && console.log(` Total import 'fixes': ${totalFixe,`}`); console && console.log(`\n✨ Missing imports fix completed!`)} main().catch(console && console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content && content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content && content.match(importRegex); if (!existingImport) { missingImports && missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports && missingImports.length = == 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent && fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
+
+const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports ;\n`;`
+}
+
+const importIndex = fixedContent && fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs && fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary':`); console && console.log(` Files 'processed': ${filesProcesse,`}`); console && console.log(` Total import 'fixes': ${totalFixe,`}`); console && console.log(`\n✨ Missing imports fix completed!`)} main().catch(console && console.error);`origin/cursor/integrate-build-improve-and-re-verify-c7b5
+    'src.disabled','
+    'pages.disabled','
+    'components.disabled''
+  ];
+  for (const pattern of patterns) {const files = await glob(pattern, {'ignore': excludeDirs.map(dir => `**/${dir}/**`)})for ;`  const file of files) {processFile(file)}
+  }
+  console.log('\n📊 Missing Imports Fix 'Summary': ')console.log(`   Files 'processed': ${filesProcessed}`)console.log(`   Total import 'fixes': ${totalFixes}`)console.log('\n✨ Missing imports fix completed!','}
 // Run the script;
-main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: '0' ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)ursor/automate-test-improve-and-merge-code-646c;
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: '0' ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;}
-  return { content,changes: '0' ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;
-  const newImport = `import { ${missingImports ;\n`;}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
 }
-const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary: `)console && console.log(` Files processed: ${filesProcessed}`)console && console.log(` Total import fixes: ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;
-  const newImport = `import { ${missingImports ;\n`;}
-}
-const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary: `)console && console.log(` Files processed: ${filesProcessed}`)console && console.log(` Total import fixes: ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;
-  const newImport = `import { ${missingImports ;\n`;}
-}
-const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)ursor/automate-test-improve-and-merge-code-646c;
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary: `)console && console.log(` Files processed: ${filesProcessed}`)console && console.log(` Total import fixes: ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;
-  const newImport = `import { ${missingImports ;\n`;}
-}
-const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary: `)console && console.log(` Files processed: ${filesProcessed}`)console && console.log(` Total import fixes: ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;
-  const newImport = `import { ${missingImports ;\n`;}
-}
-const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary: `)console && console.log(` Files processed: ${filesProcessed}`)console && console.log(` Total import fixes: ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon && icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;
-  const newImport = `import { ${missingImports ;\n`;}
-}
-const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix Summary: `)console && console.log(` Files processed: ${filesProcessed}`)console && console.log(` Total import fixes: ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console && console.error)origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-    'src.disabled','pages.disabled','components.disabled'
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; /**`)})} console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;
+}
+return { content,'changes': '0' ,;'
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
+  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports ;\n`;`
+}
+
+const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try { const content = fs && fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary': `)console && console.log(` Files 'processed': ${filesProcessed}`)console && console.log(` Total import 'fixes': ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
+  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports ;\n`;`
+}
+
+const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs && fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary': `)console && console.log(` Files 'processed': ${filesProcessed}`)console && console.log(` Total import 'fixes': ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
+  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports ;\n`;`
+}
+
+const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs && fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary': `)console && console.log(` Files 'processed': ${filesProcessed}`)console && console.log(` Total import 'fixes': ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
+  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports ;\n`;`
+}
+
+const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs && fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary': `)console && console.log(` Files 'processed': ${filesProcessed}`)console && console.log(` Total import 'fixes': ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
+  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports ;\n`;`
+}
+
+const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs && fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary': `)console && console.log(` Files 'processed': ${filesProcessed}`)console && console.log(` Total import 'fixes': ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons && commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content && content.match(importRegex)if (!existingImport) { missingImports && missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports && missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon && icon.trim()) || []; }'
+
+const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
+  const newImport = `import { ${allIcons ;`; fixedContent = fixedContent && fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports ;\n`;`
+}
+
+const importIndex = fixedContent && fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent && fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent && fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent && fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs && fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8')totalFixes += result && result.changes; console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console ;`
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console && console.log(`\n📊 Missing Imports Fix 'Summary': `)console && console.log(` Files 'processed': ${filesProcessed}`)console && console.log(` Total import 'fixes': ${totalFixes}`)console && console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console && console.error)origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+    'src.disabled','pages.disabled','components.disabled''
 ];
 
-  for (const pattern of patterns) {const files = await glob(pattern, {\"ignore\": excludeDirs.map(dir => `**/${dir}/**`)})for ;
-  const file of files) {processFile(file)}
+  for (const pattern of patterns) {const files = await glob(pattern, {'ignore': excludeDirs.map(dir => `**/${dir}/**`)})for ;`  const file of files) {processFile(file)}
   }
-  console.log(\"\n📊 Missing Imports Fix \"Summary\": \")console.log(`   Files processed: ${filesProcessed}`)console.log(`   Total import \"fixes\": ${totalFixes}`)console.log(\"\n✨ Missing imports fix completed!\",
+  console.log('\n📊 Missing Imports Fix 'Summary': ')console.log(`   Files 'processed': ${filesProcessed}`)console.log(`   Total import 'fixes': ${totalFixes}`)console.log('\n✨ Missing imports fix completed!','}
+// Run the script;
+main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
 }
-// Run the script;
-main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: '0' ,}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: '0' ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
-
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };
-  return missingImports} function fixMissingImports(content,filePath) {;
-  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;}
-  return { content,changes: 0 ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > { const iconRegex = new RegExp(`\\b${icon}\\b`,'g')const matches = content.match(iconRegex)if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' )const existingImport = content.match(importRegex)if (!existingImport) { missingImports.push(icon)} } };'  return missingImports} function fixMissingImports() {;
+  }
+  const missingImports = findMissingImports(content,filePath)if (missingImports.length === 0) {;
+}
+return { content,'changes': 0 ,;
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;}
-  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex)if (existingImport) {;
+  }
+  const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort(;
-  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;}
-  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8';}
-  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-})for ;
-  const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary: `)console.log(` Files processed: ${filesProcessed}`)console.log(` Total import fixes: ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,
-} main().catch(console.error)
-  console.log(\"\n📊 Missing Imports Fix \"Summary\": \");
-  console.log(`   Files processed: ${filesProcesse,}
-}`);
-  console.log(`   Total import \"fixes\": ${totalFixes}`);
-  console.log(\"\n✨ Missing imports fix completed!\")}
-// Run the script;
+  const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport)changes++} else {;`  }
+  const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import')if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex)fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try { const content = fs.readFileSync(filePath,'utf8';'
+  }
+  const result = fixMissingImports(content,filePath)if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8')totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n')const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary': `)console.log(` Files 'processed': ${filesProcessed}`)console.log(` Total import 'fixes': ${totalFixes}`)console.log(`\n✨ Missing imports fix completed!`,;`} main().catch(console.error)
+  console.log('\n📊 Missing Imports Fix 'Summary': ');'
+  console.log(`   Files 'processed': ${filesProcesse,`}`);`  console.log(`   Total import 'fixes': ${totalFixes}`);`  console.log('\n✨ Missing imports fix completed!')}'
+// Run the script,
 main().catch(console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;}
-  return { content,changes: '0' ,}
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;
+}
+return { content,'changes': '0' ,;'
 } let fixedContent = content; let changes = 0;
 
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
 
-const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
+const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
+
+
+const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': 'fixedContent',changes } function processFile() { try {;'
+  }
+  const content = fs.readFileSync(filePath,'utf8');'
+
+const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');'
+}
+
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
+
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary':`); console.log(` Files 'processed': ${filesProcesse,`}`); console.log(` Total import 'fixes': ${totalFixe,`}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+
+const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports() { const missingImports = []; commonIcons.forEach(icon = > {;'
+  }
+  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');'
+const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['']lucide-react['']`,'g' );'
+const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports() { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;
+}
+return { content,'changes': 0 ,;
+} let fixedContent = content; let changes = 0;
+
+const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['']lucide-react[''];?/g;'
+
+const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => { return icon.trim()) || []; }'
 
 const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
 
-const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
+const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;`
+const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};'
+  return { 'content': fixedContent,changes } function processFile() { try {;
+  }
+  const content = fs.readFileSync(filePath,'utf8');'
 
-const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: 'fixedContent',changes }} function processFile(filePath) { try {;
-  const content = fs.readFileSync(filePath,'utf8');}
+const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');'
 }
-const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
 
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary:`); console.log(` Files processed: ${filesProcesse,}
-}`); console.log(` Total import fixes: ${totalFixe,}
-}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];'
 
-const commonIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle']; let totalFixes = 0; let filesProcessed = 0; function findMissingImports(content,filePath) { const missingImports = []; commonIcons.forEach(icon = > {;}
-  const iconRegex = new RegExp(`\\b${icon}\\b`,'g');
-
-const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g' );
-
-const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return missingImports} function fixMissingImports(content,filePath) { const missingImports = findMissingImports(content,filePath); if (missingImports.length = == 0) {;}
-  return { content,changes: 0 ,}
-} let fixedContent = content; let changes = 0;
-
-const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
-
-const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || [];
-
-const allIcons = [...new Set([...existingIcons,...missingImports])].sort();
-
-const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`;
-
-const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++};
-  return { content: fixedContent,changes }} function processFile(filePath) { try {;
-  const content = fs.readFileSync(filePath,'utf8');}
-}
-const result = fixMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting missing imports fix...\n');}
-}
-const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}'];
-
-const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`,
-}); for (const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix Summary:`); console.log(` Files processed: ${filesProcesse,}
-}`); console.log(` Total import fixes: ${totalFixe,}
-}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);
+const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled']; for (const pattern of patterns) { const files = await glob(pattern,{ 'ignore': excludeDirs.map(dir => `**/${dir}/**`,`}); for (const file of files) { processFile(file)} } console.log(`\n📊 Missing Imports Fix 'Summary':`); console.log(` Files 'processed': ${filesProcesse,`}`); console.log(` Total import 'fixes': ${totalFixe,`}`); console.log(`\n✨ Missing imports fix completed!`)} main().catch(console.error);`

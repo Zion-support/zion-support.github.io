@@ -4,96 +4,102 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "es2020"
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
-    "forceConsistentCasingInFileNames": false,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "moduleResolution": "bundler",
+    "maxNodeModuleJsDepth": 0,
+    "skipDefaultLibCheck": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "jsxImportSource": "react",
+    "incremental": true,
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+        "./*"
       ],
       "@/components/*": [
-        "./src/components/*"
+        "./components/*"
       ],
       "@/pages/*": [
-        "./src/pages/*"
+        "./pages/*"
       ],
       "@/utils/*": [
-        "./src/utils/*"
+        "./utils/*"
       ],
       "@/hooks/*": [
-        "./src/hooks/*"
+        "./hooks/*"
       ],
       "@/types/*": [
-        "./src/types/*"
+        "./types/*"
       ],
       "@/styles/*": [
-        "./src/styles/*"
+        "./styles/*"
       ],
       "@/assets/*": [
-        "./src/assets/*"
+        "./assets/*"
       ]
     },
-    "allowSyntheticDefaultImports": true,
     "strictNullChecks": true,
-    "incremental": true,
-    "module": "esnext",
-    "esModuleInterop": true
+    "tsBuildInfoFile": ".next/cache/tsbuildinfo.json",
+    "allowImportingTsExtensions": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "src/**/*.ts",
-    "src/**/*.tsx",
     "pages/**/*.ts",
     "pages/**/*.tsx",
-    "app/**/*.ts",
-    "app/**/*.tsx",
     "components/**/*.ts",
     "components/**/*.tsx",
-    "data/**/*.ts",
-    "data/**/*.tsx",
-    "types/**/*.ts",
-    "types/**/*.tsx",
-    "zion/**/*.ts",
-    "zion/**/*.tsx",
-    "protocol/**/*.ts",
-    "protocol/**/*.tsx"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "lib_backup*",
-    "src_backup*",
-    "pages_backup*",
-    "corrupted-files-backup*",
-    "performance-reports*",
-    "log-analysis-reports*",
-    "link-reports*",
-    "lint-target*",
-    "monitoring*",
-    "pm2-automation*",
-    "automation/logs*",
-    "automation/backup*",
-    "src.pages.disabled.auto",
-    "components.disabled",
-    "src.disabled",
-    "src.pages.disabled",
-    "recovered-branches/**",
-    "temp_backup/**",
-    "api.disabled/**"
+    "apps/**",
+    "apps.backup/**",
+    "api-backup/**",
+    "backup/**",
+    "backup-merge-conflicts/**",
+    "backup-problematic-files/**",
+    "broken_files_backup/**",
+    "corrupted_backup/**",
+    "_conflicted_disabled/**",
+    "components-disabled/**",
+    "components.disabled/**",
+    "components.disabled_full/**",
+    "api-disabled/**",
+    "api.disabled/**",
+    "api.disabled.temp/**",
+    "src_backup/**",
+    "utils/**",
+    "vite.config-backup.ts",
+    "browserstack.config.ts",
+    "cypress.config.ts",
+    "jest.config.*",
+    "*.config.ts",
+    "types/**",
+    "netlify/**",
+    "components/**",
+    "src/**"
   ]
 }

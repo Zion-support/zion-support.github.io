@@ -1,5 +1,24 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 import { execSync, spawn } from;
+<<<<<<< HEAD
+
+        stdio: '
+        warnings: this.parseLintOutput(output, ;warning)
+        errors: this.parseLintOutput(output, 'error')
+
+  '
+      console.log(')
+  
+      execSync()
+  ', { stdio: '}
+      console.log()
+  
+      console.log('ESLint auto-fix had issues, trying manual fixes...')
+
+    if (message.includes('single quotes')
+
+=======
+<<<<<<< HEAD
   'child_process'
   'fs'
   'path'
@@ -11,8 +30,8 @@ import { execSync, spawn } from;
   '🧹 Lint: Error Auto Fixer started'
     console.log(' Checking lint errors...')
       const output = execSync('npm run lint')
-        stdio: "stdio",
-    warnings: this.parseLintOutput(output, 'warning')
+        stdio: 'pipe'
+        warnings: this.parseLintOutput(output, 'warning')
         stdio: '
         warnings: this.parseLintOutput(output, ';warning')
         errors: this.parseLintOutput(output, 'error')
@@ -33,11 +52,11 @@ import { execSync, spawn } from;
       const lines = content.split('\\n')
       switch (rule) {'}
         case 'no-unused-vars'
-        case: 'no-console', ',:'
-        case: 'quotes', ',:'
-        case: 'semi', ',:'
-        case: 'indent', ',:'
-        case: 'no-trailing-spaces', ',:'
+        case: 'no-console';';:'
+        case: 'quotes';';:'
+        case: 'semi';';:'
+        case: 'indent';';:'
+        case: 'no-trailing-spaces';';:'
   eol-last';: modified: = this.fixEolLast(lines)'
         case: 'prefer-const '
         fs.writeFileSync(file + '.backup')
@@ -46,5 +65,24 @@ import { execSync, spawn } from;
     const varMatch = message.match(/'(.+?)'
     if (line.includes('console.')
     if (message.includes('single quotes')
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       lines[lineIndex] = line.replace(/"/g, ")
       lines[lineIndex] = line.replace(/"/g, ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+      lines[lineIndex] = line.replace(/"/g, ")
+=======
+      lines[lineIndex] = line.replace(/"/g, ")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

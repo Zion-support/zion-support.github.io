@@ -1,44 +1,38 @@
-import { Button } from \"@/components/ui/button\";
-import { Loader2 } from \"lucide-react\";
-import { NavigationButtonsProps } from \"./types\",;
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from "lucide-react",;
+import { NavigationButtonsProps } from "./types",;
+
 ;
-export const NavigationButtons = (;
+export const NavigationButtons = ({;
+  onBack,;
+  onNext,;
+  isNextDisabled = false,;"
+  backLabel = "Back",;""
+  nextLabel = "Next",;")
+  isLoading = false} NavigationButtonsProps) => {;
+<<<<<<< HEAD
+
+=======
   return (;
-    <div className=\"flex justify-between\" />;
-      {onBack && (;) => {
-  return $3;}
-}
-        <Button variant=\"outline\" onClick={onBack} />;          {backLabel}
+    <div className="flex justify-between">;
+      {onBack && (;
+        <Button variant="outline" onClick={onBack}>;          {backLabel}
         </Button>;
       )}
-      {onNext && (<Button onClick={onNext} disabled={isNextDisabled || isLoading} />;
-      {onNext && (;}
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading} />;
-          {isLoading && <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" />}
+      {onNext && (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>;
       )}
     </div>;
-  ),;
-},; export const NavigationButtons = (
-  return (<div className=\"flex justify-between\"  /> {
-  onBack && (<Button variant=\"outline\" onClick= {
-  onBack ) = /> {
-  return $3;}
-}
-} /> {}
-  backLabel }
-}</Button>) 
-}{
-  onNext && (<Button onClick= {}
-  onNext }
-}disabled= {}
-  isNextDisabled || isLoading }
-} /> {}
-  isLoading && <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" /> }
-}{}
-  nextLabel }
-}
-}</div>) 
-}
-}
+
+  onBack;
+}> {
+)
+}) 
+  onNext && (<Button onClick= {
+  onNext;
+}disabled= {

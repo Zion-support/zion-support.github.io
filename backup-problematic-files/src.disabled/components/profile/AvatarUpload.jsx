@@ -1,21 +1,40 @@
-import React from 'react';
-const AvatarUpload = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />AvatarUpload</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const AvatarUpload = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />AvatarUpload</h1>
-      <p />This component is under development.</p>
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+:src.disabled/components/profile/AvatarUpload.jsx
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+:temp_exclude/src.disabled/components/profile/AvatarUpload.jsx
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
+import React from 'react';'
+const AvatarUpload = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>AvatarUpload</h1>
+      <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   )
-}
-}
+};
+=======
+  );
+};
 
+<<<<<<< HEAD
+export default AvatarUpload;
+=======
+export default AvatarUpload;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

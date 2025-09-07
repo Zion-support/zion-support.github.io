@@ -1,17 +1,20 @@
-import React from 'react';
-const AICodeGenerator.js = ({ className }) => {return (<div className={className || ''} />;
-      <h1 />AICodeGenerator.js</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const AICodeGenerator.js = ({ className }) => {}
-  return (}
-    <div className={className || ''} />
-      <h1 />AICodeGenerator.js</h1>
-      <p />This component is under development.</p>
+const AICodeGenerator.js = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>AICodeGenerator.js</h1>
+      <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   )
-}
-}
+};
+=======
+  );
+};
 
+<<<<<<< HEAD
+export default AICodeGenerator.js;
+=======
+export default AICodeGenerator.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

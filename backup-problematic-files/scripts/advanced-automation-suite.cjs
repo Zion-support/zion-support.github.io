@@ -1,17 +1,40 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
-
-
-
-
-
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Advanced Automation Suite");"console.log("");''"
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 console.log('🚀 Advanced Automation Suite');
-console.log('');
-// Function to create ESLint configuration fix
+console.log();
+// Function to create ESLint configuration fix;
 function fixESLintConfiguration() {
+<<<<<<< HEAD
   console.log('\n🔧 Fixing ESLint Configuration...');
   const eslintConfig = "
 module.exports = {
@@ -27,19 +50,21 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'warn',
     'react/no-unescaped-entities': 'off',
     'no-console': 'warn'
+=======
+
+>>>>>>> merged-prs-20250907-203621
   },
-  "env": {
-    browser: true,
+  "env": {"
+    browser: true,"
     "node": true,
-    "es6": true
-  },
-  "globals": {
-    React: 'readonly',
-    "JSX": 'readonly'
+    "es6": true;"
+  },"
+
   }
 };
-";
+";"
 class AdvancedAutomationSuite {
+  // TODO: Implement
   constructor() {
     this.results = {
       timestamp: new Date().toISOString(),
@@ -49,19 +74,26 @@ class AdvancedAutomationSuite {
       performance: {},
       security: {},
       seo: {}
-    };
-  }
+  }"
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+
+  const deploymentScript = "#!/bin/bash;"
+=======
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    
   }
 // Function to create deployment automation
 function createDeploymentAutomation() {
   console.log('\n🚀 Creating Deployment Automation...');
   const deploymentScript = "#!/bin/bash
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
   async runCommand(command, description) {
     try {
+<<<<<<< HEAD
       this.log(`Running: ${description}`);
       const result = execSync(command, {
         encoding: 'utf8',
@@ -78,28 +110,30 @@ function createDeploymentAutomation() {
   }
   async createAdvancedMonitoring() {
     this.log('Creating advanced monitoring system...');
+<<<<<<< HEAD
     const monitoringScript = `#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+=======
+const monitoringScript = `#!/usr/bin/env node;
+=======
+  // TODO: Implement
+
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 class AdvancedMonitor {
-  constructor() {
+  // TODO: Implement
     this.metrics = {
-      performance: {},
-      errors: [],
       uptime: Date.now(),
-      requests: 0
-    };
-  }
+      requests: 0;
   logMetric(type, data) {
     this.metrics[type] = { ...this.metrics[type], ...data };
     this.saveMetrics();
-  }
-  saveMetrics() {
-    const reportPath = path.join(process.cwd(), 'monitoring', 'metrics.json');
+
     if (!fs.existsSync(path.dirname(reportPath))) {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
-    }
     fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));
+<<<<<<< HEAD
   }
 }
 module.exports = AdvancedMonitor;`;
@@ -109,36 +143,40 @@ module.exports = AdvancedMonitor;`;
   }
   async createAutomatedTesting() {
     this.log('Creating automated testing framework...');
+<<<<<<< HEAD
     const testFramework = `#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+=======
+const testFramework = `#!/usr/bin/env node;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 class AutomatedTestFramework {
-  constructor() {
+  // TODO: Implement
     this.tests = [];
     this.results = { passed: 0, failed: 0, total: 0 };
-  }
   addTest(name, testFn) {
     this.tests.push({ name, testFn });
-  }
-  async runTests() {
-    console.log('🧪 Running automated tests...');
+
     for (const test of this.tests) {
-      try {
+  // TODO: Implement
         await test.testFn();
         this.results.passed++;
-        
       } catch (error) {
         this.results.failed++;
-        
+<<<<<<< HEAD
+=======
       }
     }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.results.total = this.tests.length;
     this.generateReport();
-  }
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
       ...this.results,
+<<<<<<< HEAD
       successRate: (this.results.passed / this.results.total) * 100
     };
     const reportPath = path.join(process.cwd(), 'test-reports', 'automated-test-report.json');
@@ -156,25 +194,36 @@ module.exports = AutomatedTestFramework;`;
   }
   async createPerformanceOptimizer() {
     this.log('Creating performance optimizer...');
+<<<<<<< HEAD
     const optimizer = `#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+=======
+const optimizer = `#!/usr/bin/env node;
+=======
+      successRate: (this.results.passed / this.results.total) * 100;
+
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 class PerformanceOptimizer {
-  constructor() {
+  // TODO: Implement
     this.optimizations = [];
-  }
   async optimizeImages() {
-    
+<<<<<<< HEAD
+    // Image optimization logic would go here;
+    this.optimizations.push('Images optimized');
+
+=======
     // Image optimization logic would go here
     this.optimizations.push('Images optimized');
   }
   async optimizeCode() {
-    
     // Code optimization logic would go here
     this.optimizations.push('Code optimized');
   }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   async generateReport() {
-    const report = {
+<<<<<<< HEAD
       timestamp: new Date().toISOString(),
       optimizations: this.optimizations
     };
@@ -192,25 +241,34 @@ module.exports = PerformanceOptimizer;`;
   }
   async createSecurityEnhancer() {
     this.log('Creating security enhancer...');
+<<<<<<< HEAD
     const securityEnhancer = `#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+=======
+const securityEnhancer = `#!/usr/bin/env node;
+=======
+      optimizations: this.optimizations;
+
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 class SecurityEnhancer {
-  constructor() {
+  // TODO: Implement
     this.securityChecks = [];
-  }
   async checkDependencies() {
-    
+<<<<<<< HEAD
+    // Dependency check logic would go here;
+=======
     // Dependency check logic would go here
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.securityChecks.push('Dependencies checked');
+<<<<<<< HEAD
   }
   async checkCodeSecurity() {
-    
     // Code security check logic would go here
     this.securityChecks.push('Code security checked');
   }
   async generateReport() {
-    const report = {
       timestamp: new Date().toISOString(),
       checks: this.securityChecks
     };
@@ -228,25 +286,33 @@ module.exports = SecurityEnhancer;`;
   }
   async createSEOEnhancer() {
     this.log('Creating SEO enhancer...');
+<<<<<<< HEAD
     const seoEnhancer = `#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+=======
+const seoEnhancer = `#!/usr/bin/env node;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 class SEOEnhancer {
-  constructor() {
+  // TODO: Implement
     this.seoChecks = [];
-  }
   async checkMetaTags() {
-    
+<<<<<<< HEAD
+    // Meta tag check logic would go here;
+=======
     // Meta tag check logic would go here
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.seoChecks.push('Meta tags checked');
+<<<<<<< HEAD
   }
   async checkStructuredData() {
-    
     // Structured data check logic would go here
     this.seoChecks.push('Structured data checked');
   }
   async generateReport() {
-    const report = {
       timestamp: new Date().toISOString(),
       checks: this.seoChecks
     };
@@ -280,57 +346,55 @@ echo "✅ Deployment completed successfully!"`;
 echo "✅ Deployment completed successfully!";";
   fs.writeFileSync('deploy.sh', deploymentScript);
   fs.chmodSync('deploy.sh', '755');
+=======
+
+# Build the project;"
+echo "📦 Building project...
+npm run build;
+# Run tests;"
+echo "🧪 Running tests...
+npm run test:smoke || true;
+# Deploy to production;"
+
+>>>>>>> origin/chore/fix-lint-and-merge
   console.log('✅ Deployment script created');
   return true}
-// Function to create CI/CD pipeline
+// Function to create CI/CD pipeline;
 function createCICDPipeline() {
-  console.log('\n🔄 Creating CI/CD Pipeline...');
-  const githubActions = `"name": CI/CD Pipeline;
-    on:
-  push:
-    branches: [main, develop ]
-  "pull_request": branches: [main ]
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: "version",
-    cache: 'npm'
-    - name: Install dependencies
-      run: npm ci
-    - name: Run linting
-      run: npm run lint
-    - name: Run type checking
-      run: npm run type-check
-    - name: Run tests
-      run: npm run test
-    - name: Build application
-      run: npm run build
-    - name: Run security audit
-      run: npm audit --audit-level=moderate
+
+  const githubActions = `"name": CI/CD Pipeline;"
+on: push:,
+  branches: [main, develop ]"
+  "pull_request": branches: [main ]",
+  jobs:
+  test: runs-on: ubuntu-latest;,
+  steps:
+    - uses: actions/checkout@v3;
+    - name: Setup Node.js;,
+  uses: actions/setup-node@v3;"
+
+    - name: Install dependencies;,
+  run: npm ci;
+    - name: Run linting;,
+  run: npm run lint;
+    - name: Run type checking;,
+  run: npm run type-check;
+    - name: Run tests;,
+  run: npm run test;
+    - name: Build application;,
+  run: npm run build;
+    - name: Run security audit;,
+  run: npm audit --audit-level=moderate;
   deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-        cache: 'npm'
-    - name: Install dependencies
-      run: npm ci
-    - name: Build application
-      run: npm run build
-    - name: Deploy to Vercel
-      uses: amondnet/vercel-action@v20
+    needs: test;
+    runs-on: ubuntu-latest;,
+  if: github.ref == 'refs/heads/main
+
+    - name: Deploy to Vercel;,
+  uses: amondnet/vercel-action@v20;
       with:
         vercel-token: \${{ secrets.VERCEL_TOKEN }}
+<<<<<<< HEAD
         vercel-org-"id": \${{ secrets.ORG_ID }}
         vercel-project-"id": \${{ secrets.PROJECT_ID }}
         vercel-"args": '--prod';`;
@@ -341,9 +405,13 @@ jobs:
 // Function to create monitoring and alerting
 function createMonitoringAlerting() {
   console.log('\n📊 Creating Monitoring and Alerting...');
+<<<<<<< HEAD
   const monitoringScript = "#!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
+=======
+const monitoringScript = "#!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
 console.log('📊 Starting monitoring and alerting system...');
 // Monitor system health
 function monitorSystemHealth() {
@@ -355,22 +423,19 @@ function monitorSystemHealth() {
     "dependencies": checkDependencies()
  };
   fs.writeFileSync('health-monitor.json', JSON.stringify(healthChecks, null, 2));
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   console.log('✅ System health monitored');
   return healthChecks}
 function checkBuildStatus() {
-  try {
-    require('child_process').execSync('npm run build', { "stdio": 'pipe' });
-    return { "status": 'healthy', "message": 'Build successful' }} catch (error) {
-    return { "status": 'unhealthy', "message": 'Build failed', "error": error.message }}
-}
-function checkPerformance() {
-  const bundleSize = getBundleSize;(;);
-  return {;
-    "status": bundleSize < 50 ? 'healthy' : 'warning',
-    "message": \"Bundle size: \${bundleSize}MB\",
-    bundleSize
+  // TODO: Implement
+
+    "message": \"Bundle size: \${bundleSize}MB\","
+    bundleSize;
   }}
 function checkSecurity() {
+<<<<<<< HEAD
   try {
     require('child_process').execSync('npm audit --audit-level=moderate', { "stdio": 'pipe' });
     return { "status": 'healthy', "message": 'No security vulnerabilities found' }} catch (error) {
@@ -385,14 +450,21 @@ function checkDependencies() {
     "message": \"\${totalDeps} dependencies\",
     "count": totalDeps
   }}
+=======
+  // TODO: Implement
+
+    "count": totalDeps;"
+>>>>>>> merged-prs-20250907-203621
 function getBundleSize() {
-  try {
+  // TODO: Implement
+
     const stats = fs.statSync('.next';);
     return Math.round(stats.size / (1024 * 1024) * 100) / 100} catch {
+  // TODO: Implement
     return 0}
-}
-// Run monitoring
+// Run monitoring;
 monitorSystemHealth();
+<<<<<<< HEAD
 ";
   fs.writeFileSync('monitoring-system.js', monitoringScript);
   console.log('✅ Monitoring system created');
@@ -403,33 +475,40 @@ function createBackupRecovery() {
   const backupScript = "#!/bin/bash
 # Backup and Recovery System for Zion Tech Group
 set -e
+=======
+
+  const backupScript = "#!/bin/bash;"
+# Backup and Recovery System for Zion Tech Group;
+set -e;"
+>>>>>>> merged-prs-20250907-203621
 BACKUP_DIR="backups/\$(date +%Y%m%d_%H%M%S)"
 mkdir -p "\$BACKUP_DIR"
-echo "💾 Starting backup process..."
-# Backup source code
+echo "💾 Starting backup process...
+# Backup source code;"
 echo "📁 Backing up source code..."
-tar -czf "\$BACKUP_DIR/source-code.tar.gz" --exclude=node_modules --exclude=.next --exclude=.git .
-# Backup database (if exists)
-if [-f "database.sqlite" ]; then
+tar -czf "\$BACKUP_DIR/source-code.tar.gz" --exclude=node_modules --exclude=.next --exclude=.git ."
+# Backup database (if exists)"
+if [-f "database.sqlite" ]; then;
   echo "🗄️ Backing up database..."
-  cp database.sqlite "\$BACKUP_DIR/"
-fi
-# Backup configuration files
+  cp database.sqlite "\$BACKUP_DIR/
+fi;
+# Backup configuration files;"
 echo "⚙️ Backing up configuration..."
 cp package.json "\$BACKUP_DIR/"
-cp next.config.js "\$BACKUP_DIR/" 2>/dev/null || true
-cp tsconfig.json "\$BACKUP_DIR/" 2>/dev/null || true
-# Create backup manifest
+cp next.config.js "\$BACKUP_DIR/" 2>/dev/null || true;
+cp tsconfig.json "\$BACKUP_DIR/" 2>/dev/null || true;"
+# Create backup manifest;"
 echo "📋 Creating backup manifest..."
-cat > "\$BACKUP_DIR/manifest.json" << EOF
-{
+cat > "\$BACKUP_DIR/manifest.json" << EOF;"
+{"
   "timestamp": "\$(date -u +%Y-%m-%dT%"H": %M:%SZ)",
   "version": "\$(node -p "require('./package.json').version")",
   "files": ["source-code.tar.gz",
     "package.json",
     "next.config.js",
-    "tsconfig.json"
+    "tsconfig.json]
   ]
+<<<<<<< HEAD
 }
 EOF
 echo "✅ Backup "completed": \$BACKUP_DIR"
@@ -442,8 +521,11 @@ echo "✅ Backup "completed": \$BACKUP_DIR"
 function createPerformanceOptimization() {
   console.log('\n⚡ Creating Performance Optimization...');
   const performanceScript = "#!/usr/bin/env node
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
+=======
+>>>>>>> merged-prs-20250907-203621
 console.log('⚡ Starting performance optimization...');
 // Performance optimization configurations
 const optimizations = {
@@ -462,14 +544,21 @@ const nextConfig = {
     "contentSecurityPolicy": "default-src 'sel;f;'; script-src 'none'; sandbox;"},
   // Bundle optimization
   "webpack": (config, { isServer }) => {
+=======
+EOF;"
+
+  // Bundle optimization;"
+  "webpack": (config, { isServer }) => {"
+>>>>>>> origin/chore/fix-lint-and-merge
     if ( {
       config.resolve.fallback = {
-        ...config.resolve.fallback,
+        ...config.resolve.fallback,"
         "fs": false,
         "net": false,
-        "tls": false}}
+        "tls": false}}")
     return config) {
      {
+<<<<<<< HEAD
       config.resolve.fallback = {
         ...config.resolve.fallback,
         "fs": false,
@@ -481,35 +570,19 @@ const nextConfig = {
     optimizeCss: true,
     "scrollRestoration": true},
   // Headers for performance
+=======
+
+        "tls": false}}"
+    return config}},
+  // Experimental features;"
+  "experimental": {"
+    optimizeCss: true,"
+    "scrollRestoration": true},"
+  // Headers for performance;
+>>>>>>> merged-prs-20250907-203621
   async headers() {
     return [;
-      {
-        "source": '/(.*)',
-        "headers": [
-          {
-            key: 'X-Content-Type-Options',
-            "value": 'nosniff'},
-          {
-            "key": 'X-Frame-Options',
-            "value": 'DENY'},
-          {
-            "key": 'X-XSS-Protection',
-            "value": '1; mode=block'}]}]}};
-module.exports = nextConfig;
-\",
-  "packageJson": {
-    scripts: {
-      'analyze': 'cross-env ANALYZE=true next build',
-      'lighthouse': 'lighthouse "http": //localhost:3000 --output=html --output-path=./lighthouse-report.html',
-      '"perf": audit': 'npm run build && npm run lighthouse'
-    }
-    const deployPath = path.join(process.cwd(), 'scripts', 'deploy.sh');
-    fs.writeFileSync(deployPath, deploymentScript);
-    fs.chmodSync(deployPath, '755');
-    this.results.improvements.push('Deployment automation created');
-  }
-  async runAllAutomations() {
-    this.log('Starting advanced automation suite...');
+
     await this.createAdvancedMonitoring();
     await this.createAutomatedTesting();
     await this.createPerformanceOptimizer();
@@ -518,6 +591,10 @@ module.exports = nextConfig;
     await this.createDeploymentAutomation();
     this.results.scriptsRun = this.results.improvements.length;
     this.log('\\n📊 ADVANCED AUTOMATION SUITE SUMMARY');
+<<<<<<< HEAD
+
+// Main execution;
+=======
     this.log('==');
     this.log(`Scripts created: ${this.results.scriptsRun}`);
     this.log(`Improvements: ${this.results.improvements.length}`);
@@ -542,26 +619,44 @@ console.log('⚡ Performance optimization completed!');
       fs.mkdirSync(path.dirname(resultsPath), { recursive: true });
     }
     fs.writeFileSync(resultsPath, JSON.stringify(this.results, null, 2));
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    this.log('\\n🎉 Advanced automation suite completed!');
+  }
+}
+// Run the automation suite
+const automation = new AdvancedAutomationSuite();
+automation.runAllAutomations().catch(console.error);
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     this.log('\\n🎉 Advanced automation suite completed!');
   }
 }
 // Main execution
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 async function main() {
   const startTime = Date.now(;);
   console.log('🎯 Starting advanced automation suite...\n');
-  // Run all automation functions
+  // Run all automation functions;
   const results = {
-    "eslintConfig": fixESLintConfiguration(),
-    "deployment": createDeploymentAutomation(),
-    "cicd": createCICDPipeline(),
-    "monitoring": createMonitoringAlerting(),
-    "backup": createBackupRecovery(),
-    "performance": createPerformanceOptimization()
- };
-  // Generate final report
+
+    "performance": createPerformanceOptimization()"
+  // Generate final report;
   const endTime = Date.now(;);
   const duration = endTime - startTi;m;e;
-  const report = {
+<<<<<<< HEAD
     "timestamp": new Date().toISOString(),
     "duration": `${duration}ms`,
     "automations": Object.keys(results).filter(key => results[key]),
@@ -583,9 +678,33 @@ async function main() {
   console.log(`   - Files "created": ${report.createdFiles.length}`);
   console.log("   - Report saved "to": advanced-automation-report.json");
   console.log('\n🎉 Advanced automation suite completed!')}
+=======
+  const report = {"
+
+>>>>>>> origin/chore/fix-lint-and-merge
 main().catch(console.error);
-// Run the automation suite
+// Run the automation suite;
 const automation = new AdvancedAutomationSuite();
 automation.runAllAutomations().catch(console.error);
+<<<<<<< HEAD
+`;
+=======
+=======
+<<<<<<< HEAD
 automation.runAllAutomations().catch(console.error);
-
+=======
+<<<<<<< HEAD
+automation.runAllAutomations().catch(console.error);
+=======
+automation.runAllAutomations().catch(console.error);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

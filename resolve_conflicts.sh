@@ -73,4 +73,8 @@ done
 echo "All conflicts resolved. Committing merge..."
 git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
 
+<<<<<<< HEAD
+echo "Merge completed successfully!"
+=======
 
+>>>>>>> merged-prs-20250907-203621

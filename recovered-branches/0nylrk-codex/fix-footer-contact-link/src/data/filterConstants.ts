@@ -1,5 +1,31 @@
+<<<<<<< HEAD
+// Common skills for filtering
+export const COMMON_SKILLS = $2;
+  "Python",
+  "JavaScript",
+  "React",
+  "Data Science",
+  "AWS",
+  "Docker",
+  "Kubernetes",
+  "DevOps",
+  "Cloud Architecture",
+  "TensorFlow"
+],
 
-
+// Regions
+export const REGIONS = $2;
+  "Europe",
+  "Asia Pacific",
+  "South America",
+  "Middle East",
+  "Africa"
+],
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export const COMMON_SKILLS = [
   'Machine Learning',
   'Python',
@@ -12,7 +38,108 @@ export const COMMON_SKILLS = [
   'DevOps',
   'Cloud Architecture',;
   'TensorFlow',];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+  'TensorFlow',];
+
+<<<<<<< HEAD
+export const COMMON_SKILLS = ['
+  'Machine Learning''
+  'Python''
+  'JavaScript''
+  'React''
+  'Data Science''
+  'AWS''
+  'Docker''
+  'Kubernetes''
+  'DevOps''
+  'Cloud Architecture'';
+  'TensorFlow',];
+
+  'Machine Learning',
+  'Python',
+  'JavaScript',
+  'React',
+  'Data Science',
+  'AWS',
+  'Docker',
+  'Kubernetes',
+
+  'DevOps',
+'
+  'TensorFlow', ];
+;
+// Regions;
+
+export const REGIONS = [  "Machine Learning";
+
+  "Python";
+  "JavaScript";
+  "React";
+  "Data Science";
+  "AWS";
+  "Docker";
+  "Kubernetes";
+  "DevOps";
+
+  "TensorFlow"
+// Regions
+export const REGIONS = [
+  'North America'
+  'Europe'
+  'Asia Pacific'
+  'South America'
+  'Middle East'
+  'Africa',];  "North America";
+
+  "Europe";
+  "Asia Pacific";
+  "South America";
+  "Middle East";
+
+  "TensorFlow"
+
+],
+;
+// Regions;
+export const REGIONS = ["
+  "North America","
+  "Europe","
+  "Asia Pacific","
+  "South America","
+  "Middle East","
+  "Africa"
+],;
 // Common skills for filtering;
+export const COMMON_SKILLS = [;"
+  "Machine Learning",;"
+  "Python",;"
+  "JavaScript",;"
+  "React",;"
+  "Data Science",;"
+  "AWS",;"
+  "Docker",;"
+  "Kubernetes",;"
+  "DevOps",;"
+  "Cloud Architecture",;"
+  "TensorFlow";
+],;
+// Regions;
+export const REGIONS = [;"
+  "North America",;"
+  "Europe",;"
+  "Asia Pacific",;"
+  "South America",;"
+  "Middle East",;"
+  "Africa";
+];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 export const COMMON_SKILLS = [
   'Machine Learning'
   'Python'
@@ -25,7 +152,18 @@ export const COMMON_SKILLS = [
   'DevOps'
   'Cloud Architecture'
   'TensorFlow',];
-// Regions;
+// Regions
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+// Common skills for filtering;
+export const COMMON_SKILLS = [;
+// Common skills for filtering
+
+export const COMMON_SKILLS = [
   'Machine Learning',
   'Python',
   'JavaScript',
@@ -40,81 +178,103 @@ export const COMMON_SKILLS = [
 ;
 // Regions;
 
-export const REGIONS = [  \"Machine Learning\";
-  \"Python\";
-  \"JavaScript\";
-  \"React\";
-  \"Data Science\";
-  \"AWS\";
-  \"Docker\";
-  \"Kubernetes\";
-  \"DevOps\";
-  \"Cloud Architecture\";
-
-
-  \"TensorFlow\"
-// Regions;
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export const REGIONS = [  "Machine Learning";
+  "Python";
+  "JavaScript";
+  "React";
+  "Data Science";
+  "AWS";
+  "Docker";
+  "Kubernetes";
+  "DevOps";
+  "Cloud Architecture";
+<<<<<<< HEAD
+  "TensorFlow"
+// Regions
 export const REGIONS = [
   'North America'
   'Europe'
   'Asia Pacific'
   'South America'
   'Middle East'
-  'Africa',];  \"North America\";
-  \"Europe\";
-  \"Asia Pacific\";
-  \"South America\";
-  \"Middle East\";
+  'Africa',];  "North America";
+=======
 
 
-  \"Africa\"
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  "Europe";
+  "Asia Pacific";
+  "South America";
+  "Middle East";
+<<<<<<< HEAD
+  "Africa"
 
-// Common skills for filtering;
+// Common skills for filtering
 export const COMMON_SKILLS = [
-  \"Machine Learning\",
-  \"Python\",
-  \"JavaScript\",
-  \"React\",
-  \"Data Science\",
-  \"AWS\",
-  \"Docker\",
-  \"Kubernetes\",
-  \"DevOps\",
-  \"Cloud Architecture\",
-  \"TensorFlow\"
+  "Machine Learning",
+  "Python",
+  "JavaScript",
+  "React",
+  "Data Science",
+  "AWS",
+  "Docker",
+  "Kubernetes",
+  "DevOps",
+  "Cloud Architecture",
+  "TensorFlow"
+
+// Regions
+export const REGIONS = [
+  'North America',
+  'Europe',
+  'Asia Pacific',
+  'South America',
+  'Middle East',;
+  'Africa',];  "North America";
+  "Europe";
+  "Asia Pacific";
+  "South America";
+  "Middle East";
+  "Africa"
+
 ],
 
-// Regions;
+// Regions
 export const REGIONS = [
-  \"North America\",
-  \"Europe\",
-  \"Asia Pacific\",
-  \"South America\",
-  \"Middle East\",
-  \"Africa\"
+  "North America",
+  "Europe",
+  "Asia Pacific",
+  "South America",
+  "Middle East",
+  "Africa"
 ],
 // Common skills for filtering;
 export const COMMON_SKILLS = [;
-  \"Machine Learning\",;
-  \"Python\",;
-  \"JavaScript\",;
-  \"React\",;
-  \"Data Science\",;
-  \"AWS\",;
-  \"Docker\",;
-  \"Kubernetes\",;
-  \"DevOps\",;
-  \"Cloud Architecture\",;
-  \"TensorFlow\";
+  "Machine Learning",;
+  "Python",;
+  "JavaScript",;
+  "React",;
+  "Data Science",;
+  "AWS",;
+  "Docker",;
+  "Kubernetes",;
+  "DevOps",;
+  "Cloud Architecture",;
+  "TensorFlow";
 ],;
 // Regions;
 export const REGIONS = [;
-  \"North America\",;
-  \"Europe\",;
-  \"Asia Pacific\",;
-  \"South America\",;
-  \"Middle East\",;
-  \"Africa\";
+  "North America",;
+  "Europe",;
+  "Asia Pacific",;
+  "South America",;
+  "Middle East",;
+  "Africa";
 ];
 
 
@@ -131,10 +291,11 @@ export const COMMON_SKILLS = [
   'DevOps'
   'Cloud Architecture'
   'TensorFlow',];
-// Regions;
+// Regions
 // Common skills for filtering;
 export const COMMON_SKILLS = [;
-// Common skills for filtering;
+// Common skills for filtering
+
 export const COMMON_SKILLS = [
   'Machine Learning',
   'Python',
@@ -150,41 +311,60 @@ export const COMMON_SKILLS = [
 ;
 // Regions;
 
-export const REGIONS = [  \"Machine Learning\";
-  \"Python\";
-  \"JavaScript\";
-  \"React\";
-  \"Data Science\";
-  \"AWS\";
-  \"Docker\";
-  \"Kubernetes\";
-  \"DevOps\";
-  \"Cloud Architecture\";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+export const REGIONS = [  "Machine Learning";
+  "Python";
+  "JavaScript";
+  "React";
+  "Data Science";
+  "AWS";
+  "Docker";
+  "Kubernetes";
+  "DevOps";
+  "Cloud Architecture";
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  "Europe";
+  "Asia Pacific";
+  "South America";
+  "Middle East";
+
+<<<<<<< HEAD
+=======
+
+=======
 
 
-  \"Europe\";
-  \"Asia Pacific\";
-  \"South America\";
-  \"Middle East\";
-
-
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   'Cloud Architecture',;
   'TensorFlow',];
 
-
-
-// Common skills for filtering;
+// Common skills for filtering
 export const COMMON_SKILLS = [
-  \"Machine Learning\",
-  \"Python\",
-  \"JavaScript\",
-  \"React\",
-  \"Data Science\",
-  \"AWS\",
-  \"Docker\",
-  \"Kubernetes\",
-  \"DevOps\",
-  \"Cloud Architecture\",
-  \"TensorFlow\"
+  "Machine Learning",
+  "Python",
+  "JavaScript",
+  "React",
+  "Data Science",
+  "AWS",
+  "Docker",
+  "Kubernetes",
+  "DevOps",
+  "Cloud Architecture",
+<<<<<<< HEAD
+  "TensorFlow"
+=======
+  "TensorFlow"
 
-  \"Africa\";
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

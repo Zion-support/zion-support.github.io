@@ -1,21 +1,20 @@
-import React from 'react';
-const LinkHealthMonitor = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />LinkHealthMonitor</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const LinkHealthMonitor = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />LinkHealthMonitor</h1>
-      <p />This component is under development.</p>
+const LinkHealthMonitor = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>LinkHealthMonitor</h1>
+      <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   )
-}
-}
+};
+=======
+  );
+};
 
+<<<<<<< HEAD
+export default LinkHealthMonitor;
+=======
+export default LinkHealthMonitor;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

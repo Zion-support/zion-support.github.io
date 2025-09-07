@@ -1,17 +1,20 @@
-import React from 'react';
-const TrustedBySection.js = ({ className }) => {return (<div className={className || ''} />;
-      <h1 />TrustedBySection.js</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const TrustedBySection.js = ({ className }) => {}
-  return (}
-    <div className={className || ''} />
-      <h1 />TrustedBySection.js</h1>
-      <p />This component is under development.</p>
+const TrustedBySection.js = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>TrustedBySection.js</h1>
+      <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   )
-}
-}
+};
+=======
+  );
+};
 
+<<<<<<< HEAD
+export default TrustedBySection.js;
+=======
+export default TrustedBySection.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

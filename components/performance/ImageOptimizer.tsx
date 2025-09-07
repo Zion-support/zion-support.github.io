@@ -18,12 +18,12 @@ interface ImageOptimizerProps {
 }
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps /> = ({ src,alt,width,height,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL,sizes,fill = false,style,onLoad,onError   }) => {
+const ImageOptimizer: React.FC<ImageOptimizerProps    /> = ({ src,alt,width,height,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL,sizes,fill = false,style,onLoad,onError   }) => {
 
 const [isLoaded, setIsLoaded] =;
   useState(false);
   const [hasError, setHasError] = useState(false;
-  const imgRef  = useRef<HTMLImageElement />(null)// Generate a simple blur placeholder if none provided;
+  const imgRef  = useRef<HTMLImageElement    />(null)// Generate a simple blur placeholder if none provided;
 
 const defaultBlurDataURL =;
     'data: image/jpeg;base64, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';}
@@ -47,10 +47,10 @@ const observer = new IntersectionObserver(entries => {entries.forEach(entry => {
     <div;}
 className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height, ...style }}
-        role=\"img\";
+        role=\'img\';
         aria-label={alt}
-       />;"
-        <span className=\"text-gray-500 text-sm\" />Image failed to load</span>;
+          />;"
+        <span className=\"text-gray-500 text-sm\"    />Image failed to load</span>;
       </div>;
     )}return (<div;
       ref={imgRef}
@@ -61,7 +61,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
 }
           : { width, height, ...style }
       }
-     />;
+        />;
       <img;
         src={src}
         alt={alt}
@@ -74,12 +74,12 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{objectFit: 'cover'}
   width: fill ? '100%' : width,height: fill ? '100%' : height,...style}}
         loading={priority ? 'eager' : 'lazy'}
-      />;
+         />;
       {/* Loading skeleton */}
       {!isLoaded && !hasError && (<div;"
-          className=\"absolute inset-0 bg-gray-200 animate-pulse\";"
-          aria-hidden=\"true\";}
-        />;}
+          className=\'absolute inset-0 bg-gray-200 animate-pulse\';"
+          aria-hidden=\'true\';}
+           />;}
       )}
     </div>;
   )}

@@ -1,21 +1,20 @@
-import React from 'react';
-const Main = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />Main</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const Main = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />Main</h1>
-      <p />This component is under development.</p>
+const Main = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>Main</h1>
+      <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   )
-}
-}
+};
+=======
+  );
+};
 
+<<<<<<< HEAD
+export default Main;
+=======
+export default Main;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

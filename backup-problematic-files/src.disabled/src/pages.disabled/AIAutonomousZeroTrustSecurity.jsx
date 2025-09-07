@@ -1,21 +1,20 @@
-import React from 'react';
-const AIAutonomousZeroTrustSecurity = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />AIAutonomousZeroTrustSecurity</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const AIAutonomousZeroTrustSecurity = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />AIAutonomousZeroTrustSecurity</h1>
-      <p />This component is under development.</p>
+const AIAutonomousZeroTrustSecurity = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>AIAutonomousZeroTrustSecurity</h1>
+      <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   )
-}
-}
+};
+=======
+  );
+};
 
+<<<<<<< HEAD
+export default AIAutonomousZeroTrustSecurity;
+=======
+export default AIAutonomousZeroTrustSecurity;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

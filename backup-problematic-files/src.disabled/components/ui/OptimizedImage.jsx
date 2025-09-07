@@ -1,21 +1,41 @@
-import React from 'react';
-const OptimizedImage = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />OptimizedImage</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
+import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
+import React,{ useState,useRef,useEffect } from\';react\'; import { cn } from\';\';@/lib/utils\'; import { motion,AnimatePresence } from\';\';framer-motion\'; \"export\": function OptimizedImage({ src,alt,width,height,className,placeholder =\';\';/images/placeholder.svg\',fallback =\';\';/images/fallback.svg\',\"priority\": \'= false\',sizes =\';\';100vw\',loading =\';\';lazy\',onLoad,onError,aspectRatio =\';\';auto\',objectFit =\';\';cover\',\"blur\": \'= false\',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)\'';\';
+const React,{ useState,useRef,useEffect } from";react"; import { cn } from";";@/lib/utils"; import { motion,AnimatePresence } from";";framer-motion"; export: function OptimizedImage({ src,alt,width,height,className,placeholder =";";/images/placeholder.svg",fallback =";";/images/fallback.svg",priority: "= false",sizes =";";100vw",loading =";";lazy",onLoad,onError,aspectRatio =";";auto",objectFit =";";cover",blur: "= false",quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)"";";"""
+import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 
-const OptimizedImage = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />OptimizedImage</h1>
-      <p />This component is under development.</p>
+
+
+
+import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
+import React,{ useState,useRef,useEffect } from\';react\'; import { cn } from\';\';@/lib/utils\'; import { motion,AnimatePresence } from\';\';framer-motion\'; \"export\": function OptimizedImage({ src,alt,width,height,className,placeholder =\';\';/images/placeholder && placeholder.svg\',fallback =\';\';/images/fallback && fallback.svg\',\"priority\": \'= false\',sizes =\';\';100vw\',loading =\';\';lazy\',onLoad,onError,aspectRatio =\';\';auto\',objectFit =\';\';cover\',\"blur\": \'= false\',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)\'';\';
+const React,{ useState,useRef,useEffect } from";react"; import { cn } from";";@/lib/utils"; import { motion,AnimatePresence } from";";framer-motion"; export: function OptimizedImage({ src,alt,width,height,className,placeholder =";";/images/placeholder && placeholder.svg",fallback =";";/images/fallback && fallback.svg",priority: "= false",sizes =";";100vw",loading =";";lazy",onLoad,onError,aspectRatio =";";auto",objectFit =";";cover",blur: "= false",quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)"";";"""
+import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder && placeholder.svg',fallback =';';/images/fallback && fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
+
+import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
+import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder && placeholder.svg',fallback =';';/images/fallback && fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
+import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
+import React,{ useState,useRef,useEffect } from\';react\'; import { cn } from\';\';@/lib/utils\'; import { motion,AnimatePresence } from\';\';framer-motion\'; \"export\": function OptimizedImage({ src,alt,width,height,className,placeholder =\';\';/images/placeholder.svg\',fallback =\';\';/images/fallback.svg\',\"priority\": \'= false\',sizes =\';\';100vw\',loading =\';\';lazy\',onLoad,onError,aspectRatio =\';\';auto\',objectFit =\';\';cover\',\"blur\": \'= false\',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)\'';\';
+const React,{ useState,useRef,useEffect } from";react"; import { cn } from";";@/lib/utils"; import { motion,AnimatePresence } from";";framer-motion"; export: function OptimizedImage({ src,alt,width,height,className,placeholder =";";/images/placeholder.svg",fallback =";";/images/fallback.svg",priority: "= false",sizes =";";100vw",loading =";";lazy",onLoad,onError,aspectRatio =";";auto",objectFit =";";cover",blur: "= false",quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)"";";"""
+import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
+import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder && placeholder.svg',fallback =';';/images/fallback && fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
+import React from 'react';'
+const OptimizedImage = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>OptimizedImage</h1>
+      <p>This component is under development.</p>
     </div>
   )
-}
-}
+};
 
+<<<<<<< HEAD
+    </div>)'
+pr-12325
+=======
+<<<<<<< HEAD
+export default OptimizedImage;
+=======
+export default OptimizedImage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

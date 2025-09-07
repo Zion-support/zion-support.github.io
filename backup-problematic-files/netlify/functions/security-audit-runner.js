@@ -1,45 +1,174 @@
-const path = require('path')const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '..', '..', relPath)const res = spawnSync('node', [abs, ...args], {stdio: 'pipe';}
-    encoding: 'utf8';}
-  })return {status: res.status |0;
-    stdout: res.stdout |'';}
-    stderr: res.stderr |'';}
-  }
-exports.config = { schedule: '15 */12 * * *' }exports.handler = async () => {const logs = [];}
-  const step = (logs.push(`\n=== ${name) => {
-  return $3;}
-} ===`)const { status, stdout, stderr } = fn()if (stdout) logs.push(stdout)if (stderr) logs.push(stderr)logs.push(`exit=${status}`)return status;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:netlify/functions/security-audit-runner.js
+:backup-problematic-files/netlify/functions/security-audit-runner.js
+const path = require('path'),;
+const { spawnSync } = require('child_process'),;
+function runNode(relPath, args = []) {;
+  const abs = path.resolve(__dirname, '....', relPath),;
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),;
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
+;
+exports.config = { schedule: '15 */12 * * *' },;
+exports.handler = async () => {;
+  const logs = [],;
+  const step = (name, fn) => {;
+    logs.push(`\n=== ${name} ===`),;
+    const { status, stdout, stderr } = fn(),;
+    if (stdout) logs.push(stdout),;
+    if (stderr) logs.push(stderr),;
+    logs.push(`exit=${status}`),;
+    return status;
+  },;
+  step('security:audit', () => runNode('automation/security-audit.cjs')),;
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),;
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
+},;
+:backup-problematic-files/netlify/functions/security-audit-runner.js
+:backup-problematic-files/netlify/functions/security-audit-runner.js
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
+
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], {
-    stdio: \"stdio\",}
-    encoding: 'utf8'}
+<<<<<<< HEAD
+    stdio: 'pipe'
+    encoding: 'utf8'
   });
   return {
-    status: res.status |0;
-    stdout: res.stdout |''}
-    stderr: res.stderr |''}
+    status: res.status |0
+    stdout: res.stdout |''
+    stderr: res.stderr |''
   }
 exports.config = { schedule: '15 */12 * * *' }
+
+=======
+    stdio: 'pipe,
+  encoding: 'utf8)
+  });
+  return {
+  // TODO: Implement
+}
+    status: res.status |0;,
+  stdout: res.stdout |
+    stderr: res.stderr |
+exports.config = { schedule: '15 */12 * * *' }
+>>>>>>> merged-prs-20250907-203621
 exports.handler = async () => {
   const logs = [];
-  const step = () => {
-  return $3;}
-}
+  const step = (name, fn) => {
     logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
     if (stdout) logs.push(stdout);
+<<<<<<< HEAD
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
+
     return status;
   }
-  step('security:audit', () => runNode('automation/security-audit.cjs'))step('git:sync', () => runNode('automation/advanced-git-sync.cjs'))return {statusCode: 200;}
+  step('security:audit', () => runNode('automation/security-audit.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  return {
+    statusCode: 200
     headers: { 'content-type': 'text/plain' }
-    body: logs.join('\n')}
-}function runNode() {}
-    body: logs.join('\n')}
+    body: logs.join('\n')
   }
 };function runNode(relPath, args = []) {
+=======
+    if (stderr) logs.push(stderr);`;
+    logs.push(`exit=${status}`);
+
+    return status;
+  step('security:audit', () => runNode('automation/security-audit.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  // TODO: Implement
+    statusCode: 200;,
+  headers: { 'content-type': 'text/plain' }
+    body: logs.join('\n')
+<<<<<<< HEAD
+};function runNode(relPath, args = []) {
+=======
+  }
+};function runNode(relPath, args = []) {
+<<<<<<< HEAD
+:netlify/functions/security-audit-runner.js
+>>>>>>> merged-prs-20250907-203621
+  const abs = path.resolve(__dirname, '....', relPath)
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+  return { status: res.status |0, stdout: res.stdout |'', stderr: res.stderr |'' }
 }
+exports.config = { schedule: '15 */12 * * *' }
+exports.handler = async () => {
+  const logs = []
+  const step = (name, fn) => {
+    logs.push(`\n=== ${name} ===`)
+    const { status, stdout, stderr } = fn()
+    if (stdout) logs.push(stdout)
+    if (stderr) logs.push(stderr)
+    logs.push(`exit=${status}`)
+    return status
+  }
+  step('security:audit', () => runNode('automation/security-audit.cjs'))
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
+<<<<<<< HEAD
 }
+=======
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  const abs = path.resolve(__dirname, '....', relPath),
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
+
+exports.config = { schedule: '15 */12 * * *' },
+
+exports.handler = async () => {
+  const logs = [],
+  const step = (name, fn) => {
+    logs.push(`\n=== ${name} ===`),
+    const { status, stdout, stderr } = fn(),
+    if (stdout) logs.push(stdout),
+    if (stderr) logs.push(stderr),
+    logs.push(`exit=${status}`),
+    return status
+  },
+
+  step('security:audit', () => runNode('automation/security-audit.cjs')),
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
+
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
+},
+
+<<<<<<< HEAD
+
+main:netlify/functions/security-audit-runner.js
+:backup-problematic-files/netlify/functions/security-audit-runner.js
+:netlify/functions/security-audit-runner.js
+
+}
+main:netlify/functions/security-audit-runner.js
+:backup-problematic-files/netlify/functions/security-audit-runner.js
+=======
+=======
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/security-audit-runner.js
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

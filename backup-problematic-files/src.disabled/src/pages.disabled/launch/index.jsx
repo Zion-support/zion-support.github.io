@@ -1,21 +1,20 @@
-import React from 'react';
-const Index = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />Index</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const Index = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />Index</h1>
-      <p />This component is under development.</p>
+const Index = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>Index</h1>
+      <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   )
-}
-}
+};
+=======
+  );
+};
 
+<<<<<<< HEAD
+export default Index;
+=======
+export default Index;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

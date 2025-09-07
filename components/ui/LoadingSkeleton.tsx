@@ -1,12 +1,13 @@
 
 
-import React from 'react';
-import { motion } from 'framer-motion';
-  rounded?: string;
+import React from 'react';'
+import { motion } from 'framer-motion';'
+  rounded?: string
 }
 
-const Skeleton: React.FC<SkeletonProps /> = ({ }
-  className;}
+const 'Skeleton': React.FC<SkeletonProps> = ({ 
+  }
+  className;
           ))}
         </div>
       </div>
@@ -14,6 +15,4 @@ const Skeleton: React.FC<SkeletonProps /> = ({ }
 
 )
 };
-
 export default Skeleton;
-

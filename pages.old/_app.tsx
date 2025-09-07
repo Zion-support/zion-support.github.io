@@ -1,59 +1,46 @@
 
-;
-import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
-</Component>';
-</Component>';
-</Component>';
-</Component>';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
 import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
-const type { AppProps } from \"next/app\"; import \"./styles/globals.css\"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\";
-</Component>';
-const type { AppProps } from \"next/app\"; import \"./styles/globals.css\"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\";
+const type { AppProps } from "next/app"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+const type { AppProps } from "next/app"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"
+>>>>>>> merged-prs-20250907-203621
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
-
-
-
-const type { AppProps } from \"next/app\"; import \"./styles/globals.css\"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\"
+<<<<<<< HEAD
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
+=======
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
+</Component>'
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
+</Component>'
+import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+const type { AppProps } from "next/app"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
 import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
-const type { AppProps } from \"next/app\"; import \"./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\";
+const type { AppProps } from "next/app"; import "./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''";
 import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
 </Component>';
+import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
 </Component>';
-const type { AppProps } from \"next/app\"; import \"./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\";
-</Component>';
-</Component>';
-const type { AppProps } from \"next/app\"; import \"./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\";
-</Component>';
-</Component>';
-ursor/automate-test-improve-and-merge-code-646c;
-const type { AppProps } from \"next/app\"; import \"./styles/globals.css\"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\";
-</Component>';
-ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
-</Component>';
-const type { AppProps } from \"next/app\"; import \"./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\";
-</Component>';
-</Component>';
-const type { AppProps } from \"next/app\"; import \"./styles/globals.css\"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\";
-</Component>';
-const type { AppProps } from \"next/app\"; import \"./styles/globals.css\"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\";
-</Component>';
-</Component>'import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
-const type { AppProps } from \"next/app\"; import \"./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\";
-</Component>';
-</Component>';
-const type { AppProps } from \"next/app\"; import \"./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\";
-</Component>';
-</Component>';
+import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+const type { AppProps } from "next/app"; import "./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''";
+import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
 </Component>'
-</Component>'
-
-</Component>'
-
-const type { AppProps } from \"next/app\"; import \"./styles/globals.css\"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''\"
-</Component>'
-
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> merged-prs-20250907-203621

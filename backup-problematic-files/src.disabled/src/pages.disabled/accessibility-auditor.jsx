@@ -1,17 +1,20 @@
-import React from 'react';
-const Accessibility-auditor = ({ className }) => {return (<div className={className || ''} />;
-      <h1 />Accessibility-auditor</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const Accessibility-auditor = ({ className }) => {}
-  return (}
-    <div className={className || ''} />
-      <h1 />Accessibility-auditor</h1>
-      <p />This component is under development.</p>
+const Accessibility-auditor = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>Accessibility-auditor</h1>
+      <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   )
-}
-}
+};
+=======
+  );
+};
 
+<<<<<<< HEAD
+export default Accessibility-auditor;
+=======
+export default Accessibility-auditor;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

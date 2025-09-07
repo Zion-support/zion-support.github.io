@@ -1,21 +1,20 @@
-import React from 'react';
-const HomepagePromotion = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />HomepagePromotion</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const HomepagePromotion = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />HomepagePromotion</h1>
-      <p />This component is under development.</p>
+const HomepagePromotion = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>HomepagePromotion</h1>
+      <p>This component is under development.</p>
     </div>
   )
-}
-}
+};
 
+<<<<<<< HEAD
+    </div>)'
+pr-12325
+=======
+<<<<<<< HEAD
+export default HomepagePromotion;
+=======
+export default HomepagePromotion;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

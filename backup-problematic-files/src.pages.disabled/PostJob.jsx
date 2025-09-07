@@ -1,16 +1,38 @@
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true }}
-  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
-  render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
+<<<<<<< HEAD
+return (
+    <div>
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
 }
 import React from 'react';
-const PostJob = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />PostJob</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )
+
+const PostJob = ({ className }) => {
+  return (
+    <div className={className || ''}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+      <h1>PostJob</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+}
+}
+<
+
+}

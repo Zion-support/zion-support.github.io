@@ -1,21 +1,20 @@
-import React from 'react';
-const InnovativeServicesShowcase2025 = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />InnovativeServicesShowcase2025</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const InnovativeServicesShowcase2025 = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />InnovativeServicesShowcase2025</h1>
-      <p />This component is under development.</p>
+const InnovativeServicesShowcase2025 = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>InnovativeServicesShowcase2025</h1>
+      <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   )
-}
-}
+};
+=======
+  );
+};
 
+<<<<<<< HEAD
+export default InnovativeServicesShowcase2025;
+=======
+export default InnovativeServicesShowcase2025;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

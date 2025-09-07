@@ -1,39 +1,80 @@
 class ErrorBoundary extends React.Component {
-  constructor(props) {}
-    super(props);}
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  constructor(props) {
+    super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error) {}
+<<<<<<< HEAD
+  
+  static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
   }
+  
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   render() {
-    if (this.state.hasError) {}
-      return <div />Something went wrong.</div>;}
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+    
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     return this.props.children;
   }
 }
 import React from 'react';
-const MainNavigation = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />MainNavigation</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
+interface MainNavigationProps {
+  // Add props here as needed
 
-const MainNavigation = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />MainNavigation</h1>
-      <p />This component is under development.</p>
+  return (
+    <div>
+      <h1>MainNavigation</h1>
+      <p>This component is currently under development.</p>
     </div>
-  )
-}
-}
+  );
 
+}
+:src.disabled/layout/MainNavigation.jsx
+}
+}
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);'
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;'
+    <div className={className || ''}>'
+</div>
+      <h1>MainNavigation</h1>
+      <p>This component is under development.</p>
+    </div>
+
+<<<<<<< HEAD
+    </div>'
+pr-12325
+=======
+<<<<<<< HEAD
+export default MainNavigation;
+=======
+export default MainNavigation;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

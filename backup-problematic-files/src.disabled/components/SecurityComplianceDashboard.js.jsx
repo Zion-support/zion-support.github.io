@@ -1,17 +1,20 @@
-import React from 'react';
-const SecurityComplianceDashboard.js = ({ className }) => {return (<div className={className || ''} />;
-      <h1 />SecurityComplianceDashboard.js</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const SecurityComplianceDashboard.js = ({ className }) => {}
-  return (}
-    <div className={className || ''} />
-      <h1 />SecurityComplianceDashboard.js</h1>
-      <p />This component is under development.</p>
+const SecurityComplianceDashboard.js = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>SecurityComplianceDashboard.js</h1>
+      <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   )
-}
-}
+};
+=======
+  );
+};
 
+<<<<<<< HEAD
+export default SecurityComplianceDashboard.js;
+=======
+export default SecurityComplianceDashboard.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

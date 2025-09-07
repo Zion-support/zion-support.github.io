@@ -1,17 +1,20 @@
-import React from 'react';
-const ClientSuccessStoriesSection.js = ({ className }) => {return (<div className={className || ''} />;
-      <h1 />ClientSuccessStoriesSection.js</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const ClientSuccessStoriesSection.js = ({ className }) => {}
-  return (}
-    <div className={className || ''} />
-      <h1 />ClientSuccessStoriesSection.js</h1>
-      <p />This component is under development.</p>
+const ClientSuccessStoriesSection.js = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>ClientSuccessStoriesSection.js</h1>
+      <p>This component is under development.</p>
     </div>
+<<<<<<< HEAD
   )
-}
-}
+};
+=======
+  );
+};
 
+<<<<<<< HEAD
+export default ClientSuccessStoriesSection.js;
+=======
+export default ClientSuccessStoriesSection.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

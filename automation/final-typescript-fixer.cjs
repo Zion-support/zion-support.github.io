@@ -1,0 +1,302 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> merged-prs-20250907-203621
+#!/usr/bin/env node;
+
+#!/usr/bin/env node;
+<<<<<<< HEAD
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
+=======
+=======
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+#!/usr/bin/env node;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
+
+
+
+
+
+
+
+
+
+
+
+
+#!/usr/bin/env node/usr/bin/env node;const fs = require("fs");"const path = require("path");class $1 {; constructor() {; this.projectRoot = process.cwd(); this.$1 = []};" log(message, type = "INFO") {; const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${type}] ${message})}; async fixCorruptedImports() {;" this.log(" Fixing corrupted import statements."); const filesToFix = [;" "pages"," "components"," "utils"," "hooks"]; for (const dir of filesToFix) {; const dirPath = path.join(this.projectRoot, dir); if (fs.existsSync(dirPath)) {; this.fixFilesInDirectory(dirPath)} } }; fixFilesInDirectory(dirPath) {; const items = fs.readdirSync(dirPath); for (const item of items) {; const fullPath = path.join(dirPath, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {;" this.fixFilesInDirectory(fullPath)} else if (item.endsWith(".ts") | item.endsWith(".tsx")) {; this.fixCorruptedFile(fullPath)} } }; fixCorruptedFile(filePath) {; try {;" let content = fs.readFileSync(filePath, "utf8"); let modified = false; / Fix corrupted import statements with \n;" if (content.includes("import React from \"react\";\nimport type { NextPage }")) {; content = content.replace(;" /import React from "react";\nimport type { NextPage }/g," "import React from \"react\";\nimport type { NextPage }"; ); modified = true} ; / Fix other corrupted patterns;" if (content.includes("\n")) {;" content = content.replace(/\n/g, "\n"); modified = true} ; / Fix specific corrupted files;" if (filePath.includes("messageChannelHandler.ts")) {;" content = "/ Message channel handler utility;module.exports = const messageChannelHandler = {;" receiveMessage: (callback: (message: any) => void) => {; / Implementation for receiving messages}," sendMessage: (message: any) => {; / Implementation for sending messages}"};"; modified = true} ;" if (filePath.includes("sanitizeHtml.ts")) {;" content = "/ HTML sanitization utility to prevent CSP violations;"const DOMPurify from "isomorphic-dompurify";"module.exports = const sanitizeHtml = (html: string): string => {;" return DOMPurify.sanitize(html)};"; modified = true} ; if (modified) {; fs.writeFileSync(filePath, content);"` this.fixes.push(`Fixed corrupted file: ${path.relative(this.projectRoot, filePath)})} } catch (error) {;"` this.log(` Could not fix file ${filePath}: ${error.message}, "WARN")} }; async run() {;" this.log(" Starting Final TypeScript Fixing Process.");" this.log("=="); try {; await this.fixCorruptedImports();" this.log("\n FINAL TYPESCRIPT FIXING REPORT");" this.log("======");"` this.log(`Fixes Applied: ${this.fixes.length}); if (this.fixes.length > 0) {;" this.log("\n Fixes Applied: "); this.fixes.forEach((fix, index) => {;` this.log(` ${index + 1}. ${fix})})} ;" this.log("\n Final TypeScript fixing completed!")} catch (error) {;"` this.log(` Fatal error: ${error.message}, "ERROR"); process.exit(1)} }};const fixer = new FinalTypeScriptFixer();fixer.run().catch(console.error)"`"`"
+#!/usr/bin/env node"
+
+const fs = require("fs");
+const path = require("path");
+class $1 {;
+  constructor() {;
+  this.projectRoot = process.cwd();
+    this.$1 = []}
+;"
+  log($2) {;"
+  const timestamp = new Date().toISOString()
+  async fixCorruptedImports() {;"
+  this.log("🔧 Fixing corrupted import statements...");"
+    const filesToFix = [;"
+  "pages",
+      "components",
+      "utils","]"
+      "hooks"];"
+  for($2) {
+  const dirPath = path.join(this.projectRoot, dir)
+      if (fs.existsSync(dirPath)) {
+  this.fixFilesInDirectory(dirPath)}
+  fixFilesInDirectory($2) {
+  const items = fs.readdirSync(dirPath)
+  for($2) {
+  const fullPath = path.join(dirPath, item)
+      const stat = fs.statSync(fullPath)
+      if (stat.isDirectory()) {;"
+  fixCorruptedFile($2) {
+  try {;"
+  let content = fs.readFileSync(filePath, "utf8");"
+      let modified = false
+      // Fix corrupted import statements with \\n;"
+      if (content.includes("import React from \"react\";\\nimport type { NextPage }")) {;"
+  content = content.replace(;"
+          /import React from "react";\\nimport type { NextPage }/g,
+          "import React from \"react\";\nimport type { NextPage }";")
+        )
+      // Fix other corrupted patterns;"
+      if (content.includes("\\n")) {
+  content = content.replace(/\\n/g, "\n");"
+
+      // Fix specific corrupted files;"
+      if (filePath.includes("messageChannelHandler.ts")) {
+  content = "// Message channel handler utility;"
+export const messageChannelHandler = {;"
+  "receiveMessage": (callback: (message: any) => void) => {;"
+  // Implementation for receiving messages},"
+  "sendMessage": (message: any) => {;"
+  // Implementation for sending messages}"
+};";"
+
+  async run() {;"
+  this.log("🚀 Starting Final TypeScript Fixing Process...")
+    this.log("==");"
+    try {;
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> merged-prs-20250907-203621
+#!/usr/bin/env node;
+main
+
+  await this.fixCorruptedImports();"
+
+"
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+const fs = require("fs")
+
+  log(message, type = "INFO")
+  this.log(" Fixing corrupted import statements...")
+  "pages"
+      "components"
+      "utils"
+      "hooks"
+  this.fixFilesInDirectory(fullPath)} else if (item.endsWith(".ts") || item.endsWith(".tsx")
+  let content = fs.readFileSync(filePath, "utf8")
+      if (content.includes("import React from \"react\";\\nimport type { NextPage }")
+          /import React from "react"
+          "import React from \"react\";\nimport type { NextPage }"
+      if (content.includes("\\n")
+  content = content.replace(/\\n/g, "\n")
+      if (filePath.includes("messageChannelHandler.ts")
+  content = "
+  "receiveMessage"
+  "sendMessage"
+};"
+      if (filePath.includes("sanitizeHtml.ts")
+  content = "
+import DOMPurify from "isomorphic-dompurify"
+export const sanitizeHtml = ("html")
+  return DOMPurify.sanitize(html)};"
+        this.fixes.push(`Fixed corrupted "file"`)
+  this.log(`⚠  Could not fix file ${filePath}: ${error.message}, "WARN"`)
+  this.log(" Starting Final TypeScript Fixing Process...")
+    this.log("==")
+      this.log("\\n FINAL TYPESCRIPT FIXING REPORT")
+      this.log("======")
+      this.log(`Fixes "Applied"`)
+  this.log("\\n Fixes "Applied": ")
+      this.log("\\n� Final TypeScript fixing completed!")
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
+<<<<<<< HEAD
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> merged-prs-20250907-203621
+
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> merged-prs-20250907-203621
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+
+
+
+
+
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+
+
+
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

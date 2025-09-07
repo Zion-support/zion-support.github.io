@@ -1,103 +1,123 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('🔧 Fixing all syntax errors...\n');
+console.log('🔧 Fixing all syntax errors...');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let fixed = false;
-
-    // Fix unterminated strings
-    content = content.replace(/\"[^"]*$/gm, (match) => {
-      if (!match.endsWith('"')) {
-        fixed = true;
-        return match + '"';
+// Fix AIServices.tsx - fix all missing commas
+const aiservicesPath = 'pages/AIServices.tsx';
+if (fs.existsSync(aiservicesPath)) {
+  let content = fs.readFileSync(aiservicesPath, 'utf8');
+  
+  // Fix missing comma before features
+  content = content.replace(
+    /benefits: \[.*?\]\n\s*features: \[/g,
+    (match) => {
+      if (!match.includes(',')) {
+        return match.replace(']\n    features: [', '],\n    features: [');
       }
       return match;
-    });
-
-    // Fix trailing commas in objects/arrays
-    content = content.replace(/,(\s*[}\]])/g, '$1');
-
-    // Fix malformed JSX
-    content = content.replace(/className=\"[^"]*\"\s*\/>/g, (match) => {
-      return match.replace(/\/>$/, '></div>');
-    });
-
-    // Fix broken import statements
-    content = content.replace(/import\s+React\s+from\s+"react";/g, 'import React from "react";');
-
-    // Fix broken metadata objects
-    content = content.replace(/export\s+const\s+metadata\s*=\s*\{[^}]*\},?\s*\}/g, (match) => {
-      return match.replace(/,\s*}/g, '}');
-    });
-
-    // Fix broken JSX elements
-    content = content.replace(/<(\w+)\s+className="[^"]*"\s*\/>/g, '<$1 className="$2"></$1>');
-
-    // Fix broken function declarations
-    content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*\{[^}]*\},?\s*\}/g, (match) => {
-      return match.replace(/,\s*}/g, '}');
-    });
-
-    if (fixed) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed syntax errors in ${filePath}`);
-      return true;
     }
-  } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-  }
-  return false;
+  );
+  
+  fs.writeFileSync(aiservicesPath, content);
+  console.log('✅ Fixed pages/AIServices.tsx');
 }
 
-// Function to find and fix all TypeScript/JavaScript files
-function fixAllFiles() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'pages/**/*.tsx',
-    'pages/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts',
-    'src/**/*.tsx',
-    'src/**/*.ts'
-  ];
+// Fix ai-powered-cybersecurity.tsx
+const cybersecurityPath = 'pages/ai-powered-cybersecurity.tsx';
+if (fs.existsSync(cybersecurityPath)) {
+  let content = fs.readFileSync(cybersecurityPath, 'utf8');
+  content = content.replace("import React from 'react',", "import React from 'react';");
+  fs.writeFileSync(cybersecurityPath, content);
+  console.log('✅ Fixed pages/ai-powered-cybersecurity.tsx');
+}
 
-  let totalFixed = 0;
+// Fix ai-powered-devops-platform.tsx
+const devopsPath = 'pages/ai-powered-devops-platform.tsx';
+if (fs.existsSync(devopsPath)) {
+  let content = fs.readFileSync(devopsPath, 'utf8');
+  content = content.replace("import React from 'react',", "import React from 'react';");
+  fs.writeFileSync(devopsPath, content);
+  console.log('✅ Fixed pages/ai-powered-devops-platform.tsx');
+}
 
-  for (const pattern of patterns) {
-    try {
-      const files = execSync(`find . -path "./${pattern}" -type f 2>/dev/null || true`, { 
-        cwd: '/workspace', 
-        encoding: 'utf8' 
-      }).trim().split('\n').filter(f => f);
+// Fix api-docs.tsx
+const apiDocsPath = 'pages/api-docs.tsx';
+if (fs.existsSync(apiDocsPath)) {
+  let content = fs.readFileSync(apiDocsPath, 'utf8');
+  
+  // Fix the misplaced import
+  content = content.replace(
+    /    \]\nimport Head from 'next\/head';\n\n\} from 'lucide-react';\nconst apiEndpoints = \[/,
+    '    ]\n  } from \'lucide-react\';\n\nimport Head from \'next/head\';\n\nconst apiEndpoints = ['
+  );
+  
+  fs.writeFileSync(apiDocsPath, content);
+  console.log('✅ Fixed pages/api-docs.tsx');
+}
 
-      for (const file of files) {
-        if (fs.existsSync(file)) {
-          if (fixSyntaxErrors(file)) {
-            totalFixed++;
-          }
+// Fix api-documentation.tsx
+const apiDocPath = 'pages/api-documentation.tsx';
+if (fs.existsSync(apiDocPath)) {
+  let content = fs.readFileSync(apiDocPath, 'utf8');
+  
+  // Fix the malformed JSX
+  content = content.replace(
+    /    <Layout>;\s*<Head>;\s*<title>API Documentation \| Zion Tech Group<\/title>;\s*<link;\s*rel='canonical'\s*'\s*href='https: \/\/ziontechgroup && ziontechgroup.com\/api-documentation'/,
+    `    <Layout>
+      <Head>
+        <title>API Documentation | Zion Tech Group</title>
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/api-documentation'
+        />`
+  );
+  
+  fs.writeFileSync(apiDocPath, content);
+  console.log('✅ Fixed pages/api-documentation.tsx');
+}
+
+// Create a comprehensive script to fix all pages with syntax errors
+const pagesDir = 'pages';
+if (fs.existsSync(pagesDir)) {
+  const files = fs.readdirSync(pagesDir);
+  
+  files.forEach(file => {
+    if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      const filePath = path.join(pagesDir, file);
+      try {
+        let content = fs.readFileSync(filePath, 'utf8');
+        let modified = false;
+        
+        // Fix common syntax errors
+        if (content.includes("import React from 'react',")) {
+          content = content.replace("import React from 'react',", "import React from 'react';");
+          modified = true;
         }
+        
+        if (content.includes("import React from 'react';\nimport React from 'react';")) {
+          content = content.replace("import React from 'react';\nimport React from 'react';", "import React from 'react';");
+          modified = true;
+        }
+        
+        // Fix missing semicolons in imports
+        content = content.replace(/import\s+.*?from\s+['"][^'"]+['"]\s*(?=\n|$)/g, (match) => {
+          if (!match.endsWith(';')) {
+            return match + ';';
+          }
+          return match;
+        });
+        
+        if (modified) {
+          fs.writeFileSync(filePath, content);
+          console.log(`✅ Fixed pages/${file}`);
+        }
+      } catch (error) {
+        console.log(`⚠️  Could not fix pages/${file}: ${error.message}`);
       }
-    } catch (error) {
-      console.log(`⚠️  Error processing pattern ${pattern}: ${error.message}`);
     }
-  }
-
-  return totalFixed;
+  });
 }
 
-// Main execution
-try {
-  const totalFixed = fixAllFiles();
-  console.log(`\n🎉 Fixed syntax errors in ${totalFixed} files`);
-} catch (error) {
-  console.error('💥 Error during syntax fixing:', error.message);
-  process.exit(1);
-}
+console.log('🎉 All syntax errors fixed!');
