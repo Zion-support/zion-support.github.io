@@ -1,23 +1,17 @@
 import type { Metadata } from 'next';
-<<<<<<< HEAD
 import React from 'react';
+import { Inter } from 'next/font/google';
 import Header from './components/Header';
 import Footer from './components/Footer';
-=======
-import { Inter } from 'next/font/google';
->>>>>>> main
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
-<<<<<<< HEAD
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
-  keywords: ['AI', 'artificial intelligence', 'blockchain', 'technology', 'innovation', 'automation'],
-=======
   description: 'Zion Tech Group is a leading technology company specializing in AI, micro SaaS development, and IT services. Transform your business with cutting-edge technology.',
   keywords: ['AI', 'artificial intelligence', 'micro SaaS', 'IT services', 'technology', 'innovation', 'business solutions', 'zion tech'],
->>>>>>> main
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -31,11 +25,6 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-<<<<<<< HEAD
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
-    type: 'website',
-=======
     title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
     description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
     url: 'https://ziontechgroup.com',
@@ -48,28 +37,29 @@ export const metadata: Metadata = {
         alt: 'Zion Tech Group - AI and Technology Solutions',
       },
     ],
->>>>>>> main
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-<<<<<<< HEAD
-    description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
-=======
     description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
     images: ['/og-image.jpg'],
->>>>>>> main
   },
   verification: {
     google: 'your-google-verification-code',
   },
-  category: 'technology',
-  classification: 'Business',
-  referrer: 'origin-when-cross-origin',
-  colorScheme: 'light',
-  themeColor: '#000000',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -79,28 +69,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
-          rel="stylesheet" 
-        />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0f172a" />
       </head>
-      <body className="font-sans antialiased">
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
-        {/* <PerformanceMonitor /> */}
-=======
       <body className={inter.className}>
-        {children}
->>>>>>> main
+        <PerformanceMonitor />
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
