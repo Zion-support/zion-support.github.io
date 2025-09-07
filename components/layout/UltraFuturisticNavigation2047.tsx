@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+
+
+import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -387,6 +389,76 @@ const UltraFuturisticNavigation2047 = () => {
                       <motion.div
                         initial={{ opacity: 0, height: 0}}
                         animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0}}
-                        transition = $2;
-export default UltraFuturisticNavigation2047,
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className='ml-4 mt-2 space-y-1'
+                      >
+                        {item.children?.map(child => (
+                          <Link
+                            key={child.name}
+                            href={child.href}
+className='ml-4 mt-2 space-y-1'
+                      >
+                        {item.children?.map(child => (
+                          <Link
+                            key={child.name}
+                            href={child.href}
+                            className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'
+                            onClick={closeMenu}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ))}
+              {/* Mobile Contact Info */}
+              <div className='pt-4 pb-3 border-t border-slate-700/50'>
+                <div className='px-3 py-2 text-sm text-gray-400'>
+                  <div className='flex items-center space-x-2 mb-2'>
+                    <Phone className='w-4 h-4' />
+                    <a;`
+                      href={`tel:${contactInfo.mobile}`}'
+                      className='hover:text-white transition-colors'
+                    >
+                      {contactInfo.mobile}
+                    </a>
+                  </div>'
+                  <div className='flex items-center space-x-2 mb-2'>'
+                    <Mail className='w-4 h-4' />
+                    <a;`
+                      href={`mailto:${contactInfo.email}`}'
+                      className='hover:text-white transition-colors'
+                    >
+                      {contactInfo.email}
+
+                    </a>
+                  </div>
+                  <div className='flex items-center space-x-2'    />
+                    <MapPin className='w-4 h-4'    />
+                    <span    />{contactInfo.address}</span>
+                  </div>
+                </div>
+                <div className='px-3 pt-2'    />
+                  <Link
+                  <Link"
+                    href="/contact""
+                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
+                  </Link>
+                </div>
+              </div>
+            </div>
+export default UltraFuturisticNavigation2047
+          </motion.div>)}
+      </AnimatePresence>
+    </nav>
+  );
+}
+export default UltraFuturisticNavigation2047;  )
+}
+export default UltraFuturisticNavigation2047;
+
+"

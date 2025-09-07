@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
 
-const localeLabelKey: Record<string, string> = {
-  en: 'lang.english',
-  pt: 'lang.portuguese',
-  es: 'lang.spanish',
+
+const localeLabelKey: Record<string, string /> = {
+
+  en: 'lang.english';
+  pt: 'lang.portuguese';
+  es: 'lang.spanish';
   ar: 'lang.arabic'},
 
 export default function LanguageSwitchPrompt() {
@@ -52,5 +51,9 @@ export default function LanguageSwitchPrompt() {
         </div>
       </div>
     </div>
-  )
+  );
+  );
+}
+
+"
 }

@@ -1,74 +1,48 @@
-const nextJest = require('next/jest');
+const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
+  // Provide the path to your Next.js app to load next.config.js and .env files
   dir: './',
-});
+})
 
+// Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/src'],
-  testPathIgnorePatterns: [
-    '<rootDir>/.next/',
-    '<rootDir>/node_modules/',
-    '<rootDir>/src.disabled/',
-    '<rootDir>/src-disabled/',
-    '<rootDir>/components.disabled/',
-    '<rootDir>/components-disabled/',
-    '<rootDir>/pages.disabled/',
-    '<rootDir>/backup/',
-    '<rootDir>/backup-*/',
-    '<rootDir>/broken*/',
-    '<rootDir>/corrupted*/',
-    '<rootDir>/backup-problematic-files/',
-    '<rootDir>/ai-optimization-backups/',
-    '<rootDir>/apps.backup/',
-    '<rootDir>/api-backup/',
-    '<rootDir>/api-disabled/',
-    '<rootDir>/api.disabled/',
-    '<rootDir>/automation_backup/',
-    '<rootDir>/cypress_backup/',
-    '<rootDir>/data_backup/',
-    '<rootDir>/data.disabled/',
-    '<rootDir>/components.disabled_full/',
-    '<rootDir>/apps/backup/',
-    '<rootDir>/test-next/',
-    '<rootDir>/backup-problematic-files/temp-exclude/',
-    '<rootDir>/src/__tests__/.*\.test\.tsx?$',
-  ],
-  modulePathIgnorePatterns: [
-    '<rootDir>/backup/.*',
-    '<rootDir>/backup-*/.*',
-    '<rootDir>/broken.*/.*',
-    '<rootDir>/corrupted.*/.*',
-    '<rootDir>/backup-problematic-files/.*',
-    '<rootDir>/ai-optimization-backups/.*',
-    '<rootDir>/apps.backup/.*',
-    '<rootDir>/api-backup/.*',
-    '<rootDir>/api-disabled/.*',
-    '<rootDir>/api.disabled/.*',
-    '<rootDir>/automation_backup/.*',
-    '<rootDir>/cypress_backup/.*',
-    '<rootDir>/data_backup/.*',
-    '<rootDir>/data.disabled/.*',
-    '<rootDir>/components.disabled_full/.*',
-    '<rootDir>/apps/backup/.*',
-    '<rootDir>/test-next/.*',
-  ],
-  watchPathIgnorePatterns: ['<rootDir>/backup.*', '<rootDir>/backup-problematic-files/.*'],
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/**/*.stories.{js,jsx,ts,tsx}',
-    '!src/**/*.test.{js,jsx,ts,tsx}',
-  ],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-  },
   testMatch: [
-    '<rootDir>/src/__tests__/**/*.test.{js,jsx,ts,tsx}',
-    '<rootDir>/src/**/*.test.{js,jsx,ts,tsx}',
+    '<rootDir>/__tests__/**/*.test.{js,jsx,ts,tsx}',
+    '<rootDir>/app/**/*.test.{js,jsx,ts,tsx}',
+    '<rootDir>/components/**/*.test.{js,jsx,ts,tsx}',
+    '<rootDir>/pages/**/*.test.{js,jsx,ts,tsx}',
   ],
-};
+  collectCoverageFrom: [
+    'app/**/*.{js,jsx,ts,tsx}',
+    'components/**/*.{js,jsx,ts,tsx}',
+    'pages/**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!**/.next/**',
+    '!**/coverage/**',
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 70,
+      functions: 70,
+      lines: 70,
+      statements: 70,
+    },
+  },
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+  },
+  transformIgnorePatterns: [
+    '/node_modules/',
+    '^.+\\.module\\.(css|sass|scss)$',
+  ],
+}
 
-module.exports = createJestConfig(customJestConfig);
+// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+module.exports = createJestConfig(customJestConfig)

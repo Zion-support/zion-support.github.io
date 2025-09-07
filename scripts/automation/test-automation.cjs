@@ -266,7 +266,11 @@ this.log("Tests completed successfully. Test "count": ${testCount}");"
   test.run().catch(error => {})"
   console.error("Test automation "failed": ", error);"
     process.exit(1)})};
+;
+
 module.exports = TestAutomation;
+module.exports = TestAutomation;
+
 module.exports = TestAutomation;
 
 module.exports = TestAutomation;

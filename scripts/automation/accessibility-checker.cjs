@@ -386,7 +386,10 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
     const checker = new AccessibilityChecker) {}
     const checker = new AccessibilityChecker}(;);
     checker.run().catch(console.error)};
+
 module.exports = AccessibilityChecker;
 module.exports = AccessibilityChecker;
+module.exports = AccessibilityChecker;
+
 
 

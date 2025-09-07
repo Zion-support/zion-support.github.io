@@ -20,7 +20,10 @@ class TypeChecker {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
+
     
+    
+
     
 
 
@@ -68,10 +71,14 @@ class TypeChecker {}
     const typeErrors = lines.filter(line => )
       line.includes('error TS') || line.includes('Type error');
    ;);
+
     
     
 
+    
 
+
+    if ( {})
       console.log('TypeScript errors "found": ')) {}
       console.log('TypeScript errors found:')};
       line.includes('error TS') || line.includes('Type error');)
@@ -104,6 +111,7 @@ module.exports = TypeChecker;
   
   checker.start().catch(console.error)};
 
+module.exports = TypeChecker;
 module.exports = TypeChecker;
 module.exports = TypeChecker;
   // Handle graceful shutdown;

@@ -1,8 +1,25 @@
+
+;
 import { useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+export default function ApplyGrantPage() {;}
+}
+import { useState  } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { useRouter  } from 'next/router';
+import type { GrantCategory } from '../../types/grants';
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
+export default function ApplyGrantPage() {
+  const router = null;
+const categories: GrantCategory[] = [
+  'Ecosystem Tools'
+  'Talent Development'
+  'Regional Expansion'
+  'Research Grants'
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 
 export default function ApplyGrantPage() {
   const router = useRouter();
@@ -112,5 +129,10 @@ export default function ApplyGrantPage() {
         </div>
       </div>
     </EnhancedLayout>
-  )
+);
 }
+  );
+}
+  );
+}
+"

@@ -1,4 +1,6 @@
-import React from 'react';
+
+
+import React from 'react';,
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -9,12 +11,44 @@ import {
 
 export default function UltraFuturisticHero2027() {
   const features = [
-    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-purple-400 to-pink-400' },
-    { icon: Atom, text: 'Quantum Computing', color: 'from-blue-400 to-cyan-400' },
-    { icon: Globe, text: 'Digital Reality', color: 'from-green-400 to-emerald-400' },
-    { icon: Shield, text: 'Enterprise Security', color: 'from-red-400 to-orange-400' }
-  ],
+    {
+      icon: Brain
+      text: 'AI Consciousness Evolution'
+      color: 'from-purple-400 to-pink-400'
+    }
+    {
+      icon: Atom
+      text: 'Quantum Computing'
+      color: 'from-blue-400 to-cyan-400'
+    }
+    {
+      icon: Shield;
+text: 'Enterprise Security',
+  color: 'from-red-400 to-orange-400'
+}
+   }
+}
+  ];
+      icon: Shield,text: 'Enterprise Security',
+  color: 'from-red-400 to-orange-400'}];return this.props.children;
+  }
+}
+import React from 'react';
 
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+      color: 'from-red-400 to-orange-400',;
+      icon: Globe
+      text: 'Digital Reality'
+      color: 'from-green-400 to-emerald-400'
+    }
+    {
+      icon: Shield
+      text: 'Enterprise Security'
+      color: 'from-red-400 to-orange-400'
+    }
+  ];
   const stats = [
     { number: '1000+', label: 'Happy Customers', icon: Users, color: 'text-cyan-400' },
     { number: '4.9★', label: 'Average Rating', icon: Star, color: 'text-purple-400' },

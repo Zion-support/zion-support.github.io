@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface Particle {
@@ -98,14 +100,17 @@ export default function UltraFuturisticBackground2029() {
               if (partner && partner.type === 'quantum') {
                 const distance = Math.sqrt(
                   Math.pow(particle.x - partner.x, 2) + Math.pow(particle.y - partner.y, 2)
-                ),
+                );
+                if (distance < 100) {) => {
+  return $3;}
+}
                 if (distance < 100) {
-                  ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 100)})`,
-                  ctx.lineWidth = $2;
-                  ctx.beginPath($2);
-                  ctx.moveTo($2);
-                  ctx.lineTo($2);
-                  ctx.stroke()
+                  ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 100)})`;
+                  ctx.lineWidth = 1;
+                  ctx.beginPath();
+                  ctx.moveTo(particle.x, particle.y);
+                  ctx.lineTo(partner.x, partner.y);
+                  ctx.stroke();                }                  ctx.stroke()
                 }
               }
             }

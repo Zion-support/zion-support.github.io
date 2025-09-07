@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface EnhancedFuturisticBackgroundProps {
@@ -9,16 +11,49 @@ interface EnhancedFuturisticBackgroundProps {
   animationSpeed?: number
 }
 
-const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
-  children,
-  className = $2;
-  intensity = $2;
-  colorScheme = $2;
-  particleCount = $2;
-  animationSpeed = $2;
-  const animationRef = $2;
-  const colorSchemes = $2;
-      secondary: '#ff00ff',
+const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps /> = ({children;
+  className;
+
+const colorSchemes = {quantum: {resizeCanvas ()window.addEventListener ('resize', resizeCanvas)// Wrap around edges if (this.x < 0) this.x = canvas.width;
+if (this.x > canvas.width) this.x = 0;
+if (this.y < 0) this.y = canvas.height;
+if (this.y > canvas.height) this.y = 0;
+
+// Fade out near end of life if (this.life < 20) {
+  }
+}
+}let particles: Particle[] = [];
+let connections: Connection[] = [];
+// Initialize particles ctx.fill_style = colors.primary;
+ctx.font = `$ {
+}
+  fontSize }
+}px monospace`;
+
+}let particles: Particle[] = []
+let connections: Connection[] = []
+// Initialize particles ctx.fill_style = colors.primary
+ctx.font = `$ {
+
+  fontSize }
+}px monospace`
+const EnhancedFuturisticBackground: React.FC<
+  EnhancedFuturisticBackgroundProps
+> = ({ children,
+  className = '',
+  intensity = 'medium',
+  colorScheme = 'quantum',
+  particleCount = 100,}
+  animationSpeed = 1,}
+   }) => {
+
+  const canvasRef = useRef<HTMLCanvasElement    />(null)
+const animationRef = useRef<number | undefined    />(undefined)
+const colorSchemes = {
+    quantum: {
+
+      primary: '#00ffff',
+  secondary: '#ff00ff',
       accent: '#ffff00',
       background: 'rgba(0, 0, 0, 0.85)',
       particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'],
@@ -290,7 +325,10 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
         }}
       />
-      
-      {/* Content */}
-      <div className = $2;
-export default EnhancedFuturisticBackground,
+{/* Content */}
+      <div className='relative z-10'>{children}</div>
+    </div>
+  );
+}
+export default EnhancedFuturisticBackground;
+

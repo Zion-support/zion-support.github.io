@@ -1,63 +1,38 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
-const isClient = typeof window !== 'undefined';
+
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+    }
+    return this.props.children;
+  }
+    return this.props.children
+import React, { useCallback, useEffect, useState } from 'react'
 type Web3LoginModalProps = {
   isOpen: boolean,
   onClose: () => void,
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
 };
 
-function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (!isOpen) {
-      setError(null);
-      setLoading(false)
-    }
-  }, [isOpen]);
-
-  const handleEvmConnect = useCallback(async () => {
-    setError(null);
-    setLoading(true);
-    try {
-      const Web3ModalCtor = (await import('web3modal')).default;
-      const WalletConnectProvider = (await import('@walletconnect/web3-provider')).default;
-
-      const web3Modal = new Web3ModalCtor({
-        cacheProvider: false,
-        providerOptions: {
-          walletconnect: {
-            package: WalletConnectProvider,
-            options: {
-              rpc: { 1: 'https://cloudflare-eth.com' }}}}}),
-
-      const provider = await web3Modal.connect();
-      const ethers = await import('ethers');
-      const web3Provider = new ethers.providers.Web3Provider(provider as any);
-      const signer = web3Provider.getSigner();
-      const address = (await signer.getAddress()).toLowerCase();
-      const network = await web3Provider.getNetwork();
-
-      const nonceRes = await fetch('/api/auth/nonce');
-      const { nonce } = await nonceRes.json();
-
-      const domain = window.location.host;
-      const origin = window.location.origin;
-      const statement = 'Sign in to Zion with your wallet. No gas required.';
-      const issuedAt = new Date().toISOString();
-      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`,
-
-      const signature = await signer.signMessage(siweMessage);
-
-      const verifyRes = await fetch('/api/auth/verify-evm', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: siweMessage, signature, address, chainId: network.chainId })}),
-      if (!verifyRes.ok) throw new Error('Failed to verify signature');
-
-      onLoggedIn?.({ address, chain: 'evm' }),
+import dynamic from 'next/dynamic'
+const isClient = typeof window !== 'undefined'
+  }) => void
+}
+    setError(null)
+    setLoading(true)
+    try {;'
+      const Web3ModalCtor = (await import('web3modal')).default
+      const ethers = await import('ethers')
+      const web3Provider = new ethers.providers.Web3Provider(provider as any)
+      const signer = web3Provider.getSigner()
+      const address = (await signer.getAddress()).toLowerCase()
+      const network = await web3Provider.getNetwork();'
+      const nonceRes = await fetch('/api/auth/nonce')
+      const { nonce } = await nonceRes.json()
+      const domain = window.location.host
+      const origin = window.location.origin;'
+      const statement = 'Sign in to Zion with your wallet. No gas required.'
+      const issuedAt = new Date().toISOString()
       onClose()
     } catch (e: any) {
       console.error(e);

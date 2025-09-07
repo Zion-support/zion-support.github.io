@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -109,6 +111,7 @@ const Homepage2047: React.FC = () => {
     transition: { duration: 0.6 }
   };
 
+const staggerContainer = {
   const staggerContainer = {
     animate: {
       transition: {
@@ -133,17 +136,23 @@ const Homepage2047: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              className="space-y-8"
-            >
-              <div className="space-y-6">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium"
-                >
-                  <Sparkles className="w-4 h-4" />
+              transition={{ duration: 1 }
+}
+className='space-y-8' />
+
+              <div className='space-y-6' />;
+                <motion.div;
+                  initial={{ opacity: 0, y: 20 }
+}
+                  animate={{ opacity: 1, y: 0 }
+}
+                  transition={{ duration: 0.8, delay: 0.2 }
+}
+
+className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'
+                 />
+
+                  <Sparkles className='w-4 h-4' />
                   <span>Innovating the Future Since 2025</span>
                 </motion.div>
 
@@ -165,13 +174,30 @@ const Homepage2047: React.FC = () => {
               </div>
 
               {/* CTA Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="flex flex-col sm:flex-row gap-4"
-              >
-                <Link
+              <motion&& motion.div;
+                initial={{ opacity: 0, y: 20 }
+}
+
+                animate={{ opacity: 1, y: 0 }
+}
+
+                transition={{ duration: 0.8, delay: 0.4 }
+}
+className='flex flex-col sm:flex-row gap-4'
+               />
+                <Link;
+href='/2025-innovative-services-showcase-v2'
+
+                  className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center space-x-2'    />
+                  <span    />Explore Services</span>
+                  <ArrowUpRight className='w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200'    />
+                </Link>
+                <Link'
+                  href='/contact''
+                  className='group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2'>
+                  <span>Get Started</span>;'
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-200' />                </Link>              >
+                <Link"
                   href="/2025-innovative-services-showcase-v2"
                   className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center space-x-2"
                 >
@@ -444,7 +470,10 @@ const Homepage2047: React.FC = () => {
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
-  )
-};
-
+  );
+}
+export default Homepage2047;  )
+}
 export default Homepage2047;
+
+"

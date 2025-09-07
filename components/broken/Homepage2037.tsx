@@ -1,6 +1,3 @@
-import React from 'react';
-import Layout from './layout/Layout';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -31,13 +28,63 @@ const Homepage2037: React.FC = () => {
             <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
           </div>
-          
-          <div className="text-center max-w-5xl mx-auto relative z-10">
+          <div className='text-center max-w-5xl mx-auto relative z-10'    />            <motion && motion.div        {/* Hero Section */}
+
+        <section className=\"min-h-screen flex items-center justify-center px-4 relative\"    />
+          {/* Animated background elements */}"
+          <div className=\"absolute inset-0 overflow-hidden\"    />;"
+            <div className=\"absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse\"    /></div>;"
+            <div className=\"absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000\"    /></div>;"
+            <div className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500\"    /></div>
+          </div>;"
+          <div className=\"text-center max-w-5xl mx-auto relative z-10\"    />
+const Homepage2037: React.FC
+const Homepage2037: React.FC = () => {// Get featured services from each category
+const featuredMicroSaas = realMicroSaasServices2025
+    .filter(service = > service.popular).slice(0, 3
+  const featuredIT = realITServices2025
+    .filter(service = > service.popular).slice(0, 3
+  const featuredAI = realAIServices2025
+    .filter(service = > service.popular).slice(0, 3;}
+  return (<Layout    />;}
+      {/* Main Content */}
+<main className='relative z-10'    />
+        {/* Hero Section */}
+        <section className='min-h-screen flex items-center justify-center px-4 relative'    />
+          {/* Animated background elements */}
+          <div className='absolute inset-0 overflow-hidden' />;
+            <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse' /></div>;
+            <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000' /></div>;
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500' /></div>;
+          </div>;
+          <div className='text-center max-w-5xl mx-auto relative z-10' />;
+            <motion.div;
+          <div className='absolute inset-0 overflow-hidden' />;
+            <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse' /></div>;
+            <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000' /></div>;
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500' /></div>;
+          </div>;<div className='text-center max-w-5xl mx-auto relative z-10' />            <motion && motion.div        {/* Hero Section */}"
+        <section className=\"min-h-screen flex items-center justify-center px-4 relative\" />;
+          {/* Animated background elements */}"
+          <div className=\"absolute inset-0 overflow-hidden\" />;"
+            <div className=\"absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse\" /></div>;"
+            <div className=\"absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000\" /></div>;"
+            <div className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500\" /></div>;"
+          </div>;<div className=\"text-center max-w-5xl mx-auto relative z-10\" />;
+            <motion&& motion.div;
+              initial={{ opacity: 0, y: 30 }
+}
+          <div className='absolute inset-0 overflow-hidden'    />
+            <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'    /></div>
+            <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'    /></div>
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'    /></div>
+          </div>
+          <div className='text-center max-w-5xl mx-auto relative z-10'    />
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              animate={{ opacity: 1, y: 0}}
-              transition={{ duration: 1}}
-            >
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }
+}    />
               {/* Main heading with enhanced typography */}
               <div className="mb-8">
                 <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight">
@@ -111,28 +158,52 @@ const Homepage2037: React.FC = () => {
                 <div className="text-gray-300 text-lg">AI Services</div>
                 <div className="text-cyan-400 text-sm mt-2">Revolutionary Solutions</div>
               </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true}}
-                className="text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"
-              >
-                <div className="text-5xl font-bold text-blue-400 mb-3">100+</div>
-                <div className="text-gray-300 text-lg">Quantum Solutions</div>
-                <div className="text-blue-400 text-sm mt-2">Future Technology</div>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true}}
-                className="text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
-              >
-                <div className="text-5xl font-bold text-purple-400 mb-3">24/7</div>
-                <div className="text-gray-300 text-lg">Autonomous Operations</div>
+
+                className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300'>
+                <div className='text-5xl font-bold text-purple-400 mb-3'    />
+                  24/7
+                </div>
+                <div className='text-gray-300 text-lg'    />
+                  Autonomous Operations
+                </div>
+                <div className='text-purple-400 text-sm mt-2'    />
+                  Always Available
+                </div>
+              </motion && motion.div>              >;"
+                <div className=\"text-5xl font-bold text-purple-400 mb-3\"    />24/7</div>;"
+                <div className=\"text-gray-300 text-lg\"    />Autonomous Operations</div>;"
+                <div className=\"text-purple-400 text-sm mt-2\"    />Always Available</div>
+              </motion && motion.div>
+                initial={{ opacity: 0, y: 20 }
+
+                whileInView={{ opacity: 1, y: 0 }
+}
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+
+                viewport={{ once: true }}
+
+                <div className='text-5xl font-bold text-purple-400 mb-3'>
+                  24/7
+                </div>'
+                <div className='text-gray-300 text-lg'>
+                  Autonomous Operations
+                </div>'
+                <div className='text-purple-400 text-sm mt-2'>
+                  Always Available
+                </div>
+
+                <div className='text-5xl font-bold text-purple-400 mb-3'>
+                  24/7
+                </div>;'
+                <div className='text-gray-300 text-lg'>
+                  Autonomous Operations
+                </div>;'
+                <div className='text-purple-400 text-sm mt-2'>
+                  Always Available
+                </div>
+              </motion && motion.div>              >;"
+                <div className="text-5xl font-bold text-purple-400 mb-3">24/7</div>;"
+                <div className="text-gray-300 text-lg">Autonomous Operations</div>;"
                 <div className="text-purple-400 text-sm mt-2">Always Available</div>
               </motion.div>
               
@@ -419,7 +490,55 @@ const Homepage2037: React.FC = () => {
         <section className="py-24 px-4">
           <div className="max-w-5xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition = $2;
-export default Homepage2037,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}
+              className='relative'
+            >
+              {/* Background decoration */}
+              <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-3xl'></div>
+              <div className='relative z-10 p-12 bg-gradient-to-r from-black/80 to-gray-900/80 backdrop-blur-xl rounded-3xl border border-cyan-500/30'>
+                <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 via-cyan-400 to-teal-500 bg-clip-text text-transparent'>
+                  Ready to Transform Your Business?
+                </h2>
+                <p className='text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed'    />
+                  Join the future of technology with Zion Tech Group. Let's
+                  build something extraordinary together and shape the future of
+                  your industry.
+                </p>
+                <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'    />
+                  <Link href='/contact'    />
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+
+                      className='px-12 py-5 bg-gradient-to-r from-green-500 to-teal-600 text-white font-bold text-xl rounded-2xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-green-500/25'
+                        />
+                      Start Your Journey Today
+                    </motion.button>
+                  </Link>
+
+                    Contact us:{' '}
+                    <a'
+                      href='tel:+13024640950''
+                      className='text-cyan-400 hover:text-cyan-300'>
+                      +1 302 464 0950
+                    </a>
+                  </p>;'
+                  <p className='text-sm'>;'
+                    Email:{' '}
+
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </main>
+    </Layout>
+  );
+}
+export default Homepage2037;  )
+}
+export default Homepage2037;
+
+"

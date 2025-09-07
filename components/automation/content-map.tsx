@@ -1,4 +1,6 @@
-import fs from 'fs';
+
+
+import fs from 'fs';,
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Entry = { route: string, file: string },
@@ -47,5 +49,7 @@ export default function ContentMap({ report }: Props) {
         </ul>
       </section>
     </div>
-  )
+);
 }
+
+"

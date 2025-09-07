@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
@@ -196,6 +198,204 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0}}
-                transition = $2;
-export default UltraFuturisticServiceCardV2,
+                animate={{ opacity: 1, x: 0 }}
+
+              >
+                <div className='w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full'></div>
+                <span className='text-gray-300'>{benefit}</span>
+origin/cursor/automate-test-improve-and-merge-code-2533
+              </motion.div>
+            ))}
+
+          </div>
+        </div>
+        {/* Market info */}
+
+        {service.marketSize && service.growthRate && (
+
+<div className='relative z-10 mb-6'    />
+            <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'    />
+              <div className='flex items-center justify-between text-xs'    />
+                <span className='text-gray-400'    />Market Size</span>
+                <span className='text-cyan-400 font-medium'    />}
+
+                  {service.marketSize}
+                </span>
+              </div>
+              <div className='flex items-center justify-between text-xs mt-1'    />
+                <span className='text-gray-400'    />Growth Rate</span>
+                <span className='text-green-400 font-medium'    />
+                  {service.growthRate}
+
+                </span>
+              </div>
+            </div>
+          </div>
+            ))}
+
+        {/* Market info */}
+        {service && service.marketSize && service && service.growthRate && (
+          <div className='relative z-10 mb-6'    />
+            <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'    />
+              <div className='flex items-center justify-between text-xs'    />
+                <span className='text-gray-400'    />Market Size</span>;}
+                <span className='text-cyan-400 font-medium'    />;}
+                  {service && service.marketSize}
+                </span>
+              </div>
+              <div className='flex items-center justify-between text-xs mt-1'    />
+                <span className='text-gray-400'    />Growth Rate</span>
+                <span className='text-green-400 font-medium'    />
+                  {service && service.growthRate}"
+                </span>              </div>          <div className=\"relative z-10 mb-6\"    />;"
+            <div className=\"bg-gray-800/30 rounded-lg p-3 border border-gray-600/20\"    />;"
+              <div className=\"flex items-center justify-between text-xs\"    />;"
+                <span className=\"text-gray-400\"    />Market Size</span>;"
+                <span className=\"text-cyan-400 font-medium\"    />{service && service.marketSize}</span>
+              </div>;"
+              <div className=\"flex items-center justify-between text-xs mt-1\"    />;"
+                <span className=\"text-gray-400\"    />Growth Rate</span>;"
+                <span className=\"text-green-400 font-medium\"    />{service && service.growthRate}</span>
+            </div>
+          </div>
+        )}
+        {/* CTA Button */}
+        <div className='relative z-10'>          <motion.a
+            href={service.link}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'        <div className="relative z-10">
+          <motion.a
+            href={service.link}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
+          >
+            <span className='relative z-10 flex items-center space-x-2'>
+              <span>Learn More</span>
+              <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200' />
+            </span>
+            {/* Button glow effect */}
+            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'    /></div>
+          </motion.a>
+        </div>
+        <div className='relative z-10'    />          <motion&& motion.a
+href={service && service.link}
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }
+}"
+            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'        <div className=\"relative z-10\"    />
+          <motion&& motion.a
+            href={service && service.link}
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }
+
+            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'    />
+            <span className='relative z-10 flex items-center space-x-2'    />
+              <span    />Learn More</span>
+              <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200'    />
+            </span>;</motion.a>
+            {/* Button glow effect */}
+            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'    /></div>          </motion && motion.a>          >;"
+            <span className=\"relative z-10 flex items-center space-x-2\"    />
+              <span    />Learn More</span>;"
+              <ArrowRight className=\"w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200\"    />
+            </span>
+            {/* Button glow effect */}"
+            <div className=\"absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300\"    /></div>
+          </motion && motion.a>
+        </div>;</motion.a>
+        </div>
+          </motion.a>
+
+        </div>
+
+        {/* Hover overlay */}
+        <motion&& motion.div
+          initial={{ opacity: 0 }}
+
+          whileHover={{ opacity: 1 }}
+export default UltraFuturisticServiceCardV2;'
+                className='flex items - center space - x-2 text - sm'
+              >;'
+                <div className='w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full'></div>;'"
+                <span className='text - gray - 300'>{benefit}</span>              </motion.div>                className="flex items - center space - x-2 text - sm"
+              >;"
+                <div className="w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full"></div>;"
+                <span className="text - gray - 300">{benefit}</span>))}
+          </div>
+        </div>
+        {/* Market info */}
+        {service.market_size && service.growth_rate && ('
+          <div className='relative z - 10 mb - 6'>;'
+            <div className='bg - gray - 800 / 30 rounded - lg p - 3 border border - gray - 600 / 20'>;'
+              <div className='flex items - center justify - between text - xs'>;'
+                <span className='text - gray - 400'>Market Size</span>;'
+                <span className='text - cyan - 400 font - medium'>
+                  {service.market_size}
+                </span>
+              </div>;'
+              <div className='flex items - center justify - between text - xs mt - 1'>;'
+                <span className='text - gray - 400'>Growth Rate</span>;'
+                <span className='text - green - 400 font - medium'>
+                  {service.growth_rate}"
+                </span>              </div>          <div className="relative z - 10 mb - 6">;"
+            <div className="bg - gray - 800 / 30 rounded - lg p - 3 border border - gray - 600 / 20">;"
+              <div className="flex items - center justify - between text - xs">;"
+                <span className="text - gray - 400">Market Size</span>;"
+                <span className="text - cyan - 400 font - medium">{service.market_size}</span>
+              </div>;"
+              <div className="flex items - center justify - between text - xs mt - 1">;"
+                <span className="text - gray - 400">Growth Rate</span>;"
+                <span className="text - green - 400 font - medium">{service.growth_rate}</span>
+            </div>
+          </div>)}
+        {/* CTA Button */}'
+        <div className='relative z - 10'>          <motion.a
+            href={service.link}
+            while_hover={{ scale: 1.05 }}
+            while_tap={{ scale: 0.95 }}'"
+            className='group / btn relative w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white font - semibold rounded - xl overflow - hidden transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 500 / 25'        <div className="relative z - 10">
+          <motion.a
+            href={service.link}
+            while_hover={{ scale: 1.05 }}
+            while_tap={{ scale: 0.95 }}'
+            className='group / btn relative w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white font - semibold rounded - xl overflow - hidden transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 500 / 25'
+          >;'
+            <span className='relative z - 10 flex items - center space - x-2'>
+              <span > Learn More</span>;'
+              <ArrowRight className='w - 4 h - 4 group - hover / btn:translate - x-1 transition - transform duration - 200' />
+            </span>
+            {/* Button glow effect */}'
+            <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - purple - 400 opacity - 0 group - hover / btn:opacity - 100 transition - opacity duration - 300'></div>          </motion.a>          >;"
+            <span className="relative z - 10 flex items - center space - x-2">
+              <span > Learn More</span>;"
+              <ArrowRight className="w - 4 h - 4 group - hover / btn:translate - x-1 transition - transform duration - 200" />
+            </span>
+            {/* Button glow effect */}"
+            <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - purple - 400 opacity - 0 group - hover / btn:opacity - 100 transition - opacity duration - 300"></div>
+          </motion.a>
+        </div>
+        {/* Hover overlay */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileHover={{ opacity: 1 }}
+          className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none'
+        />
+      </div>
+    </motion.div>
+  );
+}
+export default UltraFuturisticServiceCardV2;        />
+      </div>
+    </motion.div>)
+export default UltraFuturisticServiceCardV2
+className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none'
+           />
+      </div>
+    </motion.div>
+  )
+}
+export default UltraFuturisticServiceCardV2;
+
+"

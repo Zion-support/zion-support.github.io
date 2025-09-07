@@ -1,12 +1,34 @@
-import React from 'react';
+
+
+import React from 'react';,
 import Link from 'next/link';
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
-export type OnboardingStep = $2;
-  label: string,
-  completed: boolean,
-  ctaLabel?: string,
+export type OnboardingStep = any;
+import Link from 'next/link';
+
+import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
+export type OnboardingStep = {
+  id: string;
+  label: string;
+  completed: boolean;
+  ctaLabel?: string;
+  ctaHref?: string;
+}
+export type OnboardingProgressCardProps = {
+  title: string;
+  steps: OnboardingStep[];
+  highlightColorClass?: string;}
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps |steps.length === 0) return 0;
+  const completedCount = steps.filter(s => s.completed).length;
+  return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
   ctaHref?: string
-},
+}
+export type OnboardingProgressCardProps = {
+  title: string
+  steps: OnboardingStep[]
+  highlightColorClass?: string
+}
 
 export type OnboardingProgressCardProps = $2;
   steps: OnboardingStep[],

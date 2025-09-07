@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function EpisodePage() {
@@ -30,5 +32,8 @@ export default function EpisodePage() {
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
       </div>
     </div>
-  )
+
+  );
+
+);
 }

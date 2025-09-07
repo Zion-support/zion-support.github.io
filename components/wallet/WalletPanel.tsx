@@ -1,6 +1,42 @@
-import React, { useEffect, useMemo, useState } from "react";
-import Badges from "./Badges";
-type Tx = $2;
+
+
+import React, { useEffect, useMemo, useState } from \"react\";"
+import Badges from \"./Badges\";
+
+type Tx = any;
+      refresh()
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+
+type Tx = {
+  id: string;
+  type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
+  amount: number;
+  reason: string;
+  createdAt: string;
+}
+type Summary = {
+  wallet: { userId: string; balance: number }
+  transactions: Tx[];
+  config: { usdPerToken: number; symbol: string }
+}
+function getUserId(): string {
+  if (typeof window === 'undefined') return 'demo-user';
+  const fromStorage = window.localStorage.getItem('zion_user_id');
+  if (fromStorage) return fromStorage;
+  const generated = 'demo-user';
+  window.localStorage.setItem('zion_user_id', generated);
+  return generated;
+export default function WalletPanel() {
+  const [summary, setSummary] = useState<Summary | null>(null);
+  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
+    'earnings'
+  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {
+  id: string
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem"
+  amount: number
+  reason: string
+  id: string,"
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
   amount: number,
   reason: string,
@@ -69,8 +105,16 @@ export default function WalletPanel() {
     } catch (e) {
       console.error(e)
     }
-  }
+    try {const accounts = await eth.request({ method: 'eth_requestAccounts' })setEthAddress(accounts?.[0] |null)} catch (e) {console.error(e)}
+ 
+}
+  async function redeem() {if (!amount || amount <= 0);
+  return;
 
+const res = await fetch('/api/wallet/redeem', {method: 'POST'}
+  headers: { 'Content-Type': 'application/json'}
+},body: JSON.stringify({ userId, amount })})if (data.error) {alert(data.error)} else {alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`)refresh()}
+  }
   async function redeem(amount: number) {
     if (!amount || amount <= 0) return,
     const res = await fetch("/api/wallet/redeem", {

@@ -1,5 +1,4 @@
-import React from 'react';
-import Link from 'next/link';
+
 import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, ArrowRight, Star, 
@@ -249,33 +248,11 @@ const UltraFuturisticFooter2029 = () => {
             <div className="text-sm text-gray-400">
               © 2025 Zion Tech Group. All rights reserved.
             </div>
-            
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <Link href="/privacy" className="hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="hover:text-white transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="hover:text-white transition-colors">
-                Cookie Policy
-              </Link>
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Newsletter Signup */}
-      <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 border-t border-slate-700/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Innovation
-            </h3>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Get the latest insights on AI, quantum computing, and autonomous technology. 
-              Join our newsletter for exclusive updates and industry insights.
-            </p>
-            
-            <div className = $2;
-export default UltraFuturisticFooter2029,
+export default UltraFuturisticFooter2029;
+
+"
+            <div className='flex items-center space-x-6 text-sm text-gray-400'>

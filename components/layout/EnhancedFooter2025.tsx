@@ -1,5 +1,4 @@
-import React from 'react';
-import Link from 'next/link';
+
 import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Star, ArrowRight,
@@ -245,5 +244,60 @@ const EnhancedFooter2025: React.FC = () => {
                 initial={{ opacity: 0, y: 20}}
                 whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                viewport = $2;
-export default EnhancedFooter2025,
+                viewport={{ once: true }}
+                className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
+              >
+                <input
+type='email'
+                  placeholder='Enter your email'
+                  className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                />
+                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  Subscribe              >
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
+                  Subscribe
+                </button>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+        {/* Bottom Bar */}
+        <div className='border-t border-gray-800/50'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+              <div className='text-gray-400 text-sm'>
+                © {currentYear} Zion Tech Group. All rights reserved.
+              </div>
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>                © {currentYear} Zion Tech Group. All rights reserved.
+              </div>
+              <div className="flex items-center space-x-6 text-sm text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <span>Trusted by 1000+ companies worldwide</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                  <span>Trusted by 1000+ companies worldwide</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <div className='w-2 h-2 bg-green-400 rounded-full'></div>                  <span>99.9% Uptime Guarantee</span>                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <span>99.9% Uptime Guarantee</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+export default EnhancedFooter2025;  )
+}
+export default EnhancedFooter2025;
+
+"

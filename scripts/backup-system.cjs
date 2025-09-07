@@ -27,7 +27,10 @@ const { execSync } = require("child_process")
   case "restore"
       console.error("Please specify backup name to restore")
   case "list"
+
   "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
   "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
+  "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
+
 
 

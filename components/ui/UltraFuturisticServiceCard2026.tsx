@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 <<<<<<< HEAD
@@ -30,8 +28,102 @@ import React from react';
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
-    switch (variant) {case 'ai':;
-        return {}
+  integration?: string[],benefits?: string[];
+}
+
+interface ServiceCardProps {
+  service: Service;
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'}
+}
+}
+
+  service: Service
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
+}
+}
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'ai':
+        return {
+          gradient: 'from-purple-600 via-pink-600 to-purple-700'
+          borderColor: 'border-purple-400/30'
+          textColor: 'text-purple-400'
+          iconBg: 'bg-purple-500/20'
+          iconBorder: 'border-purple-400/30'
+        }
+      case 'quantum':
+        return {
+          gradient: 'from-cyan-600 via-blue-600 to-cyan-700'
+          borderColor: 'border-cyan-400/30'
+          textColor: 'text-cyan-400'
+          iconBg: 'bg-cyan-500/20'
+          iconBorder: 'border-cyan-400/30'
+        }
+      case 'space':
+        return {
+          gradient: 'from-indigo-600 via-purple-600 to-indigo-700'
+          borderColor: 'border-indigo-400/30'
+          textColor: 'text-indigo-400'
+          iconBg: 'bg-indigo-500/20'
+          iconBorder: 'border-indigo-400/30'
+        }
+      case 'cybersecurity':
+        return {
+          gradient: 'from-red-600 via-orange-600 to-red-700'
+          borderColor: 'border-red-400/30'
+          textColor: 'text-red-400'
+          iconBg: 'bg-red-500/20'
+          iconBorder: 'border-red-400/30'
+        }
+      case 'enterprise':
+        return {
+          gradient: 'from-indigo-600 via-purple-600 to-indigo-700'
+          borderColor: 'border-indigo-400/30'
+          textColor: 'text-indigo-400'
+          iconBg: 'bg-indigo-500/20'
+          iconBorder: 'border-indigo-400/30'
+        }
+      case 'automation':
+        return {
+          gradient: 'from-green-600 via-emerald-600 to-green-700'
+          borderColor: 'border-green-400/30'
+          textColor: 'text-green-400'
+          iconBg: 'bg-green-500/20'
+          iconBorder: 'border-green-400/30'
+        }
+      case 'it':
+        return {
+          gradient: 'from-blue-600 via-indigo-600 to-blue-700'
+          borderColor: 'border-blue-400/30'
+          textColor: 'text-blue-400'
+          iconBg: 'bg-blue-500/20'
+          iconBorder: 'border-blue-400/30'
+        }
+      case 'emerging':
+        return {
+          gradient: 'from-yellow-600 via-orange-600 to-yellow-700'
+          borderColor: 'border-yellow-400/30'
+          textColor: 'text-yellow-400'
+          iconBg: 'bg-yellow-500/20'
+          iconBorder: 'border-yellow-400/30'
+        }
+      case 'premium':
+        return {
+          gradient: 'from-amber-600 via-yellow-600 to-amber-700'
+          borderColor: 'border-amber-400/30'
+          textColor: 'text-amber-400'
+          iconBg: 'bg-amber-500/20'
+          iconBorder: 'border-amber-400/30'
+        }
+      default:
+        return {
+          gradient: 'from-gray-600 via-gray-700 to-gray-800'
+          borderColor: 'border-gray-400/30'
+          textColor: 'text-gray-400'
+          iconBg: 'bg-gray-500/20'
+          iconBorder: 'border-gray-400/30'
+        }
     }
   }
   const styles = getVariantStyles()return (<motion&& motion.div;
@@ -182,19 +274,29 @@ export default function UltraFuturisticServiceCard2026({
             </h4>
             <div className="space-y-2">
               {service.benefits.slice(0, 3).map((benefit, idx) => (
-                <div key = $2;
-UltraFuturisticServiceCard2026.displayName = $2;
-export default UltraFuturisticServiceCard2026,
-=======
-
-interface ServiceCardProps {
-  service: Service;
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'}
-}
-}
-
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps    /> = ({ service, variant;
-}
-}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
+                <div key={idx} className="text-xs text-gray-400 flex items-start space-x-2">
+                  <Check className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span>{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {/* CTA Button */}
+        <div className="relative z-10">
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className={`w-full py-3 px-6 rounded-lg bg-gradient-to-r ${styles.gradient} text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-${styles.textColor}/25 border border-white/20 hover:border-white/40`}
+          >
+            Get Started
+          </motion.button>
+        </div>
+        {/* Enhanced Hover Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
+      </div>
+    </motion.div>
+  )
+});
+UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
+export default UltraFuturisticServiceCard2026;

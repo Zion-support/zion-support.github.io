@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-;
-function fixJSXSyntax(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, 'utf8');
+function fixJSXSyntax(filePath) {
+  try {
+  // TODO: Implement
+}
+    let content = fs.readFileSync(filePath,utf8);
     let modified = false;
 ;
     // Fix semicolons in JSX;
@@ -38,9 +39,20 @@ function fixJSXSyntax(filePath) {;
     }
 ;
     return modified;
-  } catch (error) {;
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+      .replace(/^<<<<<<< [^\n]+\s*$/gm, '')
+      // Fix interface syntax
+      .replace(/interface\s+(\w+)\s*\{;/g, 'interface $1 {')
+      .replace(/;\s*$/gm, '')
+      // Clean up extra semicolons
+      .replace(/;;+/g, ';')
+      .replace(/;\s*;/g, ';')
+      .replace(/;\s*$/gm, '')
+      .trim();
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed JSX: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 ;
@@ -61,7 +73,8 @@ function processDirectory(dirPath) {;
 ;
   return fixedCount;
 }
-;
-console.log('Starting JSX syntax fixes...');
+'
+console.log('Starting JSX syntax fixes...);
 const fixedCount = processDirectory('./pages');
 console.log(`Fixed ${fixedCount} files`);
+'

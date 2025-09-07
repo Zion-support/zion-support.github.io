@@ -1,3 +1,12 @@
+
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+    }
+    return this.props.children;
+  }
+}
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 export type FeedbackWidgetProps = $2;
@@ -76,5 +85,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         </div>
       )}
     </div>
-  )
+);
 }
+}
+})}"

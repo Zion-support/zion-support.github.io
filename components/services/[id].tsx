@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { getServiceById } from '../../data/micro-saas-services';
@@ -112,3 +111,5 @@ export default function ServiceDetailPage() {
     </>
   )
 }
+
+"

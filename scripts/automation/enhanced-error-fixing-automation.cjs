@@ -1,4 +1,9 @@
 
+#!/usr/bin/env node
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+
 
 
 
@@ -6,7 +11,10 @@
           const lines = content.split("\n");"
           const newLines = [];
           let inConflict = false;
-            if (line.includes("
+          
+          for (const line of lines) {
+              continue;
+            } else if (line.includes("")) {
               inConflict = false;
               continue;
 
@@ -70,11 +78,11 @@ if (require.main === module) {
   automation.run().catch(console.error);
 
 module.exports = EnhancedErrorFixingAutomation;
-
-
-
 #!/usr/bin/env node;
 #!/usr/bin/env node;
+
+
+
 #!/usr/bin/env node;
 
 const fs = require("fs")
@@ -313,6 +321,9 @@ export default function"
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+
+
 
 
 

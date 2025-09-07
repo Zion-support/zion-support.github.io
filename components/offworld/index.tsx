@@ -1,4 +1,6 @@
-import { useState } from 'react';
+
+
+import { useState  } from 'react';
 import Head from 'next/head';
 export default function OffworldConsole() {
   const [chat, setChat] = useState($2);
@@ -70,5 +72,8 @@ export default function OffworldConsole() {
 
       {status && <p className="text-sm text-gray-700">{status}</p>}
     </div>
-  )
+
+  );
+
+);
 }

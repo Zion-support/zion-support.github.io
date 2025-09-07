@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 type Props = $2;
@@ -34,4 +36,33 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       </div>
     </div>
   )
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+  return (
+  RemoteParticipant,
+  LocalParticipant,
+  TrackPublication,
+
+  participant: RemoteParticipant | LocalParticipant
+  is_local?: boolean;}
+  display_name?: string;}
+
+        track.attach (audio_ref.current)}
+
+        track.attach (audio_ref.current)}
+
+      <video
+        ref={video_ref}
+        auto_play
+        plays_inline
+        muted={Boolean (is_local)}
+        className='w - full h - 48 object - cover bg - black'
+        {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
+      </div>
+    </div>)
+      </div>
+    </div>
+);
 }
+
+"

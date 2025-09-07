@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundV2Props {
@@ -5,9 +7,21 @@ interface UltraAdvancedFuturisticBackgroundV2Props {
   className?: string
 }
 
-const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({ 
-  children,
-  className = $2;
+const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props /> = ({ children;
+  className;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let animationFrameId: number;
+
+let particles: Array< {
+
+const UltraAdvancedFuturisticBackgroundV2: React.FC<}
+  UltraAdvancedFuturisticBackgroundV2Props}
+> = ({ children, className = ''    }) => {
+
+ ;
+  const canvasRef = useRef<HTMLCanvasElement />(null);
+
   useEffect(() => {
     const canvas = $2;
     if (!canvas) return,
@@ -28,7 +42,21 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       life: number,
       maxLife: number}> = [],
 
-    const colors = $2;
+      coordinate_y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      color: string;
+
+      life: number;
+
+      maxLife: number;}
+}
+    }> = [];
+
+    }> = []
+const colors = [
+  '#00ffff','#ff00ff','#ffff00','#00ff00','#ff0080','#8000ff','#ff8000','#0080ff','#ff0080','#80ff00']
     // Initialize particles
     const initParticles = $2;
       for (let i = 0, i < 150, i++) {
@@ -264,5 +292,17 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       </div>
 
       {/* Content */}
-      <div className = $2;
-export default UltraAdvancedFuturisticBackgroundV2,
+
+}
+export default UltraAdvancedFuturisticBackgroundV2
+      {/* Content */}'
+      <div className='relative z-40'>{children}</div>
+    </div>
+  );
+}
+export default UltraAdvancedFuturisticBackgroundV2;    </div>
+  )
+}
+export default UltraAdvancedFuturisticBackgroundV2;
+
+"

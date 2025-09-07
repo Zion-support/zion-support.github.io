@@ -1,3 +1,5 @@
+
+
 'use client',
 
 import { useState, useEffect } from 'react';
@@ -619,6 +621,33 @@ export default function EnhancedNavigation2025() {
                           <motion.div
                             initial={{ opacity: 0, height: 0}}
                             animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0}}
-                            transition = $2;
-export default EnhancedNavigation2025,
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+
+                  >
+                    View Pricing
+                  </Link>
+                  <Link;"
+                    href="/contact"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {/* Spacer for fixed navigation */}
+      <div className="h-20" />
+    </>
+  )
+}
+  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon}
+ } from 'lucide-react';
+
+const navigationItems = null;
+

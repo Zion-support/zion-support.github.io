@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
@@ -82,8 +81,6 @@ export default function UltraFuturisticServiceShowcase2029({
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
-          ))}
-        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20}}
@@ -100,6 +97,16 @@ export default function UltraFuturisticServiceShowcase2029({
           </Link>
         </motion.div>
       </div>
-    </section>
-  )
+
+  );
+
 }
+
+"
+          ))}
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className='text-center mt-12'

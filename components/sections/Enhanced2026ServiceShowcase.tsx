@@ -56,18 +56,42 @@ export default function Enhanced2026ServiceShowcase() {
         className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300"
       >
         {/* Glowing border effect */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
-        <div className="relative p-6">
+
           {/* Service header */}
-          <div className="flex items-start justify-between mb-4">
-            <div className="flex items-center space-x-3">
-              <div className="text-3xl">{service.icon}</div>
-              <div>
-                <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                  {service.name}
-                </h3>
-                <p className="text-slate-400 text-sm">{service.tagline}</p>
+
+          <div className='flex items-start justify-between mb-4' />
+            <div className='flex items-center space-x-3' />
+              <div className='text-3xl' />{service.icon}</div>
+              <div />
+                <h3 className='text-xl font-bold text-white group-hover: text-cyan-400 transition-colors duration-300' />
+
+                  {service.nam}
+}
+                </h3>;
+                <p className='text-slate-400 text-sm' />{service.tagline}</p>;
+              </div>;
+            </div>;
+            {service.popular && (<div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium' />;
+                <Star className='w-3 h-3 fill-current' />;
+                <span />Popular</span>;}
+              </div>;}
+            )}
+          </div>;
+          {/* Description */}
+<p className='text-slate-300 text-sm mb-4 leading-relaxed' />;
+            {service.description}
+          </p>;
+          {/* Features */}
+
+                    className='flex items-center space-x-2 text-xs text-slate-400'
+                  >'
+                    <div className='w-1.5 h-1.5 bg-cyan-500 rounded-full' />
+                    <span>{feature}</span>
+                  </div>
+
+              <div className='text-2xl font-bold text-white'>
+                {service.price}
+
               </div>
             </div>
             {service.popular && (

@@ -488,6 +488,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
             font-size: 0.9em;
             margin-top: 20px}
     </style>
+</head>
 <body>
 </body>"
     <div class="container">"
@@ -566,7 +567,10 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
     dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR')
     process.exit(1)})}
 ;
+
 module.exports = ErrorAnalyticsDashboard
+module.exports = ErrorAnalyticsDashboard
+
 module.exports = ErrorAnalyticsDashboard
 
 module.exports = ErrorAnalyticsDashboard

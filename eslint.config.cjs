@@ -5,7 +5,15 @@ const tsparser = require('@typescript-eslint/parser');
 module.exports = [
   {
     ignores: [
-      'node_modules/**',
+      'node_modules/**/*',
+      'app-optimizer.js',
+      'zion-os/**/*',
+      'apps.backup/**/*',
+      'zion-website/**/*',
+      'automation/**/*',
+      'advanced-automation-improvements.cjs',
+      'analyze_links.cjs',
+      'app-enhancement-suite.cjs',
       '.next/**',
       'dist/**',
       'build/**',

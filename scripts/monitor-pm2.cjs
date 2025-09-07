@@ -79,7 +79,10 @@ const { exec } = require("$1")
     case "help"
     "default"
   process.on("SIGINT")
+
   process.on(")
   process.on(")
+  process.on(")
+
 
 

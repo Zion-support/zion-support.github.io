@@ -1,11 +1,3 @@
-import { useEffect, useMemo, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type { GrantApplication, Milestone } from '../../types/grants';
-export default function GrantsAdminPage() {
-  const [token, setToken] = useState($2);
-  const [items, setItems] = useState<GrantApplication[]>([]),
-  const [selected, setSelected] = useState<GrantApplication | null>(null),
-  const [milestones, setMilestones] = useState<Milestone[]>([]),
 
   const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]),
 
@@ -88,5 +80,7 @@ export default function GrantsAdminPage() {
         </div>
       </div>
     </EnhancedLayout>
-  )
+);
 }
+}
+

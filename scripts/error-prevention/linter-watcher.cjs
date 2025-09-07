@@ -11,10 +11,8 @@ class LinterWatcher {}
   async start() {}
     console.log('Starting Linter Watcher...');
     this.isRunning = true;
-    
     // Initial lint check;
     await this.runLint();
-    
 
     this.isRunning = true;
     // Initial lint check;
@@ -22,10 +20,17 @@ class LinterWatcher {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
+
     
     
+    // Initial lint check;
+    await this.runLint();
+    
+    // Set up interval for periodic checks;
+    this.intervalId = setInterval(() => {}
+      this.runLint()}, this.interval);
 
-
+    
     console.log('Linter Watcher started successfully')};
     console.log('Starting Linter Watcher...')
     this.isRunning = true
@@ -53,14 +58,23 @@ class LinterWatcher {}
         "cwd": process.cwd();
       };);
 
+      let output = ;';';
+      let errorOutput = ;';';
+
+      child.stdout.on('data', (data) => {}
+        output += data.toString()}
+});
+
+      child.stderr.on('data', (data) => {}
+        errorOutput += data.toString()}
+});
+
 "
       let output = ;';';
       let errorOutput = ;';';
       child.stdout.on('data', (data) => {}
         output += data.toString()}
-})
-      child.stderr.on('data', (data) => {}
-        errorOutput += data.toString()}
+});
 
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
@@ -75,6 +89,9 @@ class LinterWatcher {}
      {}
           console.log('Lint check passed ✓')}} else {}
           console.log('Lint check failed ✗');
+          console.log('"Output": ', output);
+          console.log('"Errors": ', errorOutput);
+          
           
           // Attempt to auto-fix;
           this.attemptAutoFix()};
@@ -98,6 +115,7 @@ console.log('Lint check failed ✗')
 
 
 
+
       child.on('close', (code) => {}
         if ( {})
 
@@ -112,6 +130,7 @@ console.log('Lint check failed ✗')
     console.log('Stopping Linter Watcher...);
     this.isRunning = false;
     
+    
     if ( {})
       clearInterval(this.intervalId)}
     console.log('Linter Watcher stopped')) {}
@@ -123,6 +142,7 @@ console.log('Lint check failed ✗')
   const watcher = new LinterWatcher) {}
   const watcher = new LinterWatcher}(;);
   
+  
   // Handle graceful shutdown;
 const watcher = new LinterWatcher}(;)
   // Handle graceful shutdown
@@ -131,11 +151,17 @@ const watcher = new LinterWatcher}(;)
     process.exit(0)}
 });
   
+  
   process.on('SIGTERM', () => {}
     watcher.stop()
     process.exit(0)}
 });
-module.exports = LinterWatcher;
+  watcher.start().catch(console.error)};
+
+  
+  watcher.start().catch(console.error)};
+  
+  watcher.start().catch(console.error)};
   
   watcher.start().catch(console.error)};
 

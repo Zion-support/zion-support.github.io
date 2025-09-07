@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 const InteractiveNavigation = () => {
@@ -28,3 +27,6 @@ const InteractiveNavigation = () => {
 };
 
 export default InteractiveNavigation;
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';

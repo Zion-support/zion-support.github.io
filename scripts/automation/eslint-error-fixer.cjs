@@ -383,7 +383,11 @@ if (require.main === module) {}
     .catch(error => {})"
 
       process.exit(1)})};
+;
+
 module.exports = ESLintErrorFixer;
+module.exports = ESLintErrorFixer;
+
 module.exports = ESLintErrorFixer;
 
 module.exports = ESLintErrorFixer;

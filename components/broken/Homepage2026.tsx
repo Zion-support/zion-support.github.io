@@ -1,5 +1,3 @@
-import React from 'react';
-import Layout from './layout/Layout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -323,8 +321,98 @@ const Homepage2026: React.FC = () => {
         {/* Contact Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition = $2;
-export default Homepage2026,
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+
+                <h3 className='text-2xl font-semibold text-cyan-400 mb-6'>
+                  Contact Information
+                </h3>
+                <div className='grid md:grid-cols-2 gap-6 text-left'    />
+                  <div className='flex items-center space-x-3'    />
+                    <Globe className='w-5 h-5 text-blue-400'    />
+                    <div    />
+                      <div className='text-sm text-gray-400'    />Website</div>
+                      <a
+href='https: //ziontechgroup.com'
+                        className='text-cyan-400 hover:underline font-medium'
+                          />
+                        ziontechgroup.com
+                      </a>
+                    </div>
+                  </div>
+<div className='flex items-center space-x-3'    />
+                    <Phone className='w-5 h-5 text-green-400'    />
+                    <div    />
+                      <div className='text-sm text-gray-400'    />Phone</div>
+                      <a
+href='tel:+13024640950'
+                        className='text-cyan-400 hover:underline font-medium'
+                          />
+                        +1 302 464 0950
+                      </a>
+                    </div>
+                  </div>
+<div className='flex items-center space-x-3'    />
+                    <Mail className='w-5 h-5 text-yellow-400'    />
+                    <div    />
+                      <div className='text-sm text-gray-400'    />Email</div>
+                      <a
+href='mailto:kleber@ziontechgroup.com'
+                        className='text-cyan-400 hover:underline font-medium'
+                          />
+                        kleber@ziontechgroup.com
+                      </a>
+                    </div>
+                  </div>
+<div className='flex items-center space-x-3'    />
+                    <MapPin className='w-5 h-5 text-purple-400'    />
+                    <div    />
+                      <div className='text-sm text-gray-400'    />Address</div>
+                      <div className='text-white font-medium'    />
+                        364 E Main St STE 1008
+                        <br    />
+                        Middletown DE 19709
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+export default Homepage2026;'
+              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>
+                <a;'
+                  href='mailto:kleber@ziontechgroup.com';'
+                  className='inline - flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105'
+                >
+                  <span > Get Started Today</span>;'
+                  <ArrowRight className='w - 5 h - 5' />
+                </a>
+                <a;'
+                  href='tel:+13024640950';'
+                  className='px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300'                >                <a;"
+                  href="mailto:kleber@ziontechgroup.com";"
+                  className="inline - flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105"
+                >
+                  <span > Get Started Today</span>;"
+                  <ArrowRight className="w - 5 h - 5" />
+                </a>
+                <a;"
+                  href="tel:+13024640950";"
+                  className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300"
+                >
+                  Call Now
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </main>
+    </Layout>
+  );
+}
+export default Homepage2026;  )
+}
+export default Homepage2026;
+
+"

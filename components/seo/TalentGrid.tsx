@@ -1,10 +1,9 @@
-import React from 'react';
-import { TALENT_PROFILES } from '../../data/talent';
-import type { TalentProfile } from '../../data/talent';
-type Props = $2;
-  service?: string
-},
 
+
+type Props = {
+  region?: string;
+  service?: string;
+}
 function matchesRegion(profile: TalentProfile, region?: string) {
   if (!region) return true,
   const r = region.toLowerCase($2);
@@ -48,5 +47,7 @@ export default function TalentGrid({ region, service }: Props) {
         </div>
       ))}
     </div>
-  )
+  );
 }
+
+"

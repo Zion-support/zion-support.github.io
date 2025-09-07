@@ -4,10 +4,15 @@
  * Smart Performance Optimizer Automation;
  * Monitors and optimizes application performance;
  */
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 class SmartPerformanceOptimizer {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -72,6 +77,19 @@ fs.appendFileSync(this.logFile, logMessage)
 
             }
             // Analyze bundle;
+            const bundleAnalysis = execSync('npm run analyze', { })
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
+            };);
+            
+            this.log('Bundle analysis completed');
+            return { "status": 'success', "output": bundleAnalysis }} catch (error) {}
+            this.log(`Bundle analysis "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }};
+    };
+    checkBuildPerformance() {}
+        this.log('Checking build performance...');
         
         const startTime = Date.now(;);
         
@@ -96,11 +114,16 @@ fs.appendFileSync(this.logFile, logMessage)
     optimizeImages() {}
         this.log('Optimizing images...');
         
+        
         try {}
             // This would typically use a tool like imagemin;
             // For now, we'll just check if images exist;
             const publicDir = path.join(this.projectRoot, 'public';);
             const imageFiles = this.findImageFiles(publicDir;);
+            this.log(`Found ${imageFiles.length} image files`);
+            
+            this.log(`Found ${imageFiles.length} image files`);
+            
             
             this.log(`Found ${imageFiles.length} image files`);
             
@@ -118,6 +141,8 @@ fs.appendFileSync(this.logFile, logMessage)
     findImageFiles(dir) {}
         const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
         const files = [];
+        if () return file) {}
+    ) return file}s;
         
         if () return file) {}
     ) return file}s;
@@ -134,10 +159,15 @@ fs.appendFileSync(this.logFile, logMessage)
         const files = [];
         if () return file) {}
     ) return file}s;
+        
+        if () return file) {}
+    ) return file}s;
+        
         const items = fs.readdirSync(dir;);
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
+            
             
             if () {}
                 files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
@@ -146,6 +176,8 @@ fs.appendFileSync(this.logFile, logMessage)
     ) {}
         return files}};
     checkLighthouseMetrics() {}
+        this.log('Checking Lighthouse metrics...');
+        
         
         // This would typically run Lighthouse programmatically;
         // For now, we'll return mock data;
@@ -170,6 +202,7 @@ return files}}
     generateOptimizationReport() {}
         this.log('Generating performance optimization report...');
         
+        
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -181,6 +214,12 @@ return files}}
             },
             "optimizations": this.generateOptimizationSuggestions();
        };
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Performance report saved to ${this.reportFile}`);
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Performance report saved to ${this.reportFile}`);
+        
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Performance report saved to ${this.reportFile}`);
@@ -206,6 +245,7 @@ return files}}
         ]}
     async run() {}
         this.log('Smart Performance Optimizer started');
+        
         
         try {}
             const report = this.generateOptimizationReport(;)
@@ -238,7 +278,10 @@ if ( {})
      {}
     const optimizer = new SmartPerformanceOptimizer}(;);
     optimizer.run().catch(console.error)};
+
 module.exports = SmartPerformanceOptimizer;
 module.exports = SmartPerformanceOptimizer;
+module.exports = SmartPerformanceOptimizer;
+
 
 

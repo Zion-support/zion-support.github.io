@@ -23,6 +23,4 @@ const AppMinimal: React.FC<AppMinimalProps> = ({
       )}
     </main>
   );
-};
-
-export default AppMinimal;
+}

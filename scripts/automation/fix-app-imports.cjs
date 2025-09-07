@@ -21,6 +21,7 @@ class AppImportsFixer {}
       const hasDefault = content.includes('export default');
       const namedExports = [];
       
+      
       // Check for named exports;
       const exportMatches = content.match(/export\s+(?:function|const|class)\s+(\w+)/g);
       if (exportMatches) {}
@@ -34,6 +35,15 @@ class AppImportsFixer {}
           if (nameMatch) {}
             namedExports.push(nameMatch[1])};
         })};
+      return { "exists": true, hasDefault, "hasNamed": namedExports }} catch (error) {}
+      return { "exists": false, "hasDefault": false, "hasNamed": [] }};
+  };
+  fixAppImports() {}
+    this.log('Fixing App.tsx imports...');
+    let content = fs.readFileSync(this.appPath, 'utf8');
+    
+    let content = fs.readFileSync(this.appPath, 'utf8');
+    
     
     let content = fs.readFileSync(this.appPath, 'utf8');
     
@@ -68,10 +78,12 @@ class AppImportsFixer {}
 
     ];
 
+
     // Check each page and fix imports;
     pages.forEach(page => {})
 
       const exports = this.checkFileExports(filePath);
+      
       
       if (exports.exists) {}
         let importStatement;
@@ -95,6 +107,7 @@ class AppImportsFixer {}
         const regex = new RegExp(`const ${page.name} = lazy\\(.*?\\);`, 'g');
         content = content.replace(regex, importStatement);
         
+        
         this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default' : 'named'} export`)} else {`}
         this.log(`"Warning": ${page.path}.tsx does not exist`)};
       if (exports.exists) {}
@@ -104,7 +117,13 @@ class AppImportsFixer {}
     }
 });
 
+
     // Write the fixed content back;
+    fs.writeFileSync(this.appPath, content);
+    this.log('App.tsx imports fixed successfully!')};
+  async run() {}
+    this.log('Starting App Imports Fixer...');
+    
     
     try {}
       this.fixAppImports();
@@ -150,6 +169,11 @@ this.log(`Error in App Imports "Fixer": ${error.message}`)
     .then(() => {}"
 
       process.exit(1)})};
+
 module.exports = AppImportsFixer;
+module.exports = AppImportsFixer;
+
+module.exports = AppImportsFixer;
+
 module.exports = AppImportsFixer;
 

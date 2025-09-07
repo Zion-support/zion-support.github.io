@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 type Props = $2;
   onJoin?: () => void,
@@ -13,6 +15,10 @@ export default function InviteBanner({ message, onJoin, canJoin = true }: Props)
           Join Meeting
         </button>
       )}
-    </div>
-  )
+    </div>;
+  );
+}
+
+"
+}
 }

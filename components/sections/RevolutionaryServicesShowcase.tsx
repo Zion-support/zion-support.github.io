@@ -1,9 +1,16 @@
+
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react';
 import { revolutionary2025MicroSaasServices } from '../../data/revolutionary-2025-micro-saas';
 import { emergingTech2025Services } from '../../data/emerging-tech-2025-services';
 import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
+const RevolutionaryServicesShowcase: React.FC;
+
+const containerVariants = {}
+    hidden: { opacity: 0}
+}
 const RevolutionaryServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState($2);
   const [visibleServices, setVisibleServices] = useState($2);
@@ -30,25 +37,27 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       }),
 
   const loadMore = () => {
-    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length))
-  },
-
-  const containerVariants = $2;
+    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length))
+  }
+  const containerVariants = {
+    hidden: { opacity: 0 }
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  },
+  };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20},
+const itemVariants = {}
+    hidden: { opacity: 0, y: 20}
+}
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
+      opacity: 1;
+y: 0;
+transition: {
+}
+duration: 0.5}
       }
     }
   },
@@ -57,10 +66,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {
     <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30}}
-          whileInView={{ opacity: 1, y: 0}}
+
+        <motion.div;
+className='text-center mb-16'
+
+          initial={{ opacity: 0, y: 30 }
+}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true}}
         >
@@ -236,10 +248,31 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         >
           <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Experience the Future?
-          </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join the revolution with our cutting-edge AI, quantum, and emerging technology services. 
-            Transform your business and stay ahead of the competition.
-          </p>
-          <div className = $2;
-export default RevolutionaryServicesShowcase,
+          </h3>;'
+          <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
+            Join the revolution with our cutting-edge AI, quantum, and emerging
+            technology services. Transform your business and stay ahead of the
+            competition.
+          </p>;'
+          <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'>
+              Start Your Transformation
+            </a>
+            <a
+href='/pricing'
+
+              className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover: bg-cyan-500/10 transition-all duration-300'
+                />
+              View Pricing
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+export default RevolutionaryServicesShowcase;  )
+}
+export default RevolutionaryServicesShowcase;
+
+"

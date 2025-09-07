@@ -343,6 +343,13 @@ class ErrorPreventionMonitor {
     this.checkProjectHealth()
     // Schedule periodic health checks
     setInterval(() => {
+      this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes
+    this.log('Monitoring active - health checks every 15 minutes')}
+}
+// Start the monitor
+const monitor = new ErrorPreventionMonitor();
+
+monitor.run();
 monitor.run();
 monitor.run();
       this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes;

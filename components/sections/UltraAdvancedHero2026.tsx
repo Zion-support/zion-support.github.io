@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -10,11 +12,28 @@ export default function UltraAdvancedHero2026() {
   const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  },
-
-  const containerVariants = $2;
+  }
+  const containerVariants = {
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1;
+transition: {
+}
+staggerChildren: 0.1}
+      }
+    }
+  };
+
+const itemVariants = {}
+    hidden: { opacity: 0, y: 30}
+}
+    visible: {
+      opacity: 1;
+y: 0;
+transition: {
+}
+duration: 0.8}
+      opacity: 1
       transition: {
         staggerChildren: 0.1
       }
@@ -46,14 +65,13 @@ export default function UltraAdvancedHero2026() {
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="space-y-8"
-        >
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center' />
+        <motion.div;
+variants={containerVariant}
+}
+          initial='hidden';
+          animate='visible';
+          className='space-y-8' />;
           {/* Badge */}
           <motion.div variants={itemVariants} className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30">
             <Sparkles className="w-5 h-5 text-purple-400" />
@@ -267,5 +285,8 @@ export default function UltraAdvancedHero2026() {
         </motion.div>
       </div>
     </section>
-  )
+);
+
+"
+);  )
 }

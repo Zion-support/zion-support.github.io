@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import i18n from '../../utils/i18n';
-import { supportedLocales, isRtl } from '../../utils/i18n';
-const localeToFlag: Record<string, string> = {
-  en: 'us',
-  pt: 'br',
-  es: 'es',
+
+
+const localeToFlag: Record<string, string /> = {
+
+  en: 'us';
+  pt: 'br';
+  es: 'es';
   ar: 'sa'},
 
 const localeLabelKey: Record<string, string> = {
@@ -56,5 +55,7 @@ export default function LanguageSwitcher() {
         </ul>
       )}
     </div>
-  )
+);
 }
+
+"

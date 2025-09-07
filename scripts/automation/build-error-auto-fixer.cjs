@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+
 class BuildErrorAutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -10,7 +11,6 @@ class BuildErrorAutoFixer {}
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.fixInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 900000; // 15 minutes;
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === 'true';
-    
 
 const fs = require('fs');
 const path = require('path');
@@ -19,12 +19,15 @@ class BuildErrorAutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
 
+    
+    
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
         fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
+    
     
     this.fixesApplied = 0;
     this.buildHistory = []};"
@@ -41,12 +44,18 @@ class BuildErrorAutoFixer {}
     const errorLines = output.split('\n').filter(line => )
 
     );
+    const errors = [];
+    let currentError = null;
+    
+    const errors = [];
+    let currentError = null;
     
     const errors = [];
     let currentError = null;
     
     const errors = [];
     let currentError = null;
+    
     for (const line of errorLines) {}
 )
     const errors = []
@@ -65,6 +74,7 @@ class BuildErrorAutoFixer {}
       return 0};
     let fixesApplied = 0;
     
+    
     for (const error of errors) {}
 return 0}
     let fixesApplied = 0
@@ -74,6 +84,7 @@ return 0}
     return fixesApplied}
   async fixSingleBuildError(error) {}
     const message = error.message.toLowerCase();
+    
     
     // Fix common build errors;
 const message = error.message.toLowerCase()
@@ -90,6 +101,8 @@ const message = error.message.toLowerCase()
       return await this.fixDependencyError(error)}
     return false}
   async fixModuleNotFoundError(error) {}
+    this.log('Attempting to fix module not found error...', 'INFO');
+    
     
     try {}
       // Try to install missing dependencies
@@ -115,33 +128,58 @@ const message = error.message.toLowerCase()
   async fixSyntaxError(error) {}
     this.log('Attempting to fix syntax error...', 'INFO');
     
+    
     try {}
       if (error.file && error.file !== 'unknown') {}
         const content = fs.readFileSync(error.file, 'utf8');
         const lines = content.split('\n');
-        
 
         const lines = content.split('\n');
+        
+        
         // Basic syntax fixes;
         const fixes = [this.fixMissingSemicolons.bind(this)]
           this.fixUnclosedBrackets.bind(this),
           this.fixUnclosedQuotes.bind(this),
           this.fixTrailingCommas.bind(this);
         ];
+        let originalContent = content;
+        let modifiedContent = content;
+        
+        let originalContent = content;
+        let modifiedContent = content;
         
         let originalContent = content;
         let modifiedContent = content;
         
         let originalContent = content;
         let modifiedContent = content;
+        
         for (const fix of fixes) {}
             const result = fix(lines, error);
             if (result.modified) {}
+              modifiedContent = result.content;
+              this.log(`Applied syntax fix to ${error.file}: ${result.description}`, 'INFO')};
+          } catch (fixError) {}
+            this.log(`Syntax fix failed for ${error.file}: ${fixError.message}`, 'WARN')};
+        };
+        if (modifiedContent !== originalContent) {}
+          fs.writeFileSync(error.file, modifiedContent);
+          return true};
+      };
+      return false} catch (fixError) {}
+      this.log(`Failed to fix syntax "error": ${fixError.message}`, 'ERROR');
+      return false};
+  };
+  async fixMemoryError(error) {}
+    this.log('Attempting to fix memory error...', 'INFO');
+    
     
     try {}
       // Clean build artifacts
       execSync('rm -rf .next out dist build', { "stdio": 'pipe' }
 });
+      
       
       // Increase Node.js memory limit for build;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -161,6 +199,7 @@ const message = error.message.toLowerCase()
   async fixPermissionError(error) {}
     this.log('Attempting to fix permission error...', 'INFO');
     
+    
     try {}
       // Fix file permissions
       execSync('chmod -R 755 .', { "stdio": 'pipe' }
@@ -175,10 +214,19 @@ const message = error.message.toLowerCase()
   async fixDependencyError(error) {}
     this.log('Attempting to fix dependency error...', 'INFO');
     
+    
     try {}
       // Try to fix peer dependency issues
       execSync('npm install --legacy-peer-deps', { "stdio": 'pipe' }
 });
+      // If that doesn't work, try to update dependencies;
+      execSync('npm update', { "stdio": 'pipe' }
+});
+      
+      // If that doesn't work, try to update dependencies;
+      execSync('npm update', { "stdio": 'pipe' }
+});
+      
       
       // If that doesn't work, try to update dependencies;
       execSync('npm update', { "stdio": 'pipe' }
@@ -213,6 +261,7 @@ const message = error.message.toLowerCase()
       const openBrackets = (line.match(/[\(\[\{]/g) || []).length;}
       const closeBrackets = (line.match(/[\)\]\}]/g) || []).length;
       
+      
       if (openBrackets > closeBrackets) {}
         const missingBrackets = openBrackets - closeBrackets;
         const closingBrackets = ')}]'.slice(0, missingBrackets);
@@ -235,6 +284,7 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
       const line = lines[lineIndex];
       const singleQuotes = (line.match(/'/g) || []).length;
       const doubleQuotes = (line.match(/"/g) || []).length;
+      
       
       if (singleQuotes % 2 !== 0) {}
         lines[lineIndex] = line + "'";
@@ -278,6 +328,14 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
     return { "modified": false, "content": lines.join('\n') }}
   async runAutoFix() {}
     this.log('Starting build error auto-fix...');
+    try {}
+      // Get current build errors;
+      const checkResult = await this.runBuildCheck();
+    
+    try {}
+      // Get current build errors;
+      const checkResult = await this.runBuildCheck();
+      
     
     try {}
       // Get current build errors;
@@ -287,6 +345,13 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
         this.log('No build errors found - no fixes needed', 'INFO');
         return};
       this.log(`Found ${checkResult.errors.length} build errors, attempting to fix...`, 'INFO');
+      // Apply fixes;
+      const fixesApplied = await this.fixBuildErrors(checkResult.errors);
+      
+      this.log(`Applied ${fixesApplied} fixes out of ${checkResult.errors.length} errors`, 'INFO');
+      
+      // Run build check again to see if fixes worked;
+      const postCheckResult = await this.runBuildCheck();
       
       // Apply fixes;
       const fixesApplied = await this.fixBuildErrors(checkResult.errors);
@@ -310,11 +375,22 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
 
       // Run build check again to see if fixes worked;
       const postCheckResult = await this.runBuildCheck();
+      
       const report = {}
 
         "initialErrors": checkResult.errors.length,"
         fixesApplied,"
         "remainingErrors": postCheckResult.errors.length,
+        "success": postCheckResult.success;
+      };
+      // Save report;
+      const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      
+      // Save report;
+      const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      
       
       // Save report;
       const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
@@ -341,6 +417,12 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
   }
   async startAutoFixer() {}
     this.log('Starting build error auto-fixer...');
+    // Run initial fix;
+    await this.runAutoFix();
+    
+    // Run initial fix;
+    await this.runAutoFix();
+    
     
     // Run initial fix;
     await this.runAutoFix();
@@ -351,7 +433,6 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
         await this.runAutoFix()} catch (error) {}
         this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')};
     }, this.fixInterval);
-
         "success": postCheckResult.success;"
       // Save report;`;
       const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
@@ -366,6 +447,8 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
     setInterval(async () => {}
 
     }, this.fixInterval);
+
+
     this.log(`Build error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
   getStatus() {}
 
@@ -373,6 +456,7 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
 // Main execution;
 if (require.main === module) {}
   const fixer = new BuildErrorAutoFixer();
+  
   
   // Handle graceful shutdown;
 this.log('Starting build error auto-fixer...')
@@ -413,10 +497,12 @@ this.log('Starting build error auto-fixer...')
     process.exit(0)}
 });
 
+
   process.on('SIGTERM', () => {}
     fixer.log('Shutting down build error auto-fixer...')
     process.exit(0)}
 });
+
 
   // Start auto-fixer;
 })
@@ -426,6 +512,11 @@ this.log('Starting build error auto-fixer...')
   // Handle graceful shutdown;"
 
     process.exit(1)})};
+
 module.exports = BuildErrorAutoFixer;
+module.exports = BuildErrorAutoFixer;
+
+module.exports = BuildErrorAutoFixer;
+
 module.exports = BuildErrorAutoFixer;
 

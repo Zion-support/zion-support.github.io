@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -75,9 +77,31 @@ const Footer = () => {
           </div>
 
           {/* Services */}
+import React from 'react';
+import Link from 'next/link';
+
+export default function Footer() {
+  return (
+    <footer className="bg-slate-900 border-t border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
+            <p className="text-slate-400 mb-4">
+              Leading provider of innovative micro SaaS products, AI services, and IT solutions.
+            </p>
+            <div className="flex space-x-4">
+              <a href="tel:+13024640950" className="text-slate-400 hover:text-white transition-colors">
+                Phone: (302) 464-0950
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -145,9 +169,59 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex items-center space-x-6 mt-4 md:mt-0">
-              <span className="text-gray-400 text-sm">Made with ❤️ by Zion Tech Group</span>
+            </div>
+            {/* Social Links */}
+            <div className="flex space-x-4 mb-4 md:mb-0">
+              <a
+                href="https://linkedin.com/company/zion-tech-group"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://twitter.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://facebook.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://instagram.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
+            {/* Legal Links */}
+            <div className="flex space-x-6 text-sm">
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Terms of Service
+              </Link>
+              <Link
+                href="/cookies"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Cookie Policy
+              </Link>
             </div>
           </div>
         </div>
@@ -157,3 +231,6 @@ const Footer = () => {
 };
 
 export default Footer;
+}
+}
+}

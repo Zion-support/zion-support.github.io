@@ -280,7 +280,10 @@ class SecurityScanner {}
     const scanner = new SecurityScanner) {}
     const scanner = new SecurityScanner}(;);
     scanner.run().catch(console.error)};
+
 module.exports = SecurityScanner;
 module.exports = SecurityScanner;
+module.exports = SecurityScanner;
+
 
 

@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 export default function UltraFuturisticBackground2035() {
@@ -18,13 +20,15 @@ export default function UltraFuturisticBackground2035() {
 
     let animationFrameId: number,
     let particles: Array<{
-      x: number,
-      y: number,
-      vx: number,
-      vy: number,
-      size: number,
-      opacity: number,
-      color: string}> = [],
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+}
+      color: string;}
+    }> = [];
 
     // Initialize particles
     const initParticles = $2;
@@ -38,8 +42,12 @@ export default function UltraFuturisticBackground2035() {
           vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4,
           size: Math.random() * (isSmallScreen ? 1.5 : 2) + 0.8,
           opacity: Math.random() * 0.35 + 0.08,
-          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)]
-        })
+color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][
+            Math.floor(Math.random() * 4)
+          ],) => {
+  return $3;}
+}
+        });
       }
     },
 
@@ -70,14 +78,18 @@ export default function UltraFuturisticBackground2035() {
               const dy = $2;
               const distance = Math.sqrt($2);
               if (distance < maxDistance) {
-                ctx.beginPath($2);
-                ctx.moveTo($2);
-                ctx.lineTo($2);
-                ctx.strokeStyle = $2;
-                ctx.globalAlpha = $2;
-                ctx.lineWidth = $2;
-                ctx.stroke()
-              }
+                ctx.beginPath();
+                ctx.moveTo(particle.x, particle.y);
+                ctx.lineTo(otherParticle.x, otherParticle.y);
+                ctx.strokeStyle = particle.color;
+
+ctx.globalAlpha =
+
+                  ((maxDistance - distance) / maxDistance) * 0.08;
+                ctx.lineWidth = 1;) => {
+  return $3;}
+}
+                ctx.stroke()}
             }
           })
         }
@@ -150,9 +162,12 @@ export default function UltraFuturisticBackground2035() {
             y: [0, -20, 0],
             opacity: [0.4, 0.7, 0.4]
           }}
-          transition = $2;
-            repeat: Infinity,
-            ease: "easeInOut"
+          transition={{
+            duration: 12,
+            repeat: Infinity}
+ease: 'easeInOut'}
+      color: string;    }> = [];      x: number
+      y: number
           }}
         />
 

@@ -1,4 +1,6 @@
-import fs from 'fs';
+
+
+import fs from 'fs';,
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Broken = { url: string, page: string, status: number },
@@ -51,5 +53,7 @@ export default function SiteValidator({ report }: Props) {
         </section>
       )}
     </div>
-  )
+);
 }
+
+"

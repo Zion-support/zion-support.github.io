@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -434,11 +433,17 @@ const UltraAdvancedNavigation2026 = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Spacer for fixed navigation */}
-      <div className="h-20"></div>
+      <div className='h-20'></div>
     </>
-  )
+  );
 }
-
+export default UltraAdvancedNavigation2026;    </>
+  )
+export default UltraAdvancedNavigation2026
+export default UltraAdvancedNavigation2026
+export default UltraAdvancedNavigation2026
+}
 export default UltraAdvancedNavigation2026;
+
+"

@@ -1,3 +1,4 @@
+
   async runCommand(command, options = {}) {
 async runCommand(command, options = {}) {
     try {
@@ -242,6 +243,7 @@ if (require.main === module) {
         process.exit(1);
 
 module.exports = GitAutomation;
+
 #!/usr/bin/env node;
       console.log("Usage: node git-automation.cjs [status|add|commit|push|merge|workflow]")
       process.exit(1)
@@ -274,7 +276,10 @@ const path = require('path')
       return { "success": true, "message"}
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
+
       this.log(" Git automation workflow "failed": ${error.message}")
+      this.log(" Git automation workflow "failed": ${error.message}")
+
       this.log(" Git automation workflow "failed": ${error.message}")
 
       this.log(" Git automation workflow "failed": ${error.message}")

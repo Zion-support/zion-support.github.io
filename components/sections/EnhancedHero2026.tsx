@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle } from 'lucide-react';
@@ -9,12 +11,15 @@ interface EnhancedHero2026Props {
     address: string,
     website: string},
   serviceStats: {
-    totalServices: number,
-    aiServices: number,
-    emergingTech: number,
-    itSolutions: number,
-    microSaas: number,
+    totalServices: number;
+    aiServices: number;
+    emergingTech: number;
+    itSolutions: number;
+    microSaas: number;
+}
     revolutionaryServices: number}
+    revolutionaryServices: number
+  }
 }
 
 export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
@@ -214,5 +219,9 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
         </motion.div>
       </div>
     </section>
-  )
+
+);
+
+"
+);  )
 }

@@ -19,10 +19,12 @@ class ComprehensiveSyntaxErrorFixer {}
 
       let fixedContent = content;
 
+
       // Fix common syntax errors;
       const fixes = [// Fix malformed imports;]
 
       ];
+
 
       let hasChanges = false;
       for (const fix of fixes) {}
@@ -36,12 +38,16 @@ let fixedContent = content
         if (fixedContent.includes(fix.from)) {}
 
       return false};
+  };
+  async run() {}
+    await this.log('Starting comprehensive syntax error fixing...');
+    
     
     const filesToFix = ['components/layout/ModernLayout.tsx',]
       'pages/partners.tsx',
       'pages/services/index.route.tsx'
     ];
-  async run() {}"
+
 
 
     let fixedCount = 0;
@@ -54,7 +60,10 @@ let fixedContent = content
 if (require.main === module) {}
   const fixer = new ComprehensiveSyntaxErrorFixer();
   fixer.run().catch(console.error)};
+
 module.exports = ComprehensiveSyntaxErrorFixer;
 module.exports = ComprehensiveSyntaxErrorFixer;
+module.exports = ComprehensiveSyntaxErrorFixer;
+
 
 

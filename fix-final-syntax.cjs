@@ -162,6 +162,3 @@ const path = require('path')
     "replacement": 'return (\n    <div className="min-h-screen bg-white")
     "replacement"
     "replacement"
-
-    "replacement"
-

@@ -1,8 +1,21 @@
-import React, { useMemo, useState } from 'react'
-import { useUser } from '../../providers/UserProvider'
-import { useToast } from '../ui/ToastProvider'
-import Link from 'next/link'
-
+export default function OnboardingWizard() {export default function OnboardingWizard() {export default function OnboardingWizard() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+    }return this.props.children;
+  }
+}
+import React, { useMemo, useState } from 'react';
+import { useUser } from '../../providers/UserProvider';
+import { useToast } from '../ui/ToastProvider';
+import Link from 'next/link';
+export default function OnboardingWizard() {
+  const { user, completeOnboarding, setUser } = useUser();
+  const { addToast } = useToast();
+  const [step, setStep] = useState(0);
+  const isClient = user?.role === 'client';
+  const steps = useMemo(() => {
+    if (isClient) {
+      return [
 export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser()
   const { addToast } = useToast()
@@ -60,5 +73,11 @@ export default function OnboardingWizard() {
         )}
       </div>
     </div>
-  )
+);
 }
+
+"
+        )}
+      </div>
+    </div>
+  );

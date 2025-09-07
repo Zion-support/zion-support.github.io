@@ -1,3 +1,7 @@
+
+
+  }
+}
 import React, { useState } from 'react';
 import Link from 'next/link';
 const EnhancedNavigation = () => {
@@ -82,6 +86,10 @@ const EnhancedNavigation = () => {
       </div>
     </nav>
   )
-},
+};
+export default EnhancedNavigation;
 
+);
+}
+export default EnhancedNavigation;}
 export default EnhancedNavigation;

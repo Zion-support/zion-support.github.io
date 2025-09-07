@@ -303,7 +303,11 @@ throw error}
   process.on('SIGTERM', () => {
   // Start resolver
     process.exit(1)})}
+;
+
 module.exports = DependencyErrorResolver
+module.exports = DependencyErrorResolver
+
 module.exports = DependencyErrorResolver
 
 module.exports = DependencyErrorResolver

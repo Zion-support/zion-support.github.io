@@ -1,5 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { X } from 'lucide-react';
+
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system',
   content: string,
@@ -32,13 +31,20 @@ export default function ChatWidget() {
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
-      setMessages([
-        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
+setMessages([
+{
+          role: 'assistant',
+  content: 'Hi! How can I help you?'}
+          timestamp: Date.now()}
+        }
+      ]);
     }
   }, [isOpen, messages.length]);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+}
+messagesEndRef.current?.scrollIntoView({ behavior: 'smooth'}
+});
   }, [messages]);
 
   const quickReplies = useMemo(

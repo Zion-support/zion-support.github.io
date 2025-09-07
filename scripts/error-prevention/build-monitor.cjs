@@ -20,7 +20,10 @@ class BuildMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
+
     
+    
+
     
 
 
@@ -75,6 +78,7 @@ class BuildMonitor {}
 
 
 
+
       cleanChild.on('close', (code) => {}
           console.log('Clean completed, retrying build...')) {}
           console.log('Clean completed, retrying build...')}
@@ -106,6 +110,7 @@ module.exports = BuildMonitor;
   
   monitor.start().catch(console.error)};
 
+module.exports = BuildMonitor;
 module.exports = BuildMonitor;
 module.exports = BuildMonitor;
   // Handle graceful shutdown;

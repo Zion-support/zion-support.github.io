@@ -1,9 +1,9 @@
-import React from "react";
-export type Badge = {
-  id: string,
-  label: string,
-  threshold: number, // token balance threshold
-};
+
+
+import React from \"react\";
+
+export type Badge = any;
+import React from 'react';
 
 const BADGES: Badge[] = [
   { id: "starter", label: "Starter", threshold: 50 },
@@ -40,5 +40,10 @@ export default function Badges({ balance }: { balance: number }) {
         <span className="ml-2 text-xs text-green-600">Current: {active.label}</span>
       )}
     </div>
-  )
+);        <span className="ml-2 text-xs text-green-600">Current: {active.label}</span>
+      )}
+    </div>
+  );
+
+"
 }

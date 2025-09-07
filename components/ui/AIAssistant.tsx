@@ -1,3 +1,5 @@
+
+
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 export type AIAssistantProps = $2;
   title?: string,
@@ -7,9 +9,8 @@ export type AIAssistantProps = $2;
   authorizationToken?: string
 },
 
-export default function AIAssistant({
-  buttonLabel = $2;
-  title = $2;
+  buttonLabel = \"Generate with AI\","
+  title = \"AI Writing Assistant\",
   defaultPrompt,
   systemPrompt,
   onAccept,
@@ -22,9 +23,32 @@ export default function AIAssistant({
   const [error, setError] = useState<string | null>(null),
 
   useEffect(() => {
-    setPrompt(defaultPrompt)
-  }, [defaultPrompt]),
-
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+export type AIAssistantProps = {;
+  buttonLabel?: string;
+  title?: string;
+  defaultPrompt: string;
+  systemPrompt?: string;
+  onAccept: (markdown: string) => void;
+  authorizationToken?: string;
+}
+export default function AIAssistant({
+  buttonLabel = "Generate with AI"
+  title = "AI Writing Assistant"
+  defaultPrompt
+  systemPrompt
+  onAccept
+  authorizationToken
+}: AIAssistantProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [prompt, setPrompt] = useState(defaultPrompt);
+  const [output, setOutput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  useEffect(() => {
+    setPrompt(defaultPrompt);
+  }, [defaultPrompt]);
   const callOperator = useCallback(async () => {
     setLoading($2);
     setError($2);

@@ -246,7 +246,10 @@ class ProjectHealthMonitor {}
     const monitor = new ProjectHealthMonitor) {}
     const monitor = new ProjectHealthMonitor}(;);
     monitor.run().catch(console.error)};
+
 module.exports = ProjectHealthMonitor;
 module.exports = ProjectHealthMonitor;
+module.exports = ProjectHealthMonitor;
+
 
 

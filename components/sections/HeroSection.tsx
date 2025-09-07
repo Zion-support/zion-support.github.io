@@ -1,16 +1,31 @@
-'use client',
 
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react';
-const HeroSection: React.FC = () => {
-  const stats = [
-    { icon: Users, value: '500+', label: 'Happy Clients' },
-    { icon: Award, value: '50+', label: 'Awards Won' },
-    { icon: Star, value: '99%', label: 'Client Satisfaction' },
-    { icon: Zap, value: '24/7', label: 'Support Available' }
-  ],
+
+    { icon: Users, value: '500+'}
+  label: 'Happy Clients'}
+},
+    { icon: Award, value: '50+'}
+  label: 'Awards Won'}
+},
+    { icon: Star, value: '99%'}
+  label: 'Client Satisfaction'}
+},
+{ icon: Zap, value: '24/7'}
+  label: 'Support Available'}
+}
+  ];
+  return (
+      {/* Animated Background Elements */}
+      <div className='absolute inset - 0'    />
+        {/* Floating Orbs */}
+        <motion.div
+          className='absolute top - 20 left - 20 w - 72 h - 72 bg - blue - 500 / 20 rounded - full blur - 3xl'
+          animate={{}
+          }}
+          transition={{
+            duration: 8
+repeat: Infinity;}
+ease: 'easeInOut'}
+          }}
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900">
@@ -148,6 +163,16 @@ const HeroSection: React.FC = () => {
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity}}
-            className = $2;
-export default HeroSection,
+            transition={{ duration: 2, repeat: Infinity }}
+            className='w-1 h-3 bg-white/60 rounded-full mt-2'            className="w-1 h-3 bg-white/60 rounded-full mt-2"
+          />
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
+export default HeroSection;  )
+}
+export default HeroSection;
+
+"

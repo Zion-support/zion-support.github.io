@@ -1,9 +1,15 @@
-import { useState } from "react";
-import Head from "next/head";
-export default function Partners() {
-  const [form, setForm] = useState($2);
-  const [result, setResult] = useState<any>(null),
-  const [loading, setLoading] = useState($2);
+
+    name: ''
+    entityType: ''
+    pocName: ''
+    pocEmail: ''
+    useCaseType: 'Education Partnership'
+  });  const [result, setResult] = useState<any>(null);    name: ""
+    entityType: ""
+    pocName: ""
+    pocEmail: ""
+    useCaseType: "Education Partnership"})
+  const [loading, setLoading] = useState(false);
   async function submit(e: React.FormEvent) {
     e.preventDefault($2);
     setLoading($2);
@@ -84,5 +90,13 @@ export default function Partners() {
         )}
       </div>
     </div>
-  )
+);
 }
+        )}
+
+      </div>
+    </div>
+  );
+}
+
+"

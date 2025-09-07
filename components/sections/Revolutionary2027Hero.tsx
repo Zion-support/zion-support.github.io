@@ -1,24 +1,20 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
-import Link from 'next/link';
-const Revolutionary2027Hero = () => {
-  const floatingIcons = [
-    { icon: Brain, delay: 0, position: 'top-20 left-20' },
-    { icon: Rocket, delay: 0.5, position: 'top-40 right-32' },
-    { icon: TestTube, delay: 1, position: 'bottom-40 left-32' },
-    { icon: Globe, delay: 1.5, position: 'bottom-20 right-20' },
-    { icon: Microscope, delay: 2, position: 'top-1/2 left-10' },
-    { icon: Lock, delay: 2.5, position: 'top-1/2 right-10' },
-    { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' },
-    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }
-  ],
 
-  const containerVariants = $2;
+
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom  } from 'lucide-react';
+import Link from 'next/link';
+const Revolutionary2027Hero = null;
+];
+
+const containerVariants = {}
+    hidden: { opacity: 0}
+}
     visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
+      opacity: 1;
+transition: {
+}
+staggerChildren: 0.1}
       }
     }
   },
@@ -206,7 +202,10 @@ const Revolutionary2027Hero = () => {
         ))}
       </div>
     </section>
-  )
-},
+  );
+}
+export default Revolutionary2027Hero;  )
+}
+export default Revolutionary2027Hero;
 
-export default Revolutionary2027Hero,
+"

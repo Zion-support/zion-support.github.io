@@ -1,130 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-interface CardProps {
-  children: React.ReactNode;
-=======
-<<<<<<< HEAD
-import { cn } from '../../lib/utils';
-
-
-const Card = React.forwardRef<
-  HTMLDivElement;
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm";
-      className
-    )}
-    {...props}
-  />
-));
-Card.displayName = "Card";
-
-const CardHeader = React.forwardRef<
-  HTMLDivElement;
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
-    {...props}
-  />
-));
-CardHeader.displayName = "CardHeader";
-
-const CardTitle = React.forwardRef<
-  HTMLParagraphElement;
-  React.HTMLAttributes<HTMLHeadingElement>
->(({ className, ...props }, ref) => (
-  <h3
-    ref={ref}
-    className={cn(
-      "text-2xl font-semibold leading-none tracking-tight";
-      className
-    )}
-    {...props}
-  />
-));
-CardTitle.displayName = "CardTitle";
-
-const CardDescription = React.forwardRef<
-  HTMLParagraphElement;
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => (
-  <p
-    ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
-    {...props}
-  />
-));
-CardDescription.displayName = "CardDescription";
-
-const CardContent = React.forwardRef<
-  HTMLDivElement;
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-));
-CardContent.displayName = "CardContent";
-
-const CardFooter = React.forwardRef<
-  HTMLDivElement;
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-import React from 'react';
-
-interface CardProps  {children: React.ReactNode;
-  className?: string;
-}export default function Card() {return (<div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>;
-      {children}
-import React from "react;
-import { cn } from ../../lib/utils";
-
-
-interface HTMLDivElement extends HTMLElement {
-  tagName: "DIV;
-}
-
-interface HTMLParagraphElement extends HTMLElement {
-  tagName: P";
-}
-
-interface HTMLHeadingElement extends HTMLElement {
-  tagName: "H1 | H2" | "H3 | H4" | "H5 | H6";
-}
-
-const Card = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    </div>;
-  )}
-import { cn  } from '../../lib/utils;
-interface HTMLDivElement extends HTMLElement  {tagName: "DIV;
-}interface HTMLParagraphElement extends HTMLElement  {tagName: P";
-}interface HTMLHeadingElement extends HTMLElement  {tagName: "H1 | H2" | "H3 | H4" | "H5 | H6";
-}const Card = React.forwardRef<;
-  HTMLDivElement,React.HTMLAttributes<HTMLDivElement>;
->(({ className, ...props }, ref) => (<div;
-    ref={ref}
-    className={cn("rounded-lg border bg-card text-card-foreground shadow-sm,className,)}
-    {...props}const CardContent = React && React.forwardRef<;
-  HTMLDivElement,React && React.HTMLAttributes<HTMLDivElement>;
->(({ className, ...props }, ref) => (const CardTitle = React.forwardRef<;
-  HTMLParagraphElement,React.HTMLAttributes<HTMLHeadingElement>;
->(({ className, ...props }, ref) => (<h3;
-    ref={ref}
-    className={cn("text-2xl font-semibold leading-none tracking-tight",className,// Define HTML element types;
-interface HTMLElement  {className: string;
-  id: string;
-  innerHTML: string;
-  textContent: string | null;
-import React from 'react';
 
 interface CardProps {
   children: React.ReactNode
@@ -363,7 +237,6 @@ interface CardProps  {children: React.ReactNode,class_name?: string,style?: Reac
     </div>
 },export default Card,export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent;}
 }
->>>>>>> origin/chore/fix-lint-and-merge
 "
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }<div className=\"absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none\"    />
 }"
@@ -401,32 +274,6 @@ const Card: React.FC<CardProps    /> = ({export {Card,CardHeader,CardFooter,Card
     </div>
   );
 }
-<<<<<<< HEAD
-
-
-export {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
-  CardContent,
-};
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
+"
 export default Card;
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
-export default function Card({ children, className = '' }: CardProps) {
-export default function Card({ children, className = ' }: CardProps) {
-  return (
-    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
-      {children}
-    </div>
-  );
-}
-
-
-=======
-"
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db

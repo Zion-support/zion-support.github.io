@@ -1,3 +1,5 @@
+
+
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
@@ -100,5 +102,10 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
         ))}
       </div>
     </div>
-  )
+);
 }
+
+        ))}
+      </div>
+    </div>
+  );

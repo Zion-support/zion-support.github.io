@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -341,9 +340,12 @@ export default function UltraFuturisticNavigation2030() {
           )}
         </AnimatePresence>
       </nav>
-
       {/* Spacer for fixed navigation */}
-      <div className="h-20"></div>
+      <div className='h-20'></div>
     </>
-  )
+  );      <div className="h-20"></div>
+    </>
+  );
+
+"
 }

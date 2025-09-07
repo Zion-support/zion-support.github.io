@@ -4,10 +4,15 @@
  * Enhanced Security Automation
  * Comprehensive security scanning and monitoring
  */
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 class EnhancedSecurityAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -62,12 +67,22 @@ fs.appendFileSync(this.logFile, logMessage)
             };);
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-        console.log(message)};
-    runSecurityAudit() {}"
-
-            };);
-            const auditData = JSON.parse(auditResult;);
-            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
+            
+            
+            
+            this.log(`Found ${vulnerabilities} security vulnerabilities`);
+            return {;}
+                "status": 'success',
+                "vulnerabilities": vulnerabilities,
+                "details": auditData.vulnerabilities,
+                "metadata": auditData.metadata;
+            }} catch (error) {}
+            this.log(`Security audit "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }};
+    };
+    checkForSecrets() {}
+        this.log('Checking for exposed secrets...');
+        
         
         const secretPatterns = [/password\s*=\s*['"][^'"]+['"]/gi,
             /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
@@ -76,22 +91,31 @@ fs.appendFileSync(this.logFile, logMessage)
             /private[_-]?key\s*=\s*['"][^'"]+['"]/gi;
        ];
         
-            `;
-            this.log(`Found ${vulnerabilities} security vulnerabilities`);
-            return {;}
-
-       ];
+        const filesToCheck = this.findSourceFiles(;);
+        const foundSecrets = [];
+        
+        for (const file of filesToCheck) {}
+            try {}
+                const content = fs.readFileSync(file, 'utf8';);
         const filesToCheck = this.findSourceFiles(;);
         const foundSecrets = [];
         for (const file of filesToCheck) {}
+            try {}
+                const content = fs.readFileSync(file, 'utf8';);
+                
             try {}"
 
+                
+                
                 for (const pattern of secretPatterns) {}
                     const matches = content.match(pattern;);
                     if ( {})
                         foundSecrets.push({})
 
         const files = [];
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
         
         const scanDirectory = (dir) => {}
             if () retu) {}
@@ -100,10 +124,16 @@ fs.appendFileSync(this.logFile, logMessage)
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
+        
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+            
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+                
                 
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
@@ -119,6 +149,14 @@ fs.appendFileSync(this.logFile, logMessage)
         return files};
     checkDependencies() {}
         this.log('Checking dependency security...');
+        try {}
+            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
+            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
+        
+        try {}
+            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
+            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
+            
         
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
@@ -128,6 +166,12 @@ fs.appendFileSync(this.logFile, logMessage)
                 ...packageJson.dependencies || {},
                 ...packageJson.devDependencies || {};
            };
+            const totalDeps = Object.keys(dependencies).lengt;h;
+            this.log(`Analyzing ${totalDeps} dependencies`);
+            
+            const totalDeps = Object.keys(dependencies).lengt;h;
+            this.log(`Analyzing ${totalDeps} dependencies`);
+            
             
             const totalDeps = Object.keys(dependencies).lengt;h;
             this.log(`Analyzing ${totalDeps} dependencies`);
@@ -143,15 +187,14 @@ fs.appendFileSync(this.logFile, logMessage)
     checkFilePermissions() {}
         this.log('Checking file permissions...');
         
+        
         const criticalFiles = ['package.json',]
             'package-lock.json',
             '.env',
             '.env.local',
             '.env.production'
         ];
-        
         const permissionIssues = [];
-        
 
             const dependencies = {}
                 ...packageJson.dependencies || {},
@@ -160,6 +203,12 @@ fs.appendFileSync(this.logFile, logMessage)
             this.log(`Analyzing ${totalDeps} dependencies`);
 
         const permissionIssues = [];
+        
+        const permissionIssues = [];
+        
+        
+        const permissionIssues = [];
+        
         for (const file of criticalFiles) {}
             const filePath = path.join(this.projectRoot, file;);
                 const stats = fs.statSync(filePath) {}
@@ -168,6 +217,7 @@ fs.appendFileSync(this.logFile, logMessage)
                 const mode = stats.mod;e;
                 const isReadableByOthers = (mode & 0o004) !==;0;
                 const isWritableByOthers = (mode & 0o002) !==;0;
+                
                 
                 if ( {})
                     permissionIssues.push({})
@@ -195,6 +245,7 @@ fs.appendFileSync(this.logFile, logMessage)
     generateSecurityReport() {}
         this.log('Generating security automation report...');
         
+        
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -206,6 +257,12 @@ fs.appendFileSync(this.logFile, logMessage)
             },
             "recommendations": this.generateSecurityRecommendations();
        };
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Security report saved to ${this.reportFile}`);
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Security report saved to ${this.reportFile}`);
+        
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Security report saved to ${this.reportFile}`);
@@ -234,6 +291,7 @@ fs.appendFileSync(this.logFile, logMessage)
         ]}
     async run() {}
         this.log('Enhanced Security Automation started');
+        
         
         try {}
             const report = this.generateSecurityReport(;)
@@ -265,7 +323,10 @@ return report}
     const automation = new EnhancedSecurityAutomation) {}
     const automation = new EnhancedSecurityAutomation}(;);
     automation.run().catch(console.error)};
+
 module.exports = EnhancedSecurityAutomation;
 module.exports = EnhancedSecurityAutomation;
+module.exports = EnhancedSecurityAutomation;
+
 
 

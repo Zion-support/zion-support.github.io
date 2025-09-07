@@ -1,28 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, X, ChevronDown, Search, User, 
-  Settings, LogOut, Bell, Globe, Zap
-} from 'lucide-react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-interface EnhancedNavigationProps {
-  className?: string
-}
+import { Menu, X, ChevronDown } from 'lucide-react';
 
-const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' }) => {
-  const [isOpen, setIsOpen] = useState($2);
-  const [isScrolled, setIsScrolled] = useState($2);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+const EnhancedNavigation: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = $2;
-    window.addEventListener($2);
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
-  const navigationItems = $2;
-      href: '/services',
-      icon: <Brain className = $2;
+  const navigationItems = [
+    {
+      name: "Services"
+      href: "/services"
+      icon: <Brain className="w-4 h-4" />
       dropdown: [
         { name: 'AI & Machine Learning', href: '/services?category=ai-ml', icon: <Brain className = $2;
         { name: 'Quantum Computing', href: '/services?category=quantum', icon: <Rocket className = $2;
@@ -214,8 +202,71 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0}}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0}}
-            transition = $2;
-export default EnhancedNavigation,
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {/* Search */}
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                />
+              </div>
+              {/* Navigation Items */}
+              {navigationItems.map((item) => (
+                <div key={item.name} className="space-y-2">
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                  >
+                    {item.name}
+                  </Link>
+                  {item.hasDropdown && item.dropdownItems && (
+                    <div className="ml-4 space-y-1">
+                      {item.dropdownItems.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.name}
+                          href={dropdownItem.href}
+                          onClick={() => setIsOpen(false)}
+                          className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm"
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+              {/* Contact Info */}
+              <div className="pt-4 border-t border-cyan-500/20">
+                <div className="space-y-2 text-sm text-gray-400">
+                  <div className="flex items-center space-x-2">
+                    <Globe className="w-4 h-4" />
+                    <span>{contactInfo.website}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <User className="w-4 h-4" />
+                    <span>{contactInfo.email}</span>
+                  </div>
+                </div>
+              </div>
+                >
+                  Get Started Today
+                </Link>
+              </div>
+            </div>;</motion.div>)}
+      </AnimatePresence>
+    </nav>
+  );
+};
+
+export default EnhancedNavigation;
+}
+export default EnhancedNavigation;

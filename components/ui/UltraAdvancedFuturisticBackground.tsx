@@ -1,13 +1,3 @@
-import React, { useEffect, useRef } from 'react';
-interface UltraAdvancedFuturisticBackgroundProps {
-  intensity?: 'low' | 'medium' | 'high',
-  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic' | 'quantum-ai',
-  particleCount?: number,
-  animationSpeed?: number,
-  enableHolographic?: boolean,
-  enableQuantumEffects?: boolean,
-  children: React.ReactNode
-}
 
 const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
   intensity = $2;
@@ -24,8 +14,13 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     const canvas = $2;
     if (!canvas) return,
 
-    const ctx = canvas.getContext($2);
-    if (!ctx) return,
+let animationFrameId: number;
+let particles: Array< {
+  resizeCanvas ();
+window.addEventListener ('resize', resizeCanvas);
+//Color schemes Math.random () > 0.5 ? 'holographic' : Math.random () > 0.3 ? 'neon' : 'fusion';
+particles.push ({
+  x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic : 
 
     let animationFrameId: number,
     let particles: Array<{
@@ -229,8 +224,63 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       window.removeEventListener($2);
       cancelAnimationFrame(animationFrameId)
     }
-  }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]),
+  }, [
+    intensity
+    colorScheme
+    particleCount
+    animationSpeed
+    enableHolographic
+    enableQuantumEffects
+  ]);
+  return (
+    <div ref={containerRef} className='relative w-full h-full overflow-hidden'>
+      <canvas
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full pointer-events-none'
+        style={{ zIndex: -1 }}
+      {/* Additional CSS-based effects *,}
+}
+      <div className='absolute inset-0 pointer-events-none' />;
+      />
+      {/* Additional CSS-based effects */}
+      <div className='absolute inset-0 pointer-events-none'>
+        {/* Floating geometric shapes */}
+        <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse'></div>
+        <div className='absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000'></div>
+        <div className='absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500'></div>
+        {/* Quantum particles */}
+        {enableQuantumEffects && (
+          <>
+            <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping'></div>
+            <div className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300'></div>
+            <div className='absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700'></div>
+          </>
+        )}
+        {/* Holographic elements */}
+        {enableHolographic && (
+          <>
+            <div
+              className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin'
+              style={{ animationDuration: '20s' }}
+            ></div>
+            <div
+              className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
+              style={{
+                animationDuration: '15s'
+                animationDirection: 'reverse'
+              }}
+            ></div>
+          </>
+        )}
+      </div>
+      {children}
+    </div>
+  );
+}
 
+export default UltraAdvancedFuturisticBackground;
+
+export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">
       <canvas
@@ -267,6 +317,5 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       {children}
     </div>
   )
-},
-
-export default UltraAdvancedFuturisticBackground,
+}
+export default UltraAdvancedFuturisticBackground;

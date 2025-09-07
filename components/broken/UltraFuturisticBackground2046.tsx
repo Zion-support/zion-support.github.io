@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2046: React.FC = $2;
@@ -259,16 +261,41 @@ const UltraFuturisticBackground2046: React.FC = $2;
       />
       
       {/* Floating geometric shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key = $2;
-              top: `${Math.random() * 100}%`}}
-            animate={{
-              rotate: [0, 360],
-              scale: [0.5, 1, 0.5],
-              opacity: [0.1, 0.3, 0.1]}}
-            transition = $2;
+      <div className='absolute inset-0 overflow-hidden'    />
+        {[...Array(8)].map((_, i) => (<motion&& motion.div;}
+         />;}
+      {/* Quantum particle canvas */}
+      <canvas
+        ref={canvas_ref}
+        className='absolute inset - 0 w - full h - full'
+        style={{ filter: 'blur (0.5px)' ,}
+
+         />
+      {/* Floating geometric shapes */}
+      <div className='absolute inset - 0 overflow - hidden'    />
+        {[...Array (8)].map ((_, i) => (<motion.div;}
+            key={i}
+            className='absolute w-32 h-32 border border-cyan-500/20 rounded-full'
+            style={{
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
+      {/* Quantum interference patterns */}
+      <div className='absolute inset-0'    />
+        {[...Array(5)].map((_, i) => (<motion&& motion.div
+           />;}
+      </div>;}
+      {/* Quantum interference patterns */}
+      <div className='absolute inset - 0'    />
+        {[...Array (5)].map ((_, i) => (<motion.div;}
+            key={`interference-${i}`}
+            }}
+            animate={{scale: [1, 1.5, 1];}
+              opacity: [0.05, 0.1, 0.05];}
+            }}
+
+            transition={{
+
+              duration: Math.random() * 6 + 4,
               repeat: Infinity,
               ease: "linear",
               delay: i * 0.5}}
@@ -326,4 +353,8 @@ const UltraFuturisticBackground2046: React.FC = $2;
   )
 },
 
-export default UltraFuturisticBackground2046,
+export default UltraFuturisticBackground2046;
+
+            className='absolute inset-0 opacity-5'
+            style={{
+              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`

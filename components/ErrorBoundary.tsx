@@ -1,5 +1,24 @@
-
-
+class ErrorBoundary extends Component<Props, State> {
+  constructor (props: Props) {
+  super (props)
+this.state = {
+  hasError: false 
+}
+}static getDerivedStateFromError (error: Error) : State {
+  return {
+  hasError: true, error 
+}
+this.setState ({
+  error
+errorInfo 
+})
+//Call the onError prop if provided if (this.props.onError) {
+  this.props.onError (error, errorInfo)
+}//Log error to external service (e.g., Sentry) if (typeof window !== 'undefined' && (window as any) .Sentry) {
+  (window as any) .Sentry.captureException (error, {
+  extra: errorInfo 
+})
+}
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -208,35 +227,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-    return this.props.children;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-    return this.props.children;
-  }
-}
-

@@ -1,14 +1,5 @@
-import { useEffect, useState } from "react";
-import Head from "next/head";
-export default function PartnerDashboard() {
-  const [apiKey, setApiKey] = useState($2);
-  const [token, setToken] = useState<string | null>(null),
-  const [usage, setUsage] = useState<any>(null),
-  const [loading, setLoading] = useState($2);
-  useEffect(() => {
-    const saved = localStorage.getItem($2);
-    if (saved) setToken(saved)
-  }, []),
+import { useEffect, useState  } from 'react';
+import Head from 'next/head';
 
   async function getToken() {
     const res = await fetch("/api/partners/token", {
@@ -31,12 +22,20 @@ export default function PartnerDashboard() {
   }
 
   async function regenerateKey() {
-    const res = await fetch($2);
-    const data = await res.json($2);
-    if (data.apiKey) {
-      alert(`New API Key: ${data.apiKey}`)
-    }
-  }
+    const res = await fetch('/api/partners/key', {
+      method: 'POST'}
+}
+      headers: token ? { Authorization: `Bearer ${token}` } : {}
+   
+};
+  const data = await res.json()if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)}
+ 
+}
+
+      headers: token ? { Authorization: `Bearer ${token}` } : {}
+
+}
+  const data = await res.json()if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)}
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
@@ -63,7 +62,13 @@ export default function PartnerDashboard() {
             <button onClick={regenerateKey} className="bg-gray-900 text-white px-3 py-2 rounded text-sm">Generate New Key</button>
             <p className="text-xs text-gray-500 mt-2">Old key becomes inactive.</p>
           </div>
-
+          <div className='bg-white p-6 rounded-lg shadow md:col-span-2' />
+            <h3 className='font-medium mb-2' />Usage</h3>
+            <button;
+onClick={fetchUsag}
+}
+              className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3' />;
+              {loading ? 'Loading...' : 'Refresh'}
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
@@ -93,4 +98,17 @@ export default function PartnerDashboard() {
       </div>
     </div>
   )
+          </div>
+
+        </div>
+
+            href='/api/partners/sdk?type=graphql'
+              />
+            GraphQL SDK
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+);
 }

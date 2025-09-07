@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -289,7 +291,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         </div>
       </div>
     </motion.div>
-  )
+
+)
 };
 
 export default UltraAdvancedServiceCard;
+
+"

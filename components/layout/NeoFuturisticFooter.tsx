@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
@@ -58,3 +60,4 @@ export default function NeoFuturisticFooter() {
   )
 }
 
+export default function NeoFuturisticFooter() {

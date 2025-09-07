@@ -2,10 +2,13 @@ export {};
 
 origin/main
 
+
 // Auto-generated module
 export {};
 
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
+
+
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -219,4 +222,3 @@ export {};
 // Auto-generated module
 export {};
 
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

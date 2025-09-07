@@ -132,7 +132,10 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
+
   console.log(")
   console.log(")
+  console.log(")
+
 
 

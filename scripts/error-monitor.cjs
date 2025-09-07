@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
@@ -247,7 +249,10 @@ if (require.main === module) {}
   process.on("SIGINT", () => {}
     monitor.log("Error monitor shutting down", "INFO');
     process.exit(0)})};
+
 module.exports = ErrorMonitor;
 module.exports = ErrorMonitor;
+module.exports = ErrorMonitor;
+
 
 

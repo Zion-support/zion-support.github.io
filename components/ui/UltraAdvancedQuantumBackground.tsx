@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedQuantumBackgroundProps {
@@ -5,11 +7,38 @@ interface UltraAdvancedQuantumBackgroundProps {
   className?: string
 }
 
-const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({ 
-  children;
-  className = '' 
-}) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps /> = ({children;
+  className;
+canvas.width = window.innerWidth;
+
+canvas.height = window.innerHeight;
+let animationFrameId: number;
+
+let particles: Particle[] = [];
+let quantumFields: QuantumField[] = [];
+let neuralNetworks: NeuralNetwork[] = [];
+vx: number;
+vy: number;
+size: number;
+color: string;
+life: number;
+this.vx = (Math.random () - 0.5) * 2;
+this.vy = (Math.random () - 0.5) * 2;
+this.size = Math.random () * 3 + 1;
+this.color = `hsl ($ {this.radius = Math.random () * 100 + 50;
+this.intensity = Math.random () * 0.5 + 0.5;
+this.phase = Math.random () * Math.PI * 2;
+
+this.color = `hsl ($ {
+}
+  200 + Math.random () * 60}
+}, 80%, 60%) `
+const UltraAdvancedQuantumBackground: React.FC<
+  UltraAdvancedQuantumBackgroundProps;
+> = ({ children, className = ''    }) => {
+
+ ;
+  const canvasRef = useRef<HTMLCanvasElement />(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -37,6 +66,25 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       maxLife: number,
 
       constructor() {
+const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps    /> = ({children
+  className
+    const canvas = canvasRef.current
+    if (!canvas) return
+const ctx = canvas.getContext('2d')
+    if (!ctx) return
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+let animationFrameId: number
+    let particles: Particle[] = []
+    let quantum_fields: QuantumField[] = []
+    let neural_networks: NeuralNetwork[]  = [];class Particle {coordinate_x: number
+      coordinate_y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      life: number
+      maxLife: number
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * 2;
@@ -147,15 +195,11 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         // Animate neural network
         this.nodes.forEach((node, index) => {
           node.x += (Math.random() - 0.5) * 0.5;
-          node.y += (Math.random() - 0.5) * 0.5
-        })
-      }
-
-      draw() {
-        if (!ctx) return;
-        ctx.save();
-        
-        // Draw connections
+}
+node.y += (Math.random() - 0.5) * 0.5;}
+        })}
+      draw() {if (!ctx) return;
+        ctx.save()// Draw connections;
         ctx.strokeStyle = 'rgba(100, 200, 255, 0.3)';
         ctx.lineWidth = 1;
         this.connections.forEach(connection => {
@@ -340,7 +384,9 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         />
       </div>
     </div>
-  )
-};
-
+  );
+}
+export default UltraAdvancedQuantumBackground;  )
+}
 export default UltraAdvancedQuantumBackground;
+

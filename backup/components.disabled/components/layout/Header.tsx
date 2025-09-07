@@ -457,4 +457,3 @@ const Header: React.FC = () => {
 
 export default Header;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

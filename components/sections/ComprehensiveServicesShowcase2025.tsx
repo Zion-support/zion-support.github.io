@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
@@ -56,9 +58,13 @@ const ComprehensiveServicesShowcase2025 = $2;
       gradient: 'from-amber-600 via-yellow-600 to-orange-600',
       description: 'Advanced learning and educational technology'
     }
-  ],
+  ];
 
-  const containerVariants = $2;
+const containerVariants = {}
+    hidden: { opacity: 0}
+}
+  const containerVariants = {
+    hidden: { opacity: 0 }
     visible: {
       opacity: 1,
       transition: {
@@ -67,8 +73,10 @@ const ComprehensiveServicesShowcase2025 = $2;
     }
   },
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0},
+  }
+const itemVariants = {}
+    hidden: { y: 20, opacity: 0}
+}
     visible: {
       y: 0,
       opacity: 1,
@@ -89,9 +97,15 @@ const ComprehensiveServicesShowcase2025 = $2;
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30}}
-          whileInView={{ opacity: 1, y: 0}}
+      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
+
+        {/* Header *}
+}
+
+        <motion.div;
+initial={{ opacity: 0, y: 30 }
+}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -246,5 +260,30 @@ const ComprehensiveServicesShowcase2025 = $2;
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already leveraging our cutting-edge solutions to drive innovation, efficiency, and growth.
             </p>
-            <div className = $2;
-export default ComprehensiveServicesShowcase2025,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
+              >
+                Get Started Today
+                <Rocket className="w-5 h-5 ml-2" />
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600"
+              >
+                Call +1 302 464 0950
+                <Phone className="w-5 h-5 ml-2" />
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+export default ComprehensiveServicesShowcase2025;  )
+}
+export default ComprehensiveServicesShowcase2025;
+
+"

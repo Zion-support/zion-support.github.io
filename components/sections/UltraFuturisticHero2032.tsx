@@ -1,3 +1,11 @@
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }
+}
+  render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+    }
+    return this.props.children;
+  }
+}
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -54,9 +62,32 @@ export default function UltraFuturisticHero2032() {
         <div className="absolute inset-0">
           {[...Array(50)].map((_, i) => (
             <motion.div
-              key = $2;
-                top: `${Math.random() * 100}%`}}
-              animate={{
+              key={i}'
+              className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30'
+              style={{}
+}
+                left: `${Math.random() * 100}%`
+                top: `${Math.random() * 100}%`
+              
+}              animate={{
+                y: [0, -20, 0]
+                opacity: [0.3, 0.8, 0.3]}
+}
+              }}
+              transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2}}
+            />;
+          ))}
+        </div>
+
+          ))}
+        </div>
+        {/* Gradient Orbs */}
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />"
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow" />
+      </div>
+                left: `${Math && Math.random() * 100}%`,`
+                top: `${Math && Math.random() * 100}%`,
+              }}              animate={{}
                 y: [0, -20, 0],
                 opacity: [0.3, 0.8, 0.3]}}
               transition = $2;
@@ -268,5 +299,6 @@ export default function UltraFuturisticHero2032() {
         </Link>
       </motion.div>
     </section>
-  )
-}
+  );
+
+"

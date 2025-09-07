@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 export default function OnboardingWizard() {
@@ -70,5 +69,6 @@ export default function OnboardingWizard() {
         </div>
       </div>
     </div>
-  )
+);
 }
+

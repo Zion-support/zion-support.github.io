@@ -5,6 +5,12 @@ const fs = require('fs');
 const path = require('path');
 function improveSEO() {}
   try {}
+    const pagesDir = path.join(process.cwd(), 'pages;';);
+    const componentsDir = path.join(process.cwd(), 'components;';);
+    // Add meta tags to pages;
+    const metaTemplate = '
+import Head from 'next/hea;d;';
+
     
     // Add meta tags to pages;
     const metaTemplate = '
@@ -26,6 +32,9 @@ export default function Page() {}
 
 </link>
     </>
+  )};
+      ";
+      
       
       // Generate sitemap;
   )};"
@@ -51,7 +60,19 @@ export default function Page() {}
     <priority>0.7</priority>
   </url>`
 </urlset;>;`;`
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
       
+      // Generate robots.txt;
+      const robotsContent = "User-"agent": *
+Allow: /
+
+Sitemap: https://ziontechgroup.com/sitemap.xml;";
+      
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
+
+      
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
+
       
       fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
       
@@ -62,12 +83,6 @@ Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml;";
       
       fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
-      } catch (error) {
-      console.error('SEO improvement "failed": ', error.message)}
-  }
-}
-      
-      fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
 
       
       
@@ -77,6 +92,15 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
       console.error('SEO improvement "failed": ', error.message)};
 
   };
+};
+
+improveSEO();
+      
+improveSEO();
+      
+improveSEO();
+      
+
 improveSEO();
       
 improveSEO();

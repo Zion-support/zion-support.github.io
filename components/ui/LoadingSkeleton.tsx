@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 interface SkeletonProps {
@@ -45,5 +47,20 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[...Array(4)].map((_, index) => (
-            <div key = $2;
-export default Skeleton,
+            <div key={index} className='text-center'>
+              <Skeleton className='w-16 h-16 rounded-full mx-auto mb-4' />
+              <Skeleton className='h-10 w-20 mx-auto mb-2' />
+              <Skeleton className='h-5 w-24 mx-auto' />            <div key={index} className="text-center">
+              <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />
+              <Skeleton className="h-10 w-20 mx-auto mb-2" />
+              <Skeleton className="h-5 w-24 mx-auto" />
+          ))}
+        </div>
+      </div>
+    </div>;
+  );
+}
+export default Skeleton;  )
+}
+export default Skeleton;
+

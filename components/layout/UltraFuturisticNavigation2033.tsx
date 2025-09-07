@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+
+
+import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -12,10 +14,36 @@ const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+}
+{
+  name: 'AI Emotional Intelligence',
+  href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform',
+  price: '$1, 999/month'}
+}
+}
+{name: 'AI Autonomous Business Manager',
+  href: '/ai-autonomous-business-manager', description: 'Autonomous business AI'}
+  price: '$3, 999/month';}
+}];
 
-const serviceCategories = $2;
-    icon: Brain,
+</div> </div> </div> </div> </div> > <Link href=\"/\" className=\"flex items-center space-x-3\"  /> <div className=\"relative\"  /> <div className=\"w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl\"  /> <Rocket className=\"w-7 h-7 text-white\" /> </div> <div className=\"absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse\"  /></div> </div> <div className=\"flex flex-col\"  /> <span className=\"text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent\"  /> Zion Tech Group </span> <span className=\"text-xs text-purple-300 font-medium\"  /> Future Technology Solutions </span> </div> </a> </motion.div> > <span />Services</span> <ChevronDown className=\"w-4 h-4 transition-transform duration-200 group-hover: rotate-180\" /> </button> {}
+  /* Mega Menu */}
+}<AnimatePresence /> </div> </a>) )
+}</div> </div>) )
+}</div> </motion.div>)
+}</AnimatePresence> </div> {}
+  /* Quick Links */}
+}{
+  quickLinks.map ( (link) => (<Link key= {}
+  link.name}
+}) )
+}{
+}
+  /* Contact Button */ }
+}<motion.div whileHover= {
+  {
+    title: '🧠 Revolutionary AI',
+  icon: Brain,
     color: 'from-violet-500 to-purple-600',
     services: [
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Advanced AI consciousness', price: '$2,999/month' },
@@ -81,6 +109,29 @@ export default function UltraFuturisticNavigation2033() {
     document.addEventListener($2);
     return () => document.removeEventListener('keydown', handleEscape)
   }, []),
+
+export default function UltraFuturisticNavigation2033() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string | null />(null);
+
+const [searchQuery, setSearchQuery] = useState('');
+
+const toggleMenu = () => setIsOpen(!isOpen);
+
+const closeMenu = () => setIsOpen(false);
+
+  // Close menu on escape key;
+useEffect(() => {
+
+    const handleEscape = (
+if (e.key === 'Escape') closeMenu(),) => {
+  return $3;}
+}
+};
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
 
   return (
     <>

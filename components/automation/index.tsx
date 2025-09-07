@@ -1,3 +1,4 @@
+
 import React from 'react';
 export default function AutomationPage() {
   return (
@@ -7,3 +8,13 @@ export default function AutomationPage() {
     </div>
   )
 }
+
+  )
+}
+
+  )
+}
+  )
+}
+"
+import React from 'react';

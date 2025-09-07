@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 
@@ -21,7 +23,11 @@ const path = require("path")
       "pages/blog.tsx"
       "pages/help.tsx"
       "pages/pricing-guide.tsx"
+      "pages/pricing.tsx"
+
       "
+      "
+
       "
 
       "

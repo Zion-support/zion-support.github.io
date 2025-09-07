@@ -414,7 +414,11 @@ this.log("📄 Report "generated": ${reportFile}");"
   cleaner.run().catch(error => {)
 
     process.exit(1)})}
+;
+
 module.exports = ESLintErrorCleaner
+module.exports = ESLintErrorCleaner
+
 module.exports = ESLintErrorCleaner
 
 module.exports = ESLintErrorCleaner

@@ -37,6 +37,10 @@ setupSignalHandlers() {}
     process.on('SIGINT', () => this.shutdown())};
   log(level, ...args) {}
     const timestamp = new Date().toISOString();
+
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
     
@@ -44,15 +48,11 @@ setupSignalHandlers() {}
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
     
-  async fixBuildIssues(buildError) {}"
-  this.log("Attempting to fix build issues...");"
-    // Try to install dependencies first;"
-    const installResult = await this.runCommand("npm install");"
-    if (installResult.success) {}"
-  this.fixesApplied.push("Installed missing dependencies")};"
 
-setupSignalHandlers() {}"
 
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   this.log("Attempting to fix build issues...")
@@ -273,6 +273,11 @@ const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
 
   process.exit(1)}
+
 });
+});
+
+});
+
 });
 

@@ -1,4 +1,6 @@
-import fs from 'fs';
+
+
+import fs from 'fs';,
 import path from 'path';
 import type { GetStaticProps } from 'next';
 interface Node { id: string, tokens: string[] }
@@ -50,5 +52,7 @@ export default function KnowledgeGraph({ report }: Props) {
         </ul>
       </section>
     </div>
-  )
+);
 }
+
+"

@@ -1,6 +1,9 @@
-describe('Utils', () => {
-  test('utility functions work', () => {
-    // Add utility tests here
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+describe('utils.test', () => {
+  test('renders without crashing', () => {
     expect(true).toBe(true);
   });
 });

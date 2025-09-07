@@ -1,5 +1,6 @@
-#!/usr/bin/env node,
-  import fs from 'fs';
+#!/usr/bin/env node
+
+import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 console.log('🔧 Starting comprehensive merge conflict resolution...');
@@ -53,23 +54,15 @@ console.log('Starting comprehensive merge conflict resolution...');
   function removeMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    // Remove all merge conflict markers,
-  content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    
-    // Clean up any remaining conflict markers,
-  content = content.replace(//g, '');
-    content = content.replace(/    
-    // Remove empty lines that might be left behind,
-  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    
+    // Remove all merge conflict markers
+    // Clean up any remaining conflict markers
     return false;
   }
 }
-// Function to find all files with merge conflicts,
-  function findFilesWithConflicts(dir) {
+
+// Function to find all files with merge conflicts
+function findFilesWithConflicts(dir) {
   const files = [];
   function scanDirectory(currentDir) {
     try {
@@ -94,8 +87,8 @@ console.log('Starting comprehensive merge conflict resolution...');
         }
       }
     } catch (error) {
-      // Skip directories that can't be read,
-  function findConflictedFiles(dir) {
+      // Skip directories that can't be read
+function findConflictedFiles(dir) {
   const conflictedFiles = [];
   function scanDirectory(currentDir) {
     const files = fs.readdirSync(currentDir);
@@ -111,7 +104,6 @@ console.log('Starting comprehensive merge conflict resolution...');
         // Check if file has merge conflict markers,
   try {
           const content = fs.readFileSync(filePath, 'utf8');
-          if (content.includes('') || content.includes('>>>>>>>')) {
             conflictedFiles.push(filePath);
           }
         } catch (error) {
@@ -124,8 +116,9 @@ console.log('Starting comprehensive merge conflict resolution...');
   return files;
   return conflictedFiles;
 }
-// Main execution,
-  try {
+
+// Main execution
+try {
   console.log('🔍 Scanning for files with merge conflicts...');
   const conflictFiles = findFilesWithConflicts('.');
   if (conflictFiles.length === 0) {

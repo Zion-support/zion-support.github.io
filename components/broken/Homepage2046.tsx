@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -57,16 +56,21 @@ const QuantumLoadingFallback = () => (
               "0 0 20px rgba(6, 182, 212, 0.5)"
             ]
           }}
-          transition={{ 
-            rotate: { duration: 3, repeat: Infinity, ease: "linear" },
-            scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
-            boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-          }}
-          className="w-32 h-32 mx-auto mb-8"
-        >
-          <div className="w-full h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 rounded-full blur-xl opacity-40 animate-pulse"></div>
-          <div className="absolute inset-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
-            <Brain className="w-16 h-16 text-white" />
+          transition={{}
+            rotate: { duration: 3, repeat: Infinity, ease: 'linear'}
+}
+
+            scale: { duration: 2, repeat: Infinity, ease: 'easeInOut'}
+
+            boxShadow: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
+          
+}
+
+          className='w-32 h-32 mx-auto mb-8'
+            />
+          <div className='w-full h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 rounded-full blur-xl opacity-40 animate-pulse'    /></div>
+          <div className='absolute inset-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center'    />
+            <Brain className='w-16 h-16 text-white'    />
           </div>
         </motion.div>
       </div>
@@ -461,6 +465,9 @@ const Homepage2046: React.FC = () => {
       </div>
     </Layout>
   )
-};
-
+}
+export default Homepage2046;  )
+}
 export default Homepage2046;
+
+"

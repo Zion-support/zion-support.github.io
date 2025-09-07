@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -88,7 +87,40 @@ const Homepage2045: React.FC = () => {
           {/* Animated Background Elements */}
           <div className="absolute inset-0 pointer-events-none">
             <motion.div
-              className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
+              className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg'
+              animate={{rotate: [0, 360]
+                scale: [1, 1.1, 1];}
+                opacity: [0.3, 0.6, 0.3];}
+              }}
+              transition={{duration: 8
+                repeat: Infinity
+              animate={{rotate: [0, 360];}
+                scale: [1, 1.1, 1];}
+                opacity: [0.3, 0.6, 0.3]}}
+              transition={{duration: 8,repeat: Infinity,ease: 'easeInOut'              }}
+               />
+            <motion.div
+              className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full'
+              animate = {{rotate: [360, 0],scale: [1, 1.2, 1],opacity: [0.3, 0.7, 0.3],staggerChildren: 0.1,delayChildren: 0.2}}  }
+}
+;
+
+  const backgroundVariants = {initial: { opacity: 0, scale: 0.8}
+},animate: { opacity: 1, scale: 1}
+}
+  return (}}
+              }}duration: 6,animate={{rotate: [45, 405];}
+                scale: [1, 1.15, 1];}
+                opacity: [0.3, 0.5, 0.3]}}
+
+              transition={{
+                duration: 10,
+                repeat: Infinity
+                ease: 'easeInOut'
+              }}
+            />
+            <motion.div
+              className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
               animate={{
                 rotate: [0, 360],
                 scale: [1, 1.1, 1],
@@ -346,11 +378,24 @@ const Homepage2045: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact CTA Section */}
-        <section id="contact-cta" className="py-20 relative">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition = $2;
-export default Homepage2045,
+  opacity: 0, coordinate_y: 30
+}whileInView= {}
+  {}
+  opacity: 1, coordinate_y: 0;}
+}transition= {
+  {}
+  duration: 0.8;}
+}viewport= {
+  {
+
+  once: true }
+}"
+} /> Ready to Transform? </span> </h2> <p className=\"text-xl text-gray-300 mb-8\"  /> Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className=\"flex flex-col sm:flex-row gap-4 justify-center items-center\"  /> <Link href=\"/contact\" className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105\"  /> Get Started </a> <a href=\"tel:+1 302 464 0950\" className=\"px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105\"  /> Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+};
+
+export default Homepage2045;
+
+"
+export default Homepage2045
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
+};export default Homepage2045;export default Homepage2045;

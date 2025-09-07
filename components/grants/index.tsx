@@ -1,6 +1,78 @@
+
+
+import type {;
+  GrantApplication,;
+  GrantCategory,;}
+  GrantStatus,;}
+} from '../../types/grants';
+
+;
+import type {GrantApplication,GrantCategory,GrantStatus} from '../../types/grants';
+
+const categories: GrantCategory[] = [;
+  'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];
+
+const statuses: GrantStatus[] = [;
+  'Draft','Submitted','Under Review','Approved','Rejected'];
+
+export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[] />([])sector?: string;
+    status?: string;
+    region?: string;}
+    program?: string;}
+  }>({}).catch(() => setItems([]))}, [filters])return (.then((r) => r.json()).then((d) => setItems(d.items || [])).catch(() => setItems([]))}, [filters])return (<EnhancedLayout />      .then((r) => r && r.json()).then((d) => setItems(d && d.items || [])).catch(() => setItems([]))}, [filters])return (<EnhancedLayout />;
+  }>({});
+
+      .catch(() => setItems([]));  }, [filters]);
+  return (
+
+      .then((r) => r.json())
+      .then((d) => setItems(d.items || []))
+
+      .catch(() => setItems([]))
+  }, [filters]);
+
+  return (
+
+    <EnhancedLayout />      .then((r) => r && r.json());
+      .then((d) => setItems(d && d.items || []));
+      .catch(() => setItems([]));
+  }, [filters]);
+
+  return (
+    <EnhancedLayout />;
+      <div className='flex items-center justify-between mb-6' />;
+        <h1 className='text-2xl font-semibold' />Zion Grants & Incubator</h1>;
+        <div className='flex gap-2' />;
+          <Link href='/grants/apply' />;
+            <a className='px-3 py-2 bg-blue-600 text-white rounded' />Apply</a>;
+          </Link>;
+          <Link href='/incubator' />;
+            <a className='px-3 py-2 bg-purple-600 text-white rounded' />;
+    <EnhancedLayout />;
+      <div className='flex items - center justify - between mb - 6' />;
+        <h1 className='text - 2xl font - semibold' />Zion Grants & Incubator</h1>;
+        <div className='flex gap - 2' />;
+          <Link href='/grants / apply' />;
+            <a className='px - 3 py - 2 bg - blue - 600 text - white rounded' />Apply</a>;
+          </Link>;
+          <Link href='/incubator' />;
+            <a className='px - 3 py - 2 bg - purple - 600 text - white rounded' />;Incubator;
+            </a>;
+          </Link>;
+      </div>;value={filters && filters.status || ''}
+          onChange={e =>;}
+            setFilters(f => ({ ...f, status: e && e.target.value || undefined}
+}))GrantApplication,GrantCategory,GrantStatus} from '../../types/grants';
+
+const categories: GrantCategory[] = [;
+  'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];
+
+const statuses: GrantStatus[] = [;
+  'Draft','Submitted','Under Review','Approved','Rejected',import { useEffect, useState   } from 'react';
+import Link from 'next/link';,import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+  GrantApplication,GrantCategory,GrantStatus} from '../../types/grants';
 import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
@@ -74,5 +146,34 @@ export default function GrantsPage() {
         {items.length === 0 && <div className="text-sm text-gray-600">No grants found.</div>}
       </div>
     </EnhancedLayout>
-  )
+);
 }
+
+  return (
+    <EnhancedLayout />
+    <EnhancedLayout />
+                  <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700' />;
+                    Incubated by Zion;
+                  </span>)}
+                {g.status === 'Approved' && (<span className='px - 2 py - 1 text - xs rounded bg - emerald - 100 text - emerald - 700' />;}
+                    Grant Winner;}
+                  </span>)}
+                <span className='px - 2 py - 1 text - xs rounded bg - gray - 100 dark:bg - gray - 800' />;
+                  {g.status}
+                </span>;
+              </div>;
+            </div>;
+            <p className='mt - 2 text - sm text - gray - 700 dark:text - gray - 300 line - clamp - 3' />;
+              {g.proposal_summary}
+            </p>;
+            <div className='mt - 3 text - sm text - gray - 600 dark:text - gray - 400' />;
+              Budget: {g.budget_amount} {g.budget_currenc}
+}
+            </div>;
+          </div>))}
+        {items.length === 0 && (<div className='text - sm text - gray - 600' />No grants found.</div>)}
+      </div>;
+    </EnhancedLayout>)})
+    </EnhancedLayout>);
+}
+"

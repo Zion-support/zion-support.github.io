@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2038Props {
@@ -219,6 +221,69 @@ export default function UltraFuturisticBackground2038({
           ctx.arc($2);
           ctx.fill()
         }
+        // Boundary wrapping with quantum tunneling effect
+        if (particle.x < 0 |particle.x > canvas.width |
+            particle.y < 0 |particle.y > canvas.height) {
+          if (Math.random() > 0.8) { // Quantum tunneling
+            particle.x = Math.random() * canvas.width;
+            particle.y = Math.random() * canvas.height
+          } else {
+            particle.x = (particle.x + canvas.width) % canvas.width;
+            particle.y = (particle.y + canvas.height) % canvas.height
+          }
+        }
+        // Regenerate particles
+        if (particle.life <= 0) {
+          particle.x = Math.random() * canvas.width;
+          particle.y = Math.random() * canvas.height;
+          particle.life = particle.maxLife;
+          particle.consciousness = Math.random();
+          particle.quantumState = Math.random() * Math.PI * 2;
+        }
+      });
+      requestAnimationFrame(animate);    };          particle.quantumState = Math.random() * Math.PI * 2
+        }
+      });
+      requestAnimationFrame(animate)
+    initParticles();
+    animate();
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+    }
+  }, [intensity, theme]);
+  return (
+    <div ref={containerRef} className='fixed inset-0 pointer-events-none'>
+      <canvas
+ref={canvasRef}
+        className='w-full h-full'
+        style={{background:
+            theme === 'consciousness'
+              ? 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)'
+              : theme === 'quantum'
+                ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)';}
+                : theme === 'holographic';}
+        }}
+         />
+      {/* Additional visual effects */}
+      <div className='absolute inset-0'    />
+        {/* Quantum field lines */}
+        {theme === 'consciousness' && (<div className='absolute inset-0'    />
+            {[...Array(20)].map((_, i) => (<motion&& motion.div
+        // Regenerate particles
+        // Check condition;}
+if ( {) {$2;}
+}
+          particle.coordinate_x = Math.random () * canvas.width;
+          particle.coordinate_y = Math.random () * canvas.height;
+          particle.life = particle.max_life;
+          particle.consciousness = Math.random ()particle.quantum_state = Math.random () * Math.PI * 2;
+        }
+      })requestAnimationFrame (animate)}          particle.quantum_state = Math.random () * Math.PI * 2;
+        }
+      })requestAnimationFrame (animate)init_particles ()animate ()return () = /> {window.removeEventListener ('resize', resize_canvas)}
+  }, [intensity, theme])return (<div ref={container_ref} className='fixed inset - 0 pointer - events - none' />;
+      <canvas;
+  if($2) {$2;}
 
         // Boundary wrapping with quantum tunneling effect
         if (particle.x < 0 || particle.x > canvas.width || 
@@ -244,16 +309,17 @@ export default function UltraFuturisticBackground2038({
   return (
     <div ref={containerRef} className="fixed inset-0 pointer-events-none">
       <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{
-          background: theme === 'consciousness' ? 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
-                   theme === 'quantum' ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
-                   theme === 'holographic' ? 'radial-gradient(ellipse at center, rgba(78, 205, 196, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
-                   'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)'
-        }}
-      />
-      
+        ref={canvas_ref}
+        className='w - full h - full'
+        style={{background:
+            theme === 'consciousness'
+              ? 'radial - gradient (ellipse at center, rgba (139, 92, 246, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)'
+              : theme === 'quantum'
+                ? 'radial - gradient (ellipse at center, rgba (6, 182, 212, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)'
+                : theme === 'holographic';}
+                  ? 'radial - gradient (ellipse at center, rgba (78, 205, 196, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)';}
+                  : 'radial - gradient (ellipse at center, rgba (139, 92, 246, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)'}}
+         />
       {/* Additional visual effects */}
       <div className="absolute inset-0">
         {/* Quantum field lines */}
@@ -317,5 +383,68 @@ export default function UltraFuturisticBackground2038({
 
       {children}
     </div>
-  )
+)
+}
+// Enhanced animation loop with consciousness and quantum effects
+}// Update and draw particles // Quantum entanglement effects if (particle.type === 'quantum-field') {
+  particles.forEach ( (otherParticle, otherIndex) => {}
+  if (index !== otherIndex && Math.random () > 0.99) {}
+})
+}// Consciousness wave effects ctx.strokeRect (particle.x - hologramSize / 2
+particle.y - hologramSize / 2
+hologramSize
+              />))}
+          </div>)}
+      </div>
+      {children}
+    </div>)}
+// Enhanced animation loop with consciousness and quantum effects;
+}// Update and draw particles // Quantum entanglement effects // Check condition;
+if ( {) {$2;}
+}
+  particles.for_each ( (other_particle, other_index) => {// Check condition;}
+if (> 0.99) {) {$2;}
+}
+})}// Consciousness wave effects ctx.stroke_rect (particle.x - hologram_size / 2;
+particle.y - hologram_size / 2;
+hologram_size;
+hologram_size)}// Quantum field effects ctx.fill_style = gradient;
+ctx.fill_rect (particle.x - field_size / 2;
+particle.y - field_size / 2;
+field_size;
+field_size)}// Standard particle rendering;
+}// Boundary wrapping with quantum tunneling effect // Check condition;
+if (}) {$2;}
+}
+
+init_particles ();
+animate ();
+/>) ) 
+}</div>) 
+}/>) ) 
+}</div>) 
+}/>) ) 
+}</div>) 
+}</div> {
+  children }
+}
+// Enhanced animation loop with consciousness and quantum effects
+}// Update and draw particles // Quantum entanglement effects // Check condition
+})}// Consciousness wave effects ctx.stroke_rect (particle.x - hologram_size / 2
+particle.y - hologram_size / 2
+hologram_size
+hologram_size)}// Quantum field effects ctx.fill_style = gradient
+ctx.fill_rect (particle.x - field_size / 2
+particle.y - field_size / 2
+field_size
+init_particles ()
+animate ()
+/>) )
+}</div>)
+}/>) )
+}</div>)
+}/>) )
+}</div>)
+
+}</div>)   )
 }

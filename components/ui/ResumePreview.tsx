@@ -1,3 +1,5 @@
+
+
 import React, { forwardRef } from 'react';
 
 export type ResumeData = {
@@ -206,7 +208,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
     )
   }
 );
-
 ResumePreview.displayName = 'ResumePreview';
-
 export default ResumePreview;
+
+"

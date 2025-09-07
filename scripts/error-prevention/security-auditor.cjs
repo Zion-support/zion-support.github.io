@@ -20,7 +20,10 @@ class SecurityAuditor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
+
     
+    
+
     
 
 
@@ -73,6 +76,7 @@ class SecurityAuditor {}
 
 
 
+
       child.on('close', (code) => {}
         if ( {})
 
@@ -112,6 +116,7 @@ module.exports = SecurityAuditor;
   
   auditor.start().catch(console.error)};
 
+module.exports = SecurityAuditor;
 module.exports = SecurityAuditor;
 module.exports = SecurityAuditor;
   // Handle graceful shutdown;

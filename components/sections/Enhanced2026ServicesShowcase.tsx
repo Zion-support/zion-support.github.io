@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
@@ -67,12 +69,87 @@ const Enhanced2026ServicesShowcase = $2;
       category: 'Space Tech',
       features: ['Real-time TrackingCollision PredictionSatellite SafetySpace Traffic Management']
     }
-  ],
+    {
+      id: 'dna-computing-platform-2026'
+      name: 'DNA Computing Platform 2026'
+      description:
+        'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.'
+      price: '$2,999'
+      period: '/month'
+      icon: Globe
+      color: 'from-indigo-500 to-purple-500'
+      category: 'Emerging Tech'
+      features: [
+        'Molecular Processing'
+        'Exponential Speed'
+        'Complex Algorithms'
+        'Research Ready'
+      ]
+    }
+    {
+      id: 'space-debris-tracking-system'
+      name: 'Space Debris Tracking System 2026'
+      description:
+        'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',      price: '$899',      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.'
+      price: '$899'
+      period: '/month'
+      icon: Rocket
+      color: 'from-yellow-500 to-orange-500'
+      category: 'Space Tech'
+      features: [
+        'Real-time Tracking'
+        'Collision Prediction'
+        'Satellite Safety'
+        'Space Traffic Management'
+      ]
+    }
+  ];
 
+const categories = [
+  {name: 'AI Services'}
+  count: '150+',icon: Brain,color: 'from-purple-500 to-pink-500'},{name: 'Quantum Tech'}
+  count: '75+',icon: Sparkles,color: 'from-blue-500 to-cyan-500'},{name: 'Emerging Tech'}
+  count: '100+',icon: Rocket,color: 'from-green-500 to-emerald-500'},{name: 'IT Solutions'}
+  count: '200+',icon: Cloud,color: 'from-yellow-500 to-orange-500'}];
+  return (<section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden' />;
+      {/* Background Effects */}{ name: 'IT Solutions'}
+  count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500'}
+}
   const categories = [
-    { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' },
-    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' },
+    {
+      name: 'AI Services'
+      count: '150+'
+      icon: Brain
+      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      name: 'Quantum Tech'
+      count: '75+'
+      icon: Sparkles
+      color: 'from-blue-500 to-cyan-500'
+    }
+    {
+      name: 'Emerging Tech'
+      count: '100+'
+      icon: Rocket
+      color: 'from-green-500 to-emerald-500'
+    }
+    {
+      name: 'IT Solutions'
+      count: '200+'
+      icon: Cloud
+      color: 'from-yellow-500 to-orange-500'
+    }
+  ];
+  return (
+    <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+      {/* Background Effects */}
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>
+      <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}  ];
+  const categories = [
+    { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' }
+    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' }
+    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' }
     { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500' }
   ],
 
@@ -84,15 +161,18 @@ const Enhanced2026ServicesShowcase = $2;
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true}}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              2026 Revolutionary Services
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.6 }}
+
+          viewport={{ once: true }
+}
+
+className='text-center mb-16'
+         />
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' />
+              2026 Revolutionary Services;
             </span>
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
@@ -100,26 +180,65 @@ const Enhanced2026ServicesShowcase = $2;
           </p>
         </motion.div>
 
-        {/* Category Overview */}
-        <motion.div
-          initial={{ opacity: 0, y: 20}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true}}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-        >
-          {categories.map((category, index) => (
-            <motion.div
-              key={category.name}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1}}
+          className='text-center mb-16'>;
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' />;
+              2026 Revolutionary Services;
+            </span>;
+          </h2>;
+          <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed' />;
+            Experience the future with our cutting-edge AI, quantum, and;
+            emerging technology services designed to transform your business          </p>        >;
+          <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\" />;"
+            <span className=\"bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\" />;
+              2026 Revolutionary Services;
+            </span>;
+          </h2>;"
+          <p className=\"text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed\" />;
+            Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business;
+          </p>;
+        </motion && motion.div>;{/* Category Overview */}
+        <motion&& motion.div;
+          initial={{ opacity: 0, y: 20 }
+}
+          whileInView={{ opacity: 1, y: 0 }
+}
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
+
+          viewport={{ once: true }
+}
+
+className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
+         />
+          {categories.map((category, index) => (}
+            <motion.div;}
+key={category.name}
+              initial={{ opacity: 0, scale: 0.8 }
+}
+              whileInView={{ opacity: 1, scale: 1 }
+}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              viewport={{ once: true}}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="group text-center"
-            >
-              <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
-                <category.icon className="w-8 h-8 text-white" />
+              viewport={{ once: true }
+}
+              whileHover={{ scale: 1.05, y: -5 }
+}
+
+className='group text-center'
+             />
+
+              whileInView={{ opacity: 1, scale: 1 }
+}
+              transition={{ duration: 0 && 0.6, delay: 0 && 0.2 + index * 0 && 0.1 }}
+              viewport={{ once: true }
+}
+              whileHover={{ scale: 1 && 1.05, y: -5 }
+}
+              className='group text-center'>;
+
+              <div;
+className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
+                  />
+                <category.icon className='w-8 h-8 text-white'    />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
               <p className="text-2xl font-bold text-cyan-400">{category.count}</p>
@@ -221,6 +340,25 @@ const Enhanced2026ServicesShowcase = $2;
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2, delay: 0.1 }}
               >
-                <Link
-                  href = $2;
-export default Enhanced2026ServicesShowcase,
+                <Link;'
+                  href='/contact';'
+                  className='inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 200'
+                >;'"
+                  <Shield className='w - 5 h - 5 mr - 2' />                  Get Started                  href="/contact";"
+                  className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover: bg - cyan - 500 / 10 transition - all duration - 200"
+                >;"
+                  <Shield className="w - 5 h - 5 mr - 2" />
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+export default Enhanced2026ServicesShowcase;  )
+}
+export default Enhanced2026ServicesShowcase;
+
+"

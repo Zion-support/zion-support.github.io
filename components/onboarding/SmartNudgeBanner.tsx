@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { X } from 'lucide-react';
 export type SmartNudgeBannerProps = $2;
@@ -33,5 +35,7 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
         {message}
       </div>
     </div>
-  )
+  );
+
+);
 }

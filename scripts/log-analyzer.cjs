@@ -34,7 +34,10 @@ const { execSync } = require('child_process')
         "priority"
         "message"
         "impact"
+
       console.error('\n� Log Analyzer "failed")
       console.error('\n� Log Analyzer "failed")
+      console.error('\n� Log Analyzer "failed")
+
 
 

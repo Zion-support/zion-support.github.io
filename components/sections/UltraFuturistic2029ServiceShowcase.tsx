@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react';
@@ -227,5 +229,28 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 initial={{ opacity: 0, y: 20}}
                 whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className = $2;
-export default UltraFuturistic2029ServiceShowcase,
+                className='text-center'
+              >
+                <div
+className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4
+}    />
+
+                  <stat.icon className='w-8 h-8 text-white'    />
+                </div>
+                <div className='text-3xl font-bold text-white mb-2'    />
+                  {stat.value}
+
+              </motion.div>
+            ))}
+
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+export default UltraFuturistic2029ServiceShowcase;  )
+}
+export default UltraFuturistic2029ServiceShowcase;
+
+"

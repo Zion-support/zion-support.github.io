@@ -16,27 +16,52 @@ const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
   // Keep console.error for debugging;
 ];
 
+const EXCLUDE_PATTERNS = ['node_modules',
+  '.next',
+  'dist',
+  'build',
+  'coverage',
+  'scripts',
+  '*.test.*',
+  '*.spec.*'
+];
+
+function shouldProcessFile(filePath) {
+  return !EXCLUDE_PATTERNS.some(pattern => {
+    if (pattern.includes('*')) {
+      return filePath.includes(pattern.replace('*', ''))}
     return filePath.includes(pattern)})}
 function removeConsoleStatements(content) {
   let modifiedContent = content;
   let removedCount = 0;
 
-  CONSOLE_PATTERNS.forEach(pattern => {)
+  CONSOLE_PATTERNS.forEach(pattern => {
     const matches = modifiedContent.match(pattern);
     if (matches) {
       removedCount += matches.length;
+      modifiedContent = modifiedContent.replace(pattern, '')}
+  });
 
-  return { "content": modifiedContent, removedCount }}"
+  return { "content": modifiedContent, removedCount }}
+
 function processFile(filePath) {
   try {
-  // TODO: Implement
-}"
-
+    const content = fs.readFileSync(filePath, 'utf8');
+    const { "content": newContent, removedCount } = removeConsoleStatements(content);
+    
+    if (removedCount > 0) {
+      fs.writeFileSync(filePath, newContent, 'utf8');
+      
+      
       return removedCount}
 
   let results = [];
   const list = fs.readdirSync(dir);
-  list.forEach(file => {)
+function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  
+  list.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     if (stat && stat.isDirectory()) {
@@ -46,8 +71,12 @@ function processFile(filePath) {
       const ext = path.extname(file)
       if (extensions.includes(ext)) {
         results.push(filePath);
-ursor/expand-services-advertise-and-build-project-0033
+      }
+    }
+  });
+  
   return results;
+}
 
 function main() {
 
@@ -56,12 +85,13 @@ function main() {
 
 
 
-
   const srcDir = path.join(process.cwd(), 'src');
-  const pagesDir = path.join(process.cwd(), 'pages');`;
-  const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,`;
+  const pagesDir = path.join(process.cwd(), 'pages');
+  
+  const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
+    `${pagesDir}/**/*.{js,jsx,ts,tsx}`
+  ];
 
-    `${pagesDir}/**/*.{js,jsx,ts,tsx}`]
 
   let totalRemoved = 0;
   let filesProcessed = 0;
@@ -76,12 +106,17 @@ function main() {
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
-ursor/expand-services-advertise-and-build-project-0033
 
+
+}
 
 
 
 }
+
+if (require.main === module) {
+  main().catch(console.error)}
+
 
 module.exports = { removeConsoleStatements, processFile };
 

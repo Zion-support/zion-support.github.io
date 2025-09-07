@@ -1,7 +1,40 @@
+
+
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
+export type ToastType = any;
+
+const getIcon = (
+export type ToastType = 'success' | 'error' | 'info' | 'warning';
+}, [toast.id, toast.duration, onRemove]);
+const getIcon = () => {
+  switch (toast.type) {
+  case 'success':
+interface ToastProps {
+  toast: Toast;
+onRemove: (id: string) => void,) => {
+  return $3;}
+}
+}
+
+import React from 'react';
+
+export type ToastType = 'success' | 'error' | 'info' | 'warning';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
-export type ToastType = $2;
+
+}, [toast && toast.id, toast && toast.duration, onRemove]);
+
+const getIcon = (;
+  switch (toast && toast.type) {;
+  case 'success': ;
+
+interface ToastProps {;
+  toast: Toast;
+  onRemove: (id: string) => void;
+export type ToastType = 'success' | 'error' | 'info' | 'warning';
 export interface Toast {
   id: string,
   type: ToastType,
@@ -117,36 +150,41 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
     <div className = $2;
 // Hook for managing toasts
 export const useToast = () => {
-  const [toasts, setToasts] = useState<Toast[]>([]),
-
+  const [toasts, setToasts] = useState<Toast[]>([]);
   const addToast = (toast: Omit<Toast, 'id'>) => {
-    const id = Math.random().toString(36).substr($2);
-    const newToast = { ...toast, id },
-    setToasts(prev => [...prev, newToast])
-  },
-
-  const removeToast = $2;
+    const id = Math.random().toString(36).substr(2, 9);
+    const newToast = { ...toast, id }
+    setToasts(prev => [...prev, newToast]);
+  const removeToast = (id: string) => {
+    setToasts(prev => prev.filter(toast => toast.id !== id));
+  }
   const showSuccess = (title: string, message?: string) => {
-    addToast({ type: 'success', title, message })
-  },
-
+    addToast({ type: 'success', title, message });
+  }
   const showError = (title: string, message?: string) => {
-    addToast({ type: 'error', title, message })
-  },
-
+    addToast({ type: 'error', title, message });
+  }
   const showInfo = (title: string, message?: string) => {
-    addToast({ type: 'info', title, message })
-  },
-
+    addToast({ type: 'info', title, message });
+  }
   const showWarning = (title: string, message?: string) => {
-    addToast({ type: 'warning', title, message })
-  },
-
+    addToast({ type: 'warning', title, message });
+  }
   return {
-    toasts,
-    showSuccess,
-    showError,
-    showInfo,
-    showWarning,
+    toasts
+    showSuccess
+    showError
+    showInfo
+    showWarning
+    removeToast
+  }
+};
+
+"
+};    toasts;
+    showSuccess;
+    showError;
+    showInfo;
+    showWarning;
     removeToast}
-},
+}

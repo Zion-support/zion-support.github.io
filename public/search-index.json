@@ -1,7 +1,6 @@
 {
   "version": "1.0",
-  "generated": "2025-09-06T05:13:31.519Z",
-  "baseUrl": "https://zion.app",
+  "generated": "2025-09-07T11:29:59.276Z",
   "pages": [
   "generatedAt": "2025-09-05T23:41:15.563Z",
   "items": [
@@ -16,8 +15,7 @@
         "solutions",
         "services"
       ],
-      "lastmod": "2025-09-06",
-      "type": "page"
+      "lastModified": "2025-09-07T11:29:59.276Z"
     },
     {
       "url": "https://zion.app/about",
@@ -30,8 +28,7 @@
         "team",
         "history"
       ],
-      "lastmod": "2025-09-06",
-      "type": "page"
+      "lastModified": "2025-09-07T11:29:59.276Z"
     },
     {
       "url": "https://zion.app/services",
@@ -44,8 +41,7 @@
         "cloud",
         "solutions"
       ],
-      "lastmod": "2025-09-06",
-      "type": "page"
+      "lastModified": "2025-09-07T11:29:59.276Z"
     },
     {
       "url": "https://zion.app/contact",
@@ -57,13 +53,26 @@
         "support",
         "help"
       ],
-      "lastmod": "2025-09-06",
-      "type": "page"
+      "lastModified": "2025-09-07T11:29:59.276Z"
     },
     {
-      "url": "https://zion.app/blog",
-      "title": "Blog",
-      "description": "Latest insights and updates from Zion Tech Group",
+      "url": "/portfolio",
+      "title": "Portfolio - Our Work",
+      "description": "View our successful projects and case studies",
+      "keywords": [
+        "portfolio",
+        "view",
+        "successful",
+        "projects",
+        "case",
+        "studies"
+      ],
+      "lastModified": "2025-09-07T11:29:59.276Z"
+    },
+    {
+      "url": "/blog",
+      "title": "Blog - Tech Insights",
+      "description": "Latest insights and updates from our team",
       "keywords": [
         "blog",
         "news",
@@ -4550,265 +4559,7 @@
         "team",
         "team"
       ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/terms",
-      "title": "Terms",
-      "description": "Page about terms",
-      "keywords": [
-        "terms",
-        "terms"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/test",
-      "title": "Test",
-      "description": "Page about test",
-      "keywords": [
-        "test",
-        "test"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/tokenomics",
-      "title": "Tokenomics",
-      "description": "Page about tokenomics",
-      "keywords": [
-        "tokenomics",
-        "tokenomics"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/training",
-      "title": "Training",
-      "description": "Page about training",
-      "keywords": [
-        "training",
-        "training"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/transportation-logistics-solutions",
-      "title": "Transportation Logistics Solutions",
-      "description": "Page about transportation logistics solutions",
-      "keywords": [
-        "transportation logistics solutions",
-        "transportation-logistics-solutions"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/ultimate-2026-services-showcase",
-      "title": "Ultimate 2026 Services Showcase",
-      "description": "Page about ultimate 2026 services showcase",
-      "keywords": [
-        "ultimate 2026 services showcase",
-        "ultimate-2026-services-showcase"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/vector-search-starter",
-      "title": "Vector Search Starter",
-      "description": "Page about vector search starter",
-      "keywords": [
-        "vector search starter",
-        "vector-search-starter"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/vendor-risk-automation",
-      "title": "Vendor Risk Automation",
-      "description": "Page about vendor risk automation",
-      "keywords": [
-        "vendor risk automation",
-        "vendor-risk-automation"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/verify-status",
-      "title": "Verify Status",
-      "description": "Page about verify status",
-      "keywords": [
-        "verify status",
-        "verify-status"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/verify",
-      "title": "Verify",
-      "description": "Page about verify",
-      "keywords": [
-        "verify",
-        "verify"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/vulnerability-assessment-penetration-testing",
-      "title": "Vulnerability Assessment Penetration Testing",
-      "description": "Page about vulnerability assessment penetration testing",
-      "keywords": [
-        "vulnerability assessment penetration testing",
-        "vulnerability-assessment-penetration-testing"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/warehouse-accelerator",
-      "title": "Warehouse Accelerator",
-      "description": "Page about warehouse accelerator",
-      "keywords": [
-        "warehouse accelerator",
-        "warehouse-accelerator"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/webhook-relay-replay",
-      "title": "Webhook Relay Replay",
-      "description": "Page about webhook relay replay",
-      "keywords": [
-        "webhook relay replay",
-        "webhook-relay-replay"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/webinars",
-      "title": "Webinars",
-      "description": "Page about webinars",
-      "keywords": [
-        "webinars",
-        "webinars"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/whitepaper/preview/:id",
-      "title": ":Id",
-      "description": "Page about :id",
-      "keywords": [
-        ":id",
-        "whitepaper",
-        "preview",
-        ":id"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/whitepaper-generator",
-      "title": "Whitepaper Generator",
-      "description": "Page about whitepaper generator",
-      "keywords": [
-        "whitepaper generator",
-        "whitepaper-generator"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/wiki",
-      "title": "Wiki",
-      "description": "Page about wiki",
-      "keywords": [
-        "wiki",
-        "wiki"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/zero-trust-security-platform",
-      "title": "Zero Trust Security Platform",
-      "description": "Page about zero trust security platform",
-      "keywords": [
-        "zero trust security platform",
-        "zero-trust-security-platform"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/zion/init",
-      "title": "Init",
-      "description": "Page about init",
-      "keywords": [
-        "init",
-        "zion",
-        "init"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/zion-global-2025",
-      "title": "Zion Global 2025",
-      "description": "Page about zion global 2025",
-      "keywords": [
-        "zion global 2025",
-        "zion-global-2025"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/zion-stack/api",
-      "title": "Api",
-      "description": "Page about api",
-      "keywords": [
-        "api",
-        "zion-stack",
-        "api"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/zion-tech-group",
-      "title": "Zion Tech Group",
-      "description": "Page about zion tech group",
-      "keywords": [
-        "zion tech group",
-        "zion-tech-group"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/zl",
-      "title": "Zl",
-      "description": "Page about zl",
-      "keywords": [
-        "zl",
-        "zl"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
+      "lastModified": "2025-09-07T11:29:59.276Z"
     }
   ],
   "totalPages": 418

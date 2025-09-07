@@ -1,4 +1,28 @@
+
+
 import React, { useEffect, useRef } from 'react';
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+// Particle system const particles: Array< {
+  // Wrap around edges if (particle && particle.x < 0) particle && particle.x = canvas && canvas.width
+if (particle && particle.x > canvas && canvas.width) particle && particle.x = 0
+if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height
+if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0
+// Draw particle requestAnimationFrame (animate)
+}
+// Draw particle requestAnimationFrame (animate)}
+}
+animate ();
+// Handle resize window.addEventListener ('resize', handle_resize);
+animate ();'
+// Handle resize window && window.addEventListener ('resize', handleResize)
+/> {
+  /* Floating Circles */
+}<motion.div
+export default function UltraFuturisticBackground2028({
+  children
+}: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2028Props {
   children: React.ReactNode

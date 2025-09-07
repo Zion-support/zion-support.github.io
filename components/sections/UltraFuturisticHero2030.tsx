@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -271,5 +270,9 @@ export default function UltraFuturisticHero2030() {
         />
       </div>
     </section>
-  )
+
+);
+
+"
+);  )
 }

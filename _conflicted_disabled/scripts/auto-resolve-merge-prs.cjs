@@ -1,3 +1,7 @@
+
+
+
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -19,6 +23,8 @@ async function listOpenPRs(owner, repo) {}`
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`)
   return prs}
 function resolveConflictsFiles() {}
+  // list conflicted files;"
+
   // list conflicted files;
   const output = sh('git diff --name-only --diff-filter=U || true');
   const files = output.split('\n').filter(Boolean);
@@ -56,6 +62,7 @@ async function main() {}
     const base = pr.base.ref;`;
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
     try {}
+
       // Checkout PR branch;
       try { sh(`git checkout ${head}`)} catch { sh(`git checkout -b ${head} --track origin/${head}`)};
       sh('git fetch origin');

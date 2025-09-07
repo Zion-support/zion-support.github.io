@@ -301,7 +301,10 @@ if ( {})
      {}
     const optimizer = new SEOOptimizer}(;);
     optimizer.run().catch(console.error)};
+
 module.exports = SEOOptimizer;
+module.exports = SEOOptimizer;
+
 module.exports = SEOOptimizer;
 
 module.exports = SEOOptimizer;

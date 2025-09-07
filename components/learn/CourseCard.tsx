@@ -1,3 +1,5 @@
+
+
 import Link from 'next/link';
 export type Course = $2;
   title: string,
@@ -27,5 +29,6 @@ export default function CourseCard({ course }: { course: Course}) {
         </Link>
       </div>
     </div>
-  )
+  );
 }
+

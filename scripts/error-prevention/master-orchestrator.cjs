@@ -116,7 +116,10 @@ class ErrorPreventionOrchestrator {}
   runCommand(command, args) {}
     return new Promise((resolve, reject) => {;}
       const child = spawn(command, args, { "stdio": 'inherit' };);
+
       
+      
+
       
 
       process.exit(1)};
@@ -157,6 +160,8 @@ switch (command) {}
     orchestrator.check().catch(console.error)
   case 'logs':
     orchestrator.logs();
+    break;
+
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
     process.exit(1)};
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
@@ -165,3 +170,9 @@ switch (command) {}
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
     process.exit(1)};
 
+
+  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
+    process.exit(1)};
+
+  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
+    process.exit(1)};

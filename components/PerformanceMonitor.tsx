@@ -1,18 +1,3 @@
-import React, { useEffect } from 'react';
-import { Star } from 'lucide-react';
-
-interface PerformanceData {
-  domContentLoaded: number,
-  loadComplete: number,
-  totalLoadTime: number,
-  firstPaint: number,
-  firstContentfulPaint: number,
-  resourceCount: number,
-  memory: {
-    used: number,
-    total: number,
-    limit: number,
-  } | null;
 }
 
 interface PerformanceData {
@@ -106,17 +91,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 
     // Measure performance after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
+      measurePerformance()
     } else {
-      window.addEventListener('load', measurePerformance);
+      window.addEventListener('load', measurePerformance)
     }
 
     return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, [onPerformanceData]);
+      window.removeEventListener('load', measurePerformance)
+    }
+  }, [onPerformanceData])
 
-  return null;
-};
+  return null
+}
 
-export default PerformanceMonitor;
+export default PerformanceMonitor

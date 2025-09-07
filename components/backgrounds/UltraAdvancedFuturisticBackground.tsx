@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundProps {
@@ -10,15 +12,36 @@ interface UltraAdvancedFuturisticBackgroundProps {
   enableQuantumEffects?: boolean
 }
 
-export default function UltraAdvancedFuturisticBackground({ 
-  children,
-  intensity = $2;
-  theme = $2;
-  particleCount = $2;
-  animationSpeed = $2;
-  enableHolographic = $2;
-  enableQuantumEffects = $2;
-  const animationRef = $2;
+export default function UltraAdvancedFuturisticBackground({children
+  intensity
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+const particles: Array< {
+  //Initialize particles with enhanced properties const initParticles = (
+ ;
+  const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5);
+for (let i = 0, i < count, i++) {
+
+  const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5)
+  for($2) {
+  particles.push ({
+export default function UltraAdvancedFuturisticBackground({
+  children
+  intensity = 'medium'
+  theme = 'quantum'
+  particleCount = 200
+  animationSpeed = 1.0
+  enableHolographic = true
+  enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({
+  children;
+  intensity = 'medium';
+  theme = 'quantum';
+  particleCount = 200;
+  animationSpeed = 1.0;
+  enableHolographic = true;
+  enableQuantumEffects = true
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const animationRef = useRef<number | undefined>(undefined);
   useEffect(() => {
     const canvas = $2;
     if (!canvas) return,
@@ -206,14 +229,19 @@ export default function UltraAdvancedFuturisticBackground({
           ctx.stroke()
         }
       }
-
-      animationRef.current = $2;
+      animationRef.current = requestAnimationFrame(animate)
+    }
     // Handle window resize
-    const handleResize = $2;
-      canvas.height = $2;
-    window.addEventListener($2);
-    initParticles($2);
-    animate($2);
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+canvas.height = window.innerHeight) => {
+  return $3;}
+}
+};
+
+    window.addEventListener('resize', handleResize);
+    initParticles();
+    animate();
     return () => {
       window.removeEventListener($2);
       if (animationRef.current) {
@@ -247,5 +275,6 @@ export default function UltraAdvancedFuturisticBackground({
       
       {children}
     </div>
-  )
+);
 }
+

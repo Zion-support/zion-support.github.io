@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
@@ -282,9 +284,10 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
               transition = $2;
                 delay: i * 0.1,
                 repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
+                ease: 'easeInOut',              }}
+
+            />}
+}
           ))}
         </div>
       </div>
@@ -292,4 +295,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
   )
 },
 
-export default UltraFuturisticBackground2035,
+export default UltraFuturisticBackground2035;
+
+"
+              }}

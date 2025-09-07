@@ -176,7 +176,10 @@ this.log(`� Report "generated"`)
         "criticalErrors"
         "alerts"
   this.log(� Critical Error Alert System "failed")
+
         "ERROR"
         "ERROR"
+        "ERROR"
+
 
 

@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
@@ -245,8 +247,70 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)'
             ]
           }}
-          transition = $2;
-            repeat: Infinity,
+          transition={{
+            duration: 8
+repeat: Infinity;}
+ease: 'easeInOut'}
+          }}
+
+        />
+{/* Holographic grid effect *,}
+}
+        <div className='absolute inset-0 opacity-20' />
+          <div;
+className='h-full w-full'
+            style={{
+        {/* Holographic grid effect */}'
+        <div className='absolute inset-0 opacity-20'>
+            className='h-full w-full'
+            style={{}
+              backgroundImage: `
+              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+            `
+              backgroundSize: '50px 50px'
+            }}
+          />        </div>        {/* Holographic grid effect */}"
+        <div className="absolute inset-0 opacity-20">;"
+          <divclassName="h-full w-full" style={{}`
+            backgroundImage: `
+              linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)`
+            `'
+            backgroundSize: '50px 50px'
+          }} />
+        </div>
+
+        {/* Canvas for animated particles *,}
+}
+        <canvas;
+          ref={canvasRef}
+          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}          className="absolute inset-0 w-full h-full"
+          style={{ filter: 'blur(0.5px)' }}
+        />
+
+        {/* Floating neon orbs *,}
+}
+
+        <motion.div;
+        {/* Floating neon orbs */}
+        <motion.div
+className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
+          animate={{
+            scale: [1, 1.2, 1]
+            opacity: [0.2, 0.4, 0.2]
+            rotate: [0, 180, 360],          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut',          className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20"
+          animate={{
+            scale: [1, 1.2, 1];
+            opacity: [0.2, 0.4, 0.2];
+            rotate: [0, 180, 360]
+          transition={{
+            duration: 6
+            repeat: Infinity
             ease: 'easeInOut'
           }}
         />

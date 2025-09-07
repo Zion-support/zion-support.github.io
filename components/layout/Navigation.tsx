@@ -1,7 +1,39 @@
+
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, X, Home, Brain, Cpu, Rocket, 
+import { Menu, X, Home, Brain, Cpu, Rocket;
+  Phone, Mail, MapPin, Globe, ChevronDown}
+}
+ } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Home, Brain, Cpu, Rocket;
+import {
+  Menu
+  X
+  Home
+  Brain
+  Cpu
+  Rocket
+  Phone
+  Mail
+  MapPin
+  Globe
+  ChevronDown;
+} from 'lucide-react';
+import Link from 'next/link';import {
+  Menu, X, Home, Brain, Cpu, Rocket,
+  Phone, Mail, MapPin, Globe, ChevronDown;'
+} from 'lucide-react';'
+import Link from 'next/link'
+import {}
+  Menu, X, Home, Brain, Cpu, Rocket,
+
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Menu, X, Home, Brain, Cpu, Rocket
+origin/cursor/automate-test-improve-and-merge-code-2533
   Phone, Mail, MapPin, Globe, ChevronDown
 } from 'lucide-react';
 import Link from 'next/link';
@@ -11,10 +43,16 @@ const Navigation: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    };
 
+    const handleScroll = (
+setIsScrolled(window.scrollY > 50)) => {
+  return $3;}
+}
+};
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 50)
+    }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
@@ -296,7 +334,10 @@ const Navigation: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-  )
-};
-
+  );
+}
+export default Navigation;  )
+}
 export default Navigation;
+
+"

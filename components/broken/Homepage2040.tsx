@@ -1,5 +1,7 @@
-import React, { Suspense, lazy, useState, useEffect } from 'react';
-import Layout from './layout/Layout';
+
+
+import React, { Suspense, lazy, useState, useEffect } from 'react',
+import Layout from './layout/Layout',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -15,7 +17,8 @@ import {
 import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
 // Lazy load heavy components for better performance
-const LazyServiceCard = $2;
+
+const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
 const Homepage2040: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState($2);
   const [isVisible, setIsVisible] = useState($2);
@@ -429,9 +432,79 @@ const Homepage2040: React.FC = () => {
 
                 {/* View All Services Button */}
                 <motion.div
-                  initial={{ opacity: 0, y: 30}}
-                  whileInView={{ opacity: 1, y: 0}}
-                  viewport={{ once: true}}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className = $2;
-export default Homepage2040,
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  viewport={{ once: true }}
+                  <Link"
+                    href="/innovative-2040-futuristic-services-showcase""
+                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg">
+                    View All 2040 Services;"
+                    <ArrowRight className="w-6 h-6 ml-3" />
+                  </Link>
+                </motion && motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+        {/* Enhanced CTA Section */}
+        <section className="py-20 px-4 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion&& motion.div
+              variants={containerVariants}"
+              initial="hidden""
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <motion.h2
+                variants={itemVariants}
+                className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent"
+              >
+                Ready to Transform Your Business?
+              </motion.h2>
+              <motion.p
+                variants={itemVariants}
+                className="text-xl text-gray-300 max-w-2xl mx-auto"
+              >
+                Join thousands of companies already leveraging our revolutionary technology solutions
+              </motion.p>
+              <motion.div
+                variants={itemVariants}
+                className="flex flex-col sm:flex-row gap-6 justify-center"
+              >"
+                <Link href="/contact" aria-label="Contact us">"
+                  <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
+                    Contact Us Today
+                  </button>
+                </Link>"
+                <Link href="/demo" aria-label="Request a demo">"
+                  <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+                    Request Demo
+                  </button>
+                </Link>
+              </motion.div>
+              <motion.div
+                variants={itemVariants}"
+                className="flex items-center justify-center gap-8 text-sm text-gray-400"
+              >"
+                <div className="flex items-center gap-2">"
+                  <Shield className="w-5 h-5 text-green-400" />
+                  <span>Enterprise Security</span>
+                </div>"
+                <div className="flex items-center gap-2">"
+                  <Zap className="w-5 h-5 text-yellow-400" />
+                  <span>24/7 Support</span>
+                </div>"
+                <div className="flex items-center gap-2">"
+                  <TrendingUp className="w-5 h-5 text-blue-400" />
+                  <span>Proven Results</span>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+      </main>
+    </Layout>
+  )
+}
+export default Homepage2040;

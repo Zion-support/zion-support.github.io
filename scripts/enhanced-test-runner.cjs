@@ -1,7 +1,19 @@
+
+
+
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
+
+
+
+
+
+
   "summary": {}"
     total: 0,"
     "passed": 0,
@@ -13,6 +25,10 @@ const { execSync, spawn } = require('child_process');
   "recommendations": [];"
 }
 function log(level, message) {}
+  const timestamp = new Date().toISOString();
+  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})};
+async function runJestTests() {}"
+
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
   log('info', 'Running Jest tests');
@@ -26,20 +42,33 @@ async function runJestTests() {}
     const endTime = Date.now();
     const result = JSON.parse(output);
     testReport.tests.push({})
+
+      "result": result;"
       "framework": 'jest',
       "duration": endTime - startTime,
       "result": result;
     }
 });
+    
     testReport.summary.total += result.numTotalTests;
     testReport.summary.passed += result.numPassedTests;
     testReport.summary.failed += result.numFailedTests;
     testReport.summary.skipped += result.numPendingTests;
     testReport.summary.duration += endTime - startTime;
     if (result.coverageMap) {}
+
+
+    testReport.summary.total += result.total;
+    testReport.summary.passed += result.passed;
+    testReport.summary.failed += result.failed;
+
+
+      "result": { passed: true, output };"
+    testReport.summary.passed++;
     "
       "result": { passed: false, "error": error.message };"
     testReport.summary.failed++;"
+
       testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct};
     log('info', `Jest tests "completed": ${result.numPassedTests}/${result.numTotalTests} passed`)} catch (error) {`}
     log('warn', 'Jest tests failed or not configured', error.message)};
@@ -153,6 +182,7 @@ function generateRecommendations() {}
   const { total, passed, failed, coverage } = testReport.summary,
   if($2) {}
     recommendations.push({})
+
       "priority": 'high',
       "message": 'No tests found',
       "action": 'Implement comprehensive test suite'
@@ -185,6 +215,7 @@ function generateRecommendations() {}
 async function main() {}
   try {}
     log('info', 'Starting enhanced test runner');
+    
     await runJestTests();
     await runPlaywrightTests();
     await runCypressTests();
@@ -193,6 +224,10 @@ async function main() {}
     testReport.summary.total = testReport.tests.reduce((sum, test) => sum + (test.result.total || 1), 0);
     testReport.recommendations = generateRecommendations();
     // Display summary;
+
+    process.exit(1)};
+main();
+`;
     log('info', 'Enhanced Test Runner Summary');
     log('info', '');
     log('info', `Total "tests": ${testReport.summary.total}`);

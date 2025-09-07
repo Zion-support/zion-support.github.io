@@ -1,6 +1,18 @@
-#!/usr/bin/env node,
-  const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
+
+console.log('🔧 Fixing remaining syntax errors...');
+
+// Function to fix syntax errors in a file
+function fixSyntaxErrors(filePath) {
+
+
+#!/usr/bin/env node
+
+console.log('🔧 Fixing remaining syntax errors...');
+
+// Function to fix hover syntax errors
+function fixHoverSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
@@ -38,6 +50,15 @@ const path = require('path');
       <h1>${serviceName}</h1>
       <p>Learn about our ${serviceName.toLowerCase()} services.</p>
     </main>
+  );
+}`;
+    }
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed: ${filePath}`);
+
+      console.log(`✅ Fixed syntax errors in ${filePath}`);
       return true;
     }
     return false;
@@ -46,8 +67,31 @@ const path = require('path');
     return false;
   }
 }
-// Function to find and fix all TypeScript/JSX files,
-  function fixAllFiles() {
+
+// Function to find all service page files
+function findServicePages(dir) {
+  const files = [];
+  
+  function scanDirectory(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        let stat;
+        try {
+          stat = fs.statSync(fullPath);
+        } catch (error) {
+          continue;
+        }
+        
+        if (stat.isDirectory()) {
+          scanDirectory(fullPath);
+        } else if (stat.isFile() && item === 'page.tsx') {
+          files.push(fullPath);
+        }
+// Function to find and fix all TypeScript/JSX files
+function fixAllFiles() {
   const filesToCheck = [
     'components/Footer.tsx',
     'components/Header.tsx',
@@ -73,17 +117,49 @@ const path = require('path');
       // Skip directories that can't be read
     }
   }
+});
+  
   scanDirectory(dir);
   return files;
 }
 // Main execution
-  // Find all service page files,
-  const servicePages = findServicePages('/workspace/app/services')
-  console.log(`Found ${servicePages.length} service page files`)
-  // Fix each file,
-  let fixedCount = 0,
-  for($2) {
-    if (fixSyntaxErrors(file)) {} catch (error) {
+async function main() {
+  console.log('🚀 Starting syntax error resolution...');
+try {
+  console.log('🔍 Scanning for syntax errors...');
+  const fixedCount = fixAllFiles();
+  
+  // Find all service page files
+  const servicePages = findServicePages('/workspace/app/services');
+  console.log(`Found ${servicePages.length} service page files`);
+  
+  // Fix each file
+  let fixedCount = 0;
+  for (const file of servicePages) {
+    if (fixSyntaxErrors(file)) {
+      fixedCount++;
+    }
+  }
+  
+  // Also fix the research page
+  const researchPage = '/workspace/app/research/page.tsx';
+  if (fs.existsSync(researchPage)) {
+    if (fixSyntaxErrors(researchPage)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`\n✅ Fixed ${fixedCount} files`);
+  console.log('\n🎉 Syntax error resolution completed!');
+}
+
+main().catch(console.error);
+} catch (error) {
   console.error('❌ Error:', error.message);
   process.exit(1);
 }
+
+}
+
+}}
+

@@ -1,3 +1,5 @@
+
+
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
@@ -60,6 +62,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
       {children}
     </motion.div>
   )
-};
-
+}
 export default LazySection;
+

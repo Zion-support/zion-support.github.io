@@ -4,10 +4,15 @@
  * TypeScript Syntax Fixer Automation
  * Fixes TypeScript syntax errors and improves code quality
  */
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 class TypeScriptSyntaxFixer {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -70,13 +75,39 @@ fs.appendFileSync(this.logFile, logMessage)
                 "stdio": 'pipe'
             };);
         console.log(message)};
-    runTypeScriptCheck() {}"
-
-                "errors": this.extractErrorCount(error.stdout || error.message);"
+    runTypeScriptCheck() {}
+        this.log('Running TypeScript type check...');
+        
+        try {}
+            const result = execSync('npm run type-check', { })
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
+            };);
+            
+            this.log('TypeScript type check passed');
+            return {;}
+                "status": 'success',
+                "output": result,
+                "errors": 0;
+            }} catch (error) {}
+            this.log(`TypeScript type check "failed": ${error.message}`);
+            return {;}
+                "status": 'failed',
+                "output": error.stdout || error.message,
+                "errors": this.extractErrorCount(error.stdout || error.message);
             }};
     extractErrorCount(output) {}
         const errorMatch = output.match(/(\d+)\s+error/;i;);
         return errorMatch ? parseInt(errorMatch[1]) : 0};
+    runESLintFix() {}
+        this.log('Running ESLint with auto-fix...');
+        try {}
+            const result = execSync('npm run "lint": fix', { })
+                "cwd": this.projectRoot,
+                "encoding": 'utf8',
+                "stdio": 'pipe'
+            };);
         
         try {}
             const result = execSync('npm run "lint": fix', { })
@@ -84,6 +115,7 @@ fs.appendFileSync(this.logFile, logMessage)
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
+            
             
             this.log('ESLint auto-fix completed');
 };)
@@ -107,6 +139,12 @@ fs.appendFileSync(this.logFile, logMessage)
     };
     findTypeScriptFiles() {}
         this.log('Finding TypeScript files...');
+        const files = [];
+        const extensions = ['.ts', '.tsx'];
+        
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
         
         const files = [];
         const extensions = ['.ts', '.tsx'];
@@ -123,10 +161,12 @@ fs.appendFileSync(this.logFile, logMessage)
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
+            
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+                
                 
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
@@ -143,6 +183,9 @@ fs.appendFileSync(this.logFile, logMessage)
         return files};
     fixCommonSyntaxIssues() {}
         this.log('Fixing common syntax issues...');
+        const files = this.findTypeScriptFiles(;);
+        let fixedCount = ;0;
+        const fixes = [];
         
         const files = this.findTypeScriptFiles(;);
         let fixedCount = ;0;
@@ -152,6 +195,15 @@ fs.appendFileSync(this.logFile, logMessage)
         const files = this.findTypeScriptFiles(;);
         let fixedCount = ;0;
         const fixes = [];
+        
+        const files = this.findTypeScriptFiles(;);
+        let fixedCount = ;0;
+        const fixes = [];
+        
+        for (const file of files) {}
+
+                let originalContent = conte;n;t;
+                
         for (const file of files) {}
 
                 let originalContent = conte;n;t;
@@ -161,6 +213,7 @@ fs.appendFileSync(this.logFile, logMessage)
                 content = this.fixSemicolons(content);
                 content = this.fixQuotes(content);
                 content = this.fixIndentation(content);
+                
                 
                 if ( {})
                     fs.writeFileSync(file, content)) {}
@@ -179,12 +232,23 @@ fs.appendFileSync(this.logFile, logMessage)
         return lines.map(line => {;})
             const trimmed = line.trim(;);
             if (return ') {}
-            
+    return '}';
 
+            
+            
             const indent = line.length - line.trimStart().lengt;h;
             const spaces = Math.floor(indent / 2) *;2;
             return ' '.repeat(spaces) + trimmed}).join('\n')};
     generateSyntaxReport() {}
+        this.log('Generating TypeScript syntax fix report...');
+        const typeCheck = this.runTypeScriptCheck(;);
+        const eslintFix = this.runESLintFix(;);
+        const syntaxFixes = this.fixCommonSyntaxIssues(;);
+        
+        const typeCheck = this.runTypeScriptCheck(;);
+        const eslintFix = this.runESLintFix(;);
+        const syntaxFixes = this.fixCommonSyntaxIssues(;);
+        
         
         const typeCheck = this.runTypeScriptCheck(;);
         const eslintFix = this.runESLintFix(;);
@@ -200,6 +264,12 @@ fs.appendFileSync(this.logFile, logMessage)
             },
             "recommendations": this.generateSyntaxRecommendations();
        };
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`TypeScript syntax fix report saved to ${this.reportFile}`);
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`TypeScript syntax fix report saved to ${this.reportFile}`);
+        
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`TypeScript syntax fix report saved to ${this.reportFile}`);
@@ -225,6 +295,7 @@ fs.appendFileSync(this.logFile, logMessage)
         ]}
     async run() {}
         this.log('TypeScript Syntax Fixer started');
+        
         
         try {}
             const report = this.generateSyntaxReport(;)
@@ -253,7 +324,10 @@ return report}
     const fixer = new TypeScriptSyntaxFixer) {}
     const fixer = new TypeScriptSyntaxFixer}(;);
     fixer.run().catch(console.error)};
+
 module.exports = TypeScriptSyntaxFixer;
 module.exports = TypeScriptSyntaxFixer;
+module.exports = TypeScriptSyntaxFixer;
+
 
 

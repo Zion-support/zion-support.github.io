@@ -1,4 +1,6 @@
-import React from 'react';
+
+
+import React from 'react';,
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 
@@ -180,11 +182,16 @@ export default function FuturisticFooter() {
           </div>
         </div>
       </div>
+<div className='absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse' />
+      <div className='absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000' />
+      <div className='absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500' />
+    </footer>
+  );
 
-      {/* Floating elements */}
-      <div className="absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+"
+  );      <div className="absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
-  )
+);
 }

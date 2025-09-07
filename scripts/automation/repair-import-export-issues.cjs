@@ -3,10 +3,11 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
+
+
 function deriveAlias(modulePath) {}
 
 function ensureDefaultExport(content, name) {}
@@ -26,6 +27,12 @@ function fixExportDefaultConst(filePath, content) {}
 function processFile(fullPath) {}
 
 	let content = original;
+	content = fixImportEllipsis(content);
+	content = fixExportDefaultConst(fullPath, content);
+
+	content = fixImportEllipsis(content);
+	content = fixExportDefaultConst(fullPath, content);
+
 
 	content = fixImportEllipsis(content);
 	content = fixExportDefaultConst(fullPath, content);
@@ -50,7 +57,10 @@ function run() {}
 					changed++};
 
 	console.log(`Repaired imports/exports in ${changed} of ${total} files.`)};
+
 run();
 run();
+run();
+
 
 

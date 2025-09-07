@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-<<<<<<< HEAD
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
 
 interface EnhancedLayoutProps {
   children: React.ReactNode;
@@ -20,33 +15,18 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       <header>
   }, []);
 
-=======
-}, []);
->>>>>>> origin/chore/fix-lint-and-merge
-
-
-      </main>      <main id="main" className=flex-1 container mx-auto px-4 py-6>{children}</main>;
-      <footer>;
-        <EnhancedFooter />;
-      </footer>;
-    </div>;
-}
-});
-});
-}"
-    <div className="min - h-screen flex flex - col>;
-        <EnhancedNavigation />;
-        <LanguageSwitchPrompt />;
-      </header>;
-      <main id='main' className=flex - 1 container mx - auto px - 4 py - 6>;
-        {children}
-      </main>      <main id="main" className="flex - 1 container mx - auto px - 4 py - 6">{children}</main>;
-      <footer>;
-        <EnhancedFooter />;
-      </footer>;
-    </div>);
-}
-});
+import React, { useEffect } from 'react',
+import EnhancedNavigation from './EnhancedNavigation',
+import EnhancedFooter from './EnhancedFooter',
+import i18n, { isRtl } from '../../utils/i18n';
+import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
+export type EnhancedLayoutProps = any;
+export type EnhancedLayoutProps = {
+  children: React.ReactNode;}
+export type EnhancedLayoutProps = {
+  children: React.ReactNode
+export type EnhancedLayoutProps = {
+  children: React.ReactNode
 }
 
 <<<<<<< HEAD
@@ -76,4 +56,4 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     </div>
   );
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
+

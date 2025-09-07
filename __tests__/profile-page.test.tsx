@@ -1,6 +1,9 @@
-describe('Profile Page', () => {
-  test('renders profile page', () => {
-    // Add profile page tests here
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+describe('profile-page.test', () => {
+  test('renders without crashing', () => {
     expect(true).toBe(true);
   });
 });

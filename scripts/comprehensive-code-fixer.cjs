@@ -1,8 +1,24 @@
+
+
+
+
+#!/usr/bin/env node;
+
+
+
+
+
+
+
+
+#!/usr/bin/env node;
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
+console.log()
+
 console.log('')
   console.log('� Fixing common linting issues...')
   const filesToFix = ['components/ContactForm.tsx']

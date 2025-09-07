@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2040: React.FC = $2;
@@ -324,7 +326,8 @@ const UltraFuturisticBackground2040: React.FC = $2;
         }
       `}</style>
     </div>
-  )
-},
+  );
+};  )
+}
+export default UltraFuturisticBackground2040;
 
-export default UltraFuturisticBackground2040,

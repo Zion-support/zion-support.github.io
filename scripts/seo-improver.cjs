@@ -1,3 +1,5 @@
+
+
 const fs = require("child_process")
 const path = require("path")
 
@@ -33,6 +35,10 @@ Allow: /contact"
   "twitter": {card: "summary_large_image","title": "Bolt.new Zion App - Advanced Web Development Solutions","description": "Professional web development services with cutting-edge technology and innovative solutions."}
     image: "https://bolt.new.zion.app/og-image.jpg"
 "
+
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
@@ -41,3 +47,7 @@ Allow: /contact"
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
 
+
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")

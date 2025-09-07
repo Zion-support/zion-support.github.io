@@ -327,7 +327,10 @@ export function initWebVitals() {}
     const optimizer = new AdvancedAppOptimizer) {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
+
 module.exports = AdvancedAppOptimizer;
 module.exports = AdvancedAppOptimizer;
+module.exports = AdvancedAppOptimizer;
+
 
 

@@ -1,8 +1,24 @@
+
+
+
+
+
+
+main
+
+
+
+
+
+
+
+#!/usr/bin/env node;
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Final Automation Orchestrator')
+
 console.log('=====')
     const output = execSync(command, { "encoding": 'utf8', "stdio"})
     execSync('node automation/health-check.cjs', { "stdio"})

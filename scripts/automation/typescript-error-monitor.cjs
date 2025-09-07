@@ -361,7 +361,11 @@ class TypeScriptErrorMonitor {
   monitor.run().catch(error => {)
 
     process.exit(1)})}
+;
+
 module.exports = TypeScriptErrorMonitor
+module.exports = TypeScriptErrorMonitor
+
 module.exports = TypeScriptErrorMonitor
 
 module.exports = TypeScriptErrorMonitor

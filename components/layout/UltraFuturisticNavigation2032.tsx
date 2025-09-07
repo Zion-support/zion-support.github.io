@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -402,4 +401,182 @@ export default function UltraFuturisticNavigation2032() {
       <div className="h-20" />
     </>
   )
+                  <button
+                    on_click={close_menu}'
+                    className='p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50'
+                  >;'
+                    <X className='w - 6 h - 6' />                  </button>
+                </div>
+                {/* Mobile Navigation */}'
+                <div className='space - y-6'>
+                  {main_navigation.map (item => (                    <Link
+                      key={item.name}
+                      href={item.href}
+                      on_click={close_menu}'
+                      className='flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50'
+                    >;'"
+                      <item.icon className='w - 5 h - 5' />                      <span>{item.name}</span>                  <button on_click={close_menu} className="p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50">;"
+                    <X className="w - 6 h - 6" />
+                  </button>
+                </div>
+                {/* Mobile Navigation */}'
+                <div className='space - y-6'>;"
+                  {main_navigation.map (item => (                <div className="space - y-6">
+                  {main_navigation.map ((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      on_click={close_menu}'
+                      className='flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50'
+                    >;'"
+                      <item.icon className='w - 5 h - 5' />                      className="flex items - center space - x-3 text - gray - 300 hover:text - cyan - 400 transition - colors p - 3 rounded - lg hover:bg - gray - 800 / 50"
+                    >;"
+                      <item.icon className="w - 5 h - 5" />
+                      <span>{item.name}</span>
+                    </Link>))}
+                  {/* Services Accordion */}'
+                  <div className='space - y-2'>
+                    <button
+                      on_click={() =>
+                        setActiveCategory (active_category === 0 ? null : 0)
+                      }'
+                      className='w - full flex items - center justify - between p - 3 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors'
+                    >;'
+                      <span className='flex items - center space - x-3'>;'
+                        <Briefcase className='w - 5 h - 5' />
+                        <span > Services</span>
+                      </span>
+                      <ChevronRightIcon;'`
+                        className={`w - 5 h - 5 transition - transform ${active_category === 0 ? 'rotate - 90' : ''}`}
+                      />
+                    </button>
+                    {active_category === 0 && ('
+                      <div className='pl - 8 space - y-2'>
+                        {service_categories.map ((category, index) => ('
+                          <div key={index} className='space - y-2'>;'
+                            <div className='text - sm font - medium text - cyan - 400 py - 2'>
+                              {category.title}
+                            </div>                            {category.services.map ((service, service_index) => (                    <button
+                      on_click={() => setActiveCategory (active_category === 0 ? null : 0)}"
+                      className="w - full flex items - center justify - between p - 3 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors"
+                    >;"
+                      <span className="flex items - center space - x-3">;"
+                        <Briefcase className="w - 5 h - 5" />
+                        <span > Services</span>
+                      </span>;'`
+                      <ChevronRightIcon className={`w - 5 h - 5 transition - transform ${active_category === 0 ? 'rotate - 90' : ''}`} />
+                    </button>
+                    {active_category === 0 && ("
+                      <div className="pl - 8 space - y-2">
+                        {service_categories.map ((category, index) => ("
+                          <div key={index} className="space - y-2">;"
+                            <div className="text - sm font - medium text - cyan - 400 py - 2">{category.title}</div>
+                            {category.services.map ((service, service_index) => (
+                              <Link
+                                key={service_index}
+                                href={service.href}
+                                on_click={close_menu}'"
+                                className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                              >                                className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1"
+                              >
+                                {service.name}
+                              </Link>))}
+                          </div>))}
+                      </div>)}
+                  </div>
+                  {/* Company Links */}'
+                  <div className='pt - 4 border - t border - gray - 700 / 50'>;'
+                    <div className='text - sm font - medium text - gray - 400 mb - 3'>
+                      Company
+                    </div>;'
+                    <div className='space - y-2'>
+                      {company_links.map (link => (                        <Link
+                          key={link.name}
+                          href={link.href}
+                          on_click={close_menu}'"
+                          className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                        >                  <div className="pt - 4 border - t border - gray - 700 / 50">;"
+                    <div className="text - sm font - medium text - gray - 400 mb - 3">Company</div>;"
+                    <div className="space - y-2">
+                      {company_links.map ((link) => (
+                          key={link.name}
+                          href={link.href}
+                          on_click={close_menu}'"
+                          className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1'                          className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors py - 1"
+                        >
+                          {link.name}
+                        </Link>))}
+                    </div>
+                  </div>
+                  {/* Contact Info */}'
+                  <div className='pt - 4 border - t border - gray - 700 / 50'>;'
+                    <div className='text - sm font - medium text - gray - 400 mb - 3'>
+                      Contact
+                    </div>;'
+                    <div className='space - y-2 text - sm text - gray - 400'>;'
+                      <div className='flex items - center space - x-2'>;'
+                        <Phone className='w - 4 h - 4 text - cyan - 400' />
+                        <span>{contact_info.mobile}</span>
+                      </div>;'
+                      <div className='flex items - center space - x-2'>;'
+                        <Mail className='w - 4 h - 4 text - purple - 400' />
+                        <span>{contact_info.email}</span>
+                      </div>;'
+                      <div className='flex items - center space - x-2'>;'
+                        <MapPin className='w - 4 h - 4 text - pink - 400' />;'
+                        <span className='text - xs'>{contact_info.address}</span>                      </div>                        <span>{contact_info.mobile}</span>
+                      </div>;"
+                      <div className="flex items - center space - x-2">;"
+                        <Mail className="w - 4 h - 4 text - purple - 400" />
+                        <span>{contact_info.email}</span>
+                      </div>;"
+                      <div className="flex items - center space - x-2">;"
+                        <MapPin className="w - 4 h - 4 text - pink - 400" />;"
+                        <span className="text - xs">{contact_info.address}</span>
+                      </div>
+                    </div>
+                  </div>
+                  {/* CTA Button */}'
+                  <div className='pt - 4'>;'
+                    <Link href='/contact' on_click={close_menu}>;'"
+                      <button className='w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200'>                        Get Started Today                  <div className="pt - 4">;"
+                    <Link href="/contact" on_click={close_menu}>;"
+                      <button className="w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200">
+                        Get Started Today
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>)}
+      </AnimatePresence>
+      {/* Spacer for fixed navigation */}'
+      <div className='h - 20' />;"
+    </>);      <div className="h - 20" />
+    </>)
+<div className='pt-4'>
+                    <Link href='/contact' onClick={closeMenu}>
+                      <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'>
+                        Get Started Today
+
+<div className='pt-4' />
+                    <Link href='/contact' onClick={closeMenu} />
+                      <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200' />
+                        Get Started Today
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+      </AnimatePresence>
+      {/* Spacer for fixed navigation */}
+      <div className='h-20' />
+    </>
+);      <div className="h-20" />
+    </>
+  );
+
+"
 }

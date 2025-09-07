@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -75,42 +77,111 @@ const footerSections: FooterSection[] = [
       { label: 'Education', href: '/education-technology-solutions', description: 'EdTech solutions' }
     ]
   }
-],
-
+];
 const socialLinks = [
-  { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true},
-  { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true},
-  { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true}
-],
-
+  {
+    icon: <Linkedin className='w-5 h-5' />
+    href: 'https://linkedin.com/company/ziontechgroup'
+    label: 'LinkedIn'
+    external: true
+  }
+  {
+    icon: <Twitter className='w-5 h-5' />
+    href: 'https://twitter.com/ziontechgroup'
+    label: 'Twitter'
+    external: true
+  }
+  {
+    icon: <Github className='w-5 h-5' />
+    href: 'https://github.com/ziontechgroup'
+    label: 'GitHub'
+    external: true
+  }
+];
 const quickLinks = [
-  { name: 'About Us', href: '/about', icon: <Users className = $2;
-  { name: 'Contact', href: '/contact', icon: <Phone className = $2;
-  { name: 'Support', href: '/support', icon: <HelpCircle className = $2;
-  { name: 'Documentation', href: '/docs', icon: <FileText className = $2;
-  { name: 'API Reference', href: '/api', icon: <Code className = $2;
-  { name: 'Status', href: '/status', icon: <TrendingUp className = $2;
+  { name: 'About Us', href: '/about', icon: <Users className='w-4 h-4' /> }
+  { name: 'Contact', href: '/contact', icon: <Phone className='w-4 h-4' /> }
+  {
+    name: 'Support'
+    href: '/support'
+    icon: <HelpCircle className='w-4 h-4' />
+  }
+  {
+    name: 'Documentation',
+  href: '/docs'}
+    icon: <FileText className='w-4 h-4' />}
+  },
+  { name: 'API Reference'}
+  href: '/api', icon: <Code className='w-4 h-4' />}
+},
+  { name: 'Status'}
+  href: '/status', icon: <TrendingUp className='w-4 h-4' />}
+}
+];
+
+    name: 'Documentation'
+    href: '/docs'
+    icon: <FileText className='w-4 h-4' />
+  }
+  { name: 'API Reference', href: '/api', icon: <Code className='w-4 h-4' /> }
+  { name: 'Status', href: '/status', icon: <TrendingUp className='w-4 h-4' /> },];
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  },
+  return $3;}
+}
+window.scrollTo({ top: 0, behavior: 'smooth' })
+};
 
-  const footerSections = $2;
-      items: [
-        { label: 'AI & Machine Learning', href: '/ai-services' },
-        { label: 'Quantum Computing', href: '/quantum-computing' },
-        { label: 'Space Technology', href: '/space-tech' },
-        { label: 'Cybersecurity', href: '/cybersecurity' },
-        { label: '2040 Services', href: '/innovative-2040-services-showcase' }
+const footerSections = [
+    {
+      title: 'Services',
+  items: [
+
+        { label: 'AI & Machine Learning'}
+  href: '/ai-services'}
+},
+        { label: 'Quantum Computing'}
+  href: '/quantum-computing'}
+},
+        { label: 'Space Technology'}
+  href: '/space-tech'}
+},
+        { label: 'Cybersecurity'}
+  href: '/cybersecurity'}
+},
+{ label: '2040 Services'}
+  href: '/innovative-2040-services-showcase'}
+}
       ]
     },
     {
       title: 'Solutions',
+  items: [
+        { label: 'Enterprise Solutions'}
+  href: '/enterprise-solutions'}
+},
+        { label: 'Micro SAAS'}
+  href: '/micro-saas'}
+},
+        { label: 'IT Services'}
+  href: '/it-services'}
+},
+        { label: 'Innovation Lab'}
+  href: '/innovation-lab'}
+},
+
+{ label: 'Research & Development'}
+  href: '/research-development'}
+}
+      ]
+    }
+    {
+      title: 'Solutions'
       items: [
-        { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
-        { label: 'Micro SAAS', href: '/micro-saas' },
-        { label: 'IT Services', href: '/it-services' },
-        { label: 'Innovation Lab', href: '/innovation-lab' },
+        { label: 'Enterprise Solutions', href: '/enterprise-solutions' }
+        { label: 'Micro SAAS', href: '/micro-saas' }
+        { label: 'IT Services', href: '/it-services' }
+        { label: 'Innovation Lab', href: '/innovation-lab' }
         { label: 'Research & Development', href: '/research-development' }
       ]
     },
@@ -383,5 +454,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         animate={{ opacity: 1, scale: 1}}
         transition={{ duration: 0.3, delay: 1}}
       >
-        <ArrowUp className = $2;
-export default UltraAdvancedFuturisticFooter2025,
+        <ArrowUp className='w-6 h-6 mx-auto' />
+      </motion.button>
+    </footer>
+  );
+}
+export default UltraAdvancedFuturisticFooter2025;      </motion.button>
+    </footer>
+  )
+}
+export default UltraAdvancedFuturisticFooter2025;
+
+"

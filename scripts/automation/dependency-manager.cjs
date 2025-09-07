@@ -397,7 +397,11 @@ async function $1() {}
     process.exit(1)};
 if (require.main === module) {}
   main()};
+;
+
 module.exports = DependencyManager;
+module.exports = DependencyManager;
+
 module.exports = DependencyManager;
 
 module.exports = DependencyManager;

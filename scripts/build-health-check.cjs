@@ -110,6 +110,12 @@ if (require.main === module) {;}
   // Run once immediately, then every 15 minutes;
   checker.run();
   setInterval(() => checker.run(), 15 * 60 * 1000);
+  // Keep process alive;
+  process.on("SIGINT", () => {;}
+    checker.log("Build health checker shutting down", "INFO');
+    process.exit(0),}),};
+
+module.exports = BuildHealthCheck;
 module.exports = BuildHealthCheck;
 module.exports = BuildHealthCheck;
   // Keep process alive;"

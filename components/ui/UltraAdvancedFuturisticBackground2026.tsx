@@ -1,14 +1,18 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
-  colorScheme?: 'neural-network' | 'quantum-field' | 'cyberpunk' | 'holographic' | 'multidimensional',
-  particleCount?: number,
-  animationSpeed?: number,
-  enableHolographic?: boolean,
-  enableQuantumEffects?: boolean,
-  enableNeuralNetworks?: boolean,
-  enableMultidimensional?: boolean,
+  colorScheme?: 'neural-network' | 'quantum-field' | 'cyberpunk' | 'holographic' | 'multidimensional';
+  particleCount?: number;
+  animationSpeed?: number;
+  enableHolographic?: boolean;
+  enableQuantumEffects?: boolean;
+  enableNeuralNetworks?: boolean;
+  enableMultidimensional?: boolean;
+  children?: React.ReactNode;}
+}
   children?: React.ReactNode
 }
 
@@ -26,26 +30,23 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
   const canvasRef = $2;
   const containerRef = $2;
   useEffect(() => {
-    const canvas = $2;
-    if (!canvas) return,
-
-    const ctx = canvas.getContext($2);
-    if (!ctx) return,
-
-    let animationFrameId: number,
-    let particles: Particle[] = [],
-    let neuralNodes: NeuralNode[] = [],
-    let quantumFields: QuantumField[] = [],
-    let holographicLayers: HolographicLayer[] = [],
-
-    // Set canvas size
-    const resizeCanvas = () => {
-      if (containerRef.current) {
-        const rect = containerRef.current.getBoundingClientRect($2);
-        canvas.width = $2;
-        canvas.height = $2;
-    resizeCanvas($2);
-    window.addEventListener($2);
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    let animationFrameId: number;    let particles: Particle[] = [];
+    let neuralNodes: NeuralNode[] = [];
+    let quantumFields: QuantumField[] = [];
+    let holographicLayers: HolographicLayer[] = [];    let particles: Particle[] = [];
+    let neuralNodes: NeuralNode[] = [];
+    let quantumFields: QuantumField[] = [];
+    let holographicLayers: HolographicLayer[] = [];
+}
+}
+      }
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
     // Particle class
     class Particle {
       x: number,
@@ -387,17 +388,23 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
               rotate: [360, 180, 0],
               opacity: [0.1, 0.3, 0.1]
             }}
-            transition = $2;
-              repeat: Infinity,
-              ease: "easeInOut"
+            transition={{
+              duration: 10
+              repeat: Infinity
+              ease: 'easeInOut',              ease: "easeInOut"
+            }}
+          />
+        </div>)}
+      {children}
+    </div>)
+export default UltraAdvancedFuturisticBackground2026;      {children}
+    </div>
+  )
+}
+export default UltraAdvancedFuturisticBackground2026;
+
+"
             }}
           />
         </div>
       )}
-      
-      {children}
-    </div>
-  )
-},
-
-export default UltraAdvancedFuturisticBackground2026,

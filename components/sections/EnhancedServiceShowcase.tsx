@@ -1,3 +1,5 @@
+
+
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -367,5 +369,49 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
               Join thousands of companies already achieving breakthrough results with our cutting-edge AI, quantum, and blockchain solutions. 
               Get started today and see the future of business technology.
             </p>
-            <div className = $2;
-export default EnhancedServiceShowcase,
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'    />
+              <Button
+href='/contact'
+                variant='primary'
+
+                className='text-lg px-8 py-4'    />
+                Schedule a Consultation
+                <ArrowRight className='ml-2 w-5 h-5'    />
+              </Button>
+              <Button
+                href='/pricing'
+                variant='secondary'
+                className='text-lg px-8 py-4'    />
+                View Pricing Plans
+                <DollarSign className='ml-2 w-5 h-5'    />
+              </Button>
+            </div>
+            <div className='mt-6 text-sm text-gray-400'    />
+              <p    />
+                📞 Call us: {' }
+
+                <span className='text-cyan-400'    />+1 302 464 0950</span>
+              </p>
+              <p    />
+                📧 Email: {' }
+
+                <span className='text-cyan-400'    />kleber@ziontechgroup && ziontechgroup.com</span>
+              </p>
+              <p>
+                🌐 Visit:{' '}
+                <span className='text-cyan-400'>https://ziontechgroup.com</span>
+              </p>            </div>            <div className="mt-6 text-sm text-gray-400">
+              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>
+              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>
+              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+export default EnhancedServiceShowcase;  )
+}
+export default EnhancedServiceShowcase;
+
+"

@@ -20,7 +20,10 @@ class DependencyMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
+
     
+    
+
     
 
 
@@ -82,10 +85,14 @@ class DependencyMonitor {}
     const outdatedPackages = lines.filter(line => )
       line.includes('→') && !line.includes('Package');
    ;);
+
     
     
 
+    
 
+
+    if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
       console.log('Outdated packages found:')};
@@ -101,18 +108,14 @@ class DependencyMonitor {}
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);
-
       let output = ;';';
       let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
-
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
-
 
 
       child.on('close', (code) => {}
@@ -150,6 +153,7 @@ module.exports = DependencyMonitor;
   
   monitor.start().catch(console.error)};
 
+module.exports = DependencyMonitor;
 module.exports = DependencyMonitor;
 module.exports = DependencyMonitor;
   // Handle graceful shutdown;

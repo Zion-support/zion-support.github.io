@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+
 class TypeScriptErrorAutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -10,7 +11,6 @@ class TypeScriptErrorAutoFixer {}
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.fixInterval = parseInt(process.env.TYPESCRIPT_FIX_INTERVAL) || 600000; // 10 minutes;
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === 'true';
-    
 
 const fs = require('fs');
 const path = require('path');
@@ -19,12 +19,15 @@ class TypeScriptErrorAutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
 
+    
+    
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
         fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
+    
     
     this.fixesApplied = 0;
     this.filesProcessed = 0};"
@@ -41,12 +44,18 @@ class TypeScriptErrorAutoFixer {}
     const errorLines = output.split('\n').filter(line => )
 
     );
+    const errors = [];
+    let currentError = null;
+    
+    const errors = [];
+    let currentError = null;
     
     const errors = [];
     let currentError = null;
     
     const errors = [];
     let currentError = null;
+    
     for (const line of errorLines) {}
 )
     const errors = []
@@ -66,6 +75,7 @@ class TypeScriptErrorAutoFixer {}
   async fixTypeScriptErrors(errors) {}
     let fixesApplied = 0;
     
+    
     for (const error of errors) {}
 let fixesApplied = 0
   for($2) {}
@@ -78,6 +88,7 @@ let fixesApplied = 0
 
     const lines = content.split('\n');
     
+    
     // Apply common TypeScript fixes;
 return false}
     const lines = content.split('\n')
@@ -89,6 +100,12 @@ return false}
       this.fixGenericTypes.bind(this),
       this.fixOptionalProperties.bind(this);
     ];
+    let originalContent = content;
+    let modifiedContent = content;
+
+    let originalContent = content;
+    let modifiedContent = content;
+
 
     let originalContent = content;
     let modifiedContent = content;
@@ -104,12 +121,14 @@ return false}
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
     
+    
     if (line.includes('any') && error.message.includes('any')) {}
       // Replace 'any' with more specific types;
       const fixedLine = line;
         .replace(/: any/g, ': unknown');
         .replace(/as any/g, 'as unknown');
         .replace(/<any>/g, '<unknown>');
+      
       
       if (fixedLine !== line) {}
         lines[lineIndex] = fixedLine;
@@ -148,6 +167,12 @@ this.fixOptionalProperties.bind(this)
       const importMatch = error.message.match(/Cannot find module ['"]([^'"]+)['"]/);
       if (importMatch) {}
         const moduleName = importMatch[1];
+        // Add missing import at the top of the file;
+        const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
+        
+        // Add missing import at the top of the file;
+        const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
+        
         
         // Add missing import at the top of the file;
         const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
@@ -170,15 +195,23 @@ this.fixOptionalProperties.bind(this)
     };"
     return { "modified": false, "content": lines.join('\n') }};
   fixTypeAnnotations(lines, error) {}
-    
+    const lineIndex = error.line - 1;
+    const line = lines[lineIndex];
 
+    
+    
     if (error.message.includes('implicitly has an any type')) {}
       // Add type annotation;
       const varMatch = line.match(/(const|let|var)\s+(\w+)\s*=/);
       if (varMatch) {}
         const varName = varMatch[2];
-        
+        const fixedLine = line.replace()
+          new RegExp(`(${varMatch[1]}\\s+${varName}\\s*)=`),`
+          "$"1": unknown ="
+        );
 
+        
+        
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
             modified: true,"
@@ -187,11 +220,13 @@ this.fixOptionalProperties.bind(this)
         const propName = propMatch[1];
         const typeName = propMatch[2];
         
+        
         // Try to find and extend the interface;
 
             // Add the missing property;
             const indent = lines[i].match(/^\s*/)[0];`;
             lines.splice(i + 1, 0, `${indent}  ${propName}?: unknown;`);
+            
             
             return {}
               "modified": true,
@@ -206,11 +241,13 @@ this.fixOptionalProperties.bind(this)
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
     
+    
     if (error.message.includes('Generic type') && error.message.includes('requires')) {}
       // Add generic type parameters
       const genericMatch = line.match(/(\w+<)([^>]*)(>)/)
       if (genericMatch && !genericMatch[2].trim()) {}
         const fixedLine = line.replace(genericMatch[0], `${genericMatch[1]}unknown${genericMatch[3]}`);
+        
         
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
@@ -228,6 +265,14 @@ const fixedLine = line.replace(genericMatch[0], `${genericMatch[1]}unknown${gene
   fixOptionalProperties(lines, error) {}
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
+    if (error.message.includes('Object is possibly undefined')) {}
+      // Add optional chaining;
+      const fixedLine = line.replace(/\.(\w+)/g, '?.$1');
+    
+    if (error.message.includes('Object is possibly undefined')) {}
+      // Add optional chaining;
+      const fixedLine = line.replace(/\.(\w+)/g, '?.$1');
+      
     
     if (error.message.includes('Object is possibly undefined')) {}
       // Add optional chaining;
@@ -262,6 +307,14 @@ const fixedLine = line.replace(genericMatch[0], `${genericMatch[1]}unknown${gene
       this.log('Auto-fix is disabled', 'INFO');
       return};
     this.log('Starting TypeScript error auto-fix...');
+    try {}
+      // Get current TypeScript errors;
+      const checkResult = await this.runTypeScriptCheck();
+    
+    try {}
+      // Get current TypeScript errors;
+      const checkResult = await this.runTypeScriptCheck();
+      
     
     try {}
       // Get current TypeScript errors;
@@ -271,6 +324,13 @@ const fixedLine = line.replace(genericMatch[0], `${genericMatch[1]}unknown${gene
         this.log('No TypeScript errors found - no fixes needed', 'INFO');
         return};
       this.log(`Found ${checkResult.errors.length} TypeScript errors, attempting to fix...`, 'INFO');
+      // Apply fixes;
+      const fixesApplied = await this.fixTypeScriptErrors(checkResult.errors);
+      
+      this.log(`Applied ${fixesApplied} fixes out of ${checkResult.errors.length} errors`, 'INFO');
+      
+      // Run check again to see if fixes worked;
+      const postCheckResult = await this.runTypeScriptCheck();
       
       // Apply fixes;
       const fixesApplied = await this.fixTypeScriptErrors(checkResult.errors);
@@ -287,11 +347,22 @@ const fixedLine = line.replace(genericMatch[0], `${genericMatch[1]}unknown${gene
 
       // Run check again to see if fixes worked;
       const postCheckResult = await this.runTypeScriptCheck();
+      
       const report = {}
 
         "initialErrors": checkResult.errors.length,"
         fixesApplied,"
         "remainingErrors": postCheckResult.errors.length,
+        "success": postCheckResult.success;
+      };
+      // Save report;
+      const reportPath = path.join(this.reportsDir, `typescript-fix-report-${Date.now()}.json`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      
+      // Save report;
+      const reportPath = path.join(this.reportsDir, `typescript-fix-report-${Date.now()}.json`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      
       
       // Save report;
       const reportPath = path.join(this.reportsDir, `typescript-fix-report-${Date.now()}.json`);
@@ -302,6 +373,12 @@ const fixedLine = line.replace(genericMatch[0], `${genericMatch[1]}unknown${gene
   }
   async startAutoFixer() {}
     this.log('Starting TypeScript error auto-fixer...');
+    // Run initial fix;
+    await this.runAutoFix();
+    
+    // Run initial fix;
+    await this.runAutoFix();
+    
     
     // Run initial fix;
     await this.runAutoFix();
@@ -312,7 +389,6 @@ const fixedLine = line.replace(genericMatch[0], `${genericMatch[1]}unknown${gene
         await this.runAutoFix()} catch (error) {}
         this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')};
     }, this.fixInterval);
-
         "success": postCheckResult.success;"
       // Save report;`;
       const reportPath = path.join(this.reportsDir, `typescript-fix-report-${Date.now()}.json`);
@@ -324,10 +400,13 @@ const fixedLine = line.replace(genericMatch[0], `${genericMatch[1]}unknown${gene
     setInterval(async () => {}
 
     }, this.fixInterval);
+
+
     this.log(`TypeScript error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
 // Main execution;
 if (require.main === module) {}
   const fixer = new TypeScriptErrorAutoFixer();
+  
   
   // Handle graceful shutdown;
 this.log('Starting TypeScript error auto-fixer...')
@@ -361,10 +440,12 @@ this.log('Starting TypeScript error auto-fixer...')
     process.exit(0)}
 });
 
+
   process.on('SIGTERM', () => {}
     fixer.log('Shutting down TypeScript error auto-fixer...')
     process.exit(0)}
 });
+
 
   // Start auto-fixer;
   fixer.startAutoFixer().catch(error => {})
@@ -372,6 +453,11 @@ this.log('Starting TypeScript error auto-fixer...')
   // Handle graceful shutdown;
 
     process.exit(1)})};
+
 module.exports = TypeScriptErrorAutoFixer;
+module.exports = TypeScriptErrorAutoFixer;
+
+module.exports = TypeScriptErrorAutoFixer;
+
 module.exports = TypeScriptErrorAutoFixer;
 

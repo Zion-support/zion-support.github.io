@@ -86,4 +86,6 @@ monitor.run().catch(console.error);
 const monitor = new DependencyMonitor();
 
 monitor.run().catch(console.error);
+monitor.run().catch(console.error);
+monitor.run().catch(console.error);
 
