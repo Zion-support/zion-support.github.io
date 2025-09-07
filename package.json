@@ -111,7 +111,7 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
-"@axe-core/cli": "^4.10.2",
+    "@axe-core/cli": "^4.10.2",
     "@axe-core/react": "^4.10.2",
     "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
@@ -157,7 +157,7 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-"typescript": "^5.9.2",
+    "typescript": "^5.9.2",
     "vite": "^7.1.4"
   },
   "engines": {
