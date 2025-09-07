@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -40,10 +39,6 @@ interface ServiceCardProps {
   icon: string;
   category: string;
 }
-=======
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
 
 function ServiceCard({ title, href, description, icon, category }: ServiceCardProps) {
   return (

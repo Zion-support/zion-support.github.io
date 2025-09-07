@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-=======
-import type { Metadata } from 'next';
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
 import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,7 +8,6 @@ import Footer from './components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: {
     default: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
     template: '%s | Zion Tech Group'
@@ -54,8 +49,6 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
     creator: '@ziontechgroup',
   },
-=======
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
   robots: {
     index: true,
     follow: true,
@@ -75,11 +68,6 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   colorScheme: 'light',
   themeColor: '#000000',
-<<<<<<< HEAD
-=======
-  title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
-  description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.'
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
 };
 
 export default function RootLayout({

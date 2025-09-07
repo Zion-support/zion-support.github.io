@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 import { Metadata } from 'next';
@@ -32,10 +31,6 @@ export const metadata: Metadata = {
     },
   },
 };
-=======
-
-import Link from 'next/link';
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
 
 interface CardProps {
   title: string;
@@ -295,7 +290,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Information Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 rounded-2xl relative overflow-hidden" aria-labelledby="contact-heading">
         <div className="absolute inset-0 overflow-hidden">
@@ -363,8 +357,6 @@ export default function HomePage() {
         </div>
       </section>
 
-=======
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
       {/* CTA Section */}
       <section className="text-center py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-lg relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
         {/* Animated background elements */}
@@ -381,11 +373,7 @@ export default function HomePage() {
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto animate-slide-up">
             Let&apos;s discuss your project and create a custom solution that drives
             real business value. Our team has delivered 1000+ successful
-<<<<<<< HEAD
             projects across various industries. Contact us today for a free consultation.
-=======
-            projects across various industries.
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <Link

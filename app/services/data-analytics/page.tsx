@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 
 export const metadata = {
   title: "Data Analytics & BI | Zion Tech Group",
   description: "Advanced data analytics, business intelligence, and machine learning solutions to transform raw data into actionable insights.",
   keywords: 'data-analytics, services, business, technology'
-=======
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
-export const metadata = {
-  title: 'Data Analytics - Zion Tech Group',
-  description: 'Professional data analytics solutions for your business needs.',
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
 };
 
 export default function DataAnalyticsPage() {
@@ -46,8 +37,4 @@ export default function DataAnalyticsPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
