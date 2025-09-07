@@ -1,5 +1,0 @@
-const speakers = [{"name"
-        "title"
-        "avatar"
-        "twitter"
-        "linkedin"

@@ -1,16 +1,43 @@
 import React from 'react';
+
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  className?: string;
+  label?: string;
+  error?: string;
+  helperText?: string;
 }
-export function Input({ className, ...props }: InputProps) {
+
+const Input: React.FC<InputProps> = ({
+  label,
+  error,
+  helperText,
+  className = '',
+  ...props
+}) => {
   return (
-    <input 
-      className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "file": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
-      {...props}
-    />
+    <div className="w-full">
+      {label && (
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          {label}
+        </label>
+      )}
+      <input
+        className={`
+          w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm
+          focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+          disabled:bg-gray-100 disabled:cursor-not-allowed
+          ${error ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : ''}
+          ${className}
+        `}
+        {...props}
+      />
+      {error && (
+        <p className="mt-1 text-sm text-red-600">{error}</p>
+      )}
+      {helperText && !error && (
+        <p className="mt-1 text-sm text-gray-500">{helperText}</p>
+      )}
+    </div>
   );
-}
-import React from 'react'; interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> { className?: string} export function Input({ className,...props }: InputProps) { return ( <input className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`} {...props} /> )}
-origin/cursor/automate-test-improve-and-merge-code-eafe
-cursor/website-audit-and-update-with-deployment-76dc
-cursor/fix-lint-push-and-merge-to-main-f3c1
+};
+
+export default Input;

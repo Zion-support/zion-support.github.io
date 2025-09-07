@@ -1,5 +1,7 @@
-export interface EmergingTech2026ServiceV3 {;
-  "id": string;
+  id: string;
+
+export interface EmergingTech2026ServiceV3 {
+id: string;
   name: string;
   tagline: string;
   price: string;
@@ -8,32 +10,84 @@ export interface EmergingTech2026ServiceV3 {;
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
-export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [;
-  {;
-    id: "2026-emerging-tech-v3",;
-    "name": "2026 Emerging Tech Platform V3",;
-    "tagline": "Third generation emerging tech",;
-    "price": "$399/month",;
-    "description": "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",;
-    features[;
-      "Third generation tech",;
-      "Enhanced capabilities",;
-      "Advanced features",;
-      "Improved platform",;
-      "Better performance";
-    ],;
-    "link": "/services/2026-emerging-tech-v3",;
-    "category": "Emerging Tech 2026 V3",;
-    "realImplementation": true,;
-    "contactInfo": {;
-      mobile: "+1 302 464 0950",;
-      "email": "kleber@ziontechgroup.com",;
-      "address": "364 E Main St STE 1008 Middletown DE 19709";
-]}}}
-export interface EmergingTech2026ServiceV3 {; id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: {; mobile: string; email: string; export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [; {; id: "2026-emerging-tech-v3",; name: "2026 Emerging Tech Platform V3",; tagline: "Third generation emerging tech",; price: "$399/month",; description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",; features[; "Third generation tech",; "Enhanced capabilities",; "Advanced features",; "Improved platform",; "Better performance"; ],; link: "/services/2026-emerging-tech-v3",; category: "Emerging Tech 2026 V3",; realImplementation: true,; contactInfo: {; mobile: "+1 302 464 0950",; email: "kleber@ziontechgroup.com",; address: "364 E Main St STE 1008 Middletown DE 19709"; ]}}}
-origin/cursor/automate-test-improve-and-merge-code-eafe
-cursor/website-audit-and-update-with-deployment-76dc
-cursor/fix-lint-push-and-merge-to-main-f3c1
+export interface EmergingTech2026ServiceV3 {;
+    address: string;
+  };
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+  }
+}
+
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+
+
+  id: string, name: string,
+  tagline: string, price: string,
+  description: string, features: string[],
+  link: string, category: string,
+  realImplementation: boolean,
+  contactInfo: {
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [
+  {
+    id: "2026-emerging-tech-v3", name: "2026 Emerging Tech Platform V3",
+    tagline: "Third generation emerging tech", price: "$399/month",
+    description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",
+
+
+    address: string
+  }
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [
+  {
+    id: "2026-emerging-tech-v3";
+    name: "2026 Emerging Tech Platform V3";
+    tagline: "Third generation emerging tech";
+    price: "$399/month";
+    description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.";
+    features: [
+      "Third generation tech";
+      "Enhanced capabilities";
+      "Advanced features";
+      "Improved platform";
+      "Better performance"
+    ];
+    link: "/services/2026-emerging-tech-v3", category: "Emerging Tech 2026 V3",
+    realImplementation: true,
+    contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+
+
+
+

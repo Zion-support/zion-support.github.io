@@ -1,0 +1,2469 @@
+{
+  "timestamp": "2025-09-06T23:55:31.040Z",
+  "optimizations": [
+    {
+      "type": "code-splitting",
+      "file": "/workspace/src/App.optimized.tsx",
+      "dynamicImports": 16,
+      "status": "good"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/App.optimized.tsx",
+      "size": 15067,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AIChatbot.jsx",
+      "size": 15507,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AICodeGenerator.js.jsx",
+      "size": 32765,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AIListingGenerator.tsx",
+      "size": 27299,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AIMatchingResults.tsx",
+      "size": 15694,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AIMatchmaker.tsx",
+      "size": 10390,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AboutSection.js.jsx",
+      "size": 13222,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AboutSection.jsx",
+      "size": 13222,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/Accessibility.js.jsx",
+      "size": 14483,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AdvancedAnalyticsDashboard.js.jsx",
+      "size": 17108,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AdvancedDataTable.js.jsx",
+      "size": 16591,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AdvancedForm.js.jsx",
+      "size": 15738,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AdvancedServiceInnovationHub.js.jsx",
+      "size": 29337,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AdvancedServiceRecommendation.js.jsx",
+      "size": 24091,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AnalyticsDashboard.js.jsx",
+      "size": 16789,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AuthButtons.tsx",
+      "size": 9642,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/AuthGuard.tsx",
+      "size": 7670,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/BenefitsSection.tsx",
+      "size": 9809,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/BlockchainWeb3Dashboard.js.jsx",
+      "size": 28405,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/CaseStudies.tsx",
+      "size": 7339,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/CaseStudiesSection.js.jsx",
+      "size": 28091,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/CaseStudiesSection.jsx",
+      "size": 28102,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/CategoriesSection.js.jsx",
+      "size": 15399,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/CategoriesSection.tsx",
+      "size": 21839,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/CategoryListingPage.tsx",
+      "size": 24072,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ChatAssistant/ChatAssistant.tsx",
+      "size": 22965,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ChatAssistant/ChatInput.tsx",
+      "size": 5956,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ChatAssistantTrigger.tsx",
+      "size": 6406,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ClientSuccessStoriesSection.js.jsx",
+      "size": 37793,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/CollaborationPlatform.js.jsx",
+      "size": 19828,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/CollaborativeTextEditor.js.jsx",
+      "size": 20861,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/CommunityDiscussion.js.jsx",
+      "size": 6951,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/CommunityDiscussion.jsx",
+      "size": 6951,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/CommunityDiscussion.tsx",
+      "size": 17246,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ComparisonSection.tsx",
+      "size": 13934,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ComprehensiveServicesShowcase.js.jsx",
+      "size": 16707,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ContactInfo.js.jsx",
+      "size": 11553,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ContactInfo.jsx",
+      "size": 12939,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ContactSection.js.jsx",
+      "size": 13994,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ContactSection.jsx",
+      "size": 13994,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ContactSection.tsx",
+      "size": 11582,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/Dashboard.js.jsx",
+      "size": 15557,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/DynamicListingPage.tsx",
+      "size": 56291,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EnhancedAbout.js.jsx",
+      "size": 23497,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EnhancedAbout.jsx",
+      "size": 23502,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EnhancedComprehensiveServicesShowcase.js.jsx",
+      "size": 34547,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EnhancedComprehensiveServicesShowcase.jsx",
+      "size": 14147,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EnhancedHero.js.jsx",
+      "size": 15639,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EnhancedHero.jsx",
+      "size": 22620,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EnhancedNewsletterForm.tsx",
+      "size": 9582,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EnhancedSEO.js.jsx",
+      "size": 5668,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EnhancedSEO.jsx",
+      "size": 6802,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EnhancedServicesOverview.js.jsx",
+      "size": 21940,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EnhancedServicesShowcase.js.jsx",
+      "size": 15283,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EnterpriseDashboard.js.jsx",
+      "size": 33582,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/EquipmentErrorBoundary.tsx",
+      "size": 6665,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/FaqSection.tsx",
+      "size": 16650,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/FavoriteButton.tsx",
+      "size": 8374,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/FeaturesGuideSection.tsx",
+      "size": 68062,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/FloatingCTA.tsx",
+      "size": 7332,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/Footer.jsx",
+      "size": 9499,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/FooterNewsletter.tsx",
+      "size": 15910,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/FuturisticFooter.tsx",
+      "size": 14787,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/FuturisticLoader.js.jsx",
+      "size": 6564,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/FuturisticLoader.jsx",
+      "size": 13207,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/FuturisticServicesShowcase.js.jsx",
+      "size": 13326,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/GlobalErrorHandler.tsx",
+      "size": 6047,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/GlobalPresenceSection.js.jsx",
+      "size": 28835,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/GlobalPresenceSection.jsx",
+      "size": 28835,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/GlobalServiceSection.tsx",
+      "size": 9104,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/HeroSection.js.jsx",
+      "size": 17215,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/HeroSection.jsx",
+      "size": 17215,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/HowItWorksSection.tsx",
+      "size": 27207,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/InnovationResearchSection.js.jsx",
+      "size": 30755,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/InnovativeServicesShowcase.js.jsx",
+      "size": 32261,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/InstallPrompt.tsx",
+      "size": 6975,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/InteractiveServiceShowcase.js.jsx",
+      "size": 9951,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/InteractiveTestimonials.js.jsx",
+      "size": 26426,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/InteractiveTestimonials.jsx",
+      "size": 26425,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ListingCard.tsx",
+      "size": 5474,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ListingScoreCard.tsx",
+      "size": 13188,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/MachineLearningDashboard.js.jsx",
+      "size": 36213,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/MainNavigation.js.jsx",
+      "size": 15525,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/MarketplaceErrorBoundary.tsx",
+      "size": 10175,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/MobileExperienceEnhancer.tsx",
+      "size": 18471,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ModeToggle.tsx",
+      "size": 18680,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/Navigation.js.jsx",
+      "size": 14487,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/NotFound.js.jsx",
+      "size": 13801,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/NotificationCenter.tsx",
+      "size": 8135,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/PageErrorBoundary.tsx",
+      "size": 14390,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/PerformanceDashboard.tsx",
+      "size": 16370,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/PerformanceOptimized.tsx",
+      "size": 16091,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/PerformanceOptimizedHero.js.jsx",
+      "size": 12837,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/PricingSection.js.jsx",
+      "size": 21465,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ProductCard.js.jsx",
+      "size": 6613,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ProductCard.tsx",
+      "size": 9015,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ProductListingCard.tsx",
+      "size": 30312,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ProductSubmissionForm.tsx",
+      "size": 42887,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ProjectManagementDashboard.js.jsx",
+      "size": 34287,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/QuoteRequestForm/ServiceTypeStep.tsx",
+      "size": 11793,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/QuoteRequestForm/StepProgress.tsx",
+      "size": 7373,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/QuoteRequestForm/TimelineStep.tsx",
+      "size": 11056,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ROICalculator.tsx",
+      "size": 21004,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SEO/SEOHead.tsx",
+      "size": 9898,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SEO.tsx",
+      "size": 17246,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SEOHead.js.jsx",
+      "size": 5712,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SEOOptimizer.js.jsx",
+      "size": 22985,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SearchBar.tsx",
+      "size": 18606,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SecurityComplianceDashboard.js.jsx",
+      "size": 18915,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SecurityComplianceSection.js.jsx",
+      "size": 38687,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SecurityComplianceSection.jsx",
+      "size": 38688,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ServiceCard.js.jsx",
+      "size": 6829,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ServiceComparisonTool.tsx",
+      "size": 18789,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ServiceQuoteModal.tsx",
+      "size": 21188,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ServicesBenefitsShowcase.js.jsx",
+      "size": 21019,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ServicesComparisonTable.js.jsx",
+      "size": 13583,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ServicesComparisonTable.jsx",
+      "size": 13741,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ServicesShowcase.js.jsx",
+      "size": 17928,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ServicesShowcase.jsx",
+      "size": 17928,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/Sidebar.jsx",
+      "size": 8972,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/Sitemap.js.jsx",
+      "size": 10820,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/Sitemap.jsx",
+      "size": 23607,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SitemapPage.js.jsx",
+      "size": 6383,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SitemapPage.jsx",
+      "size": 6415,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SitemapPage.tsx",
+      "size": 14639,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SocialShareSection.tsx",
+      "size": 5063,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/StatsSection.js.jsx",
+      "size": 6021,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/SupportChatbot.tsx",
+      "size": 25494,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/TechSolutionsSection.js.jsx",
+      "size": 23765,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/TechnologyStackSection.js.jsx",
+      "size": 33177,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/TestimonialCarousel.js.jsx",
+      "size": 17850,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/TestimonialCarousel.jsx",
+      "size": 17850,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/TestimonialCarousel.tsx",
+      "size": 17248,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/accessibility/AccessibilityEnhancer.tsx",
+      "size": 5619,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/admin/HealthDashboard.tsx",
+      "size": 21012,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/admin/fraud-detection/FraudFilters.tsx",
+      "size": 11098,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/admin/fraud-detection/FraudStatsCards.tsx",
+      "size": 5399,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/admin/performance-dashboard.tsx",
+      "size": 26752,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/admin/quotes/QuotesFilter.tsx",
+      "size": 10724,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/admin/quotes/QuotesTable.tsx",
+      "size": 19400,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/admin/reviews/ReviewsModerationTable.tsx",
+      "size": 23635,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/admin/whitelabel/TenantsList.tsx",
+      "size": 6569,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/admin/zion-gpt/ModelManager.tsx",
+      "size": 12353,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "code-splitting",
+      "file": "/workspace/src/components/advanced/DynamicComponentLoader.tsx",
+      "dynamicImports": 3,
+      "status": "good"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/advanced/DynamicComponentLoader.tsx",
+      "size": 8582,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ai-enhancement/AIEnhancementButton.tsx",
+      "size": 7644,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ai-enhancement/AIEnhancementPanel.tsx",
+      "size": 10395,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/auth/AuthConfigurationError.tsx",
+      "size": 29248,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/auth/SignupForm.tsx",
+      "size": 5437,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/auth/login/LoginForm.tsx",
+      "size": 26865,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/auth/login/SocialLogin.tsx",
+      "size": 11716,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/backgrounds/UltraFuturisticBackground2034.js.jsx",
+      "size": 6630,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/blog/AuthorBio.tsx",
+      "size": 5016,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/blog/SocialShareButtons.tsx",
+      "size": 7142,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/cart/GuestCheckoutModal.tsx",
+      "size": 5435,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/community/PostCard.tsx",
+      "size": 5294,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/community/ReplyCard.jsx",
+      "size": 5556,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/community/ReplyCard.tsx",
+      "size": 7241,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/conflicted/RequestQuote.js.jsx",
+      "size": 33533,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/contracts/ContractBuilder.tsx",
+      "size": 8138,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/contracts/SmartContractBuilder.tsx",
+      "size": 29946,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/contracts/blockchain/SmartContractDeployment.tsx",
+      "size": 12155,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/contracts/components/ContractForm.tsx",
+      "size": 5172,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/contracts/components/ProjectDetailsFields.tsx",
+      "size": 18238,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/contracts/page/ContractTypeCards.tsx",
+      "size": 6649,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/contracts/templates/TemplateList.tsx",
+      "size": 19859,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/contracts/templates/TemplateSaveForm.tsx",
+      "size": 8337,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/creator/CreatorSidebar.tsx",
+      "size": 8882,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/developers/ApiDocsLayout.tsx",
+      "size": 10036,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/developers/ApiDocumentation.tsx",
+      "size": 81028,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/developers/ApiKeysManager.tsx",
+      "size": 38261,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/developers/ApiLogs.tsx",
+      "size": 9315,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/developers/ApiPlayground.tsx",
+      "size": 8411,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/developers/WebhooksManager.tsx",
+      "size": 79224,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/disabled/AIServicesShowcase.js.jsx",
+      "size": 8667,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/disabled/Accessibility.jsx",
+      "size": 12674,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/disabled/AdvancedAIBusinessProcessAutomation.js.jsx",
+      "size": 8192,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/disputes/DisputeDetail.tsx",
+      "size": 64325,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/disputes/DisputeForm.tsx",
+      "size": 16437,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/disputes/DisputesList.tsx",
+      "size": 22060,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/EnterpriseCTA.tsx",
+      "size": 16862,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/EnterpriseFeatures.tsx",
+      "size": 8798,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/EnterprisePricingTable.tsx",
+      "size": 11341,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/EnterpriseStickyNav.tsx",
+      "size": 6518,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/EnterpriseTestimonials.tsx",
+      "size": 7863,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/EnterpriseTrustBadges.tsx",
+      "size": 8782,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/admin/AdminHeader.tsx",
+      "size": 10358,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/admin/RoleManagement.tsx",
+      "size": 27731,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/admin/TeamActivity.tsx",
+      "size": 13713,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/admin/TeamManagement.tsx",
+      "size": 6803,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/admin/UsageStats.tsx",
+      "size": 13096,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/billing/InvoiceHistory.tsx",
+      "size": 9904,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/billing/PaymentMethods.tsx",
+      "size": 5363,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/workspace/QuickActions.tsx",
+      "size": 7222,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/enterprise/workspace/WorkspaceHeader.tsx",
+      "size": 6710,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/errors/GlobalErrorBoundary.tsx",
+      "size": 35301,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/forms/ValidatedFormField.tsx",
+      "size": 18323,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "code-splitting",
+      "file": "/workspace/src/components/gallery/ProductGallery.tsx",
+      "dynamicImports": 6,
+      "status": "good"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/gallery/ProductGallery.tsx",
+      "size": 6839,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/header/Header.jsx",
+      "size": 6153,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/header/MainNavigation.js.jsx",
+      "size": 7052,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/header/MobileBottomNav.tsx",
+      "size": 8349,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/header/MobileMenu.jsx",
+      "size": 7625,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/hiring-tracker/CandidateCard.tsx",
+      "size": 19261,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/ContactInfo.js.jsx",
+      "size": 9707,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/ContactInfo.jsx",
+      "size": 9707,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/EnhancedQuickAccess.js.jsx",
+      "size": 13197,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/EnhancedServicesShowcase.js.jsx",
+      "size": 14589,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/ExpandedServicesPreview.js.jsx",
+      "size": 14083,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/FeatureCTAs.js.jsx",
+      "size": 11097,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/FeatureCTAs.jsx",
+      "size": 11098,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/FeatureCTAs.tsx",
+      "size": 18632,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/FeatureHighlights.js.jsx",
+      "size": 14427,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/FeatureHighlights.tsx",
+      "size": 5827,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/HomePageSkeleton.js.jsx",
+      "size": 7859,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/ITServiceRequestHero.tsx",
+      "size": 29693,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/InteractiveFeatures.tsx",
+      "size": 5606,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/MicroSaasServicesSection.js.jsx",
+      "size": 13415,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/QuickAccess.js.jsx",
+      "size": 5191,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/QuickAccess.tsx",
+      "size": 22564,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/home/ServicesShowcase.js.jsx",
+      "size": 9443,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/icons/index.tsx",
+      "size": 132167,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/integrations/IntegrationCards.tsx",
+      "size": 7949,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/integrations/WebhookManager.tsx",
+      "size": 39662,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/integrations/ZapierIntegration.tsx",
+      "size": 12660,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/interviews/InterviewCard.tsx",
+      "size": 6509,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/interviews/InterviewRequestForm.tsx",
+      "size": 33218,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/interviews/UpcomingInterviewsCard.tsx",
+      "size": 6535,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/jobs/ApplicationScoreCard.tsx",
+      "size": 15034,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/jobs/ApplyToJobForm.tsx",
+      "size": 20331,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/jobs/JobMatchesCard.tsx",
+      "size": 12303,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/jobs/JobsList.tsx",
+      "size": 15588,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/jobs/MyApplications.tsx",
+      "size": 6276,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/jobs/SuggestedJobs.tsx",
+      "size": 10438,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/jobs/TranslatableJobForm.tsx",
+      "size": 12810,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/jobs/applications/ApplicationActions.tsx",
+      "size": 7376,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/jobs/applications/ApplicationCard.tsx",
+      "size": 24893,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/jobs/applications/ApplicationProgress.tsx",
+      "size": 6864,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/jobs/applications/ApplicationRow.tsx",
+      "size": 11469,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/jobs/applications/ApplicationsTable.tsx",
+      "size": 15787,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/layout/EnhancedFooter.tsx",
+      "size": 9073,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/layout/Footer.tsx",
+      "size": 6851,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/layout/Header.tsx",
+      "size": 5037,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/layout/Sidebar.tsx",
+      "size": 24324,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/listing/AIListingForm.tsx",
+      "size": 13374,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/listing/AIListingGenerator.tsx",
+      "size": 8949,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/listing/GeneratedContentDisplay.tsx",
+      "size": 5571,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/loyalty/PointsBadge.tsx",
+      "size": 7453,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/marketplace/EmptyState.tsx",
+      "size": 11787,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/messaging/ConversationDetailView.tsx",
+      "size": 11012,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/messaging/job-application/ApplyForm.tsx",
+      "size": 9633,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/messaging/resume-selector/ResumeSelector.tsx",
+      "size": 14996,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/AppFeatures.tsx",
+      "size": 8167,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/AppScreenshots.tsx",
+      "size": 9931,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/AppStoreBanner.jsx",
+      "size": 10458,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/AppStoreButtons.tsx",
+      "size": 11515,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/AppTestimonials.tsx",
+      "size": 10702,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/CommunityTrust.tsx",
+      "size": 7930,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/DownloadSection.tsx",
+      "size": 5307,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/MobileFeatureShowcase.jsx",
+      "size": 6362,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/MobileFeatureShowcase.tsx",
+      "size": 6789,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/MobileLaunchHero.tsx",
+      "size": 10847,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/SmartAppBanner.tsx",
+      "size": 9146,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/admin/ChangelogManager.tsx",
+      "size": 8431,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/admin/ExportPanel.tsx",
+      "size": 6159,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/admin/MetadataForm.tsx",
+      "size": 7968,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/mobile-app/admin/ScreenshotManager.tsx",
+      "size": 8504,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/navigation/ModernNavigation.tsx",
+      "size": 13482,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/notifications/NotificationItem.tsx",
+      "size": 8719,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/notifications/NotificationList.tsx",
+      "size": 8869,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/onboarding/OnboardingTracker.tsx",
+      "size": 6421,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/onboarding/OnboardingWizard.tsx",
+      "size": 13129,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/onboarding/ProfileSetup.tsx",
+      "size": 9211,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/onboarding/UserTypeSelection.tsx",
+      "size": 9479,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/partners/PartnerDashboard.tsx",
+      "size": 7387,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/partners/PartnerReferralLinks.tsx",
+      "size": 21656,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/partners/PartnerResources.tsx",
+      "size": 16733,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/pricing/PricingSuggestionBox.tsx",
+      "size": 11776,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/profile/ContactPublisherModal.tsx",
+      "size": 14519,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/profile/ProfileAvailability.tsx",
+      "size": 14011,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/profile/ProfileHero.tsx",
+      "size": 7202,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/profile/ProfileProjects.tsx",
+      "size": 11583,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/profile/ServiceProviderRegistrationForm.tsx",
+      "size": 82485,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/profile/TalentCard.tsx",
+      "size": 10429,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/profile/TalentProfile.tsx",
+      "size": 13332,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/profile/TalentRegistrationForm.tsx",
+      "size": 110542,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/profile/hire-request/HireRequestForm.tsx",
+      "size": 8288,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/projects/ActiveProjectsCard.tsx",
+      "size": 15366,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/projects/ProjectOfferBanner.tsx",
+      "size": 9787,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/projects/milestones/AIMilestoneGenerator.tsx",
+      "size": 15525,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/projects/milestones/AddMilestoneForm.tsx",
+      "size": 16254,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/projects/milestones/MilestoneCard.tsx",
+      "size": 12522,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/projects/milestones/MilestoneSuggestions.tsx",
+      "size": 18422,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/projects/reviews/ProjectReviewSection.tsx",
+      "size": 10209,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/quotes/ExportToCSV.tsx",
+      "size": 11138,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/quotes/QuoteDetails.tsx",
+      "size": 14107,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/referrals/ReferralLeaderboard.tsx",
+      "size": 7740,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/referrals/ReferralLink.tsx",
+      "size": 9976,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/referrals/ReferralStats.tsx",
+      "size": 9212,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/referrals/RewardsCard.tsx",
+      "size": 14506,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/resume-builder/forms/WorkExperienceForm.tsx",
+      "size": 15012,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/resume-builder/forms/WorkExperienceItemForm.tsx",
+      "size": 34324,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/resume-builder/forms/certifications/CertificationsList.tsx",
+      "size": 6885,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/resume-builder/forms/education/EducationFormFields.tsx",
+      "size": 13243,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/resume-builder/portfolio/PortfolioBuilder.tsx",
+      "size": 9098,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/resume-builder/portfolio/ProjectCard.tsx",
+      "size": 16160,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/resume-builder/wizard/CreateResumeForm.tsx",
+      "size": 8138,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/resume-builder/wizard/ResumeWizard.tsx",
+      "size": 6218,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/reviews/ReviewCard.tsx",
+      "size": 24688,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/reviews/ReviewStats.tsx",
+      "size": 6127,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/search/ActiveFiltersBar.tsx",
+      "size": 11092,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/search/AdvancedSearchResults.tsx",
+      "size": 54374,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/search/EnhancedSearchInput.jsx",
+      "size": 7708,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/search/EnhancedSearchInput.tsx",
+      "size": 35229,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/search/SearchResultsPage.tsx",
+      "size": 54330,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/seo/SEOHead.tsx",
+      "size": 9898,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/services/CountrySelector.tsx",
+      "size": 10461,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/services/GeneratedDescriptionDisplay.tsx",
+      "size": 6335,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/services/PageSections/CountryTabs.tsx",
+      "size": 9272,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/services/PageSections/EnterpriseCallToAction.jsx",
+      "size": 15172,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/services/PageSections/PageHero.tsx",
+      "size": 12995,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/services/PageSections/ServiceIncludes.jsx",
+      "size": 19082,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/services/PageSections/ServiceIncludes.tsx",
+      "size": 15040,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/services/ServiceDescriptionForm.tsx",
+      "size": 6302,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/services/ServiceDetails.tsx",
+      "size": 14108,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/services/ServiceLandingTemplate.tsx",
+      "size": 12115,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/settings/FraudDetectionSettings.tsx",
+      "size": 7536,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/support/ChatMessage.tsx",
+      "size": 11935,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/support/HelpCenter.tsx",
+      "size": 26310,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/support/SupportWidget.tsx",
+      "size": 5196,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/support/help-content.tsx",
+      "size": 34448,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/talent/ActiveFilters.tsx",
+      "size": 10537,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/talent/FilterSidebar.tsx",
+      "size": 15779,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/talent/TalentCard.tsx",
+      "size": 14880,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/talent/TalentDetails.tsx",
+      "size": 7534,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/talent/filters/AvailabilityFilter.tsx",
+      "size": 9381,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/talent/filters/RegionFilter.tsx",
+      "size": 9252,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/talent/filters/SkillsFilter.tsx",
+      "size": 6635,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/FuturisticNavigation.jsx",
+      "size": 9751,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/FuturisticServicesShowcase.jsx",
+      "size": 16018,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/LoadingSpinner.tsx",
+      "size": 6590,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/ModernButton.tsx",
+      "size": 11379,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/ModernCard.tsx",
+      "size": 8550,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/Tabs.jsx",
+      "size": 6739,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/breadcrumb.tsx",
+      "size": 6100,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/bundle-analyzer.tsx",
+      "size": 19327,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/carousel.tsx",
+      "size": 7098,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/command.tsx",
+      "size": 5682,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/context-menu.tsx",
+      "size": 9700,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/dropdown-menu.tsx",
+      "size": 9471,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/enhanced-loading-states.tsx",
+      "size": 13532,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/loading-fallback.jsx",
+      "size": 5154,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/menubar.tsx",
+      "size": 11381,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/navigation-menu.tsx",
+      "size": 6999,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/optimized-image.tsx",
+      "size": 22492,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/quick-actions.tsx",
+      "size": 17924,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/steps.tsx",
+      "size": 6074,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/ui/toast.tsx",
+      "size": 14325,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/unused/Docs.js.jsx",
+      "size": 9768,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/unused/Marketplace.js.jsx",
+      "size": 18368,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/unused/Marketplace.jsx",
+      "size": 29392,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/components/unused/ServicesShowcase.js.jsx",
+      "size": 5115,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/contexts/ToastContext.tsx",
+      "size": 6101,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/data/marketplaceData.js",
+      "size": 6729,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/layout/Footer.tsx",
+      "size": 8105,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/layout/MainNavigation.tsx",
+      "size": 43786,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/layout/PrimaryNav.tsx",
+      "size": 33736,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/mobile/components/browse/BrowseCards.tsx",
+      "size": 19894,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/mobile/components/browse/BrowseFilters.tsx",
+      "size": 19545,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/mobile/components/common/MobileHeader.tsx",
+      "size": 6153,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/mobile/components/dashboard/ClientDashboard.tsx",
+      "size": 23526,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/mobile/components/dashboard/TalentDashboard.tsx",
+      "size": 23447,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/mobile/components/messaging/MobileChatView.tsx",
+      "size": 17775,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/mobile/components/messaging/MobileConversationList.tsx",
+      "size": 9797,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/mobile/components/onboarding/LanguageThemeSelector.tsx",
+      "size": 10348,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/mobile/components/onboarding/RolePicker.tsx",
+      "size": 5951,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/mobile/components/onboarding/SignUpForm.tsx",
+      "size": 19077,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/mobile/components/projects/MobileProjectView.tsx",
+      "size": 18426,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/mobile/components/resume/MobileResumeBuilder.tsx",
+      "size": 13388,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "code-splitting",
+      "file": "/workspace/src/routes/AuthRoutes.tsx",
+      "dynamicImports": 7,
+      "status": "good"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/routes/ContentRoutes.jsx",
+      "size": 6727,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "code-splitting",
+      "file": "/workspace/src/routes/DashboardRoutes.tsx",
+      "dynamicImports": 8,
+      "status": "good"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/store/authSlice.js",
+      "size": 5913,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/utils/cartUtils.js",
+      "size": 8253,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/utils/chunkErrorHandler.ts",
+      "size": 15613,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "code-splitting",
+      "file": "/workspace/src/utils/codeSplitting.js",
+      "dynamicImports": 3,
+      "status": "good"
+    },
+    {
+      "type": "code-splitting",
+      "file": "/workspace/src/utils/dynamicComponents.ts",
+      "dynamicImports": 16,
+      "status": "good"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/utils/env-polyfill.ts",
+      "size": 6485,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/utils/imageOptimization.tsx",
+      "size": 11184,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/utils/sentry-mock.ts",
+      "size": 14012,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/src/utils/serverless-polyfill.ts",
+      "size": 20112,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "code-splitting",
+      "file": "/workspace/src/utils/sitemapGenerator.tsx",
+      "dynamicImports": 1,
+      "status": "good"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/contact/page.tsx",
+      "size": 8057,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/page.tsx",
+      "size": 8239,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/ai-code-reviewer/page.tsx",
+      "size": 7460,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/ai-customer-support-automation/page.tsx",
+      "size": 15484,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/ai-email-optimizer/page.tsx",
+      "size": 13493,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/ai-invoice-generator/page.tsx",
+      "size": 15544,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/ai-meeting-assistant/page.tsx",
+      "size": 6327,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/ai-powered-crm/page.tsx",
+      "size": 10613,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/ai-project-management-suite/page.tsx",
+      "size": 15738,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/ai-services/page.tsx",
+      "size": 9759,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/ai-social-media-scheduler/page.tsx",
+      "size": 15574,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/blockchain-solutions/page.tsx",
+      "size": 9095,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/devops-automation/page.tsx",
+      "size": 7203,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/fintech/page.tsx",
+      "size": 10217,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/micro-saas/page.tsx",
+      "size": 8645,
+      "recommendation": "Consider splitting this component"
+    },
+    {
+      "type": "large-component",
+      "file": "/workspace/app/services/smart-invoice-generator/page.tsx",
+      "size": 8745,
+      "recommendation": "Consider splitting this component"
+    }
+  ],
+  "recommendations": [
+    "Consider splitting 401 large components",
+    "Good: Found 8 files with dynamic imports"
+  ],
+  "metrics": {
+    "totalOptimizations": 409,
+    "imageOptimizations": 0,
+    "codeSplitting": 8,
+    "largeComponents": 401
+  }
+}

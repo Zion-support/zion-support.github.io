@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 /**
- * Master Automation Orchestrator
- * Orchestrates all automation scripts, tests, improvements, and git operations
+ * Master Automation Orchestrator;
+ * Orchestrates all automation scripts, tests, improvements, and git operations;
  */
-const fs = require('fs'
-const path = require('path'
+const fs = require('fs')
+const path = require('path')
       "status"
         "performanceMonitor"
         "codeQuality"

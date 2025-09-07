@@ -1,36 +1,30 @@
 #!/bin/bash
 
 # Script to fix merge conflicts by keeping HEAD version
-echo "Fixing merge conflicts in pages/ directory..."
+echo "Fixing merge conflicts in all files..."
 
 # Find all files with merge conflicts
-<<<<<<< HEAD
-files_with_conflicts=$(grep -r "" src/ --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" -l)
-=======
-files_with_conflicts=$(find pages/ -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \;)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-82f1
+files_with_conflicts=$(find /workspace/app -name "*.tsx" -o -name "*.ts" | xargs grep -l "" 2>/dev/null)
 
 for file in $files_with_conflicts; do
     echo "Fixing merge conflicts in: $file"
     
-    # Create a backup
-    cp "$file" "$file.backup"
+    # Create a temporary file
+    temp_file=$(mktemp)
     
-    # Use sed to remove merge conflict markers and keep HEAD version
-<<<<<<< HEAD
-    sed -i '/^/,/^/!d' "$file"
-    sed -i '/^/,/^>>>>>>> /d' "$file"
-    sed -i '/^/d' "$file"
-    sed -i '/^/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
-=======
-    # Remove lines from <<<<<<< HEAD to ======= (inclusive)
-    # Remove lines from ======= to >>>>>>> (inclusive)
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/=======/,/>>>>>>> /d' "$file"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-82f1
+    # Process the file to resolve conflicts
+    awk '
+    /^/ { in_head = 1; next }
+    /^/ { in_head = 0; in_other = 1; next }
+    /^
+    in_other { next }
+    { print }
+    ' "$file" > "$temp_file"
+    
+    # Replace the original file
+    mv "$temp_file" "$file"
     
     echo "Fixed: $file"
 done
 
-echo "Merge conflicts fixed!"
+echo "All merge conflicts have been resolved!"

@@ -7,6 +7,7 @@ The Intelligent DevOps PM2 Automation System is a comprehensive, AI-powered auto
 ## 🌟 Key Features
 
 ### 1. **Intelligent Repository Manager**
+
 - **Automated Branch Management**: Intelligently analyzes branch health and automatically merges healthy branches
 - **Conflict Resolution**: AI-powered merge conflict resolution with intelligent strategies
 - **Branch Health Monitoring**: Continuous monitoring of branch health with scoring algorithms
@@ -14,6 +15,7 @@ The Intelligent DevOps PM2 Automation System is a comprehensive, AI-powered auto
 - **Health Reports**: Comprehensive repository health analytics and recommendations
 
 ### 2. **Smart Development Workflow Orchestrator**
+
 - **Automated Code Review**: Continuous code quality analysis with automated fixes
 - **Testing Automation**: Intelligent test execution and coverage analysis
 - **Quality Gates**: Automated quality checks with configurable thresholds
@@ -21,6 +23,7 @@ The Intelligent DevOps PM2 Automation System is a comprehensive, AI-powered auto
 - **Documentation Coverage**: Automated documentation quality assessment
 
 ### 3. **Smart Deployment Pipeline**
+
 - **Git-Integrated Deployments**: Seamless integration with your git workflow
 - **Automated Rollbacks**: Intelligent rollback decisions based on health metrics
 - **Environment Management**: Multi-environment deployment with health-based routing
@@ -28,6 +31,7 @@ The Intelligent DevOps PM2 Automation System is a comprehensive, AI-powered auto
 - **Backup and Recovery**: Automatic backup creation and recovery procedures
 
 ### 4. **Enhanced AI Code Analyzer**
+
 - **Code Quality Analysis**: Advanced static analysis with AI-powered insights
 - **Performance Optimization**: Intelligent code optimization recommendations
 - **Security Scanning**: Automated security vulnerability detection
@@ -62,7 +66,8 @@ The Intelligent DevOps PM2 Automation System is a comprehensive, AI-powered auto
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 16+ 
+
+- Node.js 16+
 - PM2 (will be installed automatically)
 - Git repository
 - npm or yarn
@@ -70,11 +75,13 @@ The Intelligent DevOps PM2 Automation System is a comprehensive, AI-powered auto
 ### Installation
 
 1. **Clone and Navigate**
+
    ```bash
    cd your-project-directory
    ```
 
 2. **Start the Intelligent DevOps System**
+
    ```bash
    ./start-intelligent-devops-pm2.sh
    ```
@@ -112,16 +119,16 @@ The system automatically creates an `automation-config.json` file with default s
 
 ### Core Processes
 
-| Process | Purpose | Restart Interval |
-|---------|---------|------------------|
-| `intelligent-repository-manager` | Git automation & branch management | Every 2 hours |
-| `smart-dev-workflow-orchestrator` | Development workflow automation | Every hour |
-| `smart-deployment-pipeline` | Deployment management | Every 4 hours |
-| `enhanced-ai-code-analyzer` | AI-powered code analysis | Every 2 hours |
-| `intelligent-performance-optimizer` | Performance optimization | Every 4 hours |
-| `smart-dependency-intelligence` | Dependency management | 6 AM & 6 PM |
-| `enhanced-testing-automation` | Testing automation | Every 4 hours |
-| `project-health-monitor-git` | Project health monitoring | Every hour |
+| Process                             | Purpose                            | Restart Interval |
+| ----------------------------------- | ---------------------------------- | ---------------- |
+| `intelligent-repository-manager`    | Git automation & branch management | Every 2 hours    |
+| `smart-dev-workflow-orchestrator`   | Development workflow automation    | Every hour       |
+| `smart-deployment-pipeline`         | Deployment management              | Every 4 hours    |
+| `enhanced-ai-code-analyzer`         | AI-powered code analysis           | Every 2 hours    |
+| `intelligent-performance-optimizer` | Performance optimization           | Every 4 hours    |
+| `smart-dependency-intelligence`     | Dependency management              | 6 AM & 6 PM      |
+| `enhanced-testing-automation`       | Testing automation                 | Every 4 hours    |
+| `project-health-monitor-git`        | Project health monitoring          | Every hour       |
 
 ### Management Scripts
 
@@ -178,6 +185,7 @@ ls -la reports/deployment-*
 ## 📈 Monitoring and Analytics
 
 ### Real-time Monitoring
+
 ```bash
 # Monitor all processes
 pm2 monit
@@ -190,12 +198,14 @@ pm2 status
 ```
 
 ### Reports and Analytics
+
 - **Repository Health Reports**: `reports/repository-health-*.json`
 - **Workflow Reports**: `reports/workflow-report-*.json`
 - **Deployment Reports**: `reports/deployment-report-*.json`
 - **Performance Analytics**: `reports/performance-*.json`
 
 ### Log Files
+
 - **Main Logs**: `logs/` directory
 - **Process-specific Logs**: `logs/<process-name>.log`
 - **Error Logs**: `logs/<process-name>-error.log`
@@ -203,18 +213,21 @@ pm2 status
 ## 🎯 Automation Features
 
 ### Git Automation
+
 - **Automatic Branch Merging**: Merges healthy branches automatically
 - **Conflict Resolution**: Intelligent conflict resolution strategies
 - **Health Scoring**: Branch health assessment algorithms
 - **Cleanup Automation**: Automatic stale branch removal
 
 ### Development Automation
+
 - **Code Quality Gates**: Automated quality checks
 - **Testing Automation**: Continuous testing execution
 - **Performance Optimization**: Automated performance improvements
 - **Documentation Generation**: Automated documentation updates
 
 ### Deployment Automation
+
 - **Health-Based Routing**: Deployments based on health scores
 - **Automatic Rollbacks**: Intelligent rollback decisions
 - **Environment Management**: Multi-environment coordination
@@ -230,6 +243,7 @@ pm2 status
 ## 📋 Configuration Options
 
 ### Environment Variables
+
 ```bash
 export GIT_AUTO_MERGE=true
 export GIT_AUTO_PUSH=true
@@ -240,6 +254,7 @@ export AUTO_ROLLBACK=true
 ```
 
 ### Quality Thresholds
+
 ```json
 {
   "quality": {
@@ -251,6 +266,7 @@ export AUTO_ROLLBACK=true
 ```
 
 ### Deployment Settings
+
 ```json
 {
   "environments": {
@@ -271,12 +287,14 @@ export AUTO_ROLLBACK=true
 ### Common Issues
 
 1. **Process Not Starting**
+
    ```bash
    pm2 logs <process-name>
    check logs/<process-name>-error.log
    ```
 
 2. **Git Operations Failing**
+
    ```bash
    git status
    git remote -v
@@ -291,6 +309,7 @@ export AUTO_ROLLBACK=true
    ```
 
 ### Debug Mode
+
 ```bash
 # Enable debug logging
 export DEBUG=pm2:*
@@ -298,6 +317,7 @@ export DEBUG=pm2:*
 ```
 
 ### Health Checks
+
 ```bash
 # Run health checks
 ./start-intelligent-devops-pm2.sh health
@@ -309,13 +329,16 @@ export DEBUG=pm2:*
 ## 🔄 Migration from Existing System
 
 ### From Enhanced PM2 System
+
 1. **Backup existing system**
+
    ```bash
    pm2 save
    cp ecosystem.enhanced.cjs ecosystem.enhanced.backup.cjs
    ```
 
 2. **Start new system**
+
    ```bash
    ./start-intelligent-devops-pm2.sh
    ```
@@ -327,7 +350,9 @@ export DEBUG=pm2:*
    ```
 
 ### From Basic PM2 System
+
 1. **Stop existing processes**
+
    ```bash
    pm2 stop all
    pm2 delete all
@@ -341,6 +366,7 @@ export DEBUG=pm2:*
 ## 📚 Advanced Configuration
 
 ### Custom Automation Rules
+
 ```json
 {
   "automation": {
@@ -357,6 +383,7 @@ export DEBUG=pm2:*
 ```
 
 ### Integration Hooks
+
 ```json
 {
   "hooks": {
@@ -370,12 +397,14 @@ export DEBUG=pm2:*
 ## 🤝 Contributing
 
 ### Development Setup
+
 1. **Clone the repository**
 2. **Install dependencies**: `npm install`
 3. **Run tests**: `npm test`
 4. **Submit pull request**
 
 ### Code Standards
+
 - Follow existing code style
 - Add comprehensive tests
 - Update documentation
@@ -388,16 +417,19 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🆘 Support
 
 ### Documentation
+
 - **System Documentation**: This README
 - **API Documentation**: Check individual script files
 - **Configuration Guide**: See `automation-config.json`
 
 ### Community
+
 - **Issues**: GitHub Issues
 - **Discussions**: GitHub Discussions
 - **Wiki**: Project Wiki
 
 ### Contact
+
 - **Maintainer**: Development Team
 - **Email**: automation@zion.app
 - **Repository**: Zion Holdings

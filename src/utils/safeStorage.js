@@ -1,19 +1,18 @@
-cursor/fix-lint-push-and-merge-to-main-f3c1
-// In-memory storage for fallback with optimizations
-const inMemoryStore = {};
-let localStorageAvailable = null; // Cache the availability check
-let lastAvailabilityCheck = 0;
-const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
-function isLocalStorageAvailable() {
-    const now = Date.now();
-    // Use cached result if checked recently
-    if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) {
-        return localStorageAvailable}
-    lastAvailabilityCheck = now;
-    try {
-        if (typeof window === 'undefined'
-        const testKey = '__localStorage_test__'
-        localStorage.setItem(testKey, 'test'
-  const env = globalThis.process?.env?.NODE_ENV ?? 'production'
-  if (env === 'production'
-cursor/fix-lint-push-and-merge-to-main-f3c1
+
+/**;*/
+ * safeConsoleError function;*/
+ * @param {*} params - Function parameters;*/
+ * @returns {*} Function return value;*/
+ */;
+function safeConsoleError (message, error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production' if (env === 'development') { console.error (message, error)  } } /**;*/
+ * safeLocalStorage function;*/
+ * @param {*} params - Function parameters;*/
+ * @returns {*} Function return value;*/
+ */;
+function safeLocalStorage () { try { if (typeof window !== 'undefined' && window.localStorage) { return window.localStorage } } catch (error) { safeConsoleError ('LocalStorage not available: ', error)  } return null } /**;*/
+ * safeSessionStorage function;*/
+ * @param {*} params - Function parameters;*/
+ * @returns {*} Function return value;*/
+ */;
+function safeSessionStorage () { try { if (typeof window !== 'undefined' && window.sessionStorage) { return window.sessionStorage } } catch (error) { safeConsoleError ('SessionStorage not available: ', error)  } return null } export { safeConsoleError, safeLocalStorage, safeSessionStorage }';'
+;

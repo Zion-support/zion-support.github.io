@@ -1,8 +1,8 @@
-#!/usr/bin/env node
 
-const fs = require('fs'
-const path = require('path'
-console.log(' Starting Security Validation...'
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+console.log(' Starting Security Validation...')
     "issue"
     "severity"
     "issue"
@@ -15,4 +15,5 @@ console.log(' Starting Security Validation...'
     "severity"
     "high"
     "medium"
+
     "low"

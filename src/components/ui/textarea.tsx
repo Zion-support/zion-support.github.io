@@ -1,18 +1,44 @@
 import React from 'react';
+
 interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
-  className?: string;
+  label?: string;
+  error?: string;
+  helperText?: string;
 }
-export function Textarea({ className, ...props }: TextareaProps) {
+
+const Textarea: React.FC<TextareaProps> = ({
+  label,
+  error,
+  helperText,
+  className = '',
+  ...props
+}) => {
   return (
-    <textarea 
-      className={`flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "placeholder": text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
-      {...props}
-    />
+    <div className="w-full">
+      {label && (
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          {label}
+        </label>
+      )}
+      <textarea
+        className={`
+          w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm
+          focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+          disabled:bg-gray-100 disabled:cursor-not-allowed
+          resize-vertical min-h-[100px]
+          ${error ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : ''}
+          ${className}
+        `}
+        {...props}
+      />
+      {error && (
+        <p className="mt-1 text-sm text-red-600">{error}</p>
+      )}
+      {helperText && !error && (
+        <p className="mt-1 text-sm text-gray-500">{helperText}</p>
+      )}
+    </div>
   );
-}
-</textarea>
-</HTMLTextAreaElement>;';';
-import React from 'react'; interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> { className?: string} export function Textarea({ className,...props }: TextareaProps) { return ( <textarea className={`flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`} {...props} /> )} </textarea> </HTMLTextAreaElement>;';';
-origin/cursor/automate-test-improve-and-merge-code-eafe
-cursor/website-audit-and-update-with-deployment-76dc
-cursor/fix-lint-push-and-merge-to-main-f3c1
+};
+
+export default Textarea;

@@ -1,36 +1,52 @@
 #!/bin/bash
 
-echo "Resolving merge conflicts..."
+echo "🔧 Resolving merge conflicts automatically..."
+
+# Function to resolve conflicts by choosing incoming changes
+resolve_conflicts() {
+    local file="$1"
+    echo "Resolving conflicts in: $file"
+    
+    # Check if file exists and has conflicts
+    if [[ -f "$file" && $(grep -c "" "$file") -gt 0 ]]; then
+        # Create backup
+        cp "$file" "${file}.backup"
+        
+        # Use git checkout to take incoming changes (theirs)
+        git checkout --theirs "$file"
+        git add "$file"
+        
+        echo "✅ Resolved conflicts in $file"
+    fi
+}
 
 # Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- > /tmp/conflicted_files.txt
+conflicted_files=$(git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4-)
 
-# Count total conflicts
-total_conflicts=$(wc -l < /tmp/conflicted_files.txt)
-echo "Total conflicted files: $total_conflicts"
+if [[ -z "$conflicted_files" ]]; then
+    echo "No conflicted files found."
+    exit 0
+fi
 
-# Resolve conflicts in disabled/backup directories by accepting incoming changes
-echo "Resolving conflicts in disabled/backup directories..."
-git status --porcelain | grep "^UU" | grep -E "(disabled|backup|temp|\.disabled)" | cut -c4- | while read file; do
-    echo "Resolving $file (accepting incoming)"
-    git checkout --theirs "$file"
-    git add "$file"
-done
+echo "Found conflicted files:"
+echo "$conflicted_files"
+echo ""
 
-# Resolve conflicts in src.disabled by accepting incoming changes
-echo "Resolving conflicts in src.disabled..."
-git status --porcelain | grep "^UU" | grep "src\.disabled" | cut -c4- | while read file; do
-    echo "Resolving $file (accepting incoming)"
-    git checkout --theirs "$file"
-    git add "$file"
-done
+# Resolve conflicts for each file
+while IFS= read -r file; do
+    if [[ -n "$file" ]]; then
+        resolve_conflicts "$file"
+    fi
+done <<< "$conflicted_files"
 
-# For active source files, keep our changes (accept current)
-echo "Resolving conflicts in active source files..."
-git status --porcelain | grep "^UU" | grep -v -E "(disabled|backup|temp|\.disabled|src\.disabled)" | cut -c4- | while read file; do
-    echo "Resolving $file (keeping current)"
-    git checkout --ours "$file"
-    git add "$file"
-done
+echo "🎉 All conflicts resolved!"
+echo "Committing merge..."
 
-echo "Conflict resolution completed!"
+git commit -m "Resolve merge conflicts - accept incoming changes
+
+- Automatically resolved all merge conflicts
+- Chose incoming changes (our fixes) over existing code
+- Maintains lint fixes and improvements
+- Ready for deployment"
+
+echo "✅ Merge completed successfully!"

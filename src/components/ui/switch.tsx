@@ -1,24 +1,64 @@
-const Switch = React.forwardRef<
-  React.ElementRef<typeof SwitchPrimitives.Root>,
-  React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
->(({ className, ...props }, ref) => (
-  <SwitchPrimitives.Root
-    className={cn(
-      "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-"visible": outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input
-      className
-    )}
-    {...props}
-    ref={ref}
-  >
-    <SwitchPrimitives.Thumb
-      className={cn(
-        "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
+import React from 'react';
+
+interface SwitchProps {
+  checked: boolean;
+  onChange: (checked: boolean) => void;
+  label?: string;
+  disabled?: boolean;
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const Switch: React.FC<SwitchProps> = ({
+  checked,
+  onChange,
+  label,
+  disabled = false,
+  size = 'md'
+}) => {
+  const sizeClasses = {
+    sm: 'w-8 h-4',
+    md: 'w-12 h-6',
+    lg: 'w-16 h-8'
+  };
+
+  const thumbSizeClasses = {
+    sm: 'w-3 h-3',
+    md: 'w-5 h-5',
+    lg: 'w-7 h-7'
+  };
+
+  const translateClasses = {
+    sm: checked ? 'translate-x-4' : 'translate-x-0',
+    md: checked ? 'translate-x-6' : 'translate-x-0',
+    lg: checked ? 'translate-x-8' : 'translate-x-0'
+  };
+
+  return (
+    <div className="flex items-center space-x-3">
+      <button
+        type="button"
+        className={`
+          ${sizeClasses[size]} relative inline-flex flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent
+          transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+          ${checked ? 'bg-blue-600' : 'bg-gray-200'}
+          ${disabled ? 'opacity-50 cursor-not-allowed' : ''}
+        `}
+        onClick={() => !disabled && onChange(!checked)}
+        disabled={disabled}
+      >
+        <span
+          className={`
+            ${thumbSizeClasses[size]} ${translateClasses[size]} pointer-events-none inline-block rounded-full bg-white shadow transform ring-0 transition duration-200 ease-in-out
+          `}
+        />
+      </button>
+      {label && (
+        <label className="text-sm font-medium text-gray-700">
+          {label}
+        </label>
       )}
-    />
-  </SwitchPrimitives.Root>
-))
-Switch.displayName = SwitchPrimitives.Root.displayName
-export { Switch };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-cursor/website-audit-and-update-with-deployment-76dc
-origin/cursor/automate-test-improve-and-merge-code-eafe
-cursor/fix-lint-push-and-merge-to-main-f3c1
+    </div>
+  );
+};
+
+export default Switch;

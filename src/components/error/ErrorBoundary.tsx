@@ -1,103 +1,111 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
-}
+  errorInfo?: ErrorInfo}
 
-export class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends Component<Props , State" > {"
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo });
-    this.props.onError?.(error, errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      
+    }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo)}
+
+    // Log to external service in production""
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send the error to a service like Sentry
+      
+    }
   }
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4"
-        >
-          <div className="max-w-md w-full text-center">
-            <div className="mb-6">
-              <div className="w-20 h-20 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <AlertTriangle className="w-10 h-10 text-zion-purple" />
+      if (this.props.fallback) {
+        return this.props.fallback}
+
+      return (""
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">""
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">""
+            <div className="flex items-center mb-4">""
+              <div className="flex-shrink-0">""
+                <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">""
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" /" >"
+                </svg>
+              </div>""
+              <div className="ml-3">""
+                <h3 className="text-lg font-medium text-gray-900">
+                  Something went wrong
+                </h3>
               </div>
-              <h1 className="text-2xl font-bold text-white mb-2">
-                Oops! Something went wrong
-              </h1>
-              <p className="text-zion-slate-light">
-                We encountered an unexpected error. Don't worry, our team has been notified.
+            </div>
+            
+            <div className="mt-2">
+              <p className="text-sm text-gray-500">
+                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.''
               </p>
             </div>
 
-            {this.state.error && process.env.NODE_ENV === 'development' && (
-              <details className="mb-6 text-left">
-                <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-zion-slate-dark p-3 rounded text-xs text-zion-slate-light overflow-auto">
-                  <pre>{this.state.error.stack}</pre>
-                </div>
-              </details>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">
+                <h4 className="text-sm font-medium text-red-800 mb-2">Error Details: </h4>
+                <pre className="text-xs text-red-700 overflow-auto">
+                  {this.state.error.toString()}
+                </pre>
+                {this.state.errorInfo && (""
+                  <pre className="text-xs text-red-700 mt-2 overflow-auto">
+                    {this.state.errorInfo.componentStack}
+                  </pre>
+                )}
+              </div>
             )}
-
-            <div className="space-y-3">
+""
+            <div className="mt-6 flex space-x-3">
               <button
                 onClick={() => window.location.reload()}
-                className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white px-4 py-2 rounded-md flex items-center justify-center"
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
-                <RefreshCw className="w-4 h-4 mr-2" />
+                Refresh Page
+              </button>
+              <button
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="flex-1 bg-gray-200 text-gray-900 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              >
                 Try Again
               </button>
-
-              <button
-                onClick={() => window.history.back()}
-                className="w-full border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark px-4 py-2 rounded-md flex items-center justify-center"
-              >
-                <Bug className="w-4 h-4 mr-2" />
-                Go Back
-              </button>
-
-              <a
-                href="/"
-                className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-colors"
-              >
-                <Home className="w-4 h-4 inline mr-2" />
-                Go Home
-              </a>
             </div>
 
-            <div className="mt-6 text-xs text-zion-slate-light">
-              <p>If this problem persists, please contact our support team.</p>
-              <p className="mt-1">
-                Error ID: {this.state.error?.name || 'Unknown'} - {new Date().toISOString()}
+            <div className="mt-4 text-center">
+              <p className="text-xs text-gray-400">
+                If the problem persists, please{' '}
+                <a href="/contact" className="text-blue-600 hover: text-blue-500">
+                  contact support
+                </a>
               </p>
             </div>
           </div>
-        </motion.div>
-      );
-    }
+        </div>
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
+
+export default ErrorBoundary;""

@@ -1,2 +1,12 @@
-import React, { Suspense, lazy } from 'react'
-cursor/fix-lint-push-and-merge-to-main-f3c1
+
+
+import React from 'react'
+}
+import React, { Suspense, lazy } from 'react';
+
+interface LazyComponentProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+
+  return (
+

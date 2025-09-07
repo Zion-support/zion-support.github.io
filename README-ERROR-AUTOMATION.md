@@ -5,6 +5,7 @@ This project includes a comprehensive PM2-based automation system that automatic
 ## 🚀 Features
 
 ### Automated Error Detection & Fixing
+
 - **TypeScript Error Fixing**: Automatically fixes import errors, property access issues, and type mismatches
 - **ESLint Error Resolution**: Fixes unused variables, console statements, and code style issues
 - **Import Path Correction**: Automatically corrects broken import paths
@@ -12,12 +13,14 @@ This project includes a comprehensive PM2-based automation system that automatic
 - **Package.json Validation**: Ensures all required scripts and dependencies are present
 
 ### Continuous Monitoring
+
 - **Real-time Error Monitoring**: Continuously monitors for new errors
 - **Build Health Checks**: Monitors build status and triggers fixes when needed
 - **File Change Detection**: Watches for file changes and triggers appropriate fixes
 - **Performance Metrics**: Tracks error rates, fix success rates, and build times
 
 ### PM2 Process Management
+
 - **Process Orchestration**: Manages multiple automation processes
 - **Automatic Restarts**: Handles process crashes and restarts
 - **Log Management**: Comprehensive logging with rotation
@@ -40,6 +43,7 @@ This project includes a comprehensive PM2-based automation system that automatic
 ## 🛠️ Installation & Setup
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn
 - PM2 (will be installed automatically)
@@ -47,11 +51,13 @@ This project includes a comprehensive PM2-based automation system that automatic
 ### Quick Start
 
 1. **Install dependencies**:
+
    ```bash
    npm install
    ```
 
 2. **Start the automation system**:
+
    ```bash
    ./start-error-fixing-automation.sh start
    ```
@@ -151,7 +157,7 @@ automation_settings: {
   auto_commit_fixes: false,      // Auto-commit fixes to git
   fix_types: [                   // Types of errors to fix
     'typescript',
-    'eslint', 
+    'eslint',
     'import',
     'missing_files',
     'package_json'
@@ -202,26 +208,31 @@ PM2 logs are stored in `automation/logs/`:
 ## 🔍 Error Types Handled
 
 ### TypeScript Errors
+
 - **Property Access Errors**: Fixes incorrect property access in imports
 - **Module Import Errors**: Corrects broken module import paths
 - **Type Assignment Errors**: Flags type mismatches for manual review
 
 ### ESLint Errors
+
 - **Unused Variables**: Prefixes unused variables with underscore
 - **Console Statements**: Comments out console.log statements
 - **Prefer Const**: Converts let to const where appropriate
 
 ### Import Errors
+
 - **Relative Path Issues**: Fixes incorrect relative import paths
 - **Missing Extensions**: Adds proper file extensions
 - **Path Resolution**: Resolves import paths to correct locations
 
 ### Missing Files
+
 - **Component Files**: Creates missing React components
 - **Page Files**: Creates missing page components
 - **Utility Files**: Creates missing utility files
 
 ### Package.json Issues
+
 - **Missing Scripts**: Adds required npm scripts
 - **Dependency Issues**: Flags missing dependencies
 
@@ -230,16 +241,19 @@ PM2 logs are stored in `automation/logs/`:
 ### Common Issues
 
 1. **PM2 not found**:
+
    ```bash
    npm install -g pm2
    ```
 
 2. **Permission denied**:
+
    ```bash
    chmod +x start-error-fixing-automation.sh
    ```
 
 3. **Process not starting**:
+
    ```bash
    pm2 delete all
    ./start-error-fixing-automation.sh start

@@ -1,31 +1,43 @@
+
 import React from 'react';
 import Head from 'next/head';
+import Header from '../Header';
+import Footer from '../Footer';
+
 interface MainLayoutProps {
+  title: string;
+  description: string;
   children: React.ReactNode;
-  title?: string;
-  description?: string;
   keywords?: string;
+  canonical?: string;
 }
-const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title = "Zion Tech Group",
+
+export default function MainLayout({ 
+  title, 
+  description, 
   children, 
-  title = "Zion Tech Group", 
-cursor/website-audit-and-update-with-deployment-76dc
-cursor/fix-lint-push-and-merge-to-main-f3c1
-  description = "Leading technology solutions provider",
-  keywords = "technology, AI, cloud, micro SaaS"
+  keywords = "AI solutions, IT services, micro SaaS, technology consulting",
+  canonical 
 }: MainLayoutProps) {
+
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+
         <meta name="keywords" content={keywords} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {canonical && <link rel="canonical" href={canonical} />}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {children}
+
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </div>
     </>
   );
-}
+

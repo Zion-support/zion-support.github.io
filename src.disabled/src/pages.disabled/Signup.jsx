@@ -1,1 +1,42 @@
-import { useState } from "react"; import { Link,Navigate,useNavigate } from "react-router-dom"; import { useForm } from "react-hook-form"; import { zodResolver } from "@hookform/resolvers/zod"; import { z } from "zod"; import { User,Mail,Lock,Eye,EyeOff,Facebook,Twitter,Loader2 } from "lucide-react"; import { useAuth } from "@/hooks/useAuth"; import { register } from "@/services/auth"; import { toast } from "@/hooks/use-toast"; import { Button } from "@/components/ui/button"; import { Input } from "@/components/ui/input"; import { Checkbox } from "@/components/ui/checkbox"; import { Alert,AlertDescription } from "@/components/ui/alert"; import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter"; import { Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from "@/components/ui/form"; const signupSchema = z; .object({} "; "displayName": z.string().min(2,"Name must be at least 2 characters"),; "email": z.string().email("Please enter a valid email"),"; "password": z.string(); .min(8,"Password must be at least 8 characters"); .regex(/[A-Z]/,"Password must contain at least one uppercase letter"); .regex(/[a-z]/,"Password must contain at least one lowercase letter"); .regex(/[0-9]/,"Password must contain at least one number"),; "confirmPassword": z.string(),; "termsAccepted": z.boolean().refine(val => val === true,{} "; "message": "You must accept the terms and conditions"})}); .refine(data => data.password === data.confirmPassword,{} "; "message": "Passwords do not match",; "path": ["confirmPassword"]}); export {}; return null} const { signup,loginWithGoogle,loginWithFacebook,loginWithTwitter,isLoading,isAuthenticated,user } = useAuth(); const navigate = useNavigate(); const [showPassword,setShowPassword] = useState(false); const [showConfirmPassword,setShowConfirmPassword] = useState(false);"; const [confirmPasswordValue,setConfirmPasswordValue] = useState(""); const passwordValue = form.watch("password"); const [isSubmitting,setIsSubmitting] = useState(false); const form = useForm({} "resolver": zodResolver(signupSchema),; "defaultValues": {} "; "displayName": ",""; "email": ",; "password": ",""; "confirmPassword": ",; "termsAccepted": 'false'}}); const onSubmit = async (data) => {} if (isSubmitting); return; setIsSubmitting(true); try {} const { res,"data": 'resData' } = await register(data.displayName,data.email,data.password); if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {} '; ''; '''; form.setError('email',{ "message": 'resData.message' });'''; toast.error('Email already registered – please login.'); return;} if (res.ok && resData.token && resData.user) {} '; ''; '''; safeStorage.setItem('authToken',resData.token); setUser(resData.user); setTokens({ "accessToken": 'resData.token',"refreshToken": 'resData.refreshToken || null' }); if (resData?.emailVerificationRequired) {} setShowVerificationMessage(true)} else if (resData?.session) {} const { "error": 'sessionError' } = await supabase.auth.setSession(resData.session); if (sessionError) {} "; form.setError("root",{ "message": sessionError.message || "Failed to set session. Please try logging in." }); toast.error(sessionError.message || "Failed to set session. Please try logging in."); return;} toast.success("Welcome to ZionAI �"); navigate("/dashboard");} else {} "; form.setError("root",{ "message": "Registration complete,but an unexpected issue occurred. Please try logging in." }); toast.error("Registration complete,but an unexpected issue occurred. Please try logging in manually."); return;} if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {} try {} await mailchimpService.addSubscriber({} "email": 'data.email',; "mergeFields": { FNAME: data.displayName } });'; await mailchimpService.sendWelcomeEmail(data.email,NEW10');} catch (err) {} '} } } try { } catch (err) {} "; const message = err.message ?? "Registration failed"; form.setError("root",{ message }); toast.error(message);} finally {} setIsSubmitting(false);} } finally { } ; const onInvalid = (errors) => {} const firstError = Object.keys(errors)[0]; if (firstError) {} form.setFocus(firstError);} }; if (isAuthenticated && user?.profileComplete) {} "; return <Navigate to="/"
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+interface SignupProps {
+  // Add props here as needed
+
+
+}
+
+export default function Signup({ }: SignupProps) {
+  return (
+    <div>
+      <h1>Signup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+}
+:src.disabled/src/pages.disabled/Signup.jsx
+}
+}

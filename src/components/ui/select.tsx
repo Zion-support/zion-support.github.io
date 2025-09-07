@@ -1,72 +1,63 @@
 import React from 'react';
-interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {;
-  "children": React.ReactNode;
-  className?: string;
+
+interface SelectOption {
+  value: string;
+  label: string;
 }
-export function Select($1) {
-  const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "focus": outlin e-none focus: rin g-2 focus: rin g-ring focus: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50';
-  return (;
-    <select;
-      className={`${baseClasses} ${className}`}
-      {...props}
-    >;
-      {children}
-    </select>;
-  );
-}
-;
-interface SelectTriggerProps {;
-  "children": React.ReactNode;
-  className?: string;
-}
-export function SelectTrigger($1) {
-  return (
-    <div className="min-h-screen bg-white">
-      {children}
-    </div>;
-  );
-}
-;
-interface SelectContentProps {;
-  "children": React.ReactNode;
-  className?: string;
-}
-export function SelectContent($1) {
-  return (
-    <div className="min-h-screen bg-white">
-      {children}
-    </div>;
-  );
-}
-;
-interface SelectValueProps {;
-  children?: React.ReactNode;
+
+interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  label?: string;
+  error?: string;
+  helperText?: string;
+  options: SelectOption[];
   placeholder?: string;
 }
-;
-export function SelectValue($1) {;
-  return (;
-    <span className="block truncate">;
-      {children || placeholder}
-    </span>;
+
+const Select: React.FC<SelectProps> = ({
+  label,
+  error,
+  helperText,
+  options,
+  placeholder,
+  className = '',
+  ...props
+}) => {
+  return (
+    <div className="w-full">
+      {label && (
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          {label}
+        </label>
+      )}
+      <select
+        className={`
+          w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm
+          focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+          disabled:bg-gray-100 disabled:cursor-not-allowed
+          ${error ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : ''}
+          ${className}
+        `}
+        {...props}
+      >
+        {placeholder && (
+          <option value="" disabled>
+            {placeholder}
+          </option>
+        )}
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+      {error && (
+        <p className="mt-1 text-sm text-red-600">{error}</p>
+      )}
+      {helperText && !error && (
+        <p className="mt-1 text-sm text-gray-500">{helperText}</p>
+      )}
+    </div>
   );
-}
-;
-interface SelectItemProps {;
-  "children": React.ReactNode;
-  value: string;
-  className?: string;
-}
-;
-export function SelectItem($1) {;
-  return (;
-    <option value={value} className={className}>;
-      {children}
-    </option>;
-  );
-}
-</HTMLSelectElement>;';';
-import React from 'react'; ; interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {; children: React.ReactNode; className?: string} export function Select($1) { const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus: outlin e-none focus: rin g-2 focus: rin g-ring focus: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50'; ; return (; <select; className={`${baseClasses} ${className}`} {...props} >; {children} </select>; )} ; interface SelectTriggerProps {; children: React.ReactNode; className?: string} export function SelectTrigger($1) { return ( <div className="min-h-screen bg-white"> {children} </div>; )} ; interface SelectContentProps {; children: React.ReactNode; className?: string} export function SelectContent($1) { return ( <div className="min-h-screen bg-white"> {children} </div>; )} ; interface SelectValueProps {; children?: React.ReactNode; placeholder?: string} ; export function SelectValue($1) {; return (; <span className="block truncate">; {children || placeholder} </span>; )} ; interface SelectItemProps {; children: React.ReactNode; value: string; className?: string} ; export function SelectItem($1) {; return (; <option value={value} className={className}>; {children} </option>; )} </HTMLSelectElement>;';';
-origin/cursor/automate-test-improve-and-merge-code-eafe
-cursor/website-audit-and-update-with-deployment-76dc
-cursor/fix-lint-push-and-merge-to-main-f3c1
+};
+
+export default Select;

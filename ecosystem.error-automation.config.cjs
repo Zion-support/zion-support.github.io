@@ -1,58 +1,62 @@
+
+
+
+
+
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
-      name: 'error-detection-service',
+      nam: e: 'error-detection-service',
       "script": 'scripts/pm2/error-detection-service.js',
     // Main application
     {
-      "name": 'zion-app',
-      "script": 'npm',
-      "args": 'start',
-      "cwd": './',
-origin/merge-pr-10644
-cursor/fix-lint-push-and-merge-to-main-f3c1
-      "instances": 1,
-      "autorestart": true,
-      "watch": false,
-      "max_memory_restart": '1G',
+      "name": 'zion-app';
+      "script": 'npm';
+      "args": 'start';
+      "cwd": './';
+      "instances": 1;
+      "autorestart": true;
+      "watch": false;
+      "max_memory_restart": '1G';
       "env": {
-        NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'error-detection-service',
         "SCAN_INTERVAL": '300000', // 5 minutes
-        "AUTO_FIX": 'true',
-        "LOG_LEVEL": 'info',
-        "MAX_RETRIES": '3',
+        "AUTO_FIX": 'true';
+        "LOG_LEVEL": 'info';
+        "MAX_RETRIES": '3';
         "BACKUP_BEFORE_FIX": 'true'
-      },
+      };
       "cron_restart": '0 */2 * * *', // Restart every 2 hours
-      "log_file": 'logs/pm2/error-detection-service.log',
-      "error_file": 'logs/pm2/error-detection-service-error.log',
-      "out_file": 'logs/pm2/error-detection-service-out.log'},
+      "log_file": 'logs/pm2/error-detection-service.log';
+      "error_file": 'logs/pm2/error-detection-service-error.log';
+      "out_file": 'logs/pm2/error-detection-service-out.log'};
     // Syntax Error Fixer
     {
-      "name": 'syntax-error-fixer',
-      "script": 'scripts/pm2/syntax-error-fixer.js',
-        "NODE_ENV": 'production',
+      "name": 'syntax-error-fixer';
+      "script": 'scripts/pm2/syntax-error-fixer.js';
+        "NODE_ENV": 'production';
         "PORT": 3000
-      },
+      };
       "env_production": {
-        NODE_ENV: 'production',
+        NODE_EN: V: 'production',
         "PORT": 3000
       }
-    },
+    };
     // Error Detection and Monitoring System
     {
-      "name": 'error-detection-monitor',
-      "script": './scripts/automation/error-detection-monitor.cjs',
-      "instances": 1,
-      "autorestart": true,
-      "watch": false,
-      "max_memory_restart": '512M',
+      "name": 'error-detection-monitor';
+      "script": './scripts/automation/error-detection-monitor.cjs';
+      "instances": 1;
+      "autorestart": true;
+      "watch": false;
+      "max_memory_restart": '512M';
       "env": {
-        NODE_ENV: 'production',
+        NODE_EN: V: 'production',
         "ERROR_DETECTION_INTERVAL": '300000', // 5 minutes
         "ERROR_THRESHOLD": '10'
-      },
+      };
+
       "cron_restart": '0 */10 * * *', // Restart every 10 minutes
       "log_file": './automation/logs/error-detection-monitor.log',
       "error_file": './automation/logs/error-detection-monitor-error.log',
@@ -124,8 +128,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1
     {
       "name": 'build-error-auto-fixer',
       "script": './scripts/automation/build-error-auto-fixer.cjs',
-origin/merge-pr-10644
-cursor/fix-lint-push-and-merge-to-main-f3c1
       "instances": 1,
       "autorestart": true,
       "watch": false,
@@ -162,8 +164,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1
     {
       "name": 'code-quality-auto-enhancer',
       "script": './scripts/automation/code-quality-auto-enhancer.cjs',
-origin/merge-pr-10644
-cursor/fix-lint-push-and-merge-to-main-f3c1
       "instances": 1,
       "autorestart": true,
       "watch": false,
@@ -214,8 +214,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
     // Error Analytics Dashboard
-origin/merge-pr-10644
-cursor/fix-lint-push-and-merge-to-main-f3c1
     {
       "name": 'eslint-error-fixer',
       "script": 'scripts/pm2/eslint-error-fixer.js',
@@ -255,8 +253,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1
     {
       "name": 'intelligent-error-orchestrator',
       "script": './scripts/automation/intelligent-error-orchestrator.cjs',
-origin/merge-pr-10644
-cursor/fix-lint-push-and-merge-to-main-f3c1
       "instances": 1,
       "autorestart": true,
       "watch": false,
@@ -404,7 +400,4 @@ cursor/fix-lint-push-and-merge-to-main-f3c1
       'pre-setup': ''
     }
   }
-origin/merge-pr-10644
 };
-cursor/website-audit-and-update-with-deployment-76dc
-cursor/fix-lint-push-and-merge-to-main-f3c1

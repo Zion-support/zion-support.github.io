@@ -1,10 +1,10 @@
-#!/usr/bin/env node
 
-const fs = require('fs'
-const path = require('path'
-const { execSync } = require('child_process'
-console.log('⚡ Starting Advanced Build Optimization...'
-  log(message, type = 'info'
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log('⚡ Starting Advanced Build Optimization...')
+  log(message, type = 'info')
         "status"
         "message"
         "impact"
@@ -16,8 +16,8 @@ console.log('⚡ Starting Advanced Build Optimization...'
             "status"
             "message"
             "impact"
-            'module.exports = {\n  "compress"
-            'module.exports = {\n  "compress"
+            'module.exports = {\n  "compress"}
+            'module.exports = {\n  "compress"}
             "status"
             "message"
             "impact"
@@ -66,10 +66,10 @@ console.log('⚡ Starting Advanced Build Optimization...'
             "status"
             "message"
             "impact"
-        if (&& !config.includes('"content"
-    && !config.includes('"content"
-            'module.exports = {\n  "mode": "jit"
-            'module.exports = {\n  "mode": "jit"
+        if (&& !config.includes('"content")
+    && !config.includes('"content")
+            'module.exports = {\n  "mode": "jit"}
+            'module.exports = {\n  "mode": "jit"}
             "status"
             "message": "
             "impact"
@@ -89,6 +89,7 @@ console.log('⚡ Starting Advanced Build Optimization...'
           "impact"
           "status"
           "impact"
-          resolve({ "size": 0, "message"
-          resolve({ "size": 0, "message"
-    this.log(' Build Optimization "Summary"
+          resolve({ "size": 0, "message"})
+          resolve({ "size": 0, "message"})
+
+    this.log(' Build Optimization "Summary")

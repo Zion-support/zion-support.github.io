@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = {}
   "apps"
       "script"
       "max_memory_restart"

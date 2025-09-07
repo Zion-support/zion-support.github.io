@@ -1,5 +1,25 @@
-import { useState, useEffect } from
-  'react'
-  'resize'
-  'resize'
-cursor/fix-lint-push-and-merge-to-main-f3c1
+import { useState, useEffect } from 'react';
+
+interface ResponsiveState {
+  isMobile: boolean;
+  isTablet: boolean;
+  isDesktop: boolean;
+  width: number;
+  height: number;
+}
+
+export const useResponsive = (): ResponsiveState => {
+  const [state, setState] = useState<ResponsiveState>({
+    isMobile: false,
+    isTablet: false,
+    isDesktop: false,
+    width: 0,
+    height: 0,
+  });
+    updateDimensions(),;
+    window && window.addEventListener(;
+  'resize', updateDimensions),;
+    return () => window && window.removeEventListener(;
+  'resize', updateDimensions)}, []),;
+  return state},;
+export default useResponsive,;import { useState, useEffect } from 'react';

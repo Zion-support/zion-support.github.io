@@ -1,46 +1,40 @@
-cursor/fix-lint-push-and-merge-to-main-f3c1
-// Performance monitoring utilities;
-export class PerformanceMonitor {;
-  static measure(name, fn) {;
-    const start = performance.now();
-    const result = fn();
-    const end = performance.now();
-    // 
-    ;
-    // Send to analytics if available;
-    if (typeof window !== 'undefined' && window.gtag) {;';';
-      window.gtag('event', 'performance', {;';';
-        "event_category": 'timing',
-        "event_label": name,
-        "value": Math.round(end - start)})}
-    ;
-    return result}
-  ;
-  static measureAsync(name, fn) {;
-    const start = performance.now();
-    return fn().then(result => {;
-      const end = performance.now();
-      // 
-      ;';';
-      if (typeof window !== 'undefined' && window.gtag) {;';';
-        window.gtag('event', 'performance', {;';';
-          "event_category": 'timing',
-          "event_label": name,
-          "value": Math.round(end - start)})}
-      ;
-      return result})}
-  ;
-  static reportWebVitals() {;';';
-    if (typeof window !== 'undefined' && 'web-vitals' in window) {;';';
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log)})}
+
+// Performance monitoring utilities
+class PerformanceMonitor {
+  constructor() {
+    this.metrics = {};
+    this.startTime = Date.now();
+  }
+
+  mark(name) {
+    this.metrics[name] = Date.now() - this.startTime;
+  }
+
+  measure(name, startMark, endMark) {
+    if (this.metrics[startMark] && this.metrics[endMark]) {
+      this.metrics[name] = this.metrics[endMark] - this.metrics[startMark];
+    }
+  }
+
+  getMetrics() {
+    return this.metrics;
+  }
+
+  report() {
+    console.log('Performance Metrics:', this.metrics);
   }
 }
-export class PerformanceMonitor {; static measure(name,fn) {; const start = performance.now(); const result = fn(); const end = performance.now(); ; ; if (typeof window !== 'undefined' && window.gtag) {;';'; window.gtag('event','performance',{;';'; event_category: 'timing',event_label: name,value: Math.round(end - start)})} ; return result} ; static measureAsync(name,fn) {; const start = performance.now(); return fn().then(result => {; const end = performance.now(); ;';'; if (typeof window !== 'undefined' && window.gtag) {;';'; window.gtag('event','performance',{;';'; event_category: 'timing',event_label: name,value: Math.round(end - start)})} ; return result})} ; static reportWebVitals() {;';'; if (typeof window !== 'undefined' && 'web-vitals' in window) {;';'; import('web-vitals').then(({ getCLS,getFID,getFCP,getLCP,getTTFB }) => {; getCLS(console.log); getFID(console.log); getFCP(console.log); getLCP(console.log); getTTFB(console.log)})} } }
-origin/cursor/automate-test-improve-and-merge-code-eafe
-cursor/website-audit-and-update-with-deployment-76dc
-cursor/fix-lint-push-and-merge-to-main-f3c1
+
+// Web Vitals monitoring
+function reportWebVitals(metric) {
+  console.log('Web Vital:', metric);
+  // Send to analytics service
+}
+
+// Export for use in components
+if (typeof window !== 'undefined') {
+  window.PerformanceMonitor = PerformanceMonitor;
+  window.reportWebVitals = reportWebVitals;
+}
+
+module.exports = { PerformanceMonitor, reportWebVitals };
