@@ -32,22 +32,8 @@ jobs:
         run: node automation/linkedin-marketing-orchestrator.cjs once | cat
       - name: Run Instagram marketing orchestrator (single cycle)
         run: node automation/instagram-marketing-orchestrator.cjs once | cat
-
-      - name: Run site link crawl+fix (single cycle)
-        env:
-          APP_MARKETING_URL: https://ziontechgroup.com
-        run: |
-          node automation/site-link-crawler.cjs | cat
-          node automation/site-link-fixer.cjs | cat
-
-      - name: Upload marketing reports and logs
-        uses: actions/upload-artifact@v4
-        with:
-          name: marketing-reports
-          path: |
-            data/reports/marketing/**/*
-            automation/logs/**/*.log
-          if-no-files-found: ignore
+:.github/workflows/backup-20250818-113801/marketing-daily.yml
+:.github/workflows/backup-20250818-113801/marketing-daily.yml
 
       - name: Upload link-monitor reports
         uses: actions/upload-artifact@v4

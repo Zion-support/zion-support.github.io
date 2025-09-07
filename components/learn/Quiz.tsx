@@ -1,162 +1,65 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState } from 'react';
+type Question = $2;
+  question: string,
+  options: string[],
+  answerIndex: number},
 
-type Question = any;
+type Props = $2;
+  onComplete: (score: number) => void
+},
 
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
 export default function Quiz({ questions, onComplete }: Props) {
+  const [answers, setAnswers] = useState<Record<string, number>>({}),
+  const [submitted, setSubmitted] = useState($2);
+  const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0),
 
-export default function Quiz({ questions, onComplete }: Props) {;
-  const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [submitted, setSubmitted] = useState(false);
-
-const score = questions.reduce(
-    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0),
-    0
-=======
-export default function Quiz({ questions, onComplete }: Props) {};
-export default function Quiz() { return null; }
-  const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [submitted, setSubmitted] = useState(false);
-  const score = questions.reduce(
-    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0)
-    0;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  );
-  function submit() {}
-    setSubmitted(true);
-    onComplete(score);
-  }
-  return (
-    <div className='space-y-4'>;
-      {questions && questions.map((q, idx) => (;'
-        <div key={q && q.id} className='border rounded p-3'>;'
-          <div className='font-medium'>;
-            {idx + 1}. {q && q.question}
-          </div>;'
-          <div className='mt-2 grid gap-2'>;
-            {q && q.options.map((opt, i) => (;'
-              <label key={i} className='flex items-center gap-2'>;
-                <input;
-  function submit() {}
-  function submit() {}
-    setSubmitted(true)
-
-                  type='radio'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  function submit() {
+    setSubmitted($2);
     onComplete(score)
   }
- ;
+
   return (
-<<<<<<< HEAD
-    <div className="space-y-4">;
-      {questions && questions.map((q, idx) => (;"
-        <div key={q && q.id} className="border rounded p-3">;"
-          <div className="font-medium">{idx + 1}. {q && q.question}</div>;"
-          <div className="mt-2 grid gap-2">;
-            {q && q.options.map((opt, i) => (;"
-              <label key={i} className="flex items-center gap-2">;
-                <input"
-                  type="radio"'
-            <div className='mt - 2 text - sm'>;
-              {answers[q.id] === q.answer_index ? ('
-                <span className='text - green - 600'>Correct</span>) : ('
-                <span className='text - red - 600'>Incorrect</span>              )}              {answers[q.id] === q.answer_index ? ("
-                <span className="text - green - 600">Correct</span>) : ("
-                <span className="text - red - 600">Incorrect</span>)}
-            </div>)}
-        </div>))}
-      <button;
-        on_click={submit}'
-        className='px - 4 py - 2 bg - blue - 600 text - white rounded';
-      >;
-        Submit Quiz;
-      </button>;
-      {submitted && (
-          Score: {score} / {questions.length}
-        </div>)}"
-    </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;"
-      {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
-    </div>);
+    <div className="space-y-4">
+      {questions.map((q, idx) => (
+        <div key={q.id} className="border rounded p-3">
+          <div className="font-medium">{idx + 1}. {q.question}</div>
+          <div className="mt-2 grid gap-2">
+            {q.options.map((opt, i) => (
+              <label key={i} className="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name={q.id}
+                  checked={answers[q.id] === i}
+                  onChange={() => setAnswers({ ...answers, [q.id]: i })}
+                />
                 <span>{opt}</span>
               </label>
-=======
-    <div className=\"space-y-4\" />;
-      {questions && questions.map((q, idx) => (;}"
-        <div key={q && q.id} className=\"border rounded p-3\" />;
-"
-          <div className=\"font-medium\" />{idx + 1}. {q && q.question}</div>;"
-          <div className=\"mt-2 grid gap-2\" />;"
-            {q && q.options.map((opt, i) => (<label key={i} className=\"flex items-center gap-2\" />;
-                <input;"
-                  type=\"radio\";
-            <div className='mt - 2 text - sm' />;"
-              {answers[q.id] === q.answer_index ? (<span className='text - green - 600' />Correct</span>) : (<span className='text - red - 600' />Incorrect</span>              )}              {answers[q.id] === q.answer_index ? (<span className=\"text - green - 600\" />Correct</span>) : (<span className=\"text - red - 600\" />Incorrect</span>)}
-            </div>)}
-        </div>))}
-      <button;
-        on_click={submit}
-        className='px - 4 py - 2 bg - blue - 600 text - white rounded' />
-
-        Submit Quiz;
-      </button>;
-      {submitted && (Score: {score} / {questions.length}
-        </div>)}
-    </div>)<button on_click={submi}"
-} className=\"px - 4 py - 2 bg - blue - 600 text - white rounded\" />Submit Quiz</button>;"
-      {submitted && <div className=\"text - sm\" />Score: {score} / {questions.length}</div>}
-    </div>)<span />{op}
-}</span>;
-              </label>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             ))}
-
           </div>
           {submitted && (
-<div className='mt-2 text-sm'>
-
-<div className='mt-2 text-sm' />
+            <div className="mt-2 text-sm">
               {answers[q.id] === q.answerIndex ? (
-                <span className='text-green-600' />Correct</span>
+                <span className="text-green-600">Correct</span>
               ) : (
-                <span className='text-red-600'>Incorrect</span>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                <span className='text-red-600' />Incorrect</span>}
-}
+                <span className="text-red-600">Incorrect</span>
               )}
-            </div>;
+            </div>
           )}
-
         </div>
       ))}
-  )
 
-<button;
+<button
 onClick={submit}
-        className='px-4 py-2 bg-blue-600 text-white rounded' />
+        className='px-4 py-2 bg-blue-600 text-white rounded'    />
 
-        Submit Quiz;
-      </button>;
-      {submitted && (<div className='text-sm' />;}
+        Submit Quiz
+      </button>
+      {submitted && (<div className='text-sm'    />;}
           Score: {score} / {questions.lengt}
-}
-  );
-}
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  )
 <button
         onClick={submit}
         className='px-4 py-2 bg-blue-600 text-white rounded'
@@ -167,17 +70,14 @@ onClick={submit}
         <div className='text-sm'>
           Score: {score} / {questions.length}
         </div>
-        </div>;
+        </div>
       )}
-
     </div>
   );
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
+      {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
+    </div>
+);
+}

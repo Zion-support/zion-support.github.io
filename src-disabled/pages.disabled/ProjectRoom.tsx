@@ -1,8 +1,3 @@
-<<<<<<< HEAD:src_backup/pages/ProjectRoom.tsx
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/ProjectRoom.tsx
 import React, { useState } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams
 import { Header  } from '@/components/Header';
@@ -29,14 +24,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>
       </div>
     </>
-<<<<<<< HEAD:src_backup/pages/ProjectRoom.tsx
-  );
-=======
-
-}
-}
-  )
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/ProjectRoom.tsx
 
 };
 const endVideoCall = () => {;

@@ -1,70 +1,71 @@
-<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from "react",
-// Local stub is used in place of the @hello-pangea/dnd package which isn't
-// available in this environment.
-import { Draggable } from "@/lib/dnd-stub",
-import { formatDistanceToNow } from "date-fns",
-import Link from "next/link",
-import { JobApplication } from "@/types/jobs",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react'
+const handleSaveNotes = () => {
+
+:src/components/hiring-tracker/CandidateCard.tsx
+import { Draggable } from '@/lib/dnd-stub'
+import { formatDistanceToNow } from 'date-fns'
+import Link from 'next/link'
+import { JobApplication } from '@/types/jobs';
+import { Card, CardContent } from '@/components/ui/card';
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
-import { toast } from "@/hooks/use-toast",
-import { HireConfirmationModal } from "./HireConfirmationModal",
-import Image from 'next/image', // Import next/image
+  MessageSquare
+  User
+  FileText
+  MoreVertical
+  Calendar
+  AlertTriangle
+  BriefcaseIcon
+} from 'lucide-react';// Local stub is used in place of the @hello-pangea/dnd package which isn't
+// available in this environment.
+import { Draggable } from "@/lib/dnd-stub"
+import { formatDistanceToNow } from "date-fns"
+import Link from "next/link"
+import { JobApplication } from "@/types/jobs"
+import { Card, CardContent } from "@/components/ui/card"
+
+import { Avatar as AvatarPrimitive  } from "@/components/ui/avatar"; // Renamed to avoid conflict
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react'
+
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu'
+import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge'
+import { toast } from '@/hooks/use-toast';
+import { HireConfirmationModal } from './HireConfirmationModal';
+import Image from 'next/image'; // Import next/image
 
 interface CandidateCardProps {
-  application: JobApplication,
+  application: JobApplication;
   index: number
-}
-
 export function CandidateCard({ application, index }: CandidateCardProps) {
-  const [showNotes, setShowNotes] = useState(false),
-  const [notes, setNotes] = useState(application.notes || ""),
-  const [showHireModal, setShowHireModal] = useState(false),
-  const [avatarError, setAvatarError] = useState(false),
 
+  const [showNotes, setShowNotes] = useState(false)
+  const [notes, setNotes] = useState(application.notes |'')
+  const [showHireModal, setShowHireModal] = useState(false)
+  const [avatarError, setAvatarError] = useState(false)
   // Check if application is stalled (no activity for 7 days)
-  const isStalled = application.updated_at && 
-    new Date(application.updated_at).getTime() < 
-    (Date.now() - 7 * 24 * 60 * 60 * 1000),
-  
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  const isStalled = null;
+    application.updated_at &&
+    new Date(application.updated_at).getTime() <
+      Date.now() - 7 * 24 * 60 * 60 * 1000
   const handleSaveNotes = () => {
-=======
-const handleSaveNotes = () => {
+    // Here you would save the notes to the database
+    // For now, we'll just show a toast
+    toast({
+      title: 'Notes saved'
+      description: 'Your notes have been saved'
+    // Here you would save the notes to the database
+    // For now, we'll just show a toast
+    toast({
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/hiring-tracker/CandidateCard.tsx
-    // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
-=======
-const handleSaveNotes = () => {
-    // Here you would save the notes to the database
-=======
-  const handleSaveNotes = () => {    // Here you would save the notes to the database
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    // For now, we'll just show a toast
-    toast({
-=======
-
-    // Here you would save the notes to the database
-    // For now, we'll just show a toast
-    toast({
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       title: 'Notes saved',
       description: 'Your notes have been saved',
@@ -79,6 +80,8 @@ const handleSaveNotes = () => {
       description: 'Offer has been sent to the talent.'
     })
   }
+:src/components/hiring-tracker/CandidateCard.tsx
+  const candidateName = application.talent_profile?.full_name |'Candidate'
 
 import { useState } from 'react';
 
@@ -124,7 +127,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
@@ -144,10 +146,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
-<<<<<<< HEAD
-=======
+:src/components/hiring-tracker/CandidateCard.tsx
+        {provided => (
+          <Card
+            className='mb-2 p-0 shadow-sm border'
+            ref={provided.innerRef}            {...provided.draggableProps}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"
@@ -190,40 +194,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;
     toast({;
-<<<<<<< HEAD
-      title: "Notes saved",;
-      description: "Your notes have been saved";
-    }),;
-    setShowNotes(false);
-  },;
-  const handleHireConfirmed = () => {;
-    // Hiring process completed via the modal;
-    toast({;
-      title: "Hiring process initiated",;
-      description: "Offer has been sent to the talent.";
-    });
-  };
-  const candidateName = application.talent_profile?.full_name || "Candidate";
-  return (;
-=======
-      title: 'Notes saved',,
-  description: 'Your notes have been saved',;
-    });
-    setShowNotes(false)
-};
 
-  const handleHireConfirmed = () => {;
-    // Hiring process completed via the modal;
-    toast({;
-      title: 'Hiring process initiated',,
-  description: 'Offer has been sent to the talent.',;
-    })
-};
-
-  const candidateName = application && application.talent_profile?.full_name || 'Candidate';
-
-  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       <Draggable draggableId={application.id} index={index}>;
         {(provided) => (;
@@ -236,10 +207,35 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
           >;
             <CardContent className="p-3">;
               {/* Candidate Header */}
-<<<<<<< HEAD
-=======
+:src/components/hiring-tracker/CandidateCard.tsx
+              <div className='flex justify-between items-start mb-2'>
+                <div className='flex items-center gap-2'>
+                  <AvatarPrimitive className='h-8 w-8'>
+                    {' '}
+                    {/* Using renamed AvatarPrimitive */}
+                    {application.talent_profile?.profile_picture_url &&
+                    !avatarError ? (
+                      <Image
+                        src={application.talent_profile.profile_picture_url}
+                        alt={candidateName}
+                        width={32} // Match h-8 w-8
+                        height={32} // Match h-8 w-8
+                        className='rounded-full object-cover' // Ensure rounded and object-cover
+                        onError={() => setAvatarError(true)}                        priority={false} // Avatars are usually not LCP
+                      />
+                    ) : (
+                      <User className='h-4 w-4' />
+                    )}
+                  </AvatarPrimitive>
+                  <div>
+                    <h4 className='font-medium text-sm'>{candidateName}</h4>
+                    <p className='text-xs text-muted-foreground'>
+                      {application.talent_profile?.professional_title |
+                        'Applicant'}
+                    </p>
+                  </div>
+                </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
                   <AvatarPrimitive className="h-8 w-8"> {/* Using renamed AvatarPrimitive */}
@@ -266,11 +262,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     </p>
                   </div>
                 </div>
-<<<<<<< HEAD
-                
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -279,28 +271,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      {showNotes ? "Hide notes" : "Add notes"}
-                    </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setShowHireModal(true)}>
-                      <BriefcaseIcon className="h-4 w-4 mr-2" aria-hidden="true" /> Hire Candidate
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link href={`/messages?talentId=${application.talent_id}`}>
-                        Message
-                      </Link>
-                    </DropdownMenuItem>
-                    {application.resume?.file_url && (
-                      <DropdownMenuItem asChild>
-                        <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
-                          View Resume
-                        </Link>
-                      </DropdownMenuItem>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/hiring-tracker/CandidateCard.tsx
+
                   </AvatarPrimitive>;
                   <div>;
                     <h4 className='font-medium text-sm'>{candidateName}</h4>;
@@ -343,83 +314,47 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                           View Resume;
                         </a>;
                       </DropdownMenuItem>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                    )}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    )}
+:src/components/hiring-tracker/CandidateCard.tsx
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+              {/* Application Info */}
+              <div className='flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2'>
+                <div className='flex items-center'>
+                  <Calendar className='h-3 w-3 mr-1' />
+                  {formatDistanceToNow(new Date(application.created_at), {
+                    addSuffix: true
+                  })}
+                </div>
+                {isStalled && (
+                  <div className='flex items-center text-amber-500'>
+                    <AlertTriangle className='h-3 w-3 mr-1' />
+                    Stalled
+                  </div>
+                )}
+              </div>
+              {/* Match Score */}
+              {application.match_score !== null &&
+                application.match_score !== undefined && (
+                  <div className='mb-2'>
+                    <ScoreBadge application={application} />
+                  </div>
+                )}
+              {/* Notes Section */}
+              {showNotes && (
+                <div className='mt-2'>
+
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
-<<<<<<< HEAD
-              {/* Application Info */}
-              <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;
-                <div className="flex items-center">;
-                  <Calendar className="h-3 w-3 mr-1" />;
-                  {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
-                </div>;
-                {isStalled && (;
-                  <div className="flex items-center text-amber-500">;
-                    <AlertTriangle className="h-3 w-3 mr-1" />;
-=======
 
-              {/* Application Info */}
-              <div className='flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2'>;
-                <div className='flex items-center'>;
-                  <Calendar className='h-3 w-3 mr-1' />;
-                  {formatDistanceToNow(new Date(application && application.created_at), {;
-                    addSuffix: true,;
-                  })}
-                </div>;
-
-                {isStalled && (;
-                  <div className='flex items-center text-amber-500'>;
-                    <AlertTriangle className='h-3 w-3 mr-1' />;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     Stalled;
                   </div>;
                 )}
               </div>;
-<<<<<<< HEAD
-              {/* Match Score */}
-              {application.match_score !== null && application.match_score !== undefined && (;
-                <div className="mb-2">;
-                  <ScoreBadge application={application} />;
-                </div>;
-              )}
-;
-              {/* Notes Section */}
-              {showNotes && (
-                <div className="mt-2">
-                  <Textarea 
-                    placeholder="Add private notes about this candidate..." 
-                    className="text-xs min-h-[60px]"
-                    value={notes}
-                    onChange={(e) => setNotes(e.target.value)}
-                  />
-                  <div className="flex justify-end mt-2">
-                    <Button size="sm" onClick={handleSaveNotes}>Save Notes</Button>
-                  </div>
-                </div>
-              )}
-;
-              {/* Action Buttons */}
-=======
 
-              {/* Match Score */}
-              {application && application.match_score !== null &&;
-                application && application.match_score !== undefined && (;
-                  <div className='mb-2'>;
-                    <ScoreBadge application={application} />;
-                  </div>;
-<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/hiring-tracker/CandidateCard.tsx
                 )}
               {/* Notes Section */}
               {showNotes && (;
@@ -428,6 +363,18 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     placeholder='Add private notes about this candidate...'
                     className='text-xs min-h-[60px]'
                     value={notes}
+:src/components/hiring-tracker/CandidateCard.tsx
+                    onChange={e => setNotes(e.target.value)}                  />
+                  <div className='flex justify-end mt-2'>
+                    <Button size='sm' onClick={handleSaveNotes}>
+                      Save Notes
+                    </Button>
+                  </div>
+                </div>
+              )}
+              {/* Action Buttons */}
+              <div className='flex justify-between mt-2 gap-1'>
+                <Button variant='outline' size='sm' className='flex-1' asChild>
                     onChange={e => setNotes(e && e.target.value)}                  />;
                   <div className='flex justify-end mt-2'>;
                     <Button size='sm' onClick={handleSaveNotes}>;
@@ -438,7 +385,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
               )}
               {/* Action Buttons */}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="flex justify-between mt-2 gap-1">
                 <Button 
                   variant="outline" 
@@ -446,46 +392,21 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   className="flex-1"
                   asChild
                 >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
-<<<<<<< HEAD
-=======
+:src/components/hiring-tracker/CandidateCard.tsx
+                <Button variant='outline' size='sm' className='flex-1' asChild>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button 
                   variant="outline" 
                   size="sm" 
                   className="flex-1"
                   asChild
                 >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {application.resume?.file_url ? (
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" /> Resume
@@ -495,30 +416,21 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                       <FileText className="h-3 w-3 mr-1" /> No Resume
                     </span>
                   )}
-<<<<<<< HEAD
+:src/components/hiring-tracker/CandidateCard.tsx
                 </Button>
-=======
-
-                </Button>;
-
                 <Button
                   variant='default'
                   size='sm'
                   className='flex-1'
-                  onClick={() => setShowHireModal(true)}                >;
-                  <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire;
+                  onClick={() => setShowHireModal(true)}                >
+                  <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire
                 </Button>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </Draggable>
 
-  handleHireConfirmed 
-}/> </>) 
-}'"};
-;
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button 
                   variant="default" 
                   size="sm" 
@@ -531,16 +443,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
             </CardContent>;
           </Card>;
         )}
-<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/hiring-tracker/CandidateCard.tsx
 
       </Draggable>;
-
 
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
@@ -550,6 +454,85 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
         onConfirm = {handleHireConfirmed,}
       />
     </>
+:src/components/hiring-tracker/CandidateCard.tsx
+  )
+  //Here you would save the notes to the database //For now, we'll just show a toast toast ({
+  setShowNotes (false)
+}
+  //Hiring process completed via the modal toast ({
+  application.id
+}index= {
+  index
+}> {
+  (provided) => (<Card className="mb-2 p-0 shadow-sm border" ref= {
+  provided.innerRef
+}{
+  ...provided.draggableProps
+}{
+  ...provided.dragHandleProps "
+}> <CardContent className="p-3"> {
+  /* Candidate Header */ "
+}<div className="flex justify-between items-start mb-2"> <div className="flex items-center gap-2"> <AvatarPrimitive className="h-8 w-8"> {
+  /* Using renamed AvatarPrimitive */
+}{
+  application.talent profile?.profile picture url && !avatarError ? (<Image src= {
+  application.talent profile.profile picture url
+}alt= {
+  candidateName
+}width= {
+  32
+}//Match h-8 w-8 height= {
+  32 "
+}//Match h-8 w-8 className="rounded-full object-cover" //Ensure rounded and object-cover onError= {
+  () => setAvatarError (true)
+}priority= {
+  false "
+}//Avatars are usually not LCP />) : (<User className="h-4 w-4" />) "
+}</AvatarPrimitive> <div> <h4 className="font-medium text-sm"> {
+  candidateName "
+}</h4> </p> </div> </div> <DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="ghost" className="h-8 w-8 p-0"> <MoreVertical className="h-4 w-4" /> </Button> </DropdownMenuTrigger> </DropdownMenuItem> <DropdownMenuItem asChild> <Link href= {
+  `/messages?talentId=$ {
+  application.talent id
+}`
+}> Message </Link> </DropdownMenuItem> {
+  application.resume?.file url && (<DropdownMenuItem asChild> <a href= {
+  application.resume.file url "
+}target="blank" rel="noopener noreferrer"> View Resume </Link> </DropdownMenuItem>)
+}</DropdownMenuContent> </DropdownMenu> </div> {
+  /* Application Info */ "
+}<div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2"> <div className="flex items-center"> <Calendar className="h-3 w-3 mr-1" /> {
+  formatDistanceToNow (new Date (application.created at), {
+  addSuffix: true
+})
+}</div> {"
+  isStalled && (<div className="flex items-center text-amber-500"> <AlertTriangle className="h-3 w-3 mr-1" /> Stalled </div>)
+}</div> {
+  /* Match Score */
+}{"
+  application.match score !== null && application.match score !== undefined && (<div className="mb-2"> <ScoreBadge application= {
+  application
+}/> </div>) "
+}<Textarea placeholder="Add private notes about this candidate..." className="text-xs min-h-[60px]" value= {
+  notes
+}onChange= {
+  (e) => setNotes (e.target.value)
+}/> </div> </div>) "
+}<Button variant="outline" size="sm" className="flex-1" asChild > </Link> </Button> <Button variant="outline" size="sm" className="flex-1" asChild > <FileText className="h-3 w-3 mr-1" /> Resume </Link>) : (<span> <FileText className="h-3 w-3 mr-1" /> No Resume </span>) "
+}</Button> <Button variant="default" size="sm" className="flex-1" onClick={
+  () => setShowHireModal (true) "
+}> <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire </Button> </div> </CardContent> </Card>)
+}</Draggable> {
+  /* Hire Confirmation Modal */
+}<HireConfirmationModal isOpen= {
+  showHireModal
+}onClose= {
+  () => setShowHireModal (false)
+}application= {
+  application
+}onConfirm= {
+  handleHireConfirmed
+}/> </>)
+}'"}
 origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
@@ -604,7 +587,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   formatDistanceToNow (new Date (application.created at), {;
 origin/cursor/automate-test-improve-and-merge-code-2533
   addSuffix: true ;
-}) ;
+});
 }</div> {";
   isStalled && (<div className="flex items-center text-amber-500"> <AlertTriangle className="h-3 w-3 mr-1" /> Stalled </div>) ;
 }</div> {;
@@ -635,49 +618,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }onConfirm= {;
   handleHireConfirmed ;
 }/> </>) ;
-<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
-<<<<<<< HEAD
-}'"}
 
-  add_suffix: true;
-});
-}</div> {";
-  is_stalled && (<div className="flex items - center text - amber - 500"> <AlertTriangle className="h - 3 w - 3 mr - 1" /> Stalled </div>);
-}</div> {
-  /* Match Score */;
-}{";
-  application.match score !== null && application.match score !== undefined && (<div className="mb - 2"> <ScoreBadge application= {
-  application;
-}/> </div>) ";
-}<Textarea placeholder="Add private notes about this candidate..." className="text - xs min - h-[60px]" value= {
-  notes;
-}on_change= {
-  (e) => set_notes (e.target.value);
-}/> </div> </div>) ";
-}<Button variant="outline" size="sm" className="flex - 1" as_child > </Link> </Button> <Button variant="outline" size="sm" className="flex - 1" as_child > <FileText className="h - 3 w - 3 mr - 1" /> Resume </Link>) : (<span> <FileText className="h - 3 w - 3 mr - 1" /> No Resume </span>) ";
-}</Button> <Button variant="default" size="sm" className="flex - 1" on_click={
-  () => setShowHireModal (true) ";
-}> <BriefcaseIcon className="h - 3 w - 3 mr - 1" /> Hire </Button> </div> </CardContent> </Card>);
-}</Draggable> {
-  /* Hire Confirmation Modal */;
-}<HireConfirmationModal is_open= {
-  showHireModal;
-}on_close= {
-  () => setShowHireModal (false);
-}application= {
-  application;
-}on_confirm= {
-  handleHireConfirmed;
-}/> </>);
-}'"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      </Draggable>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-      </Draggable>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         isOpen={showHireModal}
@@ -688,21 +629,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   );
 }
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-}'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-;
-
-}'"
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/hiring-tracker/CandidateCard.tsx

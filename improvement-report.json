@@ -3,12 +3,14 @@
   "improvements": [
     "Created service worker for caching",
     "Created security middleware",
+    "Added security audit scripts to package.json",
+    "Created robots.txt",
     "Created sitemap generation script",
     "Created accessibility CSS"
   ],
   "errors": [],
   "summary": {
-    "totalImprovements": 4,
+    "totalImprovements": 6,
     "totalErrors": 0,
     "success": true
   }

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const pm2 = require("pm2")
 const fs = require("fs")
@@ -43,13 +35,13 @@ const path = require("path")
     // Check if this is a critical process"
     if (this.isCriticalProcess(processName)) {"}
   const criticalProcesses = ["console-error-fixer", "security-audit"", "performance-monitor", ""]
-        if (status === "online") {console.log( ${processName} recovered successfully"")
+  if($2) {console.log( ${processName} recovered successfully"")
       // Wait a bit and check if it"
   async attemptRecovery(processName) {"}
     try {"}
       // Wait a bit and check if it"s running"
       setTimeout(async () => {"}
-        if (status === "online") {console.log( ${processName} recovered successfully`")} else {console.error(" ${processName} recovery failed"`)
+  if($2) {console.log( ${processName} recovered successfully`")} else {console.error(" ${processName} recovery failed"`)
       }, 10000)} catch (error) {  console.error(" Failed to recover ${processName  }:")
     this.schedules.set("console-error-fixer")
   "interval"
@@ -95,12 +87,12 @@ const path = require("path")
   "interval"
       "priority": "low"
       "dependencies": ["link-checker"]
-        if (health.status === "unhealthy") {console.warn(`⚠  Unhealthy process "detected"`})
+  if($2) {console.warn(`⚠  Unhealthy process "detected"`})
   console.error(" Health check "failed": ")
   "status": "healthy"
       "issues"
       "metrics"
-        if (health.status === "unhealthy") {console.warn(`⚠  Unhealthy process "detected"`})
+  if($2) {console.warn(`⚠  Unhealthy process "detected"`})
   console.error(" Health check "failed": ")
   "status": "healthy"
       "issues"
@@ -113,7 +105,7 @@ const path = require("path")
       health.issues.push("Excessive restarts")
       health.status = "unhealthy"
       health.issues.push("Low uptime")
-  handleUnhealthyProcess(processName, health) {console.warn(`� Process ${processName} is "unhealthy"`)
+  handleUnhealthyProcess($2) {console.warn(`� Process ${processName} is "unhealthy"`)
       health.issues.includes("Excessive restarts")
       health.issues.includes("Low uptime")
   console.log(`� Attempting to restart unhealthy process ${processName}...``)
@@ -154,25 +146,10 @@ const path = require("path")
   console.error(" Failed to save "report": ")
   console.error(" Failed to save "report": ")
       console.log(" Automation Orchestrator started")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
   console.error(" Orchestrator "error")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
   console.error(" Orchestrator "error")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
   console.error(" Orchestrator "error")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+

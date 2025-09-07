@@ -1,307 +1,225 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { createContext, useContext, useState, ReactNode } from "react";
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-import React, { createContext, useContext, ReactNode } from "react";
+
+}
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
 =======
 <<<<<<< HEAD
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-import React, { create_context, useContext, useState, ReactNode } from './react';
-;
-interface AccessibilityContextType {}
-  high_contrast: boolean;
-  large_text: boolean;
-  reduced_motion: boolean;
-  toggleHighContrast: () => void;
-  toggleLargeText: () => void;
-  toggleReducedMotion: () => void;
-=======
 import React, { createContext, useContext, ReactNode } from 'react';
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import React, { createContext, useContext, ReactNode } from "react";
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
-interface AccessibilityContextType {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-import React, { create_context, useContext, useState, ReactNode } from './react';
-;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import React, { createContext, useContext, ReactNode } from "react";
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 interface AccessibilityContextType {
   announceToScreenReader: (message: string) => void;
   setFocus: (elementId: string) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  toggleHighContrast: () => void;
+  toggleLargeText: () => void;
+  toggleReducedMotion: () => void;
 }
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/chore/fix-lint-and-merge
+interface AccessibilityProviderProps {
+  children: ReactNode;
+=======
+'use client';
+
+import React, { createContext, useContext, useEffect, useState } from 'react';
+
+interface AccessibilityContextType {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  toggleHighContrast: () => void;
+  toggleReducedMotion: () => void;
+  setFontSize: (size: 'small' | 'medium' | 'large') => void;
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 }
+
 <<<<<<< HEAD
-const AccessibilityContext = createContext<
-  AccessibilityContextType | undefined
->(undefined);
+import React, { createContext, useContext, useState } from 'react'
+interface AccessibilityContextType {
+  highContrast: boolean
+  largeText: boolean
+  reducedMotion: boolean
+  toggleHighContrast: () => void
+  toggleLargeText: () => void
+  toggleReducedMotion: () => void
+}
+
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined)
 export const useAccessibility = () => {
+  const context = useContext(AccessibilityContext)
+  if (context === undefined) {
+    throw new Error('useAccessibility must be used within an AccessibilityProvider')
+'use client';
 
-<<<<<<< HEAD
-export const useAccessibility = () => {;
-=======
+import React, { createContext, useContext, useEffect, useState } from react';
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+interface AccessibilityContextType {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small | medium' | 'large;
+  toggleHighContrast: () => void;
+  toggleReducedMotion: () => void;
+  setFontSize: (size: small' | 'medium | large') => void;
+}
+
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+
+export function useAccessibility() {
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error('useAccessibility must be used within an AccessibilityProvider');
+  }
+  return context
+}
 const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
 >(undefined);
-
-<<<<<<< HEAD
 interface AccessibilityProviderProps {
   children: ReactNode;
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-  children,
-}) => {
-=======
-<<<<<<< HEAD
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-  children,
-}) => {
-=======
-<<<<<<< HEAD
-
-=======
-  const context = useContext(AccessibilityContext);
-  if (context === undefined) {}
-    throw new Error(
-      "useAccessibility must be used within an AccessibilityProvider"
-    );
-  }
-  return context;
+  return (
+    <AccessibilityContext.Provider value={value}>
+      <div className={`${highContrast ? 'high-contrast' : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>
+        {children}
+      </div>
+    </AccessibilityContext.Provider>
+  )
 }
-interface AccessibilityProviderProps {}
-  children: React.ReactNode;
-}
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-const AccessibilityContext = createContext<;
-  AccessibilityContextType | undefined;
->(undefined);
-  const context = useContext(AccessibilityContext);
-  if (context === undefined) {;
-    throw new Error(;"
-      "useAccessibility must be used within an AccessibilityProvider",;
-    );
-  }
-  return context;
-};
-interface AccessibilityProviderProps {;
-  children: React && React.ReactNode;
+export default AccessibilityProvider
+'use client';
+
+import React, { createContext, useContext, useEffect, useState } from 'react';
+
+interface AccessibilityContextType {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  toggleHighContrast: () => void;
+  toggleReducedMotion: () => void;
+  setFontSize: (size: 'small' | 'medium' | 'large') => void;
 }
 
-  children,
-}) => {;
-  const [highContrast, setHighContrast] = useState(false);
-  const [largeText, setLargeText] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const toggleHighContrast = () => setHighContrast(!highContrast);
-  const toggleLargeText = () => setLargeText(!largeText);
-  const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-=======
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-  children,
-}) => {
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-  const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById("live-region");
-    if (liveRegion) {
-      liveRegion.textContent = message;
-    }
-  };
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
-  const setFocus = (elementId: string) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.focus();
-    }
-  };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  const context = useContext(AccessibilityContext);
+export function useAccessibility() {
   if (context === undefined) {
-    throw new Error(
-      "useAccessibility must be used within an AccessibilityProvider"
-    );
+    throw new Error(useAccessibility must be used within an AccessibilityProvider');
   }
   return context;
 }
+
 interface AccessibilityProviderProps {
   children: React.ReactNode;
 }
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+
+export default function AccessibilityProvider({ children }: AccessibilityProviderProps) {
+  const [highContrast, setHighContrast] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState<'small | medium' | 'large>(medium');
+
+  useEffect(() => {
+    // Check for user's motion preferences
+    const mediaQuery = window.matchMedia((prefers-reduced-motion: reduce));
+    setReducedMotion(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setReducedMotion(e.matches);
+    }
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener(change, handleChange);
+  }, []);
+
+  useEffect(() => {
+    // Apply accessibility settings to document
+    document.documentElement.setAttribute('data-high-contrast', highContrast.toString());
+    document.documentElement.setAttribute(data-reduced-motion, reducedMotion.toString());
+    document.documentElement.setAttribute('data-font-size', fontSize);
+  }, [highContrast, reducedMotion, fontSize]);
+
+  const toggleHighContrast = () => {
+    setHighContrast(!highContrast);
 <<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
+  }
 
+  const toggleReducedMotion = () => {
+    setReducedMotion(!reducedMotion);
+  }
+=======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+  };
 
-const AccessibilityContext = createContext<;
-  AccessibilityContextType | undefined;
->(undefined);
-  const context = useContext(AccessibilityContext);
-  if (context === undefined) {;
-    throw new Error(;
-      "useAccessibility must be used within an AccessibilityProvider",;
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  const toggleReducedMotion = () => {
+    setReducedMotion(!reducedMotion);
+  };
+<<<<<<< HEAD
+
   return (
-    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
+    <AccessibilityContext.Provider
+      value={{
+        announceToScreenReader,
+        setFocus,
+        highContrast,
+        largeText,
+        reducedMotion,
+        toggleHighContrast,
+        toggleLargeText,
+        toggleReducedMotion,
+      }}
+    >
       {children}
     </AccessibilityContext.Provider>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
-    throw new Error(
-      "useAccessibility must be used within an AccessibilityProvider",
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    );
+    throw new Error('useAccessibility must be used within an AccessibilityProvider');
   }
   return context;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface AccessibilityProviderProps {;
-  children: React && React.ReactNode;
-}
-
-  children,
-}) => {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  const [highContrast, setHighContrast] = useState(false);
-  const [largeText, setLargeText] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const toggleHighContrast = () => setHighContrast(!highContrast);
-  const toggleLargeText = () => setLargeText(!largeText);
-  const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-  return (
-    <AccessibilityContext && AccessibilityContext.Provider value={value}>;
-      <div"
-        className={`${highContrast ? "high-contrast" : ""} ${largeText ? "large-text" : ""} ${reducedMotion ? "reduced-motion" : ""}`}>;
-        {children}
-      </div>;
-    </AccessibilityContext && AccessibilityContext.Provider>;
-  );
-<<<<<<< HEAD
 =======
-  return context;
-}
-;
-interface AccessibilityProviderProps {}
-  children: React.ReactNode;
-}
-export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({}
-  children,
-}) => {};
-  const [high_contrast, setHighContrast] = useState (false);
-  const [large_text, setLargeText] = useState (false);
-  const [reduced_motion, setReducedMotion] = useState (false);
-;
-  const toggleHighContrast = () =>: any setHighContrast (!high_contrast);
-  const toggleLargeText = () =>: any setLargeText (!large_text);
-  const toggleReducedMotion = () =>: any setReducedMotion (!reduced_motion);
-;
-  const value = {}
-    high_contrast,
-    large_text,
-    reduced_motion,
+>>>>>>> origin/chore/fix-lint-and-merge
+
+  const value = {
+    highContrast,
+    reducedMotion,
+    fontSize,
     toggleHighContrast,
-    toggleLargeText,
     toggleReducedMotion,
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-};
+    setFontSize,
+  };
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
-  if (context === undefined) {
-    throw new Error(
-      "useAccessibility must be used within an AccessibilityProvider",
-    );
-  }
-  return context;
-};
+  return (
+    <AccessibilityContext.Provider value={value}>
+      {children}
+    </AccessibilityContext.Provider>
 <<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+  );
+
+  )
+}
+    )
+  return context
+}
+export const useAccessibility = () => {
+  if($2) {
+    throw new Error(
+      useAccessibility must be used within an AccessibilityProvider",
+    )
+  return context
+}
+export default AccessibilityProvider;
+  );
+}
+  );
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  );
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

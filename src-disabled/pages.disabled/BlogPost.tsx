@@ -1,59 +1,3 @@
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
-import { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import Link from 'next/link',
-import { SEO } from "@/components/SEO",
-import JsonLd from "@/components/JsonLd",
-import { Button } from "@/components/ui/button",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
-import {
-  ArrowLeft
-  Calendar
-  Clock
-  ChevronLeft
-  ChevronRight
-  Share2
-  Facebook
-  Twitter
-  Linkedin
-} from 'lucide-react'
-import type { BlogPost as BlogPostType } from '@/types/blog'
-import { Separator } from '@/components/ui/separator'
-import ReactMarkdown from 'react-markdown'
-import { logErrorToProduction } from '@/utils/productionLogger'
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from '@/data/blog-posts'
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout'
-import { fetchWithRetry } from '@/utils/fetchWithRetry'
-export default function BlogPost() {
-  const router = useRouter()
-  const { slug } = router.query as { slug: string }
-  const [post, setPost] = useState<BlogPostType | null>(null)
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
-  const [showShareMenu, setShowShareMenu] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const timedOut = useSkeletonTimeout(20000)
-  useEffect(() => {import { useRouter } from 'next/router'
-import { SEO } from "@/components/SEO"
-import JsonLd from "@/components/JsonLd"
-import { Button } from "@/components/ui/button"
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator } from "@/components/ui/separator",
-import ReactMarkdown from 'react-markdown',
-import {logErrorToProduction} from '@/utils/productionLogger',
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-=======
-
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",;
-import { Separator } from "@/components/ui/separator";
-import ReactMarkdown from 'react-markdown';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/BlogPost.tsx
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
@@ -68,24 +12,6 @@ default:
     }
   };
 
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
-  const articleLd = {
-    '@context': 'https://schema.org'
-    '@type': 'BlogPosting'
-    headline: post.title
-    description: post.excerpt
-    image: post.featuredImage
-    datePublished: post.publishedDate
-origin/cursor/automate-test-improve-and-merge-code-2533
-    author: {
-      '@type': 'Person'
-      name: post.author.name
-    }
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/BlogPost.tsx
   return (
     <>
       <SEO
@@ -265,7 +191,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
 
-
                   #{tag}
                 </span>;
               ))}
@@ -273,7 +198,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
 
             <Separator className='my-12 bg-zion-blue-light' />;
-
 
             {/* Related articles */}
             {relatedPosts && relatedPosts.length > 0 && (;
@@ -464,33 +388,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </>
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
-=======
-  )
-                <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
-              </p>;
-            </div>;
-            {/* Navigation */}
-            <div className="flex justify-between items-center mt-12">;
-              <Button;
-                variant="outline";
-                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
-                asChild;
-              >;
-                <Link href="/blog">;
-                  <ChevronLeft className="mr-2 h-4 w-4" />;
-                  All Articles;
-                </Link>;
-              </Button>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  );
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/BlogPost.tsx
+
   );
 
 };

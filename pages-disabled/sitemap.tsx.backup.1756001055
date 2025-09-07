@@ -1,5 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD:pages/sitemap.tsx
+
+export default function Sitemap() {
+  return (
+    <>
+      <Head>
+        <title>sitemap | Zion Tech Group</title>
+        <meta name="description" content="sitemap page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              sitemap
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the sitemap page.
+            </p>
+          </div>
+=======
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -344,10 +364,14 @@ const SitemapPage: React.FC = () => {
             <p>Last updated: {new Date().toLocaleDateString()}</p>
             <p>Total pages: {mainSections.length + servicePages.length + companyPages.length + resourcePages.length + legalPages.length + specialPages.length}</p>
           </motion.div>
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages-disabled/sitemap.tsx.backup.1756001055
         </div>
       </div>
     </>
   );
+<<<<<<< HEAD:pages/sitemap.tsx
+}
+=======
 };
 
 export default SitemapPage;
@@ -778,3 +802,4 @@ export default function SitemapPage() {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages-disabled/sitemap.tsx.backup.1756001055

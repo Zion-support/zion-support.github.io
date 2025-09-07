@@ -1,78 +1,31 @@
 <<<<<<< HEAD:pages/api/integrations/oauth/[provider]/callback.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({
-    ok: true
-    message:
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({
-    ok: true
-    message:
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-<<<<<<< HEAD
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+  try {
+    // TODO: Implement callback logic
+    res.status(200).json({ message: 'callback endpoint' });
+  } catch (error) {
+    console.error('Error in callback:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+message:
 
-    message:
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
-  });
-<<<<<<< HEAD
-}
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import type { NextApiRequest, NextApiResponse } from "next";
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
     ok: true
-    message:
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({
-    ok: true
-=======
-export default function handler($2) {;
-  res.status(200).json({;
-    ok: true;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/oauth/[provider]/callback.ts
+
     message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
   });
   res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======;
-import type { NextApiRequest, NextApiResponse } from './next';
-export default /**
- * handler - Function description
- */;
-function handler() {;
-  res.status (200).json ({;
-    ok: true;
-    message:;
-      "OAuth mock callback successful. Use /api / integrations / connect to finalize connection."
-  });
-}
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection.",;
   });
 }
@@ -96,16 +49,6 @@ export default function handler($2) {;
   }
 }
 }
-<<<<<<< HEAD:pages/api/integrations/oauth/[provider]/callback.ts
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-=======
-=======
-=======;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/oauth/[provider]/callback.ts
-
 
     message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
@@ -113,7 +56,7 @@ export default function handler($2) {;
 }
   res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 import type { NextApiRequest, NextApiResponse } from './next';
 export default /**
  * handler - Function description
@@ -124,22 +67,5 @@ function handler() {;
     message:;
       "OAuth mock callback successful. Use /api / integrations / connect to finalize connection."
   });
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages-disabled/api-disabled/api/integrations/oauth/[provider]/callback.ts
 }
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD:pages/api/integrations/oauth/[provider]/callback.ts
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/oauth/[provider]/callback.ts

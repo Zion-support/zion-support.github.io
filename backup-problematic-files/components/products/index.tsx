@@ -6,10 +6,6 @@ export default function ProductsIndexPage() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Browse Zion products.</p>
     </div>
     </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 import React from 'react';
 export default function ProductsIndexPage() {;

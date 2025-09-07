@@ -3,6 +3,13 @@
 
 
 
+<<<<<<< HEAD:pages/api/book/export/templates.ts
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+=======
 
 
 
@@ -82,12 +89,17 @@ const templates = {;
       { name: 'US Trade', widthIn: 6, heightIn: 9, bleedIn: 0.125, marginIn: 0.75 },;
       { name: 'Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 }]}};
 export default function handler(req, res) {
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api/book/export/templates.ts
   try {
-  res.status(200).json(templates);
+    // TODO: Implement templates logic
+    res.status(200).json({ message: 'templates endpoint' });
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error in templates:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
+<<<<<<< HEAD:pages/api/book/export/templates.ts
+}
+=======
 }
 }
 
@@ -98,3 +110,4 @@ export default function handler(req, res) {
 }
 
 
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api/book/export/templates.ts

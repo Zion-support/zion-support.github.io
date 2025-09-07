@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src_backup/pages/ServicesPage.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/ServicesPage.tsx
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { useRouter  } from 'next/router';

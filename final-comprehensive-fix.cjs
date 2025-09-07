@@ -1,353 +1,372 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/final-ultimate-fix.cjs
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node
+
 const fs = require('fs');
-=======
-// Function to fix all remaining syntax errors
-=======
-// Function to fix all remaining syntax errors;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-function fixSyntaxErrors(content) {
-  // Fix extra commas in JSX attributes;
+const path = require('path');
 
-  return content}
+class FinalComprehensiveFix {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = [];
+    this.errors = [];
+  }
 
-// Function to process a file;
-function processFile(filePath) {
-  try {
-  // TODO: Implement
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = {
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
+      'PROGRESS': '🔄'
+    }[type] || 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  fixServicePages() {
+    this.log('🔧 Fixing service pages...', 'PROGRESS');
+
+    const servicePages = [
+      'app/services/automation/page.tsx',
+      'app/services/consulting/page.tsx'
+    ];
+
+    for (const pagePath of servicePages) {
+      const fullPath = path.join(this.projectRoot, pagePath);
+      if (fs.existsSync(fullPath)) {
+        try {
+          let content = fs.readFileSync(fullPath, 'utf8');
+          
+          // Ensure proper closing
+          if (!content.trim().endsWith('}')) {
+            content += '\n}';
+          }
+          
+          // Remove extra closing braces
+          content = content.replace(/\n}\n}$/g, '\n}');
+          
+          fs.writeFileSync(fullPath, content);
+          this.fixedFiles.push(pagePath);
+          this.log(`Fixed ${pagePath}`, 'SUCCESS');
+        } catch (error) {
+          this.errors.push(`Failed to fix ${pagePath}: ${error.message}`);
+        }
+      }
+    }
+  }
+
+  createMissingDependencies() {
+    this.log('🔧 Creating missing dependencies...', 'PROGRESS');
+
+    // Create lib/utils.ts
+    const libUtilsPath = path.join(this.projectRoot, 'lib', 'utils.ts');
+    const libDir = path.dirname(libUtilsPath);
+    if (!fs.existsSync(libDir)) {
+      fs.mkdirSync(libDir, { recursive: true });
+    }
+
+    const utilsContent = `import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`;
+
+    fs.writeFileSync(libUtilsPath, utilsContent);
+    this.fixedFiles.push('lib/utils.ts');
+
+    // Create data/docsSearchData.ts
+    const dataDir = path.join(this.projectRoot, 'data');
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+
+    const docsSearchDataContent = `export interface SearchSuggestion {
+  text: string;
+  description?: string;
+  category?: string;
 }
 
-      return true}
-    return false} catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false}
-<<<<<<< HEAD
-}
-console.log('🔧 Applying final comprehensive fixes...');
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:final-comprehensive-fix.cjs
-// Fix SEO.tsx - remove everything after the return statement
-const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
-const seoFixed = seoContent.split('  );')[0] + '  );';
-fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
-console.log('✅ Fixed SEO.tsx');
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-main
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-// Fix TalentCard.jsx - fix malformed JSX
-
-const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
-const talentFixed = talentContent;
-  .replace(/>"/g, '>')
-  .replace(/"</g, '<')
-  .replace(/loading="lazy/g, 'loading="lazy"')
-  .replace(/src={talent\.profile_picture_url}/g, 'src={talent.profile_picture_url}')
-  .replace(/alt={talent\.full_name}/g, 'alt={talent.full_name}')
-  .replace(/className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">/g, 'className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">')
-  .replace(/className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center text-white font-bold text-lg">/g, 'className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center text-white font-bold text-lg">')
-  .replace(/className="text-sm font-medium text-zion-blue-dark">/g, 'className="text-sm font-medium text-zion-blue-dark">')
-  .replace(/className="flex-1">/g, 'className="flex-1">')
-  .replace(/className="text-lg font-semibold text-zion-blue-dark mb-1">/g, 'className="text-lg font-semibold text-zion-blue-dark mb-1">')
-  .replace(/className="text-sm text-zion-blue-light mb-2">/g, 'className="text-sm text-zion-blue-light mb-2">')
-  .replace(/className="flex flex-wrap gap-1 mb-3">/g, 'className="flex flex-wrap gap-1 mb-3">')
-  .replace(/className="px-2 py-1 bg-zion-blue-light text-zion-blue-dark text-xs rounded-full">/g, 'className="px-2 py-1 bg-zion-blue-light text-zion-blue-dark text-xs rounded-full">')
-  .replace(/className="flex items-center justify-between">/g, 'className="flex items-center justify-between">')
-  .replace(/className="flex items-center text-sm text-zion-blue-light">/g, 'className="flex items-center text-sm text-zion-blue-light">')
-  .replace(/className="w-4 h-4 mr-1"\/>/g, 'className="w-4 h-4 mr-1" />')
-  .replace(/className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">/g, 'className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">')
-  .replace(/className="text-sm">/g, 'className="text-sm">');
-fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-main
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-const filesToFix = ['components/ContactForm.tsx',
-  'components/ErrorBoundary.tsx',
-  'components/PerformanceMonitor.tsx',
-  'pages/docs.tsx',
-  'pages/index.tsx]
+export const docsSearchSuggestions: SearchSuggestion[] = [
+  { text: "Getting Started", description: "Learn how to get started with our API", category: "Guides" },
+  { text: "API Reference", description: "Complete API reference documentation", category: "Reference" },
+  { text: "Webhooks", description: "Webhook configuration and events", category: "Integration" },
+  { text: "Authentication", description: "API authentication methods", category: "Security" },
+  { text: "Rate Limits", description: "API rate limiting information", category: "Reference" },
+  { text: "Error Codes", description: "API error codes and handling", category: "Reference" }
 ];
-// Fix use-toast.ts - add missing closing brace;
-const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
-const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
-fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
-console.log('✅ Fixed use-toast.ts');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+export function getDocsSearchPath(query: string): string | null {
+  const suggestions = docsSearchSuggestions.find(s => 
+    s.text.toLowerCase().includes(query.toLowerCase()) ||
+    s.description?.toLowerCase().includes(query.toLowerCase())
+  );
+  
+  if (suggestions) {
+    switch (suggestions.text) {
+      case "Getting Started":
+        return "/developers/docs/getting-started";
+      case "API Reference":
+        return "/developers/docs/reference";
+      case "Webhooks":
+        return "/developers/docs/webhooks";
+      case "Authentication":
+        return "/developers/docs/authentication";
+      case "Rate Limits":
+        return "/developers/docs/rate-limits";
+      case "Error Codes":
+        return "/developers/docs/errors";
+      default:
+        return null;
+    }
+  }
+  
+  return null;
+}`;
 
+    fs.writeFileSync(path.join(dataDir, 'docsSearchData.ts'), docsSearchDataContent);
+    this.fixedFiles.push('data/docsSearchData.ts');
 
+    // Create types/search.ts
+    const typesDir = path.join(this.projectRoot, 'types');
+    if (!fs.existsSync(typesDir)) {
+      fs.mkdirSync(typesDir, { recursive: true });
+    }
 
+    const searchTypesContent = `export interface SearchSuggestion {
+  text: string;
+  description?: string;
+  category?: string;
+}`;
 
+    fs.writeFileSync(path.join(typesDir, 'search.ts'), searchTypesContent);
+    this.fixedFiles.push('types/search.ts');
 
+    this.log('Missing dependencies created', 'SUCCESS');
+  }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-main
-=======
+  fixEnhancedSearchInput() {
+    this.log('🔧 Fixing EnhancedSearchInput component...', 'PROGRESS');
 
+    const searchDir = path.join(this.projectRoot, 'src', 'components', 'search');
+    if (!fs.existsSync(searchDir)) {
+      fs.mkdirSync(searchDir, { recursive: true });
+    }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    const enhancedSearchInputContent = `import React, { useState, useEffect, useRef, useMemo } from "react";
+import { Search, X } from 'lucide-react';
+import { Input } from "@/components/ui/input";
+import { SearchSuggestion } from "@/types/search";
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+interface EnhancedSearchInputProps {
+  value: string;
+  onChange: (value: string) => void;
+  onSelectSuggestion: (suggestion: SearchSuggestion) => void;
+  searchSuggestions: SearchSuggestion[];
+  placeholder?: string;
+  className?: string;
+}
 
-// Fix enhancedServices.ts - fix malformed object properties
+export function EnhancedSearchInput({
+  value,
+  onChange,
+  onSelectSuggestion,
+  searchSuggestions,
+  placeholder = "Search...",
+  className = ""
+}: EnhancedSearchInputProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const listRef = useRef<HTMLUListElement>(null);
 
-const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
-const servicesFixed = servicesContent;
-  .replace(/"currency": "\$,/g, '"currency": "$",')
-  .replace(/"tags": \["Process Automation, "RPA, "Workflow Optimization, "AI"\]/g, '"tags": ["Process Automation", "RPA", "Workflow Optimization", "AI"]')
-  .replace(/"name": "Zion Tech Group,/g, '"name": "Zion Tech Group",')
-  .replace(/"id": "zion-tech-group,/g, '"id": "zion-tech-group",')
-  .replace(/"avatarUrl": "https:\/\/ziontechgroup\.com\/wp-content\/uploads\/2024\/01\/zion-logo\.png",/g, '"avatarUrl": "https://ziontechgroup.com/wp-content/uploads/2024/01/zion-logo.png",')
-  .replace(/"email": "kleber@ziontechgroup\.com"/g, '"email": "kleber@ziontechgroup.com"')
-  .replace(/images: \["https:\/\/images\.unsplash\.com\/photo-1551288049-bebda4e38f71\?auto=format&fit=crop&w=800&h=500"\]/g, '"images": ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"]')
-  .replace(/createdAt: "2024-01-15T10:00:00\.000Z"/g, '"createdAt": "2024-01-15T10:00:00.000Z"')
-  .replace(/reviewCount: 156/g, '"reviewCount": 156');
-fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
+  const filteredSuggestions = useMemo(() => {
+    if (!value.trim()) return searchSuggestions;
+    return searchSuggestions.filter(suggestion =>
+      suggestion.text.toLowerCase().includes(value.toLowerCase()) ||
+      suggestion.description?.toLowerCase().includes(value.toLowerCase())
+    );
+  }, [value, searchSuggestions]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (inputRef.current && !inputRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
 
-<<<<<<< HEAD
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
-main
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!isOpen) return;
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-// Fix useAuth.tsx - fix malformed function
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
-const authFixed = authContent;
-  .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated": true,')
-  .replace(/"isLoading": fals e/g, '"isLoading": false')
-  .replace(/:src\/hooks\/useAuth\.tsx/g, )
-  .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, 'useEffect(() => {\n    // Check if user is logged in (e.g., check localStorage, cookies, etc.)\n    // Implementation here\n  }, []);');
-fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
-<<<<<<< HEAD:backup-problematic-files/final-ultimate-fix.cjs
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"console.log(" Applying final ultimate fixes.");/ Fix SEO.tsx - remove everything after the return statement"const seoContent = fs.readFileSync("src/components/SEO.tsx", "utf8");"const seoFixed = seoContent.split(" );")[0] + " );";"fs.writeFileSync("src/components/SEO.tsx", seoFixed, "utf8");"console.log(" Fixed SEO.tsx");/ Fix TalentCard.jsx - fix malformed JSX"const talentContent = fs.readFileSync("src/components/talent/TalentCard.jsx", "utf8");const talentFixed = talentContent" .replace(/>"/g, ">")"" .replace(/"</g, "<")"" .replace(/loading="lazy/g, "loading="lazy"")" .replace(/src={talent\.profile_picture_url}/g, "src={talent.profile_picture_url}")" .replace(/alt={talent\.full_name}/g, "alt={talent.full_name}")"" .replace(/className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">/g, "className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">")"" .replace(/className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center text-white font-bold text-lg">/g, "className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center text-white font-bold text-lg">")"" .replace(/className="text-sm font-medium text-zion-blue-dark">/g, "className="text-sm font-medium text-zion-blue-dark">")"" .replace(/className="flex-1">/g, "className="flex-1">")"" .replace(/className="text-lg font-semibold text-zion-blue-dark mb-1">/g, "className="text-lg font-semibold text-zion-blue-dark mb-1">")"" .replace(/className="text-sm text-zion-blue-light mb-2">/g, "className="text-sm text-zion-blue-light mb-2">")"" .replace(/className="flex flex-wrap gap-1 mb-3">/g, "className="flex flex-wrap gap-1 mb-3">")"" .replace(/className="px-2 py-1 bg-zion-blue-light text-zion-blue-dark text-xs rounded-full">/g, "className="px-2 py-1 bg-zion-blue-light text-zion-blue-dark text-xs rounded-full">")"" .replace(/className="flex items-center justify-between">/g, "className="flex items-center justify-between">")"" .replace(/className="flex items-center text-sm text-zion-blue-light">/g, "className="flex items-center text-sm text-zion-blue-light">")"" .replace(/className="w-4 h-4 mr-1"\/>/g, "className="w-4 h-4 mr-1" />")"" .replace(/className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan-light">/g, "className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan-light">")"" .replace(/className="text-sm">/g, "className="text-sm">");"fs.writeFileSync("src/components/talent/TalentCard.jsx", talentFixed, "utf8");"console.log(" Fixed TalentCard.jsx");/ Fix use-toast.ts - add missing closing brace"const toastContent = fs.readFileSync("src/components/ui/use-toast.ts", "utf8");"const toastFixed = toastContent.replace(" return { showToast };\n}", " return { showToast };\n}");"fs.writeFileSync("src/components/ui/use-toast.ts", toastFixed, "utf8");"console.log(" Fixed use-toast.ts");/ Fix enhancedServices.ts - fix malformed object properties"const servicesContent = fs.readFileSync("src/data/enhancedServices.ts", "utf8");const servicesFixed = servicesContent"" .replace(/currency: "\$,/g, "currency: "$",")"" .replace(/tags: \["Process Automation, "RPA, "Workflow Optimization, "AI"\]/g, "tags: ["Process Automation", "RPA", "Workflow Optimization", "AI"]")"" .replace(/name: "Zion Tech Group,/g, "name: "Zion Tech Group",")"" .replace(/id: "zion-tech-group,/g, "id: "zion-tech-group",")"" .replace(/avatarUrl: "https:\/\/ziontechgroup\.com\/wp-content\/uploads\/2024\/01\/zion-logo\.png",/g, "avatarUrl: "https:/ziontechgroup.com/wp-content/uploads/2024/01/zion-logo.png",")"" .replace(/email: "kleber@ziontechgroup\.com"/g, "email: "kleber@ziontechgroup.com"")"" .replace(/images: \["https:\/\/images\.unsplash\.com\/photo-1551288049-bebda4e38f71\?auto=format&fit=crop&w=800&h=500"\]/g, "images: ["https:/images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"]")"" .replace(/createdAt: "2024-01-15T10:00:00\.000Z/g, "createdAt: "2024-01-15T10:00:00.000Z"")"" .replace(/reviewCount: 15 6/g, "reviewCount: 156")"" .replace(/featured: tru e/g, "featured: true");"fs.writeFileSync("src/data/enhancedServices.ts", servicesFixed, "utf8");"console.log(" Fixed enhancedServices.ts");/ Fix useAuth.tsx - fix malformed function"const authContent = fs.readFileSync("src/hooks/useAuth.tsx", "utf8");const authFixed = authContent"" .replace(/isAuthenticated: tru e/g, "isAuthenticated: true")"" .replace(/isLoading: fals e/g, "isLoading: false")"" .replace(/user: nul l/g, "user: null")" .replace(/:src\/hooks\/useAuth\.tsx/g, "")" .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, "useEffect(() => {\n / Check if user is logged in (e.g., check localStorage, cookies, etc.)\n / Implementation here\n }, []);");"fs.writeFileSync("src/hooks/useAuth.tsx", authFixed, "utf8");"console.log(" Fixed useAuth.tsx");"console.log(" Final ultimate fixes completed!");'"'"
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        setHighlightedIndex(prev => 
+          prev < filteredSuggestions.length - 1 ? prev + 1 : 0
+        );
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setHighlightedIndex(prev => 
+          prev > 0 ? prev - 1 : filteredSuggestions.length - 1
+        );
+        break;
+      case 'Enter':
+        e.preventDefault();
+        if (highlightedIndex >= 0 && highlightedIndex < filteredSuggestions.length) {
+          onSelectSuggestion(filteredSuggestions[highlightedIndex]);
+          setIsOpen(false);
+        }
+        break;
+      case 'Escape':
+        setIsOpen(false);
+        break;
+    }
+  };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
+  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
+    onSelectSuggestion(suggestion);
+    setIsOpen(false);
+  };
 
-<<<<<<< HEAD
+  return (
+    <div className="relative" ref={inputRef}>
+      <div className="relative">
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+        <Input
+          type="text"
+          value={value}
+          onChange={(e) => {
+            onChange(e.target.value);
+            setIsOpen(true);
+            setHighlightedIndex(-1);
+          }}
+          onFocus={() => setIsOpen(true)}
+          onKeyDown={handleKeyDown}
+          placeholder={placeholder}
+          className={\`pl-10 pr-10 \${className}\`}
+        />
+        {value && (
+          <button
+            type="button"
+            onClick={() => {
+              onChange('');
+              setIsOpen(false);
+            }}
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 hover:text-gray-600"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        )}
+      </div>
 
+      {isOpen && filteredSuggestions.length > 0 && (
+        <ul
+          ref={listRef}
+          className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-60 overflow-auto"
+        >
+          {filteredSuggestions.map((suggestion, index) => (
+            <li
+              key={index}
+              onClick={() => handleSuggestionClick(suggestion)}
+              className={\`px-4 py-2 cursor-pointer hover:bg-gray-100 \${index === highlightedIndex ? 'bg-gray-100' : ''}\`}
+            >
+              <div className="font-medium text-gray-900">{suggestion.text}</div>
+              {suggestion.description && (
+                <div className="text-sm text-gray-500">{suggestion.description}</div>
+              )}
+              {suggestion.category && (
+                <div className="text-xs text-blue-600 mt-1">{suggestion.category}</div>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}`;
 
+    fs.writeFileSync(path.join(searchDir, 'EnhancedSearchInput.tsx'), enhancedSearchInputContent);
+    this.fixedFiles.push('src/components/search/EnhancedSearchInput.tsx');
 
+    this.log('EnhancedSearchInput component fixed', 'SUCCESS');
+  }
 
-main
+  createUIComponents() {
+    this.log('🔧 Creating UI components...', 'PROGRESS');
 
-=======
-<<<<<<< HEAD
+    const uiDir = path.join(this.projectRoot, 'src', 'components', 'ui');
+    if (!fs.existsSync(uiDir)) {
+      fs.mkdirSync(uiDir, { recursive: true });
+    }
 
+    const inputComponentContent = `import * as React from "react";
+import { cn } from "@/lib/utils";
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+export interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-) {
-    if (processFile(file)) {
-      totalFixed++}
-<<<<<<< HEAD
+const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ className, type, ...props }, ref) => {
+    return (
+      <input
+        type={type}
+        className={cn(
+          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          className
+        )}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+Input.displayName = "Input";
+
+export { Input };`;
+
+    fs.writeFileSync(path.join(uiDir, 'input.tsx'), inputComponentContent);
+    this.fixedFiles.push('src/components/ui/input.tsx');
+
+    this.log('UI components created', 'SUCCESS');
+  }
+
+  async run() {
+    this.log('🚀 Starting final comprehensive fix...', 'PROGRESS');
+
+    try {
+      this.fixServicePages();
+      this.createMissingDependencies();
+      this.fixEnhancedSearchInput();
+      this.createUIComponents();
+
+      this.log('🎉 Final comprehensive fix completed!', 'SUCCESS');
+      this.log(`✅ Fixed files: ${this.fixedFiles.length}`, 'SUCCESS');
+      
+      if (this.errors.length > 0) {
+        this.log(`⚠️ Errors encountered: ${this.errors.length}`, 'WARNING');
+        this.errors.forEach(error => this.log(`   ${error}`, 'ERROR'));
+      }
+
+      return {
+        fixedFiles: this.fixedFiles,
+        errors: this.errors,
+        success: this.errors.length === 0
+      };
+    } catch (error) {
+      this.log(`❌ Fix failed: ${error.message}`, 'ERROR');
+      throw error;
+    }
   }
 }
 
+// Run if called directly
+if (require.main === module) {
+  const fixer = new FinalComprehensiveFix();
+  fixer.run().catch(console.error);
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-main
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-if ( {
-  ) {
-     {
-console.log('✨ Final comprehensive fixes completed!');
-
-<<<<<<< HEAD
-  }} else {
-  }
-console.log('✨ Final comprehensive fixes completed!');
-  }} else {
-  }
-
-
-
-console.log('✨ Final comprehensive fixes completed!');
-  }} else {
-  }
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:final-comprehensive-fix.cjs
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-  }} else {
-  }
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-#!/usr/bin/env node;
-const fs = require('fs')
-    return match.replace(/,\s*$/, '')
-  content = content.replace(/\{\s*,/g, '{'})
-  content = content.replace(/>\s*,\s*$/gm, '>')
-  content = content.replace(/>\s*,\s*</g, '><')
-  content = content.replace(/\)\s*\{\s*,/g, ') {'}
-  content = content.replace(/>\s*,\s*$/gm, '>')
-    return match.replace(/\}\);/g, '}\n      }
-});'
-    return match.replace(/\}\);/g, '}\n      }
-});'
-  content = content.replace(/JSON\.stringify\(\{\s*,/g, 'JSON.stringify({'})
-  content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\s*console\.log\('"CLS")
-  .replace(/>")
-  .replace(/")
-  .replace(/loading="lazy/g, 'loading="lazy")
-  .replace(/className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">/g, 'className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light")
-  .replace(/className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center text-white font-bold text-lg">/g, 'className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center text-white font-bold text-lg")
-  .replace(/className="text-sm font-medium text-zion-blue-dark">/g, 'className="text-sm font-medium text-zion-blue-dark")
-  .replace(/className="flex-1">/g, 'className="flex-1")
-  .replace(/className="text-lg font-semibold text-zion-blue-dark mb-1">/g, 'className="text-lg font-semibold text-zion-blue-dark mb-1")
-  .replace(/className="text-sm text-zion-blue-light mb-2">/g, 'className="text-sm text-zion-blue-light mb-2")
-  .replace(/className="flex flex-wrap gap-1 mb-3">/g, 'className="flex flex-wrap gap-1 mb-3")
-  .replace(/className="px-2 py-1 bg-zion-blue-light text-zion-blue-dark text-xs rounded-full">/g, 'className="px-2 py-1 bg-zion-blue-light text-zion-blue-dark text-xs rounded-full")
-  .replace(/className="flex items-center justify-between">/g, 'className="flex items-center justify-between")
-  .replace(/className="flex items-center text-sm text-zion-blue-light">/g, 'className="flex items-center text-sm text-zion-blue-light")
-  .replace(/className="w-4 h-4 mr-1"\/>/g, 'className="w-4 h-4 mr-1")
-  .replace(/className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">/g, 'className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light")
-  .replace(/className="text-sm">/g, 'className="text-sm")
-  .replace(/"currency": "\$,/g, '"currency": "$")
-  .replace(/"tags": \["Process Automation, "RPA, "Workflow Optimization, "AI"\]/g, '"tags": ["Process Automation", "RPA", "Workflow Optimization", "AI")]
-  .replace(/"name": "Zion Tech Group,/g, '"name": "Zion Tech Group")
-  .replace(/"id": "zion-tech-group,/g, '"id": "zion-tech-group")
-  .replace(/"avatarUrl": "https:\/\/ziontechgroup\.com\/wp-content\/uploads\/2024\/01\/zion-logo\.png",/g, '"avatarUrl": "https://ziontechgroup.com/wp-content/uploads/2024/01/zion-logo.png")
-  .replace(/"email": "kleber@ziontechgroup\.com"/g, '"email": "kleber@ziontechgroup.com")
-  .replace(/images: \["https:\/\/images\.unsplash\.com\/photo-1551288049-bebda4e38f71\?auto=format&fit=crop&w=800&h=500"\]/g, '"images": ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500")]
-<<<<<<< HEAD:backup-problematic-files/final-ultimate-fix.cjs
-  .replace(/createdAt: "2024-01-15T10:00:00\.000Z/g, '"createdAt": "2024-01-15T10:00:00.000Z")
-  .replace(/reviewCount: 15 6/g, '"reviewCount")
-  .replace(/featured: tru e/g, '"featured")
-  .replace(/"isAuthenticated": tru e/g, '"isAuthenticated")
-  .replace(/isLoading: fals e/g, '"isLoading")
-
-  .replace(/user: nul l/g, '"user")
-  .replace(/user: nul l/g, '"user")
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  .replace(/createdAt: "2024-01-15T10:00:00\.000Z"/g, '"createdAt": "2024-01-15T10:00:00.000Z")
-  .replace(/reviewCount: 156/g, '"reviewCount")
-  .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated")
-  .replace(/"isLoading": fals e/g, '"isLoading")
-<<<<<<< HEAD
-  .replace(/"isLoading": fals e/g, '"isLoading")
-
-  .replace(/"isLoading": fals e/g, '"isLoading")
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:final-comprehensive-fix.cjs
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+module.exports = FinalComprehensiveFix;

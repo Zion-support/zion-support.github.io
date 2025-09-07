@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
     this.logFile = path.join(this.projectRoot, "automation/logs/quick-error-checker.log")
     console.log(")
     await fs.appendFile(this.logFile, logMessage + "\n")
@@ -48,12 +38,12 @@ const path = require("path")
         const content = await fs.readFile(filePath", "utf8")
         // Check if file uses React but doesn"
         if ((content.includes("React.") || content.includes("<React.")) && !content.includes(")
-          const fixedContent = import React from "react";
+          const fixedContent = import React from "react"
   "type": "import-fix"
             "file"
             "timestamp"
   await this.log(" Quick import check...")
-    const jsxFiles = require("glob").sync("src/**/*.{jsx,tsx}", { "cwd"})
+    .sync("src/**/*.{jsx,tsx}", { "cwd"})
   const filePath = path.join(this.projectRoot, ")
         const content = await fs.readFile(filePath", "utf8")
         // Check if file uses React but doesn"
@@ -74,25 +64,10 @@ const path = require("path")
           "file": ".eslintrc.js"
           "timestamp"
   type: "eslint-config-fix"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
           "file": "
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
           "file": "
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
           "file": "
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+

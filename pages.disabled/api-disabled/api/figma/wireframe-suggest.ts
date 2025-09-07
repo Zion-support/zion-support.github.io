@@ -1,4 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+=======
 import OpenAI from 'openai';
 
 
@@ -76,47 +84,17 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/figma/wireframe-suggest.ts
   try {
-    const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini'
-      messages: [{
-        role: 'system'
-        content: 'You are a senior product designer. Respond with a compact wireframe outline.'
-      }, {
-        role: 'user'
-        content: prompt
-      }]
-      temperature: 0.4
-      max_tokens: 400
-    });
-    const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
-    res.status(200).json({
-      suggestion
-    });
-  } catch (e: unknown) {
-    const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
-    res.status(500).json({
-      error: message
-    });
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+    // TODO: Implement wireframesuggest logic
+    res.status(200).json({ message: 'wireframesuggest endpoint' });
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error in wireframesuggest:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
+<<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
+}
+=======
 }
   const { screenName, role } = req.body || {  } catch (error) {
     console.error("Error:", error);
@@ -370,3 +348,4 @@ export default async function handler(req, res) {
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/figma/wireframe-suggest.ts

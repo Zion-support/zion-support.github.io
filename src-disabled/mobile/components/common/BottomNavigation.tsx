@@ -1,34 +1,39 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-              isActive ? "text-primary" : "text-muted-foreground"
-            )}
-          >
-            <div className="h-5 w-5">
-              {React.cloneElement(item.icon as React.ReactElement, {
-                className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground")
-origin/cursor/automate-test-improve-and-merge-code-2533
-              })}
-            </div>
-            <span className="text-xs mt-1">{item.label}</span>"
-          </Link>
-        )
-}}})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { useRouter } from "next/router",
+:src/mobile/components/common/BottomNavigation.tsx
+import Link from "next/link";
+import { Home, ShoppingBag, Users, User } from 'lucide-react'
+import { cn } from "@/lib/utils";
+export function BottomNavigation() {
+
+  const router = useRouter()
+  const navItems = [
+    { path: '/mobile', icon: <Home />, label: 'Home' }
+    {
+      path: '/mobile/marketplace'
+      icon: <ShoppingBag />
+      label: 'Marketplace'
+    }
+    { path: '/mobile/community', icon: <Users />, label: 'Community' }
+    { path: '/mobile/profile', icon: <User />, label: 'Profile' }
+  ]
+  return (
+    <div className='fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50'>
+      {navItems.map(item => {
+        const isActive = router.pathname === item.path
+                  >
+            <div className='h-5 w-5'>
+              {React.cloneElement(item.icon as React.ReactElement, {
+                className: cn(
+                  'h-5 w-5'
+                  isActive ? 'stroke-primary' : 'stroke-muted-foreground'
+                )
 import Link from "next/link",
 import { Home, ShoppingBag, Users, User } from 'lucide-react'
 import { cn } from "@/lib/utils",
 export function BottomNavigation() {
   const router = useRouter(),
-<<<<<<< HEAD
-  
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" },
     { path: "/mobile/marketplace", icon: <ShoppingBag />, label: "Marketplace" },
@@ -51,14 +56,9 @@ export function BottomNavigation() {
             <div className="h-5 w-5">
               {React.cloneElement(item.icon as React.ReactElement, { 
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 import { Home, ShoppingBag, Users, User } from 'lucide-react';
-=======
-import { Home, ShoppingBag, Users, User } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import { cn } from '@/lib/utils';
 
 export function BottomNavigation() { return null; }
@@ -83,42 +83,17 @@ export function BottomNavigation() { return null; }
                   'h-5 w-5',;'
                   isActive ? 'stroke-primary' : 'stroke-muted-foreground';
                 ),;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-  const router = null;
-              })}
-            </div>
-            <span className='text-xs mt-1'>{item.label}</span>
-          </Link>
-        );
-      })}
-    </div>
-  );
-              isActive ? "text-primary" : "text-muted-foreground"
-            )}
-          >
-            <div className="h-5 w-5">
-              {React.cloneElement(item.icon as React.ReactElement, {
-                className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground")
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
               })}
             </div>
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
         )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+:src/mobile/components/common/BottomNavigation.tsx
+      })}
+    </div>
+  )
+
 import React from "react",;
 import { useRouter } from "next/router",;
 import Link from "next/link",;
@@ -156,23 +131,11 @@ export function BottomNavigation() {;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
       })}
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 
               {React.cloneElement(item.icon as React.ReactElement, { 
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") 
@@ -194,30 +157,3 @@ export function BottomNavigation() {;
 
     </div>);
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

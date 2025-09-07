@@ -1,20 +1,15 @@
-<<<<<<< HEAD:src/components/PwaInstallButton.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+:src/components/PwaInstallButton.tsx
+import React, { useEffect, useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react'
+import { toast  } from 'sonner';
+import { safeStorage  } from '@/utils/safeStorage';
+import {logErrorToProduction} from '@/utils/productionLogger';
+const DISMISS_KEY = null;
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-const in_standalone = window.match_media ('(display - mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
-
-    const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PwaInstallButton.tsx
+    const inStandalone = window.matchMedia('(display-mode: standalone)').matches
+        description: 'Your browser does not support app installation.'})
+      return
 import React, { useEffect, useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2 } from 'lucide-react';
@@ -49,50 +44,7 @@ export const PwaInstallButton: React.FC = () => {;
       toast('Installation not available', {;
         description: 'Your browser does not support app installation.'}),;
       return;
-=======
-const in_standalone = window.match_media ('(display - mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
 
-    const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
-
-import React, { useEffect, useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Loader2 } from 'lucide-react';
-import { toast } from 'sonner',;
-import { safeStorage } from '@/utils/safeStorage',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-const DISMISS_KEY = 'pwaDismissed',;
-const DISMISS_MS = 7 * 24 * 60 * 60 * 1000, // 7 days;
-export const PwaInstallButton: React.FC = () => {;
-  const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null),;
-  const [isInstalling, setIsInstalling] = useState(false),;
-  // Check dismissal flag and register event listener;
-  useEffect(() => {;
-    if (typeof window === 'undefined') return,;
-    const dismissedAt = safeStorage.getItem(DISMISS_KEY),;
-    const recentlyDismissed = dismissedAt && Date.now() - Number(dismissedAt) < DISMISS_MS,;
-    const inStandalone = window.matchMedia('(display-mode: standalone)').matches,;
-    if (recentlyDismissed || inStandalone) return,;
-    const handler = (e: BeforeInstallPromptEvent) => {;
-      e.preventDefault(),;
-      setPromptEvent(e);
-    },;
-    window.addEventListener('beforeinstallprompt', handler),;
-    return () => window.removeEventListener('beforeinstallprompt', handler);
-  }, []),;
-  if (!promptEvent || window.matchMedia('(display-mode: standalone)').matches) {;
-    return null;
-  }
-;
-  const onClick = async () => {;
-    if (!promptEvent) {;
-      toast('Installation not available', {,
-  description: 'Your browser does not support app installation.'}),;
-      return;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     try {;
       setIsInstalling(true),;
@@ -124,23 +76,6 @@ export const PwaInstallButton: React.FC = () => {;
   )
 },
 
-<<<<<<< HEAD:src/components/PwaInstallButton.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default PwaInstallButton,
-=======
-export default PwaInstallButton,
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-export default PwaInstallButton,
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PwaInstallButton.tsx
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -220,9 +155,3 @@ export const PwaInstallButton: React.FC = () => {
 };
 export default PwaInstallButton;
 '
-<<<<<<< HEAD:src/components/PwaInstallButton.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PwaInstallButton.tsx

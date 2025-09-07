@@ -1,11 +1,6 @@
+:src/components/ServiceQuoteModal.tsx
+import { useState  } from 'react';
 ...formData;            startDate: startDate?.toISOString(),
-<<<<<<< HEAD:src/components/ServiceQuoteModal.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ServiceQuoteModal.tsx
 
             endDate: endDate?.toISOString()}
         }
@@ -13,6 +8,7 @@
 
 }
 }
+:src/components/ServiceQuoteModal.tsx
 
 ...form_data;            start_date: start_date?.toISOString (),
             end_date: end_date?.toISOString ()}
@@ -21,34 +17,10 @@
 }
 }
 
-<<<<<<< HEAD:src/components/ServiceQuoteModal.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ServiceQuoteModal.tsx
-
-
 ;
 
-<<<<<<< HEAD:src/components/ServiceQuoteModal.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import { useState  } from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-import { useState } from 'react',
-import { useState  } from 'react';
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ServiceQuoteModal.tsx
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -64,23 +36,7 @@ import { cn } from "@/lib/utils",
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
-=======
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog","
-import { Button } from "@/components/ui/button","
-import { Input } from "@/components/ui/input","
-import { Textarea } from "@/components/ui/textarea","
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select","
-import { Label } from "@/components/ui/label","
-import { Slider } from "@/components/ui/slider","
-import { Calendar } from "@/components/ui/calendar","
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover","
-import { format } from "date-fns",'
-import { CalendarIcon } from 'lucide-react'"
-import { cn } from "@/lib/utils","
-import { ProductListing } from "@/types/listings",'
-import { toast } from '@/hooks/use-toast',"
-import { supabase } from "@/integrations/supabase/client",'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ServiceQuoteModal.tsx
+
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface ServiceQuoteModalProps {}
   open: boolean,
@@ -241,38 +197,20 @@ interface ServiceQuoteModalProps {;
   service: ProductListing | null;
 }
 ;
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
-<<<<<<< HEAD:src/components/ServiceQuoteModal.tsx
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ServiceQuoteModal.tsx
+
 const BUDGET_RANGES = [;
   { label: "Less than $5,000", value: "0-5000" },;
   { label: "$5,000 - $10,000", value: "5000-10000" },;
   { label: "$10,000 - $25,000", value: "10000-25000" },;
   { label: "$25,000 - $50,000", value: "25000-50000" },;
-=======
-const BUDGET_RANGES = [;"
-  { label: "Less than $5,000", value: "0-5000" },;"
-  { label: "$5,000 - $10,000", value: "5000-10000" },;"
-  { label: "$10,000 - $25,000", value: "10000-25000" },;"
-  { label: "$25,000 - $50,000", value: "25000-50000" },;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ServiceQuoteModal.tsx
+
   { label: "$50,000+", value: "50000+" }],;
 const TIMELINE_OPTIONS = [;"
   { label: "Less than 1 month", value: "lt-1month" },;"
   { label: "1-3 months", value: "1-3months" },;"
   { label: "3-6 months", value: "3-6months" },;"
   { label: "6+ months", value: "6+months" }],;
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
-export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {;
-  const [formData, setFormData] = useState({,
-  description: '',;
-    email: '',;
-    budget: BUDGET_RANGES[0]?.value || '0-5000',;
-=======
-export function ServiceQuoteModal() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ServiceQuoteModal.tsx
+
     timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),;
   const [startDate, setStartDate] = useState<Date | undefined>(new Date()),;
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),;'
@@ -301,42 +239,14 @@ export function ServiceQuoteModal() { return null; }
       }),;
       if (error) throw error,;
       // Show success message;
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
-      toast({;
-        title: "Quote Request Submitted!",,
-  description: "We've sent your request to the service provider. They will contact you soon."}),;
-      // Close the modal and reset form;
-      onOpenChange(false),;
-      setFormData({,
-  description: '',;
-        email: '',;
-        budget: BUDGET_RANGES[0]?.value || '0-5000',;
-=======
-      toast({;"
-        title: "Quote Request Submitted!",;'"
-        description: "We've sent your request to the service provider. They will contact you soon."}),;
-      // Close the modal and reset form;
-      onOpenChange(false),;
-      setFormData({;'
-        description: '',;'
-        email: '',;'
-        budget: BUDGET_RANGES[0]?.value || '0-5000',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ServiceQuoteModal.tsx
+
         timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),;
       setStartDate(new Date()),;
       setEndDate(undefined),;'
       setCurrentStep('details');
     } catch (error) {;'
       logErrorToProduction('Error submitting quote:', { data: error }),;
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
-      toast({;
-        title: "Error",,
-  description: "There was an error submitting your quote request. Please try again.",;
-=======
-      toast({;"
-        title: "Error",;"
-        description: "There was an error submitting your quote request. Please try again.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ServiceQuoteModal.tsx
+
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -569,31 +479,15 @@ export function ServiceQuoteModal() { return null; }
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
-<<<<<<< HEAD:src/components/ServiceQuoteModal.tsx
-<<<<<<< HEAD
-            </div>;
-          </DialogFooter>;
-        </form>;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
-;
-<<<<<<< HEAD
-=======
+:src/components/ServiceQuoteModal.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ServiceQuoteModal.tsx
             </div>
           </DialogFooter>
         </form>
       </DialogContent>
     </Dialog>
+:src/components/ServiceQuoteModal.tsx
+  )
   );
 
 });
@@ -658,12 +552,3 @@ else if (currentStep === 'contact') setCurrentStep ('timeline') ;
 }'"
 }
 }
-<<<<<<< HEAD:src/components/ServiceQuoteModal.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ServiceQuoteModal.tsx
-=======
-;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ServiceQuoteModal.tsx

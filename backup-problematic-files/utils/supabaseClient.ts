@@ -14,9 +14,5 @@ let browserClient: SupabaseClient | undefined
 
 export function getSupabaseClient(): ZionSupabase {
   try {
-<<<<<<< HEAD
     if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return undefined,
-=======
-    if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return undefined,;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }

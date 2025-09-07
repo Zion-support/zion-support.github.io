@@ -6,8 +6,9 @@ on:
   schedule:
     - cron: '0 */6 * * *'
   push:
-
+    branches: [ main ]
   workflow_dispatch:
+    branches: [ main ]  workflow_dispatch:
     branches: [ main ]  workflow_dispatch:
 
 permissions:
@@ -58,6 +59,5 @@ jobs:
           branch: main
           commit_user_name: zion-bot
           commit_user_email: bot@users.noreply.github.com
-
           commit_author: zion-bot <bot@users.noreply.github.com>
           commit_author: zion-bot <bot@users.noreply.github.com>

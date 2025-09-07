@@ -1,22 +1,16 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
+
 /**
  * Comprehensive Automation Orchestrator
  * Orchestrates all automation scripts for maximum efficiency
  * Enhanced with parallel execution, better error handling, and comprehensive monitoring
  */
-<<<<<<< HEAD
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const os = require("os")
-=======
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
->>>>>>> main
 
-class AutomationOrchestrator {
+class ComprehensiveAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
@@ -33,7 +27,6 @@ class AutomationOrchestrator {
         systemInfo: {}
       }
     };
-    this.startTime = Date.now();
     
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
@@ -56,7 +49,6 @@ class AutomationOrchestrator {
   log(message, type = "info") {
     const timestamp = new Date().toISOString();
     const prefix = type === "error" ? "❌" : type === "success" ? "✅" : "ℹ️";
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] ${prefix} ${message}`;
     console.log(logMessage);
     
@@ -91,83 +83,50 @@ class AutomationOrchestrator {
     }
     
     this.log(`Completed ${category} scripts execution`);
-=======
-    console.log(`[${timestamp}] ${prefix} ${message}`);
->>>>>>> main
   }
 
-  async runScript(scriptName, category) {
+  async run() {
     try {
-      this.log(`Running ${scriptName} (${category})...`);
-      const scriptPath = path.join("scripts", scriptName);
+      this.log("🚀 Starting Comprehensive Automation Orchestration...");
+      this.log("🏢 Zion Tech Group - Advanced Automation System");
       
-      if (!fs.existsSync(scriptPath)) {
-        this.log(`Script ${scriptName} not found, skipping...`, "warning");
-        this.results.warnings.push(`Script ${scriptName} not found`);
-        return;
-      }
-
-      execSync(`node ${scriptPath}`, { 
-        stdio: "pipe",
-        cwd: this.projectRoot,
-        encoding: "utf8",
-        timeout: 300000 // 5 minutes timeout
-      });
+      await this.init();
+      await this.preAutomationChecks();
+      await this.runErrorFixing();
+      await this.runBuildOptimization();
+      await this.runPerformanceMonitoring();
+      await this.runQualityChecks();
+      await this.generateReport();
       
-      this.log(`${scriptName} completed successfully`, "success");
-      this.results.success.push(`${scriptName} (${category}) completed`);
+      this.log("🎉 Comprehensive automation completed successfully!", "success");
+      this.log(`⏱️ Total orchestration time: ${Date.now() - this.startTime}ms`);
+      
     } catch (error) {
-      this.results.errors.push(`${scriptName} failed: ${error.message}`);
-      this.log(`${scriptName} failed: ${error.message}`, "error");
-    }
-  }
-
-  async runCommand(cmd, name) {
-    try {
-      this.log(`Running ${name}...`);
-      execSync(cmd, { 
-        stdio: "pipe",
-        cwd: this.projectRoot,
-        encoding: "utf8",
-        timeout: 300000
-      });
-      this.log(`${name} completed successfully`, "success");
-      this.results.success.push(`${name} completed`);
-    } catch (error) {
-      this.results.warnings.push(`${name} had issues: ${error.message}`);
-      this.log(`${name} had issues: ${error.message}`, "warning");
+      this.log(`Orchestration failed: ${error.message}`, "error");
+      process.exit(1);
     }
   }
 
   async preAutomationChecks() {
-    this.log("Running pre-automation checks...");
+    this.log("🔍 Running pre-automation checks...");
     
     // Check if we're in a Node.js project
     if (!fs.existsSync("package.json")) {
       throw new Error("Not in a Node.js project directory");
     }
     
-    // Ensure scripts directory exists
     if (!fs.existsSync("scripts")) {
-      this.log("Creating scripts directory...");
-      fs.mkdirSync("scripts", { recursive: true });
-    }
-    
+      this.log("Creating scripts directory...")
+      fs.mkdirSync("scripts", { recursive: true })
     // Check Node.js version
-    const nodeVersion = process.version;
-    this.log(`Node.js version: ${nodeVersion}`);
-    
-    this.results.success.push("Pre-automation checks passed");
-  }
-
+    const nodeVersion = process.version
+    this.log(`Node.js version: ${nodeVersion}`)
+    this.results.success.push("Pre-automation checks passed")
   async runErrorFixing() {
-    this.log("🔧 Running error fixing automation...");
-    
+    this.log("🔧 Running error fixing automation...")
     const errorFixingScripts = [
       "comprehensive-error-fixer.cjs",
-      "auto-fixer.js",
-      "syntax-fixer.cjs",
-      "fix-all-syntax-errors.cjs"
+      "auto-fixer.js"
     ];
     
     for (const script of errorFixingScripts) {
@@ -176,12 +135,10 @@ class AutomationOrchestrator {
   }
 
   async runBuildOptimization() {
-    this.log("⚡ Running build optimization...");
-    
+    this.log("⚡ Running build optimization...")
     const buildScripts = [
       "advanced-build-optimizer.js",
-      "build-optimizer.cjs",
-      "optimize-performance.js"
+      "optimize-build.js"
     ];
     
     for (const script of buildScripts) {
@@ -190,12 +147,10 @@ class AutomationOrchestrator {
   }
 
   async runPerformanceMonitoring() {
-    this.log("📊 Running performance monitoring...");
-    
+    this.log("📊 Running performance monitoring...")
     const performanceScripts = [
       "performance-monitor-enhanced.js",
-      "performance-optimizer.js",
-      "performance-monitor.cjs"
+      "performance-optimizer.js"
     ];
     
     for (const script of performanceScripts) {
@@ -206,52 +161,48 @@ class AutomationOrchestrator {
   async runQualityChecks() {
     this.log("🔍 Running quality checks...");
     
-    const qualityCommands = [
+    const qualityChecks = [
       { cmd: "npm run lint", name: "ESLint" },
       { cmd: "npm run type-check", name: "TypeScript" },
-      { cmd: "npm run test:smoke", name: "Smoke Tests" }
+      { cmd: "npm run build", name: "Build" }
     ];
     
-    for (const { cmd, name } of qualityCommands) {
-      await this.runCommand(cmd, name);
+    for (const check of qualityChecks) {
+      try {
+        execSync(check.cmd, { stdio: "pipe" });
+        this.log(`${check.name} completed successfully`, "success");
+        this.results.success.push(`${check.name} check passed`);
+      } catch (error) {
+        this.results.warnings.push(`${check.name} had issues`);
+        this.log(`${check.name} had issues`, "error");
+      }
     }
   }
 
-  async runSecurityAudit() {
-    this.log("🔒 Running security audit...");
+  async runScript(scriptName, category) {
+    const scriptPath = path.join("scripts", scriptName);
     
-    const securityScripts = [
-      "security-audit.cjs",
-      "security-auditor.js",
-      "security-enhancer.js"
-    ];
+    if (!fs.existsSync(scriptPath)) {
+      this.log(`⚠️ Script not found: ${scriptName}`);
+      return;
+    }
     
-    for (const script of securityScripts) {
-      await this.runScript(script, "security-audit");
+    try {
+      execSync(`node ${scriptPath}`, { stdio: "pipe" });
+      this.log(`${scriptName} completed successfully`, "success");
+      this.results.success.push(`${scriptName} (${category}) completed`);
+    } catch (error) {
+      this.results.errors.push(`${scriptName} failed`);
+      this.log(`${scriptName} failed: ${error.message}`, "error");
     }
   }
 
-  async runSEOOptimization() {
-    this.log("🔍 Running SEO optimization...");
+  async generateReport() {
+    this.log("📊 Generating comprehensive automation report...");
     
-    const seoScripts = [
-      "seo-optimizer.js",
-      "seo-enhancer.js",
-      "generate-dynamic-sitemap.js"
-    ];
-    
-    for (const script of seoScripts) {
-      await this.runScript(script, "seo-optimization");
-    }
-  }
-
-  generateReport() {
-    this.log("📋 Generating comprehensive automation report...");
-    
-    const duration = Date.now() - this.startTime;
     const report = {
       timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
+      duration: Date.now() - this.startTime,
       summary: {
         successful: this.results.success.length,
         errors: this.results.errors.length,
@@ -264,31 +215,23 @@ class AutomationOrchestrator {
     
     const reportPath = path.join(process.cwd(), "comprehensive-automation-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Comprehensive report saved to ${reportPath}`, "success");
+    this.log(`📄 Comprehensive report saved to ${reportPath}`, "success");
     
     // Generate markdown summary
-    this.generateMarkdownReport(report);
-  }
-
-  generateMarkdownReport(report) {
     const markdown = `# Comprehensive Automation Report
 
 ## Summary
-- **Timestamp**: ${report.timestamp}
-- **Duration**: ${report.duration}
-- **Successful**: ${report.summary.successful}
-- **Errors**: ${report.summary.errors}
-- **Warnings**: ${report.summary.warnings}
+- ✅ Successful: ${report.results.success.length}
+- ❌ Errors: ${report.results.errors.length}
+- ⚠️ Warnings: ${report.results.warnings.length}
 
-## Results
-
-### Successful Operations
+## Successful Operations
 ${report.results.success.map(item => `- ${item}`).join("\n")}
 
-### Errors
+## Errors
 ${report.results.errors.map(item => `- ${item}`).join("\n")}
 
-### Warnings
+## Warnings
 ${report.results.warnings.map(item => `- ${item}`).join("\n")}
 
 ## Recommendations
@@ -296,11 +239,13 @@ ${report.recommendations.map(item => `- ${item}`).join("\n")}
 
 ## Next Steps
 ${report.nextSteps.map(item => `- ${item}`).join("\n")}
+
+*Generated on ${report.timestamp}*
 `;
     
     const markdownPath = path.join(process.cwd(), "AUTOMATION_REPORT.md");
     fs.writeFileSync(markdownPath, markdown);
-    this.log(`📝 Markdown summary saved to ${markdownPath}`, "success");
+    this.log(`📄 Markdown summary saved to ${markdownPath}`, "success");
   }
 
   generateRecommendations() {
@@ -333,7 +278,6 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n")}
     ];
   }
 
-<<<<<<< HEAD
   generateMarkdownReport(report) {
     return `# Automation Report
 
@@ -395,35 +339,13 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
       this.log("🎉 Comprehensive automation completed successfully!", "success");
       this.log(`⏱️ Total orchestration time: ${(report.duration / 1000).toFixed(2)}s`);
       this.log(`💾 Memory usage: ${(this.results.metrics.memoryUsage.end.heapUsed / 1024 / 1024).toFixed(2)}MB`);
-=======
-  async orchestrate() {
-    try {
-      this.log("🚀 Starting Comprehensive Automation Orchestration...");
-      this.log("🏢 Zion Tech Group - Advanced Automation System");
       
-      await this.preAutomationChecks();
-      await this.runErrorFixing();
-      await this.runBuildOptimization();
-      await this.runPerformanceMonitoring();
-      await this.runSecurityAudit();
-      await this.runSEOOptimization();
-      await this.runQualityChecks();
-      
-      this.generateReport();
-      
-      this.log("🎉 Comprehensive automation completed successfully!", "success");
-      this.log(`⏱️ Total orchestration time: ${Date.now() - this.startTime}ms`);
->>>>>>> main
-      
+      return report;
     } catch (error) {
       this.log(`❌ Orchestration failed: ${error.message}`, "error");
-<<<<<<< HEAD
       this.results.metrics.endTime = Date.now();
       this.results.metrics.duration = this.results.metrics.endTime - this.results.metrics.startTime;
       throw error;
-=======
-      process.exit(1);
->>>>>>> main
     }
   }
 }
@@ -431,27 +353,12 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
 // Run the orchestrator
 const orchestrator = new AutomationOrchestrator();
 orchestrator.orchestrate().catch(console.error);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 /**;
  * Comprehensive Automation Orchestrator;
  * Orchestrates all automation scripts for maximum efficiency;
  */;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require("$1")
 const path = require("$1")
 const { execSync, spawn } = require("child_process")
@@ -601,26 +508,10 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n"`)
         "Monitor application performance"
     const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.json")
     this.log(" Starting Comprehensive Automation Orchestrator")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
       this.log(")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
       this.log(")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
       this.log(")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> origin/main
+

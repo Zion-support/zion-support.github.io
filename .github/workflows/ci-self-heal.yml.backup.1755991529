@@ -11,10 +11,8 @@ permissions:
 
 jobs:
   attempt-fix:
-
     continue-on-error: true
     continue-on-error: true
-
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     runs-on: ubuntu-latest
     steps:

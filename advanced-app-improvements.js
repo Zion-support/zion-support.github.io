@@ -13,18 +13,28 @@ function createAdvancedMonitoring() {
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 class HealthChecker {
   constructor() {
     this.checks = new Map();
     this.results = new Map();
   }
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 export class HealthChecker {
-  constructor() {;
+  constructor() {
     this.checks = new Map();
     this.results = new Map();  }
+<<<<<<< HEAD
+
+=======
 >>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
   addCheck(name, checkFunction) {
     this.checks.set(name, checkFunction);
   }
@@ -33,13 +43,19 @@ export class HealthChecker {
     const results = {};
     for (const [name, check] of this.checks) {
       try {
+        const result = await check();
 <<<<<<< HEAD
         const result = await check();
+        const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
+      try {
+        const result = await checkFunction();
+=======
 =======
         const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
       try {
         const result = await checkFunction();
 >>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
         results[name] = { status: 'healthy', result };
       } catch (error) {
         results[name] = { status: 'unhealthy', error: error.message };
@@ -47,6 +63,9 @@ export class HealthChecker {
     }
     this.results = results;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
     return results;
   }
 
@@ -479,13 +498,16 @@ module.exports = { QueryOptimizer, queryOptimizer };`,
     
     'database/connection-pool.js': `// Database connection pooling
 class ConnectionPool {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 }
 
 export const healthChecker = new HealthChecker();`,
 
-    'monitoring/performance-monitor.js': `// Performance monitoring system
+    'monitoring/performance-monitor.js: `// Performance monitoring system
 export class PerformanceMonitor {
   constructor() {
     this.metrics = new Map();
@@ -493,7 +515,7 @@ export class PerformanceMonitor {
   }
 
   startMonitoring() {
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+    if (typeof window !== undefined' && 'PerformanceObserver in window) {
       // Monitor Core Web Vitals
       this.observeLCP();
       this.observeFID();
@@ -503,51 +525,45 @@ export class PerformanceMonitor {
   }
 
   observeLCP() {
-    const observer = new PerformanceObserver((list) => {;
+    const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      this.metrics.set('lcp', lastEntry.startTime);
+      this.metrics.set(lcp', lastEntry.startTime);
     });
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    observer.observe({ entryTypes: ['largest-contentful-paint] });
     this.observers.push(observer);
   }
 
   observeFID() {
-    const observer = new PerformanceObserver((list) => {;
-      const entries = list.getEntries();
       entries.forEach((entry) => {
-        this.metrics.set('fid', entry.processingStart - entry.startTime);
+        this.metrics.set(fid', entry.processingStart - entry.startTime);
       });
     });
-    observer.observe({ entryTypes: ['first-input'] });
+    observer.observe({ entryTypes: ['first-input] });
     this.observers.push(observer);
   }
 
   observeCLS() {
     let clsValue = 0;
-    const observer = new PerformanceObserver((list) => {;
-      const entries = list.getEntries();
       entries.forEach((entry) => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
       });
-      this.metrics.set('cls', clsValue);
+      this.metrics.set(cls', clsValue);
     });
-    observer.observe({ entryTypes: ['layout-shift'] });
+    observer.observe({ entryTypes: ['layout-shift] });
     this.observers.push(observer);
   }
 
   observeFCP() {
-    const observer = new PerformanceObserver((list) => {;
-      const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') {
-          this.metrics.set('fcp', entry.startTime);
+        if (entry.name === first-contentful-paint') {
+          this.metrics.set('fcp, entry.startTime);
         }
       });
     });
-    observer.observe({ entryTypes: ['paint'] });
+    observer.observe({ entryTypes: [paint'] });
     this.observers.push(observer);
   }
 
@@ -563,22 +579,21 @@ export class PerformanceMonitor {
 
 export const performanceMonitor = new PerformanceMonitor();`,
 
-    'monitoring/error-tracker.js': `// Error tracking system
+    'monitoring/error-tracker.js: `// Error tracking system
 export class ErrorTracker {
   constructor() {
     this.errors = [];
     this.errorCounts = new Map();  }
   trackError(error, context = {}) {
-    const errorInfo = {
       message: error.message,
 
       stack: error.stack;
       timestamp: new Date().toISOString();
       context,
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown';
+      userAgent: typeof navigator !== undefined' ? navigator.userAgent : 'unknown;
 
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
-    };
+      url: typeof window !== undefined' ? window.location.href : 'unknown
+    }
 
     this.errors.push(errorInfo);
     
@@ -599,7 +614,7 @@ export class ErrorTracker {
         .sort((a, b) => b[1] - a[1])
 
         .slice(0, 10);
-    };
+    }
 
   }
 }
@@ -615,14 +630,14 @@ if (=> {
     });
   });
 
-  window.addEventListener('unhandledrejection', (event) => {
+  window.addEventListener(unhandledrejection', (event) => {
     errorTracker.trackError(new Error(event.reason), {
-      type: 'unhandledrejection'
+      type: 'unhandledrejection
     });
   });
 }`,
 
-    'monitoring/analytics.js': `// Analytics tracking system
+    monitoring/analytics.js': `// Analytics tracking system
 export class AnalyticsTracker {
   constructor() {
     this.events = [];
@@ -630,7 +645,7 @@ export class AnalyticsTracker {
   }
 
   generateSessionId() {
-    return 'session_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+    return 'session_ + Math.random().toString(36).substr(2, 9) + _' + Date.now();
   }
 
   track(event, properties = {}) {
@@ -640,9 +655,9 @@ export class AnalyticsTracker {
       properties;
       timestamp: new Date().toISOString();
       sessionId: this.sessionId;
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
+      url: typeof window !== 'undefined ? window.location.href : unknown'
 
-    };
+    }
 
     this.events.push(eventData);
     
@@ -652,7 +667,7 @@ export class AnalyticsTracker {
 
   sendToAnalytics(eventData) {
     // Implement your analytics service integration here
-    console.log('Analytics event:', eventData);
+    console.log('Analytics event:, eventData);
   }
 
   getEvents() {
@@ -665,9 +680,13 @@ export class AnalyticsTracker {
 
 export const queryOptimizer = new QueryOptimizer();`,
     
-    'database/connection-pool.js': `// Database connection pooling
+    database/connection-pool.js': `// Database connection pooling
 export class ConnectionPool {
+<<<<<<< HEAD
+
+=======
 >>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
   constructor(options = {}) {
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
@@ -676,11 +695,16 @@ export class ConnectionPool {
     this.usedConnections = new Set();
   }
 
+  async getConnection() {
 <<<<<<< HEAD
   async getConnection() {
+async getConnection() {
+async getConnection() {
+=======
 =======
 async getConnection() {
 >>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
     if (this.availableConnections.length > 0) {
       const connection = this.availableConnections.pop();
       this.usedConnections.add(connection);
@@ -711,6 +735,9 @@ async getConnection() {
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
   releaseConnection(connection) {
     this.usedConnections.delete(connection);
     this.availableConnections.push(connection);
@@ -737,7 +764,10 @@ async getConnection() {
 
 const connectionPool = new ConnectionPool();
 module.exports = { ConnectionPool, connectionPool };
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export function debounce(func, wait) {
   let timeout = null;
@@ -746,7 +776,7 @@ export function debounce(func, wait) {
       clearTimeout(timeout);
       func(...args);
 
-    };
+    }
   }
 
 
@@ -758,47 +788,50 @@ export function throttle(func, limit) {
       inThrottle = true;
       setTimeout(() => inThrottle = false, limit);
     }
-  };
+  }
 }`,
 
-    'utils/optimization.js': `// General optimization utilities
+    'utils/optimization.js: `// General optimization utilities
 export function optimizeImages() {
-  if (typeof window === 'undefined') return;
+  if (typeof window === undefined') return;
 
-  const images = document.querySelectorAll('img');
+  const images = document.querySelectorAll('img);
   images.forEach(img => {
-    // Add loading="lazy" if not present
-    if (!img.hasAttribute('loading')) {
-      img.setAttribute('loading', 'lazy');
+    // Add loading=lazy" if not present
+    if (!img.hasAttribute(loading')) {
+      img.setAttribute('loading, lazy');
     }
     
     // Add proper alt text if missing
     if (!img.alt) {
-      img.alt = 'Image';
+      img.alt = 'Image;
     }
   });
 }
 
 export function preloadCriticalResources() {
-  if (typeof window === 'undefined') return;
+  if (typeof window === undefined') return;
 
   const criticalResources = [
-    '/fonts/main.woff2';
-    '/css/critical.css'
+    '/fonts/main.woff2;
+    /css/critical.css'
   ];
 
   criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
+    const link = document.createElement('link);
+    link.rel = preload';
     link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    link.as = resource.endsWith('.css) ? style' : 'font;
     document.head.appendChild(link);
   });
 }`
 
 
 export const connectionPool = new ConnectionPool();
+<<<<<<< HEAD
+=======
 >>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
   };
 
   Object.entries(dbFiles).forEach(([filename, content]) => {
@@ -808,32 +841,46 @@ export const connectionPool = new ConnectionPool();
     console.log(`[OK] Created ${filename}`);
   });
 });
+}
+
 <<<<<<< HEAD
 }
 
 =======
+=======
 >>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
 // Main execution
 async function main() {
   try {
-    console.log('🚀 Starting advanced app improvements...');
+    console.log('🚀 Starting advanced app improvements...);
     
     // Create all improvement systems
+    createAdvancedMonitoring();
 <<<<<<< HEAD
     createAdvancedMonitoring();
 =======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 // Main execution
 async function main() {
   try {
-    console.log('🚀 Starting advanced app improvements...');
+    console.log(🚀 Starting advanced app improvements...');
     
     // Create all improvement systems
+<<<<<<< HEAD
+
+=======
 >>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
     
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
     // Create PM2 ecosystem configuration
     const pm2Config = {
       apps: [{
@@ -877,7 +924,10 @@ async function main() {
     
   } catch (error) {
     console.error('❌ Error during advanced improvements:', error.message);
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log('\n✅ Advanced app improvements completed successfully!');
     console.log('\n📋 Summary:');
     console.log('  - Advanced monitoring system created');
@@ -887,18 +937,29 @@ async function main() {
     
   } catch (error) {
     console.error('❌ Error during app improvements:', error);
+<<<<<<< HEAD
+
+=======
 >>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
     process.exit(1);
   }
 }
 
+main();
 <<<<<<< HEAD
 main();
 =======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 main();// Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
+<<<<<<< HEAD
+
+=======
 >>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge

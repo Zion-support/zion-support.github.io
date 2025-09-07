@@ -5,8 +5,4 @@ if (typeof window !== 'undefined') {
     tracesSampleRate: 0.1,
     integrations: [],
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)})
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }

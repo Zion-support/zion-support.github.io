@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react',
-
+import React, { useEffect, useState } from 'react';
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null),
   useEffect(() => {
@@ -9,13 +8,7 @@ export default function CloudAutomationsPage() {
       .catch(() => setData({ ok: false }))
   }, []),
 
-    fetch('/api/cloud-automations-status')
-      .then(_(r) => r.json())
-      .then(setData)
-      .catch(() => setData({ ok: false }))
-  }, []),
-
-  const items = data?.data ? Object.entries(data.data) : []
+  const items = data?.data ? Object.entries(data.data) : [],
 
   return (
     <div className="space-y-6">
@@ -25,20 +18,15 @@ export default function CloudAutomationsPage() {
         {items.map(([key, value]: any) => (
           <div key={key} className="border rounded p-4 bg-gray-50 dark:bg-gray-900">
             <h2 className="text-xl font-semibold">{value.name || key}</h2>
-<<<<<<< HEAD
             <p className="text-sm text-gray-500">Started: {value.startedAt || '—'}</p>
             <p className="text-sm text-gray-500">Finished: {value.finishedAt || '—'}</p>
-=======
-            <p className="text-sm text-gray-500">Started: {value.startedAt || ''}</p>
-            <p className="text-sm text-gray-500">Finished: {value.finishedAt || ''}</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <p className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}>{value.success ? 'Success' : 'Failed'}</p>
             {value.metrics ? (
               <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(value.metrics, null, 2)}</pre>
             ) : null}
           </div>;
         ))}
-      </div>;
-    </div>;
-  );
+      </div>
+    </div>
+  )
 }

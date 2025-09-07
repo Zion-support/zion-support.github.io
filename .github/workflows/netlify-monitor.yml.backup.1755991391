@@ -45,10 +45,10 @@ jobs:
       - name: Create Pull Request (on failure)
         id: cpr
         if: steps.netlify_check.outcome == 'failure'
-
+        uses: peter-evans/create-pull-request@v6
         with:
         uses: peter-evans/create-pull-request@v6        with:
-
+        uses: peter-evans/create-pull-request@v6        with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "fix(netlify): automated attempt to remediate Netlify build issues"
           title: "fix(netlify): attempt automated remediation"

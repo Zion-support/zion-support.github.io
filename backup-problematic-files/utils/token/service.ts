@@ -13,15 +13,7 @@ export function earnTokens(
   userId: string,
   amount: number,
   reason: string,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  metadata?: Record<string, any>
-=======
   metadata?: Record<string any>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  metadata?: Record<string, any>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ): TokenTransaction {
   if (amount <= 0) throw new Error("Amount must be positive"),
   const wallet = tokenStore.getWallet(userId)
@@ -43,15 +35,7 @@ export function burnTokens(
   userId: string,
   amount: number,
   reason: string,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  metadata?: Record<string, any>
-=======
   metadata?: Record<string any>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  metadata?: Record<string, any>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ): TokenTransaction {
   if (amount <= 0) throw new Error("Amount must be positive"),
   const wallet = tokenStore.getWallet(userId)
@@ -122,14 +106,5 @@ export function getConfig() {
 
 export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void {
   const current = tokenStore.getConfig()
-<<<<<<< HEAD
-<<<<<<< HEAD
   tokenStore.setConfig({ ...current, ...partial })
-
-=======
-  tokenStore.setConfig({ ...current, ...partial });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  tokenStore.setConfig({ ...current, ...partial })
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

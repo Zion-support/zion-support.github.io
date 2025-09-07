@@ -1,6 +1,25 @@
-<<<<<<< HEAD:src/components/services/ServiceDescriptionForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src/components/services/ServiceDescriptionForm.tsx
+const formSchema = z.object({
+  title: z.string().min(3, "Title must be at least 3 characters")
+  keyFeatures: z.string()
+  targetAudience: z.string()})
+type FormData = z.infer<typeof formSchema>
+      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs."
+const formSchema = z && z.object({;
+  title: z && z.string().min(3, "Title must be at least 3 characters");
+  keyFeatures: z && z.string(),;
+  targetAudience: z && z.string()}),;
+
+type FormData = z && z.infer<typeof formSchema>;
+
+      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";
+
+});
+}
+
+  )
+}
+:src/components/services/ServiceDescriptionForm.tsx
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -12,40 +31,9 @@ import { supabase } from "@/integrations/supabase/client",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { useForm } from "react-hook-form",
 import z from "zod",
-import { zodResolver } from "@hookform/resolvers/zod",
-import {logErrorToProduction} from '@/utils/productionLogger',
-const formSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters"),
-  keyFeatures: z.string(),
-  targetAudience: z.string()}),
-
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
-type FormData = z.infer<typeof formSchema>,
-
-interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-const formSchema = z && z.object({;
-  title: z && z.string().min(3, "Title must be at least 3 characters");
-  keyFeatures: z && z.string(),;
-  targetAudience: z && z.string()}),;
-
-type FormData = z && z.infer<typeof formSchema>;
-
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/services/ServiceDescriptionForm.tsx
-      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";
-
-}
-  );
-}
-
-  )
-}
+import { zodResolver } from "@hookform/resolvers/zod";
+import {logErrorToProduction} from '@/utils/productionLogger';
+const formSchema = null;
 
 const form_schema = z.object ({"
   title: z.string ().min (3, "Title must be at least 3 characters");
@@ -53,17 +41,9 @@ const form_schema = z.object ({"
   target_audience: z.string ()}),
 type FormData = z.infer < typeof form_schema>;"
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high - quality solutions tailored to your specific needs.";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-}
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceDescriptionForm.tsx
 
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
-<<<<<<< HEAD
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-=======
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/services/ServiceDescriptionForm.tsx
+}
+
   const { toast } = useToast(),
   const [isLoading, setIsLoading] = useState(false),
   
@@ -111,7 +91,7 @@ export function ServiceDescriptionForm() { return null; }
   const form = useForm<FormData>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;"
-      title: "",;"
+      title: "","
       keyFeatures: "",;"
       targetAudience: ""}}),;
   const handleSubmit = async (data: FormData) => {;
@@ -152,33 +132,12 @@ export function ServiceDescriptionForm() { return null; }
     }
   },
 
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Loader, Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { useForm } from "react-hook-form",
-import z from "zod",
-=======
-import { Loader, Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",;
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
-import { useForm } from "react-hook-form",;
-import z from "zod",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/ServiceDescriptionForm.tsx
 import { zodResolver } from "@hookform/resolvers/zod";
 import {logErrorToProduction} from '@/utils/productionLogger';
 const formSchema = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-=======
-  return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/services/ServiceDescriptionForm.tsx
+
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>"
         <CardTitle className="flex items-center text-white">"
@@ -206,27 +165,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;"
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.",;
       onDescriptionGenerated(description),;
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
-      toast({;
-        title: "Description Generated",,
-  description: "Your professional service description has been created.";
-=======
-      toast({;"
-        title: "Description Generated",;"
-        description: "Your professional service description has been created.";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/services/ServiceDescriptionForm.tsx
+
       });
     } catch (error) {;'
       logErrorToProduction('Error generating description:', { data: error }),;
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
-      toast({;
-        title: "Generation Failed",,
-  description: error instanceof Error ? error.message : "Failed to generate description. Please try again.";
-=======
-      toast({;"
-        title: "Generation Failed",;"
-        description: error instanceof Error ? error.message : "Failed to generate description. Please try again.";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/services/ServiceDescriptionForm.tsx
+
         variant: "destructive";
       });
     } finally {;
@@ -301,12 +244,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </FormItem>;
               )}
             />
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
-            
-            <Button "
-=======
-            <Button 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/ServiceDescriptionForm.tsx
+
               type="submit"
               disabled={isLoading}"
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
@@ -322,45 +260,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Generate Description;
                 </>;
               )}
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
-<<<<<<< HEAD:src/components/services/ServiceDescriptionForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/ServiceDescriptionForm.tsx
+:src/components/services/ServiceDescriptionForm.tsx
+
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
   );
 }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-;
-=======
-;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceDescriptionForm.tsx
-=======
-  );
-}
-;
 
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/ServiceDescriptionForm.tsx
+
             </Button>
           </form>
         </Form>
       </CardContent>
     </Card>
+:src/components/services/ServiceDescriptionForm.tsx
 
   );
 
@@ -383,12 +301,3 @@ toast ({;
 }'"
   )
 }
-<<<<<<< HEAD:src/components/services/ServiceDescriptionForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceDescriptionForm.tsx
-=======
-;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/services/ServiceDescriptionForm.tsx

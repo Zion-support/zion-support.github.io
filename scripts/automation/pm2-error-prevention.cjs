@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -58,7 +50,7 @@ const { execSync } = require("child_process")
   const content = fs.readFileSync(filePath, "utf8")
       if (content.includes(".ts") || content.includes(.ts"")
       const importLines = content.match(/import.*"from/g")
-    if (importIssues > 0) {console.log(⚠  Found ${importIssues} import issues"")
+  if($2) {console.log(⚠  Found ${importIssues} import issues"")
   console.log("" No import issues found")
   const content = fs.readFileSync(filePath, "utf8")
       if (content.includes("any"")
@@ -68,7 +60,7 @@ const { execSync } = require("child_process")
       if (content.includes("any"")
       if (content.includes("<\\w+")
       if (content.includes("\\w+\\w+":")
-    if (syntaxIssues > 0) {console.log("})
+  if($2) {console.log("})
   console.log("" No syntax issues found")
       const result = execSync("npm run lint -- --quiet")
   "cwd"
@@ -76,7 +68,7 @@ const { execSync } = require("child_process")
         "stdio": "pipe"
       const unusedImportCount = (result.match(/""unused/g"")
   console.log("" No syntax issues found")
-      if (this.config.autoFix) {"}
+  if($2) {"}
         await this.autoFixSyntaxIssues();")}")} else {"}
       console.log(" No syntax issues found")
       const result = execSync("npm run lint -- --quiet")
@@ -84,7 +76,7 @@ const { execSync } = require("child_process")
         "encoding": "utf8"
         "stdio": "pipe"
       const unusedImportCount = (result.match(/"unused/g")
-      if (unusedImportCount > 0) {console.log(⚠  Found ${unusedImportCount} unused imports")
+  if($2) {console.log(⚠  Found ${unusedImportCount} unused imports")
 // console.log(" No unused imports found")
       console.log(")
 // console.log(" No unused imports found")
@@ -136,25 +128,10 @@ const { execSync } = require("child_process")
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
   console.log("� Received SIGTERM, shutting down gracefully...")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
   console.log("� Received SIGTERM, shutting down gracefully...")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
   console.log("� Received SIGTERM, shutting down gracefully...")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+

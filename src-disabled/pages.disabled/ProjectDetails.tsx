@@ -1,5 +1,5 @@
-<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
-import React, { useState, useEffect } from 'react';
+:src/pages/ProjectDetails.tsx
+import React, { useState, useEffect } from "react",
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { format } from "date-fns",
@@ -8,17 +8,320 @@ import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { Project, ProjectStatus } from "@/types/projects",
-=======
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger} from "@/components/ui/alert-dialog",
+import { Avatar } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
 
-import Link from 'next/link';
-import { useRouter  } from 'next/router';
-import { format } from "date-fns",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useProjects } from "@/hooks/useProjects",;
-import { SEO } from "@/components/SEO",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { Project, ProjectStatus } from "@/types/projects",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/ProjectDetails.tsx
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+  AlertDialog
+  AlertDialogAction
+  AlertDialogCancel
+  AlertDialogContent
+  AlertDialogDescription
+  AlertDialogFooter
+  AlertDialogHeader
+  AlertDialogTitle
+  AlertDialogTrigger
+} from '@/components/ui/alert-dialog'
+import { Avatar } from '@/components/ui/avatar'
+import { Badge } from '@/components/ui/badge'
+import { Textarea } from '@/components/ui/textarea'
+import { toast } from '@/hooks/use-toast'
+import { supabase } from '@/integrations/supabase/client'
+import { ProjectReviewSection } from '@/components/projects/reviews/ProjectReviewSection'
+  AlertCircle
+  Calendar
+  CheckCircle2
+  Clock
+  FileText
+  Layers
+  MessageSquare
+  Video
+  User
+  XCircle
+} from 'lucide-react'
+function ProjectDetailsContent() {
+  const router = useRouter()
+  // Get projectId from Next.js router query params
+  const { projectId } = router.query as { projectId?: string }
+  const { user } = useAuth()
+  const { getProjectById, updateProjectStatus } = useProjects()
+  const [project, setProject] = useState<Project | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [notes, setNotes] = useState<any[]>([])
+  const [newNote, setNewNote] = useState('')
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false)
+  const [activeTab, setActiveTab] = useState('details')
+  const router = useRouter(),
+  // Get projectId from Next.js router query params
+  const { projectId } = router.query as { projectId?: string },
+  const { user } = useAuth(),
+  const { getProjectById, updateProjectStatus } = useProjects(),
+  
+  const [project, setProject] = useState<Project | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [notes, setNotes] = useState<any[]>([]),
+  const [newNote, setNewNote] = useState(""),
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false),
+  const [activeTab, setActiveTab] = useState("details"),
+  
+  // Load project data
+  useEffect(() => {
+    async function loadProject() {
+      if (!projectId) return
+      setIsLoading(true)
+      const projectData = await getProjectById(projectId)
+      if (projectData) {
+        setProject(projectData)
+        // Now fetch notes
+        fetchProjectNotes(projectId)
+      } else {
+        toast({
+          title: 'Project not found'
+          description: 'The requested project could not be found.'
+          variant: 'destructive'
+        })
+        router.push('/dashboard')
+      }
+      setIsLoading(false)
+    }
+    loadProject()
+  }, [projectId])
+  const fetchProjectNotes = async (projectId: string) => {    try {
+      const { data, error } = await supabase
+        .from('project_notes')
+        .select(
+          `
+          *
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `
+        )
+        .eq('project_id', projectId)
+        .order('created_at', { ascending: false })
+      if (error) throw error
+      setNotes(data |[])
+    } catch (err: any) {
+      logErrorToProduction('Error fetching project notes:', { data: err })
+      toast({
+        title: 'Failed to load notes'
+        description:
+          err.message |'An error occurred while loading project notes.'
+        variant: 'destructive'
+      })
+    }
+  }
+  const handleSubmitNote = async () => {
+    if (!newNote.trim() |!project |!user) return
+    setIsSubmittingNote(true)
+      const { data, error } = await supabase
+        .from("project_notes")
+        .select(`
+          *,
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `)
+        .eq("project_id", projectId)
+        .order("created_at", { ascending: false }),
+      
+      if (error) throw error,
+      
+      setNotes(data || [])
+    } catch (err: any) {
+      logErrorToProduction('Error fetching project notes:', { data: err }),
+      toast({
+        title: "Failed to load notes",
+        description: err.message || "An error occurred while loading project notes.",
+        variant: "destructive"})
+    }
+  },
+  
+  const handleSubmitNote = async () => {
+    if (!newNote.trim() || !project || !user) return,
+    
+    setIsSubmittingNote(true),
+    
+    try {
+      const { data, error } = await supabase
+        .from("project_notes")
+        .insert({
+          project_id: project.id
+          user_id: user.id
+          content: newNote
+        })
+        .select()
+      if (error) throw error
+      // Refresh notes
+      fetchProjectNotes(project.id)
+      setNewNote('')
+      toast({
+        title: 'Note added'
+        description: 'Your note has been added to the project.'
+      })
+    } catch (err: any) {
+      logErrorToProduction('Error adding note:', { data: err })
+      toast({
+        title: 'Failed to add note'
+        description: err.message |'An error occurred while adding note.'
+        variant: 'destructive'
+      })
+    } finally {
+      setIsSubmittingNote(false)
+    }
+  }
+  const handleStatusChange = async (newStatus: ProjectStatus) => {
+    if (!project) return;
+    const success = await updateProjectStatus(project.id, newStatus)
+    if (success) {
+      setProject({
+        ...project
+        status: newStatus
+      })
+          content: newNote})
+        .select(),
+      
+      if (error) throw error,
+      
+      // Refresh notes
+      fetchProjectNotes(project.id),
+      setNewNote(""),
+      
+      toast({
+        title: "Note added",
+        description: "Your note has been added to the project."})
+    } catch (err: any) {
+      logErrorToProduction('Error adding note:', { data: err }),
+      toast({
+        title: "Failed to add note",
+        description: err.message || "An error occurred while adding note.",
+        variant: "destructive"})
+    } finally {
+      setIsSubmittingNote(false)
+    }
+  },
+  
+  const handleStatusChange = async (newStatus: ProjectStatus) => {
+    if (!project) return,
+    
+    const success = await updateProjectStatus(project.id, newStatus),
+    
+    if (success) {
+      setProject({
+        ...project,
+        status: newStatus}),
+      
+      // If offer was accepted, show a special toast
+      if (newStatus === "offer_accepted") {
+        toast({
+          title: 'Offer Accepted! 🎉'
+          description: 'The project is now in progress. Congratulations!'
+        })
+      }
+    }
+  }
+  const getStatusBadge = (status: ProjectStatus) => {    switch (status) {
+      case 'offer_sent':
+        return <Badge variant='outline'>Offer Sent</Badge>
+      case 'offer_accepted':
+        return (
+          <Badge className='bg-green-100 text-green-800'>Offer Accepted</Badge>
+        )
+      case 'changes_requested':
+        return <Badge variant='secondary'>Changes Requested</Badge>
+      case 'in_progress':
+        return <Badge className='bg-blue-100 text-blue-800'>In Progress</Badge>
+      case 'completed':
+        return <Badge variant='default'>Completed</Badge>
+      case 'canceled':
+        return <Badge variant='destructive'>Canceled</Badge>
+      default:
+        return <Badge variant='outline'>{status}</Badge>
+    }
+  }
+  if (isLoading) {
+    return (
+      <div className="container mx-auto py-8">
+        <div className="flex justify-center items-center h-64">
+          <div className="text-center">
+            <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>
+            <p>Loading project details...</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
+  if (!project) {
+    return (
+      <div className="container mx-auto py-8">
+        <Card>
+          <CardContent className="flex flex-col items-center justify-center py-10">
+            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />
+            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>
+            <p className="text-muted-foreground mb-4">
+              The project you're looking for doesn't exist or you don't have access to it.
+            </p>
+            <Button onClick={() => router.push('/dashboard')}>              Return to Dashboard
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    )
+  }
+  // Check if user is either the client or the talent
+  const isClient = user?.id === project.client_id
+  const isTalent = user?.id === project.talent_id
+  if (!isClient && !isTalent) {
+    router.push('/unauthorized')
+    return null
+  }
+  const isOfferPending = project.status === 'offer_sent'
+  const isOfferAccepted = [
+    'offer_accepted'
+    'in_progress'
+    'completed'
+  ].includes(project.status)
+  const isActiveProject = ['offer_accepted', 'in_progress'].includes(
+    project.status
+  )
+
+  return (
+    <>
+      <SEO
+        title={`Project: ${project.job?.title |'Project Details'} | Zion AI Marketplace`}
+        description='View and manage your project details and collaboration.'
+  const isClient = user?.id === project.client_id,
+  const isTalent = user?.id === project.talent_id,
+  
+  if (!isClient && !isTalent) {
+    router.push("/unauthorized"),
+    return null
+  }
+  
+  const isOfferPending = project.status === "offer_sent",
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
+  
 import { Button } from "@/components/ui/button";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
@@ -53,11 +356,7 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
 
 function ProjectDetailsContent() {
   const router = null;
-<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/ProjectDetails.tsx
   return (
     <>
       <SEO 
@@ -68,6 +367,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
             <div>
+:src/pages/ProjectDetails.tsx
+              <h1 className='text-3xl font-bold'>
+                {project.job?.title |'Project'}
+              </h1>
+              <div className='flex items-center gap-2 mt-1'>
               <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
                 {getStatusBadge(project.status)}
@@ -96,12 +400,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
+:src/pages/ProjectDetails.tsx
+                        <AlertDialogAction
+                          onClick={() => handleStatusChange('offer_accepted')}
+                        >                          Accept Offer
                         <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
                           Accept Offer
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
+:src/pages/ProjectDetails.tsx
+                  <Button
+                    variant='outline'
+                    onClick={() => handleStatusChange('changes_requested')}
+                  >
+                    <MessageSquare className='mr-2 h-4 w-4' /> Request Changes
+                  </Button>
+                </>
+              )}
+              {(isClient |isTalent) && project.status === 'in_progress' && (
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
                   </Button>
@@ -124,6 +442,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
+:src/pages/ProjectDetails.tsx
+                      <AlertDialogAction
+                        onClick={() => handleStatusChange('completed')}
+                      >                        Mark as Completed
                       <AlertDialogAction onClick={() => handleStatusChange("completed")}>
                         Mark as Completed
                       </AlertDialogAction>
@@ -146,6 +468,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>
                 </Button>
               )}
+:src/pages/ProjectDetails.tsx
+              {(isClient |isTalent) &&
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(
                   project.status
                 ) && (
@@ -179,6 +503,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 )}
               </TabsList>
               <TabsContent value='details'>
+:src/pages/ProjectDetails.tsx
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
                 <Button 
                   variant="outline" 
@@ -234,6 +559,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </CardContent>
                 </Card>
               </TabsContent>
+:src/pages/ProjectDetails.tsx
+              <TabsContent value='timeline'>
               <TabsContent value="timeline">
                 <Card>
                   <CardHeader>
@@ -251,6 +578,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <p>{format(new Date(project.start_date), "PPP")}</p>
                         </div>
                       </div>
+:src/pages/ProjectDetails.tsx
+                      <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>
+                        <Clock className='h-5 w-5 text-primary mt-0.5' />
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
                         <Clock className="h-5 w-5 text-primary mt-0.5" />
                         <div>
@@ -264,6 +594,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </CardContent>
                 </Card>
               </TabsContent>
+:src/pages/ProjectDetails.tsx
+              <TabsContent value='documents'>
               <TabsContent value="documents">
                 <Card>
                   <CardHeader>
@@ -295,7 +627,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             onChange={e => setNewNote(e && e.target.value)}
                             className='min-h-[100px] mb-2'                          />;
 
-
                                 <span className="font-medium text-sm">
                                   {note.created_by_profile?.display_name || "User"}
                         </div>
@@ -317,6 +648,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </CardContent>
                 </Card>
               </TabsContent>
+:src/pages/ProjectDetails.tsx
+              <TabsContent value='notes'>
               <TabsContent value="notes">
                 <Card>
                   <CardHeader>
@@ -329,6 +662,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="space-y-4">
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
                         {notes.length > 0 ? (
+:src/pages/ProjectDetails.tsx
+                          notes.map(note => (
+                            <div
+                              key={note.id}
+                              className='bg-muted/30 p-3 rounded-md'
+                            >
+                              <div className='flex items-center gap-2 mb-2'>
+                                <Avatar className='h-6 w-6'>
                           notes.map((note) => (
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">
                               <div className="flex items-center gap-2 mb-2">
@@ -337,12 +678,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                     <img
                                       src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
+:src/pages/ProjectDetails.tsx
+                                      loading='lazy'                                    />
                                       loading="lazy"
                                     />
                                   ) : (
                                     <User className="h-4 w-4" />
                                   )}
                                 </Avatar>
+:src/pages/ProjectDetails.tsx
+                                <span className='font-medium text-sm'>
+                                  {note.created_by_profile?.display_name |
+                                    'User'}
                                 <span className="font-medium text-sm">
                                   {note.created_by_profile?.display_name || "User"}
                                 </span>
@@ -362,7 +709,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
                         )}
                       </div>
-
+:src/pages/ProjectDetails.tsx
+                      {isOfferAccepted && (
+                        <div>
+                          <Textarea
+                            placeholder='Add a note or update to the project...'
+                            value={newNote}
+                            onChange={e => setNewNote(e.target.value)}
+                            className='min-h-[100px] mb-2'                          />
+                          <Button
+                            onClick = {handleSubmitNote,}
+                            disabled = {!newNote.trim() |isSubmittingNote,}
 
                       {isOfferAccepted && (
                         <div>
@@ -372,7 +729,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             onChange={(e) => setNewNote(e.target.value)}
                             className="min-h-[100px] mb-2"
                           />
-
 
                           <Button
                             onClick={handleSubmitNote}
@@ -389,13 +745,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </CardContent>
                 </Card>
               </TabsContent>
+:src/pages/ProjectDetails.tsx
+              <TabsContent value='reviews'>
               <TabsContent value="reviews">
-
 
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
           </div>
+:src/pages/ProjectDetails.tsx
+          <div className='order-1 lg:order-2 lg:col-span-1'>
           <div className="order-1 lg:order-2 lg:col-span-1">
             <Card>
               <CardHeader>
@@ -406,7 +765,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
 
-
             <Card>
                 <CardTitle>Project Participants</CardTitle>
               </CardHeader>
@@ -415,6 +773,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
+:src/pages/ProjectDetails.tsx
+                          loading='lazy'                        />
                           loading="lazy"
                         />
                       ) : (
@@ -535,7 +895,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
 
-
                       ) : (
                         <User className='h-6 w-6' />
                       )}
@@ -560,12 +919,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       )}
                     </div>
                   </div>
+:src/pages/ProjectDetails.tsx
+                  <div className='flex items-start gap-4'>
+                    <Avatar className='h-10 w-10'>
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
                       {project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
+:src/pages/ProjectDetails.tsx
+                          loading='lazy'                        />
                           loading="lazy"
                         />
                       ) : (
@@ -573,6 +937,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       )}
                     </Avatar>
                     <div>
+:src/pages/ProjectDetails.tsx
+                      <h3 className='font-semibold'>
+                        {project.talent_profile?.full_name |'Client'}
                       <h3 className="font-semibold">
                         {project.talent_profile?.full_name || "Client"}
                       {project.talent_profile?.profile_picture_url ? (
@@ -588,6 +955,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (
                         <Button
+:src/pages/ProjectDetails.tsx
+                          variant='outline'
+                          size='sm'
+                          className='mt-2'
+                          onClick={() =>
+                            router.push(
+                              `/messages?clientId=${project.client_id}`
+                            )
+                          }                        >
+                          <MessageSquare className='mr-1 h-3 w-3' /> Message
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            {/* Project Status Card */}
+            <Card className='mt-6'>
                           variant="outline"
                           size="sm"
                           className="mt-2"
@@ -613,7 +999,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (err: any) {;
       logErrorToProduction('Error fetching project notes:', { data: err }),;
       toast({;
-        title: "Failed to load notes",;
+        title: "Failed to load notes",
         description: err.message || "An error occurred while loading project notes.",;
         variant: "destructive"});
     }
@@ -634,12 +1020,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       fetchProjectNotes(project.id),;
       setNewNote(""),;
       toast({;
-        title: "Note added",;
+        title: "Note added",
         description: "Your note has been added to the project."});
     } catch (err: any) {;
       logErrorToProduction('Error adding note:', { data: err }),;
       toast({;
-        title: "Failed to add note",;
+        title: "Failed to add note",
         description: err.message || "An error occurred while adding note.",;
         variant: "destructive"});
     } finally {;
@@ -656,7 +1042,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       // If offer was accepted, show a special toast;
       if (newStatus === "offer_accepted") {;
         toast({;
-          title: "Offer Accepted! 🎉",;
+          title: "Offer Accepted! 🎉",
           description: "The project is now in progress. Congratulations!"});
       }
     }
@@ -1086,6 +1472,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="text-sm font-medium">Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
+:src/pages/ProjectDetails.tsx
+                  <div className='flex justify-between items-center'>
+                    <span className='text-sm font-medium'>Creation Date:</span>
+                    <span className='text-sm'>
+                      {format(new Date(project.created_at), 'PPP')}
+                    </span>
+                  </div>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-sm font-medium'>Start Date:</span>
+                    <span className='text-sm'>
+                      {format(new Date(project.start_date), 'PPP')}
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
                     <span className="text-sm">
@@ -1097,7 +1494,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="text-sm">
                       {format(new Date(project.start_date), "PPP")}
 
-
               <CardHeader>
               </CardHeader>
               <CardContent>
@@ -1106,7 +1502,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className='text-sm font-medium'>Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
-
 
                     </span>
                   </div>
@@ -1118,7 +1513,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
-
+:src/pages/ProjectDetails.tsx
+                  <Button
+                    variant='outline'
+                    onClick={() =>
+                      router.push(`/messages?talentId=${project.talent_id}`)
+                    }
+                    className='w-full'                  >
+                    <MessageSquare className='mr-2 h-4 w-4' /> Discuss Changes
+                  </Button>
+                </CardFooter>
+              )}
+              {project.status === 'offer_sent' && isClient && (
+                <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
+                  <p className='text-sm text-muted-foreground'>
 
                   <Button 
                     variant="outline"
@@ -1127,7 +1535,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
 
-
                   </Button>
                 </CardFooter>
               )}
@@ -1135,6 +1542,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-muted-foreground">
                     Waiting for the talent to accept your offer.
+                  </p>
+                </CardFooter>
+              )}
+:src/pages/ProjectDetails.tsx
+              {project.status === 'completed' && (
+                <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
+                  <p className='text-sm text-green-600 flex items-center gap-1'>
+                    <CheckCircle2 className='h-4 w-4' /> This project has been
+                    completed.
+                  </p>
+                </CardFooter>
+              )}
+              {project.status === 'canceled' && (
+                <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
+                  <p className='text-sm text-red-600 flex items-center gap-1'>
+                    <XCircle className='h-4 w-4' /> This project has been
+                    canceled.
                   </p>
                 </CardFooter>
               )}
@@ -1184,8 +1608,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </main>
     </>
-<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
-=======
+:src/pages/ProjectDetails.tsx
   )
 }
 setIsSubmittingNote (true)
@@ -1200,6 +1623,7 @@ toast ({
 }finally {
   setIsSubmittingNote (false)
 }
+const handleStatusChange = async (newStatus: ProjectStatus) => {
   if (!project) return;
 const success = await updateProjectStatus (project.id, newStatus)
 if (success) {
@@ -1215,6 +1639,7 @@ case "in progress": return <Badge className="bg-blue-100 text-blue-800">In Progr
 case "completed": return <Badge variant="default">Completed</Badge>;"
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;"
 default: return <Badge variant="outline"> {
+  status
 }</Badge>
 };'"
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={"
@@ -1297,19 +1722,19 @@ const ProjectDetails = () => {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
                 <ul className="text-gray-600 space-y-2">
-                  <li> Professional Solutions</li>
-                  <li> Expert Implementation</li>
-                  <li> 24/7 Support</li>
-                  <li> Custom Development</li>
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
                 </ul>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
                 <ul className="text-gray-600 space-y-2">
-                  <li> Industry Expertise</li>
-                  <li> Proven Results</li>
-                  <li> Scalable Solutions</li>
-                  <li> Competitive Pricing</li>
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
                 </ul>
               </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1319,6 +1744,10 @@ const ProjectDetails = () => {
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us
               </Link>
+            </div>
+    </>
+  )
+}
             </Card>;
           </div>;
         </div>;
@@ -1335,7 +1764,7 @@ export default function ProjectDetails() {;
   );
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/ProjectDetails.tsx
+
   );
 
 };
@@ -1364,7 +1793,6 @@ status: newStatus ;
 //If offer was accepted, show a special toast if (newStatus === "offer accepted") {;
   toast ({;
   ;
-
 
 };";
 case "offer accepted": return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;";

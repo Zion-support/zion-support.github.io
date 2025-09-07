@@ -1,3 +1,5 @@
+<<<<<<< HEAD:pages/api/integrations/webhooks/job-posted.ts
+=======
 
 
 
@@ -87,14 +89,11 @@ c.provider_id === "pipedrive",
 });
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '../../../../lib/integrations/fileStore';
-import { crm } from '../../../../lib/integrations/connectors';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { job } = req.body as { job?: Record<string, any> };
-  if (!job) return res.status(400).json({ error: 'Missing job payload' });
 
+<<<<<<< HEAD:pages/api/integrations/webhooks/job-posted.ts
+=======
   const state = readState();
   const crms = state.connections.filter(c => c.providerId === 'salesforce' || c.providerId === 'hubspot' || c.providerId === 'zoho' || c.providerId === 'pipedrive');
   const results: any[] = [];
@@ -131,13 +130,17 @@ results.push({ providerId: conn.providerId, ok: true })
 res.status(200).json({ ok: true, results });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '../../../../lib/integrations/fileStore';
-import { crm } from '../../../../lib/integrations/connectors';
-export default async function handler(req, res) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
   try {
+<<<<<<< HEAD:pages/api/integrations/webhooks/job-posted.ts
+    // TODO: Implement jobposted logic
+    res.status(200).json({ message: 'jobposted endpoint' });
+=======
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact });
     writeState(s => s.logs.push(log));
@@ -197,10 +200,14 @@ export default async function handler(req, res) {
   });
 ;
   res.status (200).json ({ ok: true, results });
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error in jobposted:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
+<<<<<<< HEAD:pages/api/integrations/webhooks/job-posted.ts
+}
+=======
   res.status(200).json({ ok: true, results });
 }
 
@@ -273,3 +280,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ ok: true, results })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts

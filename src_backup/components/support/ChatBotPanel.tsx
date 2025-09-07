@@ -1,25 +1,6 @@
-<<<<<<< HEAD:src_backup/components/support/ChatBotPanel.tsx
-<<<<<<< HEAD
-
-import React, { useState, useRef, useEffect } from "react",
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-=======
-import React, { useState, useRef, useEffect } from 'react';
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Separator } from '@/components/ui/separator';
-import { toast } from '@/components/ui/use-toast';
-import { cn } from '@/lib/utils';
-import { ChatMessage } from './ChatMessage';
-import { QuickReplyButton } from './QuickReplyButton';
-import { Send, Loader2 } from 'lucide-react';
-import { useTheme } from '@/hooks/useTheme';
-
+:src/components/support/ChatBotPanel.tsx
 import React, { useState, useRef, useEffect } from "react";
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { ScrollArea } from "@/components/ui/scroll-area",
@@ -27,45 +8,35 @@ import { Separator } from "@/components/ui/separator",
 import { toast } from "@/components/ui/use-toast",
 import { cn } from "@/lib/utils",
 import { ChatMessage } from "./ChatMessage",
-<<<<<<< HEAD
-import { QuickReplyButton } from "./QuickReplyButton",
+:src/components/support/ChatBotPanel.tsx
+import { QuickReplyButton } from "./QuickReplyButton";
 import { Send, Loader2 } from 'lucide-react'
-import { useTheme } from "@/hooks/useTheme",
+import { useTheme } from "@/hooks/useTheme";
+// Define suggested quick replies
 // Define suggested quick replies
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
   { id: "match", text: "How do I get matched?" },
   { id: "billing", text: "Billing help" }],
 
+const QUICK_REPLIES = [
+  { id: "hire", text: "How do I hire?" }
+  { id: "match", text: "How do I get matched?" }
+  { id: "billing", text: "Billing help" }]
 type Message = {
-=======
-import { Button } from "@/components/ui/button","
-import { Input } from "@/components/ui/input","
-import { ScrollArea } from "@/components/ui/scroll-area","
-import { Separator } from "@/components/ui/separator","
-import { toast } from "@/components/ui/use-toast","
-import { cn } from "@/lib/utils","
-import { ChatMessage } from "./ChatMessage",";
-import { QuickReplyButton } from "./QuickReplyButton";
+  id: string
+  content: string
+  sender: "user" | "bot"
+  timestamp: Date
+}
+export function ChatBotPanel() {
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: "welcome"
+      content: "Hi! How can I help you?"
+      sender: "bot"
+      timestamp: new Date()}])
 
-import React, { useState, useRef, useEffect } from './react';'
-import { log_debug, logErrorToProduction } from '@/utils / production_logger';'
-import { Button  } from '@/components / ui / button';'
-import { Input  } from '@/components / ui / input';'
-import { ScrollArea  } from '@/components / ui / scroll - area';'
-import { Separator  } from '@/components / ui / separator';'
-import { toast  } from '@/components / ui / use - toast';'
-import { cn  } from '@/lib / utils';'
-import { ChatMessage  } from './ChatMessage';'
-import { QuickReplyButton  } from './QuickReplyButton';'
-import { Send, Loader2 } from 'lucide-react'import { use_theme  } from '@/hooks / use_theme';
-// Define suggested quick replies;
-const QUICK_REPLIES = [;"
-  { id: "hire", text: "How do I hire?" },"
-  { id: "match", text: "How do I get matched?" },"
-  { id: "billing", text: "Billing help" }],
-type Message = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/ChatBotPanel.tsx
   id: string,
   content: string,"
   sender: "user" | "bot",
@@ -79,6 +50,13 @@ export function ChatBotPanel() {
       content: "Hi! How can I help you?",
       sender: "bot",
       timestamp: new Date()}]),
+:src/components/support/ChatBotPanel.tsx
+  const [inputValue, setInputValue] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+  const [failedAttempts, setFailedAttempts] = useState(0)
+  const scrollAreaRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
+  const { theme } = useTheme()
   const [inputValue, setInputValue] = useState(""),
   const [isLoading, setIsLoading] = useState(false),
   const [failedAttempts, setFailedAttempts] = useState(0),
@@ -90,6 +68,32 @@ export function ChatBotPanel() {
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
+:src/components/support/ChatBotPanel.tsx
+    }
+  }, [messages])
+  // Focus input when component mounts
+  useEffect((,) => {
+    if (inputRef.current) {
+      inputRef.current.focus()
+    }
+  }, [])
+  const handleSendMessage = async (text: string = inputValue) => {
+    if (!text.trim()) return
+      timestamp: new Date()}
+        timestamp: new Date()}
+        description: "We're having trouble connecting to our support service."})
+      id: `bot-escalation-${Date.now()}`
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?"
+      sender: "bot"
+      timestamp: new Date()}
+  const handleQuickReply = (text: string,) => {
+    handleSendMessage(text)
+  }
+
+  )
+}
+  )
+}
 import React, { useState, useRef, useEffect } from "react",;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
 import { Button } from "@/components/ui/button",;
@@ -216,7 +220,7 @@ export function ChatBotPanel() {;
       logErrorToProduction("Error in AI chat", error as Error, { component: 'ChatBotPanel' }),;
       toast({;
         variant: "destructive",;
-        title: "Communication Error",;
+        title: "Communication Error",
         description: "We're having trouble connecting to our support service."}),;
       setFailedAttempts((prev) => prev + 1),;
       if (failedAttempts >= 2) {;
@@ -396,7 +400,7 @@ export function ChatBotPanel() {;
     ]),;
     // In a real implementation, this would trigger a live chat request;
     toast({;"
-      title: "Support request submitted",;"
+      title: "Support request submitted","
       description: "A support agent will be with you shortly."});
   },;
   const handleEmailSupport = () => {;
@@ -514,6 +518,10 @@ export function ChatBotPanel() {;
       </div>
     </div>
   )
+:src/components/support/ChatBotPanel.tsx
+}
+  )
+}
 ;
       {failedAttempts >= 3 && (;"
         <div className="px-4 py-3 border-t border-zion-purple/10">;"
@@ -576,18 +584,7 @@ export function ChatBotPanel() {;
     </div>;
   );
 }
-<<<<<<< HEAD:src_backup/components/support/ChatBotPanel.tsx
-<<<<<<< HEAD
-;
-=======
-  const sendToAIAssistant = async (message: string) => {
-    try {
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-=======
-  const sendToAIAssistant = async (message: string) => {}
-    try {"
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/ChatBotPanel.tsx
+
         method: "POST",
         headers: {"
           "Content-Type": "application/json"},
@@ -653,120 +650,3 @@ export function ChatBotPanel() {;
       logErrorToProduction("Failed to log support escalation", error as Error, { component: 'ChatBotPanel' })
     }
   },
-
-<<<<<<< HEAD:src_backup/components/support/ChatBotPanel.tsx
-  const handleQuickReply = (text: string) => {
-    handleSendMessage(text)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import { QuickReplyButton } from "./QuickReplyButton";
-import { Send, Loader2 } from 'lucide-react'
-import { useTheme } from "@/hooks/useTheme";
-// Define suggested quick replies
-  );
-
-}, [messages]);
-//Focus input when component mounts useEffect ( () => {;
-  if (inputRef.current) {;
-  inputRef.current.focus () ;
-
-}, []);
-const handleSendMessage = async (text: string = inputValue) => {;
-  if (!text.trim () ) return;
-id: `user-$ {;
-  Date.now () ;
-}`;
-content: text;
-setIsLoading (true);
-  id: `bot-$ {;
-  Date.now () ;
-}`;
-//After 3 failed attempts, suggest escalation if (failedAttempts >= 2) {;
-  setFailedAttempts ( (prev) => prev + 1);
-if (failedAttempts >= 2) {;
-  suggestEscalation () ;
-
-}finally {;
-  setIsLoading (false) ;
-
-};
-const sendToAIAssistant = async (message: string) => {;
-  try {;
-  const response = await fetch ("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {";
-  method: "POST";
-headers: {";
-  "Content-Type" : "application/json" ;
-};
-body: JSON.stringify ({;
-  ;
-}) ;
-});
-}const data = await response.json ();
-return {;
-  success: true;
-message: data.message ;
-
-}catch (error) {;
-  ;
-
-};
-const suggestEscalation = () => {;
-  const escalationMessage: Message = {;
-  id: `bot-escalation-$ {;
-  Date.now () ;
-}`;
-content: //Log this interaction for the support team logSupportEscalation () ;
-};
-const logSupportEscalation = async () => {;
-  try {;
-  //Send the conversation to the backend for logging //This would be implemented in a real system conversationHistory: messages.map (m => ({;
-  content: m.content,  sender: m.sender, timestamp: m.timestamp ;
-}) );
-component: 'ChatBotPanel' ;
-
-};
-const handleEscalateToLiveAgent = () => {;
-  setMessages ( (prev) => [ ...prev, {;
-  id: `user-$ {;
-  Date.now () ;
-}`;'";
-content: "I'd like to speak with a human agent";";
-sender: "user";
-timestamp: new Date () ;
-};
-timestamp: new Date () ;
-}]);
-//In a real implementation, this would trigger a live chat request ;
-};
-  setMessages ( (prev) => [ ...prev, {;
-  id: `user-$ {;
-  Date.now () ;
-}`;'";
-content: "I'd like to email support";";
-sender: "user";
-timestamp: new Date () ;
-};
-timestamp: new Date () ;
-}]) ;
-};
-</div>) ;
-}</div> </ScrollArea> key= {;
-  reply.id ;
-}text= {;
-  reply.text ;
-}onClick={;
-  () => handleQuickReply (reply.text) ;
-}/>) ) ;
-}</div> </div>) ";
-}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) ";
-}aria-label="Send message" h-4 w-4" /> </Button> </form> </div> </div>) ;
-}'"
-  )
-}
-  )
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  const handleQuickReply = (text: string) => {}
-    handleSendMessage(text)'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/ChatBotPanel.tsx

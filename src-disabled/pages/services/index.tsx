@@ -1,7 +1,12 @@
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Star, Award, Users, Globe, MapPin } from "lucide-react";
 import * as React from "react";
-import Link from "next/link";
-import { REAL_MICRO_SAAS_SERVICES_2025, SERVICE_CATEGORIES, PRICING_TIERS, ZION_CONTACT_INFO } from "../../data/realMicroSaasServices2025";
+import { Link } from "react-router-dom";
+// Contact information
+const ZION_CONTACT_INFO = {
+  email: "kleber@ziontechgroup.com",
+  phone: "+1 302 464 0950",
+  address: "364 E Main St STE 1008, Middletown DE 19709"
+};
 
 
 export default function Index() {
@@ -82,11 +87,11 @@ export default function Index() {
               </div>
             </div>
             <div className="mt-4 md:mt-0">
-              <Link
+              <a
                 href="https://ziontechgroup.com"
                 className="text-indigo-400 hover:text-indigo-300 font-semibold">
                 Visit Our Website →
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -109,7 +114,7 @@ export default function Index() {
             </div>
             <div className="mt-6">
               <Link
-                href="/services/comprehensive-micro-saas-showcase"
+                to="/services/comprehensive-micro-saas-showcase"
                 className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
                 View All 15+ AI Services <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
@@ -169,7 +174,7 @@ export default function Index() {
                   ))}
                 </ul>
                 <Link
-                  href="/contact"
+                  to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     index === 1
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700'
@@ -191,12 +196,12 @@ export default function Index() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Start Your Free Trial <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
-              href="/services/comprehensive-micro-saas-showcase"
+              to="/services/comprehensive-micro-saas-showcase"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-colors font-semibold">
               View All Services
             </Link>

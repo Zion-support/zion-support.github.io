@@ -8,138 +8,98 @@ import {
 } from 'lucide-react',
 
 // Import our new service data
-import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion'
-import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion'
-import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure'
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
+import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
+import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
 
-// Import our new service data
-
-const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-const _allServices = [
-  ...advancedEnterpriseServices2025,
+const allServices = $2;
       ...innovativeMicroSaasExpansion2025,
   ...cuttingEdgeITInfrastructureServices
 ],
 
-const categories = [
-  {
-    id: 'all',
+const categories = $2;
     name: 'All Services',
-    icon: <Grid className="w-6 h-6" />,
+    icon: <Grid className = $2;
     color: 'from-gray-500 to-slate-500',
     description: 'Complete portfolio of advanced services'
   },
   {
     id: 'enterprise',
     name: 'Enterprise Solutions',
-    icon: <Building className="w-6 h-6" />,
+    icon: <Building className = $2;
     color: 'from-blue-500 to-purple-500',
     description: 'Enterprise-grade AI and IT solutions'
   },
   {
     id: 'micro-saas',
     name: 'Micro SAAS',
-    icon: <Globe className="w-6 h-6" />,
+    icon: <Globe className = $2;
     color: 'from-green-500 to-emerald-500',
     description: 'Innovative micro SAAS solutions'
   },
   {
     id: 'infrastructure',
     name: 'IT Infrastructure',
-    icon: <Shield className="w-6 h-6" />,
+    icon: <Shield className = $2;
     color: 'from-orange-500 to-red-500',
     description: 'Cutting-edge infrastructure services'
   },
   {
     id: 'ai-ml',
     name: 'AI & Machine Learning',
-    icon: <Brain className="w-6 h-6" />,
+    icon: <Brain className = $2;
     color: 'from-purple-500 to-pink-500',
     description: 'Advanced AI and ML platforms'
   },
   {
     id: 'quantum',
     name: 'Quantum Computing',
-    icon: <Atom className="w-6 h-6" />,
+    icon: <Atom className = $2;
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions'
   }
 ],
 
-const getServiceCategory = (service: any) => {
-  if (service.category) return service.category,
+const getServiceCategory = $2;
   return 'Other'
 },
 
-const getServicePricing = (service: any) => {
-  if (service.price) return `${service.price}${service.period}`,
+const getServicePricing = $2;
   if (service.pricing?.starter) return service.pricing.starter,
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
   return 'Contact for pricing'
 },
 
-const getServiceFeatures = (service: any) => {
-  if (service.features) return service.features,
+const getServiceFeatures = $2;
   if (service.keyFeatures) return service.keyFeatures,
   return []
 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function AdvancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [searchTerm, setSearchTerm] = useState($2);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [filteredServices, setFilteredServices] = useState(allServices),
-
+  const [filteredServices, setFilteredServices] = useState($2);
   useEffect(() => {
-    let filtered = allServices
-
+    let filtered = $2;
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
-        const category = getServiceCategory(service).toLowerCase()
-        if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial'),
-        if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project'),
-        if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge'),
-        if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml'),
-        if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant'),
+        const category = getServiceCategory(service).toLowerCase($2);
+        if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes($2);
+        if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes($2);
+        if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes($2);
+        if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes($2);
+        if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes($2);
         return false
       })
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 
     // Filter by search term
@@ -151,27 +111,18 @@ export default function AdvancedServicesShowcase() {
       )
     }
       );}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     setFilteredServices(filtered)
   }, [selectedCategory, searchTerm]),
 
-  const _ServiceCard = (_{_service}: {_service: unknown}) => (
+  const ServiceCard = ({ service }: { service: any}) => (
     <motion.div
-      initial={_{ opacity: 0, _y: 20}}
-      animate={_{ opacity: 1, _y: 0}}
-      transition={_{ duration: 0.5}}
-      className={_`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
-        service.popular ? 'ring-2 ring-blue-500' : ''}`}
+      initial={{ opacity: 0, y: 20}}
+      animate={{ opacity: 1, y: 0}}
+      transition={{ duration: 0.5 }}
+      className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
+        service.popular ? 'ring-2 ring-blue-500' : ''
+      }`}
     >
       {_service.popular && (
         <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
@@ -179,50 +130,22 @@ export default function AdvancedServicesShowcase() {
           Popular
         </div>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <div className={_`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
-        <span className="text-4xl">{_service.icon}</span>
-      </div>
-
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       
       <div className={_`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
         <span className="text-4xl">{_service.icon}</span>
       </div>
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
             {_service.name}
           </h3>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
-          {_service.tagline}
-        </p>
-
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         
         <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
           {_service.tagline}
         </p>
         
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="flex items-center justify-between mb-4">
           <span className="text-2xl font-bold text-gray-900 dark:text-white">
             {_getServicePricing(service)}
@@ -231,15 +154,7 @@ export default function AdvancedServicesShowcase() {
             {_service.trialDays} day trial
           </span>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="space-y-3 mb-6">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-500" />
@@ -260,120 +175,27 @@ export default function AdvancedServicesShowcase() {
             </span>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
           <div className="space-y-1">
-            {_getServiceFeatures(service).slice(0, _3).map(_(feature: string, _index: number) => (
-              <div key={index} className="flex items-center gap-2">
-                <Check className="w-3 h-3 text-green-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">{_feature}</span>
-              </div>
-            ))}
-            {_getServiceFeatures(service).length > 3 && (
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                +{getServiceFeatures(service).length - 3} more features
-              </span>
-            )}
-          </div>
-        </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            {_service.roi}
-          </p>
-        </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            {_service.marketPosition}
-          </p>
-        </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        <div className="flex items-center justify-between">
-          <a
-            href={_service.link}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-          >
-            Learn More
-            <ArrowRight className="w-4 h-4" />
-          </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-          
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          <a
-            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
-          >
-            Contact
-          </a>
-        </div>
-      </div>
-    </motion.div>
-  ),
-
-  const _ServiceList = (_{_service}: {_service: unknown}) => (
+            {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (
+              <div key = $2;
+  const ServiceList = ({ service }: { service: any}) => (
     <motion.div
-      initial={_{ opacity: 0, _x: -20}}
-      animate={_{ opacity: 1, _x: 0}}
-      transition={_{ duration: 0.5}}
-      className={_`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
-        service.popular ? 'ring-2 ring-blue-500' : ''}`}
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0}}
+      transition={{ duration: 0.5 }}
+      className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
+        service.popular ? 'ring-2 ring-blue-500' : ''
+      }`}
     >
       <div className="p-6">
         <div className="flex items-start gap-6">
           <div className={_`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
             <span className="text-3xl">{_service.icon}</span>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
           
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="flex-1">
             <div className="flex items-start justify-between mb-3">
               <div>
@@ -389,15 +211,7 @@ export default function AdvancedServicesShowcase() {
                   {_service.tagline}
                 </p>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
               
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-              
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="text-right">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">
                   {_getServicePricing(service)}
@@ -407,15 +221,7 @@ export default function AdvancedServicesShowcase() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-            
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500" />
@@ -436,173 +242,47 @@ export default function AdvancedServicesShowcase() {
                 </span>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-            
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
                 <div className="space-y-1">
-                  {_getServiceFeatures(service).slice(0, _4).map(_(feature: string, _index: number) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <Check className="w-3 h-3 text-green-500" />
-                      <span className="text-sm text-gray-600 dark:text-gray-400">{_feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-              
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-              
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                  {_service.roi}
-                </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-                
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  {_service.marketPosition}
-                </p>
-              </div>
-            </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-            
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <div className="flex items-center gap-4">
-              <a
-                href={_service.link}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Learn More
-                <ArrowRight className="w-4 h-4" />
-              </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-              
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-              
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              <a
-                href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
-              >
-                Contact Sales
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  ),
-
-  return (_<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <SEO
-=======
+                  {getServiceFeatures(service).slice(0, 4).map((feature: string, index: number) => (
+                    <div key = $2;
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <SEO 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-      <SEO 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         title="2025 Advanced Services Showcase - Zion Tech Group"
         description="Discover our comprehensive portfolio of advanced AI services, _micro SAAS solutions, _and cutting-edge IT infrastructure. Real, _innovative, _and market-ready solutions for modern businesses."
         keywords={_["AI services", _"micro SAAS", _"IT infrastructure", _"quantum computing", _"enterprise solutions", _"Zion Tech Group"]}
       />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-      
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {_/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <motion.h1
-=======
             <motion.h1 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-            <motion.h1 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              initial={_{ opacity: 0, _y: 20}}
-              animate={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8}}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold text-white mb-6"
             >
               2025 Advanced Services Showcase
             </motion.h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <motion.p
-=======
             <motion.p 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-            <motion.p 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              initial={_{ opacity: 0, _y: 20}}
-              animate={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8, _delay: 0.2}}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              Discover our comprehensive portfolio of real, _innovative, _and market-ready solutions.
-              From AI-powered enterprise services to cutting-edge quantum computing platforms.
-            </motion.p>
-            <motion.div
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Discover our comprehensive portfolio of real, _innovative, _and market-ready solutions. 
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
             </motion.p>
             <motion.div 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              initial={_{ opacity: 0, _y: 20}}
-              animate={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.8, _delay: 0.4}}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <div className="flex items-center gap-2 text-white">
@@ -652,7 +332,7 @@ export default function AdvancedServicesShowcase() {
                 href={_contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark: hover: bg-gray-600 transition-all duration-300"
               >
                 Visit Website
               </a>
@@ -678,67 +358,33 @@ export default function AdvancedServicesShowcase() {
                 />
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-            
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <button
                   onClick={_() => setViewMode('grid')}
                   className={_`p-2 rounded-lg transition-all duration-300 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    viewMode === 'grid'
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
-=======
                     viewMode === 'grid' 
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                    viewMode === 'grid' 
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark: hover: bg-gray-600'
+                  }`}
                 >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={_() => setViewMode('list')}
                   className={_`p-2 rounded-lg transition-all duration-300 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    viewMode === 'list'
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
-=======
                     viewMode === 'list' 
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                    viewMode === 'list' 
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark: hover: bg-gray-600'
+                  }`}
                 >
                   <List className="w-5 h-5" />
                 </button>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
           
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {_/* Category Filters */}
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
@@ -748,7 +394,8 @@ export default function AdvancedServicesShowcase() {
                   className={_`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r text-white shadow-lg'
-                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'} ${_category.color}`}
+                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark: hover:bg-gray-700'
+                  } ${category.color}`}
                 >
                   {_category.icon}
                   {_category.name}
@@ -768,28 +415,10 @@ export default function AdvancedServicesShowcase() {
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400">
                   {_selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  {_searchTerm && ` • Search: "${searchTerm}"`}
-                </p>
-              </div>
-
-=======
-<<<<<<< HEAD
-                  {_searchTerm && ` • Search: "${searchTerm}"`}
-=======
-                  {_searchTerm && `  Search: "${searchTerm}"`}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                </p>
-              </div>
-              
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                   {_searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
               
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
@@ -808,19 +437,7 @@ export default function AdvancedServicesShowcase() {
         <div className="space-y-6">
           {_filteredServices.length === 0 ? (
             <div className="text-center py-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
-=======
-<<<<<<< HEAD
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
-=======
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4"></div>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 No services found
               </h3>
@@ -852,15 +469,7 @@ export default function AdvancedServicesShowcase() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              Our team of experts is ready to help you implement these cutting-edge solutions.
-=======
               Our team of experts is ready to help you implement these cutting-edge solutions. 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-              Our team of experts is ready to help you implement these cutting-edge solutions. 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

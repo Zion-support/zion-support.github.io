@@ -15,8 +15,4 @@ export async function trackEvent(_payload: TrackEventPayload) {_try {
   }
       keepalive: true as any});
   } catch (e) {_// swallow}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }

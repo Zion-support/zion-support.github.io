@@ -12,9 +12,20 @@ function setup() {;
 
 
 
+<<<<<<< HEAD
+  return (
+    <button onClick={handleAddToCart}>
+      {status}
+    </button>
+  );
+}
+import { describe, it, expect, vi } from 'vitest';
+import { ProductActions } from '@/components/ProductActions';
+=======
 
 
 
+>>>>>>> origin/chore/fix-lint-and-merge
 function setup() {
   const addToCart = vi.fn().mockResolvedValue(undefined);
   render(<ProductActions productId='1' addToCart={addToCart} />);

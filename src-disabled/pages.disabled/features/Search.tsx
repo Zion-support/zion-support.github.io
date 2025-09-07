@@ -1,3 +1,4 @@
+:src/pages/features/Search.tsx
 
   return (
     <>;
@@ -64,6 +65,23 @@ import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
+:src/pages/features/Search.tsx
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+export default function SearchFeature() {
+
+  const schema = {
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'Advanced Search'
+    description:
+      'Quickly locate products, services and talent using intelligent search filters.'
+    url: 'https://app.ziontechgroup.com/features/search',  };    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "Advanced Search"
+    "description": "Quickly locate products, services and talent using intelligent search filters."
+    "url": "https://app.ziontechgroup.com/features/search"
+  }
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function SearchFeature() {
@@ -78,6 +96,11 @@ export default function SearchFeature() {
   return (
     <>
       <SEO
+:src/pages/features/Search.tsx
+        title='Advanced Search'
+        description='Find exactly what you need with fast, filterable search powered by Elasticsearch.'
+        keywords='search engine, filtering, tech marketplace search'
+        canonical='https://app.ziontechgroup.com/features/search'
 
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
@@ -206,6 +229,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>
     </>
   )
+:src/pages/features/Search.tsx
+}
 ;
 
 ;

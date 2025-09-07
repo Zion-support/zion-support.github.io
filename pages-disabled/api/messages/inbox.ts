@@ -1,77 +1,32 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+<<<<<<< HEAD:pages/api/messages/inbox.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
 
-  res.status(200).json({ items })
+  try {
+    // TODO: Implement inbox logic
+    res.status(200).json({ message: 'inbox endpoint' });
+  } catch (error) {
+    console.error('Error in inbox:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+}
 =======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { requireUser } from '../../../utils/auth',;
-=======
-import { NextApiRequest, NextApiResponse } from 'next',;'
-import { requireUser } from '../../../utils/auth',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import { listConversations } from '../../../utils/messaging/storage',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   const user = requireUser(req, res),
   if (!user) return,'
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' }),
   const items = listConversations(user.id),
-<<<<<<< HEAD
-=======
->>>>>>> pr-12243
+
 import { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { requireUser } from '../../../utils/auth';
-import { listConversations } from '../../../utils/messaging/storage';
-export default function handler(req, res) {
-  try {
 
-
-  const user = requireUser(req, res);
-  if (!user) return,;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
-import { requireUser } from '../../../utils/auth',;
-import { listConversations } from '../../../utils/messaging/storage',;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser(req, res)
-  if (!user) return
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
-  const items = listConversations(user.id)
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
-  const user = requireUser(req, res);
-  if (!user) return;
-  if (req.method !== 'GET')
-    return res.status(405).json({ error: 'Method not allowed' });
-  const items = listConversations(user.id);
-  res.status(200).json({ items });
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
   res.status(200).json({ items })
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  res.status(200).json({ items });
-};'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages-disabled/api/messages/inbox.ts

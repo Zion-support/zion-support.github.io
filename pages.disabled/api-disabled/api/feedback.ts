@@ -1,3 +1,6 @@
+<<<<<<< HEAD:pages/api/feedback.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
 
 import {
   saveFeedbackFallback
@@ -175,63 +178,23 @@ function handler() {
   if (return bad (res, "rating must be 1 - 5")) {
   $2
 }
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/feedback.ts
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
   }
-;
-  const wrote = await tryWriteToFirestore (doc);
-  if (saveFeedbackFallback (doc)) {
-  $2
-}
-  return ok (res, { id: doc.id });
-}
 
-function bad(res: NextApiResponse, msg: string, code = 400) {
-  return res.status(code).json({
-    ok: false
-    error: msg
-  });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-export default async function handler(req, res) {
   try {
-  const doc = {
-    id: 'feedback-id'
-    createdAtIso: new Date().toISOString()
-    user: 'user'
-    rating: 5
-    comment: 'feedback comment'
-    kind: 'general'
-    context: 'api'
-  };
-  return ok(res, {
-    id: doc.id
-  });
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store"
-function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data })   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+    // TODO: Implement feedback logic
+    res.status(200).json({ message: 'feedback endpoint' });
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error in feedback:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
+<<<<<<< HEAD:pages/api/feedback.ts
+}
+=======
 }
 function bad(res: NextApiResponse, msg: string, code = 400) { return res.status(code).json({ ok: false, error: msg })   } catch (error) {
     console.error("Error:", error);
@@ -470,3 +433,4 @@ context: context || undefined,
 
 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/feedback.ts

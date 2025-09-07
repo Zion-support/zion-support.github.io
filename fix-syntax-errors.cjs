@@ -1,92 +1,231 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node
 
-// Function to fix common syntax errors in service pages
-function fixServicePage(filePath) {
+const fs = require('fs');
+<<<<<<< HEAD
+const path = require(path');
+const glob = require('glob);
+
+
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Fix missing closing braces in IndustryCard components
-    content = content.replace(
-      /features=\[([^\]]+)\]\s*\/>/g,
-      (match, features) => {
-        // Check if the features array is properly closed
-        if (!features.includes(']')) {
-          return match.replace(']', ']');
+    
+    // Fix missing closing brace in metadata and missing function declaration
+    if (content.includes('export const metadata = {') && !content.includes('export default function')) {
+      // Find the metadata object and add missing closing brace and function declaration
+      const metadataMatch = content.match(/export const metadata = \{[\s\S]*?keywords: "[^"]*"/);
+      if (metadataMatch) {
+        const beforeMetadata = content.substring(0, content.indexOf('export const metadata = {'));
+        const afterMetadata = content.substring(content.indexOf('export const metadata = {'));
+        
+        // Extract the metadata content
+        const metadataContent = afterMetadata.match(/export const metadata = \{[\s\S]*?keywords: "[^"]*"/)[0];
+        
+        // Find where the JSX starts (look for <div)
+        const jsxStart = afterMetadata.search(/^\s*<div/);
+        if (jsxStart !== -1) {
+          const jsxContent = afterMetadata.substring(jsxStart);
+          
+          // Get the function name from the file path
+          const fileName = path.basename(filePath, '.tsx');
+          const functionName = fileName.split('-').map(word => 
+            word.charAt(0).toUpperCase() + word.slice(1)
+          ).join('') + 'Page';
+          
+          // Reconstruct the file
+          content = beforeMetadata + 
+            metadataContent + '};\n\n' +
+            `export default function ${functionName}() {\n` +
+            '  return (\n' +
+            jsxContent.replace(/^\s*/, '    ') + '\n' +
+            '  );\n' +
+            '}';
+          
+          modified = true;
         }
-        return match;
-      }
-    );
 
-    // Fix duplicate metadata exports
-    const metadataRegex = /export const metadata = \{[\s\S]*?\};/g;
-    const metadataMatches = content.match(metadataRegex);
-    if (metadataMatches && metadataMatches.length > 1) {
-      // Keep only the first metadata export
-      content = content.replace(metadataRegex, (match, index) => {
-        return index === 0 ? match : '';
+    // Fix import statements with commas instead of semicolons
+    const importRegex = /^import\s+.*?,\s*$/gm;
+    const matches = content.match(importRegex);
+    if (matches) {
+      content = content.replace(importRegex, (match) => {
+        return match.replace(/,\s*$/, ;);
       });
       modified = true;
     }
 
-    // Fix metadata in JSX
-    content = content.replace(
-      /\/\/ eslint-disable-next-line react-refresh\/only-export-components\nexport const metadata = \{[\s\S]*?\};\n/g,
-      ''
-    );
-
-    // Fix missing closing tags
-    content = content.replace(/(<IndustryCard[^>]*>)(?![\s\S]*?<\/IndustryCard>)/g, (match) => {
-      return match + '</IndustryCard>';
+    // Fix interface properties with commas instead of semicolons
+    const interfaceRegex = /interface\s+\w+\s*\{[^}]*\}/gs;
+    content = content.replace(interfaceRegex, (match) => {
+      const fixed = match.replace(/(\w+)\s*:\s*([^,;]+),\s*$/gm, '$1: $2;');
+      if (fixed !== match) {
+        modified = true;
+        return fixed;
+      }
+      return match;
     });
 
-    // Fix duplicate description in metadata
-    content = content.replace(
-      /description: '[^']*',\s*description: '[^']*',/g,
-      (match) => {
-        const firstDesc = match.match(/description: '([^']*)'/)[1];
-        return `description: '${firstDesc}',`;
+    // Fix type definitions with commas instead of semicolons
+    const typeRegex = /type\s+\w+\s*=\s*\{[^}]*\}/gs;
+    content = content.replace(typeRegex, (match) => {
+      const fixed = match.replace(/(\w+)\s*:\s*([^,;]+),\s*$/gm, '$1: $2;');
+      if (fixed !== match) {
+        modified = true;
+        return fixed;
       }
-    );
+      return match;
+    });
 
-    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
+    // Fix object properties with commas instead of semicolons
+    const objectRegex = /const\s+\w+\s*=\s*\{[^}]*\}/gs;
+    content = content.replace(objectRegex, (match) => {
+      const fixed = match.replace(/(\w+)\s*:\s*([^,;]+),\s*$/gm, '$1: $2;');
+      if (fixed !== match) {
+        modified = true;
+        return fixed;
+      }
+      return match;
+    });
+
+    // Fix function parameters with commas instead of semicolons
+    const functionRegex = /function\s+\w+\s*\([^)]*\)/g;
+    content = content.replace(functionRegex, (match) => {
+      const fixed = match.replace(/(\w+)\s*:\s*([^,)]+),\s*/g, '$1: $2, ');
+      if (fixed !== match) {
+        modified = true;
+        return fixed;
+      }
+      return match;
+    });
+
+    // Fix arrow function parameters with commas instead of semicolons
+    const arrowFunctionRegex = /\([^)]*\)\s*=>/g;
+    content = content.replace(arrowFunctionRegex, (match) => {
+      const fixed = match.replace(/(\w+)\s*:\s*([^,)]+),\s*/g, '$1: $2, ');
+      if (fixed !== match) {
+        modified = true;
+        return fixed;
+      }
+      return match;
+    });
+
+    // Fix destructuring with commas instead of semicolons
+    const destructuringRegex = /const\s+\{[^}]*\}\s*=/g;
+    content = content.replace(destructuringRegex, (match) => {
+      const fixed = match.replace(/(\w+)\s*:\s*([^,}]+),\s*/g, '$1: $2, ');
+      if (fixed !== match) {
+        modified = true;
+        return fixed;
+      }
+      return match;
+    });
+
+    // Fix array destructuring with commas instead of semicolons
+    const arrayDestructuringRegex = /const\s+\[[^\]]*\]\s*=/g;
+    content = content.replace(arrayDestructuringRegex, (match) => {
+      const fixed = match.replace(/(\w+)\s*:\s*([^,\]]+),\s*/g, '$1: $2, ');
+      if (fixed !== match) {
+        modified = true;
+        return fixed;
+      }
+      return match;
+    });
+
+    // Fix React component props with commas instead of semicolons
+    const componentPropsRegex = /interface\s+\w+Props\s*\{[^}]*\}/gs;
+    content = content.replace(componentPropsRegex, (match) => {
+      const fixed = match.replace(/(\w+)\s*:\s*([^,;]+),\s*$/gm, '$1: $2;');
+      if (fixed !== match) {
+        modified = true;
+        return fixed;
+      }
+      return match;
+    });
+
+    // Fix generic type parameters with commas instead of semicolons
+    const genericRegex = /<[^>]*>/g;
+    content = content.replace(genericRegex, (match) => {
+      const fixed = match.replace(/(\w+)\s*:\s*([^,>]+),\s*/g, '$1: $2, ');
+      if (fixed !== match) {
+        modified = true;
+        return fixed;
+      }
+      return match;
+    });
+
+    // Fix export statements with commas instead of semicolons
+    const exportRegex = /^export\s+.*?,\s*$/gm;
+    content = content.replace(exportRegex, (match) => {
+      return match.replace(/,\s*$/, ';');
+    });
+
+    // Fix variable declarations with commas instead of semicolons
+    const varRegex = /^(const|let|var)\s+.*?,\s*$/gm;
+    content = content.replace(varRegex, (match) => {
+      return match.replace(/,\s*$/, ';');
+    });
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+
+    return false;
+
+// Function to fix specific file types
+function fixFile(filePath) {
+  const ext = path.extname(filePath);
+  if (['.ts', .tsx, '.js', '.jsx'].includes(ext)) {
+    return fixSyntaxErrors(filePath);
   }
   return false;
 }
 
-// Find all service page files
-const servicesDir = path.join(__dirname, 'app', 'services');
-const serviceFiles = [];
 
-function findServiceFiles(dir) {
   const files = fs.readdirSync(dir);
+  
   files.forEach(file => {
+
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
+    
     if (stat.isDirectory()) {
-      findServiceFiles(filePath);
-    } else if (file === 'page.tsx') {
-      serviceFiles.push(filePath);
-    }
+      fixedCount += findAndFixFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      if (fixSyntaxErrors(filePath)) {
+        console.log(`Fixed syntax errors in: ${filePath}`);
+        fixedCount++;
+      }
+    });
   });
+
+  console.log(`\nProcessed ${totalFiles} files`);
+  console.log(`Fixed syntax errors in ${fixedFiles} files`);
 }
 
-findServiceFiles(servicesDir);
+console.log('Starting syntax error fixes...');
+const fixedCount = findAndFixFiles('./app');
+console.log(`Fixed syntax errors in ${fixedCount} files.`);
 
-console.log(`Found ${serviceFiles.length} service page files`);
+const fixedCount = processDirectory(workspacePath);
+console.log(`🎉 Fixed ${fixedCount} files with syntax errors`);
 
-let fixedCount = 0;
-serviceFiles.forEach(file => {
-  if (fixServicePage(file)) {
-    fixedCount++;
+// Also fix specific known problematic files
+const specificFiles = [
+  'pages/design-map.tsx',
+  'pages/pricing.tsx',
+  'pages/privacy.tsx',
+  'pages/space-tech.tsx'
+];
+
+for (const file of specificFiles) {
+  const filePath = path.join(workspacePath, file);
+  if (fs.existsSync(filePath)) {
+    processFile(filePath);
   }
-});
+}
 
-console.log(`Fixed ${fixedCount} files`);
+console.log('✨ Syntax error fixing completed!');
+>>>>>>> origin/chore/fix-lint-and-merge

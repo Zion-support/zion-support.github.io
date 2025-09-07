@@ -1,56 +1,38 @@
-'use client';
+'use client'
 
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  memoryUsage: number;
-  connectionType: string;
-}
+import { useEffect } from 'react'
 
 export default function PerformanceMonitor() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
   useEffect(() => {
-    // Only run on client side
-    if (typeof window === 'undefined') return;
+    // Performance monitoring logic
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime)
+          }
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime)
+          }
+          if (entry.entryType === 'layout-shift') {
+            console.log('CLS:', entry.value)
+          }
+        }
+      })
 
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-      
-      const memory = (performance as any).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
-      
-      const connection = (navigator as any).connection;
-      const connectionType = connection ? connection.effectiveType : 'unknown';
+      try {
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
+      } catch (e) {
+        // Performance Observer not supported
+      }
 
-      setMetrics({
-        loadTime,
-        memoryUsage,
-        connectionType
-      });
-    };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
+      // Cleanup
+      return () => {
+        observer.disconnect()
+      }
     }
+  }, [])
 
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
-
-  if (!metrics) return null;
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded-lg text-xs font-mono">
-      <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
-      <div>Memory: {metrics.memoryUsage.toFixed(1)}MB</div>
-      <div>Connection: {metrics.connectionType}</div>
-    </div>
-  );
+  return null
 }

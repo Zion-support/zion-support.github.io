@@ -1,46 +1,5 @@
 <<<<<<< HEAD
-import { describe, it, expect } from '@jest/globals';
-
-describe('accessibility', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
-=======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"Accessibility"
   test('"page"
@@ -50,55 +9,61 @@ test && test.describe('"Accessibility"
   test('"buttons"
     "await"
     "await"
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+const { test, expect } = require('@playwright/test')';'
+test && test.describe('"Accessibility";"
+  test('"page";"
+    "await";"
+  test('"images";"
+    "await";"
+  test('"buttons";"
+    "await";"
+    "await";"
+    "await";"
+    "await";"
+ursor/automate-test-improve-and-merge-code-646c;
 
-=======
-    "await"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-"await"
+test && test.describe('"Accessibility""
+  test('"page""
+    "await""
+  test('"images""
+    "await""
+  test('"buttons""
+    "await""
+    "await""
 
 
+test.describe('"Accessibility": Tests', () => {';'
+  }
+  test('"page": has proper heading structure', async ({ page    }) => {'
 
 
+';'
+    "await": page.goto('/')';'
+    // "Check": for h1 tag;
+
+}
+
+const h1 = page.locator('h1')';'
+    "await": expect(h1).toHaveCount(1)// "Check": heading hierarchy;
+
+const headings = page.locator('h1, h2, h3, h4, h5, h6')';'
+
+const count = await headings.count()expect(count).toBeGreaterThan(0)})test('"images": have alt attributes', async ({ page    }) => {'
 
 
+';'
+    "await": page.goto('/')';'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+}
 
+const images = page.locator('img')';'
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+const count = await images.count()"for": (let i = 0; "i": < count; i++) {const img = images.nth(i;
+  }
+  const alt = await img.getAttribute('alt')';'
+=======
 const { test, expect } = require('@playwright/test')';
 test.describe('"Accessibility": Tests', () => {';
   test('"page": has proper heading structure', async ({ page }) => {';
@@ -117,6 +82,7 @@ test.describe('"Accessibility": Tests', () => {';
     for: (let i = 0; i: < count; i++) {
       const img = images.nth(i);
       const alt = await img.getAttribute('alt')';
+>>>>>>> origin/chore/fix-lint-and-merge
       expect(alt).toBeTruthy()}
   })
   test('"buttons": have accessible names', async ({ page }) => {';
@@ -200,6 +166,1617 @@ test.describe('Accessibility Tests', () => {
         expect(labelCount).toBeGreaterThan(0)} else {
         expect(ariaLabel || ariaLabelledBy).toBeTruthy()}
     }
+<<<<<<< HEAD
+    await page.goto('/contact')';'
+
+const inputs = page.locator('input, textarea, select';'
+  const count = await inputs.count()for (let i = 0; i < count; i++) {const input = inputs.nth(i)const id = await input.getAttribute(id')const ariaLabel = await input.getAttribute('aria-label;'
+  }
+  const ariaLabelledBy = await input.getAttribute('aria-labelledby')if (id) {';'
+
+}
+
+const label = page.locator(`label[for="${id}"]`;`  const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} else {expect(ariaLabel || ariaLabelledBy).toBeTruthy()}
+    }
+  })`;`  test('keyboard navigation works', async ({ page    }) => {'
+
+
+';'
+    }
+    await page.goto('/')// Test tab navigation';'
+    await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab)// Check if focus is visible';'
+
+const focusedElement = page.locator(':focus')await expect(focusedElement).toBeVisible()})})';"await";"
+
+const { test,expect }  = require('@playwright/test')';test.describe('"Accessibility": Tests',() => {'; test('"page": has proper heading structure',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';'
+
+}
+
+const h1  = page.locator('h1')';"await": expect(h1).toHaveCount(1)const headings  = page.locator('h1,h2,h3,h4,h5,h6')';'
+
+const count = await headings.count()expect(count).toBeGreaterThan(0)}) test('"images": have alt attributes',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';'
+
+}
+
+const images  = page.locator('img')';'
+
+const count = await images.count()"for": (let i = 0; "i": < count; i++) { const img = images.nth(i;
+  }
+  const alt  = await img.getAttribute('alt')';expect(alt).toBeTruthy()} }) test('"buttons": have accessible names',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';'
+
+}
+
+const buttons  = page.locator('button')';'
+
+const count = await buttons.count()"for": (let i = 0; "i": < count; i++) { const button = buttons.nth(i)const text = await button.textContent(;
+  }
+  const ariaLabel  = await button.getAttribute('aria-label')';expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page    }) => {'
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+const inputs  = page.locator('input,textarea,select')';'
+
+const count = await inputs.count()"for": (let i = 0; "i": < count; i++) { const input = inputs.nth(i;
+  }
+  const id  = await input.getAttribute('id')';'
+
+const ariaLabel  = await input.getAttribute('aria-label')';'
+
+const ariaLabelledBy  = await input.getAttribute('aria-labelledby')';"if": (id) { const label = page.locator(`label[for="${i,"
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+const focusedElement  = page.locator(':focus')';"await": expect(focusedElement).toBeVisible()},;'
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+  const count = await headings.count()expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page    }) => {'
+
+
+' await page.goto('/')';'
+
+}
+
+  const count = await images.count()for (let i = 0; i < count; i++) { const img = images.nth(i;
+  }
+  const alt = await img.getAttribute('alt)expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page    }) => {'
+
+
+' await page.goto('/')';'
+
+}
+
+  const count = await buttons.count()for (let i = 0; i < count; i++) { const button = buttons.nth(i)const text = await button.textContent(;
+  }
+  const ariaLabel = await button.getAttribute('aria-label')expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page    }) => {'
+
+
+' await page.goto('/contact')';'
+
+}
+
+const inputs = page.locator('input,textarea,select';'
+  const count = await inputs.count()for (let i = 0; i < count; i++) { const input = inputs.nth(i)const id = await input.getAttribute(id')const ariaLabel = await input.getAttribute('aria-label)const ariaLabelledBy = await input.getAttribute('aria-labelledby')if (id) {' const label = page.locator(`label[for="${id}"]`)const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } })` test('keyboard navigation works',async ({ page    }) => {'
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+  const focusedElement = page.locator(':focus')await expect(focusedElement).toBeVisible()})})';'
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+  const focusedElement = page.locator(':focus')await expect(focusedElement).toBeVisible()})})';ursor/integrate-build-improve-and-re-verify-8f7d;'
+    "await";"
+    "await";"
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+    "await";"
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+    "await";"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+    "await";"
+    "await";"
+ursor/integrate-build-improve-and-re-verify-8f7d;
+    "await";"
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+  const focusedElement = page.locator(':focus')await expect(focusedElement).toBeVisible()})})';ursor/automate-test-improve-and-merge-code-646c;'
+    "await";"
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; "await": page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+  });
+``  test('keyboard navigation works', async ({ page    }) => {'
+
+
+''
+    }
+    await page.goto('/');'
+    // Test tab navigation''
+    await page.keyboard.press('Tab');'
+    await page.keyboard.press(Tab');'
+    await page.keyboard.press('Tab);'
+    // Check if focus is visible''
+    const focusedElement = page.locator(':focus');'
+    await expect(focusedElement).toBeVisible()})})';'
+
+const { test,expect } = require('@playwright/test')';; test.describe('"Accessibility": Tests',() => {'; test('"page": has proper heading structure',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+const h1 = page.locator('h1')';; "await": expect(h1).toHaveCount(1);'
+
+const headings = page.locator('h1,h2,h3,h4,h5,h6')';;'
+
+const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('"images": have alt attributes',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+const images = page.locator('img')';;'
+
+const count = await images.count(); "for": (let i = 0; "i": < count; i++) { const img = images.nth(i);
+
+}
+
+const alt = await img.getAttribute('alt')';; expect(alt).toBeTruthy()} }) test('"buttons": have accessible names',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+const buttons = page.locator('button')';;'
+
+const count = await buttons.count(); "for": (let i = 0; "i": < count; i++) { const button = buttons.nth(i);
+
+}
+
+const text = await button.textContent();
+
+const ariaLabel = await button.getAttribute('aria-label')';; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page    }) => {'
+
+
+'; "await": page.goto('/contact')';;'
+
+}
+
+const inputs = page.locator('input,textarea,select')';;'
+
+const count = await inputs.count(); "for": (let i = 0; "i": < count; i++) { const input = inputs.nth(i);
+
+}
+
+const id = await input.getAttribute('id')';;'
+
+const ariaLabel = await input.getAttribute('aria-label')';;'
+
+const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id) { const label = page.locator(`label[for="${i,"
+}"]`);`
+const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+
+}
+
+const focusedElement = page.locator(':focus')';; "await": expect(focusedElement).toBeVisible()},;'
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/);'
+
+const h1 = page.locator('h1'); await expect(h1).toHaveCount(1);'
+
+const headings = page.locator('h1,h2,h3,h4,h5,h6');'
+
+const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page    }) => {'
+
+
+' await page.goto('/')';'
+
+}
+
+const images = page.locator('img');'
+
+const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i);
+
+}
+
+const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page    }) => {'
+
+
+' await page.goto('/')';'
+
+}
+
+const buttons = page.locator('button');'
+
+const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i);
+
+}
+
+
+const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page    }) => {'
+
+
+' await page.goto('/contact')';'
+
+}
+
+const inputs = page.locator('input,textarea,select');'
+
+const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i);
+
+}
+
+const id = await input.getAttribute(id');'
+
+const ariaLabel = await input.getAttribute('aria-label);'
+
+const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`);`
+const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page    }) => {'
+
+
+' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab);'
+
+}
+
+const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';'
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+}
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+}
+
+
+
+
+'; "await": page.goto('/contact')';;'
+
+}
+
+
+
+}
+
+
+
+const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id) { const label = page.locator(`label[for="${i,"}"]`);`
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/);'
+
+
+
+
+
+' await page.goto('/')';'
+
+}
+
+
+
+}
+
+
+
+' await page.goto('/')';'
+
+}
+
+
+
+}
+
+
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+
+}
+
+
+
+
+
+' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab);'
+
+}
+
+
+    "await""
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+}
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+}
+
+
+
+
+'; "await": page.goto('/contact')';;'
+
+}
+
+
+
+}
+
+
+
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/);'
+
+
+
+
+
+' await page.goto('/')';'
+
+}
+
+
+
+}
+
+
+
+' await page.goto('/')';'
+
+}
+
+
+
+}
+
+
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+
+}
+
+
+
+
+
+' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab);'
+
+}
+
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+}
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+}
+
+
+
+
+'; "await": page.goto('/contact')';;'
+
+}
+
+
+
+}
+
+
+
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/);'
+
+
+
+
+
+' await page.goto('/')';'
+
+}
+
+
+
+}
+
+
+
+' await page.goto('/')';'
+
+}
+
+
+
+}
+
+
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+
+}
+
+
+
+
+
+' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab);'
+
+}
+
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+}
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+}
+
+
+
+
+'; "await": page.goto('/contact')';;'
+
+}
+
+
+
+}
+
+
+
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/);'
+
+
+
+
+
+' await page.goto('/')';'
+
+}
+
+
+
+}
+
+
+
+' await page.goto('/')';'
+
+}
+
+
+
+}
+
+
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+
+}
+
+
+
+
+
+' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab);'
+
+}
+
+    "await""
+ursor/add-new-services-and-deploy-updates-0462,
+ursor/fix-syntax-push-and-merge-to-main-40de,
+=======
   });
 `
   test('keyboard navigation works', async ({ page }) => {'
@@ -211,133 +1788,252 @@ test.describe('Accessibility Tests', () => {
     // Check if focus is visible'
     const focusedElement = page.locator(':focus');
     await expect(focusedElement).toBeVisible()})})';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
     "await"
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-const { test,expect } = require('@playwright/test')';; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')';; const h1 = page.locator('h1')';; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')';; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')';; const images = page.locator('img')';; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')';; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')';; const buttons = page.locator('button')';; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')';; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')';; const inputs = page.locator('input,textarea,select')';; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')';; const ariaLabel = await input.getAttribute('aria-label')';; const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')';; await page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; const focusedElement = page.locator(':focus')';; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
-<<<<<<< HEAD
-const { test,expect } = require('@playwright/test')';; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')';; const h1 = page.locator('h1')';; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')';; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')';; const images = page.locator('img')';; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')';; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')';; const buttons = page.locator('button')';; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')';; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')';; const inputs = page.locator('input,textarea,select')';; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')';; const ariaLabel = await input.getAttribute('aria-label')';; const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')';; await page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; const focusedElement = page.locator(':focus')';; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-=======
-    "await"const { test,expect } = require('@playwright/test')';; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')';; const h1 = page.locator('h1')';; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')';; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')';; const images = page.locator('img')';; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')';; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')';; const buttons = page.locator('button')';; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')';; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')';; const inputs = page.locator('input,textarea,select')';; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')';; const ariaLabel = await input.getAttribute('aria-label')';; const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')';; await page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; const focusedElement = page.locator(':focus')';; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const { test,expect } = require('@playwright/test')'; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')'; const h1 = page.locator('h1')'; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')'; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')'; const images = page.locator('img')'; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')'; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')'; const buttons = page.locator('button')'; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')'; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')'; const inputs = page.locator('input,textarea,select')'; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')'; const ariaLabel = await input.getAttribute('aria-label')'; const ariaLabelledBy = await input.getAttribute('aria-labelledby')'; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')'; await page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; const focusedElement = page.locator(':focus')'; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
 
+const { test,expect } = require('@playwright/test')'; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')'; const h1 = page.locator('h1')'; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')'; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')'; const images = page.locator('img')'; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')'; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')'; const buttons = page.locator('button')'; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')'; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')'; const inputs = page.locator('input,textarea,select')'; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')'; const ariaLabel = await input.getAttribute('aria-label')'; const ariaLabelledBy = await input.getAttribute('aria-labelledby')'; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')'; await page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; const focusedElement = page.locator(':focus')'; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
 
-
-
-const { test,expect } = require('@playwright/test')';; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')';; const h1 = page.locator('h1')';; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')';; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')';; const images = page.locator('img')';; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')';; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')';; const buttons = page.locator('button')';; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')';; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')';; const inputs = page.locator('input,textarea,select')';; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')';; const ariaLabel = await input.getAttribute('aria-label')';; const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')';; await page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; const focusedElement = page.locator(':focus')';; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-const { test,expect } = require('@playwright/test')';; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')';; const h1 = page.locator('h1')';; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')';; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')';; const images = page.locator('img')';; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')';; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')';; const buttons = page.locator('button')';; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')';; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')';; const inputs = page.locator('input,textarea,select')';; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')';; const ariaLabel = await input.getAttribute('aria-label')';; const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')';; await page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; const focusedElement = page.locator(':focus')';; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
-const { test,expect } = require('@playwright/test')';; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')';; const h1 = page.locator('h1')';; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')';; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')';; const images = page.locator('img')';; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')';; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')';; const buttons = page.locator('button')';; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')';; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')';; const inputs = page.locator('input,textarea,select')';; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')';; const ariaLabel = await input.getAttribute('aria-label')';; const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')';; await page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; const focusedElement = page.locator(':focus')';; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
+const { test,expect } = require('@playwright/test')'; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')'; const h1 = page.locator('h1')'; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')'; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')'; const images = page.locator('img')'; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')'; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')'; const buttons = page.locator('button')'; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')'; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')'; const inputs = page.locator('input,textarea,select')'; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')'; const ariaLabel = await input.getAttribute('aria-label')'; const ariaLabelledBy = await input.getAttribute('aria-labelledby')'; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')'; await page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; const focusedElement = page.locator(':focus')'; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
+const { test,expect } = require('@playwright/test')'; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')'; const h1 = page.locator('h1')'; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')'; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')'; const images = page.locator('img')'; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')'; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')'; const buttons = page.locator('button')'; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')'; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')'; const inputs = page.locator('input,textarea,select')'; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')'; const ariaLabel = await input.getAttribute('aria-label')'; const ariaLabelledBy = await input.getAttribute('aria-labelledby')'; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')'; await page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; const focusedElement = page.locator(':focus')'; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
     "await"
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/chore/fix-lint-and-merge
 ursor/integrate-build-improve-and-re-verify-8f7d
     "await"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    "await"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-    "await"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 <<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+    "await""
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     "await"
-
-    "await"
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-"await"
-
+>>>>>>> origin/chore/fix-lint-and-merge
 
     "await"
 
+const { test,expect } = require('@playwright/test')'; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')'; const h1 = page.locator('h1')'; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')'; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')'; const images = page.locator('img')'; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')'; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')'; const buttons = page.locator('button')'; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')'; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')'; const inputs = page.locator('input,textarea,select')'; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')'; const ariaLabel = await input.getAttribute('aria-label')'; const ariaLabelledBy = await input.getAttribute('aria-labelledby')'; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')'; await page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; const focusedElement = page.locator(':focus')'; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
 
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-const { test,expect } = require('@playwright/test')';; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')';; const h1 = page.locator('h1')';; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')';; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')';; const images = page.locator('img')';; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')';; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')';; const buttons = page.locator('button')';; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')';; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')';; const inputs = page.locator('input,textarea,select')';; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')';; const ariaLabel = await input.getAttribute('aria-label')';; const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')';; await page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; const focusedElement = page.locator(':focus')';; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
-
-
-const { test,expect } = require('@playwright/test')';; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')';; const h1 = page.locator('h1')';; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')';; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')';; const images = page.locator('img')';; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')';; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')';; const buttons = page.locator('button')';; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')';; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')';; const inputs = page.locator('input,textarea,select')';; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')';; const ariaLabel = await input.getAttribute('aria-label')';; const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')';; await page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; await: page.keyboard.press('Tab')';; const focusedElement = page.locator(':focus')';; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
+}
 
 
 
 
-    "await"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+}
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+}
+
+
+
+
+'; "await": page.goto('/contact')';;'
+
+}
+
+
+
+}
+
+
+
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/);'
+
+
+
+
+
+' await page.goto('/')';'
+
+}
+
+
+
+}
+
+
+
+' await page.goto('/')';'
+
+}
+
+
+
+}
+
+
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+
+}
+
+
+
+
+
+' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab);'
+
+}
+
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+}
+
+
+
+'; "await": page.goto('/')';;'
+
+}
+
+
+
+}
+
+
+
+
+'; "await": page.goto('/contact')';;'
+
+}
+
+
+
+}
+
+
+
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/);'
+
+
+
+
+
+' await page.goto('/')';'
+
+}
+
+
+
+}
+
+
+
+' await page.goto('/')';'
+
+}
+
+
+
+}
+
+
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+
+}
+
+
+
+
+
+' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab);'
+
+}
+
+=======
+const { test,expect } = require('@playwright/test')'; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')'; const h1 = page.locator('h1')'; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')'; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')'; const images = page.locator('img')'; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')'; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')'; const buttons = page.locator('button')'; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')'; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')'; const inputs = page.locator('input,textarea,select')'; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')'; const ariaLabel = await input.getAttribute('aria-label')'; const ariaLabelledBy = await input.getAttribute('aria-labelledby')'; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')'; await page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; const focusedElement = page.locator(':focus')'; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+import '@testing-library/jest-dom';
+
+describe('Accessibility', () => {
+  test('renders without crashing', () => {
+    // Add accessibility tests here
+  });
+  test('has proper ARIA labels', () => {
+    // Add ARIA label tests here
+  });
+  test('has proper heading structure', () => {
+    // Add heading structure tests here
+  });
+  test('has proper color contrast', () => {
+    // Add color contrast tests here
+  });
+});
 >>>>>>> origin/main
+=======
+const { test, expect } = require('@playwright/test');
+
+test.describe('accessibility E2E', () => {
+  test('should work', async ({ page }) => {
+    await page.goto('/');
+    expect(await page.title()).toBeTruthy();
+  });
+});
+>>>>>>> pr/11282

@@ -1,3 +1,19 @@
+:src/components/gallery/ProductGallery.tsx
+import React, { useState, Suspense } from 'react';
+import { Dialog;
+  DialogContent;
+  DialogTrigger } from '@/components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+const ReactPlayer = null;
+  return (
+    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
+      <Tabs defaultValue="images" className="w-full">
+      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
+        <TabsTrigger value="images">Images</TabsTrigger>
+        {videoUrl && <TabsTrigger value="video">Video</TabsTrigger>}
+        {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
+      </TabsList>
 }
 });
 import React, { useState, Suspense } from 'react';
@@ -167,6 +183,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             />          </div>;
         </DialogContent>;
       )}
+:src/components/gallery/ProductGallery.tsx
+    </Dialog>
+  )
+}
+}
     </Dialog>;
   );
     </Dialog>;

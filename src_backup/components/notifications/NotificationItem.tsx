@@ -1,17 +1,3 @@
-<<<<<<< HEAD:src/components/notifications/NotificationItem.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -45,12 +31,8 @@ import { Notification, NotificationType } from '@/context/notifications'
 }) => {
       className={cn(
                   onMarkAsRead(notification.id); import React from 'react'
-<<<<<<< HEAD:src/components/notifications/NotificationItem.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
+:src/components/notifications/NotificationItem.tsx
+
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -83,26 +65,7 @@ export const getTypeIcon = (type: NotificationType,) => {
       return <span className="text-orange-500">📦</span>
     default:
       return <span className="text-gray-500">📣</span>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-import React from 'react',
-// Use the centralized icon wrapper to avoid missing icons
-import { Check, Trash2, ChevronRight } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { formatDistanceToNow } from 'date-fns',
-import { cn } from '@/lib/utils',
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
+:src/components/notifications/NotificationItem.tsx
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from 'lucide-react';
@@ -138,11 +101,15 @@ export const getTypeIcon = (type: NotificationType) => {;
     case 'order_status':;
       return <span className="text-orange-500">📦</span>,;
     default:;
-<<<<<<< HEAD:src/components/notifications/NotificationItem.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
+
+import React from 'react',
+// Use the centralized icon wrapper to avoid missing icons
+import { Check, Trash2, ChevronRight } from 'lucide-react'
+import { Button } from '@/components/ui/button',
+import { Badge } from '@/components/ui/badge',
+import { formatDistanceToNow } from 'date-fns',
+import { cn } from '@/lib/utils',
+
 import React from 'react';
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -171,60 +138,7 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'project_update':
       return <span className="text-orange-500">📦</span>;
     default:
-<<<<<<< HEAD:src/components/notifications/NotificationItem.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      return <span className="text-gray-500">📣</span>
-import React from 'react',;
-// Use the centralized icon wrapper to avoid missing icons;
-import { Check, Trash2, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
-import { formatDistanceToNow } from 'date-fns',;
-import { cn } from '@/lib/utils',;
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger} from '@/components/ui/tooltip',;
-import { useRouter } from 'next/router',;
-import { Notification, NotificationType } from '@/context/notifications',;
-export const getTypeIcon = (type: NotificationType) => {;
-  switch (type) {;
-    case 'message':;
-      return <span className="text-blue-500">💬</span>,;
-    case 'quote_request':;
-      return <span className="text-purple-500">📝</span>,;
-    case 'booking_confirmation':;
-      return <span className="text-green-500">✅</span>,;
-    case 'hire_request':;
-      return <span className="text-zion-purple">🤝</span>,;
-    case 'onboarding':;
-      return <span className="text-zion-cyan">🚀</span>,;
-    case 'system':;
-      return <span className="text-yellow-500">⚠️</span>,;
-    case 'project_update':;
-      return <span className="text-indigo-400">📌</span>,;
-    case 'milestone_complete':;
-      return <span className="text-green-500">🏁</span>,;
-    case 'order_status':;
-      return <span className="text-orange-500">📦</span>,;
-    default:;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
       return <span className="text-gray-500">📣</span>;
   }
 },;
@@ -247,61 +161,40 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (notification.action_url) {;
       router.push(notification.action_url), // Changed to router.push;
     }
-<<<<<<< HEAD:src/components/notifications/NotificationItem.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src/components/notifications/NotificationItem.tsx
+  }
+
   return (<div
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
         !notification.read ? 'bg-zion-blue-dark/30' : ''),}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src/components/notifications/NotificationItem.tsx
+
   },;
   return (;
     <div;
       className={cn(;
         'p-3 border-b border-zion-blue-light relative group',;
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     >
       <div className="flex items-start gap-2">
         <div className="text-xl">{getTypeIcon(notification.type)}</div>
         <div className="flex-1">
           <div className="flex justify-between items-center mb-1">
             <h4 className="font-medium text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              {notification.title || 'Notification'}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src/components/notifications/NotificationItem.tsx
+              {notification.title |'Notification'}
+
             </h4>
             {!notification.read && (
               <Badge className="bg-zion-cyan text-xs">New</Badge>
             )}
           </div>
           <p className="text-sm text-zion-slate-light">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {notification.message || 'You have a new notification'}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src/components/notifications/NotificationItem.tsx
+            {notification.message |'You have a new notification'}
+
           </p>
           <div className="flex justify-between items-center mt-1">
             <p className="text-xs text-zion-slate">
@@ -310,42 +203,21 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                     addSuffix: true})
                 : 'Just now'}
             </p>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {notification.action_url && notification.action_text && (
               <Button
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                onClick={handleClick}
-              >;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src/components/notifications/NotificationItem.tsx
+                onClick = {handleClick,}
+              >
+
                 {notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
               </Button>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </div>;
-        </div>;
-      </div>;
-=======
-          </div>
-        </div>
-      </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          </div>
-        </div>
-      </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
       {/* Action buttons that appear on hover */}
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
@@ -355,16 +227,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-<<<<<<< HEAD
-                onClick={(e) => {
-=======
+:src/components/notifications/NotificationItem.tsx
+                onClick={(e,) => {
+                  e.stopPropagation()
 
-
-                onClick={(e) => {
-                onClick={(e) => {
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   e.stopPropagation(),
                   onMarkAsRead(notification.id)
                 }}
@@ -378,31 +244,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-<<<<<<< HEAD
 
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-6 w-6"
-                onClick={(e) => {
-                  e.stopPropagation(),
-                  onDismiss(notification.id)
-                }}
-                aria-label="Dismiss notification"
-              >
-                <Trash2 className="h-3.5 w-3.5 text-red-400" />
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-        <TooltipProvider>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
   };
 
   const handleMarkAsRead = (e: React.MouseEvent) => {
@@ -480,19 +322,20 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
               </TooltipContent>
             </Tooltip>
           )}
-          
-<<<<<<< HEAD:src/components/notifications/NotificationItem.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
                 variant="ghost"
+:src/components/notifications/NotificationItem.tsx
+                size="icon"
+                className="h-6 w-6"
+                onClick={(e,) => {
+                  e.stopPropagation()
+                  e.stopPropagation(),
+                  onDismiss(notification.id)
+                }}
+                aria-label="Dismiss notification"
                 size="sm"
                 onClick={handleDismiss}
                 className="h-8 w-8 p-0 text-gray-400 hover:text-red-500"
@@ -504,71 +347,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
               <p>Dismiss</p>
             </TooltipContent>
           </Tooltip>
-<<<<<<< HEAD:src/components/notifications/NotificationItem.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src/components/notifications/NotificationItem.tsx
         </TooltipProvider>
-<<<<<<< HEAD
-      </div>
-    </div>
-  )
-},
-      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
-        <TooltipProvider>;
-          <Tooltip>;
-            <TooltipTrigger asChild>;
-              <Button;
-                variant="ghost";
-                size="icon";
-                className="h-6 w-6";
-                onClick={(e) => {;
-                  e.stopPropagation(),;
-                  onMarkAsRead(notification.id);
-                }}
-                aria-label="Mark as read";
-              >;
-                <Check className="h-3.5 w-3.5 text-green-400" />;
-              </Button>;
-            </TooltipTrigger>;
-            <TooltipContent>;
-              <p>Mark as read</p>;
-            </TooltipContent>;
-          </Tooltip>;
-        </TooltipProvider>;
-        <TooltipProvider>;
-          <Tooltip>;
-            <TooltipTrigger asChild>;
-              <Button;
-                variant="ghost";
-                size="icon";
-                className="h-6 w-6";
-                onClick={(e) => {;
-                  e.stopPropagation();
-                  onDismiss(notification.id);
-                }}
-                aria-label="Dismiss notification";
-              >;
-                <Trash2 className="h-3.5 w-3.5 text-red-400" />;
-              </Button>;
-            </TooltipTrigger>;
-            <TooltipContent>;
-              <p>Dismiss</p>;
-            </TooltipContent>;
-          </Tooltip>;
-        </TooltipProvider>;
       </div>;
     </div>;
   );
 };
-=======
-=======
-        </TooltipProvider>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-
-
 
     </div>);
 },
@@ -576,40 +360,13 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
 
       </div>
     </div>
-<<<<<<< HEAD
-  )
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
+
         </div>
       </div>
     </TooltipProvider>
   );
 };
-<<<<<<< HEAD:src/components/notifications/NotificationItem.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
   );
 };
 interface NotificationItemProps {;
@@ -631,9 +388,3 @@ onDismiss ;
 }</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
 };
 '"
-<<<<<<< HEAD:src/components/notifications/NotificationItem.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx

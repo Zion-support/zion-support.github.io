@@ -1,5 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD:pages/2028-services-showcase.tsx
+
+export default function Page() {
+=======
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -66,17 +70,12 @@ const serviceCategories = [
 ];
 
 export default function ServicesShowcase2028() {
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:components/2028-services-showcase.tsx.backup.1755992110.backup.1756001147
   return (
     <>
       <Head>
-        <title>2028 Futuristic Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology." />
-        <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" />
-        <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />
-        <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations." />
-        <meta property="og:url" content="https://ziontechgroup.com/2028-services-showcase" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/2028-services-showcase" />
+        <title>2028-services-showcase | Zion Tech Group</title>
+        <meta name="description" content="2028-services-showcase page" />
       </Head>
 
       <UltraFuturisticNavigation2028 />
@@ -211,6 +210,9 @@ export default function ServicesShowcase2028() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages/2028-services-showcase.tsx
+      </div>
+=======
       </section>
 
       {/* Featured Services */}
@@ -405,6 +407,7 @@ export default function ServicesShowcase2028() {
       </section>
 
       <UltraFuturisticFooter2028 />
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:components/2028-services-showcase.tsx.backup.1755992110.backup.1756001147
     </>
   );
 }
