@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -215,7 +212,6 @@ export default function Privacy() {
     </>
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -407,4 +403,3 @@ export default function Privacy() {return (<>;
       </main>;
     </>;
   )}
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

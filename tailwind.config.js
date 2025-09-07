@@ -1,22 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
-<<<<<<< HEAD
-=======
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}'
->>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
-=======
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
   ],
   theme: {
     extend: {
@@ -60,8 +48,8 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
-          950: '#030712'
-        }
+          950: '#030712',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -70,11 +58,6 @@ module.exports = {
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
         'slide-right': 'slideRight 0.5s ease-out',
@@ -85,47 +68,31 @@ module.exports = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
-<<<<<<< HEAD
->>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
-=======
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
-          '100%': { opacity: '1' }
+          '100%': { opacity: '1' },
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-          '100%': { transform: 'translateY(0)', opacity: '1' }
-        },
-      },
-    },
-  },
-  plugins: [],
-};
-=======
-=======
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-          '100%': { transform: 'translateY(0px)', opacity: '1' }
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         slideDown: {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0px)', opacity: '1' }
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         slideLeft: {
           '0%': { transform: 'translateX(20px)', opacity: '0' },
-          '100%': { transform: 'translateX(0px)', opacity: '1' }
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         slideRight: {
           '0%': { transform: 'translateX(-20px)', opacity: '0' },
-          '100%': { transform: 'translateX(0px)', opacity: '1' }
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         scaleIn: {
           '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' }
+          '100%': { transform: 'scale(1)' },
         },
         bounceIn: {
           '0%': { transform: 'scale(0.3)', opacity: '0' },
@@ -136,31 +103,31 @@ module.exports = {
         'gradient-x': {
           '0%, 100%': {
             'background-size': '200% 200%',
-            'background-position': 'left center'
+            'background-position': 'left center',
           },
           '50%': {
             'background-size': '200% 200%',
-            'background-position': 'right center'
+            'background-position': 'right center',
           },
         },
         'gradient-y': {
           '0%, 100%': {
             'background-size': '200% 200%',
-            'background-position': 'center top'
+            'background-position': 'center top',
           },
           '50%': {
             'background-size': '200% 200%',
-            'background-position': 'center bottom'
+            'background-position': 'center bottom',
           },
         },
         'gradient-xy': {
           '0%, 100%': {
             'background-size': '400% 400%',
-            'background-position': 'left center'
+            'background-position': 'left center',
           },
           '50%': {
             'background-size': '400% 400%',
-            'background-position': 'right center'
+            'background-position': 'right center',
           },
         },
       },
@@ -179,22 +146,13 @@ module.exports = {
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
-        '128': '32rem'
+        '128': '32rem',
       },
       borderRadius: {
         '4xl': '2rem',
-        '5xl': '2.5rem'
+        '5xl': '2.5rem',
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
-<<<<<<< HEAD
+  plugins: [],
 };
->>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
-=======
-};
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739

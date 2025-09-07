@@ -16,9 +16,12 @@ import { useAuth   } from '@/hooks/useAuth';
 import { UserMenu   } from '@/components/header/UserMenu';
 import { useSelector   } from 'react-redux';
 import type { RootState } from '@/store';
-import { cn } from '@/lib/utils', // Import cn utility;
+import { cn } from '@/lib/utils'; // Import cn utility
 import { useRouter  } from 'next/router';
-export function AppHeader() {const [mobileMenuOpen, setMobileMenuOpen] = useState(false)const [loginOpen, setLoginOpen] = useState(false)const isMobile = null;
+export function AppHeader() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const isMobile = null;
   const showTagline = router.pathname === '/';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)const [loginOpen, setLoginOpen] = useState(false)const isMobile = useIsMobile()const { t } = useTranslation()const { user } = useAuth()const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)const router = useRouter()const showTagline = router.pathname === '/';
   // Messaging context (unread message count)const { unreadCount } = useMessaging()const openLoginModal = (returnToPath?: string,) => {// The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router.push with shallow:true before this function is called.;

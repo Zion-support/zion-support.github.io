@@ -1,139 +1,160 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-
-export const metadata = { 
-  title: 'Advanced Data Analytics & BI | Zion Tech Group',
-  description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.',
-  keywords: 'data analytics, business intelligence, data visualization, predictive analytics, data engineering'
+export const metadata = {
+  title: 'Data Analytics - Zion Tech Group',
+  description: 'Professional data analytics solutions for your business needs.',
 =======
 import Link from "next/link";
 
 export const metadata = {
-  title: "Data Analytics & BI | Zion Tech Group",
-  description: "Advanced data analytics, business intelligence, and machine learning solutions to transform raw data into actionable insights.",
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
-import { Metadata } from 'next';
-import React from 'react';
-
-export const metadata: Metadata = { 
-  title: 'Data Analytics Solutions | Zion Tech Group',
-  description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+  title: "Data Analytics | Zion Tech Group",
+  description: "Professional data analytics services for your business needs.",
+  keywords: "data-analytics, services, business, technology"
+>>>>>>> 70a7e91307b7b137e58209a8df72dcd2ceb02acb
 };
 
 export default function DataAnalyticsPage() {
   return (
 <<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="space-y-16">
-      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-          Data Analytics & BI
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your data into actionable insights with advanced analytics, 
-          real-time dashboards, and AI-powered business intelligence solutions.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=Data Analytics Inquiry"
-            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-          >
-            Get Analytics Consultation
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Data Analytics
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional data analytics solutions designed to meet your business requirements 
+            and drive growth. Our expert team delivers high-quality, scalable solutions.
+          </p>
         </div>
-      </section>
+
+        <div className="max-w-6xl mx-auto">
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Fast Implementation</h3>
+              <p className="text-gray-600">
+                Quick deployment and setup to get your solution running in no time.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Secure & Reliable</h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and reliability for your peace of mind.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">📈</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
+              <p className="text-gray-600">
+                Built to grow with your business and adapt to changing needs.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center bg-white rounded-xl shadow-lg p-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Contact us today to discuss your data analytics requirements 
+              and get a custom solution tailored to your needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
+                Get Started
+                <ArrowRightIcon className="h-5 w-5 ml-2" />
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
 =======
-    <div className="animate-fade-in">
+    <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Data Analytics & Business Intelligence
+          Data Analytics
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your raw data into actionable insights with our advanced Data Analytics and Business Intelligence solutions. We empower your business with predictive modeling, real-time dashboards, and data-driven decision-making.
+          Professional data analytics services for your business needs.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Capabilities</h2>
-          <div className="space-y-4">
-            <FeatureItem
-              icon="📊"
-              title="Advanced Data Modeling"
-              description="Design and implement robust data models that support complex analytics and reporting requirements."
-              benefits={["Scalable data architecture", "High data accuracy", "Optimized query performance", "Custom data schemas"]}
-            />
-            <FeatureItem
-              icon="📈"
-              title="Business Intelligence Dashboards"
-              description="Create interactive and intuitive BI dashboards that provide real-time insights into key performance indicators (KPIs)."
-              benefits={["Real-time data visualization", "Customizable reports", "User-friendly interface", "Cross-device access"]}
-            />
-            <FeatureItem
-              icon="🧠"
-              title="Predictive Analytics & ML"
-              description="Leverage machine learning models to forecast future trends, predict customer behavior, and identify new opportunities."
-              benefits={["95% prediction accuracy", "Fraud detection", "Churn prediction", "Demand forecasting"]}
-            />
-            <FeatureItem
-              icon="🔍"
-              title="Data Warehousing & Lakes"
-              description="Build and manage scalable data warehouses and data lakes for efficient storage and processing of large datasets."
-              benefits={["Centralized data storage", "Big data processing", "Data governance", "Cloud-native solutions"]}
-            />
-            <FeatureItem
-              icon="🧹"
-              title="Data Integration & Quality"
-              description="Integrate data from disparate sources and ensure high data quality through cleansing, validation, and transformation processes."
-              benefits={["Unified data view", "Automated data pipelines", "Error reduction", "Improved data reliability"]}
-            />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Data Analytics Solutions
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Advanced data analytics solutions to transform your data into actionable business insights.
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">📊</span>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Data Analysis
+          </h3>
+          <p className="text-gray-600">
+            Analyze your data to uncover insights and trends.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Business Intelligence</h3>
-            <p className="text-gray-300">
-              Comprehensive BI solutions to analyze and visualize your business data effectively.
-            </p>
+
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">🔍</span>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Predictive Analytics</h3>
-            <p className="text-gray-300">
-              Leverage machine learning to predict trends and make data-driven decisions.
-            </p>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Insights & Reports
+          </h3>
+          <p className="text-gray-600">
+            Get detailed insights and reports from your data.
+          </p>
+        </div>
+
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">🎯</span>
+>>>>>>> 70a7e91307b7b137e58209a8df72dcd2ceb02acb
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Data Engineering</h3>
-            <p className="text-gray-300">
-              Build robust data pipelines and infrastructure for scalable analytics.
-            </p>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
-          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Custom Solutions
+          </h3>
+          <p className="text-gray-600">
+            Create custom data analytics solutions tailored to your specific needs.
+          </p>
         </div>
       </div>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+<<<<<<< HEAD
+=======
+
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Ready to Analyze Your Data?
+        </h2>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Contact us today to discuss your data analytics needs and create intelligent solutions.
+        </p>
+        <a
+          href="/contact"
+          className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+        >
+          Get Started Today
+        </a>
+      </div>
+>>>>>>> 70a7e91307b7b137e58209a8df72dcd2ceb02acb
     </div>
   );
 }

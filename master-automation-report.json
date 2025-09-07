@@ -141,12 +141,9 @@
     ]
   },
   "summary": {
-    "totalScripts": 6,
-    "successfulScripts": 3,
-    "failedScripts": 3,
-    "testsPassed": 0,
-    "testsFailed": 3,
-    "buildSuccess": false,
-    "totalErrors": 12
+    "totalPhases": 6,
+    "successfulPhases": 5,
+    "failedPhases": 1,
+    "overallSuccess": false
   }
 }

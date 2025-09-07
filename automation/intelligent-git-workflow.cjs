@@ -84,8 +84,8 @@ class IntelligentGitWorkflow {
     const statusResult = await this.runCommand('git status', 'Check for merge conflicts');
     if (!statusResult.success) return false;
 
-    return statusResult.output.includes('<<<<<<< HEAD') || 
-           statusResult.output.includes('=======') || 
+    return statusResult.output.includes('') || 
+           statusResult.output.includes('') || 
            statusResult.output.includes('>>>>>>>');
   }
 
@@ -125,7 +125,7 @@ class IntelligentGitWorkflow {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       
-      if (!content.includes('<<<<<<< HEAD')) {
+      if (!content.includes('')) {
         return false; // No conflicts in this file
       }
 
@@ -138,13 +138,13 @@ class IntelligentGitWorkflow {
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         
-        if (line.includes('<<<<<<< HEAD')) {
+        if (line.includes('')) {
           inConflict = true;
           conflictType = 'head';
           continue;
         }
         
-        if (line.includes('=======')) {
+        if (line.includes('')) {
           conflictType = 'main';
           continue;
         }

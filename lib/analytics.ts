@@ -332,6 +332,8 @@ export const trackEvent = (eventName: string,properties?: Record<string, string 
     dataLayer: unknown[];
   }
 }
+
+
 }
     gtag: (...args: unknown[]) => void;
     dataLayer: unknown[];
