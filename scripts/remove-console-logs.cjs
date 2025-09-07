@@ -95,7 +95,7 @@ function main() {
   let filesProcessed = 0;
 
   for (const pattern of patterns) {
-    const files = await glob(pattern);
+    const files = glob.sync(pattern);
     
     for (const file of files) {
       if (shouldProcessFile(file)) {

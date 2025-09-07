@@ -4,16 +4,16 @@ interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;}
-  networkLatency: number,}
+  networkLatency: number}
 }
 
 export const PerformanceOptimizer: React.FC = () => ;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null\"  />(null)\";
 
-const [isOptimized, setIsOptimized] = useState(false)useEffect(() => {
-const measurePerformance = (\"\";
+const [isOptimized, setIsOptimized] = useState(false)useEffect(() => {"
+const measurePerformance = (\"\";"
       if (typeof window !== 'undefined' && 'performance' in window) {\"\";
-
+"
 const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;\"\";
 
 const paint = performance.getEntriesByType('paint';
@@ -31,11 +31,11 @@ const networkLatency = navigation.responseEnd - navigation.requestStart;
 
 const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
         setIsOptimized(isGoodPerformance)}
-    }// Measure performance after page load;
-    if (document.readyState === 'complete') {measurePerformance()} else {window.addEventListener('load', measurePerformance)}// Measure performance after page load\"\";
-    if (document.readyState === 'complete') {measurePerformance()} else {\"\";}
+    }// Measure performance after page load;"
+    if (document.readyState === 'complete') {measurePerformance()} else {window.addEventListener('load', measurePerformance)}// Measure performance after page load\"\";"
+    if (document.readyState === 'complete') {measurePerformance()} else {\"\";}"
       window.addEventListener('load', measurePerformance)}return () => {\"\";}
-      window.removeEventListener('load', measurePerformance)}
+      window.removeEventListener('load', measurePerformance)}"
   }, [])const optimizePerformance = (// Implement performance optimizations\"\";
     if (typeof window !== 'undefined') {// Preload critical resources;
 
@@ -53,34 +53,34 @@ const criticalResources = [
         }
         document.head.appendChild(link)})// Enable service worker for caching;
       if ('serviceWorker' in navigator) {navigator.serviceWorker.register('/sw.js').catch(console.error)}setIsOptimized(true)}
-  }if (!metrics) {return null;}
-  }if (!metrics) {return null}return (\"\";
-    <div className=\"fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50\" />\"\";
-      <div className=\"flex items-center justify-between mb-2\" />\"\";
-        <h3 className=\"text-sm font-semibold text-gray-900\" />Performance</h3>\"\";
+  }if (!metrics) {return null;}"
+  }if (!metrics) {return null}return (\"\";"
+    <div className=\"fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50\" />\"\";"
+      <div className=\"flex items-center justify-between mb-2\" />\"\";"
+        <h3 className=\"text-sm font-semibold text-gray-900\" />Performance</h3>\"\";"
         <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}\"  /></div>\";
-      </div>;
-      \"\";
-      <div className=\"space-y-2 text-xs\" />\"\";
-        <div className=\"flex justify-between\" />\"\";
-          <span className=\"text-gray-600\" />Load Time:</span>\"\";
+      </div>;"
+      \"\";"
+      <div className=\"space-y-2 text-xs\" />\"\";"
+        <div className=\"flex justify-between\" />\"\";"
+          <span className=\"text-gray-600\" />Load Time:</span>\"\";"
           <span className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}\"  />\";
             {metrics.loadTime.toFixed(0)}ms;
           </span>;
-        </div>;
-        <div className=\"flex justify-between\" />;
+        </div>;"
+        <div className=\"flex justify-between\" />;"
           <span className=\"text-gray-600\" />Render Time: </span>;
           <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'} />;
             {metrics.renderTime.toFixed(0)}ms;
           </span>;
-        </div>;
-        <div className=\"flex justify-between\" />;
+        </div>;"
+        <div className=\"flex justify-between\" />;"
           <span className=\"text-gray-600\" />Memory: </span>;
           <span className={metrics.memoryUsage < 50 ? 'text-green-600' : 'text-red-600'} />;
             {metrics.memoryUsage.toFixed(1)}MB;
           </span>;
-        </div>;
-        <div className=\"flex justify-between\" />;
+        </div>;"
+        <div className=\"flex justify-between\" />;"
           <span className=\"text-gray-600\" />Network: </span>;
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'} />;
             {metrics.networkLatency.toFixed(0)}ms;
@@ -88,7 +88,7 @@ const criticalResources = [
         </div>;
       </div>;
       {!isOptimized && (<button;}
-          onClick={optimizePerformance}
+          onClick={optimizePerformance}"
           className=\"mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors\" />
 
           Optimize Performance;
@@ -97,4 +97,4 @@ const criticalResources = [
     </div>;
   )}
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizer;"

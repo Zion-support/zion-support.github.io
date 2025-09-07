@@ -36,7 +36,7 @@ export default function ServicesIndexPage () {
   headers: {
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {}
-  start: values.timelineStart, end: values.timelineEnd,}
+  start: values.timelineStart, end: values.timelineEnd}
 }
 budgetRange: values.budgetRange;
 }
@@ -55,3 +55,4 @@ budgetRange: values.budgetRange;
 
 export default ServicesPage;
 
+"

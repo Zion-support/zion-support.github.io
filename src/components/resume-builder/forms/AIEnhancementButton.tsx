@@ -46,25 +46,25 @@ if ( {) {$2;}
 }
       on_enhanced (enhanced_content)}}},return (onClick={handleEnhance}
       disabled={isEnhancing}>;
-      {isEnhancing ? (<Loader2 className=\"h-3 w-3 animate-spin\" />;}
-      ) : (<Sparkles className=\"h-3 w-3\" />;}
+      {isEnhancing ? (<Loader2 className=\"h-3 w-3 animate-spin\" />;}"
+      ) : (<Sparkles className=\"h-3 w-3\" />;}"
       )}<span className=\"text-xs\" />{buttonText}</span>;
     </Button>;
-  )}<Button;
-      type=\"button\";
-      variant=\"ghost\";
+  )}<Button;"
+      type=\"button\";"
+      variant=\"ghost\";"
       size=\"sm\";
       className={`h - 6 gap - 1 text - primary hover: text - primary ${class_name}`}
       on_click = {handle_enhance }
-      disabled = {is_enhancing,}
+      disabled = {is_enhancing}
 }
      />;
       {is_enhancing ? (<Loader2 className='h - 3 w - 3 animate - spin' />) : (<Sparkles className='h - 3 w - 3' />)}
       <span className='text - xs' />{button_text}</span>;
     </Button>)on_click={handle_enhance}
       disabled={is_enhancing}
-    >;
-      {is_enhancing ? (<Loader2 className=\"h - 3 w - 3 animate - spin\" />) : (<Sparkles className=\"h - 3 w - 3\" />)}
+    >;"
+      {is_enhancing ? (<Loader2 className=\"h - 3 w - 3 animate - spin\" />) : (<Sparkles className=\"h - 3 w - 3\" />)}"
       <span className=\"text - xs\" />{button_text}</span>;
     </Button>)})}import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -84,13 +84,13 @@ export function AIEnhancementButton({currentContent;
   context;
   onEnhanced;
   buttonText;
-  return (<Button;
-      type=\"button\";
-      variant=\"ghost\";}
+  return (<Button;"
+      type=\"button\";"
+      variant=\"ghost\";}"
       size=\"sm\";}
       className={`h-6 gap-1 text-primary hover: text-primary ${className}`}
       onClick = {handleEnhance}
-      disabled = {isEnhancin,}
+      disabled = {isEnhancin}
 }
      />;
       {isEnhancing ? (<Loader2 className='h-3 w-3 animate-spin' />;}
@@ -98,4 +98,4 @@ export function AIEnhancementButton({currentContent;
       )}
       <span className='text-xs' />{buttonText}</span>;
     </Button>;
-  )
+  )"

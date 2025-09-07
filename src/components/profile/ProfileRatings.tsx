@@ -7,9 +7,9 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   const [ratingDistribution, setRatingDistribution] = useState<Record <number, number\"  />>({})\";
 }
 
-export function ProfileRatings({ userId, averageRating;
-  return (<div className=\"space-y-6\" />;
-      <div className=\"flex flex-col md:flex-row gap-6\" />;
+export function ProfileRatings({ userId, averageRating;"
+  return (<div className=\"space-y-6\" />;"
+      <div className=\"flex flex-col md:flex-row gap-6\" />;"
         <div className=\"md:w-1/3\" />;}
           <ReviewStats;}
             averageRating={averageRating}
@@ -53,15 +53,15 @@ export function ProfileRatings({ userId, averageRating;
           </Tabs>;
         </div>;
       </div>;
-    </div>;
+    </div>;"
   )}, [reviews])//Fetch reviews when component mounts return (<div className=\"space-y-6\"  /> <div className=\"flex flex-col md:flex-row gap-6\"  /> <div className=\"md:w-1/3\"  /> <ReviewStats averageRating= {averageRating ;}
-}totalReviews= {ratingCount ;}
-}ratingDistribution= {ratingDistribution \";}
+}totalReviews= {ratingCount ;}"
+}ratingDistribution= {ratingDistribution \";}"
 }/> </div> </TabsList> <TabsContent value=\"all\"  /> <ReviewsList reviews= {reviews ;}
-}isLoading= {isLoading ;}
-}onReportReview= {reportReview \";}
-}/> </TabsContent> <TabsContent value=\"positive\"  /> <ReviewsList reviews= {reviews.filter ( (r) = /> r.rating >= 4)}isLoading= {isLoading ;}
-}onReportReview= {reportReview \";}
+}isLoading= {isLoading ;}"
+}onReportReview= {reportReview \";}"
+}/> </TabsContent> <TabsContent value=\"positive\"  /> <ReviewsList reviews= {reviews.filter ( (r) = /> r.rating >= 4)}isLoading= {isLoading ;}"
+}onReportReview= {reportReview \";}"
 }/> </TabsContent> <TabsContent value=\"critical\"  /> <ReviewsList reviews= {reviews.filter ( (r) = /> r.rating < 4)}isLoading= {isLoading ;}
-}onReportReview= {reportReview ;}
-}/> </TabsContent> </Tabs> </div> </div> </div>)}\";
+}onReportReview= {reportReview ;}"
+}/> </TabsContent> </Tabs> </div> </div> </div>)}\";"

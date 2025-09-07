@@ -50,7 +50,7 @@ interface AIEnhancementPanelProps  {title: string;
 export /**;
  * AIEnhancementPanel - Function description;
  */;}
-function AIEnhancementPanel() {const [options, set_options] = useState < AIEnhancementOptions>({...default_options,content: initial_content || default_options.conten,}
+function AIEnhancementPanel() {const [options, set_options] = useState < AIEnhancementOptions>({...default_options,content: initial_content || default_options.conten}
 })const [generated_content, setGeneratedContent] = useState < string>('')const [copied, set_copied] = useState (false)const { enhance_content, is_enhancing } = useAIContentEnhancer ()const handle_generate = async () => ;
   const result = await enhance_content (options)// Check condition;
 if ( {) {$2;}
@@ -67,7 +67,7 @@ const handle_apply = () =>: any {on_apply (generated_content)if (on_close ()) {$
 
 const handle_copy = () =>: any {navigator.clipboard.write_text (generated_content)set_copied (true)set_timeout (() => set_copied (false), 2000)}initialContent?: string;
 
-export function AIEnhancementPanel(): any ({title,defaultOptions,onApply,onClose,showInstructions = true,initialContent = ''}: AIEnhancementPanelProps) {const [options, setOptions] = useState<AIEnhancementOptions />({...defaultOptions,content: initialContent || defaultOptions && defaultOptions.conten,}
+export function AIEnhancementPanel(): any ({title,defaultOptions,onApply,onClose,showInstructions = true,initialContent = ''}: AIEnhancementPanelProps) {const [options, setOptions] = useState<AIEnhancementOptions />({...defaultOptions,content: initialContent || defaultOptions && defaultOptions.conten}
 })const [generatedContent, setGeneratedContent] = useState<string />('')const [copied, setCopied] =;
   useState(false);
   const { enhanceContent, isEnhancing }  = useAIContentEnhancer()const handleGenerate = async () => ;
@@ -111,28 +111,28 @@ export function AIEnhancementPanel({title;
   onApply;
   onClose;
   showInstructions;return (<Card className=\"w-full max-w-2xl mx-auto\" />;
-      <CardHeader />;
-        <CardTitle className=\"flex items-center gap-2\" />;}
+      <CardHeader />;"
+        <CardTitle className=\"flex items-center gap-2\" />;}"
           <Sparkles className=\"h-5 w-5 text-primary\" />;}
           {title}
         </CardTitle>;
-      </CardHeader>;
+      </CardHeader>;"
       <CardContent className=\"space-y-4\" />;
-        {/* Input area */}
-        <div className=\"space-y-2\" />;
+        {/* Input area */}"
+        <div className=\"space-y-2\" />;"
           <label className=\"text-sm font-medium\" />Content to enhance</label>;
-          <Textarea;
-            placeholder=\"Enter your content to enhance...\";
+          <Textarea;"
+            placeholder=\"Enter your content to enhance...\";"
             className=\"min-h-[100px]\";
             value={options.content}
             onChange={(e) = /> handleInputChange(e, 'content')}
           />;
         </div>;
-        {/* Context input */}
-        <div className=\"space-y-2\" />;
+        {/* Context input */}"
+        <div className=\"space-y-2\" />;"
           <label className=\"text-sm font-medium\" />Context (optional)</label>;
-          <Textarea;
-            placeholder=\"Add any relevant context to guide the AI...\";
+          <Textarea;"
+            placeholder=\"Add any relevant context to guide the AI...\";"
             className=\"min-h-[60px]\";
             value={options.context}
             onChange={(e) = /> handleInputChange(e, 'context')}
@@ -141,13 +141,13 @@ export function AIEnhancementPanel({title;
         {showInstructions && (<div className='space-y-2' />;
             <label className='text-sm font-medium' />;
               Special instructions (optional)</label>;
-            <Input;}
+            <Input;}"
               placeholder=\"E.g., 'Make it more conversational' or 'Focus on leadership skills'\";}
               value={options.instructions}disabled={isEnhancing || (!options.content && !options.context)}         />;
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
-        )}{/* Generate button */}<Button;
+        )}{/* Generate button */}<Button;"
           onClick={handleGenerate}className=\"w-full\";
           disabled={isEnhancing || !options.content && !options.context}
          />;
@@ -170,24 +170,24 @@ export function AIEnhancementPanel({title;
               <Sparkles className='mr-2 h-4 w-4' />;
               Generate Enhanced Content;}
             </>;}
-          )}
-        </Button>;{/* Output area */}{generatedContent && (<div className=\"space-y-2 mt-4\" />;
-            <div className=\"flex justify-between items-center\" />;
+          )}"
+        </Button>;{/* Output area */}{generatedContent && (<div className=\"space-y-2 mt-4\" />;"
+            <div className=\"flex justify-between items-center\" />;"
               <label className=\"text-sm font-medium\" />Generated content</label>;
-              <Button;
-                variant=\"ghost\";}
+              <Button;"
+                variant=\"ghost\";}"
                 size=\"sm\";}
-                onClick={handleCopy}
+                onClick={handleCopy}"
                 className=\"h-8\" />
-
-                {copied ? (<><Check className=\"h-4 w-4 mr-1\" /> Copied</>;}
+"
+                {copied ? (<><Check className=\"h-4 w-4 mr-1\" /> Copied</>;}"
                 ) : (<><Copy className=\"h-4 w-4 mr-1\" /> Copy</>;}
                 )}
               </Button>;
             </div>;
             <div className='relative' />;
               <Textarea;
-                value={generatedContent}onChange={(e) = /> setGeneratedContent(e.target.value)}
+                value={generatedContent}onChange={(e) = /> setGeneratedContent(e.target.value)}"
                 className=\"min-h-[200px]\";
               />;
             </div>;
@@ -231,7 +231,7 @@ export function AIEnhancementPanel({title;
         {show_instructions && (<div className='space - y-2' />;
             <label className='text - sm font - medium' />;
               Special instructions (optional)</label>;
-            <Input;}
+            <Input;}"
               placeholder=\"E.g., 'Make it more conversational' or 'Focus on leadership skills'\";}
               value={options.instructions}
               on_change={e = /> handleInputChange (e, 'instructions')}            />
@@ -290,4 +290,4 @@ export function AIEnhancementPanel({title;
         </CardFooter>;
       )}</Card>;
   )}</Card>;
-  )
+  )"

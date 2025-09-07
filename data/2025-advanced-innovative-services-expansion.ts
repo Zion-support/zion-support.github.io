@@ -1,11 +1,6 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface AdvancedInnovativeService  {id: string;
-  id: string;
-=======
+
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: string;
   tagline: string;
   price: string;
@@ -1536,11 +1531,9 @@ implementationDetails:
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
   }
 ];
-<<<<<<< HEAD;
-      'Most advanced AI climate prediction platform with research-grade accuracy'
-=======
+
       'Most advanced AI climate prediction platform with research-grade accuracy',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
   },;
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
     ];
@@ -2056,9 +2049,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development';
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
 }

@@ -13,7 +13,7 @@ interface Props  {children: React.ReactNode;
 interface State  {hasError: boolean;
   error?: Error;
 }
-export class EquipmentErrorBoundary extends React.Component<Props, State /> {constructor(props: Props) {super(props)this.state = { hasError: false,}
+export class EquipmentErrorBoundary extends React.Component<Props, State /> {constructor(props: Props) {super(props)this.state = { hasError: false}
 }
   hasError: boolean;
   error?: Error;
@@ -32,7 +32,7 @@ interface State {
 }
 }
 
-export class EquipmentErrorBoundary extends React.Component<Props, State /> {constructor(props: Props) {super(props)this.state = { hasError: false,}
+export class EquipmentErrorBoundary extends React.Component<Props, State /> {constructor(props: Props) {super(props)this.state = { hasError: false}
 }
   static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
   }
@@ -51,7 +51,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State /> {con
               <div className='flex gap-2 justify-center' />;
                 <Button;}
                   onClick={() = />;}
-                    this.setState({ hasError: false, error: undefined },
+                    this.setState({ hasError: false, error: undefined }
 }
                   variant='outline'                >;
                   <RefreshCw className='h-4 w-4 mr-2' />;
@@ -63,20 +63,20 @@ export class EquipmentErrorBoundary extends React.Component<Props, State /> {con
 
                   <RefreshCw className=\"h-4 w-4 mr-2\" />;
                   Try Again;
-                </Button>;
-        <div className=\"container py-8\" />;
-          <Card className=\"border-red-200 bg-red-50\" />;
-            <CardContent className=\"p-8 text-center\" />;
-              <AlertTriangle className=\"mx-auto mb-4 h-12 w-12 text-red-600\" />;
-              <h2 className=\"text-2xl font-bold text-red-900 mb-2\" />Something went wrong</h2>;
+                </Button>;"
+        <div className=\"container py-8\" />;"
+          <Card className=\"border-red-200 bg-red-50\" />;"
+            <CardContent className=\"p-8 text-center\" />;"
+              <AlertTriangle className=\"mx-auto mb-4 h-12 w-12 text-red-600\" />;"
+              <h2 className=\"text-2xl font-bold text-red-900 mb-2\" />Something went wrong</h2>;"
               <p className=\"text-red-700 mb-4\" />;
                 We're having trouble loading the equipment listings. This might be a temporary issue.;
-              </p>;
+              </p>;"
               <div className=\"flex gap-2 justify-center\" />;
                 <Button;
-                  onClick={() = /> this.setState({ hasError: false, error: undefined },
+                  onClick={() = /> this.setState({ hasError: false, error: undefined },"
 }variant=\"outline\">
-
+"
                   <RefreshCw className=\"h-4 w-4 mr-2\" />;
                   Try Again;
                 </Button>;
@@ -89,8 +89,8 @@ interface State {
 }
 }
 
-export class EquipmentErrorBoundary extends React && React.Component<Props, State /> {constructor(props: Props) {super(props,}
-}static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
+export class EquipmentErrorBoundary extends React && React.Component<Props, State /> {constructor(props: Props) {super(props}
+}static getDerivedStateFromError(error: Error): State {return { hasError: true, error }"
   }}render() {if (this && this.state.hasError) {return (<Button onClick={() = /> window.location.reload()} variant=\"default\">;
                   Refresh Page;
                 </Button>;
@@ -103,17 +103,17 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   }}}
                   onClick={() => window && window.location.reload()}
                   variant='default';
-                >                  Refresh Page;
+                >                  Refresh Page;"
                 <Button onClick={() = /> window && window.location.reload()} variant=\"default\">;
-              </p>;
+              </p>;"
               <div className=\"flex gap-2 justify-center\" />;
                 <Button;
-                  onClick={() = /> this && this.setState({ hasError: false, error: undefined },
+                  onClick={() = /> this && this.setState({ hasError: false, error: undefined },"
 }variant=\"outline\">
-
+"
                   <RefreshCw className=\"h-4 w-4 mr-2\" />;
                   Try Again;
-                </Button>;
+                </Button>;"
                 <Button onClick={() = /> window && window.location.reload()} variant=\"default\">;
                   Refresh Page;
                 </Button>;
@@ -125,7 +125,7 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   }      )}return this && this.props.children;
   }static getDerivedStateFromError (error: Error): State {return { has_error: true, error }
   }
-  componentDidCatch (error: Error, error_info: React.ErrorInfo) {logErrorToProduction ('Equipment page error:', error, { component_stack: error_info.component_stack },
+  componentDidCatch (error: Error, error_info: React.ErrorInfo) {logErrorToProduction ('Equipment page error:', error, { component_stack: error_info.component_stack }
 }
   render () {// Check condition;}
 if ( {) {$2;}
@@ -144,7 +144,7 @@ if ( {) {$2;}
               <div className='flex gap - 2 justify - center' />;
                 <Button;
                   on_click={() = />;}
-                    this.set_state ({ has_error: false, error: undefined },
+                    this.set_state ({ has_error: false, error: undefined }
 }
                   variant='outline'                >;
                   <RefreshCw className='h - 4 w - 4 mr - 2' />;
@@ -153,18 +153,18 @@ if ( {) {$2;}
                 <Button;
                   on_click={() = /> window.location.reload ()}
                   variant='default';
-                >                  Refresh Page;
+                >                  Refresh Page;"
                 <Button on_click={() = /> window.location.reload ()} variant=\"default\">;
-              </p>;
+              </p>;"
               <div className=\"flex gap - 2 justify - center\" />;
                 <Button;
-                  on_click={() = /> this.set_state ({ has_error: false, error: undefined },
-}
+                  on_click={() = /> this.set_state ({ has_error: false, error: undefined }
+}"
                   variant=\"outline\">
-
+"
                   <RefreshCw className=\"h - 4 w - 4 mr - 2\" />;
                   Try Again;
-                </Button>;
+                </Button>;"
                 <Button on_click={() = /> window.location.reload ()} variant=\"default\">;
                   Refresh Page;
                 </Button>;
@@ -177,4 +177,4 @@ if ( {) {$2;}
     return this.props.children;
   }      )}return this.props.children;
   }})}return this.props.children;
-  }
+  }"

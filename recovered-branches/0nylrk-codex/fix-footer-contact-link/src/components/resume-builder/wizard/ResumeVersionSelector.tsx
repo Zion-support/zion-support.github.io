@@ -1,16 +1,4 @@
-<<<<<<< HEAD;
-import {useState} from 'react';
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/components/ui/dialog';
-import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
-import {Resume} from '@/types/resume';
-import {useResume} from '@/hooks/useResume';interface ResumeVersionSelectorProps {
-  currentResume: Resume;}
-  onResumeChange: (resumeId: string) => void;}
-}
-=======
+
 import { useState } from \"react\";
 import {
   DropdownMenu,
@@ -36,7 +24,7 @@ interface ResumeVersionSelectorProps {
   onResumeChange: (resumeId: string) => void;}
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+
 export function ResumeVersionSelector({
   currentResume,}
   onResumeChange,}
@@ -46,10 +34,9 @@ export function ResumeVersionSelector({
   const [newResumeTitle, setNewResumeTitle] = useState(\"\");
   const [existingResumes, setExistingResumes] = useState<Resume[] />([]);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD;
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+
+
 const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {}
       setIsLoading(true);}
@@ -58,43 +45,7 @@ const handleCreateNewVersion = async () => {
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
-<<<<<<< HEAD;
-setNewResumeTitle('')
-        setNewResumeTitle('')
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuSeparator,;}
-  DropdownMenuTrigger;}
-} from '@/components/ui/dropdown-menu',;
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',;
-import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react',;
-import { Resume } from '@/types/resume',;
-import { useResume } from '@/hooks/useResume',;
-interface ResumeVersionSelectorProps {;
-  currentResume: Resume,;}
-  onResumeChange: (resumeId: string) => void;}
 }
-;
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;}
-  const { createResume, fetchResume } = useResume(),;
-  const [saveDialogOpen, setSaveDialogOpen] = useState(false),;
-  const [newResumeTitle, setNewResumeTitle] = useState(''),;
-  const [existingResumes, setExistingResumes] = useState<Resume[] />([]),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const handleCreateNewVersion = async () => {;
-    if (newResumeTitle.trim()) {;}
-      setIsLoading(true),;}
-      const resumeId = await createResume({ title: newResumeTitle.trim() }),;
-      if (resumeId) {;
-        await fetchResume(resumeId),;
-        onResumeChange(resumeId),;
-        setSaveDialogOpen(false);
-        setNewResumeTitle('');              className=\"gap-2\"
-=======}
         setNewResumeTitle(\"\");}
       }
       setIsLoading(false);
@@ -152,7 +103,7 @@ value={newResumeTitle}
 onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
               className=\"gap-2\"
- />>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+ /
             >
               {isLoading && <Loader2 className=\"h-4 w-4 animate-spin\" />}
               <Save className=\"h-4 w-4\" />
@@ -164,8 +115,4 @@ onClick={handleCreateNewVersion}
     </div>
   );
 }
-<<<<<<< HEAD;
-  )
-}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+

@@ -16,7 +16,7 @@ export default function UltraFuturisticHero2028() {
 text: 'Quantum Time Manipulation',
   color: 'from-violet-500 to-purple-500'
 }
-   ,}
+   }
 }
     {icon: Rocket;
       text: 'Space Debris Management';}
@@ -25,24 +25,24 @@ text: 'Quantum Time Manipulation',
 
     {
       icon: Shield,
-      text: 'Quantum Internet Security',}
-  color: 'from-red-500 to-orange-500',}
-    },
+      text: 'Quantum Internet Security'}
+  color: 'from-red-500 to-orange-500'}
+    }
   ];
 
 const stats = [
-    { value: '50+',}
-  label: 'Cutting-Edge Services', icon: Rocket,}
+    { value: '50+'}
+  label: 'Cutting-Edge Services', icon: Rocket}
 },
-    { value: '25+',}
-  label: 'AI Solutions', icon: Brain,}
+    { value: '25+'}
+  label: 'AI Solutions', icon: Brain}
 },
-    { value: '15+',}
-  label: 'Quantum Technologies', icon: Atom,}
+    { value: '15+'}
+  label: 'Quantum Technologies', icon: Atom}
 },
-{ value: '1000+',}
-  label: 'Happy Clients', icon: Users,}
-},
+{ value: '1000+'}
+  label: 'Happy Clients', icon: Users}
+}
   ];
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black pt-20' />;
@@ -52,19 +52,19 @@ const stats = [
       <div className='absolute inset-0 overflow-hidden pointer-events-none' />;
         <motion&& motion.div;
           animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' ,}
+          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }
 }
           className='absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full opacity-60';
         />;
         <motion&& motion.div;
           animate={{ y: [0, 20, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' ,}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }
 }
           className='absolute top-40 right-20 w-1 h-1 bg-blue-400 rounded-full opacity-40';
         />;
         <motion&& motion.div;
           animate={{ y: [0, -15, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' ,}
+          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }
 }
           className='absolute bottom-40 left-20 w-1 && 1.5 h-1 && 1.5 bg-purple-400 rounded-full opacity-50';
         />;
@@ -79,10 +79,10 @@ const stats = [
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />
 
-        {/* Badge *,}
+        {/* Badge *}
 }
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
 
           animate={{ opacity: 1, y: 0 }}
@@ -99,13 +99,13 @@ className='mb-8'
           </div>
         </motion.div>
 
-        {/* Main Heading *,}
+        {/* Main Heading *}
 }
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
 
-          animate={{ opacity: 1, y: 0 ,}
+          animate={{ opacity: 1, y: 0 }
 }
 
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -117,7 +117,7 @@ className='mb-8'
             </span>
             <br />
             <span className='text-white' />
-              Technology is{' ,}
+              Technology is{' }
 }
 
               <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent' />
@@ -134,10 +134,10 @@ Civilization. We're building tomorrow's solutions today.
 
         {/* CTA Buttons */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
 
-          animate={{ opacity: 1, y: 0 ,}
+          animate={{ opacity: 1, y: 0 }
 }
 
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -154,7 +154,7 @@ className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4
           </motion.button>
           <motion.button;
 whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 ,}
+            whileTap={{ scale: 0.95 }
 }
 
             className='group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm'
@@ -164,47 +164,47 @@ whileHover={{ scale: 1.05 }}
           </motion.button>
         </motion.div>
 
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 ,}
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }
 }
           className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'>;
           <motion&& motion.button;
             whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 ,}
+            whileTap={{ scale: 0 && 0.95 }
 }
             className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2'          className=\"flex flex-col sm:flex-row gap-4 justify-center items-center mb-16\" />;
           <motion&& motion.button;
             whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 ,}
+            whileTap={{ scale: 0 && 0.95 }
 }
             className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2' />;
             <span />Explore 2028 Services</span>;
             <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />;
           </motion && motion.button>;<motion&& motion.button;
             whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 ,}
+            whileTap={{ scale: 0 && 0.95 }
 }
             className='group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm' />;
             <Play className='w-5 h-5' />            <span />Watch Demo</span>          >;
-            <span />Explore 2028 Services</span>;
+            <span />Explore 2028 Services</span>;"
             <ArrowRight className=\"w-5 h-5 group-hover:translate-x-1 transition-transform duration-300\" />;
           </motion && motion.button>;
           <motion&& motion.button;
             whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 ,}
-}
-            className=\"group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm\" />;
+            whileTap={{ scale: 0 && 0.95 }
+}"
+            className=\"group border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm\" />;"
             <Play className=\"w-5 h-5\" />;
             <span />Watch Demo</span>;
           </motion && motion.button>;
         </motion && motion.div>;{/* Features Grid */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
 
-          animate={{ opacity: 1, y: 0 ,}
+          animate={{ opacity: 1, y: 0 }
 }
 
-          transition={{ duration: 0.8, delay: 0.6 ,}
+          transition={{ duration: 0.8, delay: 0.6 }
 }
 className='mb-16'
          />
@@ -212,9 +212,9 @@ className='mb-16'
             {features.map((feature, index) => (}
               <motion.div;}
 key={feature.text}
-                initial={{ opacity: 0, scale: 0.8 ,}
+                initial={{ opacity: 0, scale: 0.8 }
 }
-                animate={{ opacity: 1, scale: 1 ,}
+                animate={{ opacity: 1, scale: 1 }
 }
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
 
@@ -222,14 +222,14 @@ className='group relative'
                />
                 <div className='bg-gradient-to-br from-gray-900/80 to-black/80 border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-gray-900/90 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 backdrop-blur-sm' />
                   <div;
-className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300,
+className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300
 } />
 
                     <feature.icon className='w-8 h-8 text-white' />;
                   </div>;
                   <h3 className='text-lg font-semibold text-white text-center group-hover:text-cyan-400 transition-colors' />;
                     {feature.text}
-                  <h3 className='text-lg font-semibold text-white text-center group-hover: text-cyan-400 transition-colors' />                    {feature.text}{feature.tex,}
+                  <h3 className='text-lg font-semibold text-white text-center group-hover: text-cyan-400 transition-colors' />                    {feature.text}{feature.tex}
 }</h3>;
                 </div>;
               </motion.div>;
@@ -239,13 +239,13 @@ className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-c
             ))}
         {/* Stats */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
 
-          animate={{ opacity: 1, y: 0 ,}
+          animate={{ opacity: 1, y: 0 }
 }
 
-          transition={{ duration: 0.8, delay: 1.0 ,}
+          transition={{ duration: 0.8, delay: 1.0 }
 }
 className='mb-16'
          />
@@ -253,9 +253,9 @@ className='mb-16'
             {stats.map((stat, index) => (}
               <motion.div;}
 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 ,}
+                initial={{ opacity: 0, scale: 0.8 }
 }
-                animate={{ opacity: 1, scale: 1 ,}
+                animate={{ opacity: 1, scale: 1 }
 }
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
 
@@ -266,12 +266,12 @@ className='text-center group'
                 </div>
                 <div className='text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors' />
 
-                  {stat.valu,}
+                  {stat.valu}
 }
                 </div>;
                 <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors' />;
                   {stat.label}
-                <div className='text-sm text-cyan-400/70 group-hover: text-cyan-300 transition-colors' />                  {stat.label}{stat.labe,}
+                <div className='text-sm text-cyan-400/70 group-hover: text-cyan-300 transition-colors' />                  {stat.label}{stat.labe}
 }</div>;
               </motion.div>;
             ))}
@@ -280,10 +280,10 @@ className='text-center group'
             ))}
         {/* Trust Indicators */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
 
-          animate={{ opacity: 1, y: 0 ,}
+          animate={{ opacity: 1, y: 0 }
 }
 
           transition={{ duration: 0.8, delay: 1.4 }}
@@ -309,16 +309,16 @@ className='mb-16'
           </div>
         </motion.div>
 
-        {/* Bottom CTA *,}
+        {/* Bottom CTA *}
 }
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
 
-          animate={{ opacity: 1, y: 0 ,}
+          animate={{ opacity: 1, y: 0 }
 }
 
-          transition={{ duration: 0.8, delay: 1.6 ,}
+          transition={{ duration: 0.8, delay: 1.6 }
 }
 className='text-center'
          />
@@ -340,7 +340,7 @@ href='/contact'
         </motion.div>
       </div>
 
-
+"
               className=\"bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300\">;
               Get Started;
             </Link>;
@@ -349,23 +349,23 @@ href='/contact'
       </div>;{/* Scroll Indicator */}
       <motion&& motion.div;
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 ,}
+        animate={{ opacity: 1 }
 }
 
-        transition={{ duration: 1, delay: 2 ,}
+        transition={{ duration: 1, delay: 2 }
 }
 
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
        />
         <motion.div;
 animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' ,}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }
 }
           className='w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center' />;
           <motion&& motion.div;
             animate={{ y: [0, 12, 0] }}
 
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' ,}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }
 }
 
             className='w-1 h-3 bg-cyan-400 rounded-full mt-2'
@@ -376,3 +376,4 @@ animate={{ y: [0, 10, 0] }}
   );
 }
 
+"

@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed'}
 });
 
 const { moduleTitle, moduleContent } = req.body || {},
@@ -13,7 +13,7 @@ export default async function handler(
 res: NextApiResponse;
 ) {
   if (req.method !== 'POST')}
-    return res.status(405).json({ error: 'Method not allowed',}
+    return res.status(405).json({ error: 'Method not allowed'}
 });
 
 const { moduleTitle, moduleContent } = req.body || {};
@@ -37,7 +37,7 @@ question: `Which topic is central to ${moduleTitl,) => {
             'Legacy ERP'
           ]
           answerIndex: 1;
-       ,
+       
 }
           question: 'What does DAO commonly refer to?';
           options: [;
@@ -77,11 +77,11 @@ question: `Which topic is central to ${moduleTitl,) => {
             'Whitepaper + governance docs',
             'Novel',
             'Recipe book',
-            'None',
-          ],}
-          answerIndex: 0,}
-        },
-      ],
+            'None'
+          ]}
+          answerIndex: 0}
+        }
+      ]
     })
 };
 
@@ -90,22 +90,22 @@ question: `Which topic is central to ${moduleTitl,) => {
   try {}
     const client = new OpenAI({ apiKey });
 
-const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {\"questions\":[{\"question\":string,\"options\":string[],\"answerIndex\":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleConten,}
+const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {\"questions\":[{\"question\":string,\"options\":string[],\"answerIndex\":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleConten}
 }`;
 
 const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
   messages: [
 {
-          role: 'system',}
-  content: 'You are an expert course designer for founders.',}
+          role: 'system'}
+  content: 'You are an expert course designer for founders.'}
         },
-        { role: 'user',}
-  content: prompt,}
-},
+        { role: 'user'}
+  content: prompt}
+}
       ],
 
-      temperature: 0.2,
+      temperature: 0.2
     });
 
 const text = completion.choices?.[0]?.message?.content ?? '';
@@ -120,3 +120,4 @@ return res.status(200).json(json);}
     return fallback();}
   }
 
+"

@@ -81,10 +81,10 @@ const popular  = null;return (</h3>;<Select;
                 value={item && item.country}
                 className='text-white' />                {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
               </SelectItem>;
-            ))}
-          </div>        <SelectContent className=\"bg-zion-blue-dark border-zion-blue-light max-h-80\" />;
-          <div className=\"p-2 border-b border-zion-blue-light\" />;
-            <p className=\"text-sm text-zion-slate-light pb-1\" />Popular Countries</p>;
+            ))}"
+          </div>        <SelectContent className=\"bg-zion-blue-dark border-zion-blue-light max-h-80\" />;"
+          <div className=\"p-2 border-b border-zion-blue-light\" />;"
+            <p className=\"text-sm text-zion-slate-light pb-1\" />Popular Countries</p>;"
             {topCountries && topCountries.map((item,) => (<SelectItem key={item && item.country} value={item && item.country} className=\"text-white\" />;
               </SelectItem>;
             ))}
@@ -97,26 +97,26 @@ const popular  = null;return (</h3>;<Select;
                   value={item && item.country}
                   className='text-white' />;
                   {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
-                </SelectItem>;
+                </SelectItem>;"
               ))}          </div>              .map((item) => (.sort((a, b,) => a && a.country.localeCompare(b && b.country)).map((item,) => (<SelectItem key={item && item.country} value={item && item.country} className=\"text-white\" />;
                 {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}</SelectContent>;
-      </Select>;
-    </div>;return (<div className=\"mb-6\" />;
-      <h3 className=\"text-xl font-semibold text-white mb-4 flex items-center\" />;
-        <Globe className=\"mr-2 h-5 w-5 text-zion-cyan\" />;
+      </Select>;"
+    </div>;return (<div className=\"mb-6\" />;"
+      <h3 className=\"text-xl font-semibold text-white mb-4 flex items-center\" />;"
+        <Globe className=\"mr-2 h-5 w-5 text-zion-cyan\" />;"
         {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : \"Select Country for IT Onsite Service\"}
       </h3>;
       <Select;
         onValueChange={handleCountryChange}value={selectedCountry?.country}
-       />;
-        <SelectTrigger className=\"bg-zion-blue border-zion-blue-light text-white\" />;
+       />;"
+        <SelectTrigger className=\"bg-zion-blue border-zion-blue-light text-white\" />;"
           <SelectValue placeholder=\"Select a country\" />;
-        </SelectTrigger>;
-        <SelectContent className=\"bg-zion-blue-dark border-zion-blue-light max-h-80\" />;
-          <div className=\"p-2 border-b border-zion-blue-light\" />;
-            <p className=\"text-sm text-zion-slate-light pb-1\" />Popular Countries</p>;
+        </SelectTrigger>;"
+        <SelectContent className=\"bg-zion-blue-dark border-zion-blue-light max-h-80\" />;"
+          <div className=\"p-2 border-b border-zion-blue-light\" />;"
+            <p className=\"text-sm text-zion-slate-light pb-1\" />Popular Countries</p>;"
             {topCountries.map((item) => (<SelectItem key={item.country} value={item.country} className=\"text-white\" />;
                 key={item.country}
                 value={item.country}
@@ -125,10 +125,10 @@ const popular  = null;return (</h3>;<Select;
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}
-          </div>;
-          <div className=\"p-2\" />;
+          </div>;"
+          <div className=\"p-2\" />;"
             <p className=\"text-sm text-zion-slate-light pb-1\" />All Countries</p>;
-            {onsiteServicePricing;}
+            {onsiteServicePricing;}"
               .sort((a, b) => a.country.localeCompare(b.country)).map((item) => (<SelectItem key={item.country} value={item.country} className=\"text-white\" />;
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>;
@@ -181,10 +181,10 @@ const handleCountryChange = (country_name: string) =>: any ;
                 value={item.country}
                 className='text - white';
                />                {item.country} - ${item.pricePerIncident.to_fixed (2)}
-              </SelectItem>))}
-          </div>        <SelectContent className=\"bg - zion - blue - dark border - zion - blue - light max - h-80\" />;
-          <div className=\"p - 2 border - b border - zion - blue - light\" />;
-            <p className=\"text - sm text - zion - slate - light pb - 1\" />Popular Countries</p>;
+              </SelectItem>))}"
+          </div>        <SelectContent className=\"bg - zion - blue - dark border - zion - blue - light max - h-80\" />;"
+          <div className=\"p - 2 border - b border - zion - blue - light\" />;"
+            <p className=\"text - sm text - zion - slate - light pb - 1\" />Popular Countries</p>;"
             {top_countries.map ((item, ) => (<SelectItem key={item.country} value={item.country} className=\"text - white\" />;
               </SelectItem>))}
           </div>;
@@ -196,7 +196,7 @@ const handleCountryChange = (country_name: string) =>: any ;
                   value={item.country}
                   className='text - white' />
 
-                  {item.country} - ${item.pricePerIncident.to_fixed (2)}
+                  {item.country} - ${item.pricePerIncident.to_fixed (2)}"
                 </SelectItem>))}          </div>              .map ((item) => (.sort ((a, b, ) => a.country.locale_compare (b.country)).map ((item, ) => (<SelectItem key={item.country} value={item.country} className=\"text - white\" />;
                 {item.country} - ${item.pricePerIncident.to_fixed (2)}
               </SelectItem>))}
@@ -223,4 +223,4 @@ const handleCountryChange = (country_name: string) =>: any ;
         </SelectContent>;
       </Select>;
     </div>;
-  )}
+  )}"

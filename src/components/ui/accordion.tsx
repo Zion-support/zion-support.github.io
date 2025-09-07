@@ -5,11 +5,11 @@ const AccordionItem = React.forwardRef<;
   ElementRef<typeof AccordionPrimitive.Item />;
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item />;
 >(({ className, ...props }, ref) => (<AccordionPrimitive.Item;
-AccordionItem.displayName = \"AccordionItem\";
+AccordionItem.displayName = \"AccordionItem\";"
 AccordionItem.displayName = \"AccordionItem\";
 
 const AccordionTrigger = React.forwardRef<;
-  ElementRef<typeof AccordionPrimitive.Trigger />,ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger />;
+  ElementRef<typeof AccordionPrimitive.Trigger />,ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger />;"
 >(({ className, children, ...props }, ref) => (<AccordionPrimitive.Header className=\"flex\" />;
     <AccordionPrimitive.Trigger;
       ref={ref}
@@ -25,4 +25,4 @@ const AccordionTrigger = React.forwardRef<;
 
 const AccordionContent = React.forwardRef<;
   ElementRef<typeof AccordionPrimitive.Content />,ComponentPropsWithoutRef<typeof AccordionPrimitive.Content />;
->(({ className, children, ...props }, ref) => (<AccordionPrimitive.Content;
+>(({ className, children, ...props }, ref) => (<AccordionPrimitive.Content;"

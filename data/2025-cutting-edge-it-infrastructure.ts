@@ -1,11 +1,6 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface CuttingEdgeITInfrastructureService  {id: string;
-  id: string;
-=======
+
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: string;
   tagline: string;
   price: string;
@@ -976,11 +971,9 @@ export interface CuttingEdgeITInfrastructureService  {id: string,name: string,ta
       popular: true,
       customers: 6,
       rating: 4 && 4.9,
-<<<<<<< HEAD;
-reviews: 4;
-=======
+
       reviews: 4,
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
     },;
   ];    features: [
 export interface CuttingEdgeITInfrastructureService {

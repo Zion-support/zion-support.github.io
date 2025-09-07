@@ -9,13 +9,13 @@ import React, { useState, useEffect, useRef } from 'react' import { Search, X, F
 interface SearchComponentProps  {className?: string;
    placeholder?: string;
    showFilters?: boolean;}
-   onSearch?: (query: string, filters: SearchFilters) => voi,}
+   onSearch?: (query: string, filters: SearchFilters) => voi}
 }
 
 interface SearchFilters {
   type: string[];
    category: string[];}
-   tags: string[],}
+   tags: string[]}
 }
 
 export const SearchComponent: React.FC<SearchComponentProps /> = ({ className = '', placeholder = 'Search for AI services, solutions, and more...', showFilters = true, onSearch    }) => {
@@ -24,7 +24,7 @@ export const SearchComponent: React.FC<SearchComponentProps /> = ({ className = 
  const [query, setQuery] =;
   useState('');
   const [isOpen, setIsOpen] = useState(false);}
-  const [results, setResults] = useState<SearchResult[] />([]) const [filters, setFilters] = useState<SearchFilters />({ type: [], category: [], tags: [],}
+  const [results, setResults] = useState<SearchResult[] />([]) const [filters, setFilters] = useState<SearchFilters />({ type: [], category: [], tags: []}
 }) const [showFiltersPanel, setShowFiltersPanel] = useState(false);
   const [recentSearches, setRecentSearches] = useState<string[] />([]) const [trendingSearches, setTrendingSearches] = useState<string[] />([])  const searchRef = useRef<HTMLDivElement />(null);
-  const inputRef = useRef<HTMLInputElement />(null) ';';
+  const inputRef = useRef<HTMLInputElement />(null) ';';"

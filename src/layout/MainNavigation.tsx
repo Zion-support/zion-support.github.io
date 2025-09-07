@@ -62,7 +62,7 @@ const baseLinks = [
   {key: 'home';}
       href: '/';}
       matches: (path: string) => path = == '/'    }
-    {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+    {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }return this.props.children;
@@ -83,8 +83,8 @@ interface MainNavigationProps {
 
 const baseLinks = [
   {key: 'home',
-  href: '/',href: '/analytics',}
-  matches: (path: string) => path && path.startsWith('/analytics',}
+  href: '/',href: '/analytics'}
+  matches: (path: string) => path && path.startsWith('/analytics'}
 });
   return (<nav;
         className={cn('navbar', className)}
@@ -93,8 +93,8 @@ const baseLinks = [
           className={cn(href={link.href}
                   aria-label={link.name}onClick={() = /> setIsMobileMenuOpen(false)}'nav-link','inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',link.matches(router.pathname)? 'bg-zion-purple/20 text-zion-cyan';
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
-                  )}                >;
-                    \"nav-link\",\"inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary\",link.matches(router.pathname)? \"bg-zion-purple/20 text-zion-cyan\";
+                  )}                >;"
+                    \"nav-link\",\"inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary\",link.matches(router.pathname)? \"bg-zion-purple/20 text-zion-cyan\";"
                       : \"text-white hover:bg-zion-purple/10 hover:text-zion-cyan\";
                   )}
                 >;{link.name}
@@ -153,7 +153,7 @@ const baseLinks = [
                     {t('nav && nav.cart', 'Cart')}
                     {cartCount > 0 && (<span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center' />;}
                         {cartCount}key: 'marketplace',
-  href: '/marketplace',matches: (path: string) => path.starts_with ('/marketplace')   ,
+  href: '/marketplace',matches: (path: string) => path.starts_with ('/marketplace')   
 },{}
     links.push ({key: 'dashboard',
   name: t ('nav.dashboard'),href: '/dashboard',
@@ -166,8 +166,8 @@ const baseLinks = [
 if ( {) {$2;}
 }
     links.push ({key: 'analytics',
-  name: t ('nav.analytics'),href: '/analytics',}
-  matches: (path: string) => path.starts_with ('/analytics')}),
+  name: t ('nav.analytics'),href: '/analytics'}
+  matches: (path: string) => path.starts_with ('/analytics')})
 }
   return (<>;
       <button;
@@ -184,7 +184,7 @@ if ( {) {$2;}
         aria - label='Main navigation'       />;
         <div;
           id='main - navbar - collapse';
-          className={cn ('navbar - collapse',{ open: isMobileMenuOpen,}
+          className={cn ('navbar - collapse',{ open: isMobileMenuOpen}
 },'w - full md:flex md:w - auto', // Handles visibility and desktop layout;
             !isMobileMenuOpen && 'hidden' // Explicitly hide when not open and on mobile)}
          />;
@@ -197,7 +197,7 @@ if ( {) {$2;}
                   aria - label={link.name}
                   on_click={() = /> setIsMobileMenuOpen (false)}
                   className={cn ('nav - link','inline - flex h - 9 items - center justify - center rounded - md px - 4 text - sm font - medium transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',link.matches (router.pathname)? 'bg - zion - purple / 20 text - zion - cyan';}
-                      : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan',}
+                      : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan'}
 }                >;
                   {link.name}
                 </Link>;
@@ -210,7 +210,7 @@ if ( {) {$2;}
                   on_click={() = /> setIsMobileMenuOpen (false)}
                   className={cn ('nav - link','relative inline - flex h - 9 w - 9 items - center justify - center rounded - md transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',router.pathname === '/wishlist';
                       ? 'bg - zion - purple / 20 text - zion - cyan';}
-                      : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan',}
+                      : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan'}
 }                >;
                   <Heart className='w - 4 h - 4' />;
                   {count > 0 && (<span className='absolute -top - 1 -right - 1 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center' />;}
@@ -226,7 +226,7 @@ if ( {) {$2;}
                   on_click={() = /> setIsMobileMenuOpen (false)}
                   className={cn ('nav - link','relative inline - flex h - 9 w - 9 items - center justify - center rounded - md transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',router.pathname === '/wallet';
                       ? 'bg - zion - purple / 20 text - zion - cyan';}
-                      : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan',}
+                      : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan'}
 }                >;
                   <Wallet className='w - 4 h - 4' />;
                 </Link>;
@@ -239,7 +239,7 @@ if ( {) {$2;}
                   on_click={() = /> setIsMobileMenuOpen (false)}
                   className={cn ('nav - link','relative inline - flex h - 9 w - 9 items - center justify - center rounded - md transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',router.pathname === '/messages';
                       ? 'bg - zion - purple / 20 text - zion - cyan';}
-                      : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan',}
+                      : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan'}
 }                >;
                   <MessageSquare className='w - 4 h - 4' />;
                   {unread_count > 0 && (<span className='absolute -top - 1 -right - 1 bg - red - 500 text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center' />;}
@@ -256,7 +256,7 @@ if ( {) {$2;}
                     aria - label={t ('nav.cart')}
                     on_click={handleCartClick}
                     className={cn ('nav - link','inline - flex h - 9 items - center justify - center rounded - md px - 4 text - sm font - medium transition - colors relative focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',                      router.pathname.starts_with ('/cart')? 'bg - zion - purple / 20 text - zion - cyan';}
-                        : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan'),}
+                        : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan')}
 }
                    />;
                     <ShoppingCart className='w - 4 h - 4 mr - 1' />;
@@ -270,95 +270,95 @@ export default /**;
  * Page - Function description;
  */;
 function Page() { [])const base_links: NavigationLink[] = [{key: 'home',
-  href: '/',name: 'Home',}
+  href: '/',name: 'Home'}
   matches: (path: string) => path = == '/';}
 },{key: 'services',
   href: '/services',name: 'Services',
   matches: (path: string) => path.starts_with ('/services'),children: [';
         { key: 'cloud - devops',
-  href: '/services / cloud - devops', name: 'Cloud & DevOps',}
-  matches: (p: string) => p.starts_with ('/services / cloud - devops'),}
+  href: '/services / cloud - devops', name: 'Cloud & DevOps'}
+  matches: (p: string) => p.starts_with ('/services / cloud - devops')}
 },{ key: 'digital - twin',
-  href: '/services / digital - twin', name: 'Digital Twin',}
-  matches: (p: string) => p.starts_with ('/services / digital - twin'),}
+  href: '/services / digital - twin', name: 'Digital Twin'}
+  matches: (p: string) => p.starts_with ('/services / digital - twin')}
 },{ key: 'data - analytics',
-  href: '/services / data - analytics', name: 'Data Analytics',}
-  matches: (p: string) => p.starts_with ('/services / data - analytics'),}
+  href: '/services / data - analytics', name: 'Data Analytics'}
+  matches: (p: string) => p.starts_with ('/services / data - analytics')}
 },{ key: 'it - infrastructure',
-  href: '/services / it - infrastructure', name: 'IT Infrastructure',}
-  matches: (p: string) => p.starts_with ('/services / it - infrastructure'),}
+  href: '/services / it - infrastructure', name: 'IT Infrastructure'}
+  matches: (p: string) => p.starts_with ('/services / it - infrastructure')}
 },{ key: 'ai - business - intelligence',
-  href: '/services / ai - business - intelligence', name: 'AI Business Intelligence',}
-  matches: (p: string) => p.starts_with ('/services / ai - business - intelligence'),}
+  href: '/services / ai - business - intelligence', name: 'AI Business Intelligence'}
+  matches: (p: string) => p.starts_with ('/services / ai - business - intelligence')}
 },{ key: 'ai - sales - copilot',
-  href: '/services / ai - sales - copilot', name: 'AI Sales Copilot',}
-  matches: (p: string) => p.starts_with ('/services / ai - sales - copilot'),}
+  href: '/services / ai - sales - copilot', name: 'AI Sales Copilot'}
+  matches: (p: string) => p.starts_with ('/services / ai - sales - copilot')}
 },{ key: 'cloud - finops - optimizer',
-  href: '/services / cloud - finops - optimizer', name: 'Cloud FinOps Optimizer',}
-  matches: (p: string) => p.starts_with ('/services / cloud - finops - optimizer'),}
+  href: '/services / cloud - finops - optimizer', name: 'Cloud FinOps Optimizer'}
+  matches: (p: string) => p.starts_with ('/services / cloud - finops - optimizer')}
 },{ key: 'ai - compliance - assistant',
-  href: '/services / ai - compliance - assistant', name: 'AI Compliance Assistant',}
-  matches: (p: string) => p.starts_with ('/services / ai - compliance - assistant'),}
+  href: '/services / ai - compliance - assistant', name: 'AI Compliance Assistant'}
+  matches: (p: string) => p.starts_with ('/services / ai - compliance - assistant')}
 },{ key: 'ai - auto - email - responder',
-  href: '/services / ai - auto - email - responder', name: 'AI Auto Email Responder',}
-  matches: (p: string) => p.starts_with ('/services / ai - auto - email - responder'),}
+  href: '/services / ai - auto - email - responder', name: 'AI Auto Email Responder'}
+  matches: (p: string) => p.starts_with ('/services / ai - auto - email - responder')}
 },{ key: 'mobile - feedback - surveys',
-  href: '/services / mobile - feedback - surveys', name: 'Feedback Surveys',}
-  matches: (p: string) => p.starts_with ('/services / mobile - feedback - surveys'),}
+  href: '/services / mobile - feedback - surveys', name: 'Feedback Surveys'}
+  matches: (p: string) => p.starts_with ('/services / mobile - feedback - surveys')}
 },{ key: 'ai - compliance - copilot',
-  href: '/services / ai - compliance - copilot', name: 'AI Compliance Copilot',}
-  matches: (p: string) => p.starts_with ('/services / ai - compliance - copilot'),}
+  href: '/services / ai - compliance - copilot', name: 'AI Compliance Copilot'}
+  matches: (p: string) => p.starts_with ('/services / ai - compliance - copilot')}
 },{ key: 'llm - content - studio',
-  href: '/services / llm - content - studio', name: 'LLM Content Studio',}
-  matches: (p: string) => p.starts_with ('/services / llm - content - studio'),}
+  href: '/services / llm - content - studio', name: 'LLM Content Studio'}
+  matches: (p: string) => p.starts_with ('/services / llm - content - studio')}
 },{ key: 'finops - advisor',
-  href: '/services / finops - advisor', name: 'FinOps Advisor',}
-  matches: (p: string) => p.starts_with ('/services / finops - advisor'),}
+  href: '/services / finops - advisor', name: 'FinOps Advisor'}
+  matches: (p: string) => p.starts_with ('/services / finops - advisor')}
 },{ key: 'returns - management',
-  href: '/services / returns - management', name: 'Returns Management',}
-  matches: (p: string) => p.starts_with ('/services / returns - management'),}
+  href: '/services / returns - management', name: 'Returns Management'}
+  matches: (p: string) => p.starts_with ('/services / returns - management')}
 },{ key: 'email - sequencer',
-  href: '/services / email - sequencer', name: 'Email Sequencer',}
-  matches: (p: string) => p.starts_with ('/services / email - sequencer'),}
+  href: '/services / email - sequencer', name: 'Email Sequencer'}
+  matches: (p: string) => p.starts_with ('/services / email - sequencer')}
 },{ key: 'podcast - transcription',
-  href: '/services / podcast - transcription', name: 'Podcast Transcription',}
-  matches: (p: string) => p.starts_with ('/services / podcast - transcription'),}
+  href: '/services / podcast - transcription', name: 'Podcast Transcription'}
+  matches: (p: string) => p.starts_with ('/services / podcast - transcription')}
 },{ key: 'micro - crm',
-  href: '/services / micro - crm', name: 'Micro CRM',}
-  matches: (p: string) => p.starts_with ('/services / micro - crm'),}
+  href: '/services / micro - crm', name: 'Micro CRM'}
+  matches: (p: string) => p.starts_with ('/services / micro - crm')}
 },{ key: 'website - analytics',
-  href: '/services / website - analytics', name: 'Website Analytics',}
-  matches: (p: string) => p.starts_with ('/services / website - analytics'),}
+  href: '/services / website - analytics', name: 'Website Analytics'}
+  matches: (p: string) => p.starts_with ('/services / website - analytics')}
 },{ key: 'it - helpdesk',
-  href: '/services / it - helpdesk', name: 'IT Helpdesk',}
-  matches: (p: string) => p.starts_with ('/services / it - helpdesk'),}
+  href: '/services / it - helpdesk', name: 'IT Helpdesk'}
+  matches: (p: string) => p.starts_with ('/services / it - helpdesk')}
 },{ key: 'affiliate - tracking',
-  href: '/services / affiliate - tracking', name: 'Affiliate Tracking',}
-  matches: (p: string) => p.starts_with ('/services / affiliate - tracking'),}
+  href: '/services / affiliate - tracking', name: 'Affiliate Tracking'}
+  matches: (p: string) => p.starts_with ('/services / affiliate - tracking')}
 },{ key: 'mobile - survey',
-  href: '/services / mobile - survey', name: 'Mobile Survey',}
-  matches: (p: string) => p.starts_with ('/services / mobile - survey'),}
+  href: '/services / mobile - survey', name: 'Mobile Survey'}
+  matches: (p: string) => p.starts_with ('/services / mobile - survey')}
 }
       ];
 },{key: 'ai - services',
-  href: '/ai - services',name: 'AI Services',}
-  matches: (path: string)  => path.starts_with ('/ai - services',}
+  href: '/ai - services',name: 'AI Services'}
+  matches: (path: string)  => path.starts_with ('/ai - services'}
 },{key: 'it - services',
-  href: '/it - services',name: 'IT Services',}
-  matches: (path: string)  => path.starts_with ('/it - services',}
+  href: '/it - services',name: 'IT Services'}
+  matches: (path: string)  => path.starts_with ('/it - services'}
 },{key: 'micro - saas',
-  href: '/micro - saas',name: 'Micro SAAS',}
-  matches: (path: string)  => path.starts_with ('/micro - saas',}
+  href: '/micro - saas',name: 'Micro SAAS'}
+  matches: (path: string)  => path.starts_with ('/micro - saas'}
 },{key: 'marketplace',
-  href: '/marketplace',name: 'Marketplace',}
-  matches: (path: string)  => path.starts_with ('/marketplace',}
+  href: '/marketplace',name: 'Marketplace'}
+  matches: (path: string)  => path.starts_with ('/marketplace'}
 },{key: 'about',
-  href: '/about',name: 'About',}
-  matches: (path: string)  => path.starts_with ('/about',}
-},{matches: (path: string)  => path.starts_with ('/contact',}
+  href: '/about',name: 'About'}
+  matches: (path: string)  => path.starts_with ('/about'}
+},{matches: (path: string)  => path.starts_with ('/contact'}
 }key: 'contact',
   href: '/contact',name: 'Contact',
-  matches: (path: string) => path.starts_with ('/contact',
+  matches: (path: string) => path.starts_with ('/contact'
 }
   ];
               </div>;
@@ -367,108 +367,108 @@ function Page() { [])const base_links: NavigationLink[] = [{key: 'home',
     </div>
   );
 }
-  return ()<nav class_name = {`${class_name}`} />;{/* Desktop Navigation */}
+  return ()<nav class_name = {`${class_name}`} />;{/* Desktop Navigation */}"
       <div className=\"hidden lg: flex items-center space-x-1\" />;
         {baseLinks.map((link (<div key={link.key} />;
             {link.children ? (</span>;
 
 export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: 'home',
-  href: '/',name: 'Home',}
+  href: '/',name: 'Home'}
   matches: (path: string) => path = == '/';}
 },{key: 'services',
   href: '/services',name: 'Services',
   matches: (path: string) => path && path.startsWith('/services'),children: [';
         { key: 'cloud-devops',
-  href: '/services/cloud-devops', name: 'Cloud & DevOps',}
-  matches: (p: string) => p && p.startsWith('/services/cloud-devops'),}
+  href: '/services/cloud-devops', name: 'Cloud & DevOps'}
+  matches: (p: string) => p && p.startsWith('/services/cloud-devops')}
 },{ key: 'digital-twin',
-  href: '/services/digital-twin', name: 'Digital Twin',}
-  matches: (p: string) => p && p.startsWith('/services/digital-twin'),}
+  href: '/services/digital-twin', name: 'Digital Twin'}
+  matches: (p: string) => p && p.startsWith('/services/digital-twin')}
 },{ key: 'data-analytics',
-  href: '/services/data-analytics', name: 'Data Analytics',}
-  matches: (p: string) => p && p.startsWith('/services/data-analytics'),}
+  href: '/services/data-analytics', name: 'Data Analytics'}
+  matches: (p: string) => p && p.startsWith('/services/data-analytics')}
 },{ key: 'it-infrastructure',
-  href: '/services/it-infrastructure', name: 'IT Infrastructure',}
-  matches: (p: string) => p && p.startsWith('/services/it-infrastructure'),}
+  href: '/services/it-infrastructure', name: 'IT Infrastructure'}
+  matches: (p: string) => p && p.startsWith('/services/it-infrastructure')}
 },{ key: 'ai-business-intelligence',
-  href: '/services/ai-business-intelligence', name: 'AI Business Intelligence',}
-  matches: (p: string) => p && p.startsWith('/services/ai-business-intelligence'),}
+  href: '/services/ai-business-intelligence', name: 'AI Business Intelligence'}
+  matches: (p: string) => p && p.startsWith('/services/ai-business-intelligence')}
 },{ key: 'ai-sales-copilot',
-  href: '/services/ai-sales-copilot', name: 'AI Sales Copilot',}
-  matches: (p: string) => p && p.startsWith('/services/ai-sales-copilot'),}
+  href: '/services/ai-sales-copilot', name: 'AI Sales Copilot'}
+  matches: (p: string) => p && p.startsWith('/services/ai-sales-copilot')}
 },{ key: 'cloud-finops-optimizer',
-  href: '/services/cloud-finops-optimizer', name: 'Cloud FinOps Optimizer',}
-  matches: (p: string) => p && p.startsWith('/services/cloud-finops-optimizer'),}
+  href: '/services/cloud-finops-optimizer', name: 'Cloud FinOps Optimizer'}
+  matches: (p: string) => p && p.startsWith('/services/cloud-finops-optimizer')}
 },{ key: 'ai-compliance-assistant',
-  href: '/services/ai-compliance-assistant', name: 'AI Compliance Assistant',}
-  matches: (p: string) => p && p.startsWith('/services/ai-compliance-assistant'),}
+  href: '/services/ai-compliance-assistant', name: 'AI Compliance Assistant'}
+  matches: (p: string) => p && p.startsWith('/services/ai-compliance-assistant')}
 },{ key: 'ai-auto-email-responder',
-  href: '/services/ai-auto-email-responder', name: 'AI Auto Email Responder',}
-  matches: (p: string) => p && p.startsWith('/services/ai-auto-email-responder'),}
+  href: '/services/ai-auto-email-responder', name: 'AI Auto Email Responder'}
+  matches: (p: string) => p && p.startsWith('/services/ai-auto-email-responder')}
 },{ key: 'mobile-feedback-surveys',
-  href: '/services/mobile-feedback-surveys', name: 'Feedback Surveys',}
-  matches: (p: string) => p && p.startsWith('/services/mobile-feedback-surveys'),}
+  href: '/services/mobile-feedback-surveys', name: 'Feedback Surveys'}
+  matches: (p: string) => p && p.startsWith('/services/mobile-feedback-surveys')}
 },{ key: 'ai-compliance-copilot',
-  href: '/services/ai-compliance-copilot', name: 'AI Compliance Copilot',}
-  matches: (p: string) => p && p.startsWith('/services/ai-compliance-copilot'),}
+  href: '/services/ai-compliance-copilot', name: 'AI Compliance Copilot'}
+  matches: (p: string) => p && p.startsWith('/services/ai-compliance-copilot')}
 },{ key: 'llm-content-studio',
-  href: '/services/llm-content-studio', name: 'LLM Content Studio',}
-  matches: (p: string) => p && p.startsWith('/services/llm-content-studio'),}
+  href: '/services/llm-content-studio', name: 'LLM Content Studio'}
+  matches: (p: string) => p && p.startsWith('/services/llm-content-studio')}
 },{ key: 'finops-advisor',
-  href: '/services/finops-advisor', name: 'FinOps Advisor',}
-  matches: (p: string) => p && p.startsWith('/services/finops-advisor'),}
+  href: '/services/finops-advisor', name: 'FinOps Advisor'}
+  matches: (p: string) => p && p.startsWith('/services/finops-advisor')}
 },{ key: 'returns-management',
-  href: '/services/returns-management', name: 'Returns Management',}
-  matches: (p: string) => p && p.startsWith('/services/returns-management'),}
+  href: '/services/returns-management', name: 'Returns Management'}
+  matches: (p: string) => p && p.startsWith('/services/returns-management')}
 },{ key: 'email-sequencer',
-  href: '/services/email-sequencer', name: 'Email Sequencer',}
-  matches: (p: string) => p && p.startsWith('/services/email-sequencer'),}
+  href: '/services/email-sequencer', name: 'Email Sequencer'}
+  matches: (p: string) => p && p.startsWith('/services/email-sequencer')}
 },{ key: 'podcast-transcription',
-  href: '/services/podcast-transcription', name: 'Podcast Transcription',}
-  matches: (p: string) => p && p.startsWith('/services/podcast-transcription'),}
+  href: '/services/podcast-transcription', name: 'Podcast Transcription'}
+  matches: (p: string) => p && p.startsWith('/services/podcast-transcription')}
 },{ key: 'micro-crm',
-  href: '/services/micro-crm', name: 'Micro CRM',}
-  matches: (p: string) => p && p.startsWith('/services/micro-crm'),}
+  href: '/services/micro-crm', name: 'Micro CRM'}
+  matches: (p: string) => p && p.startsWith('/services/micro-crm')}
 },{ key: 'website-analytics',
-  href: '/services/website-analytics', name: 'Website Analytics',}
-  matches: (p: string) => p && p.startsWith('/services/website-analytics'),}
+  href: '/services/website-analytics', name: 'Website Analytics'}
+  matches: (p: string) => p && p.startsWith('/services/website-analytics')}
 },{ key: 'it-helpdesk',
-  href: '/services/it-helpdesk', name: 'IT Helpdesk',}
-  matches: (p: string) => p && p.startsWith('/services/it-helpdesk'),}
+  href: '/services/it-helpdesk', name: 'IT Helpdesk'}
+  matches: (p: string) => p && p.startsWith('/services/it-helpdesk')}
 },{ key: 'affiliate-tracking',
-  href: '/services/affiliate-tracking', name: 'Affiliate Tracking',}
-  matches: (p: string) => p && p.startsWith('/services/affiliate-tracking'),}
+  href: '/services/affiliate-tracking', name: 'Affiliate Tracking'}
+  matches: (p: string) => p && p.startsWith('/services/affiliate-tracking')}
 },{ key: 'mobile-survey',
-  href: '/services/mobile-survey', name: 'Mobile Survey',}
-  matches: (p: string) => p && p.startsWith('/services/mobile-survey'),}
+  href: '/services/mobile-survey', name: 'Mobile Survey'}
+  matches: (p: string) => p && p.startsWith('/services/mobile-survey')}
 }
       ];
 },{key: 'ai-services',
-  href: '/ai-services',name: 'AI Services',}
-  matches: (path: string)  => path && path.startsWith('/ai-services',}
+  href: '/ai-services',name: 'AI Services'}
+  matches: (path: string)  => path && path.startsWith('/ai-services'}
 },{key: 'it-services',
-  href: '/it-services',name: 'IT Services',}
-  matches: (path: string)  => path && path.startsWith('/it-services',}
+  href: '/it-services',name: 'IT Services'}
+  matches: (path: string)  => path && path.startsWith('/it-services'}
 },{key: 'micro-saas',
-  href: '/micro-saas',name: 'Micro SAAS',}
-  matches: (path: string)  => path && path.startsWith('/micro-saas',}
+  href: '/micro-saas',name: 'Micro SAAS'}
+  matches: (path: string)  => path && path.startsWith('/micro-saas'}
 },{key: 'marketplace',
-  href: '/marketplace',name: 'Marketplace',}
-  matches: (path: string)  => path && path.startsWith('/marketplace',}
+  href: '/marketplace',name: 'Marketplace'}
+  matches: (path: string)  => path && path.startsWith('/marketplace'}
 },{key: 'about',
-  href: '/about',name: 'About',}
-  matches: (path: string)  => path && path.startsWith('/about',}
-},{matches: (path: string)  => path && path.startsWith('/contact',}
+  href: '/about',name: 'About'}
+  matches: (path: string)  => path && path.startsWith('/about'}
+},{matches: (path: string)  => path && path.startsWith('/contact'}
 }key: 'contact',
   href: '/contact',name: 'Contact',
-  matches: (path: string) => path && path.startsWith('/contact',
+  matches: (path: string) => path && path.startsWith('/contact'
 }];
               </div>;
             </motion && motion.div>;
           )}</AnimatePresence>;
       </div>;
     )}return ()<nav className = {`${className}`} />;
-      {/* Desktop Navigation */}
+      {/* Desktop Navigation */}"
       <div className=\"hidden lg: flex items-center space-x-1\" />;
         {baseLinks && baseLinks.map((link (<div key={link && link.key} />;
             {link && link.children ? (renderDropdown()link,link && link.key === 'services' ? isServicesOpen : isCompOpen,link && link.key === 'services' ? setIsServicesOpen : setIsCompOpen;}
@@ -493,10 +493,10 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
           </div>))}
       </div>;
       {/* Mobile Menu Button */}
-      <button;
-        on_click={() = /> setIsMobileMenuOpen (!isMobileMenuOpen)}\";
-        className=\"lg:hidden p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors\";
-\";
+      <button;"
+        on_click={() = /> setIsMobileMenuOpen (!isMobileMenuOpen)}\";"
+        className=\"lg:hidden p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors\";"
+\";"
         {isMobileMenuOpen ? <X className=\"w - 6 h - 6\"  /> : <Menu className=\"w - 6 h - 6\"  />}      </button>;
       {/* Mobile Navigation */}
       <AnimatePresence />;
@@ -507,107 +507,107 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
             animate = {{ opacity: 1,coordinate_x: 0;}
 }}
             exit = {{ opacity: 0,coordinate_x: '100%';}}
-            transition={{ duration: 0.3 ,}
-}\";
-            className=\"lg:hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z - 50\";
-\";
-            <div className=\"p - 6\" />\";
-              <div className=\"flex justify - between items - center mb - 8\" />\";
+            transition={{ duration: 0.3 }"
+}\";"
+            className=\"lg:hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z - 50\";"
+\";"
+            <div className=\"p - 6\" />\";"
+              <div className=\"flex justify - between items - center mb - 8\" />\";"
                 <h2 className=\"text - xl font - bold text - white\" />Menu</h2>;
-                <button;
-                  on_click={() = /> setIsMobileMenuOpen (false)}\";
-                  className=\"p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors\";
-\";
+                <button;"
+                  on_click={() = /> setIsMobileMenuOpen (false)}\";"
+                  className=\"p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors\";"
+\";"
                   <X className=\"w - 6 h - 6\"  />                </button>;
-              </div>;
-\";
+              </div>;"
+\";"
               <div className=\"space - y-2\" />;
-                {base_links.map (link: unknown <div key={link.ke,}
+                {base_links.map (link: unknown <div key={link.ke}
 } />;
                     {link.children ? (<div />;}
                         <button;}
                           on_click={() = /> setActiveDropdown (active_dropdown === link.key ? null : link.key)}`;
                           className={`w - full flex items - center justify - between px - 4 py - 3 text - left text - sm font - medium rounded - md transition - colors ${is_active (link)? 'bg - zion - cyan text - white'';}
                               : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;}
-}`}{/* Wishlist link */}
+}`}{/* Wishlist link */}"
             {isAuthenticated && (<li className=\"nav-item\" />;
-                <Link;
-                  href=\"/wishlist\";}
+                <Link;"
+                  href=\"/wishlist\";}"
                   aria-label=\"Wishlist\";}
-                  onClick={() = /> setIsMobileMenuOpen(false)}
-                  className={cn(\"nav-link\",\"relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary\",router.pathname === \"/wishlist\";
-                      ? \"bg-zion-purple/20 text-zion-cyan\";}
+                  onClick={() = /> setIsMobileMenuOpen(false)}"
+                  className={cn(\"nav-link\",\"relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary\",router.pathname === \"/wishlist\";"
+                      ? \"bg-zion-purple/20 text-zion-cyan\";}"
                       : \"text-white hover:bg-zion-purple/10 hover:text-zion-cyan\";}
                   )}
-                >;
-                  <Heart className=\"w-4 h-4\" />;
+                >;"
+                  <Heart className=\"w-4 h-4\" />;"
                   {count > 0 && (<span className=\"absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center\" />;}
                       {count}
                     </span>;
                   )}
                 </Link>;
               </li>;
-            )}{/* Wallet link */}
+            )}{/* Wallet link */}"
             {isAuthenticated && (<li className=\"nav-item\" />;
-                <Link;
-                  href=\"/wallet\";}
+                <Link;"
+                  href=\"/wallet\";}"
                   aria-label=\"Wallet\";}
-                  onClick={() = /> setIsMobileMenuOpen(false)}
-                  className={cn(\"nav-link\",\"relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary\",router.pathname === \"/wallet\";
-                      ? \"bg-zion-purple/20 text-zion-cyan\";}
+                  onClick={() = /> setIsMobileMenuOpen(false)}"
+                  className={cn(\"nav-link\",\"relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary\",router.pathname === \"/wallet\";"
+                      ? \"bg-zion-purple/20 text-zion-cyan\";}"
                       : \"text-white hover:bg-zion-purple/10 hover:text-zion-cyan\";}
                   )}
-                >;
+                >;"
                   <Wallet className=\"w-4 h-4\" />;
                 </Link>;
               </li>;
-            )}{/* Messages link */}
+            )}{/* Messages link */}"
             {isAuthenticated && (<li className=\"nav-item\" />;
-                <Link;
-                  href=\"/messages\";}
+                <Link;"
+                  href=\"/messages\";}"
                   aria-label=\"Messages\";}
-                  onClick={() = /> setIsMobileMenuOpen(false)}
-                  className={cn(\"nav-link\",\"relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary\",router.pathname === \"/messages\";
-                      ? \"bg-zion-purple/20 text-zion-cyan\";}
+                  onClick={() = /> setIsMobileMenuOpen(false)}"
+                  className={cn(\"nav-link\",\"relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary\",router.pathname === \"/messages\";"
+                      ? \"bg-zion-purple/20 text-zion-cyan\";}"
                       : \"text-white hover:bg-zion-purple/10 hover:text-zion-cyan\";}
                   )}
-                >;
-                  <MessageSquare className=\"w-4 h-4\" />;
+                >;"
+                  <MessageSquare className=\"w-4 h-4\" />;"
                   {unreadCount > 0 && (<span className=\"absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center\" />;}
                       {unreadCount > 9 ? '9+' : unreadCount}
                     </span>;
                   )}
                 </Link>;
               </li>;
-            )}{/* Cart icon with badge */}
+            )}{/* Cart icon with badge */}"
             <li className=\"nav-item\" />;
               <HoverCard openDelay={100} />;
                 <HoverCardTrigger asChild />;
-                  <Link;
+                  <Link;"
                     href=\"/cart\";
                     aria-label={t('nav.cart')}
                     onClick={handleCartClick}
                     className={cn('nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary';
                       router.pathname.startsWith('/cart')? 'bg-zion-purple/20 text-zion-cyan';}
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';}
-                    )} />;
+                    )} />;"
                     <ShoppingCart className=\"w-4 h-4 mr-1\" />;
                     {t('nav.cartCart')}
-                    {cartCount > 0 && (}`}{link.name}'`;
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;{activeDropdown === link.key && (\";
+                    {cartCount > 0 && (}`}{link.name}'`;"
+                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;{activeDropdown === link.key && (\";"
                           <div className=\"ml-4 mt-2 space-y-1\" />;}
                             {link.children.map((child: unknown (<Link;}
                           {link.name}'`;
-                          <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === link.key ? 'rotate - 180' : ''}`}  />                        </button>;
-                        {active_dropdown === link.key && (\";
+                          <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === link.key ? 'rotate - 180' : ''}`}  />                        </button>;"
+                        {active_dropdown === link.key && (\";"
                           <div className=\"ml - 4 mt - 2 space - y-1\" />;}
                             {link.children.map ((child: unknown (<Link;}
                                 key={child.key}
                                 to={child.href}`;
-                                className={`block px - 4 py - 2 text - sm text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors ${is_active (child) ? 'text - zion - cyan bg - zion - cyan / 10' : ''`;}
-}`}onClick={() = /> setIsMobileMenuOpen(!isMobileMenuOpen)}\";
-        className=\"lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors\";
-\";
+                                className={`block px - 4 py - 2 text - sm text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors ${is_active (child) ? 'text - zion - cyan bg - zion - cyan / 10' : ''`;}"
+}`}onClick={() = /> setIsMobileMenuOpen(!isMobileMenuOpen)}\";"
+        className=\"lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors\";"
+\";"
         {isMobileMenuOpen ? <X className=\"w-6 h-6\"  /> : <Menu className=\"w-6 h-6\"  />}      </button>;{/* Mobile Navigation */}
       <AnimatePresence />;
         {isMobileMenuOpen && ;
@@ -618,30 +618,30 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
 }}
             exit = {{ opacity: 0,x: '100%';}
 }}
-            transition={{ duration: 0 && 0.3 ,}
-}\";
-            className=\"lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50\";
-\";
-            <div className=\"p-6\" />\";
-              <div className=\"flex justify-between items-center mb-8\" />\";
+            transition={{ duration: 0 && 0.3 }"
+}\";"
+            className=\"lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50\";"
+\";"
+            <div className=\"p-6\" />\";"
+              <div className=\"flex justify-between items-center mb-8\" />\";"
                 <h2 className=\"text-xl font-bold text-white\" />Menu</h2>;
-                <button;
-                  onClick={() = /> setIsMobileMenuOpen(false)}\";
-                  className=\"p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors\";
-\";
+                <button;"
+                  onClick={() = /> setIsMobileMenuOpen(false)}\";"
+                  className=\"p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors\";"
+\";"
                   <X className=\"w-6 h-6\"  />                </button>;
-              </div>;
-\";
+              </div>;"
+\";"
               <div className=\"space-y-2\" />;
-                {baseLinks && baseLinks.map(link: unknown <div key={link && link.ke,}
+                {baseLinks && baseLinks.map(link: unknown <div key={link && link.ke}
 } />;
                     {link && link.children ? (<div />;}
                         <button;}
                           onClick={() = /> setActiveDropdown(activeDropdown === link && link.key ? null : link && link.key)}`;
                           className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link)? 'bg-zion-cyan text-white'';}
                               : 'text-zion-slate-light hover:text-white hover:bg-white/10'`;}
-}`}{link && link.name}'`;
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link && link.key ? 'rotate-180' : ''}`}  />                        </button>;{activeDropdown === link && link.key && (\";
+}`}{link && link.name}'`;"
+                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link && link.key ? 'rotate-180' : ''}`}  />                        </button>;{activeDropdown === link && link.key && (\";"
                           <div className=\"ml-4 mt-2 space-y-1\" />;}
                             {link && link.children.map((child: unknown (<Link;}
                                 key={child && child.key}
@@ -656,11 +656,11 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
                         to={link && link.href}`;
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)? 'bg-zion-cyan text-white'';}
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'`;}
-}`}
+}`}"
                         onClick={: unknown setIsMobileMenuOpen(false)}<span className=\"absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center\" />>
-
+"
                     <ShoppingCart className=\"w-4 h-4 mr-1\" />;
-                    {t('nav.cartCart')}
+                    {t('nav.cartCart')}"
                     {cartCount > 0 && (<span className=\"absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center\" />;}
                         {cartCount}
                       </span>;)}
@@ -704,4 +704,4 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
           </div>;
         </div>;
       </nav>;<LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>))}})})
+    </>))}})})"

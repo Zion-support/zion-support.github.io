@@ -62,30 +62,11 @@ export interface BiotechAIService {
       'API for lab integration',
     ],
     popular: true,
-<<<<<<< HEAD;
-icon: '🔬',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-}
-      website: 'https://ziontechgroup.com';}
-    }
-    real_implementation: true,
-    implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.';
-    launch_date: '2024 - 03 - 10';
-    customers: 90;
-    rating: 4.9,
-    reviews: 45;
 
-  }
-
-;
-    realImplementation: true;
-implementationDetails:
-      'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
-=======
     icon: '🔬',
   realImplementation: true;
     implementationDetails: \"implementationDetails\",
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 launchDate: '2024-01-15',
   customers: 120;
 rating: 5.0;
@@ -451,11 +432,6 @@ export const biotechAIServices: BiotechAIService[] = [;
     rating: 4.9,
     reviews: 45;
   }
-<<<<<<< HEAD;
-;
-  }
-];
-=======
+
 ;  }
 ];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

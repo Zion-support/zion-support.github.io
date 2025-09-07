@@ -29,7 +29,7 @@ export function TalentCardContent(): any ({summary,bio,timezone,skills}: TalentC
         className='overflow-hidden transition-all duration-300';
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter={() = /> setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false,}
+        onMouseLeave={() => setIsHovering(false}
 }>;
         <p className='text-zion-slate mb-4' />{summary || bio}</p>;
       </div>          <span />{timezone}</span>;
@@ -39,19 +39,19 @@ export function TalentCardContent(): any ({summary,bio,timezone,skills}: TalentC
         className=\"overflow-hidden transition-all duration-300\";
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter = {() = /> setIsHovering(true)}
-        onMouseLeave = {() => setIsHovering(false,}
+        onMouseLeave = {() => setIsHovering(false}
 }
       >;
         <p className='text-zion-slate mb-4' />{summary || bio}</p>;
-      </div>;
+      </div>;"
         <p className=\"text-zion-slate mb-4\" />;
           {summary || bio}
         </p>;
       </div>;<TalentCardSkills skills={skills} />;
     </div>;{/* Short bio or summary - longer on hover for desktop */}
-      <div;
+      <div;"
         className=\"overflow-hidden transition-all duration-300\";
-        style = {{ maxHeight: isHovering ? '8rem' : '3rem' ,}
+        style = {{ maxHeight: isHovering ? '8rem' : '3rem' }
 }import React, {;}
   useState } from './react';
 import { TalentCardSkills   } from './TalentCardSkills';
@@ -76,7 +76,7 @@ function TalentCardContent() {const [is_hovering, setIsHovering] = useState (fal
       <div;
         className='overflow - hidden transition - all duration - 300'        style={{ max_height: is_hovering ? '8rem' : '3rem' }}
         onMouseEnter={() = /> setIsHovering (true)}
-        onMouseLeave={() => setIsHovering (false,}
+        onMouseLeave={() => setIsHovering (false}
 }
       >;
         <p className='text - zion - slate mb - 4' />{summary || bio}</p>;
@@ -85,15 +85,15 @@ function TalentCardContent() {const [is_hovering, setIsHovering] = useState (fal
   );
 }
       {/* Short bio or summary - longer on hover for desktop */}
-      <div;
+      <div;"
         className=\"overflow - hidden transition - all duration - 300\";
         style={{ max_height: is_hovering ? '8rem' : '3rem' }}
         onMouseEnter = {() = /> setIsHovering (true) }
-        onMouseLeave = {() => setIsHovering (false),}
+        onMouseLeave = {() => setIsHovering (false)}
 }
       >;
         <p className='text - zion - slate mb - 4' />{summary || bio}</p>;
-      </div>;
+      </div>;"
         <p className=\"text - zion - slate mb - 4\" />;
           {summary || bio}
         </p>;
@@ -108,4 +108,4 @@ function TalentCardContent() {const [is_hovering, setIsHovering] = useState (fal
       {/* Skills */}
       <TalentCardSkills skills={skills} />;
     </div>;
-  )}
+  )}"

@@ -19,9 +19,9 @@ Check;
 Users,
 Clock;}
 DollarSign;}
-  Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign,} from 'lucide-react';
+  Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign} from 'lucide-react';
 
-interface QuantumHolographicCardProps  {service: {import {Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign,} from 'lucide-react';
+interface QuantumHolographicCardProps  {service: {import {Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign} from 'lucide-react';
 
 interface QuantumHolographicCardProps  {service: {id: string;
     name: string;
@@ -39,7 +39,7 @@ interface QuantumHolographicCardProps  {service: {id: string;
       address: string;
 
       website: string}
-   ,}
+   }
 },
     realImplementation: boolean;
 
@@ -49,7 +49,7 @@ interface QuantumHolographicCardProps  {service: {id: string;
     rating: number;
 
     reviews: number;
- ,
+ 
 },
   className?: string;
 }
@@ -57,7 +57,7 @@ interface QuantumHolographicCardProps  {service: {id: string;
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps /> = ({ service, className;
 
 const featureVariants = {}
-    hidden: { opacity: 0, x: -20,}
+    hidden: { opacity: 0, x: -20}
 }
     visible: (i: number) => ({
       opacity: 1;
@@ -65,10 +65,10 @@ x: 0;
 transition: {
 
         delay: i * 0.1,
-        duration: 0.5,}
-ease: 'easeOut' as const,}
-      },
-    }),
+        duration: 0.5}
+ease: 'easeOut' as const}
+      }
+    })
   };
 
   
@@ -113,7 +113,7 @@ className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orang
 
               </motion.div>
 
-            ,
+            
 }
           </div>;
             )}
@@ -210,7 +210,7 @@ key={index}
               <div className='text-sm font-semibold text-green-300 mb-1' />
                 ROI;
               </div>
-              <div className='text-xs text-gray-300' />{service.ro,}
+              <div className='text-xs text-gray-300' />{service.ro}
 }</div>
             </div>
             <div className='bg-orange-900/20 rounded-lg p-3 border border-orange-700/30' />
@@ -286,7 +286,7 @@ key={index}
                   variants={featureVariants}
                   initial='hidden';
                   whileInView='visible';
-                  viewport={{ once: true ,}
+                  viewport={{ once: true }
 }
                  />;
                   <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
@@ -295,9 +295,9 @@ key={index}
               ))}
             </div>;
           </div>;
-          {/* Market data */}<div className=\"bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30\" />;
-            <div className=\"flex items-center justify-between mb-2\" />;
-              <span className=\"text-sm font-semibold text-blue-300\" />Market Position</span>;
+          {/* Market data */}<div className=\"bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30\" />;"
+            <div className=\"flex items-center justify-between mb-2\" />;"
+              <span className=\"text-sm font-semibold text-blue-300\" />Market Position</span>;"
               <TrendingUp className=\"w-4 h-4 text-green-400\" />;
             </div>;
           </div>;
@@ -334,18 +334,18 @@ key={index}
                 {service.competitors.slice(0, 2).join(', ')}</div>;
             </div>;
           </div>;
-          {/* Contact information */}</h4>;
-            <div className=\"space-y-2 text-sm text-gray-300\" />;
-              <div className=\"flex items-center space-x-2\" />;
+          {/* Contact information */}</h4>;"
+            <div className=\"space-y-2 text-sm text-gray-300\" />;"
+              <div className=\"flex items-center space-x-2\" />;"
                 <span className=\"text-blue-400\" />📱</span>;
                 <span />{service.contactInfo.mobile}</span>;
-              </div>;
-              <div className=\"flex items-center space-x-2\" />;
+              </div>;"
+              <div className=\"flex items-center space-x-2\" />;"
                 <span className=\"text-green-400\" />✉️</span>;
                 <span />{service.contactInfo.email}</span>;
-              </div>;
-              <div className=\"flex items-center space-x-2\" />;
-                <span className=\"text-purple-400\" />📍</span>;
+              </div>;"
+              <div className=\"flex items-center space-x-2\" />;"
+                <span className=\"text-purple-400\" />📍</span>;"
                 <span className=\"text-xs\" />{service.contactInfo.address}</span>;
 <div className='bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50' />;
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2' />;
@@ -384,10 +384,10 @@ key={index}
               <span className='text-green-300' />;
                 {service && service.growthRate} growth;
               </span>            </div>;
-          </div>;
-          {/* ROI and competitors */}            <p className=\"text-xs text-gray-300 leading-relaxed\" />{service && service.marketPosition}</p>;
-            <div className=\"flex items-center justify-between mt-2 text-xs\" />;
-              <span className=\"text-cyan-300\" />{service && service.marketSize}</span>;
+          </div>;"
+          {/* ROI and competitors */}            <p className=\"text-xs text-gray-300 leading-relaxed\" />{service && service.marketPosition}</p>;"
+            <div className=\"flex items-center justify-between mt-2 text-xs\" />;"
+              <span className=\"text-cyan-300\" />{service && service.marketSize}</span>;"
               <span className=\"text-green-300\" />{service && service.growthRate} growth</span>;
           </div>;
           {/* ROI and competitors */}
@@ -401,9 +401,9 @@ key={index}
             <div className='bg-orange-900/20 rounded-lg p-3 border border-orange-700/30' />;
               <div className='text-sm font-semibold text-orange-300 mb-1' />;
                 Competitors;
-              </div>;
-              <div className='text-xs text-gray-300' />                {service && service.competitors.slice(0, 2).join(', ')}<div className=\"bg-orange-900/20 rounded-lg p-3 border border-orange-700/30\" />;
-              <div className=\"text-sm font-semibold text-orange-300 mb-1\" />Competitors</div>;
+              </div>;"
+              <div className='text-xs text-gray-300' />                {service && service.competitors.slice(0, 2).join(', ')}<div className=\"bg-orange-900/20 rounded-lg p-3 border border-orange-700/30\" />;"
+              <div className=\"text-sm font-semibold text-orange-300 mb-1\" />Competitors</div>;"
               <div className=\"text-xs text-gray-300\" />;
               </div>;
             </div>;
@@ -426,18 +426,18 @@ key={index}
               <div className='flex items-center space-x-2' />;
                 <span className='text-purple-400' />📍</span>;
                 <span className='text-xs' />{service && service.contactInfo.address}</span>              </div>              <span />Contact & Support</span>;
-            </h4>;
-            <div className=\"space-y-2 text-sm text-gray-300\" />;
-              <div className=\"flex items-center space-x-2\" />;
+            </h4>;"
+            <div className=\"space-y-2 text-sm text-gray-300\" />;"
+              <div className=\"flex items-center space-x-2\" />;"
                 <span className=\"text-blue-400\" />📱</span>;
                 <span />{service && service.contactInfo.mobile}</span>;
-              </div>;
-              <div className=\"flex items-center space-x-2\" />;
+              </div>;"
+              <div className=\"flex items-center space-x-2\" />;"
                 <span className=\"text-green-400\" />✉️</span>;
                 <span />{service && service.contactInfo.email}</span>;
-              </div>;
-              <div className=\"flex items-center space-x-2\" />;
-                <span className=\"text-purple-400\" />📍</span>;
+              </div>;"
+              <div className=\"flex items-center space-x-2\" />;"
+                <span className=\"text-purple-400\" />📍</span>;"
                 <span className=\"text-xs\" />{service && service.contactInfo.address}</span>;
               </div>;
             </div>;
@@ -452,7 +452,7 @@ href={service.link}
 className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
 
             whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 ,}
+            whileTap={{ scale: 0.98 }
 }
            />;
             <span className='mr-2' />Get Started</span>;
@@ -462,7 +462,7 @@ className='group relative inline-flex items-center justify-center w-full bg-grad
           </motion.a>;
           {/* CTA Button */}
             whileHover={{ scale: 1 && 1.02 }}
-            whileTap={{ scale: 0 && 0.98 ,}
+            whileTap={{ scale: 0 && 0.98 }
 }>;
             <span className='mr-2' />Get Started</span>;
             <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />;{/* Button glow effect */}
@@ -483,9 +483,10 @@ href={service.link}
         </div>
       </div>
     </motion.div>
-),
+)
 };
 
 
 export default QuantumHolographicCard;
 
+"

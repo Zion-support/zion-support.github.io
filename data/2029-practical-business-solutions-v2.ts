@@ -1,95 +1,6 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types / service - variants';
-export interface PracticalBusinessSolution2029  {{id: 'ai - business - intelligence - suite',
-  name: 'AI Business Intelligence Suite',tagline:;
-      'Intelligent insights and predictive analytics for business growth',price: '$2, 499',
-  period: '/month',description:;
-      'Comprehensive AI - powered business intelligence platform that provides real - time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',features: [;
-      'Real - time data analytics','Predictive business modeling','Automated report generation','Custom dashboard creation','Data visualization tools','Business trend analysis','Performance benchmarking','ROI tracking automation','Market opportunity identification','Competitive intelligence';
-    ],popular: true,icon: '📊',}
-  reviews: 167;}
-  }'Competitive intelligence';
-    ],popular: true,icon: '📊','Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making';
-    ],    features: [;
-      'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making';
-    ],    features: [;
-import { ServiceVariant  } from '../types/service-variants';
-export interface PracticalBusinessSolution2029  {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  contactInfo: {mobile: string;
-    email: string;
-    address: string;}
-    website: string;}
-  },realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-    id: 'ai-business-intelligence-suite';
-    name: 'AI Business Intelligence Suite';
-    tagline: 'Intelligent insights and predictive analytics for business growth';
-    price: '$2,499',
-  period: '/month';
-    description: 'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
-  features: [;
-    id: 'ai-business-intelligence-suite';
-    name: 'AI Business Intelligence Suite';
-    tagline:;
-      'Intelligent insights and predictive analytics for business growth';
-    price: '$2,499';
-    period: '/month';
-    description:;
-      'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.';
-    features: [;
-      'Real-time data analytics';
-      'Predictive business modeling';
-      'Automated report generation';
-      'Custom dashboard creation';
-      'Data visualization tools';
-      'Business trend analysis';
-      'Performance benchmarking';
-      'ROI tracking automation';
-      'Market opportunity identification';
-      'Competitive intelligence';
-    id: 'ai - business - intelligence - suite',
-  name: 'AI Business Intelligence Suite',
-    tagline:;
-      'Intelligent insights and predictive analytics for business growth',
-    price: '$2, 499',
-  period: '/month',
-    description:;
-      'Comprehensive AI - powered business intelligence platform that provides real - time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
-    features: [;
-      'Real - time data analytics',
-      'Predictive business modeling',
-=======
+
 'Predictive business modeling',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
       'Automated report generation',
       'Custom dashboard creation',
       'Data visualization tools',
@@ -103,11 +14,9 @@ export interface PracticalBusinessSolution2029  {id: string;
     icon: '📊',
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'
     ],    features: [
-<<<<<<< HEAD;
-      'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'
-=======
+
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
     ],    features: [;
       'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation';
       'Market opportunity identificationCompetitive intelligence'
@@ -117,138 +26,16 @@ export interface PracticalBusinessSolution2029  {id: string;
     color: 'from-blue-500 via-indigo-500 to-purple-500';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/services/ai-business-intelligence-suite';
-<<<<<<< HEAD;
-marketPosition:;
-      'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.';
-    targetAudience:;
-      'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies';
-    trialDays: 21;
-    setupTime: '2-3 weeks';
-    category: 'AI Business Intelligence';
-    realService: true;
-    technology: [;
-      'Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics';
-    ];
-    integrations: [;
-      'ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms';
-    ];
-    useCases: [;
-      'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making';
-    ],    features: [;
-      'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation';
-      'Market opportunity identificationCompetitive intelligence';
-    ];
-    popular: true;
-    icon: '📊';
-    color: 'from-blue-500 via-indigo-500 to-purple-500';
-    textColor: 'text-blue-400';
-    link: 'https://ziontechgroup.com/services/ai-business-intelligence-suite';marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.';
 
-    marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.'
-=======
     marketPosition: \"marketPosition\",
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 targetAudience: 'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies';
     trialDays: 21;
     setupTime: '2-3 weeks';
     category: 'AI Business Intelligence';
     realService: true;
-<<<<<<< HEAD;
-technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'];
-    integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'];
-    useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'];
-    roi: 'Average customer sees 350% ROI through improved decision making and business optimization.';
-    competitors: ['Tableau, Power BI, Qlik, Looker, Domo'];marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.';
-    targetAudience: 'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies',
-  trialDays: 21;
-    setupTime: '2-3 weeks';
-    category: 'AI Business Intelligence';
-    realService: true;
-    technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'],integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'],useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'],roi: 'Average customer sees 350% ROI through improved decision making and business optimization.';
-    competitors: ['Tableau, Power BI, Qlik, Looker, Domo'],marketSize: '$18B market';
-    growthRate: '280% annual growth';
-    variant: 'ai-futuristic';
-    contactInfo: {mobile: '+1 302 464 0950';
-    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-business-intelligence-suite';
-    marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.',
-  id: 'ai-business-intelligence-suite';
-    name: 'AI Business Intelligence Suite';
-    tagline:;
-      'Intelligent insights and predictive analytics for business growth';
-    price: '$2,499';
-    period: '/month';
-    description:;
-      'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.';
-    features: [;
-      mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709',}
-  website: 'https://ziontechgroup && ziontechgroup.com';}
-    }realImplementation: true,implementationDetails: 'Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.';
-    launchDate: '2024-07-01';
-    customers: 95;
-    rating: 4 && 4.8,reviews: 167;
-  }email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    },realImplementation: true;
-    implementationDetails: 'Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.',
-  launchDate: '2024-07-01';
-    customers: 95;
-    rating: 4.8;
-    reviews: 167;
-  },// Intelligent Customer Experience Platform;
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true,implementation_details: 'Production - ready AI business intelligence platform with predictive analytics, automated reporting, and real - time insights.';
-    launch_date: '2024 - 07 - 01';
-    customers: 95;
-    rating: 4.8,reviews: 167;
-  }
-  // Intelligent Customer Experience Platform;
-  {id: 'intelligent - customer - experience - platform';
-    name: 'Intelligent Customer Experience Platform';link: 'https://ziontechgroup && ziontechgroup.com/services/intelligent-customer-experience-platform';
-    marketPosition: 'Advanced AI customer experience platform. 60% better customer satisfaction than traditional CX tools.',
-  targetAudience: 'E-commerce companies, Retail businesses, SaaS companies, Service providers, Hospitality industry';
-    trialDays: 14;
-    setupTime: '1-2 weeks';
-    category: 'Customer Experience';
-    realService: true;
-    technology: ['AI personalization, Machine learning, Customer analytics, Journey mapping, Behavioral analysis'];
-    integrations: ['E-commerce platforms, CRM systems, Marketing tools, Social media, Customer support platforms'];
-    useCases: ['Customer personalization, Journey optimization, Customer retention, Revenue optimization, Customer insights'];
-    roi: 'Average customer sees 450% ROI through improved customer satisfaction and increased revenue.';
-    competitors: ['Adobe Experience Cloud, Salesforce Customer 360, HubSpot, Intercom, Zendesk'];
-    tagline: 'AI-powered customer journey optimization and personalization';
-    price: '$1,899',
-  period: '/month';
-    description: 'Revolutionary customer experience platform that uses AI to optimize every touchpoint, personalize interactions, and create seamless customer journeys that drive loyalty and revenue.',
-  features: [;
-      'AI-powered personalizationCustomer journey mappingReal-time optimizationMulti-channel integrationBehavioral analyticsPredictive customer insightsAutomated A/B testingCustomer sentiment analysis';
-      'Loyalty program optimizationRevenue optimization';
-    ];
-    popular: true;
-    icon: '🎯';
-    color: 'from-green-500 via-emerald-500 to-teal-500';
-    textColor: 'text-green-400';
-    link: 'https://ziontechgroup.com/services/intelligent-customer-experience-platform';
-    marketPosition: 'Advanced AI customer experience platform. 60% better customer satisfaction than traditional CX tools.';
-    targetAudience: 'E-commerce companies, Retail businesses, SaaS companies, Service providers, Hospitality industry',
-  trialDays: 14;
-    setupTime: '1-2 weeks';
-    category: 'Customer Experience';
-    realService: true;
-    technology: ['AI personalization, Machine learning, Customer analytics, Journey mapping, Behavioral analysis'],integrations: ['E-commerce platforms, CRM systems, Marketing tools, Social media, Customer support platforms'],useCases: ['Customer personalization, Journey optimization, Customer retention, Revenue optimization, Customer insights'],roi: 'Average customer sees 450% ROI through improved customer satisfaction and increased revenue.';
-    competitors: ['Adobe Experience Cloud, Salesforce Customer 360, HubSpot, Intercom, Zendesk'],marketSize: '$22B market';
-    growthRate: '320% annual growth';
-    variant: 'ai-futuristic';
-    contactInfo: {tagline: 'AI - powered customer journey optimization and personalization',
-  price: '$1, 899';
-    period: '/month',
-  description: 'Revolutionary customer experience platform that uses AI to optimize every touchpoint, personalize interactions, and create seamless customer journeys that drive loyalty and revenue.';
-    realService: true;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'];
     integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'];
     useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'];
@@ -1727,12 +1514,9 @@ import { ServiceVariant } from '../types/service-variants',export interface Prac
   }
 ];
 export const getPopularPracticalBusinessSolutions2029 = (
-<<<<<<< HEAD;
-return practicalBusinessSolutions2029.filter(service => service.popular);
 
-=======
   return practicalBusinessSolutions2029.filter(service => service.popular)
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38) => {
+
   return $3;}
 }
 };
@@ -2010,8 +1794,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
-<<<<<<< HEAD}
-=======}
+}
 }
 ;
 export const getPracticalBusinessSolutions2029ByCategory = (
@@ -2071,7 +1854,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
       address: '364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https://ziontechgroup.com'}
     },
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 realImplementation: true,
     implementationDetails: \"Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.\",
     launchDate: \"2024-07-01\",
@@ -2440,14 +2223,9 @@ realImplementation: true,
     rating: 4 && 4.9,
     reviews: 198;
 ]}}
-<<<<<<< HEAD;
-};
 
-
-import { ServiceVariant } from '../types/service-variants',;
-=======
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 export interface PracticalBusinessSolution2029 {;
   id: string,;
   name: string,;
@@ -3199,13 +2977,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (;
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
-<<<<<<< HEAD) => {
-  return $3;}
-}
-  });
-};
-=======
+
   })
 }
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

@@ -8,8 +8,8 @@ interface PaymentButtonProps  {amount: number;
   providerId: string;
   buttonText?: string;
   className?: string;}
-  onPaymentInitiated?: () => void;}
-        description: \"Please sign in to make a purchase.\"})import { useRouter ,}
+  onPaymentInitiated?: () => void;}"
+        description: \"Please sign in to make a purchase.\"})import { useRouter }
 } from 'next/router';
 
 interface PaymentButtonProps {
@@ -30,7 +30,7 @@ export function PaymentButton({amount;
         className;}
       )}
     >;
-      {isProcessing ? (<>;
+      {isProcessing ? (<>;"
           <Loader2 className=\"h-4 w-4 mr-2 animate-spin\" />;
           Processing...;
         </>;}
@@ -38,6 +38,6 @@ export function PaymentButton({amount;
       )}
     </Button>;
   )}catch (error) {';}
-  logErrorToProduction ('Payment error:', {data: error ;}
-})toast ({}finally {//Reset button state after a short delay setTimeout ( () => {setIsProcessing (false)}, 1500)}}> {\";}
-  isProcessing ? (<> <Loader2 className=\"h-4 w-4 mr-2 animate-spin\" /> Processing... </>) : (buttonText)}</Button>)}'\";
+  logErrorToProduction ('Payment error:', {data: error ;}"
+})toast ({}finally {//Reset button state after a short delay setTimeout ( () => {setIsProcessing (false)}, 1500)}}> {\";}"
+  isProcessing ? (<> <Loader2 className=\"h-4 w-4 mr-2 animate-spin\" /> Processing... </>) : (buttonText)}</Button>)}'\";"

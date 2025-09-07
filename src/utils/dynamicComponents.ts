@@ -9,21 +9,21 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 
 const LoadingSpinner = () =>;
-  React.createElement(\"div\",{ className: \"flex items-center justify-center p-8\",}
-},React.createElement(\"div\", {className: \"animate-spin rounded-full h-8 w-8 border-b-2 border-primary\";}
-    }),)className: \"animate-spin rounded-full h-8 w-8 border-b-2 border-primary\";
+  React.createElement(\"div\",{ className: \"flex items-center justify-center p-8\"}"
+},React.createElement(\"div\", {className: \"animate-spin rounded-full h-8 w-8 border-b-2 border-primary\";}"
+    }),)className: \"animate-spin rounded-full h-8 w-8 border-b-2 border-primary\";"
       className: \"animate-spin rounded-full h-8 w-8 border-b-2 border-primary\";
-    }),)const LoadingSkeleton = () =>;
-  React.createElement(\"div\",{ className: \"animate-pulse space-y-4\",}
-},React.createElement(\"div\", { className: \"h-4 bg-gray-200 rounded w-3/4\",}
-}),React.createElement(\"div\", { className: \"h-4 bg-gray-200 rounded w-1/2\",}
-}),React.createElement(\"div\", { className: \"h-32 bg-gray-200 rounded\",}
-}),)}() => import('recharts').then(mod = > ({ default: mod && mod.BarChart,}
+    }),)const LoadingSkeleton = () =>;"
+  React.createElement(\"div\",{ className: \"animate-pulse space-y-4\"}"
+},React.createElement(\"div\", { className: \"h-4 bg-gray-200 rounded w-3/4\"}"
+}),React.createElement(\"div\", { className: \"h-4 bg-gray-200 rounded w-1/2\"}"
+}),React.createElement(\"div\", { className: \"h-32 bg-gray-200 rounded\"}
+}),)}() => import('recharts').then(mod = > ({ default: mod && mod.BarChart}
 })),)export;
-  const DynamicBarChart = dynamic (() => import ('recharts').then (mod => ({ default: mod.BarChart,}
+  const DynamicBarChart = dynamic (() => import ('recharts').then (mod => ({ default: mod.BarChart}
 })),{    loading: LoadingSkeleton,ssr: false;}
     ssr: false;}
-  }() => import('react-window').then(mod => ({ default: mod && mod.FixedSizeList,}
+  }() => import('react-window').then(mod => ({ default: mod && mod.FixedSizeList}
 })),)// TODO: Uncomment when these components are available;
 // export const DynamicPDFGenerator = dynamic (//   () => import ('../components / pdf / PDFGenerator'),//   {//     loading: LoadingSpinner,//     ssr: false;}
 //   }
@@ -35,37 +35,37 @@ const LoadingSpinner = () =>;
 //   }
 // )// Virtual list for large datasets;
 
-export const DynamicVirtualList = dynamic (() => import ('react - window').then (mod => ({ default: mod.FixedSizeList,}
+export const DynamicVirtualList = dynamic (() => import ('react - window').then (mod => ({ default: mod.FixedSizeList}
 })),{    loading: LoadingSkeleton,ssr: false;}
     ssr: false;}
-  }// Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart ,}
+  }// Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart }
 } from '@/utils/dynamicComponents';
-// With: import { DynamicChart as Chart ,}
+// With: import { DynamicChart as Chart }
 } from '@/utils/dynamicComponents';
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
-// With: import { DynamicChart as Chart ,}
+// With: import { DynamicChart as Chart }
 } from '@/utils/dynamicComponents';
 )// Usage examples:;
-// Replace: import Chart from '../components / charts / Chart';// With: import { DynamicChart as Chart ,}
+// Replace: import Chart from '../components / charts / Chart';// With: import { DynamicChart as Chart }
 } from '@/utils / dynamic_components';
-// With: import { DynamicChart as Chart ,}
+// With: import { DynamicChart as Chart }
 } from '@/utils / dynamic_components';
 // Usage examples: // Replace: import Chart from '../components / charts / Chart';
-// With: import { DynamicChart as Chart ,}
-} from '@/utils / dynamic_components';
-import React from 'react';,import dynamic from 'next/dynamic';,const LoadingSpinner = () => React.createElement('div',{ className: \"flex items-center justify-center p-8\",}
-},React.createElement('div', { className: \"animate-spin rounded-full h-8 w-8 border-b-2 border-primary\",}
-});
-  const LoadingSkeleton = () => React.createElement('div',{ className: \"animate-pulse space-y-4\",}
-},React.createElement('div', { className: \"h-4 bg-gray-200 rounded w-3/4\",}
-}),React.createElement('div', { className: \"h-4 bg-gray-200 rounded w-1/2\",}
-}),React.createElement('div', { className: \"h-32 bg-gray-200 rounded\",}
-}))// Chart components (heavy - only load when needed)// TODO: Uncomment when Chart component is available;
-// export const DynamicChart = dynamic(//   () => import('../components/charts/Chart'),export const DynamicPieChart = dynamic(() => import(\"recharts\").then((mod) => ({ default: mod.PieChart,}
-})),{ loading: LoadingSkeleton, ssr: false,}
-},)export;
-  const DynamicBarChart = dynamic(() => import(\"recharts\").then((mod) => ({ default: mod.BarChart,}
-})),{ loading: LoadingSkeleton, ssr: false,}
+// With: import { DynamicChart as Chart }
+} from '@/utils / dynamic_components';"
+import React from 'react';,import dynamic from 'next/dynamic';,const LoadingSpinner = () => React.createElement('div',{ className: \"flex items-center justify-center p-8\"}"
+},React.createElement('div', { className: \"animate-spin rounded-full h-8 w-8 border-b-2 border-primary\"}
+});"
+  const LoadingSkeleton = () => React.createElement('div',{ className: \"animate-pulse space-y-4\"}"
+},React.createElement('div', { className: \"h-4 bg-gray-200 rounded w-3/4\"}"
+}),React.createElement('div', { className: \"h-4 bg-gray-200 rounded w-1/2\"}"
+}),React.createElement('div', { className: \"h-32 bg-gray-200 rounded\"}
+}))// Chart components (heavy - only load when needed)// TODO: Uncomment when Chart component is available;"
+// export const DynamicChart = dynamic(//   () => import('../components/charts/Chart'),export const DynamicPieChart = dynamic(() => import(\"recharts\").then((mod) => ({ default: mod.PieChart}
+})),{ loading: LoadingSkeleton, ssr: false}
+},)export;"
+  const DynamicBarChart = dynamic(() => import(\"recharts\").then((mod) => ({ default: mod.BarChart}
+})),{ loading: LoadingSkeleton, ssr: false}
 },)// TODO: Uncomment when these components are available;
 // export const DynamicPDFGenerator = dynamic(//   () => import('../components/pdf/PDFGenerator'),//   {//     loading: LoadingSpinner,//     ssr: false;}
 //   }
@@ -76,74 +76,74 @@ import React from 'react';,import dynamic from 'next/dynamic';,const LoadingSpin
 // )// export const DynamicRichEditor = dynamic(//   () => import('../components/editor/RichTextEditor'),//   {//     loading: LoadingSpinner,//     ssr: false;}
 //   }
 // )// Virtual list for large datasets;
-
-export const DynamicVirtualList = dynamic(() => import(\"react-window\").then((mod) => ({ default: mod.FixedSizeList,}
-})),{ loading: LoadingSkeleton, ssr: false,}
+"
+export const DynamicVirtualList = dynamic(() => import(\"react-window\").then((mod) => ({ default: mod.FixedSizeList}
+})),{ loading: LoadingSkeleton, ssr: false}
 },)// Usage examples:;
-// Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart ,}
+// Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart }
 } from '@/utils/dynamicComponents';
-// With: import { DynamicChart as Chart ,}
+// With: import { DynamicChart as Chart }
 } from '@/utils/dynamicComponents';
 ursor/automate-test-improve-and-merge-code-646c;
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
-// With: import { DynamicChart as Chart ,}
+// With: import { DynamicChart as Chart }
 } from '@/utils/dynamicComponents';
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
-// With: import { DynamicChart as Chart ,}
+// With: import { DynamicChart as Chart }
 } from '@/utils/dynamicComponents';
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
-// With: import { DynamicChart as Chart ,}
+// With: import { DynamicChart as Chart }
 } from '@/utils/dynamicComponents';
 // Replace: import Chart from '../components/charts/Chart';
-// With: import { DynamicChart as Chart ,}
+// With: import { DynamicChart as Chart }
 } from '@/utils/dynamicComponents';
 /**
  * Dynamic component imports - reduces initial bundle size;
  * Auto-generated by performance optimizer;
- */
+ */"
 import React from \"react\";
 
 const LoadingSpinner = () =>
-  React.createElement(
+  React.createElement("
     \"div\",
-    {
+    {"
       className: \"flex items-center justify-center p-4\"}
-   ,}
+   }
 },
-    React.createElement(
+    React.createElement("
       \"div\",
-      {
+      {"
         className: \"animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600\"}
-     ,}
+     }
 }
     )
   );
 
 // Lazy load heavy components;
-export const LazyServicesShowcase = React.lazy(() => 
-  import(\"../components/ServicesShowcase\").catch(() => ({}
-    default: () => React.createElement(\"div\", { className: \"p-4 text-center\",}
+export const LazyServicesShowcase = React.lazy(() => "
+  import(\"../components/ServicesShowcase\").catch(() => ({}"
+    default: () => React.createElement(\"div\", { className: \"p-4 text-center\"}"
 }, \"Services temporarily unavailable\")
   }))
 );
 
-export const LazyPricingSection = React.lazy(() => 
-  import(\"../components/PricingSection\").catch(() => ({}
-    default: () => React.createElement(\"div\", { className: \"p-4 text-center\",}
+export const LazyPricingSection = React.lazy(() => "
+  import(\"../components/PricingSection\").catch(() => ({}"
+    default: () => React.createElement(\"div\", { className: \"p-4 text-center\"}"
 }, \"Pricing temporarily unavailable\")
   }))
 );
 
-export const LazyTestimonials = React.lazy(() => 
-  import(\"../components/TestimonialsSection\").catch(() => ({}
-    default: () => React.createElement(\"div\", { className: \"p-4 text-center\",}
+export const LazyTestimonials = React.lazy(() => "
+  import(\"../components/TestimonialsSection\").catch(() => ({}"
+    default: () => React.createElement(\"div\", { className: \"p-4 text-center\"}"
 }, \"Testimonials temporarily unavailable\")
   }))
 );
 
-export const LazyContactForm = React.lazy(() => 
-  import(\"../components/ContactForm\").catch(() => ({}
-    default: () => React.createElement(\"div\", { className: \"p-4 text-center\",}
+export const LazyContactForm = React.lazy(() => "
+  import(\"../components/ContactForm\").catch(() => ({}"
+    default: () => React.createElement(\"div\", { className: \"p-4 text-center\"}"
 }, \"Contact form temporarily unavailable\")
   }))
 );
@@ -166,3 +166,4 @@ export const withErrorBoundary = (
 
 // Export loading component;
 export { LoadingSpinner };
+"

@@ -1,60 +1,4 @@
-<<<<<<< HEAD;
-import { Certification  } from '@/types/resume';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { Edit, Trash2  } from 'lucide-react';
-import { format } from 'date-fns';
-import {Certification} from '@/types/resume';
-import {Card, CardContent} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {Edit, Trash2} from 'lucide-react';
-import {format} from 'date-fns';
-interface CertificationsListProps {
-  certifications: Certification[];
-  onEdit: (cert: Certification) => void;}
-  onDelete: (id: string) => void;}
-import { Certification } from '@/types/resume';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button',;
-import { Edit, Trash2 } from 'lucide-react',;
-import { format } from 'date-fns',;
-interface CertificationsListProps {;
-  certifications: Certification[],;}
-  onEdit: (cert: Certification) => void;}
-  onDelete: (id: string) => void;                  )}
-                </p>;
-              </div>;
-              <div className=\"flex gap-2\" />;
-                <Button;
-variant=\"ghost\"
-                  size=\"icon\"                  onClick={() = /> onEdit(cert)}
-                >;
-                  <Edit className=\"h-4 w-4\" />;
-                </Button>;
-            {cert.credential_url && (                      {typeof cert.expiration_date === \"string\";}
-                        ? cert.expiration_date;}
-                        : format (cert.expiration_date, \"MMM yyyy\")}
-                    </>)}
-                </p>;
-              </div>;
-              <div className=\"flex gap-2\" />;
-                <Button;
-                  variant=\"ghost\";
-                  size=\"icon\";
-                  on_click={() = /> on_edit (cert)}
-                >;
-                  <Edit className=\"h - 4 w-4\" />;
-                </Button>;
-                <Button;
-                  variant=\"ghost\";
-                  size=\"icon\";
-                  on_click={() = /> on_delete (cert.id!)}
-                >;
-                  <Trash2 className=\"h - 4 w-4\" />;
-                </Button>;
-              </div>;
-            </div>;
-=======
+
 import { Certification } from \"@/types/resume\";
 import { Card, CardContent } from \"@/components/ui/card\";
 import { Button } from \"@/components/ui/button\";
@@ -122,7 +66,7 @@ variant=\"ghost\"
                 </Button>
               </div>
             </div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+
             {cert.credential_url && (
               <p className=\"text-xs mt-2\" />}
                 <a;}
@@ -132,11 +76,9 @@ href={cert.credential_url}
                   className=\"text-primary hover:underline\"
                  />
                   View credential;
-<<<<<<< HEAD;
-                </Link>
-=======
+
                 </a>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+
               </p>
             )}
           </CardContent>
@@ -145,29 +87,4 @@ href={cert.credential_url}
     </div>
   );
 }
-<<<<<<< HEAD;
-;
-  ),;}
- ? cert.issue date : format (cert.issue date, 'MMM yyyy') ) : 'N/A' 
-}{
-  cert.expiration date && (<> · Expires: {}
-  typeof cert.expiration date === 'string' ? cert.expiration date : format (cert.expiration date, 'MMM yyyy') }
-}</>) 
-}</p> </div> <div className=\"flex gap-2\"  /> <Button  /> <Edit className=\"h-4 w-4\" /> </Button> <Button  /> <Trash2 className=\"h-4 w-4\" /> </Button> </div> </div> <a href= {}
-  cert.credential url }
-}target=\"blank\" rel=\"noopener noreferrer\" className=\"text-primary hover:underline\"  /> View credential </Link> </p>) 
-}</CardContent> </Card>) ) 
-}</div>) 
-}
-  );
-}
-}
-;
-  );
-}
-  )
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+

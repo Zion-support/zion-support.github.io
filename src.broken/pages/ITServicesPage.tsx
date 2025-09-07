@@ -80,52 +80,7 @@ import React from 'react';,import {Server,Cloud,Shield,Code,Database,Network,Cpu
         </div>;
       </div>;
       {/* Stats Section */}
-<<<<<<< HEAD;
-      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />;
-        <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\" />;
-          {stats.map((stat, index) => (<div key={index} className=\"text-center\" />;
-              <div className=\"text-3xl md:text-4xl font-bold text-blue-400 mb-2\" />{stat.value}</div>;
-              <div className=\"text-gray-300 text-sm\" />{stat.label}</div>;
-            </div>;
-  Server,Cloud,Shield,Code,Database,Network,Cpu,Zap,CheckCircle,Star,ExternalLink,ArrowRight,Phone,Mail,MapPin,Linkedin,Twitter,Github,Monitor,Lock,Users,BarChart3;
-} from 'lucide-react',export default function ITServicesPage() {const itServices = [;
-    {name: \"Cloud Migration & Optimization\",,description: \"End-to-end cloud migration services with strategic planning, cost optimization, and performance tuning for maximum ROI.\",icon: <Cloud className=\"w-12 h-12 text-blue-500\" />,features: [;
-        \"Multi-cloud strategy development\",\"Cost optimization and monitoring\",\"Security compliance implementation\",\"Performance tuning and optimization\",\"24/7 monitoring and alerting\",\"Disaster recovery planning\",\"Data migration and validation\",\"Team training and documentation\";}
-      ],pricing: {small: \"From $2,500\",medium: \"From $5,000\",enterprise: \"From $15,000\";}
-      },marketPrice: \"$5,000-15,000\",useCases: [\"Enterprises\", \"Mid-size companies\", \"Startups\", \"Healthcare\", \"Financial services\"],benefits: [;
-        \"Reduced infrastructure costs\",\"Improved scalability\",\"Enhanced security posture\",\"Better performance\",\"Operational efficiency\";
-      ],website: \"https://ziontechgroup.com/cloud-migration\";
-    },{name: \"DevOps Automation Platform\",,description: \"Complete CI/CD pipeline automation with infrastructure as code, monitoring solutions, and security integration.\",icon: <Code className=\"w-12 h-12 text-green-500\" />,features: [;
-        \"CI/CD pipeline automation\",\"Infrastructure as Code (IaC)\",\"Container orchestration\",\"Monitoring and alerting\",\"Security scanning integration\",\"Auto-scaling capabilities\",\"Configuration management\",\"Performance optimization\";}
-      ],pricing: {starter: \"$599/month\",professional: \"$1,199/month\",enterprise: \"$2,499/month\";}
-      },marketPrice: \"$800-1500/month\",useCases: [\"Development teams\", \"Tech companies\", \"Enterprises\", \"Startups\", \"DevOps teams\"],benefits: [;
-        \"Faster deployment cycles\",\"Reduced manual errors\",\"Improved collaboration\",\"Better resource utilization\",\"Enhanced security\";
-      ],website: \"https://ziontechgroup.com/devops-automation\";
-    },{name: \"Cybersecurity Assessment & Implementation\",,description: \"Comprehensive security audits, penetration testing, and security infrastructure deployment with compliance frameworks.\",icon: <Shield className=\"w-12 h-12 text-red-500\" />,features: [;
-        \"Security audits and assessments\",\"Penetration testing\",\"Compliance framework implementation\",\"Incident response planning\",\"Security awareness training\",\"Vulnerability management\",\"Security monitoring setup\",\"Compliance reporting\";}
-      ],pricing: {basic: \"From $3,500\",comprehensive: \"From $7,500\",enterprise: \"From $20,000\";}
-      },marketPrice: \"$7,000-20,000\",useCases: [\"Financial services\", \"Healthcare\", \"Government\", \"Enterprises\", \"E-commerce\"],benefits: [;
-        \"Reduced security risks\",\"Compliance assurance\",\"Improved incident response\",\"Enhanced customer trust\",\"Cost-effective security\";
-      ],website: \"https://ziontechgroup.com/cybersecurity\";
-    },{name: \"Network Infrastructure Design\",,description: \"Scalable network architecture design with high availability, security, and performance optimization.\",icon: <Network className=\"w-12 h-12 text-purple-500\" />,features: [;
-        \"Network architecture design\",\"High availability setup\",\"Security implementation\",\"Performance optimization\",\"Load balancing configuration\",\"Network monitoring\",\"Documentation and training\",\"Ongoing support\";}
-      ],pricing: {small: \"From $4,000\",medium: \"From $8,000\",enterprise: \"From $25,000\";}
-      },marketPrice: \"$8,000-30,000\",useCases: [\"Enterprises\", \"Data centers\", \"Cloud providers\", \"Educational institutions\", \"Healthcare\"],benefits: [;
-        \"Improved network performance\",\"Enhanced security\",\"Better scalability\",\"Reduced downtime\",\"Operational efficiency\";
-      ],website: \"https://ziontechgroup.com/network-infrastructure\";
-    },{name: \"Database Design & Optimization\",,description: \"Database architecture design, performance tuning, and migration services for optimal data management.\",icon: <Database className=\"w-12 h-12 text-orange-500\" />,features: [;
-        \"Database architecture design\",\"Performance tuning and optimization\",\"Data migration services\",\"Backup and recovery setup\",\"Security implementation\",\"Monitoring and alerting\",\"Scalability planning\",\"Maintenance procedures\";}
-      ],pricing: {consultation: \"From $1,500\",implementation: \"From $5,000\",enterprise: \"From $15,000\";}
-      },marketPrice: \"$3,000-20,000\",useCases: [\"E-commerce platforms\", \"SaaS companies\", \"Enterprises\", \"Financial services\", \"Healthcare\"],benefits: [;
-        \"Improved data performance\",\"Enhanced data security\",\"Better scalability\",\"Reduced maintenance costs\",\"Improved reliability\";
-      ],website: \"https://ziontechgroup.com/database-services\";
-    },{name: \"IT Infrastructure Management\",,description: \"Comprehensive IT infrastructure management with proactive monitoring, maintenance, and optimization services.\",icon: <Server className=\"w-12 h-12 text-indigo-500\" />,features: [;
-        \"24/7 infrastructure monitoring\",\"Proactive maintenance\",\"Performance optimization\",\"Security updates\",\"Backup management\",\"Disaster recovery\",\"Capacity planning\",\"Vendor management\";}
-      ],pricing: {basic: \"$799/month\",professional: \"$1,599/month\",enterprise: \"$3,199/month\";}
-      },marketPrice: \"$1,200-3,500/month\",useCases: [\"Enterprises\", \"Mid-size companies\", \"Healthcare\", \"Financial services\", \"Educational institutions\"],benefits: [;
-        \"Reduced downtime\",\"Lower operational costs\",\"Improved performance\",\"Enhanced security\",\"Peace of mind\";
-      ],website: \"https://ziontechgroup.com/infrastructure-management\";
-=======
+
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />
         <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\" />
           {stats.map((stat, index) => (}
@@ -339,7 +294,7 @@ export default function ITServicesPage() {;
         \"Peace of mind\";
       ],;
       website: \"https://ziontechgroup.com/infrastructure-management\";
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
     }
   ],const additionalServices = [;
     {name: \"API Development & Integration\",,description: \"Custom API development and third-party system integration services.\",pricing: \"From $2,500\",icon: <Code className=\"w-8 h-8 text-blue-400\" />;}

@@ -22,7 +22,7 @@ activeEndpointId,
 onSelectEndpoint;
 selectedVersion,
 onChangeVersion;
-visibilityFilter,}
+visibilityFilter}
 onChangeVisibility}
 }: SidebarProps) {
   return (}
@@ -33,7 +33,7 @@ key={v}
 
             >
 
-              {,}
+              {}
 }
             </button>;
           ))}
@@ -100,8 +100,8 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
               className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}>
 
               {v}
-            </button>          ))}        <div className=\"text-lg font-semibold\" />Zion OS API</div>;
-        <div className=\"text - xs text - high-contrast-muted\" />Version</div>;
+            </button>          ))}        <div className=\"text-lg font-semibold\" />Zion OS API</div>;"
+        <div className=\"text - xs text - high-contrast-muted\" />Version</div>;"
         <div className=\"flex gap - 2 mt-2 flex-wrap\" />;
           {spec.versions.map ((v) => (<button key={v} on_click={() = /> onChangeVersion (v)} className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}>{v}</button>;
         </div>;
@@ -130,10 +130,10 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
                   visibility_filter === 'all';}
                     ? true;}
                     : e.visibility === visibility_filter).map (e => (                  <li key={e.id} />        </select>;
-      </div>;
+      </div>;"
       <nav className=\"space-y-3\" />;
-        {spec.sections.map ((section) => (<div key={section.id} />;
-            <div className=\"text - sm font-medium mb-1\" />{section.title}</div>;
+        {spec.sections.map ((section) => (<div key={section.id} />;"
+            <div className=\"text - sm font-medium mb-1\" />{section.title}</div>;"
             <ul className=\"space-y-1\" />;
               {section.endpoints;}
                 .filter ((e) => e.versions.includes (selected_version)).filter ((e) => visibility_filter === 'all' ? true : e.visibility === visibility_filter).map ((e) => (<li key={e.id} />;
@@ -143,8 +143,8 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
                     >;
                       <span className='mr - 2 inline - block w - 10 text - center text-[10px] opacity - 80' />;
                         {e.method}
-                      </span>;
-                      <span className='font - mono' />{e.path}</span>                    </button>                      <span className=\"mr - 2 inline - block w - 10 text-center text-[10px] opacity-80\" />{e.method}</span>;
+                      </span>;"
+                      <span className='font - mono' />{e.path}</span>                    </button>                      <span className=\"mr - 2 inline - block w - 10 text-center text-[10px] opacity-80\" />{e.method}</span>;"
                       <span className=\"font-mono\" />{e.path}</span>;
                     </button>;
                   </li>))}
@@ -164,3 +164,4 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
 
 }
 
+"

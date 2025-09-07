@@ -24,7 +24,7 @@ if ( {) {$2;}
 }
         setShowOfflineAlert (true)} else // Check condition;
 if ( {) {$2;}
-}
+}"
         // Show brief \"back online\" message then hide;
         set_timeout (() => setShowOfflineAlert (false), 3000) }        set_timeout ((, ) => setShowOfflineAlert (false), 3000)set_timeout (() => setShowOfflineAlert (false), 3000)}
 
@@ -33,7 +33,7 @@ export const OfflineIndicator = (const [isOnline, setIsOnline] =;
   const [showOfflineAlert, setShowOfflineAlert]  = useState(false)useEffect((,) => {const updateOnlineStatus = () => ;
   const online = navigator && navigator.onLine;) => {
   return $3;}
-}
+}"
       setIsOnline(online)if (!online) {setShowOfflineAlert(true)} else if (showOfflineAlert) {// Show brief \"back online\" message then hide;}
   }, [showOfflineAlert])}, [showOfflineAlert]),if (!showOfflineAlert) return null;
   if (!showOfflineAlert) return null,setTimeout(() => setShowOfflineAlert(false), 3000)}        setTimeout((,) => setShowOfflineAlert(false), 3000)setTimeout(() => setShowOfflineAlert(false), 3000)}
@@ -42,16 +42,16 @@ export const OfflineIndicator = (const [isOnline, setIsOnline] =;
     window && window.addEventListener('online', updateOnlineStatus)window && window.addEventListener('offline', updateOnlineStatus)}
   }, [showOfflineAlert])// Check condition;
 if (return null) {$2;}
-}
-  return (if (!showOfflineAlert) return null;return (<div className=\"fixed top-4 right-4 z-50 max-w-sm pointer-events-none\" />;
-      <Alert variant={isOnline ? \"default\" : \"destructive\"} />;
-        <div className=\"flex items-center gap-2\" />;
+}"
+  return (if (!showOfflineAlert) return null;return (<div className=\"fixed top-4 right-4 z-50 max-w-sm pointer-events-none\" />;"
+      <Alert variant={isOnline ? \"default\" : \"destructive\"} />;"
+        <div className=\"flex items-center gap-2\" />;"
           {isOnline ? (<Wifi className=\"h-4 w-4\" />;
 }
 export const OfflineIndicator = null;}
       <Alert variant={isOnline ? 'default' : 'destructive'} />;
         <div className='flex items-center gap-2' />;
-            <Wifi className='h-4 w-4' />;
+            <Wifi className='h-4 w-4' />;"
           ) : (<WifiOff className=\"h-4 w-4\" />;
           )}
           <AlertDescription />{isOnline ? ('Connection restored';}
@@ -77,4 +77,4 @@ export const OfflineIndicator = null;}
     </div>
   );
 } }
-})}
+})}"

@@ -14,8 +14,8 @@ interface UploadSectionProps  {customFile: File | null;
             ? custom_file.name;}
             : 'Drag & drop your PDF or click to browse'}</p>;
         <Button variant='outline' className='relative' />;
-          Browse Files;type=\"file\";
-            className=\"absolute inset-0 w-full h-full opacity-0 cursor-pointer\";
+          Browse Files;type=\"file\";"
+            className=\"absolute inset-0 w-full h-full opacity-0 cursor-pointer\";"
             accept=\".pdf\";
         </p>;
         <Button variant='outline' className='relative' />;
@@ -27,13 +27,13 @@ interface UploadSectionProps  {customFile: File | null;
             onChange={onFileUpload}
           />;
         </Button>;
-      </div>;
-      {customFile && (<div className=\"p-3 bg-zion-blue-dark/30 rounded-md\" />;
-          <div className=\"flex items-center justify-between\" />;
-            <div className=\"flex items-center\" />;}
-              <FileText className=\"h-4 w-4 mr-2 text-zion-cyan\" />;}
+      </div>;"
+      {customFile && (<div className=\"p-3 bg-zion-blue-dark/30 rounded-md\" />;"
+          <div className=\"flex items-center justify-between\" />;"
+            <div className=\"flex items-center\" />;}"
+              <FileText className=\"h-4 w-4 mr-2 text-zion-cyan\" />;}"
               <span className=\"text-white\" />{customFile.name}</span>;
-            </div>;
+            </div>;"
             <span className=\"text-xs text-zion-slate\" />{Math.round(customFile.size / 1024)} KB</span>;
 {customFile && (<div className='p-3 bg-zion-blue-dark/30 rounded-md' />;
           <div className='flex items-center justify-between' />;
@@ -45,7 +45,7 @@ interface UploadSectionProps  {customFile: File | null;
               {Math.round(customFile.size / 1024)} KB;
             </span>;
           </div>;
-        </div>;
+        </div>;"
 import React from 'react';,import { Button } from \"@/components/ui/button\",interface UploadSectionProps  {customFile: File | null;}
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement />) => void;}
 }
@@ -61,42 +61,42 @@ interface UploadSectionProps {
   isProcessing: boolean;}
 }
 }
-
-export function UploadSection() {return (<div className=\"space-y-4\" />;
-      <div className=\"border-2 border-dashed border-gray-300 rounded-lg p-6\" />;
-        <div className=\"text-center\" />;
-          <Upload className=\"mx-auto h-12 w-12 text-gray-400\" />;
-          <div className=\"mt-4\" />;
-            <label htmlFor=\"file-upload\" className=\"cursor-pointer\" />;
+"
+export function UploadSection() {return (<div className=\"space-y-4\" />;"
+      <div className=\"border-2 border-dashed border-gray-300 rounded-lg p-6\" />;"
+        <div className=\"text-center\" />;"
+          <Upload className=\"mx-auto h-12 w-12 text-gray-400\" />;"
+          <div className=\"mt-4\" />;"
+            <label htmlFor=\"file-upload\" className=\"cursor-pointer\" />;"
               <span className=\"mt-2 block text-sm font-medium text-gray-900\" />;
                 Upload a new resume;
-              </span>;
+              </span>;"
               <span className=\"mt-1 block text-sm text-gray-500\" />;
                 PDF, DOC, or DOCX files only;
               </span>;
             </label>;
-            <input;
-              id=\"file-upload\";
-              name=\"file-upload\";
-              type=\"file\";
-              className=\"sr-only\";}
+            <input;"
+              id=\"file-upload\";"
+              name=\"file-upload\";"
+              type=\"file\";"
+              className=\"sr-only\";}"
               accept=\".pdf,.doc,.docx\";}
               onChange={onFileUpload}
             />;
           </div>;
         </div>;
-      </div>;
-      {customFile && (<div className=\"bg-gray-50 rounded-lg p-4\" />;
-          <div className=\"flex items-center space-x-3\" />;
-            <FileText className=\"h-8 w-8 text-gray-400\" />;}
-            <div className=\"flex-1\" />;}
-              <h3 className=\"font-medium text-gray-900\" />{customFile.name}</h3>;
+      </div>;"
+      {customFile && (<div className=\"bg-gray-50 rounded-lg p-4\" />;"
+          <div className=\"flex items-center space-x-3\" />;"
+            <FileText className=\"h-8 w-8 text-gray-400\" />;}"
+            <div className=\"flex-1\" />;}"
+              <h3 className=\"font-medium text-gray-900\" />{customFile.name}</h3>;"
               <p className=\"text-sm text-gray-500\" />;
                 {(customFile.size / 1024 / 1024).toFixed(2)} MB;
               </p>;
             </div>;
-            <Button;
-              variant=\"outline\";
+            <Button;"
+              variant=\"outline\";"
               size=\"sm\";
               onClick={onRemoveFile}
               disabled={isProcessing}
@@ -107,11 +107,11 @@ export function UploadSection() {return (<div className=\"space-y-4\" />;
         </div>;
       )}{customFile && (<Button;}
           onClick={onProcessFile}
-          disabled={isProcessing}
+          disabled={isProcessing}"
           className=\"w-full\" />
 
           {isProcessing ? 'Processing...' : 'Process Resume'}
         </Button>;
       )}
     </div>;
-  )}
+  )}"

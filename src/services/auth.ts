@@ -3,8 +3,8 @@ export async /**;*/;
  * @param {*} params - Function parameters;*/;
  * @returns {*} Function return value;*/;
  */;
-function register () {try {try {try { const res = await fetch ('/api / auth / register', { method: 'POST',}
-  headers: { 'Content - Type': 'application / json',}
+function register () {try {try {try { const res = await fetch ('/api / auth / register', { method: 'POST'}
+  headers: { 'Content - Type': 'application / json'}
 } catch (error) {console.error ('Error in register: ', error) }
 } catch (error) {console.error ('Error in register: ', error) }
 } catch (error) { console.error ('Error in register: ', error)  } }, body: JSON.stringify ({ name, email, password })}) ;
@@ -17,13 +17,13 @@ export async /**;*/;
  * @param {*} params - Function parameters;*/;
  * @returns {*} Function return value;*/;
  */;
-function forgotPassword () {try {try {try {' const res = await fetch ('/api / auth / forgot', { method: 'POST',}
-  headers: { 'Content - Type': 'application / json',}
+function forgotPassword () {try {try {try {' const res = await fetch ('/api / auth / forgot', { method: 'POST'}
+  headers: { 'Content - Type': 'application / json'}
 } catch (error) {';}
     console.error ('Error in forgotPassword: ', error) }
 } catch (error) {console.error ('Error in forgotPassword: ', error) }
-} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) ,
-} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email },
+} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) 
+} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email }
 }) ;
   const data = await res.json () .catch ( () => ({}) ) ';'\";'\";
 /**
@@ -72,7 +72,7 @@ class AuthService {
       user: this.user,
       isAuthenticated: !!this.user,
       isLoading: false}
-   ,}
+   }
 };
     this.listeners.forEach(listener => listener(state));
   }
@@ -94,7 +94,7 @@ if (email && password) {
           email,
           name: email.split('@')[0],
           role: 'user'}
-       ,}
+       }
 };
         
         if (typeof window !== 'undefined') {}
@@ -131,3 +131,4 @@ if (email && password) {
 export const authService = new AuthService();
 
 export default authService;
+"

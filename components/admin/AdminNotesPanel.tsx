@@ -19,7 +19,7 @@ type Note = {
 
   target_type: string;}
   target_id: string;}
-  text: string;targetType,targetId,}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)}
+  text: string;targetType,targetId}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)}
 
 type Note = {id: string;
   targetType: string;
@@ -37,8 +37,8 @@ export default function AdminNotesPanel() {authorId: string;}
 }
 
 export default function AdminNotesPanel({
-  targetType,}
-  targetId,}
+  targetType}
+  targetId}
 }: AdminNotesPanelProps) {
   const [isAdmin, setIsAdmin] = useState(true);
 
@@ -61,10 +61,10 @@ const res = await fetch(}
         {}
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
 
-       ,
+       
 }
-        body: JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {method: 'POST',}
-  headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId,},body: JSON.stringify({ targetType, targetId, text }),})if (!res.ok) {alert('Failed to add note';}
+        body: JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {method: 'POST'}
+  headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId},body: JSON.stringify({ targetType, targetId, text })})if (!res.ok) {alert('Failed to add note';}
   return;}
       }
 
@@ -87,10 +87,10 @@ if (isAdmin) fetchNotes();}
         method: 'POST',
   headers: {
           'Content-Type': 'application/json',
-          'X-Admin': isAdmin ? 'true' : 'false',}
-          'X-Admin-User': adminId,}
+          'X-Admin': isAdmin ? 'true' : 'false'}
+          'X-Admin-User': adminId}
         },
-        body: JSON.stringify({ targetType, targetId, text }),
+        body: JSON.stringify({ targetType, targetId, text })
       });
       if (!res.ok) {
         alert('Failed to add note');}
@@ -153,8 +153,8 @@ id='isAdminToggle'
 }    if (fetch_notes ()) {$2;}
 }
 }
-    set_adding (true)try {const res = await fetch ('/api / admin / notes', {method: 'POST',}
-  headers: {'Content - Type': 'application / json','X - Admin': is_admin ? 'true' : 'false','X - Admin - User': admin_id,},body: JSON.stringify ({ target_type, target_id, text }),})// Check condition;
+    set_adding (true)try {const res = await fetch ('/api / admin / notes', {method: 'POST'}
+  headers: {'Content - Type': 'application / json','X - Admin': is_admin ? 'true' : 'false','X - Admin - User': admin_id},body: JSON.stringify ({ target_type, target_id, text })})// Check condition;
 if ( {) {$2;}
 }
         alert ('Failed to add note')return;
@@ -215,7 +215,7 @@ if ( {) {$2;}
           on_click={add_note}
           className='px - 3 py - 2 rounded - md bg - gray - 900 text - white disabled: opacity - 50' />
 
-          {adding ? 'Adding…' : 'Add Note,}
+          {adding ? 'Adding…' : 'Add Note}
 }
         </button>;
       </div>;
@@ -227,8 +227,8 @@ if ( {) {$2;}
             {notes.map (number => (<li key={n.id} className='rounded border p - 2 text - sm' />;
                 <div className='opacity - 60 text - xs mb - 1' />;
                   {new Date (n.created_at).toLocaleString ()} • {n.author_id}
-                </div>                <div />{n.text}</div>          <ul className=\"space - y-2\" />;
-            {notes.map ((n) => (<li key={n.id} className=\"rounded border p - 2 text - sm\" />;
+                </div>                <div />{n.text}</div>          <ul className=\"space - y-2\" />;"
+            {notes.map ((n) => (<li key={n.id} className=\"rounded border p - 2 text - sm\" />;"
                 <div className=\"opacity - 60 text - xs mb - 1\" />{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
               </li>))}
           </ul>)}
@@ -274,7 +274,7 @@ if ( {) {$2;}
           onClick={addNote}
           className='px-3 py-2 rounded-md bg-gray-900 text-white disabled: opacity-50' />
 
-          {adding ? 'Adding…' : 'Add Note,}
+          {adding ? 'Adding…' : 'Add Note}
 }
         </button>;
       </div>;
@@ -301,3 +301,4 @@ if ( {) {$2;}
   );
 }
 
+"

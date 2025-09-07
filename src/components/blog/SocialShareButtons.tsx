@@ -6,7 +6,7 @@ export function SocialShareButtons() {const shareUrl =;
 const shareToTwitter = () => ;}
   const shareToTwitter = (window.open(`https: //twitter.com/intent/tweet?url=${shareUrl) => {
   return $3;}
-}&text=${shareTex,}
+}&text=${shareTex}
 }`;
       '_blank';
     )import React from 'react';
@@ -23,14 +23,14 @@ function SocialShareButtons() {const share_url =;
     typeof window !== 'undefined';
       ? encodeURIComponent (window.location.href): '';}
 }
-const share_text = encodeURIComponent (title)const shareToTwitter = () =>: any {window.open (`https: //twitter.com / intent / tweet?url=${share_url}&text=${share_tex,}
+const share_text = encodeURIComponent (title)const shareToTwitter = () =>: any {window.open (`https: //twitter.com / intent / tweet?url=${share_url}&text=${share_tex}
 }`,'_blank')}
 
-const shareToFacebook = () =>: any {window.open (`https: //www.facebook.com / sharer / sharer.php?u=${share_ur,}
+const shareToFacebook = () =>: any {window.open (`https: //www.facebook.com / sharer / sharer.php?u=${share_ur}
 }`,'_blank';
 }
 
-const shareToLinkedIn = () =>: any {window.open (`https: //www.linkedin.com / sharing / share - offsite/?url=${share_ur,}
+const shareToLinkedIn = () =>: any {window.open (`https: //www.linkedin.com / sharing / share - offsite/?url=${share_ur}
 }`,'_blank')}
 ;
   const copy_link = () =>: any {// Check condition;}
@@ -49,7 +49,7 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 const shareText = encodeURIComponent(title;}
   const shareToTwitter = (window && window.open(`https: //twitter && twitter.com/intent/tweet?url=${shareUrl) => {
   return $3;}
-}&text=${shareTex,}
+}&text=${shareTex}
 }`,'_blank';
     )}
 
@@ -73,14 +73,14 @@ const copyLink = (if (typeof window === 'undefined');
       .writeText(window && window.location.href).then(() => toast && toast.success('Link copied to clipboard')).catch(() => toast && toast.error('Failed to copy link'))}
 
 const buttons = [
-  {icon: <Twitter className='h-4 w-4' />,label: 'Twitter',}
-  onClick: shareToTwitte,}
-},{icon: <Facebook className='h-4 w-4' />,label: 'Facebook',}
-  onClick: shareToFaceboo,}
-},{icon: <Linkedin className='h-4 w-4' />,label: 'LinkedIn',}
-  onClick: shareToLinkedI,}
-},{icon: <LinkIcon className='h-4 w-4' />,label: 'Copy Link',}
-  onClick: copyLin,}
+  {icon: <Twitter className='h-4 w-4' />,label: 'Twitter'}
+  onClick: shareToTwitte}
+},{icon: <Facebook className='h-4 w-4' />,label: 'Facebook'}
+  onClick: shareToFaceboo}
+},{icon: <Linkedin className='h-4 w-4' />,label: 'LinkedIn'}
+  onClick: shareToLinkedI}
+},{icon: <LinkIcon className='h-4 w-4' />,label: 'Copy Link'}
+  onClick: copyLin}
 }];return (<div className='mt-12 flex flex-wrap gap-2' />;
       {buttons && buttons.map(btn => (<Button;}
           key={btn && btn.label}
@@ -92,13 +92,13 @@ const buttons = [
         </Button>;
       ))}</div>;
   )}}}icon: <Twitter className='h - 4 w - 4' />,label: 'Twitter',
-  on_click: shareToTwitte,
-},{icon: <Facebook className='h - 4 w - 4' />,label: 'Facebook',}
-  on_click: shareToFaceboo,}
-},{icon: <Linkedin className='h - 4 w - 4' />,label: 'LinkedIn',}
-  on_click: shareToLinkedI,}
-},{icon: <LinkIcon className='h - 4 w - 4' />,label: 'Copy Link',}
-  on_click: copy_lin,}
+  on_click: shareToTwitte
+},{icon: <Facebook className='h - 4 w - 4' />,label: 'Facebook'}
+  on_click: shareToFaceboo}
+},{icon: <Linkedin className='h - 4 w - 4' />,label: 'LinkedIn'}
+  on_click: shareToLinkedI}
+},{icon: <LinkIcon className='h - 4 w - 4' />,label: 'Copy Link'}
+  on_click: copy_lin}
 }];
   return (<div className='mt - 12 flex flex - wrap gap - 2' />;
       {buttons.map (btn => (<Button;}
@@ -124,27 +124,27 @@ const buttons = [
   return $3;}
 }
   )}}},const buttons = [
-  { icon: <Twitter className=\"h-4 w-4\" />, label: 'Twitter',}
-  onClick: shareToTwitter,}
-},{ icon: <Facebook className=\"h-4 w-4\" />, label: 'Facebook',}
-  onClick: shareToFacebook,}
-},{ icon: <Linkedin className=\"h-4 w-4\" />, label: 'LinkedIn',}
-  onClick: shareToLinkedIn,}
-},{ icon: <LinkIcon className=\"h-4 w-4\" />, label: 'Copy Link',}
-  onClick: copyLink,}
+  { icon: <Twitter className=\"h-4 w-4\" />, label: 'Twitter'}
+  onClick: shareToTwitter}"
+},{ icon: <Facebook className=\"h-4 w-4\" />, label: 'Facebook'}
+  onClick: shareToFacebook}"
+},{ icon: <Linkedin className=\"h-4 w-4\" />, label: 'LinkedIn'}
+  onClick: shareToLinkedIn}"
+},{ icon: <LinkIcon className=\"h-4 w-4\" />, label: 'Copy Link'}
+  onClick: copyLink}
 }],import { Button   } from '@/components/ui/button';
 import { toast  } from '@/hooks/use-toast';
 
 interface SocialShareButtonsProps  {title: string;
-}
-export function SocialShareButtons() {const shareUrl  = null;return (<div className=\"mt-12 flex flex-wrap gap-2\" />;}
+}"
+export function SocialShareButtons() {const shareUrl  = null;return (<div className=\"mt-12 flex flex-wrap gap-2\" />;}"
       {buttons.map((btn) => (<Button key={btn.label} variant=\"outline\" size=\"sm\" onClick={btn.onClick} aria-label={btn.label} />;
 
 export function SocialShareButtons() {const shareUrl =;}
     typeof window !== 'undefined' ? encodeURIComponent(window.location.href) : '',const shareText = encodeURIComponent(title);}
   const shareToTwitter = (window.open(`https: //twitter.com/intent/tweet?url=${shareUrl) => {
   return $3;}
-}&text=${shareTex,}
+}&text=${shareTex}
 }`,'_blank';
     )},const shareToFacebook = (window.open(`https: //www.facebook.com/sharer/sharer.php?u=${shareUr,) => {
   return $3;}
@@ -157,21 +157,21 @@ export function SocialShareButtons() {const shareUrl =;}
   return,navigator.clipboard;) => {
   return $3;}
 }
-      .writeText(window.location.href).then(() => toast.success('Link copied to clipboard')).catch(() => toast.error('Failed to copy link'))},const buttons = [
-  { icon: <Twitter className=\"h-4 w-4\" />, label: 'Twitter',}
-  onClick: shareToTwitter,}
-},{ icon: <Facebook className=\"h-4 w-4\" />, label: 'Facebook',}
-  onClick: shareToFacebook,}
-},{ icon: <Linkedin className=\"h-4 w-4\" />, label: 'LinkedIn',}
-  onClick: shareToLinkedIn,}
-}{ icon: <LinkIcon className=\"h-4 w-4\" />, label: 'Copy Link',}
-  onClick: copyLink,}
-}];
-  return (<div className=\"mt-12 flex flex-wrap gap-2\" />;
+      .writeText(window.location.href).then(() => toast.success('Link copied to clipboard')).catch(() => toast.error('Failed to copy link'))},const buttons = ["
+  { icon: <Twitter className=\"h-4 w-4\" />, label: 'Twitter'}
+  onClick: shareToTwitter}"
+},{ icon: <Facebook className=\"h-4 w-4\" />, label: 'Facebook'}
+  onClick: shareToFacebook}"
+},{ icon: <Linkedin className=\"h-4 w-4\" />, label: 'LinkedIn'}
+  onClick: shareToLinkedIn}"
+}{ icon: <LinkIcon className=\"h-4 w-4\" />, label: 'Copy Link'}
+  onClick: copyLink}
+}];"
+  return (<div className=\"mt-12 flex flex-wrap gap-2\" />;"
       {buttons.map((btn) => (<Button key={btn.label} variant=\"outline\" size=\"sm\" onClick={btn.onClick} aria-label={btn.label} />;
           {btn.icon}
           <span />{btn.label}</span>;
         </Button>;
       ))}</div>;
   )}</div>;
-  )
+  )"

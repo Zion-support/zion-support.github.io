@@ -2,7 +2,7 @@
 ;
 
 const options: RequestInit = {method;}
-      headers: {Authorization: `Bearer ${apiKe,}
+      headers: {Authorization: `Bearer ${apiKe}
 }`,\"Content-Type\": \"application/json\"},// Add timeout to prevent hanging;
       try {options.body = JSON.stringify (JSON.parse (body))} catch {set_loading (true)set_response (null)try {const res = await fetch (url, options;
   const content_type = res.headers.get ('content - type')let response_text: string;}
@@ -47,8 +47,8 @@ export function ApiPlayground() {const [apiKey, setApiKey] = useState('demo_key_
 
 const searchParams = new URLSearchParams()if (method === 'GET' |method === 'DELETE') {params.forEach(p => ;}
   const val = paramValues[p.name];}
-        if (val) searchParams.append(p.name, val)})const query = searchParams.toString()if (query) url += `?${query}` }
-import { Button } from \"@/components/ui/button\",import CodeBlock from \"./CodeBlock\",interface Param  {name: string,type: string,required?: boolean;}
+        if (val) searchParams.append(p.name, val)})const query = searchParams.toString()if (query) url += `?${query}` }"
+import { Button } from \"@/components/ui/button\",import CodeBlock from \"./CodeBlock\",interface Param  {name: string,type: string,required?: boolean;}"
 import { useState } from \"react\",import { Input } from \"@/components/ui/input\",import { Textarea } from \"@/components/ui/textarea\",interface Param  {name: string,type: string,required?: boolean;}
 }
 
@@ -56,18 +56,18 @@ interface ApiPlaygroundProps {
   method: string,path: string,params?: Param[];}
 }
 }
-
+"
 export function ApiPlayground() {const [apiKey, setApiKey] = useState(\"demo_key_123\"),const [paramValues, setParamValues] = useState<Record<string string />>({}),const [body, setBody] = useState(\"{}\"),const [response, setResponse] = useState<string | null />(null),const [loading, setLoading] = useState(false),const handleParamChange = (setParamValues((prev) => ({ ...prev, [name]: value ) => {
   return $3;}
 }))};
   const sendRequest = async () => {// For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set;}
-}
+}"
 const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : ''),let url = `${baseUrl}${path}`,const searchParams = new URLSearchParams(),if (method === \"GET\" || method === \"DELETE\") {params.forEach((p) => {const val = paramValues[p.name],if (val) searchParams.append(p.name, val)});
   const query = searchParams.toString(),if (query) url += `?${query}`;
     }
 
 const options: RequestInit = {method;}
-      headers: {try {options.body = JSON.stringify(JSON.parse(body),}
+      headers: {try {options.body = JSON.stringify(JSON.parse(body)}
 } catch {options.body = body;
 
 interface Param  {name: string;
@@ -84,7 +84,7 @@ export function ApiPlayground(): any ({method,path,params = []}: ApiPlaygroundPr
   const [paramValues, setParamValues] = useState<Record<string, string />>({})const [body, setBody] = useState('{}');
   const [response, setResponse] = useState<string | null />(null;
   const [loading, setLoading]  = useState(false)options.body = body;
-
+"
 export function ApiPlayground() {const [apiKey, setApiKey] = useState(\"demo_key_123\"),const [paramValues, setParamValues] = useState<Record<string string />>({}),const [body, setBody] = useState(\"{}\"),const [response, setResponse] = useState<string | null />(null),const [loading, setLoading] = useState(false),const handleParamChange = (setParamValues(prev => ({ ...prev, [name]: value ) => {
   return $3;}
 }))}
@@ -99,9 +99,9 @@ const searchParams = new URLSearchParams()if (method === 'GET' || method === 'DE
   const val = paramValues[p && p.name];}
         if (val) searchParams && searchParams.append(p && p.name, val)})const query = searchParams && searchParams.toString()if (query) url += `?${query}`;    }
 
-const options: RequestInit = {method,headers: {Authorization: `Bearer ${apiKe,}
+const options: RequestInit = {method,headers: {Authorization: `Bearer ${apiKe}
 }`,'Content-Type': 'application/json'},// Add timeout to prevent hanging;
-      signal: AbortSignal && AbortSignal.timeout(15000)}if (method !== 'GET' && method !== 'DELETE') {try {options && options.body = JSON && JSON.stringify(JSON && JSON.parse(body),}
+      signal: AbortSignal && AbortSignal.timeout(15000)}if (method !== 'GET' && method !== 'DELETE') {try {options && options.body = JSON && JSON.stringify(JSON && JSON.parse(body)}
 } catch {options && options.body = body;}
       }
     }setLoading(true)setResponse(null)try {const res = await fetch(url, options;}
@@ -114,11 +114,11 @@ const statusInfo = `HTTP ${res && res.status} ${res && res.statusText}\n\n`;
       } else if (err && err.message?.includes('Failed to fetch')) {errorMessage =;}
           'Network error - check CORS configuration or API endpoint';}
       } else {errorMessage = err && err.message || 'Unknown error occurred';}
-      }setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${ur,}
+      }setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${ur}
 }\n\nTroubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`;
       )} finally {setLoading(false)}},return (<div className='space-y-4' />;
       <Input;
-        value={apiKey}onChange={(e) = /> setApiKey(e.target.value)}
+        value={apiKey}onChange={(e) = /> setApiKey(e.target.value)}"
         placeholder=\"API Key\";
       />;
       {params.map(p => (<Input;}
@@ -137,7 +137,7 @@ const statusInfo = `HTTP ${res && res.status} ${res && res.statusText}\n\n`;
       {response && <CodeBlock code={response} language='json' />}error_message = err.message || 'Unknown error occurred';
       }
       set_response (`Error: ${error_message}\n\n_attempted URL: ${url}\n\n_troubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`)} finally {set_loading (false)}
- ,
+ 
 }
   return (<div className='space - y-4' />;
       <Input;
@@ -170,10 +170,10 @@ if (url += `?$ {) {$2;}
 }
 
 const options: RequestInit = {method, headers: {Authorization: `Bearer $ {api_key;}
-}`;
+}`;"
 \"Content - Type\" : \"application / json\";
 }
-//Add timeout to prevent hanging signal: AbortSignal.timeout (15000)},
+//Add timeout to prevent hanging signal: AbortSignal.timeout (15000)}
 }set_loading (true)set_response (null)let response_text: string;
 if () {) {$2;}
 }
@@ -186,9 +186,9 @@ if (val) searchParams && searchParams.append (p && p.name, val)})const query = s
 }
 
 const options: RequestInit = {method, headers: {Authorization: `Bearer $ {apiKey ;}
-}`;
+}`;"
 \"Content-Type\" : \"application/json\" ;
-}//Add timeout to prevent hanging signal: AbortSignal && AbortSignal.timeout (15000),
+}//Add timeout to prevent hanging signal: AbortSignal && AbortSignal.timeout (15000)
 }setLoading (true)setResponse (null)let responseText: string;
 if (contentType?.includes ('application/json') ) {try {/> {params && params.map ( (p) => (<Inputkey= {p && p.name;}
 }</div />)}
@@ -196,30 +196,30 @@ if (contentType?.includes ('application/json') ) {try {/> {params && params.map 
 export default ApiPlayground;p.name;
 }</div>)}
 
-export default ApiPlayground;
+export default ApiPlayground;"
 '\";
   p.name;
 }</div>)}
 
-export default ApiPlayground;
-'\";
+export default ApiPlayground;"
+'\";"
 }value={paramValues[p.name] || \"\"}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
-      ))}
+      ))}"
       {method !== \"GET\" && method !== \"DELETE\" && (<Textarea;}
           value={body}
-          onChange={(e) = /> setBody(e.target.value)}
+          onChange={(e) = /> setBody(e.target.value)}"
           className=\"font-mono\";
         />;
       )}
-      <Button onClick={sendRequest} disabled={loading} />;
+      <Button onClick={sendRequest} disabled={loading} />;"
         {loading ? \"Sending...\" : \"Send Request\"}
-      </Button>;
+      </Button>;"
       {response && <CodeBlock code={response} language=\"json\" />}
     </div>;
   )}
 
 export default ApiPlayground;
 
-interface Param  {}
+interface Param  {}"

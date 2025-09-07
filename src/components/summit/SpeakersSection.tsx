@@ -30,8 +30,8 @@ interface Speaker  {linkedin?: string;
 
 const speakers: Speaker[] = [;
   {name: 'Alex Zion',
-  title: 'Founder & CEO',avatar: 'https://placehold.co/100x100',}
-  twitter: '#',linkedin: '#,}
+  title: 'Founder & CEO',avatar: 'https://placehold.co/100x100'}
+  twitter: '#',linkedin: '#}
 }];
   linkedin?: string;
 }
@@ -41,7 +41,7 @@ const speakers: Speaker[] = [;
     title: 'Founder & CEO';
     avatar: 'https://placehold.co/100x100';
     twitter: '#';}
-    linkedin: '#,}
+    linkedin: '#}
 }],name: 'Alex Zion';
     title: 'Founder & CEO';
     avatar: 'https://placehold.co/100x100';
@@ -93,4 +93,4 @@ aria-label='LinkedIn';
         </div>;
       </div>;
     </section>;
-  )}
+  )}"

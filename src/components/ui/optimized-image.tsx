@@ -72,7 +72,7 @@ if (!lazy || priority || isInView) return;}
       {root_margin: '50px', // Start loading 50px before image comes into view;}
         threshold: 0.1}
     )if (imgRef.current) {observerRef.current.observe(imgRef.current)}
-    return () => {observerRef.current?.disconnect(),}
+    return () => {observerRef.current?.disconnect()}
 }, [lazy, priority, isInView])// Start load time tracking;
   useEffect(() => {}
 loadStartTime.current = performance.now()}, [src])// Monitor image performance;
@@ -88,18 +88,18 @@ const loadTime  = null;resourceEntry.responseEnd - resourceEntry.requestStart;
               format: src.includes('.webp')? 'webp';
                 : src.includes('.avif')? 'avif';
                   : 'other';}
-              wasOptimized: src.includes('/_next/image',}
+              wasOptimized: src.includes('/_next/image'}
 })// Log slow or large images;
             if (loadTime > 2000) {logWarn('Slow image loading:', {src;}
-                loadTime: `${loadTime.toFixed(2,}
+                loadTime: `${loadTime.toFixed(2}
 }ms`;
-                size: `${(fileSize / 1024).toFixed(2,}
+                size: `${(fileSize / 1024).toFixed(2}
 }KB`;
               })}
             if (fileSize > 500 * 1024) {logWarn('Large image detected:', {src;}
-                size: `${(fileSize / 1024).toFixed(2,}
+                size: `${(fileSize / 1024).toFixed(2}
 }KB`;
-                loadTime: `${loadTime.toFixed(2,}
+                loadTime: `${loadTime.toFixed(2}
 }ms`;
               })}, [lazy, priority, isInView])// Start load time tracking;
   useEffect (() => {loadStartTime.current = performance.now ()}, [src])// Monitor image performance;
@@ -121,21 +121,21 @@ const load_time =;
               resource_entry.response_end - resource_entry.request_start;
             set_metrics ({load_time,file_size,format: src.includes ('.webp')? 'webp';
                 : src.includes ('.avif')? 'avif';}
-                  : 'other',was_optimized: src.includes ('/_next / image',}
+                  : 'other',was_optimized: src.includes ('/_next / image'}
 })// Log slow or large images;
             // Check condition;
 if ( {) {$2;}
 }
-              log_warn ('Slow image loading:', {src,load_time: `${load_time.to_fixed (2,}
-}ms`,size: `${(file_size / 1024).to_fixed (2)}KB`},
+              log_warn ('Slow image loading:', {src,load_time: `${load_time.to_fixed (2}
+}ms`,size: `${(file_size / 1024).to_fixed (2)}KB`}
 }
             // Check condition;
 if ( {) {$2;}
 }
-              log_warn ('Large image detected:', {src,size: `${(file_size / 1024).to_fixed (2,}
+              log_warn ('Large image detected:', {src,size: `${(file_size / 1024).to_fixed (2}
 }KB`,load_time: `${load_time.to_fixed (2)}ms`})}
           }
-        })})observer.observe({ entryTypes: ['resource'] })return () => observer.disconnect()}return () => ,
+        })})observer.observe({ entryTypes: ['resource'] })return () => observer.disconnect()}return () => 
 } // Return empty cleanup function for the else case;
   }, [src])// Generate optimized URLs;
 
@@ -205,16 +205,16 @@ if (!lazy || priority || isInView) return,observerRef.current = new Intersection
 loadStartTime.current = window.window.window.performance.now()}, [src]),// Monitor image performance;
   useEffect(() => {
 if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {const observer = new PerformanceObserver((list) => {const entries = list.getEntries(),entries.forEach((entry) => {if (entry.name === src && entry.entryType === 'resource') {const resourceEntry = entry as PerformanceResourceTiming,const fileSize = resourceEntry.transferSize || resourceEntry.encodedBodySize || 0;}
-  const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart,setMetrics({loadTime,fileSize,format: src.includes('.webp') ? 'webp' : src.includes('.avif') ? 'avif' : 'other',wasOptimized: src.includes('/_next/image',}
+  const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart,setMetrics({loadTime,fileSize,format: src.includes('.webp') ? 'webp' : src.includes('.avif') ? 'avif' : 'other',wasOptimized: src.includes('/_next/image'}
 }),// Log slow or large images;
-            if (loadTime > 2000) {logWarn('Slow image loading:', {src,loadTime: `${loadTime.toFixed(2,}
-}ms`,size: `${(fileSize / 1024).toFixed(2,}
+            if (loadTime > 2000) {logWarn('Slow image loading:', {src,loadTime: `${loadTime.toFixed(2}
+}ms`,size: `${(fileSize / 1024).toFixed(2}
 }KB`;
-              })}if (fileSize > 500 * 1024) {logWarn('Large image detected:', {src,size: `${(fileSize / 1024).toFixed(2,}
-}KB`,loadTime: `${loadTime.toFixed(2,}
+              })}if (fileSize > 500 * 1024) {logWarn('Large image detected:', {src,size: `${(fileSize / 1024).toFixed(2}
+}KB`,loadTime: `${loadTime.toFixed(2}
 }ms`;})}
           }
-        })}),observer.observe({ entryTypes: ['resource'],}
+        })}),observer.observe({ entryTypes: ['resource']}
 }),return () => observer.disconnect()}return () => {}, // Return empty cleanup function for the else case;
   }, [src]),// Generate optimized URLs;
 
@@ -245,14 +245,14 @@ const generatePlaceholder = (if (placeholder === 'none');
   return $3;}
 }
 className={placeholderClassName}
-          style={{ backgroundColor: placeholderColor ,}
+          style={{ backgroundColor: placeholderColor }
 }
         />;
       )}if (placeholder = == 'color') ;
   return (
     <div;
 className={placeholderClassName}
-          style={{ backgroundColor: placeholderColor ,}
+          style={{ backgroundColor: placeholderColor }
 }
         />;
       )}return (// Simulate loading progress for demo purposes;
@@ -285,39 +285,39 @@ if ( {) {$2;}
   // Container styles;
 
 const container_style: React.CSSProperties = {aspect_ratio:;}
-      aspect_ratio || (width && height ? `${width}/${height}` : undefined),width: width ? `${widt,}
-}px` : undefined,height: height ? `${height}px` : undefine,
+      aspect_ratio || (width && height ? `${width}/${height}` : undefined),width: width ? `${widt}
+}px` : undefined,height: height ? `${height}px` : undefine
 }
       >;
       <AnimatePresence />;}},// Container styles;
 
-const containerStyle: React.CSSProperties = {aspectRatio: aspectRatio || (width && height ? `${width}/${heigh,}
-}` : undefined),width: width ? `${widt,}
+const containerStyle: React.CSSProperties = {aspectRatio: aspectRatio || (width && height ? `${width}/${heigh}
+}` : undefined),width: width ? `${widt}
 }px` : undefined,{/* Placeholder */}<div className={placeholderClassName} />;
         <ImageIcon className='h-8 w-8 text-gray-400' />;
       </div>;
     )}// Container styles;
 
 const containerStyle: React && React.CSSProperties = {aspectRatio:;}
-      aspectRatio || (width && height ? `${width}/${height}` : undefined),width: width ? `${widt,}
-}px` : undefined,height: height ? `${height}px` : undefine,
+      aspectRatio || (width && height ? `${width}/${height}` : undefined),width: width ? `${widt}
+}px` : undefined,height: height ? `${height}px` : undefine
 }>;
       <AnimatePresence />;
         {/* Placeholder */}{(isLoading |!isInView) && !hasError && (<motion.div;}
             initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}transition={{ duration: 0.3 ,}
+            exit={{ opacity: 0 }}transition={{ duration: 0.3 }
 }{(isLoading || !isInView) && !hasError && (<motion&& motion.div;}
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}transition={{ duration: 0.3 }}className=\"absolute inset-0\" />
 
-            {generatePlaceholder()}{/* Loading progress *,}
-}
+            {generatePlaceholder()}{/* Loading progress *}
+}"
             {showLoadingProgress && isLoading && loadProgress > 0 && (<div className=\"absolute bottom-0 left-0 right-0 h-1 bg-gray-200\" />;
-                <motion.div;}
+                <motion.div;}"
                   className=\"h-full bg-blue-500\";}
                   initial={{ width: 0 }}
                   animate={{ width: `${loadProgress}%` }}
-                  transition={{ duration: 0.3 ,}
+                  transition={{ duration: 0.3 }
 }
                 />;
               </div>;
@@ -327,11 +327,11 @@ const containerStyle: React && React.CSSProperties = {aspectRatio:;}
         {/* Error state */}
         {hasError && (<motion.div;}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 ,}
+            animate={{ opacity: 1 }"
 }className=\"absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400\" />
-
-            <AlertTriangle className=\"h-8 w-8 mb-2\" />;
-            <span className=\"text-sm\" />Failed to load image</span>;
+"
+            <AlertTriangle className=\"h-8 w-8 mb-2\" />;"
+            <span className=\"text-sm\" />Failed to load image</span>;"
             {retries > 0 && (<span className=\"text-xs mt-1\" />Retried {retries} times</span>;
             )}
           </motion.div>;
@@ -357,7 +357,7 @@ const containerStyle: React && React.CSSProperties = {aspectRatio:;}
             className={cn('w-full h-full transition-opacity duration-300',`object-${objectFit}`,isLoading ? 'opacity-0' : 'opacity-100';)}
             initial={{ opacity: 0 }}
             animate={{ opacity: isLoading ? 0 : 1 }}
-            transition={{ duration: 0.3 ,}
+            transition={{ duration: 0.3 }
 }
           />;
         )}opacity: 0;
@@ -376,42 +376,42 @@ export const ImageGallery: React.FC<ImageGalleryProps /> = ({ images,columns = 3
 const [loadedCount, setLoadedCount] = useState(0),const handleImageLoad = (setLoadedCount(prev => prev + 1)) => {
   return $3;}
 };
-  return (<div className={cn('space-y-4', className)} />;
-      <div className=\"flex justify-between items-center\" />;
-        <h3 className=\"text-lg font-semibold\" />Gallery</h3>;
+  return (<div className={cn('space-y-4', className)} />;"
+      <div className=\"flex justify-between items-center\" />;"
+        <h3 className=\"text-lg font-semibold\" />Gallery</h3>;"
         <span className=\"text-sm text-muted-foreground\" />;
           {loadedCount}/{images.length} loaded;
         </span>;
       </div>;
         className={`grid gap-4`}
-        style={{gridTemplateColumns: `repeat(${column,}
+        style={{gridTemplateColumns: `repeat(${column}
 }, 1fr)`        }}>;
         {images && images.map((image, index,) => (<motion&& motion.div;}
             key = {index}<div;
         className={`grid gap-4`}
-        style={{gridTemplateColumns: `repeat(${column,}
+        style={{gridTemplateColumns: `repeat(${column}
 }, 1fr)`;
         }}
        />;
         {images.map((image, index) => (<motion.div;}
-            key={index}initial={{ opacity: 0, y: 20 ,}
+            key={index}initial={{ opacity: 0, y: 20 }
 }
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 ,}
-}
+            transition={{ delay: index * 0.1 }
+}"
             className=\"group cursor-pointer\";
             onClick={() = /> onImageClick?.(index)}
-          >;
+          >;"
             <div className=\"relative\" />;
               <OptimizedImage;
                 src={image.src}
                 alt={image.alt}
-                aspectRatio={aspectRatio}</div />;
+                aspectRatio={aspectRatio}</div />;"
                 className=\"rounded-lg group-hover:scale-105 transition-transform duration-300\";
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images;
-              />;
-              {image.caption && (<div className=\"absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg\" />;}
+              />;"
+              {image.caption && (<div className=\"absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg\" />;}"
                   <p className=\"text-sm\" />{image.caption}</p>;
                 </div>;
               />;{image && image.caption && (<div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg' />;}
@@ -435,8 +435,8 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps /> = ({ src,alt,size
 
 
   const sizeClasses = {sm: 'h-8 w-8',
-  md: 'h-10 w-10',lg: 'h-12 w-12',}
-  xl: 'h-16 w-16,}
+  md: 'h-10 w-10',lg: 'h-12 w-12'}
+  xl: 'h-16 w-16}
 }
 ;
   const initials =;
@@ -448,12 +448,12 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps /> = ({ src,alt,size
           alt={alt}
           aspectRatio='1/1';
           objectFit='cover';
-          fallbackSrc={`https: //ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random,
+          fallbackSrc={`https: //ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random
 }
           placeholder='color';
-          placeholderColor='#f3f4f6';
+          placeholderColor='#f3f4f6';"
           priority={true}className=\"rounded-full\";
-        />;
+        />;"
       ) : (<div className=\"w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold\" />;
           {initials}</div>;
       )}}}}</div>;
@@ -464,14 +464,14 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps /> = ({ src,alt,size
             className='absolute inset - 0' />
 
             {generate_placeholder ()}
-            {/* Loading progress *,}
+            {/* Loading progress *}
 }
             {showLoadingProgress && is_loading && load_progress > 0 && (<div className='absolute bottom - 0 left - 0 right - 0 h - 1 bg - gray - 200' />;
                 <motion.div;}
                   className='h - full bg - blue - 500';}
                   initial={{ width: 0 }}
                   animate={{ width: `${load_progress}%` }}
-                  transition={{ duration: 0.3 ,}
+                  transition={{ duration: 0.3 }
 }
                 />
     </div>
@@ -481,7 +481,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps /> = ({ src,alt,size
         {/* Error state */}
         {has_error && (<motion.div;}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 ,}
+            animate={{ opacity: 1 }
 }
             className='absolute inset - 0 flex flex - col items - center justify - center bg - gray - 100 text - gray - 400' />
 
@@ -501,7 +501,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps /> = ({ src,alt,size
             initial={{ opacity: 0 }}
             animate={{ opacity: is_loading ? 0 : 1 }}
             transition={{ duration: 0.3 }}
-          />,
+          />
 }
       </AnimatePresence>
     </div>
@@ -539,15 +539,15 @@ const [loaded_count, setLoadedCount] =;}
       </div>;
       <div;
         className={`grid gap - 4`}
-        style={{gridTemplateColumns: `repeat (${column,}
+        style={{gridTemplateColumns: `repeat (${column}
 }, 1fr)`        }}
        />;
         {images.map ((image, index, ) => (<motion.div;}
             key = {index }
-            initial={{ opacity: 0, coordinate_y: 20 ,}
+            initial={{ opacity: 0, coordinate_y: 20 }
 }
             animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ delay: index * 0.1 ,}
+            transition={{ delay: index * 0.1 }
 }
             className='group cursor - pointer';
             on_click={() = /> onImageClick?.(index)}          >;
@@ -578,8 +578,8 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps /> = ({ src,alt,si
 
 
   const size_classes = {sm: 'h - 8 w - 8',
-  md: 'h - 10 w - 10',lg: 'h - 12 w - 12',}
-  xl: 'h - 16 w - 16,}
+  md: 'h - 10 w - 10',lg: 'h - 12 w - 12'}
+  xl: 'h - 16 w - 16}
 }
 ;
   const initials =;
@@ -591,7 +591,7 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps /> = ({ src,alt,si
           alt={alt}
           aspect_ratio='1 / 1';
           object_fit='cover';
-          fallback_src={`https: //ui - avatars.com / api/?name=${encodeURIComponent (initials)}&background = random,
+          fallback_src={`https: //ui - avatars.com / api/?name=${encodeURIComponent (initials)}&background = random
 }
           placeholder='color';
           placeholder_color='#f3f4f6';
@@ -628,5 +628,5 @@ interface ImageMetrics {
 }
 }
 
-export const OptimizedImage: React.FC<OptimizedImageProps /> = ({,}
-}
+export const OptimizedImage: React.FC<OptimizedImageProps /> = ({}
+}"

@@ -10,7 +10,7 @@ import React, { useState } from \"react\",import { Button } from \"@/components/
   articleId: string;}
 }
 }
-
+"
 const [feedbackGiven, setFeedbackGiven] = useState<\"helpful\" | \"not-helpful\" | null>(null)// Find the article in all categories;
   let article = null;
   for (const category of HELP_CATEGORIES) {const found = category.articles.find(a => a.id === articleId)if (found) {article = found;}
@@ -22,18 +22,18 @@ const [feedbackGiven, setFeedbackGiven] = useState<\"helpful\" | \"not-helpful\"
 
 const handleFeedback = (setFeedbackGiven(type;) => {
   return $3;}
+}"
+  return new Date(date).toLocaleDateString(\"en-US\", {export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {const [feedbackGiven, setFeedbackGiven]  =;}"
+  useState<\"helpful\" | \"not-helpful\" | null>(null)year: \"numeric\",month: \"long\",day: \"numeric\" })
 }
-  return new Date(date).toLocaleDateString(\"en-US\", {export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {const [feedbackGiven, setFeedbackGiven]  =;}
-  useState<\"helpful\" | \"not-helpful\" | null>(null)year: \"numeric\",month: \"long\",day: \"numeric\" }),
-}
-;
+;"
   const [feedbackGiven, setFeedbackGiven] = useState<\"helpful\" | \"not-helpful\" | null>(null),// Find the article in all categories;
-  let article,for (const category of HELP_CATEGORIES) {const found = category.articles.find(a => a.id === articleId),if (found) {article = found,break;}
+  let article,for (const category of HELP_CATEGORIES) {const found = category.articles.find(a => a.id === articleId),if (found) {article = found,break;}"
 import { HELP_CATEGORIES } from \"./help-content\",interface HelpArticleViewProps {
   articleId: string;}
 }
 }
-
+"
 export function HelpArticleView() {const [feedbackGiven, setFeedbackGiven]  = useState<\"helpful\" | \"not-helpful\" | null>(null),// Find the article in all categories;
   let article;
   for (const category of HELP_CATEGORIES) {const found = category && category.articles.find(a => a && a.id === articleId)if (found) {article = found;}
@@ -44,8 +44,8 @@ export function HelpArticleView() {const [feedbackGiven, setFeedbackGiven]  = us
 
 const handleFeedback = (setFeedbackGiven(type;) => {
   return $3;}
-}
-  return new Date(date).toLocaleDateString(\"en-US\", {year: \"numeric\",month: \"long\",day: \"numeric\" },
+}"
+  return new Date(date).toLocaleDateString(\"en-US\", {year: \"numeric\",month: \"long\",day: \"numeric\" }
 }import React, {;}
   useState } from './react';
 import { Button   } from '@/components / ui / button';
@@ -60,11 +60,11 @@ interface HelpArticleViewProps {
 
 export /**;
  * HelpArticleView - Function description;
- */;
+ */;"
 function HelpArticleView() {const [feedback_given, setFeedbackGiven] = useState<\"helpful\" | \"not - helpful\" | null>(null)// Find the article in all categories;}
   let article;}
   for (const category of HELP_CATEGORIES) {}
 
-const found = null;
+const found = null;"
     day: \"numeric\";
-  })}
+  })}"

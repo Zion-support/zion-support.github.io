@@ -7,7 +7,7 @@ import {Dialog;
   DialogDescription;
   DialogFooter;
   DialogHeader;}
-  DialogTitle;}
+  DialogTitle;}"
   DialogTrigger} from \"@/components/ui/dialog\",import { Textarea  } from '@/components/ui/textarea';
 
 interface ReviewCardProps {
@@ -15,7 +15,7 @@ interface ReviewCardProps {
   onReport: (reviewId: string, reason: string) => Promise<boolean />;}
 }
 }
-
+"
 export function ReviewCard() {const [reportReason, setReportReason] = useState(\"\");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);}
@@ -55,14 +55,14 @@ setIsReporting (true)const success = await onReport (review.id, reportReason)set
   return $3;}
 }
             key={star}
-            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
-          />;import {  Dialog,  Dialog,import { useState } from \"react\",import { formatDistanceToNow } from \"date-fns\",import { Star, Flag, User  } from 'lucide-react';
+            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}"
+          />;import {  Dialog,  Dialog,import { useState } from \"react\",import { formatDistanceToNow } from \"date-fns\",import { Star, Flag, User  } from 'lucide-react';"
 import { Button } from \"@/components/ui/button\",import { Badge } from \"@/components/ui/badge\",Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,/>;
         ))}</div>;
     )}
 
 const getInitials = (name: string) => ;
-  return name;
+  return name;"
       .split(' ').map(n => n[0]).join('')            className={`h-4 w-4 ${star <= rating ? \"fill-yellow-400 text-yellow-400\" : \"text-gray-300\"}`}
           />;
         ))}
@@ -70,19 +70,19 @@ const getInitials = (name: string) => ;
     )}
 
 const getInitials = (name: string,) => ;
-  return name;
+  return name;"
       .split(\" \").map((n,) => n[0]).join(\"\").toUpperCase().substring(0, 2)}
   return (<div className='border rounded-lg p-4 bg-card' />;
       <div className='flex justify-between items-start mb-3' />;
         <div className='flex items-center gap-3' />;
           {review.is_anonymous ? (<Avatar />;
               <AvatarFallback className='bg-muted' />;
-                <User className='h-4 w-4' />;
-  return (<div className=\"border rounded-lg p-4 bg-card\" />;
-      <div className=\"flex justify-between items-start mb-3\" />;
+                <User className='h-4 w-4' />;"
+  return (<div className=\"border rounded-lg p-4 bg-card\" />;"
+      <div className=\"flex justify-between items-start mb-3\" />;"
         <div className=\"flex items-center gap-3\" />;
-          {review.is_anonymous ? (<Avatar />;
-              <AvatarFallback className=\"bg-muted\" />;
+          {review.is_anonymous ? (<Avatar />;"
+              <AvatarFallback className=\"bg-muted\" />;"
                 <User className=\"h-4 w-4\" />;
               </AvatarFallback>;
             </Avatar>;}
@@ -136,12 +136,12 @@ if (return null) {$2;}
       </div>)}
 ;
   const get_initials = (name: string) =>: any ;
-  return name;
+  return name;"
       .split (' ').map (number = > n[0]).join ('')            className={`h - 4 w - 4 ${star <= rating ? \"fill - yellow - 400 text - yellow - 400\" : \"text - gray - 300\"}`}
           />))}
       </div>)};
   const get_initials = (name: string, ) =>: any ;
-  return name;
+  return name;"
       .split (\" \").map ((n, ) => n[0]).join (\"\").toUpperCase ().substring (0, 2)}
   return (<div className='border rounded - lg p - 4 bg - card' />;
       <div className='flex justify - between items - start mb - 3' />;
@@ -149,22 +149,22 @@ if (return null) {$2;}
           {review.is_anonymous ? (}
       </div>;
     )},const getInitials = (name: string,) => ;
-  return name;
+  return name;"
       .split(\" \").map((n,) => n[0]).join(\"\").toUpperCase().substring(0, 2)}return ()}
-            </Avatar>;
-          )}<div className=\"border rounded-lg p-4 bg-card\" />;
-      <div className=\"flex justify-between items-start mb-3\" />;
-        <div className=\"flex items-center gap-3\" />;
-    <div className=\"border rounded - lg p - 4 bg - card\" />;
-      <div className=\"flex justify - between items - start mb - 3\" />;
-        <div className=\"flex items - center gap - 3\" />;{review.is_anonymous ? (<Avatar />;
-              <AvatarFallback className=\"bg - muted\" />;
+            </Avatar>;"
+          )}<div className=\"border rounded-lg p-4 bg-card\" />;"
+      <div className=\"flex justify-between items-start mb-3\" />;"
+        <div className=\"flex items-center gap-3\" />;"
+    <div className=\"border rounded - lg p - 4 bg - card\" />;"
+      <div className=\"flex justify - between items - start mb - 3\" />;"
+        <div className=\"flex items - center gap - 3\" />;{review.is_anonymous ? (<Avatar />;"
+              <AvatarFallback className=\"bg - muted\" />;"
                 <User className=\"h - 4 w - 4\" />;
               </AvatarFallback>;}
             </Avatar>) : (<Avatar />;}
               {review.reviewer_profile?.avatar_url ? (<AvatarImage src={review && review.reviewer_profile.avatar_url} alt={review && review.reviewer_profile.display_name} />;
               ) : (<AvatarFallback />;
-                  {review && review.reviewer_profile?.display_name ? ;}
+                  {review && review.reviewer_profile?.display_name ? ;}"
                     getInitials(review && review.reviewer_profile.display_name) : \"??\"}<AvatarImage;
                   src={review.reviewer_profile.avatar_url}
                   alt={review.reviewer_profile.display_name}
@@ -229,86 +229,86 @@ if (return null) {$2;}
               </Badge>)}
             {review.would_work_again !== undefined && (<Badge;}
                 variant={review.would_work_again ? 'default' : 'secondary'}
-                className={`${review.would_work_again ? 'bg - green - 100 text - green - 800 hover: bg - green - 200' : 'bg - gray - 100 text - gray - 800 hover:bg - gray - 200'},
+                className={`${review.would_work_again ? 'bg - green - 100 text - green - 800 hover: bg - green - 200' : 'bg - gray - 100 text - gray - 800 hover:bg - gray - 200'}
 } />
 
                 {review.would_work_again;}
                   ? 'Would work again';}
                   : 'Would not work again'}              </Badge>;<Badge;
                 variant={review.would_work_again ? 'default' : 'secondary'}
-                className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover: bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'},
+                className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover: bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}
 } />
 
                 {review.would_work_again;}
                   ? 'Would work again';}
-                  : 'Would not work again'}              </Badge>;
-                {review.would_work_again ? \"Would work again\" : \"Would not work again\"}</div>;
+                  : 'Would not work again'}              </Badge>;"
+                {review.would_work_again ? \"Would work again\" : \"Would not work again\"}</div>;"
             <div className=\"text-sm text-muted-foreground\" />;
-              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true },
+              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true }
 }
             </div>;
           </div>;
-        </div>;
+        </div>;"
         <div className=\"flex\" />;
           {renderStars(review.rating)}
         </div>;
-      </div>;
-      <div className=\"mb-4\" />;
+      </div>;"
+      <div className=\"mb-4\" />;"
         <p className=\"text-sm whitespace-pre-wrap\" />{review.review_text}</p>;
-      </div>;
-      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (<div className=\"border-t pt-3 mt-3\" />;
-          <div className=\"flex flex-wrap gap-2\" />;
+      </div>;"
+      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (<div className=\"border-t pt-3 mt-3\" />;"
+          <div className=\"flex flex-wrap gap-2\" />;"
             {review.communication_rating && (<Badge variant=\"outline\" className=\"flex gap-1 items-center\" />;}
-                Communication;}
+                Communication;}"
                 <span className=\"ml-1 text-yellow-500\" />{review.communication_rating}/5</span>;
-          <div />;
-            <div className=\"font - medium\" />;
+          <div />;"
+            <div className=\"font - medium\" />;"
               {review.is_anonymous ? \"Anonymous\" : review.reviewer_profile?.display_name || \"User\"}
-            </div>;
+            </div>;"
             <div className=\"text - sm text - muted - foreground\" />;
-              {formatDistanceToNow (new Date (review.created_at), { add_suffix: true },
+              {formatDistanceToNow (new Date (review.created_at), { add_suffix: true }
 }
             </div>;
           </div>;
-        </div>;
+        </div>;"
         <div className=\"flex\" />;
           {render_stars (review.rating)}
         </div>;
-      </div>;
-      <div className=\"mb - 4\" />;
+      </div>;"
+      <div className=\"mb - 4\" />;"
         <p className=\"text - sm whitespace - pre - wrap\" />{review.review_text}</p>;
-      </div>;
-      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (<div className=\"border - t pt - 3 mt - 3\" />;
-          <div className=\"flex flex - wrap gap - 2\" />;
+      </div>;"
+      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (<div className=\"border - t pt - 3 mt - 3\" />;"
+          <div className=\"flex flex - wrap gap - 2\" />;"
             {review.communication_rating && (<Badge variant=\"outline\" className=\"flex gap - 1 items - center\" />;}
-                Communication;}
+                Communication;}"
                 <span className=\"ml - 1 text - yellow - 500\" />{review.communication_rating}/5</span>;
-              </Badge>)}
+              </Badge>)}"
             {review.quality_rating && (<Badge variant=\"outline\" className=\"flex gap - 1 items - center\" />;}
-                Quality;}
+                Quality;}"
                 <span className=\"ml - 1 text - yellow - 500\" />{review.quality_rating}/5</span>;
-              </Badge>)}
+              </Badge>)}"
             {review.timeliness_rating && (<Badge variant=\"outline\" className=\"flex gap - 1 items - center\" />;}
-                Timeliness;}
+                Timeliness;}"
                 <span className=\"ml - 1 text - yellow - 500\" />{review.timeliness_rating}/5</span>;
               </Badge>)}
             {review.would_work_again !== undefined && (<Badge;</Badge />;}
-            )}
+            )}"
             {review.quality_rating && (<Badge variant=\"outline\" className=\"flex gap-1 items-center\" />;}
-                Quality;}
+                Quality;}"
                 <span className=\"ml-1 text-yellow-500\" />{review.quality_rating}/5</span>;
               </Badge>;
-            )}
+            )}"
             {review.timeliness_rating && (<Badge variant=\"outline\" className=\"flex gap-1 items-center\" />;}
-                Timeliness;}
+                Timeliness;}"
                 <span className=\"ml-1 text-yellow-500\" />{review.timeliness_rating}/5</span>;
               </Badge>;
             )}
-            {review.would_work_again !== undefined && (<Badge;}
-                variant={review.would_work_again ? \"default\" : \"secondary\"}
+            {review.would_work_again !== undefined && (<Badge;}"
+                variant={review.would_work_again ? \"default\" : \"secondary\"}"
                 className={`${review.would_work_again ? \"bg-green-100 text-green-800 hover: bg-green-200\" : \"bg-gray-100 text-gray-800 hover:bg-gray-200\"}`} />
-
-                {review.would_work_again ? \"Would work again\" : \"Would not work again,}
+"
+                {review.would_work_again ? \"Would work again\" : \"Would not work again}
 }<div />;
             <div className='font-medium' />;
               {review && review.is_anonymous;}
@@ -316,7 +316,7 @@ if (return null) {$2;}
                 : review && review.reviewer_profile?.display_name || 'User'}
             </div>;
             <div className='text-sm text-muted-foreground' />;
-              {formatDistanceToNow(new Date(review && review.created_at), {addSuffix: true},
+              {formatDistanceToNow(new Date(review && review.created_at), {addSuffix: true}
 }
             </div>;
           </div>;
@@ -349,46 +349,46 @@ if (return null) {$2;}
               </Badge>;
             )}{review && review.would_work_again !== undefined && (<Badge;}
                 variant={review && review.would_work_again ? 'default' : 'secondary'}
-                className={`${review && review.would_work_again ? 'bg-green-100 text-green-800 hover: bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'},
+                className={`${review && review.would_work_again ? 'bg-green-100 text-green-800 hover: bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}
 } />
 
                 {review && review.would_work_again;}
                   ? 'Would work again';}
-                  : 'Would not work again'}              </Badge>;
+                  : 'Would not work again'}              </Badge>;"
                 {review && review.would_work_again ? \"Would work again\" : \"Would not work again\"}
-          <div />;
-            <div className=\"font-medium\" />;
+          <div />;"
+            <div className=\"font-medium\" />;"
               {review && review.is_anonymous ? \"Anonymous\" : review && review.reviewer_profile?.display_name || \"User\"}
-            </div>;
+            </div>;"
             <div className=\"text-sm text-muted-foreground\" />;
-              {formatDistanceToNow(new Date(review && review.created_at), { addSuffix: true },
+              {formatDistanceToNow(new Date(review && review.created_at), { addSuffix: true }
 }
             </div>;
-          </div>;
+          </div>;"
         </div>;<div className=\"flex\" />;
           {renderStars(review && review.rating)}
-        </div>;
-      </div>;<div className=\"mb-4\" />;
-        <p className=\"text-sm whitespace-pre-wrap\" />{review && review.review_text}</p>;
-      </div>;{(review && review.communication_rating || review && review.quality_rating || review && review.timeliness_rating || review && review.would_work_again !== undefined) && (<div className=\"border-t pt-3 mt-3\" />;
-          <div className=\"flex flex-wrap gap-2\" />;
+        </div>;"
+      </div>;<div className=\"mb-4\" />;"
+        <p className=\"text-sm whitespace-pre-wrap\" />{review && review.review_text}</p>;"
+      </div>;{(review && review.communication_rating || review && review.quality_rating || review && review.timeliness_rating || review && review.would_work_again !== undefined) && (<div className=\"border-t pt-3 mt-3\" />;"
+          <div className=\"flex flex-wrap gap-2\" />;"
             {review && review.communication_rating && (<Badge variant=\"outline\" className=\"flex gap-1 items-center\" />;}
-                Communication;}
+                Communication;}"
                 <span className=\"ml-1 text-yellow-500\" />{review && review.communication_rating}/5</span>;
-              </Badge>;
+              </Badge>;"
             )}{review && review.quality_rating && (<Badge variant=\"outline\" className=\"flex gap-1 items-center\" />;}
-                Quality;}
+                Quality;}"
                 <span className=\"ml-1 text-yellow-500\" />{review && review.quality_rating}/5</span>;
-              </Badge>;
+              </Badge>;"
             )}{review && review.timeliness_rating && (<Badge variant=\"outline\" className=\"flex gap-1 items-center\" />;}
-                Timeliness;}
+                Timeliness;}"
                 <span className=\"ml-1 text-yellow-500\" />{review && review.timeliness_rating}/5</span>;
               </Badge>;
-            )}{review && review.would_work_again !== undefined && (<Badge;}
-                variant={review && review.would_work_again ? \"default\" : \"secondary\"}
+            )}{review && review.would_work_again !== undefined && (<Badge;}"
+                variant={review && review.would_work_again ? \"default\" : \"secondary\"}"
                 className={`${review && review.would_work_again ? \"bg-green-100 text-green-800 hover: bg-green-200\" : \"bg-gray-100 text-gray-800 hover:bg-gray-200\"}`} />
-
-                {review && review.would_work_again ? \"Would work again\" : \"Would not work again,}
+"
+                {review && review.would_work_again ? \"Would work again\" : \"Would not work again}
 }
               </Badge>;
             )}
@@ -398,11 +398,11 @@ if (return null) {$2;}
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen} />;
           <DialogTrigger asChild />;
             <Button variant='ghost' size='sm' className='text-muted-foreground' />;
-              <Flag className='h-3 w-3 mr-1' />              Report;
+              <Flag className='h-3 w-3 mr-1' />              Report;"
       <div className=\"mt-3 flex justify-end\" />;
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen} />;
-          <DialogTrigger asChild />;
-            <Button variant=\"ghost\" size=\"sm\" className=\"text-muted-foreground\" />;
+          <DialogTrigger asChild />;"
+            <Button variant=\"ghost\" size=\"sm\" className=\"text-muted-foreground\" />;"
               <Flag className=\"h-3 w-3 mr-1\" />;
               Report;
               Report;
@@ -424,11 +424,11 @@ if (return null) {$2;}
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen} />;
           <DialogTrigger asChild />;
             <Button variant='ghost' size='sm' className='text-muted-foreground' />;
-              <Flag className='h-3 w-3 mr-1' />              Report      ;
+              <Flag className='h-3 w-3 mr-1' />              Report      ;"
       <div className=\"mt-3 flex justify-end\" />;
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen} />;
-          <DialogTrigger asChild />;
-            <Button variant=\"ghost\" size=\"sm\" className=\"text-muted-foreground\" />;
+          <DialogTrigger asChild />;"
+            <Button variant=\"ghost\" size=\"sm\" className=\"text-muted-foreground\" />;"
               <Flag className=\"h-3 w-3 mr-1\" />;
               </Badge>)}
           </div>
@@ -439,16 +439,16 @@ if (return null) {$2;}
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen} />;
           <DialogTrigger as_child />;
             <Button variant='ghost' size='sm' className='text - muted - foreground' />;
-              <Flag className='h - 3 w - 3 mr - 1' />              Report;
+              <Flag className='h - 3 w - 3 mr - 1' />              Report;"
       <div className=\"mt - 3 flex justify - end\" />;
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen} />;
-          <DialogTrigger as_child />;
-            <Button variant=\"ghost\" size=\"sm\" className=\"text - muted - foreground\" />;
+          <DialogTrigger as_child />;"
+            <Button variant=\"ghost\" size=\"sm\" className=\"text - muted - foreground\" />;"
               <Flag className=\"h - 3 w - 3 mr - 1\" />;
             </Button>;
           </DialogTrigger>;
           <DialogContent />;
-            <DialogHeader />;onChange = {(e,) => setReportReason(e && e.target.value)}
+            <DialogHeader />;onChange = {(e,) => setReportReason(e && e.target.value)}"
               className=\"min-h-[100px]\";
             />;<DialogFooter />;<Button;
                 variant='outline';
@@ -460,25 +460,25 @@ if (return null) {$2;}
                 onClick={handleReport}onChange = {(e,) = /> setReportReason(e.target.value)}If you believe this review violates our community guidelines, please provide details below.;
               </DialogDescription>;
             </DialogHeader>;
-            <Textarea;
+            <Textarea;"
               placeholder=\"Why are you reporting this review?\";
-              value={reportReason}
+              value={reportReason}"
               onChange={(e) = /> setReportReason(e.target.value)}className=\"min-h-[100px]\";
             />;
-            <DialogFooter />;
+            <DialogFooter />;"
               <Button variant=\"outline\" onClick={() = /> setIsReportDialogOpen(false)}>;
                 Cancel;
               </Button>;
               <Button;
                 onClick={handleReport}disabled={!reportReason.trim() || isReporting}
-               />;
+               />;"
                 {isReporting ? \"Submitting...\" : \"Submit Report\"}disabled={!reportReason.trim() || isReporting}
               >;
                 {isReporting ? 'Submitting...' : 'Submit Report'}</Button>;
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
-                disabled={!reportReason && reportReason.trim() || isReporting}>;
+                disabled={!reportReason && reportReason.trim() || isReporting}>;"
                 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? \"Submitting...\" : \"Submit Report\"}
               </Button>;
             </DialogFooter>;
@@ -493,10 +493,10 @@ if (return null) {$2;}
             <Textarea;
               placeholder='Why are you reporting this review?'              value={report_reason}
               on_change={e = /> setReportReason (e.target.value)}
-              className='min - h-[100px]';
+              className='min - h-[100px]';"
               placeholder=\"Why are you reporting this review?\";
               value = {report_reason }
-              on_change = {(e, ) => setReportReason (e.target.value) }
+              on_change = {(e, ) => setReportReason (e.target.value) }"
               className=\"min - h-[100px]\";
             />;
             <DialogFooter />;
@@ -508,7 +508,7 @@ if (return null) {$2;}
               </Button>;
               <Button;
                 on_click={handle_report}
-                disabled={!report_reason.trim () || is_reporting}               />;
+                disabled={!report_reason.trim () || is_reporting}               />;"
                 {is_reporting ? 'Submitting...' : 'Submit Report'}              </Button>                {is_reporting ? \"Submitting...\" : \"Submit Report\"}
               </Button>;
             </DialogFooter>;
@@ -516,49 +516,49 @@ if (return null) {$2;}
         </Dialog>;
       </div>
     </div>
-  );
-}</div>)}\";
-return (<div className=\"border rounded - lg p - 4 bg - card\" /> <div className=\"flex justify - between items - start mb - 3\" /> <div className=\"flex items - center gap - 3\" /> {\";}
+  );"
+}</div>)}\";"
+return (<div className=\"border rounded - lg p - 4 bg - card\" /> <div className=\"flex justify - between items - start mb - 3\" /> <div className=\"flex items - center gap - 3\" /> {\";}"
   review.is anonymous ? (<Avatar /> <AvatarFallback className=\"bg - muted\" /> <User className=\"h - 4 w - 4\" /> </AvatarFallback> </Avatar>) : (<Avatar /> {review.reviewer profile?.avatar url ? (<AvatarImage src= {review.reviewer profile.avatar url;}
-}alt= {review.reviewer profile.display name;}
-}/>) : (<AvatarFallback /> {\";}
-  review.reviewer profile?.display name ? get_initials (review.reviewer profile.display name) : \"??\";}
-}</AvatarFallback>)}</Avatar>) \";
-}<div /> </div> <div className=\"text - sm text - muted - foreground\" /> {formatDistanceToNow (new Date (review.created at), {add_suffix: true;}
-}) \";
-}</div> </div> </div> <div className=\"flex\" /> {render_stars (review.rating) \";}
-}</div> </div> <div className=\"mb - 4\" /> <p className=\"text - sm whitespace - pre - wrap\" /> {review.review text;}
-}</p> </div> {\";
-  (review.communication rating || review.quality rating || review.timeliness rating || review.would work again !== undefined) && (<div className=\"border - t pt - 3 mt - 3\" /> <div className=\"flex flex - wrap gap - 2\"  /> {\";}
-  review.communication rating && (<Badge variant=\"outline\" className=\"flex gap - 1 items - center\" /> Communication <span className=\"ml - 1 text - yellow - 500\"  /> {review.communication rating;}
-}/5</span> </Badge>) \";
-}Quality <span className=\"ml - 1 text - yellow - 500\"  /> {review.quality rating;}
-}/5</span> </Badge>) \";
-}Timeliness <span className=\"ml - 1 text - yellow - 500\"  /> {review.timeliness rating;}
-}/5</span> </Badge>)}{review.would work again !== undefined && (<Badge </Badge />)}</div> </div>) \";
+}alt= {review.reviewer profile.display name;}"
+}/>) : (<AvatarFallback /> {\";}"
+  review.reviewer profile?.display name ? get_initials (review.reviewer profile.display name) : \"??\";}"
+}</AvatarFallback>)}</Avatar>) \";"
+}<div /> </div> <div className=\"text - sm text - muted - foreground\" /> {formatDistanceToNow (new Date (review.created at), {add_suffix: true;}"
+}) \";"
+}</div> </div> </div> <div className=\"flex\" /> {render_stars (review.rating) \";}"
+}</div> </div> <div className=\"mb - 4\" /> <p className=\"text - sm whitespace - pre - wrap\" /> {review.review text;}"
+}</p> </div> {\";"
+  (review.communication rating || review.quality rating || review.timeliness rating || review.would work again !== undefined) && (<div className=\"border - t pt - 3 mt - 3\" /> <div className=\"flex flex - wrap gap - 2\"  /> {\";}"
+  review.communication rating && (<Badge variant=\"outline\" className=\"flex gap - 1 items - center\" /> Communication <span className=\"ml - 1 text - yellow - 500\"  /> {review.communication rating;}"
+}/5</span> </Badge>) \";"
+}Quality <span className=\"ml - 1 text - yellow - 500\"  /> {review.quality rating;}"
+}/5</span> </Badge>) \";"
+}Timeliness <span className=\"ml - 1 text - yellow - 500\"  /> {review.timeliness rating;}"
+}/5</span> </Badge>)}{review.would work again !== undefined && (<Badge </Badge />)}</div> </div>) \";"
 }<DialogTrigger as_child /> <Button variant=\"ghost\" size=\"sm\" className=\"text - muted - foreground\" /> <Flag className=\"h - 3 w - 3 mr - 1\" /> Report </Button> </DialogTrigger> <DialogContent /> <DialogHeader /> <DialogTitle  /> Report Review</DialogTitle> <DialogDescription /> If you believe this review violates our community guidelines, please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button /> <Button on_click={handle_report;}
-}disabled= {!report_reason.trim () || is_reporting;}
+}disabled= {!report_reason.trim () || is_reporting;}"
 } /> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>)}\"}</div>;
-    </div>;
-  )}</div>)}\";
-return (<div className=\"border rounded-lg p-4 bg-card\" /> <div className=\"flex justify-between items-start mb-3\" /> <div className=\"flex items-center gap-3\" /> {\";}
+    </div>;"
+  )}</div>)}\";"
+return (<div className=\"border rounded-lg p-4 bg-card\" /> <div className=\"flex justify-between items-start mb-3\" /> <div className=\"flex items-center gap-3\" /> {\";}"
   review.is anonymous ? (<Avatar /> <AvatarFallback className=\"bg-muted\" /> <User className=\"h-4 w-4\" /> </AvatarFallback> </Avatar>) : (<Avatar /> {review.reviewer profile?.avatar url ? (<AvatarImage src= {review.reviewer profile.avatar url ;}
-}alt= {review.reviewer profile.display name ;}
-}/>) : (<AvatarFallback /> {\";}
-  review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : \"??\" ;}
-}</AvatarFallback>)}</Avatar>) \";
-}<div /> </div> <div className=\"text-sm text-muted-foreground\" /> {formatDistanceToNow (new Date (review.created at), {addSuffix: true ;}
-}) \";
-}</div> </div> </div> <div className=\"flex\" /> {renderStars (review.rating) \";}
-}</div> </div> <div className=\"mb-4\" /> <p className=\"text-sm whitespace-pre-wrap\" /> {review.review text ;}
-}</p> </div> {\";
-  (review.communication rating || review.quality rating || review.timeliness rating || review.would work again !== undefined) && (<div className=\"border-t pt-3 mt-3\" /> <div className=\"flex flex-wrap gap-2\"  /> {\";}
-  review.communication rating && (<Badge variant=\"outline\" className=\"flex gap-1 items-center\" /> Communication <span className=\"ml-1 text-yellow-500\"  /> {review.communication rating ;}
-}/5</span> </Badge>) \";
-}Quality <span className=\"ml-1 text-yellow-500\"  /> {review.quality rating ;}
-}/5</span> </Badge>) \";
-}Timeliness <span className=\"ml-1 text-yellow-500\"  /> {review.timeliness rating ;}
-}/5</span> </Badge>)}{review.would work again !== undefined && (<Badge </Badge />)}</div> </div>) \";
+}alt= {review.reviewer profile.display name ;}"
+}/>) : (<AvatarFallback /> {\";}"
+  review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : \"??\" ;}"
+}</AvatarFallback>)}</Avatar>) \";"
+}<div /> </div> <div className=\"text-sm text-muted-foreground\" /> {formatDistanceToNow (new Date (review.created at), {addSuffix: true ;}"
+}) \";"
+}</div> </div> </div> <div className=\"flex\" /> {renderStars (review.rating) \";}"
+}</div> </div> <div className=\"mb-4\" /> <p className=\"text-sm whitespace-pre-wrap\" /> {review.review text ;}"
+}</p> </div> {\";"
+  (review.communication rating || review.quality rating || review.timeliness rating || review.would work again !== undefined) && (<div className=\"border-t pt-3 mt-3\" /> <div className=\"flex flex-wrap gap-2\"  /> {\";}"
+  review.communication rating && (<Badge variant=\"outline\" className=\"flex gap-1 items-center\" /> Communication <span className=\"ml-1 text-yellow-500\"  /> {review.communication rating ;}"
+}/5</span> </Badge>) \";"
+}Quality <span className=\"ml-1 text-yellow-500\"  /> {review.quality rating ;}"
+}/5</span> </Badge>) \";"
+}Timeliness <span className=\"ml-1 text-yellow-500\"  /> {review.timeliness rating ;}"
+}/5</span> </Badge>)}{review.would work again !== undefined && (<Badge </Badge />)}</div> </div>) \";"
 }<DialogTrigger asChild /> <Button variant=\"ghost\" size=\"sm\" className=\"text-muted-foreground\" /> <Flag className=\"h-3 w-3 mr-1\" /> Report </Button> </DialogTrigger> <DialogContent /> <DialogHeader /> <DialogTitle />Report Review</DialogTitle> <DialogDescription /> If you believe this review violates our community guidelines, please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button /> <Button onClick={handleReport ;}
-}disabled= {!reportReason.trim () || isReporting ;}
-} /> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>)}\";
+}disabled= {!reportReason.trim () || isReporting ;}"
+} /> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>)}\";"

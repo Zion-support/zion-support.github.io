@@ -14,14 +14,14 @@ import React from \"react\",import { Badge } from \"@/components/ui/badge\",impo
   CardContent;
   CardDescription;
   CardFooter;}
-  CardHeader;}
+  CardHeader;}"
   CardTitle} from \"@/components/ui/card\",export function UsageStats() {const handleSaveChanges  = null;return (<div className=\"space-y-8\" />;
-      <div />;
-        <h3 className=\"text-xl font-medium mb-4\" />Usage Limits & Settings</h3>;
+      <div />;"
+        <h3 className=\"text-xl font-medium mb-4\" />Usage Limits & Settings</h3>;"
         <p className=\"text-muted-foreground mb-6\" />;
           Configure usage limits for your team to manage your subscription resources.;
         </p>;
-      </div>;
+      </div>;"
 return (<div className=\"grid grid-cols-1 lg:grid-cols-2 gap-6\" />;
         <Card />;
           <CardHeader />;
@@ -154,10 +154,10 @@ return (<div className=\"grid grid-cols-1 lg:grid-cols-2 gap-6\" />;
             </Button>;
           </CardFooter>;
         </Card>;
-      </div>;
-      <div className=\"bg-muted/50 rounded-lg p-6 flex items-center justify-between\" />;
-        <div className=\"flex items-center gap-4\" />;
-          <div className=\"h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center\" />;
+      </div>;"
+      <div className=\"bg-muted/50 rounded-lg p-6 flex items-center justify-between\" />;"
+        <div className=\"flex items-center gap-4\" />;"
+          <div className=\"h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center\" />;"
             <Sparkles className=\"h-5 w-5 text-primary\" />;
           </div>;
           <div />;
@@ -307,6 +307,6 @@ export function UsageStats() {const handleSaveChanges = (toast({title: 'Limits u
         </div>;<Button  /> Contact Us</Button>;
       </div>
     </div>
-  );
-}\"}</div>;
-  ))}\";
+  );"
+}\"}</div>;"
+  ))}\";"

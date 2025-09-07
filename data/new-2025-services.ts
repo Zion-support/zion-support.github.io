@@ -66,9 +66,8 @@ const contact  = null;description:;
 // Additional 2025 real micro-SaaS, AI and IT services;
 export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
       'Jailbreak and injection detection',
       'PII redaction and audit trail',
       'Hallucination and grounding score',
@@ -899,12 +898,9 @@ technology: ['TypeScript', 'OpenAI', 'Anthropic', 'OpenTelemetry']
     technology: ['Next.jsLLM APIs'];
     integrations: ['HubSpotSalesforceOutreach'];
     use_cases: ['Outbound emails_lead nurturing_meeting booking'];
-<<<<<<< HEAD;
-roi: 'Increase meetings by 20–50%';rating: 4 && 4.7,reviews: 21;
+
     reviews: 21;
-=======
-    reviews: 21;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 competitors: ['SmartleadReply.io_apollo.io'];
     market_size: '$5B sales tech';
     growth_rate: '26% CAGR';
@@ -2184,31 +2180,10 @@ reviews: 6}
   },;
 ];
     reviews: 6;
-<<<<<<< HEAD;
-      'Model and dataset registryRisk and policy mappingsPII/PHI tagging and checksChange approvals and trailsReports and exports'
-    ];
-    popular: true, icon: '📚',
-  color: 'from-slate-700 to-gray-700', textColor: 'text-slate-300',
-  link: 'https://ziontechgroup.com/services/ai-governance-registry', marketPosition: 'Practical governance for teams shipping AI quickly.',
-  targetAudience: 'Product, security and compliance',
-    trialDays: 14, setupTime: '2 days',
-  category: 'AI & Data', realService: true,
-    technology: ['TypeScriptPostgreSQL'], integrations: ['GitHubJiraSlack'],
-    useCases: ['Audit readinessAsset ownershipPolicy enforcement'], roi: 'Reduce compliance cycle time by 50%',
-  competitors: ['Model governance suites'], marketSize: '$3B AI governance',
-  growthRate: '30% CAGR', variant: 'ai-futuristic',
-  contactInfo: contact, realImplementation: true,
-    implementationDetails: 'Registry, policies and approval workflows.',
-  launchDate: '2025-03-07', customers: 10,
-    rating: 4.6,
-    reviews: 6;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
   }
 ];
 ;
-<<<<<<< HEAD;
+
 ];
-=======
-];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

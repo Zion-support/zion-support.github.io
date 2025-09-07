@@ -9,19 +9,19 @@ interface TryItProps  {path: string; // full URL or relative;
 export default function TryItConsole() {const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';}
 }
-interface TryItProps  {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',method,path,requiresAuth,}: TryItProps) {const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
+interface TryItProps  {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',method,path,requiresAuth}: TryItProps) {const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',const [baseUrl, setBaseUrl]  = useState('https://api.zion.os')path: string, // full URL or relative;
   requiresAuth: boolean;
 
 export default function TryItConsole({
   method;
-path,}
+path}
 requiresAuth}
 }: TryItProps) {
 
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   path: string, // full URL or relative;}
-requiresAuth: boolean,}
+requiresAuth: boolean}
 }
 
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
@@ -42,7 +42,7 @@ return baseUrl.replace(/\/$/, '') + path;}
     setResponse('');
     try {
 const headers: Record<string, string /> = {}
-        'Content-Type': 'application/json',}
+        'Content-Type': 'application/json'}
       };
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
 
@@ -52,7 +52,7 @@ headers,
 body: method === 'GET' |method === 'DELETE'
             ? undefined;
             : body |undefined}
-     ,}
+     }
 });
 
 const text = await res.text();
@@ -78,7 +78,7 @@ const text = await res.text();
 className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
 
             value={baseUrl}
-            onChange={e = /> setBaseUrl(e.target.value,}
+            onChange={e = /> setBaseUrl(e.target.value}
 }
           />;
         </div>;
@@ -123,15 +123,15 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
           />        </div>;
       </div>;
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (<div />        <div />;}
-          <label className=\"block text-sm mb-1\" html_for=\"input - Base URL\" />Base URL</label>;}
+          <label className=\"block text-sm mb-1\" html_for=\"input - Base URL\" />Base URL</label>;}"
           <input className=\"w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary\" value={base_url} on_change={(e) = /> setBaseUrl (e.target.value)} />;
         </div>;
-        <div />;
-          <label className=\"block text-sm mb-1\" html_for=\"input - Auth Token\" />Auth Token</label>;
+        <div />;"
+          <label className=\"block text-sm mb-1\" html_for=\"input - Auth Token\" />Auth Token</label>;"
           <input className=\"w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary\" value={token} on_change={(e) = /> set_token (e.target.value)} placeholder=\"Optional\" />;
         </div>;
-        <div />;
-          <label className=\"block text-sm mb-1\" html_for=\"input - Method\" />Method</label>;
+        <div />;"
+          <label className=\"block text-sm mb-1\" html_for=\"input - Method\" />Method</label>;"
           <input className=\"w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary\" value={method} read_only />;
         </div>;
       </div>;
@@ -175,3 +175,4 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
 
   );
 
+"

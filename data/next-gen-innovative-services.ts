@@ -55,15 +55,9 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Advanced analytics dashboard',
       'API for research integration',
       'Compliance with medical standards',
-<<<<<<< HEAD;
-tagline: 'World\'s first quantum-enhanced AI with human-like reasoning',
-    price: '$2,999',
 
-      '24 / 7 quantum AI support'    ],    price: '$2, 999',
-  period: '/month',
-=======
 =======    period: '/month',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
   features: [;
       'Quantum neural signal processing_real - time brain activity monitoringAI - powered cognitive enhancement_neural pattern recognition_secure quantum encryption_multi - modal interface support_advanced analytics dashboardAPI for research integration',
@@ -71,9 +65,8 @@ description: 'Revolutionary quantum AI platform that combines quantum computing 
     ],
     popular: true,
     icon: '🧠',
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
       'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
     target_audience:;
       'Research institutions, Medical centers, Defense contractors, Tech companies, Universities',    trial_days: 30,
@@ -86,9 +79,8 @@ description: 'Revolutionary quantum AI platform that combines quantum computing 
     setupTime: '2-4 weeks',
   category: 'Quantum AI & Neuroscience',
     realService: true,
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
       'Quantum Computing',
       'Neural Networks',
       'Brain - Computer Interface',
@@ -114,9 +106,8 @@ description: 'Revolutionary quantum AI platform that combines quantum computing 
     useCases: ['Medical researchCognitive enhancementNeural rehabilitationAI developmentDefense applications'],
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
   competitors: ['Neuralink ($10,000+/month)Kernel ($50,000+/month)'],
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 growthRate: '300% annual growth',
   variant: 'quantum-ai-futuristic',
     contactInfo: {
@@ -132,9 +123,8 @@ growthRate: '300% annual growth',
       mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 realImplementation: true,
     implementationDetails: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.',
   launchDate: '2024-12-01',
@@ -1688,15 +1678,10 @@ launchDate: string;
 customers: number;
 rating: number;
 reviews: number;
-<<<<<<< HEAD;
-}
-export const nextGenInnovativeServices: NextGenInnovativeService[] = [
 
-    id: 'quantum-ai-brain-computer-interface'
-=======
 }export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     id: \"id\",
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: 'Quantum AI Brain-Computer Interface',
   tagline: \"World's first quantum-enhanced AI with human-like reasoning\"
     price: '$2,999',
@@ -1848,9 +1833,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+}
+
     },
     realImplementation: true,
     implementationDetails: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.',
@@ -1859,9 +1843,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 8;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 reviews: 8;
   }
   // Space Technology Platform;
@@ -2104,9 +2087,8 @@ id: 'space-technology-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+}
+
     },
     realImplementation: true,
     implementationDetails: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.',
@@ -2115,9 +2097,8 @@ id: 'space-technology-platform',
     rating: 4.8,
     reviews: 12;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 reviews: 12;
   }
   // Biotech AI Platform;
@@ -2356,9 +2337,8 @@ id: 'biotech-ai-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+}
+
     },
     realImplementation: true,
     implementationDetails: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.',
@@ -2367,9 +2347,8 @@ id: 'biotech-ai-platform',
     rating: 4.7,
     reviews: 18;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 reviews: 18;
   }
   // Quantum Financial Trading Platform;
@@ -2616,9 +2595,8 @@ id: 'quantum-financial-trading',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+}
+
     },
     realImplementation: true,
     implementationDetails: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.',
@@ -2627,9 +2605,8 @@ id: 'quantum-financial-trading',
     rating: 4.9,
     reviews: 15;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 reviews: 15;
   }
   // Autonomous Vehicle AI Platform;
@@ -2867,9 +2844,8 @@ id: 'autonomous-vehicle-ai-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+}
+
     },
     realImplementation: true,
     implementationDetails: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.',
@@ -2878,9 +2854,8 @@ id: 'autonomous-vehicle-ai-platform',
     rating: 4.8,
     reviews: 22;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 reviews: 22;
   }
   // Quantum Cybersecurity Platform;
@@ -3121,9 +3096,8 @@ id: 'quantum-cybersecurity-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+}
+
     },
     realImplementation: true,
     implementationDetails: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.',
@@ -3132,9 +3106,8 @@ id: 'quantum-cybersecurity-platform',
     rating: 4.9,
     reviews: 28;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 reviews: 28;
   }
   // Metaverse AI Development Platform;
@@ -3370,9 +3343,8 @@ id: 'metaverse-ai-development-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+}
+
     },
     realImplementation: true,
     implementationDetails: 'Complete metaverse AI platform with content generation, world building, and social interaction features.',
@@ -3381,9 +3353,8 @@ id: 'metaverse-ai-development-platform',
     rating: 4.7,
     reviews: 32;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 reviews: 32;
   }
   // Quantum Internet Security Platform;
@@ -3621,9 +3592,8 @@ id: 'quantum-internet-security-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+}
+
     },
     realImplementation: true,
     implementationDetails: 'Complete quantum internet security platform with encryption, monitoring, and protection features.',
@@ -3632,9 +3602,8 @@ id: 'quantum-internet-security-platform',
     rating: 4.8,
     reviews: 19;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 reviews: 19;
   }
   // AI-Powered Legal Contract Analyzer;
@@ -3874,9 +3843,8 @@ id: 'ai-legal-contract-analyzer',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+}
+
     },
     realImplementation: true,
     implementationDetails: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.',
@@ -3885,9 +3853,8 @@ id: 'ai-legal-contract-analyzer',
     rating: 4.6,
     reviews: 45;
   },
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 reviews: 45;
   }
   // Quantum IoT Platform;
@@ -3979,31 +3946,23 @@ technology: [
     ],
     roi: '600% ROI through security improvements and operational efficiency',
   link: 'https://ziontechgroup.com/quantum-iot-platform',
-<<<<<<< HEAD;
-marketPosition: 'First quantum IoT platform. 100x more secure than traditional solutions.',
-  link: 'https://ziontechgroup.com/quantum-iot-platform',
 
-
-
-=======
     marketPosition: 'First quantum IoT platform. 100x more secure than traditional solutions.',
   link: 'https://ziontechgroup.com/quantum-iot-platform',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 targetAudience: 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics',
   trialDays: 30,
     setupTime: '2-3 weeks',
   category: 'Quantum IoT & Edge Computing',
     realService: true,
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 integrations: ['IoT devicesCloud platformsSecurity toolsAnalytics platforms'],
     useCases: ['Smart citiesIndustrial IoTHealthcare monitoringConsumer devicesSecurity systems'],
     roi: '600% ROI through security improvements and operational efficiency',
   competitors: ['AWS IoT ($5/month)Microsoft Azure IoT ($25/month)'],
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 growthRate: '250% annual growth',
   variant: 'quantum-iot-futuristic',
     contactInfo: {
@@ -4019,25 +3978,17 @@ growthRate: '250% annual growth',
       mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD;
-mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
 
-
-=======
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+
     },
     real_implementation: true,
     implementation_details: 'Complete quantum IoT platform with security, edge computing, and device management features.',
   launch_date: '2024 - 03 - 01',
-<<<<<<< HEAD;
-customers: 38;
-=======
+
     customers: 38,
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 ],
     rating: 4.7,
     reviews: 26;
@@ -4053,9 +4004,8 @@ customers: 38;
       address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+}
+
     },
     realImplementation: true,
     implementationDetails: 'Complete quantum IoT platform with security, edge computing, and device management features.',
@@ -4578,10 +4528,5 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
   }
 ]
   }
-<<<<<<< HEAD;
-];
 
-
-=======
 ];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

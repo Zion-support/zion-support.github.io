@@ -8,15 +8,15 @@ import {Select;
   SelectContent;
   SelectItem;
   SelectTrigger;}
-  SelectValue;}
+  SelectValue;}"
 } from \"@/components/ui/select\",import { Zap, ChevronLeft, ChevronRight  } from 'lucide-react';
 import { Badge  } from '@/components/ui/badge';
 import { Card, CardContent  } from '@/components/ui/card';
 
 type JobPostStep = any;
-
+"
 export function MobileJobPost() {const [currentStep, setCurrentStep] = useState<JobPostStep />(\"details\")const goToNextStep = (if (currentStep === \"details\") {setCurrentStep(\"requirements\")) => {
-  return $3;}
+  return $3;}"
 } else if (currentStep === \"requirements\") {setCurrentStep(\"budget\")} else if (currentStep === \"budget\") {setCurrentStep(\"preview\")import React, {;}
   useState } from './react';
 import { MobileHeader  } from '@/mobile / components / common / MobileHeader';
@@ -29,42 +29,42 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '
 import { Zap, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Badge  } from '@/components / ui / badge';
 import { Card, CardContent  } from '@/components / ui / card';
-
+"
 type JobPostStep = \"details\" | \"requirements\" | \"budget\" | \"preview\";
 
 export /**;
  * MobileJobPost - Function description;
- */;
+ */;"
 function MobileJobPost() {const [current_step, setCurrentStep] = useState < JobPostStep>(\"details\")const goToNextStep = () =>: any {// Check condition;}
 if ( {) {$2;}
-}
+}"
       setCurrentStep (\"requirements\")} else // Check condition;
 if ( {) {$2;}
-}
+}"
       setCurrentStep (\"budget\")} else // Check condition;
 if ( {) {$2;}
-}
+}"
       setCurrentStep (\"preview\")}
   }
 
 const goToPrevStep = () =>: any {// Check condition;}
 if ( {) {$2;}
-}
+}"
       setCurrentStep (\"details\")} else // Check condition;
 if ( {) {$2;}
-}
+}"
       setCurrentStep (\"requirements\")} else // Check condition;
 if ( {) {$2;}
-}
+}"
       setCurrentStep (\"budget\")}
   }
-
+"
 const renderStepContent = () =>: any {switch (current_step) {case \"details\":;
-  return <DetailsStep />;
+  return <DetailsStep />;"
       case \"requirements\":;
-        return <RequirementsStep />;
+        return <RequirementsStep />;"
       case \"budget\":;
-        return <BudgetStep />;
+        return <BudgetStep />;"
       case \"preview\":;
         return <PreviewStep />;
       default:;}
@@ -80,212 +80,212 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-
+"
 type JobPostStep = \"details\" | \"requirements\" | \"budget\" | \"preview\";
-
+"
 export function MobileJobPost() {const [currentStep, setCurrentStep]  = useState<JobPostStep />(\"details\")const goToNextStep = (if (currentStep === \"details\") {setCurrentStep(\"requirements\")) => {
-  return $3;}
+  return $3;}"
 } else if (currentStep === \"requirements\") {setCurrentStep(\"budget\")} else if (currentStep === \"budget\") {setCurrentStep(\"preview\")}
  ;
 }
-
+"
 const goToPrevStep = (if (currentStep === \"requirements\") {setCurrentStep(\"details\")) => {
-  return $3;}
+  return $3;}"
 } else if (currentStep === \"budget\") {setCurrentStep(\"requirements\")} else if (currentStep === \"preview\") {setCurrentStep(\"budget\")}
   }
-;
+;"
   const renderStepContent = (switch (currentStep) {case \"details\":;
-  return <DetailsStep />;
+  return <DetailsStep />;"
       case \"requirements\":;
-        return <RequirementsStep />;
+        return <RequirementsStep />;"
       case \"budget\":;
-        return <BudgetStep />;
+        return <BudgetStep />;"
       case \"preview\":;
         return <PreviewStep />;
       default:;
         return <DetailsStep />;) => {
   return $3;}
 }
-    }
+    }"
   }}},const goToPrevStep = (if (currentStep === \"requirements\") {setCurrentStep(\"details\")) => {
-  return $3;}
-} else if (currentStep === \"budget\") {setCurrentStep(\"requirements\")} else if (currentStep === \"preview\") {setCurrentStep(\"budget\")}};
-  const renderStepContent = (switch (currentStep) {case \"details\":;
-  return <DetailsStep />,case \"requirements\":;
-        return <RequirementsStep />,case \"budget\":;
+  return $3;}"
+} else if (currentStep === \"budget\") {setCurrentStep(\"requirements\")} else if (currentStep === \"preview\") {setCurrentStep(\"budget\")}};"
+  const renderStepContent = (switch (currentStep) {case \"details\":;"
+  return <DetailsStep />,case \"requirements\":;"
+        return <RequirementsStep />,case \"budget\":;"
         return <BudgetStep />,case \"preview\":;
         return <PreviewStep />,default:;
         return <DetailsStep />;) => {
   return $3;}
 }
-    }
-  },return (<main className=\"flex-1 py-4 pb-24 px-4\" />;
-        <div className=\"mb-6 flex justify-between\" />;
-          <div className=\"flex space-x-1\" />;
-            <Badge variant={currentStep === \"details\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />1</Badge>;
-            <Badge variant={currentStep === \"requirements\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />2</Badge>;
-            <Badge variant={currentStep === \"budget\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />3</Badge>;
+    }"
+  },return (<main className=\"flex-1 py-4 pb-24 px-4\" />;"
+        <div className=\"mb-6 flex justify-between\" />;"
+          <div className=\"flex space-x-1\" />;"
+            <Badge variant={currentStep === \"details\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />1</Badge>;"
+            <Badge variant={currentStep === \"requirements\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />2</Badge>;"
+            <Badge variant={currentStep === \"budget\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />3</Badge>;"
             <Badge variant={currentStep === \"preview\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />4</Badge>;
-          </div>;
-          <Button variant=\"outline\" className=\"flex gap-1\" />;
+          </div>;"
+          <Button variant=\"outline\" className=\"flex gap-1\" />;"
             <Zap className=\"h-4 w-4\" /> AI Assist;
           </Button>;
-        </div>;
-        {renderStepContent()}<div className=\"flex gap-2 mt-6\" />;
-          {currentStep !== \"details\" && (<Button;
-              variant=\"outline\";}
+        </div>;"
+        {renderStepContent()}<div className=\"flex gap-2 mt-6\" />;"
+          {currentStep !== \"details\" && (<Button;"
+              variant=\"outline\";}"
               className=\"flex-1 gap-1\";}
               onClick={goToPrevStep}
-             />;
+             />;"
               <ChevronLeft className=\"h-4 w-4\" /> Back;
-            </Button>;
-          )}/>;<main className=\"flex-1 py-4 pb-24 px-4\" />;
-        <div className=\"mb-6 flex justify-between\" />;
-          <div className=\"flex space-x-1\" />;
-            <Badge variant={currentStep === \"details\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />1</Badge>;
-            <Badge variant={currentStep === \"requirements\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />2</Badge>;
-            <Badge variant={currentStep === \"budget\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />3</Badge>;
-            <Badge variant={currentStep === \"preview\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />4</Badge>;
-          </div>;<Button variant=\"outline\" className=\"flex gap-1\" />;
+            </Button>;"
+          )}/>;<main className=\"flex-1 py-4 pb-24 px-4\" />;"
+        <div className=\"mb-6 flex justify-between\" />;"
+          <div className=\"flex space-x-1\" />;"
+            <Badge variant={currentStep === \"details\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />1</Badge>;"
+            <Badge variant={currentStep === \"requirements\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />2</Badge>;"
+            <Badge variant={currentStep === \"budget\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />3</Badge>;"
+            <Badge variant={currentStep === \"preview\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />4</Badge>;"
+          </div>;<Button variant=\"outline\" className=\"flex gap-1\" />;"
             <Zap className=\"h-4 w-4\" /> AI Assist;
-          </Button>;
-        </div>;{renderStepContent()}<div className=\"flex gap-2 mt-6\" />;
-          {currentStep !== \"details\" && (<Button;
-              variant=\"outline\";}
+          </Button>;"
+        </div>;{renderStepContent()}<div className=\"flex gap-2 mt-6\" />;"
+          {currentStep !== \"details\" && (<Button;"
+              variant=\"outline\";}"
               className=\"flex-1 gap-1\";}
-              onClick = {goToPrevStep} />;
+              onClick = {goToPrevStep} />;"
               <ChevronLeft className=\"h-4 w-4\" /> Back;
             </Button>;
           )}<Button;
-          <Button;
+          <Button;"
             className=\"flex-1 gap-1\";
-            onClick = {goToNextStep} />;
-            {currentStep === \"preview\" ? \"Publish Job\" : \"Continue\"}
+            onClick = {goToNextStep} />;"
+            {currentStep === \"preview\" ? \"Publish Job\" : \"Continue\"}"
             {currentStep !== \"preview\" && <ChevronRight className=\"h-4 w-4\" />}<BottomNavigation />;
     </div>;
-  )}
-function DetailsStep() {return (<div className=\"space-y-4\" />;
-      <h2 className=\"text-lg font-medium\" />Job Details</h2>;
-      <div className=\"space-y-2\" />;
-        <Label htmlFor=\"title\" />Job Title</Label>;
+  )}"
+function DetailsStep() {return (<div className=\"space-y-4\" />;"
+      <h2 className=\"text-lg font-medium\" />Job Details</h2>;"
+      <div className=\"space-y-2\" />;"
+        <Label htmlFor=\"title\" />Job Title</Label>;"
         <Input id=\"title\" placeholder=\"e.g. Senior React Developer\" />;
-      </div>;
-      <div className=\"space-y-2\" />;
-        <Label htmlFor=\"company\" />Company Name</Label>;
+      </div>;"
+      <div className=\"space-y-2\" />;"
+        <Label htmlFor=\"company\" />Company Name</Label>;"
         <Input id=\"company\" placeholder=\"Your company name\" />;
-      </div>;
-      <div className=\"space-y-2\" />;
-        <Label htmlFor=\"location\" />Location</Label>;
+      </div>;"
+      <div className=\"space-y-2\" />;"
+        <Label htmlFor=\"location\" />Location</Label>;"
         <Select defaultValue=\"remote\" />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select location type\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"remote\" />Remote</SelectItem>;
-            <SelectItem value=\"onsite\" />On-site</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"remote\" />Remote</SelectItem>;"
+            <SelectItem value=\"onsite\" />On-site</SelectItem>;"
             <SelectItem value=\"hybrid\" />Hybrid</SelectItem>;
           </SelectContent>;
         </Select>;
-      </div>;
-      <div className=\"space-y-2\" />;
+      </div>;"
+      <div className=\"space-y-2\" />;"
         <Label htmlFor=\"jobType\" />Job Type</Label>;
         <Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select job type\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"fulltime\" />Full-time</SelectItem>;
-            <SelectItem value=\"parttime\" />Part-time</SelectItem>;
-            <SelectItem value=\"contract\" />Contract</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"fulltime\" />Full-time</SelectItem>;"
+            <SelectItem value=\"parttime\" />Part-time</SelectItem>;"
+            <SelectItem value=\"contract\" />Contract</SelectItem>;"
             <SelectItem value=\"freelance\" />Freelance</SelectItem>;
           </SelectContent>;
         </Select>;
-      </div>;
-    <div className=\"min - h-screen flex flex - col\" />;<div className=\"space-y-2\" />;
+      </div>;"
+    <div className=\"min - h-screen flex flex - col\" />;<div className=\"space-y-2\" />;"
         <Label htmlFor=\"description\" />Job Description</Label>;
-        <Textarea;
-          id=\"description\";
-          placeholder=\"Describe the job role and responsibilities\";
-      <div className=\"space-y-2\" />;
+        <Textarea;"
+          id=\"description\";"
+          placeholder=\"Describe the job role and responsibilities\";"
+      <div className=\"space-y-2\" />;"
         <Label htmlFor=\"description\" />Job Description</Label>;
-        <Textarea;
-          id=\"description\";}
-          placeholder=\"Describe the job role and responsibilities\";}
-import { Textarea } from \"@/components/ui/textarea\",import { Label } from \"@/components/ui/label\",Select,SelectContent,SelectItem,SelectTrigger,SelectValue;
-} from \"@/components/ui/select\",import { Badge } from \"@/components/ui/badge\",import { Card, CardContent } from \"@/components/ui/card\",type JobPostStep = \"details\" | \"requirements\" | \"budget\" | \"preview\",export function MobileJobPost() {const [currentStep, setCurrentStep] =;}
+        <Textarea;"
+          id=\"description\";}"
+          placeholder=\"Describe the job role and responsibilities\";}"
+import { Textarea } from \"@/components/ui/textarea\",import { Label } from \"@/components/ui/label\",Select,SelectContent,SelectItem,SelectTrigger,SelectValue;"
+} from \"@/components/ui/select\",import { Badge } from \"@/components/ui/badge\",import { Card, CardContent } from \"@/components/ui/card\",type JobPostStep = \"details\" | \"requirements\" | \"budget\" | \"preview\",export function MobileJobPost() {const [currentStep, setCurrentStep] =;}"
   useState<JobPostStep />(\"details\"),const goToNextStep = (if (currentStep === \"details\") {setCurrentStep(\"requirements\")) => {
-  return $3;}
-} else if (currentStep === \"requirements\") {setCurrentStep(\"budget\")} else if (currentStep === \"budget\") {setCurrentStep(\"preview\")}
+  return $3;}"
+} else if (currentStep === \"requirements\") {setCurrentStep(\"budget\")} else if (currentStep === \"budget\") {setCurrentStep(\"preview\")}"
   },const goToPrevStep = (if (currentStep === \"requirements\") {setCurrentStep(\"details\")) => {
-  return $3;}
+  return $3;}"
 } else if (currentStep === \"budget\") {setCurrentStep(\"requirements\")} else if (currentStep === \"preview\") {setCurrentStep(\"budget\")}
-  };
-  const renderStepContent = (switch (currentStep) {case \"details\":;
-  return <DetailsStep />,case \"requirements\":;
-        return <RequirementsStep />,case \"budget\":;
+  };"
+  const renderStepContent = (switch (currentStep) {case \"details\":;"
+  return <DetailsStep />,case \"requirements\":;"
+        return <RequirementsStep />,case \"budget\":;"
         return <BudgetStep />,case \"preview\":;
         return <PreviewStep />,default:;
         return <DetailsStep />;) => {
   return $3;}
 }
-    }
+    }"
   },return (<div className=\"min-h-screen flex flex-col\" />;<MobileHeader;title={`Post a Job (${current_step === \"preview\" ? 4 : current_step === \"budget\" ? 3 : current_step === \"requirements\" ? 2 : 1}/4)`}
         show_back;
-      />;
-      <main className=\"flex - 1 py - 4 pb - 24 px - 4\" />;
-        <div className=\"mb - 6 flex justify - between\" />;
-          <div className=\"flex space - x-1\" />;
-            <Badge variant={current_step === \"details\" ? \"default\" : \"outline\"} className=\"rounded - full w - 7 h - 7 flex items - center justify - center p - 0\" />1</Badge>;
-            <Badge variant={current_step === \"requirements\" ? \"default\" : \"outline\"} className=\"rounded - full w - 7 h - 7 flex items - center justify - center p - 0\" />2</Badge>;
-            <Badge variant={current_step === \"budget\" ? \"default\" : \"outline\"} className=\"rounded - full w - 7 h - 7 flex items - center justify - center p - 0\" />3</Badge>;
+      />;"
+      <main className=\"flex - 1 py - 4 pb - 24 px - 4\" />;"
+        <div className=\"mb - 6 flex justify - between\" />;"
+          <div className=\"flex space - x-1\" />;"
+            <Badge variant={current_step === \"details\" ? \"default\" : \"outline\"} className=\"rounded - full w - 7 h - 7 flex items - center justify - center p - 0\" />1</Badge>;"
+            <Badge variant={current_step === \"requirements\" ? \"default\" : \"outline\"} className=\"rounded - full w - 7 h - 7 flex items - center justify - center p - 0\" />2</Badge>;"
+            <Badge variant={current_step === \"budget\" ? \"default\" : \"outline\"} className=\"rounded - full w - 7 h - 7 flex items - center justify - center p - 0\" />3</Badge>;"
             <Badge variant={current_step === \"preview\" ? \"default\" : \"outline\"} className=\"rounded - full w - 7 h - 7 flex items - center justify - center p - 0\" />4</Badge>;
-          </div>;
-          <Button variant=\"outline\" className=\"flex gap - 1\" />;
+          </div>;"
+          <Button variant=\"outline\" className=\"flex gap - 1\" />;"
             <Zap className=\"h - 4 w - 4\" /> AI Assist;
           </Button>;
         </div>;
-        {renderStepContent ()}
-        <div className=\"flex gap - 2 mt - 6\" />;
-          {current_step !== \"details\" && (<Button;
-              variant=\"outline\";}
+        {renderStepContent ()}"
+        <div className=\"flex gap - 2 mt - 6\" />;"
+          {current_step !== \"details\" && (<Button;"
+              variant=\"outline\";}"
               className=\"flex - 1 gap - 1\";}
               on_click = {goToPrevStep }
-             />;
+             />;"
               <ChevronLeft className=\"h - 4 w - 4\" /> Back;
             </Button>)}
-          <Button;
+          <Button;"
             className=\"flex - 1 gap - 1\";
             on_click = {goToNextStep }
-           />;
-            {current_step === \"preview\" ? \"Publish Job\" : \"Continue\"}
+           />;"
+            {current_step === \"preview\" ? \"Publish Job\" : \"Continue\"}"
             {current_step !== \"preview\" && <ChevronRight className=\"h - 4 w - 4\" />}title={`Post a Job (${currentStep === \"preview\" ? 4 : currentStep === \"budget\" ? 3 : currentStep === \"requirements\" ? 2 : 1}/4)`}
         showBack;
-      />;
-      <main className=\"flex-1 py-4 pb-24 px-4\" />;
-        <div className=\"mb-6 flex justify-between\" />;
-          <div className=\"flex space-x-1\" />;
-            <Badge variant={currentStep === \"details\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />1</Badge>;
-            <Badge variant={currentStep === \"requirements\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />2</Badge>;
-            <Badge variant={currentStep === \"budget\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />3</Badge>;
+      />;"
+      <main className=\"flex-1 py-4 pb-24 px-4\" />;"
+        <div className=\"mb-6 flex justify-between\" />;"
+          <div className=\"flex space-x-1\" />;"
+            <Badge variant={currentStep === \"details\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />1</Badge>;"
+            <Badge variant={currentStep === \"requirements\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />2</Badge>;"
+            <Badge variant={currentStep === \"budget\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />3</Badge>;"
             <Badge variant={currentStep === \"preview\" ? \"default\" : \"outline\"} className=\"rounded-full w-7 h-7 flex items-center justify-center p-0\" />4</Badge>;
-          </div>;
-          <Button variant=\"outline\" className=\"flex gap-1\" />;
+          </div>;"
+          <Button variant=\"outline\" className=\"flex gap-1\" />;"
             <Zap className=\"h-4 w-4\" /> AI Assist;
           </Button>;
-        </div>;
-        {renderStepContent()}<div className=\"flex gap-2 mt-6\" />;
-          {currentStep !== \"details\" && (<Button;
-              variant=\"outline\";}
+        </div>;"
+        {renderStepContent()}<div className=\"flex gap-2 mt-6\" />;"
+          {currentStep !== \"details\" && (<Button;"
+              variant=\"outline\";}"
               className=\"flex-1 gap-1\";}
               onClick={goToPrevStep}
-             />;
+             />;"
               <ChevronLeft className=\"h-4 w-4\" /> Back;
             </Button>;
-          )}<Button;
+          )}<Button;"
             className=\"flex-1 gap-1\";
             onClick={goToNextStep}
-           />;
-            {currentStep === \"preview\" ? \"Publish Job\" : \"Continue\"}
+           />;"
+            {currentStep === \"preview\" ? \"Publish Job\" : \"Continue\"}"
             {currentStep !== \"preview\" && <ChevronRight className=\"h-4 w-4\" />}</Button>;
         </div>;
       </main>;
@@ -295,71 +295,71 @@ import { Textarea } from \"@/components/ui/textarea\",import { Label } from \"@/
 }
 /**;
  * DetailsStep - Function description;
- */;
-function DetailsStep() {return (<div className=\"space - y-4\" />;
-      <h2 className=\"text - lg font - medium\" />Job Details</h2>;
-      <div className=\"space - y-2\" />;
-        <Label html_for=\"title\" />Job Title</Label>;
+ */;"
+function DetailsStep() {return (<div className=\"space - y-4\" />;"
+      <h2 className=\"text - lg font - medium\" />Job Details</h2>;"
+      <div className=\"space - y-2\" />;"
+        <Label html_for=\"title\" />Job Title</Label>;"
         <Input id=\"title\" placeholder=\"e.g. Senior React Developer\" />;
-      </div>;
-      <div className=\"space - y-2\" />;
-        <Label html_for=\"company\" />Company Name</Label>;
+      </div>;"
+      <div className=\"space - y-2\" />;"
+        <Label html_for=\"company\" />Company Name</Label>;"
         <Input id=\"company\" placeholder=\"Your company name\" />;
-      </div>;
-      <div className=\"space - y-2\" />;
-        <Label html_for=\"location\" />Location</Label>;}
-        <Select default_value=\"remote\" />;</div>;}
-  )}function DetailsStep() {return (<div className=\"space-y-4\" />;
-      <h2 className=\"text-lg font-medium\" />Job Details</h2>;
-      <div className=\"space-y-2\" />;
-        <Label htmlFor=\"title\" />Job Title</Label>;
+      </div>;"
+      <div className=\"space - y-2\" />;"
+        <Label html_for=\"location\" />Location</Label>;}"
+        <Select default_value=\"remote\" />;</div>;}"
+  )}function DetailsStep() {return (<div className=\"space-y-4\" />;"
+      <h2 className=\"text-lg font-medium\" />Job Details</h2>;"
+      <div className=\"space-y-2\" />;"
+        <Label htmlFor=\"title\" />Job Title</Label>;"
         <Input id=\"title\" placeholder=\"e.g. Senior React Developer\" />;
-      </div>;
-      <div className=\"space-y-2\" />;
-        <Label htmlFor=\"company\" />Company Name</Label>;
+      </div>;"
+      <div className=\"space-y-2\" />;"
+        <Label htmlFor=\"company\" />Company Name</Label>;"
         <Input id=\"company\" placeholder=\"Your company name\" />;
-      </div>;
-      <div className=\"space-y-2\" />;
-        <Label htmlFor=\"location\" />Location</Label>;
-        <Select defaultValue=\"remote\" />;<SelectTrigger />;
+      </div>;"
+      <div className=\"space-y-2\" />;"
+        <Label htmlFor=\"location\" />Location</Label>;"
+        <Select defaultValue=\"remote\" />;<SelectTrigger />;"
             <SelectValue placeholder=\"Select location type\" />;
           </SelectTrigger>;
-          <SelectContent />;
+          <SelectContent />;"
             <SelectItem value=\"remote\" />Remote</SelectItem>;<SelectItem value=\"onsite\" />On - site</SelectItem>;<SelectItem value=\"onsite\" />On-site</SelectItem>;<SelectItem value=\"hybrid\" />Hybrid</SelectItem>;
           </SelectContent>;
-        </Select>;
-      </div>;<div className=\"space - y-2\" />;
-        <Label html_for=\"job_type\" />Job Type</Label>;<div className=\"space-y-2\" />;
+        </Select>;"
+      </div>;<div className=\"space - y-2\" />;"
+        <Label html_for=\"job_type\" />Job Type</Label>;<div className=\"space-y-2\" />;"
         <Label htmlFor=\"jobType\" />Job Type</Label>;<Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select job type\" />;
-          </SelectTrigger>;
-          <SelectContent />;<SelectItem value=\"fulltime\" />Full - time</SelectItem>;
-            <SelectItem value=\"parttime\" />Part - time</SelectItem>;<SelectItem value=\"fulltime\" />Full-time</SelectItem>;
-            <SelectItem value=\"parttime\" />Part-time</SelectItem>;<SelectItem value=\"contract\" />Contract</SelectItem>;
+          </SelectTrigger>;"
+          <SelectContent />;<SelectItem value=\"fulltime\" />Full - time</SelectItem>;"
+            <SelectItem value=\"parttime\" />Part - time</SelectItem>;<SelectItem value=\"fulltime\" />Full-time</SelectItem>;"
+            <SelectItem value=\"parttime\" />Part-time</SelectItem>;<SelectItem value=\"contract\" />Contract</SelectItem>;"
             <SelectItem value=\"freelance\" />Freelance</SelectItem>;
           </SelectContent>;
-        </Select>;
-      </div>;<div className=\"space - y-2\" />;
+        </Select>;"
+      </div>;<div className=\"space - y-2\" />;"
         <Label html_for=\"description\" />Job Description</Label>;
-        <Textarea;
-          id=\"description\";}
+        <Textarea;"
+          id=\"description\";}"
           placeholder=\"Describe the job role and responsibilities\";}
           rows = {5 }
         />;
-      </div>;
-    </div>)<div className=\"space-y-2\" />;
+      </div>;"
+    </div>)<div className=\"space-y-2\" />;"
         <Label htmlFor=\"description\" />Job Description</Label>;
-        <Textarea;
-          id=\"description\";
+        <Textarea;"
+          id=\"description\";"
           placeholder=\"Describe the job role and responsibilities\";
           rows={5}
         />;
       </div>;
     </div>;
-  )}function RequirementsStep() {const [skills, setSkills] = useState<string[] />([;
-    \"React\", \"TypeScript\", \"Node.js\";}
-  ])const [newSkill, setNewSkill] = useState(\"\");}
+  )}function RequirementsStep() {const [skills, setSkills] = useState<string[] />([;"
+    \"React\", \"TypeScript\", \"Node.js\";}"
+  ])const [newSkill, setNewSkill] = useState(\"\");}"
   const addSkill = (if (newSkill && !skills.includes(newSkill)) {setSkills([...skills, newSkill])setNewSkill(\"\")) => {
   return $3;}
 }
@@ -368,35 +368,35 @@ function DetailsStep() {return (<div className=\"space - y-4\" />;
   const removeSkill = (setSkills(skills.filter(s => s !== skill))) => {
   return $3;}
 }
- ;
-  return (<div className=\"space-y-4\" />;
-      <h2 className=\"text-lg font-medium\" />Job Requirements</h2>;
-      <div className=\"space-y-2\" />;
+ ;"
+  return (<div className=\"space-y-4\" />;"
+      <h2 className=\"text-lg font-medium\" />Job Requirements</h2>;"
+      <div className=\"space-y-2\" />;"
         <Label htmlFor=\"experience\" />Experience Level</Label>;
         <Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select experience level\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"entry\" />Entry Level</SelectItem>;
-            <SelectItem value=\"mid\" />Mid Level</SelectItem>;
-            <SelectItem value=\"senior\" />Senior</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"entry\" />Entry Level</SelectItem>;"
+            <SelectItem value=\"mid\" />Mid Level</SelectItem>;"
+            <SelectItem value=\"senior\" />Senior</SelectItem>;"
             <SelectItem value=\"expert\" />Expert</SelectItem>;
           </SelectContent>;
         </Select>;
-      </div>;
-      <div className=\"space-y-2\" />;
+      </div>;"
+      <div className=\"space-y-2\" />;"
         <Label htmlFor=\"education\" />Education</Label>;
         <Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select required education\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"high_school\" />High School</SelectItem>;
-            <SelectItem value=\"associate\" />Associate Degree</SelectItem>;
-            <SelectItem value=\"bachelor\" />Bachelor's Degree</SelectItem>;
-            <SelectItem value=\"master\" />Master's Degree</SelectItem>;
-            <SelectItem value=\"phd\" />PhD</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"high_school\" />High School</SelectItem>;"
+            <SelectItem value=\"associate\" />Associate Degree</SelectItem>;"
+            <SelectItem value=\"bachelor\" />Bachelor's Degree</SelectItem>;"
+            <SelectItem value=\"master\" />Master's Degree</SelectItem>;"
+            <SelectItem value=\"phd\" />PhD</SelectItem>;"
             <SelectItem value=\"none\" />No Specific Requirement</SelectItem>;
           </SelectContent>;
         </Select>;
@@ -404,382 +404,382 @@ function DetailsStep() {return (<div className=\"space - y-4\" />;
           </Button>;
         </div>;
       </main>;<BottomNavigation />;
-    </div>;
-  )}function DetailsStep() {return (<div className=\"space-y-4\" />;
-      <h2 className=\"text-lg font-medium\" />Job Details</h2>;<div className=\"space-y-2\" />;
-        <Label htmlFor=\"title\" />Job Title</Label>;
-        <Input id=\"title\" placeholder=\"e && e.g. Senior React Developer\" />;
-      </div>;<div className=\"space-y-2\" />;
-        <Label htmlFor=\"company\" />Company Name</Label>;
-        <Input id=\"company\" placeholder=\"Your company name\" />;
-      </div>;<div className=\"space-y-2\" />;
-        <Label htmlFor=\"location\" />Location</Label>;
+    </div>;"
+  )}function DetailsStep() {return (<div className=\"space-y-4\" />;"
+      <h2 className=\"text-lg font-medium\" />Job Details</h2>;<div className=\"space-y-2\" />;"
+        <Label htmlFor=\"title\" />Job Title</Label>;"
+        <Input id=\"title\" placeholder=\"e && e.g. Senior React Developer\" />;"
+      </div>;<div className=\"space-y-2\" />;"
+        <Label htmlFor=\"company\" />Company Name</Label>;"
+        <Input id=\"company\" placeholder=\"Your company name\" />;"
+      </div>;<div className=\"space-y-2\" />;"
+        <Label htmlFor=\"location\" />Location</Label>;"
         <Select defaultValue=\"remote\" />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select location type\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"remote\" />Remote</SelectItem>;
-            <SelectItem value=\"onsite\" />On-site</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"remote\" />Remote</SelectItem>;"
+            <SelectItem value=\"onsite\" />On-site</SelectItem>;"
             <SelectItem value=\"hybrid\" />Hybrid</SelectItem>;
           </SelectContent>;
-        </Select>;
-      </div>;<div className=\"space-y-2\" />;
+        </Select>;"
+      </div>;<div className=\"space-y-2\" />;"
         <Label htmlFor=\"jobType\" />Job Type</Label>;
         <Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select job type\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"fulltime\" />Full-time</SelectItem>;
-            <SelectItem value=\"parttime\" />Part-time</SelectItem>;
-            <SelectItem value=\"contract\" />Contract</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"fulltime\" />Full-time</SelectItem>;"
+            <SelectItem value=\"parttime\" />Part-time</SelectItem>;"
+            <SelectItem value=\"contract\" />Contract</SelectItem>;"
             <SelectItem value=\"freelance\" />Freelance</SelectItem>;
           </SelectContent>;
-        </Select>;
-      </div>;<div className=\"space-y-2\" />;
+        </Select>;"
+      </div>;<div className=\"space-y-2\" />;"
         <Label htmlFor=\"description\" />Job Description</Label>;
-        <Textarea;
-          id=\"description\";}
+        <Textarea;"
+          id=\"description\";}"
           placeholder=\"Describe the job role and responsibilities\";}
           rows = {5}
         />;
       </div>;
-    </div>;
-  )}function RequirementsStep() {const [skills, setSkills]  = useState<string[] />([;\"React\", \"TypeScript\", \"Node && Node.js\";}
-  ])const [newSkill, setNewSkill]  = useState(\"\");}
+    </div>;"
+  )}function RequirementsStep() {const [skills, setSkills]  = useState<string[] />([;\"React\", \"TypeScript\", \"Node && Node.js\";}"
+  ])const [newSkill, setNewSkill]  = useState(\"\");}"
   const addSkill = (if (newSkill && !skills && skills.includes(newSkill)) {setSkills([...skills, newSkill])setNewSkill(\"\")) => {
   return $3;}
 }
   }
 ;
-  const removeSkill = (setSkills(skills && skills.filter(s => s !== skill));
-  return (<div className=\"space-y-4\" />;
+  const removeSkill = (setSkills(skills && skills.filter(s => s !== skill));"
+  return (<div className=\"space-y-4\" />;"
       <h2 className=\"text-lg font-medium\" />Job Requirements</h2>;\"React\", \"TypeScript\", \"Node.js\";) => {
   return $3;}
-}
+}"
   ]),const [newSkill, setNewSkill] = useState(\"\"),const addSkill = (if (newSkill && !skills.includes(newSkill)) {setSkills([...skills, newSkill]),setNewSkill(\"\")) => {
   return $3;}
 }
   }
 ;
-  const removeSkill = (setSkills(skills.filter(s => s !== skill));
-  return (<div className=\"space-y-4\" />;
-      <h2 className=\"text-lg font-medium\" />Job Requirements</h2>;<div className=\"space-y-2\" />;
-        <Label htmlFor=\"experience\" />Experience Level</Label>;
-    <div className=\"space - y-4\" />;
-      <h2 className=\"text - lg font - medium\" />Job Requirements</h2>;
-      <div className=\"space - y-2\" />;
+  const removeSkill = (setSkills(skills.filter(s => s !== skill));"
+  return (<div className=\"space-y-4\" />;"
+      <h2 className=\"text-lg font-medium\" />Job Requirements</h2>;<div className=\"space-y-2\" />;"
+        <Label htmlFor=\"experience\" />Experience Level</Label>;"
+    <div className=\"space - y-4\" />;"
+      <h2 className=\"text - lg font - medium\" />Job Requirements</h2>;"
+      <div className=\"space - y-2\" />;"
         <Label html_for=\"experience\" />Experience Level</Label>;<Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select experience level\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"entry\" />Entry Level</SelectItem>;
-            <SelectItem value=\"mid\" />Mid Level</SelectItem>;
-            <SelectItem value=\"senior\" />Senior</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"entry\" />Entry Level</SelectItem>;"
+            <SelectItem value=\"mid\" />Mid Level</SelectItem>;"
+            <SelectItem value=\"senior\" />Senior</SelectItem>;"
             <SelectItem value=\"expert\" />Expert</SelectItem>;
           </SelectContent>;
-        </Select>;
-      </div>;<div className=\"space - y-2\" />;
+        </Select>;"
+      </div>;<div className=\"space - y-2\" />;"
         <Label html_for=\"education\" />Education</Label>;<Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select required education\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"high_school\" />High School</SelectItem>;
-            <SelectItem value=\"associate\" />Associate Degree</SelectItem>;
-            <SelectItem value=\"bachelor\" />Bachelor's Degree</SelectItem>;
-            <SelectItem value=\"master\" />Master's Degree</SelectItem>;
-            <SelectItem value=\"phd\" />PhD</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"high_school\" />High School</SelectItem>;"
+            <SelectItem value=\"associate\" />Associate Degree</SelectItem>;"
+            <SelectItem value=\"bachelor\" />Bachelor's Degree</SelectItem>;"
+            <SelectItem value=\"master\" />Master's Degree</SelectItem>;"
+            <SelectItem value=\"phd\" />PhD</SelectItem>;"
             <SelectItem value=\"none\" />No Specific Requirement</SelectItem>;
           </SelectContent>;
-        </Select>;
+        </Select>;"
       </div>;<div className=\"space-y-2\" />;
-        <Label />Required Skills</Label>;
+        <Label />Required Skills</Label>;"
         <div className=\"flex flex-wrap gap-2 mb-3\" />;
           {skills.map((skill) => (<Badge;) = /> {
   return $3;}
-}
-              key={skill}variant=\"secondary\";
+}"
+              key={skill}variant=\"secondary\";"
               className=\"flex items-center gap-1 px-3 py-1\" />
-
-              {skill}))}<div className=\"space-y-2\" />;
+"
+              {skill}))}<div className=\"space-y-2\" />;"
         <Label htmlFor=\"requirements\" />Specific Requirements</Label>;
-        <Textarea;
-          id=\"requirements\";
+        <Textarea;"
+          id=\"requirements\";"
           placeholder=\"List any specific requirements or qualifications\";
           rows={4}
         />;
-      </div>;
-      <div className=\"space-y-2\" />;
+      </div>;"
+      <div className=\"space-y-2\" />;"
         <Label htmlFor=\"responsibilities\" />Key Responsibilities</Label>;
-        <Textarea;
-          id=\"responsibilities\";
-          placeholder=\"List the key responsibilities for this role\";
-}function BudgetStep() {return (<div className=\"space-y-4\" />;
-      <h2 className=\"text-lg font-medium\" />Budget & Timeline</h2>;
-      <div className=\"space-y-2\" />;
+        <Textarea;"
+          id=\"responsibilities\";"
+          placeholder=\"List the key responsibilities for this role\";"
+}function BudgetStep() {return (<div className=\"space-y-4\" />;"
+      <h2 className=\"text-lg font-medium\" />Budget & Timeline</h2>;"
+      <div className=\"space-y-2\" />;"
         <Label htmlFor=\"paymentType\" />Payment Type</Label>;
         <Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select payment type\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"hourly\" />Hourly Rate</SelectItem>;
-            <SelectItem value=\"fixed\" />Fixed Price</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"hourly\" />Hourly Rate</SelectItem>;"
+            <SelectItem value=\"fixed\" />Fixed Price</SelectItem>;"
             <SelectItem value=\"salary\" />Salary</SelectItem>;
           </SelectContent>;
         </Select>;
-      </div>;
+      </div>;"
       <div className=\"space-y-2\" />;
-        <Label />Salary Range</Label>;
-        <div className=\"flex gap-4 items-center\" />;
+        <Label />Salary Range</Label>;"
+        <div className=\"flex gap-4 items-center\" />;"
           <Input placeholder=\"Min\" type=\"number\" className=\"w-full\" />;
-          <span />to</span>;
-          <Input placeholder=\"Max\" type=\"number\" className=\"w-full\" />;
-          <Select defaultValue=\"usd\" />;
-            <SelectTrigger className=\"w-24\" />;
+          <span />to</span>;"
+          <Input placeholder=\"Max\" type=\"number\" className=\"w-full\" />;"
+          <Select defaultValue=\"usd\" />;"
+            <SelectTrigger className=\"w-24\" />;"
               <SelectValue placeholder=\"Currency\" />;
             </SelectTrigger>;
-            <SelectContent />;
-              <SelectItem value=\"usd\" />USD</SelectItem>;
-              <SelectItem value=\"eur\" />EUR</SelectItem>;
+            <SelectContent />;"
+              <SelectItem value=\"usd\" />USD</SelectItem>;"
+              <SelectItem value=\"eur\" />EUR</SelectItem>;"
               <SelectItem value=\"gbp\" />GBP</SelectItem>;
             </SelectContent>;
           </Select>;
         </div>;
-      </div>;
-      <div className=\"space-y-2\" />;
-        <Label htmlFor=\"deadline\" />Application Deadline</Label>;
+      </div>;"
+      <div className=\"space-y-2\" />;"
+        <Label htmlFor=\"deadline\" />Application Deadline</Label>;"
         <Input type=\"date\" id=\"deadline\" />;
-      </div>;
-      <div className=\"space-y-2\" />;
-        <Label htmlFor=\"startDate\" />Expected Start Date</Label>;
+      </div>;"
+      <div className=\"space-y-2\" />;"
+        <Label htmlFor=\"startDate\" />Expected Start Date</Label>;"
         <Input type=\"date\" id=\"startDate\" />;
-      </div>;
-      <div className=\"space-y-2\" />;
+      </div>;"
+      <div className=\"space-y-2\" />;"
         <Label htmlFor=\"duration\" />Project Duration</Label>;
         <Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select project duration\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"ltw\" />Less than a week</SelectItem>;
-            <SelectItem value=\"ltm\" />Less than a month</SelectItem>;
-            <SelectItem value=\"1-3m\" />1-3 months</SelectItem>;
-            <SelectItem value=\"3-6m\" />3-6 months</SelectItem>;
-            <SelectItem value=\"6m+\" />6+ months</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"ltw\" />Less than a week</SelectItem>;"
+            <SelectItem value=\"ltm\" />Less than a month</SelectItem>;"
+            <SelectItem value=\"1-3m\" />1-3 months</SelectItem>;"
+            <SelectItem value=\"3-6m\" />3-6 months</SelectItem>;"
+            <SelectItem value=\"6m+\" />6+ months</SelectItem>;"
             <SelectItem value=\"ongoing\" />Ongoing</SelectItem>;
           </SelectContent>;
         </Select>;
-      </div>;
-      <div className=\"space-y-2\" />;
+      </div>;"
+      <div className=\"space-y-2\" />;"
         <Label htmlFor=\"additionalInfo\" />Additional Budget Information</Label>;
-        <Textarea;
-          id=\"additionalInfo\";}
-          placeholder=\"Any additional information about budget or payment\";}
-}function PreviewStep() {return (<div className=\"space-y-4\" />;
+        <Textarea;"
+          id=\"additionalInfo\";}"
+          placeholder=\"Any additional information about budget or payment\";}"
+}function PreviewStep() {return (<div className=\"space-y-4\" />;"
       <h2 className=\"text-lg font-medium mb-2\" />Job Preview</h2>;
-      <Card />;
-        <CardContent className=\"p-4\" />;
-          <h3 className=\"font-bold text-lg\" />Senior React Developer</h3>;
-          <p className=\"text-muted-foreground\" />TechCorp Inc. • Remote • Full-time</p>;
-          <div className=\"flex gap-2 my-3\" />;
-            <Badge variant=\"outline\" />React</Badge>;
-            <Badge variant=\"outline\" />TypeScript</Badge>;
+      <Card />;"
+        <CardContent className=\"p-4\" />;"
+          <h3 className=\"font-bold text-lg\" />Senior React Developer</h3>;"
+          <p className=\"text-muted-foreground\" />TechCorp Inc. • Remote • Full-time</p>;"
+          <div className=\"flex gap-2 my-3\" />;"
+            <Badge variant=\"outline\" />React</Badge>;"
+            <Badge variant=\"outline\" />TypeScript</Badge>;"
             <Badge variant=\"outline\" />Node.js</Badge>;
-          </div>;
-          <div className=\"space-y-1 text-sm mt-4\" />;
+          </div>;"
+          <div className=\"space-y-1 text-sm mt-4\" />;"
             <p className=\"font-medium\" />Salary Range:</p>;
             <p />$80,000 - $120,000 USD / year</p>;
-          </div>;
-          <div className=\"space-y-1 text-sm mt-3\" />;
+          </div>;"
+          <div className=\"space-y-1 text-sm mt-3\" />;"
             <p className=\"font-medium\" />Experience Level:</p>;
             <p />Senior</p>;
-          </div>;
-          <div className=\"space-y-1 text-sm mt-3\" />;
+          </div>;"
+          <div className=\"space-y-1 text-sm mt-3\" />;"
             <p className=\"font-medium\" />Application Deadline:</p>;
             <p />December 15, 2023</p>;
-          </div>;
-          <div className=\"mt-4 pt-3 border-t border-border\" />;
-            <h4 className=\"font-medium mb-2\" />Description</h4>;
+          </div>;"
+          <div className=\"mt-4 pt-3 border-t border-border\" />;"
+            <h4 className=\"font-medium mb-2\" />Description</h4>;"
             <p className=\"text-sm\" />We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>;
           </div>;
         </CardContent>;
-        </div>;
+        </div>;"
         <div className=\"flex gap-2\" />;}
           <Input;}
             value = {newSkill}
-            onChange = {(e,) = /> setNewSkill(e && e.target.value)}
+            onChange = {(e,) = /> setNewSkill(e && e.target.value)}"
             placeholder=\"Add a skill\";
             onKeyDown = {(e,) => e && e.key === 'Enter' && addSkill()}
           />;
           <Button onClick={addSkill} />Add</Button>;
-        </div>;
-      </div>;<div className=\"space-y-2\" />;
+        </div>;"
+      </div>;<div className=\"space-y-2\" />;"
         <Label htmlFor=\"requirements\" />Specific Requirements</Label>;
-        <Textarea;
-          id=\"requirements\";
+        <Textarea;"
+          id=\"requirements\";"
           placeholder=\"List any specific requirements or qualifications\";
           rows = {4}
-        />;
-      </div>;<div className=\"space-y-2\" />;
+        />;"
+      </div>;<div className=\"space-y-2\" />;"
         <Label htmlFor=\"responsibilities\" />Key Responsibilities</Label>;
-        <Textarea;
-          id=\"responsibilities\";
+        <Textarea;"
+          id=\"responsibilities\";"
           placeholder=\"List the key responsibilities for this role\";
           rows = {4}
         />;
       </div>;
-    </div>;
-  )}function BudgetStep() {return (<div className=\"space-y-4\" />;
-      <h2 className=\"text-lg font-medium\" />Budget & Timeline</h2>;<div className=\"space-y-2\" />;
+    </div>;"
+  )}function BudgetStep() {return (<div className=\"space-y-4\" />;"
+      <h2 className=\"text-lg font-medium\" />Budget & Timeline</h2>;<div className=\"space-y-2\" />;"
         <Label htmlFor=\"paymentType\" />Payment Type</Label>;
         <Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select payment type\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"hourly\" />Hourly Rate</SelectItem>;
-            <SelectItem value=\"fixed\" />Fixed Price</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"hourly\" />Hourly Rate</SelectItem>;"
+            <SelectItem value=\"fixed\" />Fixed Price</SelectItem>;"
             <SelectItem value=\"salary\" />Salary</SelectItem>;
           </SelectContent>;
-        </Select>;
+        </Select>;"
       </div>;<div className=\"space-y-2\" />;
-        <Label />Salary Range</Label>;
-        <div className=\"flex gap-4 items-center\" />;
+        <Label />Salary Range</Label>;"
+        <div className=\"flex gap-4 items-center\" />;"
           <Input placeholder=\"Min\" type=\"number\" className=\"w-full\" />;
-          <span />to</span>;
-          <Input placeholder=\"Max\" type=\"number\" className=\"w-full\" />;
-          <Select defaultValue=\"usd\" />;
-            <SelectTrigger className=\"w-24\" />;
+          <span />to</span>;"
+          <Input placeholder=\"Max\" type=\"number\" className=\"w-full\" />;"
+          <Select defaultValue=\"usd\" />;"
+            <SelectTrigger className=\"w-24\" />;"
               <SelectValue placeholder=\"Currency\" />;
             </SelectTrigger>;
-            <SelectContent />;
-              <SelectItem value=\"usd\" />USD</SelectItem>;
-              <SelectItem value=\"eur\" />EUR</SelectItem>;
+            <SelectContent />;"
+              <SelectItem value=\"usd\" />USD</SelectItem>;"
+              <SelectItem value=\"eur\" />EUR</SelectItem>;"
               <SelectItem value=\"gbp\" />GBP</SelectItem>;
             </SelectContent>;
           </Select>;
-        </div>;
-      </div>;<div className=\"space-y-2\" />;
-        <Label htmlFor=\"deadline\" />Application Deadline</Label>;
-        <Input type=\"date\" id=\"deadline\" />;
-      </div>;<div className=\"space-y-2\" />;
-        <Label htmlFor=\"startDate\" />Expected Start Date</Label>;
-        <Input type=\"date\" id=\"startDate\" />;
-      </div>;<div className=\"space-y-2\" />;
+        </div>;"
+      </div>;<div className=\"space-y-2\" />;"
+        <Label htmlFor=\"deadline\" />Application Deadline</Label>;"
+        <Input type=\"date\" id=\"deadline\" />;"
+      </div>;<div className=\"space-y-2\" />;"
+        <Label htmlFor=\"startDate\" />Expected Start Date</Label>;"
+        <Input type=\"date\" id=\"startDate\" />;"
+      </div>;<div className=\"space-y-2\" />;"
         <Label htmlFor=\"duration\" />Project Duration</Label>;
         <Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select project duration\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"ltw\" />Less than a week</SelectItem>;
-            <SelectItem value=\"ltm\" />Less than a month</SelectItem>;
-            <SelectItem value=\"1-3m\" />1-3 months</SelectItem>;
-            <SelectItem value=\"3-6m\" />3-6 months</SelectItem>;
-            <SelectItem value=\"6m+\" />6+ months</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"ltw\" />Less than a week</SelectItem>;"
+            <SelectItem value=\"ltm\" />Less than a month</SelectItem>;"
+            <SelectItem value=\"1-3m\" />1-3 months</SelectItem>;"
+            <SelectItem value=\"3-6m\" />3-6 months</SelectItem>;"
+            <SelectItem value=\"6m+\" />6+ months</SelectItem>;"
             <SelectItem value=\"ongoing\" />Ongoing</SelectItem>;
           </SelectContent>;
-        </Select>;
-      </div>;<div className=\"space-y-2\" />;
+        </Select>;"
+      </div>;<div className=\"space-y-2\" />;"
         <Label htmlFor=\"additionalInfo\" />Additional Budget Information</Label>;
-        <Textarea;
-          id=\"additionalInfo\";}
+        <Textarea;"
+          id=\"additionalInfo\";}"
           placeholder=\"Any additional information about budget or payment\";}
           rows = {3}
         />;
       </div>;
-    </div>;
-  )}function PreviewStep() {return (<div className=\"space-y-4\" />;
-      <h2 className=\"text-lg font-medium mb-2\" />Job Preview</h2>;<Card />;
-        <CardContent className=\"p-4\" />;
-          <h3 className=\"font-bold text-lg\" />Senior React Developer</h3>;
-          <p className=\"text-muted-foreground\" />TechCorp Inc. • Remote • Full-time</p>;<div className=\"flex gap-2 my-3\" />;
-            <Badge variant=\"outline\" />React</Badge>;
-            <Badge variant=\"outline\" />TypeScript</Badge>;
-            <Badge variant=\"outline\" />Node && Node.js</Badge>;
-          </div>;<div className=\"space-y-1 text-sm mt-4\" />;
+    </div>;"
+  )}function PreviewStep() {return (<div className=\"space-y-4\" />;"
+      <h2 className=\"text-lg font-medium mb-2\" />Job Preview</h2>;<Card />;"
+        <CardContent className=\"p-4\" />;"
+          <h3 className=\"font-bold text-lg\" />Senior React Developer</h3>;"
+          <p className=\"text-muted-foreground\" />TechCorp Inc. • Remote • Full-time</p>;<div className=\"flex gap-2 my-3\" />;"
+            <Badge variant=\"outline\" />React</Badge>;"
+            <Badge variant=\"outline\" />TypeScript</Badge>;"
+            <Badge variant=\"outline\" />Node && Node.js</Badge>;"
+          </div>;<div className=\"space-y-1 text-sm mt-4\" />;"
             <p className=\"font-medium\" />Salary Range:</p>;
-            <p />$80,000 - $120,000 USD / year</p>;
-          </div>;<div className=\"space-y-1 text-sm mt-3\" />;
+            <p />$80,000 - $120,000 USD / year</p>;"
+          </div>;<div className=\"space-y-1 text-sm mt-3\" />;"
             <p className=\"font-medium\" />Experience Level:</p>;
-            <p />Senior</p>;
-          </div>;<div className=\"space-y-1 text-sm mt-3\" />;
+            <p />Senior</p>;"
+          </div>;<div className=\"space-y-1 text-sm mt-3\" />;"
             <p className=\"font-medium\" />Application Deadline:</p>;
-            <p />December 15, 2023</p>;
-          </div>;<div className=\"mt-4 pt-3 border-t border-border\" />;
-            <h4 className=\"font-medium mb-2\" />Description</h4>;
+            <p />December 15, 2023</p>;"
+          </div>;<div className=\"mt-4 pt-3 border-t border-border\" />;"
+            <h4 className=\"font-medium mb-2\" />Description</h4>;"
             <p className=\"text-sm\" />We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>;
           </div>;
-        </CardContent>;
+        </CardContent>;"
       </Card>;<Button variant=\"outline\" className=\"w-full\" />Edit Job Post</Button>;
-    </div>;</Card>;
+    </div>;</Card>;"
       <Button variant=\"outline\" className=\"w-full\" />Edit Job Post</Button>;}
-    </div>;}
-  )}\";
-min-h-screen flex flex-col\"> <MobileHeader </div /> <Button variant=\" outline\"className=\" flex gap-1\" /> <Zap className=\" h-4 w-4\"/> AI Assist </Button> </div> {renderStepContent () \";}<Buttonvariant=\" outline\"className=\" flex-1 gap-1\"onClick={goToPrevStep \";}
-} /> <ChevronLeft className=\" h-4 w-4\"/> Back </Button>)}<Button </Button /> </div> </main> <BottomNavigation /> </div>) \";
+    </div>;}"
+  )}\";"
+min-h-screen flex flex-col\"> <MobileHeader </div /> <Button variant=\" outline\"className=\" flex gap-1\" /> <Zap className=\" h-4 w-4\"/> AI Assist </Button> </div> {renderStepContent () \";}<Buttonvariant=\" outline\"className=\" flex-1 gap-1\"onClick={goToPrevStep \";}"
+} /> <ChevronLeft className=\" h-4 w-4\"/> Back </Button>)}<Button </Button /> </div> </main> <BottomNavigation /> </div>) \";"
 }<div className=\" space-y-2\" /> <Label htmlFor=\" title\" />Job Title</Label> <Input id=\" title\"placeholder=\" e && e.g. Senior React Developer\"/> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" company\" />Company Name</Label> <Input id=\" company\"placeholder=\" Your company name\"/> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" location\" />Location</Label> <Select defaultValue=\" remote\" /> <SelectTrigger /> <SelectValue placeholder=\" Select location type\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" remote\" />Remote</SelectItem> <SelectItem value=\" onsite\" />On-site</SelectItem> <SelectItem value=\" hybrid\" />Hybrid</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" jobType\" />Job Type</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select job type\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" fulltime\" />Full-time</SelectItem> <SelectItem value=\" parttime\" />Part-time</SelectItem> <SelectItem value=\" contract\" />Contract</SelectItem> <SelectItem value=\" freelance\" />Freelance</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" description\" />Job Description</Label> <Textareaid=\" description\"placeholder=\" Describe the job role and responsibilities\"rows= {5;}
 }/> </div> </div>)}
-
+"
 const addSkill = (if (newSkill && !skills && skills.includes (newSkill) ) {\";) => {
-  return $3;}
-}<Button variant=\" outline\"className=\" flex-1 gap-1\"onClick={goToPrevStep \";}
-} /> <ChevronLeft className=\" h-4 w-4\"/> Back </Button>)}<Button </Button /> </div> </main> <BottomNavigation /> </div>) \";
+  return $3;}"
+}<Button variant=\" outline\"className=\" flex-1 gap-1\"onClick={goToPrevStep \";}"
+} /> <ChevronLeft className=\" h-4 w-4\"/> Back </Button>)}<Button </Button /> </div> </main> <BottomNavigation /> </div>) \";"
 }<div className=\" space-y-2\" /> <Label htmlFor=\" title\" />Job Title</Label> <Input id=\" title\"placeholder=\" e.g. Senior React Developer\"/> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" company\" />Company Name</Label> <Input id=\" company\"placeholder=\" Your company name\"/> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" location\" />Location</Label> <Select defaultValue=\" remote\" /> <SelectTrigger /> <SelectValue placeholder=\" Select location type\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" remote\" />Remote</SelectItem> <SelectItem value=\" onsite\" />On-site</SelectItem> <SelectItem value=\" hybrid\" />Hybrid</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" jobType\" />Job Type</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select job type\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" fulltime\" />Full-time</SelectItem> <SelectItem value=\" parttime\" />Part-time</SelectItem> <SelectItem value=\" contract\" />Contract</SelectItem> <SelectItem value=\" freelance\" />Freelance</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" description\" />Job Description</Label> <Textarea id=\" description\"placeholder=\" Describe the job role and responsibilities\"rows= {5 ;}
 }/> </div> </div>)}
-
+"
 const addSkill = (if (newSkill && !skills.includes (newSkill) ) {\";<div className=\" space-y-2\" /> <Label htmlFor=\" experience\" />Experience Level</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select experience level\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" entry\" />Entry Level</SelectItem> <SelectItem value=\" mid\" />Mid Level</SelectItem> <SelectItem value=\" senior\" />Senior</SelectItem> <SelectItem value=\" expert\" />Expert</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" education\" />Education</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select required education\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" high school\" />High School</SelectItem> <SelectItem value=\" associate\" />Associate Degree</SelectItem> <SelectItem value=\" bachelor\" />Bachelor's Degree</SelectItem> <SelectItem value=\" master\" />Master's Degree</SelectItem> <SelectItem value=\" phd\" />PhD</SelectItem> <SelectItem value=\" none\" />No Specific Requirement</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label />Required Skills</Label> key= {skill \";) => {
   return $3;}
-}
-}variant=\" secondary\"className=\" flex items-center gap-1 px-3 py-1\"> {skill ;}
-}<button  /> × </button> </Badge>) ) \";}</div> <div className=\" flex gap-2\" /> <Input /> <ButtononClick={addSkill \";}
-} />Add</Button> </div> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" requirements\" />Specific Requirements</Label> <Textarea /> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" responsibilities\" />Key Responsibilities</Label> <Textarea /> </div> </div>) \";
-}<div className=\" space-y-2\" /> <Label htmlFor=\" paymentType\" />Payment Type</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select payment type\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" hourly\" />Hourly Rate</SelectItem> <SelectItem value=\" fixed\" />Fixed Price</SelectItem> <SelectItem value=\" salary\" />Salary</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label />Salary Range</Label> <div className=\" flex gap-4 items-center\" /> <Input placeholder=\" Min\"type=\" number\"className=\" w-full\"/> <span />to</span> <Input placeholder=\" Max\"type=\" number\"className=\" w-full\"/> <Select defaultValue=\" usd\" /> <SelectTrigger className=\" w-24\" /> <SelectValue placeholder=\" Currency\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" usd\" />USD</SelectItem> <SelectItem value=\" eur\" />EUR</SelectItem> <SelectItem value=\" gbp\" />GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" deadline\" />Application Deadline</Label> <Input type=\" date\"id=\" deadline\"/> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" startDate\" />Expected Start Date</Label> <Input type=\" date\"id=\" startDate\"/> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" duration\" />Project Duration</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select project duration\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" ltw\" />Less than a week</SelectItem> <SelectItem value=\" ltm\" />Less than a month</SelectItem> <SelectItem value=\" 1-3m\" />1-3 months</SelectItem> <SelectItem value=\" 3-6m\" />3-6 months</SelectItem> <SelectItem value=\" 6m+\" />6+ months</SelectItem> <SelectItem value=\" ongoing\" />Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" additionalInfo\" />Additional Budget Information</Label> <Textareaid=\" additionalInfo\"placeholder=\" Any additional information about budget or payment\"rows= {3;}
-}/> </div> </div>) '\";
-}<Card /> <CardContent className=\" p-4\" /> <h3 className=\" font-bold text-lg\" />Senior React Developer</h3> <p className=\" text-muted-foreground\" />TechCorp Inc. • Remote • Full-time</p> <div className=\" flex gap-2 my-3\" /> <Badge variant=\" outline\" />React</Badge> <Badge variant=\" outline\" />TypeScript</Badge> <Badge variant=\" outline\" />Node && Node.js</Badge> </div> </div> <div className=\" space-y-1 text-sm mt-3\" /> <p className=\" font-medium\" />Experience Level: </p> <p />Senior</p> </div> </div> <div className=\" mt-4 pt-3 border-t border-border\" /> <h4 className=\" font-medium mb-2\" />Description</h4> <p className=\" text-sm\" />We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=\" outline\"className=\" w-full\"  />Edit Job Post</Button> </div> ',
+}"
+}variant=\" secondary\"className=\" flex items-center gap-1 px-3 py-1\"> {skill ;}"
+}<button  /> × </button> </Badge>) ) \";}</div> <div className=\" flex gap-2\" /> <Input /> <ButtononClick={addSkill \";}"
+} />Add</Button> </div> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" requirements\" />Specific Requirements</Label> <Textarea /> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" responsibilities\" />Key Responsibilities</Label> <Textarea /> </div> </div>) \";"
+}<div className=\" space-y-2\" /> <Label htmlFor=\" paymentType\" />Payment Type</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select payment type\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" hourly\" />Hourly Rate</SelectItem> <SelectItem value=\" fixed\" />Fixed Price</SelectItem> <SelectItem value=\" salary\" />Salary</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label />Salary Range</Label> <div className=\" flex gap-4 items-center\" /> <Input placeholder=\" Min\"type=\" number\"className=\" w-full\"/> <span />to</span> <Input placeholder=\" Max\"type=\" number\"className=\" w-full\"/> <Select defaultValue=\" usd\" /> <SelectTrigger className=\" w-24\" /> <SelectValue placeholder=\" Currency\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" usd\" />USD</SelectItem> <SelectItem value=\" eur\" />EUR</SelectItem> <SelectItem value=\" gbp\" />GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" deadline\" />Application Deadline</Label> <Input type=\" date\"id=\" deadline\"/> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" startDate\" />Expected Start Date</Label> <Input type=\" date\"id=\" startDate\"/> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" duration\" />Project Duration</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select project duration\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" ltw\" />Less than a week</SelectItem> <SelectItem value=\" ltm\" />Less than a month</SelectItem> <SelectItem value=\" 1-3m\" />1-3 months</SelectItem> <SelectItem value=\" 3-6m\" />3-6 months</SelectItem> <SelectItem value=\" 6m+\" />6+ months</SelectItem> <SelectItem value=\" ongoing\" />Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" additionalInfo\" />Additional Budget Information</Label> <Textareaid=\" additionalInfo\"placeholder=\" Any additional information about budget or payment\"rows= {3;}"
+}/> </div> </div>) '\";"
+}<Card /> <CardContent className=\" p-4\" /> <h3 className=\" font-bold text-lg\" />Senior React Developer</h3> <p className=\" text-muted-foreground\" />TechCorp Inc. • Remote • Full-time</p> <div className=\" flex gap-2 my-3\" /> <Badge variant=\" outline\" />React</Badge> <Badge variant=\" outline\" />TypeScript</Badge> <Badge variant=\" outline\" />Node && Node.js</Badge> </div> </div> <div className=\" space-y-1 text-sm mt-3\" /> <p className=\" font-medium\" />Experience Level: </p> <p />Senior</p> </div> </div> <div className=\" mt-4 pt-3 border-t border-border\" /> <h4 className=\" font-medium mb-2\" />Description</h4> <p className=\" text-sm\" />We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=\" outline\"className=\" w-full\"  />Edit Job Post</Button> </div> ',"
 }<div className=\"space - y-2\" />;
-        <Label  /> Required Skills</Label>;
+        <Label  /> Required Skills</Label>;"
         <div className=\"flex flex - wrap gap - 2 mb - 3\" />;
           {skills.map ((skill, ) => (<Badge;}
-              key = {skill }
-              variant=\"secondary\";
+              key = {skill }"
+              variant=\"secondary\";"
               className=\"flex items - center gap - 1 px - 3 py - 1\" />
 
               {skill}
-              <button;
+              <button;"
                 className=\"ml - 1 rounded - full hover:bg - background / 20 p - 1\";
                 on_click = {(, ) = /> remove_skill (skill) }
               >;
                 ×;
               </button>;
             </Badge>))}
-        </div>;
+        </div>;"
         <div className=\"flex gap - 2\" />;
           <Input;
             value = {new_skill }
-            on_change = {(e, ) = /> setNewSkill (e.target.value) }
+            on_change = {(e, ) = /> setNewSkill (e.target.value) }"
             placeholder=\"Add a skill\";
             onKeyDown = {(e, ) => e.key === 'Enter' && add_skill () }
           />;
           <Button on_click={add_skill} />Add</Button>;
         </div>;
-      </div>;
-      <div className=\"space - y-2\" />;
+      </div>;"
+      <div className=\"space - y-2\" />;"
         <Label html_for=\"requirements\" />Specific Requirements</Label>;
-        <Textarea;
-          id=\"requirements\";
+        <Textarea;"
+          id=\"requirements\";"
           placeholder=\"List any specific requirements or qualifications\";
           rows = {4 }
         />;
-      </div>;
-      <div className=\"space - y-2\" />;
+      </div>;"
+      <div className=\"space - y-2\" />;"
         <Label html_for=\"responsibilities\" />Key Responsibilities</Label>;
-        <Textarea;
-          id=\"responsibilities\";
+        <Textarea;"
+          id=\"responsibilities\";"
           placeholder=\"List the key responsibilities for this role\";
           rows = {4 }
         />;
@@ -789,68 +789,68 @@ const addSkill = (if (newSkill && !skills.includes (newSkill) ) {\";<div classNa
 }
 /**;
  * BudgetStep - Function description;
- */;
-function BudgetStep() {return (<div className=\"space - y-4\" />;
-      <h2 className=\"text - lg font - medium\" />Budget & Timeline</h2>;
-      <div className=\"space - y-2\" />;
+ */;"
+function BudgetStep() {return (<div className=\"space - y-4\" />;"
+      <h2 className=\"text - lg font - medium\" />Budget & Timeline</h2>;"
+      <div className=\"space - y-2\" />;"
         <Label html_for=\"payment_type\" />Payment Type</Label>;
         <Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select payment type\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"hourly\" />Hourly Rate</SelectItem>;
-            <SelectItem value=\"fixed\" />Fixed Price</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"hourly\" />Hourly Rate</SelectItem>;"
+            <SelectItem value=\"fixed\" />Fixed Price</SelectItem>;"
             <SelectItem value=\"salary\" />Salary</SelectItem>;
           </SelectContent>;
         </Select>;
-      </div>;
+      </div>;"
       <div className=\"space - y-2\" />;
-        <Label  /> Salary Range</Label>;
-        <div className=\"flex gap - 4 items - center\" />;
+        <Label  /> Salary Range</Label>;"
+        <div className=\"flex gap - 4 items - center\" />;"
           <Input placeholder=\"Min\" type=\"number\" className=\"w - full\" />;
-          <span  /> to</span>;
-          <Input placeholder=\"Max\" type=\"number\" className=\"w - full\" />;
-          <Select default_value=\"usd\" />;
-            <SelectTrigger className=\"w - 24\" />;
+          <span  /> to</span>;"
+          <Input placeholder=\"Max\" type=\"number\" className=\"w - full\" />;"
+          <Select default_value=\"usd\" />;"
+            <SelectTrigger className=\"w - 24\" />;"
               <SelectValue placeholder=\"Currency\" />;
             </SelectTrigger>;
-            <SelectContent />;
-              <SelectItem value=\"usd\" />USD</SelectItem>;
-              <SelectItem value=\"eur\" />EUR</SelectItem>;
+            <SelectContent />;"
+              <SelectItem value=\"usd\" />USD</SelectItem>;"
+              <SelectItem value=\"eur\" />EUR</SelectItem>;"
               <SelectItem value=\"gbp\" />GBP</SelectItem>;
             </SelectContent>;
           </Select>;
         </div>;
-      </div>;
-      <div className=\"space - y-2\" />;
-        <Label html_for=\"deadline\" />Application Deadline</Label>;
+      </div>;"
+      <div className=\"space - y-2\" />;"
+        <Label html_for=\"deadline\" />Application Deadline</Label>;"
         <Input type=\"date\" id=\"deadline\" />;
-      </div>;
-      <div className=\"space - y-2\" />;
-        <Label html_for=\"start_date\" />Expected Start Date</Label>;
+      </div>;"
+      <div className=\"space - y-2\" />;"
+        <Label html_for=\"start_date\" />Expected Start Date</Label>;"
         <Input type=\"date\" id=\"start_date\" />;
-      </div>;
-      <div className=\"space - y-2\" />;
+      </div>;"
+      <div className=\"space - y-2\" />;"
         <Label html_for=\"duration\" />Project Duration</Label>;
         <Select />;
-          <SelectTrigger />;
+          <SelectTrigger />;"
             <SelectValue placeholder=\"Select project duration\" />;
           </SelectTrigger>;
-          <SelectContent />;
-            <SelectItem value=\"ltw\" />Less than a week</SelectItem>;
-            <SelectItem value=\"ltm\" />Less than a month</SelectItem>;
-            <SelectItem value=\"1 - 3m\" />1 - 3 months</SelectItem>;
-            <SelectItem value=\"3 - 6m\" />3 - 6 months</SelectItem>;
-            <SelectItem value=\"6m+\" />6+ months</SelectItem>;
+          <SelectContent />;"
+            <SelectItem value=\"ltw\" />Less than a week</SelectItem>;"
+            <SelectItem value=\"ltm\" />Less than a month</SelectItem>;"
+            <SelectItem value=\"1 - 3m\" />1 - 3 months</SelectItem>;"
+            <SelectItem value=\"3 - 6m\" />3 - 6 months</SelectItem>;"
+            <SelectItem value=\"6m+\" />6+ months</SelectItem>;"
             <SelectItem value=\"ongoing\" />Ongoing</SelectItem>;
           </SelectContent>;
         </Select>;
-      </div>;
-      <div className=\"space - y-2\" />;
+      </div>;"
+      <div className=\"space - y-2\" />;"
         <Label html_for=\"additional_info\" />Additional Budget Information</Label>;
-        <Textarea;
-          id=\"additional_info\";}
+        <Textarea;"
+          id=\"additional_info\";}"
           placeholder=\"Any additional information about budget or payment\";}
           rows = {3 }
         />;
@@ -860,58 +860,58 @@ function BudgetStep() {return (<div className=\"space - y-4\" />;
 }
 /**;
  * PreviewStep - Function description;
- */;
-function PreviewStep() {return (<div className=\"space - y-4\" />;
+ */;"
+function PreviewStep() {return (<div className=\"space - y-4\" />;"
       <h2 className=\"text - lg font - medium mb - 2\" />Job Preview</h2>;
-      <Card />;
-        <CardContent className=\"p - 4\" />;
-          <h3 className=\"font - bold text - lg\" />Senior React Developer</h3>;
-          <p className=\"text - muted - foreground\" />TechCorp Inc. • Remote • Full - time</p>;
-          <div className=\"flex gap - 2 my - 3\" />;
-            <Badge variant=\"outline\" />React</Badge>;
-            <Badge variant=\"outline\" />TypeScript</Badge>;
+      <Card />;"
+        <CardContent className=\"p - 4\" />;"
+          <h3 className=\"font - bold text - lg\" />Senior React Developer</h3>;"
+          <p className=\"text - muted - foreground\" />TechCorp Inc. • Remote • Full - time</p>;"
+          <div className=\"flex gap - 2 my - 3\" />;"
+            <Badge variant=\"outline\" />React</Badge>;"
+            <Badge variant=\"outline\" />TypeScript</Badge>;"
             <Badge variant=\"outline\" />Node.js</Badge>;
-          </div>;
-          <div className=\"space - y-1 text - sm mt - 4\" />;
+          </div>;"
+          <div className=\"space - y-1 text - sm mt - 4\" />;"
             <p className=\"font - medium\" />Salary Range:</p>;
             <p />$80, 000 - $120, 000 USD / year</p>;
-          </div>;
-          <div className=\"space - y-1 text - sm mt - 3\" />;
+          </div>;"
+          <div className=\"space - y-1 text - sm mt - 3\" />;"
             <p className=\"font - medium\" />Experience Level:</p>;
             <p  /> Senior</p>;
-          </div>;
-          <div className=\"space - y-1 text - sm mt - 3\" />;
+          </div>;"
+          <div className=\"space - y-1 text - sm mt - 3\" />;"
             <p className=\"font - medium\" />Application Deadline:</p>;
             <p  /> December 15, 2023</p>;
-          </div>;
-          <div className=\"mt - 4 pt - 3 border - t border - border\" />;
-            <h4 className=\"font - medium mb - 2\" />Description</h4>;
+          </div>;"
+          <div className=\"mt - 4 pt - 3 border - t border - border\" />;"
+            <h4 className=\"font - medium mb - 2\" />Description</h4>;"
             <p className=\"text - sm\" />We are looking for a skilled React developer to help us build out our new customer - facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>;
           </div>;
         </CardContent>;
-      </Card>;
+      </Card>;"
       <Button variant=\"outline\" className=\"w - full\" />Edit Job Post</Button>
     </div>}
-  );}
-}\";
-min - h-screen flex flex - col\"> <MobileHeader </div /> <Button variant=\" outline\"className=\" flex gap - 1\" /> <Zap className=\" h - 4 w - 4\"/> AI Assist </Button> </div> {renderStepContent () \";}
-}<Button variant=\" outline\"className=\" flex - 1 gap - 1\"on_click={goToPrevStep \";}
-} /> <ChevronLeft className=\" h - 4 w - 4\"/> Back </Button>)}<Button </Button /> </div> </main> <BottomNavigation /> </div>) \";
+  );}"
+}\";"
+min - h-screen flex flex - col\"> <MobileHeader </div /> <Button variant=\" outline\"className=\" flex gap - 1\" /> <Zap className=\" h - 4 w - 4\"/> AI Assist </Button> </div> {renderStepContent () \";}"
+}<Button variant=\" outline\"className=\" flex - 1 gap - 1\"on_click={goToPrevStep \";}"
+} /> <ChevronLeft className=\" h - 4 w - 4\"/> Back </Button>)}<Button </Button /> </div> </main> <BottomNavigation /> </div>) \";"
 }<div className=\" space - y-2\" /> <Label html_for=\" title\" />Job Title</Label> <Input id=\" title\"placeholder=\" e.g. Senior React Developer\"/> </div> <div className=\" space - y-2\" /> <Label html_for=\" company\" />Company Name</Label> <Input id=\" company\"placeholder=\" Your company name\"/> </div> <div className=\" space - y-2\" /> <Label html_for=\" location\" />Location</Label> <Select default_value=\" remote\" /> <SelectTrigger /> <SelectValue placeholder=\" Select location type\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" remote\" />Remote</SelectItem> <SelectItem value=\" onsite\" />On - site</SelectItem> <SelectItem value=\" hybrid\" />Hybrid</SelectItem> </SelectContent> </Select> </div> <div className=\" space - y-2\" /> <Label html_for=\" job_type\" />Job Type</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select job type\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" fulltime\" />Full - time</SelectItem> <SelectItem value=\" parttime\" />Part - time</SelectItem> <SelectItem value=\" contract\" />Contract</SelectItem> <SelectItem value=\" freelance\" />Freelance</SelectItem> </SelectContent> </Select> </div> <div className=\" space - y-2\" /> <Label html_for=\" description\" />Job Description</Label> <Textarea id=\" description\"placeholder=\" Describe the job role and responsibilities\"rows= {5;}
 }/> </div> </div>)}
-
+"
 const add_skill = () =>: any {if () {\") {$2;}
-}
-  <div className=\" space - y-2\" /> <Label html_for=\" experience\" />Experience Level</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select experience level\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" entry\" />Entry Level</SelectItem> <SelectItem value=\" mid\" />Mid Level</SelectItem> <SelectItem value=\" senior\" />Senior</SelectItem> <SelectItem value=\" expert\" />Expert</SelectItem> </SelectContent> </Select> </div> <div className=\" space - y-2\" /> <Label html_for=\" education\" />Education</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select required education\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" high school\" />High School</SelectItem> <SelectItem value=\" associate\" />Associate Degree</SelectItem> <SelectItem value=\" bachelor\" />Bachelor's Degree</SelectItem> <SelectItem value=\" master\" />Master's Degree</SelectItem> <SelectItem value=\" phd\" />PhD</SelectItem> <SelectItem value=\" none\" />No Specific Requirement</SelectItem> </SelectContent> </Select> </div> <div className=\" space - y-2\" /> <Label  /> Required Skills</Label> key= {skill \";}
-}variant=\" secondary\"className=\" flex items - center gap - 1 px - 3 py - 1\"> {skill;}
-}<button  /> × </button> </Badge>) ) \";
-}</div> <div className=\" flex gap - 2\" /> <Input /> <Button on_click={add_skill \";}
-} />Add</Button> </div> </div> <div className=\" space - y-2\" /> <Label html_for=\" requirements\" />Specific Requirements</Label> <Textarea /> </div> <div className=\" space - y-2\" /> <Label html_for=\" responsibilities\" />Key Responsibilities</Label> <Textarea /> </div> </div>) \";
-}<div className=\" space - y-2\" /> <Label html_for=\" payment_type\" />Payment Type</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select payment type\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" hourly\" />Hourly Rate</SelectItem> <SelectItem value=\" fixed\" />Fixed Price</SelectItem> <SelectItem value=\" salary\" />Salary</SelectItem> </SelectContent> </Select> </div> <div className=\" space - y-2\" /> <Label  /> Salary Range</Label> <div className=\" flex gap - 4 items - center\" /> <Input placeholder=\" Min\"type=\" number\"className=\" w - full\"/> <span  /> to</span> <Input placeholder=\" Max\"type=\" number\"className=\" w - full\"/> <Select default_value=\" usd\" /> <SelectTrigger className=\" w - 24\" /> <SelectValue placeholder=\" Currency\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" usd\" />USD</SelectItem> <SelectItem value=\" eur\" />EUR</SelectItem> <SelectItem value=\" gbp\" />GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=\" space - y-2\" /> <Label html_for=\" deadline\" />Application Deadline</Label> <Input type=\" date\"id=\" deadline\"/> </div> <div className=\" space - y-2\" /> <Label html_for=\" start_date\" />Expected Start Date</Label> <Input type=\" date\"id=\" start_date\"/> </div> <div className=\" space - y-2\" /> <Label html_for=\" duration\" />Project Duration</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select project duration\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" ltw\" />Less than a week</SelectItem> <SelectItem value=\" ltm\" />Less than a month</SelectItem> <SelectItem value=\" 1 - 3m\" />1 - 3 months</SelectItem> <SelectItem value=\" 3 - 6m\" />3 - 6 months</SelectItem> <SelectItem value=\" 6m+\" />6+ months</SelectItem> <SelectItem value=\" ongoing\" />Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=\" space - y-2\" /> <Label html_for=\" additional_info\" />Additional Budget Information</Label> <Textarea id=\" additional_info\"placeholder=\" Any additional information about budget or payment\"rows= {3;}
-}/> </div> </div>) '\";
-}<Card /> <CardContent className=\" p - 4\" /> <h3 className=\" font - bold text - lg\" />Senior React Developer</h3> <p className=\" text - muted - foreground\" />TechCorp Inc. • Remote • Full - time</p> <div className=\" flex gap - 2 my - 3\" /> <Badge variant=\" outline\" />React</Badge> <Badge variant=\" outline\" />TypeScript</Badge> <Badge variant=\" outline\" />Node.js</Badge> </div> </div> <div className=\" space - y-1 text - sm mt - 3\" /> <p className=\" font - medium\" />Experience Level: </p> <p  /> Senior</p> </div> </div> <div className=\" mt - 4 pt - 3 border - t border - border\" /> <h4 className=\" font - medium mb - 2\" />Description</h4> <p className=\" text - sm\" />We are looking for a skilled React developer to help us build out our new customer - facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=\" outline\"className=\" w - full\"  />Edit Job Post</Button> </div> '\",
-}</div> <div className=\" flex gap-2\" /> <Input /> <Button onClick={addSkill \";}
-} />Add</Button> </div> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" requirements\" />Specific Requirements</Label> <Textarea /> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" responsibilities\" />Key Responsibilities</Label> <Textarea /> </div> </div>) \";
-}<div className=\" space-y-2\" /> <Label htmlFor=\" paymentType\" />Payment Type</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select payment type\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" hourly\" />Hourly Rate</SelectItem> <SelectItem value=\" fixed\" />Fixed Price</SelectItem> <SelectItem value=\" salary\" />Salary</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label />Salary Range</Label> <div className=\" flex gap-4 items-center\" /> <Input placeholder=\" Min\"type=\" number\"className=\" w-full\"/> <span />to</span> <Input placeholder=\" Max\"type=\" number\"className=\" w-full\"/> <Select defaultValue=\" usd\" /> <SelectTrigger className=\" w-24\" /> <SelectValue placeholder=\" Currency\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" usd\" />USD</SelectItem> <SelectItem value=\" eur\" />EUR</SelectItem> <SelectItem value=\" gbp\" />GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" deadline\" />Application Deadline</Label> <Input type=\" date\"id=\" deadline\"/> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" startDate\" />Expected Start Date</Label> <Input type=\" date\"id=\" startDate\"/> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" duration\" />Project Duration</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select project duration\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" ltw\" />Less than a week</SelectItem> <SelectItem value=\" ltm\" />Less than a month</SelectItem> <SelectItem value=\" 1-3m\" />1-3 months</SelectItem> <SelectItem value=\" 3-6m\" />3-6 months</SelectItem> <SelectItem value=\" 6m+\" />6+ months</SelectItem> <SelectItem value=\" ongoing\" />Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" additionalInfo\" />Additional Budget Information</Label> <Textarea id=\" additionalInfo\"placeholder=\" Any additional information about budget or payment\"rows= {3 ;}
-}/> </div> </div>) '\";
-}<Card /> <CardContent className=\" p-4\" /> <h3 className=\" font-bold text-lg\" />Senior React Developer</h3> <p className=\" text-muted-foreground\" />TechCorp Inc. • Remote • Full-time</p> <div className=\" flex gap-2 my-3\" /> <Badge variant=\" outline\" />React</Badge> <Badge variant=\" outline\" />TypeScript</Badge> <Badge variant=\" outline\" />Node.js</Badge> </div> </div> <div className=\" space-y-1 text-sm mt-3\" /> <p className=\" font-medium\" />Experience Level:</p> <p />Senior</p> </div> </div> <div className=\" mt-4 pt-3 border-t border-border\" /> <h4 className=\" font-medium mb-2\" />Description</h4> <p className=\" text-sm\" />We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=\" outline\"className=\" w-full\"  />Edit Job Post</Button> </div> '\";
+}"
+  <div className=\" space - y-2\" /> <Label html_for=\" experience\" />Experience Level</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select experience level\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" entry\" />Entry Level</SelectItem> <SelectItem value=\" mid\" />Mid Level</SelectItem> <SelectItem value=\" senior\" />Senior</SelectItem> <SelectItem value=\" expert\" />Expert</SelectItem> </SelectContent> </Select> </div> <div className=\" space - y-2\" /> <Label html_for=\" education\" />Education</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select required education\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" high school\" />High School</SelectItem> <SelectItem value=\" associate\" />Associate Degree</SelectItem> <SelectItem value=\" bachelor\" />Bachelor's Degree</SelectItem> <SelectItem value=\" master\" />Master's Degree</SelectItem> <SelectItem value=\" phd\" />PhD</SelectItem> <SelectItem value=\" none\" />No Specific Requirement</SelectItem> </SelectContent> </Select> </div> <div className=\" space - y-2\" /> <Label  /> Required Skills</Label> key= {skill \";}"
+}variant=\" secondary\"className=\" flex items - center gap - 1 px - 3 py - 1\"> {skill;}"
+}<button  /> × </button> </Badge>) ) \";"
+}</div> <div className=\" flex gap - 2\" /> <Input /> <Button on_click={add_skill \";}"
+} />Add</Button> </div> </div> <div className=\" space - y-2\" /> <Label html_for=\" requirements\" />Specific Requirements</Label> <Textarea /> </div> <div className=\" space - y-2\" /> <Label html_for=\" responsibilities\" />Key Responsibilities</Label> <Textarea /> </div> </div>) \";"
+}<div className=\" space - y-2\" /> <Label html_for=\" payment_type\" />Payment Type</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select payment type\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" hourly\" />Hourly Rate</SelectItem> <SelectItem value=\" fixed\" />Fixed Price</SelectItem> <SelectItem value=\" salary\" />Salary</SelectItem> </SelectContent> </Select> </div> <div className=\" space - y-2\" /> <Label  /> Salary Range</Label> <div className=\" flex gap - 4 items - center\" /> <Input placeholder=\" Min\"type=\" number\"className=\" w - full\"/> <span  /> to</span> <Input placeholder=\" Max\"type=\" number\"className=\" w - full\"/> <Select default_value=\" usd\" /> <SelectTrigger className=\" w - 24\" /> <SelectValue placeholder=\" Currency\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" usd\" />USD</SelectItem> <SelectItem value=\" eur\" />EUR</SelectItem> <SelectItem value=\" gbp\" />GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=\" space - y-2\" /> <Label html_for=\" deadline\" />Application Deadline</Label> <Input type=\" date\"id=\" deadline\"/> </div> <div className=\" space - y-2\" /> <Label html_for=\" start_date\" />Expected Start Date</Label> <Input type=\" date\"id=\" start_date\"/> </div> <div className=\" space - y-2\" /> <Label html_for=\" duration\" />Project Duration</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select project duration\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" ltw\" />Less than a week</SelectItem> <SelectItem value=\" ltm\" />Less than a month</SelectItem> <SelectItem value=\" 1 - 3m\" />1 - 3 months</SelectItem> <SelectItem value=\" 3 - 6m\" />3 - 6 months</SelectItem> <SelectItem value=\" 6m+\" />6+ months</SelectItem> <SelectItem value=\" ongoing\" />Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=\" space - y-2\" /> <Label html_for=\" additional_info\" />Additional Budget Information</Label> <Textarea id=\" additional_info\"placeholder=\" Any additional information about budget or payment\"rows= {3;}"
+}/> </div> </div>) '\";"
+}<Card /> <CardContent className=\" p - 4\" /> <h3 className=\" font - bold text - lg\" />Senior React Developer</h3> <p className=\" text - muted - foreground\" />TechCorp Inc. • Remote • Full - time</p> <div className=\" flex gap - 2 my - 3\" /> <Badge variant=\" outline\" />React</Badge> <Badge variant=\" outline\" />TypeScript</Badge> <Badge variant=\" outline\" />Node.js</Badge> </div> </div> <div className=\" space - y-1 text - sm mt - 3\" /> <p className=\" font - medium\" />Experience Level: </p> <p  /> Senior</p> </div> </div> <div className=\" mt - 4 pt - 3 border - t border - border\" /> <h4 className=\" font - medium mb - 2\" />Description</h4> <p className=\" text - sm\" />We are looking for a skilled React developer to help us build out our new customer - facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=\" outline\"className=\" w - full\"  />Edit Job Post</Button> </div> '\","
+}</div> <div className=\" flex gap-2\" /> <Input /> <Button onClick={addSkill \";}"
+} />Add</Button> </div> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" requirements\" />Specific Requirements</Label> <Textarea /> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" responsibilities\" />Key Responsibilities</Label> <Textarea /> </div> </div>) \";"
+}<div className=\" space-y-2\" /> <Label htmlFor=\" paymentType\" />Payment Type</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select payment type\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" hourly\" />Hourly Rate</SelectItem> <SelectItem value=\" fixed\" />Fixed Price</SelectItem> <SelectItem value=\" salary\" />Salary</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label />Salary Range</Label> <div className=\" flex gap-4 items-center\" /> <Input placeholder=\" Min\"type=\" number\"className=\" w-full\"/> <span />to</span> <Input placeholder=\" Max\"type=\" number\"className=\" w-full\"/> <Select defaultValue=\" usd\" /> <SelectTrigger className=\" w-24\" /> <SelectValue placeholder=\" Currency\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" usd\" />USD</SelectItem> <SelectItem value=\" eur\" />EUR</SelectItem> <SelectItem value=\" gbp\" />GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" deadline\" />Application Deadline</Label> <Input type=\" date\"id=\" deadline\"/> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" startDate\" />Expected Start Date</Label> <Input type=\" date\"id=\" startDate\"/> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" duration\" />Project Duration</Label> <Select /> <SelectTrigger /> <SelectValue placeholder=\" Select project duration\"/> </SelectTrigger> <SelectContent /> <SelectItem value=\" ltw\" />Less than a week</SelectItem> <SelectItem value=\" ltm\" />Less than a month</SelectItem> <SelectItem value=\" 1-3m\" />1-3 months</SelectItem> <SelectItem value=\" 3-6m\" />3-6 months</SelectItem> <SelectItem value=\" 6m+\" />6+ months</SelectItem> <SelectItem value=\" ongoing\" />Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=\" space-y-2\" /> <Label htmlFor=\" additionalInfo\" />Additional Budget Information</Label> <Textarea id=\" additionalInfo\"placeholder=\" Any additional information about budget or payment\"rows= {3 ;}"
+}/> </div> </div>) '\";"
+}<Card /> <CardContent className=\" p-4\" /> <h3 className=\" font-bold text-lg\" />Senior React Developer</h3> <p className=\" text-muted-foreground\" />TechCorp Inc. • Remote • Full-time</p> <div className=\" flex gap-2 my-3\" /> <Badge variant=\" outline\" />React</Badge> <Badge variant=\" outline\" />TypeScript</Badge> <Badge variant=\" outline\" />Node.js</Badge> </div> </div> <div className=\" space-y-1 text-sm mt-3\" /> <p className=\" font-medium\" />Experience Level:</p> <p />Senior</p> </div> </div> <div className=\" mt-4 pt-3 border-t border-border\" /> <h4 className=\" font-medium mb-2\" />Description</h4> <p className=\" text-sm\" />We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=\" outline\"className=\" w-full\"  />Edit Job Post</Button> </div> '\";"

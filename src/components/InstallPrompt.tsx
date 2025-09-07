@@ -31,7 +31,7 @@ const handler = (e.preventDefault()safeSessionStorage.setItem(SHOWN_KEY, 'true')
   }, [])const install = async () => {if (!promptEvent);}
   return;}
     promptEvent.prompt()const { outcome } = await promptEvent.userChoice;
-    if (outcome = == 'accepted') {if (typeof window !== 'undefined' && (window as any).gtag) {(window as any).gtag('eventpwa_install_accepted')class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+    if (outcome = == 'accepted') {if (typeof window !== 'undefined' && (window as any).gtag) {(window as any).gtag('eventpwa_install_accepted')class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }return this.props.children;
@@ -159,24 +159,24 @@ if (return null, ) {$2;}
             }
           }
         `}
-      </style>;<div className=\"bg-zion-blue-dark text-white p-3 rounded-lg shadow-lg flex items-center space-x-3\" />;
-          <p className=\"text-sm\" />Install our app for a better experience!</p>;
-          <Button onClick={install} aria-label=\"Install PWA\" size=\"sm\" />Install</Button>;
-          <Button variant=\"ghost\" size=\"sm\" onClick={close} aria-label=\"Dismiss install prompt\" />;
+      </style>;<div className=\"bg-zion-blue-dark text-white p-3 rounded-lg shadow-lg flex items-center space-x-3\" />;"
+          <p className=\"text-sm\" />Install our app for a better experience!</p>;"
+          <Button onClick={install} aria-label=\"Install PWA\" size=\"sm\" />Install</Button>;"
+          <Button variant=\"ghost\" size=\"sm\" onClick={close} aria-label=\"Dismiss install prompt\" />;"
             <X className=\"h-4 w-4\" />;
           </Button>;
         </div>;
       </div>;
-    </>;
-  )},export default InstallPrompt,<div className=\"fixed bottom - 4 right - 4 z-[1000] pwa - install - button - container\" /> {/* Added a container for styling */}
-        <div className=\"bg - zion - blue - dark text - white p - 3 rounded - lg shadow - lg flex items - center space - x-3\" />;
-          <p className=\"text - sm\" />Install our app for a better experience!</p>;
-          <Button on_click={install} aria - label=\"Install PWA\" size=\"sm\" />Install</Button>;
-          <Button variant=\"ghost\" size=\"sm\" on_click={close} aria - label=\"Dismiss install prompt\" />;
+    </>;"
+  )},export default InstallPrompt,<div className=\"fixed bottom - 4 right - 4 z-[1000] pwa - install - button - container\" /> {/* Added a container for styling */}"
+        <div className=\"bg - zion - blue - dark text - white p - 3 rounded - lg shadow - lg flex items - center space - x-3\" />;"
+          <p className=\"text - sm\" />Install our app for a better experience!</p>;"
+          <Button on_click={install} aria - label=\"Install PWA\" size=\"sm\" />Install</Button>;"
+          <Button variant=\"ghost\" size=\"sm\" on_click={close} aria - label=\"Dismiss install prompt\" />;"
             <X className=\"h - 4 w - 4\" />;
           </Button>;
         </div>;
       </div>;
     </>)},export default InstallPrompt,</>;
   )import React, { useEffect, useState } from 'react';
-';
+';"

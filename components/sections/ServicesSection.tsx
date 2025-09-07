@@ -9,7 +9,7 @@ import {
   Shield,
   BarChart3,
 
-  ArrowRight,}
+  ArrowRight}
   Zap,;}
 } from 'lucide-react';
 
@@ -25,10 +25,10 @@ const ServicesSection: React.FC = () => {
         'Machine Learning Models',
         'Natural Language Processing',
         'Computer Vision',
-        'Predictive Analytics',
+        'Predictive Analytics'
       ],
-      color: 'from-blue-500 to-cyan-500',}
-  href: '/services/ai-development',}
+      color: 'from-blue-500 to-cyan-500'}
+  href: '/services/ai-development'}
     },
     {
       icon: Cloud,
@@ -39,10 +39,10 @@ const ServicesSection: React.FC = () => {
         'AWS/Azure/GCP',
         'Microservices',
         'Serverless Architecture',
-        'DevOps Automation',
+        'DevOps Automation'
       ],
-      color: 'from-purple-500 to-pink-500',}
-  href: '/services/cloud-architecture',}
+      color: 'from-purple-500 to-pink-500'}
+  href: '/services/cloud-architecture'}
     },
     {
       icon: RefreshCw,
@@ -53,10 +53,10 @@ const ServicesSection: React.FC = () => {
         'Process Automation',
         'Legacy System Migration',
         'Change Management',
-        'Digital Strategy',
+        'Digital Strategy'
       ],
-      color: 'from-green-500 to-emerald-500',}
-  href: '/services/digital-transformation',}
+      color: 'from-green-500 to-emerald-500'}
+  href: '/services/digital-transformation'}
     },
     {
       icon: Wifi,
@@ -66,10 +66,10 @@ features: [
         'Sensor Networks',
         'Real-time Monitoring',
         'Data Analytics',
-        'Edge Computing',
+        'Edge Computing'
       ],
-      color: 'from-orange-500 to-red-500',}
-  href: '/services/iot-platforms',}
+      color: 'from-orange-500 to-red-500'}
+  href: '/services/iot-platforms'}
     },
     {
       icon: Shield,
@@ -80,10 +80,10 @@ features: [
         'Smart Contracts',
         'DeFi Applications',
         'NFT Platforms',
-        'Supply Chain Solutions',
+        'Supply Chain Solutions'
       ],
-      color: 'from-indigo-500 to-purple-500',}
-  href: '/services/blockchain-solutions',}
+      color: 'from-indigo-500 to-purple-500'}
+  href: '/services/blockchain-solutions'}
     },
     {
       icon: BarChart3,
@@ -93,29 +93,29 @@ features: [
         'Big Data Processing',
         'Real-time Dashboards',
         'Predictive Modeling',
-        'Data Visualization',
+        'Data Visualization'
       ],
-      color: 'from-teal-500 to-blue-500',}
-  href: '/services/data-analytics',}
-    },
+      color: 'from-teal-500 to-blue-500'}
+  href: '/services/data-analytics'}
+    }
   ];
 
 const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: { opacity: 0}
 }
     visible: {
       opacity: 1;
 transition: {}
-staggerChildren: 0.1,}
-      },
-    },
+staggerChildren: 0.1}
+      }
+    }
   };
 
 const cardVariants = {}
-    hidden: { opacity: 0, y: 20,}
+    hidden: { opacity: 0, y: 20}
 },
-visible: { opacity: 1, y: 0,}
-},
+visible: { opacity: 1, y: 0}
+}
   };
 
   return (
@@ -135,69 +135,69 @@ visible: { opacity: 1, y: 0,}
  ;
 }
 
-const card_variants = {hidden: { opacity: 0, coordinate_y: 20,}
-},visible: { opacity: 1, coordinate_y: 0,}
-},}
+const card_variants = {hidden: { opacity: 0, coordinate_y: 20}
+},visible: { opacity: 1, coordinate_y: 0}
+}}
   }
 ;
-  const cardVariants = {hidden: { opacity: 0, y: 20,}
-},visible: { opacity: 1, y: 0,}
+  const cardVariants = {hidden: { opacity: 0, y: 20}
+},visible: { opacity: 1, y: 0}
 },;
   return (<section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden' />;
       {/* Background Elements */}return (<section className=\"py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden\" />;
       {/* Background Elements */}
-    hidden: { opacity: 0, y: 20,}
-},visible: { opacity: 1, y: 0,}
-},}
+    hidden: { opacity: 0, y: 20}
+},visible: { opacity: 1, y: 0}
+}}
 
-const cardVariants = {hidden: { opacity: 0, y: 20,}
+const cardVariants = {hidden: { opacity: 0, y: 20}
 },{/* Section Header */}<motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 } />;
           <motion.div;
-        stagger_children: 0.1,},},  }
+        stagger_children: 0.1}}  }
 
-const card_variants = {hidden: { opacity: 0, coordinate_y: 20,}
-},visible: { opacity: 1, coordinate_y: 0,}
+const card_variants = {hidden: { opacity: 0, coordinate_y: 20}
+},visible: { opacity: 1, coordinate_y: 0}
 },        stagger_children: 0.1;
       }
     }
   }
 
-const card_variants = {hidden: { opacity: 0, coordinate_y: 20,}
-},visible: { opacity: 1, coordinate_y: 0,}
-},}
-    hidden: { opacity: 0, y: 20,}
-},}
+const card_variants = {hidden: { opacity: 0, coordinate_y: 20}
+},visible: { opacity: 1, coordinate_y: 0}
+}}
+    hidden: { opacity: 0, y: 20}
+}}
 ;
-  const cardVariants = {hidden: { opacity: 0, y: 20,}
-},visible: { opacity: 1, y: 0,}
+  const cardVariants = {hidden: { opacity: 0, y: 20}
+},visible: { opacity: 1, y: 0}
 },;
-  return (<section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden' />;
+  return (<section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden' />;"
       {/* Background Elements */}return (<section className=\"py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden\" />;
       {/* Background Elements */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
 
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
 className='text-center mb-16'
          />
           <motion.div;
-initial={{ opacity: 0, scale: 0.8 ,}
+initial={{ opacity: 0, scale: 0.8 }
 }
-            whileInView={{ opacity: 1, scale: 1 ,}
+            whileInView={{ opacity: 1, scale: 1 }
 }
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true ,}
+            viewport={{ once: true }
 }
 
 className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
@@ -228,7 +228,7 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
             </span>;
           </h2>;
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed' />;
-            We deliver cutting-edge technology solutions that drive innovation,efficiency, and growth for businesses across all industries.          </p>          ;
+            We deliver cutting-edge technology solutions that drive innovation,efficiency, and growth for businesses across all industries.          </p>          ;"
           <p className=\"text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed\" />;
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth ;
             for businesses across all industries.;
@@ -238,7 +238,7 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
 
 initial='hidden'
           whileInView='visible'
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'
@@ -257,7 +257,7 @@ className='group relative'
 
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300' />
 
-                  {service.titl,}
+                  {service.titl}
 }
                 </h3>;
                 <p className='text-gray-300 mb-6 leading-relaxed' />;
@@ -288,22 +288,22 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
               </div>
             </motion.div>
 
-          ),
+          )
 }
-        </motion.div>;
+        </motion.div>;"
                 <div className=\"absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300\" />;
               </div>;
             </motion && motion.div>;
           ))}
         {/* Bottom CTA */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
 
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
 className='text-center'
@@ -328,9 +328,10 @@ href='/contact'
         </motion.div>
       </div>
     </section>
-),
+)
 };
 
 
 export default ServicesSection;
 
+"

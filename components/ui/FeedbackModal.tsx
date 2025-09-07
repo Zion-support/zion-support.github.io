@@ -13,8 +13,8 @@ defaultKind = 'general'}
   isOpen,
   onClose,
   defaultContext,
-  defaultKind = 'general',}
-  userHeaders,}
+  defaultKind = 'general'}
+  userHeaders}
 }: {;
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
@@ -39,15 +39,15 @@ const [loading, setLoading] = useState(false);
     setLoading(true);
     try {
       await fetch('/api/feedback', {}
-        method: 'POST',}
+        method: 'POST'}
 headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
         body: JSON.stringify({
           rating;
-comment,}
+comment}
 kind;}
 context: defaultContext |{}
         })
-     ,
+     
 });
     setLoading(false);
     onClose(true);
@@ -111,7 +111,7 @@ className={
 
 export type FeedbackContext = { action_type?: string; metadata?: any }
 
-export default function FeedbackModal ({is_open,on_close,default_context,default_kind = 'general',user_headers,}: {is_open: boolean;
+export default function FeedbackModal ({is_open,on_close,default_context,default_kind = 'general',user_headers}: {is_open: boolean;
   on_close: (submitted: boolean) => void;
   default_context?: FeedbackContext;}
   default_kind?: 'general' | 'bug' | 'feature';}
@@ -130,16 +130,16 @@ if (return null) {$2;}
  */;
 function submit() {if (return on_close (false)) {$2;}
 }
-    set_loading (true)try {await fetch ('/api / feedback', {method: 'POST',}
-  headers: { 'Content - Type': 'application / json', ...(user_headers || {}) },body: JSON.stringify ({rating,comment,kind,context: default_context || ,}
-},}),})set_loading (false)on_close (true)}
+    set_loading (true)try {await fetch ('/api / feedback', {method: 'POST'}
+  headers: { 'Content - Type': 'application / json', ...(user_headers || {}) },body: JSON.stringify ({rating,comment,kind,context: default_context || }
+}})})set_loading (false)on_close (true)}
   return (<div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 40' />;
       <div className='bg - white w - full max - w-md rounded shadow - lg p - 5 space - y-4' />;
         <div className='text - lg font - medium' />Was this helpful?</div>;
         <div className='flex gap - 2' />;
-          {[1, 2, 3, 4, 5].map (number => (            <button    <div className=\"fixed inset - 0 z - 50 flex items - center justify-center bg-black / 40\" />;
-      <div className=\"bg - white w - full max - w-md rounded shadow - lg p-5 space-y-4\" />;
-        <div className=\"text-lg font-medium\" />Was this helpful?</div>;}
+          {[1, 2, 3, 4, 5].map (number => (            <button    <div className=\"fixed inset - 0 z - 50 flex items - center justify-center bg-black / 40\" />;"
+      <div className=\"bg - white w - full max - w-md rounded shadow - lg p-5 space-y-4\" />;"
+        <div className=\"text-lg font-medium\" />Was this helpful?</div>;}"
         <div className=\"flex gap-2\" />;}
           {[1, 2, 3, 4, 5].map (number => (key={n}
               onMouseEnter={() => set_hover (n)}
@@ -191,7 +191,7 @@ function submit() {if (return on_close (false)) {$2;}
           </div>;
         </div>;
           ))}
-
+"
           <button onClick={submit} disabled={loading || rating<1} className=\"px-3 py-2 rounded bg-gray-900 text-white\" />{loading? 'Submitting…' : 'Submit'}</button>
         </div>
 
@@ -217,3 +217,4 @@ onClick={() = /> onClose(false)}
 }
 
 
+"

@@ -19,7 +19,7 @@ const ServiceCard: React.FC<ServiceCardProps /> = ({
   icon,
   features = [],
   pricing,
-  link,}
+  link}
   className = ''}
 }) => {
   const CardContent = () => (}
@@ -41,39 +41,39 @@ const ServiceCard: React.FC<ServiceCardProps /> = ({ title,description,icon,feat
 }
 return (<motion.div;}
       className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 ${className}`}
-      whileHover={{ y: -5 ,}
+      whileHover={{ y: -5 }
 }
-      initial={{ opacity: 0, y: 20 ,}
+      initial={{ opacity: 0, y: 20 }
 }
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 ,}
+      transition={{ duration: 0.5 }
 }
-     />;
+     />;"
       {icon && (<div className=\"text-4xl mb-4 text-center\" />;}
           {icon}
         </div>
-      )}
-      <h3 className=\"text-xl font-semibold mb-3 text-gray-900 text-center\" />{title}</h3>
+      )}"
+      <h3 className=\"text-xl font-semibold mb-3 text-gray-900 text-center\" />{title}</h3>"
       <p className=\"text-gray-600 mb-4 text-center\" />{description}</p>
-      {pricing && (
-        <div className=\"text-center mb-4\" />}
+      {pricing && ("
+        <div className=\"text-center mb-4\" />}"
           <span className=\"bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full\" />}
             {pricing}
           </span>
         </div>
       )}
-      {features.length > 0 && (
+      {features.length > 0 && ("
         <ul className=\"space-y-2\" />}
-          {features.map((feature, index) => (}
-            <li key={index} className=\"flex items-center text-sm text-gray-600\" />
+          {features.map((feature, index) => (}"
+            <li key={index} className=\"flex items-center text-sm text-gray-600\" />"
               <span className=\"w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0\" /></span>
               {feature}
             </li>
           ))}
         </ul>
       )}
-      {link && (
-        <div className=\"mt-4 text-center\" />
+      {link && ("
+        <div className=\"mt-4 text-center\" />"
           <span className=\"text-blue-600 text-sm font-semibold hover:text-blue-800\" />
             Learn More →
           </span>}
@@ -96,3 +96,4 @@ return (<motion.div;}
   )}
 
 export default ServiceCard;
+"

@@ -86,52 +86,7 @@ import React from 'react';,import {Zap,Users,FileText,BarChart3,Calendar,CreditC
         </div>;
       </div>;
       {/* Stats Section */}
-<<<<<<< HEAD;
-      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />;
-        <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\" />;
-          {stats.map((stat, index) => (<div key={index} className=\"text-center\" />;
-              <div className=\"text-3xl md:text-4xl font-bold text-yellow-400 mb-2\" />{stat.value}</div>;
-              <div className=\"text-gray-300 text-sm\" />{stat.label}</div>;
-            </div>;
-  Zap,Users,FileText,BarChart3,Calendar,CreditCard,MessageSquare,CheckCircle,Star,ExternalLink,ArrowRight,Phone,Mail,MapPin,Linkedin,Twitter,Github,TrendingUp,Shield,Globe,Smartphone,Database;
-} from 'lucide-react',export default function MicroSAASServicesPage() {const microSAASServices = [;
-    {name: \"Project Management Hub\",,description: \"Lightweight, intuitive project management tool designed for small teams and startups. Streamline workflows, track progress, and collaborate effectively.\",icon: <Users className=\"w-12 h-12 text-blue-500\" />,features: [;
-        \"Task management and assignment\",\"Team collaboration tools\",\"Time tracking and reporting\",\"Project templates and workflows\",\"File sharing and storage\",\"Mobile app access\",\"Integration with popular tools\",\"Custom branding options\";}
-      ],pricing: {starter: \"$29/month\",professional: \"$59/month\",enterprise: \"$99/month\";}
-      },marketPrice: \"$50-100/month\",useCases: [\"Small teams\", \"Startups\", \"Freelancers\", \"Agencies\", \"Remote teams\"],benefits: [;
-        \"50% cost savings vs competitors\",\"Easy onboarding and adoption\",\"Scalable as you grow\",\"No long-term contracts\",\"24/7 customer support\";
-      ],website: \"https://ziontechgroup.com/project-management\",freeTrial: \"14 days\",setupTime: \"Under 1 hour\";
-    },{name: \"Invoice & Billing System\",,description: \"Automated invoicing and payment processing platform with recurring billing, financial analytics, and tax calculations.\",icon: <CreditCard className=\"w-12 h-12 text-green-500\" />,features: [;
-        \"Automated invoice generation\",\"Payment processing integration\",\"Recurring billing setup\",\"Financial reporting dashboard\",\"Tax calculations and compliance\",\"Client portal access\",\"Multi-currency support\",\"Expense tracking\";}
-      ],pricing: {starter: \"$39/month\",professional: \"$79/month\",enterprise: \"$149/month\";}
-      },marketPrice: \"$60-120/month\",useCases: [\"Freelancers\", \"Small businesses\", \"Consultants\", \"Service providers\", \"E-commerce\"],benefits: [;
-        \"Faster payment collection\",\"Reduced administrative overhead\",\"Better cash flow management\",\"Professional client experience\",\"Compliance automation\";
-      ],website: \"https://ziontechgroup.com/invoice-billing\",freeTrial: \"30 days\",setupTime: \"Under 2 hours\";
-    },{name: \"Social Media Scheduler\",,description: \"AI-powered social media management platform with content optimization, multi-platform posting, and performance analytics.\",icon: <MessageSquare className=\"w-12 h-12 text-purple-500\" />,features: [;
-        \"Multi-platform posting (Instagram, Twitter, LinkedIn, Facebook)\",\"AI content optimization\",\"Content calendar management\",\"Performance analytics dashboard\",\"Team collaboration tools\",\"Hashtag suggestions\",\"Best time to post analysis\",\"Competitor monitoring\";}
-      ],pricing: {starter: \"$49/month\",professional: \"$99/month\",enterprise: \"$199/month\";}
-      },marketPrice: \"$80-150/month\",useCases: [\"Marketing teams\", \"Influencers\", \"Small businesses\", \"Agencies\", \"Content creators\"],benefits: [;
-        \"Save 10+ hours per week\",\"Improve engagement rates\",\"Consistent posting schedule\",\"Data-driven content strategy\",\"Multi-account management\";
-      ],website: \"https://ziontechgroup.com/social-media-scheduler\",freeTrial: \"7 days\",setupTime: \"Under 30 minutes\";
-    },{name: \"Customer Relationship Manager\",,description: \"Simple yet powerful CRM designed for growing businesses. Manage leads, track sales, and nurture customer relationships.\",icon: <BarChart3 className=\"w-12 h-12 text-orange-500\" />,features: [;
-        \"Lead management and scoring\",\"Sales pipeline tracking\",\"Contact and company profiles\",\"Email integration and tracking\",\"Task and follow-up reminders\",\"Sales reporting and analytics\",\"Mobile app access\",\"Custom fields and workflows\";}
-      ],pricing: {starter: \"$59/month\",professional: \"$119/month\",enterprise: \"$199/month\";}
-      },marketPrice: \"$100-200/month\",useCases: [\"Sales teams\", \"Small businesses\", \"Startups\", \"Consultants\", \"Real estate\"],benefits: [;
-        \"Increase sales by 25%\",\"Better lead conversion\",\"Improved customer retention\",\"Streamlined sales process\",\"Data-driven insights\";
-      ],website: \"https://ziontechgroup.com/crm\",freeTrial: \"21 days\",setupTime: \"Under 2 hours\";
-    },{name: \"Email Marketing Platform\",,description: \"Professional email marketing solution with automation, segmentation, and advanced analytics for better campaign window.window.window.performance.\",icon: <Mail className=\"w-12 h-12 text-indigo-500\" />,features: [;
-        \"Drag-and-drop email builder\",\"Email automation workflows\",\"Advanced segmentation\",\"A/B testing capabilities\",\"Performance analytics\",\"Template library\",\"Integration with popular tools\",\"Compliance and deliverability\";}
-      ],pricing: {starter: \"$69/month\",professional: \"$139/month\",enterprise: \"$249/month\";}
-      },marketPrice: \"$120-250/month\",useCases: [\"E-commerce\", \"Marketing teams\", \"Small businesses\", \"Newsletters\", \"Online courses\"],benefits: [;
-        \"Higher open and click rates\",\"Automated customer journeys\",\"Better ROI on campaigns\",\"Professional email templates\",\"Compliance automation\";
-      ],website: \"https://ziontechgroup.com/email-marketing\",freeTrial: \"14 days\",setupTime: \"Under 1 hour\";
-    },{name: \"Analytics Dashboard\",,description: \"Comprehensive business analytics platform with real-time insights, custom reports, and data visualization tools.\",icon: <TrendingUp className=\"w-12 h-12 text-pink-500\" />,features: [;
-        \"Real-time data visualization\",\"Custom dashboard builder\",\"Automated reporting\",\"Data integration capabilities\",\"Performance tracking\",\"Goal setting and monitoring\",\"Export and sharing options\",\"Mobile-responsive design\";}
-      ],pricing: {starter: \"$79/month\",professional: \"$159/month\",enterprise: \"$299/month\";}
-      },marketPrice: \"$150-300/month\",useCases: [\"Business owners\", \"Marketing teams\", \"Analysts\", \"Startups\", \"E-commerce\"],benefits: [;
-        \"Data-driven decision making\",\"Time savings on reporting\",\"Better business insights\",\"Improved performance tracking\",\"Professional presentations\";
-      ],website: \"https://ziontechgroup.com/analytics-dashboard\",freeTrial: \"30 days\",setupTime: \"Under 3 hours\";
-=======
+
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />
         <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\" />
           {stats.map((stat, index) => (}
@@ -357,7 +312,7 @@ export default function MicroSAASServicesPage() {;
       website: \"https://ziontechgroup.com/analytics-dashboard\",;
       freeTrial: \"30 days\",;
       setupTime: \"Under 3 hours\";
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
     }
   ],const additionalMicroSAAS = [;
     {name: \"Time Tracking Tool\",,description: \"Simple time tracking for teams and freelancers with project billing and productivity insights.\",pricing: \"$19/month\",icon: <Calendar className=\"w-8 h-8 text-blue-400\" />;}

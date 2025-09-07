@@ -10,29 +10,29 @@ const Revolutionary2027Hero = null;
 
 
 const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: { opacity: 0}
 }
     visible: {
       opacity: 1;
 transition: {
 }
-staggerChildren: 0.1,}
-      },
-    },
+staggerChildren: 0.1}
+      }
+    }
   };
 
 const itemVariants = {}
-    hidden: { opacity: 0, y: 30,}
+    hidden: { opacity: 0, y: 30}
 }
     visible: {
       opacity: 1;
 y: 0;
 transition: {
 
-        duration: 0.8,}
-ease: 'easeOut' as const,}
-      },
-    },
+        duration: 0.8}
+ease: 'easeOut' as const}
+      }
+    }
   };
 
   return (
@@ -41,9 +41,9 @@ ease: 'easeOut' as const,}
       {/* Enhanced Background Effects */}
       <div className='absolute inset-0 opacity-20' />;
         <div className = 'absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]' /></div>      </div>  ;
-  return (<section className=\"relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900\" />;
-      {/* Enhanced Background Effects */}<div className=\"absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0 && 0.15),transparent_50%)]\" /></div>;
-      <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0 && 0.1),transparent_50%)]\" /></div>;
+  return (<section className=\"relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900\" />;"
+      {/* Enhanced Background Effects */}<div className=\"absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0 && 0.15),transparent_50%)]\" /></div>;"
+      <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0 && 0.1),transparent_50%)]\" /></div>;"
       <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0 && 0.08),transparent_50%)]\" /></div>;
 
       {/* Animated Grid Pattern */}
@@ -58,7 +58,7 @@ ease: 'easeOut' as const,}
       </div>
 
  ;
-  return (
+  return ("
     <section className=\"relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900\" />;
 
       {/* Enhanced Background Effects */}
@@ -69,14 +69,14 @@ ease: 'easeOut' as const,}
 
           animate={{
 
-y: [0, -20, 0],}
-            rotate: [0, 5, -5, 0],}
+y: [0, -20, 0]}
+            rotate: [0, 5, -5, 0]}
           }}
           transition={{
             duration: 4,
             delay: item.delay,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
          />
           <item.icon className='w-8 h-8' />
@@ -85,7 +85,7 @@ ease: 'easeInOut',}
       {/* Main Content */}
 <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center' />
         <motion.div;
-variants={containerVariant,}
+variants={containerVariant}
 }
           initial='hidden';
           animate='visible';
@@ -111,7 +111,7 @@ variants={containerVariant,}
           </motion.div>
 
           {/* Subtitle */}
-<motion.div variants={itemVariant,}
+<motion.div variants={itemVariant}
 } className='max-w-4xl mx-auto' />;
             <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed' />;
               Experience the next generation of AI, quantum computing, and;
@@ -212,7 +212,7 @@ variants={containerVariant,}
       </div>
 
 
-      {/* Scroll Indicator *,}
+      {/* Scroll Indicator *}
 }
       <motion.div;
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2';
@@ -235,17 +235,17 @@ className='w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-
 
             animate={{
 }
-              y: [0, 12, 0],}
+              y: [0, 12, 0]}
             }}
             transition={{
               duration: 2,
-              repeat: Infinity,}
-              ease: 'easeInOut',}
+              repeat: Infinity}
+              ease: 'easeInOut'}
             }}
             transition={{
               duration: 2;}
 repeat: Infinity;}
-ease: 'easeInOut',            }}
+ease: 'easeInOut'            }}
 
           />;
         </div>;
@@ -262,12 +262,12 @@ ease: 'easeInOut',            }}
           <motion.div;}
 key={i}
             className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';
-            style={{left: `${Math.random() * 10,}
+            style={{left: `${Math.random() * 10}
 }%`;
-              top: `${Math.random() * 10,}
+              top: `${Math.random() * 10}
 }%`;
-              left: `${Math.random() * 10,}
-}%`,top: `${Math.random() * 10,}
+              left: `${Math.random() * 10}
+}%`,top: `${Math.random() * 10}
 }%`,key={i}
             className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';
             style={{}}            animate={{y: [0, -100];}
@@ -277,8 +277,8 @@ key={i}
             transition={{
 
               duration: 3 + Math.random() * 2,
-              repeat: Infinity,}
-              delay: Math.random() * 2,}
+              repeat: Infinity}
+              delay: Math.random() * 2}
             }}
           />
         ))}
@@ -290,3 +290,4 @@ key={i}
 
 export default Revolutionary2027Hero;
 
+"

@@ -25,7 +25,7 @@ interface PerformanceMetrics  {buildSize: string;
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error';}
 }
-interface Improvement  {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+interface Improvement  {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }return this.props.children;
@@ -159,34 +159,34 @@ interface Improvement  {id: string;
   category: 'performance' | 'security' | 'ux' | 'build';
 
 const PerformanceDashboard: React.FC = () => {const [metrics] =;
-  useState < PerformanceMetrics>({build_size: '959 MB',}
-  page_count: 166,load_time: 1.2,health_status: 'healthy,}
+  useState < PerformanceMetrics>({build_size: '959 MB'}
+  page_count: 166,load_time: 1.2,health_status: 'healthy}
 };
   const improvements: Improvement[] = [;
     {id: '1',
   title: 'Fixed Search Bar Issues',description:;
-        'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',status: 'completed',}
-  impact: 'high',category: 'ux,}
+        'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',status: 'completed'}
+  impact: 'high',category: 'ux}
 },{id: '2',
   title: 'Environment Validation System',description:;
-        'Added comprehensive pre - build checks to prevent deployment with missing environment variables',status: 'completed',}
-  impact: 'high',category: 'build,}
+        'Added comprehensive pre - build checks to prevent deployment with missing environment variables',status: 'completed'}
+  impact: 'high',category: 'build}
 },{id: '3',
   title: 'NextAuth Configuration Fix',description:;
-        'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',status: 'completed',}
-  impact: 'medium',category: 'security,}
+        'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',status: 'completed'}
+  impact: 'medium',category: 'security}
 },{id: '4',
   title: 'API Client Error Handling',description:;
-        'Improved global error handling with better retry logic and user feedback',status: 'completed',}
-  impact: 'medium',category: 'ux,}
+        'Improved global error handling with better retry logic and user feedback',status: 'completed'}
+  impact: 'medium',category: 'ux}
 },{id: '5',
   title: 'Bundle Analyzer Integration',description:;
-        'Added bundle analysis tools to identify and optimize large dependencies',status: 'completed',}
-  impact: 'medium',category: 'performance,}
+        'Added bundle analysis tools to identify and optimize large dependencies',status: 'completed'}
+  impact: 'medium',category: 'performance}
 },{id: '6',
   title: 'Health Check Endpoint',description:;
-        'Created production monitoring endpoint for environment and service health',status: 'completed',}
-  impact: 'medium',category: 'security,}
+        'Created production monitoring endpoint for environment and service health',status: 'completed'}
+  impact: 'medium',category: 'security}
 }];
 
 const getStatusIcon = (status: string, ) =>: any {switch (status) {case 'completed':;
@@ -272,48 +272,48 @@ interface Improvement {
 }
 
 const PerformanceDashboard: React.FC = () => ;
-  const [metrics] = useState<PerformanceMetrics />({buildSize: '959 MB',}
+  const [metrics] = useState<PerformanceMetrics />({buildSize: '959 MB'}
   pageCount: 166,loadTime: 1.2,healthStatus: 'healthy';}
-  }),loadTime: 1 && 1.2,healthStatus: 'healthy,
+  }),loadTime: 1 && 1.2,healthStatus: 'healthy
 })const improvements: Improvement[] = [;
     {id: '1',
   title: 'Fixed Search Bar Issues',description: 'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',
   status: 'completed',impact: 'high',
   category: 'ux';description:;
-        'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',status: 'completed',}
-  impact: 'high',category: 'ux,}
+        'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',status: 'completed'}
+  impact: 'high',category: 'ux}
 },{id: '2',
   title: 'Environment Validation System',description: 'Added comprehensive pre-build checks to prevent deployment with missing environment variables',
   status: 'completed',impact: 'high',
   category: 'build';description:;
-        'Added comprehensive pre-build checks to prevent deployment with missing environment variables',status: 'completed',}
-  impact: 'high',category: 'build,}
+        'Added comprehensive pre-build checks to prevent deployment with missing environment variables',status: 'completed'}
+  impact: 'high',category: 'build}
 },{id: '3',
   title: 'NextAuth Configuration Fix',description: 'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',
   status: 'completed',impact: 'medium',
   category: 'security';description:;
-        'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',status: 'completed',}
-  impact: 'medium',category: 'security,}
+        'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',status: 'completed'}
+  impact: 'medium',category: 'security}
 },{id: '4',
   title: 'API Client Error Handling',description: 'Improved global error handling with better retry logic and user feedback',
   status: 'completed',impact: 'medium',
   category: 'ux';description:;
-        'Improved global error handling with better retry logic and user feedback',status: 'completed',}
-  impact: 'medium',category: 'ux,}
+        'Improved global error handling with better retry logic and user feedback',status: 'completed'}
+  impact: 'medium',category: 'ux}
 },{id: '5',
   title: 'Bundle Analyzer Integration',description: 'Added bundle analysis tools to identify and optimize large dependencies',
   status: 'completed',impact: 'medium',
   category: 'performance';description:;
-        'Added bundle analysis tools to identify and optimize large dependencies',status: 'completed',}
-  impact: 'medium',category: 'performance,}
+        'Added bundle analysis tools to identify and optimize large dependencies',status: 'completed'}
+  impact: 'medium',category: 'performance}
 },{id: '6',
   title: 'Health Check Endpoint',description: 'Created production monitoring endpoint for environment and service health',
-  status: 'completed',impact: 'medium',}
+  status: 'completed',impact: 'medium'}
   category: 'security';}
     }
-  ],const getStatusIcon = (switch (status) {case 'completed': return <CheckCircle className=\"h-4 w-4 text-green-500\" />,case 'in-progress': return <AlertCircle className=\"h-4 w-4 text-yellow-500\" />,case 'planned': return <TrendingUp className=\"h-4 w-4 text-blue-500\" />,default:;
-  return <AlertCircle className=\"h-4 w-4 text-gray-500\" />;
-  ],const getStatusIcon = (status: string) => {switch (status) {case 'completed': return <CheckCircle className=\"h-4 w-4 text-green-500\" />,case 'in-progress': return <AlertCircle className=\"h-4 w-4 text-yellow-500\" />,case 'planned': return <TrendingUp className=\"h-4 w-4 text-blue-500\" />,default:;
+  ],const getStatusIcon = (switch (status) {case 'completed': return <CheckCircle className=\"h-4 w-4 text-green-500\" />,case 'in-progress': return <AlertCircle className=\"h-4 w-4 text-yellow-500\" />,case 'planned': return <TrendingUp className=\"h-4 w-4 text-blue-500\" />,default:;"
+  return <AlertCircle className=\"h-4 w-4 text-gray-500\" />;"
+  ],const getStatusIcon = (status: string) => {switch (status) {case 'completed': return <CheckCircle className=\"h-4 w-4 text-green-500\" />,case 'in-progress': return <AlertCircle className=\"h-4 w-4 text-yellow-500\" />,case 'planned': return <TrendingUp className=\"h-4 w-4 text-blue-500\" />,default:;"
   return <AlertCircle className=\"h-4 w-4 text-gray-500\" />;) => {
   return $3;}
 }
@@ -322,8 +322,8 @@ const PerformanceDashboard: React.FC = () => ;
   return 'bg-gray-100 text-gray-800';) => {
   return $3;}
 }
-    }
-  },const getCategoryIcon = (switch (category) {case 'performance': return <Zap className=\"h-4 w-4\" />,case 'security': return <Shield className=\"h-4 w-4\" />,case 'ux': return <Search className=\"h-4 w-4\" />,case 'build': return <TrendingUp className=\"h-4 w-4\" />,default:;
+    }"
+  },const getCategoryIcon = (switch (category) {case 'performance': return <Zap className=\"h-4 w-4\" />,case 'security': return <Shield className=\"h-4 w-4\" />,case 'ux': return <Search className=\"h-4 w-4\" />,case 'build': return <TrendingUp className=\"h-4 w-4\" />,default:;"
   return <CheckCircle className=\"h-4 w-4\" />;) => {
   return $3;}
 }
@@ -352,18 +352,18 @@ const PerformanceDashboard: React.FC = () => ;
               Health Status;
             </CardTitle>;
           </CardHeader>;
-          <CardContent />;
-            <div className=\"text-2xl font-bold\" />{metrics.loadTime}s</div>;
+          <CardContent />;"
+            <div className=\"text-2xl font-bold\" />{metrics.loadTime}s</div>;"
             <p className=\"text-xs text-gray-500\" />Average page load</p>;
           </CardContent>;
         </Card>;
-        <Card />;
-          <CardHeader className=\"pb-2\" />;
+        <Card />;"
+          <CardHeader className=\"pb-2\" />;"
             <CardTitle className=\"text-sm font-medium text-gray-600\" />Health Status</CardTitle>;
           </CardHeader>;
-          <CardContent />;
-            <div className=\"flex items-center space-x-2\" />;
-              <CheckCircle className=\"h-5 w-5 text-green-500\" />;
+          <CardContent />;"
+            <div className=\"flex items-center space-x-2\" />;"
+              <CheckCircle className=\"h-5 w-5 text-green-500\" />;"
               <span className=\"text-sm font-semibold text-green-600\" />Healthy</span>;
             </div>;
           </CardContent>;
@@ -371,7 +371,7 @@ const PerformanceDashboard: React.FC = () => ;
       </div>;
       description:;
         'Created production monitoring endpoint for environment and service health',status: 'completed',
-  impact: 'medium',category: 'security,
+  impact: 'medium',category: 'security
 }];
 
 const getStatusIcon = (switch (status) {case 'completed':;
@@ -385,33 +385,33 @@ const getStatusIcon = (switch (status) {case 'completed':;
 }
         return <AlertCircle className='h-4 w-4 text-gray-500' />;{/* Completed Improvements */}
       <Card />;
-        <CardHeader />;
-          <CardTitle className=\"flex items-center space-x-2\" />;
+        <CardHeader />;"
+          <CardTitle className=\"flex items-center space-x-2\" />;"
             <CheckCircle className=\"h-5 w-5 text-green-500\" />;
             <span />Completed Improvements</span>;
           </CardTitle>;
           <CardDescription />Recent performance and functionality improvements that have been implemented;
           </CardDescription>;
         </CardHeader>;
-        <CardContent />;
-          <div className=\"space-y-4\" />;
-            {completedImprovements.map((improvement) => (<div key={improvement.id} className=\"flex items-start space-x-3 p-3 border rounded-lg\" />;
+        <CardContent />;"
+          <div className=\"space-y-4\" />;"
+            {completedImprovements.map((improvement) => (<div key={improvement.id} className=\"flex items-start space-x-3 p-3 border rounded-lg\" />;"
                 <div className=\"flex-shrink-0 mt-1\" />;
-                  {getCategoryIcon(improvement.category)}</div>;
-                <div className=\"flex-1 min-w-0\" />;
-                  <div className=\"flex items-center justify-between\" />;
+                  {getCategoryIcon(improvement.category)}</div>;"
+                <div className=\"flex-1 min-w-0\" />;"
+                  <div className=\"flex items-center justify-between\" />;"
                     <h3 className=\"text-sm font-medium text-gray-900\" />;
                       {improvement.title}
-                    </h3>;
+                    </h3>;"
                     <div className=\"flex items-center space-x-2\" />;
                       <Badge className={getImpactColor(improvement.impact)} />;
                         {improvement.impact} impact;
                       </Badge>;
                       {getStatusIcon(improvement.status)}
                     </div>;
-                  </div>;
-                  <p className=\"text-sm text-gray-600 mt-1\" />;
-  },const getCategoryIcon = (switch (category) {case 'performance': return <Zap className=\"h-4 w-4\" />,case 'security': return <Shield className=\"h-4 w-4\" />,case 'ux': return <Search className=\"h-4 w-4\" />,case 'build': return <TrendingUp className=\"h-4 w-4\" />,default:;
+                  </div>;"
+                  <p className=\"text-sm text-gray-600 mt-1\" />;"
+  },const getCategoryIcon = (switch (category) {case 'performance': return <Zap className=\"h-4 w-4\" />,case 'security': return <Shield className=\"h-4 w-4\" />,case 'ux': return <Search className=\"h-4 w-4\" />,case 'build': return <TrendingUp className=\"h-4 w-4\" />,default:;"
   return <CheckCircle className=\"h-4 w-4\" />;) => {
   return $3;}
 }
@@ -554,14 +554,14 @@ const completedImprovements = improvements && improvements.filter(imp => imp && 
         </CardContent>;
       </Card>;
       {/* Action Buttons */}</div>;
-        </CardContent>;
-      </Card>;{/* Action Buttons */}<div className=\"flex space-x-4\" />;
-        <Button onClick={() = /> window.open('/api/health/environment_blank')} variant=\"outline\">;
+        </CardContent>;"
+      </Card>;{/* Action Buttons */}<div className=\"flex space-x-4\" />;"
+        <Button onClick={() = /> window.open('/api/health/environment_blank')} variant=\"outline\">;"
           <Shield className=\"h-4 w-4 mr-2\" />;
           Check Health Status;
         </Button>;
-        <Button onClick={() = /> alert('Bundle analysis available with: npm run build:analyze',}
-} variant=\"outline\">;
+        <Button onClick={() = /> alert('Bundle analysis available with: npm run build:analyze'}"
+} variant=\"outline\">;"
           <TrendingUp className=\"h-4 w-4 mr-2\" />;
           Bundle Analysis;
         </Button>;
@@ -573,14 +573,14 @@ const completedImprovements = improvements && improvements.filter(imp => imp && 
 
 export default PerformanceDashboard;
 
-export default PerformanceDashboard,export default PerformanceDashboard;
-}},export default PerformanceDashboard,<div className=\"flex space-x-4\" />;
-        <Button onClick={() = /> window.open('/api/health/environment_blank')} variant=\"outline\">;
+export default PerformanceDashboard,export default PerformanceDashboard;"
+}},export default PerformanceDashboard,<div className=\"flex space-x-4\" />;"
+        <Button onClick={() = /> window.open('/api/health/environment_blank')} variant=\"outline\">;"
           <Shield className=\"h-4 w-4 mr-2\" />;
           Check Health Status;
         </Button>;
-        <Button onClick={() = /> alert('Bundle analysis available with: npm run build:analyze',}
-} variant=\"outline\">;
+        <Button onClick={() = /> alert('Bundle analysis available with: npm run build:analyze'}"
+} variant=\"outline\">;"
           <TrendingUp className=\"h-4 w-4 mr-2\" />;Bundle Analysis;
         </Button>;
       </div>;
@@ -625,7 +625,7 @@ export default PerformanceDashboard;<div className='space - y-4' />;
         </Button>;
         <Button;
           on_click={() = />;}
-            alert ('Bundle analysis available with: npm run build:analyze',}
+            alert ('Bundle analysis available with: npm run build:analyze'}
 }
           variant='outline'>
 
@@ -641,4 +641,4 @@ export default PerformanceDashboard;
 
 export default PerformanceDashboard,export default PerformanceDashboard,)}
 
-export default PerformanceDashboard;
+export default PerformanceDashboard;"

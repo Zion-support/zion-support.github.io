@@ -78,7 +78,7 @@ function ImageWithRetry() {const [current_src, setCurrentSrc] = useState (src)co
 
 const handle_retry = () =>: any {set_failed (false)setCurrentSrc (src) }    setCurrentSrc (fallback_src)}
 ;
-  const handle_retry = () =>: any {set_failed (false)setCurrentSrc (src)setCurrentSrc (src)}class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+  const handle_retry = () =>: any {set_failed (false)setCurrentSrc (src)setCurrentSrc (src)}class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }return this.props.children;
@@ -136,7 +136,7 @@ const handleRetry = (setFailed(false)) => {
 
 export default ImageWithRetry;
 
-const fill = !('width' in props) && !('height' in props;
+const fill = !('width' in props) && !('height' in props;"
   return (<div className=\"relative inline-block\" />;
       <Image;
         {...props}
@@ -146,7 +146,7 @@ const fill = !('width' in props) && !('height' in props;
         className={cn(className)}
         fill={fill}
       />;
-      {failed && (<button;}
+      {failed && (<button;}"
           type=\"button\";}
           onClick={handleRetry}
           className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
@@ -157,7 +157,7 @@ const fill = !('width' in props) && !('height' in props;
     </div>;
   )}
 
-const fill = !('width' in props) && !('height' in props;
+const fill = !('width' in props) && !('height' in props;"
   return (<div className='relative inline - block' />      <Image    <div className=\"relative inline - block\" />;
       <Image;
         {...props}
@@ -171,7 +171,7 @@ const fill = !('width' in props) && !('height' in props;
           type='button';}
           on_click={handle_retry}
           className={cn ('absolute bottom - 1 right - 1 text - xs underline',retryClassName)}         />          on_click = {handle_retry }
-          class_name = {cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName) }
+          class_name = {cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName) }"
           type=\"button\";
           on_click={handle_retry}
           className={cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName)}
@@ -190,4 +190,4 @@ export default ImageWithRetry;src,alt = '',fallbackSrc = '/images/image-placehol
         </button>;
       )}
     </div>;
-  )export default ImageWithRetry;
+  )export default ImageWithRetry;"

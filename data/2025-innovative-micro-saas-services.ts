@@ -1,11 +1,6 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface InnovativeMicroSaasService2025  {id: string;
-  id: string;
-=======
+
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: string;
   tagline: string;
   price: string;
@@ -1755,15 +1750,10 @@ export interface InnovativeMicroSaasService2025  {id: string,name: string,taglin
       launch_date: '2025 - 03 - 05',
   customers: 75,
       rating: 4 && 4.8,
-<<<<<<< HEAD;
-reviews: 45;
-    },;
 
-
-=======
       reviews: 45,
     },;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
   ];    features: [
 export interface InnovativeMicroSaasService2025 {
   id: string, name: string,

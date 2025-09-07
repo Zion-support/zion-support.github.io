@@ -73,13 +73,13 @@ export { SidebarGroup }SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup }}
             )}
           </button>;
-        )}
+        )}"
         <div className={cn(\"mt-1\", !expanded && \"hidden\")} />{children}</div>;
       </div>;
-    )}
+    )}"
 ),SidebarGroup.displayName = \"SidebarGroup\",export { SidebarGroup },<div className={cn(\"mt-1\", !expanded && \"hidden\")} />{children}</div>;
       </div>;
-    )}
+    )}"
 ),SidebarGroup.displayName = \"SidebarGroup\",export { SidebarGroup }className={cn(\"h-4 w-4 transition-transform\", expanded ? \"rotate-0\" : \"-rotate-90\")}
               />;
             )}
@@ -89,4 +89,4 @@ export { SidebarGroup }}
     )}
 ))SidebarGroup.displayName = 'SidebarGroup';
 
-export { SidebarGroup }
+export { SidebarGroup }"

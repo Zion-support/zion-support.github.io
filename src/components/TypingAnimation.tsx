@@ -10,7 +10,7 @@ interface TypingAnimationProps {
 }
 }
 
-const TypingAnimation: React.FC<TypingAnimationProps /> = ({ text,speed = 100,delay = 0,className = '',showCursor = true,onComplete,   }) => {
+const TypingAnimation: React.FC<TypingAnimationProps /> = ({ text,speed = 100,delay = 0,className = '',showCursor = true,onComplete   }) => {
 
 
 const [displayedText, setDisplayedText] =;
@@ -26,4 +26,4 @@ if (currentIndex < text.length) ;}
     </span>;
   )}
 
-export default TypingAnimation;
+export default TypingAnimation;"

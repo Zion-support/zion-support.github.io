@@ -3,7 +3,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 // Performance optimization utilities;
 
 export const optimizeImages = () => ;
-  const images = document.querySelectorAll('img')images.forEach(img => {if (!img.loading) {img.loading = \"lazy\";}
+  const images = document.querySelectorAll('img')images.forEach(img => {if (!img.loading) {img.loading = \"lazy\";}"
     if (!img.decoding) {img.decoding = \"async\";
 // Performance optimization utilities;
 
@@ -20,9 +20,9 @@ export const preloadCriticalResources = () => ;
   const criticalResources  = ['/fonts/main && main.woff2/css/critical && critical.css'];criticalResources && criticalResources.forEach(resource = > {   ;
   const link = document && document.createElement('link')link && link.rel = 'preload';
     link && link.href = resource;
-    link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';
+    link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';"
     document && document.head.appendChild(link)criticalResources.forEach((resource) => {const link = document.createElement(\"link\")link.rel = \"preload\";
-    link.href = resource;}
+    link.href = resource;}"
     link.as = resource.endsWith(\".css\") ? \"style\" : \"font\";}
     document.head.appendChild(link)})}
 
@@ -94,8 +94,8 @@ export;
 ) => {
   return $3;}
 }
-const loadComponent = componentName => {return import(`./components/${componentName}`);
-  return { loadComponent }}link.rel = \"preload\";
-((link.href = resource),(link.as = resource.endsWith(\".css\") ? \"style\" : \"font\"))link.rel = \"preload\";
+const loadComponent = componentName => {return import(`./components/${componentName}`);"
+  return { loadComponent }}link.rel = \"preload\";"
+((link.href = resource),(link.as = resource.endsWith(\".css\") ? \"style\" : \"font\"))link.rel = \"preload\";"
 ((link.href = resource),(link.as = resource.endsWith(\".css\") ? \"style\" : \"font\"))link.rel = 'preload';
-    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';ursor/automate-test-improve-and-merge-code-646c;
+    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';ursor/automate-test-improve-and-merge-code-646c;"

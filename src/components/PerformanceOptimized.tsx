@@ -30,9 +30,9 @@ export const useDebouncedSearch = (value: string, delay: number = 300) = > {cons
 // Performance metrics collection;
 
 export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React;}
-  useState({renderCount: 0, lastRenderTime: 0, averageRenderTime:  ,}
+  useState({renderCount: 0, lastRenderTime: 0, averageRenderTime:  }
 };
-  const recordRender = useCallback((renderTime: number) = > {, setMetrics(prev = > ({, renderCount: prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)}),
+  const recordRender = useCallback((renderTime: number) = > {, setMetrics(prev = > ({, renderCount: prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)})
 }, [];
   return { metrics, recordRender }} }
 }}
@@ -57,12 +57,12 @@ export const usePerformanceMetrics = (const [metrics, setMetrics] = React;
   return $3;}
 }
 };
-  const recordRender = useCallback((renderTime: number) => {, setMetrics(prev => ({,renderCount: prev.renderCount + 1, lastRenderTime: renderTime,averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)}),
+  const recordRender = useCallback((renderTime: number) => {, setMetrics(prev => ({,renderCount: prev.renderCount + 1, lastRenderTime: renderTime,averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)})
 }, [])return { metrics, recordRender }
 }
  ;
   return { metrics, recordRender }}import React from 'react';
-
+"
 export default function PerformanceOptimized() {return (<div className=\"performance-optimized\" />;
       <p />Performance Optimized Component</p>;}
     </div>;}
@@ -79,25 +79,25 @@ export default function PerformanceOptimized() {return (<div className=\"perform
 ;}
   const observer = new IntersectionObserver(,([entry]) => {,if (entry.isIntersecting && !hasLoaded) {,setIsVisible(true),setHasLoaded(true)}
       },{ threshold, rootMargin },),,if (ref.current) {,observer.observe(ref.current)},,return () => observer.disconnect()}, [threshold, rootMargin, hasLoaded]),;
-  return (,<div ref={ref} />,{isVisible ? childre: n: fallbac,}
+  return (,<div ref={ref} />,{isVisible ? childre: n: fallbac}
 },</div>)},,// Image optimization component,export const: OptimizedImage: React.FC<{,sr: c: string,al: t: string,width?: number,height?: number,className?: string,loading?: 'lazy' | 'eager',placeholder?: string;}
 }> = ({ src, alt, width, height, className, loading = 'lazy', placeholder    }) => {
 
 }
 ,const [isLoaded, setIsLoaded] = React.useState(false),const [hasError, setHasError] = React;}
   useState(false),,const handleLoad = useCallback(() => {,setIsLoaded(true)}, []),;
-  const handleError = useCallback(() => {,setHasError(true)}, []),;
-  return (,<div className={`relative ${className}`} style={{ width, height }} />,{placeholder && !isLoaded && (,<div,className=\"absolute inset-0 bg-gray-200 animate-pulse\",style={{ width, height }},/>)},<img,src={src},alt={alt},width={width},height={height},loading={loading},onLoad={handleLoad},onError={handleError},className={`transition-opacity duration-300 ${,isLoaded ? 'opacity-100' : 'opacity-0';}
+  const handleError = useCallback(() => {,setHasError(true)}, []),;"
+  return (,<div className={`relative ${className}`} style={{ width, height }} />,{placeholder && !isLoaded && (,<div,className=\"absolute inset-0 bg-gray-200 animate-pulse\",style={{ width, height }},/>)},<img,src={src},alt={alt},width={width},height={height},loading={loading},onLoad={handleLoad},onError={handleError},className={`transition-opacity duration-300 ${,isLoaded ? 'opacity-100' : 'opacity-0';}"
         } ${hasError ? 'hidden' : ''}`},/>,{hasError && (,<div className = \"absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500\" />,Failed to load image,</div>)},</div>,)},{ threshold, rootMargin },),,if (ref.current) {,observer.observe(ref.current)},,return () => observer.disconnect()}, [threshold, rootMargin, hasLoaded]),;
-  return (,<div ref={ref} />,{isVisible ? childre: n: fallbac,}
+  return (,<div ref={ref} />,{isVisible ? childre: n: fallbac}
 },</div>)},,// Image optimization component,export const: OptimizedImage: React.FC<{,sr: c: string,al: t: string,width?: number,height?: number,className?: string,loading?: 'lazy' | 'eager',placeholder?: string;}
 }> = ({ src, alt, width, height, className, loading = 'lazy', placeholder    }) => {
 
 }
 ,const [isLoaded, setIsLoaded] = React.useState(false),const [hasError, setHasError] = React;}
   useState(false),,const handleLoad = useCallback(() => {,setIsLoaded(true)}, []),;
-  const handleError = useCallback(() => {,setHasError(true)}, []),;
-  return (,<div className={`relative ${className}`} style={{ width, height }} />,{placeholder && !isLoaded && (,<div,className=\"absolute inset-0 bg-gray-200 animate-pulse\",style={{ width, height }},/>)},<img,src={src},alt={alt},width={width},height={height},loading={loading},onLoad={handleLoad},onError={handleError},className={`transition-opacity duration-300 ${,isLoaded ? 'opacity-100' : 'opacity-0';}
+  const handleError = useCallback(() => {,setHasError(true)}, []),;"
+  return (,<div className={`relative ${className}`} style={{ width, height }} />,{placeholder && !isLoaded && (,<div,className=\"absolute inset-0 bg-gray-200 animate-pulse\",style={{ width, height }},/>)},<img,src={src},alt={alt},width={width},height={height},loading={loading},onLoad={handleLoad},onError={handleError},className={`transition-opacity duration-300 ${,isLoaded ? 'opacity-100' : 'opacity-0';}"
         } ${hasError ? 'hidden' : ''}`},/>,{hasError && (,<div className=\"absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500\" />,Failed to load image,</div>)},</div>,)}
 }
 }
@@ -136,13 +136,13 @@ export const LazyLoadWrapper: React.FC<{, children: React && React.ReactNode, fa
   useRef<HTMLDivElement />(null)React && React;}
   useEffect(() = > ;}
   const observer = new IntersectionObserver(([entry]) = > {if (entry && entry.isIntersecting && !hasLoaded) {setIsVisible(true)setHasLoaded(true)}}{ threshold, rootMargin })if (ref && ref.current) {observer && observer.observe(ref && ref.current)}return () = > observer && observer.disconnect()}, [threshold, rootMargin, hasLoaded];
-  return ( <div ref = {ref} />, {isVisible ? children: fallbac,}
+  return ( <div ref = {ref} />, {isVisible ? children: fallbac}
 }, </div>)}// Image optimization component;
 
 export const OptimizedImage: React.FC<{, src: string, alt: string, width?: number, height?: number; className?: string; loading?: 'lazy' | 'eager'; placeholder?: string}>  = ({ src, alt, width, height, className, loading = 'lazy'; placeholder }) = > {const [isLoaded, setIsLoaded] = React && React.useState(false);}
   const [hasError, setHasError]  = React && React.useState(false);}
   const handleLoad = useCallback(() = > {setIsLoaded(true)}, [];
-  const handleError = useCallback(() = > {setHasError(true)}, [];
+  const handleError = useCallback(() = > {setHasError(true)}, [];"
   return ( <div className = {`relative ${className}`} style = {{ width, height }} />; {placeholder && !isLoaded && (<div className = \"absolute inset-0 bg-gray-200 animate-pulse\" style = {{ width, height }} />; )}<imgalt=\"Image\" src = {src} alt = {alt} width = {width} height = {height} loading = {loading} onLoad = {handleLoad} onError = {handleError} className = {`transition-opacity duration-300 ${ isLoaded ? 'opacity-100': 'opacity-0'} ${hasError ? 'hidden': ''}`} />; {hasError && (<div className = \"absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500\" />, Failed to load image, </div>)}</div>; )}}}// Debounced search hook;
 
 export const useDebouncedSearch = (value: string, delay: number = 300) = > {const [debouncedValue, setDebouncedValue]  = React && React;
@@ -152,13 +152,13 @@ export const useDebouncedSearch = (value: string, delay: number = 300) = > {cons
   return debouncedValue}// Performance metrics collection;
 
 export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React && React;}
-  useState({renderCount: 0, lastRenderTime: 0, averageRenderTime:  ,}
+  useState({renderCount: 0, lastRenderTime: 0, averageRenderTime:  }
 });
-  const recordRender = useCallback((renderTime: number) = > {, setMetrics(prev = > ({, renderCount: prev && prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev && prev.averageRenderTime * prev && prev.renderCount + renderTime) / (prev && prev.renderCount + 1)}),
+  const recordRender = useCallback((renderTime: number) = > {, setMetrics(prev = > ({, renderCount: prev && prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev && prev.averageRenderTime * prev && prev.renderCount + renderTime) / (prev && prev.renderCount + 1)})
 }, [])return { metrics, recordRender }}}}}import React, { memo, useMemo, useCallback } from 'react',,// Higher-order component for performance optimization,export const withPerformanceOptimization = <P extends object />(,Component: React.ComponentType<P />,options: {,memo?: boolean,memoDeps?: (props: P) => any[],displayName?: string} = {}) => {,const { memo: useMemo = true, memoDeps, displayName } = options,,let OptimizedComponent = Component,,if (useMemo) {,OptimizedComponent = memo(Component, (prevProps, nextProps) => {,if (memoDeps) {,const prevDeps = memoDeps(prevProps),const nextDeps = memoDeps(nextProps),return prevDeps.every((dep, index) => dep === nextDeps[index])}return false, // Always re-render if no custom comparison})},if (displayName) {,OptimizedComponent.displayName = displayName},return OptimizedComponent},// Hook for expensive calculations,export const useExpensiveCalculation = <T />(,calculation: () => T,deps: React.DependencyList,): T => {,return useMemo(calculation, deps)},// Hook for stable callbacks,export const useStableCallback = <T extends (...args: any[]) = /> any>(,callback: T,deps: React.DependencyList): T => {,return useCallback(callback, deps)}}}return { metrics, recordRender }},// Image optimization component,export const OptimizedImage: React.FC<{,src: string,alt: string,width?: number,height?: number,className?: string,loading?: 'lazy' | 'eager',placeholder?: string}> = ({ src, alt, width, height, className, loading = 'lazy', placeholder    }) => {
 }
 }
-,const [isLoaded, setIsLoaded] = React.useState(false),const [hasError, setHasError] = React.useState(false),,const handleLoad = useCallback(() => {,setIsLoaded(true)}, []),,const handleError = useCallback(() => {,setHasError(true)}, []),;
+,const [isLoaded, setIsLoaded] = React.useState(false),const [hasError, setHasError] = React.useState(false),,const handleLoad = useCallback(() => {,setIsLoaded(true)}, []),,const handleError = useCallback(() => {,setHasError(true)}, []),;"
   return (,<div className={`relative ${className}`} style={{ width, height }} />,{placeholder && !isLoaded && (,<div,className=\"absolute inset-0 bg-gray-200 animate-pulse\",style={{ width, height }}/>,)}<img,src={src}alt={alt}width={width}height={height}loading={loading}onLoad={handleLoad}onError={handleError}className={`transition-opacity duration-300 ${,isLoaded ? 'opacity-100' : 'opacity-0'} ${hasError ? 'hidden' : ''}`}/>,{hasError && (,<div className=\"absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500\" />,Failed to load image,</div>,)}</div>,)}},// Debounced search hook,export const useDebouncedSearch = (,const [debouncedValue, setDebouncedValue] = React;
   useState(value),,React;
   useEffect(() => {) => {
@@ -170,14 +170,14 @@ export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React
   return $3;}
 }
 }),;
-  const recordRender = useCallback((renderTime: number) => {,setMetrics(prev => ({,renderCount: prev.renderCount + 1,lastRenderTime: renderTime,averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)}),
+  const recordRender = useCallback((renderTime: number) => {,setMetrics(prev => ({,renderCount: prev.renderCount + 1,lastRenderTime: renderTime,averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)})
 }, []),;
   return { metrics, recordRender }}// Performance metrics collection;
 
 export const usePerformanceMetrics = () =>: any {const [metrics, set_metrics] = React;}
-  useState ({render_count: 0, lastRenderTime: 0,averageRenderTime:  ,}
+  useState ({render_count: 0, lastRenderTime: 0,averageRenderTime:  }
 };
-  const record_render = useCallback ((render_time: number) => {, set_metrics (prev => ({,render_count: prev.render_count + 1, lastRenderTime: render_time,averageRenderTime: (prev.averageRenderTime * prev.render_count + render_time) / (prev.render_count + 1)}),
+  const record_render = useCallback ((render_time: number) => {, set_metrics (prev => ({,render_count: prev.render_count + 1, lastRenderTime: render_time,averageRenderTime: (prev.averageRenderTime * prev.render_count + render_time) / (prev.render_count + 1)})
 }, [])return { metrics, record_render }
 }
  ;
@@ -201,13 +201,13 @@ export const LazyLoadWrapper: React.FC<{, children: React.ReactNode, fallback?: 
   useRef<HTMLDivElement />(null)React;}
   useEffect(() = > ;}
   const observer = new IntersectionObserver(([entry]) = > {if (entry.isIntersecting && !hasLoaded) {setIsVisible(true)setHasLoaded(true)}}{ threshold, rootMargin })if (ref.current) {observer.observe(ref.current)}return () = > observer.disconnect()}, [threshold, rootMargin, hasLoaded];
-  return (<div ref = {ref} />, {isVisible ? children: fallbac,}
+  return (<div ref = {ref} />, {isVisible ? children: fallbac}
 }, </div>)}// Image optimization component;
 
 export const OptimizedImage: React.FC<{, src: string, alt: string, width?: number, height?: number; className?: string; loading?: 'lazy' | 'eager'; placeholder?: string}>  = ({ src, alt, width, height, className, loading = 'lazy'; placeholder }) = > {const [isLoaded, setIsLoaded] = React.useState(false);}
   const [hasError, setHasError]  = React.useState(false);}
   const handleLoad = useCallback(() = > {setIsLoaded(true)}, [];
-  const handleError = useCallback(() = > {setHasError(true)}, [];
+  const handleError = useCallback(() = > {setHasError(true)}, [];"
   return (<div className = {`relative ${className}`} style = {{ width, height }} />; {placeholder && !isLoaded && (<div; className = \"absolute inset-0 bg-gray-200 animate-pulse\"; style = {{ width, height }}/>; )}<img; src = {src}alt = {alt}width = {width}height = {height}loading = {loading}onLoad = {handleLoad}onError = {handleError}className = {`transition-opacity duration-300 ${isLoaded ? 'opacity-100': 'opacity-0'} ${hasError ? 'hidden': ''}`}/>; {hasError && (<div className = \"absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500\" />, Failed to load image, </div>)}</div>; )}}}// Debounced search hook;
 
 export const useDebouncedSearch = (value: string, delay: number = 300) = > {const [debouncedValue, setDebouncedValue]  = React;
@@ -217,9 +217,9 @@ export const useDebouncedSearch = (value: string, delay: number = 300) = > {cons
   return debouncedValue}// Performance metrics collection;
 
 export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React;}
-  useState({renderCount: 0, lastRenderTime: 0, averageRenderTime:  ,}
+  useState({renderCount: 0, lastRenderTime: 0, averageRenderTime:  }
 };
-  const recordRender = useCallback((renderTime: number) = > {, setMetrics(prev = > ({, renderCount: prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)}),
+  const recordRender = useCallback((renderTime: number) = > {, setMetrics(prev = > ({, renderCount: prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)})
 }, [];
   return { metrics, recordRender }}}}}// Debounced search hook;
 
@@ -237,6 +237,6 @@ export const usePerformanceMetrics = (const [metrics, setMetrics] = React;
   return $3;}
 }
 };
-  const recordRender = useCallback((renderTime: number) => {, setMetrics(prev => ({,renderCount: prev.renderCount + 1, lastRenderTime: renderTime,averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)}),
+  const recordRender = useCallback((renderTime: number) => {, setMetrics(prev => ({,renderCount: prev.renderCount + 1, lastRenderTime: renderTime,averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)})
 }, [];
-  return { metrics, recordRender }}
+  return { metrics, recordRender }}"

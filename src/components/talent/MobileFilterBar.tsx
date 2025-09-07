@@ -34,4 +34,4 @@ export function MobileFilterBar() {return (<div className='lg:hidden mb-4 sticky
         </p>;
       </div>;
     </div>;
-  )
+  )"

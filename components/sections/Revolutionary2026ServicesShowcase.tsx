@@ -14,28 +14,28 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
 const featuredAIServices = null;
 
 const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: { opacity: 0}
 }
     visible: {
       opacity: 1;
 transition: {
 }
-staggerChildren: 0.1,}
-      },
-    },
+staggerChildren: 0.1}
+      }
+    }
   };
 
 const itemVariants = {}
-    hidden: { opacity: 0, y: 20,}
+    hidden: { opacity: 0, y: 20}
 }
     visible: {
       opacity: 1;
 y: 0;
 transition: {
 }
-duration: 0.6,}
-      },
-    },
+duration: 0.6}
+      }
+    }
   };
 
   return (
@@ -56,16 +56,16 @@ duration: 0.6,}
       {/* Enhanced Background Effects */}
       <div className='max-w-7xl mx-auto relative z-10' />        {/* Enhanced Header */}
 
-        {/* Enhanced Header *,}
+        {/* Enhanced Header *}
 }
 
         <motion.div;
         <motion&& motion.div;
-initial={{ opacity: 0, y: 30 ,}
+initial={{ opacity: 0, y: 30 }
 }
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
 className='text-center mb-20'
@@ -138,21 +138,21 @@ technologies ever created.
             with our revolutionary solutions.;
 
           </p>;
-          {/* Service Statistics */}
-          <div className=\"grid grid-cols-2 md:grid-cols-4 gap-6 mt-12\" />;
-            <div className=\"text-center\" />;
-              <div className=\"text-3xl font-bold text-purple-400\" />{aiAutonomousServices2026.length}</div>;
+          {/* Service Statistics */}"
+          <div className=\"grid grid-cols-2 md:grid-cols-4 gap-6 mt-12\" />;"
+            <div className=\"text-center\" />;"
+              <div className=\"text-3xl font-bold text-purple-400\" />{aiAutonomousServices2026.length}</div>;"
               <div className=\"text-gray-400 text-sm\" />AI Autonomous Services</div>;
-            </div>;
-            <div className=\"text-center\" />;
-              <div className=\"text-3xl font-bold text-cyan-400\" />{quantumSpaceTechServices2026.length}</div>;
+            </div>;"
+            <div className=\"text-center\" />;"
+              <div className=\"text-3xl font-bold text-cyan-400\" />{quantumSpaceTechServices2026.length}</div>;"
               <div className=\"text-gray-400 text-sm\" />Quantum Space Tech</div>;
-            </div>;
-            <div className=\"text-center\" />;
-              <div className=\"text-3xl font-bold text-pink-400\" />{metaverseDigitalRealityServices2026.length}</div>;
+            </div>;"
+            <div className=\"text-center\" />;"
+              <div className=\"text-3xl font-bold text-pink-400\" />{metaverseDigitalRealityServices2026.length}</div>;"
               <div className=\"text-gray-400 text-sm\" />Metaverse Services</div>;
-            </div>;
-            <div className=\"text-center\" />;
+            </div>;"
+            <div className=\"text-center\" />;"
               <div className=\"text-gray-400 text-sm\" />Possibilities</div>;
               </div>;
               <div className='text-gray-400 text-sm' />Metaverse Services</div>;
@@ -187,35 +187,35 @@ technologies ever created.
               <div className='text-gray-400 text-sm' />Metaverse Services</div>;
             </div>;
             <div className='text-center' />;
-              <div className='text-gray-400 text-sm' />Possibilities</div>            </div>        >;
-          <div className=\"inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6\" />;
-            <Sparkles className=\"w-5 h-5 text-purple-400\" />;
+              <div className='text-gray-400 text-sm' />Possibilities</div>            </div>        >;"
+          <div className=\"inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6\" />;"
+            <Sparkles className=\"w-5 h-5 text-purple-400\" />;"
             <span className=\"text-purple-300 text-sm font-medium\" />2026 Revolutionary Innovations</span>;
-          </div>;
-          <h2 className=\"text-5xl md:text-6xl font-bold text-white mb-8 leading-tight\" />;
+          </div>;"
+          <h2 className=\"text-5xl md:text-6xl font-bold text-white mb-8 leading-tight\" />;"
             <span className=\"bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent\" />;
               The Future is Now;
             </span>;
-          </h2>;
+          </h2>;"
           <p className=\"text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed\" />;
-            Experience the most advanced AI, quantum computing, and metaverse technologies ever created. ;
+            Experience the most advanced AI, quantum computing, and metaverse technologies ever created. ;"
             <span className=\"text-purple-400 font-semibold\" /> 1000% ROI guaranteed</span> with our revolutionary solutions.;
           </p>;
-          {/* Service Statistics */}
-          <div className=\"grid grid-cols-2 md:grid-cols-4 gap-6 mt-12\" />;
-            <div className=\"text-center\" />;
-              <div className=\"text-3xl font-bold text-purple-400\" />{aiAutonomousServices2026 && aiAutonomousServices2026.length}</div>;
+          {/* Service Statistics */}"
+          <div className=\"grid grid-cols-2 md:grid-cols-4 gap-6 mt-12\" />;"
+            <div className=\"text-center\" />;"
+              <div className=\"text-3xl font-bold text-purple-400\" />{aiAutonomousServices2026 && aiAutonomousServices2026.length}</div>;"
               <div className=\"text-gray-400 text-sm\" />AI Autonomous Services</div>;
-            </div>;
-            <div className=\"text-center\" />;
-              <div className=\"text-3xl font-bold text-cyan-400\" />{quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length}</div>;
+            </div>;"
+            <div className=\"text-center\" />;"
+              <div className=\"text-3xl font-bold text-cyan-400\" />{quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length}</div>;"
               <div className=\"text-gray-400 text-sm\" />Quantum Space Tech</div>;
-            </div>;
-            <div className=\"text-center\" />;
-              <div className=\"text-3xl font-bold text-pink-400\" />{metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length}</div>;
+            </div>;"
+            <div className=\"text-center\" />;"
+              <div className=\"text-3xl font-bold text-pink-400\" />{metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length}</div>;"
               <div className=\"text-gray-400 text-sm\" />Metaverse Services</div>;
-            </div>;
-            <div className=\"text-center\" />;
+            </div>;"
+            <div className=\"text-center\" />;"
               <div className=\"text-gray-400 text-sm\" />Possibilities</div>;
             </div>;
           </div>;
@@ -226,7 +226,7 @@ technologies ever created.
 initial='hidden'
           whileInView='visible'
 
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
           className='mb-20'
@@ -265,7 +265,7 @@ className='group relative'
                     </div>
                   </div>
                   <p className='text-gray-300 mb-4 text-sm leading-relaxed' />
-                    {service.descriptio,}
+                    {service.descriptio}
 }
                   </p>
                   <div className='space-y-3 mb-6' />
@@ -324,7 +324,7 @@ href='/services?category=ai-autonomous'
 variants={containerVariants}
 initial='hidden'
           whileInView='visible'
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
           className='mb-20'
          />
@@ -357,7 +357,7 @@ className='group relative'
                     <div className='text-3xl' />{service.icon}</div>
                     <div />
                       <h4 className='text-xl font-bold text-white' />
-                        {service.nam,}
+                        {service.nam}
 }
                       </h4>;
                       <p className='text - indigo - 300 text - sm' />;
@@ -407,7 +407,7 @@ href={service.link}
                   </Link>
                 </div>
               </motion.div>
-            ),
+            )
 }
           </div>
 
@@ -430,7 +430,7 @@ href='/services?category=quantum-space'
 initial='hidden'
           whileInView='visible'
 
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
           className='mb-20'
@@ -464,7 +464,7 @@ className='group relative'
                     <div />
                       <h4 className='text-xl font-bold text-white' />
 
-                        {service.nam,}
+                        {service.nam}
 }
                       </h4>;
                       <p className='text-pink-300 text-sm' />{service.tagline}</p>;
@@ -510,7 +510,7 @@ href={service.link}
                   </Link>
                 </div>
               </motion.div>
-            ),
+            )
 }
           </div>
 
@@ -528,12 +528,12 @@ href='/services?category=metaverse'
 
         {/* Call to Action Section */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
 
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
 className='text-center'
@@ -541,9 +541,9 @@ className='text-center'
           <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12' />
             <h3 className='text-4xl font-bold text-white mb-6' />
               Ready to Experience the Future?
-            </h3>
+            </h3>"
             <p className=\"text-gray-300 text-xl mb-8 max-w-3xl mx-auto\" />
-              Join thousands of companies already achieving unprecedented success with our revolutionary 2026 technologies. 
+              Join thousands of companies already achieving unprecedented success with our revolutionary 2026 technologies. "
               <span className=\"text-purple-400 font-semibold\" /> Contact us today</span> to start your transformation.
             </p>
 
@@ -581,3 +581,4 @@ href='/services'
   );
 }
 
+"

@@ -36,10 +36,10 @@ interface SuggestedJobsProps {
 }
 
 export function SuggestedJobs() {const { user } = useAuth()const currentTalentId = null;
-  if (isLoading) {return (<div className=\"flex items-center justify-center p-6\" />;
+  if (isLoading) {return (<div className=\"flex items-center justify-center p-6\" />;"
         <Loader2 className=\"w-6 h-6 animate-spin text-primary\" />;}
-      </div>;}
-    )import { useAuth } from \"@/hooks/useAuth\",import { Loader2  } from 'lucide-react';
+      </div>;}"
+    )import { useAuth } from \"@/hooks/useAuth\",import { Loader2  } from 'lucide-react';"
 import { Badge } from \"@/components/ui/badge\",import { useJobSuggestions } from \"@/hooks/useJobSuggestions\",import { JobMatchesCard } from \"./JobMatchesCard\",import { NoJobsCard } from \"./NoJobsCard\",interface SuggestedJobsProps {
   talentId?: string;}
 }
@@ -55,59 +55,59 @@ const {isLoading,updateJobMatchStatus,categorizedMatches: {newMatches,viewedMatc
 
 const handleDecline = (updateJobMatchStatus(matchId, 'declined')) => {
   return $3;}
-}if (isLoading) ;
-  return (<div className=\"flex items-center justify-center p-6\" />;
+}if (isLoading) ;"
+  return (<div className=\"flex items-center justify-center p-6\" />;"
         <Loader2 className=\"w-6 h-6 animate-spin text-primary\" />;
       </div>;
-    )}if (newMatches && newMatches.length = == 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) ;
-  return <NoJobsCard />;}return (<div className=\"space-y-6\" />;
-      {/* New Matches Section */}{newMatches && newMatches.length > 0 && (<div className=\"space-y-4\" />;
-          <div className=\"flex items-center justify-between\" />;
-            <h3 className=\"text-lg font-medium\" />New Job Matches</h3>;}
+    )}if (newMatches && newMatches.length = == 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) ;"
+  return <NoJobsCard />;}return (<div className=\"space-y-6\" />;"
+      {/* New Matches Section */}{newMatches && newMatches.length > 0 && (<div className=\"space-y-4\" />;"
+          <div className=\"flex items-center justify-between\" />;"
+            <h3 className=\"text-lg font-medium\" />New Job Matches</h3>;}"
             <Badge className=\"bg-green-100 text-green-800 border-green-300\" />;}
               {newMatches && newMatches.length} New;
-            </Badge>;
+            </Badge>;"
           </div>;<div className=\"grid gap-4 md:grid-cols-2\" />;
             {newMatches && newMatches.map(match => (<JobMatchesCard;}
                 key = {match && match.id}match = {match}
                 onApply = {handleApply}
-                onDecline = {handleDecline}
+                onDecline = {handleDecline}"
               />;<div className=\"grid gap-4 md:grid-cols-2\" />;
             {newMatches.map(match => (<JobMatchesCard;}
                 key={match.id}match={match}onApply={handleApply}onDecline={handleDecline}/>;
             ))}
           </div>;
         </div>;
-      )};;{/* Previously Viewed Section */}
-      {viewedMatches.length > 0 && (<div className=\"space-y-4\" />;
-          <div className=\"flex items-center justify-between\" />;
+      )};;{/* Previously Viewed Section */}"
+      {viewedMatches.length > 0 && (<div className=\"space-y-4\" />;"
+          <div className=\"flex items-center justify-between\" />;"
             <h3 className=\"text-lg font-medium\" />Previously Viewed</h3>;}
           </div>;}
-      {/* Previously Viewed Section */}
-      {viewedMatches && viewedMatches.length > 0 && (<div className=\"space-y-4\" />;
-          <div className=\"flex items-center justify-between\" />;
-            <h3 className=\"text-lg font-medium\" />Previously Viewed</h3>;
+      {/* Previously Viewed Section */}"
+      {viewedMatches && viewedMatches.length > 0 && (<div className=\"space-y-4\" />;"
+          <div className=\"flex items-center justify-between\" />;"
+            <h3 className=\"text-lg font-medium\" />Previously Viewed</h3>;"
           </div>;<div className=\"grid gap-4 md:grid-cols-2\" />;}
             {viewedMatches && viewedMatches.map(match => (<JobMatchesCard;}
                 key = {match && match.id}match = {match}
                 onApply = {handleApply}
-                onDecline = {handleDecline}
+                onDecline = {handleDecline}"
               />;<div className=\"grid gap-4 md:grid-cols-2\" />;
             {viewedMatches.map(match => (<JobMatchesCard;}
                 key={match.id}match={match}onApply={handleApply}onDecline={handleDecline}/>;
             ))}
           </div>;
         </div>;
-      )};;{/* Applied Jobs Section */}
-      {appliedMatches.length > 0 && (<div className=\"space-y-4\" />;
-          <div className=\"flex items-center justify-between\" />;
+      )};;{/* Applied Jobs Section */}"
+      {appliedMatches.length > 0 && (<div className=\"space-y-4\" />;"
+          <div className=\"flex items-center justify-between\" />;"
             <h3 className=\"text-lg font-medium\" />Applied Jobs</h3>;
           </div>;}
               <JobMatchesCard;}
-                key = {match.id}{/* Applied Jobs Section */}
-      {appliedMatches && appliedMatches.length  /> 0 && (<div className=\"space-y-4\" />;
-          <div className=\"flex items-center justify-between\" />;
-            <h3 className=\"text-lg font-medium\" />Applied Jobs</h3>;
+                key = {match.id}{/* Applied Jobs Section */}"
+      {appliedMatches && appliedMatches.length  /> 0 && (<div className=\"space-y-4\" />;"
+          <div className=\"flex items-center justify-between\" />;"
+            <h3 className=\"text-lg font-medium\" />Applied Jobs</h3>;"
           </div>;<div className=\"grid gap-4 md:grid-cols-2\" />;}
             {appliedMatches && appliedMatches.map(match => (<JobMatchesCard;}
                 key = {match && match.id}match = {match}
@@ -122,16 +122,16 @@ const handleDecline = (updateJobMatchStatus(matchId, 'declined')) => {
 if ( {) {$2;}
 }
     return <NoJobsCard />;
-  }
+  }"
   return (<div className=\"space - y-6\" />;
-      {/* New Matches Section */}
-      {new_matches.length > 0 && (<div className=\"space - y-4\" />;
-          <div className=\"flex items - center justify - between\" />;
-            <h3 className=\"text - lg font - medium\" />New Job Matches</h3>;}
+      {/* New Matches Section */}"
+      {new_matches.length > 0 && (<div className=\"space - y-4\" />;"
+          <div className=\"flex items - center justify - between\" />;"
+            <h3 className=\"text - lg font - medium\" />New Job Matches</h3>;}"
             <Badge className=\"bg - green - 100 text - green - 800 border - green - 300\" />;}
               {new_matches.length} New;
             </Badge>;
-          </div>;
+          </div>;"
           <div className=\"grid gap - 4 md:grid - cols - 2\" />;
             {new_matches.map (match => (<JobMatchesCard;}
                 key = {match.id }
@@ -143,11 +143,11 @@ if ( {) {$2;}
     </div>
   );
 }
-      {/* Previously Viewed Section */}
-      {viewed_matches.length > 0 && (<div className=\"space - y-4\" />;
-          <div className=\"flex items - center justify - between\" />;
+      {/* Previously Viewed Section */}"
+      {viewed_matches.length > 0 && (<div className=\"space - y-4\" />;"
+          <div className=\"flex items - center justify - between\" />;"
             <h3 className=\"text - lg font - medium\" />Previously Viewed</h3>;
-          </div>;
+          </div>;"
           <div className=\"grid gap - 4 md:grid - cols - 2\" />;}
             {viewed_matches.map (match => (<JobMatchesCard;}
                 key = {match.id }
@@ -159,11 +159,11 @@ if ( {) {$2;}
     </div>
   );
 }
-      {/* Applied Jobs Section */}
-      {applied_matches.length > 0 && (<div className=\"space - y-4\" />;
-          <div className=\"flex items - center justify - between\" />;
+      {/* Applied Jobs Section */}"
+      {applied_matches.length > 0 && (<div className=\"space - y-4\" />;"
+          <div className=\"flex items - center justify - between\" />;"
             <h3 className=\"text - lg font - medium\" />Applied Jobs</h3>;
-          </div>;
+          </div>;"
           <div className=\"grid gap - 4 md:grid - cols - 2\" />;}
             {applied_matches.map (match => (<JobMatchesCard;}
                 key = {match.id }
@@ -183,29 +183,29 @@ const handle_decline = (match_id: string) =>: any {';}
   updateJobMatchStatus (match_id, 'declined')}
 // Check condition;
 if ( {) {$2;}
-}
+}"
   return (<div className=\"flex items - center justify - center p - 6\"  /> <Loader2 className=\"w - 6 h - 6 animate - spin text - primary\" /> </div>)}// Check condition;
 if ( {) {$2;}
-}
-  return <NoJobsCard /> \";
-}return (<div className=\"space - y-6\"  /> {/* New Matches Section */;}
-}{\";}
+}"
+  return <NoJobsCard /> \";"
+}return (<div className=\"space - y-6\"  /> {/* New Matches Section */;}"
+}{\";}"
   new_matches.length > 0 && (<div className=\"space - y-4\"  /> <div className=\"flex items - center justify - between\"  /> <h3 className=\"text - lg font - medium\"  />New Job Matches</h3> <Badge className=\"bg - green - 100 text - green - 800 border - green - 300\"  /> new_matches.length;}
 }New </Badge> </div> <JobMatchesCard key= {match.id;}
 }match= {match;}
 }on_apply= {handle_apply;}
-}on_decline= {handle_decline;}
-}/>) )}</div> </div>) \";
+}on_decline= {handle_decline;}"
+}/>) )}</div> </div>) \";"
 }</div> <div className=\"grid gap - 4 md:grid - cols - 2\"  /> {viewed_matches.map (match => (<JobMatchesCard key= {match.id;}
 }match= {match;}
 }on_apply= {handle_apply;}
-}on_decline= {handle_decline;}
-}/>) )}</div> </div>) \";
+}on_decline= {handle_decline;}"
+}/>) )}</div> </div>) \";"
 }</div> <div className=\"grid gap - 4 md:grid - cols - 2\"  /> {applied_matches.map (match => (<JobMatchesCard key= {match.id;}
 }match= {match;}
 }on_apply= {handle_apply;}
 }on_decline= {handle_decline;}
-}show_applied= {true;}
+}show_applied= {true;}"
 }/>) )}</div> </div>)}</div>)}'\"}
 }</div>;
   )}= useJobSuggestions (currentTalentId)const handleApply = (updateJobMatchStatus (matchId,  'applied')//In a real app, this might redirect to application form or open a modal ;) => {
@@ -215,25 +215,25 @@ if ( {) {$2;}
 
 const handleDecline = (';) => {
   return $3;}
-}
-  updateJobMatchStatus (matchId, 'declined')}if (isLoading) {return (<div className = \"flex items-center justify-center p-6\"  /> <Loader2 className=\"w-6 h-6 animate-spin text-primary\" /> </div>)}if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) ;
-  return <NoJobsCard /> \";
-}return (<div className=\"space-y-6\"  /> {/* New Matches Section */ ;}
-}{\";}
+}"
+  updateJobMatchStatus (matchId, 'declined')}if (isLoading) {return (<div className = \"flex items-center justify-center p-6\"  /> <Loader2 className=\"w-6 h-6 animate-spin text-primary\" /> </div>)}if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) ;"
+  return <NoJobsCard /> \";"
+}return (<div className=\"space-y-6\"  /> {/* New Matches Section */ ;}"
+}{\";}"
   newMatches.length > 0 && (<div className=\"space-y-4\"  /> <div className=\"flex items-center justify-between\"  /> <h3 className=\"text-lg font-medium\"  />New Job Matches</h3> <Badge className=\"bg-green-100 text-green-800 border-green-300\"  /> newMatches.length ;}
 }New </Badge> </div> <JobMatchesCard key= {match.id ;}
 }match= {match ;}
 }onApply= {handleApply ;}
-}onDecline= {handleDecline ;}
-}/>) )}</div> </div>) \";
+}onDecline= {handleDecline ;}"
+}/>) )}</div> </div>) \";"
 }</div> <div className=\"grid gap-4 md:grid-cols-2\"  /> {viewedMatches.map (match => (<JobMatchesCard key= {match.id ;}
 }match= {match ;}
 }onApply= {handleApply ;}
-}onDecline= {handleDecline ;}
-}/>) )}</div> </div>) \";
+}onDecline= {handleDecline ;}"
+}/>) )}</div> </div>) \";"
 }</div> <div className=\"grid gap-4 md:grid-cols-2\"  /> {appliedMatches.map (match => (<JobMatchesCard key= {match.id ;}
 }match= {match ;}
 }onApply= {handleApply ;}
 }onDecline= {handleDecline ;}
-}showApplied= {true ;}
-}/>) )}</div> </div>)}</div>)}'\";
+}showApplied= {true ;}"
+}/>) )}</div> </div>)}</div>)}'\";"

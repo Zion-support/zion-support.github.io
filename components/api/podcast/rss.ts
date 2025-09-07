@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 const EPISODES_PATH = null;
-  return res.status(200).json({ ok: true, path: '/podcast.xml' }),
+  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
 
 const EPISODES_PATH = path.join(
@@ -18,7 +18,7 @@ const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
 function ensureStorage() {
 
   const dir = path.dirname(EPISODES_PATH);}
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true,}
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true}
 });
 
 if (!fs.existsSync(EPISODES_PATH))
@@ -26,7 +26,7 @@ if (!fs.existsSync(EPISODES_PATH))
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')}
-    return res.status(405).json({ error: 'Method not allowed',}
+    return res.status(405).json({ error: 'Method not allowed'}
 });
   ensureStorage();
 
@@ -39,14 +39,14 @@ const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
 const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);}
-  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true,}
+  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true}
 });
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST')}
-    return res && res.status(405).json({ error: 'Method not allowed',}
+    return res && res.status(405).json({ error: 'Method not allowed'}
 });
   ensureStorage();
 
@@ -77,7 +77,7 @@ const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
 
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
-return res.status(200).json({ ok: true, path: '/podcast.xml',}
+return res.status(200).json({ ok: true, path: '/podcast.xml'}
 });
 
 }) .join ('\n');
@@ -88,3 +88,4 @@ return res.status(200).json({ ok: true, path: '/podcast.xml',}
   items }
 }</channel> </rss>`;
 
+"

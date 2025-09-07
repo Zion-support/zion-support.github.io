@@ -33,7 +33,7 @@ Atom;}
 
 import Link from 'next/link';
 import { AnimatePresence  } from 'framer-motion';
-  Mail,Phone,MapPin,Globe,Twitter,Linkedin,Github,ArrowUp,Crown,Zap,Brain,Rocket,Shield,Users,BookOpen,} from 'lucide-react';
+  Mail,Phone,MapPin,Globe,Twitter,Linkedin,Github,ArrowUp,Crown,Zap,Brain,Rocket,Shield,Users,BookOpen} from 'lucide-react';
 
 interface FooterLink {
   interface FooterLink  {label: string;
@@ -92,7 +92,7 @@ const footerSections: FooterSection[] = [;
   href: '/healthcare-solutions'
         description: 'Medical technology'
 }
-     ,}
+     }
 }
       {label: 'Financial Services';
         href: '/solutions?industry=financial';}
@@ -119,8 +119,8 @@ const footerSections: FooterSection[] = [;
     title: 'Solutions',
   links: [
 
-      { label: 'Healthcare & Biotech',}
-  href: '/healthcare-solutions', description: 'Medical technology',}
+      { label: 'Healthcare & Biotech'}
+  href: '/healthcare-solutions', description: 'Medical technology'}
 },
       { label: 'Financial Services',
   href: '/solutions?industry;
@@ -129,65 +129,65 @@ const footerSections: FooterSection[] = [;
         label: 'About Us',
   href: '/about'
         description: 'Our mission and values'}
-     ,}
+     }
 }
-      { label: 'Careers',}
-  href: '/careers', description: 'Join our team',}
+      { label: 'Careers'}
+  href: '/careers', description: 'Join our team'}
 }
-      { label: 'Contact',}
+      { label: 'Contact'}
   href: '/contact', description: 'Get in touch' }
     ]
- ,
+ 
 },  {
     title: 'Resources',
   links: [
-      { label: 'Blog',}
-  href: '/blog', description: 'Industry insights',}
+      { label: 'Blog'}
+  href: '/blog', description: 'Industry insights'}
 },  {
     title: 'Solutions',
   links: [
 
-      { label: 'Healthcare & Biotech',}
-  href: '/healthcare-solutions', description: 'Medical technology',}
+      { label: 'Healthcare & Biotech'}
+  href: '/healthcare-solutions', description: 'Medical technology'}
 }
-      { label: 'Financial Services',}
-  href: '/solutions?industry=financial', description: 'Fintech solutions',}
+      { label: 'Financial Services'}
+  href: '/solutions?industry=financial', description: 'Fintech solutions'}
 }
-      { label: 'Manufacturing',}
-  href: '/solutions?industry=manufacturing', description: 'Industry 4.0',}
+      { label: 'Manufacturing'}
+  href: '/solutions?industry=manufacturing', description: 'Industry 4.0'}
 }
-      { label: 'Retail & E-commerce',}
-  href: '/solutions?industry=retail', description: 'Digital commerce',}
+      { label: 'Retail & E-commerce'}
+  href: '/solutions?industry=retail', description: 'Digital commerce'}
 }
-      { label: 'Government',}
-  href: '/solutions?industry=government', description: 'Public sector',}
+      { label: 'Government'}
+  href: '/solutions?industry=government', description: 'Public sector'}
 }
-      { label: 'Education',}
-  href: '/solutions?industry=education', description: 'EdTech solutions',}
+      { label: 'Education'}
+  href: '/solutions?industry=education', description: 'EdTech solutions'}
 }
     ];
   }
   {title: 'Company';
     links: [;
-      { label: 'About Us',}
-  href: '/about', description: 'Our mission and values',}
+      { label: 'About Us'}
+  href: '/about', description: 'Our mission and values'}
 }
-      { label: 'Careers',}
-  href: '/careers', description: 'Join our team',}
+      { label: 'Careers'}
+  href: '/careers', description: 'Join our team'}
 }
-      { label: 'Contact',}
+      { label: 'Contact'}
   href: '/contact', description: 'Get in touch' }
 
     ]
 
- ,
+ 
 }
   {
     title: 'Resources',
   links: [
 
-      { label: 'Blog',}
-  href: '/blog', description: 'Industry insights',}
+      { label: 'Blog'}
+  href: '/blog', description: 'Industry insights'}
 }
       {label: 'White Papers';
         href: '/white-papers';}
@@ -204,57 +204,57 @@ const footerSections: FooterSection[] = [;
 
       {
         label: 'Education',
-  href: '/education-technology-solutions',}
-        description: 'EdTech solutions',}
-      },
-    ],
-  },
+  href: '/education-technology-solutions'}
+        description: 'EdTech solutions'}
+      }
+    ]
+  }
 ];
 
 const socialLinks = [
   {
     icon: <Linkedin className='w-5 h-5' />,
     href: 'https://linkedin.com/company/ziontechgroup',
-  label: 'LinkedIn',}
-    external: true,}
+  label: 'LinkedIn'}
+    external: true}
   },
   {
     icon: <Twitter className='w-5 h-5' />,
     href: 'https://twitter.com/ziontechgroup',
-  label: 'Twitter',}
-    external: true,}
+  label: 'Twitter'}
+    external: true}
   },
   {
     icon: <Github className='w-5 h-5' />,
     href: 'https://github.com/ziontechgroup',
-  label: 'GitHub',}
-    external: true,}
-  },
+  label: 'GitHub'}
+    external: true}
+  }
 ];
 
 const quickLinks = [
-  { name: 'About Us',}
-  href: '/about', icon: <Users className='w-4 h-4' />,}
+  { name: 'About Us'}
+  href: '/about', icon: <Users className='w-4 h-4' />}
 },
-  { name: 'Contact',}
-  href: '/contact', icon: <Phone className='w-4 h-4' />,}
+  { name: 'Contact'}
+  href: '/contact', icon: <Phone className='w-4 h-4' />}
 },
   {
     name: 'Support',
-  href: '/support',}
-    icon: <HelpCircle className='w-4 h-4' />,}
+  href: '/support'}
+    icon: <HelpCircle className='w-4 h-4' />}
   },
   {
     name: 'Documentation',
-  href: '/docs',}
-    icon: <FileText className='w-4 h-4' />,}
+  href: '/docs'}
+    icon: <FileText className='w-4 h-4' />}
   },
-  { name: 'API Reference',}
-  href: '/api', icon: <Code className='w-4 h-4' />,}
+  { name: 'API Reference'}
+  href: '/api', icon: <Code className='w-4 h-4' />}
 },
-  { name: 'Status',}
-  href: '/status', icon: <TrendingUp className='w-4 h-4' />,}
-},
+  { name: 'Status'}
+  href: '/status', icon: <TrendingUp className='w-4 h-4' />}
+}
 ];
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
@@ -262,7 +262,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
   return $3;}
 }
-window.scrollTo({ top: 0, behavior: 'smooth' }),
+window.scrollTo({ top: 0, behavior: 'smooth' })
 };
 
 
@@ -271,128 +271,128 @@ const footerSections = [
       title: 'Services',
   items: [
 
-        { label: 'AI & Machine Learning',}
-  href: '/ai-services',}
+        { label: 'AI & Machine Learning'}
+  href: '/ai-services'}
 },
-        { label: 'Quantum Computing',}
-  href: '/quantum-computing',}
+        { label: 'Quantum Computing'}
+  href: '/quantum-computing'}
 },
-        { label: 'Space Technology',}
-  href: '/space-tech',}
+        { label: 'Space Technology'}
+  href: '/space-tech'}
 },
-        { label: 'Cybersecurity',}
-  href: '/cybersecurity',}
+        { label: 'Cybersecurity'}
+  href: '/cybersecurity'}
 },
-{ label: '2040 Services',}
-  href: '/innovative-2040-services-showcase',}
-},
-      ],
+{ label: '2040 Services'}
+  href: '/innovative-2040-services-showcase'}
+}
+      ]
     },
     {
       title: 'Solutions',
   items: [
-        { label: 'Enterprise Solutions',}
-  href: '/enterprise-solutions',}
+        { label: 'Enterprise Solutions'}
+  href: '/enterprise-solutions'}
 },
-        { label: 'Micro SAAS',}
-  href: '/micro-saas',}
+        { label: 'Micro SAAS'}
+  href: '/micro-saas'}
 },
-        { label: 'IT Services',}
-  href: '/it-services',}
+        { label: 'IT Services'}
+  href: '/it-services'}
 },
-        { label: 'Innovation Lab',}
-  href: '/innovation-lab',}
+        { label: 'Innovation Lab'}
+  href: '/innovation-lab'}
 },
 
-{ label: 'Research & Development',}
-  href: '/research-development',}
-},
-      ],
+{ label: 'Research & Development'}
+  href: '/research-development'}
+}
+      ]
     },
     {
       title: 'Company',
   items: [
-        { label: 'About Us',}
-  href: '/about',}
+        { label: 'About Us'}
+  href: '/about'}
 },
-        { label: 'Our Team',}
-  href: '/team',}
+        { label: 'Our Team'}
+  href: '/team'}
 },
-        { label: 'Careers',}
-  href: '/careers',}
+        { label: 'Careers'}
+  href: '/careers'}
 },
-        { label: 'Investors',}
-  href: '/investors',}
+        { label: 'Investors'}
+  href: '/investors'}
 },
 
-{ label: 'Press & Media',}
-  href: '/press',}
-},
-      ],
+{ label: 'Press & Media'}
+  href: '/press'}
+}
+      ]
     },
     {
       title: 'Resources',
   items: [
-        { label: 'Blog',}
-  href: '/blog',}
+        { label: 'Blog'}
+  href: '/blog'}
 },
-        { label: 'Case Studies',}
-  href: '/case-studies',}
+        { label: 'Case Studies'}
+  href: '/case-studies'}
 },
-        { label: 'White Papers',}
-  href: '/white-papers',}
+        { label: 'White Papers'}
+  href: '/white-papers'}
 },
-        { label: 'Documentation',}
-  href: '/docs',}
+        { label: 'Documentation'}
+  href: '/docs'}
 },
-{ label: 'Support',}
-  href: '/support',}
-},
-      ],
-    },
+{ label: 'Support'}
+  href: '/support'}
+}
+      ]
+    }
   ];
 
 const socialLinks = [
     {
       icon: Twitter,
-      href: 'https://twitter.com/ziontechgroup',}
-  label: 'Twitter',}
+      href: 'https://twitter.com/ziontechgroup'}
+  label: 'Twitter'}
     },
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/company/ziontechgroup',}
-  label: 'LinkedIn',}
+      href: 'https://linkedin.com/company/ziontechgroup'}
+  label: 'LinkedIn'}
     },
-    { icon: Github, href: 'https://github.com/Zion-Holdings',}
-  label: 'GitHub',}
+    { icon: Github, href: 'https://github.com/Zion-Holdings'}
+  label: 'GitHub'}
 },
-    { icon: Globe, href: 'https://ziontechgroup.com',}
-  label: 'Website',}
-},
+    { icon: Globe, href: 'https://ziontechgroup.com'}
+  label: 'Website'}
+}
   ];
 
 const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: { opacity: 0}
 }
     visible: {
       opacity: 1;
 transition: {}
-staggerChildren: 0.1,}
-      },
-    },
+staggerChildren: 0.1}
+      }
+    }
   };
 
 const itemVariants = {}
-    hidden: { y: 20, opacity: 0,}
+    hidden: { y: 20, opacity: 0}
 }
     visible: {
       y: 0;
 opacity: 1;
 transition: {
 }
-duration: 0.5,}
-      },
-    },
+duration: 0.5}
+      }
+    }
   };
 
   return (
@@ -408,14 +408,14 @@ className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-f
             animate={{
               x: [0, Math.random() * 1000, 0],
               y: [0, Math.random() * 1000, 0],
-              opacity: [0, 0.6, 0],}
-              scale: [0, 1, 0],}
+              opacity: [0, 0.6, 0]}
+              scale: [0, 1, 0]}
             }}
             transition={{
               duration: 15 + Math.random() * 10,
               repeat: -1,
-              delay: Math.random() * 8,}
-ease: 'easeInOut',}
+              delay: Math.random() * 8}
+ease: 'easeInOut'}
             }}
           />;
         ))}
@@ -423,7 +423,7 @@ ease: 'easeInOut',}
 
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20' />
           <motion.div;
-variants={containerVariant,}
+variants={containerVariant}
 }
             initial='hidden';
             whileInView='visible';
@@ -432,7 +432,7 @@ variants={containerVariant,}
 
             {/* Company Info */}
 
-            <motion.div variants={itemVariant,}
+            <motion.div variants={itemVariant}
 } className='lg:col-span-2' />
               <div className='flex items-center space-x-3 mb-6' />
                 <div className='relative' />
@@ -486,7 +486,7 @@ href='https: //ziontechgroup.com'
               </div>
             </motion.div>
 
-            {/* Footer Sections *,}
+            {/* Footer Sections *}
 }
             {footerSections.map((section, index) => (}
               <motion.div key={section.title} variants={itemVariants} />
@@ -512,7 +512,7 @@ href='https: //ziontechgroup.com'
                        />
 
                         {item.label}
-            {/* Footer Sections *,}
+            {/* Footer Sections *}
 }
             {footerSections && footerSections.map((section, index) => (<motion && motion.div key={section && section.title} variants={itemVariants} />;
                 <h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2' />;
@@ -530,13 +530,13 @@ href='https: //ziontechgroup.com'
                   {section && section.items.map(item => (<li key={item && item.label} />;
                       <Link;
                         href={item && item.href}
-                        className='text-gray-300 hover: text-white transition-colors duration-200 hover:translate-x-1 inline-block' />                  <span />{section && section.titl,}
+                        className='text-gray-300 hover: text-white transition-colors duration-200 hover:translate-x-1 inline-block' />                  <span />{section && section.titl}
 }</span>;
                 </h4>;
                 <ul className=\"space-y-3\" />;
                   {section && section.items.map((item) => (<li key={item && item.label} />;
                       <Link;
-                        href={item && item.href}
+                        href={item && item.href}"
                         className=\"text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block\" />;
                         {item && item.label}
                       </Link>;
@@ -547,7 +547,7 @@ href='https: //ziontechgroup.com'
             ))}
           {/* Social Links & Newsletter */}
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={{ opacity: 0, y: 20 }
 }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
@@ -558,7 +558,7 @@ className='mt-16 pt-12 border-t border-gray-800/50'
            />
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8' />
 
-              {/* Social Links *,}
+              {/* Social Links *}
 }
               <div className='flex items-center space-x-6' />;
                 <span className='text-gray-400 font-medium' />Follow Us:</span>;
@@ -572,7 +572,7 @@ className='mt-16 pt-12 border-t border-gray-800/50'
                     whileHover={{ y: -2 }}
 
 
-                    whileTap={{ scale: 0.95 ,}
+                    whileTap={{ scale: 0.95 }
 }
                    />;
                     <social.icon className='w-5 h-5' />;
@@ -599,7 +599,7 @@ type='email'
 className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'
 
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 ,}
+                    whileTap={{ scale: 0.95 }
 }
                    />;
                     Subscribe;
@@ -610,7 +610,7 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
           </motion.div>;
         </div>;
                     whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ scale: 0 && 0.95 ,}
+                    whileTap={{ scale: 0 && 0.95 }
 }>;
                     Subscribe;
                   </motion && motion.button>;
@@ -627,11 +627,11 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
           </motion.div>;
           {/* Social Links & Newsletter */}
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 ,}
+            initial={{ opacity: 0, coordinate_y: 20 }
 }
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true ,}
+            viewport={{ once: true }
 }
             className='mt - 16 pt - 12 border - t border - gray - 800 / 50' />
 
@@ -646,24 +646,24 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
                     rel='noopener noreferrer';
                     className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration - 200 hover:scale - 110';
                     while_hover={{ coordinate_y: -2 }}
-                    while_tap={{ scale: 0.95 ,}
+                    while_tap={{ scale: 0.95 }
 }
                    />;
-                    <social.icon className='w - 5 h - 5' />                  </motion.a>          >;
+                    <social.icon className='w - 5 h - 5' />                  </motion.a>          >;"
             <div className=\"flex flex - col lg:flex - row items - center justify-between gap-8\" />;
-              {/* Social Links */}
-              <div className=\"flex items-center space-x-6\" />;
+              {/* Social Links */}"
+              <div className=\"flex items-center space-x-6\" />;"
                 <span className=\"text - gray-400 font-medium\" />Follow Us:</span>;
                 {social_links.map ((social) => (<motion.a;}
                     key={social.label}
-                    href={social.href}
-                    target=\"_blank\";
-                    rel=\"noopener noreferrer\";
+                    href={social.href}"
+                    target=\"_blank\";"
+                    rel=\"noopener noreferrer\";"
                     className=\"w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration-200 hover:scale-110\";
                     while_hover={{ coordinate_y: -2 }}
-                    while_tap={{ scale: 0.95 ,}
+                    while_tap={{ scale: 0.95 }
 }
-                   />;
+                   />;"
                     <social.icon className=\"w-5 h-5\" />;
                   </motion.a>))}
               </div>;
@@ -683,18 +683,18 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
                     className='flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent';
                   />;
                   <motion.button;
-                    className='px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover: from - purple - 600 hover:to - pink - 600 transition - all duration - 200'                    while_hover={{ scale: 1.05 ,}
-}                </p />;
+                    className='px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover: from - purple - 600 hover:to - pink - 600 transition - all duration - 200'                    while_hover={{ scale: 1.05 }
+}                </p />;"
                 <div className=\"flex space-x-2\" />;
-                  <input;
-                    type=\"email\";
-                    placeholder=\"Enter your email\";
+                  <input;"
+                    type=\"email\";"
+                    placeholder=\"Enter your email\";"
                     className=\"flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple-500 focus:border-transparent\";
                   />;
-                  <motion.button;
+                  <motion.button;"
                     className=\"px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition-all duration-200\";
                     while_hover={{ scale: 1.05 }}
-                    while_tap={{ scale: 0.95 ,}
+                    while_tap={{ scale: 0.95 }
 }
                    />;
                     Subscribe;
@@ -710,7 +710,7 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0 && 0.6 }}
 
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
 className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
@@ -760,16 +760,16 @@ href='/terms'
 
       {/* Scroll to Top Button */}
       <motion.button;
-onClick={scrollToTo,}
+onClick={scrollToTo}
 }
 className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'
 
         whileHover={{ scale: 1.1, y: -2 }}
-        whileTap={{ scale: 0.9 ,}
+        whileTap={{ scale: 0.9 }
 }
-        initial={{ opacity: 0, scale: 0 ,}
+        initial={{ opacity: 0, scale: 0 }
 }
-        animate={{ opacity: 1, scale: 1 ,}
+        animate={{ opacity: 1, scale: 1 }
 }
         transition={{ duration: 0.3, delay: 1 }}
 
@@ -778,9 +778,10 @@ className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-
 <ArrowUp className='w-6 h-6 mx-auto' />
       </motion.button>
     </footer>
-  ),
+  )
 };
 
 
 export default UltraAdvancedFuturisticFooter2025;
 
+"

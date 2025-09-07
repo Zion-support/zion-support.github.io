@@ -43,7 +43,7 @@ interface ValidationRule  {interface ValidationRule  {required?: boolean;
   placeholder?: string;
   description?: string;
   validation?: ValidationRule;}
-  options?: { value: string; label: string,}
+  options?: { value: string; label: string}
 }[];
   form: any; // React Hook Form control;
   className?: string;
@@ -92,7 +92,7 @@ interface ValidatedFormFieldProps  {name: string;
   placeholder?: string;
   description?: string;
   validation?: ValidationRule;}
-  options?: { value: string; label: string,}
+  options?: { value: string; label: string}
 }[];
   form: any; // React Hook Form control;
   class_name?: string;
@@ -192,7 +192,7 @@ interface ValidatedFormFieldProps  {name: string;
   placeholder?: string;
   description?: string;
   validation?: ValidationRule;}
-  options?: { value: string; label: string,}
+  options?: { value: string; label: string}
 }[];
   form: any; // React Hook Form control;
   className?: string;
@@ -260,10 +260,10 @@ const isTouched  = form && form.formState.touchedFields[name];// Debounced valid
               onCheckedChange={checked = /> form && form.setValue(name, checked)}
               disabled={disabled}
             />;
-            <label;
+            <label;"
               htmlFor={name}className=\"text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70\" />
 
-              {labe,}
+              {labe}
 }
             </label>;
             {getValidationIcon()}case 'password':;
@@ -274,18 +274,18 @@ const isTouched  = form && form.formState.touchedFields[name];// Debounced valid
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}{...form.register(name)}
-            />;
+            />;"
             <div className=\"absolute inset-y-0 right-0 flex items-center gap-1 pr-3\" />;
               {getValidationIcon()}
-              <Button;
-                type=\"button\";
-                variant=\"ghost\";
-                size=\"sm\";
+              <Button;"
+                type=\"button\";"
+                variant=\"ghost\";"
+                size=\"sm\";"
                 className=\"h-7 w-7 p-0\";
                 onClick={() = /> setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
-              >;
-                {showPassword ? (<EyeOff className=\"h-4 w-4\" />;}
+              >;"
+                {showPassword ? (<EyeOff className=\"h-4 w-4\" />;}"
                 ) : (<Eye className=\"h-4 w-4\" />;}
                 )}default:;
         ),default:;
@@ -298,7 +298,7 @@ const isTouched  = form && form.formState.touchedFields[name];// Debounced valid
               disabled={disabled}
               className={baseClasses}
               {...form.register(name)}
-            />;
+            />;"
             <div className=\"absolute inset-y-0 right-0 flex items-center pr-3\" />;
               {getValidationIcon()}</div>;
           </div>;
@@ -306,15 +306,15 @@ const isTouched  = form && form.formState.touchedFields[name];// Debounced valid
   }if (type = == 'checkbox') ;
   return (<FormField;
         control={form.control}
-        name={name}
+        name={name}"
         render={() = /> (<FormItem className=\"flex flex-row items-start space-x-3 space-y-0\" />;}
             <FormControl />{renderField()}
-            </FormControl>;
-            {(fieldError || description) && (<div className=\"space-y-1\" />;}
+            </FormControl>;"
+            {(fieldError || description) && (<div className=\"space-y-1\" />;}"
                 {fieldError && (<FormMessage className=\"text-sm text-red-500\" />;}
                     {fieldError.message}
                   </FormMessage>;
-                )}
+                )}"
                 {description && !fieldError && (<p className=\"text-sm text-muted-foreground\" />{description}</p>;
                 )}
               </div>;
@@ -412,17 +412,17 @@ if ( {) {$2;}
             {label}
             {validation.required && (/>;}
     )}render={() => (<FormItem />;}
-          <FormLabel className='text-sm font-medium' />;}
+          <FormLabel className='text-sm font-medium' />;}"
             {label}{validation.required && <span className=\"text-red-500 ml-1\" />*</span>}
           </FormLabel>;
           <FormControl />{renderField()}
-          </FormControl>;
-          {(fieldError || description) && (<div className=\"space-y-1\" />;
-              {fieldError && (<FormMessage className=\"text-sm text-red-500 flex items-center gap-1\" />;}
+          </FormControl>;"
+          {(fieldError || description) && (<div className=\"space-y-1\" />;"
+              {fieldError && (<FormMessage className=\"text-sm text-red-500 flex items-center gap-1\" />;}"
                   <AlertCircle className=\"h-3 w-3\" />;}
                   {fieldError.message}
                 </FormMessage>;
-              )}
+              )}"
               {description && !fieldError && (<p className=\"text-sm text-muted-foreground\" />{description}</p>;
               )}
             </div>;
@@ -440,12 +440,12 @@ if ( {) {$2;}
         </FormItem>)}
     />)// Validation helpers for common patterns;
 
-export const validation_patterns = {email: /^[a - z_a - Z0 - 9._%+-]+@[a - z_a - Z0 - 9.-]+\.[a - z_a - Z]{,}
+export const validation_patterns = {email: /^[a - z_a - Z0 - 9._%+-]+@[a - z_a - Z0 - 9.-]+\.[a - z_a - Z]{}
 }$/,phone: /^[\+]?[1 - 9][\d]{0, 15}$/,url: /^https?:\/\/.+/,strong_password:;
     /^(?=.*[a - z])(?=.*[A - Z])(?=.*\d)(?=.*[@$!%*?&])[A - Za - z\d@$!%*?&]{8}$/}
 // Pre - configured validation rules;
 
-export const common_validations = {required: { required: true,}
+export const common_validations = {required: { required: true}
 },email: {required: true,pattern: validation_patterns.email,custom: (value: string, ) => {if () {) {$2;}
 }
         return 'Please enter a valid email address';
@@ -467,11 +467,11 @@ export const common_validations = {required: { required: true,}
     }}}}}}/>;
   )// Validation helpers for common patterns;
 
-export const validationPatterns = {email: /^[a-zA-Z0-9 && 9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{,}
+export const validationPatterns = {email: /^[a-zA-Z0-9 && 9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{}
 }$/,phone: /^[\+]?[1-9][\d]{0,15}$/,url: /^https?:\/\/.+/,strongPassword:;
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/}// Pre-configured validation rules;
 
-export const commonValidations = {required: { required: true,}
+export const commonValidations = {required: { required: true}
 },email: {required: true,pattern: validationPatterns && validationPatterns.email,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.email.test(value)) ;}
   return 'Please enter a valid email address';}
       }
@@ -483,4 +483,4 @@ export const commonValidations = {required: { required: true,}
       }
       return null;}}}
   }}return null;
-    }}}
+    }}}"

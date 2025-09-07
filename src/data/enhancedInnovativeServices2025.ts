@@ -2,7 +2,7 @@
   phone: string;
    email: string;
    website: string;}
-   address: string,}
+   address: string}
 }
 
 export interface MicroSaasService {
@@ -25,7 +25,7 @@ export interface MicroSaasService {
    setupTime: string;
    integrations: string[];
    freeTier: boolean;}
-   trialPeriod: string,}
+   trialPeriod: string}
 }
 
 export interface ITService {
@@ -45,7 +45,7 @@ export interface ITService {
    sla: string;
    certifications: string[];
    deliveryTime: string;}
-   support: string,}
+   support: string}
 }
 
 export interface AIService {
@@ -67,7 +67,7 @@ export interface AIService {
    trainingData: string;
    compliance: string[];
    aiScore: number;}
-   useCases: string[],}
+   useCases: string[]}
 }
 
-export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['';\"\";
+export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['';\"\";"

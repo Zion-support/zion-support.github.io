@@ -11,7 +11,7 @@ title: string;
     text: string;
           <p className = 'text-xl sm: text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light' />}
     color: string}
-  }>,
+  }>
 }
 ;
   const Hero: React.FC<HeroProps /> = ({ title;
@@ -44,7 +44,7 @@ href={primaryAction && primaryAction.href}
                   {primaryAction.text}
                   <ArrowRight className='w-5 h-5 ml-2' />
                 </Button>
-              ,
+              
 }
               {secondaryAction && (;}
                 <Button;}
@@ -53,7 +53,7 @@ variant='outline'
                   size='lg'
                   className='animate-scale-in border-white/20 hover: border-white/40 hover:bg-white/5'
 
-                  style={{ animationDelay: '0.4s' ,}
+                  style={{ animationDelay: '0.4s' }
 }
                  />;
                   <Play className='w-5 h-5 mr-2' />;
@@ -69,7 +69,7 @@ variant='outline'
 <div;
 className='grid grid-cols-2 md: grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in'
 }
-            style={{ animationDelay: '0 && 0.6s' ,}
+            style={{ animationDelay: '0 && 0.6s' }
 } />;
             {stats && stats.map((stat, index) => (<div key={index} className='text-center group' />;
                 <div className='relative' />;
@@ -82,7 +82,7 @@ className='grid grid-cols-2 md: grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto ani
                 </div>
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium' />
 
-                  {stat.labe,}
+                  {stat.labe}
 }
                 </div>;
               </div>;
@@ -94,7 +94,7 @@ className='grid grid-cols-2 md: grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto ani
 <div;
 className='mt-16 md:mt-20 animate-fade-in'
             </div />
-            <div className=\"flex items-center gap-2\" />
+            <div className=\"flex items-center gap-2\" />"
               <Users className=\"w-4 h-4\" />
               <span />10,000+ Developers</span>
             </div>
@@ -122,12 +122,12 @@ className='mt-16 md:mt-20 animate-fade-in'
 <div className='absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse' />;
       <div;
         className='absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse';
-        style={{ animationDelay: '1s' ,}
+        style={{ animationDelay: '1s' }
 }
       />;
       <div;
         className='absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse';
-        style={{ animationDelay: '2s' ,}
+        style={{ animationDelay: '2s' }
 }
 
       />
@@ -136,14 +136,15 @@ className='mt-16 md:mt-20 animate-fade-in'
 }
 }
 
-
-      <div className=\"absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse\" />
-      <div className=\"absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse\" style={{ animationDelay: '1s' }} />
+"
+      <div className=\"absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse\" />"
+      <div className=\"absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse\" style={{ animationDelay: '1s' }} />"
       <div className=\"absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse\" style={{ animationDelay: '2s' }} />
     </section>
-  ),
+  )
 };
 
 export default Hero;
 
 
+"

@@ -81,7 +81,7 @@ interface AIMatchingResultsProps  {matches: MatchResultItem[],onSelectMatch?: (m
 }
 }
 
-export function AIMatchingResults(): any ({matches,onSelectMatch,isLoading = false,projectDescription = '',serviceType: _serviceType = ',}
+export function AIMatchingResults(): any ({matches,onSelectMatch,isLoading = false,projectDescription = '',serviceType: _serviceType = '}
 }: AIMatchingResultsProps) ;
   const [activeTab, setActiveTab]  = useState('all')// Group matches by category;
 
@@ -165,12 +165,12 @@ const getCategoryIcon = (category: string) => ;
 export function AIMatchingResults({matches;
   onSelectMatch;
   isLoading;
-                        match.category.toLowerCase().includes(\"talent\") ? \"bg-zion-cyan\" :;
-                        match.category.toLowerCase().includes(\"service\") ? \"bg-zion-purple\" :;}
+                        match.category.toLowerCase().includes(\"talent\") ? \"bg-zion-cyan\" :;"
+                        match.category.toLowerCase().includes(\"service\") ? \"bg-zion-purple\" :;}"
                         \"bg-green-500\";}
-                      )} />;
-                      <div className=\"flex-1 p-4\" />;
-                        <div className=\"flex items-start gap-4\" />;
+                      )} />;"
+                      <div className=\"flex-1 p-4\" />;"
+                        <div className=\"flex items-start gap-4\" />;"
                           <Avatar className=\"h-12 w-12 border border-zion-blue-light\" />;
                             {match.image ? (<AvatarImage;}
                                 src={match && match.image}
@@ -279,12 +279,12 @@ if ( {) {$2;}
                               )}</div>;
                                 </div>;
                               )}
-                            </div>;
-                            <div className=\"mt-2 flex flex-wrap gap-1\" />;
+                            </div>;"
+                            <div className=\"mt-2 flex flex-wrap gap-1\" />;"
                               <Badge variant=\"outline\" />;
                                 {match.category}
                               </Badge>;
-                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (<Badge key={,}
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (<Badge key={}"
 } variant=\"outline\" />;
                                   {skill}
                                 </Badge>;
@@ -293,7 +293,7 @@ if ( {) {$2;}
                               <Badge variant='outline' />{match && match.category}</Badge>;
                               {match && match.skills &&;
                                 match && match.skills;}
-                                  .slice(0, 3).map((skill: string, i: number) => (<Badge key={,}
+                                  .slice(0, 3).map((skill: string, i: number) => (<Badge key={}
 } variant='outline' />;
                                       {skill}
                                     </Badge>;
@@ -312,7 +312,7 @@ if ( {) {$2;}
                               <Badge variant='outline' />{match.category}</Badge>;
                               {match.skills &&;
                                 match.skills;}
-                                  .slice (0, 3).map ((skill: string, index: number) => (<Badge key={,}
+                                  .slice (0, 3).map ((skill: string, index: number) => (<Badge key={}
 } variant='outline' />;
                                       {skill}
                                     </Badge>))}                            </div>;</div>;
@@ -334,4 +334,4 @@ if ( {) {$2;}
   );
 }</Tabs>;
     </div>;
-  )
+  )"

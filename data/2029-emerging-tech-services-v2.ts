@@ -1,13 +1,7 @@
-<<<<<<< HEAD;
-export interface EmergingTechService2029V2  {export interface EmergingTechService2029V2  {export interface EmergingTechService2029V2  {id: string;export interface EmergingTechService2029V2  {export interface EmergingTechService2029V2  {export interface EmergingTechService2029V2  {id: string;
-id: string;name: string;
 
-  id: string;
-  name: string;
-=======
 id: string;
   name: string,
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 description: string;
   category: string[];
   price: string;
@@ -326,9 +320,8 @@ mobile: '+1 302 464 0950',
     mobile: string;
     email: string;
     website: string;
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;}
+
+
 address: string;}
   }
 ;
@@ -1714,76 +1707,5 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709';}
     }
   }
-<<<<<<< HEAD;
+
 ];
-    funding: 'Series C funding, $500M valuation',
-  exit: 'IPO or financial acquisition',
-    contact: {
-      mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-  deployment: 'Cloud-based, web and desktop apps',}
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-    }
-  },
-    id: 'quantum - creativity - studio',
-  name: 'Quantum Creativity Studio',
-    description:;
-      'Innovative quantum - enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.',
-    category: ['Creativity', 'Quantum Computing', 'AI', 'Design', 'Art'],
-    price: '$1, 999 / month',
-  features: [;
-      'Quantum creativity algorithms',
-      'AI - powered content generation',
-      'Creative design tools',
-      'Collaborative workspace',
-      'Real - time rendering',
-      'Creative asset management',
-      'Design automation',
-      'Creative analytics'
-    ],
-    benefits: [;
-      'Unleash unlimited creativity',
-      'Generate unique content',
-      'Accelerate design processes',
-      'Enhance creative collaboration',
-      'Improve design quality',
-      'Reduce creative blocks'
-    ],
-    use_cases: [;
-      'Graphic design',
-      'Content creation',
-      'Product design',
-      'Marketing materials',
-      'Creative agencies',
-      'Individual artists'
-    ],
-    market_size: '$18.9B by 2029',
-  competitors: ['Adobe Creative Suite', 'Canva', 'Figma', 'Sketch'],
-    technology: [;
-      'Quantum Computing',
-      'AI / ML',
-      'Computer Graphics',
-      'Design Tools'
-    ],
-    integration: ['Design tools', 'Creative platforms', 'Asset libraries'],
-    support: ['24 / 7 creative support', 'Design experts', 'Implementation help'],
-    compliance: ['Copyright protection', 'Creative licensing', 'Data privacy'],    scalability: 'Creative platform, multi - user support',
-  roi: '400% within 12 months',
-    deployment: 'Cloud - based, web and desktop apps',
-  maintenance: 'Continuous updates, feature additions',
-    training: 'Creative training, tutorials',
-  documentation: 'Creative guides, best practices',
-    security: 'Content protection, access controls',
-  backup: 'Creative asset backup', monitoring: 'Creative performance tracking',
-  analytics: 'Creative insights, usage analytics',
-    customization: 'Custom creative tools, templates',
-  website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-    }
-  }
-];
-;
-=======
-];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

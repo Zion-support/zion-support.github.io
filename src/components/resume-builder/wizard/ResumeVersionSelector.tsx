@@ -33,7 +33,7 @@ interface ResumeVersionSelectorProps  {currentResume: Resume;
 const handleCreateNewVersion = async () => {if (newResumeTitle.trim()) {setIsLoading(true;}
   const resumeId = await createResume({ title: newResumeTitle.trim() })if (resumeId) {await fetchResume(resumeId)onResumeChange(resumeId)setSaveDialogOpen(false)setNewResumeTitle('')}
       setIsLoading(false)}
- ,
+ 
 }
  ;
   return (<div className='flex items-center gap-2' />;
@@ -94,4 +94,4 @@ const handleCreateNewVersion = async () => {if (newResumeTitle.trim()) {setIsLoa
       </Dialog>;
     </div>;
   )}> {resume.basic info.title ;}
-}</DropdownMenuItem>) )}<DropdownMenuSeparator /> <DropdownMenuItem  /> <Plus className=\"h-4 w-4 mr-2\" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader /> <DialogTitle />Save as new resume version</DialogTitle> </DialogHeader> <div className=\"py-4\"  /> <Input /> </div> <DialogFooter /> <Button  /> Cancel </Button> <Button Save </Button /> </DialogFooter> </DialogContent> </Dialog> </div>)}\";
+}</DropdownMenuItem>) )}<DropdownMenuSeparator /> <DropdownMenuItem  /> <Plus className=\"h-4 w-4 mr-2\" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader /> <DialogTitle />Save as new resume version</DialogTitle> </DialogHeader> <div className=\"py-4\"  /> <Input /> </div> <DialogFooter /> <Button  /> Cancel </Button> <Button Save </Button /> </DialogFooter> </DialogContent> </Dialog> </div>)}\";"

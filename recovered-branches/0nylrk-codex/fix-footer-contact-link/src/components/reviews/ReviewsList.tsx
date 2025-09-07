@@ -13,14 +13,7 @@ export function ReviewsList({
 }: ReviewsListProps) {
   if (isLoading) {
     return (
-<<<<<<< HEAD;
-      <div className=\"space-y-4\" />;
-        {Array (3);
-          .fill (0);
-          .map ((_, i) => (}
-            <div;}
-              key={i}              className=\"border rounded-lg p-4 bg-card animate-pulse\"
-=======
+
       <div className=\"space-y-4\" />
         {Array(3)
           .fill(0)
@@ -28,7 +21,7 @@ export function ReviewsList({
             <div;}
 key={i}
               className=\"border rounded-lg p-4 bg-card animate-pulse\"
- />>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+ /
             >
               <div className=\"flex items-center gap-3 mb-3\" />
                 <div className=\"h-10 w-10 rounded-full bg-muted\" /></div>
@@ -58,10 +51,7 @@ key={i}
       </div>}
     );}
   }
-<<<<<<< HEAD;
-}
-}
-=======
+
 
   return (
     <div className=\"space-y-4\" />
@@ -71,4 +61,3 @@ key={i}
     </div>
   );
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;

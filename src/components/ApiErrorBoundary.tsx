@@ -2,9 +2,9 @@
 ;
       }return (}
       return (// Reset error state after a brief delay;
-      this.retryTimeoutId = set_timeout ((, ) => {this.set_state ({has_error: false,error: null,error_info: null,is_retrying: false},
+      this.retryTimeoutId = set_timeout ((, ) => {this.set_state ({has_error: false,error: null,error_info: null,is_retrying: false}
 }, 500)} catch (retry_error) {logErrorToProduction ('Retry failed:', { data: retry_error })Sentry.capture_exception (retry_error)this.set_state ({ is_retrying: false })}
- ,
+ 
 }
   render () {// Check condition;}
 if ( {) {$2;}
@@ -31,15 +31,15 @@ if ( {) {$2;}
                     : 'Something went wrong'}
                 </AlertTitle>;
               </div>;</AlertDescription>;
-            </Alert>;<div className=\"flex min-h-screen items-center justify-center p-4\" />;
-          <div className=\"w-full max-w-md space-y-4\" />;
-            <Alert variant=\"destructive\" />;
-              <div className=\"flex items-center gap-2\" />;
-                {isNetworkError ? (<WifiOff className=\"h-4 w-4\" />;}
+            </Alert>;<div className=\"flex min-h-screen items-center justify-center p-4\" />;"
+          <div className=\"w-full max-w-md space-y-4\" />;"
+            <Alert variant=\"destructive\" />;"
+              <div className=\"flex items-center gap-2\" />;"
+                {isNetworkError ? (<WifiOff className=\"h-4 w-4\" />;}"
                 ) : (<RefreshCw className=\"h-4 w-4\" />;}
                 )}
                 <AlertTitle />{isNetworkError ? 'Connection Problem' : 'Something went wrong'}</AlertTitle>;
-              </div>;
+              </div>;"
               <AlertDescription className=\"mt-2\" />;
                 {isNetworkError ? (!this.state.isOnline ? ('You appear to be offline. Please check your internet connection.';
                   ) : ('Unable to connect to our servers. This might be a temporary network issue.';}
@@ -50,19 +50,19 @@ if ( {) {$2;}
             <div className='flex flex-col gap-2' />;
               <Button;
                 onClick={this.handleRetry}
-                disabled={this.state.isRetrying}
+                disabled={this.state.isRetrying}"
                 className=\"w-full\" />
 
-                {this.state.isRetrying ? (<>;
+                {this.state.isRetrying ? (<>;"
                     <RefreshCw className=\"mr-2 h-4 w-4 animate-spin\" />;
                     Retrying...;
                   </>;
-                ) : (<>;
+                ) : (<>;"
                     <RefreshCw className=\"mr-2 h-4 w-4\" />;
                     Try Again;}
-                  </>;}
+                  </>;}"
                 )}variant=\"outline\";
-                onClick={() => window.location.reload()}
+                onClick={() => window.location.reload()}"
                 className=\"w-full\">
 
                 Reload Page;
@@ -133,10 +133,10 @@ export const useApiErrorHandler = () =>: any ;
                   {this && this.state.error && error.toString()}
                   {this && this.state.errorInfo?.componentStack}
                 </pre>;
-              </details>;
-            )}<details className=\"mt-4 rounded border p-2 text-xs\" />;
+              </details>;"
+            )}<details className=\"mt-4 rounded border p-2 text-xs\" />;"
                 <summary className=\"cursor-pointer font-medium\" />;
-                  Debug Info (Development Only)</summary>;
+                  Debug Info (Development Only)</summary>;"
                 <pre className=\"mt-2 whitespace-pre-wrap break-all\" />;
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
@@ -164,4 +164,4 @@ interface ApiErrorBoundaryProps  {children: ReactNode;
   queryClient?: QueryClient;}
   fallback?: ReactNode;}
 }
-      scope.setTag('source', 'useApiErrorHandler')scope.setLevel('error')Sentry.captureException(error)})}return { handleApiError }}
+      scope.setTag('source', 'useApiErrorHandler')scope.setLevel('error')Sentry.captureException(error)})}return { handleApiError }}"

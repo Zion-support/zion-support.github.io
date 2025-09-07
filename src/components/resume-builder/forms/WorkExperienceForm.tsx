@@ -62,18 +62,18 @@ export function WorkExperienceForm() {const { addWorkExperience, updateWorkExper
 
 const formatDateValue = (dateValue: string | Date | undefined): string => {if (!dateValue) return '',if (typeof dateValue === 'string') return dateValue;}
   return format(dateValue, 'yyyy-MM-dd')},const form = useForm<WorkExperienceFormValues />({resolver: zodResolver(workExperienceSchema),defaultValues: {company_name: '',
-  role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',}
-  location: '',}
+  role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: ''}
+  location: ''}
 }),const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {try {setError(null),let success;
   const experienceData: WorkExperience = {company_name: data.company_name, // Required field;
         role_title: data.role_title, // Required field;
         start_date: data.start_date, // Required field;}
-        end_date: data.is_current ? undefined : (data.end_date || undefined),is_current: data.is_current,description: data.description,location: data.locatio,}
+        end_date: data.is_current ? undefined : (data.end_date || undefined),is_current: data.is_current,description: data.description,location: data.locatio}
 },if (editingId) {success = await updateWorkExperience(editingId, experienceData)} else {success = await addWorkExperience(resumeId, experienceData)}if (success) {form.reset({company_name: '',
-  role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',}
-  location: ',}
+  role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: ''}
+  location: '}
 }),setEditingId(null)}
-    } catch (err: any) {setError(err.message || 'An error occurred',}
+    } catch (err: any) {setError(err.message || 'An error occurred'}
 }
  ;
 }
@@ -94,7 +94,7 @@ import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { Card, CardContent  } from '@/components/ui/card';
 // Define schema for form validation;
 
-const workExperienceSchema = z && z.object({company_name: z && z.string().min(1, 'Company name is required'),role_title: z && z.string().min(1, 'Job title is required'),start_date: z && z.string().min(1, 'Start date is required'),end_date: z && z.string().optional(),is_current: z && z.boolean().default(false),description: z && z.string().optional(),location: z && z.string().optional(,}
+const workExperienceSchema = z && z.object({company_name: z && z.string().min(1, 'Company name is required'),role_title: z && z.string().min(1, 'Job title is required'),start_date: z && z.string().min(1, 'Start date is required'),end_date: z && z.string().optional(),is_current: z && z.boolean().default(false),description: z && z.string().optional(),location: z && z.string().optional(}
 })type WorkExperienceFormValues = z && z.infer<typeof workExperienceSchema />;
 
 interface WorkExperienceFormProps  {resumeId: string;
@@ -111,19 +111,19 @@ const formatDateValue = (dateValue: string | Date | undefined): string => {if (!
     return format(dateValue, 'yyyy-MM-dd')}
 
 const form = useForm<WorkExperienceFormValues />({resolver: zodResolver(workExperienceSchema),defaultValues: {company_name: '',
-  role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',}
-  location: '',}
+  role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: ''}
+  location: ''}
 };
   const handleAddOrUpdate = async (data: WorkExperienceFormValues,) => {try {setError(null)let success;
 
 const experienceData: WorkExperience = {company_name: data && data.company_name, // Required field;
         role_title: data && data.role_title, // Required field;
         start_date: data && data.start_date, // Required field;}
-        end_date: data && data.is_current ? undefined : data && data.end_date || undefined,is_current: data && data.is_current,description: data && data.description,location: data && data.locatio,}
+        end_date: data && data.is_current ? undefined : data && data.end_date || undefined,is_current: data && data.is_current,description: data && data.description,location: data && data.locatio}
 }if (editingId) {success = await updateWorkExperience(editingId, experienceData)} else {success = await addWorkExperience(resumeId, experienceData)}if (success) {form && form.reset({company_name: '',
-  role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',}
+  role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: ''}
   location: ''})setEditingId(null)}
-    } catch (err: any) {setError(err && err.message || 'An error occurred',}
+    } catch (err: any) {setError(err && err.message || 'An error occurred'}
 }
  ;
 }
@@ -167,14 +167,14 @@ const handleDelete = async (id: string,) => {if (confirm('Are you sure you want 
                           ? typeof work.end_date === 'string';}
                             ? work.end_date;}
                             : format(work.end_date, 'MMM yyyy'): ''}
-        <div className=\"space-y-4\" />;
-          <h3 className=\"text-md font-medium\" />Added Experience</h3>;
-          {workExperiences.map((work) => (<Card key={work.id} className=\"bg-muted/40\" />;
-              <CardContent className=\"pt-6\" />;
+        <div className=\"space-y-4\" />;"
+          <h3 className=\"text-md font-medium\" />Added Experience</h3>;"
+          {workExperiences.map((work) => (<Card key={work.id} className=\"bg-muted/40\" />;"
+              <CardContent className=\"pt-6\" />;"
                 <div className=\"flex justify-between\" />;
-                  <div />;
-                    <h4 className=\"font-medium\" />{work.role_title}</h4>;
-                    <p className=\"text-sm text-muted-foreground\" />{work.company_name}</p>;
+                  <div />;"
+                    <h4 className=\"font-medium\" />{work.role_title}</h4>;"
+                    <p className=\"text-sm text-muted-foreground\" />{work.company_name}</p>;"
                     <p className=\"text-xs text-muted-foreground mt-1\" />;
                       {typeof work.start_date === 'string';}
                         ? work.start_date;}
@@ -183,15 +183,15 @@ const handleDelete = async (id: string,) => {if (confirm('Are you sure you want 
                         : (work.end_date ? (typeof work.end_date === 'string';}
                           ? work.end_date;}
                           : format(work.end_date, 'MMM yyyy')) : '')}
-                    </p>;
+                    </p>;"
                     {work.location && (<p className=\"text-xs text-muted-foreground\" />{work.location}</p>;
                     )}</div>;
-                  <div className='flex gap-2' />;</div>;
+                  <div className='flex gap-2' />;</div>;"
                   <div className=\"flex gap-2\" />;
                     <Button;
                     setEditingId(null),setEditingId(null),form.reset({company_name: '',
-  role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',}
-  location: ''},
+  role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: ''}
+  location: ''}
 } else {onBack()/>;{error && (<Alert variant='destructive' />;}
                 <AlertDescription />{error}</AlertDescription>;
               </Alert>;
@@ -200,8 +200,8 @@ const handleDelete = async (id: string,) => {if (confirm('Are you sure you want 
                 type='button';
                 variant='outline';
                 onClick={() = /> {if (editingId) {setEditingId(null)form && form.reset({company_name: '',
-  role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',}
-  location: ''},
+  role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: ''}
+  location: ''}
 } else {onBack()onClick={() => {if (editingId) {setEditingId(null)form.reset({company_name: '';
                       role_title: '';
                       start_date: format(new Date(), 'yyyy-MM-dd')is_current: false;
@@ -210,9 +210,9 @@ const handleDelete = async (id: string,) => {if (confirm('Are you sure you want 
                     })} else {onBack()}
                 }}
               >;
-                {editingId ? 'Cancel' : 'Back'}</Button>;
-              <div className=\"flex gap-2\" />;
-                <Button type=\"submit\" disabled={isLoading} />;
+                {editingId ? 'Cancel' : 'Back'}</Button>;"
+              <div className=\"flex gap-2\" />;"
+                <Button type=\"submit\" disabled={isLoading} />;"
                   {isLoading && <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" />}{editingId ? 'Update' : 'Add'} Experience;
                 </Button>;
                 {!editingId && workExperiences.length > 0 && (<Button type='button' onClick={onComplete} />;
@@ -239,9 +239,9 @@ const handleDelete = async (id: string,) => {if (confirm('Are you sure you want 
 if ( {) {$2;}
 }
                     setEditingId (null)form.reset ({company_name: '',
-  role_title: '',start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: '',}
+  role_title: '',start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: ''}
   location: ''})} else {on_back ()}
-                ,
+                
 }
               >;
                 {editing_id ? 'Cancel' : 'Back'}
@@ -259,9 +259,9 @@ if ( {) {$2;}
           </form>;
         </Form>;
       </div>;...work;
-      start_date: formatDateValue(work.start_date),end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})}</div>,
+      start_date: formatDateValue(work.start_date),end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})}</div>
 }> {';}
-  editing_id ? 'Cancel': 'Back';}
+  editing_id ? 'Cancel': 'Back';}"
 }</Button> Next </Button>)}</div> </div> </form> </Form> </div> </div>)}'\"  )}</div>;
             </div>;
           </form>;
@@ -269,5 +269,5 @@ if ( {) {$2;}
       </div>;
     </div>;
   )}> {';}
-  editingId ? 'Cancel': 'Back' ;}
-}</Button> Next </Button>)}</div> </div> </form> </Form> </div> </div>)}'\";
+  editingId ? 'Cancel': 'Back' ;}"
+}</Button> Next </Button>)}</div> </div> </form> </Form> </div> </div>)}'\";"

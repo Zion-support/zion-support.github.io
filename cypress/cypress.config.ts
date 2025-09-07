@@ -1,19 +1,6 @@
-<<<<<<< HEAD;
+
 experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
-    setupNodeEvents(on, config) {on('before:browser:launch', (browser = {}, launchOptions) => {import { define_config  } from 'cypress';
-export default define_config ({e2e: {baseUrl: 'http://localhost:3000', // Standard Next && Next.js port;
-    supportFile: 'cypress/support/e2e && e2e.ts',}
-  experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors;}
-    setupNodeEvents(on, config) {on('before:browser:launch', (browser = {}, launchOptions) => {experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors;}
-    setupNodeEvents(on, config) {on('before:browser:launch', (browser = {}, launchOptions) => {if (browser && browser.family === 'chromium') {launchOptions && launchOptions.args.push('--disable-ipv6')base_url: 'http://localhost:3000', // Standard Next.js port;
-    support_file: 'cypress / support / e2e.ts',}
-  experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium - based browsers to avoid socket errors;}
-    setupNodeEvents (on, config) {on ('before:browser:launch', (browser = {}, launch_options) => {// Check condition;
-if ( {) {$2;
-    experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
-=======
-experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;}
+
 setupNodeEvents(on, config) {}
       on('before:browser:launch', (browser = {}, launchOptions) => {
         if (browser && browser.family === 'chromium') {
@@ -96,18 +83,12 @@ if ( {) {$2;}
       });export default define_config ({
   e2e: {
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
-<<<<<<< HEAD;
-baseUrl: 'http://localhost:3000', // Standard Next.js port;
-    supportFile: 'cypress/support/e2e.ts';
-    baseUrl: 'http://localhost:3000', // Standard Next && Next.js port;
-supportFile: 'cypress/support/e2e && e2e.ts';
-    supportFile: 'cypress/support/e2e.ts';
-=======
+
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
     supportFile: 'cypress/support/e2e.ts';
     baseUrl: 'http://localhost:3000', // Standard Next && Next.js port;
     supportFile: 'cypress/support/e2e && e2e.ts';    supportFile: 'cypress/support/e2e.ts';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors;}
 setupNodeEvents(on, config) {}
@@ -189,32 +170,5 @@ if ( {) {$2;}
   }
     to_console: true;
   }
-<<<<<<< HEAD;
-    },env: {CYPRESS_TEST_USER_EMAIL:;
-        process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com',CYPRESS_TEST_USER_PASSWORD:;
-        process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',CYPRESS_TEST_USER_DISPLAY_NAME:;
-        process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User',EXISTING_USER_EMAIL:;
-        process.env.EXISTING_USER_EMAIL || 'existing@test.com',EXISTING_USER_PASSWORD:;}
-        process.env.EXISTING_USER_PASSWORD || 'password123',TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User',STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242';}
-    },defaultCommandTimeout: 10000;
-      STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242';
-    },defaultCommandTimeout: 10000;
-  },reporter: 'junit',
-  reporter_options: {mocha_file: 'cypress / results / junit-[hash].xml',}
-  to_console: true;}
-  } })mocha_file: 'cypress / results / junit-[hash].xml';
-    to_console: true;
-  } })mocha_file: 'cypress / results / junit-[hash].xml';
-    to_console: true;
-  }
-})ursor/fix-website-loading-errors-and-merge-6662;
-      on('before:browser:launch', (browser;
-})
+
 });
-
-
-
-
-=======
-});
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

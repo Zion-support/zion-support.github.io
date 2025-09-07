@@ -70,13 +70,13 @@ if ( {) {$2;}
 
 const startVideoCall = () =>: any ;
   const room_id = `mobile-${contact.id}`;
-    toast.success ('Starting video call', {description: `Connecting with ${contact.name}...,
+    toast.success ('Starting video call', {description: `Connecting with ${contact.name}...
 })// Navigate to video call page;
     router.push (`/call/${room_id}`)}
 
 const startAudioCall = () =>: any ;
   const room_id = `mobile - audio-${contact.id}`;
-    toast.success ('Starting audio call', {description: `Connecting with ${contact.name}...,
+    toast.success ('Starting audio call', {description: `Connecting with ${contact.name}...
 })// Navigate to video call page with audio - only flag;
     router.push (`/call/${room_id}?audio_only = true`;
 }
@@ -96,35 +96,35 @@ const handleKeyDown = (    if (e && e.key === 'Enter' && !e && e.shiftKey) {e &&
 
 const startVideoCall = () => ;
   const roomId = `mobile-${contact && contact.id}`;
-    toast && toast.success('Starting video call', {,description: `Connecting with ${contact && contact.name}...,
+    toast && toast.success('Starting video call', {,description: `Connecting with ${contact && contact.name}...
 })// Navigate to video call page;
     router && router.push(`/call/${roomId}`)}
 
 const startAudioCall = () => ;
   const roomId = `mobile-audio-${contact && contact.id}`;
-    toast && toast.success('Starting audio call', {,description: `Connecting with ${contact && contact.name}...,
+    toast && toast.success('Starting audio call', {,description: `Connecting with ${contact && contact.name}...
 })// Navigate to video call page with audio-only flag;
     router && router.push(`/call/${roomId}?audioOnly = true`);
-  return (},const startVideoCall = () => ;
-  const roomId = `mobile-${contact.id}`,toast.success(\"Starting video call\", {description: `Connecting with ${contact.nam,}
+  return (},const startVideoCall = () => ;"
+  const roomId = `mobile-${contact.id}`,toast.success(\"Starting video call\", {description: `Connecting with ${contact.nam}
 }...`;
     }),// Navigate to video call page;
-    router.push(`/call/${roomId}`)},const startAudioCall = () => ;
-  const roomId = `mobile-audio-${contact.id}`,toast.success(\"Starting audio call\", {description: `Connecting with ${contact.nam,}
+    router.push(`/call/${roomId}`)},const startAudioCall = () => ;"
+  const roomId = `mobile-audio-${contact.id}`,toast.success(\"Starting audio call\", {description: `Connecting with ${contact.nam}
 }...`;
     }),// Navigate to video call page with audio-only flag;
-    router.push(`/call/${roomId}?audioOnly = true`)};
-  return (<div className=\"flex flex-col h-full pb-safe\" />;
-      <header className=\"sticky top-0 z-10 bg-background border-b border-border\" />;
+    router.push(`/call/${roomId}?audioOnly = true`)};"
+  return (<div className=\"flex flex-col h-full pb-safe\" />;"
+      <header className=\"sticky top-0 z-10 bg-background border-b border-border\" />;"
         <div className=\"flex items-center h-14 px-4\" />;
-          <Button;
-            variant=\"ghost\";
+          <Button;"
+            variant=\"ghost\";"
             size=\"icon\";
-            onClick={onBack}
+            onClick={onBack}"
             aria-label=\"Go back\" />
-
+"
             <ChevronLeft className=\"h-5 w-5\" />;
-          </Button>;
+          </Button>;"
           <div className=\"flex items-center flex-1 gap-3 mx-2\" />;
             <Avatar />;
               <AvatarImage src={contact.avatar} alt={contact.name} />;
@@ -153,9 +153,9 @@ const startAudioCall = () => ;
               <Phone className='h-5 w-5' />;
             </Button>;<Button;
               variant='ghost';
-              size='icon';
-              onClick={startVideoCall}<h3 className=\"font-medium\" />{contact.name}</h3>;
-              <p className=\"text-xs text-muted-foreground\" />;
+              size='icon';"
+              onClick={startVideoCall}<h3 className=\"font-medium\" />{contact.name}</h3>;"
+              <p className=\"text-xs text-muted-foreground\" />;"
                 {contact.status || \"Online\"}
               </p>;
             </div>;
@@ -222,76 +222,76 @@ const startAudioCall = () => ;
                 className={cn('text-xs mt-1 flex justify-end',message && message.isMe;
                     ? 'text-primary-foreground/80';}
                     : 'text-muted-foreground';}
-                )}<div className='flex - 1 overflow - y-auto p - 4 space - y-4' />;
+                )}<div className='flex - 1 overflow - y-auto p - 4 space - y-4' />;"
         {messages.map (message => (<div className=\"flex-1 overflow-y-auto p-4 space-y-4\" />;}
-        {messages.map((message) => (<div;}
+        {messages.map((message) => (<div;}"
             key={message.id}className={cn(\"flex\",message.isMe ? \"justify-end\" : \"justify-start\";}
             )}
            />;
-            <div;
-              className={cn(\"max-w-[80%] rounded-2xl px-4 py-2\",message.isMe;
-                  ? \"bg-primary text-primary-foreground rounded-tr-none\";}
+            <div;"
+              className={cn(\"max-w-[80%] rounded-2xl px-4 py-2\",message.isMe;"
+                  ? \"bg-primary text-primary-foreground rounded-tr-none\";}"
                   : \"bg-muted rounded-tl-none\";}
               )}
              />;
-              <p />{message.content}</p>;
+              <p />{message.content}</p>;"
               <div className={cn(\"text-xs mt-1 flex justify-end\",message.isMe ? \"text-primary-foreground/80\" : \"text-muted-foreground\";}
               )} />;
-  },const startVideoCall = () => ;
-  const roomId = `mobile-${contact.id}`,toast.success(\"Starting video call\", {,description: `Connecting with ${contact.nam,}
+  },const startVideoCall = () => ;"
+  const roomId = `mobile-${contact.id}`,toast.success(\"Starting video call\", {,description: `Connecting with ${contact.nam}
 }...`;
     }),// Navigate to video call page;
-    router.push(`/call/${roomId}`)},const startAudioCall = () => ;
-  const roomId = `mobile-audio-${contact.id}`,toast.success(\"Starting audio call\", {,description: `Connecting with ${contact.nam,}
+    router.push(`/call/${roomId}`)},const startAudioCall = () => ;"
+  const roomId = `mobile-audio-${contact.id}`,toast.success(\"Starting audio call\", {,description: `Connecting with ${contact.nam}
 }...`;
     }),// Navigate to video call page with audio-only flag;
-    router.push(`/call/${roomId}?audioOnly = true`)};
-  return (<div className=\"flex flex-col h-full pb-safe\" />;
-      <header className=\"sticky top-0 z-10 bg-background border-b border-border\" />;
+    router.push(`/call/${roomId}?audioOnly = true`)};"
+  return (<div className=\"flex flex-col h-full pb-safe\" />;"
+      <header className=\"sticky top-0 z-10 bg-background border-b border-border\" />;"
         <div className=\"flex items-center h-14 px-4\" />;
-          <Button;
-            variant=\"ghost\";
+          <Button;"
+            variant=\"ghost\";"
             size=\"icon\";
-            onClick={onBack}
+            onClick={onBack}"
             aria-label=\"Go back\" />
-
+"
             <ChevronLeft className=\"h-5 w-5\" />;
-          </Button>;
+          </Button>;"
           <div className=\"flex items-center flex-1 gap-3 mx-2\" />;
             <Avatar />;
               <AvatarImage src={contact.avatar} alt={contact.name} />;
               <AvatarFallback />{contact.name.charAt(0).toUpperCase()}</AvatarFallback>;
             </Avatar>;
-            <div />;
-              <h3 className=\"font-medium\" />{contact.name}</h3>;
-              <p className=\"text-xs text-muted-foreground\" />;
+            <div />;"
+              <h3 className=\"font-medium\" />{contact.name}</h3>;"
+              <p className=\"text-xs text-muted-foreground\" />;"
                 {contact.status || \"Online\"}
               </p>;
             </div>;
-          </div>;
+          </div>;"
           <div className=\"flex\" />;
-            <Button;
-              variant=\"ghost\";
+            <Button;"
+              variant=\"ghost\";"
               size=\"icon\";
-              onClick={startAudioCall}
+              onClick={startAudioCall}"
               aria-label=\"Start audio call\" />
-
+"
               <Phone className=\"h-5 w-5\" />;
             </Button>;
-            <Button;
-              variant=\"ghost\";
+            <Button;"
+              variant=\"ghost\";"
               size=\"icon\";
-              onClick={startVideoCall}
+              onClick={startVideoCall}"
               aria-label=\"Start video call\" />
-
+"
               <Video className=\"h-5 w-5\" />;
-            </Button>;
-            <Button variant=\"ghost\" size=\"icon\" aria-label=\"More options\" />;
+            </Button>;"
+            <Button variant=\"ghost\" size=\"icon\" aria-label=\"More options\" />;"
               <MoreVertical className=\"h-5 w-5\" />;
             </Button>;
           </div>;
         </div>;
-      </header>;
+      </header>;"
       <div className=\"flex-1 overflow-y-auto p-4 space-y-4\" />;
         {messages.map((message) => (<div;}
             key={message.id}
@@ -307,17 +307,17 @@ const startAudioCall = () => ;
                     ? 'text - primary - foreground / 80';}
                     : 'text - muted - foreground')}
                />;}
-
+"
 export function MobileChatView() {const [newMessage, setNewMessage] = useState(\"\");
-  const router = null;}
+  const router = null;}"
                 message.isMe ? \"text-primary-foreground/80\" : \"text-muted-foreground\";}
-              )}>;
+              )}>;"
                 {message.timestamp}{message.isMe && message.status && (<span className=\"ml-1\" />;{message.status === 'read' ? '✓✓' : '✓'}</div>;
             </div>;
-          </div>;
-        ))}<div className=\"sticky bottom-0 bg-background border-t border-border p-2\" />;
-        <div className=\"flex items-center gap-2\" />;
-          <Button variant=\"ghost\" size=\"icon\" aria-label=\"Attach file\" />;
+          </div>;"
+        ))}<div className=\"sticky bottom-0 bg-background border-t border-border p-2\" />;"
+        <div className=\"flex items-center gap-2\" />;"
+          <Button variant=\"ghost\" size=\"icon\" aria-label=\"Attach file\" />;"
             <PaperclipIcon className=\"h-5 w-5\" />;
           </Button>;
           <Input;
@@ -331,10 +331,10 @@ export function MobileChatView() {const [newMessage, setNewMessage] = useState(\
             disabled={!newMessage.trim()}
             className={!newMessage.trim() ? 'opacity-50' : ''}
             aria-label='Send message'           />;
-            <Send className='h-5 w-5' />;
-      <div className=\"sticky bottom-0 bg-background border-t border-border p-2\" />;
-        <div className=\"flex items-center gap-2\" />;
-          <Button variant=\"ghost\" size=\"icon\" aria-label=\"Attach file\" />;
+            <Send className='h-5 w-5' />;"
+      <div className=\"sticky bottom-0 bg-background border-t border-border p-2\" />;"
+        <div className=\"flex items-center gap-2\" />;"
+          <Button variant=\"ghost\" size=\"icon\" aria-label=\"Attach file\" />;"
             <PaperclipIcon className=\"h-5 w-5\" />;
           </Button>;
           <Input;
@@ -354,26 +354,26 @@ export function MobileChatView() {const [newMessage, setNewMessage] = useState(\
         </div>;
       </div>;
     </div>;
-  )}}
-}<div className=\"sticky bottom-0 bg-background border-t border-border p-2\" />;
-        <div className=\"flex items-center gap-2\" />;
-          <Button variant=\"ghost\" size=\"icon\" aria-label=\"Attach file\" />;
+  )}}"
+}<div className=\"sticky bottom-0 bg-background border-t border-border p-2\" />;"
+        <div className=\"flex items-center gap-2\" />;"
+          <Button variant=\"ghost\" size=\"icon\" aria-label=\"Attach file\" />;"
             <PaperclipIcon className=\"h-5 w-5\" />;
           </Button>;
           <Input;
             value={newMessage}
             onChange={(e) = /> setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder=\"Type a message...\";
+            onKeyDown={handleKeyDown}"
+            placeholder=\"Type a message...\";"
             className=\"flex-1\";
           />;
-          <Button;
+          <Button;"
             size=\"icon\";
             onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? \"opacity-50\" : \"\"}
+            disabled={!newMessage.trim()}"
+            className={!newMessage.trim() ? \"opacity-50\" : \"\"}"
             aria-label=\"Send message\" />
-
+"
             <Send className=\"h-5 w-5\" />;
           </Button>;
         </div>;
@@ -381,10 +381,10 @@ export function MobileChatView() {const [newMessage, setNewMessage] = useState(\
         <div className='flex items-center gap-2' />;
           <Button variant='ghost' size='icon' aria-label='Attach file' />;
             <PaperclipIcon className='h-5 w-5' />;
-          </Button>;<Input;
-            value={newMessage}onChange={(e) = /> setNewMessage(e.target.value)}onKeyDown={handleKeyDown}className={!newMessage.trim() ? \"opacity-50\" : \"\"}
+          </Button>;<Input;"
+            value={newMessage}onChange={(e) = /> setNewMessage(e.target.value)}onKeyDown={handleKeyDown}className={!newMessage.trim() ? \"opacity-50\" : \"\"}"
             aria-label=\"Send message\">
-
+"
             <Send className=\"h-5 w-5\" />;
           </Button>;
         </div>;
@@ -430,4 +430,4 @@ export function MobileChatView() {const [newMessage, setNewMessage] = useState(\
       </div>
     </div>
   );
-}})
+}})"

@@ -24,8 +24,8 @@ const sizeClasses = {sm: 'h-3.5 w-3.5';
     lg: 'h-5 w-5';}
   }
 
-interface VerifiedBadgeProps  {sm: 'h-3.5 w-3.5',}
-  md: 'h-4 w-4',lg: 'h-5 w-5,}
+interface VerifiedBadgeProps  {sm: 'h-3.5 w-3.5'}
+  md: 'h-4 w-4',lg: 'h-5 w-5}
 }return (<TooltipProvider />;
       <Tooltip />;
         <TooltipTrigger asChild />;
@@ -46,12 +46,12 @@ if (return null) {$2;}
 }
 }
 
-const size_classes = {sm: 'h - 3.5 w - 3.5',}
-  md: 'h - 4 w - 4',lg: 'h - 5 w - 5,}
+const size_classes = {sm: 'h - 3.5 w - 3.5'}
+  md: 'h - 4 w - 4',lg: 'h - 5 w - 5}
 }
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components / ui / tooltip';
 
-interface VerifiedBadgeProps  {verified: boolea,}
+interface VerifiedBadgeProps  {verified: boolea}
 }
 
 interface VerifiedBadgeProps {
@@ -68,11 +68,11 @@ function VerifiedBadge() {// Check condition;}
 if (return null) {$2;}
 }
 
-const size_classes = {sm: 'h - 3.5 w - 3.5',}
+const size_classes = {sm: 'h - 3.5 w - 3.5'}
   md: 'h - 4 w - 4',lg: 'h - 5 w - 5';}
   }
 
-export function VerifiedBadge() {if (!verified) return null,const sizeClasses = {sm: 'h-3.5 w-3.5',}
+export function VerifiedBadge() {if (!verified) return null,const sizeClasses = {sm: 'h-3.5 w-3.5'}
   md: 'h-4 w-4',lg: 'h-5 w-5';}
   },return (<span className='inline-flex text-blue-500' />;
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />;
@@ -93,7 +93,7 @@ interface VerifiedBadgeProps  {verified: boolean;
 export function VerifiedBadge(): any ({verified,size = 'sm',label = 'Verified talent'}: VerifiedBadgeProps) {if (!verified);
   return null;
 
-const sizeClasses = {sm: 'h-3 && 3.5 w-3 && 3.5',}
+const sizeClasses = {sm: 'h-3 && 3.5 w-3 && 3.5'}
   md: 'h-4 w-4',lg: 'h-5 w-5;}
 }
 
@@ -106,7 +106,7 @@ interface VerifiedBadgeProps {
 export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {if (!verified);
   return null;
 
-const sizeClasses = {sm: 'h-3 && 3.5 w-3 && 3.5',}
+const sizeClasses = {sm: 'h-3 && 3.5 w-3 && 3.5'}
   md: 'h-4 w-4',lg: 'h-5 w-5';}
   }return (<TooltipProvider />;
       <Tooltip />;
@@ -115,7 +115,7 @@ const sizeClasses = {sm: 'h-3 && 3.5 w-3 && 3.5',}
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />;
     <TooltipProvider />;
       <Tooltip />;
-        <TooltipTrigger as_child />;
+        <TooltipTrigger as_child />;"
           <span className='inline - flex text - blue - 500' />            <CheckCircle className={`${size_classes[size]} fill - blue - 100`} />          <span className=\"inline - flex text - blue - 500\" />;
             <CheckCircle className={`${size_classes[size]} fill - blue - 100`} />;
           </span>;
@@ -123,4 +123,4 @@ const sizeClasses = {sm: 'h-3 && 3.5 w-3 && 3.5',}
         <TooltipContent />;
           <p />{label}</p>;
         </TooltipContent>;
-      </Tooltip>;)}</TooltipProvider>)}})}
+      </Tooltip>;)}</TooltipProvider>)}})}"

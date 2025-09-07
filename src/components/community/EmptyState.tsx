@@ -12,7 +12,7 @@ import { Tooltip;
   TooltipTrigger;}
  } from '@/components/ui/tooltip';
 
-interface EmptyStateProps  {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+interface EmptyStateProps  {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }return this.props.children;
@@ -56,8 +56,8 @@ const EmptyState: React.FC<EmptyStateProps /> = ({ title,subtitle,cta,href,hasSe
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex' />;
         <MessageSquare className='h-10 w-10 text-zion-purple' />;}
       </div>;}
-      <h2 className='text-xl font-medium mb-2' />{title}</h2>;
-      <p className='text-muted-foreground mb-6' />{subtitle}</p>      <TooltipProvider />      <h2 className=\"text-xl font-medium mb-2\" />{title}</h2>;
+      <h2 className='text-xl font-medium mb-2' />{title}</h2>;"
+      <p className='text-muted-foreground mb-6' />{subtitle}</p>      <TooltipProvider />      <h2 className=\"text-xl font-medium mb-2\" />{title}</h2>;"
       <p className=\"text-muted-foreground mb-6\" />{subtitle}</p>;
       <TooltipProvider />;
         <Tooltip />;
@@ -69,12 +69,12 @@ const EmptyState: React.FC<EmptyStateProps /> = ({ title,subtitle,cta,href,hasSe
 
 const EmptyState: React.FC<EmptyStateProps /> = ({ title, subtitle, cta, href, hasSession    }) => {
 
-
-return (<div className=\"text-center py-16\" />;
-      <div className=\"bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\" />;
+"
+return (<div className=\"text-center py-16\" />;"
+      <div className=\"bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\" />;"
         <MessageSquare className=\"h-10 w-10 text-zion-purple\" />;}
-      </div>;}
-      <h2 className=\"text-xl font-medium mb-2\" />{title}</h2>;
+      </div>;}"
+      <h2 className=\"text-xl font-medium mb-2\" />{title}</h2>;"
       <p className=\"text-muted-foreground mb-6\" />{subtitle}</p>;
   hasSession: boolean;
       <p className='text-muted-foreground mb-6' />{subtitle}</p>;
@@ -100,8 +100,8 @@ const EmptyState: React.FC < EmptyStateProps> = ({ title,subtitle,cta,href,has_s
       <div className='bg - zion - blue / 30 p - 6 rounded - full mb - 6 inline - flex' />;
         <MessageSquare className='h - 10 w - 10 text - zion - purple' />;}
       </div>;}
-      <h2 className='text - xl font - medium mb - 2' />{title}</h2>;
-      <p className='text - muted - foreground mb - 6' />{subtitle}</p>      <TooltipProvider />      <h2 className=\"text - xl font - medium mb - 2\" />{title}</h2>;
+      <h2 className='text - xl font - medium mb - 2' />{title}</h2>;"
+      <p className='text - muted - foreground mb - 6' />{subtitle}</p>      <TooltipProvider />      <h2 className=\"text - xl font - medium mb - 2\" />{title}</h2>;"
       <p className=\"text - muted - foreground mb - 6\" />{subtitle}</p>;
       <TooltipProvider />;
         <Tooltip />;
@@ -123,4 +123,4 @@ export default EmptyState;
     </div>;
 )}
 
-export default EmptyState;
+export default EmptyState;"

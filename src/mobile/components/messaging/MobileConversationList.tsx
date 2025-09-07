@@ -134,36 +134,36 @@ export function MobileConversationList() {return (<div className;}
                   <p className='text-sm text-muted-foreground truncate' />;
                     {conversation && conversation.isTyping ? (<em />Typing...</em>;}
                     ) : (conversation && conversation.lastMessage;}
-                    )}
+                    )}"
                   </p>;{conversation && conversation.unreadCount > 0 && (<Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full' />                      {conversation && conversation.unreadCount}                    <Badge className=\"ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full\" />;
                       {conversation && conversation.unreadCount}
                     </Badge>;)}
                 </div>;
               </div>;
-            </div>;
-            <div className='border-t border-border ml-12' /></div>          </div>            <div className=\"border-t border-border ml-12\" /></div>;
-          </div>;<div className=\"flex-1 min-w-0\" />;
-                <div className=\"flex justify-between items-baseline\" />;
-                  <h3 className=\"font-medium truncate\" />{conversation.name}</h3>;
+            </div>;"
+            <div className='border-t border-border ml-12' /></div>          </div>            <div className=\"border-t border-border ml-12\" /></div>;"
+          </div>;<div className=\"flex-1 min-w-0\" />;"
+                <div className=\"flex justify-between items-baseline\" />;"
+                  <h3 className=\"font-medium truncate\" />{conversation.name}</h3>;"
                   <span className=\"text-xs text-muted-foreground whitespace-nowrap ml-2\" />;
                     {conversation.timestamp}<div className='flex-1 min-w-0' />;
                 <div className='flex justify-between items-baseline' />;
                   <h3 className='font-medium truncate' />{conversation.name}</h3>;
                   <span className='text-xs text-muted-foreground whitespace-nowrap ml-2' />;
                   </span>;
-                </div>;
-                <div className=\"flex justify-between items-center\" />;
+                </div>;"
+                <div className=\"flex justify-between items-center\" />;"
                   <p className=\"text-sm text-muted-foreground truncate\" />;
                     {conversation.isTyping;}
                       ? <em />Typing...</em>;}
-                      : conversation.lastMessage}</p>;
+                      : conversation.lastMessage}</p>;"
                   {conversation.unreadCount > 0 && (<Badge className=\"ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full\" />;}
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full' />;}
                       {conversation.unreadCount}
                     </Badge>;)}
                 </div>;
               </div>;
-            </div>;
+            </div>;"
             <div className=\"border-t border-border ml-12\" /></div>;
           </div>;
         ))}</div>;
@@ -193,13 +193,13 @@ export function MobileConversationList() {return (<div className;}
                 <div className='flex justify - between items - center' />;
                   <p className='text - sm text - muted - foreground truncate' />;
                     {conversation.is_typing ? (<em  /> Typing...</em>) : (conversation.last_message)}
-                  </p>;
+                  </p>;"
                   {conversation.unread_count > 0 && (<Badge className='ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full' />                      {conversation.unread_count}                    <Badge className=\"ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full\" />;
                       {conversation.unread_count}
                     </Badge>)}
                 </div>;
               </div>;
-            </div>;
+            </div>;"
             <div className='border - t border - border ml - 12' /></div>          </div>            <div className=\"border - t border - border ml - 12\" /></div>;
           </div>))}
       </div>
@@ -210,4 +210,4 @@ export function MobileConversationList() {return (<div className;}
         ))}
       </div>;
     </div>;
-  )}
+  )}"

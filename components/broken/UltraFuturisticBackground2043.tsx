@@ -148,7 +148,7 @@ window.removeEventListener('resize', resizeCanvas)}
         <motion&& motion.div;
           className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl';
           background:;
-            'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)',}}
+            'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)'}}
       />;
       {/* Enhanced floating orbs */}
       <div className='absolute inset - 0' />;
@@ -158,13 +158,13 @@ window.removeEventListener('resize', resizeCanvas)}
 
           animate={{
 
-            scale: [1, 1.2, 1],}
-            opacity: [0.3, 0.6, 0.3],}
+            scale: [1, 1.2, 1]}
+            opacity: [0.3, 0.6, 0.3]}
           }}
           transition={{
             duration: 8,
-            repeat: Infinity,}
-            ease: 'easeInOut',}
+            repeat: Infinity}
+            ease: 'easeInOut'}
           }}
         />
 
@@ -172,14 +172,14 @@ window.removeEventListener('resize', resizeCanvas)}
         <motion.div;
 className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl'
           animate={{
-            scale: [1.2, 1, 1.2],}
-            opacity: [0.4, 0.7, 0.4],}
+            scale: [1.2, 1, 1.2]}
+            opacity: [0.4, 0.7, 0.4]}
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: 'easeInOut',}
-  delay: 2,}
+            ease: 'easeInOut'}
+  delay: 2}
           }}
         />
 
@@ -187,14 +187,14 @@ className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-
         <motion.div;
 className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl'
           animate={{
-            scale: [1, 1.3, 1],}
-            opacity: [0.2, 0.5, 0.2],}
+            scale: [1, 1.3, 1]}
+            opacity: [0.2, 0.5, 0.2]}
           }}
           transition={{
             duration: 12,
             repeat: Infinity,
             ease: 'easeInOut',
-  delay: 4,}
+  delay: 4}
 }
           }}
         />
@@ -203,14 +203,14 @@ className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500
         <motion.div;
 className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl'
           animate={{
-            scale: [1.3, 1, 1.3],}
-            opacity: [0.3, 0.6, 0.3],}
+            scale: [1.3, 1, 1.3]}
+            opacity: [0.3, 0.6, 0.3]}
           }}
           transition={{
             duration: 9,
             repeat: Infinity,
-            ease: 'easeInOut',}
-  delay: 1,}
+            ease: 'easeInOut'}
+  delay: 1}
           }}
         />
         <motion.div;
@@ -225,14 +225,14 @@ className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10
 
             duration: 11,
             repeat: Infinity,
-            ease: 'easeInOut',}
-  delay: 3,}
+            ease: 'easeInOut'}
+  delay: 3}
           }}
           transition={{
             duration: 11;
 repeat: Infinity;}
 ease: 'easeInOut'}
-            delay: 3,          }}
+            delay: 3          }}
 
         />
       </div>
@@ -245,8 +245,8 @@ className='absolute inset-0'
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
 
-            `,}
-            backgroundSize: '50px 50px',}
+            `}
+            backgroundSize: '50px 50px'}
           }}
 
         />;
@@ -268,7 +268,7 @@ className='absolute inset-0'
         <div;
           className='absolute inset - 0';
           style={{background_image: `;}
-              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px),linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`,background_size: '50px 50px',          }}          style={{background_image: `;
+              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px),linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`,background_size: '50px 50px'          }}          style={{background_image: `;
               linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px)linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`;}
             background_size: '50px 50px';}
           }}
@@ -283,18 +283,18 @@ className='absolute inset-0'
             rotate: [45, 405],opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],        {/* Triangle */}
         <motion && motion.div;
           className=\"absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45\";
-        <motion.div;
+        <motion.div;"
           className=\"absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan-500 / 20 rotate-45\";
 
           animate={{
 
-            rotate: [45, 405],}
-            opacity: [0.2, 0.6, 0.2],}
+            rotate: [45, 405]}
+            opacity: [0.2, 0.6, 0.2]}
           }}
           transition={{
             duration: 20,
-            repeat: Infinity,}
-            ease: 'linear',}
+            repeat: Infinity}
+            ease: 'linear'}
           }}
         />
 
@@ -302,13 +302,13 @@ className='absolute inset-0'
         <motion.div;
 className='absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20'
           animate={{
-            rotate: [0, 360],}
-            scale: [1, 1.2, 1],}
+            rotate: [0, 360]}
+            scale: [1, 1.2, 1]}
           }}
           transition={{
             duration: 15,
-            repeat: Infinity,}
-            ease: 'easeInOut',}
+            repeat: Infinity}
+            ease: 'easeInOut'}
           }}
 
         {/* Circle */}
@@ -316,20 +316,20 @@ className='absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20'
         <motion.div;
 className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full'
           animate={{
-            scale: [1, 1.5, 1],}
-            opacity: [0.3, 0.8, 0.3],}
+            scale: [1, 1.5, 1]}
+            opacity: [0.3, 0.8, 0.3]}
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'easeInOut',}
-  delay: 2,}
+            ease: 'easeInOut'}
+  delay: 2}
           }}
           transition={{
             duration: 8;
 repeat: Infinity;}
 ease: 'easeInOut'}
-            delay: 2,          }}
+            delay: 2          }}
 
         />
       </div>
@@ -341,20 +341,20 @@ key={i}
             className='absolute inset - 0 border border - cyan - 500 / 10 rounded - full';
             animate={{
 
-              scale: [1, 1.5, 2, 2.5],}
-              opacity: [0.3, 0.2, 0.1, 0],}
+              scale: [1, 1.5, 2, 2.5]}
+              opacity: [0.3, 0.2, 0.1, 0]}
             }}
             transition={{
               duration: 6,
               repeat: Infinity,
-              ease: 'easeOut',}
-  delay: i * 2,}
+              ease: 'easeOut'}
+  delay: i * 2}
             }}
             transition={{
               duration: 6,
-              repeat: Infinity,}
-              ease: 'easeOut',}
-              delay: i * 2,            }}
+              repeat: Infinity}
+              ease: 'easeOut'}
+              delay: i * 2            }}
           />
         ))}
       </div>
@@ -364,7 +364,7 @@ key={i}
               duration: 6,
               repeat: Infinity,
               ease: 'easeOut',
-  delay: i * 2,            }}
+  delay: i * 2            }}
           />
         ))}
       </div>
@@ -379,20 +379,20 @@ key={i}
 
               x: [0, Math.random() * 200 - 100],
               y: [0, Math.random() * 200 - 100],
-              opacity: [0, 1, 0],}
-              scale: [0, 1, 0],}
+              opacity: [0, 1, 0]}
+              scale: [0, 1, 0]}
             }}
             transition={{
               duration: 4 + Math.random() * 4,
               repeat: Infinity,
-              delay: Math.random() * 4,}
-ease: 'easeInOut',}
+              delay: Math.random() * 4}
+ease: 'easeInOut'}
             }}
             style={{}
-              left: `${Math.random() * 10,}
+              left: `${Math.random() * 10}
 }%`,
-              top: `${Math.random() * 10,}
-}%`,
+              top: `${Math.random() * 10}
+}%`
             }}
 
           />
@@ -405,17 +405,17 @@ ease: 'easeInOut',}
         <motion.div;
 className='absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5'
           animate={{}
-            opacity: [0.3, 0.6, 0.3],}
+            opacity: [0.3, 0.6, 0.3]}
           }}
           transition={{
             duration: 10,
-            repeat: Infinity,}
-            ease: 'easeInOut',}
+            repeat: Infinity}
+            ease: 'easeInOut'}
           }}
           transition={{
             duration: 10;}
 repeat: Infinity;}
-ease: 'easeInOut',          }}
+ease: 'easeInOut'          }}
         />
       </div>
     </div>
@@ -425,3 +425,4 @@ ease: 'easeInOut',          }}
 
 export default UltraFuturisticBackground2043;
 
+"

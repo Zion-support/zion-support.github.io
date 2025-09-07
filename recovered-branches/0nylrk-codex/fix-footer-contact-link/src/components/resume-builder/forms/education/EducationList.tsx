@@ -1,39 +1,4 @@
-<<<<<<< HEAD;
-import {Education} from '@/types/resume';
-import {EducationItem} from './EducationItem';
-interface EducationListProps {
-  educationEntries: Education[];
-  onEdit: (education: Education) => void;}
-  onDelete: (id: string) => void;}
-import { Education } from '@/types/resume';
-import { EducationItem } from './EducationItem';
-interface EducationListProps {;
-  educationEntries: Education[],;
-  onEdit: (education: Education) => void;}
-  onDelete: (id: string) => void;}
-import { Education } from \"@/types/resume\";
-import { EducationItem } from \"./EducationItem\";
-interface EducationListProps {
-  education_entries: Education[];
-  on_edit: (education: Education) => void;}
-  on_delete: (id: string) => void;}
-}
-export /**
- * EducationList - Function description;
- */
-function EducationList() {
-  // Check condition;
-if ( {) {}
-  $2}
-}
-    return null;
-  }
-  return (
-    <div className=\"space-y-4\" />;
-      <h3 className=\"text - md font-medium\" />Added Education</h3>;
-      {education_entries.map ((edu) => (}
-        <EducationItem;          key={edu.id}
-=======
+
 import { Education } from \"@/types/resume\";
 import { EducationItem } from \"./EducationItem\";
 interface EducationListProps {
@@ -57,7 +22,7 @@ export function EducationList({
       {educationEntries.map((edu) => (}
         <EducationItem;}
 key={edu.id}
- />>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+ /
 education={edu}
           onEdit={onEdit}
           onDelete={onDelete}
@@ -66,7 +31,4 @@ education={edu}
     </div>
   );
 }
-<<<<<<< HEAD;
-}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+

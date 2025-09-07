@@ -57,7 +57,7 @@ const fallbackUrl = `/api/image${src}`;
   return (}
     <div;}
 className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
+        style={{ width, height }}"
         role=\"img\";
         aria-label = {alt}
        />;
@@ -77,9 +77,9 @@ const fallbackUrl = `/api/image${src}`,setCurrentSrc(fallbackUrl)setHasError(tru
   return (
     <div;
 className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
+        style={{ width, height }}"
         role=\"img\";
-        aria-label={alt} />;
+        aria-label={alt} />;"
         <ImageIcon className=\"w-6 h-6\" />;
       </div>;
     )}/>;
@@ -88,7 +88,7 @@ className={`flex items-center justify-center bg-gray-100 text-gray-400 ${classNa
         <ImageIcon className='w-6 h-6' />      </div>;
     )}/>;
   )aria-label={alt}
-      >;
+      >;"
         <ImageIcon className=\"w-6 h-6\" />;
       </div>;
     )}/>;
@@ -133,13 +133,13 @@ if ( {) {$2;}
         return (
     <div;
 className={`flex items - center justify - center bg - gray - 100 text - gray - 400 ${class_name}`}
-        style={{ width, height }}
+        style={{ width, height }}"
         role=\"img\";
         aria - label = {alt }
        />;
         <ImageIcon className='w - 6 h - 6' />      </div>)}
     />)aria - label={alt}
-      >;
+      >;"
         <ImageIcon className=\"w - 6 h - 6\" />
     </div>
   );
@@ -157,4 +157,4 @@ className={`flex items - center justify - center bg - gray - 100 text - gray - 4
   )}unoptimized = {has_error }
     />)}
 }/>;
-  )
+  )"

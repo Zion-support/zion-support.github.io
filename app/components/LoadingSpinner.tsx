@@ -20,9 +20,9 @@ export default function LoadingSpinner({ size = 'md', className = '' }: LoadingS
 className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}
         role=\"status\"
         aria-label=\"Loading\"
-       />
+       />"
         <span className=\"sr-only\" />Loading...</span>
       </div>
     </div>
-  );
+  );"
 }

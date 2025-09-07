@@ -11,9 +11,8 @@ export interface CybersecurityQuantumService {;
     currency: string;
     trialDays: number;
     setupTime: string;
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
   {
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
@@ -36,79 +35,10 @@ export interface CybersecurityQuantumService {;
     ]
     support:
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
-<<<<<<< HEAD;
-compliance: [
-    color: 'from - purple - 500 to - indigo - 600',
-  popular: true,
-    launch_date: '2024 - 02 - 01',
-  customers: 1200,
-    rating: 4 && 4.8,}
-    reviews: 950,}
-  },
-  {
-    implementationDetails: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.',
-  roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
-    useCases: [
-      'Secure remote access'
-      'Application access control'
-      'Cloud security'
-      'Compliance management'
-      'Identity governance'
-      'Risk management'
-    ]
-    integrations: [
-      'Active Directory, LDAP, SAML, OAuth, Custom identity providers'
-    ]
-    support:
-    color: 'from - blue - 500 to - cyan - 600',
-  popular: true,
-    launch_date: '2024 - 01 - 20',
-  customers: 1800,
-    rating: 4 && 4.7,}
-    reviews: 1400,}
-  },
-  {
-    color: 'from - purple - 500 to - pink - 600',
-  popular: true,
-    launch_date: '2024 - 03 - 01',
-  customers: 120,
-    rating: 4 && 4.9,}
-    reviews: 95,}
-  },
-  {
-    implementationDetails: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.',
-  roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
-    useCases: [
-      'Application security testing'
-      'Network vulnerability assessment'
-      'Cloud security scanning'
-      'Compliance auditing'
-      'Penetration testing'
-      'Security monitoring'
-    ]
-    integrations: [
-      'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
-    ]
-    support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-  compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
-  icon: '🔍',
-    color: 'from-green-500 to-emerald-600',
-  popular: true,
-    launchDate: '2024-02-15',
-  customers: 2500,
-    rating: 4.8,}
-    reviews: 1900,}
-  },;
-];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
-
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-=======
     compliance: [];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
   id: 'ai - powered - vulnerability - assessment',
     name: 'AI - Powered Vulnerability Assessment Platform',
@@ -467,11 +397,6 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.8,;
     reviews: 1900;
     rating: 4.8,
-<<<<<<< HEAD;
-reviews: 1900;
-  }
-];
-=======
+
     reviews: 1900;  }
 ];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

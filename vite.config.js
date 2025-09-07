@@ -50,18 +50,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),}
     },
   },
-<<<<<<< HEAD;
-optimizeDeps: {}
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom'],}
-  },
-});
-    }
-  },
-  optimizeDeps: {}
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']}
-  }
-});
 
-=======
 });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1;

@@ -16,8 +16,8 @@ export default function robots(): MetadataRoute.Robots {
         '/scripts/',
         '/automation/',
         '/backup/',
-        '/temp/',}
-      ],}
+        '/temp/'
+      ]
     },
     sitemap: 'https://ziontechgroup.com/sitemap.xml'
   };

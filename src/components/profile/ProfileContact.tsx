@@ -12,7 +12,7 @@ interface ProfileContactProps {
 }
 }
 
-export function ProfileContact() {const [message, setMessage] = useState(\"\");
+export function ProfileContact() {const [message, setMessage] = useState(\"\");"
   const [subject, setSubject] = useState(\"\");
   const [isSending, setIsSending] = useState(false);
   const handleSendMessage = null;
@@ -27,7 +27,7 @@ export function ProfileContact() {const [message, setMessage] = useState(\"\");
             href={`mailto: ${email}`}
             className='text-zion-cyan hover:underline truncate block' />
 
-            {emai,}
+            {emai}
 }
           </a>;
         </div>;
@@ -63,7 +63,7 @@ onChange={e = /> setMessage(e.target.value)}
         </div>;
       </form>;
     </div>;
-  )`mailto:$ {email ;}
-}` \";
-}className=\"text-zion-cyan hover: underline truncate block\" > required /> </div> <div /> <Textarea required /> </div> <Button </Button /> </div> </form> </div>,
-}'\";
+  )`mailto:$ {email ;}"
+}` \";"
+}className=\"text-zion-cyan hover: underline truncate block\" > required /> </div> <div /> <Textarea required /> </div> <Button </Button /> </div> </form> </div>,"
+}'\";"

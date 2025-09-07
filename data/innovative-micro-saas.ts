@@ -1,10 +1,6 @@
-<<<<<<< HEAD;
+
 id: string;
-export interface InnovativeMicroSaas  {id: string;name: string;
-  id: string;
-=======
-id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: string;
   tagline: string;
   price: string;
@@ -566,11 +562,9 @@ export interface InnovativeMicroSaas  {export interface InnovativeMicroSaas  {}]
     ],
     popular: true,
     icon: '📱',
-<<<<<<< HEAD;
-      'Social Media APIs',
-=======
+
       'AI/ML',      'Social Media APIs',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
       'React',
       'Node && Node.js',
       'Python',
@@ -598,11 +592,9 @@ export interface InnovativeMicroSaas  {export interface InnovativeMicroSaas  {}]
     ],
     popular: true,
     icon: '📋',
-<<<<<<< HEAD;
-      'Project Management',
-=======
+
       'AI/ML',      'Project Management',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
       'React',
       'Node && Node.js',
       'Python',
@@ -708,12 +700,9 @@ implementationDetails: 'Complete project management platform with AI-powered pla
 reviews: 1600;
 address: '364 E Main St STE 1008 Middletown DE 19709',
   reviews: 1600;
-<<<<<<< HEAD;
-address: '364 E Main St STE 1008 Middletown DE 19709',
 
-=======
 =======      address: '364 E Main St STE 1008 Middletown DE 19709',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -1021,8 +1010,5 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
   rating: number,;
   reviews: number;
 }
-<<<<<<< HEAD;
-;
-=======
+
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
