@@ -648,4 +648,6 @@ export default function InnovativeServicesShowcase2028() {
       </motion.div>
     </div>
   );
-}
+};
+
+export default InnovativeServicesShowcase2028;

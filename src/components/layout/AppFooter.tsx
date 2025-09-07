@@ -139,6 +139,13 @@ export function AppFooter() {
     { name: "Contact Us", href: "/contact" }
   ];
 
+  const showcaseLinks = [
+    { name: "2028 Services Showcase", href: "/innovative-services-showcase-2028", icon: Rocket },
+    { name: "2025 Services Showcase", href: "/comprehensive-services-showcase-2025", icon: Star },
+    { name: "2026 Services Showcase", href: "/innovative-services-showcase-2026", icon: Zap },
+    { name: "2027 Services Showcase", href: "/innovative-services-showcase-2027", icon: Brain }
+  ];
+
   const resourceLinks = [
     { name: "Blog & Insights", href: "/blog" },
     { name: "Documentation", href: "/docs" },
@@ -418,6 +425,28 @@ export function AppFooter() {
                     <Link 
                       to={link.href} 
                       className="text-zion-slate-light hover:text-zion-blue transition-all duration-300 text-sm flex items-center group"
+                    >
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" />
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-2 bg-zion-cyan/20 rounded-lg">
+                  <Rocket className="w-5 h-5 text-zion-cyan" />
+                </div>
+                <h3 className="text-lg font-bold text-zion-cyan">Showcases</h3>
+              </div>
+              <ul className="space-y-3">
+                {showcaseLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      to={link.href} 
+                      className="text-zion-slate-light hover:text-zion-cyan transition-all duration-300 text-sm flex items-center group"
                     >
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" />
                       {link.name}
