@@ -1,11 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import HomePage from '../app/page';
 
 describe('Smoke Tests', () => {
-  test('Home page renders without crashing', () => {
+  test('Home page renders without crashing', async () => {
     render(<HomePage />);
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+    // Wait for lazy-loaded components to render
+    await waitFor(() => {
+      expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+    });
   });
 
   test('Application builds successfully', () => {
