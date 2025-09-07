@@ -1,38 +1,17 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
-const fs = require('fs');
+#!/usr/bin/env node,
+  const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-=======
-    this.projectRoot = process.cwd();
-
-    this.ensureDirectories()}
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}"
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
 class SecurityAuditor {
   constructor() {
     this.vulnerabilities = [];
     this.recommendations = [];
   }
-
   async auditDependencies() {
     try {
       console.log('Auditing dependencies...');
       const result = execSync('npm audit --json', { encoding: 'utf8' });
       const auditData = JSON.parse(result);
-      
-<<<<<<< HEAD
       if (auditData.vulnerabilities) {
         this.vulnerabilities = Object.values(auditData.vulnerabilities);
         console.log(`Found ${this.vulnerabilities.length} vulnerabilities`);
@@ -293,173 +272,31 @@ const vulnerablePackages = ['lodash',;
       console.error('Error auditing dependencies:', error);
     }
   }
-
   async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
       vulnerabilities: this.vulnerabilities,
       recommendations: this.recommendations
     };
-
-<<<<<<< HEAD
     const reportPath = path.join(process.cwd(), 'security-audit-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`Security audit report generated: ${reportPath}`);
   }
-
   async run() {
     console.log('🔒 Starting Security Audit');
     await this.auditDependencies();
     await this.generateReport();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Generate recommendations;
-=======
-    // Generate recommendations
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    // Generate recommendations
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-    report.recommendations = this.generateRecommendations(report.analysis);
-
-    const reportFile = path.join(this.reportsDir, `security-report-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    
-    this.log(`📄 Security report "generated": ${reportFile}`);
-    
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    
-    this.log(`📄 Security report "generated": ${reportFile}`);
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-    return report}
-
-  generateRecommendations(analysis) {
-    const recommendations = [];
-
-    if (analysis.npmAudit && analysis.npmAudit.count > 0) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      recommendations.push({"
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      recommendations.push({
-        "type": 'npm_audit',
-        "priority": 'high',
-        "message": `Found ${analysis.npmAudit.count} vulnerabilities. Run 'npm audit fix' to resolve.`,
-        "impact": 'Reduces security risks'
-      })}
-
-    if (analysis.environmentVariables && analysis.environmentVariables.sensitiveVars.length > 0) {
-      recommendations.push({
-        "type": 'environment_variables',
-        "priority": 'high',
-        "message": 'Found potentially sensitive environment variables. Review and secure them.',
-        "impact": 'Prevents credential exposure'
-      })}
-
-    if (analysis.dependencies && analysis.dependencies.vulnerablePackages.length > 0) {
-      recommendations.push({
-        "type": 'dependencies',
-        "priority": 'medium',
-        "message": 'Found potentially vulnerable packages. Consider updating or replacing them.',
-        "impact": 'Reduces security risks'
-      })}
-
-    if (analysis.codeSecurity && analysis.codeSecurity.issues.length > 0) {
-      recommendations.push({
-        "type": 'code_security',
-        "priority": 'medium',
-        "message": 'Found potential security issues in code. Review and fix them.',
-        "impact": 'Improves code security'
-      })}
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
-    return recommendations}
-
-  async run() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  // TODO: Implement
-      const report = await this.generateSecurityReport();
-
-      throw error}
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-    this.log('🔒 Starting Security Auditor...');
-    
-    try {
-      const report = await this.generateSecurityReport();
-      
-      this.log('🎉 Security audit completed!');
-      this.log(`🔍 "Vulnerabilities": ${report.analysis.npmAudit.count || 0}`);
-      this.log(`🔐 Sensitive "variables": ${report.analysis.environmentVariables.sensitiveVars.length || 0}`);
-      this.log(`📦 Vulnerable "packages": ${report.analysis.dependencies.vulnerablePackages.length || 0}`);
-      this.log(`🔍 Code security "issues": ${report.analysis.codeSecurity.issues.length || 0}`);
-      this.log(`💡 "Recommendations": ${report.recommendations.length}`);
-      
-      return report} catch (error) {
-      this.log(`💥 Security audit "failed": ${error.message}`);
-      throw error}
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   }
 }
-
 if (require.main === module) {
   const auditor = new SecurityAuditor();
   auditor.run()
     .then((report) => {
-
-<<<<<<< HEAD
-=======
-=======
-      
-      
-      
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
-      
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Security Auditor "failed": ', error.message);
       process.exit(1)})}
-
 module.exports = SecurityAuditor;
-
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -498,10 +335,3 @@ const result = execSync('npm audit --audit-level=moderate --json');
         "message"
         "impact"
       console.error('\n� Security Auditor "failed")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

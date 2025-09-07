@@ -3,31 +3,25 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",
     "ci:build-test": "npm run build && npm run test:smoke",
+    "sitemap": "node scripts/generate-sitemap.js",
     "dev": "next dev",
-<<<<<<< HEAD
-    "build": "next build",
-=======
-<<<<<<< HEAD
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
-=======
-    "build": "next build",
-    "clean": "rm -rf .next && rm -rf out",
-    "export": "next build && next export",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-    "start": "next start",
->>>>>>> origin/main
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "next build && next export",
     "start": "next start -p 3000",
     "postbuild": "echo \"Build completed\"",
     "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
-    "lint:fix": "eslint . --fix --max-warnings 0",
+    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
     "lint:check": "eslint . --max-warnings 0",
-    "type-check": "tsc --noEmit --skipLibCheck",
+    "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
@@ -199,7 +193,6 @@
     "automation:log-analyzer": "node scripts/intelligent/log-analyzer.js",
     "automation:resource-optimizer": "node scripts/intelligent/resource-optimizer.js",
     "security:fix": "npm audit fix --force",
-    "sitemap": "node scripts/generate-sitemap.js",
     "sitemap:generate": "node scripts/generate-sitemap.js",
     "pm2:fastads:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.fast-ads.local.cjs --update-env",
     "pm2:fastads:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.fast-ads.local.cjs || pm2 start ecosystem.fast-ads.local.cjs --update-env)",
@@ -250,6 +243,7 @@
 >>>>>>> origin/main
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
+    "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.2.1",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
@@ -346,14 +340,18 @@
     "@types/react-dom": "^19.1.9",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
-    "@vitejs/plugin-react": "^5.0.2",
-    "autoprefixer": "^10.4.21",
-    "axe-core": "^4.10.3",
+    "audit-ci": "^7.1.0",
     "eslint": "^9.35.0",
     "eslint-config-next": "^14.2.32",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "identity-obj-proxy": "^3.0.0",
+    "imagemin": "^9.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-webp": "^8.0.0",
     "jest": "^30.1.3",
     "jest-environment-jsdom": "^30.1.2",
     "jsdom": "^24.0.0",
@@ -362,8 +360,25 @@
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
   },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  }
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zion-Holdings/zion.app.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "ai",
+    "automation",
+    "zion-tech-group"
+  ],
+  "author": "Zion Tech Group",
+  "license": "MIT"
 }

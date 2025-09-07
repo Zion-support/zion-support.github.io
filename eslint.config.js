@@ -1,9 +1,9 @@
-import js from '@eslint/js';'
-import typescript from '@typescript-eslint/eslint-plugin';'
-import typescriptParser from '@typescript-eslint/parser';'
-import react from 'eslint-plugin-react';'
-import reactHooks from 'eslint-plugin-react-hooks';'
-import globals from 'globals';'
+<<<<<<< HEAD
+import js from '@eslint/js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
 
 export default [
   js.configs.recommended,
@@ -48,29 +48,97 @@ export default [
       'react': react,'
       'react-hooks': reactHooks'
     },
-    "rules": {
-      'no-unused-vars': 'off','
-      '@typescript-eslint/no-unused-vars': ['warn', { "argsIgnorePattern": '^_' }],'
-      '@typescript-eslint/no-explicit-any': 'warn','
-      '@typescript-eslint/ban-ts-comment': 'off','
-      'no-console': ['warn', { "allow": ['warn', 'error'] }],'
-      'prefer-const': 'error','
-      'no-debugger': 'warn','
-      'react/react-in-jsx-scope': 'off','
-      'react/prop-types': 'off','
-      'react-hooks/rules-of-hooks': 'error','
-      'react-hooks/exhaustive-deps': 'warn''
-    },
-    "settings": {
-      }
-      "react": {
-        }
-        "version": 'detect''
+    rules: {
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+  },
+=======
+}
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsparser,
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+<<<<<<< HEAD
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLParagraphElement: 'readonly',
+        HTMLHeadingElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        MessageEvent: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly',
+        Performance: 'readonly',
+        PerformanceNavigationTiming: 'readonly'
+=======
+        // Node.js globals,
+  process: 'readonly'
+        console: 'readonly'
+        require: 'readonly'
+        module: 'readonly'
+        exports: 'readonly'
+        __dirname: 'readonly'
+        __filename: 'readonly'
+        global: 'readonly'
+        Buffer: 'readonly'
+        setTimeout: 'readonly'
+        clearTimeout: 'readonly'
+        setInterval: 'readonly'
+        clearInterval: 'readonly'
+        setImmediate: 'readonly'
+        clearImmediate: 'readonly'
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
       }
     }
   },
   {
     ignores: [
+<<<<<<< HEAD
       'node_modules/**',
       '.next/**',
       'dist/**',
@@ -284,73 +352,151 @@ export default [
       '*.spec.js',
       '*.spec.ts',
       '*.spec.tsx',
-      'pm2-automation/**',
-      'services/**',
-      '*.js',
-      '*.ts',
-      'public/sw*.js',
-      'resolve-*.js',
-      'run-complete-automation.js';
-      'security-config.js';
-      'seo-improvements.js';
-      'simple-test.js';
-      'syntax-fixer.js';
-      'performance-monitor.js']}];
+      '*.backup.js',
+      '*.backup.jsx',
+      '*.backup.ts',
+      '*.backup.tsx',
+      '*.broken.js',
+      '*.broken.jsx',
+      '*.broken.ts',
+      '*.broken.tsx',
+      '*.corrupted.js',
+      '*.corrupted.jsx',
+      '*.corrupted.ts',
+      '*.corrupted.tsx',
+      '*.disabled.js',
+      '*.disabled.jsx',
+      '*.disabled.ts',
+      '*.disabled.tsx',
+      '*.old.js',
+      '*.old.jsx',
+      '*.old.ts',
+      '*.old.tsx',
+      '*.temp.js',
+      '*.temp.jsx',
+      '*.temp.ts',
+      '*.temp.tsx',
+      '*.tmp.js',
+      '*.tmp.jsx',
+      '*.tmp.ts',
+      '*.tmp.tsx',
+      '*.bak.js',
+      '*.bak.jsx',
+      '*.bak.ts',
+      '*.bak.tsx',
+      '*.orig.js',
+      '*.orig.jsx',
+      '*.orig.ts',
+      '*.orig.tsx',
+      '*.rej.js',
+      '*.rej.jsx',
+      '*.rej.ts',
+      '*.rej.tsx',
+      '*.swp.js',
+      '*.swp.jsx',
+      '*.swp.ts',
+      '*.swp.tsx',
+      '*.swo.js',
+      '*.swo.jsx',
+      '*.swo.ts',
+      '*.swo.tsx',
+      '*.log',
+      '*.pid',
+      '*.seed',
+      '*.pid.lock',
+      '*.tgz',
+      '*.tar.gz',
+      '*.zip',
+      '*.rar',
+      '*.7z',
+      '*.tar',
+      '*.gz',
+      '*.bz2',
+      '*.xz',
+      '*.lzma',
+      '*.zst',
+      '*.lz4',
+      '*.lzop',
+      '*.lrz',
+      '*.lha',
+      '*.lzh',
+      '*.ace',
+      '*.arj',
+      '*.cab',
+      '*.deb',
+      '*.rpm',
+      '*.msi',
+      '*.dmg',
+      '*.iso',
+      '*.img',
+      '*.bin',
+      '*.exe',
+      '*.app',
+      '*.dll',
+      '*.so',
+      '*.dylib',
+      '*.a',
+      '*.lib',
+      '*.o',
+      '*.obj',
+      '*.pyc',
+      '*.pyo',
+      '*.pyd',
+      '*.class',
+      '*.jar',
+      '*.war',
+      '*.ear',
+      '*.sar',
+      '*.nar',
+      '*.zip',
+      '*.rar',
+      '*.7z',
+      '*.tar',
+      '*.gz',
+      '*.bz2',
+      '*.xz',
+      '*.lzma',
+      '*.zst',
+      '*.lz4',
+      '*.lzop',
+      '*.lrz',
+      '*.lha',
+      '*.lzh',
+      '*.ace',
+      '*.arj',
+      '*.cab',
+      '*.deb',
+      '*.rpm',
+      '*.msi',
+      '*.dmg',
+      '*.iso',
+      '*.img',
+      '*.bin',
+      '*.exe',
+      '*.app',
+      '*.dll',
+      '*.so',
+      '*.dylib',
+      '*.a',
+      '*.lib',
+      '*.o',
+      '*.obj',
+      '*.pyc',
+      '*.pyo',
+      '*.pyd',
+      '*.class',
+      '*.jar',
+      '*.war',
+      '*.ear',
+      '*.sar',
+      '*.nar'
 =======
-      ...jsxA11y.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true }
-      ],
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
-      'no-unused-vars': 'off',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    },
-    settings: {
-      react: {
-        version: "detect"
-      }
-    }
-  },
-  {
-    files: [
-      "**/*.cjs",
-      "**/scripts/**/*.js",
-      "**/automation/**/*.js",
-      "**/pm2/**/*.js"
-    ],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: "script",
-      globals: {
-        ...globals.node,
-        console: "readonly",
-        process: "readonly",
-        require: "readonly",
-        module: "readonly",
-        exports: "readonly",
-        __dirname: "readonly",
-        __filename: "readonly",
-        Buffer: "readonly",
-        global: "readonly"
-      }
-    },
-    rules: {
-      "no-unused-vars": "warn",
-      "no-console": "warn",
-      "no-undef": "error",
-      "prefer-const": "error"
-    }
-=======
-      'pages-backup/**',
-      'pages-disabled/**',
-      'pages-quarantine/**',
-      'app/**'
+      // Node/build outputs
+      '.next/**out/**dist/**build/**node_modules/**',
+      // Public assets/scripts
+      // Root-level noisy files
+      '*.config.js*.config.cjs*.config.mjs*.backup.**.old.**.disabled.**.broken.**.corrupted.**.temp.*'
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
     ]
 >>>>>>> 716160b064bcc2ca60645a7e5c009cf722f6fb29
   }

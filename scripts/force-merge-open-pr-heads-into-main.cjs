@@ -1,13 +1,6 @@
-
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
-<<<<<<< HEAD
-///usr/bin/env node
-const { execSync } = require('child_process')
-const fs = require('fs')
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 function sh(cmd) {}
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8' }).trim()};
 function getToken() {}
@@ -29,21 +22,6 @@ const res = await fetch(`${base}${path}`, {`});
     "headers": {}
       Authorization: `token ${token}`,`
       "Accept": 'application/vnd.github.v3+json',
-<<<<<<< HEAD
-=======
-      'User-Agent': 'force-merge-script'
-
-    };
-  }
-});
-  const text = await res.text();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data};
@@ -72,23 +50,15 @@ async function main() {}
   for (const pr of prs) {}
     attempted++;
     const head = pr.head && pr.head.ref;
-<<<<<<< HEAD
-"User-Agent": "force-merge-script"
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-    console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
-<<<<<<< HEAD
-=======
-    try {}`;
-      sh(`git fetch origin ${head}:${head} || true`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    }
+})
+  const text = await res.text()
+  const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`)
+  let mergedCount = 0; let attempted = 0,
+  for($2) {}
+    attempted++
+    const head = pr.head && pr.head.ref,
+  console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
       try {}
         sh(`git merge --no-ff --no-edit origin/${head}`)} catch (e) {`}
         console.log('Conflicts detected. Attempting auto-resolution...');

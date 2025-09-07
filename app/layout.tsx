@@ -1,18 +1,17 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+<<<<<<< HEAD
+=======
+import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import StructuredData, { organizationStructuredData, websiteStructuredData } from './components/StructuredData';
+>>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
+import './globals.css';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
-export const "metadata": Metadata = {
-}
-import React from 'react';'
-import './globals.css';'
-import type { Metadata } from 'next''
-import { Inter } from 'next/font/google''
-import './globals.css''
-
+<<<<<<< HEAD
+=======
+// eslint-disable-next-line react-refresh/only-export-components
+>>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
 export const metadata: Metadata = {
   metadataBase: new URL('https://zion.app'),
   robots: {
@@ -61,6 +60,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
+      <body className="font-sans">{children}</body>
+=======
       <head>
         <StructuredData type="Organization" data={organizationStructuredData} />
         <StructuredData type="WebSite" data={websiteStructuredData} />
@@ -72,6 +74,7 @@ export default function RootLayout({
           </main>
         </div>
       </body>
+>>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
     </html>
   );
 

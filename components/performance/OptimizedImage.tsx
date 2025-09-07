@@ -1,15 +1,9 @@
-import React from "react";"
-import Image from "next/image";"
-
-=======
 <<<<<<< HEAD
-import React from \"react\";"
-import Image from \"next/image\";
+import React from 'react';
+import Image from 'next/image';
 
 =======
-import React from 'react'
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -19,6 +13,7 @@ interface OptimizedImageProps {
   className?: string;
   sizes?: string;
 }
+<<<<<<< HEAD
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src;
@@ -133,7 +128,17 @@ if ( {) {}
 =======
   return (
     <Image
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  src,
+  alt,
+  width,
+  height,
+  className = "",
+  priority = false,
+  quality = 75,
+  sizes = "100vw",
+}) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
       src={src}
 =======
   priority?: boolean;
@@ -152,38 +157,6 @@ src={src}
       width={width}
       height={height}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      className={className}
->>>>>>> origin/main
-      priority={priority}
-<<<<<<< HEAD
-      className={className}
-      sizes={sizes}
-      quality={85}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-      sizes={sizes}
-      quality={quality} />
-  );
-};
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default OptimizedImage;
-=======
-export default OptimizedImage;
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-"
-=======
       priority={priority}
       className={className}
       sizes={sizes}
@@ -203,7 +176,9 @@ export default OptimizedImage;
 =======
   )
 };
+
 export default OptimizedImage;
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+      className={className}
+      priority={priority}
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57

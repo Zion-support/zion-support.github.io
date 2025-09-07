@@ -1,5 +1,4 @@
-import React from 'react';'
-import { FileText, Search, Handshake, Check  } from 'lucide-react';'
+<<<<<<< HEAD
 
 const "HowItWorksSection": React.FC = () => ;
 const steps = [;
@@ -106,3 +105,5 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
     </section>
   )
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
