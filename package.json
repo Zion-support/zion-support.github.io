@@ -7,38 +7,25 @@
     "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",
     "ci:build-test": "npm run build && npm run test:smoke",
     "dev": "next dev",
-<<<<<<< HEAD
-    "build": "next build",
-=======
-<<<<<<< HEAD
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
-=======
-    "build": "next build",
     "clean": "rm -rf .next && rm -rf out",
     "export": "next build && next export",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-    "start": "next start",
->>>>>>> origin/main
+    "start": "next start -p 3000",
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
-    "export": "next build && next export",
-    "start": "next start -p 3000",
     "postbuild": "echo \"Build completed\"",
     "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
-    "lint:fix": "eslint . --fix --max-warnings 0",
+    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
     "lint:check": "eslint . --max-warnings 0",
-    "type-check": "tsc --noEmit --skipLibCheck",
+    "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
     "test:coverage": "jest --coverage --config jest.config.ts",
     "verify": "npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
     "check": "npm run lint && npm run type-check && npm run test:smoke",
-    "clean": "rm -rf .next out dist node_modules/.cache",
     "precommit": "npm run check",
     "prepare": "echo 'Husky prepare script disabled'",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
     "autonomous:status": "node automation/launch-autonomous-systems-clean.js status",
@@ -233,21 +220,9 @@
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
-    "@supabase/supabase-js": "^2.57.2",
-=======
-    "sitemap": "node scripts/generate-sitemap.js",
-    "build:analyze": "npm run build && npx @next/bundle-analyzer"
-=======
-    "sitemap": "node scripts/generate-sitemap.js"
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-  },
-  "dependencies": {
     "@babel/core": "^7.28.4",
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
->>>>>>> origin/main
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
@@ -317,7 +292,6 @@
     "jszip": "^3.10.1",
     "livekit-server-sdk": "^2.13.3",
     "lucide-react": "^0.536.0",
-<<<<<<< HEAD
     "mongodb": "^6.19.0",
     "next": "^15.5.2",
     "process": "^0.11.10",
