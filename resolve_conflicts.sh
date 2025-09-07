@@ -17,4 +17,8 @@ git add .
 echo "Conflicts resolved. Committing merge..."
 git commit -m "Resolve merge conflicts by accepting origin/merge-automation-changes"
 
+<<<<<<< HEAD
 echo "Merge completed successfully!"
+=======
+
+>>>>>>> origin/main

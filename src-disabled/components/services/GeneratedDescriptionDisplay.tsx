@@ -41,9 +41,6 @@ export function GeneratedDescriptionDisplay(): any ({;
   description,;
   onSave,;
 }: GeneratedDescriptionDisplayProps) {;
-  const { toast } = useToast();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
 
   const handleSave = null;
 import React, { useState } from 'react'
@@ -58,12 +55,8 @@ import {
 } from '@/components/ui/card'
 import { Textarea } from '@/components/ui/textarea'
 :src/components/services/GeneratedDescriptionDisplay.tsx
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
 import { Textarea } from "@/components/ui/textarea",
-import { Check, Pencil } from 'lucide-react'
 interface GeneratedDescriptionDisplayProps {
   description: string
   onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {
@@ -104,12 +97,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <>
                 <Check className="h-4 w-4 mr-1" />"
 
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
-import { Textarea } from "@/components/ui/textarea",
-import { Check, Pencil } from 'lucide-react'
 
 interface GeneratedDescriptionDisplayProps {
   description: string,
@@ -124,7 +111,6 @@ export function GeneratedDescriptionDisplay({
   const [isEditing, setIsEditing] = useState(false),
   const [editedDescription, setEditedDescription] = useState(description),
 
-  const handleSave = () => {
     onSave(editedDescription),
     setIsEditing(false),
     toast({
@@ -181,7 +167,6 @@ import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",;
 import { Textarea } from "@/components/ui/textarea",;
-import { Check, Pencil } from 'lucide-react';
 interface GeneratedDescriptionDisplayProps {,
   description: string,;
   onSave: (editedDescription:,  string) => void;

@@ -11,6 +11,7 @@ interface AnalyticsContainerProps {
   children: React.ReactNode
 }
 
+import { useAuth } from "@/hooks/useAuth",  if (isLoading) {
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
   const { isAuthenticated, isLoading, user } = useAuth();
 
@@ -49,6 +50,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
             Track user behavior, page views, and conversion rates
           </p>
         </div>
+  }
         {children}
       </main>
       <Footer />

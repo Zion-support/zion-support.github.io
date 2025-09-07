@@ -1,3 +1,10 @@
+
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationSuiteRunner { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot, "automation-reports");" this.logFile = path.join(this.reportsDir, "automation-suite.log"); this.ensureDirectories(); } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {'"'"
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationSuiteRunner { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot, "automation-reports");" this.logFile = path.join(this.reportsDir, "automation-suite.log"); this.ensureDirectories(); } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {'"'"
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationSuiteRunner { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot, "automation-reports");" this.logFile = path.join(this.reportsDir, "automation-suite.log"); this.ensureDirectories(); } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {'"'"
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationSuiteRunner { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot, "automation-reports");" this.logFile = path.join(this.reportsDir, "automation-suite.log"); this.ensureDirectories(); } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {'"'"
+main
+
 #!/usr/bin/env node
 /**
  * Automation Suite Runner
@@ -60,7 +67,6 @@ class AutomationSuiteRunner {
       { "path": "scripts/security-auditor.cjs", "name": "Security Auditor" },
       { "path": "scripts/seo-optimizer.cjs", "name": "SEO Optimizer" }
     ];
-    const results = [];
     for (const customScript of customScripts) {
       if (fs.existsSync(customScript.path)) {
         try {
@@ -115,7 +121,6 @@ class AutomationSuiteRunner {
       "fileCount": 0,
       "largeFiles": []
     };
-    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.cjs']);
     performanceMetrics.fileCount = files.length;
     for (const file of files) {
       try {
@@ -138,10 +143,8 @@ class AutomationSuiteRunner {
   async auditSecurity() {
     this.log("🔒 Running security audit...");
     const securityIssues = [];
-    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.cjs']);
     for (const file of files) {
       try {
-        const content = fs.readFileSync(file, "utf8");
         // Check for common security issues
         const securityPatterns = [{ "pattern": /eval\s*\(/g, "type": "Eval Usage", "severity": "high" },
           { "pattern": /innerHTML\s*=/g, "type": "innerHTML Usage", "severity": "medium" },
@@ -149,7 +152,6 @@ class AutomationSuiteRunner {
           { "pattern": /localStorage\.setItem/g, "type": "localStorage Usage", "severity": "low" }
         ];
         for (const { pattern, type, severity } of securityPatterns) {
-          const matches = content.match(pattern);
           if (matches) {
             securityIssues.push({
               "file": path.relative(this.projectRoot, file),
@@ -174,11 +176,9 @@ class AutomationSuiteRunner {
       "functionCount": 0,
       "complexityIssues": []
     };
-    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.cjs']);
     let totalComments = 0;
     for (const file of files) {
       try {
-        const content = fs.readFileSync(file, "utf8");
         const lines = content.split('\n');
         qualityMetrics.totalLines += lines.length;
         // Count comments

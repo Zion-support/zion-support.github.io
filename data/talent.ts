@@ -1,26 +1,46 @@
-// Stub talent data - placeholder for missing functionality
-export const TALENT_PROFILES = $2;
-    slug: 'sample-talent',
-    name: 'Sample Talent',
-    title: 'Full Stack Developer',
-    category: 'Development',
-    location: 'Remote',
-    timezone: 'UTC',
-    region: 'Global',
-    skills: ['ReactNode.jsTypeScript'],
-    summary: 'Experienced developer with expertise in modern web technologies.',
-    bio: 'Passionate about creating innovative solutions.',
+
+    name: 'Sample Talent,
+    title: Full Stack Developer',
+    category: 'Development,
+    location: Remote',
+    timezone: 'UTC,
+    region: Global',
+
+
+// Stub talent data - placeholder for missing functionality;
+export const TALENT_PROFILES = [;
+
+  {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+    skills: ['React, Node && Node.js', 'TypeScript],
+    summary: Experienced developer with expertise in modern web technologies.',
+    bio: 'Passionate about creating innovative solutions.,
     hourlyRateUsd: 75,
-    requestQuote: true,
-    availability: 'Open',
+    request_quote: true,
+    availability: Open',
     profileImageUrl: null,
-    videoUrl: null,
+    video_url: null,
     portfolio: null,
     verified: false,
-    rating: 0,
-    reviewsCount: 0,
-    createdAt: new Date().toISOString($2);
-    originalLanguage: 'en',
-    translations: {}
-  }
-],
+    rating: 0}];
+];
+
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+// Stub talent data - placeholder for missing functionality
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

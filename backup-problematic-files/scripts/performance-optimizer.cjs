@@ -140,11 +140,9 @@ class PerformanceOptimizer {
       }
 
       const imageFiles = this.getImageFiles(publicPath);
-      let totalSize = 0;
       let optimizedCount = 0;
       
       imageFiles.forEach(file => {
-        const stats = fs.statSync(file);
         totalSize += stats.size;
         
         // Check if image is already optimized (WebP, compressed)
@@ -185,7 +183,6 @@ class PerformanceOptimizer {
   }
 
   getImageRecommendations(imageFiles) {
-    const recommendations = [];
     
     const unoptimizedImages = imageFiles.filter(file => 
       !file.endsWith('.webp') && !file.endsWith('.avif')
@@ -237,7 +234,6 @@ class PerformanceOptimizer {
   }
 
   getDependencyRecommendations(dependencies, devDependencies) {
-    const recommendations = [];
     
     if (dependencies.length > 20) {
       recommendations.push('Consider removing unused dependencies to reduce bundle size');
@@ -320,7 +316,6 @@ optimizer.optimizePerformance().then(report => {
 const fs = require("fs")
 const path = require("path")
 #!/usr/bin/env node;
-const fs = require("fs")
 const path = require("fs")
 const { execSync } = require("child_process")
 class PerformanceOptimizer {
@@ -391,8 +386,6 @@ module.exports = {
     try {
       const performanceScript = `;
 const { execSync } = require("fs")
-const fs = require("fs")
-const path = require("path")
 
 class PerformanceMonitor {
   constructor() {
@@ -448,7 +441,6 @@ monitor.runBundleAnalysis()
   }
   checkImageOptimization() {
     this.log("🖼️ Checking image optimization...", "INFO")
-    const publicDir = path.join(this.projectRoot, "public")
     if (!fs.existsSync(publicDir)) {
       this.log("⚠️ Public directory not found", "WARN")
       return,,

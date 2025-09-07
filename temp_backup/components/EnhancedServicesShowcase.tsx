@@ -160,7 +160,6 @@ const filteredServices = services.filter(service => ;
   const matchesCategory =;
       selectedCategory === 'all' || service.category === selectedCategory;
 
-const matchesSearch =;
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch;
   })const getCategoryIcon = (category: string) => ;
@@ -293,7 +292,6 @@ const matchesSearch =;
     'all',...Array.from (new Set (services.map (string = /> s.category))),const filtered_services = services.filter (service => {const matches_category =;}
       color: 'from - blue - 500 to - cyan - 500',},];
 
-const categories = [
   'all',...Array.from (new Set (services.map (string = > s.category))),const filtered_services = services.filter (service => ;
   const matches_category =;
       selected_category === 'all' || service.category === selected_category;

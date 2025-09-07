@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 const usersPath = path.join(process.cwd(), 'data', 'learn', 'users.json');
 const coursesPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
 
@@ -44,6 +45,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
     // Mark course as completed
     if (!user.completedCourses) {

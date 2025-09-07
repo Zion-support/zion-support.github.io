@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 const v1 = {
   openapi: '3.0.0',
   info: {
@@ -25,3 +26,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Type', 'application/json');
   res.status(200).json(v1);
 }
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

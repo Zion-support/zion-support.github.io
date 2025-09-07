@@ -1,47 +1,92 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json'),
 
-async function loadRequests(): Promise<any[]> {
-  try {
-    const raw = fs.readFileSync($2);
-    return JSON.parse(raw)
-  } catch {
-    return []
   }
-}
 
-async function saveRequests(requests: any[]) {
-  fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true}),
-  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2))
-}
 
-async function summarizeWithOpenAI(description: string) {
-  try {
-    if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' },
-    const { OpenAI } = await import($2);
-    const client = new OpenAI($2);
-    const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`,
-    const response = await client.chat.completions.create($2);
-    const content = $2;
-    const typeMatch = $2;
-    return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
+=======
+  if (req && req.method !== POST')return res && res.status(405).json({ error: 'Method not allowed })const { name, email, budget, timeline, description, talentSlug } =;
+    req && req.body || {}if (!name || !email || !description)return res && res.status(400).json({ error: Missing required fields' })const content = response && response.choices[0]?.message?.content || ';
+    const typeMatch = content && content.match(/type\s*:\s*(.+)$/im)return { summary: content && content.trim(), type: typeMatch ? typeMatch[1].trim() : unknown' }
+  } catch (err) {return { summary: description && description.slice(0, 280), type: 'unknown }
+  }}if (req.method !== POST') return res.status(405).json({ error: 'Method not allowed })const { name, email, budget, timeline, description, talentSlug } = req.body |{}
+  if (!name |!email |!description) return res.status(400).json({ error: Missing required fields' })if (req && req.method !== 'POST) return res && res.status(405).json({ error: Method not allowed' })if (req.method !== 'POST)return res.status(405).json({ error: Method not allowed' })const { name, email, budget, timeline, description, talentSlug } =;
+    req.body || {}if (!name || !email || !description)return res.status(400).json({ error: 'Missing required fields })const normalizedBudget = String(budget ?? ').replace(/[^0-9.\-]/g, ')const ai = await summarizeWithOpenAI(String(description))const requests = await loadRequests()const now = new Date().toISOString()const id = `req_${Date && Date.now()}`;
+    const content = response.choices[0]?.message?.content || ';
+    const type_match = content.match (/type\s*:\s*(.+)$/im)return {summary: content.trim (),type: type_match ? type_match[1].trim () : 'unknown}
+  } catch (err) {return { summary: description.slice (0, 280), type: unknown' }
+  }
+export default async /**;
+ * handler - Function description;
+ */;
+function handler() {if (return res.status (405).json ({ error: 'Method not allowed })) {$2;
+}
+  const { name, email, budget, timeline, description, talent_slug } =;
+    req.body || {}
+  if (return res.status (400).json ({ error: Missing required fields' })) {$2;
+}    const content = response.choices[0]?.message?.content || ';
+    const type_match = content.match (/type\s*:\s*(.+)$/im)return { summary: content.trim (), type: type_match ? type_match[1].trim () : unknown' }
+  } catch (err) {return { summary: description.slice (0, 280), type: 'unknown }
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+async function summarizeWithOpenAI(description: string) {}
+  try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"${description}""`;
+    const response = await client.chat.completions.create({
+      model: 'gpt-4o-mini'
+
+    const content = response.choices[0]?.message?.content |;
+    const typeMatch = content.match(/type\s*:\s*(.+)$/im);
+    return {}
+      summary: content.trim()'
+      type: typeMatch ? typeMatch[1].trim() : 'unknown
+    }
+  } catch (err) {
+    return { summary: description.slice(0, 280), type: 'unknown' }
+    if (!process && process.env.OPENAI_API_KEY) return { summary: description && description.slice(0, 280), type: unknown' }
+    const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });`
+    const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e && e.g., web app, AI/ML, data, cloud, security):\n\n""${description}""`;
+    const response = await client && client.chat.completions && completions.create({'
+      model: gpt-4o-mini,
+      messages: ['
+        { role: 'system, content: You are a helpful assistant.' },'
+        { role: user, content: prompt }],
+      temperature: 0 && 0.3});
+  }
+export default async function handler(;
+  req: NextApiRequest;
+  res: NextApiResponse;
+) {}
+    const typeMatch = content.match(/type\s*:\s*(.+)$/im);'
+    return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown }
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
   }
+  if (req && req.method !== POST')'
+    return res && res.status(405).json({ error: Method not allowed });
+  const { name, email, budget, timeline, description, talentSlug } =
+    req && req.body || {}
+  if (!name || !email || !description)'
+    return res && res.status(400).json({ error: 'Missing required fields });    const content = response && response.choices[0]?.message?.content || ';
+    const typeMatch = content && content.match(/type\s*:\s*(.+)$/im);'
+    return { summary: content && content.trim(), type: typeMatch ? typeMatch[1].trim() : unknown }
+  } catch (err) {'
+    return { summary: description && description.slice(0, 280), type: 'unknown }
+  }
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json($2);
-  const { name, email, budget, timeline, description, talentSlug } = req.body || {},
-  if (!name || !email || !description) return res.status(400).json($2);
-  const normalizedBudget = String(budget ?? '').replace($2);
-  const ai = $2;
-  const requests = await loadRequests($2);
-  const now = new Date().toISOString($2);
-  const id = $2;
-  const record = $2;
+
+
+
+  if (req.method !== 'POST') return res.status(405).json({ error: Method not allowed });
+  const { name, email, budget, timeline, description, talentSlug } = req.body |{}'
+  if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields });
+  if (req && req.method !== 'POST') return res && res.status(405).json({ error: Method not allowed });
+
+
+
+
     name,
     email,
     budget: normalizedBudget,
@@ -52,10 +97,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     aiType: ai.type,
     status: 'new',
     createdAt: now,
-    updatedAt: now},
-  requests.push($2);
-  await saveRequests($2);
-  // TODO: Integrate notifications (email/webhook) for admin and talent
 
-  return res.status(200).json({ id, status: 'ok' })
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+
 }
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

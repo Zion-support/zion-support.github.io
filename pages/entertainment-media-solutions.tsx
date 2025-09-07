@@ -1,19 +1,21 @@
-import React from 'react';
-import Head from 'next/head';
-export default function EntertainmentMediaSolutions() {
+import React from 'react;
+import Head from next/head';
+import Layout from '../components/layout/Layout';
+
+export default function entertainmentmediasolutions() {
   return (
-    <>
+    <Layout>
       <Head>
-        <title>Entertainment & Media Solutions | Zion Tech Group</title>
-        <meta name="description" content="AI solutions for entertainment and media: content automation, personalization, analytics, and monetization." />
-        <link rel="canonical" href="https://ziontechgroup.com/entertainment-media-solutions" />
+        <title>Entertainment Media Solutions - Zion Tech Group</title>
+        <meta name="description content=Entertainment Media Solutions solutions and services." />
       </Head>
-      <div className="min-h-screen bg-black text-white">
-        <section className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold mb-6">Entertainment & Media Solutions</h1>
-          <p className="text-gray-300">Accelerate production, optimize distribution, and personalize experiences with AI-driven media platforms.</p>
-        </section>
+      
+      <div className="min-h-screen bg-gray-50>
+        <div className=container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8>Entertainment Media Solutions</h1>
+          <p className=text-lg text-gray-600">
+            Professional entertainment media solutions solutions tailored to your business needs.
+          </p>
+        </div>
       </div>
-    </>
-  )
-}
+

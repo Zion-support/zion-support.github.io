@@ -1,6 +1,7 @@
 const fs = require($2);
 const path = require($2);
 console.log($2);
+<<<<<<< HEAD
 // Check if we're in a valid Next.js project,
   console.log('📁 Current directory:', process.cwd()),
 console.log('📄 Package.json exists:', fs.existsSync('package.json')),
@@ -9,15 +10,32 @@ console.log('📁 Pages directory exists:', fs.existsSync('pages')),
 console.log('📁 Components directory exists:', fs.existsSync('components')),
 // Check package.json,
   if (fs.existsSync('package.json')) {
+=======
+// Check if we're in a valid Next.js project
+console.log(📁 Current directory:, process.cwd()),
+console.log('📄 Package.json exists:', fs.existsSync(package.json)),
+console.log('📄 Next.config.js exists:', fs.existsSync(next.config.js)),
+console.log('📁 Pages directory exists:', fs.existsSync(pages)),
+console.log('📁 Components directory exists:', fs.existsSync(components)),
+
+// Check package.json
+if (fs.existsSync('package.json')) {
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   const packageJson = $2;
   console.log($2);
-  console.log('📦 React version:', packageJson.dependencies?.react || 'Not found')
+  console.log(📦 React version:, packageJson.dependencies?.react || 'Not found')
 }
+<<<<<<< HEAD
 // Check pages directory structure,
   if (fs.existsSync('pages')) {
+=======
+
+// Check pages directory structure
+if (fs.existsSync(pages)) {
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   const pages = fs.readdirSync($2);
   console.log($2);
-  console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')))
+  console.log('📄 Main pages:', pages.filter(p => p.includes(index) || p.includes('_app')))
 }
 // Check for any problematic files,
   console.log($2);
@@ -25,17 +43,84 @@ const problematicFiles = $2;
 const allFiles = getAllFiles($2);
 for (const file of allFiles) {
   try {
+<<<<<<< HEAD
     const content = fs.readFileSync($2);
     if (content.includes('') || content.includes('>>>>>>>')) {
       problematicFiles.push(file)
+=======
+    const content = fs.readFileSync(file, 'utf8');
+    if (content.includes('') |content.includes('
+const fs = require('fs'),;
+const path = require('path'),;
+const fs = require('fs');
+const path = require('path');
+
+const fs = require ('fs'),
+const path = require ('path'),
+console.log ('🔍 Debugging Next.js project structure...'),
+
+
+console.log('🔍 Debugging Next.js project structure...'),;
+// Check if we're in a valid Next.js project;
+console.log('📁 Current directory:', process.cwd()),;
+console.log('📄 Package.json exists:', fs.existsSync('package.json')),;
+console.log('📄 Next.config.js exists:', fs.existsSync('next.config.js')),;
+console.log('📁 Pages directory exists:', fs.existsSync('pages')),;
+console.log('📁 Components directory exists:', fs.existsSync('components')),;
+// Check package.json;
+  const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
+  const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
+
+
+  console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
+  console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
+
+}
+// Check pages directory structure;
+
+if (fs.existsSync('pages')) {;
+  const pages = fs.readdirSync('pages'),;
+  const pages = fs.readdirSync('pages');
+
+
+  console.log('📄 Pages found:', pages.length),;
+  console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
+
+}
+// Check for any problematic files;
+
+console.log('🔍 Checking for problematic files...'),;
+const problematicFiles = [],;
+const problematicFiles = [];
+
+
+const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
+for (const file of allFiles) {;
+  try {;
+    const content = fs.readFileSync(file, 'utf8'),;
+
+
+
+    if (content.includes() || content.includes('
+}
+}
+      problematicFiles.push(file);
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     }
-  } catch (error) {;
-    // Skip files that can't be read;
+  } catch (error) {
+    // Skip files that cant be read;
   }
 }
+<<<<<<< HEAD
+=======
+
+
+console.log('✅ Debug completed');
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 console.log($2);
 if (problematicFiles.length > 0) {
-  console.log('Files:', problematicFiles.slice(0, 10))
+  console.log(Files:, problematicFiles.slice(0, 10))
 }
 // Function to get all files recursively,
   function getAllFiles(dir, extensions) {
@@ -45,15 +130,20 @@ if (problematicFiles.length > 0) {
     for (const item of items) {
       const fullPath = path.join($2);
       const stat = fs.statSync($2);
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== node_modules) {
         files = files.concat(getAllFiles(fullPath, extensions))
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath)
       }
     }
-  } catch (error) {;
+  } catch (error) {
     // Skip directories that can't be read;
   }
   return files
 }
+<<<<<<< HEAD
 console.log($2);
+=======
+
+console.log('✅ Debug completed');
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

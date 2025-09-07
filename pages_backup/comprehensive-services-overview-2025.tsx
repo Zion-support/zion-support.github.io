@@ -72,7 +72,6 @@ import {
   Target as TargetIcon,;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 export default function ComprehensiveServicesOverviewPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -219,14 +218,8 @@ import {;
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search,;
   Filter, Grid, List, BarChart3, DollarSign, Target as TargetIcon;'
 } from 'lucide-react',;'
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';'
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 export default function ComprehensiveServicesOverviewPage(req, res) {}
   try {';
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');'
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
   // Combine all services;
   const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices],;
   const categories = [;'
@@ -255,7 +248,6 @@ export default function ComprehensiveServicesOverviewPage(req, res) {}
   // Filter and sort services;
   const filteredServices = allServices;
     .filter(service => {;'
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
@@ -322,7 +314,6 @@ return categoryData?.icon || '🚀';
   };
 
   // Calculate market statistics
-  const totalMarketSize = allServices.reduce((sum, service) => {
     const marketSize = service.marketSize.match(/\$([\d.]+)B/);
 return sum + (marketSize ? parseFloat(marketSize[1]) : 0);
   }, 0);
@@ -362,7 +353,6 @@ return sum + (marketSize ? parseFloat(marketSize[1]) : 0);
               transition={{ duration: 0.8 }}
 
 import { motion, AnimatePresence } from 'framer-motion',
-import {}
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search,;
   Filter, Grid, List, BarChart3, DollarSign, Target as TargetIcon;'

@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/env node;
 /**
  * Health Monitor Script for PM2
@@ -16,9 +14,17 @@ const log = (message) => {}
 
 const runCommand = (command, description) => {}
   try {}
-    log(`Starting: ${description})
-    const output = execSync(command, { })
-
+    log(`Starting: ${description}`);
+const output = execSync(command, { });
+      encoding: 'utf8',
+      stdio: 'pipe',
+      cwd: process.cwd();
+    }
+});
+    log(`Completed: ${description}`);
+    return { success: true, output };
+  } catch (error) {}
+    log(`Failed: ${description} - ${error.message}`);
     return { success: false, error: error.message };
 
 const checkSystemHealth = () => {}
@@ -31,7 +37,6 @@ const checkSystemHealth = () => {}
     disk: diskCheck.success,
     memory: memoryCheck.success,
     overall: appCheck.success && diskCheck.success && memoryCheck.success
-
 
 
 const generateHealthReport = (results) => {}
@@ -59,13 +64,11 @@ const main = async () => {}
   
   const report = generateHealthReport(results);
 
-  const report = generateHealthReport(results);
   
   if (report.overall.status === 'HEALTHY') {}
   // Check system health;
   const systemResults = checkSystemHealth();
   // Generate comprehensive report;
-  const results = {}
     system: systemResults;
 
     log('System health check passed: All systems operational');
@@ -74,13 +77,11 @@ const main = async () => {}
   log('Health Monitor Process completed')
 
 
-
 // Handle process termination;
 process.on('SIGINT, () => {}
   log('Health Monitor Process interrupted')
   process.exit(0)
 })
-
 
 process.on('SIGTERM', () => {}
   log('Health Monitor Process terminated');
@@ -90,6 +91,5 @@ main().catch(error => {})`;
   log(`Health Monitor Process failed: ${error.message}`);
   process.exit(1);
 }
-
-});
-
+});});
+});});

@@ -237,9 +237,7 @@ class IntelligentMonitor {
   }
   calculateAverageCpuUsage() {
     if (this.metrics.processes.length === 0) return 0;
-    const recentProcesses = this.metrics.processes.slice(-5);
     let totalCpu = 0;
-    let count = 0;
     for (const entry of recentProcesses) {
       for (const process of entry.processes) {
         totalCpu += process.cpu || 0;
@@ -270,7 +268,6 @@ class IntelligentMonitor {
     return avgResponseTime > 0 ? Math.round(60000 / avgResponseTime) : 0; // requests per minute
   }
   async checkAlerts() {
-    const currentSystem = this.metrics.system[this.metrics.system.length - 1];
     const currentProcesses = this.metrics.processes[this.metrics.processes.length - 1];
     // Check system alerts
     if (currentSystem.memory.percentage > this.thresholds.memory) {
@@ -346,7 +343,6 @@ class IntelligentMonitor {
     return insights;
   }
   calculateSystemHealth() {
-    const currentSystem = this.metrics.system[this.metrics.system.length - 1];
     let healthScore = 100;
     // Memory health
     if (currentSystem.memory.percentage > 90) healthScore -= 30;
@@ -360,8 +356,6 @@ class IntelligentMonitor {
     return Math.max(0, healthScore);
   }
   calculatePerformanceScore() {
-    const avgResponseTime = this.calculateAverageResponseTime();
-    const errorRate = this.calculateErrorRate();
     const throughput = this.calculateThroughput();
     let score = 100;
     // Response time penalty
@@ -377,8 +371,6 @@ class IntelligentMonitor {
   }
   generateRecommendations() {
     const recommendations = [];
-    const currentSystem = this.metrics.system[this.metrics.system.length - 1];
-    const errorRate = this.calculateErrorRate();
     if (currentSystem.memory.percentage > 80) {
       recommendations.push({
         "type": 'memory',
@@ -416,7 +408,6 @@ class IntelligentMonitor {
   analyzeTrends() {
     if (this.metrics.system.length < 10) return {};
     const recentSystem = this.metrics.system.slice(-10);
-    const recentProcesses = this.metrics.processes.slice(-10);
     return {
       "memoryTrend": this.calculateTrend(recentSystem.map(m => m.memory.percentage)),
       "cpuTrend": this.calculateTrend(recentSystem.map(m => m.cpu.loadAverage[0])),

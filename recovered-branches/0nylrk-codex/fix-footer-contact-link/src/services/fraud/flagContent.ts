@@ -1,36 +1,41 @@
-// Content flagging functionality
-import { supabase  } from '@/integrations/supabase/client';
-import { FraudSeverity, FraudFlag  } from '@/types/fraud';
-import { FlagResult } from './types';
-/**
- * Flag content for review
- */
-export const flagContent = $2;
-  userEmail: string | undefined,
-  contentType: FraudFlag['content_type'],
-  contentId: string,
-  contentExcerpt: string,
-  severity: FraudSeverity,
-  reason: string,
-  ipAddress?: string
-): Promise<FlagResult> => {
-  try {
+export const flagContent = async (;
+
+/**;
+* Flag content for review;
+*/;
+export const flag_content = async (
+
+      userId,
+      contentType,
+      contentId,
+      reason,
+      severity,
+reason;
+      severity;
     console.log($2);
-    const { error } = await supabase.from('fraud_flags').insert({
+    const { error } = await supabase.from(fraud_flags').insert({
       user_id: userId;
       user_email: userEmail;
       content_type: contentType;
       content_id: contentId
       content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
-      severity,
-      reason,
-      ip_address: ipAddress,
-      timestamp: new Date().toISOString($2);
-      status: 'pending'
-    }),
-    
-    if (error) throw error,
-    
+    });      reason;
+
+if (throw error) {
+  $2
+}
+    return { "success": true }
+  } catch (error) {
+
+  }
+}
+}
+    }
+  }
+}
+    }
+  }
+}
     return { success: true}
   } catch (error) {
     console.error($2);

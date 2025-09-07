@@ -74,7 +74,6 @@ import { Label } from '@/components/ui/label';'
 import { ClickableBadge } from '@/components/ui/clickable-badge';'
 import { PlusCircle, Save, Trash } from 'lucide-react';'
 import { useWebhooks, WebhookEventType } from '@/hooks/useWebhooks';
-import {;
   Select,;
   SelectContent,;
   SelectItem,;
@@ -113,7 +112,6 @@ import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 export function WebhookManager() {
-  const { 
     webhooks;
     loading;
     error;
@@ -124,14 +122,12 @@ export function WebhookManager() {
     deleteWebhook;
     testWebhook
   } = useWebhooks();
-  const [newWebhook, setNewWebhook] = useState({
     name: "";
     url: "";
     selectedEvent: "" as WebhookEventType;
     eventTypes: [] as WebhookEventType[];
     secret: ""
   });
-  const eventOptions: { value: WebhookEventType, label: string }[] = [
     { value: "new_application", label: "New Application Received" },
     { value: "quote_received", label: "Quote Request Received" },
     { value: "milestone_approved", label: "Milestone Approved" },
@@ -223,7 +219,6 @@ import { toast } from "sonner",;
   useEffect(() => {;
     fetchWebhooks();
   }, []),;
-  const handleAddEvent = () => {;
     if (!newWebhook.selectedEvent) return,;
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {;"
       toast.error("This event is already added"),;

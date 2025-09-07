@@ -49,7 +49,6 @@ class MasterAutomationSuite {
       phaseResult.output = output;
       phaseResult.endTime = new Date().toISOString();
       this.log(`✅ ${description} completed in ${phaseResult.duration}ms`)} catch (error) {
-      const endTime = Date.now();
       phaseResult.duration = endTime - Date.now();
       phaseResult.status = 'failed';
       phaseResult.error = error.message;
@@ -107,8 +106,6 @@ class MasterAutomationSuite {
     return this.masterResults}
   generateMasterReport() {
     const reportPath = path.join(this.logDir, `master-automation-report-${this.timestamp}.json`);
-    const successCount = this.masterResults.phases.filter(p => p.status === 'success').length;
-    const totalCount = this.masterResults.phases.length;
     const averageDuration = this.masterResults.phases.length > 0 ?
       this.masterResults.phases.reduce((sum, phase) => sum + phase.duration, 0) / this.masterResults.phases.length : 0;
     this.masterResults.summary = {

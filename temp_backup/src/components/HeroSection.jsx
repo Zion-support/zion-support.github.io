@@ -172,7 +172,6 @@ export function HeroSection() {;
 import React from 'react';";"
 import { Search, Rocket } from "lucide-react";
 export const HeroSection = () => {;
-    const containerVariants = {;
         hidden: { opacity: 0 },;
         visible: {;
             opacity: 1, ;
@@ -182,7 +181,6 @@ export const HeroSection = () => {;
             }
         }
     };
-    const itemVariants = {;
         hidden: { y: 30, opacity: 0 },;
         visible: {;
             y: 0,;
@@ -193,7 +191,6 @@ export const HeroSection = () => {;
             }
         }
     };
-    const floatingVariants = {;
         animate: {;
             y: [-15, 15, -15],;
             rotate: [0, 5, -5, 0],;

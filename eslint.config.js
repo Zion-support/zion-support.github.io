@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -426,3 +427,29 @@ export default [
     ]
   }
 ];
+=======
+
+
+export default [
+  {
+    ignores: [
+
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+
+      react/prop-types': 'off},
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+    settings: {
+      react: {
+        version: detect'
+      }
+    }
+  },
+  {
+
+];
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import JSZip from 'jszip';
 
@@ -31,5 +32,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     console.error('Export error:', e);
     res.status(500).json({ error: e?.message || 'Export failed' });
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   }
 }

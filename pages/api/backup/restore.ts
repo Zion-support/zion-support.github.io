@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -19,4 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Error restoring backup:', error);
     return res.status(500).json({ error: 'Failed to restore backup' });
   }
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 }

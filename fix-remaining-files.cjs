@@ -4,10 +4,20 @@ console.log('🔧 Fixing remaining problematic files...');
 
 const filesToFix = [
   {
-    path: 'components/Header.tsx',
-    content: `import React, { useState } from 'react';
+origin/cursor/expand-services-advertise-and-build-project-c28b
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+;
+const files = [;
+  {;
+    pat:h:'components/Header.tsx',;
+    conten:t:`import React, { useState } from 'react';
+>
+
+
+
+    path: 'components/Header.tsx',
+    content: `import React, { useState } from 'react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -166,7 +176,6 @@ export default SearchBar;`
   {
     path: 'components/Sidebar.tsx',
     content: `import React from 'react';
-import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
 
 interface SidebarProps {
@@ -254,8 +263,6 @@ export default SimpleLayout;`
   {
     path: 'components/layout/Footer.tsx',
     content: `import React from 'react';
-import Link from 'next/link';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -330,7 +337,6 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className=" min-h-screen flex flex-col">
       <Header />
@@ -347,8 +353,6 @@ export default Layout;`
   {
     path: 'components/layout/MainLayout.tsx',
     content: `import React, { ReactNode } from 'react';
-import Header from '../Header';
-import Footer from './Footer';
 import SEOHead from '../SEOHead';
 
 interface MainLayoutProps {
@@ -504,7 +508,6 @@ export default EnhancedMarketplaceCard;`
   {
     path: 'components/ui/InteractiveNavigation.tsx',
     content: `import React, { useState } from 'react';
-import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 interface NavItem {
@@ -519,7 +522,6 @@ interface InteractiveNavigationProps {
 }
 
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -848,6 +850,10 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return;
     }
+main
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const { id } = req.query;
     if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
@@ -958,7 +964,6 @@ export function getAllNotes(): Note[] {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
     if (req.method === 'GET') {
@@ -998,7 +1003,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
     if (req.method === 'GET') {

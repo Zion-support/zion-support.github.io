@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 const dataPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -29,3 +30,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: 'Internal server error' });
   }
 }
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

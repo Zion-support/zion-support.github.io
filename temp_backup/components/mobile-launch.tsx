@@ -127,7 +127,6 @@ const res = await fetch('/api/subscribe', {method: 'POST'}
 }
       setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
 
-const res = await fetch('/api/subscribe', {method: 'POST'}
   headers: { 'Content-Type': 'application/json',}
 }, body: JSON.stringify({ email }),
 }),

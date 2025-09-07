@@ -1,46 +1,43 @@
+
 #!/usr/bin/env node;
 #!/usr/bin/env node
 /**
- * Accessibility Checker Automation
- * Checks and improves accessibility compliance
+ * Accessibility Checker Automation;
+ * Checks and improves accessibility compliance;
  */
 
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
 class AccessibilityChecker {}
     constructor() {}
         this.projectRoot = process.cwd();
 
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};"
+            fs.mkdirSync(logsDir, { "recursive: true })}
     }
-  log($2) {}
+    log(message) {}
         const timestamp = new Date().toISOString() {}
     ) {}"
         const timestamp = new Date().toISOString(})
-})
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+});
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message)};
+
+        console.log(message)}
     checkAccessibilityIssues() {}
-        this.log('Checking accessibility issues...');
+        this.log(Checking accessibility issues...');
         const files = this.findSourceFiles(;);
         const issues = [];
-        console.log(message)};
+        console.log(message)}
     checkAccessibilityIssues() {}"
 
-        const files = this.findSourceFiles(;);
-        const issues = [];
+
         for (const file of files) {}
             try {}
 
         const files = [];
-        
-        const scanDirectory = (dir) => {}
-            if () retu) {}
-    ) retu}r;n;
-            
+
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
@@ -48,72 +45,62 @@ class AccessibilityChecker {}
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
-                
-                if (&& !item.startsWith('.') && item !== 'node_modules') {}
+
+                if (&& !item.startsWith('.) && item !== node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)}
             }
         }) {}
-    && !item.startsWith('.') && item !== 'node_modules') {}
+    && !item.startsWith('.) && item !== node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
-                    files.push(fullPath)};
-            };
+                    files.push(fullPath)}
+            }
 
-        }};
+        }}
         scanDirectory(this.projectRoot);
-        return files};
+        return files}
     analyzeFileForAccessibility(content, file) {}
 
-        const lines = content.split('\n';);
-        
-        for (let i = ;0; i < lines.length i++) {}
-            const line = lines[i];
-            const lineNumber = i +;1;
-            
+        const lines = content.split('\n;);
+
         for (let i = ;0; i < lines.length i++) {}
             const line = lines[i];
             const lineNumber = i +;1;
             // Check for missing alt attributes;
-            if (&& !line.includes('alt=')) {}
+            if (&& !line.includes(alt=')) {}
                 issues.push({})
 
                 })}
-            // Check for missing aria-labels
-            if (line.includes('<button') && !line.includes('aria-label') && !line.includes('aria-labelledby')) {}
-                if (!line.includes('>') || line.trim().endsWith('/>')) {}
+            // Check for missing aria-labels;
+            if (line.includes('<button) && !line.includes(aria-label') && !line.includes('aria-labelledby)) {}
+                if (!line.includes(>') || line.trim().endsWith('/>)) {}
 
-            // Check for heading hierarchy
+            // Check for heading hierarchy;
             if (line.match(/<h[1-6]/)) {}
-                const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {}]
+const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {}];
      {}
-        
-        const utilsDir = path.join(this.projectRoot, 'utils';);
+
+        const utilsDir = path.join(this.projectRoot, utils';);
         if () {}
-            fs.mkdirSync(utilsDir, { "recursive": true })};
+            fs.mkdirSync(utilsDir, { recursive: true })}
         // Accessibility utilities;
-        const accessibilityUtils = "/**
- * Accessibility Utilities
- * Helper functions for accessibility compliance
+const accessibilityUtils = "/**;
+ * Accessibility Utilities;
+ * Helper functions for accessibility compliance;
  */
 
-            fs.mkdirSync(utilsDir, { "recursive": true })};"
+            fs.mkdirSync(utilsDir, { "recursive: true })}
         // Accessibility utilities;"
-        const accessibilityUtils = "/**"
+
  * Accessibility Utilities;
  * Helper functions for accessibility compliance;
 
 export const accessibility = {}
-  // Generate unique IDs for form elements;"
-  "generateId": (prefix = 'element') => {}
+  // Generate unique IDs for form elements;
 
-export const accessibility = {}
-  // Generate unique IDs for form elements
-  "generateId": (prefix = 'element') => {}
-    return \"\${prefi}x}-\${Math.random().toString(36).substr(2, 9)}\"},
-  
   // Check if element is focusable;
   "isFocusable": (element) => {}
-    const focusableSelectors = ['a[href]',
+const focusableSelectors = ['a[href]',;
       '"button": not([disabled])',
       '"input": not([disabled])',
       '"select": not([disabled])',
@@ -121,66 +108,68 @@ export const accessibility = {}
       '[tabindex]:not([tabindex="-1"])',
       'details',
       'summary'
+=======
+  "generateId": (prefix = 'element) => {}
+
+export const accessibility = {}
+  // Generate unique IDs for form elements;
+  generateId: (prefix = element') => {}
+    return \"\${prefi}x}-\${Math.random().toString(36).substr(2, 9)}\"},
+
+  // Check if element is focusable;
+  isFocusable: (element) => {}
+    const focusableSelectors = ['a[href],
+      "button": not([disabled])',
+      'input: not([disabled]),
+      "select": not([disabled])',
+      'textarea: not([disabled]),
+      [tabindex]:not([tabindex="-1"])',
+      'details,
+      summary'
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
    ];
-    
-    return focusableSelectors.some(selector => element.matches(selector))},
-  
+
   // Trap focus within an element;
-  "trapFocus": (element) => {}
-    const focusableElements = element.querySelectorAll()
-      'a[href], "button": not([disabled]), "input": not([disabled]), "select": not([disabled]), "textarea": not([disabled]), [tabindex]:not([tabindex="-1"])"
+
    ;);
-    
-    const firstElement = focusableElements[0];
-    const lastElement = focusableElements[focusableElements.length - 1];
-    
+
     const handleTabKey = (e) => {}
       if ( {})
-  if($2) {}
-  if($2) {}
+        if (e.shiftKey) {}
+          if (document.activeElement === firstElement) {}
             lastElement.focus() {}
      {}
-  if($2) {}
-  if($2) {}
+        if (e.shiftKey) {}
+          if (document.activeElement === firstElement) {}
             lastElement.focus(}
-})
+});
             e.preventDefault()}
         } else {}
           if ( {})
             firstElement.focus()) {}
      {}
-            firstElement.focus()};
-            e.preventDefault()};
-        };
-      };
-    };
-    
-    element.addEventListener('keydown', handleTabKey);
-    
-    return () => {;}
-      element.removeEventListener('keydown', handleTabKey)}},
-  
+            firstElement.focus()}
+            e.preventDefault()}
+        }
+      }
+    }
+
   // Announce message to screen readers;
-  "announce": (message, priority = 'polite') => {}
+  announce": (message, priority = polite) => {}
     const announcement = document.createElement('div';);
-    announcement.setAttribute('aria-live', priority);
-    announcement.setAttribute('aria-atomic', 'true');
+    announcement.setAttribute(aria-live, priority);
+    announcement.setAttribute('aria-atomic', true);
     announcement.className = 'sr-only';
     announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
-    
-    setTimeout(() => {}
-      document.body.removeChild(announcement)}, 1000)},
-  
+
   // Skip to main content link;
-  "createSkipLink": (targetId = 'main') => {}
-    const skipLink = document.createElement('a';)
-    skipLink.href = \"#\${targetId}\"
-    skipLink.textContent = 'Skip to main content'
-    skipLink.className = 'skip-link'
-    skipLink.style.cssText = \'
-      "position": absolute;
+  "createSkipLink: (targetId = main) => {}
+    const skipLink = document.createElement('a';);
+    skipLink.href = \#\${targetId}\";
+    skipLink.textContent = Skip to main content;
+    skipLink.className = 'skip-link';
+    skipLink.style.cssText = \
+      "position: absolute;
       top: -40px;
       left: 6px;
       background: #000;
@@ -189,104 +178,82 @@ export const accessibility = {}
       text-decoration: none;
       z-index: 1000;
       transition: top 0.3s;
-    \";
-    
-    skipLink.addEventListener('focus', () => {}
-      skipLink.style.top = '6px'}
-});
-    
-    skipLink.addEventListener('blur', () => {}
-      skipLink.style.top = '-40px'}
-});
-    
-    return skipLink};
-};
+    \;
 
 // Screen reader only class;
-export const srOnly = \'
+export const srOnly = \
 .sr-only {}
-  "position": absolu;t;e
-  width: 1px
-  height: 1px
-  padding: 0
-  margin: -1px
-  overflow: hidden
-  clip: rect(0, 0, 0, 0)
-  white-"space": nowrap
+  "position": absolu;t;e;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
   border: 0}
 .skip-"link": focus {}
   position: absolute;
   top: 6px;
   left: 6px;
-  z-index: 1000};
-\";
-";
-
-        fs.writeFileSync(path.join(utilsDir, 'accessibility.js'), accessibilityUtils);
-        
-        // Accessibility testing component;
-        const accessibilityTest = "import React, { useEffect, useState } from 'reac;t;';
+  z-index: 1000}
+\;
+;
 
 interface AccessibilityTestProps {}
-  "children": React.ReactNode};
-export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children }) => {}
+  "children": React.ReactNode}
+export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }) => {}
   const [issues, setIssues] = useState<string[]>([]);
-  
+
   useEffect(() => {}
     if ( {})
-      // Run accessibility checks in development
+      // Run accessibility checks in development;
       const checkAccessibility = () => {}
-        const "newIssues": string[] = [) {}]
+const "newIssues": string[] = [) {}];
      {}
-      // Run accessibility checks in development
-      const checkAccessibility = () => {}
+      // Run accessibility checks in development;
         const newIssues: string[] = [}];
-        
+
         // Check for missing alt attributes;
-        const images = document.querySelectorAll('"img": not([alt]);';);
+        const images = document.querySelectorAll('img: not([alt]);';);
         images.forEach((img, index) => {}
           newIssues.push(\"Image \${index + 1} missing alt attribute\")}
 });
-        
+
         // Check for missing form labels;
-        const inputs = document.querySelectorAll('"input": not([aria-label]):not([aria-labelledby]);';);
+        const inputs = document.querySelectorAll(input: not([aria-label]):not([aria-labelledby]);;);
         inputs.forEach((input, index) => {}
-          const hasLabel = input.closest('label') || input.previousElementSibling?.tagName === 'LABE;L;'
+          const hasLabel = input.closest('label') || input.previousElementSibling?.tagName === LABE;L;;
           if ( {})
             newIssues.push(\"Input \${index + 1} missing label\")}
         })) {}
      {}
-            newIssues.push(\"Input \${index + 1} missing label\")};
-        })};
-        setIssues(newIssues)};
-      
-      checkAccessibility();
-      
+            newIssues.push(\Input \${index + 1} missing label\)}
+        })}
+        setIssues(newIssues)}
+
       // Re-check when DOM changes;
       const observer = new MutationObserver(checkAccessibilit;y;);
-      observer.observe(document.body, { "childList": true, "subtree": true }
+      observer.observe(document.body, { "childList": true, subtree: true }
 });
-      
-      return () => observer.disconnect()};
-  }, []);
-  
+
   if ( {})
     return () {}
      {}
-    return (};)
+
       <div>
         <div style={{}
           "position": 'fixed',
-          "top": 0,
+          top: 0,
           "right": 0,
-          "background": '#ff4444',
+          background: #ff4444,
           "color": 'white',
-          "padding": '10px',
+          padding: 10px,
           "zIndex": 9999,
-          "fontSize": '12px'
+          fontSize: '12px'
         }}>
           Accessibility "Issues": {issues.length}
-          <ul style={{ "margin": '5px 0 0 0', "paddingLeft": '20px' }}>
+          <ul style={{ margin: 5px 0 0 0, "paddingLeft": '20px' }}>
             {issues.map((issue, index) => (})
               <li key={index}>{issue}</li>
             ))}
@@ -294,99 +261,103 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
         </div>
         {children}
       </div>
-    )};
-  return <>{children}</>};
-";
+    )}
+  return <>{children}</>}
+;
 
-        fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
-        
-        this.log('Accessibility utilities created');
-        return { "status": 'success' }};
+        this.log(Accessibility utilities created);
+        return { status": 'success' }}
     generateAccessibilityReport() {}
-        this.log('Generating accessibility report...');
-        
-        const issues = this.checkAccessibilityIssues(;);
-        const utilities = this.createAccessibilityUtilities(;);
-        
+        this.log(Generating accessibility report...);
+
         const report = {}
-            "timestamp": new Date().toISOString(),
-            "project": this.projectRoot,
-            "accessibility": {}
+            "timestamp: new Date().toISOString(),
+            project": this.projectRoot,
+            "accessibility: {}
                 issues: issues,
-                "utilities": utilities,
-                "summary": {}
+                utilities": utilities,
+                "summary: {}
                     total: issues.length,
-                    "errors": issues.filter(i => i.severity === 'error').length,
-                    "warnings": issues.filter(i => i.severity === 'warning').length
+                    errors": issues.filter(i => i.severity === 'error').length,
+                    "warnings: issues.filter(i => i.severity === warning).length;
                 }
             },
-            "recommendations": this.generateAccessibilityRecommendations(issues);
-       };
+            recommendations": this.generateAccessibilityRecommendations(issues);
+       }
 
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Accessibility report saved to ${this.reportFile}`);
-        
-        return report};
+        return report}
     generateAccessibilityRecommendations(issues) {}
-        const recommendations = ['Use semantic HTML elements (header, nav, main, section, article, aside, footer)',]
-            'Ensure all images have descriptive alt text',
+
             'Provide labels for all form inputs',
-            'Use proper heading hierarchy (H1, H2, H3, etc.)',
-            'Ensure sufficient color contrast (4."5": 1 for normal text, "3": 1 for large text)',
-            'Make interactive elements keyboard accessible',
+            Use proper heading hierarchy (H1, H2, H3, etc.),
+            'Ensure sufficient color contrast (4."5: 1 for normal text, 3": 1 for large text)',
+            Make interactive elements keyboard accessible,
             'Provide focus indicators for keyboard navigation',
-            'Use ARIA attributes when semantic HTML is not sufficient',
+            Use ARIA attributes when semantic HTML is not sufficient,
             'Test with screen readers and keyboard-only navigation',
-            'Implement skip links for main content'
+            Implement skip links for main content
         ];
-        
+
         if () {}
-            recommendations.push('Add alt attributes to all images')};
-        if (issues.some(i => i.type === 'missing_form_label')) {}
+            recommendations.push('Add alt attributes to all images')}
+        if (issues.some(i => i.type === missing_form_label)) {}
             recommendations.push('Add labels to all form inputs')}
         return recommendations) {}
     ) {}
-            recommendations.push('Add alt attributes to all images')}
+            recommendations.push(Add alt attributes to all images)}
         if (issues.some(i => i.type === 'missing_form_label')) {}
-            recommendations.push('Add labels to all form inputs')}
+            recommendations.push(Add labels to all form inputs)}
         return recommendations}}
     async run() {}
         this.log('Accessibility Checker started');
-        
+
         try {}
-            const report = this.generateAccessibilityReport(;)
-            this.log('Accessibility Checker completed successfully')
+            const report = this.generateAccessibilityReport(;);
+            this.log('Accessibility Checker completed successfully');
             return report} catch (error) {}
-            this.log(`Accessibility Checker "failed": ${error.message}`);
+            this.log(`Accessibility Checker "failed: ${error.message}`);
 
-export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children }) => {}"
+export const AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children }) => {}"
 
-  const [issues, setIssues] = useState<string[]>([])
 </string>
       <div>
 </div>
-        <div style={{}"
+        <div style={{}
 
-        const issues = this.checkAccessibilityIssues(;)
-        const utilities = this.createAccessibilityUtilities(;)
-        const report = {}
+        const issues = this.checkAccessibilityIssues(;);
+        const utilities = this.createAccessibilityUtilities(;);
 
-            "accessibility": {}"
-                issues: issues,"
-                "utilities": utilities,
-                "summary": {}"
+            accessibility": {}"
+                issues: issues,
+                utilities": utilities,
+                "summary: {}
                     total: issues.length,"
 
             },
             "recommendations": this.generateAccessibilityRecommendations(issues);"
 
 
-            throw error};
+            throw error}
 // Run the checker if this script is executed directly;
     const checker = new AccessibilityChecker) {}
     const checker = new AccessibilityChecker}(;);
-    checker.run().catch(console.error)};
-module.exports = AccessibilityChecker;
-module.exports = AccessibilityChecker;
+    checker.run().catch(console.error)}
 
 
+module.exports = AccessibilityChecker;
+
+module.exports = AccessibilityChecker;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = AccessibilityChecker;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

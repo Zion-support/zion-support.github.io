@@ -1,8 +1,29 @@
-import React from 'react';
-export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
+
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <div className={["card-base p-4", className].join(' ')}>
+    <div className={[card-base p-4", className].join(" )}>{children}</div>;
+  );
+  return (
+    <div className={[card-base p-4", className].join(" )}>{children}</div>;
+  );
+import React from 'react;
+export default function EnhancedCard({ children, className = ' }: { children: React.ReactNode, className?: string }) {
+  return (
+    <div className={[card-base p-4", className].join(' )}>
+      {children}
+  return (
+    <div className={["card - base p - 4, class_name].join ( ")}>{children}</div>);
+  return (
+    <div className={["card - base p - 4, class_name].join ( ")}>{children}</div>);
+}
+  )
+    <div className={["card-base p-4", className].join( ')}>
       {children}
     </div>
   )
 }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,33 +1,54 @@
-import React, { useState } from 'react';
-type Question = $2;
-  question: string,
-  options: string[],
-  answerIndex: number},
 
-type Props = $2;
-  onComplete: (score: number) => void
-},
+=======
+import React, { useState } from 'react;
+type Question = any;
 
-export default function Quiz({ questions, onComplete }: Props) {
-  const [answers, setAnswers] = useState<Record<string, number>>({}),
-  const [submitted, setSubmitted] = useState($2);
-  const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0),
-
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+  );
   function submit() {
-    setSubmitted($2);
+    }
+    setSubmitted(true);
+    onComplete(score);
+  }
+
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     onComplete(score)
   }
 
   return (
-    <div className="space-y-4">
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+            </div>)}
+        </div>))}
+      <button;
+        on_click={submit}
+
+        Submit Quiz;
+      </button>;
+      {submitted && ("Score": {score} / {questions.length}
+        </div>)}
+
+              </label>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            ))}
+
+<div className='mt-2 text-sm>
+    <div className="space-y-4>
+=======
+    setSubmitted(true);
+    onComplete(score);
+  }
+  return (
+    <div className=space-y-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {questions.map((q, idx) => (
-        <div key={q.id} className="border rounded p-3">
-          <div className="font-medium">{idx + 1}. {q.question}</div>
-          <div className="mt-2 grid gap-2">
+        <div key={q.id} className=border rounded p-3">
+          <div className="font-medium>{idx + 1}. {q.question}</div>
+          <div className=mt-2 grid gap-2">
             {q.options.map((opt, i) => (
-              <label key={i} className="flex items-center gap-2">
+              <label key={i} className="flex items-center gap-2>
                 <input
-                  type="radio"
+                  type=radio"
                   name={q.id}
                   checked={answers[q.id] === i}
                   onChange={() => setAnswers({ ...answers, [q.id]: i })}
@@ -37,18 +58,55 @@ export default function Quiz({ questions, onComplete }: Props) {
             ))}
           </div>
           {submitted && (
-            <div className="mt-2 text-sm">
+
+
               {answers[q.id] === q.answerIndex ? (
-                <span className="text-green-600">Correct</span>
+                <span className="text-green-600>Correct</span>
               ) : (
-                <span className="text-red-600">Incorrect</span>
-              )}
-            </div>
-          )}
+
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+<button
+        onClick={submit}
+        className='px-4 py-2 bg-blue-600 text-white rounded
+      >
+        Submit Quiz
+      </button>
+      {submitted && (
+        <div className=text-sm'>
+          Score: {score} / {questions.length}
         </div>
-      ))}
-      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+        </div>;
+      )}
+    </div>;
+  )
+
+  )
+
+}
+  );
+}
+
+
+
+  )
+        </div>
+
+=======
+
+
+
+=======
+  );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
   )
 }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

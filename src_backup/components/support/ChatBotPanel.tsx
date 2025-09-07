@@ -19,7 +19,6 @@ const QUICK_REPLIES = [
   { id: "match", text: "How do I get matched?" },
   { id: "billing", text: "Billing help" }],
 
-const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" }
   { id: "match", text: "How do I get matched?" }
   { id: "billing", text: "Billing help" }]
@@ -44,7 +43,6 @@ export function ChatBotPanel() {
 },
 
 export function ChatBotPanel() {
-  const [messages, setMessages] = useState<Message[]>([
     {
       id: "welcome",
       content: "Hi! How can I help you?",
@@ -143,7 +141,6 @@ export function ChatBotPanel() {;
     }
   }, []),
 
-  const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return,
     
     const userMessage: Message = {
@@ -601,7 +598,6 @@ export function ChatBotPanel() {;
         };
       }
 ;
-      const data = await response.json(),;
       return {;
         success: true,;
         message: data.message;
@@ -634,7 +630,6 @@ export function ChatBotPanel() {;
     logSupportEscalation()
   },
 
-  const logSupportEscalation = async () => {}
     try {}
       // Send the conversation to the backend for logging;
       // This would be implemented in a real system"

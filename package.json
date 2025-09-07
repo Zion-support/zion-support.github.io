@@ -2,6 +2,7 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
+<<<<<<< HEAD
   "type": "module",
   "engines": {
     "node": ">=18.0.0",
@@ -444,4 +445,22 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
+=======
+  "scripts": {
+    "dev": "next dev",
+
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.1",
+
+  },
+  "devDependencies": {
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 }

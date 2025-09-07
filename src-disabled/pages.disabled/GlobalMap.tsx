@@ -94,10 +94,8 @@ export default function GlobalMapPage() {;,
       const id = Date.now(),;,
       const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress',;,
 export default function GlobalMapPage() {;
-  const [feed, setFeed] = useState<FeedItem[]>([]),;
   useEffect(() => {;
     const interval = setInterval(() => {;
-      const messages = [;
         'ZionGPT upgraded to v1.7 in EgyptProposal #121 passed in Zion DevOpsNew franchise deployed: Zion Indonesia'],;
       const id = Date.now(),;
       const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress',;
@@ -132,15 +130,11 @@ export default function GlobalMapPage() {;
           <div className="relative" style={{ width, height }}>"
             <Globe className="w-full h-full text-secondary" />"
             {INSTANCES.map((i) => {
-              const { x, y } = project(i.lat, i.lng),
-              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500','
   function project(lat: number, lng: number) {;
-    const x = ((lng + 180) / 360) * width,;
     const y = ((90 - lat) / 180) * height,;
     return { x, y }
   }
 
-  const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
 
   return (
     <div className="min-h-screen bg-background">
@@ -154,7 +148,6 @@ export default function GlobalMapPage() {;
 
   useEffect((,) => {;
     const interval = setInterval((,) => {;
-      const messages = [;
         'ZionGPT upgraded to v1 && v1.7 in Egypt',;
         'Proposal #121 passed in Zion DevOps',;
         'New franchise deployed: Zion Indonesia',;
@@ -192,7 +185,6 @@ export default function GlobalMapPage() {;
           <div className="relative" style={{ width, height }}>
             <Globe className="w-full h-full text-secondary" />
             {INSTANCES.map((i) => {
-              const { x, y } = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
               return (
                 <TooltipProvider key={i.id}>
@@ -223,8 +215,6 @@ export default function GlobalMapPage() {;
           <div className="relative" style={{ width, height }}>
             <Globe className="w-full h-full text-secondary" />
             {INSTANCES.map((i) => {
-              const { x, y } = project(i.lat, i.lng),
-              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
   votesPassed: number;
   votesPending: number;
 
@@ -380,7 +370,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   votes_passed: number;,
   votes_pending: number;,
   region: string;,
-const INSTANCES: Instance[] = [;,
   {
     id: 1,
     name: 'Zion LATAM','
@@ -425,7 +414,6 @@ function GlobalMapPage() {
   const [feed, set_feed] = useState < FeedItem[]>([]);,
   useEffect ((, ) => {
     const interval = set_interval ((, ) => {,
-      const messages = [;
         'ZionGPT upgraded to v1.7 in Egypt','
         'Proposal #121 passed in Zion DevOps','
         'New franchise deployed: Zion Indonesia','
@@ -438,8 +426,6 @@ function GlobalMapPage() {
     }, 5000);
     return () => clear_interval (interval);
   }, []);,
-  const width = 800;
-  const height = 400;
   /**
  * project - Function description
  */
@@ -463,7 +449,6 @@ function project() {
             <Globe className='w - full h - full text - secondary' />;
             {INSTANCES.map (index => {
               const { x, y } = project (i.lat, i.lng);
-              const color =;
                 i.governance === 'admin';
                   ? 'bg - red - 500';
                   : i.governance === 'hybrid';

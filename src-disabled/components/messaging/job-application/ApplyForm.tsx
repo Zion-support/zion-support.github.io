@@ -181,7 +181,6 @@ interface ApplyFormProps {
 
 import React, { useState } from 'react',
 import { Button  } from "@/components/ui/button";
-import { Loader2 } from 'lucide-react'
 :src/components/messaging/job-application/ApplyForm.tsx
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from "@/components/ui/tabs";
 import { useJobApplications  } from "@/hooks/useJobApplications";
@@ -190,8 +189,6 @@ import { toast  } from "@/hooks/use-toast";
 import { ResumeSelector, ResumeOption  } from "../resume-selector";
 import { MessageTab  } from "./MessageTab";
 import { ResumeTab  } from "./ResumeTab";
-import { Job } from "./types";
-import {logErrorToProduction} from '@/utils/productionLogger';
 interface ApplyFormProps {
   job: Job;
   onClose: () => void;
@@ -303,7 +300,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
     try {
       setIsSubmitting(true),
       // First submit the application to the job applications table
-      const applicationSuccess = await applyToJob(
         job.id,
         message,
         selectedResume && selectedResume.type === 'ai_resume'
@@ -315,16 +311,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       ),
       if (!applicationSuccess) {
         throw new Error("Failed to submit application")
-import React, { useState } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Loader2 } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { useJobApplications } from "@/hooks/useJobApplications",;
-import { useMessaging } from "@/context/MessagingContext",;
-import { toast } from "@/hooks/use-toast",;
-import { ResumeSelector, ResumeOption } from "../resume-selector",;
-import { MessageTab } from "./MessageTab",;
-import { ResumeTab } from "./ResumeTab",;
 import { Job } from "./types",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface ApplyFormProps {;
@@ -344,7 +330,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
   const [activeTab, setActiveTab] = useState<string>("message"),;
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),;
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),;
-  const handleResumeSelected = (resume: ResumeOption) => {;
     setSelectedResume(resume),;
     setSelectedResumeId(resume.id);
   },;

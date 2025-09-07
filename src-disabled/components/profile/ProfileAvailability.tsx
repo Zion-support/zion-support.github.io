@@ -108,7 +108,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
 import { Availability } from "@/types/profile";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, Check } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
 import { Calendar } from 'lucide-react';
 
@@ -185,7 +184,6 @@ interface ProfileAvailabilityProps {;
 export function ProfileAvailability(): any ({;
   availability,;
 }: ProfileAvailabilityProps) {;
-  const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {;
     switch (status) {;
       case 'available':;
         return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
@@ -198,7 +196,6 @@ export function ProfileAvailability(): any ({;
     }
   };
 
-  const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {;
     switch (status) {;
       case 'available':;
         return 'Available Now';

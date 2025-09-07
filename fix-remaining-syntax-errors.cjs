@@ -6,18 +6,32 @@ const path = require('path');
 console.log('🔧 Fixing remaining syntax errors...');
 
 // List of files with known syntax errors
+<<<<<<< HEAD
 const filesToFix = [
   '/workspace/app/about/page.tsx',
   '/workspace/app/services/automation/page.tsx',
   '/workspace/app/services/consulting/page.tsx',
   '/workspace/pages/api/admin/partners/fraud-flags.ts',
   '/workspace/pages/api/admin/partners/update.ts'
+=======
+const filesToFix = [;
+  '/workspace/src/components/Footer.tsx',
+  '/workspace/src/components/Header.tsx',
+  '/workspace/src/components/HeroSection.tsx',
+  '/workspace/src/components/LoadingSpinner.tsx',
+  '/workspace/src/components/Navigation.tsx',
+  '/workspace/src/components/ServicesSection.tsx'
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 ];
 
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
+<<<<<<< HEAD
       console.log(`⚠️ File not found: ${filePath}`);
+=======
+      console.log(`⚠️  File not found: ${filePath}`);
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
       return false;
     }
 

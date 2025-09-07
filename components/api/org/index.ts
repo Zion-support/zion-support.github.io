@@ -1,24 +1,48 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readOrgData, filterOrgData } from '../../../utils/org-data';
-import type { OrgFilters, RoleType } from '../../../types/org';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-  const data = readOrgData($2);
-  const parseArray = $2;
-    return Array.isArray(v) ? v : v.split().map((s) => s.trim()).filter(Boolean)
-  },
 
-  const filters: OrgFilters = $2;
-    roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined,
-    departments: parseArray($2);
-    categories: parseArray($2);
-    zones: parseArray($2);
-    regions: parseArray($2);
-    countries: parseArray($2);
-    search: (req.query.search as string) || undefined,
-    teamOnly: req.query.teamOnly = $2;
-  const filtered = filterOrgData($2);
-  return res.status(200).json(filtered)
+import type { OrgFilters, RoleType } from '../../../types/org;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req.method !== GET') {
+    return res.status(405).json({ error: 'Method not allowed })
+  }
+
+          .split(,')
+          .map(s => s.trim())
+          .filter(Boolean);
+  }
+  const filters: OrgFilters = {}
+  const filters: OrgFilters = {'
+    view: (req && req.query.view as OrgFilters[view]) || 'all';
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+    roleTypes: parseArray(req && req.query.roleTypes) as RoleType[] | undefined;
+    departments: parseArray(req && req.query.departments);
+    categories: parseArray(req && req.query.categories);
+    zones: parseArray(req && req.query.zones);
+    regions: parseArray(req && req.query.regions);
+    countries: parseArray(req && req.query.countries);
+
+    view: (req.query.view as OrgFilters['view]) || all',
+    role_types: parse_array (req.query.role_types) as RoleType[] | undefined,
+    departments: parse_array (req.query.departments),
+    categories: parse_array (req.query.categories),
+    zones: parse_array (req.query.zones),
+    regions: parse_array (req.query.regions),
+    countries: parse_array (req.query.countries),
+
+    view: (req.query.view as OrgFilters['view]) || all';
+    role_types: parse_array (req.query.role_types) as RoleType[] | undefined;
+    departments: parse_array (req.query.departments);
+    categories: parse_array (req.query.categories);
+    zones: parse_array (req.query.zones);
+    regions: parse_array (req.query.regions);
+    countries: parse_array (req.query.countries);
+
+    team_only: req.query.team_only === 'true ? true : undefined}
+  const filtered = filterOrgData (data, filters);
+  return res.status (200).json (filtered);
+  }
+  return res.status (200).json (filtered);  return res.status (200).json (filtered);
 }
+
+  const filtered = filterOrgData(data, filters);
+  return res.status(200).json(filtered);

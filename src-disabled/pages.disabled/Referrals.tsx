@@ -43,7 +43,6 @@ import {;
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { toast } from '@/hooks/use-toast';
-import { Share, Users } from 'lucide-react';
 import { useRouter } from 'next/router'; // Changed from useNavigate;
 export default function ReferralsPage() {;
   const router = useRouter(); // Changed from navigate;
@@ -217,12 +216,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Button } from '@/components/ui/button',;
 import { toast } from '@/hooks/use-toast',;
-import { Share, Users } from 'lucide-react';
-import { useRouter } from 'next/router', // Changed from useNavigate;
 export default function ReferralsPage() {;
   const router = useRouter(), // Changed from navigate;
   const { isAuthenticated } = useAuth(),;
-  const {;
     isLoading,;
     referralCode,;
     referrals,;
@@ -240,7 +236,6 @@ export default function ReferralsPage() {;
       router.push("/login"), // Changed to router.push;
     }
   }, [isAuthenticated, router]), // Changed navigate to router in dependencies;
-  const referralLink = getReferralLink();
   return (;
     <div className="container max-w-7xl py-10">;
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">;
@@ -286,7 +281,6 @@ export default function ReferralsPage() {;
           </Tabs>;
         </div>;
         <div className='space-y-6'>          <ReferralGuide />        <div className="space-y-6">;
-import { useEffect } from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import { useReferrals } from '@/hooks / useReferrals';
 import { ReferralStats } from '@/components / referrals / ReferralStats';
@@ -299,7 +293,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/co
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
 import { Button } from '@/components / ui / button';
 import { toast } from '@/hooks / use - toast';
-import { Share, Users } from 'lucide-react';
 import { use_router } from 'next / router', // Changed from use_navigate;
 import {
   Card,

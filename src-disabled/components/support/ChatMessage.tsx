@@ -153,7 +153,6 @@ function formatMessageWithLinks(message: string): string {
 
   // Replace URLs
   const urlRegex = /(https?:\/\/[^\s]+)/g,
-  let formattedMessage = safeText.replace(
     urlRegex,
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   ),

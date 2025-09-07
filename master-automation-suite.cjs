@@ -74,11 +74,9 @@ class MasterAutomationSuite {
       
       return suiteResult;
     } catch (error) {
-      const suiteDuration = Date.now() - suiteStartTime;
       this.results.errorCount++;
       this.log(`❌ ${suiteName} failed with exception: ${error.message}`, 'ERROR');
       
-      const suiteResult = {
         name: suiteName,
         success: false,
         duration: suiteDuration,

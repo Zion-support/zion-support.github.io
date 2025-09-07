@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
+=======
+
+    res.status(405).json({
+      error: 'Method not allowed'
+    });
+    return;
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
   try {
     const { screenName, role } = req.body || {};

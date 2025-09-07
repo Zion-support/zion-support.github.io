@@ -152,7 +152,6 @@ class AIProcessManager {
   }
   calculatePerformanceScore(process) {
     // Higher score = better performance
-    let score = 100;
     // Memory efficiency
     const memoryEfficiency = 1 - (process.memory / (2 * 1024 * 1024 * 1024)); // Normalize to 2GB
     score *= memoryEfficiency;
@@ -203,7 +202,6 @@ class AIProcessManager {
     }
   }
   async optimizeProcesses() {
-    const currentMetrics = this.processHistory[this.processHistory.length - 1];
     for (const process of currentMetrics.processes) {
       // Auto-scale based on load
       if (process.cpu > 70 && process.name.includes('main-app')) {
@@ -280,7 +278,6 @@ class AIProcessManager {
   }
   calculateAverage(metric) {
     if (this.processHistory.length === 0) return 0;
-    const recentHistory = this.processHistory.slice(-10);
     let total = 0;
     let count = 0;
     for (const entry of recentHistory) {

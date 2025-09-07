@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node,
   import fs from 'fs';
 import path from 'path';
@@ -45,9 +46,13 @@ console.log('🔧 Starting comprehensive merge conflict resolution...');
     return modified;
   } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 console.log('Starting comprehensive merge conflict resolution...');
 // Function to remove merge conflict markers from a file,
   function removeMergeConflicts(filePath) {
@@ -96,6 +101,27 @@ console.log('Starting comprehensive merge conflict resolution...');
     } catch (error) {
       // Skip directories that can't be read,
   function findConflictedFiles(dir) {
+=======
+
+console.log(Starting comprehensive merge conflict resolution...');
+
+// Function to remove merge conflict markers from a file
+function removeMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove all merge conflict markers
+    content = content.replace(/
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    return false;
+  }
+}
+
+// Function to find all files with merge conflicts
+
+function findConflictedFiles(dir) {
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   const conflictedFiles = [];
   function scanDirectory(currentDir) {
     const files = fs.readdirSync(currentDir);
@@ -103,14 +129,20 @@ console.log('Starting comprehensive merge conflict resolution...');
       const filePath = path.join(currentDir, file);
       const stat = fs.statSync(filePath);
       if (stat.isDirectory()) {
+<<<<<<< HEAD
         // Skip certain directories,
   if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(file)) {
+=======
+        // Skip certain directories
+        if (![node_modules', '.git, .next', 'dist, build'].includes(file)) {
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
           scanDirectory(filePath);
         }
       } else if (stat.isFile()) {
         // Check if file has merge conflict markers,
   try {
           const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
           if (content.includes('') || content.includes('>>>>>>>')) {
             conflictedFiles.push(filePath);
           }
@@ -118,12 +150,20 @@ console.log('Starting comprehensive merge conflict resolution...');
           // Skip files that can't be read
         }
       }
+=======
+          if (content.includes(
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     }
   }
   scanDirectory(dir);
-  return files;
+
+=======
   return conflictedFiles;
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 }
+<<<<<<< HEAD
 // Main execution,
   try {
   console.log('🔍 Scanning for files with merge conflicts...');
@@ -154,6 +194,12 @@ console.log('Starting comprehensive merge conflict resolution...');
   process.exit(1);
 }
 console.log('🎯 Merge conflict resolution completed!');
+=======
+
+// Main execution
+try {
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   const conflictedFiles = findConflictedFiles('.');
   console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
   let fixedCount = 0;
@@ -165,14 +211,26 @@ console.log('🎯 Merge conflict resolution completed!');
   console.log(`Successfully fixed ${fixedCount} out of ${conflictedFiles.length} files`);
   // Try to add and commit the changes,
   try {
+<<<<<<< HEAD
     execSync('git add .', { stdio: 'inherit' });
     console.log('Files staged successfully');
     execSync('git commit -m "Resolve merge conflicts - keep HEAD versions"', { stdio: 'inherit' });
+=======
+    execSync(git add ., { stdio: 'inherit' });
+    console.log(Files staged successfully);
+    
+    execSync('git commit -m "Resolve merge conflicts - keep HEAD versions"', { stdio: inherit });
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     console.log('Changes committed successfully');
   } catch (error) {
-    console.log('Git operations failed, but files have been cleaned:', error.message);
+    console.log(Git operations failed, but files have been cleaned:, error.message);
   }
 } catch (error) {
   console.error('Error during merge conflict resolution:', error.message);
   process.exit(1);
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

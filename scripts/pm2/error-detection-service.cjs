@@ -4,13 +4,10 @@
  * Main Error Detection Service;
  * Continuously scans the project for errors and coordinates fixing;
  */
-
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
-
-
-
+const chokidar = // // require('chokidar');
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -19,9 +16,6 @@ class ErrorDetectionService {}
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
-    
-    
-
     this.errorTypes = {}
       "syntax": [],""
       "typescript": [],""
@@ -30,7 +24,6 @@ class ErrorDetectionService {}
       "dependency": [],""
       "configuration": [];"
     };
-    
     this.fixAttempts = new Map();
     this.isRunning = false};
   log(level, message, data = null) {}
@@ -40,6 +33,10 @@ class ErrorDetectionService {}
       level,
       message,
       data,
+      "service": 'error-detection-service'
+    };
+
+
       "service": 'error-detection-service'
     };
 
@@ -71,8 +68,6 @@ class ErrorDetectionService {}
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')}
   async start() {}
     this.log('info', 'Starting Error Detection Service...');
-      
-    
     try {}
       // Create necessary directories;
       this.ensureDirectories();
@@ -83,26 +78,20 @@ class ErrorDetectionService {}
       // Start file watching for real-time detection;
       this.startFileWatching();
       this.log('info', 'Error Detection Service started successfully');
-
-      
-
       // Keep the process alive;
       setInterval(() => {}
   if($2) {}
           this.performFullScan()}
       }, this.scanInterval)} catch (error) {}
-      this.log('error', 'Failed to start Error Detection Service', error)
-      process.exit(1)}
-  ensureDirectories($2) {}
-    const dirs = ['logs/pm2',]
+      this.log('error', 'Failed to start Error Detection Service', error);
+      process.exit(1)};
+  };
+  ensureDirectories() {}
+const dirs = ['logs/pm2'];
       'error-reports',
       'backups',
       'temp'
     ];
-
-
-
-
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {
@@ -117,13 +106,11 @@ class ErrorDetectionService {}
     }
     this.isRunning = true;
     this.log('info', 'Starting full project error scan...');
-
     try {}
       // Clear previous error data;
       this.clearErrorData();
-
       // Perform various scans;
-      await Promise.all([this.scanForSyntaxErrors(),]
+      await Promise.all([this.scanForSyntaxErrors()]
         this.scanForTypeScriptErrors(),
         this.scanForESLintErrors(),
         this.scanForBuildErrors(),
@@ -132,12 +119,6 @@ class ErrorDetectionService {}
       ]);
       // Generate comprehensive report;
       await this.generateErrorReport();
-        this.scanForConfigurationErrors();
-      ]);
-
-      // Generate comprehensive report;
-      await this.generateErrorReport();
-
       // Trigger fixes if auto-fix is enabled;
       if (this.autoFix) {}
         await this.triggerErrorFixes()};
@@ -148,15 +129,12 @@ class ErrorDetectionService {}
       this.errorTypes[key] = []})}
   async scanForSyntaxErrors() {}
     this.log('info', 'Scanning for syntax errors...');
-    
     try {}
       const sourceFiles = this.findSourceFiles();
       let syntaxErrors = 0;
-
       for (const file of sourceFiles) {}
           // Try to parse the file;
           const content = fs.readFileSync(file, 'utf8');
-          
           // Check for common syntax issues;
           if (this.hasSyntaxIssues(content, file)) {}
             this.errorTypes.syntax.push({})
@@ -179,11 +157,7 @@ class ErrorDetectionService {}
       this.log('error', 'Error during syntax scan', error)}
   async scanForTypeScriptErrors() {}
     this.log('info', 'Scanning for TypeScript errors...');
-    
     try {}
-      // Run TypeScript compiler check;
-      const result = this.runTypeScriptCheck();
-      
       // Run TypeScript compiler check;
       const result = this.runTypeScriptCheck();
       if (result.errors && result.errors.length > 0) {}
@@ -200,14 +174,11 @@ class ErrorDetectionService {}
       this.log('error', 'Error during TypeScript scan', error)}
   async scanForESLintErrors() {}
     this.log('info', 'Scanning for ESLint errors...');
-    
     try {}
       // Run ESLint check;
       const result = this.runESLintCheck();
-      
       if (result.errors && result.errors.length > 0) {}
       // Run ESLint check;
-      const result = this.runESLintCheck();
         this.errorTypes.eslint = result.errors.map(error => ({})
           "file": error.filePath,""
           "type": 'eslint',
@@ -218,14 +189,11 @@ class ErrorDetectionService {}
       this.log('error', 'Error during ESLint scan', error)}
   async scanForBuildErrors() {}
     this.log('info', 'Scanning for build errors...');
-    
     try {}
       // Try to build the project;
       const result = this.runBuildCheck();
-      
       if (result.errors && result.errors.length > 0) {}
       // Try to build the project;
-      const result = this.runBuildCheck();
         this.errorTypes.build = result.errors.map(error => ({})
           "file": error.file || 'build',
           "type": 'build',
@@ -235,14 +203,11 @@ class ErrorDetectionService {}
       this.log('error', 'Error during build scan', error)}
   async scanForDependencyErrors() {}
     this.log('info', 'Scanning for dependency errors...');
-    
     try {}
       // Check for dependency issues;
       const result = this.runDependencyCheck();
-      
       if (result.errors && result.errors.length > 0) {}
       // Check for dependency issues;
-      const result = this.runDependencyCheck();
         this.errorTypes.dependency = result.errors.map(error => ({})
           "package": error.package,""
           "type": 'dependency',
@@ -252,17 +217,13 @@ class ErrorDetectionService {}
       this.log('error', 'Error during dependency scan', error)}
   async scanForConfigurationErrors() {}
     this.log('info', 'Scanning for configuration errors...');
-    
     try {}
-      const configFiles = ['package.json',]
+const configFiles = ['package.json'];
         'tsconfig.json',
         'eslint.config.js',
         'vite.config.ts',
-        'tailwind.config.js
-
-
-
-
+        'tailwind.config.js'
+      ];
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -283,14 +244,11 @@ class ErrorDetectionService {}
     const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
-
-
-
-
     sourceDirs.forEach(dir => {})
       if (fs.existsSync(fullPath)) {}
         this.walkDirectory(fullPath, extensions, files)};
-
+    }
+});
     return files};
   walkDirectory(dir, extensions, files) {}
     const items = fs.readdirSync(dir);
@@ -307,16 +265,14 @@ class ErrorDetectionService {}
   hasSyntaxIssues(content, filename) {}
     // Check for common syntax issues;
     const issues = [];
-    
     // Check for unterminated strings;
     const stringRegex = /(["'"])((?:(?!\1)[^\\]|\\.)*\1)/g;
     const matches = content.match(stringRegex);
     if (matches && matches.length > 0) {}
       // Count quotes to check for balance;
       const singleQuotes = (content.match(/'/g) || []).length;
-      
-      const doubleQuotes = (content.match(/"/g) || []).length;""
-      const backticks = (content.match(/"/g) || []).length;"
+      const doubleQuotes = (content.match(/"/g) || []).length;
+      const backticks = (content.match(/"/g) || []).length;
       if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
         return true};
     };
@@ -325,17 +281,12 @@ class ErrorDetectionService {}
     const blockComments = content.match(commentRegex) || [];
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
-    
-    
-
-
     if (openComments !== closeComments) {}
       return true};
     // Check for missing semicolons in certain contexts;
     const lines = content.split('\n');
     for (let i = 0; i < lines.length; i++) {}
       const line = lines[i].trim();
-      if (line && !line.endsWith(';') && !line.endsWith('{') && !line.endsWith('}') && 
       if (line && !line.endsWith(';') && !line.endsWith('{') && !line.endsWith('}') &&
           !line.endsWith('[') && !line.endsWith(']') && !line.endsWith('(') && !line.endsWith(')') &&
           !line.startsWith('//') && !line.startsWith('/*') && !line.startsWith('*') &&
@@ -351,16 +302,13 @@ class ErrorDetectionService {}
         return i + 1};
     return 1};
   runTypeScriptCheck() {}
-      const result = execSync('npx tsc --noEmit --json', { })
-        "cwd": this.projectRoot, 
+    try {}
+const result = execSync('npx tsc --noEmit --json', { });
+        "cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
 });
-      
-        "cwd": this.projectRoot,""
-        "encoding": 'utf8',
-        "stdio": 'pipe
       if (result) {}
         return JSON.parse(result)};
       return { "errors": [] }} catch (error) {}"
@@ -369,12 +317,11 @@ class ErrorDetectionService {}
       return this.parseTypeScriptErrors(stderr)}
   runESLintCheck($2) {}
       const result = execSync('npx eslint . --format json', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
 });
-      
       if (result) {}
         return JSON.parse(result)};
       return { "errors": [] }} catch (error) {}
@@ -383,26 +330,25 @@ class ErrorDetectionService {}
       // ESLint check failed, extract errors from stderr;"
       return this.parseESLintErrors(stderr)};
   runBuildCheck() {}
-      const result = execSync('npm run build', { })
-        "cwd": this.projectRoot, 
+    try {}
+const result = execSync('npm run build', { });
+        "cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
 });
-      
       return { "errors": [] }} catch (error) {}
       // Build failed, extract errors from stderr;
-      const stderr = error.stderr ? error.stderr.toString() : '';
       // Build failed, extract errors from stderr;"
       return this.parseBuildErrors(stderr)};
   runDependencyCheck() {}
-      const result = execSync('npm audit --json', { })
-        "cwd": this.projectRoot, 
+    try {}
+const result = execSync('npm audit --json', { });
+        "cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
 });
-      
       if (result) {}
         const audit = JSON.parse(result);
         return this.parseDependencyErrors(audit)};
@@ -411,19 +357,22 @@ class ErrorDetectionService {}
   parseTypeScriptErrors($2) {}
     const errors = [];"
     const lines = stderr.split('\n');
-    
     lines.forEach(line => {})
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/)
   if($2) {}
         errors.push({})
-    
+          "file": match[1].trim(),
+          "line": parseInt(match[2]),
+          "column": parseInt(match[3]),
+          "message": match[4].trim(),
+          "code": 'TS_ERROR'
+        })};
+    }
+});
     return { errors }};
   parseESLintErrors(stderr) {}
     const errors = [];
-    const lines = stderr.split('\n');
-    
     lines.forEach(line => {})
-      const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/)
   if($2) {}
         errors.push({})
           "filePath": match[1].trim(),
@@ -436,12 +385,8 @@ class ErrorDetectionService {}
         })};
     }
 });
-    
     return { errors }};
   parseBuildErrors(stderr) {}
-    const errors = [];
-    const lines = stderr.split('\n');
-    
     lines.forEach(line => {})
           "file": match[1].trim(),""
           "line": parseInt(match[2]),""
@@ -460,12 +405,11 @@ class ErrorDetectionService {}
           file: 'build',
           "message": line.trim(),""
           "phase": 'build',
-    
+          "severity": 'high'
+        })};
+    }
+});
     return { errors }};
-  parseDependencyErrors(audit) {}
-    const errors = [];
-    
-          "severity": 'high
   parseDependencyErrors(audit) {}
     if (audit.vulnerabilities) {}
       Object.keys(audit.vulnerabilities).forEach(pkg => {})
@@ -476,10 +420,8 @@ class ErrorDetectionService {}
           "version": vuln.installedVersion,""
           "resolution": vuln.recommendation;"
         })})};
-    if (error.message.includes('Cannot find module') || 
-        error.message.includes('Module not found')) {}
-      return 'critical'} else if (error.message.includes('Type') || 
-  categorizeTypeScriptSeverity(error) {}"
+    return { errors }};
+  categorizeTypeScriptSeverity(error) {}
     if (error.message.includes('Cannot find module') ||
         error.message.includes('Module not found')) {}
       return 'critical'} else if (error.message.includes('Type') ||
@@ -494,7 +436,6 @@ class ErrorDetectionService {}
           return false; // Looks like valid config
       return false} catch (error) {}
   extractConfigurationIssues(content, filename) {}
-    
     try {}
       if (filename.endsWith('.json')) {}
         JSON.parse(content)};
@@ -505,41 +446,41 @@ class ErrorDetectionService {}
     return issues}
   async generateErrorReport() {}
     const report = {}
-      "timestamp": new Date().toISOString(),""
-      "summary": {}"
-        totalErrors: 0,"
-        "errorsByType": {},""
-        "severityBreakdown": {}"
-          critical: 0,"
-          "high": 0,""
-          "medium": 0,""
-          "low": 0;"
-      },"
-      "errors": this.errorTypes,""
-      "recommendations": this.generateRecommendations();"
-
+      "timestamp": new Date().toISOString(),
+      "summary": {}
+        totalErrors: 0,
+        "errorsByType": {},
+        "severityBreakdown": {}
+          critical: 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0;
+        };
+      },
+      "errors": this.errorTypes,
+      "recommendations": this.generateRecommendations();
+    };
     // Calculate totals;
     Object.keys(this.errorTypes).forEach(type => {})
       const count = this.errorTypes[type].length;
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
+      this.errorTypes[type].forEach(error => {})
       
       
 
 
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
-
-    // Write report to file;`;
+});
+    // Write report to file;
     const reportPath = path.join(this.projectRoot, 'error-reports', `error-scan-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-`;
-    this.log('info', `Error report "generated": ${reportPath}`);""`;
-    this.log('info', `Total errors "found": ${report.summary.totalErrors}`);"
+    this.log('info', `Error report "generated": ${reportPath}`);
+    this.log('info', `Total errors "found": ${report.summary.totalErrors}`);
     return report};
   generateRecommendations() {}
     const recommendations = [];
-
     if (this.errorTypes.syntax.length > 0) {}
       recommendations.push({})"
         "priority": 'high',
@@ -558,7 +499,6 @@ class ErrorDetectionService {}
     return recommendations}
   async triggerErrorFixes() {}"
     this.log('info', 'Triggering automatic error fixes...');
-    
     try {}
       // Trigger syntax error fixes;
         await this.triggerService('syntax-error-fixer')};
@@ -576,15 +516,13 @@ class ErrorDetectionService {}
       this.log('warn', `Failed to trigger "service": ${serviceName}`, error.message)};"
   startContinuousMonitoring() {}"
     this.log('info', 'Starting continuous error monitoring...');
-    
     // Monitor for new errors every minute;
     setInterval(async () => {}
         await this.performFullScan()};
     }, 60000); // 1 minute;
   startFileWatching() {}
     this.log('info', 'Starting file watching for real-time error detection...');
-    
-    const watcher = chokidar.watch(['src/**/*.{js,jsx,ts,tsx}',)]
+const watcher = chokidar.watch(['src/**/*.{js,jsx,ts,tsx}',)];
       'components/**/*.{js,jsx,ts,tsx}',
       'pages/**/*.{js,jsx,ts,tsx}',
       'utils/**/*.{js,jsx,ts,tsx}',
@@ -594,7 +532,6 @@ class ErrorDetectionService {}
       "persistent": true;
     }
 });
-
     watcher;
       .on('change', (filePath) => {}
         this.log('debug', `File "changed": ${filePath}`);
@@ -614,19 +551,18 @@ class ErrorDetectionService {}
         this.log('debug', `File "removed": ${filePath}`);"
         this.handleFileRemoval(filePath)})}
   async handleFileChange(filePath) {}
-      
+    try {}
+      // Quick check for syntax issues in the changed file;
+      const content = fs.readFileSync(filePath, 'utf8');
       if (this.hasSyntaxIssues(content, filePath)) {}
         this.log('warn', `Syntax issues detected "in": ${filePath}`);
-        
-      // Quick check for syntax issues in the changed file;"
-      if (this.hasSyntaxIssues(content, filePath)) {}`;
-        this.log('warn', `Syntax issues detected "in": ${filePath}`);"
         // Add to syntax errors;
         this.errorTypes.syntax.push({})"
           "file": filePath,""
           "description": 'Syntax error detected in real-time',
-          "timestamp": new Date().toISOString();"
-
+          "timestamp": new Date().toISOString();
+        }
+});
         // Trigger immediate fix if auto-fix is enabled;
         if (this.autoFix) {}"
     } catch (error) {}`;
@@ -636,27 +572,27 @@ class ErrorDetectionService {}
       this.errorTypes[type] = this.errorTypes[type].filter(error => error.file !== filePath)})};
 // Start the service;
 const service = new ErrorDetectionService();
-
-// Handle graceful shutdown;"
+// Handle graceful shutdown;
 process.on('SIGINT', () => {}
   service.log('info', 'Received SIGINT, shutting down gracefully...');
   process.exit(0)}
-
+});
 process.on('SIGTERM', () => {}
   service.log('info', 'Received SIGTERM, shutting down gracefully...');
-
+  process.exit(0)}
+});
 // Handle uncaught errors;
 process.on('uncaughtException', (error) => {}
   service.log('error', 'Uncaught exception', error)
   process.exit(1)}
-
+});
 process.on('unhandledRejection', (reason, promise) => {}
-  service.log('error', 'Unhandled rejection', { reason, promise }')
-
+  service.log('error', 'Unhandled rejection', { reason, promise }
+});
+  process.exit(1)}
+});
 // Start the service;
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
+  process.exit(1)}
 });
-});
-
-

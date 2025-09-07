@@ -1,9 +1,5 @@
 
-import type { AppProps } from 'next / app',
-import '../styles / globals.css',
-/**
- * MyApp - Function description
- */
-function MyApp() {
-  return <Component {...page_props} />;
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

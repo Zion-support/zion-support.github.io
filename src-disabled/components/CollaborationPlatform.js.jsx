@@ -55,12 +55,7 @@ const mockParticipants = [{id: '1'}
   name: 'Emily Davis', isVideoOn: true, isAudioOn: true, isScreenSharing: false, isSpeaking: false, avatar:  ,}
 }] export function CollaborationPlatform() { const [isOpen, setIsOpen] =;
   useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [participants, setParticipants] = useState(mockParticipants);}
-  const [localUser, setLocalUser] = useState({ isVideoOn: true, isAudioOn: true, isScreenSharing: false, isMuted: fals,}
 });
-  const [activeChat, setActiveChat] = useState(false);
   const [chatMessages, setChatMessages] = useState([{ id: '1',
   user: 'John Smith', message: 'Great presentation!',}
   timestamp: new Date(,}
@@ -68,16 +63,11 @@ const mockParticipants = [{id: '1'}
   user: 'Sarah Johnson', message: 'I have some questions about the implementation',}
   timestamp: new Date(,}
 }]) const [newMessage, setNewMessage] = useState(');
-  const [isRecording, setIsRecording] = useState(false);
-  const [meetingDuration, setMeetingDuration] = useState(0);
-  const containerRef = useRef(null);
   useEffect(() => {}
- const interval = setInterval(() => { setMeetingDuration(prev => prev + 1) }, 1000);
   return () => clearInterval(interval) }, []) const toggleMute = ( setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted ) => {
   return $3;}
 })) }
 
-const toggleRecording = ( setIsRecording(!isRecording),) => {
   return $3;}
 }
 }
@@ -89,10 +79,8 @@ const sendMessage = ( if(newMessage.trim()) { const message = { id: Date.now().t
 } setChatMessages(prev => [...prev, message]) setNewMessage(') };
 }
 
-const formatTime = seconds => { const hours = Math.floor(seconds / 3600) const minutes = Math.floor((seconds % 3600) / 60) const secs = seconds % 60;}
   return `${hours.toString().padStart(2, 0')}: ${minutes.toString().padStart(2, 0')}: ${secs.toString().padStart(2, 0')}` }
 ;
-  const toggleChat = ( setActiveChat(!activeChat) ) => {
   return $3;}
 } if(!isOpen) { return () <button onClick={() = /> setIsOpen(true)} className='fixed bottom-4 right-20 p-3 bg-zion-purple hover: bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50' title='Start Collaboration Session' >' <Users className='w-5 h-5' /> </button> ) } if(isMinimized) { return (' <div className='fixed bottom-4 right-20 z-50' />' <div className='bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3' />' <div className='flex items-center gap-3' />' <div className='w-3 h-3 bg-zion-emerald rounded-full animate-pulse' /></div>' <span className='text-sm text-zion-slate' /> Collaboration Active </span> <button onClick={() = /> setIsMinimized(false)}' className='text-zion-slate-light hover: text-zion-slate transition-colors' >' <Maximize2 className='w-4 h-4' /> </button> </div> </div> </div> ),
 };

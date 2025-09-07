@@ -11,6 +11,15 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
+import {} from "@/components/ui/card";
+
+    refetch()
+  }, [refetch]),
+
+  const openDisputes = disputes.filter(d => d.status === 'open'),
+  const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),
+  const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),
+
 export function DisputeDashboard() {
   const { disputes, isLoading, refetch } = useDisputes($2);
   useEffect(() => {
@@ -27,10 +36,16 @@ export function DisputeDashboard() {
           <h1 className="text-3xl font-bold">Dispute Resolution Center</h1>
           <p className="text-muted-foreground">Manage and resolve disputes between clients and talents</p>
         </div>
+  return (
+
+        
+
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
       </div>
+      
+
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -96,6 +111,23 @@ export function DisputeDashboard() {
           </CardContent>
         </Card>
       </div>
+          <CardContent>        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-lg font-medium flex justify-between items-center">
+              <span>Under Review</span>
+              <span className="text-xl font-bold">{underReviewDisputes.length}</span>              <span className="text-xl font-bold">{underReviewDisputes.length}</span>
+            </CardTitle>
+            <CardDescription>Being actively processed</CardDescription>
+          </CardHeader>
+          <CardContent>            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
+
+      <DisputesList disputes={disputes} is_loading={is_loading} />;
+    </div>);
+
+}
       <DisputesList disputes={disputes} isLoading={isLoading} />
     </div>
   )

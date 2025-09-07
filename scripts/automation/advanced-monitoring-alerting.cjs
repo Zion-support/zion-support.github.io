@@ -370,7 +370,6 @@ class AdvancedMonitoringAlerting {;
   }
 
   saveHistoricalData() {
-    const dataFile = path.join(
       this.projectRoot,
 
 

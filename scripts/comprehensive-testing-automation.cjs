@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -40,6 +46,9 @@ const { execSync } = require('child_process')
         return { "status"}
     console.error(' Comprehensive testing "failed")
         "status"
+
+#!/usr/bin/env node
+
 
 
 

@@ -7,7 +7,6 @@
   const {;
   user ;
 }= useAuth ();
-const {;
   reviews, userReview,  isLoading, reportReview ;
 }= useReviews (project.id);
 const [isReviewModalOpen, setIsReviewModalOpen] = useState (false);

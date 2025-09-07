@@ -1,6 +1,5 @@
 :src/components/talent/filters/ExperienceFilter.tsx
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
 return (
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
@@ -66,7 +65,6 @@ export /**;
  * ExperienceFilter - Function description;
  */
 
-import { ChevronDown, ChevronUp } from 'lucide-react'
 
 import { ExperienceFilterProps } from "@/types/filters",
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {}
@@ -99,7 +97,6 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 import { Slider } from "@/components/ui/slider"
 import { ExperienceFilterProps } from "@/types/filters"
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
-  const handleChange = (values: number[]) => {
     setExperienceRange([values[0] |0, values[1] |15])
   }
 

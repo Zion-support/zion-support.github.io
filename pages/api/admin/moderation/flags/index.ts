@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
@@ -20,4 +21,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   
   return res.status(405).json({ error: 'Method not allowed' });
 }
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 

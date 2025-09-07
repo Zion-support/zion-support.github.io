@@ -114,7 +114,6 @@ function CategoryContent({
 
 },
 
-const iconMap = {
   "Briefcase": Briefcase,
   "MessageSquare": MessageSquare,
   "Code": Code,
@@ -149,7 +148,6 @@ function CategoryContent({
   const { featuredPosts, recentPosts } = useCommunity(),
 
   // Filter posts by category from context data
-  const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
 
     ...recentPosts.filter(post => post.categoryId === categoryId)
@@ -179,7 +177,6 @@ function CategoryContent({
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
 
-  const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
       return
@@ -202,7 +199,6 @@ import { useCommunity } from "@/context",;
 import { useToast } from "@/hooks/use-toast",;
 import { useFollowedCategories } from "@/hooks/useFollowedCategories",;
 import { logInfo } from '@/utils/productionLogger',;
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
 const categoriesInfo: Record<string ForumCategoryInfo> = {;
   "getting-hired": {;
@@ -371,10 +367,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { useCommunity } from '@/context';
 import { useToast } from '@/hooks/use-toast';
 import { useFollowedCategories } from '@/hooks/useFollowedCategories';
-import { logInfo } from '@/utils/productionLogger';
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
 // Mock category data
-const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
   );
 

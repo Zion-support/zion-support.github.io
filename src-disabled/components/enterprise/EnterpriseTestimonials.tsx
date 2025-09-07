@@ -106,7 +106,6 @@ export function EnterpriseTestimonials() {
                       />
                     </div>
 
-import { Quote } from 'lucide-react'
 import {}
   Carousel,
   CarouselContent,
@@ -270,8 +269,6 @@ export function EnterpriseTestimonials() {;
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">;'
 import React from 'react';'
 
-import { Quote } from 'lucide-react';
-import {}
   Carousel,
   CarouselContent,
   CarouselItem,

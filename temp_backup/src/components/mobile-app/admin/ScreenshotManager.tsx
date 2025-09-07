@@ -74,7 +74,6 @@ const imageFiles = files && files.filter(file => file && file.type.startsWith('i
 }
 const availableSlots  = maxScreenshots - screenshots && screenshots.length;}// Limit the number of screenshots;
 "
-const maxScreenshots = platform === "ios" ? 10 : 8;"
   const availableSlots = maxScreenshots - screenshots && screenshots.length,if (availableSlots <= 0) {toast && toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
   return;
     }

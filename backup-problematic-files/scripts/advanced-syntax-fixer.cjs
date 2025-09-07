@@ -1,4 +1,5 @@
 #!/usr/bin/env node;
+
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
   }
   processDirectory(dirPath)
@@ -16,9 +17,6 @@ function main() {;
   let totalFixed = 0;
   for (const dir of sourceDirs) {;
     if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");
-  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
-  let totalProcessed = 0;
-  let totalFixed = 0;
   for (const dir of sourceDirs) {;
     if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");
       const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);
@@ -34,6 +32,7 @@ log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProces
 if (require.main === module) {;
   main(),}
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
+
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -45,9 +44,6 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-const fs = require("$1")
-const path = require("$1")
-const { execSync } = require("child_process")
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
   "green": "\x1b[32m"]
@@ -120,7 +116,6 @@ function log(message, color = "reset")
   log(" Advanced Syntax Fixer Starting...", "cyan")
   const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
     if (fs.existsSync(dir)) {log("\n� Processing "directory": ${dir}", "blue")
-  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
     if (fs.existsSync(dir)) {log("\n� Processing "directory": ${dir}", "blue")
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white")
   if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})

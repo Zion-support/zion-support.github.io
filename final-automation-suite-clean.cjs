@@ -149,7 +149,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
       {
         name: "auto-deployment.cjs",
         content: `#!/usr/bin/env node
-const { execSync } = require("child_process");
 
 class AutoDeployment {
   constructor() {
@@ -273,7 +272,6 @@ checker.checkCodeQuality();`
       {
         name: "dependency-updater.cjs",
         content: `#!/usr/bin/env node
-const { execSync } = require("child_process");
 
 class DependencyUpdater {
   constructor() {
@@ -312,8 +310,6 @@ updater.updateDependencies();`
       {
         name: "performance-monitor.cjs",
         content: `#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
 
 class PerformanceMonitor {
   constructor() {
@@ -358,10 +354,7 @@ class PerformanceMonitor {
       return size;
     }
     
-    const items = fs.readdirSync(dir);
     for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
         size += this.getDirectorySize(fullPath);

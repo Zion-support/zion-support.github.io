@@ -1,4 +1,19 @@
-]
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Comprehensive fix for all files...');
+
+// List of problematic files
+const filesToFix = [;
+  'pages/about.tsx',
+  'pages/blog.tsx', 
+  'pages/contact.tsx',
+  'pages/services.tsx',
+  'pages/talent.tsx'
+];
+
 function fixFile(filePath) {
   try {
   // TODO: Implement
@@ -8,8 +23,20 @@ function fixFile(filePath) {
       return false
     // Remove all merge conflict markers
 
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-    
+
+
+    content = content.replace(/[^\n]+\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+
+
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+
+
+    content = content.replace(/
+
+    content = content.replace(/    
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');
     content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout';[\s\S]*?const blogPosts/g, 'const blogPosts');

@@ -22,7 +22,6 @@ interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
 // Fallback responses when API is unavailable
 
-const FALLBACK_RESPONSES = [
 :src/components/SupportChatbot.tsx
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way."
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly."
@@ -81,7 +80,6 @@ export function SupportChatbot() {
 
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]),
 
-  const sendMessage = async (text: string) => {
     const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },
     setMessages(prev => [...prev, userMsg]),
     setLoading(true),
@@ -470,7 +468,6 @@ set_typing (false);
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
 // Fallback responses when API is unavailable
-const FALLBACK_RESPONSES = [
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
@@ -479,22 +476,14 @@ const FALLBACK_RESPONSES = [
 ],
 
 export function SupportChatbot() {
-  const [open, setOpen] = useState(false),
-  const [messages, setMessages] = useState<Msg[]>([]),
-  const [loading, setLoading] = useState(false),
-  const [typing, setTyping] = useState(false),
-  const endRef = useRef<HTMLDivElement | null>(null),
 
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]),
 
-  const sendMessage = async (text: string) => {
-    const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },
     setMessages(prev => [...prev, userMsg]),
     setLoading(true),
     setTyping(true),
     try {
       // Try the Supabase AI chat function first with streaming
-      let res = await fetch('https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
@@ -546,9 +535,6 @@ export function SupportChatbot() {
           ...prev
           { id: botId, role: 'assistant', message: '' }
         ])
-        const reader = res.body.getReader()
-        const decoder = new TextDecoder()
-        let done = false
         let buffer = ''
         let accumulated = ''
         while (!done) {
@@ -566,7 +552,6 @@ export function SupportChatbot() {
                 break
               }
               try {
-                const json = JSON.parse(line)
                 const token =
                   json.choices?.[0]?.delta?.content |
                   json.choices?.[0]?.text |
@@ -601,7 +586,6 @@ export function SupportChatbot() {
           buffer += decoder.decode(result.value || new Uint8Array()),
           const lines = buffer.split('\n'),
           for (let i = 0, i < lines.length - 1, i++) {
-            let line = lines[i]?.trim(),
             if (!line) continue,
             if (line.startsWith('data:')) {
               line = line.replace(/^data:\s*/, ''),
@@ -730,7 +714,6 @@ export function SupportChatbot() {;
       logErrorToProduction('Chatbot error:', { data: err }),
       // Provide a helpful fallback response instead of generic error
       const fallbackResponse = FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.",
-      const errorMsg: Msg = { 
         id: Date.now().toString() + '-e', 
         role: 'assistant', 
         message: fallbackResponse

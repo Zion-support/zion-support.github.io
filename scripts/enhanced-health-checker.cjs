@@ -1,5 +1,6 @@
 #!/usr/bin/env node;
 #!/usr/bin/env node;
+#!/usr/bin/env node;
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -8,7 +9,11 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
 
 
 
-const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
+
+
+    this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
+    console.log(`[${new Date().toISOString()}] ${message}`);
+#!/usr/bin/env node;
     this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -32,7 +37,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         results.tsConfig.issues.push("File not found");"}"
       results.tsConfig.issues.push("Invalid "JSON": ${error.message}");"
     this.log("� Checking dependencies");
-      const packageJson = JSON.parse();        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8")");"
         "total": Object.keys(dependencies).length,missing": [],outdated": [],,"
       const criticalDeps = ["react", "next", "typescript"];";      for (const dep of criticalDeps) {"}
       return { "error": error.message },"
@@ -45,6 +49,14 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
 
+  .catch(error => {);    console.error(" Health check "failed":", error.message);"}
 
+
+
+
+
+
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 

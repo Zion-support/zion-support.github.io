@@ -46,7 +46,6 @@ import React, { useState } from 'react';
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
 import {}
-import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
 export default function APIRateLimiterPage() {;}
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
@@ -531,14 +530,10 @@ const response = await axios.get(\`https: //api.zion.tech\${endpoin,}
               <Button;
 onClick = {() = />
                   copyToClipboard(;
-  const axios = require('axios');}
 }
-const apiKey = '${apiKey || 'your_api_key_here'}';
 
-const endpoint = '${endpoint || '/api/users'}';
 
 // Make API request with rate limiting;
-const response = await axios.get(\`https: //api.zion.tech\${endpoin,}
 }\`, {
   headers: {
   'Authorization': \`Bearer \$ {

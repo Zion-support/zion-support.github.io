@@ -72,7 +72,6 @@ export default function Ecommerce() {
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function Ecommerce() {
-  const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "E-commerce Platform",

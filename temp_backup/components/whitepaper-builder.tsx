@@ -11,7 +11,6 @@ export default function WhitepaperBuilderPage() {
 const sections = null;
 
 export default function WhitepaperBuilderPage() {
-  const [edition, setEdition] = useState<WhitepaperEdition />('full');
 
 const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
 

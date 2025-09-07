@@ -65,7 +65,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;"
       "placeholder-key";
 '
-import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   try {';
@@ -88,7 +87,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
       res.status(405).end('Method Not Allowed');
     }
 
-    const supabase = getServerSupabase();
     const { data, error } = await supabase"
       .from("partners")
       .select("
@@ -122,11 +120,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   try {';
-    const isAdmin = req.headers['x-admin'] === 'true';'
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 '
     if (req.method === 'GET') {}
-      const usingPlaceholder = true; // Set to false when real data is available;
       if (usingPlaceholder) {}
         return res.status(200).json({}
           partners: ['

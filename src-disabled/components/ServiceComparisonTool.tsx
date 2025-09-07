@@ -49,7 +49,6 @@ const comparisonServices = getComparisonData ()   const comparisonMetrics = [ { 
 export const ServiceComparisonTool: React.FC < ServiceComparisonToolProps> = ({ services, onClose    }) => {
 }
 }
- const [selectedServices, setSelectedServices] = useState < string[]> ([])  const [comparisonMode, setComparisonMode] = useState<'features' | 'pricing' | 'roi'> ('features')   const addServiceToComparison = ( if (selectedServices.length < 4 && !selectedServices.includes (serviceId) ) { setSelectedServices ([...selectedServices, serviceId])  ) => {
   return $3;}
 } }
 

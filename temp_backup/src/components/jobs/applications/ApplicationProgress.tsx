@@ -77,8 +77,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     rejected: 5}
   const currentRank = statusRank[current]
   const statusRank_ = statusRank[status]
-  const currentRank = statusRank[current]
-  const statusRank_ = statusRank[status]
   const statusRank_ = statusRank[status],
 
   if (currentRank < statusRank_) {

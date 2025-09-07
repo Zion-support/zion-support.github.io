@@ -299,7 +299,6 @@ class SmartResourceManager {
   }
   async forceGarbageCollection() {
     try {
-      const { execSync } = require('child_process');
       execSync('node -e "if (global.gc) global.gc()"', { "stdio": 'pipe' });
     } catch (error) {
     }
@@ -354,8 +353,6 @@ class SmartResourceManager {
   }
   async scaleUpProcesses() {
     try {
-      const processes = await this.getProcessList();
-      const mainAppProcess = processes.find(p => p.name.includes('main-app'));
       if (mainAppProcess && mainAppProcess.instances < 10) {
         const newInstances = Math.min(10, mainAppProcess.instances + 1);
         return new Promise((resolve) => {
@@ -396,7 +393,6 @@ class SmartResourceManager {
   }
   async cleanLogFiles() {
     try {
-      const { execSync } = require('child_process');
       // Clean old log files (older than 7 days)
       execSync('find logs -name "*.log" -mtime +7 -delete', { "stdio": 'pipe' });
       // Compress recent log files
@@ -412,7 +408,6 @@ class SmartResourceManager {
   }
   async cleanTempFiles() {
     try {
-      const { execSync } = require('child_process');
       // Clean temporary files
       execSync('find /tmp -name "*.tmp" -mtime +1 -delete', { "stdio": 'pipe' });
       execSync('find . -name "*.tmp" -mtime +1 -delete', { "stdio": 'pipe' });
@@ -427,7 +422,6 @@ class SmartResourceManager {
   }
   async compressOldFiles() {
     try {
-      const { execSync } = require('child_process');
       // Compress old reports
       execSync('find . -name "*.json" -mtime +30 -exec gzip {} \\;', { "stdio": 'pipe' });
       this.optimizationActions.push({
@@ -465,7 +459,6 @@ class SmartResourceManager {
   }
   calculateAverageCpuUsage() {
     if (this.resourceHistory.length === 0) return 0;
-    const recentHistory = this.resourceHistory.slice(-10);
     const totalCpu = recentHistory.reduce((sum, r) => sum + r.system.cpu.loadAverage[0], 0);
     return totalCpu / recentHistory.length;
   }

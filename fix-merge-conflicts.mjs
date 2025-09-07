@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import { glob } from 'glob';
+import fs from 'fs;
+import path from path';
+import { execSync } from 'child_process;
+import { glob } from glob';
 
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
@@ -11,14 +11,14 @@ function fixMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('=======')) {
+    if (!content.includes(=======')) {
       return false;
     }
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
     // Remove merge conflict markers and keep the content after the last =======
-    const lines = content.split('\n');
+    const lines = content.split('\n);
     const fixedLines = [];
     let inConflict = false;
     let conflictStart = -1;
@@ -26,17 +26,17 @@ function fixMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.includes('<<<<<<<')) {
+      if (line.includes(<<<<<<<')) {
         inConflict = true;
         conflictStart = i;
         continue;
       }
       
-      if (line.includes('=======')) {
+      if (line.includes('=======)) {
         continue;
       }
       
-      if (line.includes('>>>>>>>')) {
+      if (line.includes(>>>>>>>')) {
         inConflict = false;
         conflictStart = -1;
         continue;
@@ -48,7 +48,7 @@ function fixMergeConflicts(filePath) {
     }
     
     // Write the fixed content back
-    fs.writeFileSync(filePath, fixedLines.join('\n'));
+    fs.writeFileSync(filePath, fixedLines.join('\n));
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -58,17 +58,17 @@ function fixMergeConflicts(filePath) {
 
 // Function to process all files
 async function processAllFiles() {
-  console.log('Starting merge conflict resolution...');
+  console.log(Starting merge conflict resolution...');
   
   const patterns = [
-    '**/*.js',
-    '**/*.jsx',
-    '**/*.ts',
-    '**/*.tsx',
-    '**/*.json',
-    '**/*.css',
-    '**/*.html',
-    '**/*.md'
+    '**/*.js,
+    **/*.jsx',
+    '**/*.ts,
+    **/*.tsx',
+    '**/*.json,
+    **/*.css',
+    '**/*.html,
+    **/*.md'
   ];
   
   let totalFiles = 0;

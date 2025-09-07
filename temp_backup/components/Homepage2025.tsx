@@ -117,7 +117,6 @@ if ( {) {$2;}
 
 interface Homepage2025Props  {showInternalNav?: boolean;}
 }
-const Homepage2025: React.FC<Homepage2025Props /> = ({ showInternalNav = true,   }) => {
 
 }
  ;}
@@ -146,7 +145,6 @@ const all_services = [      element.scrollIntoView ({behavior: 'smooth'}
  ,
 }
 ;
-  const allServices = [
   ...innovativeRealMicroSaasServices2025,...innovativeAIServicesEnhanced2025,...innovativeITServicesEnhanced2025,...emergingTechServicesEnhanced2025,...advancedAIAutomationServices,...quantumCybersecurityServices,...innovativeMicroSaasServices2026,...specializedITSolutions2026,];
 
 const featured_services = all_services;
@@ -162,7 +160,6 @@ const featured_services = all_services;
   ];
       icon: Brain;
     }...emergingTechServices2026,];
-  const featuredServices = allServices;
     .filter(service => service.popular).slice(0, 12)const navigationSections = [;
     {id: 'hero'}
   label: 'Home', icon: '🏠' },{id: 'services'}
@@ -182,7 +179,6 @@ const featured_services = all_services;
       icon: Brain;}
     }...emergingTechServices2026,];
 
-const featuredServices = allServices;
     .filter(service = > service.popular).slice(0, 12;
   const navigationSections = [
   {id: 'hero'}

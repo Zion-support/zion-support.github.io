@@ -79,7 +79,6 @@ export default function TalentDirectory() {
   useEffect(() => {
     if (!router.isReady || initialized) return;
     
-    const {
       search;
       skills;
       availability;

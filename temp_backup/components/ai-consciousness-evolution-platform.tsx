@@ -20,7 +20,6 @@ import { Brain;
 const AIConsciousnessEvolutionPlatform: React.FC;
 
 const AIConsciousnessEvolutionPlatform: React.FC = () = /> {const AIConsciousnessEvolutionPlatform: React.FC = () => ;
-  const features = [ ;}
   return (<Layout /> <SEO <motion.div initial= {{opacity: 0, y: 20;}
 }animate= {{opacity: 1, y: 0;}
 }transition= {{duration: 0.8;}
@@ -177,7 +176,6 @@ export default AIConsciousnessEvolutionPlatform;
 }
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion.button 
 }
-const containerVariants = {
   hidden: {
   opacity: 0 
 }

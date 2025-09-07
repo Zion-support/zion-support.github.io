@@ -155,7 +155,6 @@ export const ReplyCard = ({;
           <div className="flex items-center">;
             <span className="font-medium">;
 import { formatDistanceToNow } from 'date-fns';
-import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
 import {
   Card,
   CardContent,

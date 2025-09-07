@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState } from '../../../../lib/integrations/fileStore';
 
@@ -21,3 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: 'Internal server error' });
   }
 }
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

@@ -20,7 +20,6 @@ docsSearchSuggestions;
 } from '@/data / docsSearchData';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput","
 import { cn } from "@/lib/utils","
-import {
  getDocsSearchPath,
  docsSearchSuggestions
 } from "@/data/docsSearchData","
@@ -29,7 +28,6 @@ import {
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
 import { cn } from "@/lib/utils",;
 
-import {
  getDocsSearchPath,
  docsSearchSuggestions
 interface ApiDocsLayoutProps {

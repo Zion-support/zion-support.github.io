@@ -1,107 +1,115 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+
+
+import React, { useEffect, useRef } from 'react;
+import { motion } from framer-motion';
 interface EnhancedFuturisticBackgroundProps {
-  children: React.ReactNode,
-  className?: string,
-  intensity?: 'low' | 'medium' | 'high',
-  colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic',
-  particleCount?: number,
-  animationSpeed?: number
+  }
+  "children": React.ReactNode;
+  className?: string;
+
+  particleCount?: number;
+
+
+if (this.x > canvas.width) this.x = 0;
+if (this.y < 0) this.y = canvas.height;
+if (this.y > canvas.height) this.y = 0;
+
+
+// Fade out near end of life if (this.life < 20) {
+  
+
+}let "particles": Particle[] = [];
+let "connections": Connection[] = [];
+// Initialize particles ctx.fill_style = colors.primary;
+ctx.font = `$ {`
+  }
+
+  fontSize 
+}px monospace`;`
+const "EnhancedFuturisticBackground": React.FC<;
+  EnhancedFuturisticBackgroundProps
+> = ({ children
+  }
+  className = '','
+  intensity = 'medium','
+  colorScheme = 'quantum','
+  particleCount = 100,
+  animationSpeed = 1
+   }) => {
+
+ ;
+  }
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+=======
+
+// Fade out near end of life if (this.life < 20) {}
 }
 
-const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
-  children,
-  className = $2;
-  intensity = $2;
-  colorScheme = $2;
-  particleCount = $2;
-  animationSpeed = $2;
-  const animationRef = $2;
-  const colorSchemes = $2;
-      secondary: '#ff00ff',
-      accent: '#ffff00',
-      background: 'rgba(0, 0, 0, 0.85)',
-      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'],
-      glow: '#00ffff'
+
+}let particles: Particle[] = []
+let connections: Connection[] = []
+// Initialize particles ctx.fill_style = colors.primary
+ctx.font = `$ {
+
+  fontSize }
+}px monospace`
+const EnhancedFuturisticBackground: React.FC<
+  EnhancedFuturisticBackgroundProps
+> = ({ children,
+  className = ',
+  intensity = 'medium,
+  colorScheme = quantum',
+  particleCount = 100}
+  animationSpeed = 1}
+   }) => {
+  const canvasRef = useRef<HTMLCanvasElement />(null);
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+
+const animationRef = useRef<number | undefined />(undefined);
+
+const colorSchemes = {
+
+=======
+    quantum: {
+
+      primary: '#00ffff,
+  secondary: #ff00ff',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+      accent: '#ffff00,
+      background: rgba(0, 0, 0, 0.85)',
+      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff],
+      glow: #00ffff'
     },
     cyberpunk: {
-      primary: '#ff0080',
-      secondary: '#00ffff',
-      accent: '#ffff00',
-      background: 'rgba(20, 0, 40, 0.9)',
-      particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'],
-      glow: '#ff0080'
+      primary: '#ff0080,
+      secondary: #00ffff',
+      accent: '#ffff00,
+      background: rgba(20, 0, 40, 0.9)',
+      particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80],
+      glow: #ff0080'
     },
     holographic: {
-      primary: '#00ffff',
-      secondary: '#ff00ff',
-      accent: '#ffff00',
-      background: 'rgba(0, 20, 40, 0.85)',
-      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'],
-      glow: '#00ffff'
+      primary: '#00ffff,
+      secondary: #ff00ff',
+      accent: '#ffff00,
+      background: rgba(0, 20, 40, 0.85)',
+      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff],
+      glow: #00ffff'
     },
     neural: {
-      primary: '#00ff80',
-      secondary: '#ff0080',
-      accent: '#ffff00',
-      background: 'rgba(0, 40, 20, 0.9)',
-      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'],
-      glow: '#00ff80'
+      primary: '#00ff80,
+      secondary: #ff0080',
+      accent: '#ffff00,
+      background: rgba(0, 40, 20, 0.9)',
+      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff],
+      glow: #00ff80'
     },
     cosmic: {
-      primary: '#ff6b6b',
-      secondary: '#4ecdc4',
-      accent: '#45b7d1',
-      background: 'rgba(10, 10, 30, 0.9)',
-      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
-      glow: '#4ecdc4'
-    }
-  },
+      primary: '#ff6b6b,
+      secondary: #4ecdc4',
+      accent: '#45b7d1,
 
-  const intensitySettings = {
-    low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 },
-    medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 },
-    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
-  },
-
-  useEffect(() => {
-    const canvas = $2;
-    if (!canvas) return,
-
-    const ctx = canvas.getContext($2);
-    if (!ctx) return,
-
-    const resizeCanvas = $2;
-      canvas.height = $2;
-    resizeCanvas($2);
-    window.addEventListener($2);
-    const colors = $2;
-    const settings = $2;
-    // Enhanced particle system
-    class Particle {
-      x: number,
-      y: number,
-      vx: number,
-      vy: number,
-      size: number,
-      color: string,
-      opacity: number,
-      life: number,
-      maxLife: number,
-
-      constructor() {
-        this.x = $2;
-        this.y = $2;
-        this.vx = $2;
-        this.vy = $2;
-        this.size = $2;
-        this.color = $2;
-        this.opacity = $2;
-        this.life = $2;
-        this.maxLife = $2;
-        this.y += this.vy,
-        this.life--,
-
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
         // Wrap around edges
         if (this.x < 0) this.x = $2;
         if (this.x > canvas.width) this.x = $2;
@@ -114,75 +122,139 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       }
 
       draw() {
-        ctx.save($2);
-        ctx.globalAlpha = $2;
-        // Create gradient for particle
-        const gradient = ctx.createRadialGradient($2);
-        gradient.addColorStop($2);
-        gradient.addColorStop($2);
-        ctx.fillStyle = $2;
-        ctx.beginPath($2);
-        ctx.arc($2);
-        ctx.fill($2);
-        ctx.restore()
-      }
-
-      isDead() {
-        return this.life <= 0 || this.opacity < 0.01
-      }
-    }
-
-    // Connection lines between particles
-    class Connection {
-      p1: Particle,
-      p2: Particle,
-      opacity: number,
-
-      constructor(p1: Particle, p2: Particle) {
-        this.p1 = $2;
-        this.p2 = $2;
-        this.opacity = 0.1
-      }
-
-      draw() {
-        const distance = Math.sqrt(
-          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
-        ),
-
-        if (distance < 150) {
-          ctx.save($2);
-          ctx.globalAlpha = $2;
-          ctx.strokeStyle = $2;
-          ctx.lineWidth = $2;
-          ctx.beginPath($2);
-          ctx.moveTo($2);
-          ctx.lineTo($2);
-          ctx.stroke($2);
-          ctx.restore()
         }
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+
+// Create gradient for particle,
+const gradient = ctx.createRadialGradient(;
+          this.x,
+this.y,
+0
+          this.x,
+this.y,
+this.size
+        );
+        gradient.addColorStop(0, this.color);
+
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+
+
+            Math.pow(particles[i].x - particles[j].x, 2) +
+              Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+            Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]))
+
+      }
+
+
+
+
+            }
+
+            connections.push(new Connection(particles[i], particles[j]));
+          }
+      }draw() {const distance = Math.sqrt(Math.pow(this.p1.x - this.p2.x, 2) +;
+            Math.pow(this.p1.y - this.p2.y, 2))if (distance < 150) {ctx.save()ctx.globalAlpha = this.opacity * (1 - distance / 150)ctx.strokeStyle = colors.glow;
+          ctx.lineWidth = 0.5;
+          ctx.beginPath()ctx.moveTo(this.p1.x, this.p1.y)ctx.lineTo(this.p2.x, this.p2.y)ctx.stroke();
+      constructor (p1: Particle, p2: Particle) {this.p1 = p1;
+        this.p2 = p2;
+        this.opacity = 0.1;      }
+      draw () {const distance = Math.sqrt (Math.pow (this.p1.x - this.p2.x, 2) +;
+            Math.pow (this.p1.y - this.p2.y, 2)        )p1: Particle,p2: Particle,opacity: number,constructor (p1: Particle, p2: Particle) {this.p1 = p1;
+        this.p2 = p2,this.opacity = 0.1;
+      draw () {const distance = Math.sqrt (Math.pow (this.p1.x - this.p2.x, 2) +;
+            Math.pow (this.p1.y - this.p2.y, 2)          Math.pow (this.p1.x - this.p2.x, 2) + Math.pow (this.p1.y - this.p2.y, 2))// Check condition;
+if ( {) {$2;
+}
+          ctx.save ()ctx.global_alpha = this.opacity * (1 - distance / 150)ctx.stroke_style = colors.glow;
+          ctx.line_width = 0.5;
+          ctx.begin_path ()ctx.move_to (this.p1.x, this.p1.y)ctx.line_to (this.p2.x, this.p2.y)ctx.stroke ()ctx.restore ()}
       }
     }
-
-    let particles: Particle[] = [],
-    let connections: Connection[] = [],
-
-    // Initialize particles
-    for (let i = 0, i < settings.particleCount, i++) {
-      particles.push(new Particle())
-    }
-
-    // Matrix rain effect
-    const matrixRain = $2;
-      const fontSize = $2;
-      const columns = $2;
-      const drops: number[] = [],
-
-      for (let i = 0, i < columns, i++) {
-        drops[i] = 1
+          ctx.restore ()ctx.restore()}
       }
+    }
+    let particles: Particle[] = [];
+    let connections: Connection[]  = [];drops[i] = 1;
+// Initialize particles;
+    for (let i = 0; i < settings.particleCount; i++) {particles.push(new Particle())}
+    // Matrix rain effect;
+    const matrixRain = () => {const characters =;
+        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン;
+      const fontSize = 12;
+      const columns = canvas.width / fontSize;
+      const drops: number[]  = [];for (let i = 0; i < columns; i++) {drops[i] = 1;}
+      const drawMatrix = () => {ctx.fillStyle = rgba(0, 0, 0, 0.06)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height)ctx.fillStyle = colors.primary;
+        ctx.font = `${fontSize}px monospace`;
+    // Initialize particles;
+    for (let index = 0; i < settings.particle_count; i++) {particles.push (new Particle ())}
+    // Matrix rain effect;
+    const matrix_rain = () =>: any {const characters =;
+        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン;      const font_size = 12;    let particles: Particle[] = [],let connections: Connection[] = [],// Initialize particles;
+    for (let index = 0, i < settings.particle_count, i++) {particles.push (new Particle ())}
+    // Matrix rain effect;
+        01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン;
+      const font_size = 12;
+      const columns = canvas.width / font_size;
+      const drops: number[]  = [];for (let index = 0; i < columns; i++) {drops[i] = 1;      }      for (let index = 0, i < columns, i++) {drops[i] = 1;
+      }
+      const draw_matrix = () =>: any {ctx.fill_style = rgba (0, 0, 0, 0.06)';
+        ctx.fill_rect (0, 0, canvas.width, canvas.height)ctx.fill_style = colors.primary;
+        ctx.font = `${font_size}px monospace`;for (let index = 0; i < drops.length; i++) {const text =;
+            characters[Math.floor (Math.random () * characters.length)];
+          ctx.fill_text (text, i * font_size, drops[i] * font_size)// Check condition;
+if (> 0.975) {) {$2;
+}for (let i = 0; i < drops.length; i++) {const text =;
+            characters[Math.floor(Math.random() * characters.length)];
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize)if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {drops[i] = 0;
+          }
+          drops[i]++;
+        }
+      }return drawMatrix;    }ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize)if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {drops[i] = 0;
+          }
+          drops[i]++;
+        }return drawMatrix;
+    }const drawMatrix = matrixRain()// Main animation loop;
+    const animate = () => {// Clear canvas with fade effect;
+      ctx.fillStyle = colors.background;
+      ctx.fillRect(0, 0, canvas.width, canvas.height)// Draw matrix rain;
+      drawMatrix()// Update and draw particles;
+      particles.forEach(particle => {particle.update()particle.draw()})// Remove dead particles and add new ones;
+      particles = particles.filter(particle => !particle.isDead())while (particles.length < settings.particleCount) {connections = [];
+      for (let i = 0; i < particles && particles.length; i++) {for (let j = i + 1; j < particles && particles.length; j++) {        particles && particles.push(new Particle())}
+      connections = [];
+      for (let i = 0; i < particles && particles.length; i++) {for (let j = i + 1; j < particles && particles.length; j++) {const distance = Math && Math.sqrt(Math && Math.pow(particles[i].x - particles[j].x, 2) +;
+              Math && Math.pow(particles[i].y - particles[j].y, 2)for (let i = 0; i < particles.length; i++) {particles.push(new Particle())}// Create connections between nearby particles;
+      connections = [];
+for (let i = 0; i < particles.length; i++) {for (let j = i + 1; j < particles.length; j++) {const distance = Math.sqrt(Math.pow(particles[i].x - particles[j].x, 2) +;
+              Math.pow(particles[i].y - particles[j].y, 2))if (distance < 150) {connections.push(new Connection(particles[i], particles[j]))}          const distance = Math.sqrt(Math.pow(particles[i].x - particles[j].x, 2) +;
+            Math.pow(particles[i].y - particles[j].y, 2))if (distance < 150) {connections.push(new Connection(particles[i], particles[j]))}connections.push(new Connection(particles[i], particles[j]))}
+        }
+      }// Draw connections;
+      connections.forEach(connection => { return connection.draw())// Add floating geometric shapes; }
+      if (Math.random() < 0.02) {const x = Math.random() * canvas.width;
 
-      const drawMatrix = () => {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.06)',
+}
+
+const y = Math.random() * canvas.height;
+
+const size  = Math.random() * 20 + 10;ctx.save()ctx.globalAlpha = 0.1;
+        ctx.strokeStyle = colors.accent;
+
+ctx.stroke();
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.06),
         ctx.fillRect($2);
         ctx.fillStyle = $2;
         ctx.font = $2;
@@ -243,54 +315,18 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         ctx.lineWidth = $2;
         if (Math.random() < 0.5) {
           // Draw triangle
-          ctx.beginPath($2);
-          ctx.moveTo($2);
-          ctx.lineTo($2);
-          ctx.lineTo($2);
-          ctx.closePath($2);
-          ctx.stroke()
-        } else {
-          // Draw square
-          ctx.strokeRect(x - size, y - size, size * 2, size * 2)
-        }
-        
-        ctx.restore()
-      }
 
-      // Respect reduced motion
-      const prefersReduced = $2;
-      if (prefersReduced) {
-        // Slow down updates
-        setTimeout(() => {
-          animationRef.current = requestAnimationFrame(animate)
-        }, 100)
-      } else {
-        animationRef.current = $2;
-    animate($2);
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current)
-      }
-      window.removeEventListener('resize', resizeCanvas)
-    }
-  }, [colorScheme, intensity, particleCount, animationSpeed]),
-
-  return (
-    <div className={`relative min-h-screen ${className}`}>
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'transparent' }}
-      />
-      
       {/* Overlay gradient */}
-      <div 
-        className="fixed inset-0 pointer-events-none z-0"
+      <div;
+        className='fixed inset - 0 pointer - events - none z - 0';'
+
         style={{
-          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
-        }}
-      />
-      
+
+          }
+
+          "background": `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`,`
+        }} />
+
       {/* Content */}
-      <div className = $2;
-export default EnhancedFuturisticBackground,
+
+export default EnhancedFuturisticBackground;

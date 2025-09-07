@@ -213,7 +213,6 @@ class AIHealthMonitor {
       const recentCPU = this.metrics.cpu.slice(-3).map(m => m.usage) {
      {
       const recentCPU = this.metrics.cpu.slice(-3).map(m => m.usage});
-      const avgCPU = recentCPU.reduce((a, b) => a + b, 0) / recentCPU.lengt;h;
       if ( {
         anomalies.push({
           "type": 'cpu_spike',
@@ -360,7 +359,6 @@ class AIHealthMonitor {
       })}
   }
   async triggerAlert(type, data) {
-    const alert = {
       "id": `alert_${Date.now()}`,
       type,
       "severity": 'warning',
@@ -407,7 +405,6 @@ class AIHealthMonitor {
       }
     // Restart processes with high memory usage
     try {
-      const processes = await this.getProcessMetrics(;);
       const highMemoryProcesses = processes.filter(p => p.memory > 100 * 1024 * 1024;); // 100MB
       for (const proc of highMemoryProcesses) {
         execSync(`pm2 restart ${proc.name}`, { "stdio": 'pipe' });

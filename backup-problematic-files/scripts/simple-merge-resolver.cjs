@@ -5,6 +5,8 @@ console.log('🔧 Simple merge resolver - fixing syntax errors...');
   async log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     }
+
+
 // Fix the specific syntax errors we identified
 const files = [
   'components/Footer.tsx',
@@ -20,6 +22,7 @@ files.forEach(file => {
     if (fs.existsSync(file)) {
       let content = fs.readFileSync(file, 'utf8');
       let modified = false;
+
       
       
       // Fix hover syntax
@@ -27,6 +30,7 @@ files.forEach(file => {
         content = content.replace(/"hover":\s*/g, 'hover:');
         modified = true;
       }
+
       
       
       // Fix focus syntax
@@ -34,6 +38,7 @@ files.forEach(file => {
         content = content.replace(/"focus":\s*/g, 'focus:');
         modified = true;
       }
+
       
       
       // Fix group-hover syntax
@@ -41,6 +46,7 @@ files.forEach(file => {
         content = content.replace(/"group-hover":\s*/g, 'group-hover:');
         modified = true;
       }
+
       
       
       // Fix responsive breakpoints
@@ -48,24 +54,28 @@ files.forEach(file => {
         content = content.replace(/"sm":\s*/g, 'sm:');
         modified = true;
       }
+
       
       
       if (content.includes('"md":')) {
         content = content.replace(/"md":\s*/g, 'md:');
         modified = true;
       }
+
       
       
       if (content.includes('"lg":')) {
         content = content.replace(/"lg":\s*/g, 'lg:');
         modified = true;
       }
+
       
       
       if (content.includes('"xl":')) {
         content = content.replace(/"xl":\s*/g, 'xl:');
         modified = true;
       }
+
       
       
       // Fix animation properties
@@ -73,30 +83,35 @@ files.forEach(file => {
         content = content.replace(/"y":\s*/g, 'y:');
         modified = true;
       }
+
       
       
       if (content.includes('"opacity":')) {
         content = content.replace(/"opacity":\s*/g, 'opacity:');
         modified = true;
       }
+
       
       
       if (content.includes('"duration":')) {
         content = content.replace(/"duration":\s*/g, 'duration:');
         modified = true;
       }
+
       
       
       if (content.includes('"delay":')) {
         content = content.replace(/"delay":\s*/g, 'delay:');
         modified = true;
       }
+
       
       
       if (content.includes('"once":')) {
         content = content.replace(/"once":\s*/g, 'once:');
         modified = true;
       }
+
       
       
       if (modified) {
@@ -154,6 +169,7 @@ async function main() {
 if (require.main === module) {
   main().catch(console.error)}
 module.exports = SimpleMergeResolver;
+
 console.log('✅ Syntax fixes completed!');
 console.log('🎉 Ready for merge process!');
 #!/usr/bin/env node;
@@ -172,3 +188,4 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+

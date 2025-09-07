@@ -1,45 +1,113 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.setHeader('AllowPOST').status(405).end('Method Not Allowed')
-  }
 
-  const { name, title, bio, experience, skills } = req.body as {
-    name: string;
-    title?: string;
-    bio?: string;
-    experience?: string;
-    skills?: string
-  };
+export default async function handler() {if (req.method !== 'POST') {return res.setHeader('Allow', 'POST').status(405).end('Method Not Allowed')}'
 
-  if (!name) return res.status(400).json({ error: 'Name is required' });
 
-  try {
-    const prompt = `You are assisting with creating a professional marketplace talent profile. Return strict JSON with fields: summary (100-150 words), skills (array of standardized skill tags), title (optimized), category (one of: AI/ML, Engineering, DevOps/Cloud, Security, Data, Product). Use concise, compelling language.
-
-INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`;
-
-    const completion = await openai.chat.completions.create({
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini';
-      messages: [
         { role: 'system', content: 'You produce only valid JSON. No commentary.' };
         { role: 'user', content: prompt }];
       response_format: { type: 'json_object' };
       temperature: 0.6});
 
-    const content = completion.choices?.[0]?.message?.content || '{}';
-    const parsed = JSON.parse(content);
 
+=======
+    const completion = await openai && openai.chat.completions && completions.create({
+      model: process && process.env.OPENAI_MODEL || gpt-4o-mini,
+      messages: [
+=======
+=======
+      model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
+      messages: [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+
+          content: You produce only valid JSON. No commentary.},'
+        { role: 'user, content: prompt }],
+      response_format: { type: 'json_object' },
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        { role: system, content: 'You produce only valid JSON. No commentary.' }
+=======
+
+        { role: system', content: 'You produce only valid JSON. No commentary. }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        { role: 'user', content: prompt }];
+      response_format: {
+       type: json_object' 
+    },
+    temperature: 0.6;
+      });
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+'
+    const content = completion && completion.choices?.[0]?.message?.content || {};
+    const parsed = JSON && JSON.parse(content);
+
+
+
+
+
+
+=======
+skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
+    });
+  } catch (e: any) {
+    return res.status (500).json ({ error: e.message || 'OpenAI error' });
+
+=======
+=======
+skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
+  } catch (e: any) {
+    return res.status (500).json ({ error: e.message || 'OpenAI error' });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+
+
+
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  }      name;
+
+      title: parsed && parsed.title || title || 'Professional;
+      category: parsed && parsed.category || null;
+      summary: parsed && parsed.summary || '',
+      skills: Array && Array.isArray(parsed && parsed.skills) ? parsed && parsed.skills.slice(0, 20) : []})
+
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
+  } catch (e: any) {
+    return res.status (500).json ({ error: e.message || OpenAI error' });
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+}
     return res.status(200).json({
       name;
-      title: parsed.title || title || 'Professional';
-      category: parsed.category || null;
-      summary: parsed.summary || '';
-      skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
+      title: parsed.title || title || 'Professional, category: parsed.category || null,
+      summary: parsed.summary || ',
+
+
+
+
+      summary: parsed.summary || ',
+
+>>>>>>> origin/main
   } catch (e: any) {
-    return res.status(500).json({ error: e.message || 'OpenAI error' })
+    return res.status(500).json({ error: e.message || OpenAI error' })
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
   }
+<<<<<<< HEAD
+}
+=======
+
 }

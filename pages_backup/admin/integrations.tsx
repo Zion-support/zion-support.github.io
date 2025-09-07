@@ -18,7 +18,6 @@ interface ConnectionMap { [providerId: string]: any }
 interface ConnectionMap {;
   [key: string]: boolean,;
 
-import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
     console.error("Error:", error);
 
@@ -41,7 +40,6 @@ function StatusIcon() { return null; }
 export default function AdminIntegrationsPage() {
 
 import React, { useState } from 'react';
-import Head from 'next/head';
   [key: string]: boolean;
 
 const AdminIntegrationsPage: React.FC = () => {
@@ -57,10 +55,6 @@ const AdminIntegrationsPage: React.FC = () => {
       setLoading(false);
     }  }
 
-  const [providers, setProviders] = useState<ProviderMeta[]>([]);
-  const [connections, setConnections] = useState<ConnectionMap>({});
-  const [loading, setLoading] = useState(false);
-  const [selected, setSelected] = useState<string | null>(null);
 
 const [syncRules, setSyncRules] = useState<any>({
     autoCreateContacts: true,
@@ -125,7 +119,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     })
     [providers]
   );
-import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -254,7 +247,6 @@ await fetch('/api/integrations/resync', {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  const grouped = useMemo(() => ({
     crm: providers.filter(p => p.category === 'crm'),
     ats: providers.filter(p => p.category === 'ats')
   }), [providers]);
@@ -373,7 +365,6 @@ await fetch('/api/integrations/resync', {
     } finally { setLoading(false) }
   }
 
-  const grouped = useMemo(;
     () => ({;
       crm: providers && providers.filter(p => p && p.category === 'crm'),;
       ats: providers && providers.filter(p => p && p.category === 'ats'),;

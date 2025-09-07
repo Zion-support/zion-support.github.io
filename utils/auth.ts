@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export function authenticateRequest(req: NextApiRequest, res: NextApiResponse): boolean {
@@ -47,3 +48,26 @@ export function isAdminEmail(email: string | null | undefined): boolean {
   return admins.includes(email.toLowerCase())
 >>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
 }
+=======
+
+}
+
+export function parseUserFromRequest("req": NextApiRequest): User {
+  // Mock implementation - replace with actual auth logic;
+
+
+import type { NextApiRequest, NextApiResponse } from next';
+import { NextApiRequest, NextApiResponse } from 'next';
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+export interface User {
+  id: string;
+  email: string;
+  role: string;
+
+}
+=======
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

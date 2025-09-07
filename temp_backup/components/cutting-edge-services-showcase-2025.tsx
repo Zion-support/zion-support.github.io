@@ -233,7 +233,6 @@ staggerChildren: 0.1,
       },
     },
   }
-  const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0

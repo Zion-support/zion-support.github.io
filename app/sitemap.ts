@@ -1,50 +1,30 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com';
-  
   return [
     {
-      url: baseUrl,
+      url: 'https://ziontechgroup.com',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'yearly',
       priority: 1,
     },
     {
-      url: `${baseUrl}/services`,
+      url: 'https://ziontechgroup.com/about',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/ai-services`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/blockchain`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/micro-saas`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/solutions`,
+      url: 'https://ziontechgroup.com/services',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/research`,
+      url: 'https://ziontechgroup.com/contact',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
+      changeFrequency: 'monthly',
+      priority: 0.5,
     },
   ];
 }

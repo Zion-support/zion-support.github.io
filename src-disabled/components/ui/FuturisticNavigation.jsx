@@ -41,12 +41,8 @@ const handleScroll = () => {
 
 export default function FuturisticNavigation() {}
 
-const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [scrolled, setScrolled] = useState(false) useEffect(() => ;
 }
 
-const handleScroll = () => {
   return $3;}
 } setScrolled(window.scrollY > 20)}' window.addEventListener('scroll', handleScroll)';
   return () => window.removeEventListener('scroll', handleScroll)}, []) const toggleMenu = () => setIsOpen(!isOpen);
@@ -67,16 +63,11 @@ const handleScroll = () => {
 
 export default function FuturisticNavigation() {}
 
-const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [scrolled, setScrolled] = useState(false) useEffect(() => ;
 }
 
-const handleScroll = () => {
   return $3;}
 } setScrolled(window.scrollY > 20)}" window.addEventListener("scroll", handleScroll)";
   return () => window.removeEventListener("scroll", handleScroll)}, []) const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false)";
   return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled"` ? "bg-black/80 backdrop-blur-md border-b border-cyan-500/20"`"` : "bg-transparent"}`} />" {}" <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/10 via-transparent to-blue-900/10 opacity-0 transition-opacity duration-300 hover: opacity-100"/>" <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />" <div className="flex items-center justify-between h-16" /> {} <motion.div initial = ,
 } { opacity: 0, x: -20 }} animate = ,
 } { opacity: 1, x: 0 " ,}
@@ -98,16 +89,11 @@ const handleScroll = () => {
 
 export default function FuturisticNavigation() {}
 
-const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [scrolled, setScrolled] = useState(false) useEffect(() => ;
 }
 
-const handleScroll = () => {
   return $3;}
 } setScrolled(window.scrollY > 20)}' window.addEventListener('scroll', handleScroll)';
   return () => window.removeEventListener('scroll', handleScroll)}, []) const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false)';
   return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled'` ? 'bg-black/80 backdrop-blur-md border-b border-cyan-500/20'`'` : 'bg-transparent'}`} />' {}' <div className='absolute inset-0 bg-gradient-to-r from-cyan-900/10 via-transparent to-blue-900/10 opacity-0 transition-opacity duration-300 hover: opacity-100'/>' <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />' <div className='flex items-center justify-between h-16' /> {} <motion.div initial = ,
 } { opacity: 0, x: -20 }} animate = ,
 } { opacity: 1, x: 0 ' ,}

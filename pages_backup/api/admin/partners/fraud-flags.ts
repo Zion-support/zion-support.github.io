@@ -11,7 +11,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (usingPlaceholder) {
       return res.status(200).json({ flags: [
         { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }]})
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
   try {
     const code = req.query.code as string;

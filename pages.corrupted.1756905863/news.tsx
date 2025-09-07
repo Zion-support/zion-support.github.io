@@ -1,0 +1,17 @@
+
+
+
+
+import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const NewsPage = () => {; return (; <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News></div> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.></div> ></div> ></div> );}; export default NewsPage;"
+import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const NewsPage = () => {; return (; <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News></div> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.></div> ></div> ></div> );}; export default NewsPage;"
+=======
+
+
+
+
+import React from \'react\; import SEOHead from \../src/components/SEOHead\'; const NewsPage = () => { return (; <> <SEOHead title=\"News - Zion Tech Group\ description=\Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\> <h1 className=\text-4xl font-bold mb-6\">News></div> <p className=\"text-gray-600\>Stay tuned for company announcements,product updates,and industry insights.></div> ></div> ></div> );} export default NewsPage;
+import _React from 'react; import SEOHead from ../src/components/SEOHead'; const NewsPage = () => { return (; <> <SEOHead title=News - Zion Tech Group" description="Latest news and updates from Zion Tech Group. /> <main className=max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6>News></div> <p className=text-gray-600">Stay tuned for company announcements,product updates,and industry insights.></div> ></div> ></div> );} export default NewsPage;
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6

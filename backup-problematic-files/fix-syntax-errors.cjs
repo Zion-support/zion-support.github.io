@@ -68,6 +68,9 @@ const syntaxFixes = [
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/[\s\S]*?
     let originalContent = content;
     
     // Apply all syntax fixes

@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 const filePath = path.join(process.cwd(), 'data', 'changelog.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -42,3 +43,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(405).json({ error: 'Method not allowed' });
 }
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

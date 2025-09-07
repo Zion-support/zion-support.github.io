@@ -1,9 +1,9 @@
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 // console.log(' Targeted Syntax Fixer')
 console.log('===')
       const content = fs.readFileSync(filePath, 'utf8')

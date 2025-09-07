@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
@@ -28,3 +29,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: 'Failed to get source map' });
   }
 }
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

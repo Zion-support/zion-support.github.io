@@ -6,7 +6,6 @@ import { Button  } from '@/components/ui/button';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 origin/cursor/automate-test-improve-and-merge-code-2533
-import * as React from 'react'
 import {
   RefreshCw
   Wifi
@@ -182,7 +181,6 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
     <EmptyState 
       type="products" 
     : undefined;
-  const customDescription = isAuthenticated;
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
   return (;
@@ -203,7 +201,6 @@ export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
   );
 }
 
-  const customDescription = isAuthenticated;
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
   return (;
@@ -212,7 +209,6 @@ export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       action={action}
       description={customDescription}
 
-  const customDescription = isAuthenticated;
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
 
@@ -274,7 +270,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
     : on_retry;
       ? { label: 'Try Again', on_click: on_retry }
       : undefined;
-  const custom_description = is_authenticated;
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
       />);

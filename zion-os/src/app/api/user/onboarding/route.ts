@@ -1,0 +1,33 @@
+
+
+  try {
+    }
+    const session = await getServerSession();
+
+    // Mock user update - replace with actual database operation
+    const updatedUser = {
+      id: userId,
+      name: 'John Doe,
+      email: john@example.com',
+      role: 'user',
+      onboardingCompleted: true,
+      preferences
+
+    return NextResponse.json({
+      }
+      "message": "Onboarding completed successfully","
+      "user": {
+        }
+        "id": updatedUser.id,
+        "name": updatedUser.name,
+        "email": updatedUser.email,
+        "role": updatedUser.role,
+        "onboardingCompleted": updatedUser.onboardingCompleted
+      }
+    });
+  } catch (_error) {
+    }
+    return NextResponse.json(
+
+  }
+}

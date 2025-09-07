@@ -1,41 +1,67 @@
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+
+;
+import React, { useState } from 'react;
+import { Button  } from @/components/ui/button';
+import {Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+  DialogDescription} from "@/components/ui/dialog,
+import { DisputeForm } from ./DisputeForm";
+import { useRouter } from 'next/router;
+origin/cursor/automate-test-improve-and-merge-code-2533
 :src/components/disputes/RaiseDisputeButton.tsx
 projectId: string,
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import React, { useState } from "react;
+import { Button } from @/components/ui/button";
 import { 
   Dialog;
   DialogContent;
   DialogHeader;
   DialogTitle;
-  DialogDescription} from "@/components/ui/dialog",
-import { DisputeForm } from "./DisputeForm";
-import { useRouter } from 'next/router';
+  DialogDescription} from "@/components/ui/dialog,
+import { useRouter } from next/router';
 
-import React, { useState } from 'react'
-import { Button } from '@/components/ui/button'
+import React, { useState } from 'react
+import { Button } from @/components/ui/button'
 import {  Dialog
   DialogContent
   DialogHeader
   DialogTitle
   DialogDescription
-} from '@/components/ui/dialog'
-import { DisputeForm } from './DisputeForm'
+} from '@/components/ui/dialog
+import { DisputeForm } from ./DisputeForm'
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533
+import { ShieldAlert } from 'lucide-react
+  DialogDescription} from "@/components/ui/dialog
+import { DisputeForm } from ./DisputeForm"
+import { useRouter } from next/router'
+interface RaiseDisputeButtonProps {
+  projectId: string;
+  milestoneId?: string;
+  variant?: "default | outline" | "secondary | destructive" | "ghost | link";
+  size?: "default | sm" | "lg | icon";
+  className?: string
+return (
+    <>;
+
 Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-import { ShieldAlert } from 'lucide-react'
-  DialogDescription} from "@/components/ui/dialog"
-import { DisputeForm } from "./DisputeForm"
-import { useRouter } from 'next/router'
+  DialogDescription} from "@/components/ui/dialog
 interface RaiseDisputeButtonProps {
   projectId: string;
   milestoneId?: string;
-  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
-  size?: "default" | "sm" | "lg" | "icon";
+  variant?: "default | outline" | "secondary | destructive" | "ghost | link";
+  size?: "default | sm" | "lg | icon";
   className?: string
 }
 
@@ -43,7 +69,7 @@ export function RaiseDisputeButton({
 :src/components/disputes/RaiseDisputeButton.tsx
   projectId
   milestoneId
-  variant = 'outline'
+  variant = 'outline
   size
   className
 }: RaiseDisputeButtonProps) {
@@ -61,53 +87,61 @@ export function RaiseDisputeButton({
         size={size}
         className={className}
         onClick={() => setIsDialogOpen(true)}      >
-        <ShieldAlert className='h-4 w-4 mr-2' />
+        <ShieldAlert className=h-4 w-4 mr-2' />
         Raise Dispute
       </Button>
   projectId,
   milestoneId, 
-  variant = "outline", 
+  variant = "outline, 
   size,
   className 
 }: RaiseDisputeButtonProps) {
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+
+
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+}
+
+export function RaiseDisputeButton({ 
+  projectId;
+  milestoneId;
+  variant;
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
   
-  const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false),
     router.push(`/dashboard/disputes/${disputeId}`)
   },
   
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
 Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 
-import { 
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription} from "@/components/ui/dialog",
+  DialogDescription} from @/components/ui/dialog",
 
   projectId: string,
 
   milestoneId?: string,
-  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link","
-  size?: "default" | "sm" | "lg" | "icon","
+  variant?: "default | outline" | "secondary | destructive" | "ghost | link","
+  size?: default | "sm" | lg | "icon",
   className?: string
 }
 
   projectId,
   milestoneId,
-  variant = "outline", "
+  variant = outline", "
   size,
   className
 }:,  RaiseDisputeButtonProps) {
   className 
-}: RaiseDisputeButtonProps) {
-
-}
+}: RaiseDisputeButtonProps) {}
 
 export function RaiseDisputeButton({ 
   projectId;
@@ -122,7 +156,7 @@ export function RaiseDisputeButton({
         className={className} 
         onClick={() => setIsDialogOpen(true)}
       >
-        <ShieldAlert className="h-4 w-4 mr-2" />
+        <ShieldAlert className=h-4 w-4 mr-2 />
         Raise Dispute
       </Button>
 :src/components/disputes/RaiseDisputeButton.tsx
@@ -141,20 +175,58 @@ export function RaiseDisputeButton({
             onDisputeCreated={handleDisputeCreated}
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className='sm:max-w-[550px]'>',
+        <DialogContent className=sm:max-w-[550px]>',
           <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
-              Please provide details about the issue you're experiencing with'
+              Please provide details about the issue you're experiencing with
               this project.
             </DialogDescription>
           </DialogHeader>
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+
+  DialogDescription} from @/components/ui/dialog,import { DisputeForm  } from ./DisputeForm';
+import { useRouter  } from 'next/router;
+import { Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
+  DialogDescription;
+ } from @/components/ui/dialog';
+Dialog,DialogContent,DialogHeader,DialogTitle,import { ShieldAlert  } from 'lucide-react;
+  DialogDescription} from "@/components/ui/dialog";
+interface RaiseDisputeButtonProps  {projectId: string;
+  milestoneId?: string;
+  variant?: default | "outline" | secondary | "destructive" | ghost | "link";
+  size?: default | "sm" | lg | "icon";
+  className?: string;
+export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter(),const handleDisputeCreated = (disputeId: string) => {setIsDialogOpen(false),router.push(`/dashboard/disputes/${disputeId}`)}}export function RaiseDisputeButton({projectId;
+  milestoneId;
+  variant;return (<>;
+      <Button;
+        variant={variant}size={size}className={className}onClick={() => setIsDialogOpen(true)}
+      >;
+        <ShieldAlert className=h-4 w-4 mr-2 />;
+        Raise Dispute;
+      </Button>;
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+        <DialogContent className=sm:max-w-[550px]'>;
+          <DialogHeader>;
+            <DialogTitle>Raise a Dispute</DialogTitle>;
+            <DialogDescription>Please provide details about the issue you're experiencing with;
+              this project.;
+            </DialogDescription>;
+          </DialogHeader>;
+        onClick={() => setIsDialogOpen(true)}      >;
+        <ShieldAlert className=h-4 w-4 mr-2 />;
+        Raise Dispute;
+      </Button>;<Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         onClick={() => setIsDialogOpen(true)}      >;
         <ShieldAlert className='h-4 w-4 mr-2' />;
         Raise Dispute;
       </Button>;
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;,
-        <DialogContent className='sm:max-w-[550px]'>;
+        <DialogContent className=sm:max-w-[550px]>;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
       <Button;
@@ -166,8 +238,17 @@ export function RaiseDisputeButton({
         Raise Dispute;
       </Button>;
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
-        <DialogContent className='sm:max - w-[550px]'>;,
+        <DialogContent className=sm:max - w-[550px]>;,
           <DialogHeader>;
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+            <DialogTitle > Raise a Dispute</DialogTitle>;<DialogDescription>Please provide details about the issue you're experiencing with;
+              this project.;
+            </DialogDescription>;
+          </DialogHeader>;onCancel={() => setIsDialogOpen(false)}          />;
+        </DialogContent>;
+      </Dialog>;
+    </>;
+  )}<DisputeForm;
             <DialogTitle > Raise a Dispute</DialogTitle>;
             <DialogDescription>;
               Please provide details about the issue you're experiencing with;
@@ -183,7 +264,18 @@ export function RaiseDisputeButton({
           <DisputeForm;
             project_id={project_id}
             milestone_id={milestone_id}
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
             onDisputeCreated={handleDisputeCreated}
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+            on_cancel={() => setIsDialogOpen (false)}          />;
+        </DialogContent>;
+      </Dialog>;
+    </>);
+}
+
+
+
 
             onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
@@ -192,6 +284,8 @@ export function RaiseDisputeButton({
 :src/components/disputes/RaiseDisputeButton.tsx
   )
 }
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+          
 
             on_cancel={() => setIsDialogOpen (false)}          />;
         </DialogContent>;
@@ -201,63 +295,58 @@ export function RaiseDisputeButton({
           <DisputeForm
 
 import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { 
+import { Button } from @/components/ui/button,
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogDescription} from "@/components/ui/dialog",
-import { DisputeForm } from "./DisputeForm",
-import { useRouter } from 'next/router',
+import { DisputeForm } from ./DisputeForm,
+import { useRouter } from next/router,
 import { ShieldAlert } from 'lucide-react'
 
           <DisputeForm 
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogDescription} from "@/components/ui/dialog",;
-import { DisputeForm } from "./DisputeForm",;
-import { useRouter } from 'next/router',;
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription} from "@/components/ui/dialog",
 import { ShieldAlert } from 'lucide-react';
-interface RaiseDisputeButtonProps {;
-  projectId: string,;
-  milestoneId?: string,;
-  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",;
-  size?: "default" | "sm" | "lg" | "icon",;
+interface RaiseDisputeButtonProps {
+  projectId: string,
+  milestoneId?: string,
+  variant?: "default" | outline | "secondary" | destructive | "ghost" | link,
+  size?: "default" | sm | "lg" | icon,
   className?: string;
 }
-;
-export function RaiseDisputeButton({;
-  projectId,;
-  milestoneId,;
-  variant = "outline",;
-  size,;
+export function RaiseDisputeButton({
+  projectId,
+  milestoneId,
+  variant = "outline",
+  size,
   className;
-}:,  RaiseDisputeButtonProps) {;,
-  const [isDialogOpen, setIsDialogOpen] = useState(false),;
-  const router = useRouter(),;
-  const handleDisputeCreated = (disputeId:,  string) => {;,
+}:,  RaiseDisputeButtonProps) {,
+  const handleDisputeCreated = (disputeId:,  string) => {,
     setIsDialogOpen(false);
     router.push(`/dashboard/disputes/${disputeId}`);`
-}: RaiseDisputeButtonProps) {;
-  const [isDialogOpen, setIsDialogOpen] = useState(false),;
-  const router = useRouter(),;
-  const handleDisputeCreated = (disputeId: string) => {;
+}: RaiseDisputeButtonProps) {
     setIsDialogOpen(false);
     router.push(`/dashboard/disputes/${disputeId}`)
-};
+}
   return (;
     <>;
+            onDisputeCreated={handleDisputeCreated}onCancel={() => setIsDialogOpen(false)}          />;
+        </DialogContent>;
+      </Dialog>;
+    </>;
+  )}on_cancel={() => setIsDialogOpen (false)}          />;
+        </DialogContent>;
+      </Dialog>;
+    </>)}<DisputeForm;
+  Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from @/components/ui/dialog,interface RaiseDisputeButtonProps  {projectId: string,milestoneId?: string,variant?: "default" | outline | "secondary" | destructive | "ghost" | link,size?: "default" | sm | "lg" | icon,className?: string;
+}export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter(),const handleDisputeCreated = (disputeId: string) => {setIsDialogOpen(false)router.push(`/dashboard/disputes/${disputeId}`)}return (<>;
       <Button;
-        variant={variant} ;
-        size={size} ;
-        className={className} ;
-        onClick={() => setIsDialogOpen(true)}
+        variant={variant}size={size}className={className}onClick={() => setIsDialogOpen(true)}
       >;
         <ShieldAlert className="h-4 w-4 mr-2" />;
         Raise Dispute;
@@ -267,26 +356,38 @@ export function RaiseDisputeButton({;
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
-            <DialogDescription>;
-              Please provide details about the issue you're experiencing with this project.;
+            <DialogDescription>Please provide details about the issue you're experiencing with this project.;
             </DialogDescription>;
           </DialogHeader>;
           <DisputeForm;
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+            onCancel={() => setIsDialogOpen(false)}          />;
 
             onCancel={() => setIsDialogOpen(false)}
           />;
         </DialogContent>;
       </Dialog>;
     </>;
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
   );
-:src/components/disputes/RaiseDisputeButton.tsx
-};
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
 
 }
-;
+
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+  )})
+
+
+}
+:src/components/disputes/RaiseDisputeButton.tsx
+}
+
+}
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533

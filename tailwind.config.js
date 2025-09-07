@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /** @type {import('tailwindcss').Config} */
 <<<<<<< HEAD
 module.exports = {
@@ -20,11 +21,17 @@ module.exports = {
           400: '#60a5fa',
 =======
 module.exports = $2;
+=======
+/** @type {import('tailwindcss).Config} */
+module.exports = {
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}./components/**/*.{js,ts,jsx,tsx}'],
+
+  ],
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         'fade-in': 'fadeIn 0.6s ease-out forwardsfade-in-up': 'fadeInUp 0.6s ease-out forwardsfade-in-down': 'fadeInDown 0.6s ease-out forwardsslide-in-left': 'slideInLeft 0.6s ease-out forwardsslide-in-right': 'slideInRight 0.6s ease-out forwardsscale-in': 'scaleIn 0.6s ease-out forwardsfloat': 'float 6s ease-in-out infinitepulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinitebounce-slow': 'bounce 2s infiniteglow': 'glow 2s ease-in-out infinite alternateshimmer': 'shimmer 2.5s linear infinitematrix': 'matrix 20s linear infiniteneon-pulse': 'neonPulse 1.5s ease-in-out infinitecyber-float': 'cyberFloat 8s ease-in-out infinitehologram': 'hologram 3s ease-in-out infiniteenergy-wave': 'energyWave 4s ease-in-out infinitequantum-spin': 'quantumSpin 6s linear infiniteneural-network': 'neuralNetwork 10s linear infiniteplasma-flow': 'plasmaFlow 5s ease-in-out infinitecyber-grid': 'cyberGrid 15s linear infinite',
         primary: {
           50: '#eff6ff',
@@ -290,3 +297,15 @@ module.exports = $2;
   plugins: []}
 
 >>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
+=======
+
+      },
+      fontFamily: {
+        sans: [Inter', 'system-ui, sans-serif'],
+        mono: ['JetBrains Mono, monospace']}}},
+  plugins: [
+    require('@tailwindcss/forms),
+    require(@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio')]}
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

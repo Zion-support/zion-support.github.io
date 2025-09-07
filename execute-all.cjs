@@ -14,6 +14,7 @@ class ExecuteAllScripts {
       'ultimate-automation-orchestrator.cjs'
     ];
 
+<<<<<<< HEAD
     for (const script of scripts) {
       try {
         console.log(`Running: ${script}`);
@@ -28,3 +29,5 @@ class ExecuteAllScripts {
 
 const executor = new ExecuteAllScripts();
 executor.run().catch(console.error);
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

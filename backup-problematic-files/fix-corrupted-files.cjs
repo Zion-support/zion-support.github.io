@@ -51,7 +51,6 @@ function fixSyntaxErrors(content) {
 function processFile(filePath) {
   if (hasSyntaxErrors(filePath)) {
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
       const fixed = fixSyntaxErrors(content);
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed);

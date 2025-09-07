@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 const v1 = {
   sections: [
     { title: 'Authentication', description: 'User authentication endpoints' },
@@ -30,4 +31,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.status(200).send(toSDL());
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 }

@@ -21,14 +21,11 @@ import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 
 import React from 'react',;
-import Link from 'next/link';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
 interface AuthConfigurationErrorProps {
   onRetry?: () => void;
-import React from 'react',;
 import Link from 'next/link',;
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -46,11 +43,6 @@ export function AuthConfigurationError(): any ({;
   onRetry,;
   showSetupButton = true,;
 }:,  AuthConfigurationErrorProps) {;
-import React from 'react',;
-import Link from 'next/link',;
-import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
 interface AuthConfigurationErrorProps {;
   onRetry?: () => void,;
   showSetupButton?: boolean;

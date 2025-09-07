@@ -28,7 +28,6 @@ import {;
   CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import {;
   ArrowRight,;
   Briefcase,;
   PenTool,;
@@ -90,7 +89,6 @@ export default function ZionHireAI() {;
                 </div>;
               </div>;
               <div className='relative hidden md:block'>;',
-import React from 'react';
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { useWhitelabel } from "@/context/WhitelabelContext";
@@ -108,12 +106,7 @@ import { SEO } from "@/components/SEO","
 import { useWhitelabel } from "@/context/WhitelabelContext","
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
 import { Button } from "@/components/ui/button","
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react''
-import { useAuth } from "@/hooks/useAuth","
-import Link from "next/link","
 export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
-  const { isAuthenticated } = useAuth(),
   return (
     <>
       <SEO

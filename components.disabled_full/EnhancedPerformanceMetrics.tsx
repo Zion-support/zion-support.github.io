@@ -1,0 +1,31 @@
+
+=======
+
+;
+
+interface ErrorReport {
+  error": string;
+  stack?: string;
+  componentStack?: string;
+  timestamp: string;
+  userAgent: string;
+  url: string}
+export default function handler() {if (req.method !== 'POST) {return res.status(405).json({ message: Method not allowed' })}
+  try {const "errorReport: ErrorReport = req.body;
+    // Log the error (in production, you might want to send this to a service like Sentry)console.error('Client Error Report": , {"error: errorReport.error,stack": errorReport.stack,"componentStack: errorReport.componentStack,timestamp": errorReport.timestamp,"userAgent: errorReport.userAgent,url": errorReport.url;
+    })// In a real application, you "would: // 1. Send to error tracking service (Sentry, LogRocket, etc.)// 2. Store in database for analysis;
+    // 3. Send alerts for critical errors;
+    res.status(200).json({ message": Error reported successfully' })} catch (error) {console.error('Error processing error "report: , error)res.status(500).json({ message": Internal server error' })}
+}
+import type { NextApiRequest,NextApiResponse } from 'next; interface ErrorReport { error: string; stack?: string; componentStack?: string; timestamp: string; userAgent: string; url: string;' } } export default function handler(req: 'NextApiRequest,res: NextApiResponse) { if (req.method !== POST') { return res.status(405).json({ message: 'Method not allowed })} try { const errorReport: ErrorReport = req.body; console.error(Client Error Report:',{ error: 'errorReport.error,stack: errorReport.stack',componentStack: 'errorReport.componentStack,timestamp: errorReport.timestamp',userAgent: 'errorReport.userAgent,url: errorReport.url' })res.status(200).json({ message: 'Error reported successfully })} catch (error) { console.error(Error processing error report:',error)res.status(500).json({ message: 'Internal server error })} }
+module.exports = {}:corrupted_backup/error-reporting.ts;
+module.exports = {}ursor/automate-test-improve-and-merge-code-646c;
+module.exports = {}module.exports = {}module.exports = {}module.exports = {}import type { NextApiRequest,NextApiResponse } from next'; interface ErrorReport { error: string; stack?: string; componentStack?: string; timestamp: string; userAgent: string; url: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST) { return res.status(405).json({ message: Method not allowed' })} try { const errorReport: ErrorReport = req.body; console.error('Client Error Report:,{ error: errorReport.error,stack: errorReport.stack,componentStack: errorReport.componentStack,timestamp: errorReport.timestamp,userAgent: errorReport.userAgent,url: errorReport.url })res.status(200).json({ message: Error reported successfully' })} catch (error) { console.error('Error processing error report:,error)res.status(500).json({ message: Internal server error' })} }module.exports = {}
+import type { NextApiRequest,NextApiResponse } from 'next; interface ErrorReport { error: string; stack?: string; componentStack?: string; timestamp: string; userAgent: string; url: string;' } } export default function handler(req: 'NextApiRequest,res: NextApiResponse) { if (req.method !== POST') { return res.status(405).json({ message: 'Method not allowed })} try { const errorReport: ErrorReport = req.body; console.error(Client Error Report:',{ error: 'errorReport.error,stack: errorReport.stack',componentStack: 'errorReport.componentStack,timestamp: errorReport.timestamp',userAgent: 'errorReport.userAgent,url: errorReport.url' }); res.status(200).json({ message: 'Error reported successfully })} catch (error) { console.error(Error processing error report:',error); res.status(500).json({ message: 'Internal server error })} }
+import type { NextApiRequest,NextApiResponse } from next'; interface ErrorReport { error: string; stack?: string; componentStack?: string; timestamp: string; userAgent: string; url: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST) { return res.status(405).json({ message: Method not allowed' })} try { const errorReport: ErrorReport = req.body; console.error('Client Error Report:,{ error: errorReport.error,stack: errorReport.stack,componentStack: errorReport.componentStack,timestamp: errorReport.timestamp,userAgent: errorReport.userAgent,url: errorReport.url }); res.status(200).json({ message: Error reported successfully' })} catch (error) { console.error('Error processing error report:,error); res.status(500).json({ message: Internal server error' })} }
+
+=======
+module.exports = {}
+module.exports = {}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6

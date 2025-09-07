@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 async function fetchFromGitHub(path: string) {
@@ -45,4 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Error fetching content:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 }

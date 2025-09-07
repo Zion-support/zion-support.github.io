@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -18,3 +19,22 @@ console.log('=====')
 // console.log('\n Final Automation "Summary")
       console.log('\n "Recommendations")
     console.error(' Final automation orchestrator "failed")
+=======
+
+
+
+
+
+
+
+
+
+
+#!/usr/bin/env node;
+
+    console.error(' Final automation orchestrator "failed")
+
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

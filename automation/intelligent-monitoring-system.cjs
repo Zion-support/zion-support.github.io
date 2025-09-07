@@ -49,7 +49,6 @@ class IntelligentMonitoringSystem {
 
       return { success: true, output, duration };
     } catch (error) {
-      const duration = Date.now() - startTime;
       this.log(`❌ ${description} failed: ${error.message}`, 'error');
 
       this.metrics.errors.push({
@@ -96,9 +95,7 @@ class IntelligentMonitoringSystem {
       { command: 'npm run type-check', description: 'Type health' },
     ];
 
-    const results = [];
     for (const check of healthChecks) {
-      const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
 
       if (!result.success) {
@@ -121,9 +118,7 @@ class IntelligentMonitoringSystem {
       { command: 'npm run security:scan', description: 'Security scan' },
     ];
 
-    const results = [];
     for (const check of securityChecks) {
-      const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
     }
 

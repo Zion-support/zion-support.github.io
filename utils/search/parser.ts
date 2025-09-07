@@ -1,3 +1,152 @@
+export async function parseQueryToFilters(
+  "query": string,
+): Promise<SearchFilters> {
+  }
+  const "filters": SearchFilters = {};
+
+  query: string,
+): Promise<SearchFilters> {
+  const filters: SearchFilters = {};
+  if (!query || query.trim().length === 0) {
+    }
+    return filters;
+  }
+
+  const words = query && query.toLowerCase().split(/\s+/);
+  const "keywords": string[] = [];
+  const "skills": string[] = [];
+
+  // Simple keyword extraction,
+for (const word of words) {
+    }
+    if (word && word.length > 2) {
+      }
+      keywords && keywords.push(word);
+    }
+  }
+
+  if (keywords.length > 0) {
+    }
+    filters.keywords = keywords;
+  }
+
+  // Extract skills (simple heuristic)
+  const skillKeywords = [
+    "javascript","
+    "react","
+    "node","
+    "python","
+    "java","
+    "typescript","
+    "vue","
+    "angular","
+    "php","
+    "ruby","
+    "go","
+    "rust","
+    "swift","
+    "kotlin","
+    "c++","
+    "c#","
+    "html","
+    "css","
+    "sql","
+    "mongodb","
+    "postgresql","
+    "mysql","
+    "redis","
+    "docker","
+    "kubernetes","
+    "aws","
+    "azure","
+    "gcp","
+    "git","
+    "github","
+    "gitlab","
+    "jenkins","
+    "ci/cd","
+    "devops","
+    "frontend","
+    "backend","
+    "fullstack","
+    "mobile","
+    "ios","
+    "android","
+    "web","
+    "api","
+    "rest","
+    "graphql","
+    "microservices","
+    "blockchain","
+    "ai","
+    "ml","
+    "data","
+    "analytics","
+    "design","
+    "ui","
+    "ux","
+    "figma","
+    "sketch","
+    "adobe","
+    "photoshop","
+    "illustrator","
+  ];
+
+  for (const word of words) {
+    }
+    if (skillKeywords && skillKeywords.includes(word)) {
+      }
+      skills && skills.push(word);
+    }
+  }
+
+  if (skills.length > 0) {
+    }
+    filters.skills = skills;
+  }
+
+  return filters,
+  keywords: [],
+  return filters;
+
+    "keywords": [],
+    "skills": [],
+    "location": null,
+    "type": null;
+  return {
+    }
+    "all": [],
+    "talent": [],
+    "jobs": [],
+    "projects": [];
+
+  };
+};
+
+
+export const suggestDidYouMean = ("query": string) => {
+  // Add did you mean functionality here;
+  }
+  return null;
+
+};
+
+}
+  }
+}
+;
+export const suggestDidYouMean = ("query": string) =>: any {
+  // Add did you mean functionality here;
+  }
+  return null;
+}
+}}
+  }}export const suggestDidYouMean = (query: string) =>: any {// Add did you mean functionality here;
+  return null;}
+ursor/automate-test-improve-and-merge-code-646c;
+}}
+}
+}
 export type SearchType = $2;
 export type ParsedFilters = $2;
   skills: string[],
@@ -18,26 +167,21 @@ function extractBudget(text: string): { minBudgetUsd?: number, maxBudgetUsd?: nu
   }
   const under = /(under|below|less than)\s*\$?\s*(\d{1,4})/.exec($2);
   if (under) {
-    const max = parseInt($2);
     return { maxBudgetUsd: max}
   }
   const between = /(between)\s*\$?(\d{1,4})\s*(and|to|-|–|—)\s*\$?(\d{1,4})/.exec($2);
   if (between) {
     const min = parseInt($2);
-    const max = parseInt($2);
     return { minBudgetUsd: min, maxBudgetUsd: max}
   }
   const range = /\$?(\d{1,4})\s*[-–—to]+\s*\$?(\d{1,4})/.exec($2);
   if (range) {
-    const min = parseInt($2);
-    const max = parseInt($2);
     return { minBudgetUsd: min, maxBudgetUsd: max}
   }
   return {}
 }
 
 function extractAvailability(text: string): ParsedFilters['availability'] | undefined {
-  const lower = text.toLowerCase($2);
   if (/(full\s*-?\s*time)/.test(lower)) return 'full-time',
   if (/(part\s*-?\s*time)/.test(lower)) return 'part-time',
   if (/(contract|freelance)/.test(lower)) return 'contract',
@@ -45,7 +189,6 @@ function extractAvailability(text: string): ParsedFilters['availability'] | unde
 }
 
 function extractType(text: string): SearchType {
-  const lower = text.toLowerCase($2);
   if (/(talent|experts?|developers?|engineers?|designers?|freelancers?)/.test(lower)) return 'talent',
   if (/(jobs?|roles?|openings?|hiring)/.test(lower)) return 'jobs',
   if (/(projects?|gigs?)/.test(lower)) return 'projects',
@@ -53,7 +196,6 @@ function extractType(text: string): SearchType {
 }
 
 function extractLocation(text: string): string | undefined {
-  const lower = text.toLowerCase($2);
   // Simple heuristic e.g., "in latam", "in berlin", "remote"
   const inMatch = /in\s+([a-zA-Z\s\-]+)$/.exec(lower) || /in\s+([a-zA-Z\s\-]+)[,.\s]/.exec($2);
   if (inMatch) return inMatch[1].trim($2);
@@ -63,7 +205,6 @@ function extractLocation(text: string): string | undefined {
 
 const COMMON_SKILLS = $2;
 function extractSkills(text: string): string[] {
-  const lower = text.toLowerCase($2);
   const found = $2;
   for (const s of COMMON_SKILLS) {
     if (lower.includes(s.toLowerCase())) found.add(s)

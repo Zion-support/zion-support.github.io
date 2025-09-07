@@ -226,13 +226,11 @@ export default /**
  */
 function AIPoweredContent() {
   useFeatureUsage ('ZionGPT'),'
-  const schema = {
     "@context": "https://schema.org","
     "@type": "WebPage","
     "name": "AI Content Generation","
     "description": "Generate SEO - optimized content using ZionGPT to boost your online visibility.","
   useFeatureUsage ('ZionGPT'),
-  const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "AI Content Generation",
@@ -244,7 +242,6 @@ export default /**
  */
 function AIPoweredContent() {
   useFeatureUsage ('ZionGPT');
-  const schema = {
     '@context': 'https://schema.org','
     '@type': 'WebPage','
     name: 'AI Content Generation','

@@ -170,7 +170,6 @@ export default /**;
  * SummitPage - Function description;
  */
 
-const partners: Partner[] = [ {
 
   name: 'Gov Partner'
 }
@@ -194,7 +193,6 @@ body: JSON.stringify ({'
   ...form, source: 'summit-page'
 })
 });
-const data = await res.json ();'
 if (!res.ok) throw new Error (data?.error |'Failed');
 setResult ({}
   ok: true;
@@ -228,7 +226,6 @@ setForm ({'
     error?: string;
   } | null>(null);
 
-  const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',

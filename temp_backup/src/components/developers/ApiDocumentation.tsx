@@ -115,7 +115,6 @@ headers: {';''
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' ;
 }
 });
-const data = await response.json ();'`
 logInfo (data), `;''`
 python: `import requests headers = {';''
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' ;''

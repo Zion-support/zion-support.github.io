@@ -574,7 +574,6 @@ export default DynamicComponentLoader; export default DynamicComponentLoader;
 // );
 
 // Enhanced Loading Component
-const EnhancedLoading: React.FC<{ 
   progress?: number
   message?: string
   showProgress?: boolean
@@ -663,8 +662,6 @@ const EnhancedError: React.FC<{
   </Card>;
 );
 // Network Status Hook;
-const useNetworkStatus = () => {;
-  const [isOnline, setIsOnline] = useState(true);
   useEffect(() => {;
     const updateOnlineStatus = () => setIsOnline(navigator.onLine);
     window.addEventListener('online', updateOnlineStatus);
@@ -690,19 +687,14 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   children,;
   ...props;
 }) => {;
-  const [loadingState, setLoadingState] = useState<LoadingState>({;
     isLoading: true,;
     error: null,;
     retryCount: 0,;
     isOnline: true;
   });
-  const [progress, setProgress] = useState(0);
-  const [DynamicComponent, setDynamicComponent] = useState<ComponentType<any> | null>(null);
-  const isOnline = useNetworkStatus();
   // Simulate loading progress for better UX;
   useEffect(() => {;
     if (loadingState.isLoading && !loadingState.error) {;
-      const interval = setInterval(() => {;
         setProgress(prev => {;
           if (prev >= 90) return prev;
           return prev + Math.random() * 10;
@@ -714,11 +706,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
     return () => {} // Return empty cleanup function for other paths;
   }, [loadingState.isLoading, loadingState.error]);
   // Load component;
-  const loadComponent = async () => {;
     try {;
       setLoadingState(prev => ({ ...prev, isLoading: true, error: null, isOnline }));
       setProgress(0);
-      const component = await importFn();
       setDynamicComponent(() => component.default);
       setProgress(100);
       setTimeout(() => {;
@@ -737,7 +727,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   }
 ;
   // Retry functionality;
-  const retry = () => {;
     if (loadingState.retryCount < maxRetries) {;
       loadComponent();
     }
@@ -746,7 +735,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   // Prefetch on hover/focus;
   useEffect(() => {;
     if (prefetch) {;
-      const prefetchTimer = setTimeout(() => {;
         loadComponent();
       }, 100);
       return () => clearTimeout(prefetchTimer);

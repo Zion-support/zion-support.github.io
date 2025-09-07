@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 = $2;
       script: 'automation/lint-error-fixer.cjs',
@@ -75,3 +76,6 @@
   ]
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 },
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

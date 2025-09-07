@@ -1,3 +1,17 @@
+import CommunityRoutes from "./CommunityRoutes";
+import DeveloperRoutes from "./DeveloperRoutes";
+export {;
+  AuthRoutes;
+  DashboardRoutes;
+  MarketplaceRoutes;
+  TalentRoutes;
+  AdminRoutes;
+  MobileAppRoutes;
+  ContentRoutes;
+  ErrorRoutes;
+  EnterpriseRoutes;
+  CommunityRoutes;
+
 import AuthRoutes from "./AuthRoutes",
 import DashboardRoutes from "./DashboardRoutes",
 import MarketplaceRoutes from "./MarketplaceRoutes",
@@ -7,8 +21,6 @@ import MobileAppRoutes from "./MobileAppRoutes",
 import ContentRoutes from "./ContentRoutes",
 import ErrorRoutes from "./ErrorRoutes",
 import EnterpriseRoutes from "./EnterpriseRoutes",
-import CommunityRoutes from "./CommunityRoutes";
-import DeveloperRoutes from "./DeveloperRoutes";
 export {
   AuthRoutes,
   DashboardRoutes,
@@ -20,5 +32,6 @@ export {
   ErrorRoutes,
   EnterpriseRoutes,
   CommunityRoutes,
+  DeveloperRoutes
   DeveloperRoutes
 },

@@ -4,6 +4,14 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+
+/**
+ * Comprehensive Automation Runner
+ * Runs all automation scripts and provides comprehensive testing and improvement
+ */
+
+const { execSync, spawn } = require('child_process');
+
 class ComprehensiveAutomationRunner {
   constructor() {
     this.projectRoot = process.cwd();
@@ -123,6 +131,10 @@ class ComprehensiveAutomationRunner {
     }
   }
 
+
+
+      await this.runSyntaxFixes();
+      await this.runBuildProcess();
   async runBuildProcess() {
     this.log('🏗️ Running build process...');
 
@@ -205,6 +217,8 @@ class ComprehensiveAutomationRunner {
     }
   }
 }
+
+
 
 // Run the comprehensive automation
 const runner = new ComprehensiveAutomationRunner();

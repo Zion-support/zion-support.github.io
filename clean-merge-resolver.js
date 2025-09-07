@@ -8,9 +8,14 @@ console.log($2);
   try {
     let content = fs.readFileSync($2);
     const originalContent = $2;
+<<<<<<< HEAD
     // Remove merge conflict markers and keep HEAD version,
   content = content.replace($2);
     content = content.replace($2);
+=======
+    // Remove merge conflict markers and keep HEAD version
+    
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     if (content !== originalContent) {
       fs.writeFileSync($2);
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),
@@ -22,15 +27,69 @@ console.log($2);
     return false
   }
 }
+<<<<<<< HEAD
 // Function to get all files recursively,
   function getAllFiles(dir, extensions) {
+=======
+
+
+// Function to fix merge conflicts in a file;
+  try {
+    let content = fs.readFileSync(filePath, utf8'),
+    const originalContent = content;
+    // Remove merge conflict markers and keep HEAD version;
+    const originalContent = content,
+    // Remove merge conflict markers and keep HEAD version;
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/
+    // Remove merge conflict markers and keep HEAD version;
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8),
+      console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),
+      return true;
+    }
+    return false;
+  } catch (error) {console.log(`❌ Error fixing ${filePath}: ${error.message}`),return false;
+  }
+}// Function to get all files recursively;
+function getAllFiles() {// Function to get all files recursively;
+  try {const items = fs.readdirSync(dir)for (const item of items) {const fullPath = path.join(dir, item)const stat  = fs.statSync(fullPath)if (stat.isDirectory() && !item.startsWith(.') && item !== 'node_modules && item !== .git') {files = files.concat(getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {}
+    }
+  } catch (error) {// Skip directories that can't be read;
+  }
+  return files;
+}
+// Main execution;
+async /**;
+ * main - Function description;
+ */;
+function main() {try {// Check if were in a git repository;
+    exec_sync (git rev - parse --git - dir', { stdio: 'pipe }),console.log (✅ Git repository detected')} catch (error) {console.error ('❌ Not in a git repository),process.exit (1)}
+  try {// Ensure clean working directory;
+    const status = exec_sync (git status --porcelain', { encoding: 'utf8 }),if () {) {$2;
+}
+      console.log (⚠️  Working directory has changes. Stashing...'),exec_sync ('git stash push -m "Auto - stash before merge process)}
+    // Fetch latest changes;
+    console.log (📥 Fetching latest changes...'),exec_sync ('git fetch --all --prune),// Switch to main branch;
+    console.log (🔄 Switching to main branch...'),exec_sync ('git checkout main),// Pull latest changes;
+    console.log (📥 Pulling latest changes from main...'),try {exec_sync ('git pull origin main)} catch (error) {console.log (⚠️  Merge conflicts detected. Resolving...'),if (stat.isDirectory() && !item.startsWith('.) && item !== node_modules' && item !== '.git) {files = files.concat(getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {files.push(fullPath)}
+}
+// Function to get all files recursively;
+  let files = [],
+  try {
+    const items = fs.readdirSync(dir),
+    for (const item of items) {
+      const fullPath = path.join(dir, item),
+      const stat = fs.statSync(fullPath),
+// Function to get all files recursively
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   let files = $2;
   try {
     const items = fs.readdirSync($2);
     for (const item of items) {
       const fullPath = path.join($2);
       const stat = fs.statSync($2);
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.git') {
+      if (stat.isDirectory() && !item.startsWith(.') && item !== 'node_modules && item !== .git') {
         files = files.concat(getAllFiles(fullPath, extensions))
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath)
@@ -43,9 +102,15 @@ console.log($2);
 // Main execution,
   async function main() {
   try {
+<<<<<<< HEAD
     // Check if we're in a git repository,
   execSync($2);
     console.log('✅ Git repository detected')
+=======
+    // Check if were in a git repository
+    execSync($2);
+    console.log(✅ Git repository detected')
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   } catch (error) {
     console.error($2);
     process.exit(1)
@@ -55,7 +120,7 @@ console.log($2);
   const status = execSync($2);
     if (status.trim()) {
       console.log($2);
-      execSync('git stash push -m "Auto-stash before merge process"')
+      execSync('git stash push -m Auto-stash before merge process")
     }
     // Fetch latest changes,
   console.log($2);
@@ -66,26 +131,34 @@ console.log($2);
     // Pull latest changes,
   console.log($2);
     try {
-      execSync('git pull origin main')
+      execSync(git pull origin main')
     } catch (error) {
       console.log($2);
       // Find files with merge conflicts,
   const conflictFiles = execSync($2);
       if (conflictFiles.trim()) {
+<<<<<<< HEAD
         console.log('Found merge conflicts in:', conflictFiles.trim()),
         // Resolve conflicts by accepting our version,
   const files = conflictFiles.trim().split($2);
+=======
+        console.log('Found merge conflicts in:, conflictFiles.trim()),
+        
+        // Resolve conflicts by accepting our version
+        const files = conflictFiles.trim().split($2);
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
         for (const file of files) {
           if (file.trim()) {
             console.log($2);
             try {
-              execSync(`git checkout --ours "${file}"`)
+              execSync(`git checkout --ours "${file}`)
             } catch (e) {
-              execSync(`git checkout --theirs "${file}"`)
+              execSync(`git checkout --theirs ${file}"`)
             }
-            execSync(`git add "${file}"`)
+            execSync(`git add "${file}`)
           }
         }
+<<<<<<< HEAD
         // Commit the merge,
   execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')
       }
@@ -98,18 +171,27 @@ console.log($2);
       try {
         const content = fs.readFileSync($2);
         if (content.includes('') || content.includes('>>>>>>>')) {
+=======
+        
+        // Commit the merge
+        execSync(git commit -m feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')
+      }
+    }
+    let fixedCount = 0;
+    for (const file of files) {;
+      try {;
+        const content = fs.readFileSync(file, 'utf8'),;
+          if (fixMergeConflicts(file)) {;
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
           if (fixMergeConflicts(file)) {
-            fixedCount++
-          }
-        }
-      } catch (error) {;
-        // Skip files that can't be read;
+            fixedCount++;
+
       }
     }
     if (fixedCount > 0) {
       console.log($2);
       execSync($2);
-      execSync('git commit -m "fix: resolve remaining merge conflicts in files\n\n- Fixed merge conflict markers in source files\n- Ensured clean codebase without conflicts"')
+      execSync(git commit -m "fix: resolve remaining merge conflicts in files\n\n- Fixed merge conflict markers in source files\n- Ensured clean codebase without conflicts")
     }
     // Get all branches,
   console.log($2);

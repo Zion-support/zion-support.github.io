@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../../../../../utils/data/enterpriseStore";
 
+<<<<<<< HEAD
 export const config = {
   api: {
     responseLimit: false
@@ -32,3 +33,5 @@ export default async function handler(
     return res.status(500).json({ error: 'Internal server error' });
   }
 }
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

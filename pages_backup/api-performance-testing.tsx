@@ -11,8 +11,6 @@ export default function ApiPerformanceTestingPage() {
 							</div>
 						))}
 					</div>
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
 
   const features = [
@@ -215,9 +213,7 @@ export default function ApiPerformanceTestingPage() {}
       </section>;
 
 import React from 'react';
-import SEO from '../components/SEO';
 
-import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage(req, res) {}
   try {};
 	const features = [;'
@@ -303,7 +299,6 @@ export default function ApiPerformanceTestingPage(req, res) {}
     </div>);
 ;
 
-  const features = [
     'k6/Gatling-compatible test runner'
     'SLO-aware latency reports'
     'Regression baselines per endpoint'
@@ -446,9 +441,7 @@ export default function ApiPerformanceTestingPage(req, res) {}
 :pages/api-performance-testing.tsx
   );
 import SEO from '../components/SEO',
-import { Check, ExternalLink } from 'lucide-react',
 export default function ApiPerformanceTestingPage() {
-	const features = [
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 	],
 	return (
@@ -505,9 +498,6 @@ export default function ApiPerformanceTestingPage() {
 			</section>
 		</div>
 	)
-import React from 'react';
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage(req, res) {
   try {
 	const features = [;

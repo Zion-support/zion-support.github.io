@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -16,9 +17,41 @@ export const "Spinner"
     const accessibilityCode = "
   const baseClasses = 'font-medium rounded-lg transition-colors "focus"
     "secondary"
+=======
+
+
+
+
+
+
+
+
+
+
+
+#!/usr/bin/env node;
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     "danger"
-    "sm"
+    sm
     "md"
+<<<<<<< HEAD
     "lg"
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1")]
 console.log('\n New Features "Added")
+=======
+
+console.log('\n New Features "Added")
+
+
+
+
+
+
+
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

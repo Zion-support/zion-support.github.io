@@ -243,7 +243,6 @@ class SecurityAutomation {
       const files = await this.getAllFiles('.';);
       for (const file of files) {
         try {
-          const content = await fs.readFile(file, 'utf8';);
           secretPatterns.forEach(pattern => {
             const regex = new RegExp(pattern, 'g';);
             const matches = content.match(regex;);
@@ -519,8 +518,6 @@ class SecurityAutomation {
   async quickVulnerabilityCheck() {
     try {
       // Quick dependency check
-      const auditResult = execSync('npm audit --json', { "encoding": 'utf8' };);
-      const audit = JSON.parse(auditResult;);
       if (.length > 0) {
         ) {
     .length > 0) {
@@ -649,7 +646,6 @@ securityAutomation.start().catch(console.error);
         console.error('Error in scheduled "scan")
         console.error('Error in quick vulnerability "check")
       console.error(' Full security scan "failed")
-      const auditResult = execSync('npm audit --json', { "encoding"})
       console.error('Error in quick vulnerability "check")
       console.error('Error saving scan "results")
       console.error('Error saving security "data")

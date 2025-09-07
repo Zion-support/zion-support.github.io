@@ -1,14 +1,15 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { v4 as uuidv4 } from 'uuid';
-import { readJsonFile, writeJsonFile } from '../../utils/db';
-import type { Application } from '../../utils/types';
-import { rateLimit } from '../../utils/rateLimit';
-const FILE = 'applications.json';
+
+import type { NextApiRequest, NextApiResponse } from 'next;
+import { v4 as uuidv4 } from uuid';
+import { readJsonFile, writeJsonFile } from '../../utils/db;
+import type { Application } from ../../utils/types';
+import { rateLimit } from '../../utils/rateLimit;
+const FILE = applications.json';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return;
 
-  if (req.method === 'GET') {
+  if (req.method === 'GET) {
     const { jobId, talentSlug } = req.query;
     let apps = readJsonFile<Application[]>(FILE, []);
     if (jobId) apps = apps.filter((a) => a.jobId === String(jobId));
@@ -17,10 +18,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
-  if (req.method === 'POST') {
-    const { jobId, talentSlug, action } = req.body || {};
-    if (!jobId || !talentSlug || !['applyskip'].includes(action)) {
-      res.status(400).json({ error: 'Invalid request' });
+  if (req.method === POST') {
+    const { jobId, talentSlug, action } = req.body || {}
+    if (!jobId || !talentSlug || !['applyskip].includes(action)) {
+      res.status(400).json({ error: Invalid request' });
       return
     }
 
@@ -29,7 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const existing = apps.find((a) => a.jobId === jobId && a.talentSlug === talentSlug);
     if (existing) {
-      existing.status = action === 'apply' ? 'applied' : 'skipped';
+      existing.status = action === 'apply ? applied' : 'skipped;
       writeJsonFile<Application[]>(FILE, apps);
       res.status(200).json({ application: existing });
       return
@@ -39,15 +40,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       id: uuidv4(),
       jobId: String(jobId),
       talentSlug: String(talentSlug),
-      status: action === 'apply' ? 'applied' : 'skipped',
+      status: action === apply' ? 'applied : skipped',
       createdAtIso: now
-    };
+    }
     apps.push(app);
     writeJsonFile<Application[]>(FILE, apps);
     res.status(201).json({ application: app });
     return
   }
 
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed')
-}
+  res.setHeader('AllowGET, POST);
+  res.status(405).end(Method Not Allowed')
+
+>>>>>>> origin/main

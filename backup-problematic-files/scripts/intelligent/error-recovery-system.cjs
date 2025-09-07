@@ -146,7 +146,6 @@ class ErrorRecoverySystem {
     return error;
   }
   async analyzeRestartPattern(process) {
-    const error = {
       "id": Date.now(),
       "timestamp": new Date().toISOString(),
       "processName": process.name,
@@ -171,7 +170,6 @@ class ErrorRecoverySystem {
     return error;
   }
   async analyzeMemoryIssue(process) {
-    const error = {
       "id": Date.now(),
       "timestamp": new Date().toISOString(),
       "processName": process.name,
@@ -193,7 +191,6 @@ class ErrorRecoverySystem {
     return error;
   }
   async analyzeCpuIssue(process) {
-    const error = {
       "id": Date.now(),
       "timestamp": new Date().toISOString(),
       "processName": process.name,
@@ -335,12 +332,10 @@ class ErrorRecoverySystem {
           resolve({ "success": false, "details": err.message });
           return;
         }
-        const process = processes.find(p => p.name === processName);
         if (!process) {
           resolve({ "success": false, "details": 'Process not found' });
           return;
         }
-        const currentInstances = process.pm2_env.instances;
         const newInstances = Math.min(10, currentInstances + 1);
         pm2.scale(processName, newInstances, (err) => {
           if (err) {

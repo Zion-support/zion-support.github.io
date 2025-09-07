@@ -1,9 +1,10 @@
-import { useEffect, useCallback } from 'react';
 
-// Define MessageEvent type if not available
 interface Event {
   type: string;
   target: EventTarget | null;
+
+}type EventListener = (event: Event) => void;interface EventTarget  {addEventListener(type: string, listener: EventListener): void;
+}type EventListener = (event: Event) => void;interface EventTarget  {addEventListener(type: string, listener: EventListener): void;
 }
 
 interface EventTarget {
@@ -31,6 +32,7 @@ export function useMessageChannelHandler({
   onMessage;
   onError
 }: MessageChannelHandlerProps = {}) {
+
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
       if (onMessage) {
@@ -44,9 +46,9 @@ export function useMessageChannelHandler({
   }, [onMessage, onError]);
 
   useEffect(() => {
-    window.addEventListener('message', handleMessage);
+    window.addEventListener('message, handleMessage);
     return () => {
-      window.removeEventListener('message', handleMessage);
-    };
+      window.removeEventListener(message', handleMessage);
+    }
   }, [handleMessage]);
-}
+
