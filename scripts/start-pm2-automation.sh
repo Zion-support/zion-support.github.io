@@ -38,10 +38,7 @@ print_success() {
 }
 
 print_header() {
-    echo -e "${CYAN}================================${NC}"
-    echo -e "${CYAN}$1${NC}"
-    echo -e "${CYAN}================================${NC}"
-}
+    echo -e "${CYAN}}
 
 # Function to check if command exists
 command_exists() {
@@ -282,49 +279,7 @@ generate_startup_report() {
     {
         echo "PM2 Automation Startup Report"
         echo "Generated: $(date)"
-        echo "=================================="
-        echo ""
-        echo "System Information:"
-        echo "  Node.js: $(node --version)"
-        echo "  npm: $(npm --version)"
-        echo "  PM2: $(pm2 --version)"
-        echo "  OS: $(uname -a)"
-        echo "  Memory: $(free -h | awk 'NR==2{print $2}')"
-        echo "  Disk: $(df -h . | awk 'NR==2{print $4}') available"
-        echo ""
-        echo "PM2 Processes:"
-        pm2 jlist | jq -r '.[] | "  \(.name): \(.pm2_env.status)"' 2>/dev/null || echo "  Unable to get PM2 status"
-        echo ""
-        echo "Log Files:"
-        echo "  PM2 Logs: $LOG_DIR"
-        echo "  Orchestrator Logs: $PROJECT_ROOT/logs/pm2-orchestrator"
-        echo "  Automation Logs: $PROJECT_ROOT/automation/logs"
-        echo ""
-        echo "Management Commands:"
-        echo "  pm2-start      - Start all automation systems"
-        echo "  pm2-stop       - Stop all automation systems"
-        echo "  pm2-restart    - Restart all automation systems"
-        echo "  pm2-status     - Show PM2 status"
-        echo "  pm2-logs       - Show all logs"
-        echo "  pm2-monitor    - Open PM2 monitoring dashboard"
-        echo "  pm2-intelligent - Run intelligent PM2 manager"
-        echo "  pm2-orchestrator - Run enhanced orchestrator"
-    } > "$REPORT_FILE"
-    
-    print_success "Startup report generated: $REPORT_FILE"
-}
-
-# Main execution
-main() {
-    print_header "PM2 Intelligent Automation Setup"
-    
-    # Check if running as root
-    if [ "$EUID" -eq 0 ]; then
-        print_warning "Running as root. This is not recommended for security reasons."
-        read -p "Continue anyway? (y/N): " -n 1 -r
-        echo
-        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-            exit 1
+        echo "            exit 1
         fi
     fi
     
