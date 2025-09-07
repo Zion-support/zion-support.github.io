@@ -1,540 +1,394 @@
 #!/usr/bin/env node
 
-#!/usr/bin/env node
-const { execSync } = require('child_process');
-
-console.log('🏥 Running Health Check...');
-origin/cursor/expand-services-advertise-and-build-project-c28b
-const checks = [
-  { name: 'Build Status', command: 'npm run build' },
-  { name: 'Test Status', command: 'npm run test:smoke' },
-  { name: 'Lint Status', command: 'npm run lint:check' },
-  { name: 'Type Check', command: 'npm run type-check' }
-];
-
-checks.forEach(check => {
-  try {
-    execSync(check.command, { stdio: 'pipe' });
-    console.log(`✅ ${check.name}: OK`);
-  } catch (error) {
-    console.log(`❌ ${check.name}: FAILED`);
-  }
-});
-});
-
-});
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-#!/usr/bin/env node
-
-const fs = require("fs");
-const path = require("path");
-
-
-
-class HealthChecker {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.checks = [];
-    this.errors = [];
-  }
-
-  log(message) {
-    console.log(`🏥 [Health Check] ${message}`);
-
-#!/usr/bin/env node
-
-/**
- * Health Check Monitor
- * Monitors application health and provides alerts
- */
-
-const healthReport = {
-    timestamp: new Date().toISOString(),
-    status: 'healthy',
-    checks: {},
-    summary: {
-        total: 0,
-        passed: 0,
-        failed: 0,
-        warnings: 0
-    }
-};
-
-function runCheck(name, checkFunction) {
-    healthReport.summary.total++;
-    console.log(`\n🔍 Checking: ${name}`);
-    
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-class HealthCheckMonitor {
-  constructor() {
-    this.logFile = path.join(__dirname, 'logs', 'health-check.log');
-    this.ensureLogDir();
-    this.healthStatus = 'unknown';
-    this.lastCheck = null;
-  }
-
-  ensureLogDir() {
-    const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
-  }
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
-
-  async runCommand(command, description) {
-
-    try {
-      this.log(`Running: ${description}`);
-      const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
-        timeout: 30000
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message };
-    }
-  }
-
-  async checkApplicationHealth() {
-    this.log('🏥 Checking application health...');
-    
-    const healthChecks = [
-      { command: 'npm run build', description: 'Build health check' },
-      { command: 'npm run test:smoke', description: 'Test health check' },
-    ];
-
-    let healthy = true;
-    for (const check of healthChecks) {
-      const result = await this.runCommand(check.command, check.description);
-      if (!result.success) {
-        healthy = false;
-      }
-    }
-
-    this.healthStatus = healthy ? 'healthy' : 'unhealthy';
-    this.lastCheck = new Date();
-    
-    if (healthy) {
-      this.log('✅ Application is healthy');
-
-    } else {
-      this.log('❌ Application health issues detected', 'ERROR');
-    }
-console.log(`Total Checks: ${healthReport.summary.total}`);
-console.log(`✅ Passed: ${healthReport.summary.passed}`);
-console.log(`⚠️  Warnings: ${healthReport.summary.warnings}`);
-console.log(`❌ Failed: ${healthReport.summary.failed}`);
-console.log(`\nOverall Status: ${healthReport.status.toUpperCase()}`);
-console.log(`\n📄 Report saved to: ${reportPath}`);
-
-// Exit with appropriate code
-if (healthReport.status === 'unhealthy') {
-    process.exit(1);
-} else if (healthReport.status === 'degraded') {
-    process.exit(2);
-} else {
-    process.exit(0);
-}
-ursor/fix-syntax-push-and-merge-to-main-7ef8
-
-  log(message, type = "INFO") {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type}] ${message}`);
-  }
-
-  async checkNodeVersion() {
-    this.log("🔍 Checking Node.js version...");
-    try {
-      const version = process.version;
-      const majorVersion = parseInt(version.slice(1).split('.')[0]);
-      
-      if (majorVersion >= 18) {
-        this.checks.push(`Node.js version ${version} is compatible`);
-        this.log(`✅ Node.js version ${version} is compatible`);
-      } else {
-        this.errors.push(`Node.js version ${version} is too old. Required: >=18.0.0`);
-        this.log(`❌ Node.js version ${version} is too old`, "ERROR");
-      }
-    } catch (error) {
-      this.log(`❌ Failed to check Node.js version: ${error.message}`, "ERROR");
-      this.errors.push(error.message);
-    }
-  }
-
-  async checkPackageJson() {
-    this.log("📦 Checking package.json...");
-    try {
-      const packageJsonPath = path.join(this.projectRoot, "package.json");
-      if (fs.existsSync(packageJsonPath)) {
-        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
-        
-        // Check required dependencies
-        const requiredDeps = ["react", "react-dom", "next"];
-        const missingDeps = requiredDeps.filter(dep => !packageJson.dependencies[dep]);
-        
-        if (missingDeps.length === 0) {
-          this.checks.push("All required dependencies are present");
-          this.log("✅ All required dependencies are present");
-        } else {
-          this.errors.push(`Missing dependencies: ${missingDeps.join(", ")}`);
-          this.log(`❌ Missing dependencies: ${missingDeps.join(", ")}`, "ERROR");
-        }
-      } else {
-        this.errors.push("package.json not found");
-        this.log("❌ package.json not found", "ERROR");
-      }
-    } catch (error) {
-      this.log(`❌ Failed to check package.json: ${error.message}`, "ERROR");
-      this.errors.push(error.message);
-    }
-  }
-
-  async checkTypeScriptConfig() {
-    this.log("🔧 Checking TypeScript configuration...");
-    try {
-      const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
-      if (fs.existsSync(tsConfigPath)) {
-        const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, "utf8"));
-        
-        if (tsConfig.compilerOptions && tsConfig.compilerOptions.target) {
-          this.checks.push("TypeScript configuration is present");
-          this.log("✅ TypeScript configuration is present");
-        } else {
-          this.errors.push("TypeScript configuration is incomplete");
-          this.log("❌ TypeScript configuration is incomplete", "ERROR");
-        }
-      } else {
-        this.errors.push("tsconfig.json not found");
-        this.log("❌ tsconfig.json not found", "ERROR");
-      }
-    } catch (error) {
-      this.log(`❌ Failed to check TypeScript config: ${error.message}`, "ERROR");
-      this.errors.push(error.message);
-    }
-  }
-
-  async checkNextConfig() {
-    this.log("⚙️ Checking Next.js configuration...");
-    try {
-      const nextConfigPath = path.join(this.projectRoot, "next.config.js");
-      const nextConfigMjsPath = path.join(this.projectRoot, "next.config.mjs");
-      
-      if (fs.existsSync(nextConfigPath) || fs.existsSync(nextConfigMjsPath)) {
-        this.checks.push("Next.js configuration is present");
-        this.log("✅ Next.js configuration is present");
-      } else {
-        this.checks.push("No Next.js configuration found (using defaults)");
-        this.log("ℹ️ No Next.js configuration found (using defaults)");
-      }
-    } catch (error) {
-      this.log(`❌ Failed to check Next.js config: ${error.message}`, "ERROR");
-      this.errors.push(error.message);
-    }
-  }
-
-  async checkDependencies() {
-    this.log("📚 Checking dependencies installation...");
-    try {
-      const nodeModulesPath = path.join(this.projectRoot, "node_modules");
-      if (fs.existsSync(nodeModulesPath)) {
-        this.checks.push("Dependencies are installed");
-        this.log("✅ Dependencies are installed");
-      } else {
-        this.errors.push("Dependencies not installed");
-        this.log("❌ Dependencies not installed", "ERROR");
-      }
-    } catch (error) {
-      this.log(`❌ Failed to check dependencies: ${error.message}`, "ERROR");
-      this.errors.push(error.message);
-    }
-  }
-
-  async checkBuildCapability() {
-    this.log("🏗️ Checking build capability...");
-    try {
-      execSync("npm run build", {
-        cwd: this.projectRoot,
-        stdio: "pipe",
-        timeout: 60000
-      });
-      this.checks.push("Build test successful");
-      this.log("✅ Build test successful");
-    } catch (error) {
-      this.errors.push(`Build failed: ${error.message}`);
-      this.log(`❌ Build failed: ${error.message}`, "ERROR");
-    }
-  }
-
-  async run() {
-    this.log("🎯 Starting Health Check Process...");
-    this.log("===================================");
-    try {
-      await this.checkNodeVersion();
-      await this.checkPackageJson();
-      await this.checkTypeScriptConfig();
-      await this.checkNextConfig();
-      await this.checkDependencies();
-      await this.checkBuildCapability();
-      
-      this.log("\n📊 HEALTH CHECK REPORT");
-      this.log("======================");
-      this.log(`Checks Passed: ${this.checks.length}`);
-      this.log(`Errors Found: ${this.errors.length}`);
-      
-      if (this.checks.length > 0) {
-        this.log("\n✅ Checks Passed:");
-        this.checks.forEach((check, index) => {
-          this.log(`  ${index + 1}. ${check}`);
-        });
-      }
-      
-      if (this.errors.length > 0) {
-        this.log("\n❌ Errors:");
-        this.errors.forEach((error, index) => {
-          this.log(`  ${index + 1}. ${error}`);
-        });
-      }
-      
-      const healthScore = this.checks.length / (this.checks.length + this.errors.length) * 100;
-      this.log(`\n🏥 Health Score: ${healthScore.toFixed(1)}%`);
-      
-      if (healthScore >= 80) {
-        this.log("🎉 System is healthy!");
-      } else if (healthScore >= 60) {
-        this.log("⚠️ System has some issues but is functional");
-      } else {
-        this.log("🚨 System has critical issues that need attention");
-      }
-      
-      this.log("\n🎉 Health check completed!");
-    } catch (error) {
-      this.log(`💥 Fatal error: ${error.message}`, "ERROR");
-      process.exit(1);
-    }
-  }
-}
-
-const checker = new HealthChecker();
-checker.run().catch(console.error);
-
-
-origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
-
-
-
-    return healthy;
-  }
-
-  async checkDependencies() {
-    this.log('📦 Checking dependencies...');
-    
-    const depCheck = await this.runCommand(
-      'npm audit --audit-level=moderate',
-      'Dependency security check'
-    );
-    
-    if (depCheck.success) {
-      this.log('✅ Dependencies are secure');
-    } else {
-      this.log('⚠️ Dependency issues found', 'WARN');
-    }
-  }
-
-  async checkDiskSpace() {
-    this.log('💾 Checking disk space...');
-    
-    const diskCheck = await this.runCommand(
-      'df -h /workspace',
-      'Disk space check'
-    );
-    
-    if (diskCheck.success) {
-      this.log('✅ Disk space check completed');
-    }
-  }
-
-  async generateHealthReport() {
-    this.log('📊 Generating health report...');
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      healthStatus: this.healthStatus,
-      lastCheck: this.lastCheck,
-      checks: {
-        application: 'completed',
-        dependencies: 'completed',
-        diskSpace: 'completed'
-      },
-      recommendations: this.generateRecommendations()
-    };
-
-    const reportFile = path.join(__dirname, 'logs', 'health-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📄 Health report saved to: ${reportFile}`);
-  }
-
-  generateRecommendations() {
-    const recommendations = [];
-    
-    if (this.healthStatus === 'unhealthy') {
-      recommendations.push('Address build or test failures');
-      recommendations.push('Check application logs for errors');
-    }
-    
-    recommendations.push('Monitor application performance regularly');
-    recommendations.push('Set up automated alerts for critical issues');
-    
-    return recommendations;
-  }
-
-  async check() {
-    this.log("Starting health check...");
-    
-    try {
-      this.log("Checking project health...");
-      
-      const report = {
-        timestamp: new Date().toISOString(),
-        checks: ["Build status: OK", "Dependencies: OK", "Configuration: OK"],
-        status: "healthy"
-      };
-      
-      fs.writeFileSync(this.reportPath, JSON.stringify(report, null, 2));
-      this.log(`Health check completed. Report saved to: ${this.reportPath}`);
-      
-    } catch (error) {
-      this.log(`Error during health check: ${error.message}`);
-      throw error;
-    }
-  }
-}
-
-if (require.main === module) {
-  const checker = new HealthChecker();
-  checker.check().catch(console.error);
-}
-
-module.exports = HealthCheckMonitor;
-
-#!/usr/bin/env node
-const { execSync } = require('child_process');
-
-console.log('🏥 Running Health Check...');
-
-const checks = [
-  { name: 'Build Status', command: 'npm run build' },
-  { name: 'Test Status', command: 'npm run test:smoke' },
-  { name: 'Lint Status', command: 'npm run lint:check' },
-  { name: 'Type Check', command: 'npm run type-check' }
-];
-
-checks.forEach(check => {
-  try {
-    execSync(check.command, { stdio: 'pipe' });
-    console.log(`✅ ${check.name}: OK`);
-  } catch (error) {
-    console.log(`❌ ${check.name}: FAILED`);
-  }
-});
-
-#!/usr/bin/env node
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
+console.log('🏥 Starting Health Check...');
 
 class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
-    this.issues = [];
-    this.fixes = [];
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.startTime = new Date();
+    this.results = {
+      dependencies: { success: false, issues: [], fixes: [] },
+      configuration: { success: false, issues: [], fixes: [] },
+      typescript: { success: false, issues: [], fixes: [] },
+      linting: { success: false, issues: [], fixes: [] },
+      build: { success: false, issues: [], fixes: [] },
+      tests: { success: false, issues: [], fixes: [] }
+    };
+    this.ensureReportsDir();
+  }
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  async runCommand(command, description, options = {}) {
+    this.log(`Running: ${description}`);
+
+    try {
+      const result = execSync(command, {
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        stdio: 'pipe',
+        timeout: 30000,
+        ...options
+      });
+      
+      this.log(`✅ ${description} - Success`);
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ ${description} - Failed: ${error.message}`, 'ERROR');
+      return { success: false, error: error.message, output: error.stdout?.toString() || '' };
+    }
   }
 
   async checkDependencies() {
+    this.log('\n📦 CHECKING DEPENDENCIES');
+    
     try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"));
-      const nodeModulesExists = fs.existsSync(path.join(this.projectRoot, "node_modules"));
-      if (!nodeModulesExists) {
-        this.issues.push("node_modules directory missing");
-        this.fixes.push("Run npm install");
+      const issues = [];
+      const fixes = [];
+
+      // Check if package.json exists
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
+      if (!fs.existsSync(packageJsonPath)) {
+        issues.push('package.json not found');
+        fixes.push('Create package.json file');
+        this.results.dependencies = { success: false, issues, fixes };
+        return;
       }
-      console.log("✅ Dependencies check completed");
+
+      // Check if node_modules exists
+      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
+      if (!fs.existsSync(nodeModulesPath)) {
+        issues.push('node_modules directory missing');
+        fixes.push('Run npm install');
+      }
+
+      // Check for package-lock.json
+      const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
+      if (!fs.existsSync(packageLockPath)) {
+        issues.push('package-lock.json missing');
+        fixes.push('Run npm install to generate package-lock.json');
+      }
+
+      // Check for outdated dependencies
+      const outdatedResult = await this.runCommand('npm outdated', 'Check for outdated dependencies');
+      if (outdatedResult.success && outdatedResult.output.trim()) {
+        issues.push('Outdated dependencies found');
+        fixes.push('Run npm update to update dependencies');
+      }
+
+      this.results.dependencies = {
+        success: issues.length === 0,
+        issues,
+        fixes
+      };
+
     } catch (error) {
-      this.issues.push(`Dependencies check failed: ${error.message}`);
+      this.log(`❌ Failed to check dependencies: ${error.message}`, 'ERROR');
+      this.results.dependencies = {
+        success: false,
+        issues: ['Failed to check dependencies'],
+        fixes: []
+      };
     }
   }
 
   async checkConfiguration() {
-    const configFiles = ["package.json", "tsconfig.json", "next.config.js"];
-    for (const file of configFiles) {
-      const filePath = path.join(this.projectRoot, file);
-      if (!fs.existsSync(filePath)) {
-        this.issues.push(`Missing configuration file: ${file}`);
-        this.fixes.push(`Create ${file}`);
+    this.log('\n⚙️ CHECKING CONFIGURATION');
+    
+    try {
+      const issues = [];
+      const fixes = [];
+
+      const configFiles = [
+        { file: 'package.json', required: true },
+        { file: 'next.config.js', required: false },
+        { file: 'tsconfig.json', required: false },
+        { file: 'tailwind.config.js', required: false },
+        { file: '.env.local', required: false },
+        { file: '.gitignore', required: true }
+      ];
+
+      for (const { file, required } of configFiles) {
+        const filePath = path.join(this.projectRoot, file);
+        if (!fs.existsSync(filePath)) {
+          if (required) {
+            issues.push(`Missing required configuration file: ${file}`);
+            fixes.push(`Create ${file}`);
+          } else {
+            this.log(`ℹ️ Optional configuration file not found: ${file}`, 'INFO');
+          }
+        }
       }
+
+      this.results.configuration = {
+        success: issues.length === 0,
+        issues,
+        fixes
+      };
+
+    } catch (error) {
+      this.log(`❌ Failed to check configuration: ${error.message}`, 'ERROR');
+      this.results.configuration = {
+        success: false,
+        issues: ['Failed to check configuration'],
+        fixes: []
+      };
     }
-    console.log("✅ Configuration check completed");
   }
 
   async checkTypeScript() {
+    this.log('\n🔷 CHECKING TYPESCRIPT');
+    
     try {
-      execSync("npx tsc --noEmit", { stdio: "pipe" });
-      console.log("✅ TypeScript check passed");
+      const issues = [];
+      const fixes = [];
+
+      const tsResult = await this.runCommand('npm run type-check', 'TypeScript Type Checking');
+      
+      if (!tsResult.success) {
+        issues.push('TypeScript compilation errors found');
+        fixes.push('Fix TypeScript errors and run npm run type-check');
+      }
+
+      this.results.typescript = {
+        success: tsResult.success,
+        issues,
+        fixes
+      };
+
     } catch (error) {
-      this.issues.push("TypeScript compilation errors found");
-      this.fixes.push("Fix TypeScript errors");
+      this.log(`❌ Failed to check TypeScript: ${error.message}`, 'ERROR');
+      this.results.typescript = {
+        success: false,
+        issues: ['Failed to check TypeScript'],
+        fixes: []
+      };
     }
   }
 
   async checkLinting() {
+    this.log('\n🔍 CHECKING LINTING');
+    
     try {
-      execSync("npx eslint . --ext .js,.jsx,.ts,.tsx", { stdio: "pipe" });
-      console.log("✅ Linting check passed");
+      const issues = [];
+      const fixes = [];
+
+      const lintResult = await this.runCommand('npm run lint:check', 'ESLint Check');
+      
+      if (!lintResult.success) {
+        issues.push('ESLint errors found');
+        fixes.push('Run npm run lint:fix to fix linting issues');
+      }
+
+      this.results.linting = {
+        success: lintResult.success,
+        issues,
+        fixes
+      };
+
     } catch (error) {
-      this.issues.push("ESLint errors found");
-      this.fixes.push("Run npx eslint . --ext .js,.jsx,.ts,.tsx --fix");
+      this.log(`❌ Failed to check linting: ${error.message}`, 'ERROR');
+      this.results.linting = {
+        success: false,
+        issues: ['Failed to check linting'],
+        fixes: []
+      };
     }
   }
 
-  async runAllChecks() {
-    console.log("🔍 Running comprehensive health check...\n");
-    await this.checkDependencies();
-    await this.checkConfiguration();
-    await this.checkTypeScript();
-    await this.checkLinting();
+  async checkBuild() {
+    this.log('\n🏗️ CHECKING BUILD');
     
-    console.log("\n📊 Health Check Summary:");
-    console.log(`Issues found: ${this.issues.length}`);
-    console.log(`Suggested fixes: ${this.fixes.length}`);
-    
-    if (this.issues.length > 0) {
-      console.log("\n❌ Issues:");
-      this.issues.forEach((issue, index) => console.log(`${index + 1}. ${issue}`));
+    try {
+      const issues = [];
+      const fixes = [];
+
+      const buildResult = await this.runCommand('npm run build', 'Application Build');
+      
+      if (!buildResult.success) {
+        issues.push('Build failed');
+        fixes.push('Fix build errors and run npm run build');
+      }
+
+      this.results.build = {
+        success: buildResult.success,
+        issues,
+        fixes
+      };
+
+    } catch (error) {
+      this.log(`❌ Failed to check build: ${error.message}`, 'ERROR');
+      this.results.build = {
+        success: false,
+        issues: ['Failed to check build'],
+        fixes: []
+      };
     }
+  }
+
+  async checkTests() {
+    this.log('\n🧪 CHECKING TESTS');
     
-    if (this.fixes.length > 0) {
-      console.log("\n🔧 Suggested fixes:");
-      this.fixes.forEach((fix, index) => console.log(`${index + 1}. ${fix}`));
+    try {
+      const issues = [];
+      const fixes = [];
+
+      const testResult = await this.runCommand('npm run test:smoke', 'Smoke Tests');
+      
+      if (!testResult.success) {
+        issues.push('Tests failed');
+        fixes.push('Fix test failures and run npm run test:smoke');
+      }
+
+      this.results.tests = {
+        success: testResult.success,
+        issues,
+        fixes
+      };
+
+    } catch (error) {
+      this.log(`❌ Failed to check tests: ${error.message}`, 'ERROR');
+      this.results.tests = {
+        success: false,
+        issues: ['Failed to check tests'],
+        fixes: []
+      };
     }
+  }
+
+  async checkDiskSpace() {
+    this.log('\n💾 CHECKING DISK SPACE');
     
-    if (this.issues.length === 0) {
-      console.log("\n🎉 All checks passed! Your app is healthy.");
+    try {
+      const diskUsage = await this.runCommand('df -h', 'Check Disk Usage');
+      
+      if (diskUsage.success) {
+        this.log('✅ Disk space check completed');
+      } else {
+        this.log('⚠️ Could not check disk space', 'WARNING');
+      }
+    } catch (error) {
+      this.log(`❌ Failed to check disk space: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async checkMemoryUsage() {
+    this.log('\n🧠 CHECKING MEMORY USAGE');
+    
+    try {
+      const memoryUsage = await this.runCommand('free -h', 'Check Memory Usage');
+      
+      if (memoryUsage.success) {
+        this.log('✅ Memory usage check completed');
+      } else {
+        this.log('⚠️ Could not check memory usage', 'WARNING');
+      }
+    } catch (error) {
+      this.log(`❌ Failed to check memory usage: ${error.message}`, 'ERROR');
+    }
+  }
+
+  generateReport() {
+    const totalDuration = Date.now() - this.startTime;
+    
+    this.log('\n📊 HEALTH CHECK REPORT');
+    this.log('='.repeat(60));
+    this.log(`Total Duration: ${totalDuration}ms`);
+    this.log('');
+
+    let totalIssues = 0;
+    let totalFixes = 0;
+    let passedChecks = 0;
+
+    Object.entries(this.results).forEach(([check, result]) => {
+      const status = result.success ? '✅' : '❌';
+      const issuesCount = result.issues?.length || 0;
+      const fixesCount = result.fixes?.length || 0;
+      
+      totalIssues += issuesCount;
+      totalFixes += fixesCount;
+      if (result.success) passedChecks++;
+
+      this.log(`${status} ${check}: ${issuesCount} issues, ${fixesCount} fixes`);
+      
+      if (issuesCount > 0) {
+        result.issues.forEach(issue => this.log(`  - ${issue}`, 'WARNING'));
+      }
+      if (fixesCount > 0) {
+        result.fixes.forEach(fix => this.log(`  + ${fix}`, 'INFO'));
+      }
+    });
+
+    this.log('\n📈 SUMMARY');
+    this.log(`Passed Checks: ${passedChecks}/${Object.keys(this.results).length}`);
+    this.log(`Total Issues: ${totalIssues}`);
+    this.log(`Total Fixes: ${totalFixes}`);
+
+    // Save detailed report
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalDuration,
+      results: this.results,
+      summary: {
+        passedChecks,
+        totalChecks: Object.keys(this.results).length,
+        totalIssues,
+        totalFixes,
+        healthScore: Math.round((passedChecks / Object.keys(this.results).length) * 100)
+      }
+    };
+    
+    const reportPath = path.join(this.reportsDir, 'health-check-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log(`\n📄 Detailed report saved to ${reportPath}`);
+
+    if (totalIssues === 0) {
+      this.log('\n🎉 All health checks passed! Your application is healthy.', 'SUCCESS');
+    } else {
+      this.log(`\n⚠️ Found ${totalIssues} issues that need attention.`, 'WARNING');
+    }
+  }
+
+  async run() {
+    this.log('🚀 Starting Health Check');
+    this.log('='.repeat(60));
+    
+    try {
+      await this.checkDependencies();
+      await this.checkConfiguration();
+      await this.checkTypeScript();
+      await this.checkLinting();
+      await this.checkBuild();
+      await this.checkTests();
+      await this.checkDiskSpace();
+      await this.checkMemoryUsage();
+    } catch (error) {
+      this.log(`Fatal error: ${error.message}`, 'ERROR');
+    } finally {
+      this.generateReport();
     }
   }
 }
 
-const checker = new HealthChecker();
-checker.runAllChecks().catch(console.error);
+// Run the health checker
+if (require.main === module) {
+  const checker = new HealthChecker();
+  checker.run().catch(console.error);
+}
+
+module.exports = HealthChecker;
