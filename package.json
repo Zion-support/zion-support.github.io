@@ -7,19 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-<<<<<<< HEAD
     "lint": "next lint",
-    "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit",
-=======
-    "build:netlify": "node scripts/build-with-error-handling.js",
-    "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
-    "postbuild": "echo \"Build completed\"",
-    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
-    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
-    "lint:check": "eslint . --max-warnings 0",
     "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
