@@ -32,6 +32,33 @@ CardFooter
   onDecline: (matchId: string) => void;
   showApplied?: boolean;
 }
+<<<<<<< HEAD
+export function JobMatchesCard(): any ({;
+  match,;
+  onApply,;
+  onDecline,;
+  showApplied = false,;
+}: JobMatchCardProps) {;
+  const job = match && match.job;
+
+export function JobMatchesCard({
+  match
+  onApply
+  onDecline
+  showApplied = false
+}: JobMatchCardProps) {
+  const job = match.job;
+  if (!job) return null;
+
+import { useState } from "react",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react",
+import { format } from "date-fns",
+import { JobMatch } from "@/types/jobs",
+
+=======
 
   if (!job) return null;
 
@@ -90,6 +117,16 @@ export function JobMatchesCard() { return null; }
                   (Viewed {format(new Date(match.viewed_at), "MMM d")});
                 </span>;
               )}
+<<<<<<< HEAD
+            </CardDescription>;
+          </div>;
+          <Badge variant="outline" className="flex items-center">;
+            {match.match_score}% Match;
+            </CardDescription>;
+          </div>;
+          <Badge variant="outline" className="flex items-center">;
+            {match.match_score}% Match;
+=======
 
           </Badge>;
         </div>;
@@ -154,6 +191,9 @@ export function JobMatchesCard() { return null; }
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$
             {job.budget.min} - ${job.budget.max}
+<<<<<<< HEAD
+        
+=======
 
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
@@ -187,6 +227,8 @@ export function JobMatchesCard() { return null; }
           </div>
         ) : ("
           <div className="flex gap-2 w-full">
+<<<<<<< HEAD
+=======
 
             <Button
               className="flex-1"

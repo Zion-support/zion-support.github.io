@@ -28,6 +28,7 @@ declare module 'ws';
 declare module 'vite/client';
 declare module 'react-router-dom';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 declare module 'aria-query',;
 declare module '@babel/core',;
 declare module '@babel/generator',;
@@ -52,6 +53,8 @@ declare module 'semver',;
 declare module 'ws',;
 declare module 'vite/client',;
 declare module 'react-router-dom',;
+<<<<<<< HEAD
+=======
 
 declare module 'aria - query';
 declare module '@babel / core';

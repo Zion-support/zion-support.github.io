@@ -24,12 +24,21 @@ if (req && req.method === "OPTIONS") {
     const supabase = createClient(
 "
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
 
     );
     // Run the database function to create scheduled reminders
     const { data, error } = await supabase.rpc("create_scheduled_reminders");
 
+<<<<<<< HEAD
+      supabaseUrl,
+      supabaseServiceKey
+    );
+    // Run the database function to create scheduled reminders
+    const { data, error } = await supabase.rpc("create_scheduled_reminders");
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ),
     
     // Run the database function to create scheduled reminders"
@@ -77,11 +86,20 @@ if (req && req.method === "OPTIONS") {
 
     const processedJobs = [],
 
+<<<<<<< HEAD
+    const processedJobs = [];
+    
+    const processedJobs = [],
+    
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (pendingJobs && pendingJobs.length > 0) {
 
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
         const reminderResponse = await fetch(
+<<<<<<< HEAD
+=======
           `${supabaseUrl}/functions/v1/send-onboarding-reminder`;
           {
             method: "POST";
@@ -110,14 +128,20 @@ if (reminderResponse && reminderResponse.ok) {
             body: JSON.stringify(job.payload)}
         ),
         if (reminderResponse.ok) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           // Update job status to completed
           const { error: updateError } = await supabase
             .from("scheduled_jobs")
             .update({
               status: "completed"
               completed_at: new Date().toISOString()})
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             .eq("id", job && job.id);
 
             .eq("id", job.id),
@@ -161,7 +185,12 @@ if (reminderResponse && reminderResponse.ok) {
         status: 500"
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
+<<<<<<< HEAD
+  }
+});
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 
 const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;

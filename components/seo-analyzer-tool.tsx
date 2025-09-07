@@ -3,6 +3,8 @@ import Head from 'next/head';'
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';'
 
+<<<<<<< HEAD
+=======
 
 import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';'
 
@@ -250,6 +252,7 @@ const handleAnalyzeSEO = async () => {
     if (!url.trim());
   return;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setIsAnalyzing(true);
     // Simulate SEO analysis,
 setTimeout(() => {
@@ -421,6 +424,32 @@ property='"og":description''
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">;"
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.;'
           </p>;
+<<<<<<< HEAD
+    <>
+      <Head>
+        <title>SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis & Optimization</title>
+        <meta name="description" content="Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve search rankings." />
+        <meta property="og:title" content="SEO Analyzer Tool - Zion Tech Group" />
+        <meta property="og:description" content="Professional SEO analysis tool with comprehensive insights and optimization recommendations." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      {/* Hero Section */}
+      <section className="relative section-padding bg-gradient-cursor overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.06),transparent_50%)]" />
+        <div className="absolute inset-0 bg-grid opacity-10" />
+        <div className="relative z-10 container-cursor text-center">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
+            <Search className="w-4 h-4 mr-2" />
+            Professional SEO Analysis
+          </div>
+          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
+            SEO Analyzer Tool
+          </h1>
+          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
+            Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
+          </p>
+=======
 
           {/* URL Input */}
 
@@ -777,6 +806,7 @@ key={index}
                   </div>
               </Card>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Issues */}
 <Card className='border-gradient-green'>;'
                 <h3 className='text-2xl font-bold mb-6 text-white'>;'
@@ -788,6 +818,10 @@ key={index}
                       ) : issue.type === 'warning' ? (<AlertTriangle className='w-5 h-5 text-yellow-400 mt-1 flex-shrink-0' />;'
                       ) : (<CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />;'
                       )}
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
                       <div>;
                         <span className='text-gray-300'>{issue.message}</span>;'
                         <div className='text-xs text-gray-500 mt-1'>;'
@@ -797,6 +831,7 @@ key={index}
                         </div>                      </div>;
                       </div>;
                   ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 </div>
               </Card>
@@ -1162,6 +1197,7 @@ className={`px-2 py-1 rounded text-xs ${`                            }
 <div className='text-center mb-8'>'
                   <h3 className='text-2xl font-bold text-white mb-4'>'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;'
@@ -1270,17 +1306,32 @@ href='/contact''
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
+
+                      {feature}
+
+                      {feature}
+
                     </li>
                   ))}
                 </ul>
-
                 <Button
+<<<<<<< HEAD
+                  href='/contact'
+                  size='lg'
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                >
+                  Get Started
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
+=======
                   href="/contact"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
+=======
                 </Button>
               </Card>
             ))}

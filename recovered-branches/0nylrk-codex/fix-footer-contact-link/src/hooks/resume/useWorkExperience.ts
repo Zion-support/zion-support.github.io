@@ -26,12 +26,15 @@ import { WorkExperience  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {WorkExperience} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useWorkExperience() {;
+<<<<<<< HEAD
+=======
 
   const { user } = useAuth();
 
@@ -62,6 +65,8 @@ export function useWorkExperience() {;
 =======
         .from('work_history')
         .insert({
+<<<<<<< HEAD
+=======
 
     try {}
       const { error } = await supabase'
@@ -293,6 +298,8 @@ if (throw error) {
       const { error } = await supabase
         .from('work_history')
         .update({
+<<<<<<< HEAD
+=======
 
     try {}
       const { error } = await supabase'
@@ -413,6 +420,18 @@ if (throw error) {}
       setIsLoading (false);        .eq(id', workId),
       
 =======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        .eq('id', workId),
+      
+      if (error) throw error,
+      
+<<<<<<< HEAD
+      return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not delete work experience')
+    } finally {
+      setIsLoading(false)
 
         .eq('id', workId),
       

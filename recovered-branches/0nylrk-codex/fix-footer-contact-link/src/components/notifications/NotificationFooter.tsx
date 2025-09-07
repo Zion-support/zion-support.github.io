@@ -8,6 +8,13 @@ interface NotificationFooterProps {
 
 }
 
+<<<<<<< HEAD
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { use_navigate  } from './react-router-dom';
+interface NotificationFooterProps {
+  on_close: () => void;
+}
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 

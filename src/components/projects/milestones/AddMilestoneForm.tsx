@@ -131,8 +131,23 @@ export function AddMilestoneForm({
             name="description"
             render={({ field }: { field: any }) => (
               <FormItem>
+                <FormLabel>Title</FormLabel>
+                <FormControl>
+<<<<<<< HEAD
+                  <Input placeholder="Milestone title" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control = {form.control,}
+            name="description"
+            render={({ field }: { field: any },) => (
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Textarea
                     placeholder="Describe what needs to be delivered"
                     className="min-h-[100px]"
@@ -189,7 +204,6 @@ export function AddMilestoneForm({
               name="amount"
               render={({ field }: { field: any }) => (
                 <FormItem>
-                  <FormLabel>Amount ($)</FormLabel>
                   <FormControl>
                     <Input
                       type="number"

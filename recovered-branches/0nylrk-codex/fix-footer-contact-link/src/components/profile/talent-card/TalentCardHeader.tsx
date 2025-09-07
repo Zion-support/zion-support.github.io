@@ -213,6 +213,12 @@ export function TalentCardHeader({;
             {yearsExperience > 5 && (
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
             )}
+<<<<<<< HEAD
+          </h3>;
+          </h3>;
+          <TalentCardAvailability availabilityType={availabilityType} />;
+        </div>;
+=======
 
           </h3>;
 
@@ -221,12 +227,16 @@ export function TalentCardHeader({;
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import { BadgeCheck } from './lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';

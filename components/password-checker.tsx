@@ -1,4 +1,25 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 
+import {
+  Lock
+  Shield
+  Eye
+  EyeOff
+  Copy
+  RefreshCw
+  CheckCircle
+  XCircle
+  AlertTriangle
+  ArrowRight;
+} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+=======
 
 import React, { useState, useEffect } from 'react','
 import Head from 'next/head','
@@ -59,6 +80,8 @@ export default function PasswordCheckerPage() {;
   const [strength, setStrength] = useState(0);
   const [strengthText, setStrengthText] = useState('');
   const [strengthColor, setStrengthColor] = useState('');
+<<<<<<< HEAD
+  const [checks, setChecks] = useState({
 
 
       analyzePassword(password);
@@ -114,6 +137,20 @@ export default function PasswordCheckerPage() {;
       setStrengthText('Very Weak');
       setStrengthColor('text-red-400')
     }
+<<<<<<< HEAD
+    // Generate suggestions
+    generateSuggestions(newChecks, pass);  }
+  const isCommonPassword = (pass: string) => {
+    const commonPasswords = [    } else if (score >= 70) {
+      setStrengthText('Strong');
+      setStrengthColor('text-green-400')
+    } else if (score >= 50) {
+      setStrengthText('Moderate');
+      setStrengthColor('text-yellow-400')
+    } else if (score >= 30) {
+      setStrengthText('Weak');
+      setStrengthColor('text-orange-400')
+=======
 
     // Generate suggestions,
 generateSuggestions(newChecks, pass)
@@ -237,6 +274,7 @@ result = result
     let result = '';
     const suggestions: string[] = [],
     
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!checks.length) suggestions.push('Make your password at least 8 characters long');
     if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)');
     if (!checks.lowercase) suggestions.push('Add at least one lowercase letter (a-z)');
@@ -427,6 +465,8 @@ variant='outline';'
                 <Shield className='w-6 h-6 mr-3 text-purple-400' />'
                 Security Analysis
               </h3>
+<<<<<<< HEAD
+=======
               {password ? (
 <div className='space-y-6'>'
                   {/* Strength Score */}
@@ -815,6 +855,16 @@ passwords for all your accounts.
                 </li>
               </ul>
             </Card>
+<<<<<<< HEAD
+            <Card className='p-8 bg-gray-800 border border-gray-700'>
+              <div className='text-4xl mb-4'>❌</div>
+              <h3 className='text-2xl font-bold text-white mb-4'>Don'ts</h3>
+              <ul className='space-y-3 text-gray-300'>
+                <li className='flex items-start'>
+                  <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />
+                  Don't use personal information (names, birthdays)
+                </li>                  Don't use personal information (names, birthdays)
+=======
 
 
 <Card className='p-8 bg-gray-800 border border-gray-700'>'
@@ -858,6 +908,8 @@ passwords for all your accounts.
             </Card>
           </div>
       </section>
+<<<<<<< HEAD
+=======
 
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-indigo-600 to-purple-600'>'

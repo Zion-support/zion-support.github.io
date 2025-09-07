@@ -16,6 +16,8 @@ import {NavigationButtonsProps} from "./types";export const NavigationButtons = 
   isNextDisabled = false;"
   backLabel = "Back";"
   nextLabel = "Next";
+<<<<<<< HEAD
+=======
 
 import { Button } from "@/components/ui/button",
 
@@ -37,12 +39,16 @@ import { Button } from "@/components/ui/button","
   isNextDisabled = false,"
   backLabel = "Back","
   nextLabel = "Next",
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isLoading = false}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
       {onBack && (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
 
@@ -59,7 +65,14 @@ import { NavigationButtonsProps } from "./types",;
         <Button variant="outline" onClick={onBack}>;
 
           {backLabel}
-        </Button>;
+        </Button>
+      )}
+      {onNext && (
+        <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
+        </Button>
       )}
       {onNext && (
         <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
@@ -89,6 +102,11 @@ import { NavigationButtonsProps } from "./types",;
       )}
 
     </div>;
+  );
+    </div>;
+  );
+};
+=======
   );
 
 };

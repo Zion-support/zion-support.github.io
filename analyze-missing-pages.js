@@ -35,6 +35,12 @@ import { execSync } from 'child_process';
 "
 import fs from "fs";"
 import { execSync } from "child_process";
+<<<<<<< HEAD
+import fs from "fs";
+import { execSync } from "child_process";
+origin/main
+origin/automation-improvements-final
+=======
 
 // Read sitemap.xml
 const sitemapContent = fs.readFileSync("sitemap.xml", "utf8");
@@ -365,6 +371,8 @@ const sitemap_urls = url_matches;
       return url === "" ? "index" : url;
     });
   : [];
+<<<<<<< HEAD
+=======
 
 console && console.log("=== SITEMAP ANALYSIS ===");
 console && console.log("Total URLs in sitemap:", sitemapUrls && sitemapUrls.length);
@@ -378,6 +386,8 @@ extraPages && extraPages.forEach((page) => console && console.log(`- ${page}`));
 console && console.log("\n=== PAGES THAT NEED SUBDIRECTORIES ===");
 const pagesNeedingSubdirs = sitemapUrls && sitemapUrls.filter((url) => url && url.includes("/"));
 pagesNeedingSubdirs && pagesNeedingSubdirs.forEach((page) => console && console.log(`- ${page}`));
+<<<<<<< HEAD
+=======
 
 // Check for broken internal links
 console && console.log("\n=== CHECKING FOR BROKEN INTERNAL LINKS ===");
@@ -396,11 +406,16 @@ actualPages && actualPages.forEach((page) => {
           !actualPages && actualPages.includes(fullLink) &&
           !sitemapUrls && sitemapUrls.includes(fullLink)
         ) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           brokenLinks && brokenLinks.push({
             page,
             brokenLink: `/${link}`,
             fullLink,
+<<<<<<< HEAD
+=======
 
 ;
 // Get actual pages;
@@ -897,6 +912,8 @@ const urlMatches = sitemapContent.match(
       });
     }
   } catch (error) {
+<<<<<<< HEAD
+=======
 
   console.log('No broken internal links found');
 
@@ -1071,6 +1088,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 if (brokenLinks && brokenLinks.length > 0) {
   console && console.log("Found broken internal links:");
   brokenLinks && brokenLinks.forEach((link) => {

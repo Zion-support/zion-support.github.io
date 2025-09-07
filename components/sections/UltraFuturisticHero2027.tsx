@@ -80,6 +80,15 @@ export default function UltraFuturisticHero2027() {
   const features = null;
             ease: "easeInOut"
 
+import React from 'react',
+import React from 'react';
+=======
+
+import React from 'react';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   Rocket,
   Brain,
@@ -218,6 +227,9 @@ className='absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500
           animate={{"y": [0, -30, 0],"scale": [1, 1.1, 1],"opacity": [0.4, 0.7, 0.4]}}
           transition={{"duration": 12,"repeat": Infinity,"ease": 'easeInOut'}}' />;
         {/* Grid Pattern */}
+<<<<<<< HEAD
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
+=======
 
 <div className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-["size": 50px_50px]' />'
       </div>
@@ -407,6 +419,24 @@ className='text-center group''
 className={`text-4xl "md":text-5xl font-bold mb-2 group-"hover":shadow-lg "hover":shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}>`
                   {stat.number}
 
+<<<<<<< HEAD
+                  />                </div>              >
+                <div className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}>
+                  {stat.number}
+                </div>
+                <div className="text-cyan-300 font-medium group-hover:text-cyan-400 transition-colors duration-300">
+                  {stat.label}
+                </div>
+                <div className="flex justify-center mt-2">
+                  <stat.icon className={`w-5 h-5 ${stat.color} group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`} />
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+                  />                </div>
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>
 
                 <div className='text-cyan-300 font-medium group-"hover":text-cyan-400 transition-colors duration-300'>'
@@ -495,6 +525,7 @@ className='text-center''
                   </div>
                   <div className='text-cyan-300 font-medium'>{trust}</div>'
                 </motion.div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 

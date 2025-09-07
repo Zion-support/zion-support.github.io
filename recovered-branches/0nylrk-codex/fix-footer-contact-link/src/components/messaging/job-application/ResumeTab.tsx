@@ -81,6 +81,23 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
     if (onResumeSelected) {;
       onResumeSelected(resume);
     }
+<<<<<<< HEAD
+    }
+  }
+  return (
+
+
+;
+    if (onSelectResume) {;
+      onSelectResume(resume.id);
+    }
+  },
+  
+  return (
+    <div className="space-y-4">
+      <ResumeSelector onResumeSelected={handleResumeSelected} />
+      
+=======
 
     if (onSelectResume) {;
 
@@ -89,6 +106,7 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
   onResumeSelected?: (resume: ResumeOption) => void;
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {onApply && (
         <div className="mt-6">
           <Button
@@ -134,6 +152,8 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
           <Button 
             onClick={onApply} 
             disabled={!selectedResumeId || isSubmitting}
+<<<<<<< HEAD
+=======
 
             className="w-full"
           >
@@ -151,7 +171,6 @@ className="w-full"
             </p>
     <div className="space-y-4">;
       <ResumeSelector onResumeSelected={handleResumeSelected} />;
-
       {onApply && (;
         <div className="mt-6">;
           <Button

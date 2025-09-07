@@ -91,7 +91,6 @@ async function runJestTests() {}"
 };
 async function runPlaywrightTests() {}
   log('info', 'Running Playwright tests');
-  
   try {}
     const output = execSync('npx playwright test --reporter=json', { })
       "encoding": 'utf8',
@@ -106,18 +105,15 @@ async function runPlaywrightTests() {}
       "result": result;
     }
 });
-    
     testReport.summary.total += result.total;
     testReport.summary.passed += result.passed;
     testReport.summary.failed += result.failed;
     testReport.summary.duration += endTime - startTime;
-    
     log('info', `Playwright tests "completed": ${result.passed}/${result.total} passed`)} catch (error) {`}
     log('warn', 'Playwright tests failed or not configured', error.message)};
 };
 async function runCypressTests() {}
   log('info', 'Running Cypress tests');
-  
   try {}
     const output = execSync('npx cypress run --reporter json', { })
       "encoding": 'utf8',
@@ -132,18 +128,15 @@ async function runCypressTests() {}
       "result": result;
     }
 });
-    
     testReport.summary.total += result.total;
     testReport.summary.passed += result.passed;
     testReport.summary.failed += result.failed;
     testReport.summary.duration += endTime - startTime;
-    
     log('info', `Cypress tests "completed": ${result.passed}/${result.total} passed`)} catch (error) {`}
     log('warn', 'Cypress tests failed or not configured', error.message)};
 };
 async function runLintTests() {}
   log('info', 'Running linting tests');
-  
   try {}
     const output = execSync('npm run lint', { })
       "encoding": 'utf8',
@@ -157,10 +150,8 @@ async function runLintTests() {}
       "result": { passed: true, output };
     }
 });
-    
     testReport.summary.passed++;
     testReport.summary.duration += endTime - startTime;
-    
     log('info', 'Linting tests completed successfully')} catch (error) {}
     testReport.tests.push({})
       "framework": 'eslint',
@@ -168,13 +159,11 @@ async function runLintTests() {}
       "result": { passed: false, "error": error.message };
     }
 });
-    
     testReport.summary.failed++;
     log('warn', 'Linting tests failed', error.message)};
 };
 async function runTypeTests() {}
   log('info', 'Running TypeScript type tests');
-  
   try {}
     const output = execSync('npx tsc --noEmit', { })
       "encoding": 'utf8',
@@ -188,10 +177,8 @@ async function runTypeTests() {}
       "result": { passed: true, output };
     }
 });
-    
     testReport.summary.passed++;
     testReport.summary.duration += endTime - startTime;
-    
     log('info', 'TypeScript type tests completed successfully')} catch (error) {}
     testReport.tests.push({})
       "framework": 'typescript',
@@ -199,7 +186,6 @@ async function runTypeTests() {}
       "result": { passed: false, "error": error.message };
     }
 });
-    
     testReport.summary.failed++;
     log('warn', 'TypeScript type tests failed', error.message)};
 };
@@ -233,6 +219,9 @@ main();
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+main();
 =======
 main();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

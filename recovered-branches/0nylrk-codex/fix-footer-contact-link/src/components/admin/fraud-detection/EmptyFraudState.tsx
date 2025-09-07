@@ -28,7 +28,10 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           : "You don't have any fraud flags yet"}
       </p>
       {hasFilters && (
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
 );
 
@@ -57,7 +60,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
   onResetFilters,;
 }) => {;
   return (
-
     <div className="text - center py - 12">;
       <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;
       <h3 className="text - lg font - medium">No fraud flags found</h3>;

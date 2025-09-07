@@ -170,6 +170,11 @@ const [isDragging, setIsDragging] = useState (false);
 const fileInputRef = useRef<HTMLInputElement> (null);
 if (e.target.files) {;
   return;
+<<<<<<< HEAD
+:temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/ScreenshotManager.tsx
+=======
 
 }setScreenshots (prev => [...prev, ...newScreenshots]);
 }

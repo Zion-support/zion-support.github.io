@@ -6,6 +6,22 @@ import { GrantApplication, MilestonesUpdatePayload } from '../../../../types/gra
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
+<<<<<<< HEAD
+import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
+function grantPath(id: string) {
+return path.join(GRANTS_DIR, `${id}.json`);
+}
+const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
+import type {
+  GrantApplication
+  MilestonesUpdatePayload;
+  GrantApplication,;
+  MilestonesUpdatePayload,;
+} from '../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 }
@@ -69,6 +85,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const payload = req.body as MilestonesUpdatePayload;
     existing.milestones = payload.milestones || [];
     existing.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
+=======
 
     writeGrant(existing);
     return res.status(200).json({ record: existing });

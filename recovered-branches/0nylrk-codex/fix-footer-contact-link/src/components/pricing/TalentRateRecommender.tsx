@@ -3,6 +3,15 @@ import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPrici
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+=======
 
 "
 import React, { useState } from "react","
@@ -38,6 +47,7 @@ interface TalentRateRecommenderProps {};
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     setIsLoading(true);
     try {;
@@ -106,6 +116,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const { user } = useAuth(),;
     if (skills.length === 0 || yearsExperience <= 0) {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
     setIsLoading(true),
@@ -123,6 +134,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       return
     }
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -144,10 +156,13 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       // We'll use the middle of the range as the suggested rate;
       const suggestedRate = Math && Math.round((suggestion && suggestion.minRate + suggestion && suggestion.maxRate) / 2);
       onSuggestionApplied(suggestedRate);
+<<<<<<< HEAD
+=======
 
       }
 
   },
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       setSuggestion(result);
 
@@ -162,6 +177,15 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
     <div className="space-y-4">;
       <div>;
         {!suggestion && !isLoading ? (;
+<<<<<<< HEAD
+  },
+
+  return (
+    <div className="space-y-4">
+      <div>
+        {!suggestion && !isLoading ? (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button
             type="button"
 
@@ -267,6 +291,8 @@ if ( {) {}
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
+<<<<<<< HEAD
+=======
 
       </div>;
     </div>;

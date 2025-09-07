@@ -150,6 +150,8 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
   className;
 }
 
+<<<<<<< HEAD
+=======
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
   notifications,
   onDismiss,
@@ -328,8 +330,25 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
     }, 3000)
   }, []);
 
+<<<<<<< HEAD
+  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
+    const id = Math.random().toString(36).slice(2),
+    setToasts((prev) => [...prev, { id, message, tone }]),
+    setTimeout(() => {
+      setToasts((prev) => prev.filter((t) => t.id !== id))
+    }, 3000)
+  }, []),
+
+}: NotificationSystemProps) {;
+}: NotificationSystemProps) {
+  if (notifications.length === 0) return null;
   return (
+    <div className="fixed top-4 right-4 z-50 space-y-2">
+=======
+  return (
+<<<<<<< HEAD
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {notifications.map((notification) => (
         <div
           key={notification.id}
@@ -718,6 +737,22 @@ export const useNotifications = () => {
             )}
           </div>
         </div>
+<<<<<<< HEAD
+
+
+}
+
+
+
+      ))}
+    </div>;
+  );
+}
+}
+
+}
+}
+=======
       ))}
     </div>;
   );

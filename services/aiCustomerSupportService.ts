@@ -54,13 +54,19 @@ export interface Attachment {;
   id: string;,
 
   messages: TicketMessage[];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   created_at: Date;
   updated_at: Date;
   resolved_at?: Date,
   firstResponseTime?: number, // in minutes;
   resolution_time?: number, // in hours;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export interface TicketMessage {
 
@@ -85,6 +91,29 @@ export interface Customer {
   email: string;'
   role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
   skills: string[];
+<<<<<<< HEAD
+  isAvailable: boolean;
+  currentTickets: number;
+
+  maxTickets: number
+
+  performance: AgentPerformance
+}
+export interface AgentPerformance {
+
+  ticketsResolved: number
+
+  averageResolutionTime: number, // in hours
+  customerSatisfaction: number, // 1-5
+  firstResponseTime: number, // in minutes
+  escalationRate: number, // percentage
+}
+export interface ChatbotSession {
+  id: string;
+  customerId: string;
+  startTime: Date;
+  endTime?: Date;
+=======
 
   is_available: boolean;
   current_tickets: number;
@@ -430,11 +459,20 @@ export interface Attachment {;
     }
 
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
+<<<<<<< HEAD
+    const ticket = this.tickets.find(t => t.id === ticketId);
+=======
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!ticket) {
       throw new Error(`Ticket ${ticketId} not found`)
     }
     const message: TicketMessage = {
+<<<<<<< HEAD
+    };
+    ticket && ticket.messages.push(message);
+    ticket && ticket.updatedAt = new Date();
+=======
       id: `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...messageData;
       createdAt: new Date()
@@ -446,6 +484,21 @@ export interface Attachment {;
     if (message.senderType = $2;
       ticket.firstResponseTime = firstResponseTime
     }
+<<<<<<< HEAD
+    this && this.updateAnalytics();
+      id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      ...messageData;
+      createdAt: new Date()
+    }
+    ticket.messages.push(message);
+    ticket.updatedAt = new Date();
+    // Update first response time if this is the first agent response
+    if (message.senderType === 'agent' && !ticket.firstResponseTime) {
+      const firstResponseTime = (message.createdAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60);
+      ticket.firstResponseTime = firstResponseTime
+    }
+    this.updateAnalytics();
+=======
 
     this.updateAnalytics($2);
     return message
@@ -472,6 +525,18 @@ export interface Attachment {;
       throw new Error(`Session ${sessionId} not found`)
     }
     const message: ChatbotMessage = {
+<<<<<<< HEAD
+    };
+    session && session.messages.push(message);
+    // Simulate AI intent detection
+
+      id: `chat_msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      ...messageData;
+      timestamp: new Date()
+    }
+    session.messages.push(message);
+    // Simulate AI intent detection
+=======
       id: `chat_msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...messageData;
       timestamp: new Date()
@@ -480,6 +545,7 @@ export interface Attachment {;
     session.messages.push($2);
     // Simulate AI intent detection
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (message.sender === 'customer') {
       const intent = this.detectIntent($2);
       session.intent = $2;
@@ -529,6 +595,11 @@ export interface Attachment {;
       session && session.escalated = escalated;
       session && session.satisfaction = satisfaction,
       this && this.updateAnalytics()
+      return { intent: 'feature_request', confidence: 0.75 }
+    } else {
+      return { intent: 'general_inquiry', confidence: 0.6 }
+    }
+  }
 
       id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
 

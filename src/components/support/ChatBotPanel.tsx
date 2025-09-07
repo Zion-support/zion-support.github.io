@@ -43,7 +43,7 @@ export function ChatBotPanel() {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
     }
-  }, [messages]);
+  },
 
   // Focus input when component mounts
   useEffect(() => {

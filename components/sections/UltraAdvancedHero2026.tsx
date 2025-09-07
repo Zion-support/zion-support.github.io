@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+import {;
+  ArrowRight,;
+  Star,;
+  TrendingUp,;
+  Zap,;
+  Brain,;
+  Rocket,;
+  Globe,;
+  Sparkles,;
+  CheckCircle,;
+  Phone,;
+  Mail,;
+  MapPin,;
+=======
 
 
 
@@ -151,6 +166,32 @@ const itemVariants = {
 "duration": 0.8
       }
   };
+<<<<<<< HEAD
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };        staggerChildren: 0 && 0.1;
+      }
+    }
+  };
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 30 },;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0 && 0.8,;
+      },;
+    },;
+  };
+  return (
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
+      {/* Enhanced Background Effects */}
+=======
 
 return (;
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>'

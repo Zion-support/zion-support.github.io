@@ -37,6 +37,9 @@ export function SocialShareSection() {};
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
   },
 
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const copyLinkToClipboard = () => {
 
     navigator.clipboard.writeText(window.location.href)
@@ -84,6 +87,8 @@ export function SocialShareSection() {};
       icon: <Link className="h-5 w-5" />
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80"
       onClick: copyLinkToClipboard
+<<<<<<< HEAD
+=======
 
 import {Button} from "./ui/button";
 import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
@@ -156,6 +161,7 @@ export function SocialShareSection() {;
         });
       });
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const shareLinks = [;
     {;"
       name: "Twitter",;"

@@ -59,6 +59,7 @@ export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
   return (;
     <div className=flex justify-between items-center mb-8">;
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {;
@@ -125,7 +126,6 @@ function ContractHeader() {
         Create New Contract;
       </Button>;
     </div>);
-
 }
   )}
  interface ContractHeaderProps {

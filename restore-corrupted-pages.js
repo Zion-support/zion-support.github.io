@@ -125,6 +125,29 @@ const path = require($2);
 
           results.failed++,
 
+          console.log(`   Reason: ${result.reason}`)
+          results.failed++,
+          results.failed++,
+          console.log(`❌ Failed: ${fullPath}`),
+          console.log(`   Reason: ${result.reason}`)
+          // // // console.log(`❌ Failed: ${fullPath}`),
+          // // // console.log(`   Reason: ${result.reason}`)
+      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {;
+        results.total++,;
+        // // // console.log(`\n🔍 Checking: ${fullPath}`),;
+        const result = restorePage(fullPath);
+        if (result.restored) {;
+          results.restored++,;
+          // // // console.log(`✅ Restored: ${fullPath}`),;
+          // // // console.log(`   Used backup: ${result.backupUsed}`),;
+          // // // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
+        } else {;
+          results.failed++,;
+          // // // console.log(`❌ Failed: ${fullPath}`),;
+          // // // console.log(`   Reason: ${result.reason}`);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           results.failed++,
 
@@ -181,6 +204,8 @@ const path = require($2);
   return results;
 
 
+<<<<<<< HEAD
+=======
 
 
 }
@@ -188,6 +213,8 @@ const path = require($2);
 if ({
   restoreAllCorruptedPages()
 }
+<<<<<<< HEAD
+=======
 
 
 
@@ -250,6 +277,16 @@ if ( {) {$2;
 }
 
 
+<<<<<<< HEAD
+module.exports = {
+
+  restorePage
+  restoreAllCorruptedPages
+  findBestBackup
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 module.exports = {;
   restorePage,;

@@ -1,4 +1,32 @@
 
+<<<<<<< HEAD
+import dynamic from 'next/dynamic',
+import dynamic from 'next/dynamic';
+import React, { useEffect, useState } from 'react';
+import { useWallet } from '../../hooks/useWallet';
+
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
+export default function TokenIntegrationsPage() {;
+
+import {
+  fetchDepinActivities
+  calculateRewards
+  DepinReward;
+  fetchDepinActivities,
+  calculateRewards,;
+  DepinReward,;
+} from '../../utils/depins';
+import { CHAINS } from '../../utils/chains';
+const ClientOnlyBridge = dynamic(;
+  () => import('../../components/ui/BridgeForm'),;
+  { ssr: false }
+);import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
+import { CHAINS } from '../../utils/chains';
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false })
+export default function TokenIntegrationsPage() {
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
+export default function TokenIntegrationsPage() {;
+=======
 
 import dynamic from 'next/dynamic','
 import React, { useEffect, useState } from 'react';'
@@ -67,6 +95,15 @@ export default function TokenIntegrationsPage() {
   const [suggestion, setSuggestion] = useState<any>(null);
   const [rewards, setRewards] = useState<DepinReward[] | null>(null);
   const [depinsSyncing, setDepinsSyncing] = useState(false);
+<<<<<<< HEAD
+      await connect();
+      return
+
+  async function syncDepin() {
+    if (!account) {
+      await connect();
+      return;    }      return
+=======
 
   async function syncDepin() {
     if (!account) {
@@ -125,6 +162,8 @@ body: JSON.stringify({ region, stakeUsd: stake }),
 origin/cursor/automate-test-improve-and-merge-code-2533
     const data = await res.json();
     setSuggestion(data);
+<<<<<<< HEAD
+=======
 
   }
 

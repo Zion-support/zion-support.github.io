@@ -2,6 +2,15 @@
 
 
 
+<<<<<<< HEAD
+import React from 'react';
+import { FileText  } from 'lucide-react';
+import { ResumeOption  } from '../resume-selector/types';
+import { ResumePreviewCard  } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
+interface SelectResumeSectionProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
@@ -24,6 +33,8 @@ import React from 'react';
   handleResumeSelect;
 <<<<<<< HEAD
   handleDownloadResume;
+<<<<<<< HEAD
+=======
 
 import React from 'react',;
 import { FileText } from 'lucide-react',;

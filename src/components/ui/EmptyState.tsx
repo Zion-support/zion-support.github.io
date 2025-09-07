@@ -14,7 +14,6 @@ export function EmptyState({
   onRetry;
   showRetry = false;
   icon
-}: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
       <div className="mb-4 text-gray-400">

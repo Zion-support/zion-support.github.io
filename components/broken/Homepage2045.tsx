@@ -337,6 +337,116 @@ const LoadingFallback = () =>: any (
   const stagger_container = {
     animate: {
       transition: {
+<<<<<<< HEAD
+        stagger_children: 0.1,
+        delay_children: 0.2,
+      },
+    },  }        delay_children: 0.2;
+      }
+    }
+  }
+;
+  const background_variants = {
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1 },
+    transition: { duration: 1.2, ease: 'ease_out' },  }
+;
+  const getColorClasses = (index: number) =>: any {
+    const colors = [    transition: { duration: 1.2, ease: "ease_out" }
+  }
+;
+  const getColorClasses = (index: number) =>: any {
+    const colors = [;
+      'from - cyan - 400 to - blue - 500',
+      'from - purple - 400 to - pink - 500',
+      'from - emerald - 400 to - teal - 500',
+      'from - orange - 400 to - red - 500',
+      'from - indigo - 400 to - purple - 500',
+      'from - yellow - 400 to - orange - 500',
+    ];
+    return colors[index % colors.length];  }
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className='min - h-screen bg - black flex items - center justify - center'>;
+        <div className='text - center'>;
+          <div className='animate - spin rounded - full h - 32 w - 32 border - b-2 border - cyan - 400 mx - auto mb - 4'></div>;
+          <p className='text - cyan - 400 text - xl'>Loading Zion Tech Group...</p>        </div>      'from - cyan - 400 to - blue - 500from - purple - 400 to - pink - 500from - emerald - 400 to - teal - 500from - orange - 400 to - red - 500from - indigo - 400 to - purple - 500from - yellow - 400 to - orange - 500';
+    ];
+    return colors[index % colors.length];
+  }
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className='min - h-screen bg - black flex items - center justify - center'>;
+        <div className='text - center'>;
+          <div className='animate - spin rounded - full h - 32 w - 32 border - b-2 border - cyan - 400 mx - auto mb - 4'></div>;
+          <p className='text - cyan - 400 text - xl'>Loading Zion Tech Group...</p>      <div className="min - h-screen bg - black flex items - center justify - center">;
+        <div className="text - center">;
+          <div className="animate - spin rounded - full h - 32 w - 32 border - b-2 border - cyan - 400 mx - auto mb - 4"></div>;
+          <p className="text - cyan - 400 text - xl">Loading Zion Tech Group...</p>;
+      </div>);
+  }
+  return (
+    <Layout>;
+      <div className='min - h-screen bg - black text - white relative overflow - x-hidden'>;
+        {/* Hero Section */}
+        <section;
+          id='hero';
+          className='relative min - h-screen flex items - center justify - center overflow - hidden';
+        >;
+          {/* Animated Background Elements */}
+          <div className='absolute inset - 0 pointer - events - none'>;
+            <motion.div;
+              className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg';
+              animate={{
+                rotate: [0, 360];
+                scale: [1, 1.1, 1];
+
+      return () => observer.disconnect()
+    }
+  }, []),
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
+
+  const _staggerContainer = {_animate: {
+      transition: {
+        staggerChildren: 0.1, _delayChildren: 0.2}
+    }
+  },
+            />
+            <motion.div
+              className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
+              animate={{
+                rotate: [45, 405]
+                scale: [1, 1.15, 1]
+                opacity: [0.3, 0.5, 0.3]
+              }}
+              transition={{
+                duration: 10
+                repeat: Infinity
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },  };
+
+  };
+
+  const backgroundVariants = {
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1 },
+              }}
+              transition={{
+=======
 
   return (
     <Layout>
@@ -622,13 +732,23 @@ const backgroundVariants = {"initial": { "opacity": 0, "scale": 0.8,;
               initial={{ opacity: 0, y: 30}}
               animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+              className='mb-8'              className="mb-8"
+=======
               className="mb-8"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <motion.h1
                 initial={{ opacity: 0, y: 20}}
                 animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
+                className='text-5xl md:text-7xl font-bold mb-6'
+              >
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>                  Future of Technology                className="text-5xl md:text-7xl font-bold mb-6"
+=======
                 className="text-5xl md:text-7xl font-bold mb-6"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 className="text-5xl md:text-7xl font-bold mb-6"
@@ -905,6 +1025,9 @@ standards in technology innovation.
               </p>;
             </motion.div>;
               viewport={{ once: true }}
+<<<<<<< HEAD
+              className='text-center mb-16'
+=======
 
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
@@ -1301,6 +1424,18 @@ href='tel:+1 302 464 0950';
 };export default Homepage2045;
 
 export default Homepage2045;
+<<<<<<< HEAD
+  once: true 
+
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+  once: true 
+
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+};export default Homepage2045;export default Homepage2045;
+};export default Homepage2045;
+
+export default Homepage2045;
+=======
 
   once: true
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)

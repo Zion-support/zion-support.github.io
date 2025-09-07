@@ -194,6 +194,8 @@ const path = require('path')
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 <<<<<<< HEAD
       console.error('Fatal "error")

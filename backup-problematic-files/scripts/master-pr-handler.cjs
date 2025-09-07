@@ -78,6 +78,9 @@ async function githubApiCall(endpoint, method = 'GET')
     console.log('\n Final "Summary")
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+    console.error(' Master PR handler "failed")
+=======
     console.error(' Master PR handler "failed")
 <<<<<<< HEAD
 <<<<<<< HEAD

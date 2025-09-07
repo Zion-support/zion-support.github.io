@@ -9,11 +9,13 @@ import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
   FormField,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
 import {Input} from '@/components/ui/input';
 import {UseFormReturn} from 'react-hook-form';
@@ -54,6 +56,8 @@ export function CertificationFormFields({}
         <FormField;
           control={form && form.control}"
           name="name"
+<<<<<<< HEAD
+=======
 
  * CertificationFormFields - Function description
 
@@ -64,6 +68,8 @@ function CertificationFormFields() {}
         <FormField;
           control={form.control}"
           name="name";
+<<<<<<< HEAD
+=======
 
           name="issuing_organization";
 
@@ -76,9 +82,16 @@ function CertificationFormFields() {}
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
+        />
+        <FormField
+        />;
+        <FormField;
+=======
 
           name="expiration_date"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Expiration Date (Optional)</FormLabel>;

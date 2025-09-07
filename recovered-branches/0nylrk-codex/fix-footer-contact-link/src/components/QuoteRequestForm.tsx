@@ -2,6 +2,8 @@ const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
+=======
 
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
@@ -27,11 +29,57 @@ const navigate = useNavigate();
 
   }),
 
+<<<<<<< HEAD
+  });
+  }),
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev
       ...data
     }))
+<<<<<<< HEAD
+  }
+  },
+  
+  const handleNext = () => {
+    switch (currentStep) {
+      case "service": setCurrentStep("details"),
+        break,
+      case "details":
+        setCurrentStep("timeline"),
+        break,
+      case "timeline":
+        setCurrentStep("budget"),
+        break,
+      case "budget":
+        setCurrentStep("summary"),
+        break,
+      default:
+        break
+    }
+  }
+  },
+  
+  const handleBack = () => {
+    switch (currentStep) {
+      case "details": setCurrentStep("service"),
+        break,
+      case "timeline":
+        setCurrentStep("details"),
+        break,
+      case "budget":
+        setCurrentStep("timeline"),
+        break,
+      case "summary":
+        setCurrentStep("budget"),
+        break,
+      default:
+        break
+    }
+=======
 
   const handleNext = () => {
     switch (currentStep) {
@@ -83,14 +131,12 @@ const navigate = useNavigate();
       company: "";
     }
   });
-
   const updateFormData = (data: Partial<QuoteFormData>) => {;
     setFormData(prev => ({;
       ...prev,;
       ...data;
     }));
   };
-
   const handleNext = () => {;
     switch (currentStep) {;
 
@@ -130,6 +176,16 @@ const navigate = useNavigate();
       default:;
         break;
     }
+<<<<<<< HEAD
+  }
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    try {
+      // In a real application, you would send the data to your backend
+      console.log("Submitting form data:", formData);
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500));
+=======
 
   }
 
@@ -160,6 +216,7 @@ console.log("Submitting form "data":", formData);"
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500)),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Quote Request Submitted"
 
@@ -216,6 +273,8 @@ console.log("Submitting form "data":", formData);"
         return <SummaryStep formData={formData} updateFormData={updateFormData} />;
       default: return null;
     }
+<<<<<<< HEAD
+=======
 
   },
 
@@ -262,6 +321,7 @@ console.log("Submitting form "data":", formData);"
       default: return null;
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">
@@ -380,6 +440,16 @@ export function QuoteRequestForm() { return null; }
             <span className="text-sm text-white">AI-powered matching</span>;
           </div>;
         </div>;
+<<<<<<< HEAD
+        <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">;
+          <CardContent className="px-6 py-8">;
+            <StepProgress currentStep={currentStep} />;
+            <div className="mt-8">;
+              {renderStepContent()}
+            </div>;
+            <div className="flex justify-between mt-8">;
+              {currentStep !== "service" && (;
+=======
 
         <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">;
 
@@ -420,7 +490,6 @@ export function QuoteRequestForm() { return null; }
                   Continue;
                 </Button>;
               ) : (;
-
                 <Button
 
                   onClick={handleSubmit}

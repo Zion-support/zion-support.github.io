@@ -4,7 +4,6 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';'
 
 const CAPABILITIES = null;
 ];
-
 export default function CapabilitiesPage() {;
   return (
 

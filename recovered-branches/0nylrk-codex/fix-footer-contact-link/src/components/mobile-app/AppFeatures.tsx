@@ -10,6 +10,7 @@ const features = [
     icon: <Brain className="h-10 w-10 text-zion-cyan" />
     title: "AI Talent Matching"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />
     title: "1-Click Hiring"
@@ -19,6 +20,10 @@ const features = [
     icon: <Award className="h-10 w-10 text-zion-cyan" />
     title: "Resume Builder"
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
+<<<<<<< HEAD
+  }
+  },
+=======
 
   },
 
@@ -56,6 +61,7 @@ import { Brain, Clock, Award, Zap } from "lucide-react",;
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const features = [;
   {;"
     icon: <Brain className="h-10 w-10 text-zion-cyan" />,;"
@@ -67,7 +73,11 @@ const features = [;
     icon: <Clock className="h-10 w-10 text-zion-cyan" />,;
     title: "1-Click Hiring",
     description: "Streamlined hiring process that lets you connect with talent instantly with just one click.";
+<<<<<<< HEAD
+  },;
+=======
   };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {;
     icon: <Award className="h-10 w-10 text-zion-cyan" />,;
 
@@ -83,6 +93,18 @@ const features = [;
             Everything you love about Zion, now in your pocket. Our mobile app brings all the powerful features you need to succeed.;
           </p>;
         </div>;
+<<<<<<< HEAD
+        ;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
+          {features.map((feature, index) => (;
+            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover:border-zion-cyan transition-colors duration-300">;
+              <CardHeader>;
+                <div className="mb-4">{feature.icon}</div>;
+                <CardTitle className="text-white">{feature.title}</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <CardDescription className="text-gray-300">{feature.description}</CardDescription>;
+=======
 
               </CardContent>;
             </Card>;

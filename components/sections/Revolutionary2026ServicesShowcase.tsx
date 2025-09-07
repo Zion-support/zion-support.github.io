@@ -1,3 +1,37 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import {;
+  ArrowRight,;
+  Star,;
+  TrendingUp,;
+  Zap,;
+  Brain,;
+  Rocket,;
+  Globe,;
+  Sparkles,;
+} from 'lucide-react';import Link from 'next/link';
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
+import Link from 'next/link';
+import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
+import Link from 'next/link';
+import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+export default function Revolutionary2026ServicesShowcase() {
+  // Get featured services from each category
+  const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
+  const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
+  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3);
+  const containerVariants = {
+    hidden: { opacity: 0 }
+import React from 'react';
+
+import { motion } from 'framer-motion';
+import {
+=======
 
 
 import React from 'react';'
@@ -304,6 +338,8 @@ technologies ever created.
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
 
+<<<<<<< HEAD
+=======
 
                   <Link;
                     href={service.link} 
@@ -383,6 +419,10 @@ className='group relative';
                       <span className='text - yellow - 400 text - sm'>;'
 
                         {service.rating}
+<<<<<<< HEAD
+                  <div className="flex items-center justify-between mb-4">
+                    <div>
+=======
 
                       </span>
                       <span className='text-gray-400 text-sm'>'
@@ -399,6 +439,9 @@ href={service.link}
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
+          <div className='text-center mt-8'>
+=======
 
 
 <div className='text-center mt-8'>'
@@ -785,6 +828,7 @@ className='group relative';
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Link 
                     href={service.link} 
                     className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
@@ -869,12 +913,18 @@ href={service.link}
             )
 }
           </div>
+<<<<<<< HEAD
+=======
 
 <div className='text-center mt-8' />
             <Link;
 href='/services?category=metaverse'
               className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30' />;
               View All Metaverse Services{' '}
+<<<<<<< HEAD
+          <div className="text-center mt-8">
+            <Link 
+=======
 
 <div className='text-center mt-8'>'
             <Link,
@@ -886,6 +936,8 @@ href='/services?category=metaverse''
             </Link>
           </div>
         </motion.div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         {/* Call to Action Section */}
         <motion&& motion.div;

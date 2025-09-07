@@ -65,6 +65,9 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
 
           Interview requested by {interview.client_name || 'Client'}
         </p>
+<<<<<<< HEAD
+        
+=======
 
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
@@ -74,6 +77,8 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           <div className="flex items-center gap-3">
 
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>
+<<<<<<< HEAD
+=======
 
             <div>{formattedTime} - {formattedEndTime}</div>
           </div>"
@@ -100,7 +105,12 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
+  );
+}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -127,12 +137,16 @@ interface InterviewResponseFormProps {;
           Cancel;
         </Button>;
         <Button onClick={onConfirm} disabled={isLoading}>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {isLoading ? "Confirming..." : "Confirm Interview"}
         </Button>;
       </div>;
     </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   on_confirm: () => Promise < void>;
   );}
 interface InterviewResponseFormProps {

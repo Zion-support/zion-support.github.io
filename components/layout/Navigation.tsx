@@ -1,3 +1,57 @@
+<<<<<<< HEAD
+import {;
+  Menu,;
+  X,;
+  Home,;
+  Brain,;
+  Cpu,;
+  Rocket,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Globe,;
+  ChevronDown,;
+} from 'lucide-react';
+import Link from 'next/link';import { ;
+  Menu, X, Home, Brain, Cpu, Rocket, ;
+  Phone, Mail, MapPin, Globe, ChevronDown;
+} from 'lucide-react';
+import Link from 'next/link';
+import { 
+  Menu, X, Home, Brain, Cpu, Rocket, 
+  Phone, Mail, MapPin, Globe, ChevronDown
+} from 'lucide-react';
+import Link from 'next/link';
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+      setIsScrolled(window.scrollY > 50)
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []);
+  const navigationItems = [
+    {
+      name: 'Home',
+      href: '/',
+      icon: Home
+};
+    {
+      name: 'Services'
+      href: '/services'
+      icon: Rocket
+      dropdown: [
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Revolutionary AI solutions' },
+        { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions' },
+        { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket, description: 'Specialized software solutions' },
+        { name: 'Innovative Showcase', href: '/innovative-services-showcase', icon: Globe, description: 'Cutting-edge technology' }
+      ]
+    }
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
 
 
 import React, { useState, useEffect } from 'react';'
@@ -170,6 +224,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
+                      className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300'
+                    >
+                      <span className='font-medium'>{item.name}</span>
+                      <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />
+                      className="flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300"
+                    >
+                      <span className="font-medium">{item.name}</span>
+                      <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+
+                      {/* Dropdown Menu */}
+
+                      {/* Dropdown Menu */}
+=======
 
 className='flex items-center space-x-1 cursor-pointer text-gray-300 "hover":text-white transition-colors duration-300''
                     >
@@ -372,6 +440,7 @@ href='/contact''
               </motion.a>
             </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Mobile Menu Button */}
 
 <div className='"lg":hidden'>'

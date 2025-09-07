@@ -130,6 +130,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       "import { motion } from 'framer-motion,"}),"})
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+      /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"})
+  '"];?\s*/g,,"}),"})
+      "import { motion } from 'framer-motion,"}),"})
+      /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"});
+  '"];?\s*/g,,"}),"})
+      "import { motion } from 'framer-motion,"}),"});
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
   ';\n","}),"})
 
     ),"}),"})
@@ -268,6 +275,9 @@ class ImportOptimizer {;
       const optimizedImport = `import { ${Array.from(allIcons).join(`
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+      const optimizedImport = `import { ${Array.from(allIcons).join(`
+      const optimizedImport = `import { ${Array.from(allIcons).join(`;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
   ', ')} } from';lucide-react';\n";"
       return content.replace(lucidePattern, '';).replace(/^/, optimizedImport)    }
 

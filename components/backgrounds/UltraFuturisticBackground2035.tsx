@@ -10,6 +10,8 @@ const canvasRef = null;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
     if (ctx) {
+<<<<<<< HEAD
+=======
 
 }
 
@@ -115,6 +117,8 @@ const distance = Math.sqrt(dx * dx + dy * dy);
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(otherParticle.x, otherParticle.y);
                 ctx.strokeStyle = particle.color;
+<<<<<<< HEAD
+=======
 
 ;
   const canvasRef = useRef<HTMLCanvasElement>(null)useEffect(() => {const canvas = canvasRef.current;
@@ -318,6 +322,8 @@ className='absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transfor
           animate={{;
             scale: [1, 1 && 1.4, 1];
             y: [0, -20, 0];
+<<<<<<< HEAD
+=======
 
             }
 
@@ -409,6 +415,12 @@ className='absolute w-1 h-1 bg-purple-400 rounded-full''
           />;
         ))}
         {/* Energy Waves */}
+        <motion.div;
+          className='absolute top - 1/2 left - 0 w - full h - px bg - gradient - to - r from - transparent via - purple - 500 / 50 to - transparent';
+          animate={{
+            scale_x: [0, 1, 0],
+=======
+        {/* Energy Waves */}
 
         <motion.div,
 className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent''
@@ -466,6 +478,27 @@ className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent
         />;
 
 
+<<<<<<< HEAD
+            duration: 4
+            repeat: Infinity
+            delay: 2
+            ease: 'easeInOut',          }}            ease: "easeInOut"
+          }}
+        />
+            duration: 4,
+            repeat: Infinity,
+            delay: 2,
+            ease: 'easeInOut',          }}            ease: "easeInOut"
+          }}
+        />
+            ease: 'easeInOut',          }}
+
+          }}
+
+        />
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (;
           <motion&& motion.div
@@ -487,6 +520,10 @@ className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded
               "opacity": [0, 0.8, 0],
               "rotate": [0, 360]
             }}
+              duration: 5 + Math.random() * 3
+              repeat: Infinity
+              delay: Math.random() * 5
+
             transition={{
               }
               "duration": 5 + Math.random() * 3,

@@ -86,6 +86,7 @@ export function IntegrationCard({};
             <span>Connect</span>"
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 
 import { ArrowRight, Check, ExternalLink } from "lucide-react",;

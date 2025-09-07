@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 import React, { useEffect, useRef, useState } from 'react';'
@@ -5,7 +7,6 @@ import { motion } from 'framer-motion';'
 
 const "UltraFuturisticBackground2047": React.FC;
   }, []);
-
   if (!isClient) {;
 }
 return (;
@@ -140,6 +141,7 @@ className='absolute top-0 left-0 w-full h-full opacity-20';'
           className="absolute top-1/3 right-1/4 w-20 h-20 opacity-15"
           animate={{
             y: [0, 40, 0]
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             x: [0, -30, 0]}}
           transition={{
             duration: 12
@@ -194,6 +196,7 @@ key={i}
 
         {/* Neon Glow Effects */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl" />
 
 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>'
@@ -202,10 +205,14 @@ key={i}
         <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>'
           <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />'
         </div>
-
         <div className="absolute top-1/4 right-1/4 w-64 h-64 opacity-5">
           <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl" />
         </div>
+<<<<<<< HEAD
+        <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>;
+          <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />        </div>;
+        {/* Scanning Lines */}
+=======
 
         >;
           <div className='flex space-x-8 justify-center'>;

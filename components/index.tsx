@@ -189,7 +189,6 @@ export default function HomePage() {
           />
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -224,10 +223,32 @@ export default function HomePage() {
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
+                className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+
+              >
+                <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+                <div className='relative z-10'>
+                  <div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 flex items-center justify-center`}
+                  >
+                    <service.icon className='w-8 h-8 text-white' />
+                  </div>
+                  <h3 className='text-xl font-bold mb-4 text-white'>
+                    {service.title}
+                  </h3>
+                  <p className='text-white/70 leading-relaxed'>
+                    {service.description}
+                  </p>
+                  <div className='mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300'>
+                    <span className='text-sm font-medium'>Learn More</span>
+                    <ChevronRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300' />                  </div>                  <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
                   <p className="text-white/70 leading-relaxed">{service.description}</p>
                   <div className="mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
                     <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   </div>
                 </div>
               </motion.div>
@@ -249,6 +270,25 @@ export default function HomePage() {
                 viewport={{ once: true}}
                 className="text-center"
               >
+=======
+                className='text-center'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              >
+                <div className='w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center'>
+                  <stat.icon className='w-8 h-8 text-white' />
+                </div>
+                <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
+                  {stat.number}
+                </div>
+                <div className='text-white/70'>{stat.label}</div>              </motion.div>              >
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
@@ -267,6 +307,8 @@ export default function HomePage() {
 
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />
+<<<<<<< HEAD
+=======
 
       {/* Latest Updates Section */}
       <section className="py-20 px-6">
@@ -315,8 +357,12 @@ export default function HomePage() {
         </div>
       </section>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Contact Form Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+      {/* Contact Form Section */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30}}

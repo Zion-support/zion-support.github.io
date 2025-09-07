@@ -10,6 +10,12 @@ interface TalentCardBadgesProps {
         <span>Featured</span>
       </Badge>
     </div>
+<<<<<<< HEAD
+  );
+}
+  )
+  )
+=======
 
 }
 <<<<<<< HEAD
@@ -24,6 +30,9 @@ interface TalentCardBadgesProps {;
   featured: boolean | undefined;
 
 }
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Award } from "lucide-react",;
 
 }
 

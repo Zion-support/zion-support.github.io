@@ -25,7 +25,6 @@ export interface StepProps {
   label: string
 
 export interface NavigationButtonsProps {;
-
   onBack?: () => void;
   onNext?: () => void;
   isNextDisabled?: boolean;
@@ -49,6 +48,17 @@ export interface NavigationButtonsProps {;
   backLabel?: string,;
   nextLabel?: string,;
   isLoading?: boolean;
+<<<<<<< HEAD
+}
+export interface ResumeProgressProps {
+  resume: Resume | null;
+  progress: number
+}
+export interface CreateResumeFormProps {
+  onCreateResume: (title: string) => Promise<void>;
+  onCancel: () => void;
+  isLoading: boolean
+=======
 
 }
 export interface ResumeProgressProps {

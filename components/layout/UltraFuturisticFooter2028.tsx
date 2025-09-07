@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+import { 
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
+  Shield, Users, Briefcase, BookOpen, MessageCircle, 
+  Star, TrendingUp, Target, Layers, Cpu, Database, 
+  Cloud, Lock, ShieldCheck, Heart, Leaf, Car, 
+  GraduationCap, Scale, Building, Factory, Camera;
+  Video, Music, Gamepad2, Sun, Moon, Wind, Droplets;
+  Code
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+const serviceCategories = [
+  {
+    title: '🚀 2028 Futuristic Innovations',
+    services: [
+      { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform' },
+      { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall' },
+      { name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network' },
+      { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform' }
+    ]
+  };
+  {
+    title: '🏙️ Smart City & Infrastructure',
+    services: [
+      { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management' },
+      { name: 'IoT Energy Management System', href: '/iot-energy-management-system' },
+      { name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform' },
+      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai' }
+    ]
+  };
+import Link from 'next / link';
+import {
+=======
 
 
 import React from 'react';'
@@ -117,6 +157,13 @@ const serviceCategories = $2;
     ]
   }
 ];
+<<<<<<< HEAD
+;
+const company_links = [;
+
+;
+const company_links = [;
+=======
 
 const companyLinks = [;
   { "name": 'About Us', "href": '/about', "icon": Users,'
@@ -300,6 +347,11 @@ href={contactInfo.website}
                   <li key={link.name}>
                     <Link
                       href={link.href}
+                      className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2'
+                    >
+                      <link.icon className='w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>
+                    <Link
+                      href={link.href}
                       className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2"
                     >
                       <link.icon className="w-4 h-4" />
@@ -340,6 +392,7 @@ href={contactInfo.website}
               </ul>
             </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Newsletter Signup */}
             <div className='bg-purple-900/20 border border-purple-500/30 rounded-lg p-4'>;'
               <h4 className='font-medium text-white mb-3'>Stay Updated</h4>;'

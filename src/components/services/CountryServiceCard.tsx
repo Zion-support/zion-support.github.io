@@ -113,7 +113,6 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           onClick={() => onQuote?.(country)}
         >
           Get Quote
-        </Button>
         <Button
           asChild
           variant="ghost"

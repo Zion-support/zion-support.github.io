@@ -17,6 +17,9 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
+<<<<<<< HEAD
+
+=======
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -57,6 +60,7 @@ serve(async (req) => {
       // 2. Then use that job ID to check status with OpenAI
       // Mock response for demonstration (in real code, fetch from DB)
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // If 404, the job doesn't exist or is deleted
       if (response && response.status === 404) {
         return new Response(
@@ -196,7 +200,15 @@ if ( {) {
     }
     const data = await response.json ();
 ;
-
+    // Map OpenAI status to our internal status names;
+    let status;
+    let error = null;
+;
+    switch (data.status) {
+      case "succeeded": status = "succeeded";
+        break;
+      case "failed":;
+        status = "failed";
         error = data && data.error?.message || "Unknown error occurred during training";
 
     // Map OpenAI status to our internal status names;
@@ -259,6 +271,7 @@ if ( {) {}
         break,"
       case "failed":
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "cancelled":
         status = "failed",
 
@@ -320,6 +333,13 @@ if ( {) {}
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
+<<<<<<< HEAD
+  }
+});
+    console.error ("Error in check - training - status function:", error);
+
+
+=======
 
 "
     console.error ("Error in check - training - status function:", error);

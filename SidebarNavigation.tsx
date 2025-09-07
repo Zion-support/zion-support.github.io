@@ -10,6 +10,12 @@ const SidebarNavigation: React.FC = () => {
     { name: 'Profile', href: '/profile', icon: User },
     { name: 'Settings', href: '/settings', icon: Settings }
   ];
+<<<<<<< HEAD
+;
+  return (
+    <div className="flex h - screen bg - gray - 100">;
+      {/* Sidebar */}
+=======
 
   return (
     <div className="flex h-screen bg-gray-100">

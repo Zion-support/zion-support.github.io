@@ -180,7 +180,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
           {t('jobs.post_job_description')}
         </p>
       </div>
-      
       <div className="space-y-4">
         <div className="space-y-2">
           <div className="flex justify-between items-center">
@@ -203,7 +202,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               {t('translation.auto_translate')}
             </Button>
           </div>
-          
           <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
             <TabsList className="w-full">
               {supportedLanguages.map((lang) => (
@@ -212,7 +210,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
                 </TabsTrigger>
               ))}
             </TabsList>
-            
             {supportedLanguages.map((lang) => (
               <TabsContent key={lang.code} value={lang.code} className="mt-2">
                 <div className="space-y-1">
@@ -228,7 +225,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
             ))}
           </Tabs>
         </div>
-        
         <div className="space-y-2">
           <div className="flex justify-between items-center">
             <label htmlFor="description" className="text-lg font-medium">
@@ -250,7 +246,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               {t('translation.auto_translate')}
             </Button>
           </div>
-          
           <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
             <TabsList className="w-full">
               {supportedLanguages.map((lang) => (
@@ -259,7 +254,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
                 </TabsTrigger>
               ))}
             </TabsList>
-            
             {supportedLanguages.map((lang) => (
               <TabsContent key={lang.code} value={lang.code} className="mt-2">
                 <Textarea
@@ -273,7 +267,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
             ))}
           </Tabs>
         </div>
-        
         <div className="space-y-2">
           <div className="flex justify-between items-center">
             <label htmlFor="requirements" className="text-lg font-medium">
@@ -295,7 +288,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               {t('translation.auto_translate')}
             </Button>
           </div>
-          
           <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
             <TabsList className="w-full">
               {supportedLanguages.map((lang) => (
@@ -304,7 +296,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
                 </TabsTrigger>
               ))}
             </TabsList>
-            
             {supportedLanguages.map((lang) => (
               <TabsContent key={lang.code} value={lang.code} className="mt-2">
                 <Textarea
@@ -318,7 +309,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
             ))}
           </Tabs>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1">
             <label htmlFor="budget" className="text-lg font-medium">
@@ -346,7 +336,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
           </div>
         </div>
       </div>
-      
       <div className="pt-4">
         <Button
           type="submit"

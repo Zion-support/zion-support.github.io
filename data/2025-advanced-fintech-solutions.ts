@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 import { ServiceVariant  } from '../types / service - variants';'

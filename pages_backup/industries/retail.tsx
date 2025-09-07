@@ -4,6 +4,8 @@ import React from 'react;
 import Link from next/link';';
 import { motion } from framer-motion;
 
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from next/link;';
 import { motion } from 'framer-motion;
@@ -52,6 +54,7 @@ const services = [;
     title: 'E-commerce Platforms,',
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Layout from '../../components/Layout';
 import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database } from 'lucide-react';
 import React from 'react';
@@ -74,6 +77,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Inventory Management AI,',
+    description: 'AI-powered inventory optimization and demand forecasting systems.,',
+    icon: Brain,
+    features: [;
+      'Demand forecasting,',
+      'Stock optimization',',
+      'Automated reordering',',
+=======
 
     title: 'Inventory Management AI,,
     description: AI-powered inventory optimization and demand forecasting systems.,',
@@ -89,6 +101,15 @@ const services = [
   }];
   },
   {}
+<<<<<<< HEAD
+    title: 'Customer Analytics,',
+    description: 'Advanced analytics to understand customer behavior and preferences.,',
+    icon: BarChart3,
+    features: [;
+      'Customer segmentation,',
+      'Purchase pattern analysis',',
+      'Personalization engines',',
+=======
 
     title: 'Customer Analytics,',
     description: Advanced analytics to understand customer behavior and preferences.,,
@@ -102,6 +123,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Personalized Recommendations,',
+    description: 'AI-driven product recommendation systems for enhanced customer experience.,',
+    icon: Users,
+    features: [;
+      'Machine learning algorithms,',
+      'Real-time recommendations',',
+      'Cross-selling optimization',',
+=======
 
     title: Personalized Recommendations,',
     description: 'AI-driven product recommendation systems for enhanced customer experience.,,
@@ -117,6 +147,15 @@ const services = [
   }];
   },
   {}
+<<<<<<< HEAD
+    title: 'Supply Chain Optimization,',
+    description: 'End-to-end supply chain management with AI optimization.,',
+    icon: Package,
+    features: [;
+      'Supplier management,',
+      'Logistics optimization',',
+      'Demand planning',',
+=======
 
     title: Supply Chain Optimization,,
     description: 'End-to-end supply chain management with AI optimization.,',
@@ -130,6 +169,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Omnichannel Solutions,',
+    description: 'Seamless integration across all sales channels and touchpoints.,',
+    icon: Smartphone,
+    features: [;
+      'Unified customer experience,',
+      'Cross-channel inventory',',
+      'Mobile commerce',',
+=======
 
     description: 'Seamless integration across all sales channels and touchpoints.,,
     icon: Smartphone,
@@ -450,18 +498,35 @@ export default function RetailPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Transform Retail?;
+=======
 
               </h2>;
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">";
                 Let our retail technology experts help you implement solutions that drive sales;
                 and enhance customer experience.;
               </p>;
+<<<<<<< HEAD
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+                  Start Your Retail Project;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">";
+                  Learn About Our Expertise;
+=======
 
             >
 <<<<<<< HEAD
               <h2 className=text-4xl md:text-5xl font-bold mb-6">
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Link>;
               </div>;
             </motion.div>;

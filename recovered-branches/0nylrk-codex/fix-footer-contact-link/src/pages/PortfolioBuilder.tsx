@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs'
 import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -15,6 +16,8 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
 import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+<<<<<<< HEAD
+=======
 
 import { useState } from 'react',
 import { AppHeader } from '@/layout/AppHeader',
@@ -83,6 +86,17 @@ import {}
   );
 }
 
+<<<<<<< HEAD
+import { useState } from 'react',;
+import { AppHeader } from '@/layout/AppHeader',;
+import { Footer } from '@/components/Footer',;
+import { SEO } from '@/components/SEO',;
+import { ProtectedRoute } from '@/components/ProtectedRoute',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',;
+import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',;
+;
+=======
 import {useState} from 'react';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -91,6 +105,7 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
 import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function PortfolioBuilderContent() {;
   const [activeTab, setActiveTab] = useState('resume');
 

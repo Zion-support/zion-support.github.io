@@ -395,10 +395,20 @@ const DashboardRoutes = () => {;
             <ProjectDetails />;
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
+      />
+      <Route
+        path="/project/:id/room"
+        element={
+          <ProtectedRoute>
+            <ProjectRoom />
+          </ProtectedRoute>
+=======
       />;
           <ProtectedRoute>;
             <ProjectRoom />;
           </ProtectedRoute>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
       />;
 
@@ -433,6 +443,7 @@ const DashboardRoutes = () => {;
       />;
       <Route;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         element={
           <ProtectedRoute>;
             <ContractBuilder />;

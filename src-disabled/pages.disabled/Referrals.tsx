@@ -154,9 +154,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <TabsList className="w-full grid grid-cols-2">
               <TabsTrigger value="referrals" className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
-
-
-
                 Your Referrals
               </TabsTrigger>
               <TabsTrigger value="rewards" className="flex items-center gap-2">
@@ -168,7 +165,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ReferralTable referrals={referrals} isLoading={isLoading} />
             </TabsContent>
             <TabsContent value="rewards" className="p-0 mt-6">
-              <RewardsCard rewards={rewards} isLoading={isLoading} />
+            onShare={shareOnSocialMedia}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          />
+          <Tabs defaultValue="referrals" className="w-full">
+            <TabsList className="w-full grid grid-cols-2">
+              <TabsTrigger value="referrals" className="flex items-center gap-2">
+                <Users className="h-4 w-4" />
+                Your Referrals
+              </TabsTrigger>
+              <TabsTrigger value="rewards" className="flex items-center gap-2">
+                <Share className="h-4 w-4" />
+                Rewards
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="referrals" className="p-0 border rounded-md mt-6">
+              <ReferralTable referrals={referrals} isLoading={isLoading} />
+            </TabsContent>
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <TabsContent value="rewards" className="p-0 mt-6">
             </TabsContent>
           </Tabs>
         </div>
@@ -259,8 +282,8 @@ export default function ReferralsPage() {;
             onShare={shareOnSocialMedia}
           />;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
-
           <Tabs defaultValue="referrals" className="w-full">;
             <TabsList className="w-full grid grid-cols-2">;
               <TabsTrigger value="referrals" className="flex items-center gap-2">;
@@ -422,6 +445,7 @@ if ( {) {
           </Tabs>;
         </div>;
         <div className='space - y-6'>          <ReferralGuide />        <div className="space - y-6">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <ReferralGuide />;
           <ReferralLeaderboard />;
         </div>;

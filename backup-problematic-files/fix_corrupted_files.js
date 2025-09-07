@@ -7,11 +7,33 @@ function fixCorruptedFile(filePath) {
     // Fix common corruption patterns
     content = content
       // Fix import statements with extra commas
+<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
 
       .replace(
         /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g
         "import type { NextPage } from 'next'")
       .replace(
+      .replace(;
+        /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,
+        "import type { NextPage } from 'next'")
+      .replace(;
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      .replace(;
+        /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,
+        "import type { NextPage } from 'next'")
+      .replace(;
+<<<<<<< HEAD
+        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g
 
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g
@@ -187,13 +209,20 @@ function fixCorruptedFile() {
 // // // // // // // console && console.log("Fixing corrupted TypeScript files...");
 fixCorruptedFiles("./pages");
 fixCorruptedFiles("./components");
+<<<<<<< HEAD
+// // // // // // // console && console.log("Finished fixing corrupted files.");
+console && console.log("Finished fixing corrupted files.");
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Start fixing from the pages directory;
 // // // // // // // console.log ("Fixing corrupted TypeScript files...");
 fixCorruptedFiles ("./pages");
 fixCorruptedFiles ("./components");
 // // // // // // // console.log ("Finished fixing corrupted files.");
 console.log ("Finished fixing corrupted files.");
+<<<<<<< HEAD
+=======
 
 // // // // // // // console.log("Finished fixing corrupted files.");
 console.log("Finished fixing corrupted files.");

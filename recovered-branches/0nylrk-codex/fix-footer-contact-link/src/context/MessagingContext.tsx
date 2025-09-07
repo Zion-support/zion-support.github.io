@@ -32,6 +32,8 @@ const defaultContext: MessagingContextType = {
   fetchConversations: async () => {},
   loadMessages: async () => {}
 };
+<<<<<<< HEAD
+=======
 
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -324,6 +326,16 @@ if ( {) {}
     <MessagingContext.Provider value={context_value}>;
       {children}
     </MessagingContext.Provider>);
+),;
+;
+// Hook for using the messaging context;
+export function useMessaging():MessagingContextType {;
+  // Cast to avoid type errors when React type definitions are missing;
+  const context = useContext(MessagingContext) as MessagingContextType,;
+  if (context === undefined) {;
+    throw new Error('useMessaging must be used within a MessagingProvider'),;
+  }
+  return context,;
 }
 =======
 ;

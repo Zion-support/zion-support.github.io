@@ -210,8 +210,11 @@ const sortOptions = [
   value: 'price-high',}
 },
 ];
+export default function ComprehensiveServicesShowcase2025() {
 
 export default function ComprehensiveServicesShowcase2025() {;
+<<<<<<< HEAD
+=======
 
 export default function ComprehensiveServicesShowcase2025() {;
 
@@ -281,6 +284,7 @@ if (selectedPriceRange !== 'all') {
         switch (selectedPriceRange) {
 case 'under-50':
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             return price < 50;
           case '50-200':;
             return price >= 50 && price <= 200;
@@ -601,7 +605,10 @@ delay: i * 0.5}
             <p className=text-xl sm:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
               Discover our complete portfolio of {allServices.length}+ innovative micro SAAS, AI, IT, and emerging technology services
             </p>
+<<<<<<< HEAD
+=======
             
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12>
               {[
@@ -665,6 +672,8 @@ className='text-center'
                   <div className='text-sm text-cyan-300'    />{stat.label}</div>
                 </motion.div>
 
+<<<<<<< HEAD
+=======
 
               ))}
             </div>;
@@ -731,6 +740,8 @@ type='text'
                   <option key={range && range.value} value={range && range.value} className=bg-gray-900 text-white">;
                     {range && range.label}
                   </option>;
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -752,6 +763,8 @@ key={category.name}
                       : 'bg - white / 10 text - gray - 300 hover:bg - white / 20 hover:text - white';}
                   }`}>
 
+<<<<<<< HEAD
+=======
 
                   {category.icon}
 
@@ -787,6 +800,86 @@ key={category.name}
 
                       />
 >>>>>>> origin/chore/fix-lint-and-merge
+
+            <div className='flex flex - wrap items - center space - x-4'>;
+              {/* Price Range Filter */}
+              <select;
+                value={selectedPriceRange}
+              </select>;
+                  <span>{category.name}</span>
+                  <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>                    {category.count}                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
+                    {category.count}
+=======
+            <div className='flex flex - wrap items - center space - x-4'>;
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>                    {category.count}
+
+                    {category.count}
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  </span>
+                </button>
+              ))}
+            </div>
+<<<<<<< HEAD
+            {/* Price and Sort Controls */}
+            <div className='flex flex-wrap items-center space-x-4'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+            {/* Price and Sort Controls */}
+            <div className='flex flex-wrap items-center space-x-4'>
+
+<<<<<<< HEAD
+              {/* Price Range Filter */}
+              <select
+                value={selectedPriceRange}
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {/* Price Range Filter */}
+              <select;
+                value={selectedPriceRange}
+
+              </select>;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                onChange={e => setSelectedPriceRange(e.target.value)}
+                className='px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50'
+              >
+                {priceRanges.map(range => (
+                  <option
+                    key={range.value}
+                    value={range.value}
+                    className='bg-gray-900 text-white'
+<<<<<<< HEAD
+                  >                    {range.label}              {/* Price Range Filter */}
+              <select
+                value={selectedPriceRange}
+                onChange={(e) => setSelectedPriceRange(e.target.value)}
+                className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+              >
+                {priceRanges.map((range) => (
+                  <option key={range.value} value={range.value} className="bg-gray-900 text-white">
+                    {range.label}
+                  </option>
+                ))}
+              </select>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  >                    {range.label}
 
                     {range.label}
                   </option>;
@@ -865,6 +958,11 @@ onClick={() =    /> setViewMode('grid')}
                       ? 'bg-cyan-500 text-white'}
                       : 'text-gray-400 hover: text-white'}
                   }`}
+<<<<<<< HEAD
+                >
+                  <Grid3X3 className="w-4 h-4" />
+                </button>
+=======
 
                 >
 <Grid3X3 className='w-4 h-4'    />
@@ -877,6 +975,18 @@ onClick={() =    /> setViewMode('list')}
                       ? 'bg-cyan-500 text-white'}
                       : 'text-white'}
                   }`}
+<<<<<<< HEAD
+                >
+                  <List className='w-4 h-4' />                </button>                  <List className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Services Grid/List */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+=======
 
                 >
 <<<<<<< HEAD
@@ -1010,6 +1120,8 @@ className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium 
                   </div>;
                 </div>;
                 {/* Features Preview */}
+<<<<<<< HEAD
+=======
 
                     {service.features.slice(0, 3).map((feature, idx) => (<div;
                         }

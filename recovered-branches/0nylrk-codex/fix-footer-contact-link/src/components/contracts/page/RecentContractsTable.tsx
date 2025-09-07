@@ -1,6 +1,7 @@
 import { Button  } from '@/components / ui / button';
 interface Contract {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   title: string;
   client: string;

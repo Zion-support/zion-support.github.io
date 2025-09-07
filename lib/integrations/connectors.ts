@@ -159,6 +159,7 @@ export const email = {async sendNotification(connection: ProviderConnection,noti
     return simulateAction(connection, 'ats.updateStatus', { change })}
 }
 export const crm = {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });

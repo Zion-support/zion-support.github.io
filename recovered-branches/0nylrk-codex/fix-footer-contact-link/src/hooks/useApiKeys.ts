@@ -76,6 +76,7 @@ export function useApiKeys() {
     setLoading(true);
     setError(null);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const env = (import.meta as any)?.env ?? process.env,
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,`
     return `${url}/functions/v1/api-key-manager`
@@ -261,12 +262,35 @@ export function useApiKeys() {;
 
       setKeys(result.keys || [])
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      setKeys(result.keys || [])
       setKeys(result.keys || [])
 
     } catch (err) {
       console.error('Error fetching API keys:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
+        variant: "destructive",
+        title: "Error fetching API keys",
+
+
+        variant: "destructive";
+        title: "Error fetching API keys"
+        variant: "destructive",
+        title: "Error fetching API keys",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+  }
+  // Create new API key
+  const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null);
+    setNewApiKey(null);
+=======
 
 <<<<<<< HEAD
 =======
@@ -285,6 +309,7 @@ export function useApiKeys() {;
 
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   // Create new API key;
@@ -307,6 +332,7 @@ export function useApiKeys() {;
       if (!session) {"
         setError("Authentication required");
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         };
         body: JSON && JSON.stringify({}
           name;
@@ -316,6 +342,11 @@ export function useApiKeys() {;
         })
 >>>>>>> origin/chore/fix-lint-and-merge
       });
+<<<<<<< HEAD
+      const result = await response && response.json();
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to create API key')
+=======
 
       const result = await response && response.json();
       
@@ -355,10 +386,40 @@ toast({
       if (!response && response.ok) {'
         throw new Error(result && result.error || 'Failed to create API key')
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]);
       // Store the actual key value temporarily so it can be displayed once
+<<<<<<< HEAD
+      setNewApiKey(result && result.key);
+    try {
+      const { data: { session } } = await supabase.auth.getSession(),
+      if (!session) {
+        setError("Authentication required"),
+        return
+      }
+      const response = await fetch(`${getApiUrl()}/create`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify({
+          name;
+          scopes
+          expiresAt: expiresAt ? expiresAt.toISOString() : null
+        })
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to create API key')
+      }
+      // Add the new key to the list
+      setKeys(prev => [{ ...result, key: undefined }, ...prev]);
+      // Store the actual key value temporarily so it can be displayed once
+      setNewApiKey(result.key);
+=======
 
       }
 
@@ -367,6 +428,7 @@ toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
@@ -733,6 +795,7 @@ if ( {) {}
       // Store the new key value;
       setNewApiKey(result && result.key);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )),
       
       // Store the new key value;
@@ -748,6 +811,7 @@ if ( {) {}
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Error regenerating API key",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
 
@@ -755,12 +819,24 @@ if ( {) {}
         title: "Error regenerating API key"
         variant: "destructive",
         title: "Error regenerating API key",
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
 
+<<<<<<< HEAD
+  }
+  // Revoke API key
+  const revokeApiKey = async (keyId: string) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   // Revoke API key
@@ -859,6 +935,7 @@ if (return) {}
         variant: "destructive",
         title: "Error regenerating API key",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
 
     } finally {
@@ -866,6 +943,15 @@ if (return) {}
       setLoading(false)
     }
 
+<<<<<<< HEAD
+  }
+  // Fetch API usage logs
+  const fetchApiLogs = async (limit = 50, offset = 0) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   // Fetch API usage logs;
@@ -1029,7 +1115,6 @@ if ( {) {}
       if (!response && response.ok) {'
         throw new Error(result && result.error || 'Failed to fetch API logs')
       }
-
       setLogs(result && result.logs || []);
       setTotalLogs(result && result.count || 0);
 

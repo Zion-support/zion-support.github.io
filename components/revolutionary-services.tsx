@@ -285,7 +285,6 @@ let filteredServices = revolutionaryMicroSaasServices;
 if (selectedCategory !== 'All') {}
 filteredServices = getRevolutionaryServicesByCategory(selectedCategory);}
   }
-
   // Price range filter;
 if (priceRange !== 'All') {
 const [min, max] = priceRange;
@@ -760,6 +759,22 @@ variant='futuristic'
                 <span className=text-white">{contactInfo.website}</span>;
 
         {/* Contact Information Banner */}
+<<<<<<< HEAD
+        <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>
+          <div className='container mx-auto px-4'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
+              <div className='flex items-center gap-4'>
+                <Phone className='w-5 h-5 text-cyan-400' />
+                <span className='text-white'>{contactInfo.mobile}</span>
+                <Mail className='w-5 h-5 text-purple-400' />
+                <span className='text-white'>{contactInfo.email}</span>
+              </div>
+              <div className='flex items-center gap-4'>
+                <MapPin className='w-5 h-5 text-green-400' />
+                <span className='text-white'>{contactInfo.address}</span>
+                <Globe className='w-5 h-5 text-blue-400' />
+                <span className='text-white'>{contactInfo.website}</span>              </div>              <div className="flex items-center gap-4">
+=======
 
             >;
               {enhancedCategories.map((category, index) => (<motion.div;
@@ -878,6 +893,7 @@ className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category.col
             </motion && motion.div>;
 
 
+<<<<<<< HEAD
 =======
 <section className='py-16'    />
           <div className='container mx-auto px-4'    />
@@ -948,6 +964,8 @@ size='large';
                       <div className='text - sm text - gray - 400'    />;
 
                         {service.period}
+<<<<<<< HEAD
+=======
 
                       </div>
                     </div>
@@ -958,6 +976,7 @@ size='large';
                           <span className='text-sm text-gray-300'    />
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             {feature}
                           </span>;
                         </div>;
@@ -1038,6 +1057,8 @@ value={selectedCategory}
 type='text'
                       placeholder='Search services...'
                       value={searchQuery}
+<<<<<<< HEAD
+=======
 
 
                       onChange={e =    /> setSearchQuery(e.target.value)}
@@ -1066,6 +1087,14 @@ type='text'
 <motion.div;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+              whileInView="visible"
+              whileInView='visible'              viewport={{ once: true }}
+
+              viewport={{ once: true }}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1253,9 +1282,11 @@ key={service.id}
                       </div>
 >>>>>>> origin/chore/fix-lint-and-merge
                     )}
-                  </UltraFuturisticCard>;
+</UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -1659,6 +1690,7 @@ className='text-gray-400 hover:text-white text-2xl'>
                           <div className=text-sm text-gray-400">{selectedService.marketPrice}</div>
                         </div>
                         
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <div>
                           <h4 className="text-sm font-semibold text-green-400 mb-2>ROI & Market</h4>
                           <div className=text-sm text-gray-300 space-y-1">
@@ -1683,6 +1715,8 @@ className='text-gray-400 hover:text-white text-2xl'>
                                 <span className=text-gray-300">{feature}</span>
                               </div>
                             ))}
+<<<<<<< HEAD
+=======
                           </div>
                         </div>
                         
@@ -1738,6 +1772,9 @@ className='text-gray-400 hover:text-white text-2xl'>
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
+                  <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
+=======
 
 <<<<<<< HEAD
 

@@ -244,6 +244,12 @@ function push(branch) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 import type { NextPage } from 'next';
@@ -39,6 +41,7 @@ const AiConsultingChat: NextPage = () => {
   return (
     <div>
       <Head>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       </Head>;
 
@@ -68,6 +71,11 @@ const AiConsultingChat: NextPage = () => {
   );
 }
 export default AiConsultingChat;
+<<<<<<< HEAD
+
+        <title>AiConsultingChat - Zion Tech Solutions</title>
+
+=======
 
 
 

@@ -3,6 +3,7 @@ import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {SafeRef} from "@/types/ref-types";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   active?: boolean;
   href?: string;
   target?: string;
@@ -19,6 +20,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
 
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { forwardRef } from "react",;
 
 import { ChevronDown } from "lucide-react",;
@@ -49,6 +51,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
   badge?: React.ReactNode;
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className
           )}
 
@@ -82,6 +85,16 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
           {badge && <span>{badge}</span>}
         </a>;
       );
+<<<<<<< HEAD
+    }
+
+    return (
+      <button
+        ref={ref}
+        type="button"
+        className={cn(
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           className={cn (
             "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";
@@ -137,6 +150,20 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className="pl-2">{children}</div>
     </div>
   )
+<<<<<<< HEAD
+}
+export { SidebarMenuItem, SidebarMenuGroup }
+
+},
+
+export { SidebarMenuItem, SidebarMenuGroup },
+),;
+SidebarMenuItem.displayName = "SidebarMenuItem",;
+interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
+
+);
+SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
+=======
 
 export { SidebarMenuItem, SidebarMenuGroup },
 ),;
@@ -145,6 +172,7 @@ interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
 
 SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
   title: string,;

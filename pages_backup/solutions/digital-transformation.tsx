@@ -189,8 +189,9 @@ export default function DigitalTransformationPage() {;
               className="text-center"
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </p>;
-            </motion && motion.div>;
+            </motion.div>;
           </div>;
         </section>;              className=text-center"
 
@@ -286,7 +287,7 @@ export default function DigitalTransformationPage() {;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                 return (
-                  <motion&& motion.div
+                  <motion.div
                     key={index}
                     className="bg-gray-50 rounded-lg p-6 text-center"        <section className=py-20>"
 

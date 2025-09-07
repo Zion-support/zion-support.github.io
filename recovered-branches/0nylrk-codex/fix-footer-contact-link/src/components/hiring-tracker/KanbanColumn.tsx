@@ -34,10 +34,22 @@ interface KanbanColumnProps {;
 
 export function KanbanColumn(): any ({;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id;
   title;
   description;
   applications;
+<<<<<<< HEAD
+export function KanbanColumn({
+  id,
+  title,
+  description,
+  applications,
+  id;
+  title;
+  description;
+  applications;
+=======
 
 export function KanbanColumn({
 
@@ -46,13 +58,17 @@ export function KanbanColumn({
   description,
   applications,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   count
 }: KanbanColumnProps) {
   // Add color based on column type
 
   const getBadgeVariant = (columnId: string) => {
     switch (columnId) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   count;
 }: KanbanColumnProps) {;
   // Add color based on column type;
@@ -93,6 +109,7 @@ export /**;
 function KanbanColumn() {}
   // Add color based on column type;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "new": return "secondary",
       case "shortlisted":
         return "outline",
@@ -101,6 +118,8 @@ function KanbanColumn() {}
       case "hired":
 
         return "success",
+<<<<<<< HEAD
+=======
 
 "
       case "rejected":"
@@ -119,13 +138,25 @@ function KanbanColumn() {}
     switch (columnId) {
       case "hired": return "bg-green-50",
 
+<<<<<<< HEAD
+  }
+  },
+  
+  const getColumnBgColor = (columnId: string) => {
+    switch (columnId) {
+      case "hired": return "bg-green-50",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "rejected":
 
         return "bg-red-50"
       default:"
         return "bg-muted/30"
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "rejected":;
 
         return "destructive",;
@@ -159,6 +190,7 @@ function KanbanColumn() {}
 
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
       <CardHeader className="pb-2">
@@ -173,6 +205,7 @@ function KanbanColumn() {}
         <Droppable droppableId={id}>
           {(provided) => (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               ref={provided.innerRef}
               {...provided.droppableProps}"
               className="min-h-full space-y-2"
@@ -209,6 +242,7 @@ export function KanbanColumn({;
       case "hired":;
         return "success",;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "rejected":;
         return "destructive",
 
@@ -233,6 +267,7 @@ export function KanbanColumn({;
               {applications && applications.length === 0 && (;"
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">;"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {applications.length === 0 && (
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">
                   <p className="text-center text-sm text-muted-foreground">

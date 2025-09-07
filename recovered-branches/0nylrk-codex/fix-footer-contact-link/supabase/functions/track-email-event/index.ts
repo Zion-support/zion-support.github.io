@@ -12,6 +12,8 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+<<<<<<< HEAD
+=======
 
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -21,6 +23,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
   // Parse the URL to get the tracking parameters
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const url = new URL(req && req.url);
   const type = url && url.searchParams.get("type"), // "open" or "click"
   const campaignId = url && url.searchParams.get("cid");
@@ -121,6 +124,26 @@ if ( {) {}
         .from("email_campaigns")
         .update({ clicked_at: new Date().toISOString() })"
         .eq("id", campaignId)
+<<<<<<< HEAD
+        .eq("user_id", userId);
+      // Redirect to the specified URL or default to dashboard
+      const destination = redirectUrl |`${supabaseUrl}/dashboard`;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        .eq("user_id", userId),
+
+      // Redirect to the specified URL or default to dashboard
+      const destination = redirectUrl || `${supabaseUrl}/dashboard`,
+<<<<<<< HEAD
+      return new Response(null, {
+        status: 302
+        headers: {
+          Location: destination}})
+    }
+    return new Response("Invalid event type", { status: 400 })
+  } catch (error) {
 
         .eq("user_id", userId),
 
@@ -137,6 +160,8 @@ if ( {) {}
 
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl || `${supabaseUrl}/dashboard`,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl || `${supabaseUrl}/dashboard`,

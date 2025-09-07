@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+const UltraFuturisticBackground2043: React.FC = () => {
+const UltraFuturisticBackground2043: React.FC = () => {;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {;
+    const canvas = canvasRef && canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas && canvas.getContext('2d');
+    if (!ctx) return;
+    // Set canvas size;
+    const resizeCanvas = () => {;
+      canvas && canvas.width = window && window.innerWidth;
+      canvas && canvas.height = window && window.innerHeight;      canvas && canvas.height = window && window.innerHeight;
+      canvas.height = window.innerHeight
+    };
+    resizeCanvas();
+    window && window.addEventListener('resize', resizeCanvas);
+=======
 
 
 import React, { useEffect, useRef } from 'react';'
@@ -77,6 +95,7 @@ const colors = [;
         'rgba(255, 215, 0, 0.8)', // Gold'
       ];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return {
         }
         "x": Math.random() * canvas.width,
@@ -113,6 +132,9 @@ ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';'
         // Update life;
         particle.life--;
         if (particle.life <= 0) {
+<<<<<<< HEAD
+          particles[index] = createParticle();        }          particles[index] = createParticle()
+=======
 
 }
 
@@ -148,6 +170,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       // Draw connecting lines between nearby particles,
 ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';'
       ctx.lineWidth = 0.5;
+<<<<<<< HEAD
+=======
 
 for (let i = 0; i < particles.length; i++) {
         }
@@ -178,7 +202,6 @@ return (;
 
 requestAnimationFrame(animate);
     };
-
     animate();
     return () => {
 window.removeEventListener('resize', resizeCanvas);
@@ -213,6 +236,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
+<<<<<<< HEAD
+=======
 
             }
 
@@ -315,6 +340,7 @@ className='absolute inset-0''
           }} />;
       </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />
       </div>
       {/* Floating geometric shapes */}
@@ -452,6 +478,8 @@ className='absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20''
           animate={{rotate: [45, 405];
             opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
           transition={{
+<<<<<<< HEAD
+=======
 
         <motion.div,
 className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full''

@@ -51,5 +51,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
     </div>
   )
 };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default UserBadges;

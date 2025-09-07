@@ -1,3 +1,136 @@
+<<<<<<< HEAD
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+import { ServiceVariant } from '../types/service-variants';
+export interface SpaceColonization2029Service {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+
+    website: string;
+  }
+
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
+  // Space Colonization & Mining Services;
+  {  reviews: number;
+}
+export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
+  // Space Colonization & Mining Services;
+  {
+    id: 'mars - colonization - automation - platform',
+    name: 'Mars Colonization Automation Platform',
+    tagline: 'Automate Mars colonization process with AI and robotics',
+    price: '$99, 999',
+    period: '/month',
+    description:;
+      'Comprehensive platform that automates the entire Mars colonization process using advanced AI, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.',
+      'Autonomous habitat construction',
+      'AI - powered resource management',
+      'Life support system automation',
+      'Colony expansion planning',
+      'Robotic workforce management',
+      'Environmental monitoring AI',
+      'Supply chain automation',
+      'Emergency response systems',
+      'Colony health monitoring',
+      'Sustainable development AI',
+    ],
+    popular: true,
+    icon: '🚀',
+    color: 'from - red - 600 to - orange - 600',
+    text_color: 'text - red - 400',
+    link: 'https://ziontechgroup.com / mars - colonization - automation - platform',
+    market_position:;
+      'First Mars colonization automation platform. No direct competitors. Comparable to space infrastructure platforms ($80K+/month) but specialized in Mars colonization.',
+    target_audience:;
+      'Space agencies, Private space companies, Government organizations, Research institutions, Space mining companies, Colonization initiatives',
+    trial_days: 180,
+    setup_time: '6 - 12 months',
+    category: 'Space Colonization & Mining',
+    real_service: true,
+    technology: [;
+      'AI & Robotics',
+      'Space Technology',
+      'Autonomous Systems',
+      '3D Printing',
+      'Life Support Systems',
+      'Satellite Communication',
+    ],
+    integrations: [;
+      'NASA systems',
+      'SpaceX platforms',
+      'Satellite networks',
+      'Ground control systems',
+      'Research databases',
+      'Space monitoring tools',
+    ],
+    use_cases: [;
+      'Mars colonization',
+      'Space habitat construction',
+      'Resource extraction',
+      'Life support management',
+      'Colony expansion',
+      'Space research',
+    ],
+    roi: 'Space agencies report 2000% ROI through successful colonization missions. Private companies see 1500% ROI in space infrastructure development.',
+    competitors: [;
+      'Space infrastructure platforms',
+      'Space research tools',
+      'Government space programs',
+    ],
+    market_size: '$100B space economy market',
+    growth_rate: '500% annual growth',
+    variant: 'space - futuristic',
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Advanced Mars colonization platform with autonomous systems, AI - powered planning, robotic workforce management, and comprehensive colony monitoring. Includes real - time communication and emergency response.',
+    launch_date: '2029 - 01 - 01',
+    customers: 8,
+    rating: 4 && 4.9,
+    reviews: 23,
+  },
+  {
+=======
 
 ;
 import { ServiceVariant  } from '../types / service - variants';'
@@ -698,6 +831,7 @@ pr-12325
 
       website: 'https://ziontechgroup.com';
     }
+<<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'Advanced space energy harvesting platform with multi - source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
     real_implementation: true;,

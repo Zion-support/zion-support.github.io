@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react','
 import SEO from '../components/SEO';'
@@ -9,6 +12,10 @@ import { Brain, Shield, Code, CheckCircle, Zap;
   Lock, Eye, BarChart3, Globe, Award
  } from 'lucide-react';'
 
+import React from 'react',
+import React from 'react';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
 import {
   }
   Brain,
@@ -39,6 +46,8 @@ Award;
           'security testing';'
           'DevOps security';'
         ]}
+<<<<<<< HEAD
+=======
 
         {/* Hero Section */}
 
@@ -210,6 +219,10 @@ className='text-center mb-16''
               <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>'
                 Transparent Pricing Plans
               className="text-center mb-16"
+<<<<<<< HEAD
+className="text-center mb-16"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Code Security & Quality
@@ -219,6 +232,9 @@ className='text-center mb-16''
                 All plans include our core AI-powered security scanning capabilities.
               </p>
             </motion.div>
+<<<<<<< HEAD
+<div className="grid md:grid-cols-3 gap-8">
+=======
             
             <div className="grid "md":grid-cols-3 gap-8">"
               {[
@@ -319,6 +335,9 @@ plan.popular
                   }`}`                >;
 
                   {plan.popular && (
+<<<<<<< HEAD
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+=======
 
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'
                       <span className='bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>'
@@ -339,6 +358,7 @@ plan.popular
 <div className='text-center mb-8'>'
                     <h3 className='text-2xl font-bold text-white mb-2'>'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {plan.name}
                     </h3>;
                     <div className='flex items - baseline justify - center mb - 4'>;'
@@ -354,6 +374,8 @@ plan.popular
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+<<<<<<< HEAD
+=======
 
                   </ul>                    </div>;
                     <p className="text-gray-300">{plan && plan.description}</p>;
@@ -363,6 +385,7 @@ plan.popular
                       <li key={featureIndex} className="flex items-center text-gray-300">;
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {feature}
                       </li>;
                     ))}
@@ -639,6 +662,12 @@ whileHover={{ "scale": 1.05 }}
                   Contact Sales
                 </motion.button>
               </div>
+<<<<<<< HEAD
+              <div className='mt-8 text-gray-400'>
+                <p>
+                  14-day free trial • No credit card required • Cancel anytime
+                </p>              </div>
+=======
 
 <div className='mt-8 text-gray-400'>'
                 <p>

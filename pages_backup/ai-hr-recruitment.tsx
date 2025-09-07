@@ -87,6 +87,10 @@ import Head from 'next/head';
   MapPin,
   Check,
   ArrowRight,
+<<<<<<< HEAD
+  Star,;
+  Users,;
+=======
 
 } from 'lucide-react';
 
@@ -178,6 +182,8 @@ if (return null) {}
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
 
           </p>;
           <div className="flex justify - center gap - 4">;"
@@ -185,17 +191,27 @@ if (return null) {}
               Get Started;
             </a>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Learn More;
             </a>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
+=======
 
 export default function AIHRRecruitmentPage() {
 
+<<<<<<< HEAD
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Users } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function AIHRRecruitmentPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-hr-recruitment'));
-  if (!service) return null;
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/ai-hr-recruitment');
+  );  if (!service) return null;
 
 import React from 'react'
 import Head from 'next/head'
@@ -203,6 +219,8 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Star, Users } from 'lucide-reac
 import Layout from '../components/layout/Layout'
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+<<<<<<< HEAD
+=======
 
     s.link.endsWith('/ai-hr-recruitment')
   );
@@ -292,7 +310,12 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
       </div>
     </Layout>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+=======
 
     </Layout>);
 ;

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
   "customers": number;
   "rating": number;

@@ -9,6 +9,8 @@ import {useLocation} from 'react-router-dom';
 =======
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
+<<<<<<< HEAD
+=======
 
 import {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
@@ -27,7 +29,10 @@ import { useLocation } from "react-router-dom";
   useEffect(() => {
     const handleRouteChange = () => {
       // Track page view
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       console && console.log('Page view:', window && window.location.pathname)
 
       console.log("Page view:", window.location.pathname);

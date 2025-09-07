@@ -116,6 +116,13 @@ import {}
   CpuIcon,;} from 'lucide-react';import {};
   Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
 
+<<<<<<< HEAD
+import React from 'react';
+
+
+import React from 'react',
+import React from 'react';
+=======
 
 import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -173,12 +180,18 @@ import {
   Palette,
   Video,
   LockIcon,
+<<<<<<< HEAD
+  GlobeIcon,;
+  CpuIcon,;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
+=======
 
   GlobeIcon,;
   CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Phone, Mail, MapPin, Globe, ArrowRight;
 import { motion  } from 'framer-motion';
 import {Rocket;
@@ -434,6 +447,16 @@ return (;
           <div className='grid grid-cols-1 "lg":grid-cols-4 gap-12'>;'
 
             {/* Company Info */}
+<<<<<<< HEAD
+    <footer className="bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
+      <div className="relative z-10">
+=======
 
             <div className='"lg":col-span-1'>'
               <motion.div,
@@ -586,6 +609,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true}}
                       className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+<<<<<<< HEAD
+                      <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >
                       <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
                       <div className="text-lg font-bold text-white">{stat.value}</div>
@@ -609,6 +636,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
               </motion.div>
             </div>
+<<<<<<< HEAD
+=======
 
 
             {/* Services *
@@ -718,6 +747,12 @@ className='space-y-4''
                     </motion && motion.div>;
 
                   ))}
+<<<<<<< HEAD
+                </div>
+              </motion.div>
+            </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             {/* Quick Links & Social */}"
             <div className="lg:col-span-1">

@@ -72,8 +72,17 @@ export default function TenantOnboarding() {
     custom_domain: "";
 origin/cursor/automate-test-improve-and-merge-code-2533
     is_co_branded: true
+<<<<<<< HEAD
+  });
+  // Check if user has admin role
+  const isAdmin = null;
+  });
+  // Check if user has admin role
+  const isAdmin = null;
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   })
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
@@ -176,7 +185,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   };
 
   return (
-    <>
       <SEO 
         title="Tenant Onboarding - Zion AI Marketplace"
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."

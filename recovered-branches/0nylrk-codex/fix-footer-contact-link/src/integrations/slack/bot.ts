@@ -116,6 +116,7 @@ async function askZionGPT(prompt: string): Promise<string> {;
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
   if (safeConsole && safeConsole.log) {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
+<<<<<<< HEAD
 
 // Create a mock app instance
 const app = new MockApp($2);
@@ -228,6 +229,12 @@ export default app;
   const port = env.PORT ? Number(env.PORT) : 3000,;
   await app.start(port);
 })(),;
+<<<<<<< HEAD
+});
+// Mock startup with safer environment access export default app;
+export default app;
+export default app;
+=======
 
 })();
 export default app;

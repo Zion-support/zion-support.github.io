@@ -15,6 +15,7 @@ export const SidebarTrigger = React.forwardRef<
   React.ComponentProps<typeof Button>
 >((props, ref) => {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from &quot;react & quot;
 import { PanelLeft } from &quot;lucide-react & quot;
 import { Button } from &quot;@/components / ui / button & quot;
@@ -54,6 +55,7 @@ export const SidebarTrigger = React.forward_ref<;
       size=&quot;icon&quot;
       className={cn(&quot;h-7 w-7&quot;, props.className)}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ref={ref}
 
       data-sidebar="trigger"

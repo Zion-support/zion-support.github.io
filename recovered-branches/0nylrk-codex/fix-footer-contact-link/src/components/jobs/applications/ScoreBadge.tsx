@@ -18,7 +18,12 @@ export function ScoreBadge(): any ({ application }: ScoreBadgeProps) {;
     <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>"`
       {score ? `${score}%` : "Not scored"}
     </span>
+<<<<<<< HEAD
+  );
+}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 
 import { JobApplication } from "@/types/jobs",;

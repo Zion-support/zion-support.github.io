@@ -3,15 +3,23 @@
 import { MessageSquare } from "lucide-react",
 ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
 }
-
 export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
+<<<<<<< HEAD
+import { Link, useLocation } from "react-router-dom",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth",
+import { MessageSquare } from "lucide-react",
+=======
 
 interface MainNavigationProps {
 
@@ -57,6 +65,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: "Equipment"
       href: "/equipment"
       matches: (path: string) => path.startsWith("/equipment")
+<<<<<<< HEAD
+    }
+    },
+=======
 
     },
 
@@ -69,6 +81,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
   ],
 
+<<<<<<< HEAD
+  ];
+  ],
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Add authenticated-only links
 
     {
@@ -136,6 +154,8 @@ to={link.href}
       matches: (path: string) => path.startsWith("/analytics")
     })
   }
+<<<<<<< HEAD
+=======
 
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>
@@ -150,12 +170,46 @@ to={link.href}
                 link.matches(location.pathname)"
                   ? "bg-zion-purple/20 text-zion-cyan""
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+<<<<<<< HEAD
+=======
 
   const links = [;
     {;
       name: "Home",;
       href: "/",;
       matches: (path: string) => path === "/";
+<<<<<<< HEAD
+    },;
+    {;
+      name: "Marketplace",;
+      href: "/marketplace",;
+      matches: (path: string) => path.startsWith("/marketplace");
+    },;
+    {;
+      name: "Categories",;
+      href: "/categories",;
+      matches: (path: string) => path.startsWith("/categories");
+    },;
+    {;
+      name: "Talent",;
+      href: "/talent",;
+      matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard");
+    },;
+    {;
+      name: "Equipment",;
+      href: "/equipment",;
+      matches: (path: string) => path.startsWith("/equipment");
+    },;
+    {;
+      name: "Community",;
+      href: "/community",;
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum");
+    }
+  ],;
+  // Add authenticated-only links;
+  if (isAuthenticated) {;
+    links.push({;
+=======
     };
     {;
       name: "Marketplace",;
@@ -190,6 +244,103 @@ to={link.href}
 
     });
   }
+<<<<<<< HEAD
+        {links && links.map((link) => (;
+          <li key={link && link.name}>;
+            <Link
+              to={link && link.href}
+              className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors"
+                link && link.matches(location && location.pathname)
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}>;
+              {link && link.name}
+
+import { Link, useLocation } from "react-router-dom",;
+import { cn } from "@/lib/utils",;
+import { useAuth } from "@/hooks/useAuth",;
+import { MessageSquare } from "lucide-react",;
+;
+interface MainNavigationProps {;
+  isAdmin?:boolean,;
+  unreadCount?:number,;
+  className?:string,;
+}
+;
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className } MainNavigationProps) {;
+  const { user } = useAuth(),;
+  const isAuthenticated = !!user,;
+  const location = useLocation(),;
+  ;
+  const links = [;
+    {;
+      name:"Home",;
+      href:"/",;
+      matches:(path:string) => path === "/";
+    },;
+    {;
+      name:"Marketplace",;
+      href:"/marketplace",;
+      matches:(path:string) => path.startsWith("/marketplace");
+    },;
+    {;
+      name:"Categories",;
+      href:"/categories",;
+      matches:(path:string) => path.startsWith("/categories");
+    },;
+    {;
+      name:"Talent",;
+      href:"/talent",;
+      matches:(path:string) => path.startsWith("/talent") && !path.includes("/talent-dashboard");
+    },;
+    {;
+      name:"Equipment",;
+      href:"/equipment",;
+      matches:(path:string) => path.startsWith("/equipment");
+    },;
+    {;
+      name:"Community",;
+      href:"/community",;
+      matches:(path:string) => path.startsWith("/community") || path.startsWith("/forum");
+    }
+  ],;
+  ;
+  // Add authenticated-only links;
+  if (isAuthenticated) {;
+    links.push({;
+      name:"Dashboard",;
+      href:"/dashboard",;
+      matches:(path:string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard";
+    }),;
+  }
+  ;
+  // Add admin-only links;
+  if (isAdmin) {;
+    links.push({;
+      name:"Analytics",;
+      href:"/analytics",;
+      matches:(path:string) => path.startsWith("/analytics");
+    }),;
+  }
+  ;
+  return (;
+    <nav className={cn("ml-6 hidden md:flex", className)}>;
+      <ul className="flex items-center gap-1">;
+;
+  // Add admin-only links;
+  if (isAdmin) {;
+    links.push({;
+      name: "Analytics",;
+      href: "/analytics",;
+      matches: (path: string) => path.startsWith("/analytics");
+    });
+  }
+;
+  return (;
+    <nav className={cn("ml-6 hidden md:flex", className)}>;
+      <ul className="flex items-center gap-1">;
+=======
 
   // Add admin-only links;
 
@@ -206,6 +357,7 @@ to={link && link.href}
   }
   return (;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {links.map((link) => (;
           <li key={link.name}>;
             <Link;
@@ -256,6 +408,7 @@ to={link && link.href}
               )}>;
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               )}
             >
               {link.name}
@@ -416,6 +569,7 @@ if ( {) {}
 
                 </span>;
               )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Link>;
           </li>;
         )}

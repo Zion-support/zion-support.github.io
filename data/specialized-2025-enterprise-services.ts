@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+
+import { ServiceVariant } from '../types / service - variants';
+;
+import { ServiceVariant } from '../types/service-variants';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 import { ServiceVariant  } from '../types/service-variants';'
@@ -667,11 +674,16 @@ export default specializedEnterpriseServices;    "id": 'quantum - machine - lear
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     market_advantage: 'Advanced quantum ML platform with hybrid computing capabilities';
   }
 ;
   // Advanced Cybersecurity Services;
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   {
@@ -763,16 +775,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];"market_advantage": 'Advanced AI satellite orchestration with autonomous capabilities';'
   }// Neural Interface Services;{"id": 'brain - computer - interface - platform';'
     ];
+<<<<<<< HEAD
+=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     market_advantage: 'Advanced AI satellite orchestration with autonomous capabilities';
   }
 ;
   // Neural Interface Services;
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   {
@@ -825,11 +844,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     market_advantage: 'Advanced BCI platform with medical - grade capabilities and research tools';
   }
 ;
   // Advanced IoT Services;
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   {
@@ -882,11 +906,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     market_advantage: 'Advanced autonomous IoT platform with AI - powered management capabilities';
   }
 ;
   // Advanced Analytics Services;
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   {

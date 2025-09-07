@@ -3,6 +3,7 @@ interface SkillsSectionProps {}
   skills: Skill[];
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SkillsSectionProps {
   skills: Skill[];
 }
@@ -41,6 +42,7 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
       acc[category].push(skill);
       return acc;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return acc
   }, {} as Record<string Skill[]>),
 
@@ -77,12 +79,10 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
   );
 });
 }
-
 import {Skill} from '@/types/resume';
 interface SkillsSectionProps {;
   skills: Skill[];
 }
-
 export function SkillsSection(): any ({ skills }: SkillsSectionProps) {;
   // Group skills by category;
 
@@ -93,9 +93,7 @@ export function SkillsSection(): any ({ skills }: SkillsSectionProps) {;
     acc[category].push(skill);
     return acc;
   }, {} as Record<string, Skill[]>);
-
   if (skills && skills.length === 0) return null;
-
   return (
     <div className="mb - 6">;
       <h2 className="text - lg font - semibold border - b mb - 3">Skills</h2>;

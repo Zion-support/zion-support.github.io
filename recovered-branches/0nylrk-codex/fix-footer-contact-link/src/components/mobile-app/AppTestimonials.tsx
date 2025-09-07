@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+
+import React from "react";
+import {Star} from "lucide-react";
+import {Card, CardContent, CardFooter} from "@/components/ui/card";
 =======
 import React from "react";
 import {Star} from "lucide-react";
@@ -13,6 +18,7 @@ const testimonials = [
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!"
     rating: 5
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import { Star } from './lucide-react';
 
@@ -24,12 +30,20 @@ const testimonials = [;
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
     rating: 5,"
     avatar: "/placeholder.svg";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   {"
     name: "Sarah Williams""
     role: "Tech Recruiter""
     text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
+<<<<<<< HEAD
+    rating: 5
+    avatar: "/placeholder.svg"
+  }
+=======
 
   },
   {"
@@ -39,6 +53,8 @@ const testimonials = [;
     rating: 5,"
     avatar: "/placeholder.svg"
   },
+<<<<<<< HEAD
+=======
 
   {
 
@@ -49,6 +65,12 @@ const testimonials = [;
     rating: 4"
     avatar: "/placeholder.svg"
 
+<<<<<<< HEAD
+];
+],
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -67,6 +89,8 @@ export const AppTestimonials: React.FC = () => {
 
                 <div className="flex mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
+<<<<<<< HEAD
+=======
 
                     <Star
 
@@ -105,12 +129,24 @@ import React from "react",;
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const testimonials = [;
   {;
     name: "Alex Johnson",;
     role: "AI Developer",;
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",;
     rating: 5,;
+<<<<<<< HEAD
+    avatar: "/placeholder.svg";
+  },;
+  {;
+    name: "Sarah Williams",;
+    role: "Tech Recruiter",;
+    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",;
+    rating: 5,;
+    avatar: "/placeholder.svg";
+  },;
+=======
     avatar: "/placeholder && placeholder.svg";
   };
   {;
@@ -120,17 +156,57 @@ const testimonials = [;
     rating: 5,;
     avatar: "/placeholder && placeholder.svg";
   };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {;
     name: "Michael Chen",;
     role: "Full Stack Developer",;
     text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",;
     rating: 4,;
+<<<<<<< HEAD
+
+import React from "react",;
+import { Star } from "lucide-react",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+;
+const testimonials = [;
+  {;
+    name:"Alex Johnson",;
+    role:"AI Developer",;
+    text:"The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",;
+    rating:5,;
+    avatar:"/placeholder.svg";
+  },;
+  {;
+    name:"Sarah Williams",;
+    role:"Tech Recruiter",;
+    text:"As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",;
+    rating:5,;
+    avatar:"/placeholder.svg";
+  },;
+  {;
+    name:"Michael Chen",;
+    role:"Full Stack Developer",;
+    text:"I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",;
+    rating:4,;
+    avatar:"/placeholder.svg";
+  }
+],;
+;
+export const AppTestimonials:React.FC = () => {;
+  return (;
+    avatar: "/placeholder.svg";
+  }
+],;
+export const AppTestimonials: React.FC = () => {;
+  return (;
+=======
     avatar: "/placeholder && placeholder.svg";
   }
 ];
 
 export const AppTestimonials: React.FC = () => {;
   return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -139,6 +215,22 @@ export const AppTestimonials: React.FC = () => {;
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.;
           </p>;
         </div>;
+<<<<<<< HEAD
+        ;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+          {testimonials.map((testimonial, index) => (;
+            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">;
+              <CardContent className="pt-6">;
+                <div className="flex mb-4">;
+                  {Array.from({ length: 5 }).map((_, i) => (;
+                    <Star;
+                      key={i}
+                      className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
+                    />;
+                  ))}
+                </div>;
+                <p className="text-gray-200 mb-6">"{testimonial.text}"</p>;
+=======
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
           {testimonials && testimonials.map((testimonial, index) => (;
@@ -165,7 +257,10 @@ export const AppTestimonials: React.FC = () => {;
               </CardFooter>;
             </Card>;
           ))}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </div>;
     </section>;

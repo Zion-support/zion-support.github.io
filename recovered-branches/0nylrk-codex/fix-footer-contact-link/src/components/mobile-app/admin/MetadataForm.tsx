@@ -16,12 +16,65 @@ import {;
 
   FormLabel,
   FormMessage,;
+<<<<<<< HEAD
+} from "@/components/ui/form";
+
+} from "@/components/ui/form";
+import { Badge } from "@/components/ui/badge";
+import { X } from "lucide-react";
+
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
+
+interface MetadataFormProps {;
+  form: UseFormReturn<AppMetadataValues>;
+}
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
+  const { control, register, watch, setValue } = form;
+  const keywords = watch("keywords");
+  const platform = watch("platform");
+
+
+
+
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { AppMetadataValues } from "./MetadataManager",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Badge } from "@/components/ui/badge",
+import { X } from "lucide-react",
+
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
+import { AppMetadataValues } from "./MetadataManager";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+Form
+  FormControl
+  FormDescription
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+=======
 
 } from "@/components/ui/form";
 "
 } from "@/components/ui/form";"
 import { Badge } from "@/components/ui/badge";"
 import { X } from "lucide-react";
+<<<<<<< HEAD
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
+=======
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
@@ -270,6 +323,11 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD
+)}
+            />
+            <FormField
+=======
 
               control={control}"
 
@@ -287,6 +345,18 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                   </FormDescription>
                 </FormItem>
               )}
+<<<<<<< HEAD
+            />;
+            <FormField;
+
+/>
+            <FormField
+
+            />
+            <FormField
+            />;
+            <FormField;
+=======
 
 />
             <FormField
@@ -353,6 +423,31 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     </button>;
                   </Badge>;
                 ))}
+<<<<<<< HEAD
+              />
+
+              
+              <div className="flex flex-wrap gap-2 mt-2">
+                {keywords.map((keyword, index) => (
+                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
+                    {keyword}
+                    <button
+                    <button 
+                      type="button"
+                      onClick={() => removeKeyword(keyword)}
+                      className="ml-1 hover:text-red-300"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  </Badge>
+                ))}
+              </div>
+              <FormDescription className="mt-2">
+                Add keywords to improve discoverability (max 100 characters total)
+              </FormDescription>
+            </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 Add keywords to improve discoverability (max 100 characters;
                 total);
@@ -368,6 +463,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
+=======
 
                     <Input placeholder="e.g., 1.0.0" {...field} />
                   </FormControl>
@@ -408,6 +505,16 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
           </div>;
         </Form>;
       </CardContent>;
+<Input placeholder="e.g., 1.0.0" {...field} />
+                    <Input placeholder="e.g., 1.0.0" {...field} />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+          </div>
+        </Form>
+      </CardContent>
+    </Card>
 
   );
 };

@@ -2,6 +2,8 @@ ursor/automate-test-improve-and-merge-code-646c;
 import { NextApiRequest, NextApiResponse  } from 'next';'
 import { createMocks, RequestMethod  } from 'node-mocks-http';'
 
+<<<<<<< HEAD
+=======
 
 
 import { NextApiRequest, NextApiResponse } from 'next''

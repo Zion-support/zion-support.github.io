@@ -9,6 +9,15 @@ import { Button } from "@/components/ui/button",
   CardFooter
   CardHeader
 
+<<<<<<< HEAD
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Card,
   CardContent,
   CardDescription,
@@ -239,6 +248,18 @@ import {;
 import { Sparkles } from "lucide-react",;"
 import { Progress } from "@/components/ui/progress",;
 
+  CardTitle} from "@/components/ui/card",;
+import { Sparkles } from "lucide-react",;
+import { Progress } from "@/components/ui/progress",;
+;
+export function UsageStats() {;
+  const handleSaveChanges = () => {;
+    toast({;
+      title:"Limits updated",;
+      description:"The new usage limits have been saved successfully."}),;
+  },;
+;
+  return (;
     <div className="space-y-8">;
       <div>;"
         <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>;"
@@ -282,7 +303,14 @@ function UsageStats() {
         <Card>;
           <CardHeader>;
             <CardTitle > Job Postings</CardTitle>;
-
+          Configure usage limits for your team to manage your subscription resources.;
+        </p>;
+      </div>;
+;
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
+        <Card>;
+          <CardHeader>;
+            <CardTitle>Job Postings</CardTitle>;
             <CardDescription>;
               Set monthly limits for job postings across your organization;
             </CardDescription>;
@@ -368,17 +396,17 @@ import {
           </CardHeader>;
 
             <div>;
-              <div className="flex items - center justify - between mb - 2">;
-                <div className="text - sm font - medium">Monthly budget</div>;
-                <Badge variant="outline">$1, 250 / $5, 000</Badge>;
+              <div className="flex items-center justify-between mb-2">;
+                <div className="text-sm font-medium">Monthly budget</div>;
+                <Badge variant="outline">$1,250 / $5,000</Badge>;
               </div>;
-              <Progress value={25} className="h - 2" />;
+              <Progress value={25} className="h-2" />;
             </div>;
-            <div className="grid gap - 4">;
-              <div className="grid grid - cols - 3 items - center gap - 4">;
-                <div className="text - sm">Monthly budget:</div>;
-                <div className="col - span - 2">;
-                  <Input type="number" min="0" step="100" default_value="5000" />;
+            <div className="grid gap-4">;
+              <div className="grid grid-cols-3 items-center gap-4">;
+                <div className="text-sm">Monthly budget:</div>;
+                <div className="col-span-2">;
+                  <Input type="number" min="0" step="100" defaultValue="5000" />;
                 </div>;
               </div>;
 

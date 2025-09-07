@@ -23,6 +23,8 @@ export const QrCodeDownload: React.FC = () => {
                 instantly, or use the buttons below to get it from your app;
                 store of choice.
               </p>
+<<<<<<< HEAD
+=======
 
               <AppStoreButtons 
                 className="mb-8" 

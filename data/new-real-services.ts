@@ -1511,6 +1511,8 @@ export const "newRealServices": EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 3,
   },
+<<<<<<< HEAD
+=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2028,6 +2030,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$59',
     period: '/month',
 ];
+<<<<<<< HEAD
+
+
+
+=======
 
 ];
 ;

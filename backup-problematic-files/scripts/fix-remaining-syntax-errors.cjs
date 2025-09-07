@@ -30,11 +30,14 @@ function fixHoverSyntax(filePath) {
     }
 });
     
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (modified) {
       fs.writeFileSync(filePath, content);
       console.log(`✅ Fixed syntax errors in ${filePath}`);
       return true;
     }
+<<<<<<< HEAD
+=======
     
     return false;
   } catch (error) {
@@ -61,6 +64,8 @@ function fixAllFiles() {
   ];
   
   let totalFixed = 0;
+<<<<<<< HEAD
+=======
   
   filesToCheck.forEach(file => {
     const filePath = path.join(process.cwd(), file);

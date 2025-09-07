@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+}</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
+
+
+import React from 'react';
+
+
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+  service.name
+}- Zion Tech Group</title>) )
+ return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+ return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+  service.name 
+}- Zion Tech Group</title>) ) 
+}</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
+
+=======
 
 
 import React from 'react','
@@ -129,6 +147,7 @@ if (return null) {
                 <div className="flex items-center space-x-2"><MapPin className="w - 4 h - 4 text-green-400" /><span className="text-xs">{service.contact_info.address}</span></div>;
               </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </UltraAdvancedFuturisticBackground>);
 }
 ;

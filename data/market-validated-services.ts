@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import { ServiceVariant } from '../types / service - variants';
+;
+=======
 
 ;
 import { ServiceVariant  } from '../types/service-variants';'
@@ -473,6 +477,13 @@ export interface MarketValidatedService {;
 	setupTime?: string;
 
 
+<<<<<<< HEAD
+	contactInfo: {mobile: string;
+		email: string;
+		address: string;
+const contactInfo = {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   mobile: "+1 302 464 0950",
 	email: "kleber@ziontechgroup && ziontechgroup.com",
 	address: "364 E Main St STE 1008 Middletown DE 19709";

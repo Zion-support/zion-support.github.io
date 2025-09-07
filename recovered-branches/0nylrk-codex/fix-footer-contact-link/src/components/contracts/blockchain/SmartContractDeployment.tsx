@@ -124,6 +124,7 @@ import { Switch } from "@/components/ui/switch",;
 import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;
 import { Loader2, ShieldCheck, Download } from "lucide-react",;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -141,6 +142,12 @@ interface SmartContractDeploymentProps {;
   onDeploy: (options: DeploymentOptions) => Promise<void>,;
   isDeploying: boolean;
 }
+<<<<<<< HEAD
+;
+export function SmartContractDeployment({;
+  solidityCode,;
+  onDeploy,;
+=======
 
 }: SmartContractDeploymentProps) {;
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;'
@@ -151,12 +158,61 @@ interface SmartContractDeploymentProps {;
 
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
           Deploy your agreement as a smart contract for enhanced security and automation;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
+      <CardContent className="space-y-6">;
+        <div className="space-y-4">;
+          <div className="flex items-center space-x-2">;
+            <Switch;
+              id="deploy-blockchain";
+              checked={deploymentOptions.deployToChain}
+              onCheckedChange={(checked) => setDeploymentOptions({;
+                ...deploymentOptions,;
+                deployToChain: checked;
+              })}
+            />
+            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
+          </div>
+          {deploymentOptions.deployToChain && (
+            <>
+              <div className="space-y-2">
+                <Label>Select blockchain network</Label>
+                <RadioGroup
+                  defaultValue={deploymentOptions.network}
+                  onValueChange={(value) => setDeploymentOptions({
+                    ...deploymentOptions;
+                    network: value as BlockchainNetwork
+                <RadioGroup 
+                  defaultValue={deploymentOptions.network}
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+                  })}
+                  className="flex flex-col space-y-1"
+                >
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="ethereum" id="ethereum" />
+                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="polygon" id="polygon" />
+                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>
+                  </div>
+                </RadioGroup>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="wallet-address">Wallet address for transactions</Label>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               })}
 
@@ -242,10 +298,19 @@ interface SmartContractDeploymentProps {;
 
                     ...deploymentOptions;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
+<<<<<<< HEAD
+                    ...deploymentOptions;
+                    walletAddress: e && e.target.value;
+                  })}
+                />;
+              </div>;
+              <div className="flex items-center space-x-2">;
+=======
 
                   })}
 
@@ -276,6 +341,78 @@ interface SmartContractDeploymentProps {;
               </div>;
             </>;
           )}
+<<<<<<< HEAD
+                  onChange={(e) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    walletAddress: e.target.value;
+                  onChange={(e) => setDeploymentOptions({
+                    ...deploymentOptions;
+                    walletAddress: e.target.value
+                  onChange={(e) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    walletAddress: e.target.value;
+                  })}
+                />
+              </div>
+              <div className="flex items-center space-x-2">
+                <Switch
+                  id="use-escrow"
+                  checked={deploymentOptions.useEscrow}
+                  onCheckedChange={(checked) => setDeploymentOptions({
+                    ...deploymentOptions;
+
+                    useEscrow: checked
+                <Switch 
+                  id="use-escrow"
+                  checked={deploymentOptions.useEscrow}
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    useEscrow: checked;
+                  onCheckedChange={(checked) => setDeploymentOptions({
+                    ...deploymentOptions;
+                    useEscrow: checked
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    useEscrow: checked;
+                  })}
+                />
+                <Label htmlFor="use-escrow">Use escrow for payments</Label>
+              </div>
+            </>
+          )}
+          <div className="rounded-md bg-muted p-4">
+            <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
+            <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
+              <pre>{solidityCode.slice(0, 500)}...</pre>
+            </div>
+          </div>
+        </div>
+      </CardContent>
+      <CardFooter className="flex justify-between">
+        <Button variant="outline" onClick={handleDownloadSolidity}>
+          <Download className="mr-2 h-4 w-4" />
+          Download .sol File
+        </Button>
+        <Button onClick={handleDeployContract} disabled={isDeploying}>
+          {isDeploying ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Deploying...
+            </>
+          ) : (
+            'Deploy Contract'
+          )}
+        </Button>
+      </CardFooter>
+    </Card>
+  )
+}
+        </Button>;
+      </CardFooter>;
+    </Card>;
+  );
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   })}
                 />
@@ -408,16 +545,41 @@ interface SmartContractDeploymentProps {;
           <Download className="mr - 2 h - 4 w - 4" />;
           Download .sol File;
         </Button>;
-        <Button on_click={handleDeployContract} disabled={is_deploying}>;
-          {is_deploying ? (
+        ;
+        <Button onClick={handleDeployContract} disabled={isDeploying}>;
+          {isDeploying ? (;
             <>;
-              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Deploying...;
-            </>) : (
-            'Deploy Contract')}
+            </>;
+          ) :(;
+            'Deploy Contract';
+          )}
         </Button>;
       </CardFooter>;
-    </Card>);
+    </Card>;
+  ),; interface SmartContractDeploymentProps {
+  solidityCode: string;
+onDeploy: (options: DeploymentOptions) => Promise<void>;
+isDeploying: boolean 
+}export function SmartContractDeployment ({
+  solidityCode;
+onDeploy;
+isDeploying 
+}: SmartContractDeploymentProps) {
+  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions> ({
+  network: 'none';
+useEscrow: true;
+deployToChain: false;
+walletAddress: '' 
+});
+const handleDeployContract = async () => {
+  if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
+  
+}try {
+  await onDeploy (deploymentOptions) 
+}catch (error) {
+  
 }
 
           <Download className="mr-2 h-4 w-4" />;

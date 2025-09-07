@@ -20,6 +20,8 @@ const AiModelDevelopmentChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
       <main>;
         <h1>AiModelDevelopmentChat</h1>;
         <p>Service details coming soon...</p>;

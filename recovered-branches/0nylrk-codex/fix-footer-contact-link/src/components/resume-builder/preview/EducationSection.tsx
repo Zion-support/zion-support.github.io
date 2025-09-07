@@ -67,6 +67,22 @@ interface EducationSectionProps {
 
   const sortedEducation = [...education].sort((a, b) => {;
 
+<<<<<<< HEAD
+
+import { Education  } from '@/types/resume';
+import { format } from 'date-fns';
+import {Education} from '@/types/resume';
+import {format} from 'date-fns';
+interface EducationSectionProps {
+  education: Education[]
+}
+export function EducationSection({ education }: EducationSectionProps) {
+  // Sort education by date (newest first)
+
+  const sortedEducation = [...education].sort((a, b) => {
+  const sortedEducation = [...education].sort((a, b) => {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (a.is_current && !b.is_current) return -1;
 
     if (!a.is_current && b.is_current) return 1;
@@ -145,6 +161,7 @@ export function EducationSection() { return null; }
 
   education: Education[];
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               )}
             </div>;

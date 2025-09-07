@@ -3,11 +3,14 @@ import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState, useCallback} from 'react';
 import {checkSignupPatterns} from '@/services/fraud/signupCheck';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {;
+<<<<<<< HEAD
+=======
 
   const [isCheckingFraud, setIsCheckingFraud] = useState(false);
   // Get the user's IP address (in a real app, you'd do this server-side)
@@ -32,6 +35,8 @@ export function useFraudPreventionSignup() { return null; }
       return undefined;
     }
   },
+<<<<<<< HEAD
+=======
 
   // Check if the signup attempt might be fraudulent
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
@@ -158,7 +163,6 @@ if (||) {
             variant: "destructive"});"
           return false;
         }
-
         // Otherwise, allow but flag for review;
         return true;
       }
@@ -180,6 +184,7 @@ if (||) {
   }, []);
 ;
 
+;
   return {
 
   return {}

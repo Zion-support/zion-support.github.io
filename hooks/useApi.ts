@@ -83,6 +83,8 @@ export const useApi = <T>(
 interface UseApiOptions {
   immediate?: boolean;
 }
+<<<<<<< HEAD
+=======
 
 export function useApi<T>(
   apiCall: () => Promise<T>;
@@ -187,6 +189,8 @@ export default useApi;
       const error = err instanceof Error ? err : new Error (String (err));
       set_error (error);
       options.on_error?.(error);
+<<<<<<< HEAD
+=======
 
       throw error;
       set_loading (false);
@@ -252,7 +256,19 @@ interface UseApiOptions {
   }
   immediate?: boolean;
 }
+interface ApiState<T> {
+  data: T | null, loading: boolean,
+  error: string | null,
+ursor/add-new-services-and-deploy-updates-0462
+interface ApiState<T> {
+  data: T | null, loading: boolean,
+  error: string | null,
+origin/automation-improvements-final
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+}
 export function useApi<T>(
   "apiCall": () => Promise<T>,
   "options": UseApiOptions = {}
@@ -261,13 +277,11 @@ export function useApi<T>(
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const fetchData = useCallback(async () => {
   const fetchData = async () => {
     }
     setLoading(true);
     setError(null);
-    
     try {
       }
       const result = await apiCall();
@@ -280,7 +294,6 @@ export function useApi<T>(
       setLoading(false);
     }
   }, [apiCall]);
-
   useEffect(() => {
   };
 

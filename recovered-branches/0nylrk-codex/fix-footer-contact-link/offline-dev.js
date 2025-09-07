@@ -57,6 +57,7 @@ const path = require($2);
 })
 const PORT = 8080
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       res.writeHead(200, { 'Content-Type': 'text/html' }),;
       res.end(data);
     });
@@ -69,6 +70,11 @@ const PORT = 8080
     res.end('Not found');
   }
 }),
+<<<<<<< HEAD
+  }
+})
+const PORT = 8080
+=======
 
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝

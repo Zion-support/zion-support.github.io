@@ -60,6 +60,9 @@ console.log('\n� Phase "8")
   "criticalFailures"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+console.log('� Deployment summary saved "to")
+=======
 console.log('� Deployment summary saved "to")
 <<<<<<< HEAD
 <<<<<<< HEAD

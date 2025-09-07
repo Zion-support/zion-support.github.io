@@ -37,6 +37,20 @@ export function useAIContentEnhancer() {
 
   enhancement_type: EnhancementType;
 
+<<<<<<< HEAD
+export interface AIEnhancementOptions {
+
+export interface AIEnhancementOptions {;
+  enhancementType: EnhancementType;
+  content?: string;
+  context?: string
+  instructions?: string
+}
+export function useAIContentEnhancer() {
+
+export function useAIContentEnhancer() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async ({}
@@ -51,6 +65,7 @@ export function useAIContentEnhancer() {
       const { data, error } = await supabase && supabase.functions.invoke('ai-content-enhancer', {
         body: { 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           content;
           enhancementType;
           context;
@@ -61,6 +76,19 @@ export function useAIContentEnhancer() {
     } catch (err: any) {
       const errorMessage = err && err.message || 'Failed to enhance content';
 
+<<<<<<< HEAD
+        throw new Error(error && error.message)
+      }
+      return data && data.enhancedContent
+    } catch (err: any) {
+      const errorMessage = err && err.message || 'Failed to enhance content';
+        throw new Error(error.message)
+      }
+      return data.enhancedContent
+    } catch (err: any) {
+      const errorMessage = err.message |'Failed to enhance content';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setError(errorMessage);
       toast({
 

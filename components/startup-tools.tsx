@@ -14,6 +14,26 @@ import { Rocket;
   Mail;
   Calendar;
 import {
+<<<<<<< HEAD
+  Rocket
+  DollarSign
+  Users
+  BarChart3
+  Mail
+  Calendar
+  Shield
+  Globe
+  ArrowRight
+  Star
+  Check
+  ExternalLink
+  TrendingUp
+  Zap
+  Target
+  Lightbulb
+  BookOpen;} from 'lucide-react';import {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Rocket,
   DollarSign, 
   Users, 
@@ -29,6 +49,10 @@ import {
   TrendingUp,
   Zap,
   Target,
+<<<<<<< HEAD
+BookOpen,} from 'lucide-react';import {
+=======
+<<<<<<< HEAD
   Lightbulb,
   Shield;Globe;
   ArrowRight;
@@ -673,6 +697,8 @@ variant='outline';'
                 Explore Communities
               </Button>
             </Card>
+<<<<<<< HEAD
+=======
 
 <Card className='text-center'>'
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>'
@@ -693,6 +719,8 @@ variant='outline';'
                 Start Learning
               </Button>
             </Card>
+<<<<<<< HEAD
+=======
 
 <Card className='text-center'>'
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>'

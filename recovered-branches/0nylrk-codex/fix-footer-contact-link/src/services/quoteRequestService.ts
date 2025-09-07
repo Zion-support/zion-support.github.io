@@ -18,6 +18,7 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {supabase} from "@/integrations/supabase/client";
 
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
@@ -70,6 +71,31 @@ export const quoteRequestService = {
   getAll: async () => {
     const { data, error } = await supabase
       .from('quote_requests')
+<<<<<<< HEAD
+      .select(`;
+        *;
+      .select(`
+        *,
+        talent:talent_id (
+          display_name
+        )
+      `)
+      .select(`
+        *,
+
+        talent:talent_id (
+
+        talent:talent_id (
+    return data && data.map((item: any) => ({
+
+      .order('created_at', { ascending: false });
+    if (error) throw error;
+    // Format the data to include talent_name
+    return data.map((item: any) => ({
+      ...item
+      talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
+  }
+=======
 
       .select(`
         *,
@@ -160,6 +186,12 @@ pr-12325
       .from('quote_requests')
       .select('*')
       .eq('talent_id', talentId)
+<<<<<<< HEAD
+      .order('created_at', { ascending: false });
+    if (error) throw error;
+    return data as QuoteRequest[]
+  }
+=======
 
 .order('created_at', { ascending: false });
     if (error) throw error;

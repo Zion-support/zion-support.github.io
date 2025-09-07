@@ -13,7 +13,6 @@ export interface EmergingTechService2029 {
     email: string,
     address: string}
 }
-
 export const emergingTechServices2029: EmergingTechService2029[] = [
   {
     id: "2029-emerging-tech-service",
@@ -21,6 +20,12 @@ export const emergingTechServices2029: EmergingTechService2029[] = [
     tagline: "Emerging tech services for 2029",
     price: "$399/month",
     description: "Advanced platform showcasing emerging technology services and innovations for 2029.",
+    id: '2029-emerging-tech-service'
+    name: '2029 Emerging Tech Service Platform'
+    tagline: 'Emerging tech services for 2029'
+    price: '$399/month'
+    description:
+      'Advanced platform showcasing emerging technology services and innovations for 2029.'
     features: [
       "Emerging tech services",
       "Innovation platform",

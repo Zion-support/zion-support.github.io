@@ -71,6 +71,10 @@ import { QuickAccess } from "@/components/home/QuickAccess";
 
       <Footer />
 
+<<<<<<< HEAD
+
+}
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -148,6 +152,11 @@ import { HeroSection } from "@/components/HeroSection",;
 import { QuickAccess } from "@/components/home/QuickAccess",;
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",;
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+<<<<<<< HEAD
+export default function Home() {;
+  return (;
+    <div className="min-h-screen bg-background">;
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
       <SEO;

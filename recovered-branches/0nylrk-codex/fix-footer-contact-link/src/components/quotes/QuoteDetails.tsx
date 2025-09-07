@@ -39,6 +39,23 @@ interface QuoteDetailsProps {
   onClose: () => void;
 }
 
+  };
+
+<<<<<<< HEAD
+}
+
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
+  if (!quote) return null;
+  const formatDate = (dateString?: string) => {
+    if (!dateString) return "Not specified";
+    try {
+      return format(new Date(dateString), "PPP");
+    } catch (e) {
+      return dateString;
+    }
+  }
+  };
+=======
 import {format} from "date-fns";
 
   const formatDate = (dateString?: string) => {"
@@ -129,6 +146,7 @@ import React from './react';'
   }
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import {}
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -160,6 +178,11 @@ if (return null) {}
 if (return "Not specified") {}
   $2;
 }
+<<<<<<< HEAD
+    try {
+      return format (new Date (date_string), "PPP");
+    } catch (e) {
+=======
 
     try {"
       return format (new Date (date_string), "PPP");

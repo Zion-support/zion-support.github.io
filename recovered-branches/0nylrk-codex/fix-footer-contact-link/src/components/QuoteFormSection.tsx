@@ -30,6 +30,8 @@ import { Input } from "./ui/input",
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -100,6 +102,19 @@ export function QuoteFormSection() {
                     Name;
                   </label>
 
+import { Button } from "./ui/button",;
+import { Input } from "./ui/input",;
+import { GradientHeading } from "./GradientHeading",;
+import { useState } from "react",;
+;
+export function QuoteFormSection() {;
+  const [isSubmitted, setIsSubmitted] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+;
+  const handleSubmit = (e:React.FormEvent) => {;
+    e.preventDefault(),;
+    setIsSubmitting(true),;
+    ;
     // Simulate form submission;
     setTimeout(() => {;
       setIsSubmitting(false),;
@@ -286,7 +301,14 @@ export function QuoteFormSection() {;
                   />;
                 </div>;
               </div>;
-
+                  <Input;
+                    id="phone";
+                    type="tel";
+                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
+                  />;
+                </div>;
+              </div>;
+              ;
               <div className="mt-6">;
                 <label htmlFor="interest" className="block text-sm font-medium text-zion-slate-light mb-1">;
                   I'm interested in (select all that apply);

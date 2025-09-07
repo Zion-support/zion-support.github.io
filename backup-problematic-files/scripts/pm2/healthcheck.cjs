@@ -46,7 +46,6 @@ function pingPreview() {
 <<<<<<< HEAD
 
 const distOk = fs.existsSync('dist/index.html');
-
 function pingPreview() {}
 	return new Promise((resolve) => {}
 		const req = http.request({ host: '127.0.0.1', port: 4173, path: '/', timeout: 2000 }, (res) => {}

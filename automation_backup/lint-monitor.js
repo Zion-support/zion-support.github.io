@@ -14,6 +14,7 @@ import { execSync, spawn } from';child_process'';
 import { fileURLToPath } from';url'';
 import { dirname } from';path'';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr/bin/"env": node;
 import fs from';fs'';
 import path from';path'';

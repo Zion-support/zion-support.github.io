@@ -14,6 +14,24 @@ import { verified2025Additions   } from '../../data/verified-2025-additions';
 import { realServicesQ12025   } from '../../data/real-services-q1-2025';
 import { newVerifiedServicesQ22025  } from '../../data/real-verified-services-q2-2025';
 
+<<<<<<< HEAD
+ 
+ 
+}function getAllServices () : Service[] {
+  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
+}return {
+  paths: Array.from (slugs) .map ( (slug) => ({
+  params: {
+  slug
+}) );
+fallback: false
+}export default function ServiceDetailPage ({
+  service
+}: {
+  service: Service
+}) {
+  return (<Layout> <Head> <title> {
+=======
 
 
  
@@ -58,6 +76,24 @@ null;
 };
 null;
 
+<<<<<<< HEAD
+  service.name
+}| Zion Tech Group</title>
+}
+null;
+2)
+}/> </Head> </li>) )
+}</ul> </div>) )
+}</ul> </div> <div>) )
+2) 
+  service.name 
+}| Zion Tech Group</title> ;
+};
+null;
+2)
+2) 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -65,6 +101,8 @@ null;
 }/> </Head> </li>) ) 
 }</ul> </div>) ) 
 }</ul> </div> <div>) ) 
+<<<<<<< HEAD
+=======
 
 }</div> </div> </div> </div> </div> </div> </div> <div className = "p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {"
   `"tel":$ {`  }
@@ -90,6 +128,8 @@ null;
   }
   service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >"Position":</span> {"
 
+<<<<<<< HEAD
+=======
 
   }
 
@@ -113,6 +153,19 @@ null;
 
 
 
+<<<<<<< HEAD
+  service.marketPosition
+}</p>
+}{
+  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
+  service.roi
+  service.marketPosition 
+}</p>
+}{
+  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
+  service.roi 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }</p>
 }{
   }
@@ -313,6 +366,11 @@ export default ServiceDetail
 
 export default ServiceDetail,
 export default ServiceDetail
+<<<<<<< HEAD
+};
+;
+}
+=======
 
 };
   service.name 

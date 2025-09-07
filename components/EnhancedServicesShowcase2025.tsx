@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+import {;
+  FaRocket,;
+  FaBrain,;
+  FaCloud,;
+  FaShieldAlt,;
+  FaChartLine,;
+  FaCogs,;
+  FaLightbulb,;
+  FaGlobe,;
+  FaMobile,;
+  FaDatabase,;
+  FaNetworkWired,;
+  FaRobot,;
+  FaSearch,;
+import {;
+  SiNextdotjs,;
+  SiReact,;
+  SiTypescript,;
+  SiTailwindcss,;
+  SiPrisma,;
+  SiSupabase,;
+  SiVercel,;
+  SiDocker,;
+  SiKubernetes,;
+  SiAws,;
+  SiGooglecloud,;
+  SiMicrosoftazure,;
+} from 'react-icons/si';
+interface Service {;
+=======
 
 ;
 import React, { useState, useEffect, useMemo } from 'react';'
@@ -60,6 +91,22 @@ import {
   SiGooglecloud;
   SiMicrosoftazure
 } from 'react-icons/si';
+<<<<<<< HEAD
+  color: string;  id: string
+  name: string
+  description: string
+  icon: React.ReactNode
+  color: string
+}
+const serviceCategories: ServiceCategory[] = [
+  icon: React.ReactNode;
+  color: string;  id: string,
+  name: string,
+  description: string,
+  icon: React.ReactNode,
+  color: string
+}
+=======
 
 interface Service {
   id: string,
@@ -686,7 +733,7 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
                 ))}className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'>'
 
                     {tech}
-                  </span>;
+                  </span>
                 ))}
                 {service.technologies.length > 3 && (<span className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'>;'
                     +{service.technologies.length - 3} more;

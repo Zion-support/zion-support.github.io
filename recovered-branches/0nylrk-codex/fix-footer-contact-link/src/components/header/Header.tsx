@@ -13,10 +13,23 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
 import { generateSearchSuggestions } from "@/data/marketplaceData",;
 import { useNavigate } from "react-router-dom";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Link} from 'react-router-dom';
 import {Logo} from './Logo';
 import {UserMenu} from './UserMenu';
 import {LanguageSelector} from './LanguageSelector';
+<<<<<<< HEAD
+import {MainNavigation} from '@/layout/MainNavigation';
+import {useAuth} from '@/hooks/useAuth';
+import {useWhitelabel} from '@/context/WhitelabelContext';
+import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
+import {generateSearchSuggestions} from "@/data/marketplaceData";
+import {useNavigate} from "react-router-dom";
+import {useState} from "react";
+export interface HeaderProps {;
+  hideLogin?: boolean;
+  customLogo?: string;
+=======
 
   // If we have a white-label tenant and no specific customTheme is provided;'
   // use the tenant's primary color;
@@ -56,11 +69,22 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom",
 import { useState } from "react",
+<<<<<<< HEAD
+=======
 
 export interface HeaderProps {}
   hideLogin?: boolean,
   customLogo?: string,
 
+<<<<<<< HEAD
+export interface HeaderProps {
+  hideLogin?: boolean,
+  customLogo?: string,
+export interface HeaderProps {
+  hideLogin?: boolean,
+  customLogo?: string,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   customTheme?: {
 
 export interface HeaderProps {}
@@ -144,6 +168,21 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             value={query}
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
+<<<<<<< HEAD
+          />
+        </form>
+        <div className="flex items-center gap-2">
+          <LanguageSelector />
+
+
+
+          {!hideLogin && <UserMenu />}
+        </div>
+      </div>
+    </header>
+  )
+}
+=======
 
             value={query}
             onChange={setQuery}
@@ -223,6 +262,14 @@ export function Header(): any ({ hideLogin = false, customLogo, customTheme }: H
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
 
+<<<<<<< HEAD
+
+
+          />;
+        </form>;
+        <div className="flex items-center gap-2">;
+          <LanguageSelector />;
+=======
           />;
         </form>;
 

@@ -108,7 +108,6 @@ export function PartnerResources() {
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
-          <CardTitle>Promotion Guidelines</CardTitle>
           <CardDescription>
             Best practices for promoting the Zion AI Marketplace
           </CardDescription>
@@ -124,12 +123,20 @@ export function PartnerResources() {
               <li>Focus on how the platform can help your audience solve their AI talent needs</li>
             </ul>
           </div>
+<<<<<<< HEAD
+          <div className='space-y-2'>
+            <h3 className='text-lg font-semibold text-white'>Don'ts</h3>
+            <ul className='list-disc pl-5 space-y-1 text-zion-slate-light'>
+ursor/fix-website-loading-errors-and-merge-6662
+          <div className='space-y-2'>
+            <h3 className='text-lg font-semibold text-white'>Don'ts</h3>
+            <ul className='list-disc pl-5 space-y-1 text-zion-slate-light'>
+=======
 
           <div className="space-y-2">
             <h3 className="text-lg font-semibold text-white">Don'ts</h3>
             <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">
               <li>Make unrealistic promises about earnings or results</li>
-              <li>Use manipulative or misleading marketing tactics</li>
               <li>Spam your referral link across unrelated content</li>
               <li>Modify or alter our brand assets in unauthorized ways</li>
               <li>Create fake accounts or use bots to generate referrals</li>
@@ -137,10 +144,14 @@ export function PartnerResources() {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
+      <Card className='bg-zion-blue-dark border-zion-blue-light'>
+ursor/fix-website-loading-errors-and-merge-6662
+      <Card className='bg-zion-blue-dark border-zion-blue-light'>
+=======
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
-          <CardTitle>Partner Support</CardTitle>
           <CardDescription>
             Need help with your affiliate marketing? Contact our partner support team.
           </CardDescription>

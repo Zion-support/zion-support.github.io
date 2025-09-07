@@ -945,6 +945,16 @@ className='group'>
 
                         Contact;
                     </div>;
+<<<<<<< HEAD
+
+
+
+
+
+=======
+=======
+<<<<<<< HEAD
+=======
 
 =======
                         href=\'/contact\';
@@ -970,6 +980,8 @@ href='/contact';
                   </div>;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
                 </motion && motion.div>;<div className='mt-4'    />;
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'    />;

@@ -105,6 +105,28 @@ import {;
   AlertTriangle,;
   BriefcaseIcon,;
 } from "lucide-react";
+<<<<<<< HEAD
+
+import { useState } from "react",;
+import { Draggable } from "react-beautiful-dnd",;
+import { formatDistanceToNow } from "date-fns",;
+import { Link } from "react-router-dom",;
+import { JobApplication } from "@/types/jobs",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Avatar } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { ;
+  MessageSquare,;
+  User, ;
+  FileText, ;
+  MoreVertical, ;
+  Calendar,;
+  AlertTriangle,;
+  BriefcaseIcon;
+} from "lucide-react",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   BriefcaseIcon,;"
 } from "lucide-react";"
@@ -119,12 +141,87 @@ import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
-  DropdownMenuTrigger,;
-
+<<<<<<< HEAD
 } from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
+interface CandidateCardProps {;
+import { useState  } from './react';
+import { Draggable  } from './react - beautiful - dnd';
+import { formatDistanceToNow  } from './date - fns';
+import { Link  } from './react-router-dom';
+import { JobApplication  } from '@/types / jobs';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Avatar  } from '@/components / ui / avatar';
+import { Button  } from '@/components / ui / button';
+import { Textarea  } from '@/components / ui / textarea';
+import {
+
+
+  MessageSquare,
+  User,
+  FileText,
+  MoreVertical,
+  Calendar,
+  AlertTriangle,
+
+
+  BriefcaseIcon
+} from "lucide-react",
+
+
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { 
+  MessageSquare;
+  User;
+  FileText;
+  MoreVertical;
+  Calendar;
+  AlertTriangle;
+  BriefcaseIcon
+} from "lucide-react",
+import {
+
+  MessageSquare
+  User
+  FileText
+  MoreVertical
+  Calendar
+  AlertTriangle
+  BriefcaseIcon
+} from "lucide-react";
+import {
+DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+=======
+  DropdownMenuTrigger,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+<<<<<<< HEAD
+interface CandidateCardProps {
+  application: JobApplication;
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { 
+  MessageSquare,
+  User, 
+  FileText, 
+  MoreVertical, 
+  Calendar,
+  AlertTriangle,
+  BriefcaseIcon,;
+} from "lucide-react";
+  BriefcaseIcon
+} from "lucide-react",
+=======
 interface CandidateCardProps {;
 import { useState  } from './react';
 import { Draggable  } from './react - beautiful - dnd';
@@ -198,6 +295,21 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
+DropdownMenuTrigger,;
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
+import { toast } from "@/hooks/use-toast",
+import { HireConfirmationModal } from "./HireConfirmationModal",
+const [showNotes, setShowNotes] = useState(false);
+interface CandidateCardProps {
+  application: JobApplication,
+  index: number
+}
 
 DropdownMenuTrigger,;
 
@@ -250,12 +362,15 @@ interface CandidateCardProps {
     })
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
         {(provided) => (
           <Card "
             className="mb-2 p-0 shadow-sm border"
+<<<<<<< HEAD
+=======
 
   const handleSaveNotes = () => {;
     // Here you would save the notes to the database;
@@ -277,6 +392,7 @@ interface CandidateCardProps {
     <>;
       <Draggable draggableId={application && application.id} index={index}>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
@@ -443,11 +559,21 @@ interface CandidateCardProps {
                       {showNotes ? "Hide notes" : "Add notes"}
 
                       {showNotes ? "Hide notes" : "Add notes"}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </DropdownMenuItem>;
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
                       <BriefcaseIcon className="h-4 w-4 mr-2" /> Hire Candidate;
                     </DropdownMenuItem>;
                     <DropdownMenuItem asChild>;
+<<<<<<< HEAD
+                      <Link to={`/messages?talentId=${application.talent_id}`}>;
+                        Message;
+                      </Link>;
+                    </DropdownMenuItem>;
+                    {application.resume?.file_url && (;
+                      <DropdownMenuItem asChild>;
+                        <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">;
+=======
                       <Link to={`/messages?talentId=${application && application.talent_id}`}>;
                         Message;
                       </Link>;
@@ -470,16 +596,24 @@ interface CandidateCardProps {
                         </a>;
                       </DropdownMenuItem>;
                     )}
+<<<<<<< HEAD
+                  </DropdownMenuContent>;
+                </DropdownMenu>;
+              </div>;
+              ;
+=======
 
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Application Info */}
               <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;
                 <div className="flex items-center">;
                   <Calendar className="h-3 w-3 mr-1" />;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {isStalled && (;
                   <div className="flex items-center text-amber-500">;
                     <AlertTriangle className="h-3 w-3 mr-1" />;
@@ -541,6 +675,9 @@ interface CandidateCardProps {
                   className="flex-1"
                   asChild;
                 >
+<<<<<<< HEAD
+              {/* Action Buttons */}
+=======
 
                   {application.resume?.file_url ? (
 

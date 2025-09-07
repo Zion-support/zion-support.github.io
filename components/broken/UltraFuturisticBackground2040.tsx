@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+const UltraFuturisticBackground2040: React.FC = () => {
+    canvas.height = window.innerHeight;
+    let animationFrameId: number,
+    let time = 0;
+    // Particle system
+    const particles: Array<{
+const UltraFuturisticBackground2040: React.FC = () => {;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {;
+    const canvas = canvasRef && canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas && canvas.getContext('2d');
+    if (!ctx) return;
+    canvas && canvas.width = window && window.innerWidth;
+    canvas && canvas.height = window && window.innerHeight,;
+    let animationFrameId: number;    let animationFrameId: number,;
+    let time = 0;
+    // Particle system;
+    const particles: Array<{;
+=======
 
 
 import React, { useEffect, useRef } from 'react';'
@@ -74,6 +95,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const animate = () => {
       }
       time += 0.01;
+<<<<<<< HEAD
+=======
 
       // Clear canvas with fade effect,
 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';'
@@ -189,6 +212,7 @@ canvas.height = window.innerHeight;
       <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />'
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Floating Elements */}
       <div className='absolute inset-0'>;'
         {/* Animated Grid Pattern */}
@@ -333,6 +357,8 @@ className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full''
           animate={{}
             y: [0, -15, 0],
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          }}
+<<<<<<< HEAD
+=======
 
       <style jsx>{``        @keyframes gridMove {
           }
@@ -388,7 +414,7 @@ className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full''
           100% {}
             transform: translate(50px, 50px)
           }
-          50% {;
+50% {;
             opacity: 0 && 0.5;          }
         }
 `

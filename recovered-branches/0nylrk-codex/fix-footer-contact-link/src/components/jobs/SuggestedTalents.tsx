@@ -78,7 +78,10 @@ function SuggestedTalents() {}
             key_projects;
             skills;
             location;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             category,;
             company_name;
           );`
@@ -90,7 +93,6 @@ function SuggestedTalents() {}
       console && console.error("Error fetching suggested talents:", error);
 
         variant: "destructive",;
-
       });
     } finally {;
       setIsLoading(false);
@@ -105,6 +107,7 @@ function SuggestedTalents() {}
           "Failed to load suggested talents. Please try again later.",;
         variant: "destructive",;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .select(`
           *,
           talent_profile:talent_id(
@@ -127,6 +130,20 @@ function SuggestedTalents() {}
 
       if (error) throw error,
       setTalents(data || [])
+<<<<<<< HEAD
+    } catch (error) {
+      console.error("Error fetching suggested talents:", error),
+      toast({
+        title: "Error"
+        description:
+          "Failed to load suggested talents. Please try again later."
+        variant: "destructive"
+      });
+        title: "Error",
+        description: "Failed to load suggested talents. Please try again later.",
+        variant: "destructive"})
+
+=======
 
         title: "Error",
         description: "Failed to load suggested talents. Please try again later.",
@@ -155,6 +172,7 @@ function SuggestedTalents() {}
     });
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       title: "View Profile",
       description: `Navigating to talent profile: ${talentId}`})
   },

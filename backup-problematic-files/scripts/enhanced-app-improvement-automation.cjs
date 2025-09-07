@@ -76,6 +76,9 @@ console.log('======')
   "status"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+    console.error('� Automation "failed")
+=======
     console.error('� Automation "failed")
 <<<<<<< HEAD
 <<<<<<< HEAD

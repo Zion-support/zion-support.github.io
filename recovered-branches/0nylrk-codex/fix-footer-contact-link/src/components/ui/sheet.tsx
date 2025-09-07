@@ -61,6 +61,10 @@ const sheetVariants = cva(
         left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
         right:
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
+<<<<<<< HEAD
+    defaultVariants: {
+      side: "right"}}
+=======
 
     defaultVariants: {
       side: &quot;right&quot;}}
@@ -145,6 +149,7 @@ const SheetHeader = ({}
 
 }: React.HTMLAttributes<HTMLDivElement>) => (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
 
     )}
@@ -223,7 +228,6 @@ const SheetTitle = React.forward_ref<;
     {...props}
 
   SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
-
 }
 
 export {;

@@ -12,6 +12,22 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+<<<<<<< HEAD
+// Initialize Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "",
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
+const supabase = createClient(supabaseUrl, supabaseServiceKey),
+
+serve(async (req) => {
+  try {
+    // Authenticate the request - should be called by a cron job or authorized system only
+    if (req.method === "POST") {
+      const body = await req.json();
+      const cronSecret = body.secret;
+      const body = await req.json(),
+      const cronSecret = body.secret,
+      
+=======
 
 serve(async (req) => {
   try {
@@ -59,6 +75,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey),
     // Call the process-retention-emails function
     const response = await fetch(`${supabaseUrl}/functions/v1/process-retention-emails`, {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const result = await response && response.json();
 
     return new Response(JSON && JSON.stringify({}
@@ -109,6 +126,8 @@ if ( {) {}
     return new Response(JSON.stringify({}
       success: true,"
       message: "Daily retention process executed",
+<<<<<<< HEAD
+=======
 
       success: false
       status: 200,

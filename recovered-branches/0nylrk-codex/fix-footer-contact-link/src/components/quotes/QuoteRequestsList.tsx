@@ -9,6 +9,7 @@ import { EmptyStateCard } from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
 import { EmptyStateCard } from "./EmptyStateCard",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type QuoteRequestsListProps = {
 
   quotes: QuoteRequest[],
@@ -16,9 +17,37 @@ type QuoteRequestsListProps = {
   isArchived: boolean,
   onViewDetails: (quote: QuoteRequest) => void,
 
+<<<<<<< HEAD
+type QuoteRequestsListProps = {
+  quotes: QuoteRequest[]
+  isLoading: boolean
+  isArchived: boolean
+  onViewDetails: (quote: QuoteRequest) => void
+  onMarkAsResponded: (id: string) => void
+  onToggleArchive: (id: string, isArchived: boolean) => void
+}
+export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
+  quotes;
+  isLoading;
+  isArchived;
+  onViewDetails;
+export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
+  quotes;
+  isLoading;
+  isArchived;
+  onViewDetails;
+  onMarkAsResponded
+  quotes,
+  isLoading,
+  isArchived,
+  onViewDetails,
+  onMarkAsResponded,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onToggleArchive
 }) => {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
@@ -62,6 +91,23 @@ type QuoteRequestsListProps = {}
     );
 
   }
+  if (quotes.length === 0) {
+    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
+  }
+  
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {quotes.map(quote => (
+        <QuoteRequestCard
+          key={quote.id}
+          quote={quote}
+          onViewDetails={onViewDetails}
+          onMarkAsResponded={!isArchived ? onMarkAsResponded : undefined}
+          onToggleArchive={onToggleArchive}
+        />
+      ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   if (quotes && quotes.length === 0) {;'
 

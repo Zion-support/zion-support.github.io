@@ -4,6 +4,9 @@ interface Event {
   type: string;,
   target: EventTarget | null;
 type EventListener = (event: Event) => void;
+<<<<<<< HEAD
+;
+=======
 
 interface EventTarget {
   // TODO: Implement
@@ -18,6 +21,7 @@ interface MessagePort {
   start (): void;
   close (): void;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   data: T;
 
   origin: string;
@@ -34,6 +38,7 @@ interface MessageChannelHandlerProps {
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       try {
   // TODO: Implement
         // Check condition;
@@ -48,6 +53,8 @@ if ( {) {
     } catch (error) {
       if (onError) {
         onError(error as Error);
+<<<<<<< HEAD
+=======
 
     [onMessage, onError]
   );

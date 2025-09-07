@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <li>Inclusive hiring practices and diverse panels</li> <li>Equal opportunities and career development</li> <li>Respectful, safe, and collaborative culture</li> </ul> </div> </div>
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}

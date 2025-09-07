@@ -119,6 +119,12 @@ ursor/expand-services-advertise-and-build-project-4b36
     if (stdout) logs && logs.push(stdout),
     if (stderr) logs && logs.push(stderr),`
     logs && logs.push(`exit=${status}`),
+<<<<<<< HEAD
+    return status
+  }
+  // Generate sitemap for crawling
+  logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
+=======
 
     return status
   }
@@ -129,6 +135,7 @@ ursor/expand-services-advertise-and-build-project-4b36
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Build search index if available
 
   try {

@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {;
+  ChevronDown,;
+  Star,;
+  TrendingUp,;
+  Zap,;
+  Brain,;
+  Cpu,;
+  Shield,;
+  Rocket,;
+  Globe,;
+  Database,;
+  Lock,;
+  Cloud,;
+  Eye,;
+  Timer,;
+  Sparkles,;
+=======
 
 
 
@@ -408,11 +428,65 @@ value={sortBy}
           </div>
         </motion.div>
 
+<<<<<<< HEAD
+        {/* Services Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          {filteredServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+              variants={itemVariants}
+
+
+          ))}
+
+        </motion && motion.div>;
+
+
+        </motion.div>
+
+
+        {/* Call to Action */}
+        <motion&& motion.div
+              className='group'
+            >
+              <UltraFuturisticServiceCard
+                service={service}
+                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />              className="group"
+            >
+              <UltraFuturisticServiceCard
+                service={service}
+                className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />
+
+              />
+
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+=======
 
         {/* Services Grid *
 }
         <motion&& motion.div;
           variants={containerVariants}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 initial='hidden''
           whileInView='visible''
@@ -575,6 +649,11 @@ export default UltraFuturistic2029ServiceShowcase;
               </motion.div>
 
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
           </div>
         </motion.div>

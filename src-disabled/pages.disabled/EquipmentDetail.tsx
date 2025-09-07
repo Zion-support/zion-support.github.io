@@ -196,6 +196,15 @@ if ( {) {
         variant: 'destructive','
       });
       return;
+<<<<<<< HEAD
+    } catch (error) {
+      toast({
+        title: 'Error'
+        description: 'Failed to add item to cart. Please try again.'
+        variant: 'destructive'
+      })
+    } finally {
+      setIsAdding(false)
     }
   }
   const inCart = items.some(item => item.id === equipment?.id)
@@ -204,6 +213,39 @@ if ( {) {
         title: "Added to Cart","
         description: `${equipment.name} has been added to your cart.`})`
     } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to add item to cart. Please try again.",
+        variant: "destructive"})
+    } finally {
+      setIsAdding(false)
+    }
+          id: equipment.id,
+          name: equipment.name,
+          price: equipment.price,
+=======
+    }
+  }
+  const inCart = items.some(item => item.id === equipment?.id)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          quantity}}),
+
+      toast({
+        title: "Added to Cart",
+        description: `${equipment.name} has been added to your cart.`})
+    } catch (error) {
+<<<<<<< HEAD
+      toast({
+        title: "Error",
+        description: "Failed to add item to cart. Please try again.",
+        variant: "destructive"})
+    } finally {
+      setIsAdding(false)
+    }
+  },
+
+  const inCart = items.some(item => item.id === equipment?.id),
+=======
       toast ({
         title: 'Error','
         description: 'Failed to add item to cart. Please try again.','
@@ -326,6 +368,14 @@ if ( {) {
   if (error || !equipment) {;
     return (
       <>;
+<<<<<<< HEAD
+  }
+  // Error state
+  if (error |!equipment) {
+    return (
+      <>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <NextSeo
           title="Equipment Not Found""
           description="The equipment you're looking for doesn't exist or has been removed.""
@@ -868,6 +918,11 @@ if ( {) {
         </div>
       </>
     )
+<<<<<<< HEAD
+              : undefined
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           title: `${equipment && equipment.name} - Zion Marketplace`,
           description: equipment && equipment.description,
@@ -1073,11 +1128,17 @@ function convertProductListingToEquipmentDetails(
           {/* Breadcrumb */}
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Equipment
             </button>
-            <span className='mx-2 text-zion-slate-light'>/</span>
-            <span className='text-zion-slate-light'>{equipment.name}</span>
+            <span className="mx-2 text-zion-slate-light">/</span>
+            <span className="text-zion-slate-light">{equipment.name}</span>
           </motion.nav>
+<<<<<<< HEAD
+          <div className='grid lg:grid-cols-2 gap-12'>
+          </motion.nav>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               onClick={() => router && router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >;
@@ -1121,6 +1182,7 @@ function convertProductListingToEquipmentDetails(
                         alt={`${equipment.name} view ${index + 1}`}
                         className="object-cover"
                       />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </button>
                   ))}
                 </div>;
@@ -1144,10 +1206,39 @@ function convertProductListingToEquipmentDetails(
               )}
 
 
+<<<<<<< HEAD
               initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0 && 0.4 }}>;
               {/* Header */}
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+            {/* Product Details */}
+            <motion.div
+              className='space-y-6'
+            <motion.div 
+              className="space-y-6"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              {/* Header */}
+<<<<<<< HEAD
+              <div className='space-y-2'>
+                <div className='flex items-center gap-2 mb-2'>
+                  <Badge
+                    variant='secondary'
+                    className='bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20'
+                  >
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
+=======
 
                     {equipment.category}
                   </Badge>
@@ -1208,8 +1299,8 @@ function convertProductListingToEquipmentDetails(
                         <span className="text-white">{spec.value || 'Enterprise Grade'}</span>
                       </div>
                     ))}
-                  </div>;
-                </div>;
+                  </div>
+                </div>
               )}
 ;
               {/* Add to Cart */}
@@ -1293,7 +1384,6 @@ function convertProductListingToEquipmentDetails(
                     </div>
                   </div>
                 )}
-
 ;
                 {/* Return Policy */}
                 {equipment.returnPolicy && (
@@ -1312,8 +1402,11 @@ function convertProductListingToEquipmentDetails(
 }</div> </motion.div> </div> </div> </div> </>) 
 }'"};
 ;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </motion && motion.div>;
           </div>;

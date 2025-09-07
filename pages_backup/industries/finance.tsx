@@ -4,6 +4,8 @@ import React from 'react;
 import Link from next/link';';
 import { motion } from framer-motion;
 
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from next/link;';
 import { motion } from 'framer-motion;
@@ -54,6 +56,7 @@ const services = [;
     title: 'Blockchain Solutions,',
     description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Layout from '../../components/Layout';
 import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';
 import React from 'react';
@@ -76,6 +79,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'AI Trading Algorithms,',
+    description: 'Advanced machine learning algorithms for automated trading and investment strategies.,',
+    icon: Brain,
+    features: [;
+      'Algorithmic trading systems,',
+      'Risk management AI',',
+      'Market prediction models',',
+=======
 
     title: 'AI Trading Algorithms,,
     description: Advanced machine learning algorithms for automated trading and investment strategies.,',
@@ -91,6 +103,15 @@ const services = [
   }];
   },
   {}
+<<<<<<< HEAD
+    title: 'Digital Payment Systems,',
+    description: 'Secure, scalable payment processing solutions for modern financial transactions.',',
+    icon: CreditCard,
+    features: [;
+      'Payment gateway integration,',
+      'Mobile payment solutions',',
+      'Cross-border payments',',
+=======
 
     title: 'Digital Payment Systems,',
     description: Secure, scalable payment processing solutions for modern financial transactions.,',
@@ -104,6 +125,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Risk Management AI,',
+    description: 'AI-powered risk assessment and management tools for financial institutions.,',
+    icon: TrendingUp,
+    features: [;
+      'Credit risk analysis,',
+      'Market risk modeling',',
+      'Operational risk assessment',',
+=======
 
     title: 'Risk Management AI,',
     description: AI-powered risk assessment and management tools for financial institutions.,,
@@ -119,6 +149,15 @@ const services = [
   }];
   },
   {}
+<<<<<<< HEAD
+    title: 'Fraud Detection Systems,',
+    description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',
+    icon: Lock,
+    features: [;
+      'Real-time transaction monitoring,',
+      'Behavioral analysis',',
+      'Pattern recognition',',
+=======
 
     title: Fraud Detection Systems,',
     description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,,
@@ -132,6 +171,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Regulatory Compliance Tools,',
+    description: 'Automated compliance monitoring and reporting for financial regulations.,',
+    icon: FileText,
+    features: [;
+      'KYC/AML automation,',
+      'Regulatory reporting',',
+      'Audit trail management',',
+=======
 
     description: Automated compliance monitoring and reporting for financial regulations.,,
     icon: FileText,
@@ -452,18 +500,35 @@ export default function FinancePage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Transform Financial Services?;
+=======
 
               </h2>;
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">";
                 Let our fintech experts help you implement cutting-edge financial technology;
                 solutions that enhance security and efficiency.;
               </p>;
+<<<<<<< HEAD
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+                  Start Your Fintech Project;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">";
+                  Learn About Our Expertise;
+=======
 
             >
 <<<<<<< HEAD
               <h2 className=text-4xl md:text-5xl font-bold mb-6">
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Link>;
               </div>;
             </motion.div>;

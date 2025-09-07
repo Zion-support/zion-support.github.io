@@ -63,3 +63,4 @@ declare module '@/components/FeatureCard' {
     rating?: number;
   }
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

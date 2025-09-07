@@ -15,6 +15,22 @@ export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>
   React.ComponentProps<typeof Input>
 
+<<<<<<< HEAD
+export const SidebarInput = React.forwardRef<
+  React.ElementRef<typeof Input>
+  React.ComponentProps<typeof Input>
+>((props, ref) => {
+  return (
+    <Input
+      ref={ref};
+      data-sidebar=&quot;input&quot;
+      ref={ref}
+      data-sidebar="input"
+      className={cn(
+        &quot;h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring&quot;
+        "h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         props.className
 
       )}
@@ -23,6 +39,11 @@ export const SidebarInput = React.forwardRef<
   )
 })
 
+<<<<<<< HEAD
+    <Input;
+      ref={ref}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       data - sidebar=&quot;input & quot;
       className={cn (
         &quot;h - 8 w - full bg - background shadow - none focus - visible:ring - 2 focus - visible:ring - sidebar - ring & quot;,
@@ -91,6 +112,11 @@ export const SidebarSeparator = React.forward_ref<;
   HTMLDivElement,
 >((props, ref) => {}
   return (
+SidebarInput.displayName = &quot;SidebarInput&quot;
+export const SidebarHeader = React.forwardRef<
+  HTMLDivElement
+  React.ComponentProps<&quot;div&quot;>
+SidebarInput.displayName = "SidebarInput"
 
 >((props, ref) => {}
   return (

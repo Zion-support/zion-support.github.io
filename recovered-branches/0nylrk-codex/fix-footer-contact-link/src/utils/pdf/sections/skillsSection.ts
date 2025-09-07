@@ -6,10 +6,13 @@ export function addSkillsSection(
 export function addSkillsSection(  doc: jsPDF;
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
+<<<<<<< HEAD
+=======
 
   doc: jsPDF;
 

@@ -53,7 +53,7 @@ export interface InnovativeMicroSaasService {
 
 export interface InnovativeMicroSaasService {;
 
-
+<<<<<<< HEAD
 export interface InnovativeMicroSaasService {
 
 

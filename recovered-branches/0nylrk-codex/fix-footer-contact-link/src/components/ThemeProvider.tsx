@@ -20,6 +20,14 @@ type ThemeProviderState = {;
   )
   useEffect(() => {
     const root = window.document.documentElement
+<<<<<<< HEAD
+    root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
+    if (theme === &quot;system&quot;) {
+      const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
+        .matches
+        ? &quot;dark&quot;
+        : &quot;light&quot;
+=======
 
       root.classList.add(systemTheme)
 
@@ -154,6 +162,8 @@ if ()
     throw new Error (&quot) {
 }use_theme must be used within a ThemeProvider & quot);
   return context;
+
+
 
 }
 ;

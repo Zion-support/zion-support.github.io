@@ -6,6 +6,15 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
+<<<<<<< HEAD
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+=======
 
 "
 import { useState } from "react","
@@ -43,11 +52,14 @@ import {
   FormItem;
   FormLabel;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
+<<<<<<< HEAD
+}
 
   title: string
   content: string
@@ -112,6 +124,8 @@ export const PostForm = ({
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
+<<<<<<< HEAD
+=======
 
 import {useState} from "react";
 import {useForm} from "react-hook-form";
@@ -232,6 +246,7 @@ export const PostForm = ({
   const handle_submit = async (values: PostFormValues) => {
     setIsSubmitting (true),
 
+
     try {
       await on_submit (values);
 
@@ -246,12 +261,20 @@ export const PostForm = ({
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
+    }
+  }
+
+
+
+=======
 
   return (
 
@@ -278,6 +301,12 @@ export const PostForm = ({
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
                   <FormMessage />;
+<<<<<<< HEAD
+            />;
+            <FormField
+              control={form && form.control}
+              name="content"
+=======
 
             />;
 
@@ -286,6 +315,7 @@ export const PostForm = ({
 
               name="content"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Content</FormLabel>;
@@ -300,6 +330,8 @@ export const PostForm = ({
                 </FormItem>;
               )}
             />;
+<<<<<<< HEAD
+=======
 
             <FormField
               control={form && form.control}
@@ -321,6 +353,12 @@ export const PostForm = ({
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
+            />;
+            <FormField
+              control={form && form.control}
+              name="tags"
+=======
 
             />;
 
@@ -329,6 +367,7 @@ export const PostForm = ({
 
               name="tags"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Tags (comma-separated)</FormLabel>;

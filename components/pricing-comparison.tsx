@@ -383,6 +383,9 @@ href='/pricing'
 >>>>>>> origin/chore/fix-lint-and-merge
 
                     {insight.icon}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   </div>;
                   <p className={`text-lg font-semibold ${insight.color}`}    />
 
@@ -610,6 +613,10 @@ key={i}
 >>>>>>> origin/chore/fix-lint-and-merge
 
                             ))}
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 <span className='text-sm text-gray-400 ml-2'    />
                               {competitor.rating}
@@ -747,9 +754,11 @@ key={conIndex}
                     </div>
 
                   ))}
-                </div>;
+</div>;
               </div>;
             ))}
+<<<<<<< HEAD
+=======
 
         {/* CTA Section */}
 
@@ -869,6 +878,38 @@ href='/devops-automation;
                 className=bg-white text-indigo-600 hover:bg-gray-100"
                 Try AI Content Generator
               </Button>
+<<<<<<< HEAD
+              <Button
+
+              <Button
+                href='/cloud-monitoring'
+                variant='secondary'
+                size='lg'
+                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/cloud-monitoring"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+                Try Cloud Monitoring
+              </Button>
+              <Button
+                href='/devops-automation'
+                variant='secondary'
+                size='lg'
+                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/devops-automation"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+                Try DevOps Automation
+              </Button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+);
+}
+              <Button
+=======
 
   )}
   )

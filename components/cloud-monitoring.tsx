@@ -509,6 +509,7 @@ key={index}
                         >
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {metric}
                         </div>
                       ))}
@@ -602,6 +603,7 @@ key={index}
 <div className='text-center mb-8'>'
                   <h3 className='text-2xl font-bold text-white mb-2'>'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;'
@@ -692,6 +694,7 @@ key={index}
                 </p>
               </Card>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               </Card>
 
@@ -771,6 +774,143 @@ variant='outline';'
               size="lg"
 
 
+<<<<<<< HEAD
+              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl">;
+              <Play className="w-5 h-5 mr-2" />;
+                    <span className='text - lg text - gray - 400'>{plan.period}</span>;
+                  </div>;
+                  <p className='text - gray - 400'>{plan.description}</p>;
+                </div>;
+                <ul className='space - y-4 mb - 8'>;
+                  {plan.features.map ((feature, feature_index) => (
+                    <li;
+                      key={feature_index}
+                      className='flex items - center text - gray - 300';
+                    >;
+                      <CheckCircle className='w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0' />                      {feature}                  </div>;
+                  <p className="text - gray - 400">{plan.description}</p>;
+                </div>;
+                <ul className="space - y-4 mb - 8">;
+                  {plan.features.map ((feature, feature_index) => (
+                    <li key={feature_index} className="flex items - center text - gray - 300">;
+                      <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0" />;
+                      {feature}
+                    </li>))}
+                </ul>;
+                <Button;
+                  href='/contact';
+                  className={`w - full ${plan.button_color} text - white`}
+                  size='lg';
+                >;
+                  Get Started;
+                  <ArrowRight className='w - 5 h - 5 ml - 2' />                </Button>                  className={`w - full ${plan.button_color} text - white`}
+                  size="lg";
+                >;
+                  Get Started;
+                  <ArrowRight className="w - 5 h - 5 ml - 2" />;
+                </Button>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Integrations Section */}
+      <section className='py - 24 bg - gray - 900 relative overflow - hidden'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight'>;
+              Seamless Integrations;
+            </h2>;
+            <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>              Connect with your favorite tools and platforms;
+            </p>;
+          </div>;
+          <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6'>      <section className="py - 24 bg - gray - 900 relative overflow - hidden">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10">;
+          <div className="text - center mb - 20">;
+            <h2 className="text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight">;
+              Seamless Integrations;
+            </h2>;
+            <p className="text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+            </p>;
+          </div>;
+          <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6'>;
+            {integrations.map ((integration, index) => (
+              <Card;
+                key={index}
+                className='text - center group border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300';
+              >;
+                <div className='text - 4xl mb - 4 group - hover:scale - 110 transition - transform duration - 300'>;
+                  {integration.icon}
+                </div>;
+                <h3 className='font - semibold text - white mb - 2'>;
+                  {integration.name}
+                </h3>;
+                <p className='text - sm text - gray - 400'>;
+                  {integration.description}
+                </p>              </Card>            {integrations.map ((integration, index) => (
+              <Card;
+                key={index}
+                className="text - center group border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300";
+              >;
+                <div className="text - 4xl mb - 4 group - hover:scale - 110 transition - transform duration - 300">;
+                  {integration.icon}
+                </div>;
+                <h3 className="font - semibold text - white mb - 2">{integration.name}</h3>;
+                <p className="text - sm text - gray - 400">{integration.description}</p>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className='py - 24 bg - gradient - to - r from - green - 600 to - blue - 600 relative overflow - hidden'>;
+        <div className='absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:20px_20px] opacity - 10' />;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center relative z - 10'>;
+          <h2 className='text - 4xl sm:text - 5xl font - bold text - white mb - 8'>;
+            Ready to Monitor Your Infrastructure?;
+          </h2>;
+          <p className='text - xl text - green - 100 mb - 12 max - w-4xl mx - auto leading - relaxed'>;
+            Join thousands of DevOps teams who trust us to monitor their;
+            critical infrastructure.;
+          </p>;
+          <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
+            <Button;
+              href='/contact';
+              variant='secondary';
+              size='lg';
+              className='bg - white text - green - 600 hover:bg - gray - 100 shadow - 2xl';
+            >;
+              Start Free Trial;
+              <ArrowRight className='w - 5 h - 5 ml - 2' />;
+            </Button>;
+            <Button;
+              href='#demo';
+              variant='outline';
+              size='lg';
+              className='border - white text - white hover:bg - white hover:text - green - 600 shadow - 2xl';
+            >;
+              <Play className='w - 5 h - 5 mr - 2' />              Watch Demo            Ready to Monitor Your Infrastructure?;
+          </h2>;
+          <p className="text - xl text - green - 100 mb - 12 max - w-4xl mx - auto leading - relaxed">;
+            Join thousands of DevOps teams who trust us to monitor their critical infrastructure.;
+          </p>;
+          <div className="flex flex - col sm:flex - row gap - 6 justify - center">;
+            <Button;
+              href="/contact";
+              variant="secondary";
+              size="lg";
+              className="bg - white text - green - 600 hover:bg - gray - 100 shadow - 2xl";
+            >;
+              Start Free Trial;
+              <ArrowRight className="w - 5 h - 5 ml - 2" />;
+            </Button>;
+            <Button;
+              href="#demo";
+              variant="outline";
+              size="lg";
+              className="border - white text - white hover:bg - white hover:text - green - 600 shadow - 2xl";
+            >;
+              <Play className="w - 5 h - 5 mr - 2" />;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Watch Demo;
             </Button>;
           </div>;

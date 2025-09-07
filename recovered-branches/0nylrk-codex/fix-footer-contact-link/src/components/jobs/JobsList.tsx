@@ -7,6 +7,7 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
   const { user } = useAuth();
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
@@ -36,6 +37,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       if (!user) return;
       if (!user) return,  const { user } = useAuth();
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {
 
       if (!user) return;
@@ -83,6 +85,15 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         setIsLoading(false)
       }
 
+<<<<<<< HEAD
+    }
+    fetchJobs()
+  }, [user, filter]);
+    }
+    fetchJobs()
+  }, [user, filter]);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 
     fetchJobs()
@@ -141,7 +152,10 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
             <div className="flex flex-wrap gap-1 mt-2">
               {job.skills.slice(0, 3).map((skill, index) => ("
                 <Badge key={index} variant="outline" className="text-xs">
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -187,6 +201,8 @@ interface JobsListProps {;
 ;
   if (jobs.length === 0) {;
     return (;
+<<<<<<< HEAD
+=======
 
             :"You haven't posted any jobs yet.";
       <div className="text-center p-8 border rounded-md bg-muted/20">;
@@ -200,8 +216,32 @@ interface JobsListProps {;
           <Link to="/post-job">Post Your First Job</Link>;
         </Button>;
       </div>;
+  const getStatusColor = (status: JobStatus) => {;
+    switch (status) {;
+      case "new": return "bg-blue-100 text-blue-800";
+      case "in_progress":;
+        return "bg-yellow-100 text-yellow-800";
+      case "filled":;
+        return "bg-green-100 text-green-800";
+    ),;
+  }
+;
+  const getStatusColor = (status:JobStatus) => {;
+    switch (status) {;
+      case "new":return "bg-blue-100 text-blue-800",;
     );
   }
+<<<<<<< HEAD
+;
+  const getStatusColor = (status: JobStatus) => {;
+    switch (status) {;
+      case "new": return "bg-blue-100 text-blue-800",;
+      case "in_progress":;
+        return "bg-yellow-100 text-yellow-800",;
+      case "filled":;
+        return "bg-green-100 text-green-800",;
+    }
+=======
 
   const getStatusColor = (status: JobStatus) => {;
     switch (status) {;
@@ -294,11 +334,50 @@ interface JobsListProps {;
               </div>;
               <Badge className={getStatusColor(job && job.status)}>;"
                 {job && job.status.replace("_", " ").toUpperCase()}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </Badge>;
             </div>;
           </CardHeader>;"
           <CardContent className="p-4 pt-0">;"
             <p className="line-clamp-3 text-sm text-muted-foreground mb-2">;
+<<<<<<< HEAD
+      case "closed":;
+        return "bg-gray-100 text-gray-800";
+      default:;
+        return "bg-gray-100 text-gray-800";
+    }
+  };
+  return (;
+    <div className="grid gap-6 md:grid-cols-2">;
+      {jobs.map((job) => (;
+        <Card;
+          key={job.id} ;
+          className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${;
+            onSelectJob ? "cursor-pointer" : "";
+          }`}
+          onClick={() => onSelectJob?.(job.id, job.title)}
+        >
+          <CardHeader className="p-4">
+            <div className="flex justify-between items-start">
+              <div>
+                <CardTitle className="text-xl">{job.title}</CardTitle>
+                <CardDescription className="mt-1">
+                  Posted {format(new Date(job.created_at), "PPP")}
+                </CardDescription>
+              </div>
+              <Badge className={getStatusColor(job.status)}>
+                {job.status.replace("_", " ").toUpperCase()}
+              </Badge>
+            </div>
+          </CardHeader>
+          <CardContent className="p-4 pt-0">
+            <p className="line-clamp-3 text-sm text-muted-foreground mb-2">
+              {job.description}
+            </p>;
+            <div className="flex flex-wrap gap-1 mt-2">;
+              {job.skills.slice(0, 3).map((skill, index) => (;
+              <Link to={`/jobs/${job.id}`}>;
+=======
               {job && job.description}
             </p>;"
             <div className="flex flex-wrap gap-1 mt-2">;

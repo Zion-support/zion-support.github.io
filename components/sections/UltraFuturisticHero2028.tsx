@@ -68,6 +68,8 @@ import {
   Crown;} from 'lucide-react';
 export default function UltraFuturisticHero2028() {
 
+<<<<<<< HEAD
+=======
 
 import React from 'react','
 import Link from 'next/link';'
@@ -601,6 +603,10 @@ className='text-center'
               <Star className="w-5 h-5 text-yellow-400" />"
               <span className="text-white font-semibold">Ready to transform your business?</span>
             </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <Link"
               href="/contact""
@@ -750,6 +756,11 @@ animate={{ "y": [0, 10, 0] }}
         </motion.div>;
     </section>;
     </section>);
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+);
+  );
 }
   )}
   )

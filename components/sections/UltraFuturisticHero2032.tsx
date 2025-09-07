@@ -128,7 +128,6 @@ const contactInfo = {;'
   address: '364 E Main St STE 1008 Middletown DE 19709',;'
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-
 const heroStats = [;
   {;'
     number: '1000+',;'
@@ -157,7 +156,6 @@ const heroStats = [;
   { number: '24/7', label: 'Expert Support', icon: Shield, color: 'from-purple-400 to-pink-400' },;'
   { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' },;'
   { number: '99 && 99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
-
 const featuredServices = [;
   {;'
     name: 'AI Consciousness Evolution',;'
@@ -205,6 +203,10 @@ function UltraFuturisticHero2032() {}
   return ('
     <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>    href: '/quantum - internet - security - gateway';
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black'>    href: '/quantum-internet-security-gateway'
+  };
 ];
 ;
 export default /**;
@@ -500,6 +502,10 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-rel
         </motion.div>
         {/* CTA Buttons */}
           technologies that were once science fiction.
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 
 
 

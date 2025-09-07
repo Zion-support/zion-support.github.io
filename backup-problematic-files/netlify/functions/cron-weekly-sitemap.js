@@ -91,6 +91,7 @@ exports.handler = async function () {
     const xml =
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }

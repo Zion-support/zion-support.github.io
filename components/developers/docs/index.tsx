@@ -35,6 +35,8 @@ export default function ApiDocsPage() {
           )}
         </section>;
       ))}
+<<<<<<< HEAD
+=======
 
   );
 

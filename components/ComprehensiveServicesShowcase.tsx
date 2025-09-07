@@ -1041,7 +1041,7 @@ target='_blank';
                   </div>;
                 </motion.div>;
               ))}
-            </AnimatePresence>;
+</AnimatePresence>;
           </div>;
         )}
         {/* No Results */}
@@ -1107,6 +1107,7 @@ className='text-center py-20'>
                   />;
                 className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Call +1 302 464 0950;
               </a>;
             </div>;

@@ -40,6 +40,12 @@ interface CategoryCardProps {;
     <Link
       to={`/category/${slug}`}
       className={cn(
+<<<<<<< HEAD
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
+
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
+=======
 
         "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
 
@@ -52,6 +58,8 @@ interface CategoryCardProps {;
     >
       <div
         className={cn(
+<<<<<<< HEAD
+          "mb-4 p-3 bg-zion-blue-dark rounded-full";
 
 "mb-4 p-3 bg-zion-blue-dark rounded-full";
 

@@ -64,7 +64,6 @@ export function MobileJobPost() {
       />
       
       <main className="flex-1 py-4 pb-24 px-4">
-        <div className="mb-6 flex justify-between">
           <div className="flex space-x-1">
             <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>
             <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>
@@ -79,12 +78,23 @@ export function MobileJobPost() {
         
         {renderStepContent()}
         
+        {renderStepContent()}
+        
         <div className="flex gap-2 mt-6">
           {currentStep !== "details" && (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button 
               variant="outline" 
               className="flex-1 gap-1" 
               onClick={goToPrevStep}
+<<<<<<< HEAD
+              <ChevronLeft className="h-4 w-4" /> Back
+            </Button>
+          )}
+          <Button
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <ChevronLeft className="h-4 w-4" /> Back
             </Button>
@@ -101,7 +111,6 @@ export function MobileJobPost() {
       </main>
       
       <BottomNavigation />
-    </div>
   )
 }
 
@@ -121,7 +130,6 @@ function DetailsStep() {
       </div>
       
       <div className="space-y-2">
-        <Label htmlFor="location">Location</Label>
         <Select defaultValue="remote">
           <SelectTrigger>
             <SelectValue placeholder="Select location type" />
@@ -135,7 +143,6 @@ function DetailsStep() {
       </div>
       
       <div className="space-y-2">
-        <Label htmlFor="jobType">Job Type</Label>
         <Select>
           <SelectTrigger>
             <SelectValue placeholder="Select job type" />
@@ -265,13 +272,13 @@ function RequirementsStep() {
   )
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function BudgetStep() {
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Budget & Timeline</h2>
       
       <div className="space-y-2">
-        <Label htmlFor="paymentType">Payment Type</Label>
         <Select>
           <SelectTrigger>
             <SelectValue placeholder="Select payment type" />
@@ -285,7 +292,6 @@ function BudgetStep() {
       </div>
       
       <div className="space-y-2">
-        <Label>Salary Range</Label>
         <div className="flex gap-4 items-center">
           <Input placeholder="Min" type="number" className="w-full" />
           <span>to</span>
@@ -314,7 +320,6 @@ function BudgetStep() {
       </div>
       
       <div className="space-y-2">
-        <Label htmlFor="duration">Project Duration</Label>
         <Select>
           <SelectTrigger>
             <SelectValue placeholder="Select project duration" />
@@ -342,6 +347,7 @@ function BudgetStep() {
   )
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function PreviewStep() {
   return (
     <div className="space-y-4">
@@ -353,7 +359,6 @@ function PreviewStep() {
           <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>
           
           <div className="flex gap-2 my-3">
-            <Badge variant="outline">React</Badge>
             <Badge variant="outline">TypeScript</Badge>
             <Badge variant="outline">Node.js</Badge>
           </div>
@@ -374,7 +379,6 @@ function PreviewStep() {
           </div>
           
           <div className="mt-4 pt-3 border-t border-border">
-            <h4 className="font-medium mb-2">Description</h4>
             <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>
           </div>
         </CardContent>

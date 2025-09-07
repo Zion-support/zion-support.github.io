@@ -20,6 +20,8 @@ function readGrant(id: string): GrantApplication | null {
   if (!fs.existsSync(p)) return null;
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
 }
+<<<<<<< HEAD
+=======
 
 function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) {

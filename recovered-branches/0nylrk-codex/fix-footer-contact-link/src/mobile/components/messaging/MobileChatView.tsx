@@ -45,11 +45,99 @@ interface MobileChatViewProps {
     id: string
     name: string
     avatar?: string;
+<<<<<<< HEAD
+    status?: string
+  }
+  messages: Message[]
+  onBack: () => void
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
+interface Message {
+  id: string,
+  content: string,
+  timestamp: string,
+  is_me: boolean,
+  sender?: string;
+  avatar?: string;
+  status?: 'sent' | 'delivered' | 'read';
+}
+interface MobileChatViewProps {
+  contact: {
+    id: string
+    name: string
+    avatar?: string;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isMe: boolean,
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
+<<<<<<< HEAD
+}
+
+interface MobileChatViewProps {
+  contact: {
+    id: string,
+    name: string,
+    avatar?: string;
+    status?: string
+  };
+  messages: Message[],
+  onBack: () => void,
+  onSendMessage: (content: string) => void
+}
+
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState("");
+  const navigate = useNavigate();
+  
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage);
+      setNewMessage("")
+    }
+  };
+  
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(),
+      handleSend()
+    }
+  };
+import React, { useState } from "react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useNavigate } from "react-router-dom",;
+import { toast } from "sonner",;
+interface Message {;
+  id: string,;
+  content: string,;
+  timestamp: string,;
+  isMe: boolean,;
+  sender?: string,;
+  avatar?: string,;
+  status?: 'sent' | 'delivered' | 'read';
+}
+;
+interface MobileChatViewProps {;
+  contact: {;
+    id: string,;
+    name: string,;
+    avatar?: string,;
+    status?: string;
+  },;
+  messages: Message[],;
+  onBack: () => void,;
+  onSendMessage: (content: string) => void;
+}
+
+
+
+=======
 
 }
 
@@ -131,6 +219,7 @@ interface MobileChatViewProps {;
   onSendMessage: (content: string) => void;
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
@@ -154,6 +243,26 @@ interface MobileChatViewProps {;
   onBack: () => void,;
   onSendMessage: (content: string) => void;
 }
+<<<<<<< HEAD
+export function MobileChatView(): any ({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState("");
+  const navigate = useNavigate();
+  const [newMessage, setNewMessage] = useState("");
+
+  const navigate = useNavigate();
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage);
+      setNewMessage("")
+    }
+  }
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleSend()
+    }
+  }
+=======
 
 export function MobileChatView(): any ({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
 
@@ -192,6 +301,7 @@ export function MobileChatView() { return null; }
 
   const startVideoCall = () => {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }),
     
     // Navigate to video call page
@@ -212,12 +322,14 @@ export function MobileChatView() { return null; }
     navigate(`/call/${roomId}?audioOnly=true`)
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }),
     
     // Navigate to video call page with audio-only flag
     navigate(`/call/${roomId}?audioOnly=true`)
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -238,6 +350,7 @@ export function MobileChatView() { return null; }
           </div>
         </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 "max-w-[80%] rounded-2xl px-4 py-2",
                 message.isMe "
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
@@ -259,6 +372,23 @@ export function MobileChatView() { return null; }
       setNewMessage("");
     }
 
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>
+                "text-xs mt-1 flex justify-end",
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>
+  },;
+  const startVideoCall = () => {;
+    const roomId = `mobile-${contact.id}`,;
+    toast.success("Starting video call", {;
+  const handleSend = () => {;
+    if (newMessage && newMessage.trim() !== "") {;
+      onSendMessage(newMessage);
+      setNewMessage("");
+    }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     status?: string;
   }
   messages: Message[],
@@ -323,7 +453,6 @@ export function MobileChatView() { return null; }
                 {message.is_me && message.status && (
                   <span className="ml-1">;
                     {message.status === 'read' ? '✓✓' : '✓'}
-
   };
   const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;'
     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
@@ -468,6 +597,12 @@ return (,;
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
 
+<<<<<<< HEAD
+                "text-xs mt-1 flex justify-end";
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground";
+              )}>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {message.timestamp}
                 {message.isMe && message.status && ("
                   <span className="ml-1">'

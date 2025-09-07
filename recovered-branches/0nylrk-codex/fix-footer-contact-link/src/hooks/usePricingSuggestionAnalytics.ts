@@ -16,6 +16,7 @@ interface PricingSuggestionAnalytics {
   }[];
   isLoading: boolean
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 
@@ -25,6 +26,7 @@ import {supabase} from "@/integrations/supabase/client";'
 import { useState, useEffect } from 'react',"
 import { supabase } from "@/integrations/supabase/client",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface PricingSuggestionAnalytics {
 
   averagePriceGap: number
@@ -121,6 +123,26 @@ interface PricingSuggestionAnalytics {
         // const { data, error } = await supabase'
         //   .from('pricing_suggestions')
         //   .select(...)
+<<<<<<< HEAD
+        console && console.error("Error fetching pricing suggestion analytics:", error);
+        //   .gte('created_at', `now() - interval '${days} days'`);
+        // if (error) throw error;
+        //   .gte('created_at', `now() - interval '${days} days'`),
+        
+        // if (error) throw error,
+        // Process data and setAnalytics({...})
+      } catch (error) {
+        console.error("Error fetching pricing suggestion analytics:", error);
+        setAnalytics({
+          ...analytics;
+          isLoading: false
+          error: "Failed to load pricing analytics data."
+        })
+      }
+    }
+    fetchAnalytics()
+  }, [days]);
+=======
 
         // Process data and setAnalytics({...})
       } catch (error) {

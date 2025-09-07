@@ -49,7 +49,6 @@ export function ITServicePricingTable() { return null; }
         item.country.toLowerCase().includes(searchQuery.toLowerCase()),
       );
     }
-
     // Sort data;
     filteredData.sort((a, b) => {}
       if (a[sortConfig.key] < b[sortConfig.key]) {"
@@ -59,7 +58,6 @@ export function ITServicePricingTable() { return null; }
       }
       return 0;
     });
-
     return filteredData;
   }, [onsiteServicePricing, searchQuery, sortConfig]);
 
@@ -198,12 +196,11 @@ export function ITServicePricingTable() { return null; }
             placeholder="Search by country...";
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-
             className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white";
           />;
         </div>;
       </div>;
-
+;
       <div className="rounded-md border border-zion-blue-light overflow-hidden">;
         <Table>;
           <TableHeader className="bg-zion-blue">;

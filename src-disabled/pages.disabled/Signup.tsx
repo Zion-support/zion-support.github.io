@@ -629,6 +629,10 @@ const SignupSchema = Yup.object({;
       email: true,;
       password: true,;
       confirm: true,;
+<<<<<<< HEAD
+
+  if (healthCheckLoading) {
+=======
       terms: true,;
     });
     await formik && formik.handleSubmit(e);

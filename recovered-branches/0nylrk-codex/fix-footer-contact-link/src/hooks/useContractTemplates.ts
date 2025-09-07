@@ -26,6 +26,25 @@ import { ContractFormValues } from "@/components/contracts/components/ContractFo
 export function useContractTemplates() {
   const { user, isAuthenticated } = useAuth();
 
+<<<<<<< HEAD
+import { ContractTemplate } from "@/types/contracts";
+import { ContractFormValues } from "@/components/contracts/components/ContractForm";
+export function useContractTemplates() {
+  const { user, isAuthenticated } = useAuth();
+
+  const queryClient = useQueryClient();
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+import { ContractTemplate } from "@/types/contracts",
+import { ContractFormValues } from "@/components/contracts/components/ContractForm",
+export function useContractTemplates() {
+  const { user, isAuthenticated } = useAuth(),
+  const queryClient = useQueryClient(),
+  const { toast } = useToast(),
+  const [isLoading, setIsLoading] = useState(false),
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Fetch templates for the current user
   const {
     data: templates = []
@@ -64,6 +83,7 @@ import { ContractTemplate } from "@/types/contracts",;
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
 export function useContractTemplates() { return null; }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
 
       return data as ContractTemplate[]
@@ -90,15 +110,19 @@ title: string;
       if (!user) throw new Error("User not authenticated"),
       setIsLoading(true),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       try {
         // If this is set as default, unset any existing default
         if (isDefault) {
           await supabase
             .from('contract_templates')
             .update({ is_default: false })
+<<<<<<< HEAD
+=======
             .eq('user_id', user && user.id)
             .eq('is_default', true)
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from './react';
 import { use_query, use_mutation, useQueryClient } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
@@ -308,7 +332,6 @@ if ( {) {}
         setIsLoading (false);
       }
 
-    },
 
     onSuccess: () => {
 
@@ -321,6 +344,7 @@ if ( {) {}
       console && console.error("Error saving template:", error);
       toast({
 
+    }
     on_success: () => {
 
       query_client.invalidate_queries ({ query_key: ['contract_templates', user?.id] });
@@ -368,6 +392,7 @@ if ( {) {}
       
       setIsLoading(true),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       try {
         // If this is set as default, unset any existing default
         if (isDefault) {
@@ -375,6 +400,7 @@ if ( {) {}
             .from('contract_templates')
             .update({ is_default: false })
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       template_data: ContractFormValues,
       is_default?: boolean;
     }) => {"
@@ -564,18 +590,24 @@ pr-12325
   const deleteTemplate = useMutation({
     mutationFn: async (templateId: string) => {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       try {
         const { error } = await supabase
 
           .from('contract_templates')
           .delete()'
           .eq('id', templateId)
+<<<<<<< HEAD
+=======
 
 '
           .eq('user_id', user.id),
 
       }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 
     onSuccess: () => {
@@ -600,12 +632,24 @@ await supabase
         await supabase
           .from('contract_templates')
           .update({ is_default: false })
+<<<<<<< HEAD
+          .eq('is_default', true),
+        
+
+
+          .eq('user_id', user.id)
+          .eq('is_default', true);
+          .eq('is_default', true),
+        
+=======
 
         // Then set the new default
         const { error } = await supabase
           .from('contract_templates')
           .update({ is_default: true })
           .eq('id', templateId)
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
         if (error) throw error
@@ -793,6 +837,7 @@ if (throw error) {}
           .update({ is_default: true })'
           .eq('id', templateId)
 
+          .eq('user_id', user && user.id);
         if (error) throw error
 
     on_success: () => {
@@ -843,7 +888,10 @@ if (throw error) {}
 
         setIsLoading(false)
       }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 
     onSuccess: () => {

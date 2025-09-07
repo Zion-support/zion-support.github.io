@@ -6,6 +6,18 @@ const NotFound = () => {
   const location = useLocation();
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
+import {useLocation} from "react-router-dom";
+import {useEffect} from "react";
+import { useLocation } from "react-router-dom",
+import { useEffect } from "react",
+<<<<<<< HEAD
+const NotFound = () => {
+  const location = useLocation(),
+
+const NotFound = () => {
+  const location = useLocation(),
+
+=======
 
   const location = useLocation(),
 

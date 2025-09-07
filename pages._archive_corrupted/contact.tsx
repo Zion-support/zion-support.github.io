@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
+const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
+const \"ContactPage\": React.FC = () => {
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+
+const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
+const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
+const \"ContactPage\": React.FC = () => {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false });
+const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false });
+const \"ContactPage\": React.FC = () => {;
+=======
 
 ;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -72,6 +108,11 @@ const "ContactPage": React.FC = () => {"
 
   }
 
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
   const contactInfo = [{
       }
@@ -116,6 +157,10 @@ const services = ["AI & Machine Learning Solutions",;"
     "Digital Transformation","
     "Consulting & Strategy""
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
   ]
 return (;
@@ -982,6 +1027,10 @@ can take 2-4 weeks, while complex applications may take 3-6 months.
             <div className="bg-white rounded-lg shadow-lg p-6">"
               <h3 className="text-lg font-semibold text-gray-900 mb-3">"
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
                 Do you provide ongoing support?
               </h3>
@@ -996,6 +1045,10 @@ your solutions continue to perform optimally. This includes updates,
             <div className="bg-white rounded-lg shadow-lg p-6">"
               <h3 className="text-lg font-semibold text-gray-900 mb-3">"
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
                 What technologies do you specialize in?
               </h3>
@@ -1010,6 +1063,10 @@ the best technology stack for each project\'s specific needs.'
             <div className="bg-white rounded-lg shadow-lg p-6">"
               <h3 className="text-lg font-semibold text-gray-900 mb-3">"
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
                 How do you ensure project quality?
               </h3>
@@ -1266,6 +1323,7 @@ initial={{ "opacity": 0, \"y\": 20 }}"
               <div className=\"grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8\">"
               <div className="grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8">"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {contactInfo.map((info, index) => (
                   <motion.div
 }
@@ -2355,4 +2413,6 @@ export default ContactPage;
   )ursor/automate-test-improve-and-merge-code-646c;
   );
 
+<<<<<<< HEAD
+=======
 

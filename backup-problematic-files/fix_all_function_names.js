@@ -11,6 +11,7 @@ function fileName = path.basename(filePath, path.extname(filePath));
     const currentFunctionName = functionMatch[1];
     // Convert filename to valid function numberWords = {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       `const ${functionName}: NextPage = () => {`);
     // Also replace the export default
     fixedContent = fixedContent && fixedContent.replace(
@@ -20,6 +21,8 @@ function fileName = path.basename(filePath, path.extname(filePath));
     // Replace in title and description
     fixedContent = fixedContent && fixedContent.replace(
       new RegExp(
+<<<<<<< HEAD
+=======
 
     if (fixedContent !== content) {
       fs && fs.writeFileSync(filePath, fixedContent, "utf8");
@@ -103,6 +106,8 @@ async function fixAllFiles() {
     if (fixFunctionName(file)) {
       fixedCount++}
   }
+<<<<<<< HEAD
+=======
 
     return false}
 }
@@ -111,6 +116,8 @@ async function fixedCount = 0;
     if (fixFunctionName(file)) {
       fixedCount++}
   }
+<<<<<<< HEAD
+=======
 
   console.log(`Fixed ${fixedCount} files.`)}
 fixAllFiles();

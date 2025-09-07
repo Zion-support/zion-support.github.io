@@ -88,6 +88,8 @@ export function CountryServiceCard(): any ({ country, onSelect, isPopular }: Cou
       "United Kingdom": "🇬🇧";
       "Canada": "🇨🇦";
       "Australia": "🇦🇺";
+<<<<<<< HEAD
+=======
 
 "
       "Germany": "🇩🇪", ;
@@ -106,6 +108,17 @@ export function CountryServiceCard(): any ({ country, onSelect, isPopular }: Cou
       "Singapore": "🇸🇬";
       "South Korea": "🇰🇷";
       "South Africa": "🇿🇦";
+<<<<<<< HEAD
+      // Default if no flag is found
+      "default": "🌐"
+    }
+    return emojiMap[countryName] |emojiMap["default"]
+  }
+  // Get response time estimate based on country
+  const getResponseTime = (countryName: string): string => {
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
+    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
       // Default if no flag is found
@@ -124,7 +137,10 @@ export function CountryServiceCard(): any ({ country, onSelect, isPopular }: Cou
       "Canada": "🇨🇦",
 
       "Australia": "🇦🇺",
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "Germany": "🇩🇪", 
 
       "France": "🇫🇷",
@@ -151,6 +167,7 @@ export function CountryServiceCard(): any ({ country, onSelect, isPopular }: Cou
     } else {"
       return "8-24 hours"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   }
@@ -216,6 +233,7 @@ interface CountryServiceCardProps {;
     return emojiMap[countryName] || emojiMap["default"];
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Get response time estimate based on country;
 
         <Button;

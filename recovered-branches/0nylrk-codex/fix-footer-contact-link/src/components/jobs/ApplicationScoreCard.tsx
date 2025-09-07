@@ -166,6 +166,9 @@ function ApplicationScoreCard() {}
 ;
       // Call the trigger_resume_scoring function;
       const { error } = await supabase.rpc (
+<<<<<<< HEAD
+    }
+=======
 
 '
         'trigger_resume_scoring';
@@ -174,6 +177,7 @@ function ApplicationScoreCard() {}
         'trigger_resume_scoring';
         { application_id: application && application.id });
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   // Trigger the scoring process;
   const handleScore = async () => {;
@@ -195,6 +199,24 @@ function ApplicationScoreCard() {}
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
+<<<<<<< HEAD
+          .single();
+          .single(),
+          
+        if (error) {
+          setIsScoring(false),
+          return toast.error("Failed to check scoring status")
+        }
+        if (data.scored_at) {
+          setIsScoring(false),
+          toast.success("Resume scoring completed"),
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),
+          return
+        }
+        if (attempts < maxAttempts) {
+          setTimeout(checkScore, 3000)
+        } else {
+=======
 
         if (error) {
           setIsScoring(false),
@@ -425,9 +447,17 @@ return (;
           .select("*");"
           .eq("id", application && application.id);
           .single();
+<<<<<<< HEAD
+        if (error) {;
+          setIsScoring(false);
+          return toast && toast.error("Failed to check scoring status");
+        }
+        if (data && data.scored_at) {;
+=======
 
         if (error) {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           setIsScoring(false);
 
           toast && toast.success("Resume scoring completed");
@@ -482,6 +512,84 @@ return (;
       toast.error(`Failed to score resume: ${error.message}`);
     }
   },
+<<<<<<< HEAD
+        if (attempts < maxAttempts) {;
+          setTimeout(checkScore, 3000);
+        } else {;
+          setIsScoring(false);
+          toast && toast.info("Scoring is taking longer than expected. Check back later.");
+        }
+      };
+      setTimeout(checkScore, 3000);
+    } catch (error: any) {;
+      setIsScoring(false),;
+      toast && toast.error(`Failed to score resume: ${error && error.message}`);
+    }
+  }
+  // Render the score result or button to score;
+  return (
+    }
+  },;
+;
+  // Trigger the scoring process;
+  const handleScore = async () => {;
+    try {;
+      setIsScoring(true),;
+      ;
+      // Call the trigger_resume_scoring function;
+      const { error } = await supabase.rpc(;
+        'trigger_resume_scoring',;
+        { application_id:application.id }
+      ),;
+      ;
+      if (error) throw error,;
+      ;
+      toast.success("Resume scoring has been initiated"),;
+      ;
+      // Poll for results every 3 seconds for up to 30 seconds;
+      let attempts = 0,;
+      const maxAttempts = 10,;
+      ;
+      const checkScore = async () => {;
+        attempts++,;
+        ;
+        const { data, error } = await supabase;
+          .from("job_applications");
+          .select("*");
+          .eq("id", application.id);
+          .single(),;
+          ;
+        if (error) {;
+          setIsScoring(false),;
+          return toast.error("Failed to check scoring status"),;
+        }
+        ;
+        if (data.scored_at) {;
+          setIsScoring(false),;
+          toast.success("Resume scoring completed"),;
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),;
+          return,;
+        }
+        ;
+        if (attempts < maxAttempts) {;
+          setTimeout(checkScore, 3000),;
+        } else {;
+          setIsScoring(false),;
+          toast.info("Scoring is taking longer than expected. Check back later."),;
+        }
+      },;
+      ;
+      setTimeout(checkScore, 3000),;
+      ;
+    } catch (error:any) {;
+      setIsScoring(false),;
+      toast.error(`Failed to score resume:${error.message}`),;
+    }
+  },;
+;
+  // Render the score result or button to score;
+  return (;
+=======
 
       setTimeout(checkScore, 3000);
 
@@ -586,7 +694,6 @@ return (;
                         <p>{application && application.match_breakdown.experience_match && experience_match.analysis}</p>;
                       </div>;
                     )}
-
                     {application && application.match_breakdown.education_match && (;
 
                         <p className="font-medium">Education Match: {application && application.match_breakdown.education_match && education_match.score}/100</p>;
@@ -610,6 +717,7 @@ return (;
 
             )}
 
+            )}
           </div>;
         ) : (;"
           <div className="text-center py-4">;"
@@ -618,7 +726,6 @@ return (;
             </p>;
             <Button;
               onClick={handleScore} 
-
               disabled={isScoring}
 
               className="w-full">;

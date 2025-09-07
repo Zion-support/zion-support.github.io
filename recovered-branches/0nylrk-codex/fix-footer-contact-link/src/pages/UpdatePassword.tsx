@@ -52,12 +52,48 @@ type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
 
 export default function UpdatePassword() {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+<<<<<<< HEAD
+import { useState, useEffect } from "react",
+import { useNavigate, useLocation } from "react-router-dom",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { LockKeyhole } from "lucide-react",
+import { supabase } from "@/integrations/supabase/client",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form",
+import { toast } from "@/hooks/use-toast",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer";
+import { cleanupAuthState } from "@/utils/authUtils";
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { toast } from "@/hooks/use-toast",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { cleanupAuthState } from "@/utils/authUtils",
+=======
 
 // Form validation schema
 
@@ -185,6 +221,8 @@ if ( {) {
 =======
       setError("No access token found. Please request a new password reset link.")
       return
+<<<<<<< HEAD
+=======
 
   // Initialize react-hook-form;
   const form = useForm<UpdatePasswordFormValues>({;
@@ -192,13 +230,11 @@ if ( {) {
     defaultValues: {;
       password: "",;
       confirmPassword: ""}}),;
-
   useEffect(() => {;
 >>>>>>> origin/chore/fix-lint-and-merge
     // Extract access token from URL hash;
     const hashParams = new URLSearchParams(location && location.hash.substring(1));"
     const token = hashParams && hashParams.get("access_token");
-
     if (token) {;
       setAccessToken(token);
     } else {;"
@@ -317,6 +353,13 @@ export default function UpdatePassword() {;
 
     setIsLoading(true),
 
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+
+    setIsLoading(true),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
@@ -404,16 +447,24 @@ export default function UpdatePassword() { return null; }
 =======
   return (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           title: "Password update failed",
           description: error.message,
           variant: "destructive"}),
 >>>>>>> origin/chore/fix-lint-and-merge
         setError(error.message),
+<<<<<<< HEAD
+        return
+      }
+      // Show success message and clean up auth state
+      setSuccess(true),
+=======
 
         return
       }
       // Show success message and clean up auth state
       setSuccess(true);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
 <<<<<<< HEAD
 
@@ -421,12 +472,20 @@ export default function UpdatePassword() { return null; }
         title: "Password updated successfully"
         description: "You can now log in with your new password."})
       // Clean auth state and redirect after a delay
+<<<<<<< HEAD
+      cleanupAuthState(),
+=======
       cleanupAuthState();
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setTimeout(() => {
         navigate("/login")
       }, 3000)
     } catch (error: any) {
+<<<<<<< HEAD
+      console.error("Password update error:", error),
+=======
       console.error("Password update error:", error);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Password update failed"
         description: error.message |"An unexpected error occurred"
@@ -584,6 +643,7 @@ if ( {) {
                     Your password has been successfully updated.
                   </p>"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {success ? (
 <<<<<<< HEAD
 

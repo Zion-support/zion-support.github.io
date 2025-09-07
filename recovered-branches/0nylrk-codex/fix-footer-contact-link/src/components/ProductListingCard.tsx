@@ -3,12 +3,45 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {ProductListing} from "@/types/listings";
 import {Star, DollarSign} from "lucide-react";
+<<<<<<< HEAD
+  view?: 'grid' | 'list';
+  onRequestQuote?: (id: string) => void;
+}
+export function ProductListingCard(): any ({ ;
+  listing, ;
+=======
 
   view = 'grid';
   onRequestQuote;
 }: ProductListingCardProps) {;'
   const isGrid = view === 'grid';
   const navigate = useNavigate();
+<<<<<<< HEAD
+import { useNavigate } from "react-router-dom",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { ProductListing } from "@/types/listings";
+import { Star, DollarSign } from "lucide-react";
+interface ProductListingCardProps {
+
+  listing: ProductListing
+  view?: 'grid' | 'list';
+  onRequestQuote?: (id: string) => void
+}
+export function ProductListingCard({
+  listing
+  view = 'grid';
+  onRequestQuote
+}: ProductListingCardProps) {
+  const isGrid = view === 'grid';
+  const navigate = useNavigate();
+  // Get the first image or use a placeholder
+  const imageUrl = listing.images && listing.images.length > 0
+    ? listing.images[0]
+    : '/placeholder.svg';
+import { ProductListing } from "@/types/listings",
+import { Star, DollarSign } from "lucide-react",
+=======
 
 import { useNavigate } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
@@ -63,12 +96,20 @@ interface ProductListingCardProps {;
       // Default behavior if no handler provided;`
       navigate(`/request-quote?listing=${listing.id}`)
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
       // Default behavior if no handler provided
       navigate(`/request-quote?listing=${listing.id}`)
+<<<<<<< HEAD
+    }
+  }
+  return (
+    <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -78,6 +119,8 @@ import { Star, DollarSign } from "lucide-react",;
 interface ProductListingCardProps {;
   listing: ProductListing,;'
   view?: 'grid' | 'list',;
+<<<<<<< HEAD
+=======
 
       navigate (`/request - quote?listing=${listing.id}`);
     }
@@ -87,29 +130,44 @@ interface ProductListingCardProps {;
   const imageUrl = listing && listing.images && listing && listing.images.length > 0 ;
     ? listing && listing.images[0] ;
     : '/placeholder && placeholder.svg';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Format price display;
   const formatPrice = () => {;
     if (listing && listing.price === null) return "Custom pricing";
     return `${listing && listing.currency}${listing && listing.price.toLocaleString()}`;
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle image loading errors;
   const handleImageError = (e: React && React.SyntheticEvent<HTMLImageElement>) => {;
     e && e.currentTarget.src = '/placeholder && placeholder.svg';
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle navigating to listing detail;
   const handleViewListing = () => {;
 
     navigate(`/listing/${listing && listing.id}`);
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle request quote button click;
   const handleRequestQuote = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (onRequestQuote) {;
       onRequestQuote(listing && listing.id);
     } else {;
@@ -117,6 +175,8 @@ interface ProductListingCardProps {;
       navigate(`/request-quote?listing=${listing && listing.id}`);
     }
   };
+<<<<<<< HEAD
+=======
 
   return (
 
@@ -134,6 +194,7 @@ interface ProductListingCardProps {;
           />;
           {listing && listing.featured && (;"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
 
@@ -145,6 +206,8 @@ interface ProductListingCardProps {;
           <img
             src={imageUrl} 
             alt={listing && listing.title}
+<<<<<<< HEAD
+=======
 
       {/* Image */}
             className="w-full h-full object-cover"
@@ -156,6 +219,10 @@ interface ProductListingCardProps {;
               Featured;
             </Badge>;
           )}
+<<<<<<< HEAD
+        </div>;
+      </div>;
+=======
 
       {/* Content */}
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
@@ -205,7 +272,6 @@ interface ProductListingCardProps {;
           <p className="text-sm text-zion-slate line-clamp-2 mb-4">;
             {listing && listing.description}
           </p>;
-
           {/* Tags */}
           {listing && listing.tags && listing && listing.tags.length > 0 && (;"
             <div className="flex flex-wrap gap-1 mb-4">;
@@ -213,7 +279,6 @@ interface ProductListingCardProps {;
                 <span;
                   key={idx} "
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full">;
-
                   {tag}
                 </span>;
               ))}
@@ -236,6 +301,8 @@ interface ProductListingCardProps {;
             )}
 
                 e.stopPropagation(),
+<<<<<<< HEAD
+=======
 
                 navigate(`/listing/${listing.id}`)
 
@@ -246,7 +313,6 @@ interface ProductListingCardProps {;
             {onRequestQuote && (
 
           </div>;
-
           <div className="flex gap-2">;
             <Button
               size="sm" 

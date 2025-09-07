@@ -60,7 +60,6 @@ export function MobileResumeBuilder() {
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
         >
-          Skills
         </Button>
       </div>
       
@@ -71,7 +70,6 @@ export function MobileResumeBuilder() {
       </Button>
       
       <Button variant="default" className="w-full" size="lg">
-        Save & Preview
       </Button>
     </div>
   )

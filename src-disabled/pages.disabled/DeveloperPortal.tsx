@@ -377,6 +377,7 @@ export default function ProtectedDeveloperPortal() {
       {/* Tab content */}
       <div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
@@ -407,12 +408,18 @@ export default function ProtectedDeveloperPortal() {
   )
 ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function ProtectedDeveloperPortal() {;
   return (;
     <ProtectedRoute>;
       <DeveloperPortal />;
     </ProtectedRoute>;
   );
+<<<<<<< HEAD
+}
+;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 }
   )

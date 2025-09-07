@@ -446,6 +446,8 @@ title="White Papers - Zion Tech Group"
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
 
               </p>
+<<<<<<< HEAD
+=======
               
               <div className="mb-4">
                 <div className="flex items-center text-sm text-gray-600 mb-2">
@@ -481,6 +483,7 @@ title="White Papers - Zion Tech Group"
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
               </p>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </motion.div>
           </div>
         </section>

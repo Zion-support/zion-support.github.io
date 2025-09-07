@@ -16,6 +16,10 @@ export const monitorContent = async (;
   content: string;
 ): Promise<void> => {}
   const analysis = analyzeContent(content);
+<<<<<<< HEAD
+if (analysis && analysis.isSuspicious) {
+    let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+=======
 
   if (analysis && analysis.isSuspicious) {
     let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
@@ -27,6 +31,8 @@ if (analysis && analysis.isSuspicious) {
       r && r.includes('external') || 
 
       r && r.includes('bypass')
+<<<<<<< HEAD
+=======
 
     )) {'
       severity = 'dangerous'
@@ -60,6 +66,8 @@ export const monitorContent = async (;
       r.includes('bypass');
     )) {;'
       severity = 'dangerous';
+<<<<<<< HEAD
+=======
 
     }
 
@@ -80,6 +88,45 @@ export const monitorContent = async (;
     if (severity === 'dangerous') {
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
+    }
+    
+    await flagContent(
+      userId,
+      userEmail,
+      contentType,
+      contentId,
+      content,
+      severity,
+      analysis.reasons.join(),
+      undefined // IP address would be added in a real implementation
+    );
+    ),
+    
+    // If this is a 'dangerous' flag, automatically hide content
+    // This would be implemented in a real system with appropriate flags
+    if (severity === 'dangerous') {
+      // // // console.log('Auto-hiding dangerous content:', contentId),
+      // Code to hide content would go here
+    }
+  }
+}
+
+;
+    await flagContent(;
+      userId,;
+      userEmail,;
+      contentType,;
+      contentId,;
+      content,;
+      severity,;
+      analysis.reasons.join(),;
+      undefined // IP address would be added in a real implementation;
+    ),;
+    // If this is a 'dangerous' flag, automatically hide content;
+    // This would be implemented in a real system with appropriate flags;
+    if (severity === 'dangerous') {;
+      // // // console.log('Auto-hiding dangerous content:', contentId);
+      // Code to hide content would go here;
 
     }
   }

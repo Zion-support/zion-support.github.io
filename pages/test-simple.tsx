@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 
 export default function TestSimple() {
   return (

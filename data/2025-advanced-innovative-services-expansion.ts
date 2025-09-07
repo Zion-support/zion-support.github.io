@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import { ServiceVariant } from '../types/service-variants';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 import { ServiceVariant  } from '../types/service-variants';'

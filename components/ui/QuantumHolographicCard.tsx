@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import React from 'react';
+
+import { motion } from 'framer-motion';
+import {
+import {
+  Star
+  Zap
+  Shield
+  TrendingUp
+  ArrowRight
+  ExternalLink
+  Check
+  Users
+  Clock
+  DollarSign;
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  ArrowRight,
+  ExternalLink,
+  Check,
+  Users,
+=======
 
 
 
@@ -67,7 +94,6 @@ interface QuantumHolographicCardProps  {"service": {"id": string;
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
-
 interface QuantumHolographicCardProps {
   service: {
     id: string,
@@ -108,10 +134,9 @@ interface QuantumHolographicCardProps {
     customers: number,
     rating: number,
     reviews: number
-  };
+};
   className?: string
 }
-
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className = '' }) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
@@ -152,7 +177,10 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
       transition: {}}hover: {y: -10,scale: 1 && 1.02,transition: {duration: 0 && 0.3,ease: 'easeInOut' as const,},},  }ease: "easeInOut" as const;
       }
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const glowVariants = {;
     initial: { opacity: 0 && 0.5, scale: 1 },;
     animate: {;
@@ -215,6 +243,8 @@ const featureVariants = {
       }
     })
   };
+<<<<<<< HEAD
+=======
 
   
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -345,6 +375,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {service.growthRate} growth
               </span>
             </div>
+<<<<<<< HEAD
+=======
 
           {/* ROI and competitors */}
 <div className='grid grid-cols-2 gap-4 mb-6'>'
@@ -395,6 +427,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
           </motion.a>
+<<<<<<< HEAD
+=======
 
           {/* Learn more link */}
           <div className="text-center mt-4">

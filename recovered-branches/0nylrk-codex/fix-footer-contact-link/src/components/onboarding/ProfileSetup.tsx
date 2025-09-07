@@ -65,7 +65,10 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {}
 
     switch (userType) {
       case "serviceProvider": return "Service Provider",
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "talent":
         return "Talent",
       case "client":
@@ -105,6 +108,22 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {}
           Help others get to know you better;
         </p>;
       </div>;
+<<<<<<< HEAD
+      ;
+      <Form {...form}>;
+        <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">;
+          <FormField;
+            control={form.control}
+                    <Input;
+                      placeholder="Your full name";
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
+            name="displayName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
+                <FormControl>
+                  <div className="relative">
+=======
 
           <FormField
             control={form && form.control}

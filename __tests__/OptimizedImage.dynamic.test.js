@@ -53,6 +53,11 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
     // Test user interactions
   test('applies correct styling', () => {
     // Test styling
+<<<<<<< HEAD
+  });
+});
+origin/main
+=======
 
   test('displays correct content', () => {
     render(<OptimizedImagedynamic />);

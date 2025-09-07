@@ -33,6 +33,13 @@ const ScrollBar = React.forwardRef<
     ref={ref}
     className={cn (&quot;relative overflow - hidden & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
+      &quot;flex touch-none select-none transition-colors&quot;
+      orientation === &quot;vertical&quot; &&
+        &quot;h-full w-2.5 border-l border-l-transparent p-[1px]&quot;
+      orientation === &quot;horizontal&quot; &&
+        &quot;h-2.5 flex-col border-t border-t-transparent p-[1px]&quot;
+=======
 
       {children}
     </ScrollAreaPrimitive.Viewport>
@@ -53,11 +60,16 @@ const ScrollBar = React.forwardRef<
         "h-full w-2.5 border-l border-l-transparent p-[1px]",
       orientation === "horizontal" &&
         "h-2.5 flex-col border-t border-t-transparent p-[1px]",
+<<<<<<< HEAD
+=======
 
       className
     )}
     {...props}
   >
+<<<<<<< HEAD
+    <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />
+=======
     <ScrollAreaPrimitive.ScrollAreaThumb className=&quot;relative flex-1 rounded-full bg-border&quot; />
     <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />
 <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />
@@ -66,6 +78,27 @@ const ScrollBar = React.forwardRef<
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
 
+<<<<<<< HEAD
+>;
+    <ScrollAreaPrimitive.Viewport className=&quot;h - full w - full rounded-[inherit]&quot;>;
+import * as React from "react";
+import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
+;
+import { cn } from "@/lib/utils";
+;
+const ScrollArea = React.forwardRef<;
+  React.ElementRef<typeof ScrollAreaPrimitive.Root>,;
+  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>;
+>(({ className, children, ...props }, ref) => (;
+  <ScrollAreaPrimitive.Root;
+    ref={ref}
+    className={cn("relative overflow-hidden", className)}
+    {...props}
+  >;
+    <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">;
+      {children}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </ScrollAreaPrimitive.Viewport>;
     <ScrollBar />;
     <ScrollAreaPrimitive.Corner />;

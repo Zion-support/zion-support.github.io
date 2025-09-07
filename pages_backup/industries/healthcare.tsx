@@ -52,6 +52,7 @@ const services = [;
     title: 'AI-Powered Medical Diagnostics,',
     description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Layout from '../../components/Layout';
 import { Heart, Brain, Shield, Users, BarChart3, CheckCircle, ArrowRight, Phone, Mail, Calendar, Stethoscope, Activity, Database, Camera, FileText } from 'lucide-react';
 import React from 'react';
@@ -132,6 +133,21 @@ const benefits = []
   },
 
   {}
+<<<<<<< HEAD
+    title: 'Enhanced Efficiency,',
+    description: 'Streamlined workflows and automated processes reduce administrative burden.,',
+    icon: Activity;
+  },
+  {}
+    title: 'Cost Reduction,',
+    description: 'Optimized resource allocation and preventive care reduce overall healthcare costs.,',
+    icon: BarChart3;
+  },
+  {}
+    title: 'Regulatory Compliance,',
+    description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',
+    icon: Shield;
+=======
 
     title: 'Improved Patient Outcomes,,,
   description: AI-powered diagnostics and personalized treatment plans lead to better health results.,',
@@ -243,9 +259,14 @@ export default function HealthcarePage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Heart className="w-12 h-12 text-red-400 mr-4" />";
+<<<<<<< HEAD
+                <h1 className="text-5xl md:text-6xl font-bold">";
+                  Healthcare;
+=======
 
                 <h1 className="text-5xl md: text-6xl font-bold">", Healthcare,;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <span className="block bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -255,12 +276,21 @@ export default function HealthcarePage() {
                 Revolutionizing healthcare delivery with cutting-edge AI, telemedicine, and digital health solutions.
                 Improve patient outcomes, enhance efficiency, and ensure regulatory compliance.,
               </p>;
+<<<<<<< HEAD
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+                  Get Healthcare Consultation;
+                </Link>;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">";
+                  View Healthcare Case Studies;
+=======
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
                   Get Healthcare Consultation;
                 </Link>;
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-red-600 transition-all duration-300 font-semibold">", View Healthcare Case Studies,;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Link>;
               </div>;
             </motion.div>;
@@ -270,6 +300,7 @@ export default function HealthcarePage() {
 ];
 export default function HealthcarePage() {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-red-900 via-pink-900 to-rose-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
@@ -506,6 +537,15 @@ export default function HealthcarePage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Healthcare Success Stories;
+=======
 
 <<<<<<< HEAD
 =======
@@ -516,6 +556,7 @@ export default function HealthcarePage() {
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Healthcare Success Stories;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Real results from healthcare organizations that have transformed their operations;
@@ -527,6 +568,7 @@ export default function HealthcarePage() {
               {caseStudies.map((study, index) => (,
                 <motion.div}),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text-center mb-16"
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -591,6 +633,14 @@ export default function HealthcarePage() {
                 Let our healthcare technology experts help you implement solutions that improve;
                 patient care and operational efficiency.;
               </p>;
+<<<<<<< HEAD
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+                  Start Your Healthcare Project;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">";
+                  Learn About Our Expertise;
+=======
 
             >
 <<<<<<< HEAD

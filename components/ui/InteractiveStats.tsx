@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
+function useCounter(): any (target: number, durationMs: number) {;
+=======
 
 
     let "start": number | null;
@@ -31,6 +36,7 @@ interface InteractiveStatsProps {
   className?: string;
 
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function InteractiveStats() {return (<div className={className}>;
       {stats.map((stat, index) => (<div;

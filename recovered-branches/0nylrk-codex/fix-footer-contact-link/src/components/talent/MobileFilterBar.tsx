@@ -30,6 +30,19 @@ export function MobileFilterBar({
   searchTerm,
   setSearchTerm, 
 
+  setSearchTerm
+  setIsMobileFilterOpen
+
+
+export function MobileFilterBar({ ;
+  searchTerm;
+export function MobileFilterBar({ 
+  searchTerm,
+  setSearchTerm, 
+  setIsMobileFilterOpen 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }: MobileFilterBarProps) {
 
   return (
@@ -54,17 +67,24 @@ export function MobileFilterBar({
       </div>
     </div>
 
+<<<<<<< HEAD
+}
+=======
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Search, Sliders} from "lucide-react";
 import {Input} from "@/components/ui/input";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from "lucide-react",;
 
 import { Input } from "@/components/ui/input",;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface MobileFilterBarProps {;
   searchTerm: string,;
   setSearchTerm: (value: string) => void,;
@@ -74,6 +94,8 @@ interface MobileFilterBarProps {;
         <Sliders className="h-4 w-4" />;
         Filter Talents;
       </Button>;
+<<<<<<< HEAD
+=======
 
 import React from './react';
 

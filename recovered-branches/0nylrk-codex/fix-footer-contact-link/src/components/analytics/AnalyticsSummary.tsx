@@ -26,40 +26,61 @@ export function AnalyticsSummary() {}
 
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Get unique visitors (by counting distinct user IDs)
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase'
         .from('analytics_events')'
         .select('user_id')'
         .eq('event_typepage_view')
+<<<<<<< HEAD
+        .is('user_idnot.null');
+      if (uniqueVisitorsError) throw uniqueVisitorsError;
 
+      const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) |[]);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .is('user_idnot.null'),
         
       if (uniqueVisitorsError) throw uniqueVisitorsError,
       
       const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Get conversion count
       const { data: conversionsData, error: conversionsError } = await supabase
         .from('analytics_events')
         .select('count')
 
         .eq('event_typeconversion')
+<<<<<<< HEAD
+        .single();
+      if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .single(),
         '
       if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Get most recent event to calculate "last updated"
       const { data: lastEventData, error: lastEventError } = await supabase'
         .from('analytics_events')'
         .select('created_at')'
         .order('created_at', { ascending: false })
         .limit(1)
+<<<<<<< HEAD
+        .single();
+      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .single(),
         '
       if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return {
 
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
@@ -80,6 +101,7 @@ export function AnalyticsSummary() {}
         .from('analytics_events')
         .select('count')
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     refetchInterval: 300000, // Refetch every 5 minutes;
   }),
@@ -140,6 +162,8 @@ import { supabase } from "@/integrations/supabase/client",;
 import { Skeleton } from "@/components/ui/skeleton",;
 
 import { formatDistanceToNow } from "date-fns",;
+<<<<<<< HEAD
+=======
 
 export function AnalyticsSummary() { return null; }
   const { data: stats, isLoading } = useQuery({;'
@@ -241,6 +265,7 @@ if (throw lastEventError) {}
         .select('user_id');'
         .eq('event_typepage_view');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Get conversion count;
       const { data: conversionsData, error: conversionsError } = await supabase;'
         .from('analytics_events');'
@@ -269,6 +294,7 @@ if (throw lastEventError) {}
         .single(),
       if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 interface StatCardProps {;

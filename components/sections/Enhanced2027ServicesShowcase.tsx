@@ -135,6 +135,13 @@ className='text-center mb-16''
 type='text''
                     placeholder='Search services, features, or use cases...''
                     value={searchTerm}
+<<<<<<< HEAD
+                    onChange={(e) => setSearchTerm(e && e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50";
+                  />;
+                </div>;
+              </div>;
+=======
 
                     onChange={e => setSearchTerm(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 "focus": outline-none "focus":border-cyan-500/50 "focus":ring-1 "focus":ring-cyan-500/50''
@@ -149,6 +156,10 @@ type='text''
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e.target.value)}
                   <select
+                    onChange={e => setSelectedCategory(e.target.value)}
+                    className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10'
+                  >
+                    {categories.map(category => (                      <option key={category} value={category}>                  <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10"
@@ -577,6 +588,64 @@ className='group''
                         <h3 className='text-xl font-bold text-white mb-2 group-"hover":text-cyan-400 transition-colors'>;'
                           {service.name}
                       </div>;
+<<<<<<< HEAD
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                          {service.name}
+                      {/* Content */}
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                          {service.name}
+                        </h3>
+                  className='group'
+
+                >
+                  <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'>
+                    <div className='flex flex-col lg:flex-row items-start lg:items-center gap-6'>
+                      {/* Icon and Category */}
+                      <div className='flex items-center space-x-4'>
+                        <div
+                          className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)} shadow-lg`}
+                        >
+                          {getCategoryIcon(service.category)}
+                        </div>
+                        <div>
+                          <div className='text-sm text-gray-400'>
+                            {service.category}
+                          </div>
+                          <div className='text-2xl font-bold text-cyan-400'>
+                            {service.price}
+                          </div>                        </div>
+                      </div>
+                      {/* Content */}
+                      <div className='flex-1'>
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>                >
+                  <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
+                    <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
+                      {/* Icon and Category */}
+                      <div className="flex items-center space-x-4">
+                        <div className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)} shadow-lg`}>
+                          {getCategoryIcon(service.category)}
+                        </div>
+                        <div>
+                          <div className="text-sm text-gray-400">{service.category}</div>
+                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                        </div>
+                      </div>
+                      {/* Content */}
+                      <div className='flex-1'>
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+                          {service.name}
+                        </h3>
+                        <p className='text-gray-300 mb-3 leading-relaxed'>
+                          {service.description}
+                        </p>
+                        <div className='flex flex-wrap gap-2 mb-3'>
+                          {service.tags.slice(0, 4).map((tag, idx) => (
+                            <span
+                              key={idx}
+                              className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                            >                          {service.name}
+=======
 
                         </h3>
                         <p className='text-gray-300 mb-3 leading-relaxed'>'
@@ -616,6 +685,7 @@ className='group''
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                           {service.name}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </h3>
                         <p className="text-gray-300 mb-3 leading-relaxed">
                           {service.description}
@@ -710,13 +780,42 @@ href={service.link}
 
         {/* No Results */}
         {filteredServices.length === 0 && (
+          <motion.div
+            className='text-center py-20'            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >          <motion.div
+=======
+
+=======
+        </AnimatePresence>
+<<<<<<< HEAD
+        {/* No Results */}
+        {filteredServices.length === 0 && (
           <motion.div 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="text-center py-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
+<<<<<<< HEAD
+            <div className='text-6xl mb-4'>🔍</div>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+              No services found
+            </h3>
+            <p className='text-gray-400 mb-8'>
+              Try adjusting your search terms or category filter to find what
+              you're looking for.            </p>
+            <button
+              onClick={() => {
+                setSearchTerm('');
+                setSelectedCategory('all');
+              }}
+              className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'            >            <div className="text-6xl mb-4">🔍</div>
+=======
             <div className="text-6xl mb-4">🔍</div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
             <p className="text-gray-400 mb-8">
               Try adjusting your search terms or category filter to find what you're looking for.

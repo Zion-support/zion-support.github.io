@@ -70,6 +70,15 @@ export default function DevOpsAutomationPage() {
   BarChart3,
   Check,
   Star,
+<<<<<<< HEAD
+    {
+      icon: <Zap className="w - 6 h - 6" />,
+      title: 'Infrastructure as Code',
+      description: 'Terraform, CloudFormation, and Kubernetes automation';
+      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600';
+    }
+=======
+<<<<<<< HEAD
   GitPullRequest,
   Cpu} from 'lucide-react;
       icon: <GitBranch className=w-6 h-6' />,import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react;
@@ -638,6 +647,19 @@ href='#demo;
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 ${feature.color}`}    />
 
                     {feature.icon}
+<<<<<<< HEAD
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-400">{feature.description}</p>
+                </Card>
+
+                </Card>
+
+              ))}
+            </div>
+          </div>
+        </section>
+=======
                   </div>;
 <<<<<<< HEAD
 
@@ -987,6 +1009,57 @@ key={i}
 >>>>>>> origin/chore/fix-lint-and-merge
 
                       ))}
+<<<<<<< HEAD
+                    </div>
+                    <p className='text-sm text-gray-400'>{competitor.rating}</p>
+                  </div>
+                  <div className='mb-4'>
+                    <p className='text-lg font-semibold text-white mb-1'>
+                      Pricing: {competitor.pricing}
+                    </p>
+                    <p className='text-sm text-gray-400'>
+                      Repositories: {competitor.repositories}
+                    </p>
+                  </div>
+                  <div className='space-y-2'>
+                    <div>
+                      <p className='text-sm font-medium text-green-400 mb-1'>
+                        Pros:
+                      </p>
+                      <ul className='text-sm text-gray-300 space-y-1'>
+                        {competitor.pros.map((pro, proIndex) => (
+                          <li key={proIndex} className='flex items-center'>
+                            <Check className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                            {pro}                  </div>
+                  <div className="mb-4">
+                    <p className="text-lg font-semibold text-white mb-1">Pricing: {competitor.pricing}</p>
+                    <p className="text-sm text-gray-400">Repositories: {competitor.repositories}</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div>
+                      <p className="text-sm font-medium text-green-400 mb-1">Pros:</p>
+                      <ul className="text-sm text-gray-300 space-y-1">
+                        {competitor.pros.map((pro, proIndex) => (
+                          <li key={proIndex} className="flex items-center">
+                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                            {pro}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <p className='text-sm font-medium text-red-400 mb-1'>
+                        Cons:
+                      </p>
+                      <ul className='text-sm text-gray-300 space-y-1'>
+                        {competitor.cons.map((con, conIndex) => (
+                          <li key={conIndex} className='flex items-center'>
+                            <span className='w-4 h-4 text-red-400 mr-2 flex-shrink-0'>
+                              ×
+                            </span>                            {con}                      <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>
+                      <ul className="text-sm text-gray-300 space-y-1">
+                        {competitor.cons.map((con, conIndex) => (
+                          <li key={conIndex} className="flex items-center">
+                            <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0">×</span>
 
                     </div>
 <<<<<<< HEAD
@@ -1018,6 +1091,11 @@ key={i}
 
                           </li>
 
+                          </li>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         ))}
                       </ul>;
                     </div>;
@@ -1160,6 +1238,7 @@ key={i}
                     <p className='text-sm text-gray-400'    />{testimonial.role}</p>;
                     <p className='text-sm text-blue-400'    />;
                       {testimonial.company}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                     </p>
                   </div>

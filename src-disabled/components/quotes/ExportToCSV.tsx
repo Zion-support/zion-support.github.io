@@ -40,13 +40,39 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
       ...rows.map(row =>
         row.map(cell =>
+<<<<<<< HEAD
+      ...rows.map(row =>
+        row.map(cell =>
+      new Date(quote.created_at).toLocaleDateString()
+    ]),
+    
+    // Create CSV content
+    const csvContent = [
+      headers.join(),
+      ...rows.map(row => 
+        row.map(cell => 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           // Escape commas and quotes in cell values
-          typeof cell === 'string' && (cell.includes() |cell.includes('"'))
             ? `"${cell.replace(/"/g, '""')}"`
             : cell
         ).join()
       )
+<<<<<<< HEAD
+    ].join('\n')
+    // Create download link
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.setAttribute('href', url)
+    link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`)
+    document.body.appendChild(link)
+    // Download file and clean up
+    link.click()
+    setTimeout(() => {
+      document.body.removeChild(link)
+=======
 
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
     const url = URL.createObjectURL(blob);
@@ -61,6 +87,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
       document.body.removeChild(link);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       URL.revokeObjectURL(url)
     }, 100)
 import { Button } from '@/components / ui / button';
@@ -252,12 +279,15 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       variant="outline" 
 import { Button } from "@/components/ui/button",;
 import type { QuoteRequest } from "@/types/quotes",;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ExportToCSVProps {;
   quotes: QuoteRequest[],;
   filename?: string;
 }
-
+;
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {;
   const handleExport = () => {;
     // Define CSV Headers;

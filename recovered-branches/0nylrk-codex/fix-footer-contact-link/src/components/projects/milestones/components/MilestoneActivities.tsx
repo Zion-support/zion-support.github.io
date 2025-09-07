@@ -32,7 +32,7 @@ function MilestoneActivities() {
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   return <div>Activity will be shown here</div>;
-
+}
 }
 ;
   projectId: string

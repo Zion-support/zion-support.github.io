@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils""
 import { Button } from "@/components/ui/button"
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
 type CarouselOptions = UseCarouselParameters[0]
@@ -78,6 +79,8 @@ function useCarousel(): CarouselContextProps {;
   const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {;"
     throw new Error("useCarousel must be used within a <Carousel />");
+<<<<<<< HEAD
+=======
 
   }
 ;
@@ -114,6 +117,7 @@ const Carousel = React.forwardRef<
 
       plugins
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ...props
     }
     ref
@@ -155,6 +159,7 @@ import * as React from &quot;react & quot;
 import useEmblaCarousel from &quot;embla - carousel - react & quot;
 import { ArrowLeft, ArrowRight } from &quot;lucide-react & quot;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       },;
 
       [scrollPrev, scrollNext];
@@ -436,6 +441,12 @@ const CarouselContent = React.forwardRef<
 })
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+CarouselContent.displayName = &quot;CarouselContent&quot;
+CarouselContent.displayName = "CarouselContent"
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const CarouselItem = React.forwardRef<
   HTMLDivElement;
   React.HTMLAttributes<HTMLDivElement>
@@ -496,6 +507,19 @@ const CarouselItem = React.forward_ref<;
         "min-w-0 shrink-0 grow-0 basis-full",
         orientation === "horizontal" ? "pl-4" : "pt-4",
 
+<<<<<<< HEAD
+  return (
+    <div
+      ref={ref}
+      role="group"
+      aria-roledescription="slide"
+      className={cn(
+        &quot;min-w-0 shrink-0 grow-0 basis-full&quot;
+        orientation === &quot;horizontal&quot; ? &quot;pl-4&quot; : &quot;pt-4&quot;
+        "min-w-0 shrink-0 grow-0 basis-full",
+        orientation === "horizontal" ? "pl-4" : "pt-4",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         className
 
       )}
@@ -622,10 +646,65 @@ const CarouselPrevious = React.forwardRef<
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {}
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
   return (
+Carousel.displayName = "Carousel";
+;
+const CarouselContent = React.forwardRef<;
+  HTMLDivElement,;
+  React.HTMLAttributes<HTMLDivElement>;
+>(({ className, ...props }, ref) => {;
+  const { carouselRef, orientation } = useCarousel();
+;
+  return (;
+    <div ref={carouselRef} className="overflow-hidden">;
+      <div;
+        ref={ref}
+        className={cn(;
+          "flex",;
+          orientation === "horizontal" ? "-ml-4" :"-mt-4 flex-col",;
+          className;
+        )}
+        {...props}
+      />;
+    </div>;
+  );
+});
+CarouselContent.displayName = "CarouselContent";
+;
+const CarouselItem = React.forwardRef<;
+  HTMLDivElement,;
+  React.HTMLAttributes<HTMLDivElement>;
+>(({ className, ...props }, ref) => {;
+  const { orientation } = useCarousel();
+;
+  return (;
+    <div;
+      ref={ref}
+      role="group";
+      aria-roledescription="slide";
+      className={cn(;
+        "min-w-0 shrink-0 grow-0 basis-full",;
+        orientation === "horizontal" ? "pl-4" :"pt-4",;
+        className;
+      )}
+      {...props}
+    />;
+  );
+});
+CarouselItem.displayName = "CarouselItem";
+;
+const CarouselPrevious = React.forwardRef<;
+  HTMLButtonElement,;
+  React.ComponentProps<typeof Button>;
+>(({ className, variant = "outline", size = "icon", ...props }, ref) => {;
+  const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+;
+  return (;
     <Button;
       ref={ref}
       variant={variant}
       size={size}
+CarouselItem.displayName = &quot;CarouselItem&quot;
+CarouselItem.displayName = "CarouselItem"
 
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement
@@ -644,10 +723,20 @@ const CarouselPrevious = React.forwardRef<
       size={size}
       className={cn(
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         "absolute  h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "-left-12 top-1/2 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+<<<<<<< HEAD
+      className={cn(;
+        "absolute  h-8 w-8 rounded-full",;
+        orientation === "horizontal";
+          ? "-left-12 top-1/2 -translate-y-1/2";
+          :"-top-12 left-1/2 -translate-x-1/2 rotate-90",;
+        className;
+      )}
+=======
 
         className
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -852,6 +941,24 @@ className={cn (
 CarouselNext.display_name = &quot;CarouselNext & quot;
 ;
 
+<<<<<<< HEAD
+        className
+      )}
+      disabled={!canScrollPrev}
+      onClick={scrollPrev}
+      {...props}
+>
+      <ArrowLeft className=&quot;h-4 w-4&quot; />
+      <span className=&quot;sr-only&quot;>Previous slide</span>
+    </Button>
+  )
+})
+CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
+    >
+      <ArrowLeft className="h-4 w-4" />
+      <span className="sr-only">Previous slide</span>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </Button>
   )
 })
@@ -896,6 +1003,25 @@ const CarouselNext = React.forward_ref<;
         orientation === "horizontal""
           ? "-right-12 top-1/2 -translate-y-1/2""
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+<<<<<<< HEAD
+      className={cn(;
+        "absolute h-8 w-8 rounded-full",;
+        orientation === "horizontal";
+          ? "-right-12 top-1/2 -translate-y-1/2";
+          :"-bottom-12 left-1/2 -translate-x-1/2 rotate-90",;
+        className;
+      )}
+      disabled={!canScrollNext}
+      on_click={scroll_next}
+      {...props}
+
+
+    >
+      <ArrowRight className="h-4 w-4" />
+      <span className="sr-only">Next slide</span>
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       className={cn(;"
         "absolute h-8 w-8 rounded-full",;"
@@ -988,6 +1114,7 @@ export {
   CarouselNext};
 ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   CarouselNext}
 
 ;

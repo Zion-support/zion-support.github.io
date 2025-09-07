@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import React from 'react';
+import Link from 'next / link';
+import React from 'react',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+=======
 
 import { motion } from 'framer-motion';'
 
@@ -368,6 +377,7 @@ const socialLinks = [;
   { name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Github },;
 ];
     <footer className="bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden">
+    <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
@@ -482,6 +492,52 @@ href={contactInfo.websit
                   </a>
                 </div>
 
+<<<<<<< HEAD
+
+
+            {/* Service Categories */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
+                <Rocket className="w-5 h-5 text-purple-400" />
+                <span>Our Services</span>
+              </h4>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <Phone className="w-4 h-4 text-purple-400" />
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.mobile}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <Mail className="w-4 h-4 text-purple-400" />
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.email}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <MapPin className="w-4 h-4 text-purple-400" />
+                  <span>{contactInfo.address}</span>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <Globe className="w-4 h-4 text-purple-400" />
+                  <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.website.replace('https://', '')}
+
+];
+
+export default function UltraFuturisticFooter2030() {
+  return (
+
+                    {contactInfo.website.replace('https://', '')}
+
+                    {contactInfo.website.replace('https://', '')}
+
+                  </a>
+                </div>
+              </div>
+            </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Service Categories */}
 <div className='space-y-6'>'
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>'

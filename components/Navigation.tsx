@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 'use client';
 
@@ -529,7 +531,6 @@ export default function Navigation() {;
 
                 </AnimatePresence>;
               </div>;
-
               <Link
                 href="/pricing"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;

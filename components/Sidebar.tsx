@@ -601,6 +601,8 @@ interface SidebarProps {
 }
         : [...prev, title];
     );
+<<<<<<< HEAD
+=======
 
   ];
   return (
@@ -807,6 +809,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open;, on_close }) => {
                 <div className="space - y-2>;
                   {quick_links.map ((link) => (
                     <Link;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       key={link.name}
                       href={link.href}
                       className=block text - gray - 600 hover:text - blue - 600 transition - colors py - 1";
@@ -826,6 +829,8 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open;, on_close }) => {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
               {/* Contact Info */}
+<<<<<<< HEAD
+=======
               <div className="mt - 8 pt - 8 border - t border - gray - 200">;
                 <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Contact Us</h3>;
                 <div className="space - y-3">;
@@ -852,6 +857,36 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open;, on_close }) => {
           </motion.div>;
         </>)}
     </AnimatePresence>);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3 text-gray-600">
+                    <Phone className="w-4 h-4" />
+                    <span>+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-600">
+                    <Mail className="w-4 h-4" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                    onClick={onClose}
+                  >
+                    <span>Get Started</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+              </div>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
 }
 export default Sidebar;
 

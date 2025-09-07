@@ -203,6 +203,10 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 >>>>>>> origin/chore/fix-lint-and-merge
 
   BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
+<<<<<<< HEAD
+  Brain as BrainIcon, Play as PlayIcon
+ } from 'lucide-react';
+=======
 
   Brain as BrainIcon, Play as PlayIcon;
  } from 'lucide-react';
@@ -226,8 +230,15 @@ export default function UltimateFuturisticServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState('grid');
+<<<<<<< HEAD
+  const filteredServices = ultimateFuturisticServices2025.filter(service => {
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
+    return matchesSearch && matchesCategory
+=======
 
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
+<<<<<<< HEAD
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
@@ -305,6 +316,8 @@ default:}
         return b.popular ? 1 : -1;}
     }
   });
+<<<<<<< HEAD
+=======
 
 const containerVariants = {}
     hidden: { opacity: 0,}
@@ -623,6 +636,15 @@ onClick={() =    /> setViewMode('grid')}
             animate="visible
             className={viewMode === grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 : space-y-6'}
           >
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+          >
+
+
+          >
+
             {sortedServices.map((service, index) => (
               <motion.div
 }
@@ -661,6 +683,7 @@ viewMode === 'grid'
                 }`}    />
 
                 {/* Popular Badge */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 {service.popular && (
 <div className='absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full'    />
@@ -824,6 +847,7 @@ key={idx}
 
                 {/* Service Details */}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>
                 </div>
 
@@ -986,6 +1010,20 @@ href={`mailto: ${contactInfo.email}`}
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+{/* No Results */}
+          {sortedServices.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+              <p className="text-gray-400 mb-6">Try adjusting your search criteria or category filter</p>
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           {/* No Results *,}
 }
@@ -993,6 +1031,42 @@ href={`mailto: ${contactInfo.email}`}
           {sortedServices.length === 0 && (
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+
+
+
+            <div className='text-center py-16'>
+              <div className='text-6xl mb-4'>🔍</div>
+              <h3 className='text-2xl font-bold text-white mb-2'>
+                No services found
+              </h3>
+              <p className='text-gray-400 mb-6'>
+                Try adjusting your search criteria or category filter
+              </p>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                }}
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+              >
+                Clear Filters
+              </button>
+            </div>
+          )}
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
+        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+=======
 =======
 <div className='text-center py-16'    />
               <div className='text-6xl mb-4'    />🔍</div>

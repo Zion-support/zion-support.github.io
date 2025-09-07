@@ -56,6 +56,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-c10a
   automation.start().catch(console.error);
       this.log('TypeScript type check completed successfully');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 this.log('Type check completed successfully');
       // Run smoke tests
       this.log('Running smoke tests...');

@@ -250,6 +250,11 @@ href='/contact'
               <span className="text-lg font-medium">Watch Demo</span>;
             </button>;
           </motion && motion.div>;
+<<<<<<< HEAD
+
+
+
+=======
 
           {/* Stats */}
           <motion&& motion.div;

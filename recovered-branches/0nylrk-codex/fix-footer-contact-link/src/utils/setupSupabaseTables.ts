@@ -1,6 +1,8 @@
 import {supabase} from "@/integrations/supabase/client";
 
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+=======
 
 /**
 
@@ -59,6 +61,26 @@ if ( {) {}
     // Attempt to create the table and related objects;`
     const createTableQuery = `;
       CREATE TABLE IF NOT EXISTS public.profiles (
+<<<<<<< HEAD
+    const { error } = await supabase.rpc('exec', {
+      sql: `SELECT EXISTS (
+        SELECT FROM information_schema.tables
+        WHERE table_schema = 'public'
+        AND table_name = 'profiles'
+      ),`;
+    });
+      ),`
+    });
+    }),
+    
+    // If there's an error, log it and proceed with table creation
+    if (error) {
+      console.warn("Error checking if profiles table exists, attempting to create it:", error)
+    }
+    // Attempt to create the table and related objects
+    const createTableQuery = `
+      CREATE TABLE IF NOT EXISTS public.profiles (
+=======
 
         id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
         display_name TEXT,
@@ -69,6 +91,7 @@ if ( {) {}
         bio TEXT,
         avatar_url TEXT,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ),
       
       -- Create RLS policies;
@@ -87,6 +110,8 @@ if ( {) {}
       DO $$
       BEGIN;
         IF NOT EXISTS (
+<<<<<<< HEAD
+=======
 
           SELECT FROM pg_catalog && pg_catalog.pg_policies;
           SELECT FROM pg_catalog.pg_policies'
@@ -118,6 +143,14 @@ if ( {) {}
         END IF;
       END;
       $$;
+<<<<<<< HEAD
+          CREATE POLICY "Users can view their own profile"
+            ON public.profiles FOR SELECT
+            USING (auth.uid() = id);
+        END IF;
+      END
+      $$;
+=======
 
         END IF;
       END;
@@ -155,11 +188,20 @@ if ( {) {}
         END IF;
       END;
       $$;
+<<<<<<< HEAD
+          CREATE POLICY "Users can update their own profile"
+            ON public.profiles FOR UPDATE
+            USING (auth.uid() = id);
+        END IF;
+      END
+      $$;
+=======
 
         END IF;
       END
       $$;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           CREATE POLICY "Users can update their own profile" 
             ON public.profiles FOR UPDATE;
             USING (auth.uid() = id),
@@ -201,6 +243,7 @@ if ( {) {}
       END,
       $$ LANGUAGE plpgsql SECURITY DEFINER,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       -- Check if trigger exists before creating it
 
       DO $$
@@ -326,6 +369,23 @@ export const initializeDatabase = async () => {;
       BEGIN
         IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN
           CREATE TRIGGER on_auth_user_created
+<<<<<<< HEAD
+            AFTER INSERT ON auth.users
+            FOR EACH ROW EXECUTE FUNCTION public.handle_new_user(),
+        END IF,
+      END
+      $$;
+    `;
+    // Execute the creation query using RPC to avoid TypeScript errors
+    const { error: createError } = await supabase.rpc('exec', { sql: createTableQuery });
+    if (createError) {
+      console.error('Error creating profiles table:', createError)
+    } else {
+      console.log('Profiles table setup completed')
+    }
+  } catch (error) {
+    console.error('Error setting up profiles table:', error)
+=======
 
 ;
       $$;
@@ -337,6 +397,7 @@ export const initializeDatabase = async () => {;
     }
   } catch (error) {
     console && console.error('Error setting up profiles table:', error)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 // Call this when the app starts to ensure the table exists

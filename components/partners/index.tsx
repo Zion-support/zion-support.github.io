@@ -152,6 +152,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="inline-flex items-center bg-green-100 text-green-800 px-2 py-1 rounded">Verified Partner</span>"
                 <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded">Government API Active</span>
             </ul>
+<<<<<<< HEAD
+            <div className='mt-6'>
+=======
 
 <div className='mt-6'>'
               <a,

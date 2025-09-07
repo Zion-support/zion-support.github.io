@@ -1,3 +1,36 @@
+<<<<<<< HEAD
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  Search,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Brain,;
+  Rocket,;
+  Dna,;
+  Globe,;
+  Shield,;
+  Wifi,;
+  Package,;
+  Bot,;
+  Car,;
+  Building2,;
+  DollarSign,;
+  Monitor,;
+  Users,;
+  Cpu,;
+  Zap,;
+  Atom,;
+  Database,;
+  Cloud,;
+  Lock,;
+  Code,;
+} from 'lucide-react';
+import Link from 'next/link';import { ;
+import { 
+=======
 
 
 import React, { useState, useEffect } from 'react';'
@@ -39,6 +72,35 @@ const "UltraAdvancedNavigation": React.FC;
   Atom,
   Database,
   Cloud,
+<<<<<<< HEAD
+import Link from 'next / link';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+  Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
+  Bot, Car, Building2, DollarSign, Monitor, Users;
+  Cpu, Zap, Atom, Database, Cloud, Lock, Code;
+} from 'lucide-react';
+import Link from 'next/link';
+const UltraAdvancedNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+      setIsScrolled(window.scrollY > 50)
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []);
+  const navigationItems = [
+    {
+      name: 'Home',
+      href: '/',
+      icon: null
+    };
+  Lock,;
+  Code,;
+} from 'lucide-react';
+import Link from 'next/link';import { ;
+=======
+<<<<<<< HEAD
   Lock,
   Code,
 } from 'lucide-react';
@@ -291,6 +353,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "description": '300+ micro SaaS services','
     },
     {
+<<<<<<< HEAD
+    }
+  ];
+=======
 
       }
 
@@ -671,25 +737,28 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
                       >
-                        <div className="p-4">
-                          <div className="text-sm text-gray-400 mb-3">{item.description}</div>
-                          <div className="space-y-2">
-                            {item.dropdown.map((dropdownItem) => (
+                        <div className='p-4'>
+                          <div className='text-sm text-gray-400 mb-3'>
+                            {item.description}
+                          </div>
+                          <div className='space-y-2'>
+                            {item.dropdown.map(dropdownItem => (
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group"
+                                className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group'
                               >
-                                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                                  <dropdownItem.icon className="w-5 h-5 text-cyan-400" />
+                                <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200'>
+                                  <dropdownItem.icon className='w-5 h-5 text-cyan-400' />
                                 </div>
-                                <div className="flex-1">
-                                  <div className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-200">
+                                <div className='flex-1'>
+                                  <div className='text-white font-medium group-hover:text-cyan-400 transition-colors duration-200'>
                                     {dropdownItem.name}
                                   </div>
-                                  <div className="text-sm text-gray-400">{dropdownItem.description}</div>
+                                  <div className='text-sm text-gray-400'>
+                                    {dropdownItem.description}                                  </div>
                                 </div>
-                                <div className="text-sm font-semibold text-cyan-400">
+                                <div className='text-sm font-semibold text-cyan-400'>                                  {dropdownItem.price}                                <div className="text-sm font-semibold text-cyan-400">
                                   {dropdownItem.price}
                                 </div>
                               </Link>
@@ -764,6 +833,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="hidden "xl":inline">{contactInfo.mobile}</span>"
               </a>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
                 <Mail className="w-4 h-4" />
                 <span className="hidden xl:inline">{contactInfo.email}</span>
@@ -779,6 +849,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Get Started
             </motion.a>
           </div>
+<<<<<<< HEAD
+=======
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
@@ -927,6 +999,12 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
                   )}
                 </div>
               ))}
+<<<<<<< HEAD
+              
+
+
+
+=======
 
 
 {/* Mobile Contact Info *

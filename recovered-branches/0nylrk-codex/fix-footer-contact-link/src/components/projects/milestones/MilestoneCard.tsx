@@ -193,11 +193,88 @@ export function MilestoneCard(): any ({ ;
   description, ;
   amount, ;
   status, ;
-
+<<<<<<< HEAD
+  function getStatusBadgeColor() {;
+    switch (status) {;
+      case 'completed':;
         return 'bg-green-500';
       case 'in_progress':;
         return 'bg-blue-500';
       case 'pending':;
+        return 'bg-yellow-500';
+      case 'rejected':;
+        return 'bg-red-500';
+      default: return 'bg-gray-500';
+    }
+  }
+
+
+
+  return (
+  dueDate,;
+  onApprove,;
+  onReject;
+} MilestoneCardProps) {;
+  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id),;
+  ;
+  description?: string,;
+  amount: number,;
+  status: string,;
+  dueDate?: string,;
+  onApprove?: (id: string) => Promise<void>,;
+  onReject?: (id: string) => Promise<void>;
+}
+;
+export function MilestoneCard({;
+  id,;
+  projectId,;
+  title,;
+  description,;
+  amount,;
+  status,;
+  dueDate,;
+  onApprove,;
+  onReject;
+}: MilestoneCardProps) {;
+  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id),;
+  function getStatusBadgeColor() {;
+    switch (status) {;
+      case 'completed':;
+        return 'bg-green-500',;
+      case 'in_progress':;
+        return 'bg-blue-500',;
+=======
+
+        return 'bg-green-500';
+      case 'in_progress':;
+        return 'bg-blue-500';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      case 'pending':;
+                Due:{format(new Date(dueDate), 'MMM d, yyyy')}
+              </p>;
+            )}
+          </div>;
+          <div className="flex gap-2">;
+            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
+              {status.replace('_ ')}
+            </Badge>;
+            ;
+            {isUnderDispute && disputeStatus && (;
+              <DisputeStatusBadge status={disputeStatus} />;
+            )}
+          </div>;
+        </div>;
+      </CardHeader>;
+      ;
+      <CardContent className="pb-2">;
+        {description && (;
+          <p className="text-muted-foreground">{description}</p>;
+        )}
+        <div className="mt-4">;
+              variant="ghost"
+              size="sm"
+            />;
+          )}
         return 'bg-yellow-500';
       case 'rejected':;
         return 'bg-red-500';
@@ -331,7 +408,12 @@ export function MilestoneCard(): any ({ ;
               <Check className="h-4 w-4 mr-1" /> Approve;
             </Button>;
           )}
+<<<<<<< HEAD
+          ;
+;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {isUnderDispute && (;
 
             <Button variant="outline" size="sm" disabled>;

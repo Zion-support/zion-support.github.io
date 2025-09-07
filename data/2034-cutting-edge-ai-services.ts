@@ -37,6 +37,31 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
 
 
+<<<<<<< HEAD
+export type CuttingEdgeAIService = {
+export type CuttingEdgeAIService = {;
+  id: string;
+  name: string;
+  description: string;
+  category:
+    | 'AI Consciousness'
+    | 'AI Emotional Intelligence'
+    | 'AI Creativity'
+    | 'AI Psychology'
+    | 'AI Business Management'
+    | 'AI Healthcare'
+    | 'AI Neural Interfaces'
+    | 'AI Quantum Computing';
+  pricing: { starter: string; professional?: string; enterprise?: string }
+  features: string[];
+  integrations?: string[];
+  useCases?: string[];
+  link: string;
+  rating?: number;
+  launchDate?: string;
+  realService?: boolean;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   {

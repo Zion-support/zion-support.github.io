@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 :corrupted_backup/emerging-tech-2025-specialized-services.js;

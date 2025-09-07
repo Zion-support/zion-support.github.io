@@ -16,7 +16,6 @@ class ErrorBoundary extends React.Component {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 
@@ -66,6 +65,12 @@ const REASONS = [
   } = router.query as Record<string, string>;
   const user = useCurrentUser();
 
+<<<<<<< HEAD
+  const [projectId, setProjectId] = useState(qProjectId || '');
+  const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
+  const user = useCurrentUser();
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
@@ -109,7 +114,6 @@ const [clientUserId, setClientUserId] = useState(
   useEffect(() => {
     if (qProjectId) setProjectId(qProjectId);
   }, [qProjectId]);
-
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 if (!projectId || !description || !clientUserId || !talentUserId)
@@ -343,17 +347,24 @@ function handle_submit() {}
                 on_change={e => setTalentUserId (e.target.value)}
                 required;'
                 className='mt - 1 w - full border rounded px - 3 py - 2 bg - white dark:bg - black';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               />;
             </div>;
           </div>;
           <div>;
+<<<<<<< HEAD
+=======
 
               onChange={e => setFiles(Array && Array.from(e && e.target.files || []))}'
               className='mt-1';
             />;
           </div>;'
           <div className='pt-2'>;
+<<<<<<< HEAD
+=======
 
             <button;
               disabled={submitting}'
@@ -418,6 +429,15 @@ function toBase64(): any (file: File): Promise<string> {;
     reader && reader.onload = () => resolve(String(reader && reader.result));
     reader && reader.onerror = reject;
     reader && reader.readAsDataURL(file);
+<<<<<<< HEAD
+  });
+}
+}
+
+
+}
+}
+=======
 
   });
 

@@ -92,6 +92,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -161,7 +162,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;}
       }draw() {this.y = Math.random() * canvas.height;        }this.y = Math.random() * canvas.height;}
       }
-
       draw() {;
 
           this.y = Math.random() * canvas.height;        }
@@ -328,6 +328,11 @@ quantumFields.forEach((field) => {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
+<<<<<<< HEAD
+            ctx.stroke();          }            ctx.stroke()
+            ctx.stroke();          }
+=======
+<<<<<<< HEAD
             ctx.stroke()
       for (let i = 0; i < particles.length; i += 2) {        if (i + 1 < particles.length) {      for (let i = 0, i < particles.length, i += 2) {
 for (let i = 0; i < particles.length; i += 2) {
@@ -370,6 +375,18 @@ return (;
     <div className={`relative min-h-screen overflow-hidden ${className}`}>`
 
       {/* Quantum Matrix Overlay */}
+<<<<<<< HEAD
+      <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0 && 0.1),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0 && 0.1),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0 && 0.1),transparent_50%)]' />;
+      </div>;
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
+      </div>
+=======
 
 <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'>'
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]' />'
@@ -377,6 +394,7 @@ return (;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]' />'
       </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Animated Quantum Grid */}
       <div className='absolute inset-0 opacity-20'>;'
         <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-["length":50px_50px]' />;'
@@ -496,6 +514,56 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl"
         animate={{
           scale: [1, 1.2, 1];
+<<<<<<< HEAD
+
+    neuralNetworks.push(new NeuralNetwork()),
+
+    const animate = () => {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)',
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
+        }
+      }
+      ctx.restore(),
+
+      animationFrameId = requestAnimationFrame(animate)
+    },
+
+    animate(),
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth,
+      canvas.height = window.innerHeight
+    },
+
+    window.addEventListener('resize', handleResize),
+
+    return () => {
+      window.removeEventListener('resize', handleResize),
+      cancelAnimationFrame(animationFrameId)
+    }
+  }, []),
+
+  return (
+    <div className={`relative min-h-screen overflow-hidden ${className}`}>
+      {/* Quantum Matrix Overlay */}
+      <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black&quot;>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
+      </div>
+
+      {/* Animated Quantum Grid */}
+      <div className=&quot;absolute inset-0 opacity-20&quot;>
+        <div className=&quot;absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]&quot; />
+        <div className=&quot;absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]&quot; />
+      </div>
+
+      {_/* Floating Quantum Elements */}
+      <motion.div
+        className=&quot;absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl&quot;
+        animate={{
+          scale: [1, 1.2, 1],
+
           opacity: [0.2, 0.4, 0.2]}}
         transition={{
           duration: 4,

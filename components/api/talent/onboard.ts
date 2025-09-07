@@ -48,6 +48,12 @@ if (
       // fall through to heuristic
     }
   } catch (err) {
+<<<<<<< HEAD
+    // ignore and fallback;
+  }
+  const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
+=======
 
 // ignore and fallback
   }
@@ -238,6 +244,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   $2;
 }
       try {
+<<<<<<< HEAD
+        const content = await fse.readJSON(aggregatePath);
+        if (Array.isArray(content)) aggregate = content;        if (Array.isArray(content)) aggregate = content
+=======
 
         }
 

@@ -8,6 +8,20 @@ import { Card, CardContent  } from '@/components/ui/card';
 import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
 
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
+import { useAuth  } from '@/hooks/useAuth';
+import { MilestoneCard  } from './MilestoneCard';
+import { AddMilestoneForm  } from './AddMilestoneForm';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper
+import { Plus  } from '@/components/icons';
+import { EmptyState } from '@/components/ui/empty-state';
+interface MilestonesListProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
 import {MilestoneCard} from './MilestoneCard';
@@ -43,6 +57,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   onDeleteMilestone;
   onUploadDeliverable;
   isSubmitting;
+<<<<<<< HEAD
+=======
 
 import React, { useState } from 'react',;
 
@@ -169,6 +185,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onUpdateStatus;
   onDeleteMilestone;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   milestones,
   activities,
   isLoading,
@@ -178,12 +195,40 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onDeleteMilestone,
   onUploadDeliverable,
   isSubmitting,
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onApprove,
 
+<<<<<<< HEAD
+  
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data)
     setShowAddForm(false)
+  }
+  },
+
+  if (isLoading) {
+    return (
+      <div className="space-y-4">
+        {[1, 2, 3].map((i) => (
+          <Card key={i}>
+            <CardContent className="p-6">
+              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>
+              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>
+              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    )
+  }
+=======
+  const handleSubmit = async (data: any) => {
+    await onCreateMilestone(data)
+    setShowAddForm(false)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   if (isLoading) {
     return (
@@ -230,7 +275,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             text: "Create First Milestone",;
             onClick: () => setShowAddForm(true);
           } : undefined;
-
         }
       />;
     );
@@ -276,6 +320,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </Button>;
         </div>;
 
+      ;
       {showAddForm && (;
         <Card>;"
           <CardContent className="pt-6">;"

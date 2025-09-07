@@ -13,6 +13,11 @@ import {useReviews} from "@/hooks/useReviews";
 import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
 
+import { Project } from "@/types/projects";
+import { useAuth } from "@/hooks/useAuth";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -22,6 +27,8 @@ import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
 import {useReviews} from "@/hooks/useReviews";
 import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
+=======
 
 import { useState } from "react",
 import { Star } from "lucide-react",
@@ -178,6 +185,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {}
                         Edit Review;
                       </Button>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -228,7 +236,7 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
           Reviews are visible once the project is completed and both parties submit feedback;
         </CardDescription>;
       </CardHeader>;
-
+      ;
       <CardContent>;
         {isCompleted ? (;
           <div className="space-y-6">;

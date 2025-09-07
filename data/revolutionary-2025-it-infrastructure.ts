@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+import { ServiceVariant } from '../types/service-variants';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 import { ServiceVariant  } from '../types/service-variants';'
@@ -4160,25 +4165,21 @@ export const "revolutionary2025ITServices": Revolutionary2025ITService[] = [
     }
     "reviews": 95
   };
-
   // 🔐 Blockchain & Web3 Infrastructure Services
   {
     }
     "reviews": 67
   };
-
   // 🎯 API Management & Integration Services
   {
     }
     "reviews": 178
   };
-
   // 📊 Business Intelligence & Analytics Services
   {
     }
     "reviews": 234
   };
-
   // 🚀 Digital Transformation & Innovation Services
   {
     }

@@ -109,7 +109,6 @@ function resolveMergeConflicts(filePath) {
         conflictType = ;
         continue;
       }
-      
       if (!inConflict) {
 =======
     // Split by merge conflict markers;
@@ -132,12 +131,10 @@ conflictType = 'incoming';
       // Skip incoming version (second part)
 <<<<<<< HEAD
     }
-    
     // Write resolved content
     fs.writeFileSync(filePath, resolvedLines.join(\n));
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
-    
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false;

@@ -7,6 +7,8 @@
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+=======
 
 console.log('🔍 Starting SEO optimization...');
 
@@ -312,6 +314,9 @@ function getAllFiles(dir, extensions = []) {
   
   return files;
 }
+<<<<<<< HEAD
+module.exports = SEOOptimizer;
+=======
 
 // Run SEO audit
 function runSEOAudit() {

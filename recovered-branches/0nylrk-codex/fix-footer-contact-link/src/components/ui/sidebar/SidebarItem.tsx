@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils",
   children?: React && React.ReactNode;
   active?: boolean;
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function SidebarItem(): any ({ className, children, active, ...props }: SidebarItemProps) {;
-
   return (
 
         active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
@@ -32,7 +32,6 @@ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {}
       )}
       {...props}>;
       {children}
-
     </div>;
   );
 }

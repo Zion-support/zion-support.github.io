@@ -2,7 +2,46 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
+<<<<<<< HEAD
+import {
+DropdownMenu
+import {
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+DropdownMenuTrigger,;
+} from "@/components/ui/dropdown-menu";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+export function LanguageSelector() {;
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
 
+import React from 'react',
+import { useTranslation } from 'react-i18next',
+import { Button } from '@/components/ui/button',
+import { Globe } from 'lucide-react',
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+export function LanguageSelector() {
+
+
+import React from 'react',;
+import { useTranslation } from 'react-i18next',;
+import { Button } from '@/components/ui/button',;
+import { Globe } from 'lucide-react',;
 import {;
   DropdownMenu,;
   DropdownMenuContent,;

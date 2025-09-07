@@ -28,6 +28,7 @@ const syncLogs = [
     status: "success"
     timestamp: "2024-05-20T12:30:45Z"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     id: "2"
     integration: "Greenhouse"
@@ -62,10 +63,24 @@ const syncLogs = [
 
     details: "Updated candidate status to 'Interview Scheduled'"
 
+<<<<<<< HEAD
+=======
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 
+<<<<<<< HEAD
+];
+],
+
+export function IntegrationsSyncLog() {
+  const getStatusBadge = (status: string) => {
+    switch (status) {;
+      case "success": return <Badge className="bg-green-500">Success</Badge>;
+    switch (status) {
+      case "success": return <Badge className="bg-green-500">Success</Badge>,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "error":
 
         return <Badge variant="destructive">Error</Badge>,
@@ -76,6 +91,15 @@ import {Badge} from "@/components/ui/badge";
       default:"
         return <Badge variant="outline">Unknown</Badge>
     }
+<<<<<<< HEAD
+  },
+  
+
+  }
+
+  },
+  
+=======
 
   return (
     <Card>"
@@ -155,6 +179,7 @@ import {;
       default:;"
         return <Badge variant="outline">Unknown</Badge>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
       <div className="p-4">;
@@ -183,6 +208,10 @@ import {;
 
             ))}
 
+<<<<<<< HEAD
+            ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </TableBody>;
 
           </TableBody>;
@@ -192,6 +221,8 @@ import {;
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
 
             ))}
 import React from './react';

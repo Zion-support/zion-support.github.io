@@ -1,10 +1,16 @@
 import { ReactNode  } from './react';
 
+<<<<<<< HEAD
+import { ReactNode } from "react";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface HelpArticle {
 
   id: string;
   title: string;
   content: string;
+<<<<<<< HEAD
+=======
 
 import {ReactNode} from "react";
 export interface HelpArticle {;
@@ -55,6 +61,7 @@ export interface HelpCategory {;
 
   articles: HelpArticle[];
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { ReactNode } from "react",
 export interface HelpArticle {

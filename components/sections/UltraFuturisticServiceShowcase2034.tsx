@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import { 
+  Star, CheckCircle, ArrowRight, TrendingUp, Users, 
+=======
 
 
 import React, { useState } from 'react';'
@@ -418,6 +422,26 @@ onChange={e => { return setSelectedCategory(e.target.value)}
                 </option>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
+              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+            </div>
+              <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />            </div>
+
+            </div>
+
+            {/* Category Filter */}
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            >
+              <option value="all">All Categories</option>
+                <option key={category.id} value={category.id}>
+                  {category.title.split(' ')[0]}
+                </option>
               ))}
         {/* Service Categories */}
         <motion&& motion.div;
@@ -536,6 +560,44 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                   className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}`
 
 
+<<<<<<< HEAD
+        {/* Services Grid */}
+        <motion&& motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          {filteredServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+              variants={itemVariants}
+
+
+                </div>
+              )}
+              {/* Service Icon */}
+
+              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105'
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                </div>
+              )}
+                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
+
+                  Popular
+
+                </div>
+              )}
+
+              {/* Service Icon */}
+=======
                 </div>
               )}
 
@@ -643,6 +705,15 @@ variants={containerVariants}
                   <div className='text - 2xl font - bold text - white'>;'
 
                     {service.price}
+<<<<<<< HEAD
+                  </div>;
+                  <div className='text - sm text - gray - 400'>{service.period}</div>                </div>;
+              </div>;
+              {/* Service Info */}
+              <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors'>;
+                {service.name}
+              <div className="flex items-center justify-between mb-4">
+=======
 
                   </div>
                   <div className='text-sm text-gray-400'>{service.period}</div>'
@@ -820,7 +891,7 @@ variants={containerVariants}
                   </div>
                 ))}
                 {service.features.length > 3 && (
-                  <div className="text-sm text-cyan-400">
+                  <div className='text-sm text-cyan-400'>                  <div className="text-sm text-cyan-400">
                     +{service.features.length - 3} more features
                   </div>
                 )}
@@ -890,9 +961,9 @@ variants={containerVariants}
                 <div className="flex items-center space-x-2 text-gray-400">"
 
               {/* Service Meta */}
-              <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <Clock className="w-4 h-4" />
+              <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
+                <div className='flex items-center space-x-2 text-gray-400'>
+                  <Clock className='w-4 h-4' />
                   <span>{service.setupTime}</span>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400">"
@@ -903,6 +974,9 @@ variants={containerVariants}
                   <Star className="w-4 h-4 text-yellow-400" />"
                   <span>{service.rating}/5</span>
                 </div>
+<<<<<<< HEAD
+                <div className="flex items-center space-x-2 text-gray-400">
+=======
 
                 <div className='flex items-center space-x-2 text-gray-400'>'
                   <Users className='w-4 h-4' />'
@@ -1009,6 +1083,17 @@ variants={containerVariants}
 
               {/* Action Buttons */}
               <div className="flex space-x-3">
+=======
+              <div className='flex space-x-3'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <a
                   href={service.link}
                   className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group"
@@ -1020,6 +1105,8 @@ variants={containerVariants}
                   <Eye className="w-4 h-4" />
                 </button>
               </div>
+<<<<<<< HEAD
+=======
 
               {/* Trial Info */}
               <div className="mt-4 text-center">
@@ -1030,6 +1117,18 @@ variants={containerVariants}
 origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
 
+<<<<<<< HEAD
+
+
+        {/* Call to Action */}
+        <motion&& motion.div
+        </motion && motion.div>;
+        {/* Call to Action */}
+        <motion&& motion.div
+
+        {/* Call to Action */}
+        <motion.div
+=======
         </motion && motion.div>;
 
         {/* Call to Action */}

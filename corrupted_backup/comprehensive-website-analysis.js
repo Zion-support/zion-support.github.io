@@ -266,9 +266,9 @@ class WebsiteAnalyzer {
     this && this.checkedUrls = new Set();
     this && this.linkQueue = []}
   async analyzeWebsite() {
-    console.log(',
+    console && console.log(',
       '🚀 Starting comprehensive website analysis...');
-    console.log(`📍 Base "URL": ${BASE_URL}`);
+    console && console.log(`📍 Base "URL": ${BASE_URL}`);
     // Start with main page
 }
 await this && this.checkPage(BASE_URL);
@@ -283,19 +283,19 @@ async checkPage(url, parentUrl = null) {
     }
     await this && this.checkPage(BASE_URL);
     // Check all navigation links;
-    await this.checkNavigationLinks();
+    await this && this.checkNavigationLinks();
     // Check service pages;
-    await this.checkServicePages();
+    await this && this.checkServicePages();
     // Check additional pages;
-    await this.checkAdditionalPages();
+    await this && this.checkAdditionalPages();
     // Generate report;
-    this.generateReport();
-    console.log("
+    this && this.generateReport();
+    console && console.log("
   '\n✅ Analysis completed!');
-    console.log("📊 Total links "checked": ${this.results.summary.totalLinksChecked}")    console.log("🔗 Working "links": ${this.results.summary.workingLinks}");"
-    console.log(`❌ Broken "links": ${this.results.summary.brokenLinks}`);"
-    console.log("🔄 "Redirects": ${this.results.summary.redirects}");"
-    console.log(`📄 Missing "pages": ${this.results.summary.missingPages}`)}
+    console && console.log("📊 Total links "checked": ${this && this.results.summary && summary.totalLinksChecked}")    console && console.log("🔗 Working "links": ${this && this.results.summary && summary.workingLinks}");"
+    console && console.log(`❌ Broken "links": ${this && this.results.summary && summary.brokenLinks}`);"
+    console && console.log("🔄 "Redirects": ${this && this.results.summary && summary.redirects}");"
+    console && console.log(`📄 Missing "pages": ${this && this.results.summary && summary.missingPages}`)}
   async checkPage(url, parentUrl = null) {;
     }
     if (this && this.checkedUrls.has(url)) return;

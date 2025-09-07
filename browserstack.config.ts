@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+import { defineConfig, devices } from '@playwright/test';
 
 import { defineConfig, devices } from '@playwright/test';
 
@@ -447,6 +449,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b

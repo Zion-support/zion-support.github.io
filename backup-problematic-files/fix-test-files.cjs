@@ -159,6 +159,12 @@ console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -279,7 +285,6 @@ class TestFileFixer {
           return;
         }
       }
-
       this.log(`Processing: ${filePath}`);
       
 =======
@@ -313,30 +318,25 @@ class TestFileFixer {
 
     // Find all test files
     const testFiles = [];
-    
     try {
       const result = execSync('find . -name *.test.* -o -name "*.spec.*" | grep -v node_modules, { encoding: utf8' });
       testFiles.push(...result.trim().split('\n).filter(f => f));
     } catch (error) {
       this.log(Error finding test files: ' + error.message);
     }
-
     // Process each file
     for (const file of testFiles) {
       this.processFile(file);
     }
-
     // Summary
     this.log(`\n=== SUMMARY ===`);
     this.log(`Files processed: ${testFiles.length}`);
     this.log(`Files fixed: ${this.fixedFiles.length}`);
     this.log(`Errors: ${this.errors.length}`);
-
     if (this.fixedFiles.length > 0) {
       this.log('\nFixed files:);
       this.fixedFiles.forEach(f => this.log(`  - ${f}`));
     }
-
     if (this.errors.length > 0) {
       this.log(\nErrors:');
       this.errors.forEach(e => this.log(`  - ${e.file}: ${e.error}`));

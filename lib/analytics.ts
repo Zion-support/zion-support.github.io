@@ -46,15 +46,22 @@ export const measurePerformance = () => {
     return {
 
 export const measurePerformance = () => {
+<<<<<<< HEAD
   if (typeof window !== 'undefined' && 'performance' in window) {
     const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     return {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
       domContentLoaded: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.domContentLoadedEventStart,
       firstPaint: performance && performance.getEntriesByName('first-paint')[0]?.startTime || 0,
       firstContentfulPaint: performance && performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0
     };
+<<<<<<< HEAD
+  }
+  return null;
+}
+=======
 
   }
   return null;
@@ -73,6 +80,7 @@ export const trackEvent = (
   properties?: Record<string, string | number | boolean>
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 ) => {}
 }
@@ -179,6 +187,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 
   }
   return null;
+<<<<<<< HEAD
+}
+;
+=======
 
 }
 ;
@@ -220,6 +232,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       non_interaction: true,
     });
   }
+<<<<<<< HEAD
+}
+;
+// Track events;
+=======
 
 
       non_interaction: true
@@ -264,11 +281,14 @@ declare global {
 // Track events
 export const event = ({
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   action,
   category,
   label,
   value
 }: {;
+<<<<<<< HEAD
+=======
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -280,6 +300,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   category: string;
   label?: string;
   value?: number;
+<<<<<<< HEAD
+=======
 
 
 // Track events

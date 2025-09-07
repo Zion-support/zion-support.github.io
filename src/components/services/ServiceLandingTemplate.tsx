@@ -45,6 +45,13 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </GradientHeading>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
+<<<<<<< HEAD
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          </p>
+        </div>
+      </section>
+}
+=======
           </p>
           {heroImage && (
             <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
@@ -68,6 +75,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       </section>
 
       <section className="py-16 bg-zion-blue-light">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-white text-center mb-8">
             Benefits
@@ -81,7 +89,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                 {benefit.icon && (
                   <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
-                  </div>
+                  </div>;
                 )}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
@@ -122,10 +130,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                       {t.role && (
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
-                    </div>
-                  </div>
-                </CardFooter>
-              </Card>
+                    </div>;
+                  </div>;
+                </CardFooter>;
+              </Card>;
             ))}
           </div>
         </div>
@@ -137,7 +145,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
           asChild
         >
-          <a href={ctaLink}>{ctaText}</a>
+          <a href={ctaLink}>{ctaText}</Link>
         </Button>
       </section>
     </div>

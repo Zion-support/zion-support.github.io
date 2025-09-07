@@ -19,6 +19,17 @@ interface CodeBlockProps {
 
   language = 'bash';
   showLineNumbers = false;
+<<<<<<< HEAD
+  className
+}: CodeBlockProps) {
+  const [copied, setCopied] = useState(false);
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react';
+import {cn} from "@/lib/utils";
+import { useState } from 'react',
+import { Check, Copy } from 'lucide-react',
+import { cn } from "@/lib/utils",
+=======
   className;
 }: CodeBlockProps) {;
 
@@ -64,13 +75,23 @@ interface CodeBlockProps {
 import {cn} from "@/lib/utils";export function CodeBlock({ 
 =======
 
+<<<<<<< HEAD
+export function CodeBlock({ ;
+  code;
+  language = 'bash';
+  showLineNumbers = false;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function CodeBlock({ 
 
 >>>>>>> origin/chore/fix-lint-and-merge
   code,
   language = 'bash',
   showLineNumbers = false,
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
@@ -78,6 +99,7 @@ export function CodeBlock({
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setTimeout(() => {
       setCopied(false)
     }, 2000)
@@ -98,6 +120,12 @@ export function CodeBlock({
   }
   },
 
+<<<<<<< HEAD
+  }
+  },
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <div className={cn(
@@ -113,7 +141,10 @@ export function CodeBlock({
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">'
             {code.split('\n').map((_, i) => ("
               <div key={i} className="h-6 leading-6">
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import { Check, Copy } from 'lucide-react',;
 
@@ -133,7 +164,10 @@ export function CodeBlock({;
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleCopyClick = async () => {;
     await navigator && navigator.clipboard.writeText(code);
     setCopied(true);
@@ -141,6 +175,8 @@ export function CodeBlock({;
       setCopied(false);
     }, 2000);
   };
+<<<<<<< HEAD
+=======
 
   return (
 

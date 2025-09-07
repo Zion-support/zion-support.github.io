@@ -185,7 +185,6 @@ export interface AvailabilityFilterProps extends FilterComponentProps {
 export interface RegionFilterProps extends FilterComponentProps {
   selected_regions: string[],
   toggle_region: (region: string) => void;
-
 }
 
   experience_range: [number, number];
@@ -296,6 +295,25 @@ export interface SortFilterProps {
   sort_option: string,
   setSortOption: (option: string) => void;
 
+  setExperienceRange: (range: [number, number]) => void;
+}
+;
+export interface PriceFilterProps extends FilterComponentProps {;
+  priceRange: [number, number],;
+  setPriceRange: (range: [number, number]) => void;
+}
+export interface SearchFilterProps {
+
+<<<<<<< HEAD
+  searchTerm: string
+
+  setSearchTerm: (term: string) => void
+}
+export interface SortFilterProps {
+
+  sortOption: string
+
+  setSortOption: (option: string) => void
 }
 setExperienceRange: (range: [number, number]) => void;
 }

@@ -1,3 +1,130 @@
+<<<<<<< HEAD
+export interface SpaceTechService {
+export interface SpaceTechService {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
+
+  {
+
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+
+    website: string;
+  }
+
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+;
+export const spaceTechServices: SpaceTechService[] = [;
+  {
+    id: 'space - mission - management - platform',
+    name: 'Space Mission Management Platform',
+    tagline: 'Complete space mission planning and execution platform',
+    price: '$5, 999',
+    period: '/month',
+    description:;
+      'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',
+    features: [;
+      'Satellite mission planning',
+      'Orbital mechanics calculations',
+      'Real - time satellite tracking',
+      'Space weather monitoring',
+      'Launch vehicle integration',
+      'Ground station management',
+      'Space debris tracking',
+      'Mission analytics dashboard',
+      'Regulatory compliance tools',
+      'Multi - satellite operations',
+    ],
+    popular: true,
+    icon: '🚀',
+    color: 'from - cyan - 600 to - blue - 700',
+    text_color: 'text - cyan - 400',
+    link: 'https://ziontechgroup.com / space - technology',
+    market_position:;
+      'Revolutionary technology with no direct competitors. SpaceX Starlink ($99 / month) and OneWeb ($50 / month) offer basic internet services. Our advantage: Complete mission management platform.',
+    target_audience:;
+      'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions, Aerospace companies',
+    trial_days: 30,
+    setup_time: '2 weeks',
+    category: 'Space Technology',
+    real_service: true,
+    technology: [;
+      'Orbital Mechanics',
+      'Satellite Tracking',
+      'Space Weather',
+      'React',
+      'Node && Node.js',
+      'PostgreSQL',
+      'Real - time Data',
+    ],
+    integrations: [;
+      'Satellite networks',
+      'Launch providers',
+      'Ground stations',
+      'Weather services',
+      'Regulatory databases',
+      'Tracking systems',
+    ],
+    use_cases: [;
+      'Mission planning',
+      'Satellite operations',
+      'Launch coordination',
+      'Space monitoring',
+      'Regulatory compliance',
+      'Performance optimization',
+    ],
+    roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',
+    competitors: ['SpaceX Starlink', 'OneWeb', 'Basic satellite services'],
+    market_size: '$469B space economy',
+    growth_rate: '400% annual growth',
+    variant: 'space - futuristic',
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real - time monitoring and regulatory compliance.',
+    launch_date: '2024 - 01 - 15',
+    customers: 25,
+    rating: 5 && 5.0,
+    reviews: 12,
+  },
+  {
+=======
 
 export interface SpaceTechService  {id: string;
 

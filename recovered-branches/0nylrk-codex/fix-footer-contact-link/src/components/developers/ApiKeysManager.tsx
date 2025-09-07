@@ -7,12 +7,12 @@ export function ApiKeysManager() {;
     createApiKey, ;
     regenerateApiKey, ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     revokeApiKey;
     clearNewApiKey;
   } = useApiKeys();
 
   const [showCreateDialog, setShowCreateDialog] = useState(false);
-
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
 
@@ -22,10 +22,8 @@ export function ApiKeysManager() {;
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
 
   // Create key form state;
-
   const [keyName, setKeyName] = useState("");
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
-
   // Load keys on mount;
   useState(() => {;
     fetchApiKeys();
@@ -35,6 +33,8 @@ import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
+<<<<<<< HEAD
+=======
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -122,8 +122,15 @@ import CodeBlock from "./CodeBlock",
         ? prev.filter(s => s !== scope)
         : [...prev, scope]
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
+<<<<<<< HEAD
+  }
+  },
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const getExampleCode = (key: string) => {
 
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
@@ -228,6 +235,50 @@ export function ApiKeysManager() {;
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => ("
                       <div key={scope.value} className="flex items-center space-x-2">
+<<<<<<< HEAD
+                        <Checkbox
+                          id={scope.value}
+                        <Checkbox 
+                          id={scope.value} 
+import { useState } from "react",;
+import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
+import { format } from "date-fns",;
+import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
+import { Input } from "@/components/ui/input",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import { Label } from "@/components/ui/label",;
+import { Badge } from "@/components/ui/badge",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
+import CodeBlock from "./CodeBlock",;
+export function ApiKeysManager() {;
+  const {;
+    keys,;
+    loading,;
+    newApiKey,;
+    fetchApiKeys,;
+    createApiKey,;
+    regenerateApiKey,;
+    revokeApiKey,;
+    clearNewApiKey;
+  } = useApiKeys(),;
+  const [showCreateDialog, setShowCreateDialog] = useState(false),;
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),;
+  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),;
+  // Create key form state;
+  const [keyName, setKeyName] = useState(""),;
+  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),;
+  // Load keys on mount;
+  useState(() => {;
+    fetchApiKeys();
+  }),;
+  const handleCreateKey = async () => {;
+    if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
+=======
 
                         <Checkbox
                           id={scope.value}
@@ -246,6 +297,20 @@ import { useState } from "react",;
           Create and manage API keys for accessing the Zion APIs.;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
+      ;
+      <CardContent>;
+        <div className="flex justify-between items-center mb-6">;
+          <p className="text-sm text-zinc-400">;
+            You have {keys.length} API {keys.length === 1 ? 'key' :'keys'}
+          </p>;
+          ;
+      <CardContent>;
+        <div className="flex justify-between items-center mb-6">;
+          <p className="text-sm text-zinc-400">;
+            You have {keys.length} API {keys.length === 1 ? 'key' : 'keys'}
+          </p>;
+=======
 
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>;
             <DialogTrigger asChild>;"
@@ -259,6 +324,8 @@ import { useState } from "react",;
                   Generate a new API key for accessing the Zion APIs.;
                 </DialogDescription>;
               </DialogHeader>;
+<<<<<<< HEAD
+=======
 
                     {scopeOptions && scopeOptions.map((scope) => (;
 
@@ -268,6 +335,7 @@ import { useState } from "react",;
                 <div className="space-y-2">;
                   <Label>Scopes</Label>;
                   <div className="grid gap-2 pt-2">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {scopeOptions && scopeOptions.map((scope) => (;
                       <div key={scope && scope.value} className="flex items-center space-x-2">;
                         <Checkbox
@@ -289,6 +357,32 @@ import { useState } from "react",;
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">;
                           {scope && scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope && scope.description}</span>;
+<<<<<<< HEAD
+              ;
+              <div className="space-y-4 py-4">;
+                <div className="space-y-2">;
+                  <Label htmlFor="key-name">Key Name</Label>;
+                  <Input;
+                    id="key-name";
+                    value={keyName}
+                    onChange={(e) => setKeyName(e.target.value)}
+                    placeholder="e.g. Production API Key";
+                    className="bg-zinc-800 border-zinc-700";
+                  />;
+                </div>;
+                <div className="space-y-2">;
+                  <Label>Scopes</Label>;
+                  <div className="grid gap-2 pt-2">;
+                    {scopeOptions.map((scope) => (;
+                      <div key={scope.value} className="flex items-center space-x-2">;
+                  </div>;
+                </div>;
+              </div>;
+              ;
+              <DialogFooter>;
+                <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>;
+                <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>;
+=======
                         </Label>;
                       </div>;
                     ))}

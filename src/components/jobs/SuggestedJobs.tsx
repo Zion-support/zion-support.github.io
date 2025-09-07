@@ -38,6 +38,31 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       </div>
     )
   }
+<<<<<<< HEAD
+  return (
+  
+    <div className="space-y-6">
+      {/* New Matches Section */}
+;
+  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {;
+    return <NoJobsCard />;
+  }
+  
+  return (
+    <div className="space-y-6">
+      {/* New Matches Section */}
+      {newMatches.length > 0 && (
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-medium">New Job Matches</h3>
+            <Badge className="bg-green-100 text-green-800 border-green-300">
+              {newMatches.length} New
+            </Badge>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {newMatches.map(match => (
+ursor/fix-website-loading-errors-and-merge-6662
+=======
 
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />
@@ -55,6 +80,17 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
             </Badge>
           </div>
           
+<<<<<<< HEAD
+          <div className="grid gap-4 md:grid-cols-2">
+            {newMatches.map(match => (
+              <JobMatchesCard
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+          
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -63,6 +99,37 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />
+<<<<<<< HEAD
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+              />;
+              />
+            ))}
+              {newMatches.length} New;
+            </Badge>;
+          </div>;
+          ;
+          <div className="grid gap-4 md:grid-cols-2">;
+            {newMatches.map(match => (;
+              <JobMatchesCard ;
+                key={match.id} ;
+                match={match} ;
+                onApply={handleApply} ;
+                onDecline={handleDecline} ;
+              />;            ))}
+          </div>;
+        </div>;
+      )}
+      ;
+      {/* Previously Viewed Section */}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+;
+=======
             ))}
           </div>
         </div>
@@ -75,6 +142,17 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
           
+<<<<<<< HEAD
+          <div className="grid gap-4 md:grid-cols-2">
+            {viewedMatches.map(match => (
+              <JobMatchesCard
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+          
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -83,6 +161,36 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />
+<<<<<<< HEAD
+      {viewedMatches && viewedMatches.length > 0 && (;
+      {viewedMatches.length > 0 && (;
+        <div className="space-y-4">;
+          <div className="flex items-center justify-between">;
+            <h3 className="text-lg font-medium">Previously Viewed</h3>;
+          </div>;
+              />
+            ))}
+          ;
+          <div className="grid gap-4 md:grid-cols-2">;
+            {viewedMatches.map(match => (;
+              <JobMatchesCard ;
+                key={match.id} ;
+                match={match} ;
+                onApply={handleApply} ;
+                onDecline={handleDecline} ;
+              />;            ))}
+          </div>;
+        </div>;
+      )}
+      ;
+      {/* Applied Jobs Section */}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+;
+=======
             ))}
           </div>
         </div>

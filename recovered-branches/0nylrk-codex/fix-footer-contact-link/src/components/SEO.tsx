@@ -34,6 +34,7 @@ import { Helmet } from './react - helmet - async';
 
 import { Helmet } from './react - helmet - async';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function SEO(): any ({;
   title;
   description;
@@ -55,6 +56,18 @@ export function SEO(): any ({;
 
   // Default to the Google Drive image URL
 
+<<<<<<< HEAD
+  // Default to the Google Drive image URL
+
+  ogImage = "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+  ogUrl;
+  canonical
+  noindex}: SEOProps) {
+  const siteTitle = "Zion - The Future of Tech & AI Marketplace";
+  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
 
   title: string
@@ -133,6 +146,26 @@ export function SEO() { return null; }`
       <meta name="twitter:title" content={fullTitle} />;
       <meta name="twitter:description" content={description} />;
       <meta name="twitter:image" content={ogImage} />;
+      ;
+      {/* Canonical URL */}
+      {canonical && <link rel="canonical" href={canonical} />}
+      ;
+      {/* No index directive for search engines if needed */}
+      {noindex && <meta name="robots" content="noindex" />}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />;
+      <meta name="twitter:site" content="@lovable_dev" />;
+      <meta name="twitter:title" content={fullTitle} />;
+      <meta name="twitter:description" content={description} />;
+      <meta name="twitter:image" content={ogImage} />;
+<<<<<<< HEAD
+      {/* Canonical URL */}
+      {canonical && <link rel="canonical" href={canonical} />}
+;
+=======
 
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}

@@ -21,6 +21,7 @@
         this.vulnerabilities.push($2);
         this.log(`Found ${vulnCount} vulnerabilities`, "WARN")
       } else {,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         this.log("✓ No vulnerabilities found")
       }
     } catch (error) {,
@@ -53,6 +54,7 @@
         this.vulnerabilities.push($2);
         this.log(`Found ${secretCount} potential secrets`, "WARN")
       } else {,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         this.log("✓ No exposed secrets found")
       }
     } catch (error) {,
@@ -73,6 +75,7 @@
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
             walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             files.push(fullPath)
           }
         })

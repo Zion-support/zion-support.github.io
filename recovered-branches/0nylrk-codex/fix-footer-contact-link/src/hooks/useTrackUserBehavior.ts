@@ -9,6 +9,7 @@ import {useRef, useEffect} from 'react';
 import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { trackEvent } = useAnalytics();
 
   const componentRef = useRef<HTMLDivElement>(null);
@@ -22,6 +23,7 @@ export function useTrackUserBehavior(componentName: string) {;
         const buttonId = button?.id || '';
         const buttonText = button?.textContent || '',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         trackEvent('button_click', {
 
           component: componentName;
@@ -35,12 +37,15 @@ export function useTrackUserBehavior(componentName: string) {;
       if (target && target.tagName === 'FORM') {
         const formId = target && target.id || '',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         trackEvent('form_submit', {
           component: componentName
           elementId: formId
 
         })
       }
+<<<<<<< HEAD
+=======
 
     return () => {'
       component && component.removeEventListener('click', trackButtonClicks);'
@@ -126,6 +131,8 @@ export function useTrackUserBehavior(componentName: string) {;
     }
   }, [trackEvent, componentName]);
   return componentRef;
+<<<<<<< HEAD
+=======
 
 }
 

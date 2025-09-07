@@ -11,6 +11,47 @@ import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
 interface Milestone {
 
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {CheckCircle, ChevronRight, FileText, MessageSquare, Video} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+import {SeverityIndicator} from "../common/SeverityIndicator";
+import {useNavigate} from "react-router-dom";
+import {toast} from "sonner";
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+import { SeverityIndicator } from "../common/SeverityIndicator",
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
+interface Milestone {
+interface Milestone {
+  id: string,
+  title: string,
+  dueDate: string,
+  status: "completed" | "in_progress" | "pending",
+  paymentStatus: "paid" | "pending" | "overdue",
+  amount: string
+}
+
+  id: string
+  title: string
+  dueDate: string
+  status: "completed" | "in_progress" | "pending"
+  paymentStatus: "paid" | "pending" | "overdue"
+
+  amount: string
+=======
 import React from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -172,6 +213,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
     // Navigate to messaging with this client;
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <div className="space-y-6 px-4 pb-24">
@@ -660,6 +702,7 @@ variant={
                     className="w-full mt-3 gap-1";
                   >;"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </Badge>;
                 </div>;
                 <div className="pl-7">;
@@ -686,6 +729,8 @@ variant={
                 </div>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
+=======
 
           ))}
         </div>
@@ -722,7 +767,6 @@ interface Milestone {;
   paymentStatus: "paid" | "pending" | "overdue",;
   amount: string;
 }
-
 interface ProjectViewProps {;
   project: {;
     id: string,;
@@ -740,7 +784,6 @@ interface ProjectViewProps {;
 };
   milestones: Milestone[];
 }
-
 export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {;
   const navigate = useNavigate();
 

@@ -17,6 +17,7 @@ import { Check, ChevronRight, Circle } from "lucide-react"
 import { cn } from "@/lib/utils"
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const ContextMenu = ContextMenuPrimitive.Root
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger
 const ContextMenuGroup = ContextMenuPrimitive.Group
@@ -151,6 +152,7 @@ const ContextMenuSubContent = React.forwardRef<
   <ContextMenuPrimitive.SubContent;
     ref={ref}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
 
         className
@@ -429,6 +431,11 @@ const ContextMenuRadioItem = React.forwardRef<;
   React.ElementRef<typeof ContextMenuPrimitive.RadioItem>;
   React.ElementRef<typeof ContextMenuPrimitive.RadioItem>,;
 
+<<<<<<< HEAD
+  React.ElementRef<typeof ContextMenuPrimitive.RadioItem>;
+  React.ElementRef<typeof ContextMenuPrimitive.RadioItem>,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <ContextMenuPrimitive.RadioItem;
@@ -459,7 +466,6 @@ const ContextMenuRadioItem = React.forwardRef<;
       </ContextMenuPrimitive.ItemIndicator>;
     </span>;
     {children}
-
   </ContextMenuPrimitive.RadioItem>));
 ContextMenuRadioItem.display_name = ContextMenuPrimitive.RadioItem.display_name;
 const ContextMenuLabel = React.forward_ref<;
@@ -675,6 +681,30 @@ ContextMenuLabel.displayName = $2;
     />);
 }
 
+<<<<<<< HEAD
+ContextMenuShortcut.displayName = "ContextMenuShortcut"
+
+
+ContextMenuShortcut.displayName = &quot;ContextMenuShortcut&quot;
+export {
+  ContextMenu
+  ContextMenuTrigger
+  ContextMenuContent
+  ContextMenuItem
+  ContextMenuCheckboxItem
+  ContextMenuRadioItem
+  ContextMenuLabel
+  ContextMenuSeparator
+  ContextMenuShortcut
+  ContextMenuGroup
+  ContextMenuPortal
+  ContextMenuSub
+  ContextMenuSubContent
+  ContextMenuSubTrigger
+  ContextMenuRadioGroup}
+ContextMenuShortcut.displayName = "ContextMenuShortcut"
+
+=======
 ContextMenuShortcut.display_name = &quot;ContextMenuShortcut & quot;
 ;
 className={cn(;

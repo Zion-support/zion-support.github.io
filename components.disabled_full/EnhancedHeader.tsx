@@ -78,6 +78,7 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSearch = async ("e": React.FormEvent) => {
 
     e.preventDefault();
@@ -169,6 +170,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <button
                       onClick={() => toggleDropdown(item.name)}
 
+<<<<<<< HEAD
+                      className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                      className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                      className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
 
 
                       className="flex items-center space-x-1 text-gray-700 hover: text-blue-600 transition-colors duration-200"
@@ -208,6 +216,13 @@ ursor/automate-test-improve-and-merge-code-646c;
 key={dropdownItem.name}
                             href={dropdownItem.href}
 
+<<<<<<< HEAD
+                            className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                            className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                            className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
 
 
 
@@ -270,6 +285,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="hidden "md": flex items-center space-x-4">
             {' '}
             {}{' '}
@@ -288,6 +304,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />{' '}
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '}
@@ -295,6 +312,17 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             {}{' '}
             <div className="flex items-center space-x-2">
               {' '}
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+              <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200">
+                {' '}
+                <User className="h-5 w-5" />{' '}
+              </button>{' '}
+              <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200">
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
 
 <<<<<<< HEAD
 =======
@@ -311,6 +339,17 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
           </div>{' '}
           {}{' '}
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+          <div className="md:hidden">
+            {' '}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
 
 <<<<<<< HEAD
 
@@ -503,6 +542,7 @@ onClick={() = /> setMobileMenuOpen(!mobileMenuOpen)}
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className=""md": hidden">
         {mobileMenuOpen && (;
           <div className=\"md:hidden\" />;
@@ -528,6 +568,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         className="flex items-center justify-between w-full px-3 py-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                       <button;
                         onClick={() = /> toggleDropdown(item.name)}
@@ -574,6 +615,7 @@ onClick={() = /> toggleDropdown(item.name)}
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                               className="block px-3 py-2 text-gray-600 "hover": text-blue-600 transition-colors duration-200"
                             >
 ;
@@ -654,6 +696,7 @@ key={dropdownItem.name}
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className="block px-3 py-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                     >
                     <a;

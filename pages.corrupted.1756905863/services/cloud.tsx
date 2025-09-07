@@ -15,10 +15,10 @@ interface CloudProps {
   // Add props here as needed
 
   return (
-    <div>;
-      <h1>Cloud</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Cloud</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 
 export default function Cloud({ }: CloudProps) {

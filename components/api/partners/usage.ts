@@ -45,6 +45,8 @@ const auth = await authenticateRequest(req);
     return res && res.status(401).json({ error: \"Unauthorized\" })
  
 }
+<<<<<<< HEAD
+=======
 
 const summary = await calculateUsageSummary(auth.partner.id);
 >>>>>>> origin/chore/fix-lint-and-merge

@@ -1,5 +1,12 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+import {format} from 'date-fns';
+
+
+import { format } from 'date-fns';
+import {format} from 'date-fns';
+=======
 
 import {format} from 'date-fns';'
 
@@ -9,6 +16,7 @@ import {format} from 'date-fns';'
 import {format} from 'date-fns';
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /**
  * Formats a date for PDF display;
  * @param date Date or string to format;

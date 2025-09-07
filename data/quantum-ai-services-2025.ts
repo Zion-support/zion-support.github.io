@@ -13,7 +13,6 @@ export interface QuantumAiService2025 {
     email: string,
     address: string}
 }
-
 export const quantumAIServices2025: QuantumAiService2025[] = [
   {
     id: "quantum-ai-hybrid",
@@ -21,6 +20,12 @@ export const quantumAIServices2025: QuantumAiService2025[] = [
     tagline: "Combining quantum computing with artificial intelligence",
     price: "$299/month",
     description: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.",
+    id: 'quantum-ai-hybrid'
+    name: 'Quantum AI Hybrid Platform'
+    tagline: 'Combining quantum computing with artificial intelligence'
+    price: '$299/month'
+    description:
+      'Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.'
     features: [
       "Quantum AI algorithms",
       "Hybrid processing",

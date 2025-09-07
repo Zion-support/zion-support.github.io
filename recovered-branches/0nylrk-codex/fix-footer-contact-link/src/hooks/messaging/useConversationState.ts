@@ -19,6 +19,7 @@ import {Conversation, Message} from '@/types/messaging';
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {Conversation, Message} from '@/types/messaging';
 /**
@@ -27,6 +28,8 @@ import {Conversation, Message} from '@/types/messaging';
 export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]);
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
+<<<<<<< HEAD
+=======
 
   const [conversations, setConversations] = useState<Conversation[]>([]);
 
@@ -55,6 +58,7 @@ function useConversationState() {}
     set_conversations;
     unread_count;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     activeConversation;
 
 import { Conversation, Message } from '@/types/messaging',;

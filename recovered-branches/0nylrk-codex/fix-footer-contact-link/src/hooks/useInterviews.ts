@@ -6,6 +6,7 @@ export function useInterviews() {};
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from '@/integrations/supabase/client';
@@ -15,6 +16,20 @@ export function useInterviews() {;
   const [interviews, setInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+  const { user } = useAuth();
+import { useState } from 'react',
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from '@/integrations/supabase/client',
+import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',
+import { toast } from '@/components/ui/use-toast',
+export function useInterviews() {
+  const [interviews, setInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  const { user } = useAuth(),
+
+=======
 
   const { user } = useAuth();
 import { useState } from 'react',
@@ -35,6 +50,16 @@ export function useInterviews() {}
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
     if (!user) {
       toast({
+<<<<<<< HEAD
+        title: "Authentication required";
+        description: "You must be logged in to request interviews"
+        title: "Authentication required",
+        description: "You must be logged in to request interviews",
+        variant: "destructive"
+      }),
+      return null
+    }
+=======
 
         variant: "destructive"
       }),
@@ -73,6 +98,7 @@ export function useInterviews() {}
       const { data, error: insertError } = await supabase'
         .from('interviews')
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           client_id: interviewRequest.client_id,
           talent_id: interviewRequest.talent_id,
           scheduled_date: interviewRequest.scheduled_date,
@@ -91,6 +117,7 @@ export function useInterviews() {}
         console && console.error("Error requesting interview:", insertError);
         setError(insertError && insertError.message);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         interviewRequest.talent_id,
         'interview_requestNew Interview Request',
         `You have received an interview request for ${interviewRequest.scheduled_date}`,
@@ -151,6 +178,11 @@ export function useInterviews() { return null; }
       }),;
       return null;
     }
+<<<<<<< HEAD
+      setIsLoading (false);
+    }
+  }
+=======
 
   // Fetch interviews for the current user (as client or talent);
 
@@ -265,8 +297,22 @@ if ( {) {
 
       if (fetchError) {
 
+<<<<<<< HEAD
+      if (fetchError) {
+        console.error("Error fetching interviews:", fetchError),
+        setError(fetchError.message),
+        return []
+      }
+      // Transform the data to match Interview type
+      const formattedInterviews = data.map((interview: any): Interview => ({
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         id: interview.id;
 
+<<<<<<< HEAD
+      setInterviews(formattedInterviews);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         id: interview.id,
         client_id: interview.client_id,
         talent_id: interview.talent_id,
@@ -288,6 +334,8 @@ if ( {) {
         talent_avatar: interview.talents?.profile_picture_url})),
 
       setInterviews(formattedInterviews),
+<<<<<<< HEAD
+=======
 
       return formattedInterviews
     } catch (err: any) {
@@ -329,6 +377,7 @@ if ( {) {}
       setIsLoading(false)
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Respond to an interview request (as talent)
   const respondToInterview = async (
     interviewId: string,
@@ -341,6 +390,7 @@ if ( {) {}
       return false
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Authentication required",
         description: "You must be logged in to respond to interviews",
 
@@ -353,6 +403,10 @@ if ( {) {}
       });
       return false;
     }
+<<<<<<< HEAD
+    setIsLoading(true);
+    setError(null);
+=======
 
     setIsLoading(true);
     setError(null);
@@ -378,6 +432,7 @@ setIsLoading(true);
     setIsLoading(true),
     setError(null),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       // Update the interview status
       const { error: updateError } = await supabase
@@ -410,6 +465,18 @@ status: response.status
       if (updateError) {
         console && console.error("Error responding to interview:", updateError);
         setError(updateError && updateError.message);
+<<<<<<< HEAD
+          status: response.status
+          updated_at: new Date().toISOString()
+        })
+        .eq('id', interviewId);
+        .eq('id', interviewId),
+
+      if (updateError) {
+        console.error("Error responding to interview:", updateError),
+        setError(updateError.message),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return false
       }
 
@@ -795,6 +862,93 @@ return false;
         "related_id": relatedId})
 =======
       await supabase.from('notifications').insert({
+<<<<<<< HEAD
+        user_id: userId;
+        type;
+        title;
+        message
+        related_id: relatedId})
+    } catch (error) {
+      console.error("Error creating notification:", error)
+    }
+  }
+  // Cancel an interview (either client or talent can cancel)
+  const cancelInterview = async (interviewId: string): Promise<boolean> => {
+    if (!user?.id) return false;
+    setIsLoading(true);
+    setError(null)
+    try {
+      // Get the interview first to check permissions and get IDs for notifications
+      const { data: interview, error: fetchError } = await supabase
+        .from('interviews')
+        .select('*')
+        .eq('id', interviewId)
+        .single();
+      if (fetchError) {
+        setError(fetchError.message);
+        return false
+      }
+        user_id: userId,
+        type,
+        title,
+        message,
+        related_id: relatedId})
+    } catch (error) {
+      console.error("Error creating notification:", error)
+;
+      await createInterviewNotification(;
+        interview.client_id,;
+        notificationType,;
+        title,;
+        message,;
+        interviewId;
+      ),;
+      // Refresh the interviews list;
+      await fetchInterviews(),;
+      return true;
+    } catch (err: any) {;
+      console.error("Error in respondToInterview:", err),;
+      setError(err.message),;
+      return false;
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  // Helper function to create interview notifications;
+  const createInterviewNotification = async (;
+    userId: string,;
+    type: string,;
+    title: string,;
+    message: string,;
+    relatedId: string;
+  ) => {;
+    try {;
+      await supabase.from('notifications').insert({;
+        user_id: userId,;
+        type,;
+        title,;
+        message,;
+        related_id: relatedId});
+    } catch (error) {;
+      console.error("Error creating notification:", error);
+    }
+  },;
+  // Cancel an interview (either client or talent can cancel);
+  const cancelInterview = async (interviewId: string): Promise<boolean> => {;
+    if (!user?.id) return false,;
+    setIsLoading(true),;
+    setError(null),;
+    try {;
+      // Get the interview first to check permissions and get IDs for notifications;
+      const { data: interview, error: fetchError } = await supabase;
+        .from('interviews');
+        .select('*');
+        .eq('id', interviewId);
+        .single(),;
+      if (fetchError) {;
+        setError(fetchError.message),;
+        return false;
+=======
 
         user_id: userId;
         type;

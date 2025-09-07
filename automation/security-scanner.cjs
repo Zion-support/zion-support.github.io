@@ -26,7 +26,6 @@ class SecurityScanner {
     const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
-
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`);
     try {
@@ -47,9 +46,48 @@ class SecurityScanner {
       };
     }
   }
-
   async auditDependencies() {
     this.log('\n🔍 AUDITING DEPENDENCIES');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+    try {
+        if (!fs.existsSync('package.json')) {
+            return {
+                status: 'fail',
+                message: 'package.json not found'
+            };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    try {
+      // Run npm audit
+      const auditResult = await this.runCommand(
+        'npm audit --json',
+        'Dependency Security Audit'
+      );
+      let vulnerabilities = 0;
+      let fixes = [];
+      if (auditResult.success) {
+        try {
+          const auditData = JSON.parse(auditResult.output);
+          vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0;
+          if (vulnerabilities > 0) {
+            fixes.push('Run npm audit fix to fix vulnerabilities');
+            fixes.push('Update vulnerable packages to latest versions');
+            fixes.push('Consider using npm audit fix --force for automatic fixes');
+          }
+        } catch (parseError) {
+          this.log('Failed to parse audit results', 'WARNING');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        }
+=======
     
     try {
       // Run npm audit
@@ -75,19 +113,16 @@ class SecurityScanner {
           this.log('Failed to parse audit results', 'WARNING');
         }
       }
-
       // Try to fix vulnerabilities
       if (vulnerabilities > 0) {
         const fixResult = await this.runCommand(
           'npm audit fix',
           'Fix Security Vulnerabilities'
         );
-        
         if (fixResult.success) {
           fixes.push('Successfully applied automatic fixes');
         }
       }
-
       this.results.dependencyAudit = {
         success: auditResult.success,
         vulnerabilities,
@@ -101,14 +136,11 @@ class SecurityScanner {
       };
     }
   }
-
   async scanCodeSecurity() {
     this.log('\n🔍 SCANNING CODE SECURITY');
-    
     try {
       const issues = [];
       const fixes = [];
-
       // Check for common security issues
       const securityChecks = [
         {
@@ -132,18 +164,15 @@ class SecurityScanner {
           fix: 'Sanitize data before storing in localStorage'
         }
       ];
-
       // Scan common file types
       const fileExtensions = ['.js', '.jsx', '.ts', '.tsx'];
       const scanDirs = ['components', 'pages', 'lib', 'utils', 'hooks'];
-
       for (const dir of scanDirs) {
         const dirPath = path.join(this.projectRoot, dir);
         if (fs.existsSync(dirPath)) {
           this.scanDirectoryForSecurity(dirPath, securityChecks, issues, fixes);
         }
       }
-
       this.results.codeSecurity = {
         success: true,
         issues,
@@ -157,11 +186,9 @@ class SecurityScanner {
       };
     }
   }
-
   scanDirectoryForSecurity(dir, securityChecks, issues, fixes) {
     try {
       const items = fs.readdirSync(dir);
-      
       items.forEach(item => {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
@@ -191,7 +218,6 @@ class SecurityScanner {
 
   async setupSecurityHeaders() {
     this.log('\n🛡️ SETTING UP SECURITY HEADERS');
-    
     try {
       const securityHeaders = {
         'X-Content-Type-Options': 'nosniff',
@@ -201,7 +227,6 @@ class SecurityScanner {
         'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
       };
-
       // Create security headers middleware
       const middlewareContent = `
 // Security headers middleware
@@ -216,15 +241,12 @@ export function securityHeaders(req, res, next) {
   }).forEach(([key, value]) => {
     res.setHeader(key, value);
   });
-  
   next();
 }
 `;
-
       const middlewarePath = path.join(this.projectRoot, 'middleware', 'security.js');
       fs.mkdirSync(path.dirname(middlewarePath), { recursive: true });
       fs.writeFileSync(middlewarePath, middlewareContent);
-
       this.results.headersSecurity = {
         success: true,
         headers: Object.keys(securityHeaders),
@@ -243,10 +265,8 @@ export function securityHeaders(req, res, next) {
       };
     }
   }
-
   async setupContentSecurityPolicy() {
     this.log('\n🔒 SETTING UP CONTENT SECURITY POLICY');
-    
     try {
       const cspPolicy = {
         'default-src': ["'self'"],
@@ -260,21 +280,17 @@ export function securityHeaders(req, res, next) {
         'base-uri': ["'self'"],
         'form-action': ["'self'"]
       };
-
       const cspString = Object.entries(cspPolicy)
         .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)
         .join('; ');
-
       // Create CSP configuration
       const cspConfig = {
         policy: cspString,
         reportOnly: false,
         reportUri: '/api/csp-report'
       };
-
       const cspPath = path.join(this.projectRoot, 'csp-config.json');
       fs.writeFileSync(cspPath, JSON.stringify(cspConfig, null, 2));
-
       this.results.contentSecurityPolicy = {
         success: true,
         policy: cspString,
@@ -293,14 +309,11 @@ export function securityHeaders(req, res, next) {
       };
     }
   }
-
   async checkAuthenticationSecurity() {
     this.log('\n🔐 CHECKING AUTHENTICATION SECURITY');
-    
     try {
       const checks = [];
       const recommendations = [];
-
       // Check for authentication-related files
       const authFiles = [
         'lib/auth.js',
@@ -311,7 +324,6 @@ export function securityHeaders(req, res, next) {
         'pages/api/login',
         'pages/api/logout'
       ];
-
       let hasAuth = false;
       authFiles.forEach(file => {
         const filePath = path.join(this.projectRoot, file);
@@ -320,7 +332,6 @@ export function securityHeaders(req, res, next) {
           checks.push(`Found authentication file: ${file}`);
         }
       });
-
       if (hasAuth) {
         recommendations.push('Implement JWT token validation');
         recommendations.push('Add password hashing with bcrypt');
@@ -345,15 +356,12 @@ export function securityHeaders(req, res, next) {
       };
     }
   }
-
   generateReport() {
     const totalDuration = Date.now() - this.startTime;
-    
     this.log('\n📊 SECURITY SCANNER REPORT');
     this.log('='.repeat(60));
     this.log(`Total Duration: ${totalDuration}ms`);
     this.log('');
-    
     Object.entries(this.results).forEach(([task, result]) => {
       const status = result.success ? '✅' : '❌';
       this.log(`${status} ${task}: ${JSON.stringify(result, null, 2)}`);
@@ -372,6 +380,18 @@ export function securityHeaders(req, res, next) {
         authChecked: this.results.authenticationSecurity.success
       }
     };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const reportPath = path.join(this.reportsDir, 'security-scan-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log(`📊 Security scan completed! Report saved to: ${reportPath}`);
+    this.log(`🔒 Security Score: ${report.securityScore}% (${passedChecks}/${securityChecks.length} checks passed)`);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     
     fs.writeFileSync(
       'security-scanner-report.json',
@@ -397,7 +417,6 @@ export function securityHeaders(req, res, next) {
     }
   }
 }
-
 // Run the security scanner
 if (require.main === module) {
   const scanner = new SecurityScanner();

@@ -78,7 +78,6 @@ export function WorkExperienceItemForm({
     setIsEnhancementDialogOpen(false)
   };
 
-  return (
     <>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">
@@ -119,7 +118,6 @@ export function WorkExperienceItemForm({
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Location</FormLabel>
-                  <FormControl>
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
                   </FormControl>
                   <FormMessage />

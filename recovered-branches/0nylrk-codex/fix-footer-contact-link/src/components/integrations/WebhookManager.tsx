@@ -8,6 +8,26 @@ import {PlusCircle, Save, Trash, Play} from "lucide-react";
 import {useWebhooks, WebhookEventType} from "@/hooks/useWebhooks";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {toast} from "sonner";
+<<<<<<< HEAD
+export function WebhookManager() {
+  const { ;
+    webhooks;
+import React, { useEffect, useState } from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { PlusCircle, Save, Trash, Play } from "lucide-react",
+import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { toast } from "sonner";
+export function WebhookManager() {
+  const {
+    webhooks;
+
+    loading
+=======
 export function WebhookManager() {;
   const { ;
     webhooks;
@@ -38,10 +58,17 @@ import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
     testWebhook
   } = useWebhooks(),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [newWebhook, setNewWebhook] = useState({
 
   }),
 
+<<<<<<< HEAD
+  });
+  }),
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const eventOptions: { value: WebhookEventType, label: string }[] = [
     { value: "new_application", label: "New Application Received" }
     { value: "quote_received", label: "Quote Request Received" }
@@ -53,6 +80,11 @@ import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
     fetchWebhooks()
   }, []);
 
+  const handleAddEvent = () => {
+    if (!newWebhook.selectedEvent) return;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ],
 
   useEffect(() => {
@@ -82,6 +114,7 @@ import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
     setNewWebhook({}
       ...newWebhook,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
       ...newWebhook
@@ -106,6 +139,7 @@ import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
 
     ),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Reset form
 
     setNewWebhook({
@@ -130,6 +164,7 @@ import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
     await testWebhook(webhookId, eventType)
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <div className="space-y-8">
@@ -301,7 +336,6 @@ export function WebhookManager() { return null; }
     eventTypes: [] as WebhookEventType[],;
     secret: "";
   });
-
   const eventOptions: { value: WebhookEventType, label: string }[] = [;
     { value: "new_application", label: "New Application Received" },;
     { value: "quote_received", label: "Quote Request Received" },;
@@ -309,51 +343,43 @@ export function WebhookManager() { return null; }
 
     { value: "talent_hired", label: "Talent Hired" }
   ];
-
   useEffect(() => {;
     fetchWebhooks();
   }, []);
-
   const handleAddEvent = () => {;
     if (!newWebhook && newWebhook.selectedEvent) return;
 
       toast && toast.error("This event is already added");
       return;
     }
-
     setNewWebhook({;
       ...newWebhook;
 
       selectedEvent: "" as WebhookEventType;
     });
   };
-
   const handleRemoveEvent = (event: WebhookEventType) => {;
     setNewWebhook({;
       ...newWebhook,;
       eventTypes: newWebhook && newWebhook.eventTypes.filter(e => e !== event);
     });
   };
-
   const handleCreateWebhook = async () => {;
 
       toast && toast.error("Please fill in all required fields");
       return;
     }
-
     await createWebhook(;
       newWebhook && newWebhook.name, ;
       newWebhook && newWebhook.url, ;
       newWebhook && newWebhook.eventTypes, ;
       newWebhook && newWebhook.secret || undefined;
     );
-
     // Reset form;
 
       secret: "";
     });
   };
-
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {;
     await testWebhook(webhookId, eventType);
   };
@@ -474,6 +500,8 @@ if ( {) {
 
             <Input 
               id="webhook-secret" 
+<<<<<<< HEAD
+=======
 
               placeholder="A secret key to verify the webhook source"
 
@@ -600,59 +628,63 @@ if ( {) {
               <Label html_for="webhook - name">Webhook Name</Label>;
               <Input;
                 id="webhook - name";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 placeholder="e.g., Job Postings Webhook";
-                value={new_webhook.name}
-                on_change={(e) => setNewWebhook ({...new_webhook, name: e.target.value})}
+                value={newWebhook.name}
+                onChange={(e) => setNewWebhook({...newWebhook, name:e.target.value})}
               />;
             </div>;
-            <div className="space - y-2">;
-              <Label html_for="webhook - url">URL</Label>;
-              <Input;
-                id="webhook - url";
-                placeholder="https://example.com / webhook";
-                value={new_webhook.url}
-                on_change={(e) => setNewWebhook ({...new_webhook, url: e.target.value})}
+            ;
+            <div className="space-y-2">;
+              <Label htmlFor="webhook-url">URL</Label>;
+              <Input ;
+                id="webhook-url" ;
+                placeholder="https://example.com/webhook";
+                value={newWebhook.url}
+                onChange={(e) => setNewWebhook({...newWebhook, url:e.target.value})}
               />;
             </div>;
           </div>;
-          <div className="space - y-2">;
-            <Label > Events</Label>;
-            <div className="flex flex - wrap gap - 2 mb - 2">;
-              {new_webhook.event_types.map (event => (
-                <ClickableBadge;
-                  key={event}
-                  on_remove={() => handleRemoveEvent (event)}
-                >;
-                  {event_options.find (e => e.value === event)?.label || event}
-                </ClickableBadge>))}
+          ;
+          <div className="space-y-2">;
+            <Label>Events</Label>;
+            <div className="flex flex-wrap gap-2 mb-2">;
+              {newWebhook.eventTypes.map(event => (;
+                <ClickableBadge ;
+                  key={event} ;
+                  onRemove={() => handleRemoveEvent(event)}
+                >;                  {eventOptions.find(e => e.value === event)?.label || event}
+                </ClickableBadge>;
+              ))}
             </div>;
-            <div className="flex space - x-2">;
+            <div className="flex space-x-2">;
               <Select;
-                value={new_webhook.selected_event}
-                onValueChange={(value) => setNewWebhook ({...new_webhook, selected_event: value as WebhookEventType})}
+                value={newWebhook.selectedEvent}
+                onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent:value as WebhookEventType})}
               >;
-                <SelectTrigger className="w - full">;
+                <SelectTrigger className="w-full">;
                   <SelectValue placeholder="Select event" />;
                 </SelectTrigger>;
                 <SelectContent>;
-                  {event_options.map (option => (
-                    <SelectItem key={option.value} value={option.value}>;
-                      {option.label}
-                    </SelectItem>))}
+                  {eventOptions.map(option => (;
+                    <SelectItem key={option.value} value={option.value}>;                      {option.label}
+                    </SelectItem>;
+                  ))}
                 </SelectContent>;
               </Select>;
-              <Button type="button" on_click={handleAddEvent} variant="outline">;
-                <PlusCircle className="h - 4 w - 4 mr - 2" /> Add;
+              <Button type="button" onClick={handleAddEvent} variant="outline">;
+                <PlusCircle className="h-4 w-4 mr-2" /> Add;
               </Button>;
             </div>;
           </div>;
-          <div className="space - y-2">;
-            <Label html_for="webhook - secret">Secret (optional)</Label>;
-            <Input;
-              id="webhook - secret";
+          ;
+          <div className="space-y-2">;
+            <Label htmlFor="webhook-secret">Secret (optional)</Label>;
+            <Input ;
+              id="webhook-secret" ;
               placeholder="A secret key to verify the webhook source";
-              value={new_webhook.secret}
-              on_change={(e) => setNewWebhook ({...new_webhook, secret: e.target.value})}
+              value={newWebhook.secret}
+              onChange={(e) => setNewWebhook({...newWebhook, secret:e.target.value})}
             />;
             <p className="text - xs text - muted - foreground">;
 
@@ -830,12 +862,18 @@ if ( {) {
           </Button>;
         </CardFooter>;
       </Card>;
+<<<<<<< HEAD
+      <div>;
+        <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>;
+=======
 
                         </Button>;
                       </div>;
                     </div>;
                   </div>;
                 </CardHeader>;
+<<<<<<< HEAD
+=======
 
                 <CardContent className="py-2">;
                   <div className="flex flex - col space-y-2">;
@@ -852,15 +890,23 @@ if ( {) {
                       {webhook.last_triggered_at;
                         ? `Last triggered: ${new Date (webhook.last_triggered_at).toLocaleString ()}`;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         : 'Never triggered'}
                     </div>;
                   </div>;
                 </CardContent>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     onClick={() => deleteWebhook(webhook && webhook.id)}
                   >;"
                     <Trash className="h-4 w-4 mr-2" /> Delete;
                   </Button>;
+<<<<<<< HEAD
+                  <Select
+                    onValueChange={(value) => handleTestWebhook(webhook && webhook.id, value as WebhookEventType)}
+=======
 
                   <Select;
                     onValueChange={(value) => handleTestWebhook(webhook && webhook.id, value as WebhookEventType)}
@@ -872,12 +918,19 @@ if ( {) {
                     on_click={() => delete_webhook (webhook.id)}
                   >;"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   >;
                     <SelectTrigger className="w-[180px]">;
                       <SelectValue placeholder="Test webhook" />;
                     </SelectTrigger>;
                     <SelectContent>;
                       <SelectItem value="test_event">Test (generic)</SelectItem>;
+<<<<<<< HEAD
+                      {webhook.event_types.map(event => (;
+                        <SelectItem key={event} value={event}>;
+                          Test {eventOptions.find(e => e.value === event)?.label || event}
+                        </SelectItem>;                      ))}
+=======
 
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>;

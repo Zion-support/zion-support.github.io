@@ -63,11 +63,13 @@ try {
         document.body.removeChild(iframe);
       } catch {}
     }, 1500);
-
     return () => {;
       }
       clearTimeout(timeout);
       clearTimeout(timer);
+<<<<<<< HEAD
+      try { document.body.removeChild(iframe) } catch {}
+=======
 
 try {
         }

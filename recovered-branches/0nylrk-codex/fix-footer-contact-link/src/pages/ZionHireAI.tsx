@@ -282,12 +282,21 @@ export default function ZionHireAI() {;
                   src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI";
                   alt="Zion Hire AI Dashboard";
                   className="relative z-10 rounded-lg shadow-xl";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 />;
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+;
+        {/* Features Section */}
+        <section className="py-16 bg-background">;
+          <div className="container mx-auto px-4 md:px-6">;
+=======
 
         {/* Features Section */}"
         <section className="py-16 bg-background">"

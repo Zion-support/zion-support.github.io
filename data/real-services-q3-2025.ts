@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import { ServiceVariant } from '../types / service - variants';
+;
+=======
 
 ;
 import { ServiceVariant  } from '../types/service-variants';'
@@ -27,6 +31,16 @@ export interface Q3Service  {"id": string, "name": string,"tagline": string, "pr
   trialDays?: number;
   setupTime?: string;
 
+<<<<<<< HEAD
+  useCases?: string[];
+
+
+  category: string, realService: boolean,
+  technology?: string[];
+  integrations?: string[];
+  useCases?: string[],
+  useCases?: string[];
+=======
   category: string, realService: boolean,
 
 category: string;

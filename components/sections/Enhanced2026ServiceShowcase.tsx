@@ -30,6 +30,7 @@ Rocket;
   Globe,;
   Rocket,;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ArrowRight,
   Star,
   TrendingUp,
@@ -38,6 +39,8 @@ Rocket;
   Brain,
   Globe,;
   Rocket,;
+<<<<<<< HEAD
+=======
 
 } from 'lucide-react';'
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';'
@@ -421,6 +424,10 @@ variants={containerVariant}
         <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center mt-16"
+        >
 
             initial='hidden''
             whileInView='visible''

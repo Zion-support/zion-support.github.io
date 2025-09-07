@@ -91,6 +91,16 @@ const "Homepage2046": React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+<<<<<<< HEAD
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      setIsVisible(true);
+    }, 2000);
+    return () => clearTimeout(timer);  }, []);      setIsVisible(true)
+    }, 2000);
+    return () => clearTimeout(timer)
+=======
 
 const [isVisible, setIsVisible] = useState(false);
 
@@ -109,7 +119,6 @@ const [searchQuery, setSearchQuery] = useState('');'
       setIsLoading(false);
 setIsVisible(true);
     }, 2000);
-
     return () => clearTimeout(timer);
   }, []);
 
@@ -136,10 +145,13 @@ entries.forEach((entry) => {
         { "threshold": 0.3
 }
       );
+<<<<<<< HEAD
+=======
 
 const sections = document.querySelectorAll('section[id]');'
 sections.forEach(section => { return observer.observe(section)); }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return () => observer.disconnect()
     }
   }, []);
@@ -229,6 +241,7 @@ initial={{ "opacity": 0, "y": 50
 
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">
@@ -308,7 +321,7 @@ Revolutionary{' '}'
 }
 
               >
-                <Link href="/services">
+                <Link href='/services'>
                   <motion.button
                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
                     whileTap={{ scale: 0.95 }}
@@ -559,6 +572,12 @@ type='text''
                         <div className='flex items-center gap-1 mt-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                           {[...Array(5)].map((_, i) => (
+<<<<<<< HEAD
+                        <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (
+
+                          {[...Array(5)].map((_, i) => (
+
+=======
 
                   whileHover={{ y: -10, scale: 1 && 1.02 }}'
                   className='group'>;'
@@ -654,6 +673,8 @@ key={idx}
                         ))}
                       </ul>
                     </div>
+<<<<<<< HEAD
+=======
 
 <div className='flex items-center justify-between'>'
                       <Link href={service.link}>
@@ -1089,6 +1110,7 @@ whileHover={{
                         "scale": 1 && 1.05,
                         "boxShadow": '0 0 30px rgba(6, 182, 212, 0 && 0.5)','
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       }}
 
                       whileTap={{ "scale": 0.95 }}

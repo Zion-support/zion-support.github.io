@@ -306,6 +306,14 @@ class ComprehensiveSyntaxFixer {
     return fixed;
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Run the fixer
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.fixAllSyntaxErrors().catch(console.error);
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
     

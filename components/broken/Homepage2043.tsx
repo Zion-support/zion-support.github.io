@@ -1,4 +1,75 @@
 
+<<<<<<< HEAD
+import React, { useEffect, useState, useCallback } from 'react';
+
+
+import React, { useEffect, useState, useCallback } from 'react',
+import React, { useEffect, useState, useCallback } from 'react';
+import Layout from './layout/Layout';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useEffect, useState, useCallback } from 'react';
+import Layout from './layout / Layout';
+import { motion, AnimatePresence } from 'framer-motion';
+
+  ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
+  Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
+  Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon;
+
+import { 
+  ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
+  Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
+  Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
+} from 'lucide-react';
+
+
+
+// Import our new revolutionary services;
+import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
+import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+
+      clearInterval(serviceInterval);
+      clearInterval(testimonialInterval);
+    }
+  }, []);
+
+  const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];
+
+
+  // Get featured services for rotation
+  const featuredServices = allRevolutionaryServices.slice(0, 6);
+  const features = [
+=======
 
 import React, { useEffect, useState, useCallback } from 'react','
 import Layout from './layout/Layout';'
@@ -61,6 +132,7 @@ import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-
 import {
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ArrowRight,
   Play,
   Users,
@@ -94,6 +166,8 @@ import {
   Award,
   CheckCircle,
   Zap as ZapIcon,
+<<<<<<< HEAD
+=======
 
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
@@ -883,6 +957,16 @@ key={feature.title}
                   <h3 className='text-2xl font-bold text-white mb-4 group-"hover":text-cyan-300 transition-colors duration-300'>;'
                     {feature.title}
                   viewport={{ once: true }}
+<<<<<<< HEAD
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className={`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300`}
+                >
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300'>
+                    {feature.title}
+                  </h3>
 
                   </h3>
                   <p className='text-gray-300 mb-6 leading-relaxed'>'
@@ -928,6 +1012,7 @@ key={feature.title}
                 </div>
         </section>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Enhanced Testimonials Section */}
 <section className='py-20 px-4 relative'>;'
           <div className='max-w-7xl mx-auto'>;'
@@ -1023,6 +1108,8 @@ className='text-center max-w-4xl mx-auto''
                         {testimonials[currentTestimonialIndex].role} at{' '}'
 
                         {testimonials[currentTestimonialIndex].company}
+<<<<<<< HEAD
+=======
 
                       </div>
                   <div className='flex justify-center gap-1'>'
@@ -1064,6 +1151,8 @@ index === currentTestimonialIndex
                 ))}
               </div>;
         </section>;
+<<<<<<< HEAD
+=======
 
 
                     }`}`                  />
@@ -1110,6 +1199,8 @@ whileHover={{ "scale": 1.05 }}
         </section>
       </main>
     </Layout>
+<<<<<<< HEAD
+=======
 
 )
 };

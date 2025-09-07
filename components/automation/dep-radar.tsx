@@ -49,6 +49,7 @@ export default /**
  * DepRadarPage - Function description
  */
 function DepRadarPage() {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;

@@ -109,6 +109,15 @@ import { SEO } from "@/components/SEO",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;
 import { useWhitelabel } from "@/context/WhitelabelContext",;
+<<<<<<< HEAD
+export default function CompanyWorkspace() {;
+  const { companySlug } = useParams() as { companySlug?: string },;
+  const { user } = useAuth(),;
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug),;
+  const { isWhitelabel, tenant, brandName } = useWhitelabel(),;
+  if (isLoading) {;
+    return (;
+=======
 
   const { companySlug } = useParams() as { companySlug?: string };
   const { user } = useAuth();
@@ -124,6 +133,7 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
 
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   return (;
     <ProtectedRoute>;
@@ -157,6 +167,7 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
       <Footer />
     </ProtectedRoute>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <ProtectedRoute>;
       <SEO
         title={`${company && company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}

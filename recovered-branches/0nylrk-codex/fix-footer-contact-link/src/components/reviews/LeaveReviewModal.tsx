@@ -5,6 +5,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {ReviewForm} from "./ReviewForm";
 import {useReviews} from "@/hooks/useReviews";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
 
   Dialog;
@@ -80,6 +81,13 @@ interface LeaveReviewModalProps {;
           onSubmit={handleSubmit}
           defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
+<<<<<<< HEAD
+        />
+      </DialogContent>
+    </Dialog>
+  )
+}
+=======
 
 import { useState, useEffect } from './react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';

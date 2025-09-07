@@ -53,6 +53,12 @@ const icon_map = {}
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
 
+<<<<<<< HEAD
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy;
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
+        
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -95,6 +101,10 @@ const iconMap = {;
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null,;
   return (;
+<<<<<<< HEAD
+  if (!badges?.length) return null;
+  return (
+=======
 
 export default UserBadges;
 

@@ -40,6 +40,8 @@ export function MilestoneManager({
   }
   return (;
 
+<<<<<<< HEAD
+=======
 =======
 projectId: string
 
@@ -87,6 +89,8 @@ interface MilestoneManagerProps {
 
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
+<<<<<<< HEAD
+=======
 
   refetch;
 }: MilestoneManagerProps) {}
@@ -145,6 +149,14 @@ interface MilestoneManagerProps {
       console.error("Error approving milestone:", error),"
       toast.error("Failed to approve milestone")
     }
+<<<<<<< HEAD
+  },
+  
+
+  }
+  },
+  
+=======
 
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
@@ -224,6 +236,7 @@ export function MilestoneManager() { return null; }
 
           paymentTerms={paymentTerms}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           is_submitting={is_submitting}
           on_approve={is_client ? handleMilestoneApproved : undefined}
           on_reject={is_client ? handleMilestoneRejected : undefined}

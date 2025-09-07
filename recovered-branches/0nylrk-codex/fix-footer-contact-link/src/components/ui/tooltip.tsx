@@ -66,6 +66,7 @@ const TooltipContent = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof TooltipPrimitive && TooltipPrimitive.Content>;
 ></typeof>(({ className, sideOffset = 4, ...props }, ref) => (;
   <TooltipPrimitive&& TooltipPrimitive.Content
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ref={ref}
     sideOffset={sideOffset}
     className={cn(
@@ -90,6 +91,7 @@ const TooltipContent = React.forwardRef<;
 ));
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 
+TooltipContent && TooltipContent.displayName = TooltipPrimitive && TooltipPrimitive.Content.displayName;
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
 ;
 

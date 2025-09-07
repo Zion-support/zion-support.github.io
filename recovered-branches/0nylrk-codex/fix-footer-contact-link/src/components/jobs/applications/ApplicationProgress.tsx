@@ -14,6 +14,28 @@ interface ApplicationProgressProps {
 
 }
 
+<<<<<<< HEAD
+import { ApplicationStatus } from "@/types/jobs";
+import { Progress } from "@/components/ui/progress";
+import { CheckCircle2, Circle, CircleDot } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+import { ApplicationStatus } from "@/types/jobs",
+import { Progress } from "@/components/ui/progress",
+import { CheckCircle2, Circle, CircleDot } from "lucide-react";
+import { cn } from "@/lib/utils";
+interface ApplicationProgressProps {
+  status: ApplicationStatus;
+  className?: string
+}
+export function ApplicationProgress({
+  status
+  className
+}: ApplicationProgressProps) {
+import { CheckCircle2, Circle, CircleDot } from "lucide-react",
+import { cn } from "@/lib/utils",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -83,6 +105,10 @@ function ApplicationProgress() {}
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
+<<<<<<< HEAD
+      
+      
+=======
 
       <div className="flex justify-between text-xs text-muted-foreground">
 
@@ -140,6 +166,43 @@ export function ApplicationProgress() { return null; }
   },;
   const progressValue = getProgressValue(),;
   return (;
+<<<<<<< HEAD
+    <div className={cn("w-full space-y-2", className)}>;
+      <Progress value={progressValue} className="h-2" />;
+
+import { ApplicationStatus } from "@/types/jobs",;
+import { Progress } from "@/components/ui/progress",;
+import { CheckCircle2, Circle, CircleDot } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+;
+interface ApplicationProgressProps {;
+  status:ApplicationStatus,;
+  className?:string;
+}
+;
+export function ApplicationProgress({ status, className } ApplicationProgressProps) {;
+  // Define the progress value based on status;
+  const getProgressValue = () => {;
+    switch (status) {;
+      case "new":return 20,;
+      case "viewed":return 40,;
+      case "shortlisted":return 60,;
+      case "interview":return 80,;
+      case "hired":return 100,;
+      case "rejected":return 100,;
+      default:return 0;
+    }
+  },;
+;
+  const progressValue = getProgressValue(),;
+  ;
+  return (;
+    <div className={cn("w-full space-y-2", className)}>;
+      <Progress value={progressValue} className="h-2" />;
+      ;
+    <div className={cn("w-full space-y-2", className)}>;
+      <Progress value={progressValue} className="h-2" />;
+=======
 
           <span className="mt-1">Submitted</span>;
         </div>;"
@@ -163,10 +226,17 @@ export function ApplicationProgress() { return null; }
     </div>;
   );
 }
+<<<<<<< HEAD
+;
+function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {;
+  // Helper to determine if this step is active, completed, or inactive;
+  const statusRank: Record<ApplicationStatus number> = {;
+=======
 
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (currentRank < statusRank_) {;
 
     return <CheckCircle2 className="h-4 w-4 text-green-500" />;

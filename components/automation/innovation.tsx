@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 import fs from 'fs','
@@ -143,6 +145,8 @@ return (;
 function InnovationDigest() {return (<div className="space - y-6">;
   );
 }
+<<<<<<< HEAD
+=======
 
 
 }

@@ -1,3 +1,77 @@
+<<<<<<< HEAD
+interface UltraFuturisticBackground2026Props {
+  children: React.ReactNode,
+  className?: string
+}
+const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props> = ({ 
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+
+  children: React.ReactNode;
+  className?: string;
+const UltraFuturisticBackground2026: React.FC<
+  UltraFuturisticBackground2026Props
+> = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props> = ({
+  children;
+  className = ''
+}) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const animationRef = useRef<number | undefined>(undefined);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    let particles: Array<{
+const UltraFuturisticBackground2026: React.FC<;
+  UltraFuturisticBackground2026Props;
+> = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props> = ({ ;
+  children;
+  className = '' ;
+}) => {;
+  const animationRef = useRef<number | undefined>(undefined);
+  useEffect(() => {;
+    const canvas = canvasRef && canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas && canvas.getContext('2d');
+    if (!ctx) return;
+    canvas && canvas.width = window && window.innerWidth;
+    canvas && canvas.height = window && window.innerHeight;
+    let particles: Array<{;
+      x: number;
+      y: number;
+;
+  children: React.ReactNode;
+  class_name?: string;
+;
+const UltraFuturisticBackground2026: React.FC<;
+  UltraFuturisticBackground2026Props;
+> = ({ children, class_name = '' }) => {  const canvas_ref = useRef < HTMLCanvasElement>(null);const UltraFuturisticBackground2026: React.FC < UltraFuturisticBackground2026Props> = ({
+  children;
+  class_name = '';
+}) => {
+  const animation_ref = useRef < number | undefined>(undefined);
+;
+  useEffect (() => {
+    const canvas = canvas_ref.current;
+    // Check condition
+if (return) {
+  $2
+}
+    const ctx = canvas.get_context ('2d');
+    // Check condition
+if (return) {
+  $2
+}
+    canvas.width = window.inner_width;
+    canvas.height = window.inner_height;
+;
+    let particles: Array<{
+      coordinate_x: number;
+      coordinate_y: number;
+=======
 
 
 import React, { useEffect, useRef } from 'react';'
@@ -191,6 +265,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx.line_to (canvas.width, y);
         ctx.stroke ();
       }
+<<<<<<< HEAD
+=======
 
       animationRef.current = requestAnimationFrame(animate)
 };

@@ -44,10 +44,16 @@ const Card = React.forwardRef<;
     ref={ref}"
     className={cn(\"text-2xl font-semibold leading-none tracking-tight\",className,// Define HTML element types;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const CardContent = React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
+  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
+));
+CardContent && CardContent.displayName = "CardContent";
+=======
 
 const CardTitle = React.forwardRef<
   HTMLParagraphElement,

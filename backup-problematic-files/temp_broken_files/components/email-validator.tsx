@@ -8,6 +8,7 @@ export default function EmailValidatorPage() {;
   const [emails, setEmails] = useState(),;
   const [validationResults, setValidationResults] = useState<any[]>([]),;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const validateEmails = async () => {;
     if (!emails.trim()) return;
     setIsValidating(true);
@@ -54,6 +55,8 @@ export default function EmailValidatorPage() {;
     } else if (hasTypo) {status = 'suspicious';
       score = 60;
       issues.push('Possible typo in domain');
+<<<<<<< HEAD
+=======
 
 export default function EmailValidatorPage() {
 <<<<<<< HEAD
@@ -127,6 +130,10 @@ const commonTypos = {
     // Additional checks,
 if (email.length > 254) {
       issues.push('Email too long')
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+=======
 
     // Additional checks;
     if (email.length > 254) {status = 'invalid';
@@ -134,6 +141,7 @@ if (email.length > 254) {
     if (email.split('@')[0].length > 64) {status = 'invalid';
       issues.push('Local part too long');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
 
@@ -179,6 +187,15 @@ if (email.length > 254) {
           <h1 className=&quot;text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight&quot;>
 </h1>
           <p className=&quot;text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed&quot;>
+<<<<<<< HEAD
+:components/email-validator.tsx
+            Validate email addresses with our advanced validation service. Check for typos, disposable domains
+            and ensure maximum deliverability for your email campaigns and user registrations.
+          </p>
+            Validate email addresses with our advanced validation service. Check for typos, disposable domains, 
+            and ensure maximum deliverability for your email campaigns and user registrations.          </p>
+:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+=======
 
         </div>
       </section>
@@ -211,6 +228,10 @@ if (email.length > 254) {
                     <label className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>
 
                     <Button;
+<<<<<<< HEAD
+                      onClick={clearResults}
+variant=&quot;outline&quot;
+=======
 
                       className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
                     >
@@ -261,6 +282,7 @@ if (email.length > 254) {
 </span>
                           </span>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {validationResults.map((result, index) => (                    <div,
 key={index}`;
                       className={_`p-4 rounded-lg border ${
@@ -274,6 +296,17 @@ key={index}`;
                           <span className={`font-medium ${getStatusColor(result.status)}`}>
                             {result.email}                          </span>
                         <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+                          Score: {result.score}
+</span>
+                      </div>
+                      <div className=&quot;text-sm text-gray-300 mb-2&quot;>
+                        <span className=&quot;text-gray-400&quot;>Domain:</span>
+                        <span className=&quot;ml-2&quot;>{result.domain}</span>
+                      </div>
+=======
 
                         </div>
                       )}

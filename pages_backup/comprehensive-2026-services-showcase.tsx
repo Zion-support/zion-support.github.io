@@ -20,12 +20,16 @@ import {;
   ArrowRight, Phone, Mail, MapPin, Rocket, Users,;
   BarChart3, Award, Clock, DollarSign;'
 } from 'lucide-react',;
+<<<<<<< HEAD
+=======
 
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026';
 import { revolutionaryITInfrastructure2026 } from '../data/revolutionary-it-infrastructure-2026';
 import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
+<<<<<<< HEAD
+=======
 
 import {
   Search,
@@ -85,6 +89,15 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
     .sort((a, b) => {}
       switch (sortBy) {'
         case 'price-low':
+<<<<<<< HEAD
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''))
+        case 'price-high':
+          return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''))
+        case 'rating':
+          return b.rating - a.rating
+        case 'customers':
+          return b.customers - a.customers
+=======
 
         default: return a.popular ? -1 : 1
 
@@ -247,9 +260,7 @@ export default function Comprehensive2026ServicesShowcase(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
   },
-
   return (
 
     >
@@ -521,6 +532,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+                <div className="flex flex-wrap gap-3">
+                  {categories.map((category) => (
+                    <button
+                      key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-all duration-300 ${;
+                        selectedCategory === category.id;
+                          ? 'bg-cyan-600 border-cyan-500 text-white';
+                          : 'bg-gray-800/50 border-gray-600/30 text-gray-300 hover:border-cyan-500/50';
+                      }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    >
+                      <category.icon className="w-4 h-4" />
+                      {category.name}
+                      <span className="bg-gray-700/50 px-2 py-1 rounded-lg text-xs">
+                        {category.count}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+                {/* Sort and View Controls */}
+                <div className="flex items-center gap-4">
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+=======
 
         {/* Search and Filter Section */}
 <section className='py-12 px-4 sm:px-6 lg:px-8'>
@@ -604,6 +653,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
                     className="bg-gray-800/50 border border-gray-600/30 rounded-xl px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >"
@@ -693,7 +744,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >;
               <AnimatePresence>;
 
@@ -757,6 +811,7 @@ viewMode === 'list'
 origin/cursor/automate-test-improve-and-merge-code-2533
                     key={service.id}
                     variants={item_variants}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     layout;
                     className={`bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl rounded - 3xl border border - gray - 600 / 30 overflow - hidden transition - all duration - 500 hover:scale - 105 hover:border - cyan - 500 / 50 group ${
                       view_mode === 'list' ? 'flex flex - col lg:flex - row' : '';
@@ -771,6 +826,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
                           <span className="text-gray-400 text-sm font-normal">{service.period}</span>
                         </div>"
@@ -783,6 +840,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">"
                         <div className="flex items-center gap-1">"
                           <Users className="w-4 h-4" />
+<<<<<<< HEAD
+                          <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 3 py - 1 rounded - full font - semibold flex items - center gap - 1">;
+                          {service.customers.toLocaleString()}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          {service.setupTime}
+                        </div>
+                      </div>
+                    </div>
+=======
 
                   >
                     {/* Service Header */}
@@ -914,6 +982,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="flex flex - col sm:flex - row gap - 3">;
                         <Link;
                           href={service.link}
+<<<<<<< HEAD
+=======
 
                           className="flex-1 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105"
                         >
@@ -1122,6 +1192,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
                   className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
                 >"

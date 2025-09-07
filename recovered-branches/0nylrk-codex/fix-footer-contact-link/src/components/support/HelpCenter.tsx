@@ -85,6 +85,7 @@ import {AppLayout} from "@/layout/AppLayout";
 import {Search} from "lucide-react";
 export default function HelpCenter() {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -172,6 +173,14 @@ export default function HelpCenter() {;
           <p className="text-zion-slate-light mb-6">;
             Find answers to common questions or get in touch with our support team.;
           </p>;
+<<<<<<< HEAD
+          ;
+          <div className="relative mb-8">;
+            <Input;
+              placeholder="Search for help articles...";
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+=======
 
           ;
           <div className="relative mb-8">;
@@ -184,13 +193,27 @@ export default function HelpCenter() {;
             />;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
           </div>;
+<<<<<<< HEAD
+          ;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Tabs defaultValue="articles" className="mb-8">;
             <TabsList className="w-full grid grid-cols-3 mb-6">;
               <TabsTrigger value="articles">Articles</TabsTrigger>;
               <TabsTrigger value="faq">FAQ</TabsTrigger>;
               <TabsTrigger value="contact">Contact Us</TabsTrigger>;
             </TabsList>;
+<<<<<<< HEAD
+            <TabsContent value="articles">;
+              {!selectedCategory && !selectedArticle && (;
+                <HelpCategoryList;
+                  categories={HELP_CATEGORIES} ;
+                  onCategorySelect={handleCategorySelect}
+                  searchQuery={searchQuery}
+                />
+              )}
+=======
 
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}
@@ -219,6 +242,40 @@ export default function HelpCenter() {;
                   Frequently Asked Questions;
                 </h2>
 
+<HelpArticleList
+                  <HelpArticleList
+                  <HelpArticleList 
+                    categoryId={selectedCategory}
+                    onArticleSelect={handleArticleSelect}
+                    searchQuery={searchQuery}
+                  />
+                </>
+              )}
+              
+              {selectedArticle && (
+                <>
+                  <Button
+                    variant="ghost"
+                    onClick={handleBackToArticles}
+                    className="mb-4"
+                  >
+                    ← Back to Articles
+                  </Button>
+                  <HelpArticleView articleId={selectedArticle} />
+                </>
+              )}
+            </TabsContent>
+<TabsContent value="faq">
+              <div className="bg-zion-blue-light/20 rounded-lg p-6">
+                <h2 className="text-xl font-semibold mb-4">
+                  Frequently Asked Questions
+                </h2>
+                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+=======
+                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="space-y-6">
                   <div>"
                     <h3 className="font-medium text-zion-cyan mb-2">

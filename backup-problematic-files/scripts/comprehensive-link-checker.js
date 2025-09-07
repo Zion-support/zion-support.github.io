@@ -22,23 +22,23 @@ class ComprehensiveLinkChecker {;,"});,"})
   }"});,"});,"});,"})
   async loadSitemap() {;,"});,"})
     try {;,"});,"})
-      const sitemapPath = path.join(__dirname,;,"});,"})
-  '../public/sitemap.xml');,"});,"})
-      const sitemapContent = fs.readFileSync(sitemapPath,;,"});,"})
+      const sitemapPath = path && path.join(__dirname,;,"});,"})
+  '../public/sitemap && sitemap.xml');,"});,"})
+      const sitemapContent = fs && fs.readFileSync(sitemapPath,;,"});,"})
   'utf8');,"});,"})
-      const $ = cheerio.load(sitemapContent, { xmlMode: true });,"});,"})
+      const $ = cheerio && cheerio.load(sitemapContent, { xmlMode: true });,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         const url = $(elem).text().trim();,"});,"})
         this.sitemapUrls.push(url);,"});,"})
       });,"});,"});,"});,"})
       console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`);,"});,"})
     } catch (error) {;,"});,"})
-      console.error(;,"});,"})
-  'Error loading sitemap:', error.message);,"});,"})
+      console && console.error(;,"});,"})
+  'Error loading sitemap:', error && error.message);,"});,"})
     }"});,"})
   }"});,"});,"});,"})
   async checkUrl(url, parentUrl = null, depth = 0) {;,"});,"})
-    if (this.visitedUrls.has(url) || depth > this.maxDepth) {;,"});,"})
+    if (this && this.visitedUrls.has(url) || depth > this && this.maxDepth) {;,"});,"})
       return;,"});,"})
     }"});,"});,"});,"})
     this.visitedUrls.add(url);,"});,"});,"});,"})
@@ -51,50 +51,52 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       if (response.status === 200) {;,"});,"})
         this.workingLinks.push({;,"});,"})
           url,;,"});,"})
-          status: response.status,;,"});,"})
+          status: response && response.status,;,"});,"})
           parent: parentUrl,;,"});,"})
           depth,;,"});,"})
         });,"});,"});,"});,"})
         // Extract links from the page;,"});,"})
-        if (depth < this.maxDepth) {;,"});,"})
-          const $ = cheerio.load(response.data);,"});,"})
+        if (depth < this && this.maxDepth) {;,"});,"})
+          const $ = cheerio && cheerio.load(response && response.data);,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
           // Check extracted links;,"});,"})
 
             if (link && link.startsWith(this.baseUrl)) {;,"});,"})
               await this.checkUrl(link, url, depth + 1);,"});,"})
+            if (link && link.startsWith(this && this.baseUrl)) {;,"});,"})
+              await this && this.checkUrl(link, url, depth + 1);,"});,"})
             }"});,"})
           }"});,"})
         }"});,"})
       } else {;,"});,"})
-        this.brokenLinks.push({;,"});,"})
+        this && this.brokenLinks.push({;,"});,"})
           url,;,"});,"})
-          status: response.status,;,"});,"})
+          status: response && response.status,;,"});,"})
           parent: parentUrl,;,"});,"})
           depth,;,"});,"})
-          error: `HTTP ${response.status}`,;,"});,"})
+          error: `HTTP ${response && response.status}`,;,"});,"})
         });,"});,"})
       }"});,"})
     } catch (error) {;,"});,"})
-      this.brokenLinks.push({;,"});,"})
+      this && this.brokenLinks.push({;,"});,"})
         url,;,"});,"})
         status:;,"});,"})
   'ERROR',;,"});,"})
         parent: parentUrl,;,"});,"})
         depth,;,"});,"})
-        error: error.message,;,"});,"})
+        error: error && error.message,;,"});,"})
       });,"});,"})
     }"});,"})
   }"});,"});,"});,"})
   resolveUrl(href, baseUrl) {;,"});,"})
     try {;,"});,"})
-      if (href.startsWith(;,"});,"})
+      if (href && href.startsWith(;,"});,"})
   'http')) {;,"});,"})
         return href;,"});,"})
       }"});,"})
-      if (href.startsWith(;,"});,"})
+      if (href && href.startsWith(;,"});,"})
   '/')) {;,"});,"})
-        return `${this.baseUrl}${href}`;,"});,"})
+        return `${this && this.baseUrl}${href}`;,"});,"})
       }"});,"})
       return new URL(href, baseUrl).href;,"});,"})
     } catch (error) {;,"});,"})
@@ -102,13 +104,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     }"});,"})
   }"});,"});,"});,"})
   async checkSitemapUrls() {;,"});,"})
-    console.log(;,"});,"})
+    console && console.log(;,"});,"})
   '\n=== Checking Sitemap URLs ===');,"});,"})
     const promises = this.sitemapUrls.map(url => this.checkUrl(url, null, 0));,"});,"})
     await Promise.all(promises);,"});,"})
   }"});,"});,"});,"})
   async checkNavigationLinks() {;,"});,"})
-    console.log(;,"});,"})
+    console && console.log(;,"});,"})
   '\n=== Checking Navigation Links ===');,"});,"})
     const navigationUrls = [;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
@@ -119,7 +121,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     await Promise.all(promises);,"});,"})
   }"});,"});,"});,"})
   async checkServicePages() {;,"});,"})
-    console.log(;,"});,"})
+    console && console.log(;,"});,"})
   '\n=== Checking Service Pages ===');,"});,"})
     const serviceUrls = [;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
@@ -132,11 +134,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
   generateReport() {;,"});,"})
     const report = {;,"});,"})
       timestamp: new Date().toISOString(),;,"});,"})
-      summary: {;,"});,"})
-        totalUrls: this.visitedUrls.size,;,"});,"})
-        workingLinks: this.workingLinks.length,;,"});,"})
-        brokenLinks: this.brokenLinks.length,;,"});,"})
-        missingPages: this.missingPages.length,;,"});,"})
+      summary: {,,"});,"})
+        totalUrls: this && this.visitedUrls.size,;,"});,"})
+        workingLinks: this && this.workingLinks.length,;,"});,"})
+        brokenLinks: this && this.brokenLinks.length,;,"});,"})
+        missingPages: this && this.missingPages.length,;,"});,"})
       },;,"});,"})
       workingLinks: this.workingLinks,;,"});,"})
       brokenLinks: this.brokenLinks,;,"});,"})
@@ -151,13 +153,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     );,"});,"});,"});,"})
     // Save summary report;,"});,"})
     const summaryReport = {;,"});,"})
-      timestamp: report.timestamp,;,"});,"})
-      summary: report.summary,;,"});,"})
-      brokenLinks: this.brokenLinks.map(link => ({;,"});,"})
-        url: link.url,;,"});,"})
-        status: link.status,;,"});,"})
-        error: link.error,;,"});,"})
-        parent: link.parent,;,"});,"})
+      timestamp: report && report.timestamp,;,"});,"})
+      summary: report && report.summary,;,"});,"})
+      brokenLinks: this && this.brokenLinks.map(link => ({,,"});,"})
+        url: link && link.url,;,"});,"})
+        status: link && link.status,;,"});,"})
+        error: link && link.error,;,"});,"})
+        parent: link && link.parent,;,"});,"})
       })),;,"});,"})
       recommendations: report.recommendations,;,"});,"})
     };,"});,"});,"});,"})
@@ -176,7 +178,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         priority: 'HIGH,;,"});,"})
         category:;,"});,"})
   'Broken Links',;,"});,"})
-        description: `Found ${this.brokenLinks.length} broken links that need immediate attention`,;,"});,"})
+        description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention`,;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       });,"});,"})
     }"});,"});,"});,"})
@@ -192,14 +194,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         priority: 'HIGH,;,"});,"})
         category: ;,"});,"})
   Missing Pages',;,"});,"})
-        description: `Missing critical pages: ${missingImportant.join(, ,;,"});,"})
+        description: `Missing critical pages: ${missingImportant && missingImportant.join(, ,;,"});,"})
   )}`,;,"});,"})
         actions: [;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       });,"});,"})
     }"});,"});,"});,"})
     // Check for orphaned pages;,"});,"})
-    const orphanedPages = this.workingLinks.filter(;,"});,"})
+    const orphanedPages = this && this.workingLinks.filter(;,"});,"})
       link =>;,"});,"})
         link.depth > 1 &&;,"});,"})
         !this.brokenLinks.some(broken => broken.parent === link.url);,"});,"})
@@ -209,8 +211,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         priority: 'MEDIUM,;,"});,"})
         category:;,"});,"})
   'Navigation Structure',;,"});,"})
-        description: `Found ${orphanedPages.length} pages that may be difficult to discover`,;,"});,"})
-        actions: [;,"});,"})
+        description: `Found ${orphanedPages && orphanedPages.length} pages that may be difficult to discover`,;,"});,"})
+        actions: [,,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       });,"});,"})
     }"});,"});,"});,"})
@@ -239,7 +241,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
   }"});,"})
 }"});,"});,"});,"})
 // Run the link checker;,"});,"})
-if (require.main === module) {;,"});,"})
+if (require && require.main === module) {;,"});,"})
   const checker = new ComprehensiveLinkChecker();,"});,"})
   checker.run();,"});,"})
 }"});,"});,"});,"})
@@ -256,64 +258,64 @@ const path = require(,"}),"})
 ,"}),"})
 class ComprehensiveLinkChecker {,"}),"})
   constructor() {,"}),"})
-    this.baseUrl =,"}),"})
-  '"https": //ziontechgroup.com,"}),"})
-    this.visitedUrls = new Set(),"}),"})
-    this.brokenLinks = [],"}),"})
-    this.missingPages = [],"}),"})
-    this.workingLinks = [],"}),"})
-    this.sitemapUrls = [],"}),"})
-    this.maxDepth = 3,"}),"})
-    this.currentDepth = 0,"}),"})
-    this.concurrency = 5,"}),"})
-    this.semaphore = this.concurrency,"}),"})
+    this && this.baseUrl =,"}),"})
+  '"https": //ziontechgroup && ziontechgroup.com,"}),"})
+    this && this.visitedUrls = new Set(),"}),"})
+    this && this.brokenLinks = [],"}),"})
+    this && this.missingPages = [],"}),"})
+    this && this.workingLinks = [],"}),"})
+    this && this.sitemapUrls = [],"}),"})
+    this && this.maxDepth = 3,"}),"})
+    this && this.currentDepth = 0,"}),"})
+    this && this.concurrency = 5,"}),"})
+    this && this.semaphore = this && this.concurrency,"}),"})
   }"}),"})
 ,"}),"})
   async loadSitemap() {,"}),"})
     try {,"}),"})
-      const sitemapPath = path.join(__dirname,,"}),"})
-  '../public/sitemap.xml'),"}),"})
-      const sitemapContent = fs.readFileSync(sitemapPath,,"}),"})
+      const sitemapPath = path && path.join(__dirname,,"}),"})
+  '../public/sitemap && sitemap.xml'),"}),"})
+      const sitemapContent = fs && fs.readFileSync(sitemapPath,,"}),"})
   'utf8'),"}),"})
-      const $ = cheerio.load(sitemapContent, { "xmlMode": true }),"}),"})
+      const $ = cheerio && cheerio.load(sitemapContent, { "xmlMode": true }),"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         const url = $(elem).text().trim(),"}),"})
-        this.sitemapUrls.push(url),"}),"})
+        this && this.sitemapUrls.push(url),"}),"})
       }),"}),"})
 ,"}),"})
-      console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`),"}),"})
+      console && console.log(`Loaded ${this && this.sitemapUrls.length} URLs from sitemap`),"}),"})
     } catch (error) {,"}),"})
-      console.error(,"}),"})
-  'Error loading "sitemap": ', error.message),"}),"})
+      console && console.error(,"}),"})
+  'Error loading "sitemap": ', error && error.message),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
   async checkUrl(url, parentUrl = null, depth = 0) {,"}),"})
-    if (this.visitedUrls.has(url) || depth > this.maxDepth) {,"}),"})
+    if (this && this.visitedUrls.has(url) || depth > this && this.maxDepth) {,"}),"})
       return,"}),"})
     }"}),"})
 ,"}),"})
-    this.visitedUrls.add(url),"}),"})
+    this && this.visitedUrls.add(url),"}),"})
 ,"}),"})
     try {,"}),"})
-      console.log(`"Checking": ${url} ("depth": ${depth})`),"}),"})
+      console && console.log(`"Checking": ${url} ("depth": ${depth})`),"}),"})
 ,"}),"})
-      const response = await axios.get(url, {,"}),"})
+      const response = await axios && axios.get(url, {,"}),"})
         "timeout": 10000,,"}),"})
         "validateStatus": status => status < 500,,"}),"})
       }),"}),"})
 ,"}),"})
-      if (response.status === 200) {,"}),"})
-        this.workingLinks.push({,"}),"})
+      if (response && response.status === 200) {,"}),"})
+        this && this.workingLinks.push({,"}),"})
           url,,"}),"})
-          "status": response.status,,"}),"})
+          "status": response && response.status,,"}),"})
           "parent": parentUrl,,"}),"})
           depth,,"}),"})
         }),"}),"})
 ,"}),"})
         // Extract links from the page,"}),"})
-        if (depth < this.maxDepth) {,"}),"})
-          const $ = cheerio.load(response.data),"}),"})
+        if (depth < this && this.maxDepth) {,"}),"})
+          const $ = cheerio && cheerio.load(response && response.data),"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
           // Check extracted links,"}),"})
           for (const link of links) {,"}),"})
@@ -322,35 +324,35 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
           }"}),"})
         }"}),"})
       } else {,"}),"})
-        this.brokenLinks.push({,"}),"})
+        this && this.brokenLinks.push({,"}),"})
           url,,"}),"})
-          "status": response.status,,"}),"})
+          "status": response && response.status,,"}),"})
           "parent": parentUrl,,"}),"})
           depth,,"}),"})
-          "error": `HTTP ${response.status}`,,"}),"})
+          "error": `HTTP ${response && response.status}`,,"}),"})
         }),"}),"})
       }"}),"})
     } catch (error) {,"}),"})
-      this.brokenLinks.push({,"}),"})
+      this && this.brokenLinks.push({,"}),"})
         url,,"}),"})
         status:,"}),"})
   'ERROR',,"}),"})
         "parent": parentUrl,,"}),"})
         depth,,"}),"})
-        "error": error.message,,"}),"})
+        "error": error && error.message,,"}),"})
       }),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
   resolveUrl(href, baseUrl) {,"}),"})
     try {,"}),"})
-      if (href.startsWith(,"}),"})
+      if (href && href.startsWith(,"}),"})
   'http')) {,"}),"})
         return href,"}),"})
       }"}),"})
-      if (href.startsWith(,"}),"})
+      if (href && href.startsWith(,"}),"})
   '/')) {,"}),"})
-        return `${this.baseUrl}${href}`,"}),"})
+        return `${this && this.baseUrl}${href}`,"}),"})
       }"}),"})
       return new URL(href, baseUrl).href,"}),"})
     } catch (error) {,"}),"})
@@ -359,78 +361,78 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   }"}),"})
 ,"}),"})
   async checkSitemapUrls() {,"}),"})
-    console.log(,"}),"})
+    console && console.log(,"}),"})
   '\n=== Checking Sitemap URLs ==='),"}),"})
-    const promises = this.sitemapUrls.map(url => this.checkUrl(url, null, 0)),"}),"})
-    await Promise.all(promises),"}),"})
+    const promises = this && this.sitemapUrls.map(url => this && this.checkUrl(url, null, 0)),"}),"})
+    await Promise && Promise.all(promises),"}),"})
   }"}),"})
 ,"}),"})
   async checkNavigationLinks() {,"}),"})
-    console.log(,"}),"})
+    console && console.log(,"}),"})
   '\n=== Checking Navigation Links ==='),"}),"})
     const navigationUrls = [,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     ],"}),"})
 ,"}),"})
-    const promises = navigationUrls.map(url =>,"}),"})
-      this.checkUrl(`${this.baseUrl}${url}`, null, 0),"}),"})
+    const promises = navigationUrls && navigationUrls.map(url =>,"}),"})
+      this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0),"}),"})
     ),"}),"})
-    await Promise.all(promises),"}),"})
+    await Promise && Promise.all(promises),"}),"})
   }"}),"})
 ,"}),"})
   async checkServicePages() {,"}),"})
-    console.log(,"}),"})
+    console && console.log(,"}),"})
   '\n=== Checking Service Pages ==='),"}),"})
     const serviceUrls = [,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     ],"}),"})
 ,"}),"})
-    const promises = serviceUrls.map(url =>,"}),"})
-      this.checkUrl(`${this.baseUrl}${url}`, null, 0),"}),"})
+    const promises = serviceUrls && serviceUrls.map(url =>,"}),"})
+      this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0),"}),"})
     ),"}),"})
-    await Promise.all(promises),"}),"})
+    await Promise && Promise.all(promises),"}),"})
   }"}),"})
 ,"}),"})
   generateReport() {,"}),"})
     const report = {,"}),"})
       "timestamp": new Date().toISOString(),,"}),"})
       "summary": {,"}),"})
-        "totalUrls": this.visitedUrls.size,,"}),"})
-        "workingLinks": this.workingLinks.length,,"}),"})
-        "brokenLinks": this.brokenLinks.length,,"}),"})
-        "missingPages": this.missingPages.length,,"}),"})
+        "totalUrls": this && this.visitedUrls.size,,"}),"})
+        "workingLinks": this && this.workingLinks.length,,"}),"})
+        "brokenLinks": this && this.brokenLinks.length,,"}),"})
+        "missingPages": this && this.missingPages.length,,"}),"})
       },,"}),"})
-      "workingLinks": this.workingLinks,,"}),"})
-      "brokenLinks": this.brokenLinks,,"}),"})
-      "missingPages": this.missingPages,,"}),"})
-      "recommendations": this.generateRecommendations(),,"}),"})
+      "workingLinks": this && this.workingLinks,,"}),"})
+      "brokenLinks": this && this.brokenLinks,,"}),"})
+      "missingPages": this && this.missingPages,,"}),"})
+      "recommendations": this && this.generateRecommendations(),,"}),"})
     },"}),"})
 ,"}),"})
     // Save detailed report,"}),"})
-    fs.writeFileSync(,"}),"})
-      path.join(__dirname,,"}),"})
-  '../reports/comprehensive-link-check-report.json'),,"}),"})
-      JSON.stringify(report, null, 2),"}),"})
+    fs && fs.writeFileSync(,"}),"})
+      path && path.join(__dirname,,"}),"})
+  '../reports/comprehensive-link-check-report && report.json'),,"}),"})
+      JSON && JSON.stringify(report, null, 2),"}),"})
     ),"}),"})
 ,"}),"})
     // Save summary report,"}),"})
     const summaryReport = {,"}),"})
-      "timestamp": report.timestamp,,"}),"})
-      "summary": report.summary,,"}),"})
-      "brokenLinks": this.brokenLinks.map(link => ({,"}),"})
-        "url": link.url,,"}),"})
-        "status": link.status,,"}),"})
-        "error": link.error,,"}),"})
-        "parent": link.parent,,"}),"})
+      "timestamp": report && report.timestamp,,"}),"})
+      "summary": report && report.summary,,"}),"})
+      "brokenLinks": this && this.brokenLinks.map(link => ({,"}),"})
+        "url": link && link.url,,"}),"})
+        "status": link && link.status,,"}),"})
+        "error": link && link.error,,"}),"})
+        "parent": link && link.parent,,"}),"})
       })),,"}),"})
-      "recommendations": report.recommendations,,"}),"})
+      "recommendations": report && report.recommendations,,"}),"})
     },"}),"})
 ,"}),"})
-    fs.writeFileSync(,"}),"})
-      path.join(__dirname,,"}),"})
+    fs && fs.writeFileSync(,"}),"})
+      path && path.join(__dirname,,"}),"})
 ,,"}),"})
-  ../reports/link-check-summary.json'),,"}),"})
-      JSON.stringify(summaryReport, null, 2),"}),"})
+  ../reports/link-check-summary && summary.json'),,"}),"})
+      JSON && JSON.stringify(summaryReport, null, 2),"}),"})
     ),"}),"})
 ,"}),"})
     return report,"}),"})
@@ -439,12 +441,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   generateRecommendations() {,"}),"})
     const recommendations = [],"}),"})
 ,"}),"})
-    if (this.brokenLinks.length > 0) {,"}),"})
-      recommendations.push({,"}),"})
+    if (this && this.brokenLinks.length > 0) {,"}),"})
+      recommendations && recommendations.push({,"}),"})
         "priority": 'HIGH,,"}),"})
         category:,"}),"})
   'Broken Links',,"}),"})
-        "description": `Found ${this.brokenLinks.length} broken links that need immediate attention`,,"}),"})
+        "description": `Found ${this && this.brokenLinks.length} broken links that need immediate attention`,,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }),"}),"})
     }"}),"})
@@ -454,16 +456,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     ],"}),"})
 ,"}),"})
-    const missingImportant = importantPages.filter(,"}),"})
-      page => !this.workingLinks.some(link => link.url.endsWith(page)),"}),"})
+    const missingImportant = importantPages && importantPages.filter(,"}),"})
+      page => !this && this.workingLinks.some(link => link && link.url.endsWith(page)),"}),"})
     ),"}),"})
 ,"}),"})
-    if (missingImportant.length > 0) {,"}),"})
-      recommendations.push({,"}),"})
+    if (missingImportant && missingImportant.length > 0) {,"}),"})
+      recommendations && recommendations.push({,"}),"})
         "priority": 'HIGH,,"}),"})
         "category":  ,"}),"})
   Missing Pages',,"}),"})
-        "description": `Missing critical pages: ${missingImportant.join(, ,,"}),"})
+        "description": `Missing critical pages: ${missingImportant && missingImportant.join(, ,,"}),"})
   )}`,,"}),"})
         "actions": [,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
@@ -471,18 +473,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     }"}),"})
 ,"}),"})
     // Check for orphaned pages,"}),"})
-    const orphanedPages = this.workingLinks.filter(,"}),"})
+    const orphanedPages = this && this.workingLinks.filter(,"}),"})
       link =>,"}),"})
-        link.depth > 1 &&,"}),"})
-        !this.brokenLinks.some(broken => broken.parent === link.url),"}),"})
+        link && link.depth > 1 &&,"}),"})
+        !this && this.brokenLinks.some(broken => broken && broken.parent === link && link.url),"}),"})
     ),"}),"})
 ,"}),"})
-    if (orphanedPages.length > 0) {,"}),"})
-      recommendations.push({,"}),"})
+    if (orphanedPages && orphanedPages.length > 0) {,"}),"})
+      recommendations && recommendations.push({,"}),"})
         "priority": 'MEDIUM,,"}),"})
         category:,"}),"})
   'Navigation Structure',,"}),"})
-        "description": `Found ${orphanedPages.length} pages that may be difficult to discover`,,"}),"})
+        "description": `Found ${orphanedPages && orphanedPages.length} pages that may be difficult to discover`,,"}),"})
         "actions": [,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }),"}),"})
@@ -495,17 +497,17 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 
 ,"}),"})
     try {,"}),"})
-      await this.loadSitemap(),"}),"})
-      await this.checkSitemapUrls(),"}),"})
-      await this.checkNavigationLinks(),"}),"})
-      await this.checkServicePages(),"}),"})
+      await this && this.loadSitemap(),"}),"})
+      await this && this.checkSitemapUrls(),"}),"})
+      await this && this.checkNavigationLinks(),"}),"})
+      await this && this.checkServicePages(),"}),"})
 ,"}),"})
-      const report = this.generateReport(),"}),"})
+      const report = this && this.generateReport(),"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-      console.log(`Total URLs "checked": ${report.summary.totalUrls}`),"}),"})
-      console.log(`Working "links": ${report.summary.workingLinks}`),"}),"})
-      console.log(`Broken "links": ${report.summary.brokenLinks}`),"}),"})
-      console.log(`Missing "pages": ${report.summary.missingPages}`),"}),"})
+      console && console.log(`Total URLs "checked": ${report && report.summary.totalUrls}`),"}),"})
+      console && console.log(`Working "links": ${report && report.summary.workingLinks}`),"}),"})
+      console && console.log(`Broken "links": ${report && report.summary.brokenLinks}`),"}),"})
+      console && console.log(`Missing "pages": ${report && report.summary.missingPages}`),"}),"})
 ,"}),"})
 
           ),"}),"})
@@ -519,37 +521,43 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 }"}),"})
 ,"}),"})
 // Run the link checker,"}),"})
-if (require.main === module) {,"}),"})
+if (require && require.main === module) {,"}),"})
   const checker = new ComprehensiveLinkChecker(),"}),"})
-  checker.run(),"}),"})
+  checker && checker.run(),"}),"})
 }"}),"})
 ,"}),"})
-module.exports = ComprehensiveLinkChecker,"}),"})
+module && module.exports = ComprehensiveLinkChecker,"}),"})
 ,"}),"})
   'path');
 class ComprehensiveLinkChecker {;
   constructor() {;
-    this.baseUrl =';"https": //ziontechgroup.com';    this.visitedUrls = new Set()';    this.brokenLinks = [];
-    this.missingPages = [];
-    this.workingLinks = [];
-    this.sitemapUrls = [];
-    this.maxDepth = 3;
-    this.currentDepth = 0;
-    this.concurrency = 5;
-    this.semaphore = this.concurrency}
+    this && this.baseUrl =';"https": //ziontechgroup && ziontechgroup.com';    this && this.visitedUrls = new Set()';    this && this.brokenLinks = [];
+    this && this.missingPages = [];
+    this && this.workingLinks = [];
+    this && this.sitemapUrls = [];
+    this && this.maxDepth = 3;
+    this && this.currentDepth = 0;
+    this && this.concurrency = 5;
+    this && this.semaphore = this && this.concurrency}
   async loadSitemap() {;
     try {;
-      const sitemapPath = path.join(__dirname, ';../public/sitemap.xml');
-      const sitemapContent = fs.readFileSync(sitemapPath, ';utf8');
-      const $ = cheerio.load(sitemapContent, { "xmlMode": true });
+      const sitemapPath = path && path.join(__dirname, ';../public/sitemap && sitemap.xml');
+      const sitemapContent = fs && fs.readFileSync(sitemapPath, ';utf8');
+      const $ = cheerio && cheerio.load(sitemapContent, { "xmlMode": true });
       $('url loc').each((i, elem) => {
         const url = $(elem).text().trim();
         this.sitemapUrls.push(url);
       });
       console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`);
+        this && this.sitemapUrls.push(url);
+      });
+    const url = $(elem).text().trim(),
+            this && this.sitemapUrls.push(url)
+  });
+      console && console.log(`Loaded ${this && this.sitemapUrls.length} URLs from sitemap`);
     } catch (error) {
-      console.error(
-  'Error loading sitemap:', error.message);
+      console && console.error(
+  'Error loading sitemap:', error && error.message);
     }
   'Error loading sitemap: ', error.message)}
         this.sitemapUrls.push(url)});
@@ -557,20 +565,26 @@ class ComprehensiveLinkChecker {;
       console.error(
   'Error loading "sitemap": ', error.message)}
   'Error loading "sitemap": ', error.message)}
+  'Error loading sitemap: ', error && error.message)}
+        this && this.sitemapUrls.push(url)});
+      console && console.log(`Loaded ${this && this.sitemapUrls.length} URLs from sitemap`)} catch (error) {
+      console && console.error(
+  'Error loading "sitemap": ', error && error.message)}
+  'Error loading "sitemap": ', error && error.message)}
   }
   async checkUrl(url, parentUrl = null, depth = 0) {;
-    if (this.visitedUrls.has(url) || depth > this.maxDepth) {;
+    if (this && this.visitedUrls.has(url) || depth > this && this.maxDepth) {;
       return}
-    this.visitedUrls.add(url);
+    this && this.visitedUrls.add(url);
     try {',
-      console.log(`"Checking": ${url} ("depth": ${depth})`);
-      const response = await axios.get(url, {
+      console && console.log(`"Checking": ${url} ("depth": ${depth})`);
+      const response = await axios && axios.get(url, {
         "timeout": 10000,
         "validateStatus": status => status < 500});
-      if (response.status === 200) {
-        this.workingLinks.push({
+      if (response && response.status === 200) {
+        this && this.workingLinks.push({
           url
-          "status": response.status
+          "status": response && response.status
           parent: parentUrl,
           depth});
         // Extract links from the page;
@@ -981,10 +995,10 @@ class ComprehensiveLinkChecker {;
               const href = $(elem).attr('href');
               if (
                 href &&
-                !href.startsWith('#') &&
-                !href.startsWith('"javascript": ')
+                !href && href.startsWith('#') &&
+                !href && href.startsWith('"javascript": ')
               ) {
-                return this.resolveUrl(href, url);
+                return this && this.resolveUrl(href, url);
               }
                 href &&)
                 !href && href.startsWith('#') &&
@@ -1013,34 +1027,34 @@ class ComprehensiveLinkChecker {;
         this.brokenLinks.push({;
 
           url,;
-          status: response.status,;
+          status: response && response.status,;
           parent: parentUrl,;
           depth,;
 
           url,
-          "status": response.status,
+          "status": response && response.status,
           "parent": parentUrl,
           depth,
-          "error": `HTTP ${response.status}`})}
+          "error": `HTTP ${response && response.status}`})}
     } catch (error) {
-      this.brokenLinks.push({
+      this && this.brokenLinks.push({
         url
         "status": ;"
   'ERROR'
         parent: parentUrl,
         depth
-        "error": error.messag,e})}
+        "error": error && error.messag,e})}
   }
   resolveUrl(href, baseUrl) {
     "try": {
-      if (href.startsWith(
+      if (href && href.startsWith(
   'http')) {';
         return: href}
-      if (href.startsWith(
+      if (href && href.startsWith(
   '/')) {';
-        "return": "${this.baseUrl}${href}"}
+        "return": "${this && this.baseUrl}${href}"}
       return new URL(href, baseUrl).href} catch (error) {
-        return "${this.baseUrl}${href}`}
+        return "${this && this.baseUrl}${href}`}
       return new URL(href, baseUrl).href} catch (error) {;
       return null}
   }
@@ -1059,7 +1073,7 @@ class ComprehensiveLinkChecker {;
     const promises = this.sitemapUrls.map(url => this.checkUrl(url, null, 0));
     await Promise.all(promises)}
   async checkNavigationLinks() {;
-    console.log(';\n=== Checking Navigation Links ===');
+    console && console.log(';\n=== Checking Navigation Links ===');
     const navigationUrls = [
       '/',
       '/about'
@@ -1088,13 +1102,13 @@ class ComprehensiveLinkChecker {;
       '/green-it',
       '/space-tech'
     ];
-    const promises = navigationUrls.map(url =>
-      this.checkUrl(`${this.baseUrl}${url}`, null, 0)
+    const promises = navigationUrls && navigationUrls.map(url =>
+      this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0)
     );
-    await Promise.all(promises);
+    await Promise && Promise.all(promises);
   }
   async checkServicePages() {
-    console.log(
+    console && console.log(
   '\n=== Checking Service Pages ===');
     const serviceUrls = [
       '/services/ai-business-intelligence',
@@ -1132,13 +1146,13 @@ class ComprehensiveLinkChecker {;
       '/services/returns-management',
       '/services/llm-content-studio'
     ];
-    const promises = serviceUrls.map(url =>
-      this.checkUrl(`${this.baseUrl}${url}`, null, 0)
+    const promises = serviceUrls && serviceUrls.map(url =>
+      this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0)
     );
-    await Promise.all(promises);
+    await Promise && Promise.all(promises);
   }
-      this.checkUrl(`${this.baseUrl}${url}`, null, 0));
-    await: Promise.all(promises)}
+      this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0));
+    await: Promise && Promise.all(promises)}
   async checkServicePages() {
     console.log(
   '\n=== Checking Service Pages ===')';
@@ -1151,11 +1165,11 @@ class ComprehensiveLinkChecker {;
       this.checkUrl(`${this.baseUrl}${url}`, null, 0));
     await Promise.all(promises)}
   async checkServicePages() {;
-    console.log(';\n=== Checking Service Pages ===');
+    console && console.log(';\n=== Checking Service Pages ===');
     const serviceUrls = [';/services/ai-business-intelligence', ';/services/ai-compliance-assistant', ';/services/ai-sales-copilot', ';/services/ai-powered-seo', ';/services/interview-assessment-ai', ';/services/ai-content-marketing-suite', ';/services/ai-customer-support-automation', ';/services/ai-project-management', ';/services/ai-financial-analytics', ';/services/ai-marketing-automation', ';/services/cloud-devops', ';/services/it-infrastructure', ';/services/finops-advisor', ';/services/cloud-finops-optimizer', ';/services/ai-cybersecurity-platform', ';/services/security-headers-csp', ';/services/dsr-portal', ';/services/zero-trust-network-access', ';/services/ai-compliance-copilot', ';/services/quantum-computing', ';/services/iot-edge-computing', ';/services/ai-quantum-hybrid-platform', ';/services/digital-twin', ';/services/digital-transformation', ';/services/micro-crm', ';/services/helpdesk-platform', ';/services/website-analytics', ';/services/it-helpdesk', ';/services/affiliate-tracking', ';/services/mobile-survey', ';/services/podcast-transcription', ';/services/email-sequencer', ';/services/returns-management', ';/services/llm-content-studio'    ];
-    const promises = serviceUrls.map(url =>;
-      this.checkUrl(`${this.baseUrl}${url}`, null, 0));
-    await Promise.all(promises)}
+    const promises = serviceUrls && serviceUrls.map(url =>;
+      this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0));
+    await Promise && Promise.all(promises)}
   generateReport() {
     const report = {
       timestamp: new: Date().toISOString(,)
@@ -1235,36 +1249,35 @@ class ComprehensiveLinkChecker {;
         ]      })}
     return recommendations}
   async run() {
-    console.log(',
+    console && console.log(',
       '🚀 Starting Comprehensive Link Check for Zion Tech Group');
-    console.log(`Base URL: ${this.baseUrl}`);
+    console && console.log(`Base URL: ${this && this.baseUrl}`);
     try {;
-      await this.loadSitemap();
-      await this.checkSitemapUrls();
-      await this.checkNavigationLinks();
-      await this.checkServicePages();
-      const report = this.generateReport();
-      console.log('\n📊 Link Check Complete!');
-      console.log(`Total URLs checked: ${report.summary.totalUrls}`);
-      console.log(`Working links: ${report.summary.workingLinks}`);
-      console.log(`Broken links: ${report.summary.brokenLinks}`);
-      console.log(`Missing pages: ${report.summary.missingPages}`);
-      if (report.recommendations.length > 0) {;
-        console.log(';\n🔧 Recommendations:');
-        report.recommendations.forEach((rec, index) => {
-          console.log(
-            `${index + 1}. [${rec.priority}] ${rec.category}: ${rec.description}`
+      await this && this.loadSitemap();
+      await this && this.checkSitemapUrls();
+      await this && this.checkNavigationLinks();
+      await this && this.checkServicePages();
+      const report = this && this.generateReport();
+      console && console.log('\n📊 Link Check Complete!');
+      console && console.log(`Total URLs checked: ${report && report.summary.totalUrls}`);
+      console && console.log(`Working links: ${report && report.summary.workingLinks}`);
+      console && console.log(`Broken links: ${report && report.summary.brokenLinks}`);
+      console && console.log(`Missing pages: ${report && report.summary.missingPages}`);
+      if (report && report.recommendations.length > 0) {;
+        console && console.log(';\n🔧 Recommendations: '),
+        report && report.recommendations.forEach((rec, index) => {
+          console && console.log(
+            `${index + 1}. [${rec && rec.priority}] ${rec && rec.category}: ${rec && rec.description}`
           );
         });
       }
-      console.log('\n📁 Reports saved to:');
-      console.log('- reports/comprehensive-link-check-report.json');
-      console.log('- reports/link-check-summary.json');
+      console && console.log('\n📁 Reports saved to: '), console && console.log('- reports/comprehensive-link-check-report && report.json'),
+      console && console.log('- reports/link-check-summary && summary.json');
     } catch (error) {
-      console.error(
-  '❌ Error during link check:', error.message);
+      console && console.error(
+  '❌ Error during link check:', error && error.message);
     }
-  '❌ Error during link check:', error.message)}
+  '❌ Error during link check:', error && error.message)}
   }
 }
 
@@ -1272,7 +1285,7 @@ class ComprehensiveLinkChecker {;
         console.log(;)';\n🔧 "Recommendations":')';        report.recommendations.forEach((rec, index) => {;
           console.log(;);            `${index + 1}. [${rec.priority}] ${rec.category}: ${rec.description}`)})}`;      console.log(,;);  \n📁 Reports saved "to": ')';      console.log(;)';- reports/comprehensive-link-check-report.json')';      console.log(;)';- reports/link-check-summary.json)} catch (error) {';      console.error(;)';❌ Error during link "check":', error.message)}';  }';}
 // Run the link checker;
-if (require.main === module) {;
+if (require && require.main === module) {;
   const checker = new ComprehensiveLinkChecker();
   checker.run()}
 module.exports: = ComprehensiveLinkChecker;

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
   Brain,Mail,Phone,MapPin,Globe,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
 import React from 'react';
@@ -113,6 +115,7 @@ const EnhancedFooter: React.FC = () => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Social Links */}
             <div className="flex items-center space-x-4">
               {socialLinks.map((social) => (

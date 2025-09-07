@@ -3,6 +3,15 @@ import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Dia
 import {DisputeForm} from "./DisputeForm";
 import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+=======
 
 "
 import React, { useState } from "react","
@@ -32,6 +41,18 @@ import {
   DialogOverlay"
 } from "@/components/ui/dialog","
 import { DisputeForm } from "./DisputeForm",
+<<<<<<< HEAD
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  className?: string;
+}
+import { useNavigate } from "react-router-dom";
+import { ShieldAlert } from "lucide-react";
+interface RaiseDisputeButtonProps {
+
+  projectId: string
+=======
 
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
@@ -40,11 +61,28 @@ import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
 interface RaiseDisputeButtonProps {;
   projectId: string,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   milestoneId?: string;
 
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
+<<<<<<< HEAD
+  className?: string
+}
+export function RaiseDisputeButton({
+  projectId;
+
+  milestoneId
+  variant = "outline"
+  size;
+  className
+}: RaiseDisputeButtonProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const navigate = useNavigate();
+import { useNavigate } from "react-router-dom",
+import { ShieldAlert } from "lucide-react",
+=======
   className?: string;
 }
 <<<<<<< HEAD
@@ -76,6 +114,13 @@ interface RaiseDisputeButtonProps {
   className?: string;
 }
 
+<<<<<<< HEAD
+export function RaiseDisputeButton({ ;
+  projectId;
+export function RaiseDisputeButton({ 
+  projectId,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   milestoneId, 
 
   variant = "outline", 
@@ -169,12 +214,18 @@ export function RaiseDisputeButton({ ;
 }: RaiseDisputeButtonProps) {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleDisputeCreated = (disputeId: string) => {;
 
     navigate(`/dashboard/disputes/${disputeId}`);
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
       <Button;
@@ -203,11 +254,18 @@ export function RaiseDisputeButton({ ;
             <DialogTitle>Raise a Dispute;
             <DialogDescription>;
 
+<<<<<<< HEAD
+          <DisputeForm;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
         </DialogContent>;
       </Dialog>;

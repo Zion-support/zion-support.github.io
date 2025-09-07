@@ -32,6 +32,44 @@ import { Badge } from "@/components/ui/badge";
 "
 import { WebhookManager } from "./WebhookManager";"
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
+<<<<<<< HEAD
+export function IntegrationsHub() {;
+  const [activeTab, setActiveTab] = useState("marketplace");
+
+  return (
+    <div className="space-y-6">
+      <div className="flex justify-between items-center">
+        <div>
+          <h1 className="text-3xl font-bold">Integrations Hub</h1>
+          <p className="text-muted-foreground mt-1">
+            Connect your platform with the tools and services you use every day
+          </p>
+        </div>
+export function IntegrationsHub() {
+  const [activeTab, setActiveTab] = useState("marketplace");
+  return (
+    <div className="space-y-6">
+      <div className="flex justify-between items-center">
+        <div>
+          <h1 className="text-3xl font-bold">Integrations Hub</h1>
+          <p className="text-muted-foreground mt-1">
+            Connect your platform with the tools and services you use every day
+          </p>
+        </div>
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { IntegrationCards } from "./IntegrationCards",
+import { ZapierIntegration } from "./ZapierIntegration",
+import { Badge } from "@/components/ui/badge",
+import { WebhookManager } from "./WebhookManager",
+import { IntegrationsSyncLog } from "./IntegrationsSyncLog",
+export function IntegrationsHub() {
+  const [activeTab, setActiveTab] = useState("marketplace"),
+  
+=======
 
 export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace");
@@ -80,6 +118,9 @@ export function IntegrationsHub() {
           <CardHeader className="pb-2">
             <div className="flex justify-between items-center">
               <CardTitle className="text-lg">Status</CardTitle>
+<<<<<<< HEAD
+              <Badge variant="outline" className="bg-green-100 text-green-800">Healthy</Badge>
+=======
               <Badge variant="outline" className="bg-green-100 text-green-800">
                 Healthy
               </Badge>
@@ -91,6 +132,9 @@ export function IntegrationsHub() {
           <CardContent>
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
+<<<<<<< HEAD
+                <span className="text-muted-foreground">Connected Services</span>
+=======
                 <span className="text-muted-foreground">
                   Connected Services
                 </span>
@@ -202,6 +246,8 @@ export function IntegrationsHub() {"
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
 
         <Card className="md:col-span-2">
 
@@ -215,6 +261,9 @@ export function IntegrationsHub() {"
               <li className="flex justify-between items-center pb-2 border-b">
                 <div>
                   <p className="font-medium">Slack notification sent</p>
+<<<<<<< HEAD
+                  <p className="text-muted-foreground">New job application received</p>
+=======
                   <p className="text-muted-foreground">
                     New job application received
                   </p>
@@ -241,6 +290,17 @@ export function IntegrationsHub() {"
             </ul>
           </CardContent>
           <CardFooter className="pt-4">
+<<<<<<< HEAD
+
+      
+
+
+            <Button variant="outline" className="w-full">View All Activity</Button>
+          </CardFooter>
+        </Card>
+      </div>
+      
+=======
             <Button variant="outline" className="w-full">
               View All Activity
             </Button>
@@ -280,6 +340,9 @@ export function IntegrationsHub() {"
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
                 <CardDescription>
+<<<<<<< HEAD
+                  View the history of synchronization events between integrations.
+=======
                   View the history of synchronization events between
                   integrations.
                   View the history of synchronization events between integrations.
@@ -443,6 +506,11 @@ import { ZapierIntegration } from "./ZapierIntegration",;
 import { Badge } from "@/components/ui/badge",;
 import { WebhookManager } from "./WebhookManager",;
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog",;
+;
+export function IntegrationsHub() {;
+  const [activeTab, setActiveTab] = useState("marketplace"),;
+  ;
+  return (;
 export function IntegrationsHub() {;
   const [activeTab, setActiveTab] = useState("marketplace");
 
@@ -453,13 +521,20 @@ export function IntegrationsHub() {;
             Connect your platform with the tools and services you use every day;
           </p>;
         </div>;
+<<<<<<< HEAD
+        ;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="flex gap-2">;
 
           <Button variant="outline">View Documentation</Button>;
           <Button>Connect New Integration</Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+      ;
+=======
 
   return (
 

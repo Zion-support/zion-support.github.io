@@ -40,10 +40,30 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
   };
 
   return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="flex items-center gap-2">
       <span className="text-sm text-muted-foreground">Resume:</span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
+<<<<<<< HEAD
+          <Button variant='outline' size='sm' className='gap-2'>
+            {currentResume?.basic_info?.title |'My Resume'}
+            <ChevronDown className='h-4 w-4' />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align='end'>
+          {existingResumes.map(resume => (
+            <DropdownMenuItem
+              key={resume.id}
+              onClick={() => onResumeChange(resume.id!)}
+              className='cursor-pointer'            >              className="cursor-pointer"
+        <DropdownMenuContent align="end">
+          {existingResumes.map((resume) => (
+            <DropdownMenuItem
+              key={resume.id}
+              onClick={() => onResumeChange(resume.id!)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button variant="outline" size="sm" className="gap-2">
             {currentResume?.basic_info?.title || 'My Resume'}
             <ChevronDown className="h-4 w-4" />
@@ -62,7 +82,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           <DropdownMenuSeparator />
           <DropdownMenuItem 
             onClick={() => setSaveDialogOpen(true)}
-            className="cursor-pointer"
           >
             <Plus className="h-4 w-4 mr-2" />
             Save as new version
@@ -70,6 +89,10 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DropdownMenuContent>
       </DropdownMenu>
       
+<<<<<<< HEAD
+      
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
@@ -79,6 +102,18 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Input
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
+              placeholder="Enter resume title (e.g. DevOps Resume)"
+          </div>
+          <DialogFooter>
+
+            <Button 
+              variant="outline" 
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               placeholder="Enter resume title (e.g. DevOps Resume)"
             />
           </div>

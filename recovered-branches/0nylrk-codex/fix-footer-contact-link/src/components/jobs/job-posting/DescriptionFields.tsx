@@ -26,6 +26,17 @@ import {;
 
   FormDescription,
   FormMessage,;
+<<<<<<< HEAD
+} from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
+import { JobSchemaType } from "./validation";
+interface DescriptionFieldsProps {;
+} from "@/components/ui/form";
+
+import { Textarea } from "@/components/ui/textarea";
+import { JobSchemaType } from './validation';
+interface DescriptionFieldsProps {
+=======
 
 } from "@/components/ui/form";
 
@@ -36,10 +47,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { JobSchemaType } from "./validation";
 interface DescriptionFieldsProps {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editorContent: string;
 }
+<<<<<<< HEAD
+=======
 
 export function DescriptionFields(): any ({;
   control,;
@@ -81,6 +95,25 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
         control={control}
         name="description"
+
+import React from 'react',;
+import { Control } from 'react-hook-form',;
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;
+import { Textarea } from "@/components/ui/textarea",;
+import { JobSchemaType } from './validation',;
+;
+interface DescriptionFieldsProps {;
+  control:Control<JobSchemaType>,;
+  handleEditorChange:(content:string) => void,;
+  editorContent:string;
+}
+;
+export function DescriptionFields({ control, handleEditorChange, editorContent } DescriptionFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
+        control={control}
+        name="description";
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Job Description</FormLabel>;
@@ -99,6 +132,21 @@ export function DescriptionFields({
         control;
                   field.onChange(e.target.value)
 
+<<<<<<< HEAD
+
+export function DescriptionFields({
+  control
+  handleEditorChange
+  editorContent
+}: DescriptionFieldsProps) {
+  return (
+    <>
+      <FormField
+        control;
+                  field.onChange(e.target.value)
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',
 import { Control } from 'react-hook-form',
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
@@ -172,6 +220,14 @@ import {}
               Detailed description of the job role.;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
+          </FormItem>;        )}
+      />;
+;
+      <FormField;
+        control={control}
+        name="responsibilities";
+=======
 
         render={({ field }) => (;
           <FormItem>;
@@ -185,6 +241,14 @@ import {}
               List the main responsibilities of this job.;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
+          </FormItem>;        )}
+      />;
+;
+      <FormField;
+        control={control}
+        name="qualifications";
+=======
 
           </FormItem>)}
       />;

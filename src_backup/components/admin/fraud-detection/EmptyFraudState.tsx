@@ -26,6 +26,10 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 <<<<<<< HEAD
 import React from "react",
@@ -53,6 +57,11 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       </p>
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
+<<<<<<< HEAD
+      )}
+    </div>
+  )
+}
 
 import React from "react",;
 
@@ -92,6 +101,8 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
       </p>;
       {hasFilters && (;
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
+<<<<<<< HEAD
+=======
       )}
 <<<<<<< HEAD
     </div>;

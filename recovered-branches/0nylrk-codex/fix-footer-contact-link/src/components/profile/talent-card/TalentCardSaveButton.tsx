@@ -12,6 +12,11 @@ isSaved: boolean;
 onToggleSave?: (id: string, isSaved: boolean) => void;}
 isAuthenticated: boolean}
 }
+<<<<<<< HEAD
+export function TalentCardSaveButton({
+  profileId
+  profileName;
+  isSaved
 
   // Handle save toggle
 
@@ -66,6 +71,20 @@ export function TalentCardSaveButton({;
   // Handle save toggle;
   const handleSaveToggle = (;
     e.stopPropagation(),;
+<<<<<<< HEAD
+export function TalentCardSaveButton(): any ({ ;
+  profileId, ;
+  profileName;
+  isSaved, ;
+  onToggleSave;
+  isAuthenticated ;
+}: TalentCardSaveButtonProps) {;
+  const { toast } = useToast();
+  const [localIsSaved, setLocalIsSaved] = React && React.useState(isSaved);
+  // Handle save toggle;
+  const handleSaveToggle = (e: React && React.MouseEvent) => {;
+    e && e.stopPropagation(),;
+=======
 
     setLocalIsSaved(!localIsSaved);
     if (onToggleSave) {;
@@ -73,6 +92,8 @@ export function TalentCardSaveButton({;
   return $3;}
 }
     }
+<<<<<<< HEAD
+=======
 
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",

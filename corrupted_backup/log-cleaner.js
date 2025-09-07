@@ -309,8 +309,8 @@ const calculateDirSize = (dir) => {
             files.push({
               }
               "path": filePath,
-              "size": stats.size,
-              "mtime": stats.mtime,
+              "size": stats && stats.size,
+              "mtime": stats && stats.mtime,
               "name": file
            
 });

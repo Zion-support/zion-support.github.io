@@ -8,6 +8,7 @@ export async function createHireRequestNotifications({;
   talentId;
   adminId;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /**
 
  * Creates a hire request notification for admin and talent
@@ -19,6 +20,22 @@ export async function createHireRequestNotifications({
 
     ? `${projectType} project` 
 
+<<<<<<< HEAD
+  talentId;
+  adminId;
+  requesterName;
+
+  requesterEmail
+
+  projectType;
+  projectSummary;
+  hireRequestId
+}: HireRequestNotificationParams) {
+
+  const projectInfo = projectType
+    ? `${projectType} project`
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     : "project";
   const summaryText = projectSummary"`
     ? `: "${projectSummary}"`"
@@ -57,6 +74,15 @@ export async function createHireRequestNotifications({
   adminId,
   requesterName,
 
+<<<<<<< HEAD
+      success: talentNotification.success && adminNotification.success;
+      talentNotification
+      adminNotification
+  talentId,
+  adminId,
+  requesterName,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   requesterEmail, 
 
   projectType,

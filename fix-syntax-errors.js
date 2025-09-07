@@ -175,6 +175,30 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       },
     );
 
+<<<<<<< HEAD
+    // Fix other common syntax issues
+    // Fix missing semicolons after variable declarations
+    content = content.replace(
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+      (match, varName) => {
+        if (
+          !match.includes("function") &&
+          !match.includes("if") &&
+          !match.includes("for") &&
+          !match.includes("while") &&
+          !match.includes("switch") &&
+          !match.includes("try") &&
+          !match.includes("catch") &&
+          !match.includes("finally") &&
+          !match.includes("return") &&
+          !match.includes("throw") &&
+          !match.includes("break") &&
+          !match.includes("continue") &&
+          !match.includes("debugger") &&
+          !match.includes("export") &&
+          !match.includes("import")
+        ) {
+=======
 ;
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
@@ -242,6 +266,16 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       },
     );
 
+<<<<<<< HEAD
+    if (modified) {
+      fs.writeFileSync(filePath, content, "utf8");
+      console.log(`Fixed: ${file}`);
+      totalFixed++;
+    }
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
+  }
+=======
 ;
     // Check condition
 if ( {) {
@@ -272,6 +306,18 @@ if ( {) {
 console.log(`\nTotal files fixed: ${totalFixed}`);
 
   }
+<<<<<<< HEAD
+}},
+,
+// Run all fixes,
+fixFooter();
+fixAccessibility();
+fixAiServices();
+fixApiDocs();
+fixCareers();
+,
+console.log('🎉 Syntax error fixes completed');
+=======
 
 }},
 
@@ -367,6 +413,8 @@ fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
+<<<<<<< HEAD
+=======
 
 }},
 

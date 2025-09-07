@@ -8,6 +8,7 @@ import Skeleton from "@/components/ui/skeleton";
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -31,7 +32,6 @@ export function TokenDisplay() {
             </p>
             <div className="mt-2">
               <Button variant="outline" size="sm">
-                View Wallet
               </Button>
             </div>
           </div>

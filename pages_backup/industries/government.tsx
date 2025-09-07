@@ -4,6 +4,8 @@ import React from 'react;
 import Link from next/link';';
 import { motion } from framer-motion;
 
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from next/link;';
 import { motion } from 'framer-motion;
@@ -53,6 +55,7 @@ const services = [;
     title: 'Citizen Service Portals,',
     description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Layout from '../../components/Layout';
 import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';
 import React from 'react';
@@ -75,6 +78,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Secure Data Management,',
+    description: 'Government-grade data security and management systems for sensitive information.,',
+    icon: Shield,
+    features: [;
+      'Encrypted data storage,',
+      'Access control systems',',
+      'Audit trail management',',
+=======
 
     title: 'Secure Data Management,,
     description: Government-grade data security and management systems for sensitive information.,',
@@ -90,6 +102,15 @@ const services = [
   }];
   },
   {}
+<<<<<<< HEAD
+    title: 'Digital Identity Solutions,',
+    description: 'Secure digital identity verification and management systems for citizens.,',
+    icon: Users,
+    features: [;
+      'Biometric authentication,',
+      'Digital ID cards',',
+      'Identity verification',',
+=======
 
     title: 'Digital Identity Solutions,',
     description: Secure digital identity verification and management systems for citizens.,,
@@ -103,6 +124,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Public Safety Systems,',
+    description: 'Advanced systems for emergency response and public safety management.,',
+    icon: Phone,
+    features: [;
+      'Emergency dispatch systems,',
+      'Real-time monitoring',',
+      'Incident management',',
+=======
 
     title: Public Safety Systems,',
     description: 'Advanced systems for emergency response and public safety management.,,
@@ -118,6 +148,15 @@ const services = [
   }];
   },
   {}
+<<<<<<< HEAD
+    title: 'Government Analytics,',
+    description: 'Data analytics platforms for informed policy-making and resource allocation.,',
+    icon: BarChart3,
+    features: [;
+      'Performance metrics,',
+      'Trend analysis',',
+      'Predictive modeling',',
+=======
 
     title: Government Analytics,,
     description: 'Data analytics platforms for informed policy-making and resource allocation.,',
@@ -131,6 +170,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Compliance Management,',
+    description: 'Automated systems for regulatory compliance and policy enforcement.,',
+    icon: FileText,
+    features: [;
+      'Regulatory tracking,',
+      'Compliance reporting',',
+      'Policy management',',
+=======
 
     description: 'Automated systems for regulatory compliance and policy enforcement.,,
     icon: FileText,
@@ -451,18 +499,35 @@ export default function GovernmentPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Transform Government?;
+=======
 
               </h2>;
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">";
                 Let our government technology experts help you implement solutions that enhance;
                 citizen services and improve operational efficiency.;
               </p>;
+<<<<<<< HEAD
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+                  Start Your Government Project;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">";
+                  Learn About Our Expertise;
+=======
 
             >
 <<<<<<< HEAD
               <h2 className=text-4xl md:text-5xl font-bold mb-6">
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Link>;
               </div>;
             </motion.div>;

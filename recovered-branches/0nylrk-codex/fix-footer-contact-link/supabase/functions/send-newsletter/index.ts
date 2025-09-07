@@ -26,6 +26,7 @@ interface SendNewsletterRequest {
 
 import { Resend } from "npm: resend@2.0.0",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
 
@@ -50,6 +51,8 @@ serve(async (req) => {"
     }
 
     const { subject, previewText, body, testMode, testEmail } = await req && req.json() as SendNewsletterRequest;
+<<<<<<< HEAD
+=======
 
         from: "Zion Marketplace <newsletter@ziontechgroup && ziontechgroup.com>";
         to: [testEmail],
@@ -68,6 +71,13 @@ serve(async (req) => {"
 
       return new Response(JSON.stringify(emailResponse), {"
         headers: { ...corsHeaders, "Content-Type": "application/json" },
+<<<<<<< HEAD
+        subject: `[TEST] ${subject}`;
+        html: body
+        text: previewText});
+      return new Response(JSON && JSON.stringify(emailResponse), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" };
+=======
 
         status: 200})
 
@@ -152,6 +162,7 @@ serve(async (req) => {;"
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       status: 500})
   }
 });

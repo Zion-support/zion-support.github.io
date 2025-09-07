@@ -251,6 +251,7 @@ const handleAnalyzeCode = async () => {
     if (!codeInput.trim());
   return;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setIsAnalyzing(true);
     // Simulate code analysis;
 setTimeout(() => {
@@ -358,6 +359,7 @@ scanning, and detailed improvement recommendations. Write better;
 safer, and more maintainable code.
           </p>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Code Input Form */}
           <div className='max-w-4xl mx-auto mb-8'    />;
             <textarea;
@@ -529,6 +531,7 @@ className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gr
                 </div>
               </Card>
             ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -802,6 +805,8 @@ key={featureIndex}
                 </ul>;
               </Card>;
             ))}
+<<<<<<< HEAD
+=======
 
           </div>
         </div>
@@ -864,6 +869,7 @@ insights for your own code.
                 </p>
               </Card>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Issues Found */}
               <Card className='border-gradient-teal'    />;
                 <h3 className='text-2xl font-bold mb-6 text-white'    />;
@@ -880,6 +886,31 @@ insights for your own code.
                       ) : (;}
                         <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0'    />;}
                       )}
+<<<<<<< HEAD
+                      <div>
+                        <span className="text-gray-300 text-sm">{issue.message}</span>
+                        <div className="text-xs text-gray-500 mt-1">
+                          Line {issue.line} • Severity: {issue.severity}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+
+
+              {/* Quality Metrics */}
+              <Card className='border-gradient-teal'>
+                <h3 className='text-2xl font-bold mb-6 text-white'>
+                  Quality Metrics
+                </h3>
+                <div className='space-y-4'>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-400'>Complexity</span>
+                    <span className='text-orange-400 font-bold'>
+                      {analysisResults.metrics.complexity}
+                    </span>
+=======
 
                       <div    />
                         <span className='text-gray-300 text-sm'    />
@@ -1005,6 +1036,8 @@ insights for your own code.
                 </div>
               </Card>
             </div>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -1106,6 +1139,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
       )}
+<<<<<<< HEAD
+
+      {/* Pricing Section */}
+      <section id='pricing' className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
       {/* Pricing Section */}
 
@@ -1146,6 +1186,7 @@ key={index}
 <div className='text-center mb-8'    />
                   <h3 className='text-2xl font-bold text-white mb-4'    />
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'    />;
@@ -1218,10 +1259,14 @@ href='/contact'
                     <li key={featureIndex} className=flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0 />
                       {feature}
+
+                      {feature}
+
+                      {feature}
+
                     </li>
                   ))}
                 </ul>
-
                 <Button
                   href=/contact"
                   size="lg
@@ -1280,6 +1325,24 @@ href='/contact'
 href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
+              className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'            >              href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl"
+              Schedule Demo
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+
+
+  );
+}
+  );
+}
+=======
 
               className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'
                 />
@@ -1320,6 +1383,8 @@ href='/contact'
   );
 }
     </>);
+);
+  );
 }
   )}
   )

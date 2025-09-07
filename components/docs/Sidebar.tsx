@@ -53,6 +53,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 .filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter)
                 .map((e) => (
                   <li key={e.id}>
+<<<<<<< HEAD
 =======
   return (}
             <button;}
@@ -107,6 +108,9 @@ key={v}
 <<<<<<< HEAD
 
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                    <button
                       className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
                       onClick={() =    /> onSelectEndpoint(e.id)}
                     >;
@@ -131,6 +135,8 @@ key={v}
         ))}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onSelectEndpoint: (endpoint_id: string) => void;
   selected_version: string;
   onChangeVersion: (v: string) => void;

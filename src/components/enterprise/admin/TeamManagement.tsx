@@ -88,6 +88,7 @@ export function TeamManagement() {
       description: `A new invitation has been sent to ${memberEmail}`})
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -144,6 +145,11 @@ export function TeamManagement() {
           </DialogContent>
         </Dialog>
       </div>
+<<<<<<< HEAD
+      <div className='rounded-md border'>
+        <Table>
+      <div className='rounded-md border'>
+=======
 
       <div className="rounded-md border">
         <Table>

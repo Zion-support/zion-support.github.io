@@ -45,6 +45,19 @@ Key "skills": ${(opts.tags || []).join(', ') || 'N/A'};'
 
 export function createOpenAIClient("apiKey": string): OpenAIClient {;
 
+<<<<<<< HEAD
+type OpenAIClient = OpenAI;
+export function createOpenAIClient(apiKey: string): OpenAIClient {
+export function createOpenAIClient(apiKey: string): OpenAIClient {;
+  return new OpenAI({ apiKey });
+export async function generateJobPost(
+  openai: OpenAIClient
+  role: string
+  opts: any
+): Promise<string> {
+  const prompt = `Create a concise, compelling job post for a ${role}.
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   }
 

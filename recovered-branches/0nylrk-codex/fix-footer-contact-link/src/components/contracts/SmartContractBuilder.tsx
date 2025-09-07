@@ -9,6 +9,10 @@ interface SmartContractBuilderProps {
   onDeploy?: (contractContent: string) => void
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -124,12 +128,25 @@ export function SmartContractBuilder({
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined;
   ),
+<<<<<<< HEAD
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
+
+
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
+=======
 
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
 
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({}
     network: 'ethereum'
 
+  const handleLoadTemplate = (templateData: ContractFormValues) => {
+    setFormValues(templateData)
+  }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }),
 
   const [deployStatus, setDeployStatus] = useState<string>(''),
@@ -140,11 +157,15 @@ export function SmartContractBuilder({
   const handleLoadTemplate = (templateData: ContractFormValues) => {}
     setFormValues(templateData)
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Convert ContractFormValues to contract content string
   const handleContractGenerated = async (formValues: ContractFormValues) => {
     if (!formValues) return
     try {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
     undefined;
   );
@@ -156,18 +177,14 @@ export function SmartContractBuilder({
   });
   const [deployStatus, setDeployStatus] = useState<string>('');
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
-
   const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts();
-
   const handleLoadTemplate = (templateData: ContractFormValues) => {;
     setFormValues(templateData);
   };
-
   // Convert ContractFormValues to contract content string;
   const handleContractGenerated = async (formValues: ContractFormValues) => {;
     if (!formValues) return,;
     try {;
-
       const generatedContractText = await generateSolidityContract(formValues, talent, clientName);
       setGeneratedContract(generatedContractText);
       setActiveTab("preview");
@@ -213,6 +230,7 @@ if ( {) {}
 }
         onContractGenerated (generatedContractText);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   const handleDeployContract = async () => {}
@@ -351,6 +369,13 @@ export function SmartContractBuilder() { return null; }
             </div>
           </div>"
           <TabsContent value="form" className="pt-4">
+<<<<<<< HEAD
+      console.error ("Error deploying contract:", error);
+      setDeployStatus ('error');
+      toast.error ("Failed to deploy smart contract");
+    }
+  }
+=======
 
     <Dialog open={isOpen} onOpenChange={onClose}>
 
@@ -374,14 +399,12 @@ export function SmartContractBuilder() { return null; }
       toast && toast.error("Failed to generate smart contract");
     }
   };
-
   const handleDeployContract = async () => {;
     if (!generatedContract) return;
 
     try {;'
       setDeployStatus('deploying');
       const contractInfo = await deploySmartContract(generatedContract, deployOptions);
-
       if (contractInfo) {;
         setDeploymentInfo(contractInfo);'
         setDeployStatus('deployed');"
@@ -396,7 +419,6 @@ export function SmartContractBuilder() { return null; }
       toast && toast.error("Failed to deploy smart contract");
     }
   };
-
   // Modified to match the expected interface;
   const handleFormSubmit = (contract: string) => {;
     // This should be a function that takes a string (contract content);'
@@ -412,6 +434,7 @@ export function SmartContractBuilder() { return null; }
 
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Templates;
               </Button>;
 
@@ -479,6 +502,11 @@ export function SmartContractBuilder() { return null; }
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+<<<<<<< HEAD
+        />;
+      </DialogContent>;
+    </Dialog>;
+=======
 
             />;
           </TabsContent>;"

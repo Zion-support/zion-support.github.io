@@ -3,6 +3,8 @@ import _React from 'react'; import { render,screen } from '@testing-library/reac
 
 
 
+<<<<<<< HEAD
+=======
 
 
 import React from 'react''

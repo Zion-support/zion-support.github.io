@@ -157,6 +157,71 @@ default:
           bValue = b.name.toLowerCase();
 origin/cursor/automate-test-improve-and-merge-code-2533
       }
+<<<<<<< HEAD
+      if (sortOrder === 'asc') {
+        return aValue > bValue ? 1 : -1;
+      } else {
+        return aValue < bValue ? 1 : -1;
+      }
+    });
+    return filtered;
+  }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]);
+  const categories = [
+    {
+      id: 'all'
+      name: 'All Services'
+      icon: Sparkles
+      count: allServices.length
+    }
+    {
+      id: 'ai'
+      name: 'AI & ML'
+      icon: Brain
+      count: allServices.filter(s => s.variant.includes('ai')).length
+    }
+    {
+      id: 'quantum'
+      name: 'Quantum & Security'
+      icon: Shield
+      count: allServices.filter(s => s.variant.includes('security')).length
+    }
+    {
+      id: 'it'
+      name: 'Enterprise IT'
+      icon: Cpu
+      count: allServices.filter(s => s.variant.includes('it')).length
+    }
+    {
+      id: 'api'
+      name: 'API & Development'
+      icon: Database
+      count: allServices.filter(s => s.variant.includes('api')).length
+    }
+    {
+      id: 'cloud'
+      name: 'Cloud & DevOps'
+      icon: Cloud
+      count: allServices.filter(s => s.variant.includes('cloud')).length
+    }
+    {
+      id: 'marketing'
+      name: 'Marketing & SEO'
+      icon: TrendingUp
+      count: allServices.filter(s => s.variant.includes('marketing')).length
+    }
+    {
+      id: 'project'
+      name: 'Project Management'
+      icon: Users
+      count: allServices.filter(s => s.variant.includes('project')).length
+    }
+    {
+      id: 'customer'
+      name: 'Customer Success'
+      icon: CheckCircle
+      count: allServices.filter(s => s.variant.includes('customer')).length
+    },  ];
+=======
 
       }
     });
@@ -213,6 +278,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain;
     if (variant.includes('security')) return Shield;
@@ -223,6 +289,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (variant.includes('project')) return Users;
 
     if (variant.includes('customer')) return CheckCircle;
+<<<<<<< HEAD
+    return Sparkles;  }
+=======
 
     return Sparkles;
   };
@@ -508,11 +577,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
               </div>
+<<<<<<< HEAD
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+
+              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+=======
 
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
@@ -526,6 +605,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <br />'
                 <span className='text-white'>Solutions</span>
               </h1>
+<<<<<<< HEAD
+              
+
+
+              <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'>
+                Experience the next generation of AI, quantum security, and
+                enterprise IT solutions. Transform your business with our
+                revolutionary 2024 service portfolio.
+              </p>
+              {/* Stats */}
+              <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-16'>
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-cyan-400 mb-2'>
+                    {allServices.length}
+                  </div>
+                  <div className='text-gray-400'>Revolutionary Services</div>
+=======
 
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
@@ -558,14 +654,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className='text-gray-400'>Revolutionary Services</div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Experience the next generation of AI, quantum security, and enterprise IT solutions. 
+                Experience the next generation of AI, quantum security, and enterprise IT solutions.
                 Transform your business with our revolutionary 2024 service portfolio.
               </p>"
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">"
                 <div className="text-center">"
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>"
                   <div className="text-gray-400">Revolutionary Services</div>
+<<<<<<< HEAD
+=======
 
                 </div>
                 <div className="text-center">
@@ -596,6 +695,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+              transition={{ duration: 0 && 0.8 }}>;
+        {/* Search and Filters */}
+        {/* Search and Filters */}
+        <section className='px-4 sm:px-6 lg:px-8 mb-16'>
+          <div className='max-w-7xl mx-auto'>
+            <div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm'>
+              <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>
+                {/* Search */}
+                <div className='lg:col-span-2'>
+                  <div className='relative'>
+                    <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />
+        {/* Search and Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm">
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+=======
 
         {/* Search and Filters */}
 <section className='px-4 sm:px-6 lg:px-8 mb-16'>
@@ -737,6 +858,7 @@ if ( {) {}
                   >
                     {sortOrder === 'asc' ? '↑' : '↓'}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </button>
                 </div>
               </div>
@@ -753,6 +875,8 @@ if ( {) {}
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
 
           <div className='max - w-7xl mx - auto'>;
             {filtered_services.length === 0 ? ('
@@ -810,6 +934,7 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                             {}
                               class_name: `w - 6 h - 6 text - cyan - 400`,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             }
                           )}
 :pages/services-2024.tsx
@@ -818,7 +943,20 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                         <div className='text - right'>;'
                           <div className='text - 2xl font - bold text - cyan - 400'>;
                             {service.price}
+<<<<<<< HEAD
+        {/* Services Grid */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-7xl mx-auto">
+        {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-7xl mx-auto">
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {filteredServices.length === 0 ? (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
@@ -848,6 +986,11 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
 }
 
                     transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
+<<<<<<< HEAD
+                    key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+=======
                     <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
                       {/* Service Header */  } catch (error) {
     console.error("Error:", error);
@@ -904,13 +1047,90 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>;'
                           <div className='text-sm text-gray-400'>per month</div>                        </div>;
                       </div>;
-
                       {/* Service Info */}
                       <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>;
                         {service && service.name}
                       </h3>;
                       <p className='text-gray-300 mb-4 leading-relaxed'>                        {service && service.tagline}
                       </p>;
+<<<<<<< HEAD
+                      {/* Features */}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className='group'
+                  >
+                    <div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm'>
+                      {/* Service Header */}
+                      <div className='flex items-start justify-between mb-4'>
+                        <div className='w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center'>
+                          {React.createElement(
+                            getVariantIcon(service.variant)
+                            {
+                              className: `w-6 h-6 text-cyan-400`
+                            }
+                          )}
+                    key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
+                    <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
+                      {/* Service Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center">
+                          {React.createElement(getVariantIcon(service.variant), {
+                            className: `w-6 h-6 text-cyan-400`
+                          })  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </div>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                          <div className="text-sm text-gray-400">per month</div>
+                        </div>
+                      </div>
+                      {/* Service Info */}
+                      <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>
+                        {service.name}
+                      </h3>
+                      <p className='text-gray-300 mb-4 leading-relaxed'>                        {service.tagline}
+                      </p>
+                      {/* Features */}
+                      <div className='mb-6'>
+                        <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider'>
+                          Key Features
+                        </h4>
+                        <div className='space-y-2'>
+                          {service.features
+                            .slice(0, 3)
+                            .map((feature, featureIndex) => (
+                              <div
+                                key={featureIndex}
+                                className='flex items-center space-x-2'
+                              >
+                                <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
+                                <span className='text-sm text-gray-300'>
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+=======
 
                       {/* Features */}
 
@@ -987,13 +1207,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className='text - center'>;'
                           <div className='text - sm font - semibold text - white mb - 1'>;
                             {service.customers}
+<<<<<<< HEAD
+                        </div>
+                      </div>
+                      {/* Stats */}
+                      <div className='grid grid-cols-3 gap-4 mb-6'>
+                        <div className='text-center'>
+                          <div className='flex items-center justify-center space-x-1 mb-1'>
+                            <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                            <span className='text-sm font-semibold text-white'>
+                              {service.rating}
+                            </span>
+                          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </div>;
+                      </div>;
+                      {/* Stats */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <div className="grid grid-cols-3 gap-4 mb-6">
                         <div className="text-center">
                           <div className="flex items-center justify-center space-x-1 mb-1">
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />
 
                             <span className="text-sm font-semibold text-white">{service.rating}</span>
+<<<<<<< HEAD
+=======
 
                           </div>"
                           <div className="text-xs text-gray-400">Rating</div>
@@ -1061,6 +1308,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </motion.div>
+<<<<<<< HEAD
+=======
 
                       <div className="grid grid-cols-3 gap-4 mb-6">;
                         <div className="text-center">;
@@ -1187,6 +1436,7 @@ viewport={{ once: true }}
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Ready to Transform Your Business?
               </h2>"
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">

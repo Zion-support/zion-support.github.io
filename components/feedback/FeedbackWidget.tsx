@@ -41,6 +41,22 @@ const [comment, setComment] = useState('');'
     <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
       <div className="text-sm font-medium mb-2">Was this answer useful?</div>
       {submitted ? (
+    }
+  }
+  };
+
+  return (
+    <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>
+      {submitted ? (
+        <div className='text-sm text-emerald-700 dark:text-emerald-300'>
+          Thanks for your feedback!
+        </div>
+      ) : (
+        <div className='space-y-3'>
+          <div className='flex items-center gap-2'>
+            <button
+              type='button'              onClick={() => setRating(rating === 'up' ? null : 'up')}      {submitted ? (
         <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>
       ) : (
     }

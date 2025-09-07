@@ -6,6 +6,7 @@ import Card from '../components/ui/Card','
 import Button from '../components/ui/Button';'
 import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function WebsitePerformanceMonitorPage() {
   }
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -342,6 +343,14 @@ export default function WebsitePerformanceMonitorPage() {const [isAnalyzing, set
     }, 4000);  };          'Optimize images and implement lazy loadingMinimize render-blocking resourcesEnable compression and cachingConsider using a CDN for global performance';
         ];
       });
+<<<<<<< HEAD
+      setIsAnalyzing(false);
+    }, 4000);  };          'Optimize images and implement lazy loadingMinimize render-blocking resourcesEnable compression and cachingConsider using a CDN for global performance'
+        ]
+      });
+      setIsAnalyzing(false)
+    }, 4000)
+=======
 
       {/* Hero Section *
 }
@@ -586,7 +595,6 @@ href='#pricing';'
 
           </div>;
       </section>;
-
       {/* Demo Analysis Section */}
       {analysisResults && (;
         <section className='section-padding bg-gradient-cursor-accent'>;
@@ -758,10 +766,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
       )}
+<<<<<<< HEAD
+
+      {/* Pricing Section */}
+      <section id='pricing' className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
       )}
 
 
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Simple Pricing
       {/* Pricing Section */}
 <section id='pricing' className='section-padding bg-gradient-cursor'>'
@@ -814,6 +834,7 @@ needs.
 <div className='text-center mb-8'>'
                   <h3 className='text-2xl font-bold text-white mb-4'>'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;'
@@ -886,17 +907,32 @@ href='/contact''
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
+
+                      {feature}
+
+                      {feature}
+
                     </li>
                   ))}
                 </ul>
-
                 <Button
+<<<<<<< HEAD
+                  href='/contact'
+                  size='lg'
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                >
+                  Get Started
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
+=======
                   href="/contact"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
+=======
                 </Button>
               </Card>
             ))}

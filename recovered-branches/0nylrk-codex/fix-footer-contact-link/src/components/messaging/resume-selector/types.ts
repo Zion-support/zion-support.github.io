@@ -9,6 +9,7 @@ export interface ResumeOption {
 
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Resume } from "@/types/resume",
 
 export interface ResumeOption {

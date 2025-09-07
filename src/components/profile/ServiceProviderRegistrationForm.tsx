@@ -125,6 +125,32 @@ export function ServiceProviderRegistrationForm() {
       if (error) {
         throw new Error(error.message)
       }
+<<<<<<< HEAD
+      // Enhance profile if not already done
+      let finalSummary = values.bio
+      let finalServices = serviceTags
+      if (values.enhancedProfile && !generatedContent) {
+        try {
+          const { data: aiData } = await supabase.functions.invoke(
+            'service-profile-enhancer'
+            {
+              body: {
+                providerData: {
+                  name: values.name
+                  title: values.title
+                  bio: values.bio
+                  services: serviceTags
+                  location: values.location
+                }
+              }
+            }
+          )
+          if (aiData) {
+            finalSummary = (aiData as any).summary |values.bio
+            // Merge AI suggested services with user-provided services
+            const aiServices = (aiData as any).services |[]
+            finalServices = [...new Set([...serviceTags, ...aiServices])]
+=======
 
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
@@ -229,6 +255,7 @@ export function ServiceProviderRegistrationForm() {
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = (userData as any).user?.email;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Create the service profile
       const { data: profileData, error } = await supabase
         .from('profiles')
@@ -357,7 +384,6 @@ export function ServiceProviderRegistrationForm() {
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>
                           <FormControl>
-                            <div className="relative">
                               <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
@@ -380,7 +406,6 @@ export function ServiceProviderRegistrationForm() {
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>
                           <FormControl>
-                            <div className="relative">
                               <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
@@ -403,7 +428,6 @@ export function ServiceProviderRegistrationForm() {
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Website (optional)</FormLabel>
                           <FormControl>
-                            <div className="relative">
                               <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
@@ -439,6 +463,17 @@ export function ServiceProviderRegistrationForm() {
                         </div>
                       )}
                     </div>
+                    <label className='flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors'>
+                      <Upload className='mr-2 h-4 w-4' />
+                      <span>Upload Photo</span>
+                      <input
+                        type='file'
+                        accept='image/*'
+                        className='hidden'
+                            alt="Avatar preview"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
@@ -493,6 +528,7 @@ export function ServiceProviderRegistrationForm() {
                         <FormLabel className="text-white flex items-center">
                           <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
                           AI Profile Enhancement
+                        </FormLabel>
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your service description for better visibility and client engagement
@@ -607,6 +643,18 @@ export function ServiceProviderRegistrationForm() {
                       </FormItem>
                     )}
                   />
+                  <div className='flex flex-wrap gap-2 mt-2'>
+                    {serviceTags.map(service => (
+                      <Badge
+                        key={service}
+                        className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1'
+                      >
+                        {service}
+                        <button
+                          type='button'
+                          onClick={() => handleRemoveService(service)}
+                          className='rounded-full hover:bg-zion-purple-dark/20 p-0.5'                        >
+                          <X className='h-3 w-3' />
 
                   <div className="flex flex-wrap gap-2 mt-2">
                     {serviceTags.map(service => (
@@ -657,6 +705,7 @@ export function ServiceProviderRegistrationForm() {
                     )}
                   />
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <FormField
                     control={form.control}
                     name="availability"
@@ -735,7 +784,6 @@ export function ServiceProviderRegistrationForm() {
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Service Profile"}
                 </Button>
-              </div>
             </CardFooter>
           </form>
         </Form>

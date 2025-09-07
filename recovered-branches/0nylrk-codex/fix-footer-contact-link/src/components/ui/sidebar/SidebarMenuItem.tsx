@@ -1,6 +1,11 @@
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
   className?: string,
   children?: React.ReactNode
+<<<<<<< HEAD
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+  className?: string,
+  children?: React.ReactNode
+=======
 
 import React from "react";
 import { cn } from "@/lib/utils";
@@ -24,6 +29,8 @@ import { cn } from "@/lib/utils",interface SidebarMenuItemProps extends React.HT
 >>>>>>> origin/chore/fix-lint-and-merge
   className?: string;
   children?: React.ReactNode;
+<<<<<<< HEAD
+=======
 
 }
 

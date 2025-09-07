@@ -301,5 +301,8 @@ const fs = require(,"}),"
             "severity"
                 "type"
                 "severity"
+<<<<<<< HEAD
+        "type"
+=======
         "type"
         "message"        "message"

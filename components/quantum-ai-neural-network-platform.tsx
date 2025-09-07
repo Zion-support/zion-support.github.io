@@ -39,6 +39,7 @@ const features = [;
     'Cross-platform quantum synchronization''
 ];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const benefits = [;
   'Exponential computational power';'
@@ -48,6 +49,7 @@ const benefits = [;
     'Quantum-secure AI operations''
 ];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const benefits = [
     "Exponential computational power";
     "Quantum advantage in AI training";
@@ -55,6 +57,8 @@ const benefits = [;
     "Faster convergence rates";
     "Quantum-secure AI operations"
   ];
+<<<<<<< HEAD
+=======
 
 const pricing = {
   }
@@ -244,6 +248,7 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
                 <h3 className='text-lg font-semibold mb-2'>{feature}</h3>;
               </motion.div>;
             viewport={{ once: true }}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             )
 }
@@ -302,6 +307,7 @@ className='text-center''
                 </div>
                 <h3 className='text-xl font-semibold mb-2'>{benefit}</h3>'
               </motion.div>
+<<<<<<< HEAD
 
 
             )

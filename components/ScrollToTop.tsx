@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 import React, { useState, useEffect } from 'react';'
@@ -30,11 +32,14 @@ const scrollToTop = () => {
         setIsVisible(false);
       }
     };
-
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);    return () => window && window.removeEventListener('scroll', toggleVisibility);
   }, []);
+<<<<<<< HEAD
+      behavior: 'smooth'})
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const scrollToTop = () => {;
     window && window.scrollTo({;
       top: 0,;

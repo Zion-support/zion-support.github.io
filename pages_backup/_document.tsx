@@ -34,6 +34,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Document() {;
   return (
     <Html lang='en'>;
@@ -76,7 +77,10 @@ function Document() {
         <link;
           href='https://fonts.googleapis.com / css2?family = Inter:wght@400;500;600;700;800;900 & family = JetBrains + Mono:wght@400;600 & display = swap';
           rel='stylesheet';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />      </Head>;
       <body>;
         <Main />;

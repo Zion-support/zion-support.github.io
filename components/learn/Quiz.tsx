@@ -1,3 +1,49 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+type Question = {
+  id: string,
+  question: string,
+  options: string[],
+import React, { useState } from 'react';
+
+type Question = {
+  id: string;
+  question: string;
+  options: string[];
+  answerIndex: number;
+}
+type Props = {
+  questions: Question[];
+  onComplete: (score: number) => void;};  id: string
+  question: string
+  options: string[]
+  answerIndex: number
+}
+type Props = {
+  questions: Question[]
+  onComplete: (score: number) => void
+export default function Quiz({ questions, onComplete }: Props) {
+
+export default function Quiz({ questions, onComplete }: Props) {;
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [submitted, setSubmitted] = useState(false);
+  const score = questions.reduce(
+    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0)
+    0
+  );
+  function submit() {
+
+
+
+export default function Quiz({ questions, onComplete }: Props) {;
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [submitted, setSubmitted] = useState(false);
+  const score = questions && questions.reduce(;
+    (acc, q) => acc + (answers[q && q.id] === q && q.answerIndex ? 1 : 0),;
+    0;
+  );
+  function submit() {;
+=======
 
 
 

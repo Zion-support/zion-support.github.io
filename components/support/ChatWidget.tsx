@@ -18,6 +18,7 @@ const sessionIdRef = useRef<string>('');'
 const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+<<<<<<< HEAD
     sessionIdRef.current = generateSessionId()
   }, []);
 
@@ -342,6 +343,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button,
 onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
+                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                  className="rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50"
+=======
                   className="rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50"
 origin/cursor/automate-test-improve-and-merge-code-2533
                   placeholder=\"Ask a question…\"

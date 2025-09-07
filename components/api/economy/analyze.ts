@@ -50,6 +50,14 @@ export default async function handler(
       temperature: 0.3,
       max_tokens: 300,
     });
+<<<<<<< HEAD
+
+    const analysis = completion.choices?.[0]?.message?.content?.trim() |'No analysis generated.';
+      completion && completion.choices?.[0]?.message?.content?.trim() ||
+      'No analysis generated.';
+    return res && res.status(200).json({ analysis });
+  } catch (error: any) {
+=======
 
     const analysis = completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
     return res.status(200).json({ analysis });

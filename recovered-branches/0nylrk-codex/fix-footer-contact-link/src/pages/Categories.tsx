@@ -52,6 +52,8 @@ function Categories() {
               Find exactly what you're looking for to enhance your business or personal projects.;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
 
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -98,6 +100,7 @@ function Categories() {
             </p>;
           </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Reuse the Categories Section component */}
           <CategoriesSection showTitle={false} />
         </div>

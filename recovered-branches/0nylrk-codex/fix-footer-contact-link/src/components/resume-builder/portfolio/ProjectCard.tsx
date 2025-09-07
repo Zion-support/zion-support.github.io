@@ -77,6 +77,13 @@ interface ProjectCardProps {
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void;
 }
+<<<<<<< HEAD
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
+
+
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
+=======
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
@@ -108,6 +115,10 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
     setDeleteDialogOpen(false)
 };
 
+    }
+    setDeleteDialogOpen(false)
+  },
+  
   return (
 
     <Card className="h-full flex flex-col">

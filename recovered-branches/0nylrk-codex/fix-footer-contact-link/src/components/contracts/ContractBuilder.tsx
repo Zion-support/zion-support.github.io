@@ -8,6 +8,10 @@ interface ContractBuilderProps {
   onContractGenerated?: (contractContent: string) => void
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -184,16 +188,15 @@ export function ContractBuilder({
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
     undefined;
   );
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-
   const handleLoadTemplate = (templateData: ContractFormValues) => {;
     setFormValues(templateData);
   };
-
   const handleContractGenerated = (contract: string) => {;
     setGeneratedContract(contract);
 import { useState } from "react",;
@@ -246,16 +249,11 @@ export function ContractBuilder({;
     if (onContractGenerated) {;
       onContractGenerated(contract);
     }
-  };
-
-  if (showSmartContractBuilder) {;
-
     return (
       <SmartContractBuilder
         isOpen={isOpen}
         onClose={() => {;
           setShowSmartContractBuilder(false);
-
           onClose();
 
 onClose();
@@ -322,6 +320,14 @@ export function ContractBuilder({
 export function ContractBuilder({;export function ContractBuilder({;
   isOpen;
 
+<<<<<<< HEAD
+export function ContractBuilder({
+  isOpen,
+  onClose,
+  talent,
+  clientName,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onContractGenerated
 }: ContractBuilderProps) {
 
@@ -344,6 +350,10 @@ export function ContractBuilder({;export function ContractBuilder({;
     setActiveTab("preview"),
     if (onContractGenerated) {
       onContractGenerated(contract)
+<<<<<<< HEAD
+          setShowSmartContractBuilder(false),;
+          onClose(),;
+=======
 
 setShowSmartContractBuilder(false),;
           onClose(),;
@@ -352,6 +362,8 @@ setShowSmartContractBuilder(false),;
         client_name={client_name}
         onContractGenerated={onContractGenerated}
 
+<<<<<<< HEAD
+=======
       />
     )
   }
@@ -371,6 +383,13 @@ setShowSmartContractBuilder(false),;
               <TabsTrigger value="form">Contract Details</TabsTrigger>;
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
             </TabsList>;
+<<<<<<< HEAD
+            ;
+            <div className="flex gap-2">;
+              <Button ;
+                variant="outline" ;
+                size="sm";
+=======
 
             <div className="flex gap-2">;
               <Button
@@ -429,6 +448,7 @@ export function ContractBuilder() { return null; }
               <Button
                 variant="outline"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 variant="secondary"
 
@@ -460,7 +480,11 @@ export function ContractBuilder() { return null; }
                 variant="secondary";"
                 size="sm";
                 on_click={() => setShowSmartContractBuilder (true)}
-
+              ;
+              <Button;
+                variant="secondary";
+                size="sm";
+                onClick={() => setShowSmartContractBuilder(true)}
               >;
                 Smart Contract Builder;
               </Button>;
@@ -683,6 +707,7 @@ return (<SmartContractBuilder isOpen= {
     </Dialog>;
   );
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />;
           </TabsContent>;"
 

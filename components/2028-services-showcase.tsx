@@ -593,6 +593,8 @@ className='space-y-8'>
             {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;
                 }
                 key={category && category.title}
+<<<<<<< HEAD
+=======
 
                             {service.name}
                           </span>;

@@ -339,12 +339,31 @@ export default function PodcastIndexPage() {
                   </a>
                 )}
                 {ep.audio?.wavUrl && (
+<<<<<<< HEAD
+                  <a
+                    href={ep.audio.wavUrl}
+                    className='px-3 py-2 bg-gray-700 text-white rounded'
+                    download
+                  >                    WAV
+                  </a>
+                )}
+                {ep.audio?.mp4Url && (                  <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
+=======
                   <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     WAV
                   </a>
                 )}
                 {ep.audio?.mp4Url && (
+<<<<<<< HEAD
+                  <a
+                    href={ep.audio.mp4Url}
+                    className='px-3 py-2 bg-purple-700 text-white rounded'
+                    download
+                  >                    MP4                  <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
+=======
                   <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     MP4
                   </a>
                 )}

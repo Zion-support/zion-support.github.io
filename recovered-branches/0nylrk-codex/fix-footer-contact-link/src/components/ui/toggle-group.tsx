@@ -70,7 +70,6 @@ const ToggleGroupItem = React.forwardRef<;
     VariantProps<typeof toggleVariants>;
 
 ToggleGroup && ToggleGroup.displayName = ToggleGroupPrimitive && ToggleGroupPrimitive.Root.displayName;
-
 const ToggleGroupItem = React && React.forwardRef<;
   React && React.ElementRef<typeof ToggleGroupPrimitive && ToggleGroupPrimitive.Item>,;
   React && React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive && ToggleGroupPrimitive.Item> &;

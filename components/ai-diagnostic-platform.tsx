@@ -36,6 +36,48 @@ import { motion } from 'framer-motion';
 
 import {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  Brain,
+  Shield,
+  Zap,
+  Target,
+  Stethoscope,
+  BarChart3,
+  Cpu,
+  Globe,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,;
+  MapPin,;
+<<<<<<< HEAD
+  Brain
+  Shield
+  Zap
+  Target
+  Stethoscope
+  BarChart3
+  Cpu
+  Globe
+  Users
+  Award
+  CheckCircle
+  ArrowRight
+  Star
+  Phone
+  Mail
+  MapPin;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  Brain, Shield, Zap, Target, Stethoscope, ;
 
   Brain,
   Shield,
@@ -138,6 +180,7 @@ const contactInfo = $2;
   website: https://ziontechgroup.com'
 },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               Contact Sales
 =======
@@ -628,6 +671,27 @@ key={featureIndex}
 <section;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+
+      {/* Contact Section */}
+
+
+
+
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
+
+      {/* Contact Section */}
+      <section
+        id='contact'
+        className='py-20 bg-gradient-to-b from-slate-900 to-black'
+      >
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+=======
 =======
         id='contact';
         className='py-20 bg-gradient-to-b from-slate-900 to-black'    />

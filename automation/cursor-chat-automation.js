@@ -101,6 +101,7 @@ class CursorChatAutomation {
     } catch (error) {
       this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return session;
     } catch (error) {
       this.log(
@@ -120,6 +121,7 @@ class CursorChatAutomation {
       return;
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       this.log(
         `Cannot start automation for session ${sessionId}: session not found or inactive`,
 
@@ -156,6 +158,16 @@ class CursorChatAutomation {
       await this.executeCursorCommand(sessionId, command);
       this.stats.successfulCommands++;
       this.log(`Command sent successfully to session ${sessionId}`);
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+    } catch (error) {
+      this.stats.failedCommands++;
+      session.errors++;
+      this.log(`Failed to send command to session ${sessionId}: ${error.message}`, 'ERROR');
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
 
     } catch (error) {
       this.stats.failedCommands++;
@@ -222,6 +234,7 @@ class CursorChatAutomation {
     healthCheck();
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   /**
    * Get system statistics
    */
@@ -317,6 +330,18 @@ class CursorChatAutomation {
     const stats = automation.getStats();
     console.log('\nFinal "Statistics": ');
     console.log(JSON.stringify(stats, null, 2));
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+    process.exit(0);
+  });
+  // Keep the process alive
+  setInterval(() => {
+    const stats = automation.getStats();
+    console.log(`\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`);
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
 
     process.exit(0);
   });

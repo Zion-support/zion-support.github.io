@@ -34,6 +34,11 @@
 
 }
 };
+<<<<<<< HEAD
+export default MarketPricing;
+
+export default MarketPricing;
+=======
 
 
 };

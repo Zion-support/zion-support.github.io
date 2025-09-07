@@ -43,12 +43,14 @@ const resp = await fetch(`${baseUrl}/api/dao/metrics`)const data = await resp.js
 const resp = await fetch(`${baseUrl}/api/dao/metrics`);
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         content,
         message: 'chore (automation): weekly DAO metrics update',
         token,
       });
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 exports.handler = async function() {
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
@@ -82,7 +84,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
 
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }),
     };
@@ -98,6 +103,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const token = process && process.env.GITHUB_TOKEN,
     const cachePath = path && path.join(process && process.cwd(), 'datadaometrics && datadaometrics.json'),
     const content = fs && fs.readFileSync(cachePath, 'utf-8'),
+<<<<<<< HEAD
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/dao/metrics && metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
+    }
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }) }
+=======
 
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/dao/metrics && metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
@@ -105,6 +116,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }) }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }

@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import { useTranslation  } from 'react-i18next';
+import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
+
+const localeLabelKey: Record<string, string> = {
+
+  en: "lang.english"
+  pt: "lang.portuguese"
+  es: "lang.spanish"
+  ar: "lang.arabic"
+}
+export default function LanguageSwitchPrompt() {
+
+const localeLabelKey: Record<string, string> = {
+  en: "lang.english",
+  pt: "lang.portuguese",
+  es: "lang.spanish",
+  ar: "lang.arabic",
+};
+export default function LanguageSwitchPrompt() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 const "localeLabelKey": Record<string, string> = {

@@ -18,6 +18,13 @@ import { Message } from '@/types/messaging',;
 interface MessageBubbleProps {;
   message: Message,;
   isUserMessage: boolean;
+<<<<<<< HEAD
+
+
+}
+}
+}
+=======
 
   message: Message
 
@@ -58,6 +65,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {}
             <PaperclipIcon className="h-3 w-3 mr-1" />
 '
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="text-xs opacity-70 text-right mt-1">
 
           {format(new Date(message.created_at), 'h:mm a')}
@@ -106,7 +114,16 @@ function MessageBubble() {}
           {format (new Date (message.created_at), 'h:mm a')}
         </div>;
       </div>;
-    </div>);
+    </div>;
+  ),;}
+ export function MessageBubble ({
+  message, isUserMessage 
+}: MessageBubbleProps) {
+  return (<div className= {
+  cn ({
+  message.attachment url && (<a href= {
+  message.attachment url 
+}target="blank" rel="noopener noreferrer" className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30" > </div> </div> </div>) 
 }
 
   message: Message,

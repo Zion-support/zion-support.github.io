@@ -57,6 +57,33 @@ const CommunityRoutes = () => {
 <<<<<<< HEAD
 =======const CommunityRoutes = () => {
   return (
+    <Routes>
+      {/* Public routes */}
+      <Route path="/community" element={<CommunityPage />} />
+      <Route path="/forum" element={<CommunityPage />} />
+      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
+      <Route path="/community/post/:postId" element={<ForumPostPage />} />
+      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+const CommunityRoutes = () => {
+const CommunityRoutes = () => {;
+  return (
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "../components/ProtectedRoute",;
+import CommunityPage from "../pages/CommunityPage",;
+import ForumCategoryPage from "../pages/ForumCategoryPage",;
+import ForumPostPage from "../pages/ForumPostPage",;
+import CreatePostPage from "../pages/CreatePostPage",;
+import EditPostPage from "../pages/EditPostPage",;
+import CommunityProfilePage from "../pages/CommunityProfilePage",;
+;
+const CommunityRoutes = () => {;
+  return (;
     <Routes>;
       {/* Public routes */}
       <Route path=/community" element={<CommunityPage />} />
@@ -112,12 +139,22 @@ const CommunityRoutes = () => {;
   return (;
     <Routes>;
       {/* Public routes */}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Route path="/community" element={<CommunityPage />} />;
       <Route path="/forum" element={<CommunityPage />} />;
       <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />;
       <Route path="/community/post/:postId" element={<ForumPostPage />} />;
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />;
+<<<<<<< HEAD
+      ;
+      {/* Protected routes */}
+      <Route;
+        path="/community/create";
+        element={;
+=======
 
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
@@ -147,6 +184,64 @@ const CommunityRoutes = () =>: any {}
 
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
+      />;
+    </Routes>;
+},;
+export default CommunityRoutes;
+
+
+};
+      />;
+    </Routes>);
+}
+;
+export default CommunityRoutes;
+;
+  ),;
+},;
+;export default CommunityRoutes,
+ const CommunityRoutes = () => {
+  return (<Routes> {
+  /* Public routes */ 
+}<Route path="/community" element= {
+  <CommunityPage /> 
+}/> <Route path="/forum" element= {
+  <CommunityPage /> 
+}/> <Route path="/community/category/:categoryId" element= {
+  <ForumCategoryPage /> 
+}/> <Route path="/community/post/:postId" element= {
+  <ForumPostPage /> 
+}/> <Route path="/community/profile/:userId" element= {
+  <CommunityProfilePage /> 
+}/> /* Protected routes */ 
+}<Route <CreatePostPage /> </ProtectedRoute> 
+}/> <Route <EditPostPage /> </ProtectedRoute> 
+}/> </Routes>) 
+};
+export default CommunityRoutes;
+      {/* Protected routes */}
+      <Route
+        path="/community/create"
+        element={
+          <ProtectedRoute>
+            <CreatePostPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/community/edit/:postId"
+        element={
+          <ProtectedRoute>
+            <EditPostPage />
+          </ProtectedRoute>
+        }
+      />;
+    </Routes>;
+  );
+},;
+export default CommunityRoutes;
+=======
 
       />;
     </Routes>;

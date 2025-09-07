@@ -60,14 +60,27 @@ export function useSavedTalents() {};
         const { data: savedData, error: savedError } = await supabase
           .from('saved_talents')
           .select('talent_id')
+<<<<<<< HEAD
+          .eq('user_id', userDetails && userDetails.id);
+=======
 
           .eq('user_id', userDetails && userDetails.id);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         if (savedError) throw savedError;
 >>>>>>> origin/chore/fix-lint-and-merge
         if (savedData) {
           const talentIds = savedData && savedData.map(item => item && item.talent_id);
           setSavedTalentIds(talentIds);
+<<<<<<< HEAD
+          if (talentIds && talentIds.length > 0) {
+          .eq('user_id', userDetails.id);
+        if (savedError) throw savedError;
+        if (savedData) {
+          const talentIds = savedData.map(item => item.talent_id);
+          setSavedTalentIds(talentIds);
+          if (talentIds.length > 0) {
+=======
 
             // Fetch full talent profiles for saved talents;
             const { data: talentData, error: talentError } = await supabase'
@@ -199,16 +212,35 @@ if ( {) {}
       } catch (error) {
         console.error('Error fetching saved talents:', error),
         toast({
+<<<<<<< HEAD
+          title: "Error loading favorites",
+          description: "There was a problem loading your saved talents.",
+
+          title: "Error loading favorites";
+          description: "There was a problem loading your saved talents."
+          title: "Error loading favorites",
+          description: "There was a problem loading your saved talents.",
+=======
 
           title: "Error loading favorites",
           description: "There was a problem loading your saved talents.",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           variant: "destructive"
         })
       } finally {
         setIsLoading(false)
       }
 
+<<<<<<< HEAD
+    }
+    fetchSavedTalents()
+  }, [isAuthenticated, userDetails.id]);
+    }
+    fetchSavedTalents()
+  }, [isAuthenticated, userDetails.id]);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     
     fetchSavedTalents()
@@ -218,7 +250,6 @@ if ( {) {}
   const toggleSaveTalent = async (talent: TalentProfile) => {
     if (!isAuthenticated |!userDetails.id |!talent.id) {
   }, [isAuthenticated, userDetails && userDetails.id]);
-
   // Toggle save talent
   const toggleSaveTalent = async (talent: TalentProfile) => {
     if (!isAuthenticated || !userDetails && userDetails.id || !talent && talent.id) {
@@ -262,6 +293,26 @@ if ( {) {
     
     const isSaved = savedTalentIds.includes(talent.id),
 
+<<<<<<< HEAD
+    const isSaved = savedTalentIds && savedTalentIds.includes(talent && talent.id);
+  // Toggle save talent
+  const toggleSaveTalent = async (talent: TalentProfile) => {
+    if (!isAuthenticated |!userDetails.id |!talent.id) {
+      toast({
+        title: "Authentication required";
+        description: "Please log in to save talents to your favorites"
+        title: "Authentication required",
+        description: "Please log in to save talents to your favorites",
+        variant: "destructive"
+      }),
+      return
+    }
+    const isSaved = savedTalentIds.includes(talent.id);
+    
+    const isSaved = savedTalentIds.includes(talent.id),
+    
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
 
       if (isSaved) {
@@ -270,6 +321,7 @@ if ( {) {
 
           .from('saved_talents')
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           .eq('talent_id', talent.id),
           
         if (error) throw error,
@@ -295,6 +347,8 @@ if ( {) {
           .from('saved_talents')
 >>>>>>> origin/chore/fix-lint-and-merge
           .insert({
+<<<<<<< HEAD
+=======
 
             talent_id: talent && talent.id});
 
@@ -322,6 +376,13 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
+    return savedTalentIds && savedTalentIds.includes(talentId)
+  };
+    return savedTalentIds.includes(talentId)
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return {
 
     savedTalents;

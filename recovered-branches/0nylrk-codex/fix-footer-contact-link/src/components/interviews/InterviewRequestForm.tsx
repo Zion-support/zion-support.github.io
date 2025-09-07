@@ -127,6 +127,9 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
         description: `Your interview request with ${talent.full_name} has been sent.`})
       onClose()
     } catch (error) {
+<<<<<<< HEAD
+      console.error("Failed to schedule interview:", error),
+=======
       console.error("Failed to schedule interview:", error);
       console.error("Failed to schedule interview:", error),
       toast({
@@ -241,6 +244,11 @@ if ( {) {}
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
+<<<<<<< HEAD
+=======
 
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ]
@@ -581,6 +589,18 @@ export function InterviewRequestForm() { return null; }
 
                       selected={field.value}
                       onSelect={field.onChange}
+<<<<<<< HEAD
+                    <Calendar;
+                      mode="single";
+                      selected={field.value}
+                      onSelect={field.onChange}
+                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+                      className="p-3 pointer-events-auto";
+                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+                      className="p-3 pointer-events-auto";
+=======
 
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
@@ -592,6 +612,18 @@ export function InterviewRequestForm() { return null; }
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
+<<<<<<< HEAD
+              </FormItem>;            )}
+          />;
+;
+          <FormField;
+            control={form.control}
+            name="time";
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Time</FormLabel>;
+                <Select onValueChange={field.onChange} defaultValue={field.value}>;
+=======
 
             )}
           />;
@@ -621,6 +653,8 @@ export function InterviewRequestForm() { return null; }
                       <SelectValue placeholder="Select time" />;
                     </SelectTrigger>;
                   </FormControl>;
+<<<<<<< HEAD
+=======
 
             name="duration"
             render={({ field }) => (;
@@ -750,6 +784,9 @@ export function InterviewRequestForm() { return null; }
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
+<<<<<<< HEAD
+          />;
+=======
 
             name="platform"
             render={({ field }) => (;
@@ -761,6 +798,80 @@ export function InterviewRequestForm() { return null; }
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
+<<<<<<< HEAD
+          />;
+        </div>;
+        {form && form.watch('platform') !== 'in-app' && (;
+          <FormField
+            control={form && form.control}
+            name="meetingLink"
+                  <SelectContent className="max-h-[300px]">;
+                    {timeSlots.map((time) => (;
+                      <SelectItem key={time} value={time}>;
+                        {time}
+                      </SelectItem>;                    ))}
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>;
+            )}
+          />;
+        </div>;
+;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <FormField;
+            control={form.control}
+            name="duration";
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Duration</FormLabel>;
+                <Select onValueChange={field.onChange} defaultValue={field.value}>;
+                  <FormControl>;
+                    <SelectTrigger>;
+                      <SelectValue placeholder="Select duration" />;
+                    </SelectTrigger>;
+                  </FormControl>;
+                  <SelectContent>;
+                    <SelectItem value="15">15 minutes</SelectItem>;
+                    <SelectItem value="30">30 minutes</SelectItem>;
+                    <SelectItem value="45">45 minutes</SelectItem>;
+                    <SelectItem value="60">60 minutes</SelectItem>;
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>;            )}
+          />;
+;
+          <FormField;
+            control={form.control}
+            name="platform";
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Platform</FormLabel>;
+                <Select onValueChange={field.onChange} defaultValue={field.value}>;
+                  <FormControl>;
+                    <SelectTrigger>;
+                      <SelectValue placeholder="Select platform" />;
+                    </SelectTrigger>;
+                  </FormControl>;
+                  <SelectContent>;
+                    <SelectItem value="zoom">Zoom</SelectItem>;
+                    <SelectItem value="google-meet">Google Meet</SelectItem>;
+                    <SelectItem value="teams">Microsoft Teams</SelectItem>;
+                    <SelectItem value="other">Other</SelectItem>;
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>;
+            )}
+          />;
+        </div>;
+;
+        {form.watch('platform') !== 'in-app' && (;
+          <FormField;
+            control={form.control}
+            name="meetingLink";
+=======
 
             render={({ field }) => (;
               <FormItem>;
@@ -771,7 +882,87 @@ export function InterviewRequestForm() { return null; }
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
+              </FormItem>;
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="time"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Time</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select time" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent className="max-h-[300px]">
+                    {timeSlots.map((time) => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="duration"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Duration</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select duration" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="15">15 minutes</SelectItem>
+                    <SelectItem value="30">30 minutes</SelectItem>
+                    <SelectItem value="45">45 minutes</SelectItem>
+                    <SelectItem value="60">60 minutes</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="platform"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Platform</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select platform" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="zoom">Zoom</SelectItem>
+                    <SelectItem value="google-meet">Google Meet</SelectItem>
+                    <SelectItem value="teams">Microsoft Teams</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        {form.watch('platform') !== 'in-app' && (
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <FormField
             control={form.control}
 

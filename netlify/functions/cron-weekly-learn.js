@@ -144,6 +144,8 @@ completions: Object.values(users).reduce(
         });
         return map;
       }, {}),
+<<<<<<< HEAD
+=======
 
         content,
 
@@ -151,6 +153,8 @@ completions: Object.values(users).reduce(
         token,
       });
     }
+<<<<<<< HEAD
+=======
 
         users: Object.keys(users).length,
         courses: courses.length,
@@ -187,7 +191,6 @@ pr-12325
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
-
     const content = JSON && JSON.stringify(summary, null, 2),
     if (owner && repo && token) {'
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })

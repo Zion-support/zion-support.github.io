@@ -357,6 +357,7 @@ pr-12243
           }
         >
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }
         >'
           <option value=''>All Stages</option>
@@ -386,6 +387,33 @@ pr-12243
         />
         <select'
           className='border rounded p-2'
+<<<<<<< HEAD
+          value={filters.program |''}
+          onChange={e =>
+            setFilters(f => ({ ...f, program: e.target.value |undefined }))
+          }
+        >
+          <option value=''>All Programs</option>
+          <option value='grant'>Grant</option>
+          <option value='incubator'>Incubator</option>
+        </select>
+      </div>
+      <div className='grid gap-4'>
+        {items.map(g => (
+          <div
+            key={g.id}
+            className='border rounded p-4 bg-white/70 dark:bg-black/40'
+          >
+            <div className='flex items-center justify-between'>
+              <div>
+                <h3 className='text-lg font-medium'>
+                  <Link href={`/grants/${g.id}`}>
+                    <a>{g.projectName}</a>
+                  </Link>
+                </h3>
+                <div className='text-xs text-gray-600 dark:text-gray-400'>
+                  {g.sector |'General'} • {g.region |'Global'} •{' '}
+=======
 
       <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
         <select;

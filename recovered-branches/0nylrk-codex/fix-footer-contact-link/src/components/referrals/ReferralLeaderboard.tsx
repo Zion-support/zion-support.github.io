@@ -16,6 +16,64 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 import {
 
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Award} from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from "lucide-react",
+
+<<<<<<< HEAD
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+
+import { Award } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from "lucide-react",
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Award} from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from "lucide-react",
+interface LeaderboardEntry {
+  rank: number;
+  name: string;
+  referrals: number
+export /**
+ * ReferralLeaderboard - Function description
+ */
+function ReferralLeaderboard() {
+  // This would typically be fetched from the server;
+  // For now, we'll use mock data;
+  const leaderboard_data: LeaderboardEntry[] = [;
+    { rank: 1, name: "Alex Johnson", referrals: 24 },
+    { rank: 2, name: "Jamie Smith", referrals: 18 },
+    { rank: 3, name: "Taylor Wong", referrals: 15 },
+    { rank: 4, name: "Casey Brown", referrals: 12 },
+    { rank: 5, name: "Jordan Lee", referrals: 10 },
+  ];
+;
+  return (
+    <Card>;
+      <CardHeader>;
+        <CardTitle className="flex items - center gap - 2">;
+          <Award className="h - 5 w - 5" />;
+          Leaderboard;
+        </CardTitle>;
+        <CardDescription > Top referrers this month</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="space - y-2">;
+          {leaderboard_data.map ((entry) => (
+            <div;
+              key={entry.rank}
+
+import {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Card,
   CardContent,
   CardDescription,
@@ -90,7 +148,11 @@ interface LeaderboardEntry {;
   name: string,;
   referrals: number;
 }
+<<<<<<< HEAD
+;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ReferralLeaderboard() {;
   // This would typically be fetched from the server;
   // For now, we'll use mock data;

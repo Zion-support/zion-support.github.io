@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+
+
+
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  output: 'export',
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  reactStrictMode: true
+  compress: true
+  poweredByHeader: false
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,

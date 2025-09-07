@@ -82,9 +82,12 @@ export interface TalentCardProps {;
   onToggleSave: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean;
 }
+<<<<<<< HEAD
+=======
 
 export function TalentCard(): any ({;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   talent;
   onViewProfile;
   onRequestHire;
@@ -99,12 +102,16 @@ export function TalentCard(): any ({;
     // Navigate directly to the talent profile;`
     navigate(`/talent/${talent && talent.id}`);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Also call the onViewProfile callback if provided;
     if (onViewProfile) {;
       onViewProfile(talent && talent.id);
     }
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleRequestHire = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
@@ -112,7 +119,10 @@ export function TalentCard(): any ({;
       onRequestHire(talent);
     }
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     if (onToggleSave) {;
       onToggleSave(talent && talent.id, !isSaved);
@@ -137,6 +147,9 @@ export function TalentCard(): any ({;
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
               </div>;
             )}
+<<<<<<< HEAD
+          </div>;
+=======
 
                 onClick={handleToggleSave}>;
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;
@@ -163,17 +176,37 @@ export function TalentCard(): any ({;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
 
               )}
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
+;
+        {/* Hourly Rate & Actions */}
+        <div className="mt-5 flex items-center justify-between">;
+          <div>;
+            {talent.hourly_rate ? (;
+              <div className="text-white font-bold">;
+                ${talent.hourly_rate}
+=======
 
 "
                 <span className="text-zion-slate-light font-normal">/hr</span>;
               </div>;
             ) : (;"
               <div className="text-zion-slate-light">Rate not specified</div>;
+<<<<<<< HEAD
+          </div>;
+          <div className="flex items-center gap-2">;
+            {isAuthenticated && (;
+            )}
+          </div>
+          <div className="flex items-center gap-2">
+            {isAuthenticated && (
+=======
 
             )}
 

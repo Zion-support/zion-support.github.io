@@ -21,6 +21,26 @@ import { ChatAssistant } from "@/components/ChatAssistant",
 export function ChatAssistantTrigger() {}
   const [isOpen, setIsOpen] = useState(false),
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {MessageSquare} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {ChatAssistant} from "@/components/ChatAssistant";
+export function ChatAssistantTrigger() {;
+  const [isOpen, setIsOpen] = useState(false);
+import { useState } from "react",
+import { MessageSquare } from "lucide-react",
+import { Button } from "@/components/ui/button";
+import { ChatAssistant } from "@/components/ChatAssistant";
+export function ChatAssistantTrigger() {
+  const [isOpen, setIsOpen] = useState(false);
+import { Button } from "@/components/ui/button",
+import { ChatAssistant } from "@/components/ChatAssistant",
+export function ChatAssistantTrigger() {
+  const [isOpen, setIsOpen] = useState(false),
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle sending messages to the AI chat assistant
 
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -34,11 +54,22 @@ export function ChatAssistantTrigger() {}
           messages: [{ role: "user", content: message }] 
         })}),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
       return Promise.resolve()
     } catch (error) {
+<<<<<<< HEAD
+
+      console.error("Error in AI chat:", error),
+      return Promise.resolve()
+    }
+  }
+  return (
+    <>
+      <Button
+=======
       console.error("Error in AI chat:", error);
       return Promise.resolve()
 
@@ -58,6 +89,11 @@ import {ChatAssistant} from "@/components/ChatAssistant";
           onSendMessage={handleSendMessage}
         />;
       )}
+<<<<<<< HEAD
+    </>;
+  );
+}
+=======
 
     </>;
   );

@@ -8,6 +8,7 @@ new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
 interface QuoteStatusBadgeProps {
 
   status: QuoteStatus
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
 

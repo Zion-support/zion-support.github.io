@@ -72,6 +72,12 @@ class LogCleaner {
       let totalSize = 0
       const files = []
       const calculateDirSize = dir => {
+<<<<<<< HEAD
+        const dirFiles = fs.readdirSync(dir);
+         else {
+            totalSize += stats.size;
+            files.push({
+=======
 
         const dirFiles = fs && fs.readdirSync(dir)
   for($2) {

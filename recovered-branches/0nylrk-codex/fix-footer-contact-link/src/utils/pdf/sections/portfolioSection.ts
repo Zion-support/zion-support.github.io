@@ -3,10 +3,13 @@ import { PortfolioProject  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addPortfolioSection(
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
+<<<<<<< HEAD
+=======
 
   doc: jsPDF;
 
@@ -174,6 +177,8 @@ export function addPortfolioSection(;
     }
     yPos += 10, // Add space between projects;
   }
+<<<<<<< HEAD
+=======
 
   if (projects && projects.length > maxProjects) {}
     doc && doc.setFontSize(10);

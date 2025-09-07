@@ -3,6 +3,19 @@ import {useNavigate, useLocation} from 'react-router-dom';"
 import {useAuthState} from "./useAuthState";"
 import {useAuthEventHandlers} from "./useAuthEventHandlers";"
 import {mapProfileToUser} from "./profileMapper";
+<<<<<<< HEAD
+import React, { useEffect } from "react",;
+import { supabase, getFromProfiles } from "../../integrations/supabase/client",;
+import { useAuthOperations } from "../../hooks/useAuthOperations",;
+import { AuthContext } from "./AuthContext",;
+import { cleanupAuthState } from "../../utils/authUtils",;
+import { useNavigate, useLocation } from 'react-router-dom',;
+import { useAuthState } from "./useAuthState",;
+import { useAuthEventHandlers } from "./useAuthEventHandlers",;
+import { mapProfileToUser } from "./profileMapper",;
+;
+export const AuthProvider = ({ children } { children:React.ReactNode }) => {;
+=======
 
     user, setUser, ;
     isLoading, setIsLoading, ;
@@ -19,6 +32,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     login: loginImpl,;
     signup: signupImpl,;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     logout;
     resetPassword;
     updateProfile;
@@ -57,6 +71,7 @@ import { useNavigate, useLocation } from 'react-router-dom',
 import { useAuthState } from "./useAuthState",
 import { useAuthEventHandlers } from "./useAuthEventHandlers",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const { 
@@ -115,6 +130,7 @@ const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnb
               const mappedUser = mapProfileToUser(session.user, profile),
               setUser(mappedUser),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               // Show welcome toast when user logs in
 
               if (event === 'SIGNED_IN') {
@@ -146,6 +162,7 @@ export const AuthProvider = ({ children }: { "children": React.ReactNode }) => {
           if (event === 'SIGNED_OUT') {
             handleSignedOut()
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect } from "react",;
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",;
 import { useAuthOperations } from "../../hooks/useAuthOperations",;
@@ -289,7 +306,10 @@ pr-12325
     loginWithTwitter,;
     loginWithWeb3;
   } = useAuthOperations(setUser, setIsLoading),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Wrapper for login to match the AuthContextType interface;
   const login = async (email: string, password: string) => {;
     return loginImpl({ email, password });
@@ -343,6 +363,8 @@ pr-12325
         setIsLoading(false);
       }
     });
+<<<<<<< HEAD
+=======
 
       }
     });
@@ -351,12 +373,49 @@ pr-12325
       subscription && subscription.unsubscribe();
     }
   }, [navigate]);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const authContextValue = {;
     user;
     isLoading;
     isAuthenticated: !!user,;
+<<<<<<< HEAD
+              console.error("Error fetching user profile:", error),;
+              setUser(null);
+            }
+          } catch (error) {;
+            console.error("Error fetching user profile:", error),;
+            setUser(null);
+          }
+        } else {;
+          setUser(null),;
+          // Show logout toast when user logs out;
+          if (event === 'SIGNED_OUT') {;
+            handleSignedOut();
+          }
+        }
+        setIsLoading(false)
+      }
+    );
+    // Initial session check
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) {
+        setIsLoading(false)
+      }
+    });
+    return () => {
+      subscription.unsubscribe()
+    }
+  }, [navigate]);
+  const authContextValue = {
+    user;
+    isLoading;
+    isAuthenticated: !!user
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     login;
     signup;
     logout;
@@ -394,7 +453,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
     loginWithFacebook;
     loginWithTwitter;
     loginWithWeb3;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     onboardingStep;
   };
 
@@ -730,6 +792,8 @@ if (event === 'SIGNEDOUT') {
     </AuthContext.Provider>;
 
 };
+<<<<<<< HEAD
+=======
 
   ),;},
  export const AuthProvider = ({

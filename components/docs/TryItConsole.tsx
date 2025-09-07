@@ -5,6 +5,7 @@ interface TryItProps  {path: string; // full URL or relative;
 export default function TryItConsole() {const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';}
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -206,6 +207,7 @@ className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high
           <input;
 <<<<<<< HEAD
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
         </div>

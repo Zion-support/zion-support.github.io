@@ -4,12 +4,15 @@ import { Education  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useEducation() {;
+<<<<<<< HEAD
+=======
 
   const { user } = useAuth();
 
@@ -26,6 +29,7 @@ export function useEducation() { return null; }
   const [error, setError] = useState<string | null>(null),;
   const addEducation = async (resumeId: string, education: Education): Promise<boolean> => {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
     setIsLoading(true),
@@ -35,6 +39,22 @@ export function useEducation() { return null; }
       const { error } = await supabase
         .from('education')
         .insert({
+<<<<<<< HEAD
+          institution: education && education.institution;
+
+          resume_id: resumeId;
+          institution: education.institution;
+          degree: education.degree;
+          field_of_study: education.field_of_study;
+          start_date: formatDateForDB(education.start_date);
+          end_date: education.is_current ? null : formatDateForDB(education.end_date);
+          is_current: education.is_current;
+          description: education.description;
+          institution_logo_url: education.institution_logo_url
+          location: education.location
+        });
+      if (error) throw error;
+=======
 
       return showSuccessToast("Education added", "Your education has been added to your resume")
     } catch (e: any) {'
@@ -237,7 +257,10 @@ export function useEducation() {;
         .from('education')
 >>>>>>> origin/chore/fix-lint-and-merge
         .update({
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           institution: education && education.institution;
           degree: education && education.degree;
           field_of_study: education && education.field_of_study;
@@ -247,6 +270,7 @@ export function useEducation() {;
           description: education && education.description;
           institution_logo_url: education && education.institution_logo_url,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           institution: education.institution,
           degree: education.degree,
           field_of_study: education.field_of_study,
@@ -412,6 +436,7 @@ if ( {) {}
   $2;
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   return {;
     isLoading,;
@@ -419,6 +444,8 @@ if ( {) {}
     addEducation;
     updateEducation;
     deleteEducation;
+<<<<<<< HEAD
+=======
 
   }
 }

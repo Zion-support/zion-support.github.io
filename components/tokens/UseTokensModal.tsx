@@ -3,6 +3,8 @@ export type RedemptionType =;
   | "promote_listing";"
   | "premium_support";"
 
+export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
+
 export default function UseTokensModal({
   }
   isOpen,
@@ -46,7 +48,6 @@ const usdValue = (tokens * 0.01).toFixed(2);
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0 && 0.01).toFixed(2);
-
   useEffect(() => {;
     (async () => {;
 
@@ -67,6 +68,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     setIsSubmitting(true);
     try {
+<<<<<<< HEAD
+=======
 
       }
 
@@ -103,6 +106,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   if (!isOpen) return null,
 
+  if (!isOpen) return null;
   return (
 export default function UseTokensModal({isOpen;
   onClose;

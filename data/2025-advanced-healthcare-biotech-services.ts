@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+import { ServiceVariant } from '../types/service-variants';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 import { ServiceVariant  } from '../types/service-variants';'
@@ -1470,7 +1475,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.';,
       competitors: [
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
       ],
       marketSize: '$45 && 45.8B AI drug discovery market';,
@@ -1505,7 +1513,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growth_rate: '35% annual growth';,
       variant: 'ai - drug - discovery - enterprise';,
       contact_info: {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1532,6 +1543,8 @@ pr-12325
       rating: 4 && 4.9;,
       reviews: 12;,
     },
+<<<<<<< HEAD
+=======
 
     // Precision Medicine & Genomics Platform;
     {
@@ -1543,6 +1556,8 @@ pr-12325
       description:;
         'Comprehensive precision medicine platform that combines genomic analysis, AI - powered diagnostics, and personalized treatment recommendations for improved patient outcomes.',
       features: [;
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
         'Whole genome sequencing and analysis',
@@ -1621,7 +1636,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.';,
       competitors: [
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
       ],
       marketSize: '$78 && 78.6B precision medicine market';,
@@ -1656,7 +1674,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growth_rate: '28% annual growth';,
       variant: 'precision - medicine - enterprise';,
       contact_info: {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1680,7 +1701,10 @@ pr-12325
       rating: 4 && 4.8;,
       reviews: 23;,
     },
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'AI-powered image analysis and diagnosis',
         'Multi-modality support (X-ray, MRI, CT, Ultrasound)',
     // AI - Powered Medical Imaging Analysis;
@@ -1695,6 +1719,8 @@ pr-12325
       features: [;
         'AI - powered image analysis and diagnosis',
         'Multi - modality support (X - ray, MRI, CT, Ultrasound)',
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
@@ -1769,6 +1795,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms',
       ],
       useCases: [
+<<<<<<< HEAD
+=======
 
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
@@ -1791,7 +1819,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms',
       ],
       use_cases: [;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance',
       ],
       roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',
@@ -1807,7 +1838,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growth_rate: '42% annual growth';,
       variant: 'ai - imaging - enterprise';,
       contact_info: {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1869,6 +1903,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',
       features: [;
         'High - quality video consultations',
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
       description: 'Integrated digital health platform that provides telemedicine;, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',
@@ -1914,7 +1950,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Epic, Cerner, Allscripts, Practice management systems, Insurance systems',
       ],
       useCases: [
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management',
       ],
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.';,
@@ -1949,7 +1988,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growth_rate: '25% annual growth';,
       variant: 'digital - health - enterprise';,
       contact_info: {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1992,6 +2034,8 @@ pr-12325
         'Advanced clinical trial platform that uses AI to optimize trial design, patient recruitment, data collection, and analysis for faster, more efficient clinical research.',
       features: [;
         'AI - powered trial design optimization',
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
         'Intelligent patient recruitment and matching',
@@ -2071,7 +2115,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.';,
       competitors: [
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel',
       ],
       marketSize: '$67 && 67.2B clinical trial market';,
@@ -2486,11 +2533,15 @@ pr-12325
     market_size: '$67.2B clinical trial market';, growth_rate: '18% annual growth';,
     variant: 'clinical - trial - enterprise';,
     contact_info: {
+<<<<<<< HEAD
+=======
 
       mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
       address: '364 E Main St STE 1008 Middletown DE 19709';,
       website: 'https://ziontechgroup.com';
     },
+<<<<<<< HEAD
+=======
 
     popular: true;, icon: '🔬';,
     color: 'from-orange-600 to-red-600';, textColor: 'text-orange-400';,
@@ -2501,6 +2552,7 @@ pr-12325
     category: 'Clinical Research & Trials';, realService: true;,
     technology: ['Python;, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software'];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'];
     useCases: ['Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'];
     roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'

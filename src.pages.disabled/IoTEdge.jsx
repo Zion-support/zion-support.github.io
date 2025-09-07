@@ -32,6 +32,7 @@ interface IoTEdgeProps {
 
 }
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function IoTEdge({ }: IoTEdgeProps) {
   return (
     <div>

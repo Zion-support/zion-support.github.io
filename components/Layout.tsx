@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -18,6 +20,24 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+
+
+
+
+
+origin/automation-improvements-final
 
 import React from "react";
 import Head from "next/head";

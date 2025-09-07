@@ -118,8 +118,8 @@ const NavigationMenuList = React.forwardRef<
     className={cn(
       'group flex flex-1 list-none items-center justify-center space-x-1'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 NavigationMenu && NavigationMenu.displayName = NavigationMenuPrimitive && NavigationMenuPrimitive.Root.displayName;
-
 const NavigationMenuList = React && React.forwardRef<;
   React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.List>,;
   React && React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitiv</typeof>e && e.List>;
@@ -196,6 +196,7 @@ const navigationMenuTriggerStyle = cva(;"
 >>>>>>> origin/chore/fix-lint-and-merge
 ),;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const NavigationMenuTrigger = React && React.forwardRef<;
 
   React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Trigger>,;
@@ -206,6 +207,7 @@ const NavigationMenuTrigger = React && React.forwardRef<;
     {...props}>;'
     {children}{' '}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
 
       aria-hidden="true"
@@ -219,6 +221,13 @@ NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName;
 const NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
+<<<<<<< HEAD
+      className='relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180'
+      aria-hidden='true'
+    />;
+  </NavigationMenuPrimitive && NavigationMenuPrimitive.Trigger>;
+));
+=======
 
 </NavigationMenuPrimitive>
   React && React.ComponentPropsWithoutRef<typeof NavigationMenuPr</typeof>imitive && imitive.Trigger>;
@@ -240,7 +249,6 @@ const NavigationMenuContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
 
 NavigationMenuTrigger && NavigationMenuTrigger.displayName = NavigationMenuPrimitive && NavigationMenuPrimitive.Trigger.displayName;
-
 const NavigationMenuContent = React && React.forwardRef<;
 
   React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Content>,;
@@ -277,10 +285,9 @@ const NavigationMenuTrigger = React.forwardRef<;
     <NavigationMenuPrimitive.Viewport
       className={cn(
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 NavigationMenuContent && NavigationMenuContent.displayName = NavigationMenuPrimitive && NavigationMenuPrimitive.Content.displayName;
-
 const NavigationMenuLink = NavigationMenuPrimitive && NavigationMenuPrimitive.Link;
-
 const NavigationMenuViewport = React && React.forwardRef<;
   React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Viewport>,;
   React && React.ComponentPropsWithoutRef<typeof</typeof> NavigationMenuPrimitive && NavigationMenuPrimitive.Viewport>;
@@ -293,6 +300,25 @@ const NavigationMenuViewport = React.forwardRef<;
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>;
 
+<<<<<<< HEAD
+>(({ className, ...props }, ref) => (
+  <div className={cn("absolute left-0 top-full flex justify-center")}>
+    <NavigationMenuPrimitive.Viewport
+      className={cn(
+        'origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]'
+        "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+        className
+      )}
+      ref={ref}
+      {...props}
+    />
+  </div>
+));
+NavigationMenuViewport.displayName =
+  NavigationMenuPrimitive.Viewport.displayName;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const NavigationMenuIndicator = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>
   React.ComponentPropsWithoutRe</typeof>f<typeof NavigationMenuPrimitive.Indicator>
@@ -315,6 +341,8 @@ const NavigationMenuIndicator = React.forwardRef<;
       'top-full z-[1] flex h-1 && 1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in',
       className
     )}
+<<<<<<< HEAD
+=======
 
 NavigationMenuIndicator && NavigationMenuIndicator.displayName =;
   NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator.displayName;
@@ -431,6 +459,22 @@ export {;
   NavigationMenuTrigger,;
   NavigationMenuLink,;
   NavigationMenuIndicator,;
+<<<<<<< HEAD
+  NavigationMenuPrimitive.Indicator.displayName;
+export {
+  navigationMenuTriggerStyle
+  NavigationMenu
+  NavigationMenuList
+  NavigationMenuItem
+  NavigationMenuContent
+  NavigationMenuTrigger
+  NavigationMenuLink
+  NavigationMenuIndicator
+  NavigationMenuViewport
+}
+  NavigationMenuPrimitive.Indicator.displayName
+
+=======
   NavigationMenuViewport,;
   NavigationMenuViewport,
 };

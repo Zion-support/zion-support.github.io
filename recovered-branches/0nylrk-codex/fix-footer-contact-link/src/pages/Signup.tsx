@@ -69,6 +69,13 @@ import {Footer} from "@/components/Footer";
     displayName: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email"),
 
+<<<<<<< HEAD
+    displayName: z.string().min(2, "Name must be at least 2 characters");
+    email: z.string().email("Please enter a valid email")
+    displayName: z.string().min(2, "Name must be at least 2 characters"),
+    email: z.string().email("Please enter a valid email"),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     password: z.string()
       .min(8, "Password must be at least 8 characters")
 
@@ -122,6 +129,7 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
       confirmPassword: ""
       termsAccepted: false}}) as UseFormReturn<SignupFormValues>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
 
       await signup(data.email, data.password, data.displayName)

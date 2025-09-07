@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { useAuth } from "@/context/auth/AuthProvider";
 import { AlertCircle } from 'lucide-react'
 import { Alert, AlertDescription } from "@/components/ui/alert";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
@@ -125,6 +126,14 @@ export function SignUpForm() {
           </svg>
           Continue with Google
         </Button>
+<<<<<<< HEAD
+        <Button
+          variant="outline"
+        <Button
+          variant="outline"
+        <Button 
+          variant="outline" 
+=======
 
         <Button 
           variant="outline" 
@@ -162,6 +171,7 @@ export function SignUpForm() {
       )}
       
       <form onSubmit={handleSubmit} className="space-y-4">
+ursor/fix-website-loading-errors-and-merge-6662
         {signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
@@ -179,6 +189,8 @@ export function SignUpForm() {
             )}
           </div>
         )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
@@ -216,6 +228,23 @@ export function SignUpForm() {
         </div>
         
         <Button
+<<<<<<< HEAD
+          className="w-full py-6"
+          disabled={isLoading}
+        >
+          {isLoading ? (
+            <>
+              <LoadingSpinner size="sm" className="mr-2" />
+              Please wait...
+            </>
+          ) : (
+            signupMode ? "Create Account" : "Sign In"
+          )}
+        </Button>
+      </form>
+ursor/fix-website-loading-errors-and-merge-6662
+      
+=======
           type="submit"
           className="w-full py-6"
           disabled={isLoading}
@@ -232,9 +261,9 @@ export function SignUpForm() {
       </form>
       
       <p className="text-center text-sm">
-        {signupMode
           ? "Already have an account? "
           : "Don't have an account? "
+        }
         }
         <Link
           href="/login"

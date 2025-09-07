@@ -8,6 +8,7 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Microscope, DollarSign, Home, Users, Briefcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   BookOpen, MessageCircle, Star, TrendingUp, Target;
 
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
@@ -69,6 +70,38 @@ const serviceCategories = []
     color: 'from - indigo - 600 via - blue - 600 to - cyan - 600','
     description: 'Quantum computing and beyond',
 
+<<<<<<< HEAD
+        name: 'Synthetic Biology Automation Platform'
+        href: '/synthetic-biology-automation-platform'
+        description: 'Automate biology research'
+        price: '$3,999/month'
+      }
+    ]
+  },];      { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' }
+      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Direct neural interface', price: '$1,299/month' }
+      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum-enhanced ML', price: '$2,999/month' }
+      { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
+    ]
+  }
+        name: 'Synthetic Biology Automation Platform',
+        href: '/synthetic-biology-automation-platform',
+        description: 'Automate biology research',
+        price: '$3,999/month',
+      },
+    ],
+  },];      { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' },
+      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Direct neural interface', price: '$1,299/month' };
+      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum-enhanced ML', price: '$2,999/month' };
+      { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
+    ]
+  }
+
+];
+
+];
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -471,6 +504,8 @@ key={item.name}
                   <span>Services</span>;'
                   <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform' />;
                 </button>;
+<<<<<<< HEAD
+=======
 
 
                 {/* Mega Menu */}'
@@ -547,6 +582,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>'
                     </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              <Link href="/contact">
+                <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* CTA Buttons */}
 <div className='hidden "lg":flex items-center space-x-4'>'
               <Link href='/contact'>'
@@ -830,6 +873,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 key={serviceIndex}
                                 href={service && service.href}
                                 onClick={closeMenu}
+<<<<<<< HEAD
+                                className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1'                              >                                className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1"
+                              >
+                                {service.name}
+                              </Link>
+=======
 
 className='block text-sm text-gray-400 "hover": text-cyan-400 transition-colors py-1''
                               >
@@ -850,6 +899,8 @@ key={serviceIndex}
                       </div>
                     )}
                   </div>
+<<<<<<< HEAD
+=======
 
                   {/* Company Links */}
                   <div className="pt-4 border-t border-gray-700/50">

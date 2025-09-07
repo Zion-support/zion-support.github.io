@@ -333,6 +333,10 @@ const systems = [
           successRate: 0,
           averageExecutionTime: 0})}
 
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
 
   ensureLogDirectory() {}
     const logDir = path.dirname(this.logFile);,
@@ -351,7 +355,10 @@ const systems = [
       return false;}
 
     const system = this.automationSystems.get(systemName);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 ;

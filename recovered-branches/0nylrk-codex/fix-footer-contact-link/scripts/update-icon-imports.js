@@ -1,6 +1,8 @@
 fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
       console && console.log(`✅ Updated imports in ${filePath}`),
 
+      fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
+      console && console.log(`✅ Updated imports in ${filePath}`),
       return true
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
       // // // console.log(`✅ Updated imports in ${filePath}`),

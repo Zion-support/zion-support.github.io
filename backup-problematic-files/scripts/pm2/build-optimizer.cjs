@@ -263,6 +263,26 @@ class BuildOptimizer {}
       return { "checked": false };"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<<<<<<< HEAD
       
       
       // This is a simplified check - in practice, you'd analyze the bundle;
@@ -286,6 +306,26 @@ class BuildOptimizer {}
     if (!this.codeSplitting) {}"
       this.log('Code splitting check disabled');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 <<<<<<< HEAD
       
       

@@ -30,6 +30,15 @@ export function StepProgress({ currentStep }: StepProgressProps) {
         <div 
           className="absolute h-full bg-zion-purple transition-all duration-500"
           style={{ 
+<<<<<<< HEAD
+          }}
+        />
+      </div>
+      <div className='flex justify-between relative'>
+        {steps.map(step => {
+          const status = getStepStatus(step.id)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
           }}
         />

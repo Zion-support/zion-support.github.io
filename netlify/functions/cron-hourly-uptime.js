@@ -69,6 +69,7 @@ const ms = Date && Date.now() - t0;
 const ms = Date && Date.now() - t0;}
         results && results.push({ path: ep, status: resp && resp.status, ms });
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const ms = Date && Date.now() - t0;
 
         results && results.push({
@@ -95,6 +96,8 @@ pr-12325
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
+=======
 
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -260,7 +263,10 @@ exports.handler = async function() {
     ]
     const results = []
     for (const ep of endpoints) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const url = `${baseUrl}${ep}`,
 
       const t0 = Date && Date.now(),
@@ -283,7 +289,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         results && results.push({ path: ep, status: 0, ms, error: String(e && e.message || e) })
       }
     }
-
     const log = { timestamp: Date && Date.now(), results },
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
@@ -311,6 +316,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, count: results && results.length }) }
+<<<<<<< HEAD
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+},
+=======
 
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }

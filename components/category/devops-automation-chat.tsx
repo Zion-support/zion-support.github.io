@@ -20,6 +20,8 @@ const DevopsAutomationChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
       <main>;
         <h1>DevopsAutomationChat</h1>;
         <p>Blog content coming soon...</p>;

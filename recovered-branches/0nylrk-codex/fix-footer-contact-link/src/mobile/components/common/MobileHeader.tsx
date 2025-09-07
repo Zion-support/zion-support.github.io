@@ -19,6 +19,7 @@ interface MobileHeaderProps {
 
 export function MobileHeader(): any ({;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function MobileHeader(): any ({;
   onSettingsClick?: () => void;
 }
@@ -75,6 +76,11 @@ export function MobileHeader({};
               variant="ghost""
               size="icon""
               className="mr-2"
+<<<<<<< HEAD
+    <headerclassName={cn(
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
+      className
+=======
 
               onClick={() => navigate(-1)}
 
@@ -155,6 +161,15 @@ interface MobileHeaderProps {;
     <header className={cn(;"
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;
       className;
+<<<<<<< HEAD
+  onSettingsClick} MobileHeaderProps) {;
+  const navigate = useNavigate(),;
+;
+  return (;
+    <header className={cn(;
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;
+      className;
+=======
 
       <div className="flex items-center justify-between h-14 px-4">;
 
@@ -180,11 +195,28 @@ interface MobileHeaderProps {;
           )}
           <h1 className="text-lg font-medium leading-none truncate">;
             {title}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </h1>;
         </div>;
         <div className="flex items-center space-x-2">;
           {showNotifications && (;
+<<<<<<< HEAD
+              size="icon"
+              onClick={onNotificationsClick}>;
+            <Button ;
+              variant="ghost" ;
+              size="icon";
+              onClick={onNotificationsClick}
+            >;
+            <Button;
+              variant="ghost";
+              size="icon";
+              onClick={onNotificationsClick}
+            >;
+=======
             <Button
               variant="ghost" 
 
@@ -235,6 +267,22 @@ interface MobileHeaderProps {;
               <span className="sr-only">Notifications</span>;
             </Button>;
           )}
+<<<<<<< HEAD
+          {showSettings && (;
+              size="icon"
+              onClick={onSettingsClick}>;
+            <Button ;
+              variant="ghost" ;
+              size="icon";
+              onClick={onSettingsClick}
+            >;
+          {showSettings && (;
+            <Button;
+              variant="ghost";
+              size="icon";
+              onClick={onSettingsClick}
+            >;
+=======
 
           {showSettings && (;
             <Button
@@ -260,6 +308,11 @@ interface MobileHeaderProps {;
               <span className="sr-only">Settings</span>;
             </Button>;
           )}
+<<<<<<< HEAD
+        </div>;
+      </div>;
+    </header>;
+=======
 
         </div>;
       </div>;

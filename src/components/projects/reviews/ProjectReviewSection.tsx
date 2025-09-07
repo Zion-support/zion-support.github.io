@@ -45,10 +45,24 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       </CardHeader>
       
       <CardContent>
+<<<<<<< HEAD
+      <CardContent>
+        {isCompleted ? (
+          <div className='space-y-6'>
+            {(isClient |isTalent) && (
+              <div className='border-b pb-4 mb-4'>
+      
+      <CardContent>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {isCompleted ? (
           <div className="space-y-6">
             {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
+<<<<<<< HEAD
+                  <div className="bg-muted/20 rounded-lg p-4 text-center">
+                    <h3 className="font-medium mb-2">Share your experience</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
                 {canLeaveReview ? (
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>

@@ -8,6 +8,7 @@ interface NotificationHeaderProps {;
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
   unreadCount
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onMarkAllAsRead
 
 import React from "react";

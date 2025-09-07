@@ -173,6 +173,7 @@ export default function WhitelabelManager() {;
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>;
       <SEO
         title="White-Label Management - Zion AI Marketplace"
@@ -188,6 +189,13 @@ export default function WhitelabelManager() {;
               Create and manage branded versions of the platform for agencies, startups, and enterprise clients.;
             </p>;
           </div>;
+<<<<<<< HEAD
+;
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+            <TabsList className="mb-8">;
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+            <TabsList className="mb-8">;
+=======
 
 }
 
@@ -221,6 +229,30 @@ export default function WhitelabelManager() {;
 
               <TabsTrigger value="docs">Documentation</TabsTrigger>;
             </TabsList>;
+<<<<<<< HEAD
+            ;
+            <TabsContent value="tenants" className="space-y-6">;
+              <TenantsList />;
+            </TabsContent>;
+            ;
+            <TabsContent value="create" className="flex justify-center">;
+              <WhitelabelRequestForm />;
+            </TabsContent>;
+            ;
+            <TabsContent value="tenants" className="space-y-6">;
+              <TenantsList />;
+            </TabsContent>;
+            <TabsContent value="create" className="flex justify-center">;
+              <WhitelabelRequestForm />;
+            </TabsContent>;
+            <TabsContent value="docs" className="space-y-6">;
+              <div className="prose dark:prose-invert max-w-none">;
+                <h2>White-Label Documentation</h2>;
+                <h3>DNS Configuration</h3>;
+                <p>;
+                  To use a custom domain with your white-label instance, you need to configure the DNS records.;
+                  Add a CNAME record pointing to <code>ziontechmarketplace.com</code>.;
+=======
 
 <th>Record Type</th>;
                       <th>Name</th>;

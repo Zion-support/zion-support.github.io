@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import {;
+  ArrowRight,;
+  Star,;
+  TrendingUp,;
+  Zap,;
+  Shield,;
+  Globe,;
+  Brain,;
+  Rocket,;
+  CheckCircle,;
+} from 'lucide-react';
+interface EnhancedHero2026Props {;
+  contactInfo: {;
+import React from 'react';
+
+import { motion } from 'framer-motion';
+import {
+
+import {
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Globe
+  Brain
+  Rocket
+  CheckCircle;
+=======
 
 
 
@@ -29,6 +61,10 @@ interface EnhancedHero2026Props {;
   Shield,
   Globe,
   Brain,
+<<<<<<< HEAD
+  Rocket,;
+  CheckCircle,;
+=======
 
 '
 } from 'lucide-react';
@@ -219,6 +255,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>;
               </Button>;
             </div>;
+<<<<<<< HEAD
+=======
 
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 "hover":from-slate-700 "hover":to-slate-600 border-slate-600 "hover":border-slate-500 shadow-2xl'>;'
                 <span className='flex items-center'>;'

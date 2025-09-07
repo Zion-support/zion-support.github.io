@@ -42,7 +42,6 @@ export default function SearchModal() {interface SearchModalProps {
   onClose: () => void;}
 }
 }
-
 const searchData: SearchResult[] = [;
   // Services;
   {title: "AI Services",,description: "Machine learning, computer vision, NLP, and AI solutions",url: "/ai-services",category: "Services",},{title: "IT Services",,description: "Cloud infrastructure, cybersecurity, and IT solutions",url: "/it-services",category: "Services",},{title: "Micro SaaS",,description: "Custom micro SaaS platforms and automation tools",url: "/micro-saas",category: "Services",},{title: "Cloud Solutions",,description: "AWS, Azure, GCP migration and cloud infrastructure",url: "/cloud-solutions",category: "Services",},{title: "Cybersecurity",,description: "Security audits, penetration testing, and compliance",url: "/cybersecurity",category: "Services",},{title: "Blockchain Solutions",,description: "Smart contracts, DeFi, and blockchain development",url: "/blockchain-services",category: "Services",},// Solutions;

@@ -211,5 +211,8 @@ console.log(' Starting Enhanced Deployment Automation...')
       execSync('node scripts/optimize-images.cjs', { "stdio"})
     execSync('node scripts/performance-monitor.cjs', { "stdio"})
     const status = execSync('git status --porcelain', { "encoding"})
+<<<<<<< HEAD
+    execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
+=======
     execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
   console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")

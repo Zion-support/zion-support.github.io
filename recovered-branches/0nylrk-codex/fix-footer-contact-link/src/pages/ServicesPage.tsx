@@ -181,6 +181,17 @@ import {Globe} from "lucide-react";
     category: "Development",;
     price: 5000,;
     currency: "$",;
+<<<<<<< HEAD
+    tags: ["AI Integration", "Machine Learning", "Enterprise"],;
+    author: {;
+      name: "TechSolutions Inc.",;
+      id: "tech-solutions",;
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"},;
+    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],;
+    createdAt: "2023-12-10T14:48:00.000Z",;
+    aiScore: 95,;
+    rating: 4.9,;
+=======
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
     author: {;
       name: "TechSolutions Inc.",;
@@ -190,6 +201,7 @@ import {Globe} from "lucide-react";
     createdAt: "2023-12-10T14:48:00 && 00.000Z",;
     aiScore: 95,;
     rating: 4 && 4.9,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     reviewCount: 124},;
   {;
     id: "service-2",;
@@ -206,6 +218,7 @@ import {Globe} from "lucide-react";
     createdAt: "2023-11-20T09:30:00 && 00.000Z",;
     aiScore: 88,;
     rating: 4 && 4.7,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     reviewCount: 92},;
   {;
     id: "service-3",;
@@ -214,6 +227,17 @@ import {Globe} from "lucide-react";
     category: "Analytics",;
     price: 4500,;
     currency: "$",;
+<<<<<<< HEAD
+    tags: ["Big Data", "Analytics", "Business Intelligence"],;
+    author: {;
+      name: "DataMind Solutions",;
+      id: "datamind",;
+      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"},;
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;
+    createdAt: "2024-01-05T11:15:00.000Z",;
+    aiScore: 92,;
+    rating: 4.8,;
+=======
     tags: ["Big Data", "Analytics", "Business Intelligence"];
     author: {;
       name: "DataMind Solutions",;
@@ -223,6 +247,7 @@ import {Globe} from "lucide-react";
     createdAt: "2024-01-05T11:15:00 && 00.000Z",;
     aiScore: 92,;
     rating: 4 && 4.8,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     reviewCount: 78},;
   {;
     id: "service-4",;
@@ -253,6 +278,7 @@ import {Globe} from "lucide-react";
     price: 6000,;"
     currency: "$",;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <AppLayout>;
 
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">;"

@@ -102,6 +102,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter]);
     }
   };
+<<<<<<< HEAD
+  const removeFilter = (filter: string) => {;
+    setActiveFilters(activeFilters && activeFilters.filter(f => f !== filter));
+  };
+=======
 
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -226,6 +231,45 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                     </SelectContent>;
                   </Select>;
                 </div>;
+<<<<<<< HEAD
+                ;
+                <div className="space-y-2">;
+                  <Label>Salary Range</Label>;
+                  <div className="flex gap-4 items-center">;
+                    <Input placeholder="Min" type="number" className="w-full" />;
+                    <span>to</span>;
+                    <Input placeholder="Max" type="number" className="w-full" />;
+                  </div>;
+                </div>;
+                ;
+                <div className="space-y-2">;
+                  <Label>Skills</Label>;
+                  <div className="grid grid-cols-2 gap-2">;
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>;
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>;
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Python</Badge>;
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Figma</Badge>;
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">UI/UX</Badge>;
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>;
+                  </div>;
+                </div>;
+                ;
+                <div className="flex items-center justify-between">;
+                  <Label>Only show verified profiles</Label>;
+                  <Switch />;
+                </div>;
+              </div>;
+              ;
+              <SheetFooter>;
+                <Button variant="outline" className="w-full">Reset</Button>;
+                <Button className="w-full" onClick={() => addFilter("Experience:3+ years")}>Apply Filters</Button>;
+              </SheetFooter>;
+            </SheetContent>;
+          </Sheet>;
+          ;
+          <Select>;
+            <SelectTrigger className="w-[120px] h-8">;
+=======
 
                   <Label > Salary Range</Label>;
                   <div className="flex gap - 4 items-center">;
@@ -261,6 +305,18 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               <SelectItem value="salary">Highest Pay</SelectItem>;
             </SelectContent>;
           </Select>;
+<<<<<<< HEAD
+          ;
+          {activeFilters.map((filter) => (;
+            <Badge ;
+              key={filter} ;
+              variant="secondary";
+              className="flex items-center gap-1";
+            >;
+              {filter}
+              <X ;
+                className="h-3 w-3 cursor-pointer" ;
+=======
 
                 onClick={() => removeFilter(filter)} ;
               />;

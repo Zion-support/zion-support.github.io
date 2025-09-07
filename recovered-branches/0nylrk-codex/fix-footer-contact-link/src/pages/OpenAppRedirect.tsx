@@ -38,6 +38,8 @@ const OpenAppRedirect: React.FC = () => {
       const appScheme = "zion: //",
       const androidAppUrl = "market://details?id=app.zion.marketplace",
       const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000",
+<<<<<<< HEAD
+=======
 
       const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page
       let timeout: number | undefined
@@ -45,6 +47,8 @@ const OpenAppRedirect: React.FC = () => {
       if (isAndroid |isiOS) {
         // Set a timeout to redirect to app store if the app doesn't open
         timeout = window.setTimeout(() => {
+<<<<<<< HEAD
+=======
 
 "
       const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page;
@@ -77,6 +81,25 @@ const OpenAppRedirect: React.FC = () => {;
         setTimeout(() => {;
           navigate(fallbackUrl);
         }, 1500);
+<<<<<<< HEAD
+        // Try to open the app;
+        window.location.href = appScheme;
+      } else {;
+        // Not on mobile, redirect to mobile launch page;
+        setStatus('failed'),;
+        setTimeout(() => {;
+          navigate(fallbackUrl);
+        }, 1500);
+      }
+      
+      // Clear timeout if page visibility changes (meaning app opened successfully)
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden && timeout) {
+          clearTimeout(timeout)
+        }
+      })
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       }
 
@@ -125,6 +148,8 @@ const OpenAppRedirect: React.FC = () => {;
             </Link>
           </>
         )}
+<<<<<<< HEAD
+=======
 
       // Clear timeout if page visibility changes (meaning app opened successfully);"
       document && document.addEventListener("visibilitychange", () => {;
@@ -133,7 +158,6 @@ const OpenAppRedirect: React.FC = () => {;
         }
       });
     };
-
     attemptAppOpen();
   }, [navigate]);
 
@@ -148,7 +172,7 @@ const OpenAppRedirect: React.FC = () => {;
       />;
       <div className="text-center p-8">;
         <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>;
-
+        ;
         {status === 'redirecting' && (;
           <>;"
             <h1 className="text-2xl font-bold mb-2">Opening Zion App...</h1>;"
@@ -157,7 +181,7 @@ const OpenAppRedirect: React.FC = () => {;
             </p>;
           </>;
         )}
-
+        ;
         {status === 'timeout' && (;
           <>;"
             <h1 className="text-2xl font-bold mb-2">App Not Installed</h1>;"
@@ -166,7 +190,7 @@ const OpenAppRedirect: React.FC = () => {;
             </p>;
           </>;
         )}
-
+        ;
         {status === 'failed' && (;
           <>;"
             <h1 className="text-2xl font-bold mb-2">Opening App Failed</h1>;"
@@ -186,6 +210,9 @@ const OpenAppRedirect: React.FC = () => {;
     </div>;
   );
 },;
+<<<<<<< HEAD
+export default OpenAppRedirect;
+=======
 
   ),;
 },;

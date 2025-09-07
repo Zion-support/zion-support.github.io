@@ -27,6 +27,23 @@ return (;
                 ) : (;
                   <div className="w-12 h-12 rounded bg-gray-100 "dark":bg-gray-900" />;"
                 )}
+<<<<<<< HEAD
+                  <div className="text-xs text-gray-500">Services: {v.servicesOffered?.join() || '—'}</div>
+                </div>
+              </div>
+            </a>
+          </Link>
+                <div>;
+                  <div className="font-medium flex items-center gap-2">;
+                    {v && v.name}
+                    {v && v.verified && <span className="text-xs px-2 py-0 && 0.5 rounded bg-green-100 text-green-700">Verified</span>}
+                  </div>;
+                  <div className="text-xs text-gray-500">Services: {v && v.servicesOffered?.join() || '—'}</div>;
+                </div>;
+              </div>;
+            </a>;
+          </Link>;
+=======
 
                 <div>
                   <div className='font-medium flex items-center gap-2'>'

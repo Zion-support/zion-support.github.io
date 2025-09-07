@@ -17,6 +17,16 @@ import { SmartContractInfo } from "@/types/smart-contracts,interface ContractPre
 contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions'
   status?: 'draft' | 'ready' | 'pending',
+<<<<<<< HEAD
+  talent?: TalentProfile;
+  onDeploy?: () => void;
+  onSign?: () => void;
+  onClose?: () => void;
+  deployStatus?: string;
+  deploymentInfo?: SmartContractInfo | null
+}
+export function ContractPreview({
+  contractContent;
 
 }
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -131,6 +141,8 @@ export function ContractPreview({
 =======
         ) : ("
           <Badge variant="outline">Draft</Badge>
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
   deployStatus;
@@ -201,6 +213,25 @@ export function ContractPreview({ ;
             className="text-sm bg-yellow-100 text-yellow-800>;
             Pending Review;
           </Badge>;
+        </div>;
+      </div>;
+;
+      {/* Deployment info if available */}
+      {deploymentInfo && (;
+        <div className="mt-4 p-4 bg-primary/10 rounded-lg">;
+          <h3 className="font-medium mb-2">Contract Deployment Info</h3>;
+          <p className="text-sm">Contract Address:{deploymentInfo.deployedAddress || "Pending..."}</p>;
+          <p className="text-sm">Network:{deploymentInfo.networkName || "Unknown"}</p>;
+          <p className="text-sm">Status:{deploymentInfo.status}</p>;
+        </div>;      )}
+      ;
+      {/* Actions */}
+      <div className="flex justify-end space-x-3 mt-4">;
+        {onClose && (;
+          <Button variant="outline" onClick={onClose}>;
+            Close;
+          </Button>;
+        )}
         ) : (;
 <<<<<<< HEAD
           <Badge variant=outline">Draft</Badge>;
@@ -211,6 +242,37 @@ export function ContractPreview({ ;
         <div className=prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground">;
 =======
           <Badge variant="outline">Draft</Badge>;
+<<<<<<< HEAD
+        )}
+      </div>
+      {/* Contract content */}
+      <div className="border rounded-lg p-6 bg-muted/50">
+        {/* Render the contract content as markdown or formatted text */}
+        <div className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground">
+          {displayContent}
+        </div>
+      </div>
+      {/* Deployment info if available */}
+      {deploymentInfo && (
+        <div className="mt-4 p-4 bg-primary/10 rounded-lg">
+          <h3 className="font-medium mb-2">Contract Deployment Info</h3>
+          <p className="text-sm">Contract Address: {deploymentInfo.deployedAddress |"Pending..."}</p>
+          <p className="text-sm">Network: {deploymentInfo.networkName |"Unknown"}</p>
+          <p className="text-sm">Status: {deploymentInfo.status}</p>
+        </div>
+      )}
+      {/* Actions */}
+      <div className="flex justify-end space-x-3 mt-4">
+        {onClose && (
+          <Button variant="outline" onClick={onClose}>
+            Close
+          </Button>
+        )}
+        {status === 'ready' && onSign && (
+          <Button onClick={onSign}>
+            Sign Contract
+          </Button>
+=======
 
         )}
       {/* Contract content */}"
@@ -221,6 +283,7 @@ export function ContractPreview({ ;
           <Button variant="outline" onClick={onClose}>;
             Close;
           </Button>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         )}
 
           <Badge variant="outline">Draft</Badge>;
@@ -261,6 +324,11 @@ export function ContractPreview({ ;
             Deploy on Blockchain
 =======
 
+<<<<<<< HEAD
+        
+        
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {status === 'ready' && onDeploy && (
 
           <Button variant="outline" onClick={onDeploy}>
@@ -293,6 +361,7 @@ export function ContractPreview({ ;
         <div className="prose prose - sm max - w-none prose - headings:font - semibold prose - headings:text - foreground prose - p:text - muted-foreground>;
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {status === 'ready' && onSign && (;
           <Button onClick={onSign}>;
             Sign Contract;

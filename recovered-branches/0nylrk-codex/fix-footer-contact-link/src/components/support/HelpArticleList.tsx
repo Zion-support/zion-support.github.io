@@ -9,6 +9,7 @@ interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
+}
 
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -137,11 +138,9 @@ export function HelpArticleList({
 
 export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES && HELP_CATEGORIES.find(cat => cat && cat.id === categoryId);
-
   if (!category) {;
     return <div>Category not found</div>;
   }
-
   // Filter articles based on search query;
   const filteredArticles = searchQuery;
     ? category && category.articles.filter(;
@@ -150,7 +149,6 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
           article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
       );
     : category && category.articles;
-
   return (
     <div>;"
       <div className="mb-6">;"
@@ -288,13 +286,11 @@ function format_date (date: string): string {"
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
 }
-
 function formatDate(): any (date: string): string {;
   return new Date(date).toLocaleDateString("en-US", {;
     year: "numeric",;
     month: "long",;
     day: "numeric";
-
   });
 }
 
@@ -432,6 +428,14 @@ function format_date (date: string): string {
     month: "long",
     day: "numeric",
   });
+                  {article.content.substring(0, 120)}...;
+                </p>;
+              </CardContent>;
+            </Card>;          ))}
+        </div>;
+      )}
+    </div>;
+  ),;
 }
                   {article.content.substring(0, 120)}...;
                 </p>;

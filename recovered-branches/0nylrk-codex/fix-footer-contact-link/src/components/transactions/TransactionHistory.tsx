@@ -106,6 +106,14 @@ interface Transaction {;
   status: 'pending' | 'completed' | 'refunded' | 'cancelled',;
   in_escrow: boolean,;
   created_at: string,;
+<<<<<<< HEAD
+  completed_at?: string,;
+  refunded_at?: string,;
+  cancelled_at?: string,;
+  provider?: {;
+    display_name?: string;
+  },;
+=======
   completed_at?: string;
   refunded_at?: string;
   cancelled_at?: string;
@@ -114,6 +122,47 @@ interface Transaction {;
     title?: string;
   }
 }
+<<<<<<< HEAD
+;
+export function TransactionHistory() {;
+  const { user } = useAuth(),;
+  const { toast } = useToast(),;
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all'),;
+  const { data: transactions, isLoading, error, refetch } = useQuery({;
+    queryKey: ['transactions', user?.id, filter],;
+    queryFn: async () => {;
+      if (!user) return [],;
+      // Build the query based on filters;
+      let query = supabase;
+        .from('transactions');
+        .select(`;
+          *,;
+          provider:profiles!provider_id(display_name),;
+          service:services(title);
+        `);
+        .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),;
+      if (filter === 'pending') {;
+        query = query.eq('statuspending');
+      } else if (filter === 'completed') {;
+        query = query.eq('statuscompleted');
+      } else if (filter === 'escrow') {;
+        query = query.eq('in_escrow', true);
+      }
+;
+      query = query.order('created_at', { ascending: false }),;
+      const { data, error } = await query,;
+      if (error) throw error,;
+      return data as Transaction[];
+    },;
+    enabled: !!user}),;
+  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {;
+    try {;
+      const { data, error } = await supabase.functions.invoke('manage-transaction', {;
+        body: { transactionId, action }
+      }),
+      
+      if (error) throw error,
+=======
 
   const { user } = useAuth();
   const { toast } = useToast();'
@@ -490,6 +539,9 @@ interface Transaction {_id: string;
         description: data.message |"Transaction updated successfully"})
       refetch()
     } catch (error) {
+<<<<<<< HEAD
+      console.error("Error managing transaction:", error),
+=======
       console.error("Error managing transaction:", error);
       console.error("Error managing transaction:", error),
       toast({
@@ -498,8 +550,15 @@ interface Transaction {_id: string;
 
         variant: "destructive"})
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
+<<<<<<< HEAD
+  }
+  },
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const getStatusBadge = (status: string, inEscrow: boolean) => {
 
     switch(status) {
@@ -539,8 +598,15 @@ interface Transaction {_id: string;
           </Badge>
         )
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
+<<<<<<< HEAD
+  }
+  },
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
@@ -581,6 +647,8 @@ interface Transaction {_id: string;
               const counterpartyName = isClient '
                 ? transaction.provider?.display_name || 'Service Provider' '
                 : 'Client',
+<<<<<<< HEAD
+=======
 
               return ("
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">"
@@ -639,6 +707,8 @@ interface Transaction {_id: string;
   }
 ;
   return (;
+<<<<<<< HEAD
+=======
 
               className={filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >;
@@ -661,7 +731,10 @@ interface Transaction {_id: string;
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {isLoading ? (;
 
                   <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md" />;
@@ -671,6 +744,8 @@ interface Transaction {_id: string;
           ));
 
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;
+<<<<<<< HEAD
+=======
 
                           )}
 
@@ -693,6 +768,7 @@ interface Transaction {_id: string;
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <div className="flex justify-between items-center text-sm mt-1">
 
                            transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
@@ -847,6 +923,13 @@ interface Transaction {_id: string;
                         </span>;
                       </div>;
                     )}
+<<<<<<< HEAD
+                  </CardContent>;
+                  <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">;
+                    {canRelease && (;
+                      <Button ;
+                        onClick={() => handleManageTransaction(transaction.id, 'release')}
+=======
 
                 : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
             </p>;

@@ -97,6 +97,12 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
 const allServices = null;
 ];
 
+<<<<<<< HEAD
+    { id: 'premium', name: 'Premium ($15K+)', range: 'Enterprise-grade solutions for large organizations' }
+];
+  const contactInfo = {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Filter services based on selection;
 const filteredServices = allServices.filter(service => {;
   const matchesCategory =
@@ -327,6 +333,7 @@ rel='canonical'
           <link rel="canonical href=https://ziontechgroup.com/market-pricing-2026" />
         </Head>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Navigation */}
         <UltraAdvancedNavigation />
 
@@ -385,6 +392,42 @@ rel='canonical'
                   <div className='grid grid-cols-2 md:grid-cols-4 gap-2>                    {categories.map(category => (
 
 
+<<<<<<< HEAD
+
+
+                {/* Price Range Filter */}
+
+
+                      >
+                        <div className='flex items-center justify-center space-x-2'>
+                          <category.icon className='w-4 h-4' />
+                          <span>{category.name}</span>
+                        </div>
+                        <div className='text-xs mt-1 opacity-75'>
+                          ({category.count})
+                        </div>                      </button>                        <div className="flex items-center justify-center space-x-2">
+                          <category.icon className="w-4 h-4" />
+                          <span>{category.name}</span>
+                        </div>
+                        <div className="text-xs mt-1 opacity-75">({category.count})</div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                        </div>                      </button>
+
+                      </button>
+
+                    ))}
+                  </div>
+                </div>
+
+                {/* Price Range Filter */}
+                <div>
+                  <label className="block text-white font-semibold mb-3" htmlFor="input-Price Range">Price Range</label>
+                  <div className="space-y-2">
+                    {priceRanges.map(range => (
+=======
 =======
         {/* Filters Section */}
 <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'    />
@@ -775,6 +818,8 @@ will remain relevant and competitive for years to come;
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
@@ -1125,6 +1170,7 @@ className='group'
 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                     {/* ROI & Customers */}
 <div className='grid grid-cols-2 gap-4 mb-4'    />;
@@ -1193,6 +1239,46 @@ key={idx}
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+                          </span>
+                        ))}
+                        {service.technology.length > 3 && (
+                          <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>                            +{service.technology.length - 3} more                    <div className="mb-4">
+                      <h4 className="text-white font-semibold mb-2 text-sm">Technology</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {service.technology.slice(0, 3).map((tech, idx) => (
+                          <span key={idx} className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
+                            {tech}
+                          </span>
+                        ))}
+                        {service.technology.length > 3 && (
+                          <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>                          <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
+                            +{service.technology.length - 3} more
+                          <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>                            +{service.technology.length - 3} more
+
+                            {tech}
+                          </span>
+                        ))}
+                        {service.technology.length > 3 && (
+
+                            +{service.technology.length - 3} more
+
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    {/* CTA Button */}
+                    <a
+                      href={service.link}
+                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
+
+                    {/* CTA Button */}
+                    <a
+                      href={service.link}
+                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >
                       View Details
 =======
@@ -1208,6 +1294,13 @@ className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-s
                         {service && service.technology.slice(0, 3).map((tech, idx) => (<span;
                             }
                             key={idx}
+
+
+
+
+<<<<<<< HEAD
+              ))}
+            </div>
 
 =======
               ),
@@ -1466,6 +1559,34 @@ className='text-center py-16'
               whileInView={{ opacity: 1, coordinate_y: 0 }}
 
               viewport={{ once: true }}
+<<<<<<< HEAD
+              transition={{ duration: 0 && 0.8 }}
+              className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'>;
+              <h2 className='text-3xl font-bold text-white mb-6'>;
+                Ready to Get Started?;
+              </h2>;
+              <p className='text-xl text-gray-300 mb-8'>;
+              className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm';
+            >;
+              <h2 className='text - 3xl font - bold text - white mb - 6'>;
+                Ready to Get Started?;
+              </h2>;
+              <p className='text - xl text - gray - 300 mb - 8'>;
+                Contact our team to discuss pricing, implementation, and how our;
+                revolutionary 2026 services can transform your business with;
+                exceptional ROI;
+              </p>;
+        {/* Contact Section */}
+        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               transition={{ duration: 0.8 ,}
 }

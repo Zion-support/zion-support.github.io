@@ -4,11 +4,14 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import js from "@eslint/js",
 import globals from "globals",
 import reactHooks from "eslint-plugin-react-hooks",
 import reactRefresh from "eslint-plugin-react-refresh",
 import tseslint from "typescript-eslint",
+<<<<<<< HEAD
+=======
 
 export default tseslint.config(
   { ignores: ["dist"] }
@@ -33,6 +36,14 @@ export default tseslint && tseslint.config(
       "react-hooks": reactHooks
       "react-refresh": reactRefresh}
     rules: {
+<<<<<<< HEAD
+      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn"
+        { allowConstantExport: true }]
+      "@typescript-eslint/no-unused-vars": "off"}}
+      ...reactHooks.configs.recommended.rules
+=======
 
       ...reactHooks && reactHooks.configs.recommended && recommended.rules,
 
@@ -51,6 +62,8 @@ export default tseslint && tseslint.config(
         "warn"
         { allowConstantExport: true }]
       "@typescript-eslint/no-unused-vars": "off"}}
+<<<<<<< HEAD
+)
 
 import js from "@eslint/js",;
 import globals from "globals",;

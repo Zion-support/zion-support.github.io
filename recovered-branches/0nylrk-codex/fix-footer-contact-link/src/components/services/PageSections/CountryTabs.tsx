@@ -99,6 +99,8 @@ import { CountryPricing } from "@/data/onsiteServicePricing",;
             Browse our most popular service destinations;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
 
               <CountryServiceCard
 
@@ -136,7 +138,6 @@ import { CountryPricing } from "@/data/onsiteServicePricing",;
             />;
 
           ))}
-
         </div>;
 
   popular_countries: string[],

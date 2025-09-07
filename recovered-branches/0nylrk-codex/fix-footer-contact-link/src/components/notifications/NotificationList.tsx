@@ -92,7 +92,10 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onDismiss,;
   onRetry;
 }) => {;
@@ -181,10 +184,13 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
       {error ? (;
         <div className="p-8 text-center text-amber-500">;
           <p>{error}</p>;
+<<<<<<< HEAD
+=======
           <Button
             variant="outline" 
             size="sm" 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="mt-2"
             onClick={onRetry}>;
             Try Again;
@@ -206,6 +212,16 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
         </div>;
+<<<<<<< HEAD
+      ) :notifications.length === 0 ? (;
+        <div className="p-8 text-center text-zion-slate-light">;
+          <p>No notifications yet</p>;
+        </div>;
+      ) :(;
+        notifications.map((notification) => (;
+          <NotificationItem;
+            key={notification.id}
+=======
       ) : notifications && notifications.length === 0 ? (;
         <div className="p-8 text-center text-zion-slate-light">;
           <p>No notifications yet</p>;

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+ const response = await client && client.chat.completions && completions.create ({
+=======
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';'
@@ -29,6 +32,8 @@ const response = await client.chat.completions.create({
       ],
       "temperature": 0.3
     });
+<<<<<<< HEAD
+=======
 
 const content = response.choices[0]?.message?.content |'';'
 

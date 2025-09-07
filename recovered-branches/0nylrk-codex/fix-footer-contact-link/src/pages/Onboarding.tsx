@@ -98,6 +98,27 @@ await supabase.rpc('update_onboarding_milestone', {'
     }
 =======
 
+  // Convert our user types to match what's expected in the database;
+  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {;
+    switch (type) {;
+      case "serviceProvider": return "creator";
+      case "talent":;
+        return "jobSeeker";
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection",
+import { ProfileSetup } from "@/components/onboarding/ProfileSetup",
+import { Steps, Step } from "@/components/ui/steps",
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+export default function Onboarding() {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user, updateProfile, isLoading } = useAuth();
 
   const { user, updateProfile, isLoading } = useAuth();
@@ -142,6 +163,30 @@ export default function Onboarding() {  const { user, updateProfile, isLoading }
 
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+export default function Onboarding() {
+  const { user, updateProfile, isLoading } = useAuth(),
+  const [currentStep, setCurrentStep] = useState(0),
+  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null),
+  const navigate = useNavigate(),
+
+  // Convert our user types to match what's expected in the database
+  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
+    switch (type) {
+      case "serviceProvider": return "creator",
+      case "talent":
+        return "jobSeeker",
+      case "client":
+        return "employer"
+      default:
+        return "buyer"
+    }
+  }
+  const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
+    setUserType(type);
+=======
 
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
@@ -171,11 +216,13 @@ import { Steps, Step } from "@/components/ui/steps",
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 "
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {}
     setUserType(type),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
@@ -186,11 +233,19 @@ import { Steps, Step } from "@/components/ui/steps",
       default:;
         return "buyer";
     }
+<<<<<<< HEAD
+  },;
+;
+  const handleUserTypeSelect = (type:"serviceProvider" | "talent" | "client") => {;
+    setUserType(type),;
+    ;
+=======
   };
 
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {;
     setUserType(type);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Direct to specific registration page based on user type;
     if (type === "serviceProvider") {;
       navigate('/service-onboarding'),;
@@ -204,12 +259,28 @@ import { Steps, Step } from "@/components/ui/steps",
     setCurrentStep(1);
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {;
     if (!user || !userType) {;
       toast({;
         title: "Authentication Error",
         description: "Your session may have expired. Please log in again.",;
         variant: "destructive"}),;
+<<<<<<< HEAD
+  }
+  },
+
+  const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
+    if (!user |!userType) {
+      toast({
+        title: "Authentication Error"
+        description: "Your session may have expired. Please log in again."
+        variant: "destructive"})
+      navigate('/login');
+      return
+    }
+    const dbUserType = mapUserTypeToDatabase(userType);
+=======
 
       navigate('/login');
       return;
@@ -222,6 +293,7 @@ import { Steps, Step } from "@/components/ui/steps",
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user |!userType) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Authentication Error",
 
         description: "Your session may have expired. Please log in again.",
@@ -242,8 +314,15 @@ import { Steps, Step } from "@/components/ui/steps",
         headline: data.headline;
         profileComplete: true;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }),
 
+<<<<<<< HEAD
+      });
+      }),
+      
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Update onboarding milestone
 
       await supabase.rpc('update_onboarding_milestone', {
@@ -253,6 +332,12 @@ import { Steps, Step } from "@/components/ui/steps",
 
       }),
 
+<<<<<<< HEAD
+      });
+      }),
+      
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: 'Profile completed!'
         description: 'Your profile has been set up successfully.'})
@@ -286,6 +371,7 @@ import { Steps, Step } from "@/components/ui/steps",
     return null;
     const dbUserType = mapUserTypeToDatabase(userType);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {;
       await updateProfile({ ;
         id: user && user.id,;
@@ -389,6 +475,16 @@ return (;
               Complete your profile to get started;
             </p>;
           </div>;
+<<<<<<< HEAD
+;
+          <div className="mb-12">;
+            <Steps currentStep={currentStep} className="max-w-xl mx-auto">;
+              {steps.map((step, index) => (;
+                <Step;
+                  key={index}
+                  status={;
+                    currentStep > index;
+=======
 
                 <Step
 
@@ -401,6 +497,23 @@ return (;
                       : currentStep === index;"
                       ? "current";"
                       : "incomplete";
+<<<<<<< HEAD
+                  }
+                  label={step.label}
+                  description={step.description}
+                />
+              ))}
+            </Steps>
+          </div>
+          <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">
+            {currentStep === 0 ? (
+              <UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType} />
+            ) : (
+              <ProfileSetup onComplete={handleProfileComplete} userType={userType!} />
+            )}
+            {currentStep === 1 && (
+              <div className="mt-6">
+=======
 
                   }
                   label={step && step.label}

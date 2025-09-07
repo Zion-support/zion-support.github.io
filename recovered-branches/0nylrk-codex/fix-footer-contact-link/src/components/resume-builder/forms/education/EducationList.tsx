@@ -6,10 +6,22 @@ import { EducationItem } from './EducationItem';
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 
+<<<<<<< HEAD
+
+import { Education  } from '@/types/resume';
+import { EducationItem } from './EducationItem';
+import { Education  } from '@/types/resume';
+import { EducationItem } from './EducationItem';
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
+<<<<<<< HEAD
+=======
 
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;

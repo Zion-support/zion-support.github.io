@@ -4,6 +4,15 @@ import {Button} from "@/components/ui/button";
 import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
+<<<<<<< HEAD
+import React from "react",
+import { format } from "date-fns",
+
+import React from "react",
+import { format } from "date-fns",
+import React from "react",
+import { format } from "date-fns",
+=======
 
 import { 
 
@@ -11,11 +20,37 @@ import {
   CardContent;
   CardHeader;
 
+<<<<<<< HEAD
+import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes";
+import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
+import type { QuoteRequest } from "@/types/quotes",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded?: (id: string) => void,
 
+<<<<<<< HEAD
+type QuoteRequestCardProps = {
+  quote: QuoteRequest
+  onViewDetails: (quote: QuoteRequest) => void
+  onMarkAsResponded?: (id: string) => void
+  onToggleArchive: (id: string, isArchived: boolean) => void
+}
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
+  quote;
+  onViewDetails;
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+  quote;
+  onViewDetails;
+  onMarkAsResponded
+  quote,
+  onViewDetails,
+  onMarkAsResponded,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onToggleArchive
 }) => {
   // Format date for display
@@ -30,6 +65,15 @@ type QuoteRequestCardProps = {
             variant="outline"
             size="sm"
             onClick={() => onViewDetails(quote)}
+<<<<<<< HEAD
+            className="flex items-center gap-1"
+          >
+            <Eye className="h-4 w-4" />
+            View Details
+          </Button>
+          <div className="flex items-center">
+            {quote.status !== 'responded' && onMarkAsResponded && (
+=======
 
               <Button
                 variant="ghost"
@@ -116,23 +160,39 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
             variant="outline";
             size="sm";
             onClick={() => onViewDetails(quote)}
+<<<<<<< HEAD
+            onClick={() => onViewDetails(quote)}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="flex items-center gap-1";
           >;
             <Eye className="h-4 w-4" />;
             View Details;
           </Button>;
+<<<<<<< HEAD
+          ;
+          <div className="flex items-center">;
+            {quote.status !== 'responded' && onMarkAsResponded && (;
+              <Button;
+                variant="ghost";
+                size="sm";
+                onClick={() => onMarkAsResponded(quote.id)}
+=======
 
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => onMarkAsResponded(quote && quote.id)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="flex items-center gap-1";
               >;
                 <MessageSquare className="h-4 w-4" />;
                 Mark Responded;
               </Button>;
             )}
+<<<<<<< HEAD
+=======
 
                 <RefreshCw className="h-4 w-4" />;
               ) : (;

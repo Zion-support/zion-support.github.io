@@ -11,6 +11,7 @@ import { WorkExperience  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
@@ -41,6 +42,22 @@ import {formatDate} from '../formatters';
 
     // Check if we need to add a new page
     if (yPos > 260) {
+<<<<<<< HEAD
+    doc && doc.setFontSize(14);
+    doc && doc.setTextColor(colors && colors.subheading);
+    doc && doc.text(work && work.role_title, 20, yPos);
+    doc && doc.setFontSize(12);
+    doc && doc.text(work && work.company_name, 20, yPos + 5);
+    const startDate = formatDate(work && work.start_date);
+    const endDate = work && work.is_current ? 'Present' : formatDate(work && work.end_date);
+    const dateText = `${startDate} - ${endDate}`;
+    doc && doc.setFontSize(10);
+    doc && doc.setTextColor(colors && colors.text);
+    doc && doc.text(dateText, 20, yPos + 10);
+    if (work && work.location) {
+      doc && doc.text(work && work.location, 70, yPos + 10)
+    }
+=======
       doc && doc.addPage();
       yPos = 20
     }
@@ -64,10 +81,42 @@ import {formatDate} from '../formatters';
       doc && doc.text(work && work.location, 70, yPos + 10)
     }
     
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (work && work.description) {
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(work && work.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
+<<<<<<< HEAD
+      yPos += (descriptionLines && descriptionLines.length * 5) + 20
+    } else {
+      yPos += 20
+
+      doc.addPage();
+      yPos = 20
+    }
+    doc.setFontSize(14);
+    doc.setTextColor(colors.subheading);
+    doc.text(work.role_title, 20, yPos);
+    doc.setFontSize(12);
+    doc.text(work.company_name, 20, yPos + 5);
+    const startDate = formatDate(work.start_date);
+    const endDate = work.is_current ? 'Present' : formatDate(work.end_date);
+    const dateText = `${startDate} - ${endDate}`;
+    doc.setFontSize(10);
+    doc.setTextColor(colors.text);
+    doc.text(dateText, 20, yPos + 10);
+    if (work.location) {
+      doc.text(work.location, 70, yPos + 10)
+    }
+    if (work.description) {
+      doc.setFontSize(10);
+      const descriptionLines = doc.splitTextToSize(work.description, 170);
+      doc.text(descriptionLines, 20, yPos + 16);
+
+      yPos += (descriptionLines.length * 5) + 20
+    } else {
+      yPos += 20
+=======
       
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
 

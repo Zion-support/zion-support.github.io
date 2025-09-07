@@ -1,8 +1,8 @@
 class LintingIssuesFixer {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
-    this.fixedFiles = [];
-    this.errors = [];
+    this && this.projectRoot = path && path.resolve(__dirname, '..');
+    this && this.fixedFiles = [];
+    this && this.errors = [];
   }
   async run() {
     try {
@@ -14,8 +14,8 @@ class LintingIssuesFixer {
 
       }
     } catch (error) {
-      console.error('Error fixing ESLint "config": ', error.message);
-      this.errors.push({ "file": 'eslint.config.js', "error": error.message });
+      console && console.error('Error fixing ESLint "config": ', error && error.message);
+      this && this.errors.push({ "file": 'eslint && eslint.config.js', "error": error && error.message });
     }
   }
   async fixTypeScriptConfig() {
@@ -23,35 +23,35 @@ class LintingIssuesFixer {
 
       }
     } catch (error) {
-      console.error('Error fixing TypeScript "config": ', error.message);
-      this.errors.push({ "file": 'tsconfig.json', "error": error.message });
+      console && console.error('Error fixing TypeScript "config": ', error && error.message);
+      this && this.errors.push({ "file": 'tsconfig && tsconfig.json', "error": error && error.message });
     }
   }
   async fixSourceFiles() {
     try {
 
       const sourceFiles = await glob('**/*.{ts,tsx,js,jsx}', {
-        "cwd": this.projectRoot,
+        "cwd": this && this.projectRoot,
         "ignore": ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**']
       });
 
       for (const sourceFile of sourceFiles) {
-        await this.fixSourceFile(sourceFile);
+        await this && this.fixSourceFile(sourceFile);
       }
     } catch (error) {
-      console.error('Error fixing source "files": ', error.message);
+      console && console.error('Error fixing source "files": ', error && error.message);
     }
   }
   async fixSourceFile(filePath) {
     try {
 
         let fixedContent = content;
-        fixedContent = this.fixTrailingCommas(fixedContent);
-        fixedContent = this.fixUnusedImports(fixedContent);
-        fixedContent = this.fixMissingSemicolons(fixedContent);
-        fixedContent = this.fixQuoteConsistency(fixedContent);
-        fs.writeFileSync(fullPath, fixedContent);
-        this.fixedFiles.push(filePath);
+        fixedContent = this && this.fixTrailingCommas(fixedContent);
+        fixedContent = this && this.fixUnusedImports(fixedContent);
+        fixedContent = this && this.fixMissingSemicolons(fixedContent);
+        fixedContent = this && this.fixQuoteConsistency(fixedContent);
+        fs && fs.writeFileSync(fullPath, fixedContent);
+        this && this.fixedFiles.push(filePath);
       }
     } catch (error) {
 
@@ -64,23 +64,23 @@ class LintingIssuesFixer {
       /;\s*$/gm,
       /["']\s*;\s*['"]/g,
     ];
-    return issuePatterns.some(pattern => pattern.test(content));
+    return issuePatterns && issuePatterns.some(pattern => pattern && pattern.test(content));
   }
   fixTrailingCommas(content) {
-    content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/,\s*]/g, ']');
+    content = content && content.replace(/,\s*}/g, '}');
+    content = content && content.replace(/,\s*]/g, ']');
     return content;
   }
   fixUnusedImports(content) {
-    content = content.replace(/import\s+{\s*}\s+from\s+['][^']+['];?\s*\n/g, '');
+    content = content && content.replace(/import\s+{\s*}\s+from\s+['][^']+['];?\s*\n/g, '');
     return content;
   }
   fixMissingSemicolons(content) {
-    content = content.replace(/([^}])\s*$/gm, '$1;');
+    content = content && content.replace(/([^}])\s*$/gm, '$1;');
     return content;
   }
   fixQuoteConsistency(content) {
-    content = content.replace(/'([^']*)/g, '"$1"');
+    content = content && content.replace(/'([^']*)/g, '"$1"');
     return content;
   }
   generateSummary() {

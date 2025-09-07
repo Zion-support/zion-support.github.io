@@ -71,6 +71,30 @@ export const AppScreenshots: React.FC = () => {};
         left: direction === "left" ? -scrollAmount : scrollAmount
 
         behavior: "smooth"})
+<<<<<<< HEAD
+    }
+  }
+  },
+
+  return (
+    <section className="py-16 bg-zion-blue-dark">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">App Screenshots</h2>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            Take a visual tour through the Zion app's intuitive interface.
+          </p>
+        </div>
+        <div className="relative">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+            onClick={() => scroll("left")}
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </Button>
+=======
 
 import React, { useRef } from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
@@ -134,6 +158,8 @@ export const AppScreenshots: React.FC = () => {;
                 <img;
                   src={screenshot.src}
                   alt={screenshot.alt}
+<<<<<<< HEAD
+=======
 
 "
 
@@ -142,6 +168,12 @@ export const AppScreenshots: React.FC = () => {;
               </div>
             ))}
           </div>
+<<<<<<< HEAD
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+=======
 
           <Button
             variant="ghost"
@@ -152,7 +184,10 @@ export const AppScreenshots: React.FC = () => {;
             variant="ghost" 
             size="icon" 
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onClick={() => scroll("right")}
           >"
             <ChevronRight className="h-6 w-6" />
@@ -173,6 +208,19 @@ import { Button } from "@/components/ui/button",;
             Take a visual tour through the Zion app's intuitive interface.;
           </p>;
         </div>;
+<<<<<<< HEAD
+        ;
+        <div className="relative">;
+          <Button ;
+            variant="ghost" ;
+            size="icon" ;
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" ;
+        <div className="relative">;
+          <Button;
+            variant="ghost";
+            size="icon";
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
+=======
 
           <div
             ref={scrollContainerRef}

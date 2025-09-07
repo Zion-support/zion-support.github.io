@@ -1,4 +1,102 @@
 
+<<<<<<< HEAD
+import React, { useState } from 'react';
+
+
+import React, { useState } from 'react',
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import {
+
+  Menu
+  X
+  Search
+  ChevronDown
+  ChevronRight
+  Home
+  Users
+  Settings
+  HelpCircle
+  Mail
+  Phone
+  MapPin
+  BookOpen
+  MessageCircle
+  Star
+  TrendingUp
+  Layers
+  Cpu
+  Database
+  Cloud
+  Lock
+  Shield
+  Globe
+  Factory
+  Car
+  Building
+  GraduationCap
+  Scale
+  Palette
+  Camera
+  Video
+  Music
+  Gamepad2
+  Heart
+  Leaf
+  Sun
+  Moon
+  Wind
+  Droplets
+  Mountain
+  Code
+  Wrench
+  Smartphone
+  BarChart3
+  Eye
+  Globe2
+  Zap
+  Rocket
+  Brain
+  Sparkles
+  ShieldCheck
+  Target
+  Users2
+  Briefcase
+  Lightbulb
+  Award
+  Clock
+  CheckCircle;} from 'lucide-react';import {
+=======
 
 import React, { useState } from 'react','
 import Link from 'next/link';'
@@ -18,6 +116,27 @@ import { Menu, X, Search, ChevronDown, ChevronRight;Home, Users, Settings, HelpC
   Code, Wrench, Smartphone, BarChart3, Eye, Globe2;
 
   Zap, Rocket, Brain, Sparkles, ShieldCheck, Target;
+<<<<<<< HEAD
+  {
+    title: '🚀 2029 Futuristic AI Services',
+    icon: Brain,
+    color: 'from-violet-600 via-purple-600 to-indigo-600',
+    description: 'Next-generation AI consciousness and creativity',
+    services: [
+      { name: 'AI Consciousness Evolution Platform', href: '/services/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' };
+      { name: 'AI Emotional Intelligence Platform', href: '/services/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' };
+      { name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' };
+      { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
+    ]
+  };
+  {
+  },  {      { name: 'AI Consciousness Evolution Platform', href: '/services / ai - consciousness - evolution - platform', description: 'Develop genuine AI consciousness', price: '$19, 999 / month' }
+      { name: 'AI Emotional Intelligence Platform', href: '/services / ai - emotional - intelligence - platform', description: 'Real - time emotion analysis and response', price: '$3, 999 / month' }
+      { name: 'AI Creativity Orchestrator', href: '/services / ai - creativity - orchestrator', description: 'Multi - model creativity fusion', price: '$5, 999 / month' }
+      { name: 'AI Autonomous Business Manager', href: '/services / ai - autonomous - business - manager', description: 'Fully autonomous business operations', price: '$12, 999 / month' }
+    ];
+  }
+=======
 
   Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle
  } from 'lucide-react';'
@@ -387,6 +506,7 @@ className='flex-shrink-0';
           </div>
           {/* Right side - Contact & Search */}"
           <div className="hidden lg:flex items-center space-x-4">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Search */}
             ))}
           </div>
@@ -410,6 +530,8 @@ type='text'
                 value={searchQuery}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+<<<<<<< HEAD
+=======
 
               <input"
                 type="text""

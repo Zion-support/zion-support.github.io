@@ -38,6 +38,7 @@ import {}
 
   const [copied, setCopied] = useState(false);
 
+<<<<<<< HEAD
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
 
@@ -106,6 +107,8 @@ interface ReferralLinkProps {;
 
 export function ReferralLink(): any ({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const handleCopy = () => {;
     onCopy();

@@ -71,6 +71,7 @@ const fieldColors = [;
       energyFieldsRef.current = fields;
 };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     initParticles();
     initEnergyFields();
     // Animation loop,
@@ -120,6 +121,7 @@ particlesRef.current.forEach((particle, index) => {
           particle.y = Math.random() * canvas.height
         }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Wrap around edges;
@@ -279,6 +281,9 @@ for (let i = 0; i < 20; i++) {
       window.removeEventListener('resize', resizeCanvas);'
       window.removeEventListener('mousemove', handleMouseMove);'
       if (animationRef.current) {
+<<<<<<< HEAD
+        cancelAnimationFrame(animationRef.current);
+=======
 
 }
 

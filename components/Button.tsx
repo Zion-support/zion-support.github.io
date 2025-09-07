@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import React from 'react';
+      >;
+      {children}
+    </button>;
+  );
+}  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform',;
+=======
 
   variant?: 'primary' | 'secondary' | 'outline';'
   size?: 'sm' | 'md' | 'lg';'

@@ -392,6 +392,7 @@ interface LazyComponentProps {
 export const "LazyComponent": React.FC<LazyComponentProps> = ({"
 pr-12325
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     />
   )
 
@@ -455,6 +456,7 @@ export default LazyComponent
   fs.writeFileSync('
     path.join(componentsDir, 'LazyComponent.tsx'),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     lazyLoadingComponent
   )
   console.log('✅ Performance components created')
@@ -545,6 +547,8 @@ function main() { return null; }
       if (optimization && optimization.fn()) {
         successCount++}
 
+<<<<<<< HEAD
+  
     } catch (error) {
       console && console.error(`❌ Error in ${optimization && optimization.name}:`, error && error.message)}
   for($2) {

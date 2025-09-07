@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 
 import React, { useState, useEffect } from 'react','
 import Link from 'next/link';'
@@ -503,7 +505,6 @@ onClick={() =>;
                       {activeDropdown === item.name && (
                         <motion.div />;
                       </button>;
-
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
 }

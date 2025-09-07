@@ -15,10 +15,17 @@ import {format} from "date-fns";"
 import {CalendarIcon, Loader2} from "lucide-react";"
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";"
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
+<<<<<<< HEAD
+import { useState } from 'react',
+
+import { useState } from 'react',
+import { useState } from 'react',
+=======
 
 '
 import { useState } from 'react',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -40,6 +47,18 @@ const formSchema = z.object({
   role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
 
+<<<<<<< HEAD
+    required_error: "Start date is required"})
+  end_date: z.date().optional()
+  is_current: z.boolean().default(false)
+  description: z.string().optional()
+  location: z.string().optional()})
+type FormValues = z.infer<typeof formSchema>;
+interface WorkExperienceItemFormProps {
+  initialData?: WorkExperience;
+  onSubmit: (data: WorkExperience) => Promise<void>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     required_error: "Start date is required"}),
   end_date: z.date().optional(),
   is_current: z.boolean().default(false),
@@ -103,6 +122,7 @@ export function WorkExperienceItemForm({}
       description: values.description,    // Optional;
       location: values.location,          // Optional;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     
     await onSubmit(workExperience)
@@ -131,7 +151,10 @@ export function WorkExperienceItemForm({}
                   </FormControl>
                   <FormMessage />
                 </FormItem>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -174,7 +197,31 @@ export function WorkExperienceItemForm({;
   onSubmit,;
   onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),;
+<<<<<<< HEAD
+// Define form schema;
+const formSchema = z && z.object({;
+  company_name: z && z.string().min(1, "Company name is required");
+  role_title: z && z.string().min(1, "Role title is required");
+  start_date: z && z.date({;
+    required_error: "Start date is required"}),;
+  end_date: z && z.date().optional(),;
+  is_current: z && z.boolean().default(false),;
+  description: z && z.string().optional(),;
+  location: z && z.string().optional()}),;
+type FormValues = z && z.infer<typeof formSchema>;
+interface WorkExperienceItemFormProps {;
+  initialData?: WorkExperience;
+  onSubmit: (data: WorkExperience) => Promise<void>,;
+  onCancel: () => void;
+}
+export function WorkExperienceItemForm(): any ({;
+  initialData;
+  onSubmit;
+  onCancel}: WorkExperienceItemFormProps) {;
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Set up form;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
@@ -193,6 +240,7 @@ export function WorkExperienceItemForm({;
   const watchRoleTitle = form && form.watch("role_title");
   const watchCompanyName = form && form.watch("company_name");
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleFormSubmit = async (values: FormValues) => {;
     // Create a properly typed WorkExperience object with all required fields;
     const workExperience: WorkExperience = {;
@@ -207,17 +255,17 @@ export function WorkExperienceItemForm({;
       location: values && values.location,          // Optional;
     };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     await onSubmit(workExperience);
-  };
-
+  },;
   const handleAIEnhancement = (content: string) => {;
-    form && form.setValue("description", content, { shouldDirty: true }),;
+    form.setValue("description", content, { shouldDirty: true }),;
     setIsEnhancementDialogOpen(false);
   };
 
     <>;
       <Form {...form}>;
-        <form onSubmit={form && form.handleSubmit(handleFormSubmit)} className="space-y-6">;
+        <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <FormField
               control={form && form.control}
@@ -235,9 +283,7 @@ export function WorkExperienceItemForm({;
                   <FormControl>;
 
                   <FormMessage />;
-                </FormItem>;
-              )}
-
+                </FormItem>;              )}
             />;
 
             <FormField
@@ -349,6 +395,9 @@ function WorkExperienceItemForm() {}
                   <div className="flex items - center gap - 2 h - 10">;
                     <Switch;
                       checked={field.value}
+<<<<<<< HEAD
+            />;
+=======
 
             />;
 
@@ -396,11 +445,66 @@ function WorkExperienceItemForm() {}
                     </label>;
                   </div>;
                   <FormMessage />;
+<<<<<<< HEAD
+                </FormItem>;
+              )}
+            />;
+          </div>;
+;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+            <FormField;
+              control={form.control}
+              name="start_date";
+              render={({ field }) => (;
+                <FormItem className="flex flex-col">;
+                  <FormLabel>Start Date</FormLabel>;
+                  <Popover>;
+                    <PopoverTrigger asChild>;
+                      <FormControl>;
+                        <Button;
+                          variant={"outline"}
+                          className={cn(;
+                            "w-full pl-3 text-left font-normal",;
+                            !field.value && "text-muted-foreground";
+                          )}
+                        >;
+                          {field.value ? (;
+                            format(field.value, "MMM yyyy");
+                          ) :(;
+                            <span>Select date</span>;
+                          )}
+                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
+                        </Button>;
+                      </FormControl>;
+                    </PopoverTrigger>;
+                    <PopoverContent className="w-auto p-0" align="start">;
+                      <Calendar;
+                        mode="single";
+                        selected={field.value}
+                        onSelect={field.onChange}
+                        initialFocus;
+                        captionLayout="dropdown-buttons";
+                        fromYear={1990}
+                        toYear={new Date().getFullYear()}
+=======
 
                       />;
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
+<<<<<<< HEAD
+              <FormField
+                control={form && form.control}
+                name="end_date"
+                </FormItem>;
+              )}
+            />;
+            ;
+            {!watchIsCurrent && (;
+              <FormField;
+                control={form.control}
+                name="end_date";
+=======
 
               <FormField
                 control={form && form.control}

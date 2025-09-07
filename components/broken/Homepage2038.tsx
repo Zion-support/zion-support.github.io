@@ -277,6 +277,8 @@ initial={{ opacity: 0, y: 20 }
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2038;
                     service={service}
+<<<<<<< HEAD
+=======
 
               ))}
 "
@@ -717,6 +719,7 @@ variant='consciousness';
                   View All AI Services;
                 </motion.button>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </Link>;
             </div>;
         </section>;
@@ -896,6 +899,7 @@ variant='automation';
                   Explore All Services;
                 </motion.button>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </Link>;
             </div>;
         </section>;
@@ -903,6 +907,7 @@ variant='automation';
             </div>
         </section>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Featured IT Services */}
 <section className='py-24 px-4'>;'
           <div className='max-w-7xl mx-auto'>;'
@@ -1145,6 +1150,7 @@ variant='quantum';
                   View All IT Services;
                 </motion.button>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </Link>;
             </div>;
         </section>;

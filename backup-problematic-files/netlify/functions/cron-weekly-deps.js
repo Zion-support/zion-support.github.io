@@ -90,6 +90,12 @@ exports.handler = async function() {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
     }
+<<<<<<< HEAD
+
+:netlify/functions/cron-weekly-deps.js
+
+:backup-problematic-files/netlify/functions/cron-weekly-deps.js
+=======
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: entries.length }) }
   } catch (e) {

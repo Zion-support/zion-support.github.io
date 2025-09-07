@@ -29,6 +29,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
+=======
 
 import {;
   getWhitepaperSections,;
@@ -36,6 +38,7 @@ import {;
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function WhitepaperBuilderPage() {;
 export default function WhitepaperBuilderPage() {
   }

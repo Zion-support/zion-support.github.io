@@ -228,6 +228,8 @@ const getTotalUrls = (
     for (let index = 0, i < 6, i++) {
       result += chars.char_at (Math.floor (Math.random () * chars.length));
     }
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -261,6 +263,8 @@ professional shortening service. Track clicks, generate QR codes,
           </p>
         </div>
       </section>
+<<<<<<< HEAD
+=======
       {/* URL Shortening Tool */}
 
 <<<<<<< HEAD
@@ -353,9 +357,13 @@ className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover: from-orange
                     <   />
                   ) : (
                     <>
+<<<<<<< HEAD
+                      <Link className='w-5 h-5 mr-2' />                      <Link className="w-5 h-5 mr-2" />
+=======
 
 <<<<<<< HEAD
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       Create Short URL
                     </>
                   
@@ -367,6 +375,9 @@ className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover: from-orange
 >>>>>>> origin/chore/fix-lint-and-merge
 }
                 </Button>
+<<<<<<< HEAD
+                <div className='text-sm text-gray-400'>                  <p>• Professional, branded short URLs</p>                <div className="text-sm text-gray-400">
+=======
 
 
 <<<<<<< HEAD
@@ -476,6 +487,13 @@ className=w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-7
                   <div className='text-center p-4 bg-gray-700 rounded-lg'    />
                     <div className='text-3xl font-bold text-red-400 mb-2'    />
                       {getTotalClicks()}
+<<<<<<< HEAD
+                    </div>;
+                    <div className='text-sm text-gray-400'>Total Clicks</div>                  </div>;
+                </div>;
+                {shortenedUrls && shortenedUrls.length === 0 ? (                Your Statistics;
+              </h3>;
+=======
 
                     </div>
                     <div className='text-sm text-gray-400'    />Total Clicks</div>
@@ -621,6 +639,8 @@ variant='outline'
                           Visit;
                         </Button>
                       </div>
+<<<<<<< HEAD
+=======
 
 <div className='flex space-x-2'    />
                         <Button;
@@ -680,7 +700,7 @@ variant='outline';
                     </div>
 
                   )}
-                </Card>;
+</Card>;
               ))}
             </div>;
           </div>;
@@ -803,6 +823,18 @@ campaigns, and advertising to measure ROI and engagement.
 >>>>>>> origin/chore/fix-lint-and-merge
               </ul>
             </Card>
+<<<<<<< HEAD
+            <Card className='p-8 bg-gray-700 border border-gray-600'>
+              <div className='text-4xl mb-4'>📱</div>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                Social Media
+              </h3>
+              <p className='text-gray-400 mb-6'>
+                Share concise, professional links on social platforms with
+                built-in analytics to understand audience engagement.
+              </p>
+              <ul className='space-y-2 text-gray-300'>                <li>• Professional appearance</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
+=======
 
 
 <<<<<<< HEAD
@@ -811,6 +843,18 @@ campaigns, and advertising to measure ROI and engagement.
                 <li>• Brand consistency</li>
               </ul>
             </Card>
+<<<<<<< HEAD
+            <Card className='p-8 bg-gray-700 border border-gray-600'>
+              <div className='text-4xl mb-4'>📧</div>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                Email Marketing
+              </h3>
+              <p className='text-gray-400 mb-6'>
+                Include short, trackable URLs in newsletters and promotional
+                emails to monitor subscriber engagement.
+              </p>
+              <ul className='space-y-2 text-gray-300'>                <li>• Clean email design</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
+=======
 
 
                 <li>• Clean email design</li>
@@ -818,6 +862,18 @@ campaigns, and advertising to measure ROI and engagement.
                 <li>• A/B testing support</li>
               </ul>
             </Card>
+<<<<<<< HEAD
+            <Card className='p-8 bg-gray-700 border border-gray-600'>
+              <div className='text-4xl mb-4'>🏢</div>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                Business Presentations
+              </h3>
+              <p className='text-gray-400 mb-6'>
+                Use short URLs in presentations, business cards, and printed
+                materials for easy access and tracking.
+              </p>
+              <ul className='space-y-2 text-gray-300'>                <li>• Professional branding</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
+=======
 
 
                 <li>• Professional branding</li>

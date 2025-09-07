@@ -8,6 +8,7 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Microscope, DollarSign, Home, Users, Briefcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   BookOpen, MessageCircle, Star, TrendingUp, Target;
 
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
@@ -16,6 +17,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
   Network, Server, HardDrive, Monitor;
+<<<<<<< HEAD
+  Laptop, Watch, Headphones, Speaker, Mic,
+  Keyboard, Mouse, CpuIcon, DatabaseIcon,
+
+  Laptop, Watch, Headphones, Speaker, Mic
+  Keyboard, Mouse, CpuIcon, DatabaseIcon
+
+=======
 
   Laptop, Watch, Headphones, Speaker, Mic;
   Keyboard, Mouse, CpuIcon, DatabaseIcon;
@@ -33,6 +42,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   PaletteIcon, VideoIcon, LockIcon as LockIcon2;
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2;
   Handshake, LifeBuoy, Activity;
+<<<<<<< HEAD
+  Linkedin, Twitter, Facebook, Instagram, Youtube, Github
+
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
+}
+const serviceCategories = [
+  {
+    title: '🧠 Revolutionary AI Services'
+    icon: BrainIcon
+    color: 'from-violet-600 via-purple-600 to-indigo-600'
+    description: 'Next-generation AI consciousness and creativity'
+    services: [
+=======
 
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github
  } from 'lucide-react';'
@@ -199,6 +225,7 @@ import {
   { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
 ];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -303,6 +330,10 @@ return (;
 return (;
     <>;
       {/* Top Contact Bar */}
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 {contactInfo.mobile}
               </span>
@@ -572,11 +603,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                  {link.name}
+                </Link>
+              ))}
+
                 >
                   {link.name}
                 </Link>
               ))}
-              
+
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -793,6 +828,10 @@ href='/contact''
                   onClick={() => setIsOpen(false)}"
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";'
                           className='mt - 3 ml - 4 space - y-2';
+<<<<<<< HEAD
+className='mt - 3 ml - 4 space - y-2';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         >;
                           {category.services.map (service => (                            <Link;
                               key={service.name}
@@ -833,6 +872,12 @@ href='/contact''
                 </Link>
               </div>
             </motion.div>
+<<<<<<< HEAD
+
+      <div className="h-20"></div>
+
+          )}
+=======
 
           
 }

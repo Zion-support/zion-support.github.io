@@ -9,6 +9,27 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const { action, vendorId, value } = req.body || {};
 
+<<<<<<< HEAD
+  setVendorApproval
+  setVendorCommission
+  suspendVendor;
+} from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body |{};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+  setVendorApproval,
+  setVendorCommission,;
+  suspendVendor,;
+} from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { action, vendorId, value } = req.body || {};
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     if (action === 'approve') {
       setVendorApproval(String(vendorId), true);

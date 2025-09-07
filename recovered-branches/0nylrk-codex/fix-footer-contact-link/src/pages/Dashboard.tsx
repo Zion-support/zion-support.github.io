@@ -10,6 +10,28 @@ import {NotificationCenter} from "@/components/NotificationCenter";
 import {useToast} from "@/hooks/use-toast";
 import {Link} from "react-router-dom";
 export default function Dashboard() {;
+<<<<<<< HEAD
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CommunityDiscussion } from "@/components/CommunityDiscussion",
+import { Badge } from "@/components/ui/badge",
+import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react",
+import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications",
+import { NotificationCenter } from "@/components/NotificationCenter",
+import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
+export default function Dashboard() {
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+  if (!user) return null;
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+  if (!user) return null;
+=======
 
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -51,6 +73,7 @@ export default function Dashboard() {};
   const { toast } = useToast();
   if (!user) return null;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleTestNotification = async () => {;
 
     const result = await createTestNotification(user && user.id);
@@ -173,6 +196,7 @@ export default function Dashboard() {};
                       variant="outline"
                       onClick={async () => {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           userId: user.id,
 
                           missingMilestone: "profile_completed",
@@ -331,11 +355,16 @@ export default function Dashboard() {};
       <Footer />
     </>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">;
                 <div className="flex flex-col items-center text-center">;
                   <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">;
 
+<<<<<<< HEAD
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
@@ -365,6 +394,33 @@ import { Link } from "react-router-dom",;
                 <div className="flex flex-col items-center text-center">
                   <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">
                     {user.displayName.split(' ').map(name => name[0]).join('')}
+<<<<<<< HEAD
+                    {user.displayName.split(' ').map(name => name[0]).join('')}
+                  </div>;
+                  <h2 className="text-xl font-bold text-white">{user.displayName}</h2>;
+                  <p className="text-zion-slate-light mb-2">{user.email}</p>;
+                  ;
+                  <Badge ;
+                    className="bg-zion-purple text-white mb-4";
+                  >;
+                    {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) :"New User"}
+                  </Badge>;
+                  ;
+                  <Button ;
+                    className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+                    onClick={() => window.location.href = "/profile"}
+                  </div>;
+                  <h2 className="text-xl font-bold text-white">{user.displayName}</h2>;
+                  <p className="text-zion-slate-light mb-2">{user.email}</p>;
+                  <Badge;
+                    className="bg-zion-purple text-white mb-4";
+                  >;
+                    {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
+                  </Badge>;
+                  <Button;
+                    className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+                    onClick={() => window.location.href = "/profile"}
+=======
 
                   >;
                     <UserCheck size={16} />;
@@ -372,7 +428,11 @@ import { Link } from "react-router-dom",;
                   </Button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+              ;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Stats & Metrics */}
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">;
                 <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>;
@@ -383,6 +443,7 @@ import { Link } from "react-router-dom",;
                   </div>;
                   <div className="w-full bg-zion-blue rounded-full h-2">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="flex justify-between items-center">;
                     <span className="text-zion-slate-light">Community Points</span>;
                     <span className="text-zion-cyan font-medium">125</span>;
@@ -393,11 +454,40 @@ import { Link } from "react-router-dom",;
                       <a href="/wallet" className="hover:underline">View Wallet</a>;
                     </span>;
                   </div>;
+<<<<<<< HEAD
+                  ;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="flex justify-between items-center">;
                     <span className="text-zion-slate-light">Badges Earned</span>;
                     <span className="text-zion-cyan font-medium">3/12</span>;
                   </div>;
+<<<<<<< HEAD
+                  ;
+                  {/* Test notification buttons */}
+                  <div className="flex flex-col gap-2 mt-4">;
+                    <Button ;
+                  {/* Test notification buttons */}
+                  <div className="flex flex-col gap-2 mt-4">;
+                    <Button;
+                      className="w-full flex items-center justify-center gap-2";
+                      variant="outline";
+                      onClick={handleTestNotification}
+                    >;
+                      <Send size={16} className="text-zion-cyan" />;
+                      Send Test Notification;
+                    </Button>;
+                    <Button;
+                      className="w-full flex items-center justify-center gap-2";
+                      variant="outline";
+                      onClick={async () => {;
+                        await createOnboardingNotification({;
+                          userId: user.id,;
+                          missingMilestone: 'profile_completed',;
+                          userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent';
+                        }),;
+=======
 
                         toast({;
                           title: "Onboarding notification sent",
@@ -408,6 +498,14 @@ import { Link } from "react-router-dom",;
                       <Settings size={16} className="text-zion-purple" />;
                       Send Onboarding Nudge;
                     </Button>;
+<<<<<<< HEAD
+                    <Button;
+                      className="w-full flex items-center justify-center gap-2";
+                      variant="outline";
+                      onClick={async () => {;
+                        await createSystemNotification({;
+                          userId: user.id,;
+=======
 
                     <Button
                       className="w-full flex items-center justify-center gap-2"
@@ -430,7 +528,11 @@ import { Link } from "react-router-dom",;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+              ;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Notifications */}
               <div className="bg-zion-blue-dark rounded-xl p-6">;
                 <h3 className="text-lg font-bold text-white mb-4 flex items-center">;
@@ -447,7 +549,11 @@ import { Link } from "react-router-dom",;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+            ;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Main Content - Dashboard */}
             <div className="lg:col-span-2">;
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">;
@@ -461,6 +567,15 @@ import { Link } from "react-router-dom",;
                     </Button>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+                ;
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">;
+                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">;
+                    <h3 className="text-lg font-medium text-white">Welcome, {user.displayName.split(' ')[0]}</h3>;
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">;
+                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">;
+                    <h3 className="text-lg font-medium text-white">Welcome, {user.displayName.split(' ')[0]}</h3>;
+=======
 
                     <p className="text-zion-slate-light mt-1">Your journey on Zion has just begun!</p>;
                   </div>;
@@ -469,7 +584,11 @@ import { Link } from "react-router-dom",;
                     <p className="text-zion-slate-light mt-1">Complete your profile to unlock all features.</p>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+                ;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Badges Preview */}
                 <div className="mb-8">;
                   <h3 className="text-lg font-bold text-white mb-4">Your Badges</h3>;
@@ -500,6 +619,15 @@ import { Link } from "react-router-dom",;
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+                ;
+                {/* Community Section */}
+                <div>;
+                  <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
+                {/* Community Section */}
+                <div>;
+                  <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
+=======
 
 }
   const handleTestNotification = async () => {}

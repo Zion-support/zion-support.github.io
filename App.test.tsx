@@ -17,6 +17,7 @@ describe('App', () => {
   });
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   it('displays correct content', () => {
     render(<App />);
     expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();

@@ -64,7 +64,13 @@ const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 interface Message {
   role: string
   content: string
+<<<<<<< HEAD
+interface Message {
+  role: string
+  content: string
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 
@@ -75,12 +81,26 @@ const corsHeaders = {;'
 interface Message {;
   role: string,;
   content: string;
+<<<<<<< HEAD
+=======
 
 }
 
 interface RequestBody {
   messages: Message[];
 }
+<<<<<<< HEAD
+}
+interface RequestBody {
+  messages: Message[]
+}
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders })
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 interface RequestBody {}
@@ -100,6 +120,29 @@ interface RequestBody {}
     }
     // Combine the system message with user messages;
     const combinedMessages = [systemMessage, ...messages];
+<<<<<<< HEAD
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST'
+      headers: {
+        'Authorization': `Bearer ${openAIApiKey}`;
+        'Content-Type': 'application/json'}
+      body: JSON.stringify({
+        model: 'gpt-4o-mini';
+        messages: combinedMessages;
+        temperature: 0.7
+        max_tokens: 500})});
+    const data = await response.json();
+    if (data.error) {
+      throw new Error(data.error.message)
+
+
+
+    }
+    const assistantMessage = data.choices[0].message.content;
+    // Log this interaction for analytics (in a real implementation)
+    // This would track common questions, successful interactions, etc.
+    console.log('AI chat interaction logged');
+=======
 
       method: 'POST'
       headers: {
@@ -144,6 +187,7 @@ interface RequestBody {}
         'Content-Type': 'application/json'},;
       body: JSON.stringify({;'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     const assistantMessage = data.choices[0].message.content;
     // Log this interaction for analytics (in a real implementation)

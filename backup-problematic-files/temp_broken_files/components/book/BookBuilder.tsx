@@ -167,6 +167,10 @@ className=&quot;w-full border rounded px-3 py-2&quot;
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
                 placeholder=&quot;9781234567897&quot;
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
             <label className='space-y-1'>
@@ -617,6 +621,14 @@ const quoteCallouts = [...project.visuals.quoteCallouts],;
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+  )}
+:components/book/BookBuilder.tsx
+  );
+};
+  )}
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 
   );
 }

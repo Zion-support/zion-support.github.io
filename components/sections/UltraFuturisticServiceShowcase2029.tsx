@@ -16,6 +16,22 @@ interface Service  {"id": string;
   link: string
 }
 
+<<<<<<< HEAD
+export default function UltraFuturisticServiceShowcase2029({
+  services
+  title = '2029 Cutting-Edge Services'
+  subtitle = 'Experience the future of technology with our revolutionary solutions'
+}: UltraFuturisticServiceShowcase2029Props) {
+  return (
+    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className='text-center mb-16'
+interface UltraFuturisticServiceShowcase2029Props {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface UltraFuturisticServiceShowcase2029Props {
   }
@@ -230,6 +246,21 @@ className='text-center mt-12';
   )</p>;
 
 
+<<<<<<< HEAD
+    </section>;
+  );
+}
+
+}
+}
+}
+    </section>
+  );
+
+}
+}
+}
+=======
               </p>;
               <div className='flex items - center justify - between mb - 4'>;
                 <span className='text - 2xl font - bold text - cyan - 400'>;

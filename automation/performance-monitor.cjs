@@ -227,6 +227,96 @@ main
         );
       }
     }
+=======
+<<<<<<< HEAD
+    const reportFile = path.join(
+      __dirname,
+      'reports',
+      'performance-report.json'
+    );
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`Performance report generated: ${reportFile}`);
+  }
+  generateRecommendations() {
+    const recommendations = [];
+    if (this.metrics.buildTime > 60000) {
+      // 1 minute
+      recommendations.push(
+        'Consider optimizing build process - build time is high'
+      );
+    }
+    if (this.metrics.bundleSize > 5000000) {
+      // 5MB
+      recommendations.push('Consider code splitting - bundle size is large');
+    }
+    if (this.metrics.memoryUsage > 100) {
+      // 100MB
+      recommendations.push(
+        'Consider memory optimization - high memory usage detected'
+      );
+    }
+    return recommendations;
+  }
+}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    try {
+      fs.writeFileSync(
+        this.performanceReportFile,
+        JSON.stringify(report, null, 2)
+      );
+    } catch (_) {}
+  }
+<<<<<<< HEAD
+  getPerformanceRecommendations() {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  getPerformanceRecommendations() {
+=======
+
+  generateRecommendations() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+  generateRecommendations() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    const recommendations = [];
+    if (!this.lastCheck) return recommendations;
+    const metrics = this.lastCheck.systemMetrics;
+    if (metrics && metrics.memory && metrics.memory.heapTotal) {
+      const memoryUsagePercent =
+        (metrics.memory.heapUsed / metrics.memory.heapTotal) * 100;
+      if (memoryUsagePercent > 80) {
+        recommendations.push(
+          'High memory usage detected. Consider optimizing memory usage.'
+        );
+      }
+      if (memoryUsagePercent > 90) {
+        recommendations.push(
+          'Critical memory usage. Immediate optimization required.'
+        );
+      }
+    }
+    if (this.lastCheck.buildMetrics && this.lastCheck.buildMetrics.exists) {
+      if (this.lastCheck.buildMetrics.age > 3600000) {
+        recommendations.push(
+          'Build is stale. Consider rebuilding for optimal performance.'
+        );
+      }
+      if (this.lastCheck.buildMetrics.size > 100 * 1024 * 1024) {
+        recommendations.push(
+          'Large build size detected. Consider code splitting and optimization.'
+        );
+      }
+    }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return recommendations;
   }
 ;

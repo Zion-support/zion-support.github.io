@@ -3,6 +3,10 @@ import React from 'react';'
 type Props = {import React from './react';'
 
 }
+<<<<<<< HEAD
+
+
+=======
 
 type Props = {"title": string,"description": string;
 
@@ -14,6 +18,15 @@ import React from './react';
 type Props = {
   title: string,
   description: string;
+<<<<<<< HEAD
+  cta?: React && React.ReactNode;
+};
+export default function FuturisticCard(): any ({ title, description, cta }: Props) {;
+  return (
+      </div>;
+    </div>;
+  );
+=======
 
   cta?: React && React.ReactNode;
 };

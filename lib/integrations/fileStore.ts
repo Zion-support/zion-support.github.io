@@ -85,6 +85,8 @@ function ensureDataDir(): void {
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
   }
 }
+<<<<<<< HEAD
+=======
 
 export function readState(): IntegrationsState {
   ensureDataDir(),
@@ -120,10 +122,22 @@ export function writeState(
 
 export function readState(): IntegrationsState {;
 
+<<<<<<< HEAD
+export function readState(): IntegrationsState {
+
+export function readState(): IntegrationsState {;
+  ensureDataDir();
+  try {
+    const raw = fs.readFileSync(STATE_FILE, "utf8");
+    return JSON.parse(raw) as IntegrationsState;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     return { connections: [], logs: [], overrides: [], events: [] }
   }
 }
+<<<<<<< HEAD
+=======
 
   mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {;

@@ -1,3 +1,152 @@
+<<<<<<< HEAD
+import { 
+  Phone, Mail, MapPin, Globe, 
+  Clock, ChevronDown, ChevronUp;
+  MessageCircle, Calendar, Star
+} from 'lucide-react';
+const contactInfo = {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Clock,
+  ChevronDown,
+  ChevronUp,
+  MessageCircle,
+  Calendar,
+  Star,} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe,
+  Clock, ChevronDown, ChevronUp;
+  MessageCircle, Calendar, Star;
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+import {;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Globe,;
+  Clock,;
+  ChevronDown,;
+  ChevronUp,;
+  MessageCircle,;
+  Calendar,;
+  Star,;} from 'lucide-react';import { ;
+  Phone, Mail, MapPin, Globe, ;
+  Clock, ChevronDown, ChevronUp;
+  MessageCircle, Calendar, Star;
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',;
+  hours: 'Mon-Fri: 9AM-6PM EST',;
+  rating: '4 && 4.9/5 (200+ Reviews)',;
+};
+const quickActions = [
+  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },
+  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },
+  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
+];
+const quickActions = [;
+  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },;
+  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },;
+  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
+export default function TopContactBar() {;
+  const [isExpanded, setIsExpanded] = useState(false);
+  return (
+    <div className="relative z-40">
+      {/* Main Contact Bar */}
+      <div className="bg-gradient-to-r from-gray-900 via-black to-gray-900 border-b border-cyan-500/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-12">
+            {/* Left Side - Contact Info */}
+            <div className="hidden md:flex items-center space-x-6 text-sm">;
+              {/* Phone */}
+              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">;
+                <Phone className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />;
+                <a href={`tel:${contactInfo && contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">;
+                  {contactInfo && contactInfo.mobile}
+                </a>;
+              </div>;
+              {/* Email */}
+              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
+                <Mail className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">
+                  {contactInfo.email}
+                </a>
+              </div>
+              {/* Address */}
+              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
+                <MapPin className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
+                <span className="hover:text-cyan-400 transition-colors duration-200">
+                  {contactInfo.address}
+                </span>
+              </div>
+                  href={`mailto:${contactInfo && contactInfo.email}`}
+                  className='hover:text-cyan-400 transition-colors duration-200'>                  {contactInfo && contactInfo.email}              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">;
+                <Mail className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />;
+                <a href={`mailto:${contactInfo && contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">;
+                  {contactInfo && contactInfo.email}
+                </a>;
+              </div>;
+              {/* Address */}
+              <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group'>;
+                <MapPin className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />;
+                <span className='hover:text-cyan-400 transition-colors duration-200'>                  {contactInfo && contactInfo.address}              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">;
+                <MapPin className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />;
+                <span className="hover:text-cyan-400 transition-colors duration-200">;
+                  {contactInfo && contactInfo.address}
+                </span>;
+              </div>;
+              {/* Website */}
+              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
+                <Globe className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
+                <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-200">
+
+export default function TopContactBar() {
+  const [isExpanded, setIsExpanded] = useState(false),
+
+  return (
+    <div className=&quot;relative z-40&quot;>
+      {/* Main Contact Bar */}
+      <div className=&quot;bg-gradient-to-r from-gray-900 via-black to-gray-900 border-b border-cyan-500/30&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;flex items-center justify-between h-12&quot;>
+            {/* Left Side - Contact Info */}
+            <div className=&quot;hidden md:flex items-center space-x-6 text-sm&quot;>
+              {/* Phone */}
+              <div className=&quot;flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group&quot;>
+                <Phone className=&quot;w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200&quot; />
+                <a href={`tel:${contactInfo.mobile}`} className=&quot;hover:text-cyan-400 transition-colors duration-200&quot;>
+                  {contactInfo.mobile}
+                </a>
+              </div>
+
+              {/* Email */}
+              <div className=&quot;flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group&quot;>
+                <Mail className=&quot;w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200&quot; />
+                <a href={`mailto:${contactInfo.email}`} className=&quot;hover:text-cyan-400 transition-colors duration-200&quot;>
+                  {contactInfo.email}
+                </a>
+              </div>
+
+              {/* Address */}
+              <div className=&quot;flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group&quot;>
+                <MapPin className=&quot;w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200&quot; />
+                <span className=&quot;hover:text-cyan-400 transition-colors duration-200&quot;>
+                  {contactInfo.address}
+                </span>
+              </div>
+
+              {/* Website */}
+              <div className=&quot;flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group&quot;>
+                <Globe className=&quot;w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200&quot; />
+                <a href={contactInfo.website} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;hover:text-cyan-400 transition-colors duration-200&quot;>
+
+=======
 
 
 import React, { useState } from 'react';'
@@ -141,6 +290,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Right Side - Quick Actions & Expand Button */}
             <div className="flex items-center space-x-4">
               {/* Quick Actions */}
+              <div className='hidden sm:flex items-center space-x-2'>
+                {quickActions.map(action => (
+                  <a
+                    key={action.name}
+                    href={action.href}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    className='flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'                  >              {/* Quick Actions */}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="hidden sm:flex items-center space-x-2">
                 {quickActions.map((action) => (
                   <a
@@ -151,6 +310,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span />{contactInfo.rating}</span>
               </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     key={action.name}
                     href={action.href}
                     className="flex items - center space - x-2 px - 3 py - 1.5 text - xs text - gray - 300 hover:text - white bg - gray - 800 / 50 hover:bg - cyan - 500 / 20 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow-cyan-500 / 30";
@@ -352,6 +512,7 @@ key={action.name}
                           {action.icon}
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Quick Actions */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">

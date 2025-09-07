@@ -4,6 +4,7 @@ interface ProfileContactProps {
   email?: string;
   profileName: string;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ProfileContactProps {
   email?: string,
   profileName: string,
@@ -14,6 +15,13 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   const [message, setMessage] = useState(""),
   const [subject, setSubject] = useState(""),
   const [isSending, setIsSending] = useState(false),
+<<<<<<< HEAD
+  
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {;
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+=======
 
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault(),
@@ -84,6 +92,7 @@ interface ProfileContactProps {
   email?: string;
   profile_name: string;
   profile_type: "service" | "talent";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export /**
  * ProfileContact - Function description

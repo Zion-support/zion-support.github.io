@@ -603,6 +603,11 @@ if (score >= 50) return 'Needs Improvement';'
 }
 
 export default PerformanceMonitor;
+<<<<<<< HEAD
+}
+
+}
+=======
 
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => ;
   return new Promise ( (resolve) => {// Check condition;

@@ -9,7 +9,10 @@ Carousel;
     title: "CTO","
     company: "FutureTech Systems","
     image: "/placeholder.svg"}],
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function EnterpriseTestimonials() {
   return (
     <section id='testimonials' className='py-20 px-4 md:px-6'>
@@ -51,7 +54,29 @@ export function EnterpriseTestimonials() {
                   <blockquote className="text-xl mb-6 italic">"
 
                       <img
+<<<<<<< HEAD
+                        src={testimonial.image}
+                        alt={testimonial.author}
+                        className='h-full w-full object-cover'
+                        loading='lazy'                      />
+                    </div>
+                    <div>
+                      <p className='font-bold'>{testimonial.author}</p>
+                      <p className='text-sm text-muted-foreground'>                        {testimonial.title}, {testimonial.company}                      <p className="font-bold">{testimonial.author}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.title}, {testimonial.company}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">
+            <CarouselPrevious />
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <CarouselNext />
           </div>
         </Carousel>
@@ -84,6 +109,9 @@ import {}
     author: "Elena Rodriguez","
     title: "CTO","
     company: "FutureTech Systems",
+<<<<<<< HEAD
+    image: "/placeholder.svg"}],
+=======
 
 export function EnterpriseTestimonials() {
   return (
@@ -149,6 +177,11 @@ export function EnterpriseTestimonials() {;
             See how enterprise teams are transforming their hiring process;
           </p>;
         </div>;
+<<<<<<< HEAD
+        <Carousel className="w-full">;
+          <CarouselContent>;
+            {testimonials.map((testimonial, index) => (;
+=======
 
         <Carousel className='w-full'>;
           <CarouselContent>;
@@ -216,12 +249,16 @@ export function EnterpriseTestimonials() {;
 <div className='flex justify-center gap-2 mt-8'>
             <CarouselPrevious />
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <CarouselNext />
 
           </div>
         </Carousel>
       </div>
     </section>
+<<<<<<< HEAD
+}
+=======
 
           </CarouselContent>;'"
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">;'

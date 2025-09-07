@@ -32,6 +32,9 @@ return (
     industries={["Retail", "CPG", "E‑commerce"]}
     canonical="https: //ziontechgroup.com / retail - technology - solutions";
   />);
+		/>
+	)
+
 }
 
 

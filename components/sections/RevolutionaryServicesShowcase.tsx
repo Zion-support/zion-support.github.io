@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Star, TrendingUp, Users, Shield, Zap  } from 'lucide-react';
+import { revolutionary2025MicroSaasServices  } from '../../data/revolutionary-2025-micro-saas';
+import { emergingTech2025Services  } from '../../data/emerging-tech-2025-services';
+import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
+=======
 
 
 
@@ -109,6 +117,7 @@ key={category.i
       }
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const itemVariants = {
     hidden: { opacity: 0, y: 20},
     visible: {
@@ -119,6 +128,7 @@ key={category.i
       }
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -151,7 +161,15 @@ key={category.i
           transition={{ duration: 0.6 }}
           viewport={{ once: true}}
         >
+<<<<<<< HEAD
+          {categories.map(category => (            <button
+              key={category.id}
+              onClick={() => {
+                setActiveCategory(category.id);
+                setVisibleServices(12);              }}          {categories.map((category) => (
+=======
           {categories.map((category) => (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <button
               key={category.id}
               onClick={() => {
@@ -165,6 +183,41 @@ key={category.i
               key={category.id}
               onClick={() => {}
                 setActiveCategory(category.id);
+<<<<<<< HEAD
+
+
+              </span>
+            </button>
+          ))}
+
+        </motion && motion.div>;
+
+
+
+
+
+        </motion && motion.div>;
+                setVisibleServices(12);                setVisibleServices(12)
+              }}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${
+                activeCategory === category.id
+                  ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25'
+                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50'
+              }`}
+            >
+              {category.name}
+              <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
+                {category.count}
+              <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}
+
+                {category.count}
+
+              </span>
+            </button>
+          ))}
+        </motion.div>
+
+=======
                 setVisibleServices(12)
 setVisibleServices(12);
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -460,6 +513,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='text - gray - 400 text - sm'>;'
 
                         {service.period}
+<<<<<<< HEAD
+                      </div>                    </div>;
+                  </div>;
+                  {/* Description */}
+                  <p className='text - gray - 300 mb - 4 leading - relaxed'>;
+                    {service.description}
+=======
 
                       </div>
                     <div className="text-right">

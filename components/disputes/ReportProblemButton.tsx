@@ -29,6 +29,8 @@ entityType
     </Link>;
   );
 }
+<<<<<<< HEAD
+=======
 
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
@@ -58,7 +60,10 @@ const query = new URLSearchParams({;
     projectId,;
     ...(entityType ? { entityType } : {}),;
     ...(entityId ? { entityId } : {}),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });
 
 return (;

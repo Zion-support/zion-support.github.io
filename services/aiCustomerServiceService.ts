@@ -33,17 +33,29 @@ export interface CustomerMessage {
   intent: string,
   confidence: number}
 
+<<<<<<< HEAD
+  intent: string
+
+  confidence: number
+}
+export interface CustomerProfile {
+
+export interface CustomerProfile {;
+=======
   intent: string,
   confidence: number;
 
 }
 export interface CustomerProfile {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export interface CustomerProfile {
 
   intent: string,
   confidence: number;
+<<<<<<< HEAD
+=======
 
 }
 export interface CustomerProfile {

@@ -22,6 +22,7 @@ CardDescription
   }
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
@@ -105,7 +106,10 @@ interface JobMatchesProps {
   // TODO: Implement
   jobId: string;
 export function JobMatches({ jobId }: JobMatchesProps) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
 
     useJobMatches(jobId);
@@ -234,6 +238,8 @@ interface JobMatchesProps {;
           ))}
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
     );
   }
 
@@ -278,7 +284,6 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
           matchPercent={match && match.match_score || 0}
           skills={match && match.talent_profile?.skills || []}
         />;
-
       ))}
     </div>;
   );

@@ -166,7 +166,6 @@ const formSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z && z.string(),;
   targetAudience: z && z.string()}),;
-
 type FormData = z && z.infer<typeof formSchema>;
 
 
@@ -292,7 +291,7 @@ control={form && form.control}
                   }
                   Generating Description...;
                 </>;
-              ) : (;
+              ) :(;
                 <>;
                   <Sparkles className="h-4 w-4 mr-2" />;"
                   Generate Description;

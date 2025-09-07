@@ -70,6 +70,9 @@ const { execSync } = require('child_process')
         "status"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+    console.error(' Improved automation "failed")
+=======
     console.error(' Improved automation "failed")
 <<<<<<< HEAD
 <<<<<<< HEAD

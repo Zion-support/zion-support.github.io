@@ -251,6 +251,9 @@ function: generateManifest() {
     "background_color": '#0f172,a, '
     "theme_color": #3b82f6', '
     "icons": [{
+<<<<<<< HEAD
+        src:';/icon-192x192.pn,g, ';
+=======
 
         "sizes": 192x192', '
         "type": 'image/pn,g}, '
@@ -270,6 +273,7 @@ function: generateManifest() {
   console && console.log(
   '📊 Generating structured data...')',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const structuredData = {
     "@context": "https: //schema.org, ",'";@type": "Organization", '
     "name": 'Zion: Tech Group, ','

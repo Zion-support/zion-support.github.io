@@ -185,8 +185,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
 
+<<<<<<< HEAD
+interface Props {
+  samples: { language: 'curl' | 'javascript' | 'python', code: string }[]
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
-
   { key: 'curl', label: 'cURL' }
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }]
@@ -194,7 +199,6 @@ export default function CodeSamples({ samples }: Props) {
 
 interface Props {;
   samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
-
 const tabs: Array<{;
   key: Props['samples'][number]['language'];
   label: string;
@@ -203,15 +207,19 @@ const tabs: Array<{;
   { key: 'javascript', label: 'JavaScript' },;
   { key: 'python', label: 'Python' },;
 ];
-
 export default function CodeSamples(): any ({ samples }: Props) {;
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map(s => [s && s.language, s && s.code]));
-
+<<<<<<< HEAD
+    <div className="w-full">
+      <div className="flex gap-2 mb-2">
+        {tabs.map((t) => (
+=======
   return (
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="w-full">;
 export default function CodeSamples() {const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl')const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]))return (<div className='w-full'>;

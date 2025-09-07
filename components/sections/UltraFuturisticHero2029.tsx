@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import React from 'react';
+
+import { motion } from 'framer-motion';
+import {
+import {
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Atom
+  Rocket
+  Target
+  Shield
+  Cpu
+  Globe
+  Sparkles;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Target,
+  Shield,
+  Cpu,
+=======
 
 
 import React from 'react';'
@@ -115,6 +146,80 @@ className='absolute inset-0''
             backgroundSize: '50px 50px'
           }} />
         </div>
+    { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
+  const stats = [
+    { number: '500+', label: 'Innovative Services', icon: Sparkles }
+    { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp }
+    { number: '99.9%', label: 'Success Rate', icon: Star }
+    { number: '24/7', label: 'AI Operations', icon: Zap }
+  ];
+
+<<<<<<< HEAD
+  return (
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
+      {/* Animated Background */}
+      <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'>
+        {/* Floating Particles */}
+        <div className='absolute inset-0 overflow-hidden'>
+          {[...Array(50)].map((_, i) => (
+            <motion.div
+              key={i}
+              className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-20'
+              animate={{
+                x: [0, Math.random() * 1000]
+                y: [0, Math.random() * 1000]
+                opacity: [0.2, 0.8, 0.2]
+              }}
+              transition={{
+                duration: Math.random() * 10 + 10
+                repeat: Infinity
+                ease: 'linear'
+                duration: Math.random() * 10 + 10,
+                repeat: Infinity,
+                ease: 'linear',
+              }}
+              style={{
+                left: Math.random() * 100 + '%'
+                top: Math.random() * 100 + '%'
+              }}            />  ];
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
+        {/* Floating Particles */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(50)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-20"
+              animate={{
+                x: [0, Math.random() * 1000];
+                y: [0, Math.random() * 1000];
+                opacity: [0.2, 0.8, 0.2]}}
+              transition={{
+                duration: Math.random() * 10 + 10
+                repeat: Infinity
+                ease: "linear"
+              }}
+              style={{
+                left: Math.random() * 100 + '%'
+                top: Math.random() * 100 + '%'}}
+            />
+          ))}
+        </div>
+
+          ))}
+        </div>
+
+        {/* Grid Pattern */}
+        <div className='absolute inset-0 opacity-10'>
+          <div
+            className='absolute inset-0'
+            style={{
+              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`
+              backgroundSize: '50px 50px'
+            }}
+          />
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8 text-center'>'
         {/* Main Heading *
@@ -177,6 +282,11 @@ className='mb-8';
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services. ;'
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.;
         </motion && motion.div>;
+<<<<<<< HEAD
+
+
+
+=======
 
           <h1 className='text-5xl "md":text-7xl "lg":text-8xl font-bold mb-6'>;'
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>;'
@@ -275,6 +385,7 @@ className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'
               <div className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform`}>
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <p className='text-xs text-gray-300 group-"hover":text-white transition-colors text-center leading-tight'>'
                 {feature.text}

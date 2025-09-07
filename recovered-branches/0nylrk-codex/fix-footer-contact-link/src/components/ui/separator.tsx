@@ -5,10 +5,16 @@ import * as React from 'react';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
 import {cn} from '@/lib/utils';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
+<<<<<<< HEAD
+
+import { cn } from "@/lib/utils"
+
+=======
 
 "
 
@@ -74,9 +80,15 @@ const Separator = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>;
 ></typeof>(;
   (;
-    { className, orientation = 'horizontal', decorative = true, ...props },;
+    { className, orientation = "horizontal", decorative = true, ...props },;
     ref;
   ) => (;
+<<<<<<< HEAD
+    <SeparatorPrimitive.Root;
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+=======
     <SeparatorPrimitive&& SeparatorPrimitive.Root
     <SeparatorPrimitive&& SeparatorPrimitive.Root;"
 import React from 'react';
@@ -141,6 +153,7 @@ className
 );
 export { Separator }
 
+Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
 export { Separator };
 ;
 

@@ -95,6 +95,7 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
             {post.tags?.map(tag => (
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 
@@ -146,6 +147,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
           <div className="flex flex-wrap gap-2 mt-2">;
             {post.tags?.map(tag => (;"
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
+<<<<<<< HEAD
+=======
 
                 {tag}
               </Badge>
@@ -166,7 +169,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 
             Posted by {post && post.authorName} {timeAgo}
           </div>;
-
+          ;
           <div className="flex flex-wrap gap-2 mt-2">;
             {post && post.tags?.map(tag => (;
 

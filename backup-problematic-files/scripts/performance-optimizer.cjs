@@ -27,6 +27,10 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const { execSync } = require('child_process');
 class PerformanceOptimizer {
   constructor() {
@@ -204,7 +208,6 @@ class PerformanceOptimizer {
     this.projectRoot = process.cwd();
     this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json');
   }
-
   async optimizePerformance() {
     
     
@@ -614,14 +617,11 @@ class PerformanceOptimizer {
     if (dependencies.length > 20) {
       recommendations.push('Consider removing unused dependencies to reduce bundle size');
     }
-    
     if (devDependencies.length > 30) {
       recommendations.push('Review dev dependencies for unused packages');
     }
-    
     recommendations.push('Use npm audit to check for security vulnerabilities');
     recommendations.push('Consider using lighter alternatives for heavy dependencies');
-    
     return recommendations;
   }
 =======

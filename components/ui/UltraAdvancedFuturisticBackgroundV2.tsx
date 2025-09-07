@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let animationFrameId: number;
+let particles: Array< {
+const UltraAdvancedFuturisticBackgroundV2: React.FC<
+  UltraAdvancedFuturisticBackgroundV2Props
+> = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import React, { useEffect, useRef } from 'react';'
@@ -269,6 +279,7 @@ ctx.stroke()}
         })
       }),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Draw quantum matrix overlay
       ctx.globalAlpha = $2;
       ctx.strokeStyle = $2;
@@ -281,6 +292,7 @@ ctx.stroke()}
         ctx.stroke()
       }
       
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Horizontal lines
       for (let y = 0, y < canvas.height, y += 50) {
         ctx.beginPath($2);
@@ -288,6 +300,32 @@ ctx.stroke()}
         ctx.lineTo($2);
         ctx.stroke()
       }
+<<<<<<< HEAD
+      // Draw holographic circles
+      ctx.globalAlpha = 0.05;
+      for (let x = 0; x < canvas.width; x += 50) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();      }
+      // Horizontal lines
+      for (let y = 0; y < canvas.height; y += 50) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();      }
+      // Draw holographic circles
+      ctx.globalAlpha = 0.05;        ctx.stroke()
+      }
+      // Draw holographic circles
+      ctx.globalAlpha = 0.05;
+      for (let i = 0; i < 5; i++) {
+        const centerX =
+          canvas.width / 2 + Math.sin(Date.now() * 0.001 + i) * 100;
+        const centerY =
+          canvas.height / 2 + Math.cos(Date.now() * 0.001 + i) * 100;
+        const radius = 100 + Math.sin(Date.now() * 0.002 + i) * 50;
+=======
 
       // Draw holographic circles
       ctx.globalAlpha = $2;
@@ -320,6 +358,8 @@ ctx.stroke()}
   }, []),
 
             ease: 'easeInOut',          }}          }}
+<<<<<<< HEAD
+=======
 
         <motion&& motion.div"
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
@@ -537,6 +577,9 @@ stroke='url(#neuralGradient)''
               strokeWidth='1''
               opacity='0 && 0.1''
               animate={{
+<<<<<<< HEAD
+                opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],
+=======
 
                 }
 

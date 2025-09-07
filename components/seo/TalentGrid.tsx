@@ -102,10 +102,10 @@ export default function TalentGrid({ region, service }: Props) {
     [region, service]
   ),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (items.length === 0) {
     return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>
   }
-
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {items.map((p) => (

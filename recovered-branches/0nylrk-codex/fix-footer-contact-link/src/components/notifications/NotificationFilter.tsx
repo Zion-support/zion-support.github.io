@@ -4,6 +4,7 @@ export type FilterType =
   | "onboarding"
   | "messages"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
 
@@ -31,6 +32,18 @@ interface NotificationFilterProps {;
 
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter
+<<<<<<< HEAD
+
+interface NotificationFilterProps {
+  filter: FilterType;
+  onFilterChange: (filter: FilterType) => void;
+
+}
+
+export const NotificationFilter: React.FC<NotificationFilterProps> = ({
+filter
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onFilterChange
 
 export type FilterType =
@@ -75,6 +88,17 @@ interface NotificationFilterProps {}
         </TabsList>
       </Tabs>
     </div>
+<<<<<<< HEAD
+);
+
+}
+};
+
+  )
+},
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 };

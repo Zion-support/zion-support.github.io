@@ -16,11 +16,17 @@ import {Message, Conversation} from '@/types/messaging';'
 import {toast} from '@/hooks/use-toast';'
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
+  user: UserWithProfile;
+  active_conversation: Conversation | null;
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
+=======
 
 // Allow either UserProfile or UserDetails
 
@@ -40,7 +46,10 @@ export function useMessagingRealtime(;
           table: 'messages', 
           filter: `recipient_id=eq.${user && user.id}` 
         }, 
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         (payload) => {
           // Update messages if the conversation is selected
           if (activeConversation && payload && payload.new.sender_id === activeConversation && activeConversation.other_user.id) {

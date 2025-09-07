@@ -223,6 +223,38 @@ className={
               />;
               {idx < statusSteps.length - 1 && (/>;
                 <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
+        </button>
+      </div>
+      <div className='mt-3'>
+        <div className='flex items-center gap-2'>
+          {statusSteps.map((step, idx) => (
+            <div key={step} className='flex items-center'>
+              <div
+                className={
+                  'h-2 w-2 rounded-full ' +
+                  (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')                }
+                title={step}
+              />
+              {idx < statusSteps.length - 1 && (          {statusSteps.map((step, idx) => (
+            <div key={step} className="flex items-center">
+              <div
+                className={
+                  'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
+
+                }
+                title={step}
+              />
+              {idx < statusSteps.length - 1 && (
+                <div
+                  className={
+                    'h-0.5 w-8 ' +
+                    (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')
+                  }
+                />              )}
+            </div>
+          ))}
+        </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
+
               )}
             </div>
           ))}
@@ -348,6 +380,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={() => onAction('in_progress', milestone.id)}
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 <div className='mt-4 flex flex-wrap gap-2'>'
@@ -360,7 +393,7 @@ className='px-3 py-1 text-sm rounded bg-indigo-600 text-white "hover":bg-indigo-
             Mark In Progress
           </button>
         )}
-        {canTalentSubmit && (;
+{canTalentSubmit && (;
           <button
 }
 className='px-3 py-1 text-sm rounded bg-amber-600 text-white "hover":bg-amber-700''
@@ -501,6 +534,8 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
           </button>)}
       </div>;
     </div>);
+);
+  );
 }
     </div>)})}
   )

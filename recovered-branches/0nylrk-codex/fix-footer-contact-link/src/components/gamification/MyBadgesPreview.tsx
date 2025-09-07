@@ -1,6 +1,11 @@
 // Dummy data for demo: what badges this user earned (with fake dates)
 const earnedBadges: { badge: BadgeKey; date: string }[] = [
 
+<<<<<<< HEAD
+// Dummy data for demo: what badges this user earned (with fake dates)
+const earnedBadges: { badge: BadgeKey; date: string }[] = [
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { badge: "first_listing", date: "2024-12-16" },
   { badge: "profile_complete", date: "2024-11-22" },
   { badge: "first_action", date: "2024-09-08" },
@@ -48,7 +53,10 @@ export const MyBadgesPreview: React.FC = () => {;
       <div className="flex flex-wrap gap-2">
         {earnedBadges.map(({ badge, date }) => (
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
 );
 
@@ -99,5 +107,7 @@ export const MyBadgesPreview: React.FC = () => {;
       <div className="flex flex-wrap gap-2">;
         {earnedBadges.map(({ badge, date }) => (;
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />;
+<<<<<<< HEAD
+=======
 
   { badge: "first_listing", date: "2024-12-16" },

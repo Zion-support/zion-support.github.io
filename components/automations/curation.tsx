@@ -38,6 +38,8 @@ type Props = {
   "updatedAt": string | null;
 "items": Experiment[]
 };
+<<<<<<< HEAD
+=======
 
 export default function CurationPage() {
 }
@@ -162,6 +164,8 @@ return (;
             }
             Nothing to show yet.;
           </div>;
+<<<<<<< HEAD
+=======
 
 export default function CurationPage() {return (<main className="mx-auto max-w-4xl px-4 py-12">;"
       <h1 className="text-2xl font-bold text-gray-900">AI Curated Growth Experiments</h1>;"

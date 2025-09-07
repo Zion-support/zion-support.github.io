@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/direct-merge-resolver.cjs

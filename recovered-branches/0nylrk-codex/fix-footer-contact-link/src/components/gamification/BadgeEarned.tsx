@@ -5,6 +5,9 @@ import React from './react';
 import { getBadgeMeta, BadgeKey } from './badge_config';
 interface BadgeEarnedProps {
   badge: BadgeKey
+<<<<<<< HEAD
+import {getBadgeMeta, BadgeKey} from "./badgeConfig";
+=======
 
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 import React from "react",
@@ -80,6 +83,8 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
         style={{
+<<<<<<< HEAD
+=======
 
         title={meta.name}
       >
@@ -87,7 +92,10 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       </div>
       {showName && ("
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",;

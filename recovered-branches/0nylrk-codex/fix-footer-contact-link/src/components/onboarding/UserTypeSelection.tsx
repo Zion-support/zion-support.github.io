@@ -88,6 +88,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
   icon: Star;
     },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
 
 import {useState} from "react";
@@ -258,6 +259,8 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
     </div>;
   );
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               }`}
             >"`
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>"`
@@ -309,6 +312,10 @@ interface UserTypeOption {;
     }
   ],;
   return (;
+<<<<<<< HEAD
+          return (
+            <Button;
+              key={type.id}
 
 import { useState } from "react",;
 import { Briefcase, Star, User } from "lucide-react",;
@@ -358,6 +365,27 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
           This helps us personalize your experience;
         </p>;
       </div>;
+<<<<<<< HEAD
+      ;
+      <div className="grid gap-4 md:grid-cols-3">;
+        {userTypes.map((type) => {;
+          const Icon = type.icon,;
+          const isSelected = selectedType === type.id,;
+          ;
+      <div className="grid gap-4 md: grid-cols-3">;
+        {userTypes.map((type) => {;
+          const Icon = type.icon;
+          const isSelected = selectedType === type.id;
+          return (;
+            <Button;
+              key={type.id}
+              onClick={() => onSelect(type.id)}
+              variant="outline";
+              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${;
+                isSelected;
+                  ? "border-zion-purple bg-zion-purple/10 text-zion-purple";
+                  : "border-zion-blue-light hover:border-zion-cyan/50 text-white";
+=======
 
       <div className="grid gap-4 md: grid-cols-3">;
         {userTypes && userTypes.map((type) => {;
@@ -392,6 +420,8 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />;
               </div>;"
               <div className="text-center">;
+<<<<<<< HEAD
+=======
                 <h4 className="font-medium">{type && type.name}</h4>;
                 <p className="text-sm text-zion-slate-light mt-1">;
                   {type && type.description}

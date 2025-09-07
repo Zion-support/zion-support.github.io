@@ -83,6 +83,97 @@ export default async function handler(
 
     const isFreeProvider = freeProviders.some(provider => domain === provider);
 
+<<<<<<< HEAD
+      'admin@info@support@contact@sales@help@noreply@no-reply@', 'donotreply@do-not-reply@'
+    ];
+    const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern));
+      'gmail && gmail.com',
+      'yahoo && yahoo.com',
+      'hotmail && hotmail.com',
+      'outlook && outlook.com',
+      'aol && aol.com',
+      'icloud && icloud.com',
+      'protonmail && protonmail.com',
+      'mail && mail.com',
+      'yandex && yandex.com',    ];    ];
+    const isRoleBased = roleBasedPatterns && roleBasedPatterns.some(pattern => email && email.startsWith(pattern));
+    isDisposable: boolean;
+
+    isRoleBased: boolean
+
+    isFreeProvider: boolean
+  }
+}
+export default async function handler(
+
+  req: NextApiRequest
+
+  res: NextApiResponse<EmailValidationResult | { error: string }>
+) {
+  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
+  }
+  try {
+    const { email } = req.body;
+
+    if (!email |typeof email !== 'string') {
+
+      return res.status(400).json({ error: 'Email is required' });
+    }
+    // Basic email format validation
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const hasValidFormat = emailRegex.test(email);
+    // Extract domain
+    const domain = email.split('@')[1];
+    const hasValidDomain = domain && domain.length > 0;
+    // Check for common disposable email providers
+    const disposableDomains = [
+      'tempmail.org'
+      'guerrillamail.com'
+      'mailinator.com'
+      '10minutemail.com'
+      'temp-mail.org'
+      'sharklasers.com'
+      'getairmail.com'
+      'mailnesia.com',    ];      'tempmail.orgguerrillamail.commailinator.com10minutemail.comtemp-mail.orgsharklasers.comgetairmail.commailnesia.com'
+    ];
+    const isDisposable = disposableDomains.some(d => domain?.includes(d));
+    // Check for role-based emails
+    const roleBasedPatterns = [
+      'admin@'
+      'info@'
+      'support@'
+      'contact@'
+      'sales@'
+      'help@'
+      'noreply@'
+      'no-reply@'
+      'donotreply@'
+      'do-not-reply@'
+    ];
+    const isRoleBased = roleBasedPatterns.some(pattern =>
+      email.startsWith(pattern)
+    );
+    // Check for free email providers
+    const freeProviders = [
+      'gmail.com'
+      'yahoo.com'
+      'hotmail.com'
+      'outlook.com'
+      'aol.com'
+      'icloud.com'
+      'protonmail.com'
+      'mail.com'
+      'yandex.com',    ];    ];
+    const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern));
+    // Check for free email providers
+    const freeProviders = [
+      'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
+    ];
+    const isFreeProvider = freeProviders.some(provider => domain === provider);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Calculate score (0-100)
     let score = 100;
 

@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+import { useState, useEffect } from "react",
+import { Star } from 'lucide-react'
+import { ReviewStats } from "@/components/reviews/ReviewStats",
+import { ReviewsList } from "@/components/reviews/ReviewsList",
+import { useReviews } from "@/hooks/useReviews",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+=======
 import { useState, useEffect } from "react";
 import { Star } from 'lucide-react'
 import { ReviewStats } from "@/components/reviews/ReviewStats";
@@ -6,6 +15,7 @@ import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { useReviews } from "@/hooks/useReviews";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface ProfileRatingsProps {
   userId: string,
@@ -67,6 +77,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value="positive">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating >= 4)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
@@ -74,6 +85,12 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             
             <TabsContent value="critical">
               <ReviewsList
+=======
+
+            
+            <TabsContent value="positive">
+              <ReviewsList
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}

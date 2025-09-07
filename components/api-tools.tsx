@@ -1,6 +1,8 @@
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';'
 
+<<<<<<< HEAD
+=======
 
 import { Code;
 
@@ -422,11 +424,14 @@ key={category}
                           <span className='ml - 1 text - sm font - medium'>;'
 
                             {tool.rating}
+<<<<<<< HEAD
+=======
 
                           </span>
                         </div>
                         <span className='px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium'>'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {tool.status}
                         </span>;
                       </div>;
@@ -438,6 +443,7 @@ key={category}
                       <div className='text-center p-3 bg-gray-800/50 rounded-lg'>'
                         <div className='text-lg font-bold text-indigo-400'>'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {tool.users}
                         </div>;
                         <div className='text - xs text - gray - 500'>Users</div>;'
@@ -512,7 +518,18 @@ variant='ghost';'
                       </Button>
                       <Button
                         href={tool.docs}
+<<<<<<< HEAD
+                        variant='outline'
+                        size='sm'
+                        className='border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400'
+                      >
+                        <BookOpen className='w-4 h-4 mr-2' />                        Documentation
+                      </Button>
+                      <Button
+                        href={tool.github}                        variant="outline"
+=======
                         variant="outline"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         size="sm"
                         className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"
                       >
@@ -521,12 +538,15 @@ variant='ghost';'
                       </Button>
                       <Button
                         href={tool.github}
-                        variant="ghost"
+variant="ghost"
                         size="sm"
                         className="text-gray-400 hover:text-indigo-400"
                       >
                         <Github className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
+=======
                         GitHub
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </Button>
                     </div>
               </Card>
@@ -541,6 +561,11 @@ variant='ghost';'
             <h2 className='text-3xl "sm":text-4xl font-bold mb-6 text-white'>'
 
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>'
@@ -767,6 +792,8 @@ variant='outline';'
   );
 }
     </>);
+);
+  );
 }
   )}
   )

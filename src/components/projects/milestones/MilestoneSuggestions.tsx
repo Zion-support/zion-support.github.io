@@ -65,7 +65,6 @@ export function MilestoneSuggestions({
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Generating milestones...
             </>
           ) : (
             <>
@@ -75,18 +74,36 @@ export function MilestoneSuggestions({
           )}
         </Button>
       )}
+          <CardHeader className="pb-3">
+              <Sparkles className='mr-2 h-4 w-4' />              <Sparkles className="mr-2 h-4 w-4" />
+              <Sparkles className="mr-2 h-4 w-4" />
+              Suggest Project Milestones with AI
+            </>
+          )}
+        </Button>
+      )}
+      {showSuggestions && generatedMilestones.length > 0 && (
+        <Card>
+          <CardHeader className='pb-3'>
+            <CardTitle className='text-lg flex items-center'>
+              <Sparkles className='h-5 w-5 mr-2 text-primary' />              AI-Suggested Milestones
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className='space-y-3'>          <CardHeader className="pb-3">
 
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
             <CardTitle className="text-lg flex items-center">
-              <Sparkles className="h-5 w-5 mr-2 text-primary" />
               AI-Suggested Milestones
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
               {generatedMilestones.map((milestone, index) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">
                   <div className="flex items-center justify-between mb-1">
                     <div className="font-medium flex items-center">
@@ -100,15 +117,17 @@ export function MilestoneSuggestions({
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
-                  <div className="flex justify-between items-center mt-2 text-sm">
                     <span>Estimated: {milestone.estimatedHours} hours</span>
                   </div>
                 </div>
               ))}
+<<<<<<< HEAD
+              <div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>
+                <Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
+=======
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
                 <Check className="h-4 w-4 mr-1 text-green-500" />
-                These milestones will be added to your contract
               </div>
             </div>
           </CardContent>

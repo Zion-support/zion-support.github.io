@@ -4,6 +4,7 @@ import { CreateNotificationParams, CreateNotificationResult } from './types';
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
@@ -17,6 +18,14 @@ export async function createNotification({;
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
+
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
+
+=======
 
 import { supabase } from "@/integrations/supabase/client",
 import { CreateNotificationParams, CreateNotificationResult } from './types',
@@ -27,6 +36,7 @@ import { CreateNotificationParams, CreateNotificationResult } from './types',
 import { supabase } from "@/integrations/supabase/client",
 import { CreateNotificationParams, CreateNotificationResult } from './types',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /**
  * Creates a notification for a user and optionally sends an email notification;
  */
@@ -85,11 +95,15 @@ export async function createNotification({;
     
     if (error) throw error,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { supabase } from "@/integrations/supabase/client",;
 
 import { CreateNotificationParams, CreateNotificationResult } from './types',;
@@ -122,11 +136,15 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data;'
       await supabase.functions.invoke('send-notification-email', {;
+<<<<<<< HEAD
+=======
 
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+<<<<<<< HEAD
+=======
 
   } catch (error) {;
 

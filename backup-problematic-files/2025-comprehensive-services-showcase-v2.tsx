@@ -48,6 +48,10 @@ const staggerContainer = {
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [      staggerChildren: 0.1
     }
+  },}
+export default function ComprehensiveServicesShowcase2025V2() {
+  const allNewServices = [      staggerChildren: 0.1
+    }
   }
 }
 export default function ComprehensiveServicesShowcase2025V2() {

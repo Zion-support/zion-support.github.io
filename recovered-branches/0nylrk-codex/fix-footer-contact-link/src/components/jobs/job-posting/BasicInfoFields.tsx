@@ -4,6 +4,17 @@ FormField
   FormControl
   FormMessage
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { Control } from "react-hook-form";
+
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+=======
 import {;
   FormField,;
   FormItem,;
@@ -15,6 +26,7 @@ pr-12325
 import React, { useState } from \"react\";
 import { Control } from \"react-hook-form\";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   FormField,
   FormItem,
   FormLabel,
@@ -49,13 +61,27 @@ import { Control } from "react-hook-form","
   FormLabel,
   FormControl,
   FormMessage,;
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { Control } from "react-hook-form";
+
+import {
+FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+=======
 
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 
 import { Card, CardContent } from "@/components/ui/card";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 
 import { Control  } from './react - hook - form';
@@ -129,19 +155,73 @@ interface BasicInfoFieldsProps {;
   control: Control<any>;
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
   control,;
 }) => {;"
   const [minBudget, setMinBudget] = useState<string>("");"
   const [maxBudget, setMaxBudget] = useState<string>("");
+<<<<<<< HEAD
+  const handleSuggestionApplied = (min: number, max: number) => {;
+    (setMinBudget(min && min.toString()), setMaxBudget(max && max.toString()));
+  };
+=======
 
   return ("
     <div className="space-y-4">;
       <FormField;
         control={control}"
         name="title"
+<<<<<<< HEAD
+import React, { useState } from "react",;
+import { Control } from "react-hook-form",;
+import { ;
+  FormField,;
+  FormItem, ;
+  FormLabel, ;
+  FormControl, ;
+  FormMessage ;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
+import { Card, CardContent } from "@/components/ui/card",;
+;
+interface BasicInfoFieldsProps {;
+  control:Control<any>;
+}
+;
+export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {;
+  const [minBudget, setMinBudget] = useState<string>(""),;
+  const [maxBudget, setMaxBudget] = useState<string>(""),;
+;
+  const handleSuggestionApplied = (min:number, max:number) => {;
+    setMinBudget(min.toString()),;
+    setMaxBudget(max.toString());
+  },;
+;
+  return (;
+    <div className="space-y-4">;
+      <FormField;
+        control={control}
+        name="title";
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Job Title</FormLabel>;
+            <FormControl>;
+              <Input placeholder="e.g. Senior React Developer" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;
+        )}
+      />;
+;
+      <FormField;
+        control={control}
+        name="company";
+=======
 
         name="category"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Job Category</FormLabel>;
@@ -213,6 +293,8 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
               </select>;
             </FormControl>;
             <FormMessage />;
+<<<<<<< HEAD
+=======
 
           name="budgetMin"
           render={({ field: { onChange, ...rest } }) => (;
@@ -342,6 +424,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
         />
       </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
@@ -363,6 +446,12 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
           />;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+;
+      <FormField;
+        control={control}
+        name="location";
+=======
 
         render={({ field }) => (;
           <FormItem>;
@@ -374,7 +463,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
               />;
             </FormControl>;
             <FormMessage />;
-
+<<<<<<< HEAD
           </FormItem>)}
       />;
     </div>);

@@ -20,6 +20,8 @@ const MobileDevelopmentChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
       <main>;
         <h1>MobileDevelopmentChat</h1>;
         <p>Blog content coming soon...</p>;

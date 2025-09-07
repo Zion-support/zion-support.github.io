@@ -38,6 +38,16 @@ export interface ResumeBasicInfo {;
   location?: string;
 }
 
+<<<<<<< HEAD
+export interface Education {
+  company_logo_url?: string
+
+  location?: string
+}
+export interface Education {
+
+export interface Education {;
+=======
   company_logo_url?: string,
   location?: string;
 

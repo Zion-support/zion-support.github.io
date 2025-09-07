@@ -42,6 +42,13 @@ export function useSmartContracts() {}
     clientName: string
   ): Promise<string> => {
     try {
+<<<<<<< HEAD
+setIsLoading(true),
+      const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
+        body: {
+          talentName: talent && talent.full_name;
+          clientName: clientName;
+=======
 
       setIsLoading(true),
       const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
@@ -61,6 +68,25 @@ setIsLoading(true),
           paymentTerms: values && values.paymentTerms;
           paymentAmount: values && values.paymentAmount,
           additionalClauses: values && values.additionalClauses || []}
+<<<<<<< HEAD
+      });
+      if (error) throw error;
+
+      setIsLoading(true)
+      const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
+        body: {
+          talentName: talent.full_name;
+          clientName: clientName;
+          projectName: values.projectName;
+          scopeSummary: values.scopeSummary;
+          startDate: values.startDate.toISOString();
+          endDate: values.endDate?.toISOString();
+          paymentTerms: values.paymentTerms;
+          paymentAmount: values.paymentAmount
+          additionalClauses: values.additionalClauses |[]}
+      });
+      if (error) throw error;
+=======
 
       setIsLoading(true)
       const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
@@ -78,6 +104,7 @@ setIsLoading(true),
       });
       if (error) throw error;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           talentName: talent.full_name,
 
           clientName: clientName,
@@ -211,6 +238,7 @@ if ( {) {}
       toast.error ("Failed to generate smart contract");
       throw err;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } finally {
 
       setIsLoading (false);
@@ -228,6 +256,14 @@ if ( {) {}
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+      if (data && data.solidityCode) {
+        return data.solidityCode
+      } else {
+        throw new Error("Failed to generate Solidity contract")
+      }
+    } catch (err: any) {
+=======
 
 if (data && data.solidityCode) {
         return data.solidityCode
@@ -241,7 +277,10 @@ if (data && data.solidityCode) {
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   const deploySmartContract = async (
@@ -265,6 +304,13 @@ if (data && data.solidityCode) {
       // Wait to simulate blockchain transaction time
       await new Promise(resolve => setTimeout(resolve, 2000));
       setDeploymentStatus('success');
+<<<<<<< HEAD
+      toast.success("Smart contract deployed successfully!");
+      return mockSmartContractInfo
+    } catch (err: any) {
+      console.error("Error deploying smart contract:", err);
+      toast.error("Failed to deploy smart contract");
+=======
 
     } catch (err: any) {
       console.error("Error deploying smart contract:", err);
@@ -339,6 +385,7 @@ export function useSmartContracts() {;
     } catch (err: any) {
       console && console.error("Error deploying smart contract:", err);
       toast && toast.error("Failed to deploy smart contract");
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setDeploymentStatus('error');
       return null
 

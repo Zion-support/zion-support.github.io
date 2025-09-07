@@ -180,6 +180,7 @@ return cat ? cat.color : 'from - gray - 500 to - gray - 600';'
 return (;
 
 
+<<<<<<< HEAD
 =======
           'innovative services 2025'
           'micro SAAS'

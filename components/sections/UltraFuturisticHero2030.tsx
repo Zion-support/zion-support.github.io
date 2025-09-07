@@ -243,6 +243,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.;
           </motion && motion.p>;
         </motion && motion.div>;
+<<<<<<< HEAD
+
+
+
+=======
 
 
 
@@ -313,6 +318,7 @@ href='/contact'
           <Link
             href="/contact"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-2xl text-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-purple-500/25">;
             <span className="relative z-10 flex items-center">;
               Get Started Today;
@@ -320,6 +326,8 @@ href='/contact'
             </span>;
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>;
           </Link>;
+<<<<<<< HEAD
+=======
 
 
           <Link,
@@ -781,6 +789,7 @@ className='absolute top-20 right-20 w-2 h-2 bg-purple-400 rounded-full''
             "scale": [1, 2, 1]
             "opacity": [0.5, 1, 0.5]
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }}
           transition={{"duration": 3;
             }

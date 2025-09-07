@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { ReactNode } from "react";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type ModernLayoutProps = {
   children: ReactNode,
   title?: string;
@@ -8,6 +9,8 @@ type ModernLayoutProps = {
   keywords?: string;
   canonical?: string;
 };
+<<<<<<< HEAD
+=======
 
 const ModernLayout = ({
   children;

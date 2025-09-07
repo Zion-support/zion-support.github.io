@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState, useEffect } from 'react','
 import Link from 'next/link';'
@@ -1278,6 +1281,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {quickActions.map(action => (<Link;
                   ))}
 
+<<<<<<< HEAD
+=======
 
 
                         <span>{contactInfo.mobile}</span>

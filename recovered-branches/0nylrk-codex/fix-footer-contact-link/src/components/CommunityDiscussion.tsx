@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 
 import { MessageCircle  } from './lucide-react';
@@ -27,7 +28,13 @@ import { Separator  } from '@/components / ui / separator';
 interface DiscussionPost {
 
 interface DiscussionPost {
+<<<<<<< HEAD
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+interface DiscussionPost {
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: number;
   author: string;
   avatar?: string;
@@ -38,6 +45,8 @@ interface DiscussionPost {
 import { Card, CardContent } from "@/components/ui/card","
 import { Separator } from "@/components/ui/separator",
 
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
 interface DiscussionPost {
 
   id: number,
@@ -46,6 +55,7 @@ interface DiscussionPost {
   time: string,
   title: string,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const initial_posts: DiscussionPost[] = [;
   {}
     id: 1,"
@@ -74,12 +84,59 @@ const initial_posts: DiscussionPost[] = [;
         body: newBody,;
       },;
       ...posts,;
+<<<<<<< HEAD
+const [posts, setPosts] = useState(initialPosts);
+export const CommunityDiscussion: React.FC = () => {;
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+export const CommunityDiscussion: React.FC = () => {
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+  const handleAddPost = () => {
+    if (!newTitle.trim() |!newBody.trim()) return;
+    setPosts([
+      {
+        id: Date.now()
+        author: "You"
+        time: "Now"
+        title: newTitle
+        body: newBody
+      }
+      ...posts
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ]);
     setNewTitle("");
     setNewBody("");
     setShowNew(false);
   }
+<<<<<<< HEAD
+
+  const [posts, setPosts] = useState(initialPosts),
+  const [showNew, setShowNew] = useState(false),
+  const [newTitle, setNewTitle] = useState(""),
+  const [newBody, setNewBody] = useState(""),
+
+  const handleAddPost = () => {
+    if (!newTitle.trim() || !newBody.trim()) return,
+    setPosts([
+      {
+        id: Date.now(),
+        author: "You",
+        time: "Now",
+        title: newTitle,
+        body: newBody},
+      ...posts]),
+    setNewTitle(""),
+    setNewBody(""),
+    setShowNew(false)
+  },
+=======
   return (
 
   return (
@@ -133,6 +190,7 @@ import { Separator } from "@/components/ui/separator",;
 
 ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",;
 import { MessageCircle } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -306,46 +364,38 @@ interface DiscussionPost {
     </div>;
   );
 
-        </Card>)}
-      <div className="flex flex - col gap - 6">;
-        {posts.map ((post) => (
-          <Card;
-            key={post.id}
-            className="bg - zion - blue border - zion - slate - dark shadow - lg";
-          >;
-            <CardContent className="py - 4 flex gap - 4">;
+
+
+};
+        </Card>;
+      )}
+      <div className="flex flex-col gap-6">;
+        {posts.map((post) => (;
+          <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">;
+            <CardContent className="py-4 flex gap-4">;
               <Avatar>;
                 <AvatarFallback>;
                   {post.author;
-                    .split (" ");
-                    .map ((s) => s[0]);
-                    .join ("");
-                    .toUpperCase ();
-                    .slice (0, 2)}
+                    .split(" ");
+                    .map((s) => s[0]);
+                    .join("");
+                    .toUpperCase();                    .slice(0, 2)}
                 </AvatarFallback>;
               </Avatar>;
               <div>;
-                <div className="flex gap - 2 items - center">;
-                  <span className="font - semibold text - white">;
-                    {post.author}
-                  </span>;
-                  <span className="text - xs text - zion - slate - light">;
-                    {post.time}
-                  </span>;
+                <div className="flex gap-2 items-center">;
+                  <span className="font-semibold text-white">{post.author}</span>;
+                  <span className="text-xs text-zion-slate-light">{post.time}</span>;
                 </div>;
-                <h3 className="text - lg font - bold text - zion - cyan mt - 1">;
-                  {post.title}
-                </h3>;
-                <p className="text - zion - slate - light mt - 1 whitespace - pre - line">;
-                  {post.body}
-                </p>;
+                <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>;
+                <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>;
               </div>;
             </CardContent>;
-          </Card>))}
+          </Card>;
+        ))}
       </div>;
-      <div className="mt - 8 text - xs text - zion - slate - dark text - center">;
-        🚀 Stay engaged! Top contributors are regularly featured on the;
-        homepage.;
+      <div className="mt-8 text-xs text-zion-slate-dark text-center">;
+        🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
       </div>;
     </div>);
 

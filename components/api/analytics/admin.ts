@@ -1,4 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { createServerClient } from '../../../utils/supabase/server';
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {;
+    const supabase = createServerClient();
+    // Replace with your actual tables/queries
+    // Fallback to mock if querying fails
+    const result = await Promise && Promise.allSettled([
+      supabase && supabase.from('users').select('id, role, country'),
+      supabase && supabase.from('jobs').select('id, status, category'),
+      supabase && supabase.from('quotes').select('id, status'),
+      supabase && supabase.from('projects').select('id, status'),
+      supabase && supabase.from('referrals').select('id, converted, source'),
+=======
 
 import { createServerClient } from '../../../utils/supabase/server';
 
@@ -40,6 +58,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ? (referralsR.value.data as any[])
       : [];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const usersData = mockIfEmpty(users, [
       { id: 1, role: 'client', country: 'US' },
       { id: 2, role: 'talent', country: 'IN' },
@@ -71,6 +90,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { id: 43, converted: true, source: 'partner' },
     ]);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const totalUsers = usersData.length;
     const totalTalents = usersData.filter(u => u.role === 'talent').length;
     const totalClients = usersData.filter(u => u.role === 'client').length;
@@ -86,7 +106,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     const referralConversions = referralsData.filter(r => r.converted).length;
-
     const geoCounts: Record<string, number> = {};
     usersData.forEach(u => {
       geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1;

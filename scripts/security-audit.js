@@ -1,10 +1,13 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
+=======
 
 /**
  * Security Audit Script
  * Performs comprehensive security analysis
  */
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');

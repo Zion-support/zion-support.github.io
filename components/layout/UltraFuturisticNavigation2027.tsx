@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 import { motion, AnimatePresence } from 'framer-motion';'
 
@@ -405,6 +407,9 @@ const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
 const [isClient, setIsClient] = useState(false);
   useEffect(() => {
+<<<<<<< HEAD
+    setIsClient(true)
+=======
 
 
 }
@@ -412,6 +417,7 @@ const [isClient, setIsClient] = useState(false);
 
 setIsClient(true);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, []);
   useEffect(() => {
     if (!isClient) return;
@@ -1055,6 +1061,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
+                href={`mailto:${contactInfo.email}`}
+                className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'
+              >
+                <Mail className='w-4 h-4' />                <span>{contactInfo.email}</span>            {/* Contact Info */}
+            <div className="hidden lg:flex items-center space-x-4 text-sm">
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span>{contactInfo.mobile}</span>
+              </a>
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                <span>{contactInfo.email}</span>
+              </a>
+            </div>
+            {/* CTA Button */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
+            {/* CTA Button */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
               <Link
                 href="/contact"
                 className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300"
@@ -1071,6 +1103,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             {/* CTA Button */}href="/contact";
                 href="/contact"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                 className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300">;
@@ -1235,6 +1268,7 @@ className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors';
                     ))}
                   </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Quick Links & Contact */}
                 <div className="space-y-6">
                   <div>
@@ -1273,6 +1307,7 @@ href={`"mailto": ${contactInfo.email},`}
                           {contactInfo.address}
                       <a
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
                       >
                         <Phone className="w-4 h-4 text-cyan-400" />
@@ -1329,6 +1364,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Mobile CTA */}
 <div className='mt-6 pt-6 border-t border-gray-700/50'>'
                 <Link,

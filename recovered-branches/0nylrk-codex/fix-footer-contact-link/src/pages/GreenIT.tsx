@@ -185,7 +185,10 @@ export default function GreenIT() {;
   ],;
 ;
   return (;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <AppLayout>;
       <SEO"
         title="Green IT Solutions - Sustainable Technology" "
@@ -208,6 +211,14 @@ export default function GreenIT() {;
                 <div>;
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>;
                   <p className="text-zion-slate-light text-lg mb-6">;
+<<<<<<< HEAD
+                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers.;
+                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure;
+                    while maintaining performance and reliability.;
+                  </p>;
+                  <p className="text-zion-slate-light text-lg mb-6">;
+                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions;
+=======
                     As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. ;
                     Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure ;
                     while maintaining performance and reliability.;
@@ -245,6 +256,32 @@ As AI and cloud computing demand grows exponentially, so does the environmental 
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+            ;
+            <div className="mb-16">;
+              <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>;
+              ;
+            <div className="mb-16">;
+              <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>;
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+                {greenITSolutions.map((solution, index) => (;
+                  <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">;
+                    <div className="flex justify-center mb-4">;
+                      <solution.icon className="h-12 w-12 text-zion-cyan" />;
+                    </div>;
+                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>;
+                    <p className="text-zion-slate-light text-center">{solution.description}</p>;
+                  </div>;
+                ))}
+              </div>;
+            </div>;
+            <div className="mb-16">;
+              <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>;
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">;
+                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+                  <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>;
+                  <ul className="text-zion-slate-light space-y-2">;
+=======
 
 ;
             <div className="mb-16">;
@@ -276,6 +313,15 @@ As AI and cloud computing demand grows exponentially, so does the environmental 
                     <li>• Support for renewable energy initiatives</li>;
                   </ul>;
                 </div>;
+<<<<<<< HEAD
+                ;
+                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+                  <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>;
+                  <ul className="text-zion-slate-light space-y-2">;
+                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+                  <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>;
+                  <ul className="text-zion-slate-light space-y-2">;
+=======
 
                     <li>• Significant cost savings on energy and cooling</li>;
                     <li>• Enhanced brand reputation and stakeholder relations</li>;
@@ -287,6 +333,15 @@ As AI and cloud computing demand grows exponentially, so does the environmental 
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
+          ;
+          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>;
+            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
+              Connect with our experts to discuss how we can help you build a more sustainable IT infrastructure.;
+            </p>;
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>;
+=======
 
               <Link to="/contact">Contact Our Team</Link>;
             </Button>;

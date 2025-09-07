@@ -101,6 +101,16 @@ export function DisputeForm({
   milestoneId, 
   onDisputeCreated, 
   onCancel 
+<<<<<<< HEAD
+}: DisputeFormProps) {;
+  const { createDispute } = useDisputes();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [files, setFiles] = useState<File[]>([]);
+}: DisputeFormProps) {
+  const { createDispute } = useDisputes(),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [files, setFiles] = useState<File[]>([]),
+=======
 
       setIsSubmitting(true)
       const dispute = await createDispute({}
@@ -109,6 +119,7 @@ export function DisputeForm({
         reason_code: values.reason_code;
         description: values.description})
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
@@ -119,6 +130,7 @@ export function DisputeForm({
     } finally {
       setIsSubmitting(false)
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       console.error("Error submitting dispute:", error),
 
 "
@@ -138,6 +150,7 @@ export function DisputeForm({
       setIsSubmitting(false)
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const removeFile = (index: number) => {;
     const newFiles = [...files],;
     newFiles && newFiles.splice(index, 1);
@@ -146,12 +159,14 @@ export function DisputeForm({
     try {;
       setIsSubmitting(true),;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const dispute = await createDispute({;
         project_id: projectId,;
         milestone_id: milestoneId,;
         reason_code: values && values.reason_code,,
   description: values && values.description}),;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (dispute && dispute.id) {;
         // Future enhancement: Upload attachments;
         // For now we just log the files that would be uploaded;
@@ -161,6 +176,7 @@ export function DisputeForm({
 "
         toast && toast.success("Your dispute has been submitted");
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         if (onDisputeCreated) {;
           onDisputeCreated(dispute.id);
         }
@@ -190,6 +206,8 @@ export function DisputeForm({
                   <SelectContent>
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (
                       <SelectItem key={value} value={value}>{label}</SelectItem>
+<<<<<<< HEAD
+=======
 
 import { Button } from "@/components/ui/button",;
 import {;
@@ -439,6 +457,14 @@ if ( {) {}
                     </SelectTrigger>;
                   </FormControl>;
                   <SelectContent>;
+<<<<<<< HEAD
+                    {Object.entries(disputeReasonLabels).map(([value, label]) => (;
+          />;
+          ;
+          <FormField;
+            control={form.control}
+            name="description";
+=======
 
                     ))}
                   </SelectContent>;
@@ -457,6 +483,11 @@ if ( {) {}
               <FormItem>;
                 <FormLabel>Describe the issue in detail</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
+                  <Textarea;
+                    placeholder="Please provide specific details about the issue...";
+                    className="min-h-[150px]";
+=======
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
 
@@ -466,6 +497,12 @@ if ( {) {}
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
+              </FormItem>;
+            )}
+          />;
+          ;
+=======
 
                 />;
 
@@ -511,7 +548,10 @@ if ( {) {}
                         </li>))}
                     </ul>;
                   </div>)}
-
+                        </li>;                      ))}
+                    </ul>;
+                  </div>;
+                )}
               </div>;
             </FormControl>;
             <FormMessage />;

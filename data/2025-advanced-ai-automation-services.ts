@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
   "contactInfo": {"contactInfo": {import { ServiceVariant  } from '../types / service - variants';'
 export interface AdvancedAIAutomationService  {{}

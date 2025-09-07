@@ -20,6 +20,20 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {const contact = {
+<<<<<<< HEAD
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
+
+const contact = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',}
+export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
+  {const contact = {;
 	mobile: '+1 302 464 0950';
 origin/cursor/expand-services-advertise-and-build-project-c28b
 	email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -158,6 +172,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails: 'Provisioned infra, SDKs, CI templates, and dashboards.';
     launchDate: '2025-03-15';
     customers: 7;
+<<<<<<< HEAD
+    rating: 4 && 4.7,
+=======
 
     rating: 4 && 4.7,
 
@@ -178,6 +195,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     icon: '🕹️';
     color: 'from-cyan-600 to-blue-700';
     textColor: 'text-cyan-300';
+<<<<<<< HEAD
+    link: 'https://ziontechgroup && ziontechgroup.com/services/agentic-browser-recorder-pro';
+    marketPosition: 'Bridges manual flows to reliable agent scripts quickly.',
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/agentic-browser-recorder-pro';
     marketPosition: 'Bridges manual flows to reliable agent scripts quickly.',
@@ -187,13 +208,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     trialDays: 14;
     setupTime: '2 hours';
     category: 'Developer Tools';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     realService: true,
     technology: ['Playwright, Workers, Next && Next.js'];
     integrations: ['S3, Slack, Email'];
     useCases: ['Ops automation, QA journeys, Admin agents'];
     roi: 'Cut manual toil by 70–90%',
     competitors: ['Browserless + DIY, UI && UI.Vision'];
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
     marketSize: '$12B RPA';
@@ -204,9 +230,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails: 'Recorder UI, compiler, runner fleet, replay UIs.';
     launchDate: '2025-03-16';
     customers: 5;
+<<<<<<< HEAD
+    rating: 4 && 4.6,
+=======
 
     rating: 4 && 4.6,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     reviews: 3
 origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Accelerates ML platform maturity versus building from scratch.,

@@ -18,6 +18,8 @@ import {Trophy} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
 interface ReputationDisplayProps {
@@ -40,6 +42,7 @@ export const ReputationDisplay = ({
   const nextMilestone = (currentLevel + 1) * 100,
   const progress = ((reputation % 100) / 100) * 100,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Styling based on size
   const sizeClasses = {
     sm: {
@@ -55,6 +58,8 @@ export const ReputationDisplay = ({
 
       progress: "h-2" 
     },
+<<<<<<< HEAD
+=======
 
     lg: {
       container: "text-base"
@@ -65,8 +70,15 @@ export const ReputationDisplay = ({
 import {Progress} from "@/components/ui/progress";import {Trophy} from "lucide-react";"
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
+<<<<<<< HEAD
+  }
+  },
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <div className="space-y-1">
@@ -82,6 +94,16 @@ import {Progress} from "@/components/ui/progress";import {Trophy} from "lucide-r
       </div>
     </div>
   )
+<<<<<<< HEAD
+}
+export default ReputationDisplay;
+
+},
+
+export default ReputationDisplay,
+import { Trophy } from "lucide-react",;
+import { Progress } from "@/components/ui/progress",;
+=======
 
 import {Progress} from "@/components/ui/progress";
 
@@ -90,6 +112,17 @@ interface ReputationDisplayProps {;
   reputation: number,;'
   size?: 'sm' | 'md' | 'lg';
 }
+<<<<<<< HEAD
+;
+export const ReputationDisplay = ({;
+  reputation,;
+  size = 'md';
+}: ReputationDisplayProps) => {;
+  // Calculate next milestone;
+  const currentLevel = Math.floor(reputation / 100),;
+  const nextMilestone = (currentLevel + 1) * 100,;
+  const progress = ((reputation % 100) / 100) * 100,;
+=======
 
     </div>;
 <<<<<<< HEAD

@@ -78,6 +78,56 @@ import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 
 import {RESUME_STEPS} from './constants';
+<<<<<<< HEAD
+export function ResumeWizard() {;
+  const { user } = useAuth();
+  const {
+    isLoading;
+
+    error
+    resume
+
+    fetchResume;
+    createResume
+  } = useResume();
+  const [activeTab, setActiveTab] = useState('basic-info');
+  const [showNewResumeForm, setShowNewResumeForm] = useState(false);
+  // Use the extracted hook for progress calculation
+
+  const progress = useResumeProgress(resume);
+  useEffect(() => {
+    if (user) {
+      fetchResume()
+    }
+  }, [user, fetchResume]);
+  const handleCreateNewResume = async (title: string) => {
+    const resumeId = await createResume({ title: title.trim() })
+    if (resumeId) {
+      await fetchResume(resumeId);
+      setShowNewResumeForm(false)
+    }
+  }
+  const nextStep = () => {
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    if (currentIndex < RESUME_STEPS.length - 1) {
+      setActiveTab(RESUME_STEPS[currentIndex + 1].id)
+    }
+  }
+  const prevStep = () => {
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    if (currentIndex > 0) {
+      setActiveTab(RESUME_STEPS[currentIndex - 1].id)
+    }
+
+  };
+
+  }
+  const handleResumeChange = (resumeId: string) => {
+    fetchResume(resumeId)
+  }
+
+  };
+=======
 
   const { user } = useAuth();
   const { ;
@@ -182,6 +232,14 @@ import { RESUME_STEPS } from './constants',;
     }
 
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
+<<<<<<< HEAD
+  const [activeTab, setActiveTab] = useState('basic-info');
+  const [showNewResumeForm, setShowNewResumeForm] = useState(false);
+  // Use the extracted hook for progress calculation;
+  const progress = useResumeProgress(resume);
+  // Use the extracted hook for progress calculation;
+  const progress = useResumeProgress(resume),;
+=======
 
   // Use the extracted hook for progress calculation;
   const progress = useResumeProgress(resume);
@@ -196,6 +254,8 @@ const [activeTab, setActiveTab] = useState('basic-info');
     if (user) {;
       fetchResume();
     }
+<<<<<<< HEAD
+=======
   }, [user, fetchResume]);
 
   const handleCreateNewResume = async (title: string) => {;
@@ -218,6 +278,7 @@ const [activeTab, setActiveTab] = useState('basic-info');
     if (currentIndex > 0) {;
       setActiveTab(RESUME_STEPS[currentIndex - 1].id);
     }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   },
 
@@ -240,6 +301,9 @@ const [activeTab, setActiveTab] = useState('basic-info');
       </div>;
     );
   }
+<<<<<<< HEAD
+  if (error) {;
+=======
 
   if (error) {;
 
@@ -253,6 +317,27 @@ if (error) {;
       </Alert>;
     );
   }
+<<<<<<< HEAD
+  }, [user, fetchResume]),;
+  const handleCreateNewResume = async (title: string) => {;
+    const resumeId = await createResume({ title: title.trim() }),;
+    if (resumeId) {;
+      await fetchResume(resumeId),;
+      setShowNewResumeForm(false);
+    }
+  },;
+  const nextStep = () => {;
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),;
+    if (currentIndex < RESUME_STEPS.length - 1) {;
+      setActiveTab(RESUME_STEPS[currentIndex + 1].id);
+    }
+  },;
+  const prevStep = () => {;
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),;
+    if (currentIndex > 0) {;
+      setActiveTab(RESUME_STEPS[currentIndex - 1].id);
+    }
+  },
 
 }, [user, fetchResume]),;
   const handleCreateNewResume = async (title: string) => {;

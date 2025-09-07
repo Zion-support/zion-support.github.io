@@ -113,6 +113,12 @@ function MessagingInbox() {}
 
     markAsRead;
 
+<<<<<<< HEAD
+    }
+    loadData()
+  }, [fetchConversations]);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     
     loadData()
@@ -150,6 +156,7 @@ function MessagingInbox() {}
     navigate(`/call/${roomId}`)
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
                 onClick={startVideoCall}
@@ -169,7 +176,10 @@ function MessagingInbox() {}
   const isMobile = useIsMobile(),;
   const navigate = useNavigate(),;
   const [activeCall, setActiveCall] = useState<string | null>(null),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     // Fetch conversations when component mounts;
     const loadData = async () => {;
@@ -231,6 +241,20 @@ console.error("Failed to load conversations:", error),;
               <MessageSquare className="h-6 w-6" />;
               Messages;
             </h1>;
+<<<<<<< HEAD
+            {activeConversation && (;
+              <Button;
+                onClick={startVideoCall}
+                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
+              >
+                <Video className="h-4 w-4" />
+                Start Call
+              </Button>
+            )}
+          </div>;
+          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
+            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
+=======
 
               <Button
 
@@ -303,6 +327,10 @@ console.error("Failed to load conversations:", error),;
         {is_mobile && <div className="h - 16"></div>}
       </div>;
     </ProtectedRoute>);
+  ),; useEffect ( () => {
+  //Fetch conversations when component mounts const loadData = async () => {
+  try {
+  
 }
 }
 ;

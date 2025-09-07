@@ -9,6 +9,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const method = (req.method || 'POST').toUpperCase();
+import { authenticateRequest } from '@/utils/auth';
+import { generateText } from '@/utils/ai';
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  const method = (req.method |'POST').toUpperCase();
+  if (method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const method = (req.method |'POST').toUpperCase();
+) {;
+  const method = (req.method || 'POST').toUpperCase();
+  if (method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const method = (req.method || 'POST').toUpperCase();
+  if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
 
@@ -24,6 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `Job Description: \n${jobDescription}\n\n` +
     `Candidates:\n${candidateProfiles.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const text = await generateText(
     prompt,
     'You are a matching engine. Output strictly valid JSON.'

@@ -8,6 +8,21 @@ import type { DateRange } from '@/types/dateRange';
 
 export const useAdminQuotes = () => {
 
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
+import { quoteRequestService  } from '@/services/quoteRequestService';
+import {useState} from 'react';
+import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
+import {quoteRequestService} from '@/services/quoteRequestService';
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
+import { useToast } from '@/components/ui/use-toast';
+import type { DateRange } from '@/types/dateRange';
+
+export const useAdminQuotes = () => {
+export const useAdminQuotes = () => {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { toast } = useToast();
   const queryClient = useQueryClient();'
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');'
@@ -17,6 +32,9 @@ export const useAdminQuotes = () => {
   // Fetch all quote requests;
   const { data: allQuotes = [], isLoading, error } = useQuery({'
     queryKey: ['quotesadmin'];
+<<<<<<< HEAD
+queryFn: () => quoteRequestService && quoteRequestService.getAll(),
+=======
 
     enabled: true});
 
@@ -63,6 +81,10 @@ export const useAdminQuotes = () => {
     }
     // Date range filter
     if (dateRange?.from) {
+<<<<<<< HEAD
+      const createdAt = new Date(quote.created_at);
+      if (createdAt < dateRange.from) {
+=======
       const createdAt = new Date(quote && quote.created_at);
       if (createdAt < dateRange && dateRange.from) {
 const createdAt = new Date(quote.created_at);
@@ -73,6 +95,11 @@ const createdAt = new Date(quote.created_at);
       }
     }
     if (dateRange?.to) {
+<<<<<<< HEAD
+      const createdAt = new Date(quote.created_at);
+      const endDate = new Date(dateRange.to);
+      endDate.setHours(23, 59, 59, 999), // End of day
+=======
       const createdAt = new Date(quote && quote.created_at);
       const endDate = new Date(dateRange && dateRange.to);
       endDate && endDate.setHours(23, 59, 59, 999), // End of day
@@ -180,6 +207,10 @@ export const useAdminQuotes = () => {;
       }
     }
 
+<<<<<<< HEAD
+    
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return true
   });
   // Update quote status mutation
@@ -219,7 +250,17 @@ mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
       toast({
 
         description: "Failed to update status: " + error && error.message,
+<<<<<<< HEAD
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+    }
+    onError: (error: Error) => {
+      toast({
+        title: "Error";
+        description: "Failed to update status: " + error.message
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         variant: "destructive"
       })
     }
@@ -240,6 +281,8 @@ mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
   const toggleArchiveMutation = useMutation({}
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
+<<<<<<< HEAD
+=======
 
     onSuccess: (_, variables) => {
 
@@ -265,6 +308,15 @@ mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
       toast({"
         title: "Error";"
         description: "Failed to update quote: " + error && error.message,
+<<<<<<< HEAD
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+    }
+    onError: (error: Error) => {
+      toast({
+        title: "Error";
+        description: "Failed to update quote: " + error.message
+=======
 
 "
         variant: "destructive"
@@ -422,6 +474,8 @@ toggleArchive: (id: string, isArchived: boolean) =>
     toggleArchive: (id: string, isArchived: boolean) => 
 
     toggleArchive: (id: string, isArchived: boolean) => 
+<<<<<<< HEAD
+=======
 
     onError: (error: Error) => {
       toast({

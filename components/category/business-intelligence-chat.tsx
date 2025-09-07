@@ -20,6 +20,8 @@ const BusinessIntelligenceChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
       <main>;
         <h1>BusinessIntelligenceChat</h1>;
         <p>Blog content coming soon...</p>;

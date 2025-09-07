@@ -122,6 +122,28 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-6 max-w-4xl mx-auto mb-12''
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
                         {stat.icon}
                     </div>
+<<<<<<< HEAD
+                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
+
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+
+                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>                  <div key={index} className="text-center">
+                    <div className="flex justify-center mb-2">
+                      <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
+                        {stat.icon}
+                      </div>
+                    </div>
+                    <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-sm text-white/70">{stat.label}</div>
+                  </div>
+                ))}
+              </motion && motion.div>;
+              {/* CTA Buttons */}
+              <motion.div
+                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div
+                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+=======
 
                     <div className='text-sm text-white/70'>{stat.label}</div>'
                   </div>
@@ -284,6 +306,281 @@ key={service.id}
                     viewMode === 'list' ? 'flex flex-col "lg":flex-row' : '''
                   }`}>`
                   {/* Service Header */}
+<<<<<<< HEAD
+        duration: 0.5,
+      },
+    },  }        duration: 0.5;
+      }
+    }
+  }
+;
+  return (
+    <>;
+      <Head>;
+        <title>;
+          Cutting - Edge Services Showcase 2025 - Zion Tech Group | Future;
+          Technology Solutions;
+        </title>;
+        <meta;
+          name='description';
+          content='Explore our revolutionary cutting - edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology.';
+        />;
+        <meta;
+          name='keywords';
+          content='cutting - edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology';
+        />;
+        <meta name='viewport' content='width = device - width, initial - scale = 1' />;
+        <link rel='icon' href='/favicon.ico' />      </Head>;
+      <Layout>;
+        {/* Hero Section */}
+        <section className='relative overflow - hidden'>;
+          <div className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'></div>;
+          <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24 lg:py - 32'>            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text - center';
+            >;
+              <motion.h1;
+                className='text - 4xl md:text - 6xl lg:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6'                initial={{ opacity: 0, scale: 0.9 }}        <title > Cutting - Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title>;
+        <meta name="description" content="Explore our revolutionary cutting - edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />;
+        <meta name="keywords" content="cutting - edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />;
+        <meta name="viewport" content="width = device - width, initial - scale = 1" />;
+        <link rel="icon" href="/favicon.ico" />;
+      <Layout>;
+        {/* Hero Section */}
+        <section className='relative overflow - hidden'>;
+          <div className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'></div>;
+          <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24 lg:py - 32'>        <section className="relative overflow - hidden">;
+          <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black"></div>;
+          <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24 lg:py - 32">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text - center';
+            >;
+              <motion.h1;
+                className='text - 4xl md:text - 6xl lg:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6'              className="text - center";
+            >;
+              <motion.h1;
+                className="text - 4xl md:text - 6xl lg:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6";
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >;
+                Cutting - Edge Services;
+                <span className='block text - 2xl md:text - 3xl lg:text - 4xl mt - 4 text - white / 90'>;
+                  Showcase 2025;
+                </span>;
+              </motion.h1>;
+              <motion.p;
+                className='text - xl md:text - 2xl text - white / 80 max - w-4xl mx - auto mb - 12 leading - relaxed'                initial={{ opacity: 0, coordinate_y: 20 }}
+                animate={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >                <span className="block text - 2xl md:text - 3xl lg:text - 4xl mt - 4 text - white / 90">;
+                  Showcase 2025;
+                </span>;
+              </motion.h1>;
+              <motion.p;
+                className="text - xl md:text - 2xl text - white / 80 max - w-4xl mx - auto mb - 12 leading - relaxed";
+                animate={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >;
+                Discover revolutionary technology solutions that are reshaping;
+                industries and defining the future. From AI consciousness to;
+                space mining, experience the cutting edge of innovation.;
+              </motion.p>;
+              {/* Hero Stats */}
+              <motion.div;
+                className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto mb - 12'                initial={{ opacity: 0, coordinate_y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future.;
+                From AI consciousness to space mining, experience the cutting edge of innovation.;
+              </motion.p>;
+              {/* Hero Stats */}
+              <motion.div;
+                className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto mb - 12";
+                animate={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >;
+                {hero_stats.map ((stat, index) => (
+                  <div key={index} className='text - center'>;
+                    <div className='flex justify - center mb - 2'>;
+                      <div className='p - 3 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30'>;
+                        {stat.icon}
+                      </div>;
+                    </div>;
+                    <div className='text - 2xl md:text - 3xl font - bold text - white mb - 1'>;
+                      {stat.value}
+                    </div>;
+                    <div className='text - sm text - white / 70'>{stat.label}</div>                  </div>                  <div key={index} className="text - center">;
+                    <div className="flex justify - center mb - 2">;
+                      <div className="p - 3 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30">;
+                        {stat.icon}
+                      </div>;
+                    </div>;
+                    <div className="text - 2xl md:text - 3xl font - bold text - white mb - 1">{stat.value}</div>;
+                    <div className="text - sm text - white / 70">{stat.label}</div>))}
+              </motion.div>;
+              {/* CTA Buttons */}
+              <motion.div;
+                className='flex flex - col sm:flex - row gap - 4 justify - center'                initial={{ opacity: 0, coordinate_y: 20 }}              <motion.div;
+                className="flex flex - col sm:flex - row gap - 4 justify - center";
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                animate={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >;
+                <a;
+                  href='#services';
+                  className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25';
+                >;
+                  Explore Services;
+                  <ArrowRight className='ml - 2 w - 5 h - 5' />;
+                </a>;
+                <a;
+                  href='/contact';
+                  className='inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105'                >                >;
+                  Explore Services;
+                  <ArrowRight className="ml - 2 w - 5 h - 5" />;
+                </a>;
+                <a;
+                  href="/contact";
+                  className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105";
+                >;
+                  Get Started;
+                </a>;
+              </motion.div>;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Search and Filter Section */}
+        <section className='py - 12 bg - black / 50 backdrop - blur - sm border - t border - cyan - 500 / 20'>;
+          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+            <motion.div;
+              className='flex flex - col lg:flex - row gap - 6 items - center justify - between'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 12 bg - black / 50 backdrop - blur - sm border - t border - cyan - 500 / 20">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+            <motion.div;
+              className="flex flex - col lg:flex - row gap - 6 items - center justify - between";
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >;
+              {/* Search */}
+              <div className='relative flex - 1 max - w-md'>;
+                <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - cyan - 400 w - 5 h - 5' />;
+                <input;
+                  type='text';
+                  placeholder='Search services...';
+                  value={search_term}
+                  on_change={e => setSearchTerm (e.target.value)}
+                  className='w - full pl - 10 pr - 4 py - 3 bg - black / 50 border border - cyan - 500 / 30 rounded - lg text - white placeholder - white / 50 focus:outline - none focus:border - cyan - 500 focus:ring - 2 focus:ring - cyan - 500 / 20 transition - all duration - 300'                />;
+              </div>;
+              {/* Category Filter */}
+              <div className='flex flex - wrap gap - 2'>                <button                <input;
+                  type="text";
+                  placeholder="Search services...";
+                  value={search_term}
+                  on_change={(e) => setSearchTerm (e.target.value)}
+                  className="w - full pl - 10 pr - 4 py - 3 bg - black / 50 border border - cyan - 500 / 30 rounded - lg text - white placeholder - white / 50 focus:outline - none focus:border - cyan - 500 focus:ring - 2 focus:ring - cyan - 500 / 20 transition - all duration - 300";
+                />;
+              </div>;
+              {/* Category Filter */}
+              <div className='flex flex - wrap gap - 2'>              <div className="flex flex - wrap gap - 2">;
+                <button;
+                  on_click={() => setSelectedCategory ('all')}
+                  className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${
+                    selected_category === 'all';
+                      ? 'bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white';
+                      : 'bg - black / 50 border border - cyan - 500 / 30 text - cyan - 400 hover:bg - cyan - 500 / 10';
+                  }`}
+                >;
+                  All ({all_services.length});
+                </button>;
+                {service_categories.map (category => (                  <button                {service_categories.map ((category) => (
+                  <button;
+                    key={category.title}
+                    on_click={() => setSelectedCategory (category.title)}
+                    className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${
+                      selected_category === category.title;
+                        ? 'bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white';
+                        : 'bg - black / 50 border border - cyan - 500 / 30 text - cyan - 400 hover:bg - cyan - 500 / 10';
+                    }`}
+                  >;
+                    {category.title} ({category.count});
+                  </button>))}
+              </div>;
+              {/* View Mode Toggle */}
+              <div className='flex items - center gap - 2'>                <button              <div className="flex items - center gap - 2">;
+                <button;
+                  on_click={() => setViewMode ('grid')}
+                  className={`p - 2 rounded - lg transition - all duration - 300 ${
+                    view_mode === 'grid';
+                      ? 'bg - cyan - 500 / 20 text - cyan - 400 border border - cyan - 500 / 50';
+                      : 'bg - black / 50 text - white / 70 hover:text - white hover:bg - black / 70';
+                  }`}
+                >;
+                  <Grid className='w - 5 h - 5' />                </button>                  <Grid className="w - 5 h - 5" />;
+                </button>;
+                <button;
+                  on_click={() => setViewMode ('list')}
+                  className={`p - 2 rounded - lg transition - all duration - 300 ${
+                    view_mode === 'list';
+                      ? 'bg - cyan - 500 / 20 text - cyan - 400 border border - cyan - 500 / 50';
+                      : 'bg - black / 50 text - white / 70 hover:text - white hover:bg - black / 70';
+                  }`}
+                >;
+                  <List className='w - 5 h - 5' />                </button>                  <List className="w - 5 h - 5" />;
+                </button>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Services Grid */}
+        <section;
+          id='services';
+          className='py - 20 bg - gradient - to - b from - black via - purple - 900 / 10 to - black';
+        >;
+          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+            <motion.div;
+              variants={container_variants}
+              initial='hidden';
+              whileInView='visible';
+              viewport={{ once: true }}
+              className={
+                view_mode === 'grid';
+                  ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8';
+                  : 'space - y-6';
+              }            >            <motion.div;
+              variants={container_variants}
+              initial="hidden";
+              whileInView="visible";
+              viewport={{ once: true }}
+              className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}
+            >;
+              {filtered_services.map ((service, index) => (
+                <motion.div;
+                  key={service.id}
+                  variants={item_variants}
+                  className={`group relative overflow - hidden rounded - 2xl border border - cyan - 500 / 20 bg - gradient - to - br from - black / 80 via - purple - 900 / 10 to - black / 80 backdrop - blur - sm hover:border - cyan - 500 / 50 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 ${
+                    view_mode === 'list' ? 'flex flex - col lg:flex - row' : '';
+                  }`}
+                >;
+                  {/* Service Header */}
+                  <div;
+                    className={`p - 6 ${view_mode === 'list' ? 'lg:w - 1/3' : ''}`}
+                  >;
+                    <div className='flex items - start justify - between mb - 4'>;
+                      <div className='flex - 1'>;
+                        <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300'>;
+                  <div
+                    className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
+                  >
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='flex-1'>
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+
+
+
+
+=======
 
 <div,
 className={`p-6 ${viewMode === 'list' ? '"lg":w-1/3' : ''}`}`                  >
@@ -419,7 +716,10 @@ className={`p-6 ${viewMode === 'list' ? '"lg":w-1/3' : ''}`}`                  >
                     </div>
 
                     </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {/* Pricing */}
 
 <div className='mb-6'>'
@@ -539,8 +839,17 @@ href='/contact''
               )
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </motion && motion.div>;
 
+<<<<<<< HEAD
+            </motion.div>
+
+
+              ))}
+            </motion.div>
+
+=======
 
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;

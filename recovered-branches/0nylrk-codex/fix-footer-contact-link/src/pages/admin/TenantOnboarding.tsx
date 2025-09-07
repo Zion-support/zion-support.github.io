@@ -123,6 +123,48 @@ export default function TenantOnboarding() { return null; }
       const { data, error } = await supabase;
         .from('whitelabel_tenants');
         .insert({;
+<<<<<<< HEAD
+
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "sonner",
+import { supabase } from "@/integrations/supabase/client";
+import { Switch } from "@/components/ui/switch";
+export default function TenantOnboarding() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("company");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+import { supabase } from "@/integrations/supabase/client",
+import { Switch } from "@/components/ui/switch",
+export default function TenantOnboarding() {
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("company"),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [formData, setFormData] = useState({
+
+    brand_name: ""
+    subdomain: ""
+    logo_url: ""
+    primary_color: "#9b87f5"
+    theme_preset: "light"
+    company_size: ""
+    industry: ""
+    custom_domain: ""
+    is_co_branded: true
+  });
+  // Check if user has admin role
+  const isAdmin = user?.role === "admin";
+=======
           brand_name: formData && formData.brand_name,;
           subdomain: subdomain,;
           custom_domain: formData && formData.custom_domain || null,;
@@ -376,16 +418,19 @@ export default function TenantOnboarding() {
     is_co_branded: true
   });
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }),
 
   // Check if user has admin role"
   const isAdmin = user?.role === "admin",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   const handleSelectChange = (name: string, value: string) => {}
@@ -404,12 +449,21 @@ export default function TenantOnboarding() {
       // Generate subdomain if not provided'
       const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Create landing page copy
       const landingPageCopy = {
         headline: "AI Hiring Assistant"
         subtitle: `Find the best talent for your ${formData.industry |"company"}`
 
         cta: "Get Started"
+<<<<<<< HEAD
+      },
+      
+
+      }
+      },
+      
+=======
 
       // Submit to Supabase
 
@@ -430,6 +484,7 @@ export default function TenantOnboarding() {
           email_template_override: null
         })
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .single(),
       
       if (error) throw error,
@@ -437,6 +492,7 @@ export default function TenantOnboarding() {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
       }),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Reset form
 
       setFormData({
@@ -456,6 +512,7 @@ export default function TenantOnboarding() {
       toast.error("Failed to create tenant", { 
         description: error.message 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       })
     } finally {}
       setIsSubmitting(false)
@@ -493,6 +550,9 @@ return (
               Create a new white-label instance of Zion Hire AI for a company.;
             </p>;
           </div>;
+<<<<<<< HEAD
+;
+=======
 
 ;
           <Card>;
@@ -512,6 +572,7 @@ return (
                         value={form_data.industry}
                         onValueChange={(value) => handleSelectChange ("industry", value)}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       >;
                         <SelectTrigger>;"
                           <SelectValue placeholder="Select industry" />;
@@ -528,6 +589,15 @@ return (
                         </SelectContent>;
                       </Select>;
                     </div>;
+<<<<<<< HEAD
+                    ;
+                    <div className="space-y-2">;
+                      <Label htmlFor="company_size">Company Size</Label>;
+                      <Select ;
+                        name="company_size" ;
+                        value={formData.company_size} ;
+                        onValueChange={(value) => handleSelectChange("company_size", value)}
+=======
 
                       <Label html_for="company_size">Company Size</Label>;
                       <Select;
@@ -1173,6 +1243,15 @@ export default function TenantOnboarding() {;}
                     </div>;
                   </TabsContent>;
                 </Tabs>;
+<<<<<<< HEAD
+                ;
+                <div className="flex justify-end space-x-2">;
+                  <Button type="button" variant="outline" onClick={() => window.history.back()}>;
+                    Cancel;
+                  </Button>;
+                  <Button type="submit" disabled={isSubmitting}>;
+                    {isSubmitting ? "Creating..." : "Create Tenant"}
+=======
 
 }
 </>);

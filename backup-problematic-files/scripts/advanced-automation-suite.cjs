@@ -164,7 +164,6 @@ class SecurityEnhancer {
 <<<<<<< HEAD
   }
   async checkCodeSecurity() {
-    
     // Code security check logic would go here
     this.securityChecks.push('Code security checked');
   }
@@ -199,7 +198,6 @@ class SEOEnhancer {
 <<<<<<< HEAD
   }
   async checkStructuredData() {
-    
     // Structured data check logic would go here
     this.seoChecks.push('Structured data checked');
   }

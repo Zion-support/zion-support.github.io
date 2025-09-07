@@ -290,6 +290,20 @@ const statusCode = isAllowed ? 200 : 429;}
 >>>>>>> origin/chore/fix-lint-and-merge
     setTestResults(results);
     setIsTesting(false);
+<<<<<<< HEAD
+  }
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);  };    setIsTesting(true);
+    setTestResults([]);
+    const limit = parseInt(rateLimit);
+    const results = [];
+    // Simulate API calls to test rate limiting
+    for (let i = 1, i <= limit + 5, i++) {
+      await new Promise(resolve => setTimeout(resolve, 100));
+      const isAllowed = i <= limit;
+      const status = isAllowed ? 'success' : 'rate_limited';
+      const statusCode = isAllowed ? 200 : 429;
+=======
 
   }
 
@@ -921,6 +935,8 @@ code.
               <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
                 <pre className="text-sm text-gray-300">
 {`const axios = require('axios');
+<<<<<<< HEAD
+=======
 
 const apiKey = '${apiKey || 'your_api_key_here'}';
 const endpoint = '${endpoint || '/api/users'}';
@@ -932,6 +948,8 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
   }
 });
+<<<<<<< HEAD
+=======
 
 console.log('Response:', response.data);
 console.log('Rate Limit Info:', {
@@ -1228,6 +1246,7 @@ print('Rate Limit Info:', {
               className='border-white text-white hover:bg-white hover:text-green-600'    />
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               View Pricing;
             </Button>;
           </div>;

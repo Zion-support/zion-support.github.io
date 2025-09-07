@@ -8,3 +8,4 @@ import _React from 'react'; return (); <div className={`${baseClasses} ${variant
 }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

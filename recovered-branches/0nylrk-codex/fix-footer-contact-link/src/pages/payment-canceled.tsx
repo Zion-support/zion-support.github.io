@@ -34,11 +34,24 @@ import {XCircle} from 'lucide-react';
 export default function PaymentCanceled() {;
   const navigate = useNavigate();
 
+<<<<<<< HEAD
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { useNavigate  } from 'react-router-dom';
+import { XCircle } from 'lucide-react';
+export default function PaymentCanceled() {
+
+  const navigate = useNavigate();
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
 export default function PaymentCanceled() {;
   const navigate = useNavigate();
+<<<<<<< HEAD
+=======
 
 import React from 'react',
 import { Button } from '@/components/ui/button',
@@ -74,6 +87,7 @@ export default function PaymentCanceled() {
           <Button
           <Button 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             variant="outline"
             onClick={() => navigate("/dashboard")}
 
@@ -97,6 +111,7 @@ import { XCircle } from 'lucide-react',;'
           <XCircle className="h-6 w-6 text-red-600" />;"
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
@@ -116,6 +131,23 @@ import { XCircle } from 'lucide-react',;
           <XCircle className="h-6 w-6 text-red-600" />;
 >>>>>>> origin/chore/fix-lint-and-merge
         </div>;
+<<<<<<< HEAD
+        <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>;
+        <p className="text-zion-slate-light mb-6">;
+          Your payment process was canceled. No charges have been made to your account.;
+        </p>;
+        <div className="flex flex-col space-y-3">;
+        ;
+        <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>;
+        ;
+        <p className="text-zion-slate-light mb-6">;
+          Your payment process was canceled. No charges have been made to your account.;
+        </p>;
+        ;
+        <div className="flex flex-col space-y-3">;
+          <Button ;
+          <Button;
+=======
 
         <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>;
 
@@ -130,6 +162,17 @@ import { XCircle } from 'lucide-react',;
           >;
             Try Again;
           </Button>;
+<<<<<<< HEAD
+          ;
+          <Button ;
+            variant="outline";
+            onClick={() => navigate('/dashboard')}
+            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";
+          <Button;
+            variant="outline";
+            onClick={() => navigate('/dashboard')}
+            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
+=======
 
 ;
 

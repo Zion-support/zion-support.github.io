@@ -5,6 +5,11 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
         style={{"background":;
             'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)';'
         }}
+<<<<<<< HEAD
+          0% {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             "transform": translateY(0px) rotate(0deg);
           }

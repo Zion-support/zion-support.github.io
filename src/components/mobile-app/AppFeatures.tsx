@@ -42,7 +42,6 @@ export const AppFeatures: React.FC = () => {
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover:border-zion-cyan transition-colors duration-300">
               <CardHeader>
                 <div className="mb-4">{feature.icon}</div>
-                <CardTitle className="text-white">{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>

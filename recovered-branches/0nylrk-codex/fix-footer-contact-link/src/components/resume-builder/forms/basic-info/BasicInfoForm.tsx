@@ -2,6 +2,48 @@ skills?: string[];
   yearsExperience?: number;
   onComplete?: () => void;
 }
+<<<<<<< HEAD
+export function BasicInfoForm(): any ({;
+  resumeId;
+  resumeId?: string;
+  initialData?: Partial<BasicInfoFormData>;
+import React, { useState, useEffect } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { Button } from "@/components/ui/button",
+import { Form } from "@/components/ui/form",
+import { Card } from "@/components/ui/card",
+import { RateOptimizationSection } from "../RateOptimizationSection",
+import { basicInfoSchema, BasicInfoFormData } from "./schema",
+import { PersonalInfoFields } from "./PersonalInfoFields";
+import { ContactFields } from "./ContactFields";
+export interface BasicInfoFormProps {
+  resumeId?: string;
+
+  initialData?: Partial<BasicInfoFormData>;
+  onSave: (data: BasicInfoFormData) => void
+
+  skills?: string[];
+  yearsExperience?: number;
+import { PersonalInfoFields } from "./PersonalInfoFields",
+import { ContactFields } from "./ContactFields",
+export interface BasicInfoFormProps {
+  resumeId?: string,
+  initialData?: Partial<BasicInfoFormData>,
+  onSave: (data: BasicInfoFormData) => void,
+  skills?: string[],
+  yearsExperience?: number,
+  onComplete?: () => void
+}
+
+export function BasicInfoForm({;
+  resumeId;
+  initialData = {};
+  onSave;
+  skills = [];
+  yearsExperience = 0;
+export function BasicInfoForm({
+=======
 
 import { ContactFields } from "./ContactFields";
 export interface BasicInfoFormProps {};
@@ -23,12 +65,20 @@ export function BasicInfoForm({;
 
 export function BasicInfoForm(): any ({;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   resumeId;
 
   initialData = {}
   onSave;
   skills = [];
   yearsExperience = 0;
+<<<<<<< HEAD
+  resumeId,
+  initialData = {},
+  onSave,
+  skills = [],
+  yearsExperience = 0,
+=======
 
   resumeId,
   initialData = {},
@@ -97,6 +147,7 @@ export interface BasicInfoFormProps {;
           <div className="pt-4 border-t border-gray-200">;"
             <h3 className="text-lg font-medium mb-4">Rate Information</h3>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <RateOptimizationSection
 
               control={form && form.control}
@@ -144,6 +195,7 @@ export interface BasicInfoFormProps {;
               setValue={form && form.setValue}
               skills={skills}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               location={form.getValues("location")}
 
               rateType="hourly"

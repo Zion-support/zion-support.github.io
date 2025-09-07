@@ -408,6 +408,10 @@ href={paper.downloadUrl}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {whitepapers.map((paper, index) => (
 
+<<<<<<< HEAD
+                      Download PDF <span className='ml-1'>→</span>                    </Link>                {whitepapers.map((paper, index) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
@@ -451,6 +455,11 @@ state of the art.
                       <li>• Industry collaboration and partnerships</li>
                     </ul>
                   </div>
+<<<<<<< HEAD
+                  <div className='text-center'>
+                    <div className='text-6xl mb-4'>🧪</div>
+                    <p className='text-white/60 text-sm'>Innovation Lab</p>                  </div>                  <div className="text-center">
+=======
 
 <div className='text-center'>'
                     <div className='text-6xl mb-4'>🧪</div>'

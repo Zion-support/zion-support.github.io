@@ -104,6 +104,7 @@ pr-12325
 
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
 <h2>Compelling Service Descriptions That Convert</h2>
@@ -111,6 +112,8 @@ pr-12325
 
     featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
   },
+<<<<<<< HEAD
+=======
 
   {
 
@@ -142,6 +145,8 @@ pr-12325
 
     featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
   },
+<<<<<<< HEAD
+=======
 
   {
     id: "ai-talent-acquisition"
@@ -172,6 +177,8 @@ pr-12325
 
     featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"
   },
+<<<<<<< HEAD
+=======
 
   {
 
@@ -192,6 +199,8 @@ pr-12325
 <h2>Inference Serving Architecture</h2>
 
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
+<<<<<<< HEAD
+=======
 
 import {useState} from "react";
 import {Link} from "react-router-dom";
@@ -296,6 +305,7 @@ const CATEGORIES = [
   }
 ],
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Categories for filtering
 const CATEGORIES = [
   "All Categories",
@@ -305,6 +315,47 @@ const CATEGORIES = [
   "Ethics",
   "Recruitment",
   "Infrastructure"
+<<<<<<< HEAD
+];
+export default function Blog() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+  // Filter blog posts based on search and category
+  const filteredPosts = BLOG_POSTS.filter(post => {
+    const matchesSearch =
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) |
+      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === "All Categories" |post.category === selectedCategory;
+    return matchesSearch && matchesCategory
+  });
+  // Get featured posts
+  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured);
+],
+
+export default function Blog() {;
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+export default function Blog() {
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
+  
+  // Filter blog posts based on search and category
+  const filteredPosts = BLOG_POSTS.filter(post => {
+    const matchesSearch = 
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+      
+    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory,
+    
+    return matchesSearch && matchesCategory
+  }),
+  
+  // Get featured posts
+  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ],
 
@@ -328,6 +379,10 @@ export default function Blog() {
 
 ],
 
+<<<<<<< HEAD
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <SEO"
@@ -520,12 +575,18 @@ const CATEGORIES = [;"
   "Recruitment",;"
   "Infrastructure";
 ],;
+<<<<<<< HEAD
+export default function Blog() {;
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+=======
 
   });
 
   // Get featured posts;
   const featuredPosts = BLOG_POSTS && BLOG_POSTS.filter(post => post && post.isFeatured);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
 
@@ -539,6 +600,11 @@ const CATEGORIES = [;"
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation;
             </p>;
           </div>;
+<<<<<<< HEAD
+          ;
+          {/* Featured Post Section - Only show if there are featured posts */}
+          {featuredPosts.length > 0 && (;
+=======
 
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 && (;
@@ -550,6 +616,11 @@ const CATEGORIES = [;"
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>;
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
                 <div className="aspect-video overflow-hidden rounded-lg">;
+<<<<<<< HEAD
+                  <img ;
+                    src={featuredPosts[0].featuredImage} ;                    alt={featuredPosts[0].title}
+                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300";
+=======
                   <img
                     src={featuredPosts[0].featuredImage} 
                     alt={featuredPosts[0].title}
@@ -572,6 +643,10 @@ const CATEGORIES = [;"
                   </h3>;"
                   <p className="text-zion-slate-light mb-6">;
                     {featuredPosts[0].excerpt}
+<<<<<<< HEAD
+                  </p>;
+                  <div className="flex items-center mb-6">;
+=======
 
                     />;
                     <div>;
@@ -627,6 +702,11 @@ const CATEGORIES = [;"
                   </Button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+            </div>;
+          )}
+        ;
+=======
 
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
@@ -693,12 +773,29 @@ const CATEGORIES = [;"
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
                 />;
               </div>;
+<<<<<<< HEAD
+                <Input;
+                  type="text";
+                  placeholder="Search articles...";
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
+                />;
+              </div>;
+              ;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>;
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
                   <SelectValue placeholder="Select Category" />;
                 </SelectTrigger>;
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
+<<<<<<< HEAD
+                      {category}
+                    </SelectItem>;
+                  ))}
+=======
                   {CATEGORIES && CATEGORIES.map((category) => (;
                     <SelectItem key={category} value={category} className="text-white">;
 
@@ -738,11 +835,15 @@ const CATEGORIES = [;"
             </div>;
           </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Blog Posts Grid */}
 
                     </p>;
@@ -813,6 +914,8 @@ const CATEGORIES = [;"
                       </Link>;
                     </Button>;
                   </CardFooter>;
+<<<<<<< HEAD
+=======
 
                   setSelectedCategory("All Categories");
 

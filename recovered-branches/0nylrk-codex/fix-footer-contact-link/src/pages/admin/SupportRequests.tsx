@@ -118,6 +118,8 @@ import { SEO } from "@/components/SEO",;"
   {;
 =======
       return false
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
     }
@@ -192,6 +194,10 @@ import { SEO } from "@/components/SEO",;"
             <TabsTrigger value=\"need-response\" />Need Response</TabsTrigger>
           </TabsList>
 
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string | null>(null);
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
   // Apply filters to the request data;
   const filteredRequests = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(request => {;
     // Apply search query filter;
@@ -290,12 +296,21 @@ title=\"Support Requests | Admin Dashboard\"
                 <Input;
 placeholder=\"Search by ID, user or issue...\"
                   value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10"
+                />
+              </div>
 
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
 
+<<<<<<< HEAD
+              <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
+              <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
 
@@ -367,6 +382,7 @@ placeholder=\"Search by ID, user or issue...\"
                               ? 'default'
                               : request.status === 'in-progress'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             {request.status}
                           </Badge>
                         </TableCell>
@@ -396,6 +412,7 @@ placeholder=\"Search by ID, user or issue...\"
                         <TableCell>{request && request.category}</TableCell>;
                         <TableCell>{new Date(request && request.createdAt).toLocaleDateString()}</TableCell>;
                         <TableCell>{new Date(request && request.lastUpdated).toLocaleDateString()}</TableCell>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <TableCell>;
                           <Button variant="ghost" size="sm">View</Button>;
                           <Button variant="ghost" size="sm">Assign</Button>;

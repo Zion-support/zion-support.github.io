@@ -1,5 +1,7 @@
 import React from "react";
 
+<<<<<<< HEAD
+=======
   // If not authenticated, redirect to login;
   if (!isLoading && !user) {;
     return <Navigate to="/login" replace />;
@@ -59,6 +61,7 @@ export default function ServiceOnboarding() {
 
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",;
 import { Header } from "@/components/Header",;
@@ -73,6 +76,12 @@ export default function ServiceOnboarding() {;
   }
 ;
   return (;
+<<<<<<< HEAD
+  }
+  return (
+    <>;
+      <Header />;
+      <div className="bg-zion-blue min-h-screen py-8 md: py-12">;
 
         <div className="container mx-auto px-4">;
           <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">;
@@ -99,6 +108,9 @@ export default function ServiceOnboarding() {;
               to get discovered on the Zion Marketplace.;
             </p>;
           </div>;
+<<<<<<< HEAD
+          ;
+=======
 
           <ServiceProviderRegistrationForm />;
 

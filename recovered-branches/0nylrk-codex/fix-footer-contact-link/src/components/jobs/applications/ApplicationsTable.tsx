@@ -48,12 +48,10 @@ export function ApplicationsTable(): any ({ ;
   applications, ;
   processingId, ;
   onViewApplication, ;
-
   onStatusChange;
   onViewScore;
 }: ApplicationsTableProps) {;
   const [hireModalOpen, setHireModalOpen] = useState(false);
-
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
 
 export function ApplicationsTable({ 
@@ -66,6 +64,16 @@ export function ApplicationsTable({
 
   },
 
+<<<<<<< HEAD
+  
+  const handleHireClick = (application: JobApplication) => {
+    setSelectedApplication(application)
+    setHireModalOpen(true)
+  }
+  },
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleHireConfirmed = () => {
     // This will be called after the hire confirmation is completed
     toast({
@@ -183,7 +191,6 @@ interface ApplicationsTableProps {;
 ;
 export function ApplicationsTable() { return null; }
   };
-
   const handleHireConfirmed = () => {;
     // This will be called after the hire confirmation is completed;
     toast({;"
@@ -191,7 +198,6 @@ export function ApplicationsTable() { return null; }
       description: "Offer has been sent to the talent.";
     });
   };
-
   return (
     <>;"
       <div className="rounded-md border">;
@@ -217,13 +223,19 @@ export function ApplicationsTable() { return null; }
                   ) : (;"
                     <span className="text-muted-foreground text-sm">Not scored</span>;
                   )}
+<<<<<<< HEAD
+=======
 
                       className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
                       onClick={() => handleHireClick(application)}
                     >;"
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
+<<<<<<< HEAD
+                    <ApplicationActions
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <img;
                           src={application.talent_profile.profile_picture_url}"
                           alt={application.talent_profile.full_name || "Candidate"}
@@ -243,9 +255,105 @@ export function ApplicationsTable() { return null; }
 
                       application={application}
                       processing_id={processing_id}
-                      onViewApplication={onViewApplication}
-                      onStatusChange={onStatusChange}
-                    />;
+
+import { format } from "date-fns",;
+import { JobApplication } from "@/types/jobs",;
+import { Avatar } from "@/components/ui/avatar",;
+import { Badge } from "@/components/ui/badge",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import { ;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow;
+} from "@/components/ui/table",;
+import { ApplicationActions } from "./ApplicationActions",;
+import { StatusBadge } from "./StatusBadge",;
+import { Briefcase, User } from "lucide-react",;
+import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",;
+import { useState } from "react",;
+import { toast } from "@/hooks/use-toast",;
+;
+interface ApplicationsTableProps {;
+  applications:JobApplication[],;
+  processingId:string | null,;
+  onViewApplication:(applicationId:string) => Promise<void>,;
+  onStatusChange:(applicationId:string, newStatus:string) => Promise<void>,;
+  onViewScore:(application:JobApplication) => void;
+}
+;
+export function ApplicationsTable({ ;
+  applications, ;
+  processingId, ;
+  onViewApplication, ;
+  onStatusChange,;
+  onViewScore;
+} ApplicationsTableProps) {;
+  const [hireModalOpen, setHireModalOpen] = useState(false),;
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),;
+  ;
+  const handleHireClick = (application:JobApplication) => {;
+    setSelectedApplication(application),;
+    setHireModalOpen(true);
+  },;
+  ;
+  const handleHireConfirmed = () => {;
+    // This will be called after the hire confirmation is completed;
+    toast({;
+      title:"Hiring process initiated",;
+      description:"Offer has been sent to the talent.";
+    }),;
+  },;
+  ;
+  const handleHireClick = (application: JobApplication) => {;
+    setSelectedApplication(application),;
+    setHireModalOpen(true);
+  },;
+  const handleHireConfirmed = () => {;
+    // This will be called after the hire confirmation is completed;
+    toast({;
+      title: "Hiring process initiated";
+      description: "Offer has been sent to the talent.";
+    });
+  };
+  return (;
+    <>;
+      <div className="rounded-md border">;
+        <Table>;
+          <TableHeader>;
+            <TableRow>;
+              <TableHead>Candidate</TableHead>;
+              <TableHead className="hidden md:table-cell">Applied</TableHead>;
+              <TableHead className="hidden md:table-cell">Status</TableHead>;
+              <TableHead className="hidden lg:table-cell">Match Score</TableHead>;
+              <TableHead className="text-right">Actions</TableHead>;
+            </TableRow>;
+          </TableHeader>;
+          <TableBody>;
+            {applications.map((application) => (;
+              <TableRow key={application.id}>;
+                <TableCell>;
+                  <div className="flex items-center gap-3">;
+                    <Avatar className="h-8 w-8">;
+                      {application.talent_profile?.profile_picture_url ? (;
+                        <img;
+                          src={application.talent_profile.profile_picture_url} ;
+                          alt={application.talent_profile.full_name || "Candidate"} ;
+                        />;
+                      ) : (;
+                        <User className="h-4 w-4" />;
+                      )}
+                    </Avatar>;
+                    <div>;
+                      <div className="font-medium">;
+                        {application.talent_profile?.full_name || "Candidate"}
+                      </div>;
+                      <div className="text-xs text-muted-foreground mt-0.5">;
+                        {application.talent_profile?.professional_title || "Applicant"}
+                      </div>;
+                    </div>;
                   </div>;
                 </TableCell>;
 
@@ -276,6 +384,7 @@ export function ApplicationsTable() { return null; }
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Hire Confirmation Modal */}
 
       <HireConfirmationModal;
@@ -283,6 +392,8 @@ export function ApplicationsTable() { return null; }
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication || undefined}
         onConfirm={handleHireConfirmed}
+<<<<<<< HEAD
+=======
 
           </TableBody>;
         </Table>;

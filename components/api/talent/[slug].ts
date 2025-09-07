@@ -84,6 +84,7 @@ export default async function handler(
   }
   const { slug, lang } = req.query as { slug: string, lang?: string },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     if (hasSupabase) {
       const { data, error } = await supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single($2);

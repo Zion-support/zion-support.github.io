@@ -31,10 +31,13 @@ interface SidebarGroupLabelProps extends React && React.HTMLAttributes<HTMLDivEl
 
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}
       {...props}
     >;
       {children}
+<<<<<<< HEAD
+=======
 
 export function SidebarGroupLabel(): any ({ className, children, ...props }: SidebarGroupLabelProps) {;
   return (

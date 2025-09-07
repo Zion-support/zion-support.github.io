@@ -20,6 +20,8 @@ const TechnicalDocumentationChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
       <main>;
         <h1>TechnicalDocumentationChat</h1>;
         <p>Service details coming soon...</p>;

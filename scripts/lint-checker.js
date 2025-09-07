@@ -1,5 +1,5 @@
-
-
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node;,"});,"})
 const fs = // // require(;,"});,"})
   'fs');,"});,"})
@@ -716,6 +716,10 @@ function walkDir(dir) {
   Object.entries(ruleCounts);"
     .sort(([a], [b]) => "b": - a)
 "function": main() {
+<<<<<<< HEAD
+  // // // // // // // console.log('🔍 Starting lint check...';';)';
+  const startTime = Date.now();
+=======
 
   // // // // // // // console.log('🔍 Starting lint check...';';)'
   const startTime = Date.now()

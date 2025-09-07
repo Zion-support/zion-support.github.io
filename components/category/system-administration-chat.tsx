@@ -20,6 +20,8 @@ const SystemAdministrationChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
       <main>;
         <h1>SystemAdministrationChat</h1>;
         <p>Blog content coming soon...</p>;

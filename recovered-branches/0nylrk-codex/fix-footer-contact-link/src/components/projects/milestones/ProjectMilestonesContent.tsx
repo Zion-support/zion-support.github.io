@@ -35,6 +35,7 @@ import React, { useState, useEffect } from 'react';
     uploadDeliverable;
     isSubmitting;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const projectData = await getProjectById(projectId);
         if (projectData) {;
           setProject(projectData);
@@ -46,6 +47,35 @@ import React, { useState, useEffect } from 'react';
         setIsLoading(false);
       }
     }
+<<<<<<< HEAD
+  useEffect(() => {;
+    async function loadProject() {;
+      if (!projectId) return,;
+      setIsLoading(true),;
+      try {;
+        const projectData = await getProjectById(projectId),;
+        if (projectData) {;
+          setProject(projectData);
+        }
+      } catch (error) {
+        console.error("Error loading project:", error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+    loadProject();
+    refetch()
+  }, [projectId, getProjectById, refetch]);
+  const handleMilestoneCreated = async () => {
+    await refetch()
+  }
+  // Determine if the user is the client or talent
+  const isClient = user?.id === project?.client_id;
+  const isTalent = user?.id === project?.talent_id;
+  // Determine project type based on job category or default to "Other"
+  const projectType = job?.category |"Other";
+  if (isLoading |!project) {
+=======
 
   useEffect(() => {;
 
@@ -365,6 +395,7 @@ pr-12325
     </div>;
   );
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
         </TabsContent>;"
         <TabsContent value="activity">;'

@@ -16,6 +16,7 @@ import { Checkbox } from "@/components/ui/checkbox";"
 import { useToast } from "@/hooks/use-toast","
 import { Checkbox } from "@/components/ui/checkbox",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
 
@@ -95,10 +96,16 @@ pr-12325
 
       await new Promise(resolve => setTimeout(resolve, 1000)),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Success!"
         description: "Thank you for registering with Zion. We'll be in touch soon."})
       // Reset form
+<<<<<<< HEAD
+      setEmail(""),
+      setName(""),
+      setRole(""),
+=======
       setEmail("");
       setName("");
       setRole("");
@@ -114,6 +121,8 @@ setEmail(""),
         variant: "destructive"
         title: "Something went wrong"
         description: "Please try again later."})
+<<<<<<< HEAD
+=======
 
   // TODO: Implement
 }
@@ -191,10 +200,8 @@ if ( {) {
       setIsSubmitting (false);
     }
   }
-
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault(),;
-
     if (!email || !name || !role || !agreeTerms) {;
       toast({;"
         variant: "destructive",;""
@@ -231,14 +238,43 @@ pr-12325
               Complete your registration to access exclusive features and personalized services.;
             </p>;
           </div>;
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
                 className="bg-zion-blue-dark border-zion-blue-light";
               />;
             </div>;
+<<<<<<< HEAD
+            <div className="space-y-2">;
+              <Label htmlFor="email">Email Address</Label>;
+=======
 
                 className="bg-zion-blue-dark border-zion-blue-light";
               />;
             </div>;
+<<<<<<< HEAD
+            <div className="space-y-2">;
+              <Label htmlFor="role">Your Role</Label>;
+                onChange={(e) => setName(e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="email">Email Address</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="you@company.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="role">Your Role</Label>
+=======
 
 <div className="flex items-center space-x-2">;
               <Checkbox
@@ -292,11 +328,15 @@ export function WaitlistSection() { return null; }
       return;
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="text-sm text-zion-slate font-normal">;
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.;
               </Label>;
             </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button
               type="submit" 
               disabled={isSubmitting} 
@@ -359,6 +399,12 @@ export function WaitlistSection() { return null; }
               Complete your registration to access exclusive features and personalized services.;
             </p>;
           </div>;
+<<<<<<< HEAD
+          ;
+          <form onSubmit={handleSubmit} className="space-y-6 bg-zion-blue-light p-8 rounded-lg border border-zion-purple/20">;
+            <div className="space-y-2">;
+              <Label htmlFor="name">Full Name</Label>;
+=======
           <form on_submit={handle_submit} className="space - y-6 bg - zion - blue - light p - 8 rounded - lg border border - zion - purple / 20">;
             <div className="space - y-2">;
               <Label html_for="name">Full Name</Label>;
@@ -370,6 +416,14 @@ export function WaitlistSection() { return null; }
                 id="name";
                 placeholder="John Smith";
                 value={name}
+<<<<<<< HEAD
+                onChange={(e) => setName(e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light";
+              />;
+            </div>;
+            <div className="space-y-2">;
+              <Label htmlFor="email">Email Address</Label>;
+=======
                 on_change={(e) => set_name (e.target.value)}
                 className="bg - zion - blue - dark border - zion - blue - light";
               />;
@@ -387,6 +441,14 @@ onChange={(e) => setName(e.target.value)}
                 type="email";
                 placeholder="you@company.com";
                 value={email}
+<<<<<<< HEAD
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light";
+              />;
+            </div>;
+            <div className="space-y-2">;
+              <Label htmlFor="role">Your Role</Label>;
+=======
                 on_change={(e) => set_email (e.target.value)}
                 className="bg - zion - blue - dark border - zion - blue - light";
               />;
@@ -411,6 +473,21 @@ onChange={(e) => setEmail(e.target.value)}
                 id="role";
                 placeholder="IT Manager, Developer, Business Owner, etc.";
                 value={role}
+<<<<<<< HEAD
+                onChange={(e) => setRole(e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light";
+              />;
+            </div>;
+            <div className="flex items-center space-x-2">;
+              <Checkbox;
+                id="terms";
+                checked={agreeTerms}
+                onCheckedChange={(checked) => setAgreeTerms(checked as boolean)}
+              />;
+              <Label;
+                htmlFor="terms";
+                className="text-sm text-zion-slate font-normal";
+=======
                 on_change={(e) => set_role (e.target.value)}
                 className="bg - zion - blue - dark border - zion - blue-light";
               />;
@@ -429,6 +506,12 @@ onChange={(e) => setEmail(e.target.value)}
 
             <Button;
               type="submit";
+<<<<<<< HEAD
+              disabled={isSubmitting} ;
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
+            >;
+              {isSubmitting ? "Processing..." : "Complete Registration"}
+=======
               disabled={is_submitting}
               className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
             >;

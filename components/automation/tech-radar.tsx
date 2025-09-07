@@ -1,6 +1,8 @@
 import fs from 'fs';,
 import fs from 'fs',
 
+<<<<<<< HEAD
+=======
 
 import fs from 'fs','
 import path from 'path';'

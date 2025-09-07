@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 import type { NextPage } from 'next';
@@ -39,6 +41,7 @@ const WebDevelopmentChat: NextPage = () => {
   return (
     <div>
       <Head>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       </Head>;
 
@@ -68,6 +71,11 @@ const WebDevelopmentChat: NextPage = () => {
   );
 }
 export default WebDevelopmentChat;
+<<<<<<< HEAD
+
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>
+
+=======
 
 
 

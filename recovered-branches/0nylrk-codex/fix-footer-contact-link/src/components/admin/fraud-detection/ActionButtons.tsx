@@ -103,6 +103,8 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
         variant="ghost"
         size="icon"
         title="Suspend User"
+<<<<<<< HEAD
+=======
 
         onClick={() => onAction(flagId, 'suspension')}
         disabled={status === 'actioned' || status === 'ignored'}
@@ -173,7 +175,7 @@ onClick={() => onAction(flagId, "suspension")}
         <Button"
           variant="ghost""
           size="sm"
-
+<<<<<<< HEAD
     </div>;
 );
 
@@ -216,6 +218,8 @@ interface ActionButtonsProps {;
         onClick={() => onAction(flagId, 'ban')}'
         disabled={status === 'actioned' || status === 'ignored'}
 
+        onClick={() => onAction(flagId, "ban")}
+        disabled={status === "actioned" || status === "ignored"}
       >;
 
         <Ban className="h-4 w-4" />;

@@ -4,6 +4,15 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {Button} from "@/components/ui/button";
 import {Eye, ChevronDown, Loader2} from "lucide-react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
+<<<<<<< HEAD
+import { useState } from "react",
+import { Link } from "react-router-dom",
+
+import { useState } from "react",
+import { Link } from "react-router-dom",
+import { useState } from "react",
+import { Link } from "react-router-dom",
+=======
 
 "
 import { useState } from "react","
@@ -44,6 +53,16 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
+<<<<<<< HEAD
+export function ApplicationActions({;
+  application;
+  processingId;
+  onViewApplication;
+export function ApplicationActions({
+  application,
+  processingId,
+  onViewApplication,
+=======
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
@@ -80,6 +99,7 @@ export function ApplicationActions({
   onStatusChange
 }: ApplicationActionsProps) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="flex items-center justify-end gap-2">;
       <Button"
         variant="outline" "
@@ -90,7 +110,10 @@ export function ApplicationActions({
 
         <Eye className="h-4 w-4" />;
       </Button>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <DropdownMenu>;
         <DropdownMenuTrigger asChild>;
 
@@ -206,6 +229,7 @@ export function ApplicationActions({;
       </Button>
     </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </Button>;
         </DropdownMenuTrigger>;
         <DropdownMenuContent align="end">;
@@ -228,6 +252,10 @@ export function ApplicationActions({;
             onClick={() => onStatusChange(application && application.id, "rejected")}
             className="text-red-600";
 
+<<<<<<< HEAD
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 
 import { Link } from "react-router-dom",;
@@ -245,6 +273,38 @@ interface ApplicationActionsProps {;
   processingId: string | null,;
   onViewApplication: (applicationId: string) => Promise<void>,;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+<<<<<<< HEAD
+}
+;
+export function ApplicationActions({;
+  application,;
+  processingId;
+  onViewApplication;
+  onStatusChange;
+}: ApplicationActionsProps) {;
+  return (;
+    <div className="flex items-center justify-end gap-2">;
+      <Button;
+        variant="outline";
+        size="sm";
+        onClick={() => onViewApplication(application.id)}
+        disabled={!!application.viewed_at}
+      >;
+        <Eye className="h-4 w-4" />;
+      </Button>;
+      <DropdownMenu>;
+        <DropdownMenuTrigger asChild>;
+          <Button;
+            variant="outline";
+            size="sm";
+            disabled={processingId === application.id}
+          >;
+            {processingId === application.id ? (;
+              <Loader2 className="h-4 w-4 animate-spin" />;
+            ) : (;
+              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+            )}
+=======
 
           </Button>;
         </DropdownMenuTrigger>;"
@@ -271,6 +331,27 @@ interface ApplicationActionsProps {;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
+<<<<<<< HEAD
+;
+
+      ;
+      <Button ;
+        variant="default" ;
+        size="sm";
+      <Button;
+        variant="default";
+        size="sm";
+        asChild;
+      >;
+        <Link to={`/messages?talentId=${application.talent_id}`}>;
+          Contact;
+        </Link>;
+      </Button>;
+    </div>;
+  );
+}
+;
+=======
 
 ;
 

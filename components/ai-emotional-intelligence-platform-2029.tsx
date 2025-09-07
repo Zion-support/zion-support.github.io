@@ -55,6 +55,59 @@ import { motion } from 'framer-motion';
 import { Brain, Heart, Eye, MessageCircle, Users, Shield;
 import {
 
+<<<<<<< HEAD
+  Brain,
+  Heart,
+  Eye,
+  MessageCircle,
+  Users,
+  Shield,
+  Zap,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Cpu,
+  Lock,
+  BarChart3,
+  Smartphone,
+  Database,
+  Cloud,
+  Server,;
+  ShieldCheck,;
+  Brain
+  Heart
+  Eye
+  MessageCircle
+  Users
+  Shield
+  Zap
+  TrendingUp
+  CheckCircle
+  ArrowRight
+  Star
+  Phone
+  Mail
+  MapPin
+  Globe
+  Cpu
+  Lock
+  BarChart3
+  Smartphone
+  Database
+  Cloud
+  Server
+  ShieldCheck;
+} from 'lucide-react';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
+  Brain, Heart, Eye, MessageCircle, Users, Shield, ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -560,6 +613,7 @@ className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-rela
 
             {/* CTA Buttons */}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             {/* CTA Buttons */}
             <motion.div
@@ -1224,6 +1278,17 @@ className='text-center mb-16'
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'    />
                 Transform;
               </span>{' '}
+<<<<<<< HEAD
+              Your Business?
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Contact us today to learn how our AI Emotional Intelligence
+              Platform can revolutionize your customer experience and business
+              outcomes.
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>            <motion.div          >
+=======
 
               Your Business?
             </h2>
@@ -1306,6 +1371,18 @@ outcomes.
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
 
               viewport={{ once: true }}
+<<<<<<< HEAD
+              className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'
+            >
+              <Phone className='w-12 h-12 text-purple-400 mx-auto mb-4' />
+              <h3 className='text-xl font-bold text-white mb-2'>Call Us</h3>
+              <p className='text-gray-300'>{contactInfo.mobile}</p>            </motion.div>              className="text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10"
+            >
+              <Phone className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
+              <p className="text-gray-300">{contactInfo.mobile}</p>
+            <motion.div
+=======
 
 className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'
             >

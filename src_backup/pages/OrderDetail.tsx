@@ -14,15 +14,17 @@ export default function OrderDetailPage() {
   if (isLoading || !order) {
 origin/cursor/automate-test-improve-and-merge-code-2533
     return (
-      <div className="container mx - auto px - 4 py - 8">;
-        <div className="animate - pulse">;
-          <div className="h - 8 bg - gray - 200 rounded w - 1/4 mb - 4"></div>;
-          <div className="space - y-4">;
-            {[1, 2, 3].map (index => (
-              <div key={i} className="h - 32 bg - gray - 200 rounded"></div>))}
-          </div>;
-        </div>;
-      </div>);
+      <div className="container mx-auto px-4 py-8">
+        <div className="animate-pulse">
+          <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
+          <div className="space-y-4">
+            {[1, 2, 3].map(i => (
+              <div key={i} className="h-32 bg-gray-200 rounded"></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
   }
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
@@ -37,6 +39,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="container mx-auto px-4 py-8">
       <div className="mb-6">
         <Link href="/orders">
@@ -46,7 +49,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
         </Link>
         <h1 className="text-3xl font-bold">Order Details</h1>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Order Summary */}
@@ -220,31 +226,62 @@ if ( {) {
           </Card>;
         </div>;
         {/* Order Status & Tracking */}
-        <div className="space - y-6">;
-          <Card>;
-            <CardHeader>;
-              <CardTitle > Order Status</CardTitle>;
-            </CardHeader>;
-            <CardContent>;
-              <div className="space - y-4">;
-                <div className="flex items - center space - x-3">;
-                  <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
-                  <span className="text - sm">Order placed</span>;
-                </div>;
-                <div className="flex items - center space - x-3">;
-                  <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
-                  <span className="text - sm">Payment confirmed</span>;
-                </div>;
-                <div className="flex items - center space - x-3">;
-                  <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
-                  <span className="text - sm">Processing</span>;
-                </div>;
+        <div className="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>Order Status</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="text-sm">Order placed</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="text-sm">Payment confirmed</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="text-sm">Processing</span>
+                </div>
                 {order.status === 'shipped' && (
-                  <div className="flex items - center space - x-3">;
-                    <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
-                    <span className="text - sm">Shipped</span>;
-                  </div>)}
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span className="text-sm">Shipped</span>
+                  </div>
+                )}
                 {order.status === 'delivered' && (
+<<<<<<< HEAD
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span className="text-sm">Delivered</span>
+                  </div>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+          {order.trackingNumber && (
+            <Card>
+              <CardHeader>
+                <CardTitle>Tracking Information</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <p className="text-sm text-gray-600">Tracking Number:</p>
+                  <p className="font-mono text-lg">{order.trackingNumber}</p>
+                  <Button className="w-full mt-4">
+                    Track Package
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+=======
 
                   <div className="flex items - center space - x-3">;
                     <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;

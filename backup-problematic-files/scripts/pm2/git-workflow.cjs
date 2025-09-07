@@ -316,6 +316,9 @@ if (require.main === module) {}
   const gitWorkflow = new GitWorkflow();
   gitWorkflow.start().catch(console.error);
 module.exports = GitWorkflow;
+<<<<<<< HEAD
+cursor/website-audit-and-update-with-deployment-76dc;
+=======
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
 "`;

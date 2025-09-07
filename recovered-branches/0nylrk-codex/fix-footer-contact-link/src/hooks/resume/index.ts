@@ -8,6 +8,7 @@ import { useSkills  } from './useSkills';
 import { useCertifications  } from './useCertifications';
 import { useResumeList  } from './useResumeList';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {Resume} from '@/types/resume';
 import {useFetchResume} from './useFetchResume';
@@ -18,6 +19,8 @@ import {useSkills} from './useSkills';
 import {useCertifications} from './useCertifications';
 import {useResumeList} from './useResumeList';
 export function useResume() {;
+<<<<<<< HEAD
+=======
 
   const [resume, setResume] = useState<Resume | null>(null);
 
@@ -123,16 +126,25 @@ return result;
     createResume: resumeActions && resumeActions.createResume;
     updateBasicInfo: resumeActions && resumeActions.updateBasicInfo;
     setActiveResume: resumeActions && resumeActions.setActiveResume;
+<<<<<<< HEAD
+=======
     
     // Work experience operations;
     addWorkExperience: workOperations && workOperations.addWorkExperience;
     updateWorkExperience: workOperations && workOperations.updateWorkExperience;
     deleteWorkExperience: workOperations && workOperations.deleteWorkExperience;
+<<<<<<< HEAD
+=======
     
     // Education operations;
     addEducation: educationOperations && educationOperations.addEducation;
     updateEducation: educationOperations && educationOperations.updateEducation;
     deleteEducation: educationOperations && educationOperations.deleteEducation;
+<<<<<<< HEAD
+    // Skills operations
+    addSkill: skillsOperations && skillsOperations.addSkill;
+    deleteSkill: skillsOperations && skillsOperations.deleteSkill;
+=======
     
     // Skills operations;
     addSkill: skillsOperations && skillsOperations.addSkill;

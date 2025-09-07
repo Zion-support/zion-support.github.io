@@ -3,6 +3,7 @@ import {Button} from "@/components/ui/button";
 import {type, Company} from "./CompanyDashboard";
 import {Bell, Users, Settings} from "lucide-react";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
@@ -33,6 +34,9 @@ interface WorkspaceHeaderProps {;
 ;
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
   return (;
+<<<<<<< HEAD
+export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
+  return (
 
 interface WorkspaceHeaderProps {
   company: Company

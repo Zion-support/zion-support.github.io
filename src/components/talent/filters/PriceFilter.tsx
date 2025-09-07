@@ -30,10 +30,33 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           <Slider
             aria-label="Hourly rate range"
             value={[priceRange[0], priceRange[1]]}
-            min={50}
             max={200}
             step={5}
             onValueChange={handleChange}
+            className="mt-6"
+        </div>
+      )}
+    </div>
+  )
+}
+=======
+
+
+    </div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  );
+};
+}
+}
+<<<<<<< HEAD
+            className='mt-6'          />            className="mt-6"
+            className="mt-6"
+          />
+        </div>
+      )};
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="mt-6"
           />
         </div>

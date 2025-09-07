@@ -1,5 +1,6 @@
 import * as React from "react"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { cva, type VariantProps } from "class-variance-authority"
 "
 import { cn } from "@/lib/utils"
@@ -42,6 +43,8 @@ Toggle.displayName = TogglePrimitive.Root.displayName
 
 export { Toggle, toggleVariants };
 ;
+<<<<<<< HEAD
+=======
 
 const Toggle = React.forwardRef<ToggleRef ToggleProps>(
 
@@ -55,6 +58,7 @@ const Toggle = React.forwardRef<ToggleRef ToggleProps>(
 )
 Toggle.displayName = TogglePrimitive.Root.displayName
 export { Toggle, toggleVariants }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 Toggle.displayName = TogglePrimitive.Root.displayName
 

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 import React, { Suspense, lazy } from 'react',interface LazyComponentProps  {"component": () => Promise<{ "default": React.ComponentType < any> }>,fallback?: React.ReactNode,["key": string]: any;'
@@ -20,5 +22,8 @@ const LazyLoadedComponent = lazy (component);
       <LazyLoadedComponent {...props} />;
     </Suspense>);
 },
+<<<<<<< HEAD
+export default LazyComponent;
+=======
 
 export default LazyComponent;

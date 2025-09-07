@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import {
+  Code
+  Zap
+  Shield
+  BarChart3
+  CheckCircle
+  ArrowRight
+  Play
+  AlertTriangle
+  Clock
+  Database;
+} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
+  Code,
+  Zap,
+  Shield,
+  BarChart3,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  AlertTriangle,
+  Clock,;
+  Database,;
+} from 'lucide-react';
 
 ;
 
@@ -272,6 +302,77 @@ export default function APITestingSuitePage() {
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
   const [apiKey, setApiKey] = useState('');
+<<<<<<< HEAD
+];
+
+  const features = [
+    {
+      icon: <Code className='w-8 h-8 text-white' />
+      description:
+        'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.'
+      color: 'bg-gradient-to-br from-indigo-500 to-purple-600'
+      gradient: 'from-indigo-400 to-purple-500'
+    }
+    {
+      icon: <Zap className='w-8 h-8 text-white' />
+      title: 'Performance Testing'
+      description:
+        'Load testing, stress testing, and performance benchmarking for your APIs.'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'
+    }
+    {
+      icon: <Shield className='w-8 h-8 text-white' />
+      title: 'Security Testing'
+      description:
+        'Automated security testing including authentication, authorization, and vulnerability scanning.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'
+    }
+    {
+      icon: <BarChart3 className='w-8 h-8 text-white' />
+      title: 'Real-Time Monitoring'
+      description:
+        '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'
+    }
+  ];
+  const testTypes = [
+    {
+      name: 'Functional Testing'
+      description:
+        'Verify that your API endpoints work correctly and return expected responses.'
+      tests: [
+        'Request/response validation'
+        'Status code verification'
+        'Data format checking'
+        'Error handling'
+      ]
+    }
+    {
+      name: 'Performance Testing'
+      description:
+        'Ensure your APIs can handle expected load and perform under pressure.'
+      tests: [
+        'Load testing'
+        'Stress testing'
+        'Response time analysis'
+        'Throughput measurement'
+      ]
+    }
+    {
+      name: 'Security Testing'
+      description:
+        'Identify security vulnerabilities and ensure proper authentication and authorization.'
+      tests: [
+        'Authentication testing'
+        'Authorization checks'
+        'Input validation'
+        'SQL injection testing'
+      ]
+    }
+    {
 
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>'
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.08),transparent_50%)]' />'
@@ -417,7 +518,6 @@ className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gr
               Our API testing suite provides everything you need to ensure your APIs are reliable, performant, and secure.;
             </p>;
           </div>;
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {features && features.map((feature, index) => (;
               <Card
@@ -643,6 +743,8 @@ key={index}
                   </div>
               </Card>
             </div>
+<<<<<<< HEAD
+=======
 
             {/* Recommendations */}
 <Card className='border-gradient-indigo'>'
@@ -733,10 +835,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
       )}
+<<<<<<< HEAD
+
+      {/* Pricing Section */}
+      <section id='pricing' className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
       )}
 
 
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Simple Pricing
       {/* Pricing Section */}
 <section id='pricing' className='section-padding bg-gradient-cursor'>'
@@ -783,6 +897,7 @@ testing needs.
 <div className='text-center mb-8'>'
                   <h3 className='text-2xl font-bold text-white mb-4'>'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;'

@@ -71,6 +71,9 @@ console.log('🧪 Test "Summary")
     console.log(' "Summary")
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+    console.error('� Automation "failed")
+=======
     console.error('� Automation "failed")
 <<<<<<< HEAD
 <<<<<<< HEAD

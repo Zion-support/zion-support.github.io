@@ -32,3 +32,4 @@ import _React from 'react';'; const Card = ({ children,className = '' }) => {} r
 }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter }; export { Card,CardHeader,CardTitle,CardDescription,CardContent,CardFooter,CardDescription,CardContent,CardFooter }
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

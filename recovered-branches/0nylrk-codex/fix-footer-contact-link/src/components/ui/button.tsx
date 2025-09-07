@@ -17,7 +17,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {cn} from "@/lib/utils";
 
 const buttonVariants = cva(;"
@@ -31,7 +34,10 @@ const Button = React.forwardRef<HTMLButtonElement ButtonProps>(
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react";
 const Button = React.forwardRef<HTMLButtonElement ButtonProps>(import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
@@ -100,7 +106,13 @@ const buttonVariants = cva(;"
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",;
         outline:;"
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",;
+<<<<<<< HEAD
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
+        outline:;
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground";
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         secondary:;
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",;
         ghost: "hover:bg-accent hover:text-accent-foreground",;
@@ -117,6 +129,7 @@ const buttonVariants = cva(;"
 
 export interface ButtonProps;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from './react';
 import { Slot } from '@radix - ui / react - slot';
 import { cva, type, VariantProps } from './class - variance - authority';
@@ -213,6 +226,24 @@ pr-12325
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>;
+    VariantProps<typeof buttonVariants> {;
+  asChild?: boolean;
+}
+;
+const Button = React.forwardRef<HTMLButtonElement ButtonProps>(;
+  ({ className, variant, size, asChild = false, ...props }, ref) => {;
+    const Comp = asChild ? Slot : "button";
+    return (;
+      <Comp;
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+Button.displayName = "Button"
 
     VariantProps<typeof buttonVariants> {;
   asChild?: boolean;

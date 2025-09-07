@@ -77,6 +77,8 @@ export function AIEnhancementDialog({};
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
+<<<<<<< HEAD
+=======
 
 '
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';'

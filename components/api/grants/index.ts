@@ -2,6 +2,24 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
+const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
+function ensureDir() {
+  if (!fs && fs.existsSync(GRANTS_DIR)) {
+    fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  }
+function readAllGrants(): GrantApplication[] {
+  ensureDir();
+  const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json'));
+  return files.map(file => {
+    const full = path.join(GRANTS_DIR, file);
+    const raw = fs.readFileSync(full, 'utf8');
+    return JSON.parse(raw) as GrantApplication;
+  });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {;
+    const { status, sector, region, program } = req.query;
+    const list = readAllGrants().filter(g => {      return (function ensureDir() {
 
 import { GrantApplication, CreateGrantPayload } from '../../../types/grants';
 
@@ -29,6 +47,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const all = readAllGrants();
     const list = all.filter(g => {
       return (
+<<<<<<< HEAD
+
+
+  const files = fs.readdirSync(GRANTS_DIR).filter((f) => f.endsWith('.json'));
+  return files.map((file) => {
+    const full = path.join(GRANTS_DIR, file);
+    const raw = fs.readFileSync(full, 'utf8');
+    return JSON.parse(raw) as GrantApplication
+  })
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {;
+    const { status, sector, region, program } = req.query;
+    const list = readAllGrants().filter(g => {    const list = readAllGrants().filter((g) => {
+      return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
         (region ? g.region === region : true) &&
@@ -38,7 +73,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ items: list });
     return;
   }
-
   if (req.method === 'POST') {
     try {
       const payload = req.body as CreateGrantPayload;

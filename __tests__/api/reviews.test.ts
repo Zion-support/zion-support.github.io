@@ -114,6 +114,7 @@ import { supabase } from '@/integrations/supabase/client''
 } from '@supabase/supabase-js''
 import { describe, it, expect, beforeEach, vi } from 'vitest''
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -171,6 +172,9 @@ describe('/api/reviews API Endpoint''
         "method""
         "method""
 
+<<<<<<< HEAD
+        "error"
+=======
 
 
   }

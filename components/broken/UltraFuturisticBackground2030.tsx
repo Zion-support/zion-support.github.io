@@ -180,10 +180,51 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,'
             ease: 'linear',          }}          }}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             duration: 20,
             repeat: Infinity,"
             ease: "linear"
           }}
+<<<<<<< HEAD
+      />
+      {/* Floating Geometric Shapes */}
+      <div className="fixed inset-0 pointer-events-none z-10">
+        {/* Hexagon Grid */}
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
+          style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+          animate={{
+            rotate: 360
+            scale: [1, 1.1, 1];
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          animate={{
+            rotate: 360
+            scale: [1, 1.1, 1]
+            opacity: [0.3, 0.6, 0.3],          }}
+          transition={{
+            duration: 20
+            repeat: Infinity
+            ease: 'linear'
+          }}
+        />
+        <motion.div
+          className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
+          style={{
+            clipPath:
+              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
+          }}
+          animate={{
+            rotate: -360
+            scale: [1, 0.9, 1]
+            opacity: [0.3, 0.6, 0.3],          }}
+          transition={{
+            duration: 25
+            repeat: Infinity
+            duration: 25,
+            repeat: Infinity,
+            ease: 'linear',          }}          }}
+=======
 
           transition={{
             }
@@ -267,6 +308,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition = $2;
             repeat: Infinity,
+<<<<<<< HEAD
+ease: "easeInOut"
+          }}
+=======
             ease: "easeInOut"
           }}
         />
@@ -301,6 +346,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {children}
       </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Floating Particles */}
       <div className='fixed inset-0 pointer-events-none z-15'>;'
         {[...Array(20)].map((_, i) => (<motion&& motion.div;

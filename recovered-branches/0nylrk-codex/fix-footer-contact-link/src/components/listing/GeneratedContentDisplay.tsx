@@ -17,7 +17,17 @@ import { ArrowRight } from "lucide-react";
   CardContent,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
+  CardTitle,
+} from '@/components / ui / card';
+interface GeneratedContent {
+  description: string;
+  tags: string[];
+  suggested_price: {
+    min: number;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   key_points: string[];
 
   CardTitle,
@@ -61,7 +71,18 @@ interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
+<<<<<<< HEAD
+    min: number;
 
+    max: number;
+  }
+  keyPoints: string[];
+
+}
+interface GeneratedContentDisplayProps {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     min: number,
     max: number
 
@@ -84,6 +105,17 @@ interface GeneratedContent {;
 }
 ;
 interface GeneratedContentDisplayProps {;
+<<<<<<< HEAD
+  content: GeneratedContent;
+  onApply: () => void
+}
+export function GeneratedContentDisplay({
+  content
+  onApply
+}: GeneratedContentDisplayProps) {
+
+export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+=======
 
   content: GeneratedContent;
 
@@ -99,6 +131,7 @@ export function GeneratedContentDisplay({
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -192,7 +225,48 @@ export /**;
         </div>;
       </CardContent>;
       <CardFooter>;
+<<<<<<< HEAD
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
+          <p className="text-white">{content.description}</p>
+        </div>
+        
+        <div>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
+          <div className="flex flex-wrap gap-2">
+            {content.tags.map((tag, index) => (
+              <Badge
+                key={index}
+                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30"
+              >
+              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        </div>
+        
+        <div>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
+          <p className="text-white">
+            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
+          </p>
+        </div>
+        
+        <div>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
+          <ul className="list-disc pl-5 text-white space-y-1">
+            {content.keyPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+        </div>
+      </CardContent>
+      <CardFooter>
+        <Button
+          onClick={onApply}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing"

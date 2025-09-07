@@ -3,10 +3,13 @@ import { TALENT_PROFILES  } from '@/data/talentData';
 import { TalentProfile } from '@/types/talent';
 export function useTalentData() {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {TALENT_PROFILES} from '@/data/talentData';
 import {TalentProfile} from '@/types/talent';
 export function useTalentData() {;
+<<<<<<< HEAD
+=======
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -17,6 +20,7 @@ export function useTalentData() {;
 
   const [isLoading, setIsLoading] = useState(false);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isLoading, setIsLoading] = useState(false);
 
   const [talents] = useState<TalentProfile[]>(TALENT_PROFILES);

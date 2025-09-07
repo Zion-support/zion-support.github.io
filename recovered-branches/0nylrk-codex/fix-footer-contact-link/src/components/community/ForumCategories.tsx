@@ -109,6 +109,8 @@ import { ForumCategory, ForumCategoryInfo } from "@/types/community",
     adminOnly: false,"
     icon: "Briefcase"
   },
+<<<<<<< HEAD
+=======
 
   {
 
@@ -123,6 +125,7 @@ import { ForumCategory, ForumCategoryInfo } from "@/types/community",
     adminOnly: false,"
     icon: "Code"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
 
   {}
@@ -144,6 +147,8 @@ import { ForumCategory, ForumCategoryInfo } from "@/types/community",
     icon: "Megaphone"
   }
 
+<<<<<<< HEAD
+=======
 import {Link} from "react-router-dom";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {useAuth} from "@/hooks/useAuth";
@@ -184,6 +189,15 @@ const iconMap = {
             </Card>
           </Link>
         )
+<<<<<<< HEAD
+
+      })}
+    </div>
+  )
+}
+export default ForumCategories;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { useAuth } from "@/hooks/useAuth",;
 import {;
@@ -234,9 +248,9 @@ const categories: ForumCategoryInfo[] = [;
   Code;
   FileText;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Megaphone;
 };
-
 export const ForumCategories = () => {;
   const { user } = useAuth();'
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
@@ -267,17 +281,13 @@ export const ForumCategories = () => {;
 export const ForumCategories = () => {;
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-
   const visibleCategories = categories && categories.filter(;
     category => !category && category.adminOnly || isAdmin;
-
   );
   return (
-
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
       {visibleCategories && visibleCategories.map((category) => {;
         const Icon = iconMap[category && category.icon as keyof typeof iconMap],;
-
         return (
           <Link key={category && category.id} to={`/community/category/${category && category.id}`}>;
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;
@@ -294,6 +304,12 @@ export const ForumCategories = () => {;
           </Link>;
         );
       })}
+<<<<<<< HEAD
+    </div>;
+  );
+};
+export default ForumCategories;
+=======
 
     </div>;
   );

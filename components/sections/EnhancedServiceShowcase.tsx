@@ -464,6 +464,11 @@ return filtered && filtered.slice(0, maxServices)}, [services, selectedCategory,
             whileInView={{ opacity: 1, y: 0 }}
 
 
+<<<<<<< HEAD
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             {stats.map((stat, index) => (
           </motion.h2>

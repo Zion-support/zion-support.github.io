@@ -65,25 +65,27 @@ const features = [
   }
 ];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 ;];
 const solutions = [;
-  'Learning Management Systems (LMS)',',;
-  'Student Information Systems (SIS)',',;
-  'Virtual Classroom Platforms',',;
-  'Educational Mobile Applications',',;
-  'Assessment & Testing Platforms',',;
-  'Digital Content Management',',;
-  'Campus Management Systems',',;
-  'Online Course Creation Tools',',;
-  'Student Analytics & Reporting',',;
+  'Learning Management Systems (LMS)',',
+  'Student Information Systems (SIS)',',
+  'Virtual Classroom Platforms',',
+  'Educational Mobile Applications',',
+  'Assessment & Testing Platforms',',
+  'Digital Content Management',',
+  'Campus Management Systems',',
+  'Online Course Creation Tools',',
+  'Student Analytics & Reporting',',
   'Educational Data Integration'';
 ;];
-export default function EducationSolutionsPage() {;
-  return (
-    <Layout)
-      title="Education Solutions - Zion Tech Group""
-      description="Transform education with our comprehensive learning management systems, virtual classrooms, student information systems, and educational technology solutions."">;
+export default function EducationSolutionsPage() {
+  return (;
+    <Layout );
+      title="Education Solutions - Zion Tech Group"";
+      description="Transform education with our comprehensive learning management systems, virtual classrooms, student information systems, and educational technology solutions.""
+    >;
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">";

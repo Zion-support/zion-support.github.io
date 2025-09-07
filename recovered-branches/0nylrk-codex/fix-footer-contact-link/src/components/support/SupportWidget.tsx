@@ -8,6 +8,7 @@ import {useTheme} from "@/hooks/useTheme";
 export function SupportWidget() { return null; }
   const { theme } = useTheme();
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
 
@@ -60,6 +61,7 @@ export function SupportWidget() {
   }
 return (;
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -179,6 +181,13 @@ export function SupportWidget() {;
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
+<<<<<<< HEAD
+              <Button;
+                variant="ghost";
+                size="icon";
+                className="h-8 w-8 rounded-full";
+                onClick={() => window.location.href = "/help"}
+=======
                 onClick={() => window && window.location.href = "/help"}
 <Button;
                 variant="ghost";
@@ -198,7 +207,13 @@ onClick={() => window.location.href = "/help"}
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
+              <Button;
+                variant="ghost";
+                size="icon";
+                className="h-8 w-8 rounded-full";
                 onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
+=======
 
               <Button;
                 variant="ghost";
@@ -256,7 +271,7 @@ onClick={() => window.location.href = "/help"}
               </Button>;
             </div>;
           </div>;
-
+          ;
           <ChatBotPanel />;
         </div>;
       )}

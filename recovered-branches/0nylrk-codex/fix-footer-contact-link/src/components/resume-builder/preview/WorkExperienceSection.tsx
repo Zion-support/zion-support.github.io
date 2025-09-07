@@ -67,6 +67,22 @@ interface WorkExperienceSectionProps {
 
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
 
+<<<<<<< HEAD
+
+import { WorkExperience  } from '@/types/resume';
+import { format } from 'date-fns';
+import {WorkExperience} from '@/types/resume';
+import {format} from 'date-fns';
+interface WorkExperienceSectionProps {
+  workExperience: WorkExperience[]
+}
+export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
+  // Sort work experience by date (newest first)
+
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (a.is_current && !b.is_current) return -1;
 
     if (!a.is_current && b.is_current) return 1;
@@ -144,6 +160,7 @@ export function WorkExperienceSection() { return null; }
                 <span className="text-sm">{work.location}</span>
 
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               )}
             </div>;

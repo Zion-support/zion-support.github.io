@@ -32,6 +32,9 @@ return (
     industries={["Fintech", "Banking", "Lending", "Payments"]}
     canonical="https: //ziontechgroup.com / fintech - solutions";
   />);
+		/>
+	)
+
 }
 
 

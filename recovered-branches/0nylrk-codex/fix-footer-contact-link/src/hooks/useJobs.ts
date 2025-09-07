@@ -19,6 +19,28 @@ export const useJobs = (userId?: string, status?: JobStatus) => {}
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
+  
+  const clientId = userId || user?.id,
+
+
+      setIsLoading(true),
+      
+
+
+  
+  const clientId = userId || user?.id,
+
+  const fetchJobs = async () => {
+    if (!clientId) {
+      setIsLoading(false),
+      return
+    }
+    try {
+      setIsLoading(true);
+      setIsLoading(true),
+      
+=======
 
   const fetchJobs = async () => {
     if (!clientId) {
@@ -43,10 +65,13 @@ const clientId = userId || user?.id,;
       setIsLoading(true);
       setIsLoading(true),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       let query = supabase
         .from("jobs")
         .select("*")
         .eq("client_id", clientId)
+<<<<<<< HEAD
+=======
 
 import { useState, useEffect } from './react';'
 import { supabase } from '@/integrations / supabase / client';'
@@ -115,7 +140,10 @@ if (throw fetch_error) {}
       if (fetchError) throw fetchError,
       
       setJobs(data as Job[]),
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setError(null)
     } catch (err: any) {"
       console.error("Error fetching jobs:", err),"
@@ -124,9 +152,18 @@ if (throw fetch_error) {}
     } finally {}
       setIsLoading(false)
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
+<<<<<<< HEAD
+  }
+  },
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
     try {
 
@@ -135,6 +172,8 @@ if (throw fetch_error) {}
         .update({ status: newStatus })
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only update their own jobs
+<<<<<<< HEAD
+=======
 
       if (updateError) throw updateError,
 
@@ -156,6 +195,8 @@ if (throw fetch_error) {}
         .delete()
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only delete their own jobs
+<<<<<<< HEAD
+=======
 
       if (deleteError) throw deleteError,
 

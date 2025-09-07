@@ -22,11 +22,17 @@ import { useState } from './react';
 
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {useState} from "react";
+<<<<<<< HEAD
+interface AnalyticsChartProps {;
+  title: string,;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
 
@@ -115,6 +121,56 @@ export /**;
 
                   <SelectItem value="365d">1 Year</SelectItem>;
 
+<<<<<<< HEAD
+  
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
+      <CardHeader className="pb-2">
+        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+          <div>
+            <CardTitle className="text-white text-lg">{title}</CardTitle>
+            {description && <CardDescription className="text-zion-slate-light">{description}</CardDescription>}
+          </div>
+          <div className="flex items-center gap-2">
+            {onTimeRangeChange && (
+              <Select value={timeRange} onValueChange={onTimeRangeChange}>
+                <SelectTrigger className="w-24 h-8 text-xs bg-zion-blue border-zion-blue-light text-zion-slate-light">
+                  <SelectValue placeholder="Time Range" />
+                </SelectTrigger>
+                <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light">
+                  <SelectItem value="1d">1 Day</SelectItem>
+                  <SelectItem value="7d">7 Days</SelectItem>
+                  <SelectItem value="30d">30 Days</SelectItem>
+                  <SelectItem value="90d">3 Months</SelectItem>
+                  <SelectItem value="365d">1 Year</SelectItem>
+                </SelectContent>
+              </Select>
+            )}
+            <Select value={chartType} onValueChange={(value: 'line' | 'bar') => setChartType(value)}>
+              <SelectTrigger className="w-24 h-8 text-xs bg-zion-blue border-zion-blue-light text-zion-slate-light">
+                <SelectValue placeholder="Chart Type" />
+              </SelectTrigger>
+              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light">
+                <SelectItem value="line">Line</SelectItem>
+                <SelectItem value="bar">Bar</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent className="p-0">
+        <div className="h-72 w-full p-4">
+          <ResponsiveContainer width="100%" height="100%">
+            {chartType === 'line' ? (
+              <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
+                <XAxis
+                  dataKey="date"
+                  tick={{ fill: '#b1b9c6', fontSize: 12 }}
+                  angle={-30}
+                  textAnchor="end"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
@@ -135,6 +191,12 @@ interface AnalyticsChartProps {;
                 </SelectContent>;
               </Select>;
             )}
+<<<<<<< HEAD
+            <Select value={chartType} onValueChange={(value: 'line' | 'bar') => setChartType(value)}>;
+              </Select>;
+            )}
+            <Select value={chartType} onValueChange={(value:'line' | 'bar') => setChartType(value)}>;
+=======
 
                 <SelectItem value="line">Line</SelectItem>;
 
@@ -144,6 +206,31 @@ interface AnalyticsChartProps {;
           </div>;
         </div>;
       </CardHeader>;
+<<<<<<< HEAD
+      <CardContent className="p-0">;
+        <div className="h-72 w-full p-4">;
+          <ResponsiveContainer width="100%" height="100%">;
+            {chartType === 'line' ? (;
+              <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>;
+                <CartesianGrid strokeDasharray="3 3" stroke="#354151" />;
+                <XAxis;
+                  dataKey="date";
+                  tick={{ fill: '#b1b9c6', fontSize: 12 }}
+                  angle={-30}
+                  textAnchor="end";
+                  height={50}
+                />
+                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: '#1a2332'
+                    borderColor: '#293445'
+                    color: '#fff'
+                  }}
+                />
+                <Legend />
+                {dataKeys.map((key, index) => (
+=======
 
                   height={50}
 
@@ -196,6 +283,11 @@ interface AnalyticsChartProps {;
                 <XAxis;"
                   data_key="date";'
                   tick={{ fill: '#b1b9c6', font_size: 12 }}
+<<<<<<< HEAD
+                  angle={-30}
+                  text_anchor="end";
+                  height={50}
+=======
 
               </LineChart>;
             ) : (;

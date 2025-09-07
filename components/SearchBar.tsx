@@ -60,7 +60,10 @@ interface SearchResult {
   url: string
   type: 'service' | 'page' | 'category'
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
@@ -120,6 +123,8 @@ const "searchData": SearchResult[] = [;
    
 }
   ];
+<<<<<<< HEAD
+=======
 
 const handleSearch = async ("searchQuery": string) => {
     }

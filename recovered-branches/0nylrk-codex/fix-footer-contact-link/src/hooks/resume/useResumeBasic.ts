@@ -29,6 +29,29 @@ export /**
   updateBasicInfo: resumeActions.updateBasicInfo;
     updateBasicInfo: resumeActions.updateBasicInfo,
 
+<<<<<<< HEAD
+import { useFetchResume  } from './useFetchResume';
+import { useResumeActions } from './useResumeActions';
+export function useResumeBasic() {
+
+import {useFetchResume} from './useFetchResume';
+import {useResumeActions} from './useResumeActions';
+export function useResumeBasic() {;
+  const fetchResumeOperations = useFetchResume();
+  const resumeActions = useResumeActions();
+  return {
+    // From useFetchResume
+    isLoading: fetchResumeOperations.isLoading |resumeActions.isLoading;
+    error: fetchResumeOperations.error |resumeActions.error;
+    resume: fetchResumeOperations.resume;
+    fetchResume: fetchResumeOperations.fetchResume;
+    // From useResumeActions
+    createResume: resumeActions.createResume;
+    updateBasicInfo: resumeActions.updateBasicInfo
+
+    updateBasicInfo: resumeActions.updateBasicInfo,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
   const fetchResumeOperations = useFetchResume(),;
@@ -61,11 +84,11 @@ function useResumeBasic() {}
 ;
   return {}
     // From useFetchResume;
-    is_loading: fetchResumeOperations.is_loading || resume_actions.is_loading;
-    error: fetchResumeOperations.error || resume_actions.error;
-    resume: fetchResumeOperations.resume;
-    fetch_resume: fetchResumeOperations.fetch_resume;
-;
+    isLoading:fetchResumeOperations.isLoading || resumeActions.isLoading,;
+    error:fetchResumeOperations.error || resumeActions.error,;
+    resume:fetchResumeOperations.resume,;
+    fetchResume:fetchResumeOperations.fetchResume,;
+    ;
     // From useResumeActions;
 <<<<<<< HEAD
     "create_resume": resume_actions.create_resume;

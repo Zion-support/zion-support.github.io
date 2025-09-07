@@ -28,6 +28,14 @@ interface LazyComponentProps  {children: ReactNode;
   )}export default LazyComponent;ursor/automate-test-improve-and-merge-code-646c;
   return (
 
+<<<<<<< HEAD
+import React from 'react'
+}
+import React, { Suspense, lazy } from 'react';
+
+import React from 'react';
+};
+import React, { Suspense, lazy } from 'react';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 interface LazyComponentProps {
@@ -74,6 +82,7 @@ interface LazyComponentProps {
   fallback?: ReactNode;
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <Suspense fallback={fallback}>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [
@@ -9,6 +10,8 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];
+<<<<<<< HEAD
+=======
 
   return (
     <nav className="bg-white shadow-lg">

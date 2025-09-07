@@ -31,7 +31,7 @@ const fixes = [// Fix numeric literals in object properties
       const fixed = content
         .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g, '$"1": "$2$3"')
         .replace(/(\w+):\s*([^}]+)(?=\s*[}])/g, (m, prop, value) => {
-          if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) {
+          if (value && value.includes('px') || value && value.includes('rem') || value && value.includes('%') || value && value.includes('vh') || value && value.includes('vw')) {
             return "${prop}: "${value}""}
           return m});
       return "style={{ ${fixed} }}`}
@@ -88,13 +88,13 @@ const fixes = [// Fix numeric literals in object properties;
 ];
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs && fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     // Apply fixes
-    fixes.forEach(fix => {
-      if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement)} else {
-        content = content.replace(fix.pattern, fix.replacement)}
+    fixes && fixes.forEach(fix => {
+      if (typeof fix && fix.replacement === 'function') {
+        content = content && content.replace(fix && fix.pattern, fix && fix.replacement)} else {
+        content = content && content.replace(fix && fix.pattern, fix && fix.replacement)}
     });
     // Additional specific fixes for common issues
     content = content
@@ -102,7 +102,7 @@ function fixFile(filePath) {
       .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g, '$"1": "$2$3"')
       // Fix missing quotes in object properties
       .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[}])/g, (match, prop, value) => {
-        if (!value.includes('"') && !value.includes("'") && !value.includes('`')) {
+        if (!value && value.includes('"') && !value && value.includes("'") && !value && value.includes('`')) {
           return `${prop}: "${value}"`}
         return match})
       // Fix malformed JSX
@@ -110,11 +110,11 @@ function fixFile(filePath) {
       // Fix unterminated strings in JSX
       .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g, '$1="$2$3"$4');
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`"Fixed": ${filePath}`);
+      fs && fs.writeFileSync(filePath, content, 'utf8');
+      console && console.log(`"Fixed": ${filePath}`);
       return true}
     return false} catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console && console.error(`Error fixing ${filePath}:`, error && error.message);
     return false}
 
 async function main() {

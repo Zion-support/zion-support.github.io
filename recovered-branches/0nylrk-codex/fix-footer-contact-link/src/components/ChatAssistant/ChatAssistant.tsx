@@ -4,6 +4,7 @@ import { ChatMessage  } from './ChatMessage';
 
 import { ChatInput  } from './ChatInput';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -16,7 +17,10 @@ import { ChatInput } from './ChatInput',
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface Message {
 
   id: string,
@@ -25,7 +29,10 @@ export interface Message {
   timestamp: Date,
 
   read?: boolean
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: string,
     name: string,;
 
@@ -34,6 +41,27 @@ export interface Message {
   read?: boolean;
 }
 
+<<<<<<< HEAD
+}
+
+  id: string
+  role: 'user' | 'assistant'
+  message: string
+  timestamp: Date
+
+  read?: boolean
+}
+export interface ChatAssistantProps {
+
+  isOpen: boolean
+  onClose: () => void
+  recipient: {
+    id: string
+    name: string
+    id: string,
+    name: string,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     avatarUrl?: string;
 
     role?: string
@@ -115,6 +143,13 @@ export interface ChatAssistantProps {;
 }
 ;
 
+  contextHeader;
+}: ChatAssistantProps) {;
+=======
+  contextHeader;
+}: ChatAssistantProps) {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [messages, setMessages] = useState<Message[]>(initialMessages),;
   const messagesEndRef = useRef<HTMLDivElement | null>(null),;
   useEffect(() => {;
@@ -124,6 +159,18 @@ export interface ChatAssistantProps {;
 >>>>>>> origin/chore/fix-lint-and-merge
     }
   }, [initialMessages]),
+<<<<<<< HEAD
+  }
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]),
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  },
+  
+=======
 
   useEffect(() => {
     scrollToBottom()
@@ -195,6 +242,7 @@ export interface ChatAssistantProps {;
           ) : (;
             messages && messages.map((msg) => (;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 role={msg.role}
 
                 message={msg.message}

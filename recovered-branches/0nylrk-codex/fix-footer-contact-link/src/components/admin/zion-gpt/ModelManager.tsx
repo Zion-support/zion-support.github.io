@@ -27,6 +27,7 @@ import { useState, useEffect } from 'react',
 
 import { useState, useEffect } from 'react',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
@@ -67,6 +68,24 @@ interface ModelVersionData extends ModelConfig {}
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
 
+<<<<<<< HEAD
+interface ModelVersionData extends ModelConfig {;
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',;
+  errorMessage?: string;
+}
+export function ZionGPTModelManager() {;
+  const [models, setModels] = useState<ModelVersionData[]>([]);
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
+  // Fetch model data on component mount;
+  useEffect(() => {;
+    fetchModels();
+  }, []);
+  const fetchModels = async () => {;
+    try {;
+      setIsLoading(true);
+=======
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
 
@@ -182,7 +201,10 @@ import { ModelConfig } from '@/utils/zion-gpt',
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from 'react',;
 
 import { Button } from "@/components/ui/button",;
@@ -208,6 +230,7 @@ export function ZionGPTModelManager() { return null; }
   const fetchModels = async () => {;
     try {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const { data, error } = await supabase;
         .from('model_versions');
         .select('*');
@@ -244,6 +267,7 @@ export function ZionGPTModelManager() { return null; }
 
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {;
     try {;
       // If activating, deactivate all other models with the same purpose;
@@ -251,10 +275,43 @@ export function ZionGPTModelManager() { return null; }
 
           .eq('purpose', purpose);
       }
+<<<<<<< HEAD
+;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Update this model;
 
         .eq('id', modelId);
+<<<<<<< HEAD
+      // Refresh the model list;
+      fetchModels();
+    } catch (error) {;
+
+
+
+
+  }
+  return (
+          .update({ active:false });
+          .eq('purpose', purpose),;
+      }
+      ;
+      // Update this model;
+      await supabase;
+        .from('model_versions');
+        .update({ active:!currentActive });
+        .eq('id', modelId),;
+      ;
+      // Refresh the model list;
+      fetchModels(),;
+    } catch (error) {;
+      console.error('Error toggling model active state:', error),;
+    }
+  },;
+;
+  return (;
+=======
 
       // Refresh the model list;
       fetchModels();
@@ -365,6 +422,7 @@ export function ZionGPTModelManager() { return null; }
             </TableBody>;
           </Table>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </CardContent>;
     </Card>;
   );

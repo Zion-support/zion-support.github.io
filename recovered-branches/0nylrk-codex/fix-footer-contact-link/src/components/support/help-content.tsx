@@ -5,6 +5,11 @@ import React from "react",
 import { HelpCategory } from "./types",
 import {}
 
+import {HelpCategory} from "./types";
+import {HelpCircle, CreditCard, Users, Calendar, Briefcase} from "lucide-react";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",
 import { HelpCategory } from "./types",
 import { 
@@ -16,6 +21,7 @@ import {
 
 export const HELP_CATEGORIES: HelpCategory[] = [
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
         id: "complete-profile"
         title: "Completing your profile"
@@ -35,6 +41,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         tags: ["navigation", "interface"]
       }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
 
     id: "hiring"
@@ -99,6 +106,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         tags: ["offer", "contract", "negotiation"]
       }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     id: "profile-setup"
     name: "Profile Setup"
@@ -113,6 +121,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         lastUpdated: "2023-10-15",
         tags: ["profile", "talent"]
       },
+<<<<<<< HEAD
+=======
 
       {
         id: "client-profile"
@@ -131,6 +141,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       }
     ]
   },
+<<<<<<< HEAD
+=======
 
   {
     id: "payments"
@@ -163,6 +175,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       }
     ]
   },
+<<<<<<< HEAD
+=======
 
   {
     id: "disputes"

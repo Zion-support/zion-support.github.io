@@ -122,6 +122,39 @@ interface ActiveFiltersBarProps {;
   onRemoveRating: () => void,;
   onClearSearch: () => void;
 }
+<<<<<<< HEAD
+;
+export function ActiveFiltersBar({;
+  selectedProductTypes,;
+  selectedLocations,;
+  selectedAvailability,;
+  selectedRating,;
+  searchQuery,;
+  onRemoveFilter,;
+  onRemoveRating,;
+  onClearSearch;
+}: ActiveFiltersBarProps) {;
+  const hasActiveFilters =;
+    selectedProductTypes.length > 0 ||;
+    selectedLocations.length > 0 ||;
+    selectedAvailability.length > 0 ||;
+    selectedRating !== null ||;
+    !!searchQuery;
+  if (!hasActiveFilters) return null;
+  return (;
+    <div className="flex flex-wrap gap-2 items-center mb-4">;
+      <span className="text-sm text-zion-slate-light">Active filters:</span>;
+      {searchQuery && (;
+        <ClickableBadge;
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+          onClick={onClearSearch}
+        >
+          Search: {searchQuery}
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      )}
+      {selectedProductTypes.map(type => (
+=======
 
 export function ActiveFiltersBar(): any ({;
 
@@ -182,6 +215,14 @@ export function ActiveFiltersBar(): any ({;
           key={`type-${type}`}"
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"'
           onClick={() => onRemoveFilter('productTypes', type)}
+<<<<<<< HEAD
+        >
+          {type}
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      ))}
+      {selectedLocations.map(location => (
+=======
         >;
           {type}"
           <X className="h-3 w-3" />;

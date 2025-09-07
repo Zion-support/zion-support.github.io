@@ -40,11 +40,9 @@ setIsLoading(true),
       // Update user metadata
       const { error: authError } = await supabase && supabase.auth.updateUser({
         data: {
-
           display_name: data && data.displayName;
           user_type: data && data.userType,
           headline: data && data.headline}});
-
       if (authError) {
         toast({
           title: "Profile update failed";
@@ -80,6 +78,23 @@ if ( {) {
           variant: "destructive"});
         return { error: auth_error }
       }
+<<<<<<< HEAD
+        return { error: "User ID is required" }
+      }
+      // Update user metadata
+      const { error: authError } = await supabase.auth.updateUser({
+        data: {;
+          display_name: data.displayName;
+          user_type: data.userType
+          headline: data.headline}});
+      if (authError) {
+        toast({
+          title: "Profile update failed";
+          description: authError.message
+          variant: "destructive"});
+        return { error: authError }
+      }
+=======
 
 return { error: "User ID is required" }
       }
@@ -162,6 +177,10 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           headline: data.headline,
           avatar_url: data.avatarUrl || data.avatar_url,
           profile_complete: data.profileComplete,
+<<<<<<< HEAD
+          title: "Profile update failed";
+          description: profileError && profileError.message,
+=======
 
           updated_at: new Date().toISOString()})
         .eq("id", data && data.id);
@@ -169,6 +188,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       if (profileError) {
         toast({
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Update profiles table;
       const { error: profile_error } = await supabase;
 

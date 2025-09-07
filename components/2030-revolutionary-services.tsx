@@ -405,6 +405,8 @@ className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>'
                       <span className="text-gray-300">{service.innovationLevel}</span>
                     </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  </div>;
                   {/* Price and CTA */}
                   <div className='flex items-center justify-between'>;'
                     <div>;

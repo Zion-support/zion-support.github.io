@@ -9,6 +9,7 @@ import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [job, setJob] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -36,11 +37,29 @@ export function useJobDetails(jobId: string | undefined) {;
     }
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Load job details when component mounts or job_id changes;
 
     loadJobDetails ();
   }, [job_id]);
 ;
+<<<<<<< HEAD
+  return {
+    job;
+
+      console.error('Error loading job details:', err);
+      setError(err.message)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  // Load job details when component mounts or jobId changes
+  useEffect(() => {
+    loadJobDetails()
+  }, [jobId]);
+  return {
+    job;
+=======
 
     isLoading;
     error;

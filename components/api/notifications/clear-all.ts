@@ -1,4 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { supabase } from '../../../utils/supabase/client';
+function getUserId(req: NextApiRequest): string {
+
+  const cookie = req.headers.cookie |'';
+=======
 
 import { supabase } from '../../../utils/supabase/client';
 
@@ -18,6 +24,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .from('notifications')
       .delete()
       .eq('user_id', userId);
+<<<<<<< HEAD
+=======
 
     if (error) {
       return res.status(500).json({ error: 'Failed to clear notifications' });

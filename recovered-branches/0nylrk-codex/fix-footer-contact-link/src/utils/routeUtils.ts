@@ -42,9 +42,13 @@ export const isProtectedRoute = (path: string): boolean => {
   // If route doesn't exist in our sitemap
   if (!route) return true, // Default to accessible
   // If route requires authentication and user is not authenticated
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (route && route.requiredAuth && !isAuthenticated) return false;
 
+  if (route && route.requiredAuth && !isAuthenticated) return false;
   // If route requires specific roles and user doesn't have one
   if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
     if (!userType) return false;
@@ -63,6 +67,13 @@ export const isProtectedRoute = (path: string): boolean => {
   return true
 }
 // Get breadcrumb items for a path
+<<<<<<< HEAD
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
+  const breadcrumbs = [{label: 'Home', path: '/'}];
+  if (path === '/') return breadcrumbs;
+  // Split the path into segments
+  const segments = path.split('/').filter(Boolean);
+=======
 export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {
   const breadcrumbs = [{label: 'Home', path: '/'}];
   if (path === '/') return breadcrumbs;
@@ -79,10 +90,17 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     currentPath += `/${segment}`;
     const route = findRouteByPath(currentPath);
     if (route) {
+<<<<<<< HEAD
+      breadcrumbs && breadcrumbs.push({
+        label: route && route.label,
+      breadcrumbs.push({
+        label: route.label
+=======
 
       breadcrumbs && breadcrumbs.push({
         label: route && route.label,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         path: currentPath
       })
     } else {

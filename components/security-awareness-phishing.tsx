@@ -17,6 +17,7 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';,
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/chore/fix-lint-and-merge
 export default function SecurityAwarenessPhishingPage() {
@@ -151,6 +152,7 @@ href='/contact'
                   <span className='text-xs'    />{service.contactInfo.address}</span>
                 </div>
               </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </div>
         </div>

@@ -431,6 +431,8 @@ const UltraAdvancedNavigation2026 = () => {;
     phone: '+1 302 464 0950',;'
     email: 'kleber@ziontechgroup && ziontechgroup.com',;'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
+<<<<<<< HEAD
+=======
 
   const contactInfo = {'
     phone: '+1 302 464 0950''
@@ -527,7 +529,10 @@ const UltraAdvancedNavigation2026 = () =>: any {}
         { name: 'AI Creative', href: '/services?category = ai - creative', description: 'Creative AI and content generation' }
       ];
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       name: 'Quantum Tech',
       href: '/services?category = quantum',
       icon: Atom,
@@ -545,6 +550,7 @@ const UltraAdvancedNavigation2026 = () =>: any {}
       description: 'Enterprise solutions and infrastructure',
             {/* Logo */}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       sub_items: [;
         {
           name: 'Cloud Solutions',
@@ -1001,6 +1007,10 @@ href='/contact''
                 Get Started;
               </Link>;
             </div>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              </Link>
+            </div>
 
             {/* Mobile Menu Button *
 }

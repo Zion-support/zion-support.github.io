@@ -4,6 +4,10 @@ import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/do
 import Document, {
 } from 'next/document';'
 
+<<<<<<< HEAD
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Document() {
 }
 return (;
@@ -27,6 +31,7 @@ rel='preconnect''
           crossOrigin='''
           rel='stylesheet'' />
       </Head>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <body>
         <Main />
         <NextScript />

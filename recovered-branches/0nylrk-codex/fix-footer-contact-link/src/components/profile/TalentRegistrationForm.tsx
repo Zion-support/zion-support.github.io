@@ -78,6 +78,7 @@ type TalentFormValues = z.infer<typeof talentProfileSchema>,
   softSkills: string[]
   other: string[]
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 
@@ -98,6 +99,21 @@ import {;
   FormItem,;
 
 import { useAuth } from "@/hooks/useAuth",;
+<<<<<<< HEAD
+// Define form schema;
+const talentProfileSchema = z.object({;
+  name: z.string().min(2, "Name must be at least 2 characters long"),;
+  title: z.string().min(5, "Professional title is required"),;
+  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),;
+  location: z.string().min(2, "Location is required"),;
+  skills: z.string().min(2, "Enter at least one skill"),;
+  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {;
+    message: "Hourly rate must be a number"}),;
+  availability: z.enum(["available", "limited", "unavailable"]),;
+  enhancedProfile: z.boolean().default(true)}),;
+type TalentFormValues = z.infer<typeof talentProfileSchema>,;
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',;
+=======
 
 interface CategorizedSkills {;
   programming: string[],;
@@ -105,6 +121,8 @@ interface CategorizedSkills {;
   platforms: string[],;
   softSkills: string[],;
   other: string[];
+<<<<<<< HEAD
+=======
 
 }
 interface EnhancedProfile {}
@@ -136,11 +154,34 @@ interface EnhancedProfile {}
   const handleAddSkill = () => {"
     const skillInput = form.getValues("skills"),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle key press in skills input (add on enter)
   const handleSkillKeyPress = (e: React.KeyboardEvent) => {"
     if (e.key === "Enter") {}
       e.preventDefault()
       handleAddSkill()
+<<<<<<< HEAD
+  };
+
+    }
+  }
+  // Handle avatar upload
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader()
+      reader.onloadend = () => {
+        setUploadedAvatar(reader.result as string)
+      }
+      reader.readAsDataURL(file)
+    }
+  }
+  // Generate enhanced profile with AI
+  const generateEnhancedProfile = async () => {
+    const formData = form.getValues();
+    if (!formData.bio |formData.bio.length < 20) {
+  };
+=======
 
   },;
   // Handle removing skill tags;
@@ -165,16 +206,27 @@ interface EnhancedProfile {}
       reader.readAsDataURL(file);
     }
   },
+<<<<<<< HEAD
+    const formData = form.getValues();
+    if (!formData.bio |formData.bio.length < 20) {
+
+  // Generate enhanced profile with AI
+  const generateEnhancedProfile = async () => {
+    const formData = form.getValues(),
+    if (!formData.bio || formData.bio.length < 20) {
+=======
 
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return;
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle removing skill tags;
   const handleRemoveSkill = (skill: string) => {;
     setSkillTags(skillTags && skillTags.filter((s) => s !== skill))
 };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle key press in skills input (add on enter);
   const handleSkillKeyPress = (e: React && React.KeyboardEvent) => {;"
     if (e && e.key === "Enter") {;
@@ -183,7 +235,10 @@ interface EnhancedProfile {}
     }
 
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle avatar upload;
   const handleAvatarUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const file = e && e.target.files?.[0];
@@ -552,6 +607,70 @@ export function TalentRegistrationForm() {;
       return;
     }
 
+<<<<<<< HEAD
+
+      }
+
+;
+    try {;
+      setIsGenerating(true),;
+      // Call the Supabase Edge Function;
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {;
+        body: {;
+          talentData: {;
+            name: formData.name,;
+            title: formData.title,;
+            bio: formData.bio,;
+            skills: skillTags,;
+            location: formData.location;
+          }
+        }
+      }),;
+      if (error) {;
+        throw new Error(error.message);
+      }
+
+      setGeneratedContent(data as EnhancedProfile),
+      
+      toast({
+        title: "Enhanced Profile Generated"
+        description: "AI has created a professional bio and suggested additional skills for your profile."})
+    } catch (error: any) {
+      console.error("Error generating enhanced profile:", error),
+      toast({
+        title: "Generation failed"
+        description: error.message |"There was an error generating your enhanced profile. Please try again."
+        variant: "destructive"})
+    } finally {
+      setIsGenerating(false)
+    }
+  }
+  // Apply generated content to form
+  const applyGeneratedContent = () => {
+    if (generatedContent) {
+      form.setValue("bio", generatedContent.summary);
+      // Extract all skills from categorized skills and properly type cast them
+      const allCategorizedSkills = generatedContent.categorizedSkills;
+      const newSkills: string[] = []
+  },
+
+  // Apply generated content to form
+  const applyGeneratedContent = () => {
+    if (generatedContent) {
+      form.setValue("bio", generatedContent.summary),
+      
+      // Extract all skills from categorized skills and properly type cast them
+      const allCategorizedSkills = generatedContent.categorizedSkills,
+      const newSkills: string[] = [],
+      
+      // Safely extract and flatten skills from each category
+      Object.values(allCategorizedSkills).forEach(categorySkills => {
+        if (Array.isArray(categorySkills)) {
+          categorySkills.forEach(skill => {
+            if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
+              newSkills.push(skill)
+      });
+=======
     try {;
       setIsGenerating(true);
 
@@ -633,7 +752,6 @@ export function TalentRegistrationForm() {;
         throw new Error(error && error.message);
       }
       setGeneratedContent(data as EnhancedProfile);
-
 import React, { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -775,6 +893,13 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
+<<<<<<< HEAD
+      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
+      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
+    }
+  }
+  };
+=======
 
       }),;
       if (newSkills.length > 0) {;
@@ -805,6 +930,7 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
 >>>>>>> origin/chore/fix-lint-and-merge
     }
   },
+<<<<<<< HEAD
 
           subject: "Your Zion Talent Profile Has Been Enhanced"
           html: `"
@@ -1060,6 +1186,8 @@ if ( {) {}
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails"
           finalSummary = ""
+<<<<<<< HEAD
+=======
 
         } catch (error) {;
 
@@ -1229,11 +1357,27 @@ if ( {) {}
         description: error && error.message || "There was an error creating your profile. Please try again.",;
         variant: "destructive"}),;
       setIsSubmitting(false);
+    }
+  }
+  return (
 
     }
   }
 
   return (
+<<<<<<< HEAD
+    <div className="max-w-4xl mx-auto p-4 md:p-6">
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
+        <CardHeader>
+          <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle>
+          <CardDescription className="text-zion-slate">
+            Showcase your skills and experience to potential clients and employers.
+          </CardDescription>
+        </CardHeader>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)}>
+            <CardContent className="space-y-8">
+=======
 
 });
       if (error) throw error;
@@ -1304,6 +1448,34 @@ if ( {) {}
     }
   };
   return (;
+<<<<<<< HEAD
+          user_id:user.id,;
+          name:values.name,;
+          title:values.title,;
+          bio:values.bio,;
+          summary:finalSummary,;
+          location:values.location,;
+          skills:finalSkills.map(name => ({ name, level:4 })), // Default skill level;
+          hourly_rate:Number(values.hourlyRate),;
+          availability_status:values.availability,;
+          // Other fields would be handled here;
+        }),;
+;
+      if (error) throw error,;
+      */;
+;
+    } catch (error:any) {;
+      console.error("Error creating profile:", error),;
+      toast({;
+        title:"Error Creating Profile",;
+        description:error.message || "There was an error creating your profile. Please try again.",;
+        variant:"destructive"}),;
+      setIsSubmitting(false),;
+    }
+  },;
+;
+  return (;
+=======
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;"
@@ -1312,6 +1484,12 @@ if ( {) {}
             Showcase your skills and experience to potential clients and employers.;
           </CardDescription>;
         </CardHeader>;
+<<<<<<< HEAD
+;
+        <Form {...form}>;
+          <form onSubmit={form.handleSubmit(onSubmit)}>;
+            <CardContent className="space-y-8">;
+=======
 
 ;
         <Form {...form}>;
@@ -1323,6 +1501,11 @@ if ( {) {}
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                   <div className="col-span-1">;
+<<<<<<< HEAD
+                    <FormField;
+                      control={form.control}
+                      name="name";
+=======
                     <FormField
                       control={form && form.control}
                       name="name"
@@ -1399,6 +1582,18 @@ if ( {) {}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
+                          <FormMessage className="text-red-400" />;
+                        </FormItem>;
+                      )}
+                    />;
+                  </div>;
+;
+                  <div className="col-span-1">;
+                    <FormField;
+                      control={form.control}
+                      name="title";
+=======
 
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
@@ -1437,6 +1632,18 @@ if ( {) {}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
+                          <FormMessage className="text-red-400" />;
+                        </FormItem>;
+                      )}
+                    />;
+                  </div>;
+;
+                  <div className="col-span-1">;
+                    <FormField;
+                      control={form.control}
+                      name="location";
+=======
 
                         <FormItem>;
 
@@ -1458,6 +1665,18 @@ if ( {) {}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
+                          <FormMessage className="text-red-400" />;
+                        </FormItem>;
+                      )}
+                    />;
+                  </div>;
+;
+                  <div className="col-span-1">;
+                    <FormField;
+                      control={form.control}
+                      name="hourlyRate";
+=======
 
                     />;
                   </div>;
@@ -1496,6 +1715,15 @@ if ( {) {}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
+                          <FormMessage className="text-red-400" />;
+                        </FormItem>;
+                      )}
+                    />;
+                  </div>;
+                </div>;
+                ;
+=======
 
                     />;
                   </div>;
@@ -1625,6 +1853,15 @@ if ( {) {}
                             src={uploadedAvatar}
                             alt="Avatar preview"
                             className="w-full h-full object-cover"
+<<<<<<< HEAD
+                          <img;
+                            src={uploadedAvatar}
+                            alt="Avatar preview";
+                            className="w-full h-full object-cover";
+                          />;
+                        </AspectRatio>;
+                      ) :(;
+=======
                           />;
                         </AspectRatio>;
 
@@ -1686,21 +1923,31 @@ disabled={isGenerating}
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         onClick={applyGeneratedContent}>;
                         <Check className="mr-1 h-3 w-3" /> Apply;
                       </Button>;
                     </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div className="space-y-4">;
                       <div>;
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>;
 
                         <p className="text-zion-slate italic">{generatedContent && generatedContent.summary}</p>;
                       </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {generatedContent && generatedContent.categorizedSkills && (;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                 <Badge
 
                                     </Badge>;
@@ -1714,15 +1961,37 @@ disabled={isGenerating}
                     </div>;
                   </div>;
                 )}
+<<<<<<< HEAD
+              </div>;
+;
+              <Separator className="bg-zion-blue-light/50" />;
+;
+=======
 
                                 <div className="h-2 w-2 rounded-full bg-green-500"></div>;
                                 Available Now;
                               </label>;
                             </div>;
+<<<<<<< HEAD
+                                checked={field.value === "available"}
+                                onChange={() => field.onChange("available")}
+                                className="text-zion-purple focus:ring-zion-purple"
+                              />
+                              <label htmlFor="available" className="text-white flex items-center gap-2">
+                                <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                                Available Now
+                              </label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+=======
 
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
+<<<<<<< HEAD
+;
+                            <div className="flex items-center space-x-2">;
+=======
                                 checked={field && field.value === "unavailable"}
                                 onChange={() => field && field.onChange("unavailable")}
                                 className="text-zion-purple focus:ring-zion-purple";
@@ -1814,6 +2083,13 @@ disabled={isGenerating}
                                 id="unavailable";
                                 value="unavailable";
                                 checked={field.value === "unavailable"}
+<<<<<<< HEAD
+                                onChange={() => field.onChange("unavailable")}
+                                className="text-zion-purple focus:ring-zion-purple";
+                              />;
+                              <label htmlFor="unavailable" className="text-white flex items-center gap-2">;
+                                <div className="h-2 w-2 rounded-full bg-red-500"></div>;
+=======
                                 on_change={() => field.on_change ("unavailable")}
                                 className="text - zion - purple focus:ring - zion-purple";
                               />;
@@ -1830,6 +2106,59 @@ disabled={isGenerating}
                             </div>;
                           </div>;
                         </FormControl>;
+<<<<<<< HEAD
+                                checked={field.value === "unavailable"}
+                                onChange={() => field.onChange("unavailable")}
+                                className="text-zion-purple focus:ring-zion-purple"
+                              />
+                              <label htmlFor="unavailable" className="text-white flex items-center gap-2">
+                                <div className="h-2 w-2 rounded-full bg-red-500"></div>
+                                Currently Unavailable
+                              </label>
+                            </div>
+                          </div>
+                        </FormControl>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+                  <div className="pt-2">
+                    <FormLabel className="text-zion-slate-light">Availability Message</FormLabel>
+                    <Textarea
+                      placeholder="Describe your availability, working hours, or when you'll be available next..."
+                      className="mt-1.5 bg-zion-blue border-zion-blue-light text-white"
+                    />
+                    <FormDescription className="text-zion-slate mt-1.5 text-sm">
+                      Let clients know about your working hours, time zone, or availability for calls.
+                    </FormDescription>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter className="border-t border-zion-blue-light pt-6">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+                >
+                  Save as Draft
+                </Button>
+                <Button
+                  type="submit"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Creating Profile..." : "Create Profile"}
+                </Button>
+              </div>
+            </CardFooter>
+          </form>
+        </Form>
+      </Card>
+    </div>
+  )
+=======
 
                   />;
 "
@@ -2164,14 +2493,14 @@ checked={field.value === "unavailable"}
                 <Button;
                   type="button";
                   variant="outline";
-                  className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white";
+                  className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";
                 >;
                   Save as Draft;
                 </Button>;
-                <Button;
+                <Button ;
                   type="submit";
-                  className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
-                  disabled={is_submitting}
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+                  disabled={isSubmitting}
                 >;
                   {is_submitting ? "Creating Profile..." : "Create Profile"}
 
@@ -2197,8 +2526,19 @@ checked={field.value === "unavailable"}
           </form>;
         </Form>;
       </Card>;
-
-    </div>);
+    </div>;
+  ),; import {
+  Form;
+FormControl;
+FormDescription;
+FormField;
+FormItem;
+FormLabel;
+});
+availability: z.enum (["available", "limited", "unavailable"]);
+enhancedProfile: z.boolean () .default (true) 
+});
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
 }
 
 }

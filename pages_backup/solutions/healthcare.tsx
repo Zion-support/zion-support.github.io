@@ -23,6 +23,7 @@ import {}
   ArrowRight ';
 } from lucide-react;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const features = [
   {
     icon: Heart,
@@ -55,6 +56,8 @@ const features = [
   },
   {
     icon: Users,
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 

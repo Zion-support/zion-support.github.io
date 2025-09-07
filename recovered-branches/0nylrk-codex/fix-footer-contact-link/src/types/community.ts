@@ -4,6 +4,15 @@ export type ForumCategory =;
   | 'ai - tools';
   | 'feedback';
   | 'announcements';
+<<<<<<< HEAD
+  id: ForumCategory;
+  name: string;
+  description: string;
+  adminOnly: boolean
+  icon: string
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export interface ForumCategoryInfo {
   id: ForumCategory;
@@ -47,6 +56,31 @@ export interface ForumPost {;
   updated_at: string;
   upvotes: number;
   downvotes: number;
+<<<<<<< HEAD
+export interface ForumPost {
+
+export interface ForumPost {;
+  id: string;
+  title: string;
+  content: string;
+  authorId: string;
+  authorName: string;
+  authorAvatar?: string;
+  authorRole?: string;
+  categoryId: ForumCategory;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+  upvotes: number;
+  downvotes: number;
+  replyCount: number;
+  isAnswered?: boolean;
+  isPinned?: boolean;
+  isLocked?: boolean
+  isFeatured?: boolean
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   replyCount: number;
   isAnswered?: boolean;
@@ -94,6 +128,12 @@ export interface UserBadge {
 
 export interface UserBadge {;
 
+<<<<<<< HEAD
+export interface UserBadge {
+
+export interface UserBadge {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   userId: string;
   badgeId: string;
   awardedAt: string;

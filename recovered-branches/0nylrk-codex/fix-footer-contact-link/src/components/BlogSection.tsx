@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 import { Button } from "./ui/button";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button";
@@ -42,6 +43,8 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {}
         </div>"
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {recentPosts.map((post, index) => (
+<<<<<<< HEAD
+=======
 
             <Card key={post.id} className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">
 
@@ -51,6 +54,18 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {}
                   alt={post.title}"
                   className="object-cover w-full h-full opacity-60 hover: opacity-80 transition-opacity duration-300""
                   loading="lazy"
+<<<<<<< HEAD
+                  onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
+                    const target = e.currentTarget as HTMLImageElement,
+
+                  onError={(
+                    e: React.SyntheticEvent<HTMLImageElement, Event>
+                  ) => {
+                    const target = e.currentTarget as HTMLImageElement;
+
+                  onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
+                    const target = e.currentTarget as HTMLImageElement,
+=======
 
                     e: React.SyntheticEvent<HTMLImageElement, Event>
                   ) => {}
@@ -85,7 +100,16 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {}
                 </Button>
               </CardFooter>
             </Card>
+<<<<<<< HEAD
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GradientHeading } from "./GradientHeading",;
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -131,8 +155,11 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {;
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
+=======
   );
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GradientHeading  } from './GradientHeading';
 import { Card, CardContent, CardFooter  } from '@/components / ui / card';
 import { Button  } from './ui / button';

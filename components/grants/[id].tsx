@@ -82,6 +82,7 @@ return (;
             {item.program === 'incubator' ? 'Incubator' : 'Grant,'
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {item.program === 'incubator' ? 'Incubator' : 'Grant'}
     )return (<EnhancedLayout>;
       <div className='flex items-center justify-between mb-4'>;

@@ -31,6 +31,16 @@ type Message = {
   content: string
   sender: "user" | "bot"
 
+<<<<<<< HEAD
+}
+export function ChatBotPanel() {
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: "welcome"
+      content: "Hi! How can I help you?"
+      sender: "bot"
+      timestamp: new Date()}])
+=======
 import React, { useState, useRef, useEffect } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -64,6 +74,7 @@ export function ChatBotPanel() {;
       sender: "bot",;
       timestamp: new Date()}]),;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [inputValue, setInputValue] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
@@ -72,6 +83,22 @@ export function ChatBotPanel() {;
   const inputRef = useRef<HTMLInputElement>(null);
 
       sender: "bot",
+<<<<<<< HEAD
+      timestamp: new Date()}]),;
+  const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [failedAttempts, setFailedAttempts] = useState(0);
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const { theme } = useTheme();
+      timestamp: new Date()}]),
+  const [inputValue, setInputValue] = useState(""),
+  const [isLoading, setIsLoading] = useState(false),
+  const [failedAttempts, setFailedAttempts] = useState(0),
+  const scrollAreaRef = useRef<HTMLDivElement>(null),
+  const inputRef = useRef<HTMLInputElement>(null),
+  const { theme } = useTheme(),
+=======
 
   // Auto-scroll to bottom when messages change
 
@@ -133,6 +160,7 @@ if ( {) {}
     if (!text.trim()) return
     const userMessage: Message = {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: `user-${Date.now()}`,
       content: text,"
       sender: "user",
@@ -161,6 +189,8 @@ if ( {) {}
         // After 3 failed attempts, suggest escalation;
         if (failedAttempts >= 2) {}
           suggestEscalation()
+<<<<<<< HEAD
+=======
 
         }
       } else {}
@@ -174,6 +204,11 @@ if ( {) {}
         variant: "destructive",;"
         title: "Communication Error",'"
         description: "We're having trouble connecting to our support service."}),;
+<<<<<<< HEAD
+      setFailedAttempts((prev) => prev + 1);
+      if (failedAttempts >= 2) {;
+        suggestEscalation();
+=======
 
     } catch (error) {"
       console.error("Error in AI chat:", error),
@@ -211,6 +246,49 @@ if ( {) {}
         setFailedAttempts(0)
       }
 
+<<<<<<< HEAD
+  }, []),;
+  const handleSendMessage = async (text: string = inputValue) => {;
+    if (!text.trim()) return,;
+    const userMessage: Message = {;
+      id: `user-${Date.now()}`,;
+      content: text,;
+      sender: "user",;
+      timestamp: new Date()},;
+    setMessages((prev) => [...prev, userMessage]),;
+    setInputValue(""),;
+    setIsLoading(true),;
+    try {;
+      // Call the OpenAI-powered support function;
+      const response = await sendToAIAssistant(text),;
+      const botMessage: Message = {;
+        id: `bot-${Date.now()}`,;
+        content: response.message || "Sorry, I couldn't process your request. Please try again.",;
+        sender: "bot",;
+        timestamp: new Date()},;
+      setMessages((prev) => [...prev, botMessage]),;
+      // Check if the request was successful;
+      if (!response.success) {;
+        setFailedAttempts((prev) => prev + 1),;
+        // After 3 failed attempts, suggest escalation;
+        if (failedAttempts >= 2) {;
+          suggestEscalation();
+        }
+      } else {
+        // Reset failed attempts if successful
+        setFailedAttempts(0)
+      }
+    } catch (error) {
+      console.error("Error in AI chat:", error),
+      toast({
+        variant: "destructive"
+        title: "Communication Error"
+        description: "We're having trouble connecting to our support service."})
+      setFailedAttempts((prev) => prev + 1);
+      if (failedAttempts >= 2) {
+        suggestEscalation()
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         variant: "destructive",
 
 import { Send, Loader2 } from "lucide-react",;
@@ -222,6 +300,25 @@ import { useTheme } from "@/hooks/useTheme",;
       setFailedAttempts((prev) => prev + 1),
       if (failedAttempts >= 2) {}
         suggestEscalation()
+<<<<<<< HEAD
+    } catch (error) {;
+      console.error("Error in AI chat:", error),;
+      toast({;
+        variant: "destructive",;
+        title: "Communication Error",;
+        description: "We're having trouble connecting to our support service."}),;
+      setFailedAttempts((prev) => prev + 1),;
+      if (failedAttempts >= 2) {;
+        suggestEscalation();
+        variant: "destructive",
+        title: "Communication Error",
+        description: "We're having trouble connecting to our support service."}),
+      
+      setFailedAttempts((prev) => prev + 1),
+      if (failedAttempts >= 2) {
+        suggestEscalation()
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         description: "We're having trouble connecting to our support service."}),;
 
@@ -341,11 +438,22 @@ if ( {) {}
     }
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (!response.ok) {
         return {
           success: false
           message: "I'm having trouble connecting to my knowledge base right now."
         }
+<<<<<<< HEAD
+
+      
+
+
+          message: "I'm having trouble connecting to my knowledge base right now."
+        };
+      }
+      
+=======
       }
 
       const data = await response.json();
@@ -376,7 +484,10 @@ if ( {) {}
           timestamp: m.timestamp
         }))
       })
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later.";
       }
@@ -432,6 +543,7 @@ if ( {) {}
         sender: "bot"
         timestamp: new Date()
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // In a real implementation, this would trigger a live chat request
     toast({
       title: "Support request submitted"
@@ -466,7 +578,10 @@ if ( {) {}
         <div className="flex flex-col gap-4">
           {messages.map((message) => (
             <ChatMessage
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
 
   const suggestEscalation = () => {;
@@ -475,6 +590,24 @@ if ( {) {}
       content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",;"
       sender: "bot",;
       timestamp: new Date()},;
+<<<<<<< HEAD
+    setMessages((prev) => [...prev, escalationMessage]);
+    // Log this interaction for the support team;
+    logSupportEscalation();
+  };
+  },;
+  const suggestEscalation = () => {;
+    const escalationMessage: Message = {;
+      id: `bot-escalation-${Date.now()}`,;
+      content:;
+        "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",;
+      sender: "bot",;
+      timestamp: new Date()},;
+    setMessages((prev) => [...prev, escalationMessage]),;
+    // Log this interaction for the support team;
+    logSupportEscalation();
+  },;
+=======
 
   const logSupportEscalation = async () => {;
     try {;
@@ -484,6 +617,15 @@ if ( {) {}
         timestamp: new Date();
       }
     ]);
+<<<<<<< HEAD
+  },;
+  return (;
+    <div className="flex flex-col h-full">;
+      <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
+        <div className="flex flex-col gap-4">;
+          {messages.map((message) => (;
+            <ChatMessage;
+=======
 
   return (
     <div className="flex flex-col h-full">;
@@ -514,6 +656,7 @@ if ( {) {}
           </p>"
           <div className="flex flex-wrap gap-2">
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {isLoading && (;
             <div className="flex items-center justify-center py-2">;
 
@@ -584,7 +727,14 @@ if ( {) {}
       </div>
     </div>
   )
+<<<<<<< HEAD
+            onChange={(e) => setInputValue(e && e.target.value)}
+            placeholder="Type your question...";
+            className={cn(;
+              "flex-1";
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               theme === "dark" ;
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
 

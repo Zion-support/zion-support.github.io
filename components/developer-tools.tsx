@@ -264,6 +264,34 @@ category: 'API Development',}
   ];
     {
 
+<<<<<<< HEAD
+      category: 'API Development',
+    },  ];      category: 'API Development';
+    }
+        'API design & testing',
+        'Team collaboration',
+        'API documentation',
+        'Mock servers',
+        'Monitoring & analytics',
+      ],      pricing: '$12/month',
+
+      pricing: '$12/month',
+
+      marketPrice: '$12-99/month',
+      website: 'https://www.postman.com/pricing',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      textColor: 'text-orange-400',
+      gradient: 'from-orange-400 to-red-500',
+      popular: false,
+      category: 'API Development',
+    },  ];
+
+  ];
+;
+  const devMarketStats = [;
+    {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       title: 'Dev Tools Market',
   value: '$8.2B',
       growth: '+24% YoY',}
@@ -392,6 +420,8 @@ developers and development teams.
           </p>
         </div>
       </section>
+<<<<<<< HEAD
+=======
       {/* Developer Market Statistics */}
 
 <section className='section-padding bg-gradient-cursor-accent'    />
@@ -427,6 +457,7 @@ key={index}
                 </div>;
               </Card>;
             ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 <<<<<<< HEAD
 
@@ -520,6 +551,168 @@ reliability, and real-world developer usage.
                 className={`card-hover group border-gradient-blue relative ${}
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''}
                 }`}
+<<<<<<< HEAD
+                <div className='flex items-start space-x-6'>;
+                  <div className='relative'>;
+                    <div
+                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool && tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
+                      {tool && tool.icon}
+                    </div>;
+                    <div
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6 mb - 16'>;
+            {devMarketStats.map ((stat, index) => (
+              <Card;
+                key={index}
+                className='card - hover border - gradient - blue text - center';
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className='p - 6'>;
+                  <h3 className='text - lg font - semibold text - white mb - 3'>;
+                    {stat.title}
+                  </h3>;
+                  <div className='text - 2xl font - bold text - cursor - blue mb - 2'>;
+                    {stat.value}
+                  </div>;
+                  <div className='text - sm text - green - 400 mb - 3'>;
+                    {stat.growth}
+                  </div>;
+                  <p className='text - sm text - gray - 400'>{stat.description}</p>                </div>                <div className="p - 6">;
+                  <h3 className="text - lg font - semibold text - white mb - 3">{stat.title}</h3>;
+                  <div className="text - 2xl font - bold text - cursor - blue mb - 2">{stat.value}</div>;
+                  <div className="text - sm text - green - 400 mb - 3">{stat.growth}</div>;
+                  <p className="text - sm text - gray - 400">{stat.description}</p>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Developer Tools Grid */}
+      <section className='section - padding bg - gradient - cursor'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+              Curated Developer Tools & Services;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              Each tool has been carefully selected based on performance,
+              reliability, and real - world developer usage.;
+            </p>;
+          </div>;
+          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>            {developer_tools.map ((tool, index) => (              Curated Developer Tools & Services;
+            </h2>;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+              Each tool has been carefully selected based on performance, reliability, and real - world developer usage.;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
+            {developer_tools.map ((tool, index) => (
+              <Card;
+                key={index}
+                className={`card - hover group border - gradient - blue relative ${
+                  tool.popular ? 'ring - 2 ring - cursor - blue ring - opacity - 50' : '';
+                }`}
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                {tool.popular && (
+                  <div className='absolute -top - 3 left - 1/2 transform -translate - x-1 / 2'>;
+                    <div className='inline - flex items - center px - 3 py - 1 rounded - full bg - cursor - blue text - white text - xs font - medium'>;
+                      <Star className='w - 3 h - 3 mr - 1' />                      Most Popular                  <div className="absolute -top - 3 left - 1/2 transform -translate - x-1 / 2">;
+                    <div className="inline - flex items - center px - 3 py - 1 rounded - full bg - cursor - blue text - white text - xs font - medium">;
+                      <Star className="w - 3 h - 3 mr - 1" />;
+                      Most Popular;
+                    </div>;
+                  </div>)}
+                <div className='flex items - start space - x-6'>;
+                  <div className='relative'>;
+                    <div;
+                      className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 3xl bg - gradient - to - br ${tool.color} shadow - xl group - hover:scale - 110 transition - transform duration - 300`}
+                    >;
+                      {tool.icon}
+                    </div>;
+                    <div;
+                      className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${tool.gradient} to - transparent rounded - 2xl opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 blur - sm`}
+                    />;
+                  </div>;
+                  <div className='flex - 1'>;
+                    <div className='flex items - center justify - between mb - 2'>;
+                      <h3 className={`text - 2xl font - bold ${tool.text_color}`}>;
+                        {tool.title}
+                      </h3>;
+                      <span className='text - xs bg - gray - 800 text - gray - 300 px - 2 py - 1 rounded - full'>;
+                        {tool.category}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {tool.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-cursor-blue text-white text-xs font-medium">
+                      <Star className="w-3 h-3 mr-1" />
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                <div className='flex items-start space-x-6'>
+                  <div className='relative'>
+                    <div
+                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      {tool.icon}
+                    </div>
+                    <div
+                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
+                    />
+                  </div>
+                  <div className='flex-1'>
+                    <div className='flex items-center justify-between mb-2'>
+                      <h3 className={`text-2xl font-bold ${tool.textColor}`}>
+                        {tool.title}
+                      </h3>
+                      <span className='text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full'>
+                        {tool.category}
+                      </span>
+                    </div>
+                    <p className='text-gray-400 leading-relaxed mb-6'>
+                      {tool.description}
+                    </p>
+                    <div className='mb-6'>
+                      <div className='flex items-center justify-between mb-3'>
+                        <span className='text-sm text-gray-500'>
+                          Service Price:
+                        </span>
+                        <span className='text-lg font-semibold text-cursor-blue'>
+                          {tool.pricing}
+                        </span>
+                      </div>
+                      <div className='flex items-center justify-between mb-3'>
+                        <span className='text-sm text-gray-500'>
+                          Market Average:
+                        </span>
+                        <span className='text-sm text-gray-400'>
+                          {tool.marketPrice}
+                        </span>
+                      </div>
+                    </div>
+                    <ul className='space-y-2 mb-6'>
+                      {tool.features.map((feature, featureIndex) => (
+                        <li
+                          key={featureIndex}
+                          className='flex items-center text-gray-300'
+                        >
+                          <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />                          {feature}                      {tool.icon}
+                    </div>
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className={`text-2xl font-bold ${tool.textColor}`}>
+                      </span>;
+                    </div>;
+                    <p className='text - gray - 400 leading - relaxed mb - 6'>;
+                      {tool.description}
+                          {feature}
+                        </li>;
+                      ))}
+                    </ul>;
+                    <div className='flex items-center justify-between'>;
+=======
 
                 style={{ animationDelay: `${index * 0.1}s` }}
                   />
@@ -759,6 +952,7 @@ key={index}
                   </div>
                 </div>
               </Card>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 <<<<<<< HEAD
       {/* Tool Categories */}
@@ -916,6 +1110,27 @@ href='/contact;
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore AI Tools
             </Button>
+<<<<<<< HEAD
+            <Button
+
+            <Button
+              href='/contact'
+              variant='outline'
+              size='lg'
+              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'              href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
+              Get Dev Consultation
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+);
+}
+            <Button
+=======
 
   )}
   )

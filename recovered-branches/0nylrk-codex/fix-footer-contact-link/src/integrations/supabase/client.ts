@@ -18,6 +18,7 @@ export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 =======
   throw new Error('Missing Supabase environment variables')
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { createClient } from '@supabase/supabase-js',;
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
@@ -142,6 +143,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 
 import {createClient} from '@supabase/supabase-js';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { createClient } from '@supabase/supabase-js',;
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
@@ -273,7 +275,14 @@ export const checkOnline = async (): Promise<boolean> => {;
   if (typeof navigator !== 'undefined' && !navigator.onLine) {;
     return false;
   }
+<<<<<<< HEAD
+export const checkOnline = async ():Promise<boolean> => {;
+  if (typeof navigator !== 'undefined' && !navigator.onLine) {;
+    return false,;
+  }
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {;
     const controller = new AbortController(),;
     const id = setTimeout(() => controller.abort(), 3000),;

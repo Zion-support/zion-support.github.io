@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 import React, { useEffect, useRef } from 'react';'
@@ -27,6 +29,23 @@ const canvasRef = useRef<HTMLCanvasElement>(null)const containerRef =;
   const canvas = canvasRef.current;
     if (!canvas) return;
   enableNeuralNetworks = true;
+<<<<<<< HEAD
+}) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+  enableMultidimensional = true,;
+  children;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {;
+    const canvas = canvasRef && canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas && canvas.getContext('2d');
+=======
 
 const ctx = canvas.getContext('2d');'
     if (!ctx) return;
@@ -123,6 +142,7 @@ if ( {) {}
         this.alpha = Math.random() * 0.8 + 0.2;
         this.life = Math.random() * 100 + 50;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       update() {
         }
@@ -227,26 +247,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         this && this.life = Math && Math.random() * 100 + 50;
         this && this.maxLife = this && this.life;      }        this && this.maxLife = this && this.life;
       }
-
       update() {;
         this && this.x += this && this.vx;
         this && this.y += this && this.vy;
         this && this.life--;
-
         // Bounce off edges;
         if (this && this.x <= 0 || this && this.x >= canvas && canvas.width) this && this.vx *= -1;
         if (this && this.y <= 0 || this && this.y >= canvas && canvas.height) this && this.vy *= -1;
-
         // Wrap around;
         if (this && this.x < 0) this && this.x = canvas && canvas.width;
         if (this && this.x > canvas && canvas.width) this && this.x = 0;
         if (this && this.y < 0) this && this.y = canvas && canvas.height;
         if (this && this.y > canvas && canvas.height) this && this.y = 0;
-
         // Fade out;
         this && this.alpha = this && this.life / this && this.maxLife;      }        this && this.alpha = this && this.life / this && this.maxLife;
       }
-
       draw() {;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = this && this.alpha;
@@ -340,6 +355,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         this.y = y;
         this.radius = Math.random() * 100 + 50;
         this.intensity = Math.random() * 0.8 + 0.2;
+<<<<<<< HEAD
+        this.phase = Math.random() * Math.PI * 2
+      }
+      update() {
+        this.phase += 0.02 * animationSpeed
+      }
+=======
 
       }
 this.phase = Math.random() * Math.PI * 2;
@@ -350,11 +372,11 @@ this.phase = Math.random() * Math.PI * 2;
       }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       draw() {
         }
         ctx.save();
         ctx.globalAlpha = 0.1;
-        
         for (let i = 0, i < 3, i++) {
           const waveRadius = this.radius + Math.sin(this.phase + i * Math.PI / 3) * 20;
           const alpha = this.intensity * (1 - i / 3);
@@ -481,6 +503,13 @@ if ( {) {$2;
       rotation: number,
       alpha: number,
       color: string,
+<<<<<<< HEAD
+this.color = getColorSchemeColor()
+      }
+      update() {
+        this.rotation += 0.005 * animationSpeed;
+        this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2
+=======
 
       constructor() {
         this.x = $2;
@@ -507,6 +536,10 @@ this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;
         ctx.strokeStyle = this.color;
         ctx.lineWidth = 1;
         ctx.setLineDash([5, 5]);
+<<<<<<< HEAD
+        ctx.beginPath();
+        ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
+        ctx.stroke();
 
         ctx.restore();      }        
         ctx.beginPath();

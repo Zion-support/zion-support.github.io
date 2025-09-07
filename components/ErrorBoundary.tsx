@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 ;
@@ -10,6 +12,16 @@ interface Props  {"children": ReactNode;
   }
   level?: string;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;import { AlertTriangle, RefreshCw } from 'lucide-react';
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+=======
+interface Props {;
+  children: ReactNode;
+  level?: string;
+  fallback?: ReactNode;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface Props  {"children": ReactNode;
   }
@@ -534,6 +546,8 @@ onClick={() => this.setState({ "hasError": false })}
                 </summary>
                 <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">"
                   {this.state.error.stack}
+<<<<<<< HEAD
+=======
 
                 </pre>
               </details>

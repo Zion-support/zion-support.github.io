@@ -206,6 +206,8 @@ const allServices = [
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
       }
     }
   };
@@ -359,6 +361,16 @@ initial={{ opacity: 0, y: 30 ,}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
+              <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+                Choose the perfect plan for your business needs. All plans include our cutting-edge technology 
+                and world-class support to ensure your success.
+              </p>
+            </motion.div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingTiers.map((tier, index) => (
+                <motion.div
+=======
 
 className='text-center mb-16'
                 />
@@ -388,6 +400,254 @@ key={index}
                   viewport={{ once: true }}
 
                   className={`relative group ${
+<<<<<<< HEAD
+        duration: 0.5,
+      },
+    },  }        duration: 0.5;
+      }
+    }
+  }
+;
+  return (
+    <>;
+      <Head>;
+        <title>;
+          Cutting - Edge Pricing 2025 - Zion Tech Group | Future Technology;
+          Solutions;
+        </title>;
+        <meta;
+          name='description';
+          content='Discover competitive pricing for our revolutionary cutting - edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions.';
+        />;
+        <meta;
+          name='keywords';
+          content='cutting - edge pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SAAS pricing';
+        />;
+        <meta name='viewport' content='width = device - width, initial - scale = 1' />;
+        <link rel='icon' href='/favicon.ico' />      </Head>;
+      <Layout>;
+        {/* Hero Section */}
+        <section className='relative overflow - hidden'>;
+          <div className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'></div>;
+          <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24 lg:py - 32'>            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text - center';
+            >;
+              <motion.h1;
+                className='text - 4xl md:text - 6xl lg:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6'                initial={{ opacity: 0, scale: 0.9 }}        <title > Cutting - Edge Pricing 2025 - Zion Tech Group | Future Technology Solutions</title>;
+        <meta name="description" content="Discover competitive pricing for our revolutionary cutting - edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions." />;
+        <meta name="keywords" content="cutting - edge pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SAAS pricing" />;
+        <meta name="viewport" content="width = device - width, initial - scale = 1" />;
+        <link rel="icon" href="/favicon.ico" />;
+      <Layout>;
+        {/* Hero Section */}
+        <section className='relative overflow - hidden'>;
+          <div className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'></div>;
+          <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24 lg:py - 32'>        <section className="relative overflow - hidden">;
+          <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black"></div>;
+          <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24 lg:py - 32">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text - center';
+            >;
+              <motion.h1;
+                className='text - 4xl md:text - 6xl lg:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6'              className="text - center";
+            >;
+              <motion.h1;
+                className="text - 4xl md:text - 6xl lg:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 6";
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >;
+                Cutting - Edge;
+                <span className='block text - 2xl md:text - 3xl lg:text - 4xl mt - 4 text - white / 90'>;
+                  Pricing 2025;
+                </span>;
+              </motion.h1>;
+              <motion.p;
+                className='text - xl md:text - 2xl text - white / 80 max - w-4xl mx - auto mb - 12 leading - relaxed'                initial={{ opacity: 0, coordinate_y: 20 }}
+                animate={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >                <span className="block text - 2xl md:text - 3xl lg:text - 4xl mt - 4 text - white / 90">;
+                  Pricing 2025;
+                </span>;
+              </motion.h1>;
+              <motion.p;
+                className="text - xl md:text - 2xl text - white / 80 max - w-4xl mx - auto mb - 12 leading - relaxed";
+                animate={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >;
+                Experience revolutionary technology at competitive prices. Our;
+                cutting - edge services are designed to give you a competitive;
+                advantage while maintaining affordability and value.;
+              </motion.p>;
+              {/* Hero Stats */}
+              <motion.div;
+                className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto mb - 12'                initial={{ opacity: 0, coordinate_y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting - edge services are designed to give you;
+                a competitive advantage while maintaining affordability and value.;
+              </motion.p>;
+              {/* Hero Stats */}
+              <motion.div;
+                className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto mb - 12";
+                animate={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >;
+                {stats.map ((stat, index) => (
+                  <div key={index} className='text - center'>;
+                    <div className='flex justify - center mb - 2'>;
+                      <div className='p - 3 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30'>;
+                        <stat.icon className={`w - 5 h - 5 ${stat.color}`} />;
+                      </div>;
+                    </div>;
+                    <div className='text - 2xl md:text - 3xl font - bold text - white mb - 1'>;
+                      {stat.number}
+                    </div>;
+                    <div className='text - sm text - white / 70'>{stat.label}</div>                  </div>                  <div key={index} className="text - center">;
+                    <div className="flex justify - center mb - 2">;
+                      <div className="p - 3 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30">;
+                        <stat.icon className={`w - 5 h - 5 ${stat.color}`} />;
+                      </div>;
+                    </div>;
+                    <div className="text - 2xl md:text - 3xl font - bold text - white mb - 1">{stat.number}</div>;
+                    <div className="text - sm text - white / 70">{stat.label}</div>))}
+              </motion.div>;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Pricing Tiers Section */}
+        <section className='py - 20 bg - gradient - to - b from - black via - purple - 900 / 10 to - black'>;
+          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section className="py - 20 bg - gradient - to - b from - black via - purple - 900 / 10 to - black">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className='text - center mb - 16';
+            >;
+              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+                <span className='bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent'>                  Flexible;
+                </span>{' '}
+                Pricing Plans;
+              </h2>              className="text - center mb - 16";
+            >;
+              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+                <span className="bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent">;
+                </span>{' '}
+                Pricing Plans;
+              </h2>;
+              <p className='text - xl text - white / 80 max - w-3xl mx - auto leading - relaxed'>;
+                Choose the perfect plan for your business needs. All plans;
+                include our cutting - edge technology and world - class support to;
+                ensure your success.;
+              </p>;
+            </motion.div>;
+            <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-6xl mx - auto'>              {pricing_tiers.map ((tier, index) => (              <p className="text - xl text - white / 80 max - w-3xl mx - auto leading - relaxed">;
+                Choose the perfect plan for your business needs. All plans include our cutting - edge technology;
+                and world - class support to ensure your success.;
+              </p>;
+            </motion.div>;
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-6xl mx - auto">;
+                <motion.div;
+                  key={index}
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`relative group ${
+                    tier.popular ? 'scale - 105' : '';
+                  }`}
+                >
+                  {tier.popular && (
+                    <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
+                      <span className='bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 4 py - 2 rounded - full text - sm font - semibold'>                        Most Popular;
+                      </span>;
+                    </div>)}                    <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
+                      <span className="bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 4 py - 2 rounded - full text - sm font - semibold">;
+                        Most Popular;
+                      </span>;
+                    </div>)}
+                  <div;
+                    className={`relative p - 8 rounded - 2xl border border - cyan - 500 / 20 bg - gradient - to - br from - black / 80 via - purple - 900 / 10 to - black / 80 backdrop - blur - sm hover:border - cyan - 500 / 50 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 ${
+                      tier.popular;
+                        ? 'border - cyan - 500 / 50 shadow - cyan - 500 / 20';
+                        : '';
+                    }`}
+                  >;
+                    <div className='text - center mb - 8'>;
+                      <div;
+                        className={`inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r ${tier.color} mb - 4`}
+                      >;
+                        {tier.icon}
+                      </div>;
+                      <h3 className='text - 2xl font - bold text - white mb - 2'>;
+                        {tier.name}
+                      </h3>;
+                      <p className='text - white / 70 mb - 6'>{tier.description}</p>;
+                      <div className='text - 4xl font - bold text - white mb - 2'>;
+                        ${tier.price}
+                        <span className='text - lg font - normal text - white / 60'>;
+                          /{tier.period}
+                    tier.popular ? 'scale-105' : ''
+                  }`}
+                >
+                  {tier.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+
+                  <div
+                    className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
+                      tier.popular
+                        ? 'border-cyan-500/50 shadow-cyan-500/20'
+                        : ''
+                    }`}
+                  >
+                    <div className='text-center mb-8'>
+                      <div
+                        className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${tier.color} mb-4`}
+                      >
+                        {tier.icon}
+                      </div>
+                      <h3 className='text-2xl font-bold text-white mb-2'>
+                        {tier.name}
+                      </h3>
+                      <p className='text-white/70 mb-6'>{tier.description}</p>
+                      <div className='text-4xl font-bold text-white mb-2'>
+                        ${tier.price}
+                        <span className='text-lg font-normal text-white/60'>
+                          /{tier.period}
+                        </span>
+                      </div>
+                    </div>
+                    <ul className='space-y-4 mb-8'>
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className='flex items-start'>
+                          <Check className='w-5 h-5 text-cyan-400 mt-0.5 mr-3 flex-shrink-0' />
+                          <span className='text-white/80'>{feature}</span>                        </li>                        {tier.icon}
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                      <p className="text-white/70 mb-6">{tier.description}</p>
+                      <div className="text-4xl font-bold text-white mb-2">
+                        ${tier.price}
+                        <span className="text-lg font-normal text-white/60">/{tier.period}</span>
+                      </div>
+                    </div>
+                    <ul className="space-y-4 mb-8">
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <Check className="w-5 h-5 text-cyan-400 mt-0.5 mr-3 flex-shrink-0" />
+                          <span className="text-white/80">{feature}</span>
+                        </li>
+
+                      ))}
+                    </ul>
 
                     tier.popular ? 'scale-105' : ''}
 }
@@ -478,6 +738,10 @@ key={index}
 
 <<<<<<< HEAD
 
+
+
+
+<<<<<<< HEAD
 =======
 <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'    />
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />
@@ -487,6 +751,8 @@ initial={{ opacity: 0, y: 30 ,}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
+=======
 
 className='text-center mb-16'
                 />
@@ -502,6 +768,44 @@ multiple technology domains. Each category offers specialized;
 solutions for different business needs.
               </p>
             </motion.div>
+<<<<<<< HEAD
+            {/* Category Filter */}
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <button
+
+
+
+{/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              className='text-center mb-16'
+            >
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>                  Service
+                </span>{' '}
+                Categories
+              </h2>
+              <p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
+                Explore our comprehensive range of cutting-edge services across
+                multiple technology domains. Each category offers specialized
+                solutions for different business needs.              </p>
+            </motion.div>
+            {/* Category Filter */}
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>              <button              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                </span>{' '}
+                Categories
+              </h2>
+              <p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
+                Explore our comprehensive range of cutting-edge services across
+                multiple technology domains. Each category offers specialized
+                solutions for different business needs.              <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+                Explore our comprehensive range of cutting-edge services across multiple technology domains.
+                Each category offers specialized solutions for different business needs.
+              </p>
+            </motion.div>
+=======
 
             {/* Category Filter *,}
 }
@@ -537,6 +841,8 @@ key={service.id}
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20;
                         >;
                           {service.description}
+<<<<<<< HEAD
+=======
 
                           className=px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 

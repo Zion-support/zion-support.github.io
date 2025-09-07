@@ -6,6 +6,7 @@ import {Skeleton} from '@/components / ui / skeleton';
 
 interface MilestoneActivitiesProps {
   project_id: string;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 interface Activity {
 
@@ -172,7 +173,14 @@ import {Skeleton} from '@/components/ui/skeleton';
 interface MilestoneActivitiesProps {;
   projectId: string;
 }
+<<<<<<< HEAD
+interface MilestoneActivitiesProps {;
+  projectId: string;
+}
+;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Activity {;
   id: string,;
   milestone_id: string,;
@@ -411,6 +419,7 @@ export function MilestoneActivities() {;
         {[1, 2, 3].map((i) => (;
 
     return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="space-y-4">;
 >>>>>>> origin/chore/fix-lint-and-merge
         {[1, 2, 3].map((i) => (;
@@ -432,6 +441,7 @@ export function MilestoneActivities() {;
           <p className="text-muted-foreground py-8">No activity found for this project</p>;
         </CardContent>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-4">;
       <Card>;
         <CardHeader>;
@@ -452,6 +462,8 @@ export function MilestoneActivities() {;
   }, [project_id]);
 
 ;
+<<<<<<< HEAD
+=======
 
   function getActivityDescription (activity: Activity): string {
     switch (activity.action) {

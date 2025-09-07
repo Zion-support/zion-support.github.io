@@ -870,6 +870,7 @@ href={service.link}
       </section>
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             </ul>;
                           </div>;
                           {/* Category and Action */}

@@ -14,6 +14,7 @@ if (particle.y > canvas.height) particle.y = 0;
 animate ();
 // Handle resize window.addEventListener ('resize', handle_resize);'
 /> {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -361,7 +362,6 @@ className='absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotat
             ease: "easeInOut"
           }}
         />
-
         <motion.div
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotate-45"
           animate={{

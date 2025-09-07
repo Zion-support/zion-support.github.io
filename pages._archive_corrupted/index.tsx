@@ -9,24 +9,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { "hasError": false };
   }
-  
   static getDerivedStateFromError(error) {
     }
     return { "hasError": true };
   }
-  
   componentDidCatch(error, errorInfo) {
     }
     console.error('Error caught by "boundary":', error, errorInfo);'
   }
-  
   render() {
     }
     if (this.state.hasError) {
       }
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -558,6 +554,12 @@ const Home  = memo(() => {const Home  = memo(() => {const [sidebarOpen, setSideb
                       ))}
 
 
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {service.title}
                   </h3>;
                   <p className=\"text-gray-600 mb-6 text-center\">;"
@@ -1049,6 +1051,10 @@ href=\"/contact\""
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">"
                   <Mail className="w-6 h-6 text-blue-600" />"
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
                 </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Email</h3>"
@@ -1063,6 +1069,11 @@ href=\"/contact\""
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">"
                   <MapPin className="w-6 h-6 text-blue-600" />"
 
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
                 </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Address</h3>"

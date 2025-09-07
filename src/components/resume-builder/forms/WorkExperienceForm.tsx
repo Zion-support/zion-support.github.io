@@ -147,6 +147,13 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     )}
                   </div>
                   <div className="flex gap-2">
+<<<<<<< HEAD
+                      variant='ghost'
+                      size='icon'
+                      onClick={() => handleEdit(work)}
+                      aria-label='Edit experience'                    >
+                      <Edit className='h-4 w-4' />
+                    </Button>
                     <Button
                       variant="ghost"
                       size="icon"
@@ -269,6 +276,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 )}
               </div>
 
+              </div>
+            </div>
             <FormField
               control={form.control}
               name="location"
@@ -318,6 +327,14 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null);
+                    form.reset({
+                    setEditingId(null),
+                    setEditingId(null),
+=======
+                    <Button
+                    setEditingId(null),
+                    setEditingId(null),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     form.reset({
                       company_name: '',
                       role_title: '',
@@ -381,6 +398,12 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           </form>;
         </Form>;
       </div>;
+<<<<<<< HEAD
+;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       ...work;
       start_date: formatDateValue(work.start_date),

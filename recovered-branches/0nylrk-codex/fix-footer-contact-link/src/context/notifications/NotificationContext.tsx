@@ -28,6 +28,7 @@ import { NotificationContextType } from './types',;'
 
 import {NotificationContextType} from './types';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const useNotifications = (): NotificationContextType => {;
   const context = useContext(NotificationContext) as NotificationContextType;
 
@@ -35,6 +36,8 @@ import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useNotificationOperations } from './useNotificationOperations',;
 import { NotificationContextType } from './types',;
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
 // Default context used when React type definitions are missing. Providing a;
@@ -158,6 +161,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
       const channel = supabase;'
         .channel('notifications-changes');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { create_context, useContext, useEffect, ReactNode } from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -244,10 +248,60 @@ if ( {) {}
   return (
     <NotificationContext && NotificationContext.Provider value={notificationOps}>;
       {children}
-
     </NotificationContext && NotificationContext.Provider>;
   );
 };
+<<<<<<< HEAD
+;
+  return (
+    <NotificationContext.Provider value={notification_ops}>;
+      {children}
+    </NotificationContext.Provider>);
+}
+;
+            event:'*', ;
+            schema:'public',;
+            table:'notifications',;
+            filter:`user_id=eq.${user.id}`;
+          },;
+          (payload) => {;
+            // // // console.log('Notification change received:', payload),;
+            notificationOps.fetchNotifications(),;
+          }
+        );
+        .subscribe(),;
+        ;
+      return () => {;
+        supabase.removeChannel(channel),;
+      },;
+    }
+  }, [user]),;
+  ;
+        .on('postgres_changes',;
+          {;
+            event: '*',;
+            schema: 'public',;
+            table: 'notifications',;
+            filter: `user_id=eq.${user.id}`;
+          },;
+          (payload) => {;
+            // // // console.log('Notification change received:', payload),;
+            notificationOps.fetchNotifications();
+          }
+        );
+        .subscribe(),;
+      return () => {;
+        supabase.removeChannel(channel);
+      }
+    }
+  }, [user]);
+  return (;
+    <NotificationContext.Provider value={notificationOps}>;
+      {children}
+    </NotificationContext.Provider>;
+  );
+};
+=======
 
   return (
     <NotificationContext && NotificationContext.Provider value={notificationOps}>;

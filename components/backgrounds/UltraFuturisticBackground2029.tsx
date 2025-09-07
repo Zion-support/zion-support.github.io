@@ -1,4 +1,26 @@
 
+<<<<<<< HEAD
+resizeCanvas ();
+window.addEventListener ('resize', resizeCanvas);
+// Initialize particles
+}particlesRef.current = particles
+}
+
+initParticles ();
+// Animation loop // Update and draw particles particlesRef.current.forEach ( (particle, index) => {
+  // Update position particle.x += particle.vx;
+particle.y += particle.vy;
+// Wrap around edges if (particle.x < 0) particle.x = canvas.width;
+if (particle.x > canvas.width) particle.x = 0;
+if (particle.y < 0) particle.y = canvas.height;
+if (particle.y > canvas.height) particle.y = 0;
+// Draw particle ctx.save ();
+ctx.globalAlpha = particle.opacity;
+// Different effects for different particle types switch (particle.type) {
+  case 'quantum': // Quantum particles with glow effect import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface Particle {
+=======
 
 import React, { useEffect, useRef } from 'react';'
 import { motion } from 'framer-motion';'
@@ -58,6 +80,7 @@ canvas.height = window.innerHeight
 };
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);'
     // Initialize particles,
@@ -121,6 +144,7 @@ export default function UltraFuturisticBackground2029() {
           cyberpunk: ['#ec4899#f97316#f59e0b']
         },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         particles.push({
           }
           "x": Math.random() * canvas.width,
@@ -137,6 +161,7 @@ type
       particlesRef.current = particles;
 };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     initParticles();
     // Animation loop,
 const animate = () => {
@@ -238,6 +263,8 @@ canvas.width / 2,
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
             ctx.fillStyle = particle.color;
             ctx.fill();
+<<<<<<< HEAD
+=======
 
 // Quantum entanglement lines,
 if (index % 10 = == 0) {
@@ -283,6 +310,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ctx.beginPath()ctx.moveTo(particle.x, particle.y)ctx.lineTo(partner.x, partner.y)ctx.stroke()}
               }
             break;
+<<<<<<< HEAD
+=======
 
 const hue = (time * 50 + index * 10) % 360;
             ctx && ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;`            ctx && ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;`            ctx && ctx.shadowBlur = 15;
@@ -344,6 +373,7 @@ const hue = (time * 50 + index * 10) % 360;
             // Neural network connections
             if (index % 15 === 0) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             if (index % 15 === 0) {
               const connections = particlesRef.current.filter(p =>
                 p.type === 'neural' &&
@@ -591,6 +621,7 @@ className='absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purp
     }
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Animated gradient overlay */}

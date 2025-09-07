@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from;
 }
 
 export default function handler("req": NextApiReques t, "res": NextApiRespons e) {
-  const baseUrl =, "https": //ziontechgroup && ziontechgroup.com';'
+  const baseUrl =, "https": //ziontechgroup.com';'
   const staticPages = [', '
 import { NextApiRequest, NextApiResponse } from
   'next';

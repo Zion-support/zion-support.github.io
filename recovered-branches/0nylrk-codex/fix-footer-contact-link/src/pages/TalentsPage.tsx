@@ -1,5 +1,6 @@
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Sample talent listings
 
 const TALENT_LISTINGS: ProductListing[] = [
@@ -293,6 +294,7 @@ export default function TalentsPage() {;
     currency: "$"
     tags: ["Kubernetes", "Docker", "AWS", "Terraform"];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: "talent-2",
     title: "DevOps Specialist",
     description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.",
@@ -302,6 +304,7 @@ export default function TalentsPage() {;
     currency: "$","
     tags: ["Kubernetes", "Docker", "AWS", "Terraform"],
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     author: {
       name: "Michael Reynolds"
       id: "michael-reynolds"
@@ -354,7 +357,12 @@ const TALENT_LISTINGS: ProductListing[] = [;
   {"
     id: "talent - 3","
     title: "Data Scientist",
+<<<<<<< HEAD
+    id: "talent-3"
+    title: "Data Scientist"
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
 
     category: "Data Science"
@@ -370,6 +378,9 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 145,"
     currency: "$","
     tags: ["Statistical Analysis", "Python", "R", "Tableau"],
+<<<<<<< HEAD
+    author: {
+=======
 
     author: {
 
@@ -405,6 +416,19 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.7
     reviewCount: 31}
   {
+<<<<<<< HEAD
+    author: {
+      name: "Priya Sharma"
+      id: "priya-sharma"}
+    images: ["https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&w=800&h=500"]
+    createdAt: "2024-01-10T09:45:00.000Z"
+    aiScore: 95
+    rating: 4.9
+    reviewCount: 29}
+  {
+    id: "talent-4"
+    title: "Cybersecurity Expert"
+=======
     id: "talent - 4",
     title: "Cybersecurity Expert",
 
@@ -433,6 +457,8 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 125,"
     currency: "$","
     tags: ["React", "Node.js", "TypeScript", "MongoDB"],
+<<<<<<< HEAD
+=======
 
     author: {
       name: "David Martinez"

@@ -1,3 +1,50 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import {
+
+
+  TrendingUp
+  BarChart3
+  DollarSign
+  Users
+  Globe
+  Target
+  Clock
+  Award
+  ArrowRight
+  ExternalLink
+  PieChart
+  LineChart
+  Activity
+  Zap;
+} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
+  TrendingUp,
+  BarChart3,
+  DollarSign,
+  Users,
+  Globe,
+  Target,
+  Clock,
+  Award,
+  ArrowRight,
+  ExternalLink,
+  PieChart,
+  LineChart,
+  Activity,;
+  Zap,;
+} from 'lucide-react';
+
+} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
+} from 'lucide-react';
+
+=======
 
 
 
@@ -8,6 +55,7 @@ import Button from '../components/ui/Button';'
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function MarketResearchPage() {
 
   const marketSegments = [
@@ -338,6 +386,7 @@ export default function MarketResearchPage() {'Generative AI adoption accelerati
       ];
       marketShare: '45-60%',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       pricing: 'High ($1000+/month)'
     },    {
       company: 'Mid-Market Leaders'
@@ -1375,6 +1424,35 @@ key={index}
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Key Trends */}
                         <div>
+                        <div className="space-y-3 text-sm mb-6">
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-400">Market Size:</span>
+                            <span className="text-white font-semibold">{segment.marketSize}</span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-400">Growth Rate:</span>
+                            <span className="text-green-400 font-semibold">{segment.growthRate}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Market Analysis */}
+                    <div className='lg:w-2/3'>
+                      <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+                        {/* Key Trends */}
+                        <div>
+                          <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
+                            <TrendingUp className='w-5 h-5 mr-2 text-green-400' />
+                            Key Trends
+                          </h4>
+                          <ul className='space-y-2'>
+                            {segment.keyTrends.map((trend, trendIndex) => (
+                              <li
+                                key={trendIndex}
+                                className='flex items-start text-gray-300 text-sm'
+                              >
+                                <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />                                {trend}                        {/* Key Trends */}
+                        <div>
                           <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
                             <TrendingUp className="w-5 h-5 mr-2 text-green-400" />
                             Key Trends
@@ -1562,11 +1640,14 @@ key={index}
 
                   {/* Strengths */}
                   <div className="mb-4">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
                       {analysis.strengths.map((strength, strengthIndex) => (
                         <li key={strengthIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+<<<<<<< HEAD
+=======
                           {strength}
                         </li>
                       ))}

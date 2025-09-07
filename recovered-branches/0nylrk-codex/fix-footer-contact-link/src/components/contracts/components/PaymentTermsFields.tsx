@@ -6,6 +6,12 @@ import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSu
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
+<<<<<<< HEAD
+import { UseFormReturn } from "react-hook-form",
+
+import { UseFormReturn } from "react-hook-form",
+import { UseFormReturn } from "react-hook-form",
+=======
 
 "
 import { UseFormReturn } from "react-hook-form",
@@ -23,6 +29,7 @@ import { UseFormReturn } from "react-hook-form",
 
   FormDescription;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { 
 
   Select;
@@ -30,6 +37,7 @@ import {
   SelectItem;
   SelectTrigger;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
 
@@ -80,7 +88,10 @@ export function PaymentTermsFields({
               </Select>
               <FormMessage />
             </FormItem>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { UseFormReturn } from "react-hook-form",;
 import {;
   FormField,;
@@ -96,11 +107,27 @@ import {;
   SelectItem,;
   SelectTrigger,;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface PaymentTermsFieldsProps {;
   form: UseFormReturn<ContractFormValues>,;
   talent: TalentProfile,;
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void;
 }
+<<<<<<< HEAD
+;
+export function PaymentTermsFields({;
+  form;
+  talent;
+  handleMilestonesGenerated;
+}: PaymentTermsFieldsProps) {;
+  return (;
+    <>;
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+        <FormField;
+          control={form.control}
+          name="paymentTerms"
+          render={({ field }) => (
+=======
 
   return (
 
@@ -134,6 +161,7 @@ function PaymentTermsFields() {}
           name="payment_terms";
           render={({ field }) => (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <FormItem>
 
               <FormLabel>Payment Terms
@@ -178,6 +206,24 @@ function PaymentTermsFields() {}
               </Select>
               <FormMessage />
             </FormItem>
+<<<<<<< HEAD
+            <FormItem>;
+              <FormLabel > Payment Terms</FormLabel>;
+              <Select onValueChange={field.on_change} default_value={field.value}>;
+                <FormControl>;
+                  <SelectTrigger>;
+                    <SelectValue placeholder="Select payment terms" />;
+                  </SelectTrigger>;
+                </FormControl>;
+                <SelectContent>;
+                  <SelectItem value="hourly">Hourly Rate</SelectItem>;
+                  <SelectItem value="fixed">Fixed Price</SelectItem>;
+                  <SelectItem value="milestone">Milestone Payments</SelectItem>;
+                </SelectContent>;
+              </Select>;
+              <FormMessage />;
+        />;
+=======
 
           )}
 
@@ -197,11 +243,16 @@ function PaymentTermsFields() {}
               </Select>;
               <FormMessage />;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
               </FormDescription>;
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
+        />;
+      </div>;
+=======
 
       {/* Project Milestones */}
 
@@ -213,11 +264,14 @@ function PaymentTermsFields() {}
         <div className="pt-2">;
           <MilestoneSuggestions
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             projectName={form.getValues("projectName") || "Project"}
             scopeSummary={form.getValues("scopeSummary") || ""}
             startDate={form.getValues("startDate") || new Date()}
             endDate={form.getValues("endDate")}
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" : 
+<<<<<<< HEAD
+=======
 
                         form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
             projectName={form && form.getValues("projectName") || "Project"}

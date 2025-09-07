@@ -50,10 +50,43 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 >>>>>>> origin/chore/fix-lint-and-merge
   quotes;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isArchived = false;
   isLoading;
   updateStatus;
   toggleArchive;
+<<<<<<< HEAD
+import React from "react";
+import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
+import { 
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow 
+} from "@/components/ui/table",
+import { Button } from "@/components/ui/button";
+import { 
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { formatDate } from "@/utils/dateUtils";
+interface QuotesTableProps {
+
+  quotes: QuoteRequest[]
+  isArchived?: boolean;
+  isLoading: boolean
+  updateStatus: (id: string, status: QuoteStatus) => void
+  toggleArchive: (id: string, isArchived: boolean) => void
+  deleteQuote: (id: string) => void
+
+import {formatDate} from "@/utils/dateUtils";
+=======
 
 import {formatDate} from "@/utils/dateUtils";
 
@@ -316,6 +349,8 @@ interface QuotesTableProps {}
                   <div className="font - medium">{quote.project_name}</div>;
                   <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;
                     {quote.project_summary}
+<<<<<<< HEAD
+=======
 
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",;
 import {;
@@ -387,7 +422,10 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                               deleteQuote(quote.id);
                             }
                           }}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         >;
                           <Trash2 className="h-4 w-4" />;
 

@@ -58,7 +58,10 @@ import {
   Mountain,
   Globe2,
   Bot,
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Crown,;
   Infinity,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, 
@@ -125,6 +128,15 @@ import {Phone;
   Smartphone, BarChart3, Palette, Camera, Video;
 
   Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind;
+<<<<<<< HEAD
+      { name: 'Quantum Internet Security', href: '/services/quantum-internet-security-gateway' },
+      { name: 'Biotech DNA Computing', href: '/services/biotech-dna-computing-platform' },
+      { name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform' },
+      { name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio' }
+    ]
+  };
+  {
+=======
 
   Droplets, Mountain, Globe2, Bot, Crown, Infinity
 
@@ -749,6 +761,54 @@ const company = [;'
   { name: 'Investors', href: '/investors', icon: Star },
   { name: 'Press', href: '/press', icon: BookOpen },
   { name: 'Legal', href: '/legal', icon: Shield },
+<<<<<<< HEAD
+];
+;
+const social_links = [;
+  {
+    name: 'LinkedIn',
+    href: 'https://linkedin.com / company / ziontechgroup',
+    icon: Linkedin,
+    color: 'hover:text - blue - 500',
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com / ziontechgroup',
+    icon: Twitter,
+    color: 'hover:text - blue - 400',
+  },
+  {
+    name: 'Facebook',
+    href: 'https://facebook.com / ziontechgroup',
+    icon: Facebook,
+    color: 'hover:text - blue - 600',
+  },
+  {
+    name: 'Instagram',
+    href: 'https://instagram.com / ziontechgroup',
+    icon: Instagram,
+    color: 'hover:text - pink - 500',
+  },
+  {
+    name: 'YouTube',
+    href: 'https://youtube && youtube.com/@ziontechgroup',
+    icon: Youtube,
+    color: 'hover:text - red - 500',
+  },
+  {
+    name: 'GitHub',
+  { name: 'Privacy', href: '/privacy', icon: ShieldCheck }
+];
+const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-500' },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
+
+];
+=======
 
 const footerSections = [
   {
@@ -1016,6 +1076,10 @@ initial={{ "opacity": 0, "y": 20
 }
               whileInView={{ "opacity": 1, "y": 0 }}
 
+<<<<<<< HEAD
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+=======
 
               transition={{ "duration": 0.6 }}
               viewport={{ "once": true 
@@ -1343,6 +1407,28 @@ href='/privacy''
 href='/terms''
                 className='"hover": text-cyan-400 transition-colors duration-300 ml-2''
               >
+                className='group'
+
+              >
+                <div
+                  className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
+                >
+                  <div className='flex items-center space-x-3 mb-3'>
+                    <div
+                      className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}
+                    >
+                      <category.icon className='w-5 h-5 text-white' />
+                    </div>
+                    <h4 className='font-semibold text-white text-sm'>
+                      {category.title}
+                    </h4>
+                  </div>
+                  <ul className='space-y-2'>
+                    {category.services.slice(0, 3).map(service => (
+                      <li key={service.name}>
+                        <Link
+                          href={service.href}
+                          className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block'                        >              >
                 <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
                   <div className="flex items-center space-x-3 mb-3">
                     <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>

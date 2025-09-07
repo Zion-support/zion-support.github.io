@@ -10,6 +10,8 @@ import {
   Terminal, 
   Webhook 
 } from "lucide-react",
+<<<<<<< HEAD
+=======
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
@@ -100,6 +102,16 @@ export function DeveloperPortal() {
           {tabs.map((tab) => {}
             const Icon = tab.icon,
 
+<<<<<<< HEAD
+      {/* Tabs */}
+      <div className="border-b border-zinc-800 mb-8">
+        <div className="flex flex-wrap -mb-px">
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+
+            const Icon = tab.icon,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             return (
 
               <button
@@ -112,9 +124,12 @@ export function DeveloperPortal() {
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
+<<<<<<< HEAD
+=======
 
             const Icon = tab.icon;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Define the tabs;
   const tabs: TabDefinition[] = [;"
     { id: "documentation", label: "Documentation", icon: BookOpen },;"
@@ -136,9 +151,15 @@ export function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.;
         </p>;
       </div>;
+<<<<<<< HEAD
+      {/* Tabs */}
+      <div className="border-b border-zinc-800 mb-8">;
+        <div className="flex flex-wrap -mb-px">;
+=======
 
         <div className="flex flex-wrap -mb-px">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {tabs.map((tab) => {;
             const Icon = tab.icon;
             return (;
@@ -170,6 +191,8 @@ export function DeveloperPortal() {;
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
+<<<<<<< HEAD
+=======
 
                 <Icon size={16} className="mr-2" />
 
@@ -191,6 +214,7 @@ export function DeveloperPortal() {;
     </div>
   );
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
 </button>"

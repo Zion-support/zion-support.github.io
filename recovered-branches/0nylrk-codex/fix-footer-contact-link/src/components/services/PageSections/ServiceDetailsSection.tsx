@@ -39,7 +39,6 @@ export function ServiceDetailsSection({}
         <CountryServiceSelector;
           selected_country={selected_country}
           onCountryChange={setSelectedCountry}
-
 import {CountryPricing} from "@/data/onsiteServicePricing";
 import {CountryServiceSelector} from "../CountryServiceSelector";
 
@@ -50,7 +49,6 @@ interface ServiceDetailsSectionProps {;
   selectedCountry: CountryPricing | null,;
   setSelectedCountry: (country: CountryPricing | null) => void;
 }
-
 export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCountry }: ServiceDetailsSectionProps) {;
   return (
     <div id="service-details" className="mt-12">;

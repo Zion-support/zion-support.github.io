@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react','
 import Head from 'next/head';'
@@ -574,6 +577,8 @@ className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl fo
         </section>;
       </div>;
     </>);
+);
+  );
 }
     </>))}
   )

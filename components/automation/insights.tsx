@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
+}</ul> </div> </div>)
+ return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+ return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+}</ul> </div> </div>) 
+=======
 
 import { useEffect, useState  } from 'react';'
 import Head from 'next/head','
@@ -32,6 +40,12 @@ function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(nu
       <section className="mb - 8">;"
         <h2 className="font - medium">Market Intelligence</h2>;"
 
+<<<<<<< HEAD
+
+
+export default function AutomationInsightsPage() {;
+
+=======
 
 
 import { useEffect, useState  } from 'react';

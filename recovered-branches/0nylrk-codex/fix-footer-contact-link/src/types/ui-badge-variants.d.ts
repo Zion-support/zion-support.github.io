@@ -16,6 +16,7 @@ declare type BadgeVariant = ;
 
   | "info",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Additional type declaration for the badge variants;
 declare type BadgeVariant =;
   | "default";

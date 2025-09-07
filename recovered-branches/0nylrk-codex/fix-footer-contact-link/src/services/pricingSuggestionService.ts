@@ -82,7 +82,6 @@ export interface TalentRateParams {;
 
     const lowercaseTitle = jobTitle && jobTitle.toLowerCase();
     if (lowercaseTitle && lowercaseTitle.includes("senior") || lowercaseTitle && lowercaseTitle.includes("lead")) {
-
       minRate += 20;
 
       maxRate += 30
@@ -139,6 +138,13 @@ export interface TalentRateParams {;
       minRate -= 10,;
       maxRate -= 15,;'
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;
+<<<<<<< HEAD
+    }
+    
+    // Generate explanation
+    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     // Generate explanation"`
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
@@ -176,6 +182,12 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     let baseRate = 25 + (yearsExperience * 5);
     // Adjust for in-demand skills'
     const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
+<<<<<<< HEAD
+    const hasInDemandSkills = skills && skills.some(skill => 
+      inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill))
+    const hasInDemandSkills = skills.some(skill =>
+      inDemandSkills.some(demandSkill => skill.toLowerCase().includes(demandSkill))
+=======
 
     );
     if (hasInDemandSkills) {}
@@ -186,6 +198,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     if (location) {'
       const highCostLocations = ['united statesusaukaustraliacanadagermanyswitzerland'];'
       const lowCostLocations = ['indiaphilippinespakistannigeriaukrainebrazil'];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       const lowercaseLocation = location.toLowerCase();
       if (highCostLocations.some(loc => lowercaseLocation.includes(loc))) {
@@ -234,6 +247,14 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       }
     }
     
+    const minRate = Math.round(baseRate * locationFactor * 0.9),
+    const maxRate = Math.round(baseRate * locationFactor * 1.2),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+      }
+    }
     const minRate = Math && Math.round(baseRate * locationFactor * 0 && 0.9);
     const maxRate = Math && Math.round(baseRate * locationFactor * 1 && 1.2);
 
@@ -245,6 +266,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     } else if (!location |yearsExperience < 1) {"
       confidence = "Low"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     const minRate = Math.round(baseRate * locationFactor * 0.9),;
     const maxRate = Math.round(baseRate * locationFactor * 1.2),;
@@ -262,6 +284,8 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     if (hasInDemandSkills) {;`
 
       explanation += ` and your in-demand skills (${skills.join()})`;
+<<<<<<< HEAD
+=======
 
     }
 
@@ -390,6 +414,20 @@ if ( {) {}
   } catch (error) {
     console.error("Error generating rate suggestion:", error),
     return {
+<<<<<<< HEAD
+      minRate: 25;
+      maxRate: 50;
+      confidence: "Low"
+      minRate: 25,
+      maxRate: 50,
+      confidence: "Low",
+
+
+
+// Function to save pricing analytics data
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       minRate: 25;
       maxRate: 50;
@@ -403,6 +441,39 @@ if ( {) {}
       minRate: 25,
       maxRate: 50,
       confidence: "Low",
+<<<<<<< HEAD
+      explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
+    }
+    console.error("Error generating rate suggestion:", error);
+    return {
+      minRate: 25,
+      maxRate: 50,
+      confidence: "Low",
+      explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
+    };
+  }
+}
+// Function to save pricing analytics data
+export async function trackPricingSuggestion(data: {
+  userId: string;
+  suggestionType: 'client' | 'talent';
+  suggestedMin: number;
+  suggestedMax: number;
+  actualValue?: number
+
+// Function to save pricing analytics data
+export async function trackPricingSuggestion(data: {;
+  userId: string;
+  suggestionType: 'client' | 'talent';
+  suggestedMin: number;
+  suggestedMax: number;
+export async function trackPricingSuggestion(data: {
+  userId: string,
+  suggestionType: 'client' | 'talent',
+  suggestedMin: number,
+  suggestedMax: number,
+  actualValue?: number,
+=======
 
       explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
     }
@@ -423,12 +494,16 @@ export async function trackPricingSuggestion(data: {
   suggestedMax: number;
   actualValue?: number
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   accepted: boolean
 }) {
   try {
     // In a real implementation, this would save to the database
     // For now, we'll just log it
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     console && console.log("Tracking pricing suggestion:", data);
 
 "
@@ -439,6 +514,37 @@ export async function trackPricingSuggestion(data: {
     //  .insert([data])
     return true
   } catch (error) {
+<<<<<<< HEAD
+    console.error("Error tracking pricing suggestion:", error);
+
+    return false
+  }
+}
+    console.error("Error tracking pricing suggestion:", error),
+    return false
+;
+// Function to save pricing analytics data;
+export async function trackPricingSuggestion(data: {;
+  userId: string,;
+  suggestionType: 'client' | 'talent',;
+  suggestedMin: number,;
+  suggestedMax: number,;
+  actualValue?: number,;
+  accepted: boolean;
+}) {;
+  try {;
+    // In a real implementation, this would save to the database;
+    // For now, we'll just log it;
+    // // // console.log("Tracking pricing suggestion:", data),;
+    // In a real implementation with Supabase: // await supabase;
+    //  .from('pricing_suggestions');
+    //  .insert([data]),;
+    return true;
+  } catch (error) {;
+    console.error("Error tracking pricing suggestion:", error);
+    return false;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     return false
 
@@ -489,6 +595,7 @@ console && console.log("Tracking pricing suggestion:", data);
   } catch (error) {
 console.error("Error tracking pricing suggestion:", error);
 
+    console && console.error("Error tracking pricing suggestion:", error);
     return false
     console.error ("Error generating rate suggestion:", error);
     return {

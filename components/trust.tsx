@@ -35,10 +35,22 @@ const res = await fetch(}
 
 const json = await res && res.json();
       setData(json);
+      setLoading(true);
+      const res = await fetch(
+        `/api/trust/${encodeURIComponent(userId)}?analyze=true`
+      );
+      const json = await res.json();
+      setData(json);
       setLoading(false);
     }
     load();
   }, [userId]);
+<<<<<<< HEAD
+
+    form && form.reset();
+
+    form && form.reset();
+=======
 
   async function submitPeer(type: 'endorse' | 'flag') {
     await fetch('/api/trust/peer', {
@@ -81,6 +93,10 @@ type='checkbox'
                 checked={showLogic}
                 onChange={() =    /> setShowLogic(!showLogic)}
               />{' '}
+<<<<<<< HEAD
+              Transparent logic
+            </label>          </div>      <div className="space-y-6">
+=======
 
               Transparent logic;
             </label>
@@ -131,6 +147,59 @@ type='checkbox'
                   </ul>;
                 </div>;
               )}
+<<<<<<< HEAD
+            </div>                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">;
+                  <strong>Operator GPT Analysis:</strong> {data && data.reasonSummary}
+                </div>;
+              )}
+            </div>;
+            <div className='space-y-4'>;
+              <div className='bg-white dark:bg-gray-900 rounded border p-4 space-y-3'>;
+                <h3 className='font-medium'>Peer Review</h3>;
+                <button
+                  className='text-sm px-3 py-1 rounded bg-green-600 text-white'
+                  onClick={() => submitPeer('endorse')}
+                >;
+                  Endorse;
+                </button>;
+                <button
+                  className='text-sm px-3 py-1 rounded bg-red-600 text-white'
+                  onClick={() => submitPeer('flag')}
+                >;
+                  Flag;
+                </button>;
+              </div>;
+              {data && data.total < 70 && (;
+                <div className='bg-white dark:bg-gray-900 rounded border p-4 space-y-3'>;
+                  <h3 className='font-medium'>Appeal Score</h3>;
+                  <form onSubmit={submitAppeal} className='space-y-2'>;
+                    <input
+                      name='email'
+                      type='email'
+                      placeholder='Contact email'
+                      className='w-full border rounded px-2 py-1 text-sm'
+                    />;
+                    <textarea
+                      name='message'
+                      placeholder='Explain why your score should be reconsidered'
+                      className='w-full border rounded px-2 py-1 text-sm'
+                      rows={4}
+                      required
+                    />;
+                    <button
+                      className='text-sm px-3 py-1 rounded bg-blue-600 text-white'
+                      type='submit'>;
+                      Submit Appeal;
+                    </button>                  </form>                <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">;
+                  <h3 className="font-medium">Appeal Score</h3>;
+                  <form onSubmit={submitAppeal} className="space-y-2">;
+                    <input name="email" type="email" placeholder="Contact email" className="w-full border rounded px-2 py-1 text-sm" />;
+                    <textarea name="message" placeholder="Explain why your score should be reconsidered" className="w-full border rounded px-2 py-1 text-sm" rows={4} required />;
+                    <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" type="submit">Submit Appeal</button>;
+                </div>;
+    }
+    load()
+  }, [userId]),
 
               {data.reasonSummary && (
 

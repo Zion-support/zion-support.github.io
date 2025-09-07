@@ -9,6 +9,7 @@ import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [searchTerm, setSearchTerm] = useState('');
 
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
@@ -18,20 +19,35 @@ export function useFilterTalents(talents: TalentProfile[]) {;
   const [experienceRange, setExperienceRange] = useState<[number, number]>([0, 15]);
   const [sortOption, setSortOption] = useState<string>('relevance');
   const toggleSkill = (skill: string) => {
+<<<<<<< HEAD
+    setSelectedSkills(prev =>
+      prev.includes(skill)
+        ? prev.filter(s => s !== skill)
+=======
 
     setSelectedSkills(prev => 
       prev && prev.includes(skill) 
         ? prev && prev.filter(s => s !== skill)
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         : [...prev, skill]
     )
   }
   const toggleAvailability = (availability: string) => {
+<<<<<<< HEAD
+    setSelectedAvailability(prev => 
+      prev && prev.includes(availability) 
+        ? prev && prev.filter(a => a !== availability)
+    setSelectedAvailability(prev =>
+      prev.includes(availability)
+        ? prev.filter(a => a !== availability)
+=======
 
     setSelectedAvailability(prev => 
       prev && prev.includes(availability) 
         ? prev && prev.filter(a => a !== availability)
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         : [...prev, availability]
     )
   }
@@ -85,12 +101,24 @@ export function useFilterTalents(talents: TalentProfile[]) {
     setSelectedRegions([]);
     setPriceRange([50, 200]);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const lowerSearch = searchTerm && searchTerm.toLowerCase();
       result = result && result.filter(talent => 
         talent && talent.full_name.toLowerCase().includes(lowerSearch) ||
         talent && talent.professional_title.toLowerCase().includes(lowerSearch) ||
         talent && talent.bio?.toLowerCase().includes(lowerSearch) ||
         talent && talent.skills?.some(skill => skill && skill.toLowerCase().includes(lowerSearch))
+<<<<<<< HEAD
+      )
+
+      const lowerSearch = searchTerm.toLowerCase();
+      result = result.filter(talent =>
+        talent.full_name.toLowerCase().includes(lowerSearch) |
+        talent.professional_title.toLowerCase().includes(lowerSearch) |
+        talent.bio?.toLowerCase().includes(lowerSearch) |
+        talent.skills?.some(skill => skill.toLowerCase().includes(lowerSearch))
+      )
+=======
 
 import { useState, useMemo } from 'react',;
 
@@ -140,7 +168,17 @@ export function useFilterTalents() { return null; }
         selectedSkills && selectedSkills.every(skill => 
           talent && talent.skills?.some(talentSkill => 
             talentSkill && talentSkill.toLowerCase().includes(skill && skill.toLowerCase())
+<<<<<<< HEAD
+    }
+    // Filter by selected skills
+    if (selectedSkills.length > 0) {
+      result = result.filter(talent =>
+        selectedSkills.every(skill =>
+          talent.skills?.some(talentSkill =>
+            talentSkill.toLowerCase().includes(skill.toLowerCase())
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           )
         )
       )
@@ -158,6 +196,23 @@ export function useFilterTalents() { return null; }
     // Sort talents;
     switch (sortOption) {'
       case 'price-low':
+<<<<<<< HEAD
+        result && result.sort((a, b) => (a && a.hourly_rate || 0) - (b && b.hourly_rate || 0));
+
+        result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
+
+        result.sort((a, b) => (a.hourly_rate |0) - (b.hourly_rate |0));
+        break;
+      case 'price-high':
+        result.sort((a, b) => (b.hourly_rate |0) - (a.hourly_rate |0));
+        break;
+      case 'rating':
+        result.sort((a, b) => (b.average_rating |0) - (a.average_rating |0));
+        break;
+      case 'experience':
+        result.sort((a, b) => (b.years_experience |0) - (a.years_experience |0));
+        result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
+=======
 
         result && result.sort((a, b) => (a && a.hourly_rate || 0) - (b && b.hourly_rate || 0));
 
@@ -209,6 +264,8 @@ export function useFilterTalents() { return null; }
       default: // Default sorting by relevance (no specific order)
         break;
     }
+<<<<<<< HEAD
+=======
 
     return result
 
@@ -228,6 +285,8 @@ export function useFilterTalents() { return null; }
     setSortOption;
 
     toggleSkill;
+<<<<<<< HEAD
+=======
 
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]),;
   return {;
@@ -247,7 +306,6 @@ export function useFilterTalents() { return null; }
 
     toggleAvailability;
     toggleRegion;
-
     clearFilters}
 
 import {TalentProfile} from '@/types / talent';

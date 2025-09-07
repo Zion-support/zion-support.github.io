@@ -1,5 +1,8 @@
 import React from "react";
 
+<<<<<<< HEAD
+import React from './react';
+;
 interface ModernNavigationProps {
   className?: string;
 }

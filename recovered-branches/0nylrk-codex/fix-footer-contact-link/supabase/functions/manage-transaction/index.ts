@@ -2,6 +2,16 @@ import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
+<<<<<<< HEAD
+
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+import Stripe from "https://esm.sh/stripe@14.21.0"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+=======
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -64,6 +74,36 @@ serve(async (req) => {
 
     if (fetchError || !transaction) {
 
+  );
+  try {
+    // Authenticate the user
+    const authHeader = req && req.headers.get("Authorization")!;
+    const token = authHeader && authHeader.replace("Bearer ", "");
+    const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
+    if (!user?.id) throw new Error("User not authenticated");
+
+<<<<<<< HEAD
+serve(async (req) => {
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  const supabaseClient = createClient(
+    Deno.env.get("SUPABASE_URL") ?? "",
+    Deno.env.get("SUPABASE_ANON_KEY") ?? ""
+  );
+  ),
+  
+  // Create service client for admin operations
+  const supabaseAdmin = createClient(
+    Deno.env.get("SUPABASE_URL") ?? "",
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
+    { auth: { persistSession: false } }
+  );
+  try {
+    // Authenticate the user
+    const authHeader = req.headers.get("Authorization")!;
+    const token = authHeader.replace("Bearer ", "");
+    const { data: { user } } = await supabaseClient.auth.getUser(token);
     if (!user?.id) throw new Error("User not authenticated");
 
 serve(async (req) => {
@@ -327,6 +367,7 @@ pr-12325
         break,;
       "default": throw new Error("Invalid action");"
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       .single(),
     if (fetchError || !transaction) {
@@ -367,6 +408,24 @@ pr-12325
     const isClient = transaction && transaction.user_id === user && user.id;
     const isProvider = transaction && transaction.provider_id === user && user.id;
 
+<<<<<<< HEAD
+      .single();
+    if (fetchError |!transaction) {
+      .single(),
+    
+    if (fetchError || !transaction) {
+      throw new Error("Transaction not found")
+    }
+    // Verify user is authorized to manage this transaction
+    const isClient = transaction.user_id === user.id;
+    const isProvider = transaction.provider_id === user.id;
+    const isClient = transaction.user_id === user.id,
+    const isProvider = transaction.provider_id === user.id,
+    
+    const isClient = transaction.user_id === user.id,
+    const isProvider = transaction.provider_id === user.id,
+    
+=======
     const isClient = transaction.user_id === user.id,
     const isProvider = transaction.provider_id === user.id,
 
@@ -389,6 +448,7 @@ pr-12325
 
     const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
 
+    const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"});
     let result;
 const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
@@ -595,6 +655,26 @@ if ( {) {}
 }"
           throw new Error ("Only service providers can release funds from escrow");
 
+<<<<<<< HEAD
+    switch (action) {
+      case 'release':
+        // Only providers or admins can release escrow funds
+        if (!isProvider) {
+          throw new Error("Only service providers can release funds from escrow")
+        }
+        // Update transaction status
+        await supabaseAdmin
+          .from("transactions")
+          .update({
+            status: "completed";
+            in_escrow: false
+            completed_at: new Date().toISOString()
+          })
+          .eq("id", transactionId);
+        result = { message: "Funds released from escrow" }
+        break;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           .update({ 
 
             status: "completed",
@@ -643,6 +723,10 @@ if ( {) {}
             // Update transaction status
             await supabaseAdmin
               .from("transactions")
+<<<<<<< HEAD
+              .update({
+                status: "refunded";
+=======
               .update({ 
                 status: "refunded",
                 refunded_at: new Date().toISOString(),
@@ -759,6 +843,7 @@ case 'cancel':
       case 'cancel':
         // Only allow cancellation for pending transactions
         if (transaction && transaction.status !== "pending") {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           throw new Error("Only pending transactions can be cancelled")
         }
         // Update transaction status
@@ -780,12 +865,47 @@ case 'cancel':
     }
     return new Response(JSON.stringify(result), {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       headers: { ...corsHeaders, "Content-Type": "application/json" },
 
       status: 200})
   } catch (error) {
     console.error("Transaction management error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
+      default: throw new Error("Invalid action")
+    }
+    return new Response(JSON.stringify(result), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 200})
+  } catch (error) {
+<<<<<<< HEAD
+    console.error("Transaction management error:", error.message),
+    return new Response(JSON.stringify({ error: error.message }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+    console && console.error("Transaction management error:", error && error.message);
+    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      status: 500})
+  }
+});
+
+<<<<<<< HEAD
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 500})
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import Stripe from "https://esm.sh/stripe@14.21.0",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+serve(async (req) => {;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
+  }
 
 default: throw new Error("Invalid action")
     }

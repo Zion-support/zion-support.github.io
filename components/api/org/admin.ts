@@ -1,4 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import {readOrgData, writeOrgData} from '../../../utils/org-data';
+import type { OrgData, BasePerson } from '../../../types/org';
+
+const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
+type AdminAction =
+import {readOrgData, writeOrgData} from '../../../utils / org - data';
+import type { OrgData, BasePerson } from '../../../types / org';
+;
+const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev - admin - key';
+;
+type AdminAction =;
+=======
 
 import { readOrgData, writeOrgData } from '../../../utils/org-data';
 import type { OrgData, BasePerson } from '../../../types/org';
@@ -35,6 +48,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
+<<<<<<< HEAD
+    return res.status(200).json({ ok: true })
+  }
+    const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id),
+=======
 
     return res.status(200).json({ ok: true });
   }
@@ -69,6 +87,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
+<<<<<<< HEAD
+    return res.status(200).json({ ok: true })
+  }
+  return res && res.status(400).json({ error: 'Unknown action' });
+}
+=======
 
     return res.status(200).json({ ok: true });
   }

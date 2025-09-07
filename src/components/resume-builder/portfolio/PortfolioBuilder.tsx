@@ -64,20 +64,20 @@ export function PortfolioBuilder() {
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>
-            
-            <ProjectForm 
+            </h2>;
+            <ProjectForm;
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false);
                 setEditingProject(null)
               }}
-            />
-          </CardContent>
-        </Card>
+            />;
+          </CardContent>;
+        </Card>;
       )}
       
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -105,7 +105,6 @@ export function PortfolioBuilder() {
                 <Button 
                   onClick={() => setShowAddProject(true)} 
                   className="mt-2"
-                >
                   Add Your First Project
                 </Button>
               </div>

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+import { ServiceVariant } from '../types/service-variants';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 import { ServiceVariant  } from '../types/service-variants';'
@@ -765,6 +770,8 @@ export const getPopularEmergingTechServices = () => {;
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
   ];
+<<<<<<< HEAD
+=======
 
 export const getPopularEmergingTechServices = () => {
   ];

@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
 
+<<<<<<< HEAD
+=======
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
@@ -30,12 +32,23 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       description: "State-of-the-art natural language processing with 98% accuracy",
       price: 4999,"
       currency: "$",
+<<<<<<< HEAD
+      category: "AI Models",;
+      tags: ["AI", "NLP", "Machine Learning"];
+      category: "AI Models",
+      tags: ["AI", "NLP", "Machine Learning"],
+      images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
+      createdAt: "2023-11-15T14:48:00.000Z",
+      rating: 4.8,
+      reviewCount: 124,
+=======
 
       images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-11-15T14:48:00.000Z",
       rating: 4.8,
       reviewCount: 124,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       author: {
         name: "TechAI Labs"
         id: "tech-ai-labs"
@@ -57,6 +70,8 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-10-20T11:15:00.000Z",
       rating: 4.7,
       reviewCount: 89,
+<<<<<<< HEAD
+=======
 
       author: {
         name: "VisualAI"
@@ -79,6 +94,8 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-12-15T09:45:00.000Z",
       rating: 4.9,
       reviewCount: 56,
+<<<<<<< HEAD
+=======
 
       author: {
         name: "DataMinds Consulting"
@@ -257,11 +274,15 @@ import { Link } from "react-router-dom",;
     <section id="featured" className="py - 12 px - 4 bg - zion - blue - dark">;"
       <div className="container mx - auto">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       author: {
         name: "DataMinds Consulting"
         id: "dataminds-consulting"
       }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {ProductListingCard} from "@/components/ProductListingCard";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
@@ -289,7 +310,10 @@ import {Link} from "react-router-dom";
 
               key={listing.id}
               listing={listing}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               view="grid"
 
 }
@@ -451,6 +475,7 @@ view="grid"
               onRequestQuote={() => {}}
         </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="mt-10 text-center">;
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"

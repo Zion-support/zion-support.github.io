@@ -25,7 +25,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import AIChatbot from '
 describe('AIChatbot'
   it('renders without crashing'
@@ -33,6 +36,9 @@ describe('AIChatbot'
   it('displays correct content'
   it('handles user interactions'
 
+<<<<<<< HEAD
+import AIChatbot from './AIChatbot; ; describe('AIChatbot', () => {; it('renders without crashing', () => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AIChatbot />); }); ; it('handles user interactions'
+=======
 
 
 import AIChatbot from './AIChatbot;

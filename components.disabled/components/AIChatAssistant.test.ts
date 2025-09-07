@@ -24,6 +24,10 @@ import { render, screen  } from "@testing-library/react";",
     expect(screen.getByRole("main")).toBeInTheDocument()});",
   it("displays correct content", () => {;"}
 
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     render(<AIChatAssistant />);
 <<<<<<< HEAD
     // Add specific content checks based on component functionality});,

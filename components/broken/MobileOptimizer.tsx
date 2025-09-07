@@ -75,6 +75,8 @@ if ( {) {
   setPerformanceMetrics (prev => ({
   }
   updateBatteryLevel ();
+<<<<<<< HEAD
+=======
 
 battery.addEventListener ('levelchange', updateBatteryLevel);'
 }//Monitor network speed updateNetworkSpeed ();

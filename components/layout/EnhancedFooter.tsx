@@ -581,6 +581,7 @@ const social_links = [;
                 href="/terms";"
                 className="text - gray - 400 "hover":text - white text-sm transition-colors">"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Terms of Service;
               </Link>;
             </div>;

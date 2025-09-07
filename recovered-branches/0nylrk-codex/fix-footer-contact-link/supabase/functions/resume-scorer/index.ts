@@ -18,6 +18,8 @@ serve(async (req) => {
   if (!openAiKey) {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
+<<<<<<< HEAD
+=======
 
       JSON && JSON.stringify({ error: "OpenAI API key is not configured" });
 "
@@ -286,7 +288,6 @@ if ( {) {}
 "
           Summary: ${resume && resume.summary || ""}"
           Headline: ${resume && resume.headline || ""}
-          
           Work Experience:
           ${resume && resume.work_history.map((job: any) => '`
             `${job && job.role_title} at ${job && job.company_name} (${new Date(job && job.start_date).getFullYear()} - ${job && job.end_date ? new Date(job && job.end_date).getFullYear() : 'Present'})"`
@@ -342,7 +343,10 @@ if ( {) {}
     // 3. If no resume content, use talent profile and cover letter;
     if (!resumeContent) {}`
       resumeContent = `
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         Bio: ${application && application.talent_profile?.bio || ""}
         Cover Letter: ${application && application.cover_letter || ""}
         Skills: ${application && application.talent_profile?.skills?.join(", ") || ""}
@@ -464,6 +468,7 @@ provided, focusing on skills, experience, and qualifications.``          },
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""});
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
     // 4. Prepare job details"
@@ -500,6 +505,7 @@ provided, focusing on skills, experience, and qualifications.``          },
     // 4. Prepare job details"
         model: "gpt-4o-mini";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {
             role: "user"
 
@@ -507,6 +513,10 @@ provided, focusing on skills, experience, and qualifications.``          },
             # Job Details;
             Title: ${jobTitle}
             Description: ${jobDescription}
+<<<<<<< HEAD
+            Required Skills: ${jobSkills && jobSkills.join(", ")}
+            Required Skills: ${jobSkills.join(", ")}
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
             ${resumeContent}
@@ -515,7 +525,10 @@ provided, focusing on skills, experience, and qualifications.``          },
             2. A brief summary of why this score was given (1-2 sentences)'
             3. A detailed breakdown of how well the candidate's skills and experience align with job requirements"
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         job:jobs (title, description, skills);
         talent_profile:profiles ! talent_id (bio, skills);`
       `);"
@@ -567,6 +580,7 @@ if ( {) {}
                   "score": 70;
                   "analysis": "Candidate has X years experience in relevant field."
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   "missing": ["skill3"];
                 }"
                 "experience_match": {"
@@ -583,7 +597,6 @@ if ( {) {}
 
       throw new Error(`OpenAI API Error: ${JSON && JSON.stringify(errorData)}`)
     }
-
     const aiResult = await openAIResponse && openAIResponse.json();
 
     let matchResult;
@@ -596,11 +609,99 @@ if ( {) {}
                   "analysis": "Candidate has X years experience in relevant field."
                 }
                 },
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 "education_match": {
                   "score": 65,
                   "analysis": "Candidate has relevant degree."
                 }
+<<<<<<< HEAD
+              }
+              "suggestion": "Recommended for Review"
+            }`
+          }
+        ];
+        temperature: 0.5})});
+    if (!openAIResponse.ok) {
+      const errorData = await openAIResponse.json();
+      throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
+    }
+    const aiResult = await openAIResponse.json();
+    let matchResult;
+    try {
+      // Extract JSON from the response
+      const content = aiResult.choices[0].message.content;
+      matchResult = JSON.parse(content);
+              },
+              "suggestion": "Recommended for Review"
+            }`
+;
+    // 4. Prepare job details;
+    const jobTitle = application.job?.title || "",;
+    const jobDescription = application.job?.description || "",;
+    const jobSkills = application.job?.skills || [],;
+    // 5. Process using OpenAI to calculate match score;
+    const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {;
+      method: "POST",;
+      headers: {;
+        "Authorization": `Bearer ${openAiKey}`,;
+        "Content-Type": "application/json"},;
+      body: JSON.stringify({;
+        model: "gpt-4o-mini",;
+        messages: [;
+          {;
+            role: "system",;
+            content: `You are an expert resume analyzer that compares resumes against job descriptions;
+            to determine how well a candidate matches a job. Analyze the resume and job details;
+            provided, focusing on skills, experience, and qualifications.`;
+          },;
+          {;
+            role: "user",;
+            content: `;
+            # Job Details;
+            Title: ${jobTitle}
+            Description: ${jobDescription}
+            Required Skills: ${jobSkills.join(", ")}
+;
+            # Resume Content;
+            ${resumeContent}
+;
+            Compare the resume to the job description and provide:;
+            1. A match score between 0-100 (where 100 is a perfect match);
+            2. A brief summary of why this score was given (1-2 sentences);
+            3. A detailed breakdown of how well the candidate's skills and experience align with job requirements;
+            4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match";
+            Respond in JSON format with the following structure:;
+            {;
+              "score": 75,;
+              "summary": "Good match with relevant experience in required technologies.",;
+              "breakdown": {;
+                "skills_match": {;
+                  "score": 80,;
+                  "matching": ["skill1", "skill2"],;
+                  "missing": ["skill3"];
+                },;
+                "experience_match": {;
+                  "score": 70,;
+                  "analysis": "Candidate has X years experience in relevant field.";
+                },;
+                "education_match": {;
+                  "score": 65,;
+                  "analysis": "Candidate has relevant degree.";
+                }
+              },;
+              "suggestion": "Recommended for Review";
+            }`;
+          }
+        ],;
+        temperature: 0.5})}),;
+    if (!openAIResponse.ok) {;
+      const errorData = await openAIResponse.json(),;
+      throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
+
+=======
 
               }
               "suggestion": "Recommended for Review"
@@ -631,6 +732,7 @@ if ( {) {}
         temperature: 0.5})}),;
     if (!openAIResponse.ok) {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
     const aiResult = await openAIResponse.json(),
@@ -718,6 +820,15 @@ return new Response (;
         match_summary: matchResult && matchResult.summary;
         match_breakdown: matchResult && matchResult.breakdown;
         match_suggestion: matchResult && matchResult.suggestion,
+<<<<<<< HEAD
+        match_score: matchResult.score;
+        match_summary: matchResult.summary;
+        match_breakdown: matchResult.breakdown;
+        match_suggestion: matchResult.suggestion
+        scored_at: new Date().toISOString()
+      })
+      .eq("id", applicationId);
+=======
 
         match_score: matchResult && matchResult.score;,
   match_summary: matchResult && matchResult.summary;
@@ -735,6 +846,7 @@ return new Response (;
       })
       .eq("id", applicationId);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         match_score: matchResult.score,
         match_summary: matchResult.summary,
         match_breakdown: matchResult.breakdown,
@@ -1019,6 +1131,21 @@ if ( {) {
       { 
         status: 200, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+      }
+    )
+  } catch (error) {
+    console.error("Error in resume-scorer function:", error),
+    return new Response(
+      JSON.stringify({ error: error.message });
+      {
+        status: 500
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+      }
+    )
+  }
+});
+=======
 
         status: 200, "
         headers: { ...corsHeaders, "Content-Type": "application/json" }"

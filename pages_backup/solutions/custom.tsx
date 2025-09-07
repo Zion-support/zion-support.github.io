@@ -112,6 +112,7 @@ export default function CustomDevelopmentPage() {
                   className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
                 >;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   View Portfolio;
                 </Link>;
               </div>;
@@ -144,6 +145,13 @@ export default function CustomDevelopmentPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Capabilities</span>";
+=======
 
               transition={{ duration: 0.8 }}
 
@@ -152,6 +160,7 @@ export default function CustomDevelopmentPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6>;"
                 Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600>Capabilities</span>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </h2>;
 
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
@@ -199,6 +208,13 @@ export default function CustomDevelopmentPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>";
+=======
 
               className=text-center mb-16""
             >;
@@ -243,6 +259,13 @@ export default function CustomDevelopmentPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Process</span>";
+=======
 
               transition={{ duration: 0.8 }}
 
@@ -251,6 +274,7 @@ export default function CustomDevelopmentPage() {
               <h2 className=text-4xl md:text-5xl font-bold text-gray-900 mb-6>";"
                 Development <span className=text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600>Process</span>";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </h2>;
 
               <p className="text-xl text-gray-600 max-w-3xl mx-auto>;
@@ -264,6 +288,14 @@ export default function CustomDevelopmentPage() {
                   key={step.step}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
+                >;
+                  <div className="flex items-center mb-4">";
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">";
+                      <span className="text-white font-bold text-lg">{index + 1}</span>"
+=======
 
                   className=bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
                 >;
@@ -287,16 +319,37 @@ export default function CustomDevelopmentPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Build Something Custom?;
+=======
 
               transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">;
                 Ready to Build Something Custom?;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </h2>;
               <p className=text-xl text-purple-100 mb-8 max-w-3xl mx-auto">";
                 Let's discuss your unique requirements and create a custom solution that perfectly fits your business needs';
               </p>;
+<<<<<<< HEAD
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link;
+                  href="/contact"";
+                  className="px-8 py-4 bg-white text-purple-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
+                >;
+                  Start Custom Project;
+                  <ArrowRight className="ml-2 w-5 h-5" />";
+                </Link>;
+                <Link;
+                  href="/solutions"";
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-purple-600 rounded-lg font-semibold transition-colors"";
+                >;
+=======
 
               <div className=flex flex-col sm:flex-row gap-4 justify-center>";
                 <Link;"
@@ -311,6 +364,7 @@ export default function CustomDevelopmentPage() {
                   className=px-8 py-4 border border-white text-white hover:bg-white hover:text-purple-600 rounded-lg font-semibold transition-colors";
                 >;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   View All Solutions;
 
                 </Link>;

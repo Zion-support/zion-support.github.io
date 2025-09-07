@@ -48,6 +48,8 @@ interface UltraFuturisticBackground2034Props {
   intensity?: number;
   theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic'
 }
+<<<<<<< HEAD
+=======
 
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);'
@@ -213,6 +215,35 @@ activation: Math.random(),
     initParticles();
     initNeuralNetwork();
     initEntanglementLines();
+<<<<<<< HEAD
+    // Animation loop
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Update and draw particles
+      particles.forEach((particle, index) => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        particle.life--;
+        // Bounce off edges
+        if (particle.x <= 0 |particle.x >= canvas.width) particle.vx *= -1;
+        if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
+        // Draw particle
+        const alpha = particle.life / particle.maxLife;
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        if (particle.type === 'quantum') {
+          ctx.fillStyle = `rgba(0, 255, 255, ${alpha})`;
+          ctx.shadowColor = 'cyan';
+          ctx.shadowBlur = 10;
+        } else if (particle.type === 'neural') {
+          ctx.fillStyle = `rgba(255, 0, 255, ${alpha})`;
+          ctx.shadowColor = 'magenta';
+          ctx.shadowBlur = 8;
+        } else {
+          ctx.fillStyle = `rgba(0, 255, 0, ${alpha})`;
+          ctx.shadowColor = 'lime';
+          ctx.shadowBlur = 6;        }        if (particle.type === 'quantum') {
+=======
 
     // Animation loop,
 const animate = () => {
@@ -379,6 +410,9 @@ entanglementLines.forEach((line, index) => {
         ctx.restore();
 
         if (line.life <= 0) {
+<<<<<<< HEAD
+          entanglementLines.splice(index, 1);        }          entanglementLines.splice(index, 1)
+=======
 
 }
 
@@ -390,6 +424,8 @@ entanglementLines.splice(index, 1);
 neuralNodes.forEach((node, i) => {
         }
         node.activation = Math.sin(Date.now() * 0.001 + i) * 0.5 + 0.5;
+<<<<<<< HEAD
+=======
 
         // Draw connections,
 node.connections.forEach(connectionIndex = > {
@@ -473,7 +509,11 @@ entanglementLines.push({
           y1,
           x2,
           y2,
+<<<<<<< HEAD
+strength: Math.random (),
+=======
           strength: Math.random (),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           life: 100,
         });
       }
@@ -548,6 +588,11 @@ return (;
         {/* Floating geometric shapes */}
       setMousePosition({ x: e.clientX, y: e.clientY })
     };
+<<<<<<< HEAD
+            rotate: 360,
+            scale: [1, 1 && 1.2, 1],
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
+=======
 
         <motion&& motion.div,
 className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30''
@@ -623,6 +668,7 @@ className='absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30''
           transition={{
             rotate: [0, 180, 360];
             opacity: [0.2, 0.5, 0.2];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             transition={{
               }
@@ -714,6 +760,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]';
           style={{'
             background_size: '50px 50px',
+      {/* Cyberpunk grid */}
+      <div className='absolute inset-0'>
+        <motion.div
+          className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
+          style={{
+            backgroundSize: '50px 50px'
+
+            transition={{
+              duration: 3,
+              delay: i * 0.1,
+              repeat: -1,
+              ease: 'easeInOut',            }}
+
+            }}
+
+          />
+        ))}
+      </div>
+
+      {/* Cyberpunk grid */}
+      <div className='absolute inset-0'>
+
+        <motion.div
+          className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
+          style={{
+            backgroundSize: '50px 50px',
           }}
           animate={{}
             opacity: [0.3, 0.6, 0.3],          }}
@@ -732,6 +804,20 @@ export default UltraFuturisticBackground2034;        <motion.div;
             background_size: '50px 50px';
           }}
           animate={{
+<<<<<<< HEAD
+};
+export default UltraFuturisticBackground2034;        <motion&& motion.div
+          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]"
+        />
+      </div>
+    </div>
+  );
+}
+};
+
+export default UltraFuturisticBackground2034;        <motion.div
+          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
+=======
 
 };
 
@@ -740,6 +826,7 @@ export default UltraFuturisticBackground2034;        <motion.div
 export default UltraFuturisticBackground2034;        <motion&& motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           style={{
             backgroundSize: '50px 50px'
           }}

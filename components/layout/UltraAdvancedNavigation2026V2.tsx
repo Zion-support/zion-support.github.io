@@ -1,5 +1,12 @@
 import Link from 'next/link';'
 
+<<<<<<< HEAD
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
+=======
 
 import { motion, AnimatePresence  } from 'framer-motion';'
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';'
@@ -245,6 +252,17 @@ function UltraAdvancedNavigation2026V2() {}
       name: 'Pricing','
       href: '/pricing - enhanced - 2026','
       icon: <Database className='w - 4 h - 4' />,
+<<<<<<< HEAD
+      name: 'Showcase',
+      href: '/enhanced-services-showcase-2026-v2',
+      icon: <Rocket className='w-4 h-4' />,
+    },
+    {
+      name: 'Pricing',
+      href: '/pricing-enhanced-2026',
+      icon: <Database className='w-4 h-4' />,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     {'
       name: 'About','
@@ -650,6 +668,23 @@ key={dropdownItem.name}
                   )}
                 </div>
               ))}
+<<<<<<< HEAD
+            {/* CTA Button */}
+
+            </div>
+            {/* CTA Button */}
+            <div className='hidden lg:flex items-center space-x-4'>
+              <Link href='/contact'>
+                <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">
+              <Link href="/contact">
+                <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+
+            {/* CTA Button */}
+            <div className='hidden lg:flex items-center space-x-4'>
+              <Link href='/contact'>
+                <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started
+
+=======
 
             </div>
 
@@ -930,7 +965,6 @@ onClick={() => setIsOpen(false
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               <div className="space-y-6">
                 {navigationItems.map((item) => (
                   <div key={item.name}>
@@ -938,7 +972,7 @@ onClick={() => setIsOpen(false
                       <div>
                             <button
                               onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                              className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
+className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
                             >
                               <div className="flex items-center space-x-3">
                                 {item.icon}
@@ -955,7 +989,7 @@ onClick={() => setIsOpen(false
                                     key={dropdownItem.name}
                                     href={dropdownItem.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white"
+className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white"
                                   >
                                     {dropdownItem.icon}
                                     <span>{dropdownItem.name}</span>
@@ -968,6 +1002,77 @@ onClick={() => setIsOpen(false
                       <Link,
 href={item && item.href}
                         onClick={() => setIsOpen(false)}
+                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
+
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ duration: 0.3 }}
+            className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
+
+          >
+            <div className='p-6'>
+              <div className='flex items-center justify-between mb-8'>
+                <div className='text-xl font-bold text-white'>Menu</div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className='p-2 text-gray-300 hover:text-white transition-colors'
+                >
+                  <X className='w-6 h-6' />
+                </button>
+              </div>
+              <div className='space-y-6'>
+                {navigationItems.map(item => (
+                  <div key={item.name}>
+                    {item.dropdown ? (
+                      <div>
+                        <button
+                          onClick={() =>
+                            setActiveDropdown(
+                              activeDropdown === item.name ? null : item.name
+                            )
+                          }
+                          className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3'
+                        >
+                          <div className='flex items-center space-x-3'>
+                            {item.icon}
+                            <span>{item.name}</span>
+                          </div>
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform duration-200 ${
+                              activeDropdown === item.name ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </button>
+                        {activeDropdown === item.name && (
+                          <div className='ml-6 mt-2 space-y-2'>
+                            {item.dropdown.map(dropdownItem => (
+                              <Link
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                onClick={() => setIsOpen(false)}
+                                className='flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white'
+                              >
+                                {dropdownItem.icon}
+                                <span>{dropdownItem.name}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>                    ) : (
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'                      >                    ) : (
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
+=======
 
 className='flex items-center space-x-3 text-gray-300 "hover": text-white transition-colors duration-200 py-3''
                       >

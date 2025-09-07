@@ -34,6 +34,14 @@ type EmptyStateCardProps = {
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === "active";
 
+export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
+  const isActive = type === 'active';
+
+export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
+  const isActive = type === 'active';
+export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
+  const isActive = type === 'active',
+  
   return (
 
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
@@ -48,6 +56,9 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
           {isActive ? "No hire requests yet" : "No archived requests"}
         </h3>"
         <p className="text-zion-slate-light max-w-md mx-auto">
+<<<<<<< HEAD
+{isActive
+            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
 
           {isActive
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."

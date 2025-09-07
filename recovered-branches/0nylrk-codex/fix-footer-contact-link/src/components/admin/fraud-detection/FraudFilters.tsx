@@ -226,6 +226,15 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Button>
     </div>
   )
+<<<<<<< HEAD
+          onChange={(e) => setSearchQuery(e && e.target.value)}
+
+};
+
+}
+
+};
+=======
 
           onChange={(e) => setSearchQuery(e && e.target.value)}
 
@@ -281,6 +290,7 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
   setContentTypeFilter,;
   resetFilters}) => {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <SelectTrigger className="w-[180px]">;
 
 }

@@ -55,14 +55,12 @@ export function ClientDashboard() {
                   </div>
                 </div>
                 <Button size="sm" variant="outline">View Details</Button>
-              </div>
             </div>
           </CardContent>
         </Card>
       </section>
       
       <section>
-        <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Suggested Talents</h2>
           <Link href="/mobile/marketplace">
             <Button variant="ghost" size="sm" className="h-8 gap-1">
@@ -73,7 +71,6 @@ export function ClientDashboard() {
         
         <div className="space-y-3">
           <Card>
-            <CardContent className="p-4">
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -101,7 +98,6 @@ export function ClientDashboard() {
           </Card>
           
           <Card>
-            <CardContent className="p-4">
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -118,7 +114,6 @@ export function ClientDashboard() {
               </div>
               <div className="mt-3 flex gap-1 flex-wrap">
                 <Badge variant="outline" className="text-xs">React</Badge>
-                <Badge variant="outline" className="text-xs">Node.js</Badge>
                 <Badge variant="outline" className="text-xs">AWS</Badge>
               </div>
               <div className="flex gap-2 mt-3">

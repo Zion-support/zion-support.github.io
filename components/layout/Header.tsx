@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 const service_categories = [;
   {"name": 'Micro SaaS',"href": '/services / micro - saas',"description": 'Innovative focused software solutions',"popular": ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking'];'
@@ -329,6 +331,7 @@ const service_categories = [;
 }
   ];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     { ;
       }
       "name": 'Micro SaaS',;'
@@ -522,14 +525,19 @@ const resource_categories = [;
       <div className="max - w-7xl mx - auto px - 4 "sm":px - 6 "lg":px - 8">;"
         <div className="flex items - center justify - between h - 16">;"
           {/* Logo */}
+<<<<<<< HEAD
+=======
 
           <div className="flex-shrink-0">;"
             <Link href="/" className="text-2xl font-bold text-blue-600">;"
               Zion Tech Group;
             </Link>;
           </div>;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Desktop Navigation */}
           <div className="hidden "md":block">;"
             <div className="ml-10 flex items-baseline space-x-4">;"
@@ -566,6 +574,7 @@ const resource_categories = [;
         </div>;
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isMenuOpen && (<motion&& motion.div;

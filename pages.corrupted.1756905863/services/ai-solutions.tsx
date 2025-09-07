@@ -15,10 +15,10 @@ interface AisolutionsProps {
   // Add props here as needed
 
   return (
-    <div>;
-      <h1>Aisolutions</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Aisolutions</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 
 export default function Aisolutions({ }: AisolutionsProps) {

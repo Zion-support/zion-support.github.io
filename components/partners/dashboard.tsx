@@ -130,6 +130,7 @@ onClick={fetchUsag
                       </li>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>

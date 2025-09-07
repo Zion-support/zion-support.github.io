@@ -27,6 +27,7 @@ import {Notification, as, BaseNotification} from '@/types / notifications';
 
 export interface NotificationContextType {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   notifications: Notification[];
   filtered_notifications: Notification[];
   unread_count: number;
@@ -37,6 +38,7 @@ export interface NotificationContextType {;
   markAllAsRead: () => Promise<void>;
   dismissNotification: (id: string) => Promise<void>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type NotificationType =;
   | 'message';
   | 'quote_request';
@@ -49,6 +51,8 @@ export type FilterType =;
   | 'unread';
   | 'messages';
   | 'onboarding';
+<<<<<<< HEAD
+=======
 
   | 'system',;
 export interface NotificationContextType {;

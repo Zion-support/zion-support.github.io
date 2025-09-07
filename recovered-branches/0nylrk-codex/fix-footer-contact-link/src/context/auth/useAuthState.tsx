@@ -15,6 +15,7 @@ import React, { useState } from "react",
 import type { UserProfile } from "@/types/auth";
 import type { UserProfile } from "@/types/auth",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return {
 
     user,
@@ -39,6 +40,8 @@ import type { UserProfile } from "@/types/auth",;
  * Custom hook to manage auth state;
  */;
 export function useAuthState() {;
+<<<<<<< HEAD
+=======
 
 import React, { useState } from './react';
 import type { UserProfile } from "@/types / auth";
@@ -63,6 +66,8 @@ function useAuthState() {
     setIsLoading;
     onboardingStep;
     setOnboardingStep;
+<<<<<<< HEAD
+=======
 
   return {;
     user;
@@ -73,4 +78,14 @@ function useAuthState() {
 
     setOnboardingStep;
   }
+<<<<<<< HEAD
 }
+  }
+}
+;
+  }
+}
+;
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -164,7 +164,6 @@ export default function EducationSolutions() {
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
   }
 ];
-
 export default function EducationSolutionsPage() {
   return (
 

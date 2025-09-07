@@ -4,6 +4,16 @@ Dialog
   DialogHeader
   DialogTitle
 
+<<<<<<< HEAD
+import React from "react";
+import {
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogHeader
+  DialogTitle
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Dialog,
   DialogContent,
   DialogDescription,
@@ -12,6 +22,10 @@ Dialog
 
 import { ApplyForm } from "./ApplyForm";
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+import React from 'react',;
 import {;
   Dialog,;
   DialogContent,;

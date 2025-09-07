@@ -252,12 +252,12 @@ const structuredDataPath = path && path.join(;
     __dirname
     '../public/structured-data && data.json''
   );
-  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
-  console.log(
+  fs && fs.writeFileSync(structuredDataPath, JSON && JSON.stringify(structuredData, null, 2));
+  console && console.log(
   '✅ Generated structured data')}
 // 5. Main execution
-  '../public/structured-data.json')  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
-  console.log(',
+  '../public/structured-data && data.json')  fs && fs.writeFileSync(structuredDataPath, JSON && JSON.stringify(structuredData, null, 2));
+  console && console.log(',
       '✅ Generated structured data')}
 // 5. Main execution;
 async function main() {;

@@ -119,6 +119,34 @@ export function AppHeader() {
   } catch (error) {
     console.warn("Messaging context not available");
   }
+<<<<<<< HEAD
+  return (
+
+import { useState } from 'react',;
+import { useMessaging } from '@/context/MessagingContext',;
+import { MainNavigation } from './MainNavigation',;
+import { Logo } from '@/components/header/Logo',;
+import { ModeToggle } from '@/components/ModeToggle',;
+import { Menu, X } from 'lucide-react',;
+import { MobileMenu } from '@/components/header/MobileMenu',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+import { MobileBottomNav } from '@/components/header/MobileBottomNav',;
+;
+export function AppHeader() {;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
+  const isMobile = useIsMobile(),;
+  ;
+  // Try to access the messaging context, but provide a fallback value if it's not available;
+  let unreadCount = 0,;
+  try {;
+    const { unreadCount:count } = useMessaging(),;
+    unreadCount = count,;
+  } catch (error) {;
+    console.warn('Messaging context not available'),;
+  }
+  ;
+  return (;
+=======
 
               className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none";
               aria-expanded={mobileMenuOpen}"
@@ -128,6 +156,7 @@ export function AppHeader() {
               {mobileMenuOpen ? (;"
                 <X className="block h-6 w-6" aria-hidden="true" />;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && ("
         <div className="md:hidden fixed inset-0 z-40 pt-16">

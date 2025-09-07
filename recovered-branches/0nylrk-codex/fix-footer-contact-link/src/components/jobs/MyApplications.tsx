@@ -10,6 +10,8 @@ import {Link} from "react-router-dom";
 import {ApplicationStatus} from "@/types/jobs";
 export function MyApplications() { return null; }
   const { applications, isLoading, error } = useJobApplications();
+<<<<<<< HEAD
+=======
 
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
@@ -193,7 +195,13 @@ export function MyApplications() {}
     );
   }
 
+<<<<<<< HEAD
+                  {application.cover_letter}
+                </p>
+              )}
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -258,6 +266,7 @@ export function MyApplications() { return null; }
 
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {application.cover_letter}
                 </p>
               )}
@@ -275,6 +284,8 @@ export function MyApplications() { return null; }
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job;
                   </Link>
                 </Button>
+<<<<<<< HEAD
+=======
 
   return (
 

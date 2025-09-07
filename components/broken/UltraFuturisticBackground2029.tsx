@@ -1,3 +1,174 @@
+<<<<<<< HEAD
+const UltraFuturisticBackground2029: React.FC = () => {
+    canvas.height = window.innerHeight;
+    let animationFrameId: number,
+    const particles: Array<{
+      x: number,
+      y: number,
+  const canvas_ref = useRef < HTMLCanvasElement>(null);
+;
+  useEffect (() => {
+    const canvas = canvas_ref.current;
+    // Check condition
+if (return) {
+  $2
+}
+    const ctx = canvas.get_context ('2d');
+    // Check condition
+if (return) {
+  $2
+}
+    canvas.width = window.inner_width;
+    canvas.height = window.inner_height,
+    let animationFrameId: number;
+    const particles: Array<{
+      coordinate_x: number,
+      coordinate_y: number,
+
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
+
+    let animationFrameId: number
+
+    const particles: Array<{
+      x: number,
+      y: number,
+
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      opacity: number,
+
+    for (let i = 0, i < 50, i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        size: Math.random() * 3 + 1,
+        color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'][Math.floor(Math.random() * 5)],
+        opacity: Math.random() * 0.8 + 0.2,
+        life: Math.random() * 100 + 50
+      })
+    }
+const animate = () => {
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+
+const UltraFuturisticBackground2029: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight
+    let animationFrameId: number;
+    const particles: Array<{
+      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      opacity: number
+      life: number
+    }> = [];
+    // Initialize particles
+    for (let i = 0; i < 50; i++) {    for (let i = 0, i < 50, i++) {
+      particles.push({
+        x: Math.random() * canvas.width
+        y: Math.random() * canvas.height
+        vx: (Math.random() - 0.5) * 0.5
+        vy: (Math.random() - 0.5) * 0.5
+        size: Math.random() * 3 + 1
+        color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'][
+          Math.floor(Math.random() * 5)
+        ]
+        opacity: Math.random() * 0.8 + 0.2
+        life: Math.random() * 100 + 50
+      });    }        color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'][Math.floor(Math.random() * 5)]
+        opacity: Math.random() * 0.8 + 0.2
+        life: Math.random() * 100 + 50
+      })
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Update and draw particles
+      particles.forEach((particle, index) => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        particle.life--;
+        if (particle.life <= 0) {
+          particles[index] = {
+            x: Math.random() * canvas.width
+            y: Math.random() * canvas.height
+            vx: (Math.random() - 0.5) * 0.5
+            vy: (Math.random() - 0.5) * 0.5
+            size: Math.random() * 3 + 1
+            color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'][
+              Math.floor(Math.random() * 5)
+            ]
+            opacity: Math.random() * 0.8 + 0.2
+            life: Math.random() * 100 + 50
+          };        }            color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'][Math.floor(Math.random() * 5)]
+            opacity: Math.random() * 0.8 + 0.2
+            life: Math.random() * 100 + 50
+          }
+        // Draw particle with glow effect
+        ctx.save();
+        ctx.globalCompositeOperation = 'screen';
+        // Outer glow
+        ctx.shadowColor = particle.color;
+        ctx.shadowBlur = 20;
+        ctx.fillStyle = particle.color;
+        ctx.globalAlpha = particle.opacity * 0.3;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
+        ctx.fill();
+        // Inner particle
+        ctx.globalAlpha = particle.opacity;
+        ctx.shadowBlur = 10;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();      });        ctx.restore()
+      });
+      // Draw connecting lines between nearby particles
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
+      ctx.lineWidth = 0.5;
+      ctx.globalCompositeOperation = 'screen';
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {          const dx = particles[i].x - particles[j].x;      for (let i = 0, i < particles.length, i++) {
+        for (let j = i + 1, j < particles.length, j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 100) {
+            ctx.globalAlpha = ((100 - distance) / 100) * 0.3;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();          }
+        }
+      }
+      animationFrameId = requestAnimationFrame(animate);    };            ctx.globalAlpha = (100 - distance) / 100 * 0.3;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke()
+      animationFrameId = requestAnimationFrame(animate)
+
+      animationFrameId = requestAnimationFrame(animate)
+    };
+    animate();
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight
+    };
+    window && window.addEventListener('resize', handleResize);
+=======
 
 
 import React, { useEffect, useRef } from 'react';'
@@ -382,6 +553,21 @@ key={i}
             key={i}
             className='absolute w-0 && 0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent'
             style={{
+<<<<<<< HEAD
+              left: `${15 + i * 15}%`
+              top: '-20px'
+              left: `${15 + i * 15}%`,
+              top: '-20px',
+            }}
+            animate={{
+              y: [0, window.innerHeight + 20],            }}        {Array.from({ length: 5 }).map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent"
+            style={{
+              left: `${15 + (i * 15)}%`
+              top: '-20px'
+=======
 
             }}
             animate={{

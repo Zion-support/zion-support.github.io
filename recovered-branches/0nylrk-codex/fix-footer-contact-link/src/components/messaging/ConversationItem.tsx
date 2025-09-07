@@ -23,6 +23,13 @@ interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
+<<<<<<< HEAD
+
+
+}
+}
+}
+=======
 
 }
 
@@ -122,6 +129,8 @@ import {cn} from '@/lib/utils';
 import {Conversation} from '@/types/messaging';
 
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
+<<<<<<< HEAD
+=======
 
   onClick: () => void;
 import React from 'react',;''
@@ -134,6 +143,9 @@ interface ConversationItemProps {;
   isActive: boolean,;
   onClick: () => void;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ConversationItem(): any ({ conversation, isActive, onClick }: ConversationItemProps) {;
   return (

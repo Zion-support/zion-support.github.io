@@ -29,13 +29,17 @@ export const useJobApplications = (jobId?: string) => {;
         query = query && query.eq("talent_id", user && user.id)
       } 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         if (!jobId) {
 
           // Fix: Convert the subquery to a proper array or string
           const { data: jobIds } = await supabase
             .from("jobs")
             .select("id")
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             .eq("client_id", user && user.id);
 
 "
@@ -150,6 +154,7 @@ if (throw fetch_error) {}
       setApplications(transformedData as JobApplication[]);
       setError(null)
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       console && console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err && err.message),
       toast && toast.error("Failed to fetch applications")
@@ -170,11 +175,16 @@ if (throw fetch_error) {}
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+      console.error("Error fetching applications:", err);
+      setError("Failed to fetch applications: " + err.message)
+=======
 
       // Transform the data to match our application types
       const transformedData = data.map((app: any) => ({
         ...app,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ...app.talent_profile,
           full_name: app.talent_profile.display_name,
           profile_picture_url: app.talent_profile.avatar_url,
@@ -187,13 +197,18 @@ if (throw fetch_error) {}
     } catch (err: any) {"
       console.error("Error fetching applications:", err),"
       setError("Failed to fetch applications: " + err.message),
+<<<<<<< HEAD
+=======
 
 "
       toast.error("Failed to fetch applications")
     } finally {}
       setIsLoading (false);
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
       toast && toast.error("You must be logged in to apply for jobs");
@@ -204,6 +219,7 @@ if (throw fetch_error) {}
       const { data, error } = await supabase"
         .from("job_applications")
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           job_id: jobId,
           talent_id: user.id,
           resume_id: resumeId,
@@ -213,12 +229,16 @@ if (throw fetch_error) {}
         .select()
         .single(),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (error) {
         if (error.code === '23505') { // Unique violation
           toast.error("You have already applied to this job")
         } else {
           throw error
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -336,6 +356,42 @@ if ( { // Unique violation) {}
       toast && toast.success("Application submitted successfully");
 
       toast && toast.error("Failed to submit application: " + err && err.message),
+<<<<<<< HEAD
+      return false
+
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { toast } from "sonner",;
+;
+export const useJobApplications = (jobId?:string) => {;
+  const { user } = useAuth(),;
+  const [applications, setApplications] = useState<JobApplication[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+;
+  const fetchApplications = async () => {;
+    if (!user) {;
+      setIsLoading(false),;
+      return,;
+    }
+  }
+      
+      // Add the new application to the local state
+      const newApplication = data as JobApplication,
+      setApplications(prev => [newApplication, ...prev]),
+      
+      toast.success("Application submitted successfully"),
+      return true
+    } catch (err: any) {
+      console.error("Error applying to job:", err),
+      toast.error("Failed to submit application: " + err.message),
+      return false
+    }
+  },
+  
+=======
 
       return false;
     }
@@ -352,6 +408,7 @@ if ( { // Unique violation) {}
         .from("job_applications")
         .update({ status })
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq("id", applicationId),
       
       if (error) throw error,
@@ -517,7 +574,6 @@ if ( {) {}
     error;
     refetch: fetch_applications;
     applyToJob;
-
     updateApplicationStatus,
     markApplicationAsViewed;
 

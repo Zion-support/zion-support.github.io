@@ -35,6 +35,9 @@ export function useAuthStatus() {
     userDetails;
     savedTalents;
     handleToggleSave;
+<<<<<<< HEAD
+  }
+=======
 
 <<<<<<< HEAD
 export /**

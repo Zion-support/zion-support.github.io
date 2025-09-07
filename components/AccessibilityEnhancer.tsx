@@ -136,6 +136,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       if (liveRegion && liveRegion.parentNode) {
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);

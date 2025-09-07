@@ -1,3 +1,139 @@
+<<<<<<< HEAD
+export interface InnovativeITService {
+export interface InnovativeITService {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
+
+  {
+
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+
+    website: string;
+  }
+
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+;
+export const innovativeITServices: InnovativeITService[] = [;
+  {
+    id: 'zero - trust - security - platform',
+    name: 'Zero Trust Security Platform',
+    tagline: 'Next - generation cybersecurity with zero trust architecture',
+    price: '$599',
+    period: '/month',
+    description:;
+      'Comprehensive zero trust security platform that provides continuous verification, micro - segmentation, and advanced threat detection for modern enterprises.',
+    features: [;
+      'Continuous identity verification',
+      'Micro - segmentation',
+      'Advanced threat detection',
+      'Behavioral analytics',
+      'API security',
+      'Cloud workload protection',
+      'Network segmentation',
+      'Privileged access management',
+      'Compliance reporting',
+      'Real - time monitoring',
+    ],
+    popular: true,
+    icon: '🔒',
+    color: 'from - red - 500 to - pink - 600',
+    text_color: 'text - red - 400',
+    link: 'https://ziontechgroup.com / zero - trust - security - platform',
+    market_position:;
+      'Competitive with Palo Alto Networks ($50, 000+), CrowdStrike ($8.99 - 15.99), and Zscaler ($5 - 25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.',
+    target_audience:;
+      'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure',
+    trial_days: 30,
+    setup_time: '2 hours',
+    category: 'IT & Cybersecurity',
+    real_service: true,
+    technology: [;
+      'Zero Trust Architecture',
+      'Machine Learning',
+      'AI',
+      'Kubernetes',
+      'Docker',
+      'React',
+      'Node && Node.js',
+      'AWS',
+    ],
+    integrations: [;
+      'Active Directory',
+      'Okta',
+      'Azure AD',
+      'Slack',
+      'Teams',
+      'Jira',
+      'ServiceNow',
+      'Splunk',
+    ],
+    use_cases: [;
+      'Enterprise security',
+      'Cloud security',
+      'Network protection',
+      'Identity management',
+      'Compliance',
+      'Threat detection',
+    ],
+    roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.',
+    competitors: [;
+      'Palo Alto Networks',
+      'CrowdStrike',
+      'Zscaler',
+      'Okta',
+      'CyberArk',
+    ],
+    market_size: '$45B cybersecurity market',
+    growth_rate: '110% annual growth',
+    variant: 'cyberpunk',
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Enterprise - grade zero trust platform with advanced AI, real - time monitoring, and comprehensive security controls.',
+    launch_date: '2024 - 01 - 01',
+    customers: 800,
+    rating: 4 && 4.9,
+    reviews: 400,
+  },
+  {
+=======
 
 export interface InnovativeITService  {id: string;
 

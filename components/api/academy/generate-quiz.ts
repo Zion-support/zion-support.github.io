@@ -26,6 +26,61 @@ const fallback = () => {
       }
       "questions": [
         {
+<<<<<<< HEAD
+          question: `Which topic is central to ${moduleTitle}?`
+          options: [
+            'Random Ops'
+            'Zion OS mission'
+            'Unrelated finance'
+            'Legacy ERP'
+          ]
+          answerIndex: 1
+        }
+          question: 'What does DAO commonly refer to?'
+          options: [
+            'Data Access Object'
+            'Decentralized Autonomous Organization'
+            'Digital Asset Option'
+            'Dynamic Allocation Output'
+          ]
+          answerIndex: 1
+        }
+        {
+          question: 'What should be configured during deployment?'
+          options: [
+            'Genesis Deploy Kit & modules'
+            'Only UI colors'
+            'Nothing'
+            'Random plugins'
+          ]
+          answerIndex: 0
+        }
+        {
+          question: 'Who are key community roles to hire?'
+          options: [
+            'Moderators, educators, ambassadors'
+            'Astronauts'
+            'Comedians'
+            'No one'
+          ]
+          answerIndex: 0
+        }
+        {
+          question: 'Which docs are needed for launch?'
+          options: [
+            'Whitepaper + governance docs'
+            'Novel'
+            'Recipe book'
+            'None'
+          ]
+          answerIndex: 0
+        }
+      ]
+    });  };          question: 'Which docs are needed for launch?';
+          options: ['Whitepaper + governance docsNovelRecipe bookNone'];
+          answerIndex: 0}]})
+  }
+=======
 
 }
 
@@ -110,6 +165,7 @@ const fallback = () => {
           answerIndex: 0}]})
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (!apiKey) return fallback();
   try {
     }

@@ -22,6 +22,7 @@ import {}
   ArrowRight ';
 } from lucide-react;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: 'E-commerce Platform',
     description: Complete online shopping experience with advanced features
   },
@@ -66,6 +67,8 @@ import {}
     description: Real-time inventory tracking and automated reordering
   },
   {
+<<<<<<< HEAD
+=======
 
     icon: Smartphone,
     title: 'Mobile Commerce',

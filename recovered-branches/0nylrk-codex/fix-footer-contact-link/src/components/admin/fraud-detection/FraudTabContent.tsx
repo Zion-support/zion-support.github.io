@@ -19,6 +19,32 @@ interface FraudTabContentProps {
 
 import React from './react';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
+interface FraudTabContentProps {
+  tabValue: string
+}
+import React from "react";
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
+import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
+<<<<<<< HEAD
+import React from "react",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
+
+interface FraudTabContentProps {
+  tabValue: string
+}
+export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
+  switch(tabValue) {
+    case 'pending':
+      return (
+
+        <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
+          <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />
+          <h3 className="text-xl font-medium mb-4">Pending Review Flags</h3>
+          <p className="text-muted-foreground">
+            This tab will show fraud flags that are still pending admin review.
+          </p>
+import React from './react';
+import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
 
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 
@@ -47,6 +73,7 @@ interface FraudTabContentProps {
       );
       ),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     case 'dangerous':
       return (
 
@@ -58,6 +85,8 @@ interface FraudTabContentProps {
             This tab shows high-priority dangerous flags requiring immediate attention.
           </p>
         </div>
+<<<<<<< HEAD
+=======
 
       );
       ),
@@ -65,6 +94,12 @@ interface FraudTabContentProps {
 
       ),
 
+<<<<<<< HEAD
+      );
+      ),
+    
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     case 'actioned':
       return ("
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">"

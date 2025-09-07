@@ -10,6 +10,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const dir = path.join(process.cwd(), 'data', 'automations');
   const data: Record<string, any> = {};
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  const dir = path.resolve(process.cwd(), "data/cloud-automations");
+  const data: Record<string, any> = {}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   try {
     if (fs.existsSync(dir)) {
       const files = fs.readdirSync(dir);

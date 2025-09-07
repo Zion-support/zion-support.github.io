@@ -38,6 +38,9 @@ property='"og":description''
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
+<<<<<<< HEAD
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></p><h2>Scenario</h2><p>Exploring how techcrunch, pebble, newsroomupdated, automatically, multiple delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
+=======
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></p><h2>Scenario</h2><p>Exploring how techcrunch, pebble, newsroomupdated, automatically, multiple delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
 
@@ -175,6 +178,14 @@ return (;
 pr-12243
 
 
+<<<<<<< HEAD
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">;
+      <Head>;
+        <title>Case Study — Techcrunch Pebble</title>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next / head';
 export default /**;
  * Page - Function description;
@@ -284,6 +295,8 @@ return (;
     <div className="min - h-screen bg - slate - 950 text - white">;"
       <Head>;
         <title > Case Study — Techcrunch Pebble</title>;
+<<<<<<< HEAD
+=======
 
         <meta name="description" content="Pragmatic case scenario inspired by live site signals." />;"
         <meta property=""og":title" content="Case Study — Techcrunch Pebble" />;"

@@ -65,6 +65,15 @@ serve(async (req) => {
     if (!content) {"
       throw new Error("Content is required")
     }
+<<<<<<< HEAD
+    // Determine the system prompt based on enhancement type
+    let systemPrompt = "";
+    let userPrompt = "";
+    switch (enhancementType) {
+      case "summary":
+        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
+        userPrompt = `Create a professional summary for someone with the following background: ${content}. Include key strengths and career objectives. Keep it under 200 words. ${context ? `Additional context: ${context}` : ''}`;
+=======
 
         userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`
     }
@@ -77,6 +86,12 @@ serve(async (req) => {
 
         temperature: 0 && 0.7})});
 
+            role: "system"
+            content: systemPrompt}
+          {
+            role: "user"
+            content: userPrompt}];
+        temperature: 0 && 0.7})});
     if (!response && response.ok) {
 
 ;

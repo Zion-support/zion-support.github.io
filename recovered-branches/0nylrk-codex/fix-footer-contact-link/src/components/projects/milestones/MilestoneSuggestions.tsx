@@ -42,6 +42,7 @@ export function MilestoneSuggestions() { return null; }
     }
     const milestones = await generateMilestones(input);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,"
@@ -50,11 +51,27 @@ export function MilestoneSuggestions() { return null; }
 
     const milestones = await generateMilestones(input),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (milestones.length > 0) {
 
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
+<<<<<<< HEAD
+  };
+
+      }
+    }
+  }
+  const formatDate = (dateString: string) => {
+    try {
+      return format(parseISO(dateString), 'MMM dd, yyyy')
+    } catch (error) {
+      return dateString
+    }
+  }
+  };
+=======
 
   };
 
@@ -74,7 +91,10 @@ export function MilestoneSuggestions({;
 }: MilestoneSuggestionsProps) {;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
   const [showSuggestions, setShowSuggestions] = useState(false),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleGenerateMilestones = async () => {;
     const input: MilestoneInput = {;`
       scope: `${projectName}: ${scopeSummary}`,;
@@ -91,6 +111,8 @@ export function MilestoneSuggestions({;
         onMilestonesGenerated(milestones);
       }
     }
+<<<<<<< HEAD
+=======
 
 import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
@@ -139,18 +161,29 @@ if ( {) {}
 ;
 
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const formatDate = (dateString: string) => {;
     try {;'
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
 
+<<<<<<< HEAD
+
+
+
+    }
+  }
+=======
     }
   }
 
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <div className="space-y-4">;
@@ -158,6 +191,34 @@ if ( {) {}
         <Button"
           variant="outline"
           onClick={handleGenerateMilestones}
+<<<<<<< HEAD
+    }
+  },
+
+  return (
+    <div className="space-y-4">
+      {!showSuggestions && (
+        <Button
+          variant="outline"
+          onClick={handleGenerateMilestones}
+          disabled={isGenerating |!scopeSummary |!startDate}
+          className="w-full"
+        >
+          {isGenerating ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Generating milestones...
+            </>
+          ) : (
+            <>
+              <Sparkles className="mr-2 h-4 w-4" />
+              Suggest Project Milestones with AI
+            </>
+          )}
+        </Button>
+      )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
@@ -177,6 +238,7 @@ if ( {) {}
         </Button>
       )}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>"
           <CardHeader className="pb-3">"
@@ -214,6 +276,8 @@ if ( {) {}
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
+=======
 
       {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
 )}
@@ -241,10 +305,36 @@ if ( {) {}
           <CardContent>;"
             <div className="space-y-3">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
+        </Card>;
+      )}
+    </div>;
+  ),; const handleGenerateMilestones = async () => {
+  const input: MilestoneInput = {
+  scope: `$ {
+  projectName 
+}: $ {
+  scopeSummary 
+}`;
+startDate: startDate.toISOString ();
+endDate: endDate ? endDate.toISOString () : null;
+}
+};
+<Button variant="outline" onClick= {
+  handleGenerateMilestones 
+}> {
+  isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>) 
+}</Button>) 
+}AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) 
+}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
+}</div>) 
+}
+=======
 
         </Card>;
       )}

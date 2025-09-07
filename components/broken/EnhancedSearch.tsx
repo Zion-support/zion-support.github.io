@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+=======
 
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';'
 import { motion, AnimatePresence  } from 'framer-motion';'
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';'
 
+<<<<<<< HEAD
+features?: string[];
+=======
 interface SearchResult {
   }
   "id": string;
@@ -44,11 +49,13 @@ setIsSearching (true);
   slug: string,
   relevance: number,
   features?: string[];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   pricing?: {
     starter?: string;
     enterprise?: string
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SearchProps {
   onSearch: (query: string) => void,
   onResultSelect: (result: SearchResult) => void,
@@ -56,7 +63,10 @@ interface SearchProps {
   className?: string;
   showFilters?: boolean
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch;
   onResultSelect;
@@ -73,8 +83,15 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const [popularSearches] = useState([
     'AI ConsciousnessQuantum ComputingCybersecurityBusiness IntelligenceSpace TechnologyAutonomous Systems'
   ]);
+<<<<<<< HEAD
+  // Mock search results - in real app, this would come from API
+
+  // Mock search results - in real app, _this would come from API
+
+=======
 
   // Mock search results - in real app, this would come from API
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const mockSearchResults: SearchResult[] = [
     {
       id: '1',
@@ -86,7 +103,11 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       relevance: 95,
       features: ['Emotional IntelligenceSelf-AwarenessConsciousness Evolution'],
       pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: '2',
       name: 'Quantum AI Hybrid Computing',
@@ -97,7 +118,11 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       relevance: 92,
       features: ['Quantum SupremacyAI IntegrationHybrid Computing'],
       pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' }
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: '3',
       name: 'Quantum Cybersecurity Intelligence',
@@ -109,13 +134,20 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       features: ['Quantum ResistanceThreat PredictionAI Security'],
       pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
     }
+<<<<<<< HEAD
+];
+=======
   ];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const categories = [
     { id: 'ai', name: 'AI & ML', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { id: 'quantum', name: 'Quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' },
     { id: 'security', name: 'Security', icon: Shield, color: 'from-red-500 to-orange-500' },
     { id: 'business', name: 'Business', icon: Rocket, color: 'from-emerald-500 to-teal-500' }
+<<<<<<< HEAD
+];
+=======
   ];
 
 

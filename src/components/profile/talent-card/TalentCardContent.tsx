@@ -11,6 +11,7 @@ interface TalentCardContentProps {
 
 export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <div>

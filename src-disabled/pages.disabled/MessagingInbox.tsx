@@ -23,6 +23,7 @@ export default function MessagingInbox() {
 
     conversations;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     markAsRead;
     fetchConversations;
 export default function MessagingInbox() {
@@ -45,6 +46,23 @@ export default function MessagingInbox() {
             {activeConversation && (
               <Button 
                 onClick={startVideoCall}
+<<<<<<< HEAD
+                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
+            {activeConversation && (
+              <Button
+                onClick = {startVideoCall,}
+            
+              <Button 
+                onClick={startVideoCall}
+            {activeConversation && (
+              <Button
+                onClick = {startVideoCall,}
+            
+            {activeConversation && (
+              <Button 
+                onClick={startVideoCall}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
                 <Video className="h-4 w-4" />
@@ -68,6 +86,15 @@ export default function MessagingInbox() {
                 </div>
               ) : (
                 <ConversationsList
+<<<<<<< HEAD
+                  conversations = {conversations,}
+                  activeConversation = {activeConversation,}
+                  setActiveConversation = {setActiveConversation,}
+                  markAsRead = {markAsRead,}
+                />
+              )}
+              
+=======
 
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext',;
@@ -169,9 +196,16 @@ export default function MessagingInbox() {;
                   markAsRead = {markAsRead,}
                 />;
               )}
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+;
+
+
+=======
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Conversation Detail */}
             </div>
           </div>
@@ -228,6 +262,15 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }{/* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"}
+<<<<<<< HEAD
+  )
+}
+;
+  )
+}
+;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         logErrorToProduction ('Failed to load conversations:', { data: error }),
         toast.error ("Failed to load messages. Please try again.");

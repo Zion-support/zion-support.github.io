@@ -3,11 +3,14 @@ import { Message, Conversation, ConversationContextData  } from '@/types/messagi
 import { useConversationState  } from './useConversationState';
 import { useConversations  } from './useConversations';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation, ConversationContextData} from '@/types/messaging';
 import {useConversationState} from './useConversationState';
 import {useConversations} from './useConversations';
 import {useMessages} from './useMessages';
+<<<<<<< HEAD
+=======
 
 // Allow either UserProfile or UserDetails
 
@@ -36,11 +39,14 @@ export /**;
     active_conversation;
     setActiveConversation;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     is_loading,
     setIsLoading;
   } = useConversationState ();
 ;
   // Conversations management;
+<<<<<<< HEAD
+=======
 
   const {}
     fetch_conversations;
@@ -49,6 +55,11 @@ export /**;
     user;
     set_conversations;
     setUnreadCount;
+<<<<<<< HEAD
+    setIsLoading);
+;
+  // Messages management;
+=======
 
   const {}
     load_messages;
@@ -63,6 +74,10 @@ export /**;
     set_conversations;
     setUnreadCount;
     setIsLoading;
+<<<<<<< HEAD
+    fetch_conversations);
+;
+=======
 
   return {}
     // State;
@@ -75,7 +90,10 @@ export /**;
     setUnreadCount;
     active_conversation;
     setActiveConversation;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     is_loading;
 ;
     // Operations;

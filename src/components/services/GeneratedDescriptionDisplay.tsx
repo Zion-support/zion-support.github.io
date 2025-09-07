@@ -10,6 +10,31 @@ interface GeneratedDescriptionDisplayProps {
   description: string,
   onSave: (editedDescription: string) => void
 }
+<<<<<<< HEAD
+import { Check, Pencil } from 'lucide-react'
+interface GeneratedDescriptionDisplayProps {;
+  description: string;
+  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {
+  description: string
+  onSave: (editedDescription: string,) => void
+}
+
+export function GeneratedDescriptionDisplay({
+  description
+  onSave
+}: GeneratedDescriptionDisplayProps) {
+  const { toast } = useToast()
+  const [isEditing, setIsEditing] = useState(false)
+  const [editedDescription, setEditedDescription] = useState(description)
+  const handleSave = () => {
+    onSave(editedDescription)
+    setIsEditing(false)
+    toast({
+      title: 'Description Saved'
+      description: 'Your edited description has been saved.'
+    })
+  }
+=======
 
 export function GeneratedDescriptionDisplay({ 
   description, 

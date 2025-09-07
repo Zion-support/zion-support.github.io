@@ -78,4 +78,6 @@ try {
     // Push all changes
     console.log('📤 Pushing all changes to main...');
     execSync('git push origin main');
+<<<<<<< HEAD
+=======
 

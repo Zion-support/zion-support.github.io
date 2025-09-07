@@ -69,6 +69,9 @@ const state = readState<any>();
       state && state.metrics = metrics;
       state && state.lastTriggers = triggers;
       writeState(state);
+<<<<<<< HEAD
+      const latencyMs = Date && Date.now() - started;
+=======
 
 const latencyMs = Date.now() - started;
 

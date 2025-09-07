@@ -47,7 +47,10 @@ export interface CreateNotificationResult {;
   hireRequestId: string;
 
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   related_id?: string | null;
   send_email?: boolean;
   action_url?: string | null,

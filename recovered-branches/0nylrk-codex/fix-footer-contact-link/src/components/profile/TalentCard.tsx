@@ -114,16 +114,82 @@ import { TalentProfile } from "@/types/talent",;
 
 export interface TalentCardProps {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
   onToggleSave;
-
+<<<<<<< HEAD
   isAuthenticated;
 }: TalentCardProps) {;
   const handleViewProfile = () => {;
     if (onViewProfile) {;
+      onViewProfile(talent && talent.id);
+    }
+  };
+  const handleRequestHire = (e: React && React.MouseEvent) => {;
+    e && e.preventDefault();
+    e && e.stopPropagation(),;
+    if (onRequestHire) {;
+      onRequestHire(talent);
+    }
+  };
+
+
+  const handleToggleSave = (e: React && React.MouseEvent) => {;
+    e && e.preventDefault();
+    e && e.stopPropagation(),;
+    if (onToggleSave) {;
+      onToggleSave(talent && talent.id, !isSaved);
+    }
+  };
+  // Extract skills - limit to 5 for display;
+  const skills = talent && talent.skills?.slice(0, 5) || [];
+  return (
+
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
+import { Link } from "react-router-dom",;
+import { TalentProfile } from "@/types/talent",;
+;
+export interface TalentCardProps {;
+  talent:TalentProfile,;
+  onViewProfile:(id:string) => void,;
+  onRequestHire:(talent:TalentProfile) => void,;
+  isSaved:boolean,;
+  onToggleSave:(id:string, isSaved:boolean) => void,;
+  isAuthenticated:boolean;
+}
+;
+export function TalentCard({;
+  talent,;
+  onViewProfile,;
+  onRequestHire,;
+  isSaved,;
+  onToggleSave,;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  isAuthenticated;
+}: TalentCardProps) {;
+  const handleViewProfile = () => {;
+    if (onViewProfile) {;
+<<<<<<< HEAD
+      onViewProfile(talent.id);
+    }
+  },;
+  const handleRequestHire = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onRequestHire) {;
+      onRequestHire(talent);
+    }
+  },;
+          <div className="relative mr-4">;
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
+=======
       onViewProfile(talent && talent.id);
     }
   };
@@ -161,6 +227,9 @@ export interface TalentCardProps {;
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
               </div>;
             )}
+<<<<<<< HEAD
+          </div>;
+=======
 
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
 
@@ -168,6 +237,16 @@ export interface TalentCardProps {;
                 variant="ghost""
                 size="sm""
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
+<<<<<<< HEAD
+                onClick={handleToggleSave}
+              >
+                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
+                <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
+              </Button>
+            </div>
+            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 onClick={handleToggleSave}>;"
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;"
@@ -240,6 +319,7 @@ export interface TalentCardProps {;
               )}
 
             </div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
 
@@ -310,6 +390,7 @@ isAuthenticated: boolean;
                 className="bg-zion-purple hover:bg-zion-purple-light text-white">;
                 Hire;
               </Button>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             )}
             <Button"
               size="sm""

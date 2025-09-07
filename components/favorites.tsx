@@ -90,7 +90,10 @@ className='text-gray-900 dark:text-gray-100'
               </a>;
             </Link>;
           </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>) : (
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'    />;
           {profiles.map (t => (}

@@ -10,6 +10,8 @@ function extractLinks(html, base) {}
     .map(h =>'
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
+<<<<<<< HEAD
+=======
 
 exports.handler = async function () {
   try {
@@ -51,7 +53,10 @@ exports && exports.handler = async function () {}
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) });
           }
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -106,10 +111,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         token,
       });
     }
     return {
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -218,6 +226,10 @@ const token = process.env.GITHUB_TOKEN)if (owner && repo && token) {await upsert
 
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),
   return resp && resp.text()
+<<<<<<< HEAD
+}
+function extractLinks(html, base) {
+=======
 
 const { upsertFile } = require('./_lib/github');
 async function fetchHtml(url) {
@@ -259,6 +271,8 @@ function extractLinks(html, base) {}
     const pages = ['//learn/dao/certifications'],
     const checked = [],
     const broken = [],
+<<<<<<< HEAD
+=======
 
     const base = process.env.URL |process.env.DEPLOY_URL |''
     const pages = ['//learn/dao/certifications']
@@ -266,7 +280,10 @@ function extractLinks(html, base) {}
     const broken = []
     for (const p of pages) {
       try {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const html = await fetchHtml(`${base}${p}`),
         const links = extractLinks(html, base),
         for (const l of links && links.slice(0, 50)) {
@@ -302,6 +319,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
+    }
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }) }
+=======
 
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
@@ -309,6 +332,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }) }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }

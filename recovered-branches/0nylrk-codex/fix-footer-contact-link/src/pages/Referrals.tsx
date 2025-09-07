@@ -30,6 +30,7 @@ import {Button} from '@/components / ui / button';
 import {toast} from '@/hooks / use - toast';
 import {Share, Users} from 'lucide-react';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {use_navigate} from 'react-router-dom';
 
   const navigate = useNavigate();
@@ -99,6 +100,31 @@ import {Share, Users} from 'lucide-react';
     isLoading;
     referralCode;
 
+<<<<<<< HEAD
+import { useEffect  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { useReferrals  } from '@/hooks/useReferrals';
+import { ReferralStats  } from '@/components/referrals/ReferralStats';
+import { ReferralLink  } from '@/components/referrals/ReferralLink';
+import { ReferralTable  } from '@/components/referrals/ReferralTable';
+import { RewardsCard  } from '@/components/referrals/RewardsCard';
+import { ReferralGuide  } from '@/components/referrals/ReferralGuide';
+import { ReferralLeaderboard  } from '@/components/referrals/ReferralLeaderboard';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button  } from '@/components/ui/button';
+import { toast  } from '@/hooks/use-toast';
+import { Share, Users  } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+export default function ReferralsPage() {
+
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+  const {
+    isLoading;
+    referralCode;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     referrals;
     rewards;
     stats;
@@ -126,6 +152,7 @@ const navigate = useNavigate(),;
     }
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {useReferrals} from '@/hooks/useReferrals';
@@ -144,6 +171,8 @@ import {Share, Users} from 'lucide-react';
 import {useNavigate} from 'react-router-dom';
 export default function ReferralsPage() { return null; }
   const { isAuthenticated } = useAuth();
+<<<<<<< HEAD
+=======
 
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
@@ -322,6 +351,22 @@ export default function ReferralsPage() {;
           Share Referral Link;
         </Button>;
       </div>;
+<<<<<<< HEAD
+;
+      <ReferralStats stats={stats} isLoading={isLoading} />;
+      ;
+      <div className="grid gap-6 mt-6 lg:grid-cols-3">;
+        <div className="lg:col-span-2 space-y-6">;
+          <ReferralLink ;
+      <ReferralStats stats={stats} isLoading={isLoading} />;
+      <div className="grid gap-6 mt-6 lg:grid-cols-3">;
+        <div className="lg:col-span-2 space-y-6">;
+          <ReferralLink;
+            referralLink={referralLink} ;
+            onCopy={copyReferralLink} ;
+            onShare={shareOnSocialMedia}
+          />;
+=======
 
       <ReferralStats stats={stats} isLoading={isLoading} />;
 </ReferralStats>
@@ -370,6 +415,11 @@ export default function ReferralsPage() {;
             </TabsContent>;
           </Tabs>;
         </div>;
+<<<<<<< HEAD
+;
+        <div className="space-y-6">;
+        <div className="space-y-6">;
+=======
 
           <ReferralGuide />;
           <ReferralLeaderboard />;

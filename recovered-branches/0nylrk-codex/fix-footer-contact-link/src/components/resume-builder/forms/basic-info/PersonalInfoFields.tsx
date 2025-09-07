@@ -140,6 +140,18 @@ function PersonalInfoFields() {}
               <Input placeholder="John Doe" {...field} />;
             </FormControl>;
             <FormMessage />;
+<<<<<<< HEAD
+          </FormItem>;
+        )}
+      />;
+;
+      <FormField;
+        control={control}
+        name="title";
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Professional Title</FormLabel>;
+=======
 
         render={({ field }) => (
           <FormItem>
@@ -177,6 +189,15 @@ function PersonalInfoFields() {}
               <Input placeholder="Senior Software Engineer" {...field} />;
             </FormControl>;
             <FormMessage />;
+<<<<<<< HEAD
+          </FormItem>;
+        )}
+      />;
+;
+      <FormField;
+        control={control}
+        name="email";
+=======
 
           </FormItem>)}
       />;

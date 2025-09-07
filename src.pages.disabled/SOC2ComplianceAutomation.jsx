@@ -32,6 +32,7 @@ interface SOC2ComplianceAutomationProps {
 
 }
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationProps) {
   return (
     <div>

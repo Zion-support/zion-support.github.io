@@ -44,6 +44,20 @@ export function EducationForm({ ;
       description: data.description;
       location: data.location}
 
+<<<<<<< HEAD
+
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Education} from '@/types/resume';
+import {useResume} from '@/hooks/useResume';
+import {format} from 'date-fns';
+import {EducationFormProps} from './types';
+import {EducationList} from './EducationList';
+import {EducationFormFields} from './EducationFormFields';
+export function EducationForm({
+export function EducationForm({ ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   resumeId;
   educationEntries
   onComplete
@@ -77,14 +91,20 @@ export function EducationForm(): any ({ ;
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {;
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue,;
     return format(dateValue, 'yyyy-MM-dd');
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleAddOrUpdate = async (data: any) => {;
     const educationData: Education = {;
       institution: data && data.institution,;
@@ -95,6 +115,29 @@ export function EducationForm(): any ({ ;
       is_current: data && data.is_current,;
       description: data && data.description,;
       location: data && data.location},;
+<<<<<<< HEAD
+    let success;
+}: EducationFormProps) {;
+  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
+  const [editingId, setEditingId] = useState<string | null>(null),;
+  // Helper function to format dates to string;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;
+    if (!dateValue) return '',;
+    if (typeof dateValue === 'string') return dateValue,;
+    return format(dateValue, 'yyyy-MM-dd');
+  },;
+  const handleAddOrUpdate = async (data: any) => {;
+    const educationData: Education = {;
+      institution: data.institution,;
+      degree: data.degree,;
+      field_of_study: data.field_of_study,;
+      start_date: data.start_date,;
+      end_date: data.is_current ? undefined : (data.end_date || undefined),;
+      is_current: data.is_current,;
+      description: data.description,;
+      location: data.location},;
+    let success,;
+=======
 
     }
     if (success) {}
@@ -142,6 +185,7 @@ export function EducationForm(): any ({ ;
 
     }
 
+    }
     if (success) {;
       setEditingId(null);
     }
@@ -157,7 +201,10 @@ export function EducationForm(): any ({ ;
       await deleteEducation(id);
     }
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleCancel = () => {;
     if (editingId) {;
       setEditingId(null);
@@ -342,23 +389,31 @@ export function EducationForm({ ;
           Add your educational background and academic achievements.;
         </p>;
       </div>;
-
-      <EducationList
-        educationEntries={educationEntries} 
+;
+      <EducationList ;
+        educationEntries={educationEntries} ;
         onEdit={handleEdit}
         onDelete={handleDelete}
       />;
-
+;
       <div className="bg-muted/40 p-6 rounded-lg">;
         <h3 className="text-md font-medium mb-4">;
-          {editingId ? 'Update Education' : 'Add Education'}
+          {editingId ? 'Update Education' :'Add Education'}
         </h3>;
+<<<<<<< HEAD
+;
+        <EducationFormFields;
+          isEditing={!!editingId}
+          onSubmit={handleAddOrUpdate}
+          onCancel={handleCancel}
+=======
 
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
       </div>;
 

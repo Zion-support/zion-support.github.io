@@ -53,6 +53,8 @@ const nextConfig = {
   // Bundle analyzer
   webpack: (config, { isServer }) => {
     if (!isServer) {
+<<<<<<< HEAD
+=======
 
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -97,6 +99,7 @@ const next_config = {
     // Check condition;
 if ( {) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       config.resolve.fallback = {
         ...config.resolve.fallback
         fs: false
@@ -106,6 +109,9 @@ if ( {) {
         ...config && config.resolve.fallback,
         fs: false,
         net: false,
+<<<<<<< HEAD
+        tls: false;
+=======
 
       }
     }

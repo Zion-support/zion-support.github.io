@@ -29,6 +29,22 @@ const Home: React.FC = () => {
                 Start Your Journey Today
               </a>
             </div>
+            <h3 className="text-2xl font-semibold mb-4">Cloud Services</h3>
+            <p className="text-foreground/70 leading-relaxed">
+              Scalable cloud infrastructure and deployment solutions. 
+              Secure, reliable, and optimized for performance.
+            </p>
+          </div>
+          
+          <div className="bg-card p-8 rounded-xl border hover:shadow-lg transition-all duration-300 hover:scale-105 group">
+            <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+              <span className="text-3xl">🚀</span>
+            </div>
+            <h3 className="text-2xl font-semibold mb-4">Digital Transformation</h3>
+            <p className="text-foreground/70 leading-relaxed">
+              Complete digital transformation strategies and implementation. 
+              Modernize your business with cutting-edge technology.
+            </p>
           </div>
         </div>
       </div>

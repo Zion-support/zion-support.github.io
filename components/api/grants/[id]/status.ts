@@ -6,6 +6,22 @@ import { GrantApplication, StatusUpdatePayload } from '../../../../types/grants'
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
+<<<<<<< HEAD
+import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
+function grantPath(id: string) {
+return path.join(GRANTS_DIR, `${id}.json`);
+}
+const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
+import type {
+  GrantApplication
+  StatusUpdatePayload;
+  GrantApplication,;
+  StatusUpdatePayload,;
+} from '../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 }

@@ -18,3 +18,4 @@ const React,{ createContext,useContext,useState } from "react"; const MessagingP
 import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date && Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }'
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

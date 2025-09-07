@@ -4,12 +4,15 @@ import { Certification  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Certification} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useCertifications() {;
+<<<<<<< HEAD
+=======
 
   const { user } = useAuth();
 
@@ -26,6 +29,7 @@ export function useCertifications() { return null; }
   const [error, setError] = useState<string | null>(null),;
   const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
     setIsLoading(true),
@@ -35,6 +39,19 @@ export function useCertifications() { return null; }
       const { error } = await supabase
         .from('certifications')
         .insert({
+<<<<<<< HEAD
+          name: cert && cert.name;
+
+          resume_id: resumeId;
+          name: cert.name;
+          issuing_organization: cert.issuing_organization;
+          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
+          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null;
+          credential_id: cert.credential_id
+          credential_url: cert.credential_url
+        });
+      if (error) throw error;
+=======
 
       return showSuccessToast("Certification added", "Your certification has been added to your resume")
     } catch (e: any) {'
@@ -228,13 +245,17 @@ export function useCertifications() {;
         .from('certifications')
 >>>>>>> origin/chore/fix-lint-and-merge
         .update({
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           name: cert && cert.name;
           issuing_organization: cert && cert.issuing_organization;
           issue_date: cert && cert.issue_date ? formatDateForDB(cert && cert.issue_date) : null;
           expiration_date: cert && cert.expiration_date ? formatDateForDB(cert && cert.expiration_date) : null;
           credential_id: cert && cert.credential_id,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           name: cert.name,
           issuing_organization: cert.issuing_organization,
           issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null,
@@ -391,6 +412,7 @@ if ( {) {}
   $2;
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   return {;
     isLoading,;
@@ -398,6 +420,8 @@ if ( {) {}
     addCertification;
     updateCertification;
     deleteCertification;
+<<<<<<< HEAD
+=======
 
   }
 }

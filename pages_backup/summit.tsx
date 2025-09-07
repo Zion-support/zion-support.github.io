@@ -17,6 +17,7 @@ try {
 
   method: 'POST';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 headers: {;
   'Content-Type': 'application/json' ;
 };
@@ -49,6 +50,8 @@ export default function SummitPage() {;
   const [embedId, setEmbedId] = React && React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =;
     useCountdown(EVENT_START_ISO);
+<<<<<<< HEAD
+=======
 
     name: '',
     email: '',
@@ -61,6 +64,8 @@ export default function SummitPage() {;
     ok?: boolean;
     error?: string;
   } | null>(null);
+<<<<<<< HEAD
+=======
 
   ];
 
@@ -68,6 +73,11 @@ export default function SummitPage() {;
     { name: 'Gov Partner' },;'
     { name: 'Venture Partner' },;'
     { name: 'University Partner' },;
+<<<<<<< HEAD
+  ];
+  const onSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+=======
 
   ];
 
@@ -79,7 +89,7 @@ type Speaker = {}
   title: string,
   avatarUrl: string,
   bio: string,
-  twitter?: string;
+twitter?: string;
   linkedin?: string;
   highlight?: boolean;
 };
@@ -102,14 +112,12 @@ function useCountdown(targetIso: string) {}
     }, 1000);
     return () => clearInterval(id)
   }, [targetIso]);
-
   const isPast = remainingMs <= 0;
   const totalSec = Math.max(0, Math.floor(remainingMs / 1000));
   const days = Math.floor(totalSec / 86400);
   const hours = Math.floor((totalSec % 86400) / 3600);
   const minutes = Math.floor((totalSec % 3600) / 60);
   const seconds = totalSec % 60;
-
   return { isPast, days, hours, minutes, seconds }
 }
 
@@ -235,12 +243,15 @@ setForm ({'
       avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       twitter: 'https://twitter.com',
       linkedin: 'https://www.linkedin.com',
       highlight: true},
     {
       name: 'Alex Rivera',
       title: 'Head of Protocol Engineering',
+<<<<<<< HEAD
+=======
 
     setResult(null),;
     try {;'
@@ -342,6 +353,70 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
             </a>;
             <a'
               href='#agenda'
+<<<<<<< HEAD
+    <>
+      <Head>
+        <title>Zion Global Summit 2025 — AI, Talent, Trust</title>
+        <meta name="description" content="Zion Global Summit: AI, Talent, Trust — Globalized" />
+      </Head>
+      <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
+        <div className='max-w-4xl'>
+          <p className='uppercase tracking-widest text-neon-blue'>
+            Zion Global Summit 2025
+          </p>
+          <h1 className='mt-2 text-3xl md:text-5xl font-extrabold'>
+            AI, Talent, Trust — Globalized
+          </h1>
+          <p className='mt-4 text-white/80'>
+            Date: Nov 12, 2025 • Time: 16:00 UTC • Location: Hybrid (Virtual +
+            In‑Person)
+          </p>
+          <div className='mt-6 flex flex-wrap gap-3'>
+            <a
+              href='#register'
+              className='inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue'
+            >
+              Register
+            </a>
+            <a
+              href='#livestream'
+              className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
+            >
+              Livestream
+            </a>
+            <a
+              href='#agenda'
+              className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
+            >
+              Agenda
+            </a>          </div>
+        </div>
+      </section>
+      <div className='grid md:grid-cols-3 gap-6 mt-8'>
+        <section
+          id='agenda'
+          className='md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
+        >
+          <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
+          <ol className='space-y-3 list-decimal list-inside'>            <li>Opening Keynote — Launching Zion Protocol</li>
+      <section className="relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue">
+        <div className="max-w-4xl">
+          <p className="uppercase tracking-widest text-neon-blue">Zion Global Summit 2025</p>
+          <h1 className="mt-2 text-3xl md:text-5xl font-extrabold">AI, Talent, Trust — Globalized</h1>
+          <p className="mt-4 text-white/80">Date: Nov 12, 2025 • Time: 16:00 UTC • Location: Hybrid (Virtual + In‑Person)</p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a href="#register" className="inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue">Register</Link>
+            <a href="#livestream" className="inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10">Livestream</Link>
+            <a href="#agenda" className="inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10">Agenda</Link>
+          </div>
+        </div>
+      </section>
+      <div className="grid md:grid-cols-3 gap-6 mt-8">
+        <section id="agenda" className="md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+          <h2 className="text-2xl font-bold mb-4">Agenda</h2>
+          <ol className="space-y-3 list-decimal list-inside">
+            <li>Opening Keynote — Launching Zion Protocol</li>
+=======
 
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
             >
@@ -360,12 +435,15 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
           <ol className='space-y-3 list-decimal list-inside'>
             <li>Opening Keynote — Launching Zion Protocol</li>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
+<<<<<<< HEAD
+=======
 
           <h2 className="text-2xl font-bold mb-4">Event Info</h2>
           <ul className="space-y-2">
@@ -375,16 +453,52 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
 
             <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
           </ul>
+<<<<<<< HEAD
+        </section>
+      </div>
+=======
 
               Agenda;
             </a>          </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+      <div className='grid md:grid - cols - 3 gap - 6 mt - 8'>;
+        <section;
+          id='agenda';
+          className='md:col - span - 2 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
+        >;
+          <h2 className='text - 2xl font - bold mb - 4'>Agenda</h2>;
+          <ol className='space - y-3 list - decimal list - inside'>            <li > Opening Keynote — Launching Zion Protocol</li>;
+            <li > Panel 1 — The Future of Digital Nations</li>;
+            <li > Panel 2 — ZionDAO in Action</li>;
+            <li > Demo — ZionGPT Live</li>;
+            <li > Featured Speaker — Founder</li>;
+          </ol>;
+        </section>;
+        <section className='p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black'>;
+          <h2 className='text - 2xl font - bold mb - 4'>Event Info</h2>;
+          <ul className='space - y-2'>;
+            <li>;
+              <span className='font - medium'>Date:</span> Nov 12, 2025;
+            </li>;
+            <li>;
+              <span className='font - medium'>Time:</span> 16:00 UTC;
+            </li>;
+            <li>;
+              <span className='font - medium'>Location:</span> Hybrid (Virtual +;
+              In‑Person);
+            </li>;
+            <li>;
+              <span className='font - medium'>Tagline:</span> AI, Talent, Trust —;
+=======
 
               Globalized;
             </li>          </ul>;
         </section>;
       </div>;
+<<<<<<< HEAD
+=======
 
       <section
 
@@ -427,6 +541,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   alt={s && s.name}'
                   className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-6">Speakers</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -434,6 +549,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div key={s.name} className={`p-4 rounded-lg border ${s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>
               <div className="flex items-center gap-4">
                 <img src={s.avatarUrl} alt={s.name} className="w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800" />
+<<<<<<< HEAD
+=======
 
                 <div>
                   <div className="font-semibold">{s.name}</div>
@@ -644,6 +761,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <option value='twitch'>Twitch</option>;
               <option value='twitter'>Twitter</option>;
             </select>;
+<<<<<<< HEAD
+            <input;
+              aria - label='Embed ID';
+              className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
+=======
 
               placeholder={
                 platform === 'youtube';
@@ -652,6 +774,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ? 'Twitch Channel';
                     : 'Twitter Broadcast ID';
               }
+<<<<<<< HEAD
+=======
 
       <section
         id='register'
@@ -710,6 +834,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Thank you! You are registered.;
               </span>;
             )}
+<<<<<<< HEAD
+=======
 
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -945,7 +1071,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
             />
             {isPast ? (
-              <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
+<span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
             ) : (
               <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {hours}h {minutes}m {seconds}s</span>
             )  } catch (error) {

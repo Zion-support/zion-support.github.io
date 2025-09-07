@@ -12,6 +12,8 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
+<<<<<<< HEAD
+=======
 
 import {
 
@@ -84,6 +86,8 @@ export function ReviewsModerationTable({}
       onRefresh(),
       setViewDetailsOpen(false)
     },
+<<<<<<< HEAD
+=======
 
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
@@ -141,6 +145,13 @@ export function ReviewsModerationTable({}
   const handleApprove = (reviewId: string) => {"
     updateReviewStatus({ reviewId, status: "approved" })
 
+<<<<<<< HEAD
+  }
+  const handleReject = (reviewId: string) => {
+    updateReviewStatus({ reviewId, status: "rejected" })
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   const handleReject = (reviewId: string) => {"
@@ -242,7 +253,10 @@ import {;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ReviewsModerationTableProps {;
   reviews: Review[],;
   isLoading: boolean,;
@@ -266,6 +280,7 @@ export function ReviewsModerationTable(): any ({;
   const [selectedReview, setSelectedReview] = useState<Review | null>(null);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { mutate: updateReviewStatus, isPending } = useMutation({;
     mutationFn: async ({;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -281,6 +296,7 @@ export function ReviewsModerationTable(): any ({;
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200";
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const getInitials = (name: string) => {;
     return name;"
       .split(" ");
@@ -300,9 +316,17 @@ export function ReviewsModerationTable(): any ({;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
       </div>;
+  if (reviews && reviews.length === 0) {;
+    return (
+    ),;
+  }
+;
+  if (reviews.length === 0) {;
+    return (;
     );
   }
     return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="py-10 text-center">;
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
 
@@ -313,6 +337,15 @@ export function ReviewsModerationTable(): any ({;
 
     );
   }
+<<<<<<< HEAD
+;
+  const handleApprove = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: "approved" });
+  },;
+  const handleReject = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: "rejected" });
+  },;
+=======
 
     return ("
       <div className="flex">;
@@ -323,6 +356,11 @@ export function ReviewsModerationTable(): any ({;
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />;
         ))}
+<<<<<<< HEAD
+      </div>;
+    );
+  };
+=======
 
 import { useState } from './react';
 
@@ -652,6 +690,13 @@ if ( {) {}
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
+<<<<<<< HEAD
+            </TableRow>;
+          ))}
+        </TableBody>;
+      </Table>;
+;
+=======
 
           ))}
 

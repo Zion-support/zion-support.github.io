@@ -93,6 +93,15 @@ export function ContactFields(): any ({ control }: ContactFieldsProps) {;
               <Input placeholder="San Francisco, CA" {...field} />;
             </FormControl>;
             <FormMessage />;
+<<<<<<< HEAD
+          </FormItem>;
+        )}
+      />;
+;
+      <FormField;
+        control={control}
+        name="website";
+=======
 
         )}
 
@@ -155,6 +164,9 @@ export function ContactFields(): any ({ control }: ContactFieldsProps) {;
           <FormItem>;
             <FormLabel>GitHub</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
+              <Input placeholder="https://github.com/username" {...field} />;
+=======
               <Input placeholder="https://github && github.com/username" {...field} />;
 <Input placeholder="https://github.com/username" {...field} />;
             </FormControl>;

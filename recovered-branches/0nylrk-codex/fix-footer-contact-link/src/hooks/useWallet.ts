@@ -19,6 +19,29 @@ export function useWallet() {;
       setWallet(null);
       setLoading(false);
 
+<<<<<<< HEAD
+import { useEffect, useState  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';
+import {useEffect, useState} from 'react';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import type { Wallet, TokenTransaction } from '@/types/tokens';
+export function useWallet() {;
+  const { user } = useAuth();
+  const [wallet, setWallet] = useState<Wallet | null>(null),
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
+  const [loading, setLoading] = useState(true);
+
+  const [error, setError] = useState<string | null>(null);
+
+  async function fetchWallet() {
+    if (!user?.id) {
+      setWallet(null);
+      setLoading(false);
+      return
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect, useState} from 'react';
 
 import {use_auth} from '@/hooks / use_auth';
@@ -149,6 +172,10 @@ if (throw error) {
     loading;
     error;
 
+<<<<<<< HEAD
+    fetchWallet;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect, useState } from 'react',;
 
 import { useAuth } from '@/hooks/useAuth',;

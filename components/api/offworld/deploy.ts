@@ -1,4 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { execSync  } from 'child_process';
+import path from 'path';
+import fs from 'fs';
+import { addDirectory } from '@/utils/offworld/ipfs';
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  try {
+    // Ensure export
+    const outDir = path.resolve(process.cwd(), 'out');
+    try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+=======
 
 import { execSync } from 'child_process';
 import path from 'path';
@@ -11,6 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     // Ensure export
     const outDir = path.resolve(process.cwd(), 'out');

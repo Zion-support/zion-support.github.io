@@ -102,6 +102,7 @@ const "AIConsciousnessEvolutionPlatform": React.FC = () => {
   }
   index 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }initial= {
   {
   }
@@ -133,6 +134,25 @@ const "AIConsciousnessEvolutionPlatform": React.FC = () => {
 }` ,`}> Get Started </a> </motion && motion.div>) ) ;
 }</div> </motion && motion.div> </div> </section> <motion&& motion.div initial= {
 
+<<<<<<< HEAD
+  opacity: 1, y: 0
+  opacity: 1, y: 0 
+
+}transition= {
+  {
+  duration: 0.6, delay: index * 0.1
+}className= {
+  `bg-gradient-to-br from-gray-900/50 to-gray-800/30 border rounded-2xl p-8 $ {
+  plan.name === 'Professional' ? 'border-purple-500/40 scale-105' : 'border-gray-600/30'
+}`
+}> Most Popular </span> </div>)
+}</li>) )
+}</ul> <a plan.name === 'Professional' ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700' : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black'
+}`
+}> Get Started </a> </motion.div>) )
+}</div> </motion.div> </div> </section> <motion.div initial= {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
   }
   "opacity": 0, "y": 20
@@ -170,6 +190,16 @@ const "AIConsciousnessEvolutionPlatform": React.FC = () => {
 
 }> <h2 className="text-3xl "md":text-4xl font-bold text-white mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-300 mb-8" > Join the forefront of AI development and help shape the future of artificial intelligence. </p> <div className="flex flex-col "sm":flex-row gap-4 justify-center" > <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg "hover":from-purple-600 "hover":to-blue-700 transition-all duration-300 transform "hover":scale-105" > Start Your Journey </a> <a href="/innovation-lab" className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg "hover":bg-purple-400 "hover":text-black transition-all duration-300" > Learn More </a> </div> </motion && motion.div> </div> </div> </section> <motion&& motion.div initial= {"
 
+<<<<<<< HEAD
+  opacity: 1, y: 0
+  opacity: 1, y: 0 
+
+}transition= {
+  {
+  duration: 0.8
+}> <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-300 mb-8" > Join the forefront of AI development and help shape the future of artificial intelligence. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Start Your Journey </a> <a href="/innovation-lab" className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300" > Learn More </a> </div> </motion.div> </div> </div> </section> <motion.div initial= {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
   }
   "opacity": 0, "y": 20
@@ -183,6 +213,8 @@ const "AIConsciousnessEvolutionPlatform": React.FC = () => {
   "once": true
 }transition= {
   {
+<<<<<<< HEAD
+=======
 
   }
 

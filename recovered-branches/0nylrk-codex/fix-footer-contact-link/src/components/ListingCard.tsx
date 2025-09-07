@@ -10,6 +10,7 @@ import {Badge} from "@/components/ui/badge";"
 import {Link} from "react-router-dom";
 interface ListingCardProps {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id?: string;
   title: string,;
   description: string,;
@@ -24,6 +25,7 @@ interface ListingCardProps {;
   author, ;
   authorImage, ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Link;
       to={`/profile/${profileId}`}
@@ -73,12 +75,37 @@ interface ListingCardProps {;
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}>;
       {image && (;"
         <div className="h-48 w-full overflow-hidden">;
           <img;
             src={image} 
             alt={title} 
+<<<<<<< HEAD
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+  className,;
+  profileType = 'service';
+} ListingCardProps) {;
+  // Generate a profile ID based on the listing data;
+  // In a real app, this would be a proper ID from the database;
+  const profileId = id || (profileType === 'service' ? 'service-provider-1' :'talent-1'),;
+;
+  return (;
+    <Link ;
+      to={`/profile/${profileId}`}
+      className={cn(;
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer",;
+        className;
+      )}
+    >;
+      {image && (;
+        <div className="h-48 w-full overflow-hidden">;
+          <img ;
+            src={image} ;
+            alt={title} ;
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105";
+=======
 
 `
       to={`/profile/${profileId}`}

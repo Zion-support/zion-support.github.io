@@ -137,6 +137,17 @@ drives business transformation and shapes the future.
                     Start Your Transformation
                   </motion.button>
                 </Link>
+<<<<<<< HEAD
+                <Link href='/services'>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'                  >                <Link href="/services">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+=======
 
 <Link href='/services'>'
                   <motion.button,
@@ -266,6 +277,9 @@ className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 r
                   Always Available
                 </div>
               </motion.div>
+<<<<<<< HEAD
+              <motion.div
+=======
 
                 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 "hover":border-cyan-500/40 transition-all duration-300'>;'
                 <div className='text-5xl font-bold text-cyan-400 mb-3'>50+</div>;'
@@ -332,6 +346,9 @@ className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 r
                   Always Available
                 </div>
               </motion.div>
+<<<<<<< HEAD
+              <motion.div
+=======
 
                 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 "hover":border-purple-500/40 transition-all duration-300'>;'
                 <div className='text-5xl font-bold text-purple-400 mb-3'>;'
@@ -767,6 +784,8 @@ className='text-center mt-12''
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
 
               className='text-center mt-12'>;'
               <Link href='/ai-services'>;'
@@ -788,6 +807,8 @@ className='text-center mt-12''
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/20">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
+=======
 
         {/* Featured Enterprise IT Services */}
 
@@ -872,6 +893,22 @@ service={{
                       "category": service.category,
                       "icon": service.icon
                     }}
+<<<<<<< HEAD
+
+
+                    service={{
+                      id: service && service.id,
+                      name: service && service.name,
+                      tagline: service && service.tagline,
+                      description: service && service.description,
+                      price: service && service.price,
+                      period: service && service.period,
+                      features: service && service.features.slice(0, 5),
+                      popular: service && service.popular,
+                      category: service && service.category,
+                      icon: service && service.icon,
+=======
+<<<<<<< HEAD
                     variant='ai'                  />;
                 </motion.div>))}
             </div>                      popular: service.popular,
@@ -926,6 +963,8 @@ className='text-center mt-12''
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
 
               className='text-center mt-12'>;'
               <Link href='/it-services'>;'
@@ -947,6 +986,8 @@ className='text-center mt-12''
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
+=======
 
         {/* Featured Micro SAAS Services */}
 
@@ -1031,6 +1072,22 @@ service={{
                       "category": service.category,
                       "icon": service.icon
                     }}
+<<<<<<< HEAD
+
+
+                    service={{
+                      id: service && service.id,
+                      name: service && service.name,
+                      tagline: service && service.tagline,
+                      description: service && service.description,
+                      price: service && service.price,
+                      period: service && service.period,
+                      features: service && service.features.slice(0, 5),
+                      popular: service && service.popular,
+                      category: service && service.category,
+                      icon: service && service.icon,
+=======
+<<<<<<< HEAD
                     variant='enterprise'                  />;
                 </motion.div>))}
             </div>                      popular: service.popular,
@@ -1094,6 +1151,8 @@ className='text-center mt-12''
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
 
               className='text-center mt-12'>;'
               <Link href='/micro-saas'>;'
@@ -1115,6 +1174,8 @@ className='text-center mt-12''
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/30">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
+=======
 
         {/* Enhanced Why Choose Us Section */}
 
@@ -1182,6 +1243,9 @@ evolve, and transform your business operations
                 </p>
 
               </motion.div>
+<<<<<<< HEAD
+              <motion.div
+=======
 
                 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 "hover":border-cyan-500/40 transition-all duration-300 group'>;'
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-"hover":scale-110 transition-transform duration-300'>;'
@@ -1223,6 +1287,9 @@ prepare you for the future
                 </p>
 
               </motion.div>
+<<<<<<< HEAD
+              <motion.div
+=======
 
                 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 "hover":border-blue-500/40 transition-all duration-300 group'>;'
                 <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-"hover":scale-110 transition-transform duration-300'>;'
@@ -1265,6 +1332,9 @@ your most valuable assets
                 </p>
 
               </motion.div>
+<<<<<<< HEAD
+              <motion.div
+=======
 
                 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 "hover":border-purple-500/40 transition-all duration-300 group'>;'
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-"hover":scale-110 transition-transform duration-300'>;'
@@ -1346,6 +1416,8 @@ className='relative''
                       Start Your Journey Today
                     </motion.button>
                   </Link>
+<<<<<<< HEAD
+=======
 
 <Link href='/demo'>'
                     <motion.button,
@@ -1357,6 +1429,8 @@ whileHover={{ "scale": 1.05 }}
                     </motion.button>
                   </Link>
                 </div>
+<<<<<<< HEAD
+=======
 
 <div className='mt-8 text-gray-400'>'
                   <p className='text-sm'>'
@@ -1388,6 +1462,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </main>
     </Layout>
+<<<<<<< HEAD
+};
+export default Homepage2037;  );
+  )
+};
+export default Homepage2037;
+=======
 
 };
 export default Homepage2037;

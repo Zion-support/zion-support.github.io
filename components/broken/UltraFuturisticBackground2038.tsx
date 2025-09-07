@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react';
+=======
 
 
 import React, { useEffect, useRef } from 'react';'
@@ -35,6 +38,14 @@ const resizeCanvas = () => {
   }
   const rect = containerRef.current?.getBoundingClientRect();
       if (rect) {
+<<<<<<< HEAD
+        canvas.width = rect.width * (window.devicePixelRatio || 1);
+        canvas.height = rect.height * (window.devicePixelRatio || 1);
+        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
+      }
+    }
+    resizeCanvas();
+=======
 
         }
 
@@ -717,7 +728,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           );`
           gradient.addColorStop(0, `rgba(139, 92, 246, ${particle.opacity * 0.8})`);'
           gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
+<<<<<<< HEAD
+=======
           
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ctx.fillStyle = gradient;
           ctx.fillRect(
             particle.x - fieldSize / 2, 
@@ -744,6 +758,8 @@ fieldSize
           );
 origin/cursor/automate-test-improve-and-merge-code-2533
         }
+<<<<<<< HEAD
+=======
 
         // Standard particle rendering,
 if (particle.type === 'particle') {'
@@ -1025,6 +1041,16 @@ if ( {) {}
                 className='absolute w - px h - 32 bg - gradient - to - b from - transparent via - purple - 500 to - transparent opacity - 20';'
 
                 style={{
+<<<<<<< HEAD
+                  left: `${(i * 5) % 100}%`
+                  left: `${(i * 5) % 100}%`,
+                  top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
+                animate={{
+                  height: [32, 64, 32];
+                  opacity: [0.2, 0.6, 0.2]}}
+                transition={{
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   }
 
@@ -1058,6 +1084,7 @@ if ( {) {}
           </div>
         )}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Holographic grid */}
 
         {theme === 'holographic' && ('
@@ -1256,13 +1283,18 @@ top: `${(i * 8) % 10}
   );
 
 
+<<<<<<< HEAD
+      </div>;
+      {children}
+    </div>;
+  );
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 // Enhanced animation loop with consciousness and quantum effects ;
-
 }// Update and draw particles // Quantum entanglement effects if (particle && particle.type === 'quantum-field') {;
   particles && particles.forEach ( (otherParticle, otherIndex) => {;
   if (index !== otherIndex && Math && Math.random () > 0 && 0.99) {;
-
 }) ;
 }// Consciousness wave effects ctx && ctx.strokeRect (particle && particle.x - hologramSize / 2;
 particle && particle.y - hologramSize / 2;
@@ -1298,6 +1330,12 @@ hologramSize
               />))}
           </div>)}
       </div>;
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
       {children}
     </div>)}
 // Enhanced animation loop with consciousness and quantum effects;

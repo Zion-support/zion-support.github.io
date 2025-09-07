@@ -1,5 +1,20 @@
 import type { GetServerSideProps } from 'next';'
 
+<<<<<<< HEAD
+export default function VendorProfilePage({ vendor }: Props) {
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
+export default function VendorProfilePage(): any ({ vendor }: Props) {;
+  const [message, setMessage] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+
+import { FormEvent, useState } from 'react';
+import type { Vendor } from '../../utils/vendor-types';
+
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+type Props = { vendor: Vendor | null };
+
+=======
 
 import { FormEvent, useState } from 'react';'
 import type { Vendor } from '../../utils/vendor-types';'

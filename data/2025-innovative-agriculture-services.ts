@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
   "customers": number;
   "rating": number;
@@ -864,6 +866,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ],
   }
 ];
+<<<<<<< HEAD
+=======
 
 
     popular: true;,;

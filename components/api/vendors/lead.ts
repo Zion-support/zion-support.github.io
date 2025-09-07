@@ -24,6 +24,14 @@ const vendor = null;
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
   try {
     const item = addPipelineItem(vendorId, title);
+<<<<<<< HEAD
+    res && res.status(201).json({ item });
+    res.status(201).json({ item })
+  } catch (e: any) {
+    res && res.status(500).json({ error: e && e.message })
+  }  } catch (e: any) {
+}
+=======
 
 res.status(201).json({ item });
   } catch ("e": any) {

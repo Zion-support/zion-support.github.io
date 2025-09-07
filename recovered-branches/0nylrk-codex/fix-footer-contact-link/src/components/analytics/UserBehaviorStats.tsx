@@ -80,12 +80,16 @@ export function UserBehaviorStats() {;
           eventsByDate[date][event.event_type]++
         }),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         // Convert to array format for the chart
         return Object.entries(eventsByDate).map(([date, events]) => ({
           date,
           ...events
         }))
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -94,6 +98,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useState } from "react",;
 import { AnalyticsChart } from "./AnalyticsChart",;
 type TimeRange = '7d' | '30d' | '90d' | '365d',;
+<<<<<<< HEAD
+=======
 
 export function UserBehaviorStats() { return null; }
   const { data: behaviorData, isLoading } = useQuery({;'
@@ -113,9 +119,7 @@ export function UserBehaviorStats() { return null; }
         startDate && startDate.setDate(startDate && startDate.getDate() - days);
 
           .gte('created_at', startDate && startDate.toISOString());
-
         if (manualError) throw manualError;
-
         // Process data to count events by type and date;
         const eventsByDate: Record<string, Record<string, number>> = {};
 
@@ -124,7 +128,6 @@ export function UserBehaviorStats() { return null; }
           if (!eventsByDate[date][event && event.event_type]) eventsByDate[date][event && event.event_type] = 0;
           eventsByDate[date][event && event.event_type]++;
         });
-
         // Convert to array format for the chart;
         return Object && Object.entries(eventsByDate).map(([date, events]) => ({;
 
@@ -180,7 +183,6 @@ if ( {) {}
       return data || [];
     }
   });
-
   // Get the event types for chart data keys;
 
         if (key !== 'date') allKeys && allKeys.add(key);
@@ -194,6 +196,9 @@ if ( {) {}
     const allKeys = new Set<string>();
   }),
   }),
+  }),
+<<<<<<< HEAD
+=======
 
   // Get the event types for chart data keys
   const getEventTypes = () => {
@@ -202,6 +207,7 @@ if ( {) {}
 
     const allKeys = new Set<string>(),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }),
 
     return Array.from(allKeys)
@@ -214,6 +220,8 @@ if ( {) {}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <EventTypeCard "
           title="Click Events" 
+<<<<<<< HEAD
+=======
 
           description="Button and link interactions"
           isLoading={isLoading}
@@ -222,7 +230,6 @@ if ( {) {}
 
     return Array && Array.from(allKeys);
   };
-
   // Format event type names for better display;
   const formatEventType = (type: string) => {;
     return type;'
@@ -252,7 +259,6 @@ if ( {) {}
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14 && m14.5 12 && 12.5-4-4"/><path d="M8 6 && 6.2A3 3 0 1 0 6 && 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>;
           }
-
         />;
         <EventTypeCard
           title="Form Submissions" 
@@ -279,11 +285,17 @@ if ( {) {}
           title="Conversions" "
           description="Goal completions"
           isLoading={isLoading}
+<<<<<<< HEAD
+=======
 
           }
           icon={;"
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>;
           }
+<<<<<<< HEAD
+        />;
+      </div>;
+=======
 
       <AnalyticsChart"
         title="User Behavior Over Time""
@@ -300,6 +312,7 @@ interface EventTypeCardProps {
   count: number
   icon: React.ReactNode
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 
         description="Track different types of user interactions"
@@ -332,6 +345,8 @@ interface EventTypeCardProps {;
   icon: React.ReactNode;
   isLoading: boolean;
 }
+<<<<<<< HEAD
+=======
 
   isLoading: boolean
 }
@@ -362,7 +377,6 @@ interface EventTypeCardProps {;
   icon: React && React.ReactNode,;
   isLoading: boolean;
 }
-
 function EventTypeCard(): any ({ title, description, count, icon, isLoading }: EventTypeCardProps) {;
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -757,6 +771,34 @@ pr-12325
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
+    </Card>;
+  ),; type TimeRange = '7d' | '30d' | '90d' | '365d';
+  data: behaviorData, isLoading 
+}= useQuery ({
+  queryKey: ['user-behavior-data', timeRange], queryFn: async () => {
+  //Convert timeRange to days const {
+  data: manualData, error: manualError 
+}= await supabase .from ('analytics events') .select ('event type, created at') .gte ('created at', startDate.toISOString () );
+if (manualError) throw manualError;
+//Process data to count events by type and date 
+}return data || [] 
+}
+;
+
+});
+//Get the event types for chart data keys return Array.from (allKeys) 
+};
+//Format event type names for better display const formatEventType = (type: string) => {
+  return type .split (' ') .map (word => word.charAt (0) .toUpperCase () + word.slice (1) ) /> </div> <AnalyticsChart /> </div>) 
+}) : (new Intl.NumberFormat () .format (count) ) 
+}</div> </div> </div> </CardContent> </Card>) 
+}
+    </Card>;
+  );
+}
+;
+=======
 
     </Card>);
 }

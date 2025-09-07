@@ -172,6 +172,10 @@ onClick={() => {;
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
 
           transition={{ duration: toast && toast.duration || 5000, ease: "linear" }}
+<<<<<<< HEAD
+transition={{ duration: toast && toast.duration || 5000, ease: "linear" }}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
       </div>;
     </motion && motion.div>;
@@ -228,6 +232,7 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
     </motion && motion.div>;
   );
   return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}

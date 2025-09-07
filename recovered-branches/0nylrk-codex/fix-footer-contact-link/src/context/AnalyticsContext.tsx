@@ -1,5 +1,6 @@
 type: AnalyticsEventType,;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   path?: string;
   component?: string;
   elementId?: string;
@@ -118,6 +119,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {}
     setEvents((prevEvents) => [...prevEvents, event]),
     setLastEvent(event),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
 
       // Store event in Supabase for persistent analytics
@@ -126,6 +128,45 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {}
         path: location.pathname
         user_id: user?.id
         metadata: metadata
+<<<<<<< HEAD
+      }]);
+      console.log(`Analytics event tracked: ${type}`, metadata)
+    } catch (error) {
+      console.error('Error logging analytics event:', error)
+    }
+  }
+  // Function to track conversion events
+  const trackConversion = (conversionType: string, value?: number, metadata: Record<string, any> = {}) => {
+    trackEvent('conversion', {
+      conversionType
+      value
+      ...metadata
+    })
+  }
+  // Clear events (for development or testing)
+  const clearEvents = () => {
+    setEvents([]);
+    setLastEvent(null)
+  }
+  return (
+    <AnalyticsContext.Provider
+      value={{
+        trackEvent;
+        trackConversion;
+        pageViews;
+        lastEvent;
+        events;
+        clearEvents
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
+  undefined;
+);
+export function AnalyticsProvider(): any ({ children }: { children: ReactNode }) {;
+  const [pageViews, setPageViews] = useState(0);
+  const [events, setEvents] = useState<AnalyticsEvent[]>([]);
+  const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null);
+  const location = useLocation();
+  const { user } = useAuth();
+=======
 
     }
   }
@@ -336,7 +377,10 @@ export function AnalyticsProvider() { return null; }
     setPageViews((prev) => prev + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, [location && location.pathname]);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Function to track general analytics events;
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string, any> = {}) => {;
     const event: AnalyticsEvent = {;
@@ -346,10 +390,15 @@ export function AnalyticsProvider() { return null; }
       userId: user?.id,;
       metadata;
     };
+<<<<<<< HEAD
+    setEvents((prevEvents) => [...prevEvents, event]);
+    setLastEvent(event);
+=======
 
     setEvents((prevEvents) => [...prevEvents, event]);
     setLastEvent(event);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {;
 
       await supabase && supabase.from('analytics_events').insert([{;
@@ -358,20 +407,35 @@ export function AnalyticsProvider() { return null; }
         user_id: user?.id,;
         metadata: metadata;
       }]);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       console && console.log(`Analytics event tracked: ${type}`, metadata);
 
       console && console.error('Error logging analytics event:', error);
     }
+<<<<<<< HEAD
   };
-
   // Function to track conversion events;
   const trackConversion = (conversionType: string, value?: number, metadata: Record<string, any> = {}) => {;
 
   // Clear events (for development or testing);
   const clearEvents = () => {;
-    setEvents([]);
+    setEvents([]),;
     setLastEvent(null);
+  },;
+  return (;
+    <AnalyticsContext.Provider;
+      value={{;
+        trackEvent,;
+        trackConversion,;
+        pageViews,;
+        lastEvent,;
+        events,;
+        clearEvents;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
 
       }}
@@ -405,6 +469,18 @@ export const useAnalytics = (): AnalyticsContextType => {;
 
 export const useAnalytics = (): AnalyticsContextType => {;
 
+<<<<<<< HEAD
+      }}
+    >
+      {children}
+    </AnalyticsContext.Provider>
+  )
+}
+export const useAnalytics = (): AnalyticsContextType => {
+
+export const useAnalytics = (): AnalyticsContextType => {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const context = useContext(AnalyticsContext);
   if (!context) {'
     throw new Error('useAnalytics must be used within an AnalyticsProvider')

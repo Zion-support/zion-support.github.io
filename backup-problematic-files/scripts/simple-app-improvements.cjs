@@ -274,12 +274,10 @@ export default function SystemHealthMonitor() {;
     console.log(`Total "errors": ${this.errors.length}`);
     console.log(`"Duration": ${duration} seconds`);
     if (this.improvements.length > 0) {;
-      
       this.improvements.forEach(improvement => {;
         })}
 ;
     if (this.errors.length > 0) {;
-      
       this.errors.forEach(error => {;
         })}
 ;

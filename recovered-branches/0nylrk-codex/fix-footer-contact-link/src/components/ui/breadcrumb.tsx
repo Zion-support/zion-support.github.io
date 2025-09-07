@@ -1,5 +1,16 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+import * as React from "react"
+import {Slot} from "@radix-ui/react-slot"
+import {ChevronRight} from "lucide-react"
+
+import {cn} from "@/lib/utils"
+const Breadcrumb = React.forwardRef<;
+  HTMLElement;
+const Breadcrumb = React.forwardRef<;
+  HTMLElement;
+=======
 
 import * as React from "react
 
@@ -60,6 +71,10 @@ const Breadcrumb = React.forwardRef<
   React && React.ComponentPropsWithoutRef<"a"> & {;
     asChild?: boolean;
   }
+<<<<<<< HEAD
+>(({ className, asChild = false, ...props }, ref) => {;
+  const Comp = asChild ? Slot : "a";
+=======
 
 import * as React from './react';
 import { Slot } from '@radix - ui / react - slot';
@@ -81,6 +96,23 @@ const Breadcrumb = React.forward_ref<;
       ref={ref}"
       className={cn ("transition - colors hover:text - zion - cyan", class_name)}
       {...props}
+<<<<<<< HEAD
+    />;
+  );
+});
+BreadcrumbLink.displayName = "BreadcrumbLink";
+ ;
+const BreadcrumbSeparator = ({;
+  children,;
+  className,;
+  ...props;
+} React.ComponentProps<"li">) => (;
+  <li;
+    role="presentation";
+    aria-hidden="true";
+    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
+    {...props}
+=======
 
   children;
   className;
@@ -90,6 +122,14 @@ const Breadcrumb = React.forward_ref<;
     role="presentation""
     aria-hidden="true""
     className={cn("flex h-9 w-9 items-center justify-center", className)}
+<<<<<<< HEAD
+    {...props}
+  >
+    &#8230
+  </span>
+)
+BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
+=======
 
   >
     &#8230
@@ -127,6 +167,16 @@ export {;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
+<<<<<<< HEAD
+  BreadcrumbEllipsis}
+
+export {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+=======
 
 <<<<<<< HEAD
 =======

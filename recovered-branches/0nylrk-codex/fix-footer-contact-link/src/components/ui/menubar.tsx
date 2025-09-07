@@ -22,8 +22,10 @@ const Menubar = React.forwardRef<
   <MenubarPrimitive.Root;
     ref={ref}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Trigger>;
 >(({ className, ...props }, ref) => (;
   <MenubarPrimitive.Trigger;
@@ -61,6 +63,8 @@ className={cn(
       &quot;flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;,
     className={cn("
       "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+<<<<<<< HEAD
+=======
 
       className
 
@@ -70,7 +74,10 @@ className={cn(
 ));
 MenubarTrigger.displayName = MenubarPrimitive.Trigger.displayName;
 const MenubarSubTrigger = React.forwardRef<;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from &quot;react & quot;
 
 import * as MenubarPrimitive from &quot;@radix - ui / react - menubar & quot;
@@ -261,8 +268,10 @@ const MenubarSubContent = React.forwardRef<
   <MenubarPrimitive.SubContent;
     ref={ref}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ref
 
   ) => (
@@ -277,6 +286,8 @@ const MenubarSubContent = React.forwardRef<
           &quot;z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;,
         className={cn("
           "z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+<<<<<<< HEAD
+=======
 
           &quot;z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
         className={cn("
@@ -499,6 +510,8 @@ className={cn(
       &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
     className={cn("
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+<<<<<<< HEAD
+=======
 
       className
     )}
@@ -655,7 +668,6 @@ className={cn (
       </MenubarPrimitive.ItemIndicator>;
     </span>;
     {children}
-
   </MenubarPrimitive.RadioItem>));
 MenubarRadioItem.display_name = MenubarPrimitive.RadioItem.display_name;
 const MenubarLabel = React.forward_ref<;
@@ -766,6 +778,7 @@ const MenubarSeparator = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   React.ElementRef<typeof MenubarPrimitive.Separator>,;
 
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
@@ -787,6 +800,35 @@ const MenubarSeparator = React.forward_ref<;
     ref={ref}
     className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
+  React.ElementRef<typeof MenubarPrimitive.Separator>;
+  React.ElementRef<typeof MenubarPrimitive.Separator>,;
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
+>(({ className, ...props }, ref) => (;
+  <MenubarPrimitive.Separator;
+    ref={ref}
+    className={cn("-mx-1 my-1 h-px bg-muted", className)}
+    {...props}
+/>
+))
+MenubarSeparator.displayName = MenubarPrimitive.Separator.displayName
+const MenubarShortcut = ({
+  className
+  ...props
+}: React.HTMLAttributes<HTMLSpanElement>) => {
+  return (
+    <span
+      className={cn(
+        &quot;ml-auto text-xs tracking-widest text-muted-foreground&quot;
+        "ml-auto text-xs tracking-widest text-muted-foreground",
+        className
+      )}
+      {...props}
+    />;
+  );
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         "ml-auto text-xs tracking-widest text-muted-foreground",
 
@@ -807,6 +849,31 @@ const MenubarShortcut = ({
     />);
 }
 
+<<<<<<< HEAD
+MenubarShortcut.displayname = "MenubarShortcut"
+
+
+MenubarShortcut.displayname = &quot;MenubarShortcut&quot;
+export {
+  Menubar
+  MenubarMenu
+  MenubarTrigger
+  MenubarContent
+  MenubarItem
+  MenubarSeparator
+  MenubarLabel
+  MenubarCheckboxItem
+  MenubarRadioGroup
+  MenubarRadioItem
+  MenubarPortal
+  MenubarSubContent
+  MenubarSubTrigger
+  MenubarGroup
+  MenubarSub
+  MenubarShortcut}
+MenubarShortcut.displayname = "MenubarShortcut"
+
+=======
 MenubarShortcut.displayname = &quot;MenubarShortcut & quot;
 ;
 className={cn(;

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 :corrupted_backup/transformation.tsx;

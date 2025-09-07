@@ -17,6 +17,7 @@ import { Check, ChevronDown, ChevronUp } from "lucide-react"
 import { cn } from "@/lib/utils"
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const Select = SelectPrimitive.Root
 const SelectGroup = SelectPrimitive.Group
 const SelectValue = SelectPrimitive.Value
@@ -28,8 +29,10 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger;
     ref={ref}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <SelectPrimitive.Icon asChild>
       <ChevronDown className="h-4 w-4 opacity-50" />
 
@@ -79,6 +82,7 @@ const SelectScrollDownButton = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollDownButton>
 >(({ className, ...props }, ref) => (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
 
     )}
@@ -328,6 +332,8 @@ const SelectItem = React.forwardRef<;
       "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
     className={cn(
       "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+<<<<<<< HEAD
+=======
 
   <SelectPrimitive.Item;
     ref={ref}
@@ -463,7 +469,6 @@ const SelectSeparator = React.forward_ref<;
     ref={ref}
     className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
     {...props}
-
   />));
 SelectSeparator.display_name = SelectPrimitive.Separator.display_name;
 export {
@@ -483,6 +488,7 @@ export {
   SelectScrollUpButton;
   SelectScrollDownButton}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export {;
   Select,;
   SelectGroup,;
@@ -495,6 +501,56 @@ export {;
   SelectScrollUpButton;
   SelectScrollDownButton}
 ;
+<<<<<<< HEAD
+  SelectSeparator,;
+  SelectScrollUpButton,;
+  SelectScrollDownButton} const Select = SelectPrimitive.Root const SelectGroup = SelectPrimitive.Group const SelectValue = SelectPrimitive.Value const SelectTrigger = React.forwardRef< React.ElementRef<typeof SelectPrimitive.Trigger>;
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger> > ( ({
+  className, children, ...props 
+}, ref) => (<SelectPrimitive.Trigger) 
+}{
+  ...props 
+}> {
+  children 
+}<SelectPrimitive.Icon asChild> <ChevronDown className="h-4 w-4 opacity-50" /> </SelectPrimitive.Icon> </SelectPrimitive.Trigger>) ) SelectTrigger.displayName = SelectPrimitive.Trigger.displayName const SelectScrollUpButton = React.forwardRef< React.ElementRef<typeof SelectPrimitive.ScrollUpButton>;
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollUpButton> > ( ({
+  className, ...props 
+}, ref) => (<SelectPrimitive.ScrollUpButton) 
+}{
+  ...props 
+}> <ChevronUp className="h-4 w-4" /> </SelectPrimitive.ScrollUpButton>) ) SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName const SelectScrollDownButton = React.forwardRef< React.ElementRef<typeof SelectPrimitive.ScrollDownButton>;
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollDownButton> > ( ({
+  className, ...props 
+}, ref) => (<SelectPrimitive.ScrollDownButton) 
+}{
+  ...props 
+}> <ChevronDown className="h-4 w-4" /> </SelectPrimitive.ScrollDownButton>) ) SelectScrollDownButton.displayName = SelectPrimitive.ScrollDownButton.displayName const SelectContent = React.forwardRef< React.ElementRef<typeof SelectPrimitive.Content>;
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>) 
+}position= {
+  position 
+}{
+  ...props 
+}> <SelectScrollUpButton /> <SelectPrimitive.Viewport) 
+}> {
+  children 
+}</SelectPrimitive.Viewport> <SelectScrollDownButton /> </SelectPrimitive.Content> </SelectPrimitive.Portal>) ) SelectContent.displayName = SelectPrimitive.Content.displayName const SelectLabel = React.forwardRef< React.ElementRef<typeof SelectPrimitive.Label>;
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label> > ( ({
+  className, ...props 
+}, ref) => (<SelectPrimitive.Label />) ) SelectLabel.displayName = SelectPrimitive.Label.displayName const SelectItem = React.forwardRef< React.ElementRef<typeof SelectPrimitive.Item>;
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item> > ( ({
+  className, children, ...props 
+}, ref) => (<SelectPrimitive.Item) 
+}{
+  ...props 
+}> <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center" > <SelectPrimitive.ItemIndicator> <Check className="h-4 w-4" /> </SelectPrimitive.ItemIndicator> </span> <SelectPrimitive.ItemText> {
+  children 
+}</SelectPrimitive.ItemText> </SelectPrimitive.Item>) ) SelectItem.displayName = SelectPrimitive.Item.displayName const SelectSeparator = React.forwardRef< React.ElementRef<typeof SelectPrimitive.Separator>;
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator> > ( ({
+  className, ...props 
+}, ref) => (<SelectPrimitive.Separator />) ) SelectSeparator.displayName = SelectPrimitive.Separator.displayName export {
+  Select, SelectGroup, SelectValue, SelectTrigger, SelectContent, SelectLabel, SelectItem, SelectSeparator, SelectScrollUpButton, SelectScrollDownButton 
+}
+=======
 
   SelectScrollUpButton,;
 >>>>>>> origin/chore/fix-lint-and-merge

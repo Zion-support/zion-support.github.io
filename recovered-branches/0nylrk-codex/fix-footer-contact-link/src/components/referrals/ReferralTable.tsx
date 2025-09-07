@@ -20,6 +20,14 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
   // Helper function to render status badges
 
   const renderStatusBadge = (status: ReferralStatus) => {
+<<<<<<< HEAD
+    switch (status) {;
+      case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>;
+    switch (status) {
+      case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>,
+      case "completed":
+        return <Badge variant="outline" className="bg-green-50 text-green-800 border-green-200">Completed</Badge>,
+=======
 
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Referral, ReferralStatus} from "@/types/referrals";
@@ -45,6 +53,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {};
       case "completed":
         return <Badge variant="outline" className="bg-green-50 text-green-800 border-green-200">Completed</Badge>,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "expired":
 
         return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>
@@ -80,6 +89,35 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {};
         </p>
       </div>
     )
+<<<<<<< HEAD
+              {referral.referred_user_type 
+                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
+
+  }
+  return (
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>Date</TableHead>
+          <TableHead>Email</TableHead>
+          <TableHead>Status</TableHead>
+          <TableHead>User Type</TableHead>
+          <TableHead>Completed On</TableHead>
+          <TableHead>Reward</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {referrals.map((referral) => (
+          <TableRow key={referral.id}>
+            <TableCell>{formatDate(referral.created_at)}</TableCell>
+            <TableCell>{referral.email |'-'}</TableCell>
+            <TableCell>{renderStatusBadge(referral.status)}</TableCell>
+            <TableCell>
+              {referral.referred_user_type
+                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1)
+              {referral.referred_user_type 
+                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
+=======
 
   }
   return (
@@ -131,7 +169,10 @@ export function ReferralTable() { return null; }
   };
   if (isLoading) {;
     return (;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="flex items-center justify-center p-8">;
 
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />;
@@ -153,6 +194,27 @@ export function ReferralTable() { return null; }
       </div>;
     );
   }
+<<<<<<< HEAD
+;
+  return (;
+
+  return (
+;
+  if (referrals.length === 0) {;
+    return (;
+      <div className="flex flex-col items-center justify-center p-8 text-center">;
+        <p className="text-muted-foreground mb-2">No referrals yet</p>;
+        <p className="text-sm text-muted-foreground">;
+          Share your referral link with friends and colleagues to start earning rewards;
+        </p>;
+      </div>;
+    ),;
+  }
+;
+  return (;
+;
+  return (;
+=======
 
 ;
   return (;
@@ -198,6 +260,7 @@ export function ReferralTable() { return null; }
 
               {referral.referred_user_type;
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               {referral && referral.referred_user_type ;
 

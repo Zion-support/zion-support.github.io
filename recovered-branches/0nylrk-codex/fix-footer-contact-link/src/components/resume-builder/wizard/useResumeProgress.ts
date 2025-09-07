@@ -4,12 +4,26 @@ export const useResumeProgress = (resume: Resume | null) => {
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;
 
   const [progress, setProgress] = useState(0);
 
+<<<<<<< HEAD
+
+import { useState, useEffect } from "react";
+import { Resume } from "@/types/resume";
+export const useResumeProgress = (resume: Resume | null) => {
+import { useState, useEffect } from "react";
+import { Resume } from "@/types/resume";
+export const useResumeProgress = (resume: Resume | null) => {
+import {useState, useEffect} from 'react';
+import {Resume} from '@/types/resume';
+export const useResumeProgress = (resume: Resume | null) => {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {}
@@ -63,43 +77,36 @@ export const useResumeProgress = (resume: Resume | null) => {;
   return progress;
 
     }
-
     // Education (1 point if at least one entry);
 
     // Check condition
 if ( {) {
   $2
 }
-
       completed += 1;
 
     if (resume && resume.education && resume && resume.education.length > 0) {
       completed += 1
     }
-
     // Skills (1 point if at least one entry);
     // Check condition
 if ( {) {
   $2
 }
-
       completed += 1;
     if (resume && resume.skills && resume && resume.skills.length > 0) {
       completed += 1
 
     }
-
     // Certifications (1 point if at least one entry);
     // Check condition
 if ( {) {
   $2
 }
-
       completed += 1;
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1
     }
-
     const progress_percentage = (completed / 5) * 100;
     set_progress (progress_percentage);
   }, [resume]);

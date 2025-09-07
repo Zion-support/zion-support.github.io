@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+const UltraFuturisticBackground: React.FC = () => {
+const UltraFuturisticBackground: React.FC = () => {;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {;
+    const canvas = canvasRef && canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas && canvas.getContext('2d');
+    if (!ctx) return;
+    canvas && canvas.width = window && window.innerWidth;
+    canvas && canvas.height = window && window.innerHeight,;
+    // Quantum particle system;
+    const particles: Array<{;
+=======
 
 
 import React, { useEffect, useRef } from 'react';'
@@ -14,6 +28,7 @@ particles.forEach((particle, index) => {
         }
         particle.x += particle.vx;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       x: number;
       y: number;
   const canvas_ref  = useRef < HTMLCanvasElement>(null)useEffect (() => {const canvas = canvas_ref.current;
@@ -102,6 +117,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ctx.lineTo(particle2.x, particle2.y);
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;`            ctx.lineWidth = 1;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }
         });
       requestAnimationFrame(animate)
@@ -421,6 +437,86 @@ className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/30';
           />;
         ))}
       {/* Quantum Wave Effects */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+              ease: 'easeInOut',
+
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+            className='absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent';
+            style={{
+
+
+              top: `${20 + i * 15}%`,
+
+
+            }}
+            animate={{
+
+              coordinate_x: ['-100%', '100%'],
+
+              opacity: [0, 1, 0],            }}
+            transition={{
+
+<<<<<<< HEAD
+      <div className='absolute inset-0'>
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: i * 0.3,            }}
+
+            }}
+            transition={{
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+
+            }}
+
+          />
+        ))}
+      </div>
+
+      {/* Quantum Wave Effects */}
+      <div className='absolute inset-0'>
+
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+            className='absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent';
+            style={{
+              top: `${20 + i * 15}%`
+              top: `${20 + i * 15}%`,
+            }}
+            animate={{
+              coordinate_x: ['-100%', '100%'],
+              opacity: [0, 1, 0],            }}
+            transition={{
+
+              duration: 8 + i * 2,
+              repeat: Infinity,
+              ease: 'linear',
+              duration: 8 + i * 2
+              repeat: Infinity
+              ease: 'linear'
+              duration: 8 + i * 2,
+              repeat: Infinity,
+              ease: 'linear',
+              delay: i * 1.5,            }}        {[...Array(5)].map((_, i) => (
+          <motion.div
+              duration: 8 + i * 2,
+              repeat: Infinity,
+              ease: 'linear',
+              delay: i * 1.5,            }}        {[...Array (5)].map ((_, i) => (
+          <motion.div;
+            key={i}
+            className="absolute w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent"
+=======
+      {/* Quantum Wave Effects */}
+<<<<<<< HEAD
       <div className='absolute inset-0'>;
         {[...Array(5)].map((_, i) => (<motion&& motion.div;
               delay: i * 0.3,              ease: "easeInOut",delay: i * 0.3;

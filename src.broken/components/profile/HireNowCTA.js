@@ -42,6 +42,19 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '','
             budget: '','
             startDate: '',
+<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
+ursor/fix-syntax-push-and-merge-to-main-40de
+:src/components/profile/HireNowCTA.jsx
+            message: ''}
+    );
+        setIsFormOpen(false)};
+            message: ''
+        });
+        setIsFormOpen(false);
+    };
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
 
     );
         setIsFormOpen(false)};

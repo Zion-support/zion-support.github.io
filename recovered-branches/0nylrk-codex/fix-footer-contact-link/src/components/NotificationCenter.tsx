@@ -1,4 +1,5 @@
 // Use the shared icon wrapper;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState, useEffect } from 'react';
 // Use the shared icon wrapper
@@ -12,20 +13,45 @@ import {useNotifications} from '@/context/notifications/NotificationContext';
 import {toast} from 'sonner';
 import {NotificationFilter, NotificationHeader, NotificationList, NotificationFooter} from '@/components/notifications';
 import {FilterType} from '@/components/notifications/NotificationFilter';
+<<<<<<< HEAD
+export const NotificationCenter: React.FC = () => {;
+
+import React, { useState, useEffect } from 'react',;
+// Use the shared icon wrapper;
+import { Bell } from '@/components/icons',;
+import { Button } from '@/components/ui/button',;
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover',;
+import { useNotifications } from '@/context/notifications/NotificationContext',;
+import { toast } from 'sonner',;
+import { ;
+  NotificationFilter,;
+  NotificationHeader, ;
+  NotificationList, ;
+  NotificationFooter ;
+} from '@/components/notifications',;
+import { FilterType } from '@/components/notifications/NotificationFilter',;
+;
+export const NotificationCenter:React.FC = () => {;
+=======
 
 export const NotificationCenter: React.FC = () => {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { ;
     filteredNotifications,;
     unreadCount, ;
     markAsRead, ;
+<<<<<<< HEAD
+=======
     markAllAsRead;
     dismissNotification, ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     loading;
     filter;
     setFilter;
     fetchNotifications;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
@@ -42,6 +68,8 @@ import React, { useState, useEffect } from 'react';
     if (open) {
       const loadNotifications = async () => {
         try {
+<<<<<<< HEAD
+=======
 
   const [open, setOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -53,6 +81,14 @@ import React, { useState, useEffect } from 'react';
           setError("Couldn't load notifications"),
           toast.error("Failed to load notifications")
 
+<<<<<<< HEAD
+        }
+      }
+      loadNotifications()
+    }
+  }, [open, fetchNotifications]);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect } from 'react',;
 // Use the shared icon wrapper;
 import { Bell } from '@/components/icons',;
@@ -102,6 +138,24 @@ export const NotificationCenter: React.FC = () => {;
       loadNotifications();
     }
   }, [open, fetchNotifications]),
+<<<<<<< HEAD
+      };
+      loadNotifications();
+    }
+
+  const handleMarkAllAsRead = async () => {
+    try {
+      await markAllAsRead(),
+      toast.success("All notifications marked as read")
+    } catch (err) {
+      console.error("Failed to mark notifications as read:", err),
+      toast.error("Failed to update notifications")
+    }
+  }
+  const handleFilterChange = (newFilter: FilterType) => {
+    setFilter(newFilter as any)
+  }
+=======
 
   const handleMarkAllAsRead = async () => {
     try {
@@ -149,9 +203,13 @@ export const NotificationCenter: React.FC = () => {;
           <Bell className="h-5 w-5 text-zion-slate-light" />
 
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, [open, fetchNotifications]),;
 
+  }, [open, fetchNotifications]);
   const handleMarkAllAsRead = async () => {;
 
     try {;
@@ -162,9 +220,7 @@ export const NotificationCenter: React.FC = () => {;
       toast && toast.error("Failed to update notifications");
 
     }
-
   };
-
   const handleFilterChange = (newFilter: FilterType) => {;
     setFilter(newFilter as any);
   };
@@ -176,7 +232,6 @@ export const NotificationCenter: React.FC = () => {;
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
         />;
-
         <NotificationFilter
           filter={filter as FilterType} 
           onFilterChange={handleFilterChange} 
@@ -283,7 +338,10 @@ if ( {) {}
           onMarkAsRead={markAsRead}
 
         />;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;

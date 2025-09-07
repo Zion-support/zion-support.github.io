@@ -79,6 +79,7 @@ export interface Company {;
     primaryColor: string;
     backgroundColor: string;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   teamLimit: number;
 
   billingCycle: string;
@@ -111,6 +112,8 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
       <WorkspaceHeader company={company} />
+<<<<<<< HEAD
+=======
 
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
 
@@ -119,6 +122,8 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
           <RecentActivity />
           <TalentPool />
         </div>
+<<<<<<< HEAD
+=======
 
         <div className="space-y-6">
 
@@ -128,6 +133,15 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
           <SharedInbox />
         </div>
       </div>
+<<<<<<< HEAD
+    </div>
+  );
+}
+  )
+;
+export function CompanyDashboard({ company }: CompanyDashboardProps) {;
+  return (;
+=======
 
     </div>
 
@@ -137,7 +151,6 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 interface CompanyDashboardProps {;
   company: Company;
 }
-
 export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
   return (
 
@@ -192,6 +205,8 @@ export /**;
           <SharedInbox />;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 
     </div>;
   );

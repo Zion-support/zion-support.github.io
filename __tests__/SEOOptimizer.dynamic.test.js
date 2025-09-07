@@ -2,6 +2,7 @@ import React from 'react';  import '@testing-library/jest-dom'; import SEOOptimi
 ursor/automate-test-improve-and-merge-code-646c;
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'; describe('SEOOptimizerdynamic',() => { test('renders without crashing',() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOOptimizerdynamic />)}); test('handles user interactions',() => { render(<SEOOptimizerdynamic />)}); test('applies correct styling',() => { render(<SEOOptimizerdynamic />)})});'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -85,7 +86,41 @@ describe('SEOOptimizerdynamic', () => {'
     }
     render(<SEOOptimizerdynamic />);
   });
+});'
+import React from 'react'
+import { render, screen, fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'
+describe('SEOOptimizerdynamic'
+  test('renders without crashing'
+    expect(screen.getByTestId('seooptimizer.dynamic'
+  test('displays correct content'
+  test('handles user interactions'
+  test('applies correct styling'
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOOptimizerdynamic from "./components/SEOOptimizer.dynamic"; describe('SEOOptimizerdynamic', () => { test("renders without crashing",() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId("seooptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOOptimizerdynamic />)}); test("handles user interactions",() => { render(<SEOOptimizerdynamic />)}); test("applies correct styling"
+import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'; describe('SEOOptimizerdynamic',() => { test('renders without crashing',() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOOptimizerdynamic />)}); test('handles user interactions',() => { render(<SEOOptimizerdynamic />)}); test('applies correct styling',() => { render(<SEOOptimizerdynamic />)})});
+ursor/fix-syntax-push-and-merge-to-main-40de
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic';
+describe('SEOOptimizerdynamic', () => {
+  test('renders without crashing', () => {
+    render(<SEOOptimizerdynamic />);
+    expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<SEOOptimizerdynamic />);
+  });
+  test('handles user interactions', () => {
+    render(<SEOOptimizerdynamic />);
+  });
+  test('applies correct styling', () => {
+    render(<SEOOptimizerdynamic />);
+  });
 });
+<<<<<<< HEAD
+=======
 
     expect(screen.getByTestId('seooptimizer.dynamic''
   test('displays correct content''

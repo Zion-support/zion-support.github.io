@@ -851,6 +851,8 @@ href='/services';
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
 
                 className='bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2'                whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 ,}

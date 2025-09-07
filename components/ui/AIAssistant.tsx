@@ -52,6 +52,18 @@ export default function AIAssistant({
   onAccept,
   authorizationToken
 }: AIAssistantProps) {;
+<<<<<<< HEAD
+};
+export default function AIAssistant({
+  buttonLabel = 'Generate with AI',
+  title = 'AI Writing Assistant',
+  defaultPrompt,
+  systemPrompt,
+  onAccept,
+authorizationToken
+}: AIAssistantProps) {
+
+=======
 
 }
 
@@ -114,6 +126,7 @@ type="button""
         {buttonLabel}
       </button>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {isOpen && (
         className='inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800';
   return (<>;
@@ -232,6 +245,7 @@ value={output}
 
                   </pre>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 )}
               </div>;
       )}

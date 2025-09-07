@@ -54,6 +54,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
     }
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
@@ -72,7 +73,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           onClick={handleCategorizeSkills}
           disabled={isEnhancing || !bulkSkills.trim()}
           className="gap-2"
-        >
           {isEnhancing ? (
             <Loader2 className="h-4 w-4 animate-spin" />
           ) : (

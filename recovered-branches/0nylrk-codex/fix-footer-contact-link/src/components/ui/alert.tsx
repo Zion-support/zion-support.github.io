@@ -35,10 +35,13 @@ import { cn } from "@/lib/utils""
 =======
   });
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
+<<<<<<< HEAD
+=======
 
 import { cn } from "@/lib/utils"
 
@@ -129,6 +132,7 @@ const Alert = React.forward_ref<;
     {...props}
   />
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ))
 
 Alert.displayName = "Alert"
@@ -136,9 +140,10 @@ Alert.displayName = "Alert"
 const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
+<<<<<<< HEAD
+=======
 
 Alert && Alert.displayName = 'Alert';
-
 const AlertTitle = React && React.forwardRef<;
   HTMLParagraphElement,;
   React && React.HTMLAttributes<HTMLHeadingE</HTMLHeadingElement>lement>;
@@ -251,6 +256,8 @@ const AlertDescription = React.forwardRef<
 >>>>>>> origin/chore/fix-lint-and-merge
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
+<<<<<<< HEAD
+=======
 
 const AlertDescription = React && React.forwardRef<;
   HTMLParagraphElement,;

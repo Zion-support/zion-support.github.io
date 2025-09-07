@@ -91,7 +91,10 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
       setIsHireModalOpen (true);
     }
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Create a compatible UserProfile from UserDetails;
   const userProfile: UserProfile = {;
 
@@ -100,11 +103,13 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
     createdAt: new Date().toISOString(),;
     updatedAt: new Date().toISOString();
   };
-
   // Handle request to hire;
   const handleRequestHire = (e: React && React.MouseEvent) => {;
     e && e.stopPropagation(),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (onRequestHire) {;
       onRequestHire(profile);
     } else {;
@@ -112,6 +117,170 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
       setIsHireModalOpen(true);
     }
   };
+<<<<<<< HEAD
+  // Handle view profile;
+  const handleViewProfile = (e: React && React.MouseEvent) => {;
+    e && e.stopPropagation(),;
+    // Navigate to the talent profile page;
+    navigate(`/talent/${profile && profile.id || ''}`);
+    // Also call the onViewProfile callback if provided;
+    if (onViewProfile) {;
+      onViewProfile(profile && profile.id || '');
+    }
+  }
+
+  return (
+
+import React, { useState } from "react",
+import { Star } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { ExternalLink } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
+import { HireRequestModal } from "@/components/profile/hire-request",
+import { useAuthStatus } from "@/hooks/talent",
+import { UserProfile } from "@/types/auth";
+import { useNavigate } from "react-router-dom";
+interface TalentCardFooterProps {
+
+  profile: TalentProfile
+  onViewProfile: (id: string) => void
+
+  onRequestHire?: (profile: TalentProfile) => void
+}
+export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
+import { UserProfile } from "@/types/auth",
+import { useNavigate } from "react-router-dom",
+interface TalentCardFooterProps {
+  profile: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire?: (profile: TalentProfile) => void
+}
+
+export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+
+  const navigate = useNavigate();
+  // Create a compatible UserProfile from UserDetails
+  const userProfile: UserProfile = {
+    id: userDetails?.id
+    displayName: userDetails?.name |''
+    email: userDetails?.email |''
+    userType: ''
+    profileComplete: false
+    createdAt: new Date().toISOString()
+    updatedAt: new Date().toISOString()
+  }
+  // Handle request to hire
+  const handleRequestHire = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    if (onRequestHire) {
+      onRequestHire(profile)
+    } else {
+      // Open hire modal directly if no handler provided
+      setIsHireModalOpen(true)
+    }
+  }
+  // Handle view profile
+  const handleViewProfile = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    // Navigate to the talent profile page
+    navigate(`/talent/${profile.id |''}`);
+    // Also call the onViewProfile callback if provided
+    if (onViewProfile) {
+      onViewProfile(profile.id |'')
+    }
+  }
+import { UserProfile } from "@/types/auth",
+import { useNavigate } from "react-router-dom",
+interface TalentCardFooterProps {
+  profile: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire?: (profile: TalentProfile) => void
+  };
+import React, { useState } from "react",;
+import { Star } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { ExternalLink } from "lucide-react",;
+import { TalentProfile } from "@/types/talent",;
+import { HireRequestModal } from "@/components/profile/hire-request",;
+import { useAuthStatus } from "@/hooks/talent",;
+import { UserProfile } from "@/types/auth",;
+import { useNavigate } from "react-router-dom",;
+interface TalentCardFooterProps {;
+  profile: TalentProfile,;
+  onViewProfile: (id: string) => void,;
+  onRequestHire?: (profile: TalentProfile) => void;
+}
+;
+export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false),;
+  const { userDetails } = useAuthStatus(),;
+  const navigate = useNavigate(),;
+  // Create a compatible UserProfile from UserDetails;
+  const userProfile: UserProfile = {;
+    id: userDetails?.id,;
+    displayName: userDetails?.name || '',;
+    email: userDetails?.email || '',;
+    userType: '',;
+    profileComplete: false,;
+    createdAt: new Date().toISOString(),;
+    updatedAt: new Date().toISOString();
+  },;
+  // Handle request to hire;
+  const handleRequestHire = (e: React.MouseEvent) => {;
+    e.stopPropagation(),;
+    if (onRequestHire) {;
+      onRequestHire(profile);
+    } else {;
+      // Open hire modal directly if no handler provided;
+
+
+          <Button 
+            variant="default" 
+            size="sm" 
+
+
+      setIsHireModalOpen(true);
+    }
+  },;
+  // Handle view profile;
+  const handleViewProfile = (e: React.MouseEvent) => {;
+    e.stopPropagation(),;
+    // Navigate to the talent profile page;
+    navigate(`/talent/${profile.id || ''}`);
+    // Also call the onViewProfile callback if provided;
+    if (onViewProfile) {;
+      onViewProfile(profile.id || '');
+    }
+  },
+
+  return (
+    <>
+      <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">
+        {/* Experience or Hourly Rate */}
+        <div>
+          {profile.hourly_rate ? (
+            <div>
+              <span className="text-zion-slate-light text-xs">Hourly Rate</span>
+              <div className="text-white font-bold">${profile.hourly_rate}/hr</div>
+            </div>
+          ) : (
+            <div className="flex items-center gap-1">
+              <Star className="h-4 w-4 text-zion-purple" />
+              <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>
+            </div>
+          )}
+        </div>
+        {/* Action Buttons */}
+        <div className="flex gap-2">
+          <Button
+            variant="default"
+            size="sm"
+          <Button 
+            variant="default" 
+            size="sm" 
+=======
 
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">;
         {/* Experience or Hourly Rate */}
@@ -191,6 +360,15 @@ import { useNavigate } from "react-router-dom",;
           <Button 
             variant="outline" 
 
+<<<<<<< HEAD
+          <Button
+            variant="outline"
+            size="sm"
+          <Button 
+            variant="outline" 
+            size="sm" 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onClick={handleViewProfile}
 
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -200,6 +378,7 @@ import { useNavigate } from "react-router-dom",;
           </Button>
         </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
 
         {/* Action Buttons */}"
@@ -226,6 +405,7 @@ import { useNavigate } from "react-router-dom",;
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
     </>;
   );

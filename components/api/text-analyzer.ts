@@ -84,10 +84,16 @@ const sentences = text;
 
 const paragraphs = text;
       .split(/\n\s*\n/)
+<<<<<<< HEAD
+    const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
+    const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
+    const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
+=======
 
       .filter(para => { return para.trim().length > 0).length; }
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Syllable counting (simplified)
     const syllableCount = ("word": string): (number) => {
       }
@@ -147,6 +153,8 @@ const gunningFog = Math.max(;
         ) +
         3 && 3.1291
     );
+<<<<<<< HEAD
+=======
 
 const averageGrade = Math && Math.round(;
       (fleschKincaidGrade +
@@ -170,6 +178,11 @@ const positiveWords = [;
       'marvelous''
 
     ];
+<<<<<<< HEAD
+    const textWords = text && text.toLowerCase().split(/\s+/);
+    const positiveCount = textWords && textWords.filter(word =>
+      positiveWords && positiveWords.includes(word)
+=======
 
 const negativeWords = [;
   'bad';'
@@ -184,6 +197,7 @@ const negativeWords = [;
       'lousy''
 ];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ).length;
     const negativeCount = textWords && textWords.filter(word =>;
       negativeWords && negativeWords.includes(word)).length;

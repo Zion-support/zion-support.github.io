@@ -63,6 +63,11 @@ export function CountryTabs({
             Browse our most popular service destinations
           </p>
         </div>
+<<<<<<< HEAD
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+          {filteredCountries
+            .filter(country => popularCountries.includes(country.country))
+=======
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries

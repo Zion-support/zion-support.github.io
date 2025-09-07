@@ -2,6 +2,21 @@ import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
+<<<<<<< HEAD
+import { Search, Filter, Grid, List } from 'lucide-react';import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import ProductCard from '@/components/ProductCard';
+import { TalentCard  } from '@/components/talent/TalentCard';
+import { CategoryCard  } from '@/components/CategoryCard';
+import { SearchEmptyState  } from '@/components/marketplace/EmptyState';
+import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
+import { TALENT_PROFILES  } from '@/data/talentData';
+import { BLOG_POSTS  } from '@/data/blog-posts';
+import { useDebounce  } from '@/hooks/useDebounce';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+interface BaseSearchResult {
+=======
 
 import { Search, Filter, Grid, List } from 'lucide-react';
 import { SEO } from '@/components/SEO';
@@ -18,6 +33,7 @@ import { BLOG_POSTS  } from '@/data/blog-posts';
 import { useDebounce  } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   title: string;
   description?: string;
@@ -29,6 +45,8 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
   tags?: string[];
   category?: string;
   date?: string;
+<<<<<<< HEAD
+=======
 
   author?: {
     name: string;
@@ -39,14 +57,18 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
   date?: string
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ProductSearchResult extends BaseSearchResult {
   type: 'product' | 'equipment';
   price?: number;
   rating?: number;
+<<<<<<< HEAD
+=======
 
   type: 'talent';
   rating?: number;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 interface BlogSearchResult extends BaseSearchResult {'
   type: 'blog';
@@ -61,6 +83,11 @@ type SearchResult =;
   | TalentSearchResult;
   | BlogSearchResult;
   | CategorySearchResult;
+<<<<<<< HEAD
+// Type guard functions;
+const hasPrice = (result: SearchResult): result is ProductSearchResult =>;
+  result && result.type === 'product' || result && result.type === 'equipment';
+=======
 
   initialResults: SearchResult[];
   query: string;
@@ -122,7 +149,7 @@ type SearchResult = ProductSearchResult | TalentSearchResult | BlogSearchResult 
 const hasPrice = (result: SearchResult): result is ProductSearchResult => 
   result.type === 'product' || result.type === 'equipment';
 const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
-  result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
+  result.type === 'product' || result.type === 'equipment' || result.type === 'talent',
 
 interface TalentSearchResult extends BaseSearchResult {
   type: 'talent';
@@ -165,11 +192,116 @@ interface SearchResultsPageProps {
   totalCount: number;
 
 interface OfflineFilters {
+<<<<<<< HEAD
+=======
 
   sortBy?: string;
   category?: string;
   minPrice?: number;
   maxPrice?: number;
+<<<<<<< HEAD
+  minRating?: number;
+function offlineSearch(
+  query: string
+  page = 1
+  limit = 12
+  filters: OfflineFilters = {}
+): { results: SearchResult[]; totalCount: number } {  const term = query.toLowerCase().trim();
+  const match = (text?: string) => text?.toLowerCase().includes(term);
+  const productResults = MARKETPLACE_LISTINGS.filter(
+    p =>
+      match(p.title) |
+      match(p.description) |
+      match(p.category) |
+      p.tags?.some(t => match(t))
+  ).map(p => ({    id: p.id
+    title: p.title
+    description: p.description |''
+    type: 'product' as const
+    slug: p.id
+    image: p.images?.[0]
+    price: p.price ?? undefined
+    rating: p.rating
+    author: p.author
+      ? { name: p.author.name, avatar: p.author.avatarUrl }
+      : undefined
+    tags: p.tags
+    category: p.category
+    date: p.createdAt
+  }));
+  const talentResults = TALENT_PROFILES.filter(
+    t =>
+      match(t.full_name) |
+      match(t.professional_title) |
+      match(t.bio) |
+      t.skills?.some(s => match(s))
+  ).map(t => ({    id: t.id
+    title: t.full_name
+    description: t.professional_title |''
+    type: 'talent' as const
+    slug: t.id
+    image: t.profile_picture_url
+    rating: t.average_rating
+    author: { name: t.full_name, avatar: t.profile_picture_url }
+    tags: t.skills
+    category: t.location
+    date: undefined
+  }));
+  const blogResults = BLOG_POSTS.filter(
+    b =>
+      match(b.title) |
+      match(b.excerpt) |
+      match(b.content) |
+      b.tags?.some(t => match(t))
+  ).map(b => ({    id: b.slug
+    title: b.title
+    description: b.excerpt
+    type: 'blog' as const
+    slug: b.slug
+    image: b.featuredImage
+    tags: b.tags
+    category: 'Blog'
+    date: b.publishedDate
+  }));
+  let all = [...productResults, ...talentResults, ...blogResults];
+  if (filters.category) {
+    all = all.filter(r => r.category === filters.category);  }
+  if (typeof filters.minPrice === 'number') {
+    all = all.filter(r => {
+      if (r.type === 'product') {
+        return (r.price ?? 0) <= filters.maxPrice!
+      }
+      return true
+    })
+  }
+  if (typeof filters.minRating === 'number') {
+    all = all.filter(r => {
+      if (r.type === 'product' || r.type === 'talent') {
+        return (r.rating ?? 0) >= filters.minRating!
+      }
+      return true
+    })
+  }
+  if (filters.sortBy && filters.sortBy !== 'relevance') {
+    switch (filters.sortBy) {
+      case 'price_asc':
+        all.sort((a, b) => {
+          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
+          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
+  if (typeof filters && filters.minRating === 'number') {;
+    all = all && all.filter(r => {;
+      if (r && r.type === 'product' || r && r.type === 'talent') {;
+        return (r && r.rating ?? 0) >= filters && filters.minRating!;
+      }
+      return true;
+    });  }
+  if (filters && filters.sortBy && filters && filters.sortBy !== 'relevance') {;
+    switch (filters && filters.sortBy) {;
+      case 'price_asc':;
+        all && all.sort((a, b) => {;
+          const aPrice = a && a.type === 'product' ? (a && a.price ?? 0) : 0;
+          const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
+=======
 
           return aPrice - bPrice;        });
         break;'
@@ -179,6 +311,8 @@ interface OfflineFilters {
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
+<<<<<<< HEAD
+=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -497,6 +631,7 @@ const aRating =
         break;'
       case 'rating':
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function SearchResultsPage(): any ({;
   initialResults,;
   query,;
@@ -552,6 +687,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [maxPrice, setMaxPrice] = useState('');'
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
+<<<<<<< HEAD
+=======
 
   // Fetch search results
   const fetchResults = async (searchTerm: string, page = 1) => {
@@ -594,6 +731,8 @@ logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
         setResults(data && data.results || []);
       } else {;
         setResults(prev => [...prev, ...(data && data.results || [])]);
+<<<<<<< HEAD
+=======
 
       }
     } catch (error) {;
@@ -612,7 +751,6 @@ logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
       });
       setCurrentPage(1);    }
   };
-
   useEffect(() => {;
     if (debouncedQuery.trim()) {;
       fetchResults(debouncedQuery, 1);
@@ -678,10 +816,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 fetchResults(searchQuery, nextPage);
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       categoryFilter !== 'all' &&
       categoryFilter &&
       r.category !== categoryFilter
     ) {
+<<<<<<< HEAD
+=======
 
       } catch (error) {
     console.error("Error:", error);
@@ -945,6 +1086,8 @@ if ( {) {}
       }
     }
     return true;  });
+<<<<<<< HEAD
+=======
 
 return false;
     }
@@ -966,11 +1109,17 @@ return false;
     return true;
   });
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
       if (!acc[result.type]) acc[result.type] = [];
       acc[result.type]!.push(result);
+<<<<<<< HEAD
+    };
+    {} as Record<string, SearchResult[]>;
+  );
+=======
 
         } catch (error) {
     console.error("Error:", error);
@@ -1020,11 +1169,14 @@ return acc;
     {} as Record<string, SearchResult[]>
   );
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const renderResultCard = (result: SearchResult) => {
     switch (result.type) {
       case 'product':
 
       case 'equipment':
+<<<<<<< HEAD
+=======
 
   // Group results by type for better display;
   const groupedResults = filteredResults && filteredResults.reduce(;
@@ -1034,12 +1186,18 @@ return acc;
       return acc;
     },;
     {} as Record<string, SearchResult[]>  );
-
   const renderResultCard = (result: SearchResult) => {;
     switch (result && result.type) {;'
       case 'product':;'
       case 'equipment':;
 
+<<<<<<< HEAD
+        return (
+          <div key={result.id} data-testid="result-card">
+            <ProductCard
+              product={{
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 id: result && result.id,
                 name: result && result.title,
                 title: result && result.title,'
@@ -1085,6 +1243,15 @@ if (acc[result.type] = []) {}
                 created_at: new Date ().toISOString (),
                 updated_at: new Date ().toISOString (),
                 stock: (result as any).stock,
+<<<<<<< HEAD
+                in_stock: ((result as any).stock || 0) > 0
+              }}
+            />
+          </div>
+        );
+      case 'talent':;
+        return (
+=======
 
                 reviewCount: 0,
                 tags: result.tags || [],
@@ -1115,6 +1282,57 @@ in_stock: ((result as any).stock || 0) > 0,
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
+<<<<<<< HEAD
+                availability_type: 'available',
+              }}
+              onViewProfile={(id: string) => {
+                router.push(`/talent/${id}`);
+              }}
+              onRequestHire={talent => {
+                router.push(`/talent/${talent.id}?action=hire`);              }}
+              isAuthenticated={isAuthenticated}
+                availability_type: 'available'}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onViewProfile={(id: string) => {;
+                router.push(`/talent/${id}`);
+              }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onRequestHire={(talent) => {;
+                router.push(`/talent/${talent.id}?action=hire`);
+              }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              isAuthenticated={isAuthenticated  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            />
+          </div>
+        ),
+      case 'category':
+        return (
+          <div key={result.id} data-testid='result-card'>            <CategoryCard
+              title={result.title}
+              description={result.description |''}
+              icon={result.image |'📁'}
+            />
+          </div>
+        );
+      default:
+          <div key={result && result.id} data-testid='result-card'>            <CategoryCard
+              title={result && result.title}
+              description={result && result.description || ''}
+              icon={result && result.image || '📁'}
+=======
 
                 availability_type: 'available'}  } catch (error) {
     console.error("Error:", error);
@@ -1206,6 +1424,8 @@ availability_type: 'available',
           </div>;
         );
       default:;
+<<<<<<< HEAD
+=======
 
           </div>
         ),
@@ -1216,6 +1436,7 @@ availability_type: 'available',
     <>;
       <SEO
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >;
             <h3 className='font-semibold'>{result && result.title}</h3>;
             <p className='text-gray-600 dark:text-gray-200'>;
@@ -1225,6 +1446,58 @@ availability_type: 'available',
         );    }
   }
 
+<<<<<<< HEAD
+
+  };
+
+          <div key={result.id} data-testid="result-card">
+            <CategoryCard
+              title={result.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              description={result.description || ''  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              icon={result.image || '📁'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            />;
+          </div>;
+        ),;
+      default:;
+        return (;
+          <div;
+            key={result.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
+            data-testid="result-card"
+          >
+            <h3 className="font-semibold">{result.title}</h3>
+            <p className="text-gray-600 dark:text-gray-200">
+              {result.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </p>;
+          </div>;
+        );
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+=======
 }
   },
 
@@ -1268,10 +1541,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
       />
 
+<<<<<<< HEAD
+        title={`Search Results for "${query}" - Zion Marketplace`}
+        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
+        keywords={`${query}, search, marketplace, products, talent, services`}
+        canonical={`https://app && app.ziontechgroup.com/search/${slug}`}
+      />;
+      <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>;
+=======
         canonical={`https://app && app.ziontechgroup.com/search/${slug}`}
       />;
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div
           className='container mx-auto px-4 py-8'
           data-testid='search-results'>;
@@ -1391,6 +1673,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex flex-wrap items-center justify-between gap-4 mt-6'>
               <div className='flex items-center gap-2 flex-wrap'>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Button
                   variant="outline"
                   size="sm"
@@ -1400,11 +1683,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 </Button>
                 <select
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   data-testid='filter-button'>;
                   <Filter className='h-4 w-4' />                  Filters;
                 </Button>;
+<<<<<<< HEAD
 
+                </Button>
+                <select
+=======
                 <select
 
                   value={sortBy}
@@ -1491,6 +1779,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   on_change={e => setSortBy (e.target.value)}'
                   className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';'
                   data - testid='sort - select';
+<<<<<<< HEAD
+=======
 
                 >;
                   <option value='relevance'>Relevance</option>;
@@ -1498,6 +1788,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <option value='price_asc'>Price: Low to High</option>;
                   <option value='price_desc'>Price: High to Low</option>;
                   <option value='rating'>Highest Rated</option>                </select>;
+<<<<<<< HEAD
+                </select>;
+                <div className='flex items-center gap-1'>;
+                  <input
+                    type='number'
+                    placeholder='Min $'
+                    value={minPrice}
+                    onChange={e => setMinPrice(e && e.target.value)}
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm';
+                  />;
+                  <span>-</span>;
+                  <input
+                    type='number'
+                    placeholder='Max $'
+                    value={maxPrice}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                  data-testid="sort-select"
+                >
+                  value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSortBy(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                  data-testid="sort-select"
+                >
+                  <option value='relevance'>Relevance</option>
+                  <option value='newest'>Newest</option>
+                  <option value='price_asc'>Price: Low to High</option>
+                  <option value='price_desc'>Price: High to Low</option>
+                  <option value='rating'>Highest Rated</option>                </select>
+                  <option value="relevance">Relevance</option>
+                  <option value="newest">Newest</option>
+                  <option value="price_asc">Price: Low to High</option>
+                  <option value="price_desc">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
+                </select>
+=======
 
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1633,6 +1967,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <option value='2'>2★ & up</option>;
                 </select>;
               </div>;
+<<<<<<< HEAD
+=======
 
                 <Button'
                   variant={viewMode === 'grid' ? 'default' : 'outline'}'
@@ -1742,6 +2078,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 <div className='flex justify-center py-12'>
               <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>
@@ -1774,6 +2111,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               ))}
               {/* Load More Button */}
+<<<<<<< HEAD
+              {results.length < totalResults && (
+                <div className="flex justify-center py-8">
+                  <Button
+                    onClick={loadMore}
+                    disabled={loading}
+                    className="flex items-center gap-2"
+                  >
+                    {loading ? (
+                      <>
+                        <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>                        Loading...
+                      </>
+                    ) : (
+                      'Load More Results'
+=======
 
               {results.length < totalResults && (
 <div className='flex justify-center py-8'>
@@ -1790,12 +2142,43 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ) : (
                       'Load More Results'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     )}
-                  </Button>;
+</Button>;
                 </div>;
               )}
             </div>;
           )}
+<<<<<<< HEAD
+        </div>
+      </div>
+    </>
+  );
+export const getServerSideProps: GetServerSideProps<
+  SearchResultsPageProps
+> = async (context: any) => {;
+  const params = context.params;
+  const slug = params?.slug as string
+  // Convert slug back to query term
+  const query = slug ? slug.replace(/-/g, ' ') : '';
+  try {
+    // In production, replace with your actual API base URL
+    const apiBaseUrl =
+export const getServerSideProps: GetServerSideProps<;
+  SearchResultsPageProps;
+> = async (context: any) => {;
+  const params = context && context.params;
+  const slug = params?.slug as string,;
+  // Convert slug back to query term;
+  const query = slug ? slug && slug.replace(/-/g, ' ') : '';
+  try {;
+    // In production, replace with your actual API base URL;
+    const apiBaseUrl =;
+      process && process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',;
+    logInfo(`Fetching search results for slug: ${slug}, query: ${query}`);
+    const response = await fetch(;
+      `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`    );
+=======
 
 export const getServerSideProps: GetServerSideProps<
   SearchResultsPageProps
@@ -1824,6 +2207,15 @@ export const getServerSideProps: GetServerSideProps<
     const response = await fetch(`
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`;
     );
+<<<<<<< HEAD
+    let results = [];
+    let totalCount = 0;
+    if (response.ok) {
+      const data = await response.json();
+      results = data.results |[];
+      totalCount = data.totalCount |results.length;
+      logInfo(`Server-side fetch successful: ${results.length} results`);
+=======
 
     let results = [];
     let totalCount = 0;
@@ -1903,11 +2295,14 @@ if ( {) {}
       total_count = data.total_count || results.length;`
       log_info (`Server - side fetch successful: ${results.length} results`);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } else {
       logErrorToProduction (
         `Search API error: ${response.status} ${response.status_text}`);
       const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
       results = offline.results;
+<<<<<<< HEAD
+=======
 
       results = data.results || [];
       totalCount = data.totalCount || results.length;`
@@ -2091,6 +2486,89 @@ export const getServerSideProps: GetServerSideProps<;
       results = data.results || [];
       totalCount = data.totalCount || results.length;`
       logInfo(`Server-side fetch successful: ${results.length} results`);
+<<<<<<< HEAD
+    } else {
+      logErrorToProduction(
+        `Search API error: ${response.status} ${response.statusText}`
+      );
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+      results = offline.results;
+      totalCount = offline.totalCount;    }
+
+    return {
+      props: {
+        initialResults: results,
+        query,
+        slug,
+        totalCount,
+      },
+    };
+  } catch (error) {
+    logErrorToProduction('Error fetching search results:', { data: error });
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+
+    return {
+      props: {
+        initialResults: offline.results,
+        query,
+        slug,
+totalCount: offline.totalCount,
+      },
+    };  }
+};
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+    } else {;
+      logErrorToProduction(;
+        `Search API error: ${response.status} ${response.statusText}`);
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+      results = offline.results;
+      totalCount = offline.totalCount;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    return {;
+      props: {;
+        initialResults: results;
+        query,;
+        slug,;
+        totalCount}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    logErrorToProduction('Error fetching search results:', { data: error });
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+    return {;
+      props: {;
+        initialResults: offline.results,;
+        query,;
+        slug;
+        totalCount: offline.totalCount}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+
+=======
 
     } else {;
       logErrorToProduction(;

@@ -217,6 +217,13 @@ async function main() {
       totalFixes += result && result.changes;`
       console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)}
     filesProcessed++} catch (error) {
+<<<<<<< HEAD
+    console.error(`❌ Error processing ${filePath}:`, error.message)}
+
+// Main function
+async function main() {;
+  console.log('🔧 Starting missing imports fix...\n');
+=======
 
 `
     console && console.error(`❌ Error processing ${filePath}:`, error && error.message)}

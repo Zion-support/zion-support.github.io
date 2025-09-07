@@ -20,6 +20,8 @@ import {useMessaging} from "@/context/MessagingContext";
 import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
+=======
 
 import React, { useState } from 'react',
 
@@ -32,13 +34,25 @@ import {
 
   DialogTitle,
   DialogDescription,
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Textarea } from "@/components/ui/textarea",
 import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+import { toast } from "@/components/ui/use-toast",
+import { useNavigate } from "react-router-dom",
+
+import { toast } from "@/components/ui/use-toast";
+import { useNavigate } from "react-router-dom";
+import { toast } from "@/components/ui/use-toast",
+import { useNavigate } from "react-router-dom",
+=======
 
 export interface MessageTalentModalProps {
 
@@ -103,6 +117,14 @@ pr-12325
   ),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
+<<<<<<< HEAD
+  );
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  ),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSendMessage = async () => {
 
     if (!message.trim()) {
@@ -151,7 +173,6 @@ pr-12325
       : `Hi ${talent && talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`;
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSendMessage = async () => {;
     if (!message && message.trim()) {;
 
@@ -262,7 +283,6 @@ const contextData = {
 
     try {;
       setIsSubmitting(true);
-
       // Create context data for the conversation;
 
       // Create conversation with this talent;
@@ -288,7 +308,10 @@ const contextData = {
             <Avatar className="h-8 w-8 border border-zion-purple/20">
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />"
               <AvatarFallback className="bg-zion-blue-dark text-white">
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react',;
 import {;
   Dialog,;
@@ -346,6 +369,12 @@ export function MessageTalentModal() { return null; }
         talent.id,;
         contextData;
       ),;
+<<<<<<< HEAD
+      toast({;
+        title: "Message sent",;
+        description: `Your message has been sent to ${talent && talent.full_name}.`}),;
+      onClose();
+=======
 
       toast({;"
         title: "Message sent",`

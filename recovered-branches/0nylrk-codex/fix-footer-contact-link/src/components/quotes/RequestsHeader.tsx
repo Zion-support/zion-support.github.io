@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",
 
 import { Badge } from "@/components/ui/badge",
@@ -17,6 +18,7 @@ import {}
   SelectItem, 
   SelectTrigger, 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type RequestsHeaderProps = {
 
   unreadCount: number,
@@ -168,7 +170,10 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
               {unreadCount} New;
             </Badge>;
           )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
 
         <p className="text-zion-slate-light mt-2">;
@@ -213,6 +218,13 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
             <SelectItem value="closed">Closed</SelectItem>;
           </SelectContent>;
         </Select>;
+<<<<<<< HEAD
+        <Select;
+          value={archiveFilter} ;
+          onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
+        >;
+          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
+=======
 
         <Select;
           value={archive_filter}
@@ -220,6 +232,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
         >;
           <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <SelectValue placeholder="Active Only" />;
 
           </SelectTrigger>;
@@ -251,6 +264,13 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
         </Select>;
 
       </div>;
+<<<<<<< HEAD
+    </div>;
+  );
+};
+
+export default RequestsHeader;
+=======
 
 export default RequestsHeader;
     </div>);

@@ -2,10 +2,18 @@ const { disputeId } = useParams() as { disputeId?: string };
   const navigate = useNavigate();
   const { user } = useAuth();
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [resolution, setResolution] = useState({;
     summary: "",;
     resolution_type: "compromise"}),;
   const [activeTab, setActiveTab] = useState("overview");
+<<<<<<< HEAD
+  // Check if user is admin (placeholder - implement proper admin check);
+  const isAdmin = user?.userType === "admin";
+  useEffect(() => {;
+    if (!disputeId) return;
+    const loadDisputeData = async () => {;
+=======
 
       setIsLoading(true);
       try {;
@@ -16,6 +24,8 @@ const { disputeId } = useParams() as { disputeId?: string };
           return;
         }
         setDispute(disputeData);
+<<<<<<< HEAD
+=======
 
         const messagesData = await getDisputeMessages(disputeId);
         setMessages(messagesData);
@@ -25,11 +35,52 @@ const { disputeId } = useParams() as { disputeId?: string };
       } finally {;
         setIsLoading(false);
       }
+<<<<<<< HEAD
+    };
+    loadDisputeData();
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
+  const handleStatusChange = async (status: DisputeStatus) => {;
+    if (!disputeId) return,;
+=======
 
     const success = await updateDisputeStatus(disputeId, status);
     if (success && dispute) {;
       setDispute({ ...dispute, status });
     }
+<<<<<<< HEAD
+  const [resolution, setResolution] = useState({
+    summary: ""
+    resolution_type: "compromise"})
+  const [activeTab, setActiveTab] = useState("overview");
+  // Check if user is admin (placeholder - implement proper admin check)
+  const isAdmin = user?.userType === "admin";
+  useEffect(() => {
+    if (!disputeId) return;
+import { toast } from "sonner",
+export function DisputeDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { disputeId } = useParams() as { disputeId?: string },
+  const navigate = useNavigate(),
+  const { user } = useAuth(),
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),
+  
+  const [dispute, setDispute] = useState<any>(null),
+  const [messages, setMessages] = useState<DisputeMessage[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [message, setMessage] = useState(""),
+  const [isSending, setIsSending] = useState(false),
+  const [resolution, setResolution] = useState({
+    summary: "",
+    resolution_type: "compromise"}),
+  const [activeTab, setActiveTab] = useState("overview"),
+
+  // Check if user is admin (placeholder - implement proper admin check)
+  const isAdmin = user?.userType === "admin",
+  
+  useEffect(() => {
+    if (!disputeId) return,
+=======
 
       setIsLoading(true),
       try {}
@@ -39,17 +90,46 @@ const { disputeId } = useParams() as { disputeId?: string };
           navigate("/dashboard/disputes"),
           return;
         }
+<<<<<<< HEAD
+        setDispute(disputeData),
+        
+        const messagesData = await getDisputeMessages(disputeId),
+        setDispute(disputeData);
+        const messagesData = await getDisputeMessages(disputeId);
+        setDispute(disputeData),
+        
+        const messagesData = await getDisputeMessages(disputeId),
+=======
 
         setDispute(disputeData),
         
         const messagesData = await getDisputeMessages(disputeId),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         setMessages(messagesData)
       } catch (error) {"
         console.error("Error loading dispute data:", error),"
         toast.error("Failed to load dispute")
       } finally {}
         setIsLoading(false)
+<<<<<<< HEAD
+  };
+
+      }
+    }
+    loadDisputeData()
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
+  const handleStatusChange = async (status: DisputeStatus) => {
+    if (!disputeId) return
+    const success = await updateDisputeStatus(disputeId, status);
+    if (success && dispute) {
+      setDispute({ ...dispute, status })
+    }
+  }
+  const handleResolveDispute = async () => {
+    if (!disputeId) return;
+  };
+=======
 
       }
     }
@@ -188,6 +268,7 @@ export function DisputeDetail() { return null; }
       return;
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (success && dispute) {
       setDispute({
         ...dispute
@@ -205,7 +286,10 @@ export function DisputeDetail() { return null; }
     if (!disputeId || !message.trim()) return,
     
     setIsSending(true),
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
 
       toast.error("Please provide a resolution summary");
@@ -233,7 +317,10 @@ export function DisputeDetail() { return null; }
       toast && toast.error("Please provide a resolution summary");
       return;
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const success = await resolveDispute(disputeId, resolution);
     if (success && dispute) {;
       setDispute({;
@@ -336,6 +423,8 @@ export function DisputeDetail() { return null; }
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
 
     switch (status) {;
       case "open": return "default";
@@ -491,6 +580,8 @@ if ( {) {}
       case "closed": return "outline";
       default: return "default";
     }
+<<<<<<< HEAD
+=======
 
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
@@ -753,7 +844,10 @@ export function DisputeDetail() { return null; }
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">;
 
                             {dispute.status !== "open" ? "3" : "2"}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="container mx-auto p-4 space-y-6">;
       <div className="flex flex-wrap items-center justify-between gap-4">;
         <div>;
@@ -767,7 +861,10 @@ export function DisputeDetail() { return null; }
             Reported {formatDistanceToNow(new Date(dispute && dispute.created_at), { addSuffix: true })}
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="flex gap-2">;
 
           <Button variant="outline" onClick={() => navigate("/dashboard/disputes")}>;
@@ -780,6 +877,8 @@ export function DisputeDetail() { return null; }
           )}
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
 
@@ -791,7 +890,11 @@ export function DisputeDetail() { return null; }
               <TabsTrigger value="attachments">Attachments</TabsTrigger>;"
               {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
             </TabsList>;
+<<<<<<< HEAD
+            ;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <TabsContent value="overview" className="space-y-6">;
               <Card>;
                 <CardHeader>;
@@ -806,22 +909,38 @@ export function DisputeDetail() { return null; }
                           <span>Under review</span>;
                         </li>;
                       )}
+<<<<<<< HEAD
+                      ;
+                      {dispute.resolved_at && (;
+                        <li className="flex gap-2 items-center">;
+                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">;
+                            {dispute.status !== "open" ? "3" :"2"}
+                          </Badge>;
+                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
+=======
 
                       )}
                     </ul>;
                   </div>;
                 </CardContent>;
               </Card>;
+<<<<<<< HEAD
+              ;
+              {dispute.status === "resolved" && (;
+=======
 
                   <CardHeader>;
                     <CardTitle>Resolution</CardTitle>;
                   </CardHeader>;
                   <CardContent>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     )}
                   </CardContent>;
                 </Card>;
               )}
+<<<<<<< HEAD
+=======
 
                     {messages.length === 0 ? (
                       <div className="text - center py - 12">;
@@ -906,6 +1025,7 @@ export function DisputeDetail() { return null; }
 
                           return (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     )}
 
                   </div>;
@@ -946,6 +1066,204 @@ export function DisputeDetail() { return null; }
                         </Button>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
+                      {dispute.resolved_at && (
+                        <li className="flex gap-2 items-center">
+                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
+                            {dispute.status !== "open" ? "3" : "2"}
+                          </Badge>
+                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+              {dispute.status === "resolved" && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Resolution</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
+                    {dispute.resolution_type && (
+                      <div className="mt-4">
+                        <Badge>
+                          Resolution: {dispute.resolution_type.replace('_ ')}
+                        </Badge>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              )}
+            </TabsContent>
+            <TabsContent value="messages" className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Messages</CardTitle>
+                  <CardDescription>Communication regarding this dispute</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">
+                    {messages.length === 0 ? (
+                      <div className="text-center py-12">
+                        <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
+                        <p className="text-muted-foreground">No messages yet</p>
+                      </div>
+                    ) : (
+                      messages
+                        .filter(msg => !msg.is_admin_note)
+                        .map((msg) => {
+                          const isCurrentUser = user?.id === msg.user_id,
+                          return (
+                            <div
+                              key={msg.id}
+                              className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}
+                            >
+                              <div
+                                className={`max-w-[80%] ${
+                                  isCurrentUser
+                                    ? 'bg-primary text-primary-foreground'
+                                    : 'bg-muted'
+                                } p-4 rounded-lg`}
+                              >
+                                <div className="flex items-center gap-2 mb-2">
+                                  <Avatar className="h-6 w-6">
+                                    <AvatarImage src={msg.user_profile?.avatar_url} />
+                                    <AvatarFallback>
+                                      {msg.user_profile?.display_name?.[0] |'?'}
+                                    </AvatarFallback>
+                                  </Avatar>
+                                  <span className="text-sm font-medium">
+                                    {msg.user_profile?.display_name |'Unknown User'}
+                                  </span>
+                                  <span className="text-xs opacity-70">
+                                    {format(new Date(msg.created_at), 'MMM d, h:mm a')}
+                                  </span>
+                                </div>
+                                <p className="whitespace-pre-wrap">{msg.message}</p>
+                              </div>
+                            </div>
+                          )
+                        })
+                    )}
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <div className="w-full space-y-4">
+                    <Textarea
+                      placeholder="Type your message here..."
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      className="min-h-[100px]"
+                      disabled={isSending}
+                    />
+                    <div className="flex justify-end">
+                      <Button onClick={handleSendMessage} disabled={isSending |!message.trim()}>
+                        {isSending ? "Sending..." : "Send Message"}
+                      </Button>
+                    </div>
+                  </div>
+                </CardFooter>
+              </Card>
+            </TabsContent>
+            <TabsContent value="attachments">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Attachments</CardTitle>
+                  <CardDescription>Files related to this dispute</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-center py-12">
+                    <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
+                    <p className="text-muted-foreground">No attachments available</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+            {isAdmin && (
+              <TabsContent value="admin" className="space-y-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Admin Actions</CardTitle>
+                    <CardDescription>Handle this dispute as an administrator</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div>
+                      <h3 className="font-medium mb-2">Change Status</h3>
+                      <div className="flex gap-2">
+                        <Button
+                          variant="outline"
+                          onClick={() => handleStatusChange("open")}
+                          disabled={dispute.status === "open"}
+                        >
+                          Mark as Open
+                        </Button>
+                        <Button
+                          variant="outline"
+                          onClick={() => handleStatusChange("under_review")}
+                          disabled={dispute.status === "under_review"}
+                        >
+                          Mark as Under Review
+                        </Button>
+                        <Button
+                          variant="outline"
+                          onClick={() => handleStatusChange("closed")}
+                          disabled={dispute.status === "closed"}
+                        >
+                          Close Dispute
+                        </Button>
+                      </div>
+                    </div>
+                    {dispute.status !== "resolved" && (
+                      <div>
+                        <h3 className="font-medium mb-2">Resolve Dispute</h3>
+                        <div className="space-y-4">
+                          <Textarea
+                            placeholder="Enter resolution summary..."
+                            value={resolution.summary}
+                            onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
+                            className="min-h-[100px]"
+                          />
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <label className="text-sm font-medium mb-1 block">Resolution Type</label>
+                              <select
+                                className="w-full p-2 border rounded"
+                                value={resolution.resolution_type}
+                                onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value })}
+                              >
+                                <option value="client_favor">In Client's Favor</option>
+                                <option value="talent_favor">In Talent's Favor</option>
+                                <option value="compromise">Compromise</option>
+                                <option value="dismissed">Dismissed</option>
+                              </select>
+                            </div>
+                          </div>
+                          <Button onClick={handleResolveDispute}>Resolve Dispute</Button>
+                        </div>
+                      </div>
+                    )}
+
+
+                    <div>
+                      <h3 className="font-medium mb-2">Admin Notes</h3>
+                      <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
+                        {messages
+                          .filter(msg => msg.is_admin_note)
+                          .map((msg) => (
+                          <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
+                            <div className="flex items-center justify-between mb-2">
+                              <div className="flex items-center gap-2">
+                                <Avatar className="h-6 w-6">
+                                  <AvatarImage src={msg.user_profile?.avatar_url} />
+                                  <AvatarFallback>
+                                    {msg.user_profile?.display_name?.[0] |'A'}
+                                  </AvatarFallback>
+                                </Avatar>
+                                <span className="text-sm font-medium">
+                                  {msg.user_profile?.display_name |'Admin'}
+=======
 
                     {dispute.status !== "resolved" && (
                       <div>;
@@ -955,6 +1273,7 @@ export function DisputeDetail() { return null; }
 
                             placeholder="Enter resolution summary...";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
                     <div>;"
                       <h3 className="font-medium mb-2">Admin Notes</h3>;"
@@ -973,6 +1292,8 @@ export function DisputeDetail() { return null; }
                                 </Avatar>"
                                 <span className="text-sm font-medium">'
                                   {msg.user_profile?.display_name || 'Admin'}
+<<<<<<< HEAD
+=======
 
                                 </span>
                               </div>"
@@ -995,6 +1316,7 @@ export function DisputeDetail() { return null; }
                           onChange={(e) => setMessage(e.target.value)}
                         />
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     />;
 
                     <div className="flex justify-end">;
@@ -1079,7 +1401,7 @@ export function DisputeDetail() { return null; }
                               </select>;
                             </div>;
                           </div>;
-
+                          ;
                           <Button onClick={handleResolveDispute}>Resolve Dispute</Button>;
                         </div>;
                       </div>;
@@ -1191,6 +1513,48 @@ getDisputeMessages(disputeId!).then(setMessages);
                               })
 
                             }
+                          .filter(msg => msg.is_admin_note);
+                          .map((msg) => (;
+                          <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">;
+                            <div className="flex items-center justify-between mb-2">;
+                              <div className="flex items-center gap-2">;
+                                <Avatar className="h-6 w-6">;
+                                  <AvatarImage src={msg.user_profile?.avatar_url} />;
+                                  <AvatarFallback>;
+                                    {msg.user_profile?.display_name?.[0] || 'A'}
+                                  </AvatarFallback>;
+                                </Avatar>;
+                                <span className="text-sm font-medium">;
+                                  {msg.user_profile?.display_name || 'Admin'}
+                                </span>;
+                              </div>;
+                              <span className="text-xs opacity-70">;
+                                {format(new Date(msg.created_at), 'MMM d, h:mm a')}
+                              </span>;
+                            </div>;
+                            <p className="whitespace-pre-wrap text-sm">{msg.message}</p>;
+                          </div>;
+                        ))}
+                        ;
+                        {!messages.some(msg => msg.is_admin_note) && (;
+                          <p className="text-sm text-muted-foreground italic">No admin notes yet</p>;
+                        )}
+                      </div>;
+                      ;
+                      <div className="mt-4 space-y-4">;
+                        <Textarea;
+                          placeholder="Add an admin note (only visible to administrators)...";
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                        />;
+                        <Button ;
+                          variant="outline" ;
+                          onClick={() => {;
+                            if (message.trim()) {;
+                              addDisputeMessage(disputeId!, message, true).then(() => {;
+                                getDisputeMessages(disputeId!).then(setMessages),;
+                                setMessage(""),;
+                              }),;                            }
                           }}
                         >
                           Add Admin Note;

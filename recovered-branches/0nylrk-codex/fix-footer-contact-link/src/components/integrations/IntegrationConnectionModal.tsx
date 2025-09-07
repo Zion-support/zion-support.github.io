@@ -118,6 +118,12 @@ export function IntegrationConnectionModal(): any ({;
   const [isConnecting, setIsConnecting] = useState(false);
 
   });
+<<<<<<< HEAD
+  const handleConnectOAuth = () => {;
+    setIsConnecting(true);
+    // Simulate OAuth flow;
+    setTimeout(() => {;
+=======
 
   const handleConnectOAuth = () => {;
     setIsConnecting(true);
@@ -126,6 +132,11 @@ export function IntegrationConnectionModal(): any ({;
       toast && toast.success(`Connected to ${integration && integration.name} successfully`);
       onClose();
     }, 2000);
+<<<<<<< HEAD
+    // In a real application, this would open a popup for OAuth authentication;
+    // window && window.open(`/api/oauth/${integration && integration.id}`, 'oauthwidth=600,height=600');
+  };
+=======
 
     // In a real application, this would open a popup for OAuth authentication;
     // window && window.open(`/api/oauth/${integration && integration.id}`, 'oauthwidth=600,height=600');
@@ -198,6 +209,7 @@ interface Integration {;
   isOpen: boolean;,
   onClose: () => void;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [syncSettings, setSyncSettings] = useState({
     autoCreateContacts: true,
     pushNotes: false,
@@ -299,6 +311,8 @@ return (
             }}            </DialogDescription>
           </div>
         </DialogHeader>
+<<<<<<< HEAD
+=======
 
         {integration.status === "connected" ||
 
@@ -353,6 +367,23 @@ return (
                     Auto-create contacts in {integration.name}
                   </Label>
 
+<<<<<<< HEAD
+                    }
+                  />
+                  <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id="pushNotes"
+                    checked={syncSettings.pushNotes}
+                    onCheckedChange={(checked) =>
+                      setSyncSettings({
+                        ...syncSettings
+                        pushNotes: checked as boolean
+                      })
+                
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="flex items-center space-x-2">
                   <Checkbox"
                     id="pushNotes"
@@ -385,6 +416,7 @@ return (
                   />"
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="flex items-center space-x-2">
                   <Checkbox"
                     id="syncJobDetails"
@@ -405,6 +437,7 @@ return (
 
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="flex items-center space-x-2">
                   <Checkbox"
                     id="syncApplicantData"
@@ -427,7 +460,7 @@ return (
                   />;
                   <Label htmlFor="pushNotes">Push notes and comments</Label>;
                 </div>;
-
+                ;
                 <div className="flex items-center space-x-2">;
                   <Checkbox
 
@@ -443,7 +476,7 @@ return (
                   />;
                   <Label htmlFor="syncJobDetails">Sync job details</Label>;
                 </div>;
-
+                ;
                 <div className="flex items-center space-x-2">;
                   <Checkbox
 
@@ -514,6 +547,7 @@ return (
                 to authorize this connection.
               </p>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Connect your {integration.name} account to sync job contacts, applicants, and more. 
                 You'll be redirected to {integration.name} to authorize this connection.
               </p>
@@ -529,6 +563,8 @@ return (
                 </ul>
               </div>
             </div>
+<<<<<<< HEAD
+=======
 
             <DialogFooter>
 
@@ -539,6 +575,21 @@ return (
               </Button>
             </DialogFooter>
 
+<<<<<<< HEAD
+            
+            <DialogFooter>
+              <Button onClick={handleConnectOAuth} disabled={isConnecting}>
+                {isConnecting ? "Connecting..." : `Connect to ${integration.name}`}
+              </Button>
+            </DialogFooter>
+          </>
+        )}
+      </DialogContent>
+    </Dialog>
+  );
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export function IntegrationConnectionModal() { return null; }
 
@@ -589,6 +640,26 @@ export function IntegrationConnectionModal() { return null; }
                     }
 
                     : "Never"}
+<<<<<<< HEAD
+                </p>;
+              </div>;
+            </div>;
+            <DialogFooter className="flex items-center justify-between">;
+              ;
+              <div className="space-y-2">;
+                <h3 className="text-sm font-medium">API Details</h3>;
+                <p className="text-xs text-muted-foreground">;
+                  Last synced:{integration.lastSync ;
+                    ? new Date(integration.lastSync).toLocaleString() ;
+                    :"Never"}
+                </p>;
+              </div>;
+            </div>;
+            ;
+            <DialogFooter className="flex items-center justify-between">;
+              <Button variant="outline" onClick={handleDisconnect} type="button">;
+              <Button variant="outline" onClick={handleDisconnect} type="button">;
+=======
 
                 </p>;
               </div>;
@@ -609,6 +680,21 @@ export function IntegrationConnectionModal() { return null; }
                 </ul>;
               </div>;
             </div>;
+<<<<<<< HEAD
+            ;
+            <DialogFooter>;
+              <Button onClick={handleConnectOAuth} disabled={isConnecting}>;
+                {isConnecting ? "Connecting..." :`Connect to ${integration.name}`}
+            <DialogFooter>;
+              <Button onClick={handleConnectOAuth} disabled={isConnecting}>;
+                {isConnecting ? "Connecting..." : `Connect to ${integration.name}`}
+              </Button>;
+            </DialogFooter>;
+          </>;
+        )}
+      </DialogContent>;
+    </Dialog>;
+=======
 
         )}
       </DialogContent>;

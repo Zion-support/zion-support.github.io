@@ -98,6 +98,7 @@ async function runAllAutomations() {;
   return { results, successCount, failureCount };
 }
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Generate comprehensive report
 function generateReport(results) {
   const report = {
@@ -125,7 +126,6 @@ function generateReport(results) {
   if (!fs.existsSync(reportsDir)) {;
     fs.mkdirSync(reportsDir, { "recursive": true });
   }
-
   fs.writeFileSync(
 
     JSON.stringify(report, null, 2)
@@ -155,7 +155,6 @@ async function main() {;
     console.log(
 
     );
-
     // Return success/failure based on critical tasks
     const criticalFailures = results.results.filter(
       r => r.critical && r.status === 'failed'

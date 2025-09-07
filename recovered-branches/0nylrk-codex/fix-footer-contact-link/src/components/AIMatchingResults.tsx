@@ -9,10 +9,16 @@ import {Skeleton} from "@/components/ui/skeleton";
 
 import {cn} from "@/lib/utils";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
 }
+<<<<<<< HEAD
+export function AIMatchingResults(): any ({;
+  matches;
+  onSelectMatch;
+=======
 
 export function AIMatchingResults(): any ({;
 
@@ -20,11 +26,32 @@ export function AIMatchingResults(): any ({;
   matches;
   onSelectMatch;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isLoading = false;
   projectDescription = "";
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all");
+<<<<<<< HEAD
+import { useState } from "react",
+import { MatchResultItem } from "@/lib/ai-matchmaking",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
+import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+interface AIMatchingResultsProps {
+
+  matches: MatchResultItem[]
+  onSelectMatch?: (match: MatchResultItem) => void
+
+  isLoading?: boolean;
+  projectDescription?: string;
+import { Skeleton } from "@/components/ui/skeleton",
+import { cn } from "@/lib/utils",
+=======
 
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
@@ -66,6 +93,7 @@ interface AIMatchingResultsProps {}
     )
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { MatchResultItem } from "@/lib/ai-matchmaking",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -86,13 +114,73 @@ interface AIMatchingResultsProps {;
 ;
 
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Get the icon for a category;
   const getCategoryIcon = (category: string) => {;
 
     if (lowerCategory && lowerCategory.includes("equipment")) return Monitor,;
     return BriefcaseIcon;
   };
+<<<<<<< HEAD
+  if (isLoading) {;
+    return (
+import { useState } from "react",;
+import { MatchResultItem } from "@/lib/ai-matchmaking",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { cn } from "@/lib/utils",;
+;
+interface AIMatchingResultsProps {;
+  matches:MatchResultItem[],;
+  onSelectMatch?:(match:MatchResultItem) => void,;
+  isLoading?:boolean,;
+  projectDescription?:string,;
+  serviceType?:string;
+}
+;
+export function AIMatchingResults({;
+  matches,;
+  onSelectMatch,;
+  isLoading = false,;
+  projectDescription = "",;
+  serviceType:_serviceType = "";
+} AIMatchingResultsProps) {;
+  const [activeTab, setActiveTab] = useState("all"),;
+  ;
+  // Group matches by category;
+  const categories = {;
+    all:matches,;
+    talent:matches.filter(match => match.category.toLowerCase().includes("talent")),;
+    services:matches.filter(match => match.category.toLowerCase().includes("service")),;
+    equipment:matches.filter(match => match.category.toLowerCase().includes("equipment"));
+  },;
+  ;
+  // Get the icon for a category;
+  const getCategoryIcon = (category:string) => {;
+  // Group matches by category;
+  const categories = {;
+    all: matches,;
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent")),;
+    services: matches.filter(match => match.category.toLowerCase().includes("service")),;
+    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"));
+  },;
+  // Get the icon for a category;
+  const getCategoryIcon = (category: string) => {;
+    const lowerCategory = category.toLowerCase(),;
+    if (lowerCategory.includes("talent")) return User,;
+    if (lowerCategory.includes("equipment")) return Monitor,;
+    return BriefcaseIcon;
+  },;
+  if (isLoading) {;
+    return (;
+=======
 
   if (isLoading) {;
 

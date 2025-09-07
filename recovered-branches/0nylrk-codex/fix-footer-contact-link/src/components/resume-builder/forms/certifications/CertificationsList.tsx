@@ -15,6 +15,8 @@ interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
+<<<<<<< HEAD
+=======
 
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -31,6 +33,8 @@ export function CertificationsList({
   certifications
   onEdit
   onDelete
+<<<<<<< HEAD
+=======
 }: CertificationsListProps) {
   if (certifications.length === 0) {
 

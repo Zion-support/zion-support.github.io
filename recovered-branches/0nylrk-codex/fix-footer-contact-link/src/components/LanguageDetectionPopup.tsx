@@ -45,6 +45,34 @@ export function LanguageDetectionPopup() {;
 
     const hasVisited = localStorage && localStorage.getItem("zion_has_visited");
     if (hasVisited) return;
+<<<<<<< HEAD
+    // Mark as visited;
+    localStorage && localStorage.setItem("zion_has_visitedtrue");
+    // Get browser language;
+    const browserLang = navigator && navigator.language.substring(0, 2) as SupportedLanguage;
+    // Check if browser language is supported and different from current language;
+    const isSupported = supportedLanguages && supportedLanguages.some(;
+      (lang) => lang && lang.code === browserLang,;
+    );
+    if (isSupported && browserLang !== currentLanguage) {;
+  const { changeLanguage, currentLanguage, supportedLanguages } =
+    useLanguage() as LanguageContextType;
+  const [detectedLanguage, setDetectedLanguage] =
+    useState<SupportedLanguage | null>(null);
+  useEffect(() => {
+    // Check if this is first visit
+    const hasVisited = localStorage.getItem("zion_has_visited");
+    if (hasVisited) return;
+    // Mark as visited
+    localStorage.setItem("zion_has_visitedtrue");
+    // Get browser language
+    const browserLang = navigator.language.substring(0, 2) as SupportedLanguage;
+    // Check if browser language is supported and different from current language
+    const isSupported = supportedLanguages.some(
+      (lang) => lang.code === browserLang
+    );
+    if (isSupported && browserLang !== currentLanguage) {
+=======
 
     );
     if (isSupported && browserLang !== currentLanguage) {;
@@ -192,6 +220,7 @@ export function LanguageDetectionPopup() {;
 
           </AlertDialogCancel>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <AlertDialogAction
 
             onClick={handleAccept}
@@ -309,6 +338,7 @@ export function LanguageDetectionPopup() {;
       </AlertDialogContent>;
     </AlertDialog>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect  } from './react';
 import { use_translation  } from './react - i18next';
 import {

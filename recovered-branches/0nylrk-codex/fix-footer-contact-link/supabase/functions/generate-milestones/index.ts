@@ -20,6 +20,8 @@ import ""https"://deno.land/x/xhr@0.1.0/mod.ts",;"
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
+=======
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 
@@ -108,10 +110,13 @@ serve(async (req) => {;
 '
         model: 'gpt-4o-mini';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             content: 'You are a project management expert that breaks work into appropriate milestones.'}
           {
             role: 'user'
             content: prompt}];
+<<<<<<< HEAD
+=======
 
     }
     // Parse the AI-generated content to ensure it's valid JSON
@@ -127,6 +132,7 @@ serve(async (req) => {;
     }
   } catch (error) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             role: 'system',
             content: 'You are a project management expert that breaks work into appropriate milestones.'},
           {

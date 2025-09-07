@@ -400,6 +400,8 @@ const count = await navLinks.count(); expect(count).toBeGreaterThan(0); if (coun
 
 
 
+<<<<<<< HEAD
+=======
 
 ' await page.goto('/contact'); await page.fill('input[name="name"],'Test User'); await page.fill('input[name="email"],'test@example.com'); await page.fill('textarea[name="message"],'Test message'); await page.click('button[type="submit"]); await page.waitForTimeout(1000)})'; test('responsive design',async ({ page    }) => {'
 

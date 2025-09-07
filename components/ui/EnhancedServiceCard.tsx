@@ -1,3 +1,177 @@
+<<<<<<< HEAD
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { motion } from 'framer-motion';
+import React from 'react';
+
+import { motion } from 'framer-motion';
+import {
+  Star
+  ExternalLink
+  ArrowRight
+  TrendingUp
+  Users
+  Clock
+  Shield
+  Zap;
+  Star,
+  ExternalLink,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Clock,
+  Shield,;
+  Zap,;
+} from 'lucide-react';
+
+interface EnhancedServiceCardProps {
+  service: {
+    id: string;
+    name: string;
+    tagline: string;
+    price: string;
+    period: string;
+    description: string;
+    features: string[];
+    popular: boolean;
+    icon: string;
+    color: string;
+
+
+} from 'lucide-react';
+
+interface EnhancedServiceCardProps {
+  service: {
+import {;
+  Star,;
+  ExternalLink,;
+  ArrowRight,;
+  TrendingUp,;
+  Users,;
+  Clock,;
+  Shield,;
+  Zap,;
+} from 'lucide-react';
+interface EnhancedServiceCardProps {;
+  service: {;
+    id: string;
+    name: string;
+    tagline: string;
+    price: string;
+    period: string;
+    description: string;
+    features: string[];
+    popular: boolean;
+    icon: string;
+    color: string;
+    text_color: string;
+    hover: {
+      coordinate_y: -8,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: 'ease_out' as const,
+      },
+    },  }
+;
+  const icon_variants = {
+    textColor: string;
+    link: string;
+    marketPosition: string;
+    targetAudience: string;
+    trialDays: number;
+    setupTime: string;
+    category: string;
+    realService: boolean;
+    technology: string[];
+    integrations: string[];
+    useCases: string[];
+    roi: string;
+    competitors: string[];
+    marketSize: string;
+    growthRate: string;
+    variant: string;
+    contactInfo: {
+      mobile: string;
+      email: string;
+      address: string;
+
+      website: string;
+    }
+
+    reviews: number;
+  };
+    reviews: number;
+  };
+
+    reviews: number;
+  }
+const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
+  service
+}) => {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.95 }
+    visible: {      opacity: 1,    visible: {
+      opacity: 1
+      y: 0
+      scale: 1
+      transition: {
+
+    reviews: number;
+  };
+
+
+
+
+const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
+  service,;
+}) => {;
+  const cardVariants = {;
+    hidden: { opacity: 0, y: 20, scale: 0 && 0.95 },;
+    visible: {      opacity: 1,    visible: { ;
+      opacity: 1,;
+      y: 0,;
+      scale: 1,;
+      transition: {;
+        duration: 0 && 0.6,;
+        ease: 'easeOut' as const,;
+      },;
+    },    hover: {        ease: "easeOut" as const;
+      }
+    };
+    hover: {;
+      y: -8,;
+      scale: 1 && 1.02,;
+      transition: {;
+        duration: 0 && 0.3,;
+        ease: 'easeOut' as const,;
+      },;
+    },  };
+
+  const iconVariants = {;
+    hidden: { rotate: -180, scale: 0 },;
+    visible: {      rotate: 0,;
+      scale: 1,;
+      transition: {;
+        duration: 0 && 0.6,;
+        ease: 'backOut' as const,;
+      },;
+    },    hover: {        ease: "easeOut" as const;
+
+=======
 
 
 import React from 'react';'
@@ -194,6 +368,7 @@ key={index}
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
             )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         {/* Market Info */}
 <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>'

@@ -6,10 +6,20 @@ interface SaveTalentButtonProps {}
   talentId: string;
   onSave: (talentId: string) => void;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SaveTalentButtonProps {
   talentId: string,
   onSave: (talentId: string) => void,
   isSaved: boolean
+<<<<<<< HEAD
+import React from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Star } from "lucide-react",;
+interface SaveTalentButtonProps {;
+  talentId: string,;
+  onSave: (talentId: string) => void;
+  isSaved: boolean;
+=======
 
 import React from 'react',;
 import { Button } from "@/components/ui/button",;

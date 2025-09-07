@@ -159,7 +159,6 @@ const "result": PasswordStrengthResult = {password;
     score += hasSymbols ? 15 : 0,
     score += entropy > 50 ? 15 : 0, // High entropy bonus
     score -= hasCommonPatterns ? 20 : 0, // Penalty for common patterns
-
     // Determine strength level
     let strength: PasswordStrengthResult['strength'],
     if (score < 30) strength = $2;

@@ -33,6 +33,8 @@ import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 
 const steps = ['AccountProfilePreferencesPreview'],
+<<<<<<< HEAD
+=======
 
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0),
@@ -113,7 +115,6 @@ const next = () => setStep(s => Math.min(s + 1, steps.length - 1));
       <div className="flex gap-2">
 
       </div>
-
       <div className="flex gap-2">
 
         <EnhancedButton variant="secondary" onClick={prev} disabled={step === 0}>Back</EnhancedButton>
@@ -121,6 +122,10 @@ const next = () => setStep(s => Math.min(s + 1, steps.length - 1));
         <EnhancedButton onClick={next} disabled={step === steps.length - 1}>{step === steps.length - 1 ? 'Done' : 'Next'}</EnhancedButton>
       </div>
     </div>
+<<<<<<< HEAD
+
+
+=======
 
   const [step, set_step] = useState (0);
 ;

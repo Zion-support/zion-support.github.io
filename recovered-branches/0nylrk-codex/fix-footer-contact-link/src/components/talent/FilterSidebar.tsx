@@ -16,6 +16,7 @@ searchTerm;
   setSortOption;
   clearFilters;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function FilterSidebar({
 
   searchTerm,
@@ -107,6 +108,8 @@ export function FilterSidebar({;
         >;
 
       </div>;
+<<<<<<< HEAD
+=======
 
       {/* Search */}
 

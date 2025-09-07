@@ -74,7 +74,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
         <div className="flex flex-col space-y-3">
           <Button
-            onClick={(,) => router.push('/payments')} // Changed to router.push
+            onClick={() => router.push('/payments')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Try Again
@@ -219,6 +219,8 @@ export default function PaymentCanceled() {;
           Your payment process was canceled. No charges have been made to your account.;
         </p>;
         <div className="flex flex-col space-y-3">;
+<<<<<<< HEAD
+=======
           <Button
             onClick={(,) => router && router.push('/payments')} // Changed to router && router.push;
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
@@ -272,6 +274,7 @@ function PaymentCanceled() {
           Your payment process was canceled. No charges have been made to your account.;
         </p>;
         <div className="flex flex - col space - y-3">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button;
             onClick={() => router.push('/payments')} // Changed to router.push;
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
@@ -291,6 +294,10 @@ function PaymentCanceled() {
           </Button>;
           <Button;
             variant="outline";
+<<<<<<< HEAD
+            onClick={() => router.push('/dashboard')} // Changed to router.push;
+            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
+=======
             on_click={() => router.push ('/dashboard')} // Changed to router.push;
             className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';',
 export default /**
@@ -331,6 +338,7 @@ function PaymentCanceled() {
         </div>;
         </div>
       </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
       </div>);

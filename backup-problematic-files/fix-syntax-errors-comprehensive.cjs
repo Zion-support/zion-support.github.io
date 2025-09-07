@@ -136,7 +136,6 @@ function fixSyntaxErrors(filePath) {
 =======
 
     // Fix common syntax errors
-
     // Fix unnecessary escape characters
 const fs = require('fs');
 const path = require('path');

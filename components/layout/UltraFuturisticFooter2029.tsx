@@ -167,6 +167,7 @@ const serviceCategories = [
   }
 ];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const quickLinks = [;
   { "name": 'Home', "href": '/', "icon": Home,'
 },

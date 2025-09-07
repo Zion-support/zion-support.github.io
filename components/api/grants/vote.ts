@@ -18,6 +18,9 @@ function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  if (!fs && fs.existsSync(p)) return null;
+  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
   const p = grantPath(id);
@@ -25,6 +28,7 @@ function readGrant(id: string): GrantApplication | null {
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs.writeFileSync(
@@ -47,6 +51,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
+<<<<<<< HEAD
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+  if (!payload?.grantId |!payload?.voter |!payload?.choice) {
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+    res.status(400).json({ error: 'Missing fields' });
+    return
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const g = readGrant(payload.grantId);
   if (!g) {
     return res.status(404).json({ error: 'Grant not found' });

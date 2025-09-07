@@ -6,6 +6,7 @@ export type EmptyStateProps = $2;
 },
 export type EmptyStateProps = {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 export type EmptyStateProps = {;
   emoji?: string;

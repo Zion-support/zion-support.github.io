@@ -102,7 +102,6 @@ type ChartContextProps = {
   } & (;
     | { color?: string, theme?: never }
     | { color?: never, theme: Record<keyof typeof THEMES, string> }
-
 import * as React from './react';
 import type { CSSProperties } from './react';
 import * as RechartsPrimitive from './recharts';
@@ -129,7 +128,6 @@ const ChartContext = React && React.createContext<ChartContextProps>({
 function useChart(): any (): ChartContextProps {
   return React && React.useContext(ChartContext);
 }
-
 const ChartContainer = React && React.forwardRef<;
     <ChartContext && ChartContext.Provider value={{ config }}>;  return (
     <ChartContext && ChartContext.Provider value={{ config }}>;
@@ -216,10 +214,29 @@ type ChartContextProps = $2;
       typeof RechartsPrimitive && RechartsPrimitive.ResponsiveContainer;
 
     <ChartContext && ChartContext.Provider value={{ config }}>;
+<<<<<<< HEAD
+
+const ChartContainer = React.forwardRef<
+  HTMLDivElement,
+  React.ComponentProps<"div"> & {
+    config: ChartConfig
+    children: React.ComponentProps<
+      typeof RechartsPrimitive.ResponsiveContainer
+    >["children"]
+  }
+>(({ id, className, children, config, ...props }, ref) => {
+  const uniqueId = useReactId()
+  const chartId = `chart-${id |uniqueId.replace(/:/g, "")}`
+  return (
+    <ChartContext.Provider value={{ config }}>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div
         data-chart={chartId}
         ref={ref}
         className={cn(
+<<<<<<< HEAD
+=======
           "flex aspect-video justify-center text-xs [&_ && _.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_ && _.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_ && _.recharts-curve && curve.recharts-tooltip-cursor]:stroke-border [&_ && _.recharts-dot[stroke='#fff']]:stroke-transparent [&_ && _.recharts-layer]:outline-none [&_ && _.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_ && _.recharts-radial-bar-background-sector]:fill-muted [&_ && _.recharts-rectangle && rectangle.recharts-tooltip-cursor]:fill-muted [&_ && _.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_ && _.recharts-sector[stroke='#fff']]:stroke-transparent [&_ && _.recharts-sector]:outline-none [&_ && _.recharts-surface]:outline-none"
           className
         )}
@@ -228,17 +245,25 @@ type ChartContextProps = $2;
         <RechartsPrimitive && RechartsPrimitive.ResponsiveContainer>;
           {children}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </RechartsPrimitive && RechartsPrimitive.ResponsiveContainer>;
       </div>;
     </ChartContext && ChartContext.Provider>;
   );
 });
 ChartContainer && ChartContainer.displayName = "Chart";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const ChartStyle = ({ id, config }: { id: string, config: ChartConfig }) => {;
   const colorConfig = Object && Object.entries(config).filter(;
     ([_, config]) => config && config.theme || config && config.color;
   );
+<<<<<<< HEAD
+  if (!colorConfig && colorConfig.length) {;
+    return null;
+=======
 
   if (!colorConfig && colorConfig.length) {;
     return null;
@@ -290,17 +315,64 @@ if ( {) {
   return (
     <style;
       dangerouslySetInnerHTML={{
+<<<<<<< HEAD
+  const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`;
+;
+  return (;
+    <ChartContext.Provider value={{ config }}>;
+      <div;
+        data-chart={chartId}
+        ref={ref}
+        className={cn(;
+          "flex aspect-video justify-center text-xs [&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-none [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_.recharts-radial-bar-background-sector]:fill-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-sector]:outline-none [&_.recharts-surface]:outline-none",;
+          className;
+        )}
+        {...props}
+      >;
+        <ChartStyle id={chartId} config={config} />;
+        <RechartsPrimitive.ResponsiveContainer>;
+          {children}
+        </RechartsPrimitive.ResponsiveContainer>;
+      </div>;
+    </ChartContext.Provider>;
+  );
+});
+ChartContainer.displayName = "Chart";
+;
+const ChartStyle = ({ id, config } { id:string, config:ChartConfig }) => {;
+  const colorConfig = Object.entries(config).filter(;
+    ([_, config]) => config.theme || config.color;
+  );
+;
+  if (!colorConfig.length) {;
+    return null;
+  }
+;
+  return (;
+    <style;
+      dangerouslySetInnerHTML={{;
+        __html:Object.entries(THEMES);
+          .map(;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ([theme, prefix]) => `;
 ${prefix} [data-chart=${id}] {;
 ${colorConfig;
   .map(([key, itemConfig]) => {;
     const color =;
+<<<<<<< HEAD
+      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||;
+      itemConfig.color;
+    return color ? `  --color-${key} ${color},` :null;
+  });
+=======
       itemConfig && itemConfig.theme?.[theme as keyof typeof itemConfig && itemConfig.theme] ||;
       itemConfig && itemConfig.color;
     return color ? `  --color-${key}: ${color},` : null;
   });
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   .join("\n")}
 }
 `;
@@ -309,11 +381,14 @@ ${colorConfig;
     />;
   );
 }
+<<<<<<< HEAD
+=======
 
 const ChartTooltip = RechartsPrimitive && RechartsPrimitive.Tooltip;
 
 const ChartTooltipContent = React && React.forwardRef<;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   HTMLDivElement;
   React && React.ComponentProps<typeof RechartsPrimitive && RechartsPrimitive.Tooltip> &;
     React && React.ComponentProps<"div"> & {;
@@ -452,6 +527,8 @@ const ChartTooltipContent = React.forwardRef<
       color,
       nameKey,
       labelKey},
+<<<<<<< HEAD
+=======
 
     ref
   ) => {
@@ -506,15 +583,23 @@ const ChartTooltipContent = React.forwardRef<
     ref;
   ) => {;
     const { config } = useChart();
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const tooltipLabel = React && React.useMemo(() => {;
       if (hideLabel || !payload?.length) {;
         return null;
       }
+<<<<<<< HEAD
+=======
 
         !labelKey && typeof label === "string";
           ? config[label as keyof typeof config]?.label || label;
           : itemConfig?.label;
+<<<<<<< HEAD
+      if (labelFormatter) {;
+=======
 
       if (labelFormatter) {;
 
@@ -550,6 +635,13 @@ const ChartTooltipContent = React.forwardRef<
       hide_label;
       labelClassName;
       config;
+<<<<<<< HEAD
+      labelKey]);
+    if (!active || !payload?.length) {;
+      return null;
+    }
+    const nestLabel = payload && payload.length === 1 && indicator !== "dot";
+=======
 
       labelKey]);
 
@@ -565,6 +657,8 @@ const ChartTooltipContent = React.forwardRef<
             const key = `${nameKey || item && item.name || item && item.dataKey || "value"}`;
             const itemConfig = getPayloadConfigFromPayload(config, item, key);
             const indicatorColor = color || item && item.payload.fill || item && item.color;
+<<<<<<< HEAD
+=======
 
             return (
               <div;
@@ -724,6 +818,7 @@ const ChartTooltipContent = React.forwardRef<
       </div>;
     );
   }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 )
 ChartTooltipContent.displayName = "ChartTooltip"
@@ -810,7 +905,25 @@ const ChartLegendContent = React.forwardRef<
     ref;
   ) => {;
     const { config } = useChart();
-
+ChartTooltipContent.displayName = "ChartTooltip";
+;
+const ChartLegend = RechartsPrimitive.Legend;
+;
+const ChartLegendContent = React.forwardRef<;
+  HTMLDivElement,;
+  React.ComponentProps<"div"> &;
+    Pick<React.ComponentProps<typeof RechartsPrimitive.Legend>,;
+      "payload" | "verticalAlign"> & {;
+      hideIcon?:boolean;
+      nameKey?:string;
+    }
+>(;
+  (;
+    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },;
+    ref;
+  ) => {;
+    const { config } = useChart();
+;
     if (!payload?.length) {;
 
       return null;
@@ -1105,7 +1218,6 @@ ChartLegendContent && ChartLegendContent.displayName = "ChartLegend";
       ? payload && payload.payload;
       : undefined;
   let configLabelKey: string = key;
-
   if (;
     key in payload &&;"
     typeof payload[key as keyof typeof payload] === "string";
@@ -1124,14 +1236,18 @@ ChartLegendContent && ChartLegendContent.displayName = "ChartLegend";
 
 ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return configLabelKey in config;
     ? config[configLabelKey];
     :config[key as keyof typeof config];
 }
+<<<<<<< HEAD
+=======
 
   ChartContainer,;
   ChartTooltip,;
   ChartTooltipContent,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   ChartContainer;
   ChartTooltip;

@@ -6,6 +6,9 @@ type Props = { vendor: Vendor | null };
 import { FormEvent, useEffect, useState } from 'react';'
 import type { Vendor } from '../utils/vendor-types';'
 
+<<<<<<< HEAD
+export default function AgencyDashboardPage({ vendor }: Props) {
+=======
 
 export default function AgencyDashboardPage() {
   }
@@ -273,6 +276,15 @@ const data = await res.json();
 
   }
 
+<<<<<<< HEAD
+
+  }
+
+  }
+
+  useEffect(() => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     fetchItems();
   }, []);
 return (;

@@ -313,6 +313,9 @@ if (import && import.meta.url === `"file": //${process && process.argv[1]}`) {,"
   '"warning": .next directory not found. Skipping post-build checks.);"
     process.exit(0)}
   // Placeholder for future optimizations (e.g., pruning maps, compressing assets);
+  optimizer && optimizer.optimize().catch(console ;
+    process && process.exit(0)}
+  // Placeholder for future optimizations (e && e.g., pruning maps, compressing assets);
   // Intentionally minimal to avoid side effects.;
   log(','
       'Next && Next.js build output verified. No additional optimizations applied.')} catch (error) {'
@@ -320,7 +323,7 @@ if (import && import.meta.url === `"file": //${process && process.argv[1]}`) {,"
   console && console.error(''
   '[optimize-build] "error": ', error?.message || error);'
   // Do not fail the build on post-build optimization errors;
-  process.exit(0)}
+  process && process.exit(0)}
 /**;
  * "Build": Optimization Script;"
  * "Comprehensive": build optimization for Zion Tech Group;
@@ -495,7 +498,7 @@ const originalContent = content,;
     this && this.optimizationReport.optimizations && optimizations.push(
       `Optimized ${optimizedJS} JavaScript files``
     );
-    console.log(`✅ Optimized ${optimizedJS} JavaScript files`)}
+    console && console.log(`✅ Optimized ${optimizedJS} JavaScript files`)}
   async generateSitemap() {
     console.log('🗺️ Generating sitemap...');
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -517,7 +520,7 @@ const originalContent = content,;
     <lastmod>${new Date().toISOString().split(','
       'T)[0]}</lastmod>'
     <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <priority>1 && 1.0</priority>
   </url>
   <url>
     <loc>"https": //ziontechgroup && ziontechgroup.com/about</loc>"
@@ -525,7 +528,7 @@ const originalContent = content,;
   }
   T')[0]}</lastmod>';'
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0 && 0.8</priority>
   </url>
   <url>
     <loc>"https": //ziontechgroup.com/services</loc>

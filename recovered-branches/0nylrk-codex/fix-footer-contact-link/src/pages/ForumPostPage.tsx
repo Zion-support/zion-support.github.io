@@ -80,6 +80,7 @@ const mockPost: ForumPost = {
     upvotes: 15
     downvotes: 0
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   {
     id: "reply2",
@@ -106,6 +107,8 @@ const mockPost: ForumPost = {
     downvotes: 0,
     isAnswer: true
   },
+<<<<<<< HEAD
+=======
 
   {
     id: "reply4"
@@ -119,6 +122,99 @@ const mockPost: ForumPost = {
     downvotes: 0
   }
 
+<<<<<<< HEAD
+
+import { useState } from "react",;
+import { useParams, Link } from "react-router-dom",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { SEO } from "@/components/SEO",;
+import { Button } from "@/components/ui/button",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Badge } from "@/components/ui/badge",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Separator } from "@/components/ui/separator",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from "lucide-react",;
+import { formatDistanceToNow, format } from "date-fns",;
+import { ForumPost, ForumReply } from "@/types/community",;
+import { useAuth } from "@/hooks/useAuth",;
+import ReplyCard from "@/components/community/ReplyCard",;
+import ReplyForm from "@/components/community/ReplyForm",;
+import { useToast } from "@/hooks/use-toast",;
+;
+// Mock data for a forum post;
+const mockPost:ForumPost = {;
+  id:"1",;
+  title:"Best practices for AI model fine-tuning",;
+  content:"I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",;
+  authorId:"user1",;
+  authorName:"Alex Johnson",;
+  authorAvatar:"https://i.pravatar.cc/150?img=3",;
+  authorRole:"Verified Talent",;
+  categoryId:"ai-tools",;
+  tags:["machine-learning", "fine-tuning", "gpt"],;
+  createdAt:"2025-04-01T12:00:00Z",;
+  updatedAt:"2025-04-01T12:00:00Z",;
+  upvotes:48,;
+  downvotes:2,;
+  replyCount:4,;
+  isAnswered:true,;
+  isFeatured:true;
+},;
+;
+// Mock data for replies;
+const mockReplies:ForumReply[] = [;
+  {;
+    id:"reply1",;
+    postId:"1",;
+    content:"Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",;
+    authorId:"user2",;
+    authorName:"Sarah Chen",;
+    authorAvatar:"https://i.pravatar.cc/150?img=5",;
+    createdAt:"2025-04-01T14:30:00Z",;
+    updatedAt:"2025-04-01T14:30:00Z",;
+    upvotes:12,;
+    downvotes:0;
+  },;
+  {;
+    id:"reply2",;
+    postId:"1",;
+    content:"Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.performance.",;
+    authorId:"user3",;
+    authorName:"Michael Wong",;
+    authorRole:"AI Engineer",;
+    createdAt:"2025-04-01T16:15:00Z",;
+    updatedAt:"2025-04-01T16:15:00Z",;
+    upvotes:8,;
+    downvotes:0;
+  },;
+  {;
+    id:"reply3",;
+    postId:"1",;
+    content:"A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",;
+    authorId:"user4",;
+    authorName:"Emma Davis",;
+    authorRole:"ML Research Lead",;
+    createdAt:"2025-04-02T09:45:00Z",;
+    updatedAt:"2025-04-02T09:45:00Z",;
+    upvotes:15,;
+    downvotes:0,;
+    isAnswer:true;
+  },;
+  {;
+    id:"reply4",;
+    postId:"1",;
+    content:"Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",;
+    authorId:"user5",;
+    authorName:"David Lin",;
+    createdAt:"2025-04-02T11:20:00Z",;
+    updatedAt:"2025-04-02T11:20:00Z",;
+    upvotes:4,;
+    downvotes:0;
+  }
+],;
+;
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -287,10 +383,8 @@ export default function ForumPostPage() { return null; }
 
   // Check if this is the user's own post;
   const isAuthor = user?.id === post?.authorId;
-
   // Check if user is admin/mod;
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
-
   // For this demo, we'll assume the post is found;
   if (!post) {;
 
@@ -348,6 +442,7 @@ export default function ForumPostPage() { return null; }
       title: "Reply posted"
       description: "Your reply has been added to the discussion"})
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
@@ -364,31 +459,26 @@ export default function ForumPostPage() { return null; }
         description: "Please sign in to vote on posts"}),;
       return;
     }
-
     setPost({ ...post, upvotes: post && post.upvotes + 1 }),;
 
       description: "You upvoted this post"});
   };
-
   const handleDownvote = () => {;
     if (!user) {;
 
         description: "Please sign in to vote on posts"}),;
       return;
     }
-
     setPost({ ...post, downvotes: post && post.downvotes + 1 }),;
 
       description: "You downvoted this post"});
   };
-
   const handleSubmitReply = async (content: string) => {;
     if (!user) {;
 
         description: "Please sign in to reply"}),;
       return;
     }
-
     // Create a new reply;
 
       authorName: user && user.displayName || 'Anonymous',;
@@ -398,13 +488,11 @@ export default function ForumPostPage() { return null; }
       upvotes: 0,;
       downvotes: 0;
     };
-
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post && post.replyCount + 1 }),;
 
       description: "Your reply has been added to the discussion"});
   };
-
   const handleMarkAsAnswer = (replyId: string) => {;
     // Only post author or admin can mark an answer;
     if (!isAuthor && !isAdminOrMod) {;
@@ -419,6 +507,7 @@ export default function ForumPostPage() { return null; }
 
       ...reply,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     })),
 
     setReplies(updatedReplies),
@@ -435,6 +524,7 @@ export default function ForumPostPage() { return null; }
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleReportPost = () => {
     if (!user) {
       toast({
@@ -446,6 +536,13 @@ export default function ForumPostPage() { return null; }
 
       description: "A moderator will review this content"})
 
+<<<<<<< HEAD
+  }
+  const handlePinPost = () => {
+    if (!isAdminOrMod) return;
+    setPost({ ...post, isPinned: !post.isPinned })
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   const handlePinPost = () => {}
@@ -474,6 +571,7 @@ export default function ForumPostPage() { return null; }
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <AppLayout>
       <SEO;`
@@ -503,6 +601,7 @@ export default function ForumPostPage() { return null; }
                   <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
                 </Avatar>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -692,6 +791,7 @@ const mockReplies: ForumReply[] = [;
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     toast({;
       title: "Answer marked",
 
@@ -705,6 +805,7 @@ const mockReplies: ForumReply[] = [;
   return (
     <AppLayout>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Card>;
 
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
@@ -712,10 +813,18 @@ const mockReplies: ForumReply[] = [;
                   {tag}
                 </Badge>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={handleUpvote}
+<<<<<<< HEAD
+                  className="flex items-center gap-2"
+                >
+                  <ThumbsUp className="h-4 w-4" />
+                  <span>{post.upvotes}</span>
+                </Button>
+=======
                   className="flex items-center gap-2">;
                   <ThumbsUp className="h-4 w-4" />;
                   <span>{post && post.upvotes}</span>;
@@ -729,13 +838,19 @@ className="flex items-center gap-2"
                   variant="outline"
                   size="sm"
                   onClick={handleDownvote}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="flex items-center gap-2">;
                   <ThumbsDown className="h-4 w-4" />;
                   <span>{post && post.downvotes}</span>;
                 </Button>;
               </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="flex items-center gap-2">;
                 {(isAuthor || isAdminOrMod) && (;
                   <Button variant="ghost" size="sm" asChild>;
@@ -778,10 +893,13 @@ className="flex items-center gap-2"
                     </Link>;
                   </Button>;
                 )}
+<<<<<<< HEAD
+=======
 
                 {isAdminOrMod && (;
                   <>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Button
                       variant="ghost"
                       size="sm"
@@ -798,6 +916,68 @@ className="flex items-center gap-2"
                     </Button>;
                   </>;
                 )}
+<<<<<<< HEAD
+                  className="flex items-center gap-2"
+                >
+                  <ThumbsDown className="h-4 w-4" />
+                  <span>{post.downvotes}</span>
+                </Button>
+              </div>
+              <div className="flex items-center gap-2">
+                {(isAuthor |isAdminOrMod) && (
+                  <Button variant="ghost" size="sm" asChild>
+                    <Link to={`/community/edit/${post.id}`}>
+                      <Edit className="h-4 w-4 mr-1" />
+                      Edit
+                    </Link>
+                  </Button>
+                )}
+                {isAdminOrMod && (
+                  <>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handlePinPost}
+                    >
+                      <Pin className="h-4 w-4 mr-1" />
+                      {post.isPinned ? "Unpin" : "Pin"}
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleLockPost}
+                    >
+                      <Lock className="h-4 w-4 mr-1" />
+                      {post.isLocked ? "Unlock" : "Lock"}
+                    </Button>
+                  </>
+                )}
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleReportPost}
+                >
+                  <Flag className="h-4 w-4 mr-1" />
+                  Report
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        <div className="mt-8">
+          <h2 className="text-xl font-bold mb-6">Responses ({post.replyCount})</h2>
+          {post.isAnswered && (
+            <div className="mb-6">
+              <h3 className="flex items-center text-green-600 font-medium mb-2">
+                <CheckCircle className="h-4 w-4 mr-2" />
+                Accepted Answer
+              </h3>
+              {replies.filter(reply => reply.isAnswer).map(reply => (
+                <ReplyCard key={reply.id} reply={reply} className="border-green-500" />
+              ))}
+            </div>
+          )}
+=======
 
 className="flex items-center gap-2"
                 >
@@ -1708,6 +1888,7 @@ if (return) {}
             </div>
           )}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -2111,7 +2292,10 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
     </AppLayout>;
   );
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="mt - 8">;
           <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;
           {post.is_answered && (

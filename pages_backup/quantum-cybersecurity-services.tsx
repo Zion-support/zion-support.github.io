@@ -107,6 +107,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>;
@@ -119,10 +120,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 technology available, powered by quantum computing and AI.;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices && quantumCybersecurityServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
+<<<<<<< HEAD
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+=======
 
 
                   initial={{ opacity: 0, y: 50 }}
@@ -185,6 +192,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <li>• Financial systems exposed</li>
                 </ul>
               </motion.div>
+<<<<<<< HEAD
+
+=======
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -334,7 +344,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Email;
                   </h3>;
                   <a
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                     className='text-indigo-400 hover:text-indigo-300 transition-colors'>;
                     kleber@ziontechgroup && ziontechgroup.com;
@@ -567,16 +580,89 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Address;
                   </h3>;
                   <p className='text - gray - 300 text - sm'>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     364 E Main St STE 1008;
                     <br />                    Middletown DE 19709;
                   </p>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+        {/* Contact Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+        {/* Contact Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+                  Secure Your Future Today
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Don't wait for quantum computers to break your security. Contact us now to implement quantum-resistant protection.
+              </p>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
+                <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>
+                  <div className='text-3xl mb-4'>📱</div>
+                  <h3 className='text-xl font-semibold text-white mb-2'>
+                    Phone
+                  </h3>
+                  <a
+                    href='tel:+13024640950'
+                    className='text-indigo-400 hover:text-indigo-300 transition-colors'
+                  >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
+                  <div className="text-3xl mb-4">📱</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                  <a href="tel:+13024640950" className="text-indigo-400 hover:text-indigo-300 transition-colors">
+=======
 
 
                     +1 302 464 0950
                   </a>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                    +1 302 464 0950
+                  </Link>
                 </div>
                 <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
                   <div className="text-3xl mb-4">✉️</div>
@@ -604,14 +690,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Start Your Security Assessment
-                </a>
+                </Link>
                 <a
 href='https://ziontechgroup.com'
                   className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Visit Our Website
+<<<<<<< HEAD
+                </Link>
+=======
+<<<<<<< HEAD
                 </a>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>
             </motion.div>
           </div>
@@ -627,6 +718,52 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <a;
                   href='https://ziontechgroup.com';
                   className='border - 2 border - indigo - 400 text - indigo - 400 px - 8 py - 4 rounded - xl text - lg font - semibold hover:bg - indigo - 400 hover:text - black transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30'                >;
+  );
+  )
+            >;
+              <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">;
+                <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">;
+                  Secure Your Future Today;
+                </span>;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8">;
+                Don't wait for quantum computers to break your security. Contact us now to implement quantum-resistant protection.;
+              </p>;
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
+                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">;
+                  <div className="text-3xl mb-4">📱</div>;
+                  <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>;
+                  <a href="tel:+13024640950" className="text-indigo-400 hover:text-indigo-300 transition-colors">;
+                    +1 302 464 0950;
+                  </a>;
+                </div>;
+                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">;
+                  <div className="text-3xl mb-4">✉️</div>;
+                  <h3 className="text-xl font-semibold text-white mb-2">Email</h3>;
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-indigo-400 hover:text-indigo-300 transition-colors">;
+                    kleber@ziontechgroup.com;
+                  </a>;
+                </div>;
+                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">;
+                  <div className="text-3xl mb-4">📍</div>;
+                  <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;
+                  <p className="text-gray-300 text-sm">;
+                    364 E Main St STE 1008<br />;
+                    Middletown DE 19709;
+                  </p>;
+                </div>;
+              </div>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <a;
+                  href="mailto:kleber@ziontechgroup.com";
+                  className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30";
+                >;
+                  Start Your Security Assessment;
+                </a>;
+                <a;
+                  href="https://ziontechgroup.com";
+                  className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30";
+                >;
                   Visit Our Website;
                 </a>;
               </div>;

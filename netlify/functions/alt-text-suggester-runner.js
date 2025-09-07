@@ -1,5 +1,6 @@
 function runNode(relPath, args = []) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const path = require ('path');
 
 const { spawn_sync } = require ('child_process');
@@ -10,7 +11,10 @@ const { spawn_sync } = require ('child_process');
 function run_node() { return null; }
   return spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 ;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 exports.config = {
 
   schedule: '*/15 * * * *'
@@ -20,6 +24,10 @@ exports.config = {
 
 exports && exports.config = {'
   schedule: '*/15 * * * *',
+<<<<<<< HEAD
+  const abs = path.resolve(__dirname, '....', relPath),
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+=======
 
   const abs = path.resolve(__dirname, '....', relPath),
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })

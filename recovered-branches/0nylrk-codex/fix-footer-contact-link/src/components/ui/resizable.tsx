@@ -15,8 +15,10 @@ const ResizablePanelGroup = ({
 }: React.ComponentProps<typeof ResizablePrimitive.PanelGroup>) => (
   <ResizablePrimitive.PanelGroup
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
 
     )}
@@ -28,6 +30,8 @@ const ResizablePanelGroup = ({
     )}
   </ResizablePrimitive.PanelResizeHandle>;
 );
+<<<<<<< HEAD
+=======
 
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 

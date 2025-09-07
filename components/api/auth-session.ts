@@ -1,4 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
 
 import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 

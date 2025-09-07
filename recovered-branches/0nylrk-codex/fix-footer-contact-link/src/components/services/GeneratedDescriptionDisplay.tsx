@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
@@ -173,6 +174,70 @@ export function GeneratedDescriptionDisplay() { return null; }
     onSave(editedDescription),;
     setIsEditing(false),;
 
+<<<<<<< HEAD
+  const { toast } = useToast();
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedDescription, setEditedDescription] = useState(description);
+  const handleSave = () => {;
+    onSave(editedDescription);
+    setIsEditing(false);
+    toast({;
+      title: "Description Saved",;
+      description: "Your edited description has been saved.";
+    });
+  };
+  return (
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Check, Pencil } from "lucide-react",;
+<<<<<<< HEAD
+;
+interface GeneratedDescriptionDisplayProps {;
+  description:string,;
+  onSave:(editedDescription:string) => void;
+}
+;
+export function GeneratedDescriptionDisplay({ ;
+  description, ;
+  onSave ;
+} GeneratedDescriptionDisplayProps) {;
+  const { toast } = useToast(),;
+  const [isEditing, setIsEditing] = useState(false),;
+  const [editedDescription, setEditedDescription] = useState(description),;
+;
+  const handleSave = () => {;
+    onSave(editedDescription),;
+    setIsEditing(false),;
+    toast({;
+      title:"Description Saved",;
+      description:"Your edited description has been saved.";
+    }),;
+  },;
+;
+  return (;
+=======
+interface GeneratedDescriptionDisplayProps {;
+  description: string,;
+  onSave: (editedDescription: string) => void;
+}
+;
+export function GeneratedDescriptionDisplay({;
+  description,;
+  onSave;
+}: GeneratedDescriptionDisplayProps) {;
+  const { toast } = useToast(),;
+  const [isEditing, setIsEditing] = useState(false),;
+  const [editedDescription, setEditedDescription] = useState(description),;
+  const handleSave = () => {;
+    onSave(editedDescription),;
+    setIsEditing(false),;
+
     toast({;
       title: "Description Saved",
       description: "Your edited description has been saved.";
@@ -222,6 +287,11 @@ export function GeneratedDescriptionDisplay({ ;
       <CardHeader>;
         <CardTitle className="text-white flex items-center justify-between">;
           Generated Description;
+<<<<<<< HEAD
+          <Button ;
+            variant="outline" ;
+            size="sm" ;
+=======
           <Button
             variant="outline" 
             size="sm" 
@@ -246,6 +316,8 @@ export function GeneratedDescriptionDisplay({ ;
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
               </>;
+<<<<<<< HEAD
+=======
 
             )}
 
@@ -279,10 +351,33 @@ interface GeneratedDescriptionDisplayProps {}
         </CardTitle>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
+        {isEditing ? (;
+          <Textarea;
+            value={editedDescription}
+            onChange={(e) => setEditedDescription(e.target.value)}
+            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none";
+          />;
+        ) :(;
+          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">;
+            {editedDescription}
+          </div>;
+        )}
+      </CardContent>;
+      {isEditing && (;
+        <CardFooter>;
+          <Button ;
+            onClick={handleSave}
+            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white";
+          >;
+=======
 
           </Button>;
         </CardFooter>;
       )}
+<<<<<<< HEAD
+    </Card>;
+=======
 
         {is_editing ? (
           <Textarea;

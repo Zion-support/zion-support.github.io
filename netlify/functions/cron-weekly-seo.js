@@ -22,6 +22,8 @@ async function scorePage(url) {
   }
 
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -88,6 +90,8 @@ exports.handler = async function () {}
     const results = [];
     ${p}`));
     }
+<<<<<<< HEAD
+=======
 
         token,
       });
@@ -107,7 +111,10 @@ exports.handler = async function () {}
  */
 function score_page() {
   const t0 = Date.now (),
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
 
     const resp = await fetch (url),
@@ -130,6 +137,7 @@ exports.handler = async function () {}
     const pages = ['//learn / dao / certifications / blog'],
     const results = [],
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       results.push (await score_page (`${base_url}${p}`));
     }
     const report = { updated_at: Date.now (), results },
@@ -143,6 +151,11 @@ if ( {) {}
       await upsert_file ({ owner, repo, path: 'data / reports / seo / weekly - seo.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly SEO report', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }
+<<<<<<< HEAD
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+=======
 
 };async function scorePage(url) {
 
@@ -164,6 +177,11 @@ if ( {) {}
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
     const pages = ['//learn/dao/certifications/blog'],
     const results = [],
+<<<<<<< HEAD
+    for (const p of pages) {
+      results && results.push(await scorePage(`${baseUrl}${p}`))
+    }
+=======
 
     for (const p of pages) {
       results && results.push(await scorePage(`${baseUrl}${p}`))
@@ -179,6 +197,12 @@ if ( {) {}
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo && seo.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })
+    }
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
+=======
 
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo && seo.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })
@@ -186,6 +210,7 @@ if ( {) {}
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
 >>>>>>> origin/chore/fix-lint-and-merge

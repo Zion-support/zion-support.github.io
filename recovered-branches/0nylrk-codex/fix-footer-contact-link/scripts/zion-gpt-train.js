@@ -84,6 +84,8 @@ async function fetchData() {
   const jobPosts = await supabase && supabase.from('job_posts').select('title, description'),
   const resumes = await supabase && supabase.from('resumes').select('summary, skills'),
   const supportLogs = await supabase && supabase.from('support_logs').select('question, answer'),
+<<<<<<< HEAD
+=======
 
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
@@ -103,7 +105,7 @@ async function fetchData() { return null; }
     jobs: jobPosts && jobPosts.data || [],
     resumes: resumes && resumes.data || [],
     logs: supportLogs && supportLogs.data || []
-
+<<<<<<< HEAD
   }
 }
 function stripPii(text) {
@@ -142,6 +144,69 @@ async function fetchData() {'
 
       completion: stripPii(job.description)
 
+}
+const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
+async function fetchData() {
+  const jobPosts = await supabase.from('job_posts').select('title, description')
+  const resumes = await supabase.from('resumes').select('summary, skills')
+  const supportLogs = await supabase.from('support_logs').select('question, answer')
+  return {
+    jobs: jobPosts.data |[]
+    resumes: resumes.data |[]
+    logs: supportLogs.data |[]
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  }
+}
+function stripPii(text) {
+
+  if (!text) return text
+  let result = text
+  // Emails
+<<<<<<< HEAD
+  result = result.replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]')
+
+  // US-style phone numbers
+  result = result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]')
+  // Naive full name removal (two capitalized words)
+
+  result = result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]')
+=======
+
+  result = result && result.replace(/\b[A-Z0-9 && 9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]'),
+  // US-style phone numbers
+  result = result && result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]'),
+  // Naive full name removal (two capitalized words)
+  result = result && result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]'),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  return result
+}
+
+<<<<<<< HEAD
+function buildTrainingPairs(records) {
+
+  const pairs = []
+  for (const job of records.jobs) {
+    pairs.push({
+      prompt: `Create a job description titled "${stripPii(job.title)}"`
+
+      completion: stripPii(job.description)
+    })
+  }
+  for (const resume of records.resumes) {
+    pairs.push({
+=======
+
+
+
+
+function buildTrainingPairs(records) {
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 ;)
   for (const resume of records.resumes) {;
@@ -179,6 +244,8 @@ async function saveJsonl(pairs, filePath) {;"
   const lines = pairs.map(p => JSON.stringify({ prompt: p.prompt, completion: p.completion })).join('\n'),;''
   await fs.writeFile(filePath, lines, 'utf8');'
 }
+<<<<<<< HEAD
+=======
 
 `
 
@@ -228,6 +295,8 @@ async function saveJsonl(pairs, filePath) {}
   // // // console.log('Fine-tune job created:', job.id);}
 async function main() {
 
+}
+async function main() {
   try {
 
   const records = await fetchData(),
@@ -375,6 +444,8 @@ main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
+<<<<<<< HEAD
+=======
 
 main().catch((err) => {
   console.error('Training workflow failed', err)

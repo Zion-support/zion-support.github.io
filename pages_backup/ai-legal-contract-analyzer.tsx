@@ -88,6 +88,10 @@ import Head from 'next/head';
   MapPin,
   Check,
   ArrowRight,
+<<<<<<< HEAD
+  Star,;
+  Scale,;
+=======
 
 } from 'lucide-react';
 
@@ -180,6 +184,8 @@ if (return null) {}
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
 
           </p>;
           <div className="flex justify - center gap - 4">;"
@@ -187,17 +193,27 @@ if (return null) {}
               Get Started;
             </a>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Learn More;
             </a>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
+=======
 
 export default function AILegalContractAnalyzerPage() {
 
+<<<<<<< HEAD
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function AILegalContractAnalyzerPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'));
-  if (!service) return null;
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/ai-legal-contract-analyzer');
+  );  if (!service) return null;
 
 import React from 'react'
 import Head from 'next/head'
@@ -205,6 +221,8 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-reac
 import Layout from '../components/layout/Layout'
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+<<<<<<< HEAD
+=======
 
     s.link.endsWith('/ai-legal-contract-analyzer')
   );
@@ -294,7 +312,12 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
       </div>
     </Layout>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+=======
 
     </Layout>);
 ;

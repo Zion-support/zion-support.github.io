@@ -39,6 +39,8 @@ export function useSitemap() {;  const { user, isAuthenticated } = useAuth();
   return {}
     accessibleRoutes;
     findRouteByPath;
+<<<<<<< HEAD
+=======
 
 import {use_auth} from './use_auth';
 

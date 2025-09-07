@@ -1,3 +1,41 @@
+<<<<<<< HEAD
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
+import {;
+  Zap,;
+  Clock,;
+  TrendingUp,;
+  Activity,;
+  Gauge,;
+  Cpu,;
+  Database,;
+  Network,;
+import {
+import React, { useEffect, useState, useCallback } from 'react';
+
+import { motion } from 'framer-motion';
+import {
+  Zap
+  Clock
+  TrendingUp
+  Activity
+  Gauge
+  Cpu
+  Database
+  Network;
+  Zap,
+  Clock,
+  TrendingUp,
+  Activity,
+  Gauge,
+  Cpu,
+  Database,;
+  Network,;
+} from 'lucide-react';
+interface PerformanceMetrics {;
+  loadTime: number;
+
+=======
 
 ;
 
@@ -41,6 +79,7 @@ interface PerformanceMetrics {
 
 } from 'lucide-react';'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface PerformanceMetrics {
   }
   "load_time": number;
@@ -58,6 +97,12 @@ interface PerformanceMetrics {
   firstInputDelay: number,
   timeToInteractive: number
 }
+<<<<<<< HEAD
+    loadTime: 0,
+const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ class_name = '' }) => {
+  const [metrics, set_metrics] = useState < PerformanceMetrics>({
+    load_time: 0,
+=======
 
   className = '','
 
@@ -191,6 +236,8 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
         console && console.log('Performance monitoring not fully supported');'
 '      }';'
       // Resource hints for better performance;
+<<<<<<< HEAD
+=======
 
 const addResourceHint = ("href": string, "as": string, type?: string) => ;
   const link = document.createElement('link');'
@@ -308,11 +355,11 @@ const getPerformanceScore = (): (number) => {
   const performanceGrade = getPerformanceGrade(performanceScore);
 
   return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-bold text-white flex items-center gap-2">
           <Gauge className="w-5 h-5 text-cyan-400" />
-          Performance Optimizer
         </h3>
         <button
           onClick={() => setShowMetrics(!showMetrics)}
@@ -496,6 +543,33 @@ onClick={runAllOptimizations}
               ? 'bg-gray-600 cursor-not-allowed''
               : 'bg-gradient-to-r from-cyan-600 to-blue-600 "hover":from-cyan-700 "hover":to-blue-700 "hover":scale-105''
 
+<<<<<<< HEAD
+          } flex items-center justify-center gap-2`}
+        >
+          {isOptimizing ? (
+            <>
+              <div className='w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin' />              <span>Optimizing...</span>
+            </>
+          ) : (
+            <>
+              <Zap className='w-4 h-4' />              <span>Run All Optimizations</span>              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+              <span>Optimizing...</span>
+            </>
+          ) : (
+            <>
+              <Zap className='w-4 h-4' />              <Zap className="w-4 h-4" />
+              <span>Run All Optimizations</span>
+            </>
+          )}
+        </button>
+        {optimizationStatus !== 'idle' && (
+          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
+            <div className='text-sm text-white/80'>{optimizationStatus}</div>          </div>          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <div className="text-sm text-white/80">{optimizationStatus}</div>
+          </div>
+        )}
+      </div>
+=======
 
           } flex items-center justify-center gap-2
 }>
@@ -545,6 +619,13 @@ onClick={runAllOptimizations}
         </ul>
       </div>
 
+<<<<<<< HEAD
+  )
+};
+export default PerformanceOptimizer;
+interface PerformanceMetrics {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, [measure_performance]);
 ;
 interface PerformanceMetrics {
@@ -568,6 +649,7 @@ interface PerformanceOptimizerProps  {onMetricsUpdate?: ("metrics": PerformanceM
       measureWebVitals()} else {window && window.addEventListener('load', measureWebVitals)}
 export default PerformanceOptimizer;)
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       measureWebVitals();
     } else {;
       }

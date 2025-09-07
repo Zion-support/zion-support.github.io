@@ -33,10 +33,23 @@ export function ResumeVersionSelector({
   onResumeChange,
 }: ResumeVersionSelectorProps) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { createResume, fetchResume } = useResume();
 
         setNewResumeTitle("");
 
+<<<<<<< HEAD
+  const handleCreateNewVersion = async () => {
+    if (newResumeTitle.trim()) {
+      setIsLoading(true);
+      const resumeId = await createResume({ title: newResumeTitle.trim() });
+      if (resumeId) {
+        await fetchResume(resumeId);
+        onResumeChange(resumeId);
+        setSaveDialogOpen(false);
+        setNewResumeTitle("");
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       setIsLoading(false);
     }

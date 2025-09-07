@@ -61,6 +61,7 @@ interface StickyActionProps {}
 
 export function StickyAction(): any ({;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   className;
   children;
 
@@ -86,6 +87,7 @@ export function StickyAction(): any ({;
 
 }: StickyActionProps) {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
@@ -160,6 +162,7 @@ function StickyAction() {
     bottom: "bottom-4"","
   top: "top-20""
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <AnimatePresence>
@@ -219,6 +222,8 @@ interface StickyActionProps {;
       } else {;
         setIsVisible(false);
       }
+<<<<<<< HEAD
+=======
     };
 
     window && window.addEventListener("scroll", handleScroll);
@@ -238,6 +243,7 @@ interface StickyActionProps {;
         <motion&& motion.div
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
             positionClasses[position]
 

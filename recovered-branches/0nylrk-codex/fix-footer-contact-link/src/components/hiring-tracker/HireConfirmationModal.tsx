@@ -35,6 +35,7 @@ const { user } = useAuth();import React, { useState } from 'react',;'
   }
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react',
 import {}
 
@@ -43,9 +44,12 @@ import {}
   DialogContent,
   DialogDescription,
   DialogHeader,
+<<<<<<< HEAD
+=======
 
   DialogTitle} from "@/components/ui/dialog",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   DialogTitle} from "@/components/ui/dialog",
 
 import { Button } from "@/components/ui/button",
@@ -55,6 +59,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -86,11 +91,35 @@ export function HireConfirmationModal({ ;
   onConfirm;
   isSubmitting = false;
 }: HireConfirmationModalProps) {;
+<<<<<<< HEAD
+export interface HireConfirmationModalProps {
+  isOpen: boolean,
+  onClose: () => void,;
+  candidateData?: TalentProfile;
+  application?: JobApplication;
+  onConfirm: () => void,
+  isSubmitting?: boolean
+}
+
+export function HireConfirmationModal({ ;
+  isOpen;
+
+  onClose
+  candidateData
+  application;
+  onConfirm;
+  isSubmitting = false
+}: HireConfirmationModalProps) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [projectName, setProjectName] = useState('');
   const [projectDescription, setProjectDescription] = useState('');
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react',
 
   const { user } = useAuth();
@@ -126,7 +155,10 @@ import { Textarea } from "@/components/ui/textarea","
 import { toast } from "@/hooks/use-toast","
 import { supabase } from "@/integrations/supabase/client","
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useAuth } from "@/hooks/useAuth",
 
 import { JobApplication } from "@/types/jobs",
@@ -257,6 +289,10 @@ export interface HireConfirmationModalProps {;
         description: 'Talent information is missing.'
         variant: 'destructive'})
       return
+<<<<<<< HEAD
+  // Get talent information from either candidateData or application;
+  const talentData = candidateData || (application?.talent_profile as TalentProfile);
+=======
 
   // Get talent information from either candidateData or application;
   const talentData = candidateData || (application?.talent_profile as TalentProfile);
@@ -271,6 +307,7 @@ export interface HireConfirmationModalProps {;
   // Get talent information from either candidateData or application;
   const talentData = candidateData || (application?.talent_profile as TalentProfile);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleHireCandidate = async () => {;
     if (!projectName || !projectDescription) {;
       toast({;'
@@ -279,11 +316,16 @@ export interface HireConfirmationModalProps {;
         variant: 'destructive'}),;'
       return;
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!user) {;
 
       return;
     }
+<<<<<<< HEAD
+=======
 
     setIsLoading(true);
 
@@ -360,6 +402,7 @@ if ( {) {
     }
     setIsLoading(true);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -408,6 +451,8 @@ if ( {) {
 
     setIsLoading (true);
     // Create a new project;
+<<<<<<< HEAD
+=======
 
         .from('projects');
         .insert([;
@@ -420,12 +465,20 @@ if ( {) {
             payment_terms: 'hourly'}]);
         .select();
         .single();
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (projectError) {;
 
           title: 'Error creating project',;
           description: projectError && projectError.message,;
           variant: 'destructive'}),;
+<<<<<<< HEAD
+        setIsLoading(false);
+        return;
+      }
+=======
 
           description: projectError && projectError.message,;)
         setIsLoading(false);
@@ -440,11 +493,19 @@ setIsLoading(false);
         .from('hiring_records');
 
             status: 'active'}]),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (hiringError) {;
           title: 'Error creating hiring record',;
           description: hiringError && hiringError.message,;
           variant: 'destructive'}),;
+<<<<<<< HEAD
+        setIsLoading(false);
+        return;
+      }
+=======
 
         setIsLoading(false);
         return;
@@ -455,17 +516,24 @@ setIsLoading(false);
       }
           description: hiringError && hiringError.message,;)
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Update the availability status;
       if (updateAvailability) {;
           const { error: availabilityError } = await supabase;
             .from('talent_profiles');
             .update({ availability_type: 'unavailable' });
             .eq('id', talentData && talentData.id);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           if (availabilityError) {;
               title: 'Error updating availability',;
               description: availabilityError && availabilityError.message,;
               variant: 'destructive'}),;
+<<<<<<< HEAD
+            setIsLoading(false);
+=======
 
             setIsLoading(false);
 
@@ -517,7 +585,10 @@ return;
             title: 'Error updating availability',;
             description: 'Failed to update candidate availability status.',;
             variant: 'destructive'}),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           setIsLoading(false);
           return;
         }
@@ -573,7 +644,10 @@ return;
         }
       }
 ;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({;
         title: 'Candidate hired successfully',;
 
@@ -689,6 +763,12 @@ toast({;
             <Label htmlFor="projectName" className="text-right">;
               Project Name;
             </Label>;
+<<<<<<< HEAD
+            <Input;
+              id="projectName";
+              value={projectName}
+              onChange={(e) => setProjectName(e.target.value)}
+=======
 
             <Input
               id="projectName"
@@ -705,6 +785,12 @@ toast({;
             <Label htmlFor="projectDescription" className="text-right mt-2">;
               Project Description;
             </Label>;
+<<<<<<< HEAD
+            <Textarea;
+              id="projectDescription";
+              value={projectDescription}
+              onChange={(e) => setProjectDescription(e.target.value)}
+=======
             <Textarea
               id="projectDescription"
               value={projectDescription}
@@ -762,6 +848,7 @@ toast({;
             />;
             <label"
               htmlFor="updateAvailability"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 "
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed">;

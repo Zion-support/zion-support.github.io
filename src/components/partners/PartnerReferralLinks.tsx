@@ -9,6 +9,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -174,6 +175,7 @@ export function PartnerReferralLinks() {
         </Dialog>
       </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
           generatedLinks.map((item, index) => (
@@ -213,6 +215,7 @@ export function PartnerReferralLinks() {
               </p>
               <Button 
                 variant="outline"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2"
               >

@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+const UltraFuturisticBackground2034: React.FC = () => {
+      canvas.height = window.innerHeight
+    };
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+
+const UltraFuturisticBackground2034: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    // Set canvas size
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;      canvas.height = window.innerHeight
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    // Particle system
+    class Particle {
+=======
 
 
 
@@ -96,6 +120,70 @@ this.maxLife = this.life;}
           this && this.life = this && this.maxLife;
           this && this.x = Math && Math.random() * canvas && canvas.width;
           this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
+<<<<<<< HEAD
+          this.y = Math.random() * canvas.height
+
+          this.y = Math.random() * canvas.height
+        }
+      }
+      draw() {;
+          this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
+        }
+      }
+          this.y = Math.random() * canvas.height;        }
+
+        }
+
+      }
+
+      draw() {
+        if (!ctx) return;
+        ctx.save();
+        ctx.globalAlpha = this.alpha * (this.life / this.maxLife);
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();      }
+    }
+    // Create particles        ctx.restore()
+      }
+    }
+    // Create particles
+    const particles: Particle[] = [];
+    for (let i = 0; i < 100; i++) {
+      particles.push(new Particle());    }    const particles: Particle[] = []
+    for (let i = 0, i < 100, i++) {
+      particles.push(new Particle())
+    }
+    // Animation loop
+    const animate = () => {
+      if (!ctx) return;
+      // Clear canvas with gradient
+      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.1)');
+      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.05)');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Update and draw particles
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();      });        particle.draw()
+      });
+      // Draw connecting lines
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
+      ctx.lineWidth = 0.5;
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+      for (let i = 0, i < particles.length, i++) {
+        for (let j = i + 1, j < particles.length, j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+=======
 
         }
 
@@ -442,7 +530,6 @@ return (;
 
 requestAnimationFrame(animate);
     };
-
     animate();
     return () => {
 window.removeEventListener('resize', resizeCanvas);
@@ -754,6 +841,7 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
           "repeat": Infinity,
 "ease": 'linear','
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }}
         animate={{"rotate": -360;
           }
@@ -875,6 +963,7 @@ key={i}
 
       </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Quantum Entanglement Effect */}
       <motion&& motion.div'
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'

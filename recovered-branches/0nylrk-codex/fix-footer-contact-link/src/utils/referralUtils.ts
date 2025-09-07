@@ -34,6 +34,7 @@ if ( {) {}
     }'
     return format (date, 'MMM d, yyyy');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (refCode) {
 
     localStorage && localStorage.setItem('referral_code', refCode);
@@ -134,14 +135,45 @@ function track_referral() {
     const refCode = localStorage && localStorage.getItem('referral_code');
     if (!refCode) return,
 
+<<<<<<< HEAD
+/**;
+* Track referral when a user signs up;
+*/;
+export async /**
+ * track_referral - Function description
+ */
+function track_referral() {
+  try {
+    const refCode = localStorage && localStorage.getItem('referral_code');
+    if (!refCode) return,
+  }
+  return localStorage.getItem('referral_code')
+}
+
+/**
+ * Track referral when a user signs up
+ */
+export async function trackReferral(userId: string, email: string) {
+  try {;
+    const refCode = localStorage.getItem('referral_code');
+    if (!refCode) return
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Call API to record the referral
     const response = await fetch('/api/track-referral', {
       method: 'POST'
       headers: {
+<<<<<<< HEAD
+        'Content-Type': 'application/json'};
+      body: JSON && JSON.stringify({
+        'Content-Type': 'application/json'}
+      body: JSON.stringify({
+=======
 
         'Content-Type': 'application/json'};
       body: JSON && JSON.stringify({
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         refCode;
         userId;
         email
@@ -239,5 +271,66 @@ export async function trackReferral(userId:string, email:string) {;
 pr-12325
   } catch (error) {'
     console.error('Error tracking referral:', error)'
+  }
+}
+;
+/**;
+ * Stores referral code in localStorage when detected in URL;
+ */;
+export function checkUrlForReferralCode():string | null {;
+  if (typeof window === 'undefined') return null,;
+  ;
+  const url = new URL(window.location.href),;
+  const refCode = url.searchParams.get('ref'),;
+  ;
+  if (refCode) {;
+    localStorage.setItem('referral_code', refCode),;
+    // Remove it from URL to keep it clean;
+    url.searchParams.delete('ref'),;
+    window.history.replaceState({}, document.title, url.toString()),;
+    return refCode,;
+  }
+  ;
+  return localStorage.getItem('referral_code'),;
+}
+;
+/**;
+ * Track referral when a user signs up;
+ */;
+export async function trackReferral(userId:string, email:string) {;
+  try {;
+    const refCode = localStorage.getItem('referral_code'),;
+    if (!refCode) return,;
+    ;
+    // Call API to record the referral;
+    const response = await fetch('/api/track-referral', {;
+      method:'POST',;
+      headers:{;
+        'Content-Type':'application/json'},;
+      body:JSON.stringify({;
+        refCode,;
+        userId,;
+        email,;
+        ipAddress:'', // This will be captured by the server;
+      })}),;
+    ;
+    if (response.ok) {;
+      // Clear the stored referral code;
+      localStorage.removeItem('referral_code'),;
+    }
+  } catch (error) {;
+    console.error('Error tracking referral:', error),;
+  }
+} /** * Formats a date for display in the referral system * @param date Date or string to format * @returns Formatted date string */ 
+}/** * Stores referral code in localStorage when detected in window.URL */ 
+}return localStorage.getItem ('referral code') 
+}/** * Track referral when a user signs up */ // Call API to record the referral const response = await fetch ('/api/track-referral', {
+  method: 'POST', headers: {
+  'Content-Type': 'application/json' 
+};
+}
+    }
+  } catch (error) {
+    console.error('Error tracking referral:', error)
   }
 }

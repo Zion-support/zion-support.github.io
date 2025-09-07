@@ -1447,6 +1447,7 @@ export default function MicroSaasPage() {
           </div>
         </section>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Services Section */}
         <section id="services" className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1530,6 +1531,7 @@ export default function MicroSaasPage() {
           </div>
         </section>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
@@ -1664,6 +1666,7 @@ export default function MicroSaasPage() {
                     </ul>
                   </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {/* Pricing */}
                   <div>
                     <h4 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -1691,6 +1694,7 @@ export default function MicroSaasPage() {
                   </div>
                 </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Market Data */}
                 <div className="mt-8 bg-blue-900/20 border border-blue-500/20 rounded-lg p-6">
                   <h4 className="text-xl font-bold text-blue-400 mb-4 flex items-center">
@@ -1717,6 +1721,7 @@ export default function MicroSaasPage() {
                   </div>
                 </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Use Cases */}
                 <div className="mt-8">
                   <h4 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -1732,6 +1737,7 @@ export default function MicroSaasPage() {
                   </div>
                 </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* CTA */}
                 <div className="mt-8 text-center">
                   <Button
@@ -1749,6 +1755,7 @@ export default function MicroSaasPage() {
         </div>
       </section>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
@@ -1781,6 +1788,7 @@ export default function MicroSaasPage() {
         </div>
       </section>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Contact Information Section */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1837,6 +1845,7 @@ export default function MicroSaasPage() {
             </div>
           </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Additional Contact Information */}
           <div className="mt-16 bg-gray-700/30 rounded-2xl p-8 border border-gray-600">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

@@ -107,6 +107,9 @@ function FeaturesGuideSection() {}
     }
 
       description: "Discover professional services for your AI and tech needs, from development to consulting.";
+<<<<<<< HEAD
+      icon: <Zap className="h-10 w-10 text-zion-cyan" />
+=======
 
     },
     {"
@@ -128,12 +131,17 @@ function FeaturesGuideSection() {}
       title: "Services Marketplace","
       description: "Discover professional services for your AI and tech needs, from development to consulting.","
       icon: <Zap className="h-10 w-10 text-zion-cyan" />,
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       instructions: [
         "Browse service categories on the marketplace",
         "Compare service offerings and pricing options",
 
         "Request customized quotes for specific requirements",
+<<<<<<< HEAD
+=======
 
 "
         "Book and manage services through your dashboard"
@@ -168,15 +176,20 @@ function FeaturesGuideSection() {}
         "Search the equipment catalog by category or specifications";"
         "Check availability and rental / purchase options";"
         "Request quotes for bulk orders or specialized equipment";
-
         "Schedule delivery or pickup through the platform";
       ],"
       link: "/equipment","
       button_text: "Browse Equipment";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
+<<<<<<< HEAD
+      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
+=======
 
 icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
     },
@@ -185,6 +198,12 @@ icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
       title: "Marketplace Analytics","
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.","
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
+<<<<<<< HEAD
+      instructions: [
+        "Access analytics from your user dashboard",
+        "View interactive charts on market trends and rates",
+        "Export reports for your business planning",
+=======
 
       instructions: [
         "Access analytics from your user dashboard";
@@ -207,6 +226,12 @@ icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
       title: "Zion AI Assistant","
       description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.","
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,
+<<<<<<< HEAD
+      instructions: [
+        "Click on the chat icon in the bottom right corner",
+        "Ask questions about available services or talents",
+        "Get recommendations based on your project needs",
+=======
 
       instructions: [
         "Click on the chat icon in the bottom right corner";
@@ -366,7 +391,10 @@ icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
       description: "Showcase your AI and tech expertise by creating your own listings on the marketplace."
       icon: <Plus className="h-10 w-10 text-zion-cyan" />
       instructions: [
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       link: "/talents",;
       buttonText: "Explore Talents";
     };
@@ -435,10 +463,21 @@ icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
       instructions: [;
         "Create or log in to your account";
         "Navigate to 'Create Listing' in your dashboard",;
-
+        "Create or log in to your account";
+        "Navigate to 'Create Listing' in your dashboard"
         "Choose between talent profile, service, or equipment listing";
-        "Complete the guided form and publish your listing";
+        "Complete the guided form and publish your listing"
       ];
+<<<<<<< HEAD
+      link: "/create-profile"
+      buttonText: "Create Listing"
+    }
+    {
+      id: "help-center"
+      title: "Help & Resources"
+      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
+      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />
+=======
 
         "Set up alerts for changes in your areas of interest";
       ],"
@@ -468,7 +507,6 @@ icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
 ;
 
   return (
-
     <section className="py - 20 bg - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
 
@@ -480,7 +518,10 @@ icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
                 value={feature.id}"
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Link } from "react-router-dom",;
 
 import { GradientHeading } from "./GradientHeading",;
@@ -612,7 +653,10 @@ export function FeaturesGuideSection() {;
         <div className="text-center mb-12">;
           <GradientHeading>Your Complete Guide to Zion</GradientHeading>;"
           <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Discover all the powerful tools and features available to help you navigate;
             the world of AI and tech services;
           </p>;
@@ -632,17 +676,23 @@ export function FeaturesGuideSection() {;
 
                 {feature.title}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </TabsTrigger>))}
           </TabsList>;
           <TabsList className="grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1">;
             {features.slice (4).map (feature => (
               <TabsTrigger;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 key={feature.id}
                 value={feature.id}
                 className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
               >;
                 {feature.title}
+<<<<<<< HEAD
+=======
 
               >;
 
@@ -669,6 +719,28 @@ export function FeaturesGuideSection() {;
       </div>
     </section>
   )
+<<<<<<< HEAD
+};
+
+
+        </Tabs>;
+        ;
+        <div className="mt-12 text-center">;
+          <Button ;
+            variant="outline" ;
+            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10";
+};
+        </Tabs>;
+        <div className="mt-12 text-center">;
+          <Button;
+            variant="outline";
+            className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10";
+            asChild;
+          >;
+            <Link to="/marketplace">;
+              Explore Full Marketplace;
+              <ArrowRight className="ml-2 h-4 w-4" />;
+=======
 
 };
 

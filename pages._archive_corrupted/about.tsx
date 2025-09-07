@@ -13,24 +13,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { "hasError": false };
   }
-  
   static getDerivedStateFromError(error) {
     }
     return { "hasError": true };
   }
-  
   componentDidCatch(error, errorInfo) {
     }
     console.error('Error caught by "boundary":', error, errorInfo);'
   }
-  
   render() {
     }
     if (this.state.hasError) {
       }
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -532,6 +528,11 @@ ursor/automate-test-improve-and-merge-code-646c;
       </section>
     </main>
 
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
       {/* Values Section */}
       <section className=\"py-20\">"
@@ -663,6 +664,7 @@ technology solutions
           <div className=\"grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-8\">"
           <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-8">"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {team.map((member) => (
               <div key={member.name} className=\"bg-white rounded-lg shadow-lg overflow-hidden\">"
                 <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\">"
@@ -1474,6 +1476,18 @@ ursor/automate-test-improve-and-merge-code-646c;
     </>;
   )}}origin/cursor/integrate-build-improve-and-re-verify-c7b5;
   );
+<<<<<<< HEAD
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 
 

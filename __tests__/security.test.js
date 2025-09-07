@@ -48,6 +48,8 @@ test.describe('"Security": Tests', () => {';'
   }
   test('"HTTPS": is enforced', async ({ page    }) => {'
 
+<<<<<<< HEAD
+=======
 
 ';'
 

@@ -41,8 +41,13 @@ export default function AutomationStatusPage() {;
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) ;
 }</div>) import { useEffect, useState } from 'react';
 
+</div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) ;
+}</div>) import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
+<<<<<<< HEAD
+=======
 
 
   }, []);
@@ -56,6 +61,7 @@ export default function AutomationStatusPage() {;
   }, []);
   return (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-4">;
       <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;
       {status ? (;
@@ -70,6 +76,8 @@ export default function AutomationStatusPage() {;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
 
 
   }, []);

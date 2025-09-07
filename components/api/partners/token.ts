@@ -22,6 +22,21 @@ return res.status(400).json({ "error": 'apiKey required',;'
 
 const match = await findPartnerByApiKey(apiKey);
   if (!match) {
+<<<<<<< HEAD
+    return res.status(401).json({ error: "Invalid API key" });
+import { findPartnerByApiKey, sign_jwt } from '../../../utils / api / partner_auth';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ('Allow', 'POST');
+    return res.status (405).json ({ error: 'Method Not Allowed' });
+=======
 
 }
 
@@ -71,11 +86,17 @@ const token = signJwt(;
   );
 return res;
     .status(200)
+<<<<<<< HEAD
+      sub: partner.id, apiKeyId: key.id,
+      name: partner.name, entityType: partner.entityType,
+=======
 
     .json({ token, "partner": { "id": partner.id, "name": partner.name }
 });
 return res.status(200).json({ token, "partner": { "id": partner.id, "name": partner.name } }),;
 }
+<<<<<<< HEAD
+=======
 
       sub: partner.id;,
       apiKeyId: key.id;,

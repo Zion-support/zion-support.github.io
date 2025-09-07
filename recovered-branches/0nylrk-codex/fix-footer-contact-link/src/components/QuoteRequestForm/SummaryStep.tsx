@@ -77,6 +77,10 @@ interface SummaryStepProps {;
 
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
+<<<<<<< HEAD
+  const [isMatching, setIsMatching] = useState(false);
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+=======
 
 export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepProps) {;
 
@@ -88,7 +92,10 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
   useEffect(() => {;
     const runMatching = async () => {;
       if (!formData && formData.projectDescription) return;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setIsMatching(true);
       try {;
         // Create a query string from the form data;
@@ -171,6 +178,23 @@ const [isMatching, setIsMatching] = useState(false);
     }
     },
 
+<<<<<<< HEAD
+        );
+        setMatches(results)
+      } catch (error) {
+        console.error("Error during AI matching:", error);
+        toast({
+          title: "Matching Error"
+          description: "We couldn't find matches for your request. Please try again."
+          variant: "destructive"})
+      } finally {
+        setIsMatching(false)
+      }
+    }
+    },
+    
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     runMatching()
 
   }, [formData]);
@@ -186,6 +210,7 @@ const [isMatching, setIsMatching] = useState(false);
 
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -198,6 +223,52 @@ const [isMatching, setIsMatching] = useState(false);
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
+<<<<<<< HEAD
+      
+        `,;
+        // Get AI matches;
+        const results = await findMatches(;
+          queryString,;
+          formData.serviceType,;
+          3;
+        ),;
+        setMatches(results);
+      } catch (error) {;
+        console.error("Error during AI matching:", error),;
+        toast({;
+          title: "Matching Error",;
+          description: "We couldn't find matches for your request. Please try again.",;
+          variant: "destructive"});
+      } finally {;
+        setIsMatching(false);
+      }
+    },;
+    runMatching();
+  }, [formData]),;
+  const handleSelectMatch = (match: MatchResult) => {;
+    // Update the form with the selected match;
+    updateFormData({;
+      specificItem: match.item,;
+      serviceCategory: match.item.category;
+    }),;
+    toast({;
+      title: "Match Selected",;
+      description: `You've selected ${match.item.title}`});
+  },;
+  // Extract just the items from each MatchResult for the AIMatchingResults component;
+  const matchItems = matches.map(match => match.item),;
+  // Map the onSelectMatch handler to work with the item directly;
+  const handleItemSelect = (item: any) => {;
+    // Find the original MatchResult that contains this item;
+    const matchResult = matches.find(match => match.item.id === item.id);
+    if (matchResult) {;
+      handleSelectMatch(matchResult);
+    }
+  };
+  return (;
+    <div className="space-y-6">;
+      <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
+=======
 
         // Get AI matches;
         const results = await findMatches(;
@@ -354,6 +425,11 @@ const [isMatching, setIsMatching] = useState(false);
                 <div>"
                   <Label className="text-zion-slate-light">End Date</Label>"
 
+<<<<<<< HEAD
+              
+              
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -386,6 +462,8 @@ const [isMatching, setIsMatching] = useState(false);
       </div>
     </div>
   )
+<<<<<<< HEAD
+=======
 
 } finally {
         setIsMatching (false);
@@ -397,10 +475,8 @@ const [isMatching, setIsMatching] = useState(false);
         setIsMatching(false);
       }
     };
-
     runMatching();
   }, [formData]);
-
   const handleSelectMatch = (match: MatchResult) => {;
     // Update the form with the selected match;
     updateFormData({;
@@ -410,10 +486,8 @@ const [isMatching, setIsMatching] = useState(false);
 
       description: `You've selected ${match && match.item.title}`});
   };
-
   // Extract just the items from each MatchResult for the AIMatchingResults component;
   const matchItems = matches && matches.map(match => match && match.item);
-
   // Map the onSelectMatch handler to work with the item directly;
   const handleItemSelect = (item: any) => {;
     // Find the original MatchResult that contains this item;

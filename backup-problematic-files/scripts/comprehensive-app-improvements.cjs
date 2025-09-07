@@ -25,6 +25,8 @@ function log(message, level = 'INFO')
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 #!/usr/bin/env node
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process');
@@ -159,6 +161,8 @@ class ComprehensiveAppImprover {
 }
 // Run the comprehensive app improver
 const improver = new ComprehensiveAppImprover();
+<<<<<<< HEAD
+<<<<<<< HEAD
 improver.run().catch(console.error);
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

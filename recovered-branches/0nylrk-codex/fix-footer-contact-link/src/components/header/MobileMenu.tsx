@@ -10,6 +10,7 @@ export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps
   onClose: () => void;
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
   const { user } = useAuth();
@@ -38,6 +39,7 @@ import { Button } from "@/components/ui/button",
 
     {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       name: "Post Job"
       href: "/post-job"
@@ -78,12 +80,25 @@ import { Button } from "@/components/ui/button",
       authRequired: true;
     }
   ];
+  ];
+  // Filter items based on auth status
+  const visibleItems = navItems.filter(item =>
+    !item.authRequired |(item.authRequired && isAuthenticated)
+  );
+  ],
 
           <Link
 
             key={item.name}
             to={item.href}
             className={cn(
+<<<<<<< HEAD
+              "flex items-center px-6 py-3 text-base font-medium",
+
+              "flex items-center px-6 py-3 text-base font-medium";
+
+              "flex items-center px-6 py-3 text-base font-medium",
+=======
 
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
@@ -94,6 +109,11 @@ import { Button } from "@/components/ui/button",
             onClick={onClose}
           >
 
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Link } from "react-router-dom",;
 import { useLocation } from "react-router-dom",;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",;
@@ -121,13 +141,83 @@ export interface MobileMenuProps {;
     !item.authRequired || (item.authRequired && isAuthenticated);
   );
   return (;
+<<<<<<< HEAD
+;
+export interface MobileMenuProps {;
+  unreadCount?:number,;
+  onClose:() => void;
+}
+;
+export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
+  const location = useLocation(),;
+  const { user } = useAuth(),;
+  const isAuthenticated = !!user,;
+  ;
+  const navItems = [;
+    {;
+      name:"Home",;
+      href:"/",;
+      icon:Home,;
+      matches:(path:string) => path === "/";
+    },;
+    {;
+      name:"Browse",;
+      href:"/talent",;
+      icon:Search,;
+      matches:(path:string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace");
+    },;
+    {;
+      name:"Community",;
+      href:"/community",;
+      icon:MessageCircle,;
+      matches:(path:string) => path.startsWith("/community") || path.startsWith("/forum");
+    },;
+    {;
+      name:"Post Job",;
+      href:"/post-job",;
+      icon:BriefcaseIcon,;
+      matches:(path:string) => path.startsWith("/post-job"),;
+      authRequired:true;
+    },;
+    {;
+      name:"Messages",;
+      href:"/messages",;
+      icon:MessageSquare,;
+      matches:(path:string) => path.startsWith("/messages") || path.startsWith("/inbox"),;
+      badge:unreadCount,;
+      authRequired:true;
+    },;
+    {;
+      name:"Dashboard",;
+      href:"/dashboard",;
+      icon:User,;
+      matches:(path:string) => path.startsWith("/dashboard"),;
+      authRequired:true;
+    }
+  ],;
+;
+  // Filter items based on auth status;
+  const visibleItems = navItems.filter(item => ;
+    !item.authRequired || (item.authRequired && isAuthenticated);
+  ),;
+;
+  return (;
+=======
 
           <X className="h-5 w-5" />;
         </Button>;
       </div>;
+<<<<<<< HEAD
+        {visibleItems && visibleItems.map(item => (;
+          <Link
+            key={item && item.name}
+            to={item && item.href}
+            className={cn(
+=======
 
       <nav className="space-y-1">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               "flex items-center px-6 py-3 text-base font-medium"
               item && item.matches(location && location.pathname)
 

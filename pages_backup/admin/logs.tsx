@@ -31,6 +31,12 @@ import {
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
 
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { GetServerSideProps  } from 'next';
+import fs from 'fs',
+import path from 'path';
+=======
   SelectTrigger,;
   SelectValue,;'
 } from '@/components/ui/select';
@@ -76,6 +82,13 @@ import {}
   AlertCircle,
   XCircle,
   Search,
+<<<<<<< HEAD
+  Download,
+  RefreshCw,
+} from 'lucide-react';
+import { logErrorToProduction } from '@/utils / production_logger';
+
+=======
 
 import path from 'path';
 
@@ -118,10 +131,17 @@ interface LogEntry {;
   id: string;
   timestamp: string;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   stack?: string;
   url?: string;
   userAgent?: string;
   userId?: string;
+<<<<<<< HEAD
+component?: string;
+  timestamp: string;
+  session_id?: string;
+  user_id?: string;
+=======
 
   error?: {
 
@@ -129,13 +149,14 @@ interface LogEntry {;
     name: string;
     message: string;
     stack?: string;
+<<<<<<< HEAD
+=======
 
 :pages/admin/logs.tsx
   }
 
   performance?: {
     memory?: number;
-
   }
 
 interface LogsPageProps {
@@ -380,6 +401,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setLoading(false);
     }, 1000);
   }, []);
+<<<<<<< HEAD
+  useEffect(() => {
+    let filtered = [...logs];
+    if (searchTerm) {
+      filtered = filtered.filter(
+        log =>
+          log.message.toLowerCase().includes(searchTerm.toLowerCase()) |
+          log.category.toLowerCase().includes(searchTerm.toLowerCase()) |
+          (log.component &&
+            log.component.toLowerCase().includes(searchTerm.toLowerCase()))
+      );
+    }
+    if (levelFilter !== 'all') {
+      filtered = filtered.filter(log => log.level === levelFilter);
+    }
+    if (categoryFilter !== 'all') {
+      filtered = filtered.filter(log => log.category === categoryFilter);
+    }
+    setFilteredLogs(filtered);
+  }, [logs, searchTerm, levelFilter, categoryFilter]);
+  const getLevelColor = (level: string) => {
+    switch (level) {
+=======
 
     let filtered = [...logs];
     if (searchTerm) {
@@ -432,6 +476,8 @@ const dataUri =
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
 
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
+<<<<<<< HEAD
+=======
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
@@ -601,6 +647,15 @@ const dataUri =
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
   };
+    return parts.length > 0 ? parts.join(', ') : null;
+  }
+  const errorCount = logs.filter(log => log.level === 'error' |log.level === 'critical').length;
+  const warningCount = logs.filter(log => log.level === 'warn').length;
+  const totalCount = logs.length;
+  },;
+  const formatTimestamp = (timestamp: string) => {;
+    return new Date(timestamp).toLocaleString();
+  };
 
   },;
   const formatTimestamp = (timestamp: string) => {;
@@ -668,6 +723,10 @@ const dataUri =
             <div className="text-2xl font-bold text-red-600">{errorCount}</div>"
             <p className="text-xs text-muted-foreground">Critical & error logs</p>
           </CardContent>
+<<<<<<< HEAD
+        </Card>
+        <Card>
+=======
 
         </Card>
         <Card>
@@ -686,6 +745,10 @@ const dataUri =
             <div className="text-2xl font-bold text-yellow-600">{warningCount}</div>"
             <p className="text-xs text-muted-foreground">Warning logs</p>
           </CardContent>
+<<<<<<< HEAD
+        </Card>
+        <Card>
+=======
 
         </Card>
         <Card>
@@ -698,6 +761,12 @@ const dataUri =
             <div className="text-sm font-medium">{formatTimestamp(lastUpdated)}</div>"
             <p className="text-xs text-muted-foreground">Data freshness</p>
           </CardContent>
+<<<<<<< HEAD
+        </Card>
+      </div>
+
+      {/* Filters */}
+=======
 
             <div className='text-2xl font-bold'>{totalCount}</div>
             <p className='text-xs text-muted-foreground'>All log entries</p>
@@ -749,11 +818,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Filters */}
 :pages/admin/logs.tsx
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
       <Card>
         <CardHeader>
@@ -824,9 +896,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
               </SelectContent>
             </Select>
-            <Select value={sourceFilter} onValueChange={setSourceFilter}>
+<Select value={sourceFilter} onValueChange={setSourceFilter}>
               <SelectTrigger>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onChange={e => setSearchTerm(e && e.target.value)}
               />;
             </div>;"
@@ -855,6 +930,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </SelectContent>;
             </Select>;
           </div>;
+<<<<<<< HEAD
+        </div>;
+      {/* Logs Table */}
+=======
 
       <Card>;
         <CardHeader>;
@@ -907,6 +986,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </summary>;'
                             <pre className='mt - 1 text - xs overflow - x-auto'>;
                               {log.error.stack}
+<<<<<<< HEAD
+=======
 
       <Card>
         <CardHeader>
@@ -1019,6 +1100,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>;
     </>;
   );
+<<<<<<< HEAD
+}
+export const getServerSideProps: GetServerSideProps = async () => {
+  try {;
+    const logsDir = path.join(process.cwd(), 'logs');
+    const logs: LogEntry[] = [];
+    // Read all log files
+    if (fs.existsSync(logsDir)) {
+      const files = fs.readdirSync(logsDir);
+      const logFiles = files.filter(file => file.endsWith('.log'));
+      for (const file of logFiles) {
+        try {
+          const filePath = path.join(logsDir, file);
+          const content = fs.readFileSync(filePath, 'utf-8');
+          const lines = content.split('\n').filter(line => line.trim());
+          for (const line of lines) {
+            try {
+              const logEntry = JSON.parse(line);
+              logs.push(logEntry)
+            } catch (parseError) {
+              // Skip malformed log entries
+=======
 
             }
           }
@@ -1116,6 +1219,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }
       }
     }
+<<<<<<< HEAD
+=======
 
     // Sort logs by timestamp (newest first)
 logs.sort(
@@ -1127,11 +1232,16 @@ logs.sort(
       log => log.level === 'error' || log.level === 'critical'
     ).length;
     const warningCount = logs.filter(log => log.level === 'warn').length;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const totalCount = logs.length;
     return {
       props: {
         logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
+<<<<<<< HEAD
+=======
 
     }
   } catch (error) {
@@ -1247,13 +1357,11 @@ export const getServerSideProps: GetServerSideProps = async () => {;
       (a, b) =>;
         new Date(b && b.timestamp).getTime() - new Date(a && a.timestamp).getTime();
     );
-
     // Calculate statistics;
     const errorCount = logs && logs.filter(;'
       log => log && log.level === 'error' || log && log.level === 'critical';'
     ).length;    const warningCount = logs && logs.filter(log => log && log.level === 'warn').length;
     const totalCount = logs && logs.length;
-
     return {;
       props: {;
         logs: logs && logs.slice(0, 1000), // Limit to most recent 1000 logs;

@@ -17,6 +17,13 @@ interface LeaderboardEntry {}
   name: string;
 
   avatar?: string;
+<<<<<<< HEAD
+  referrals: number
+  earnings: number
+
+import { Badge } from "@/components/ui/badge",
+import { Crown, Medal, Trophy } from "lucide-react",
+=======
 
 interface LeaderboardEntry {
 
@@ -26,6 +33,8 @@ interface LeaderboardEntry {
   avatar?: string,
   referrals: number,
   earnings: number,
+<<<<<<< HEAD
+=======
 
   badges: string[]
 }
@@ -35,6 +44,7 @@ export function PartnerLeaderboard() {};
     {}
       id: "1"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       referrals: 178,
       earnings: 4500,"
       badges: ["gold", "trending"];
@@ -65,6 +75,7 @@ export function PartnerLeaderboard() {};
 "
       badges: ["silver"]
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
 
       id: "3"
@@ -80,6 +91,7 @@ export function PartnerLeaderboard() {};
 
 },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
 
     {}
@@ -152,6 +164,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
 import { Badge } from "@/components/ui/badge",;"
 import { Crown, Medal, Trophy } from "lucide-react",;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
@@ -163,7 +176,11 @@ interface LeaderboardEntry {;
   earnings: number,;
   badges: string[];
 }
+<<<<<<< HEAD
+;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function PartnerLeaderboard() {;
   // Placeholder data - would come from API in real implementation;
   const leaderboard: LeaderboardEntry[] = [;
@@ -210,16 +227,18 @@ export function PartnerLeaderboard() {;
   ];
   // Function to render rank badge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Function to render rank badge;
   const renderRankBadge = (rank: number) => {;
     switch(rank) {;
       case 1:;
+<<<<<<< HEAD
+=======
 
 "
         return <Trophy className="h-5 w-5 text-yellow-500" />;
       case 2:;"
         return <Medal className="h-5 w-5 text-gray-400" />;
-
   referrals: number,
   earnings: number,
   badges: string[];
@@ -291,7 +310,6 @@ function PartnerLeaderboard() {}
     }
   }
 ;
-
   return (
 
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
@@ -305,6 +323,8 @@ function PartnerLeaderboard() {}
         <CardContent>;"
           <div className="space - y-4">;
             {leaderboard.length > 0 ? (
+<<<<<<< HEAD
+=======
 
 `
                   }`}
@@ -333,6 +353,8 @@ function PartnerLeaderboard() {}
                         <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
 
                         </Badge>
+<<<<<<< HEAD
+=======
 
       case 3:;"
         return <Medal className="h-5 w-5 text-amber-700" />,;
@@ -386,6 +408,20 @@ function PartnerLeaderboard() {}
                           Trending
                         </Badge>
                       )}
+<<<<<<< HEAD
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
+                <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
+                <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p>
+                <p className="text-xs text-zion-slate-light">
+                  Start referring to earn your spot on the leaderboard
+                </p>
+              </div>
+=======
 
 </div>
                   </div>
@@ -409,9 +445,83 @@ function PartnerLeaderboard() {}
                   Start referring to earn your spot on the leaderboard;
                 </p>;
               </div>;
+<<<<<<< HEAD
+            )}
+          </div>
+        </CardContent>
+      </Card>
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
+        <CardHeader>
+          <CardTitle>Your Ranking</CardTitle>
+          <CardDescription>How you compare to other partners</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
+            <p className="text-zion-slate-light mb-4">
+              Start referring to appear on the leaderboard
+            </p>
+            <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">
+              New Partner
+            </Badge>
+          </div>
+        </CardContent>
+      </Card>
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
+        <CardHeader>
+          <CardTitle>Rewards Program</CardTitle>
+          <CardDescription>Exclusive perks for top partners</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="p-4 bg-zion-blue rounded-md">
+            <div className="flex items-center gap-2 mb-2">
+              <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
+                Elite Partner
+              </Badge>
+              <span className="text-xs text-zion-slate-light">(Top 3)</span>
+            </div>
+            <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1">
+              <li>Increased commission rate (35%)</li>
+              <li>Featured on Zion AI home page</li>
+              <li>Early access to new Zion AI features</li>
+              <li>Monthly strategy call with Zion AI team</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-zion-blue rounded-md">
+            <div className="flex items-center gap-2 mb-2">
+              <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300">
+                Premier Partner
+              </Badge>
+              <span className="text-xs text-zion-slate-light">(Top 10)</span>
+            </div>
+            <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1">
+              <li>Increased commission rate (30%)</li>
+              <li>Custom landing page for your referrals</li>
+              <li>Co-marketing opportunities</li>
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  )
+                      {entry.badges.includes("trending") && (;
+                        <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">;
+                          Trending;
+                        </Badge>;                      )}
+                    </div>;
+                  </div>;
+                </div>;
+              ));
+            ) :(;
+              <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">;
+                <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />;
+                <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p>;
+                <p className="text-xs text-zion-slate-light">;
+                  Start referring to earn your spot on the leaderboard;
+                </p>;
+              </div>;
+=======
 
             )}
-
           </div>;
         </CardContent>;
       </Card>;

@@ -5,6 +5,7 @@ export interface Job {;
 export interface Job {
 export interface Job {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   title: string;
 
@@ -20,6 +21,8 @@ export interface ApplyToJobModalProps {;
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
+<<<<<<< HEAD
+=======
 
 export interface Job {;
   id: string,;

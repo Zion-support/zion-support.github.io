@@ -140,7 +140,6 @@ export function BundleAnalyzer() {
         >
           <Package className="w-4 h-4 mr-2" />
           Bundle Analyzer
-        </Button>
       </div>
     )
   }
@@ -171,7 +170,6 @@ export function BundleAnalyzer() {
                 className="h-6 w-6 p-0"
               >
                 ✕
-              </Button>
             </div>
           </div>
         </CardHeader>
@@ -229,7 +227,6 @@ export function BundleAnalyzer() {
                       </div>
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
                         {formatSize(chunk.size)}
-                      </Badge>
                     </div>
                   ))}
                 </div>

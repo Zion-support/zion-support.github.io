@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 
 import { App  } from '@slack/bolt';'
 
@@ -16,6 +18,9 @@ await ack()const text = (command.text |'').trim()const [sub, ...rest] = text.spl
   try {if (!sub |sub.toLowerCase() === 'help') {await respond({ "response_type": 'ephemeral', "text": helpText(),'
 })return;
     }
+<<<<<<< HEAD
+      const q = rest && rest.join(' ') || 'AI researcher in Brazil';
+=======
 
     if (sub = == 'post-job') {'
      ;

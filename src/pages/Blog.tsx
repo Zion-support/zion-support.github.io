@@ -167,6 +167,7 @@ const Blog: React.FC = () => {
     });
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <SEO 

@@ -11,6 +11,29 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface MilestoneCardProps {
   id: string,
   projectId: string,
+  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id),;
+  function getStatusBadgeColor() {;
+    switch (status) {;
+      case 'completed':;
+        return 'bg-green-500',;
+      case 'in_progress':;
+        return 'bg-blue-500',;
+      case 'pending':;
+        return 'bg-yellow-500';
+      case 'rejected':;
+        return 'bg-red-500';
+import React from 'react',
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { format } from 'date-fns',
+import { Check, ArrowDown, X } from 'lucide-react'
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+interface MilestoneCardProps {
+  id: string,
+  projectId: string,
   title: string,
   description?: string;
   amount: number,
@@ -47,6 +70,23 @@ export function MilestoneCard({
     }
   }
   
+<<<<<<< HEAD
+  return (
+      <CardHeader className="pb-2">
+        <div className="flex justify-between items-start">
+          <div>
+            <CardTitle className="text-xl">{title}</CardTitle>
+            {dueDate && (
+              <p className='text-sm text-muted-foreground'>                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
+              </p>
+            )}
+          </div>  }
+      default: return 'bg-gray-500';
+    }
+  }
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -54,6 +94,20 @@ export function MilestoneCard({
           <div>
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
+<<<<<<< HEAD
+              <p className='text-sm text-muted-foreground'>                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
+              </p>
+            )}
+          </div>  }
+  return (
+    <Card>
+      <CardHeader className="pb-2">
+        <div className="flex justify-between items-start">
+          <div>
+            <CardTitle className="text-xl">{title}</CardTitle>
+            {dueDate && (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <p className="text-sm text-muted-foreground">
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>
@@ -66,7 +120,6 @@ export function MilestoneCard({
             
             {isUnderDispute && disputeStatus && (
               <DisputeStatusBadge status={disputeStatus} />
-            )}
           </div>
         </div>
       </CardHeader>

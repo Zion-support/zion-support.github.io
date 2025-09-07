@@ -49,6 +49,8 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   children;
   adminOnly = false;
+<<<<<<< HEAD
+=======
 
 import React from 'react',
 import { Navigate } from 'react-router-dom',
@@ -113,6 +115,10 @@ export interface ProtectedRouteProps {;
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
   children,;
   adminOnly = false,;
+<<<<<<< HEAD
+import React from 'react';
+import {Navigate} from 'react-router-dom';
+=======
 
 import {useTenantAdminStatus} from '@/hooks / useWhitelabelTenant';
 

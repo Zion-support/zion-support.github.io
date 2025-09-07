@@ -30,6 +30,24 @@ interface FraudFlagsTableProps {}
   hasFilters,
   resetFilters,
 
+<<<<<<< HEAD
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
+  flags;
+  isLoading;
+  hasFilters;
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
+  flags;
+  isLoading;
+  hasFilters;
+
+  resetFilters
+
+  flags,
+  isLoading,
+  hasFilters,
+  resetFilters,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onAction
 }) => {
 
@@ -45,6 +63,8 @@ interface FraudFlagsTableProps {}
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
 
+<<<<<<< HEAD
+=======
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
@@ -53,6 +73,7 @@ import {SeverityDisplay} from "./SeverityDisplay";
 import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
@@ -61,6 +82,7 @@ import { FraudFlag } from "@/types/fraud",;
 import { SeverityDisplay } from "./SeverityDisplay",;
 import { ActionButtons } from "./ActionButtons",;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface FraudFlagsTableProps {;
   flags: FraudFlag[],;
   isLoading: boolean,;
@@ -74,11 +96,14 @@ interface FraudFlagsTableProps {;
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
       </div>;
     );
+<<<<<<< HEAD
+=======
 
   }
   if (flags.length === 0) {}
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
+<<<<<<< HEAD
 
   return (
 

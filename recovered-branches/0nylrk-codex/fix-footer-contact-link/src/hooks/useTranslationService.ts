@@ -14,6 +14,8 @@ interface TranslationResponse {
   error?: string;
 
 export function useTranslationService() {;
+<<<<<<< HEAD
+=======
 
   const [isTranslating, setIsTranslating] = useState(false);
 

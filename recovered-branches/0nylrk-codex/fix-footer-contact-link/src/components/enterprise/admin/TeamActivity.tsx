@@ -22,6 +22,22 @@ import {
   TableHeader,
 
 TableRow,;
+<<<<<<< HEAD
+} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import { CalendarIcon, Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+
+import React from "react";
+import {
+Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+=======
 
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
@@ -102,7 +118,6 @@ export function TeamActivity() {;
 
 export function TeamActivity() { return null; }
   };
-
   const getCategoryBadge = (category: string) => {;
     const categoryStyles: Record<;
       string,;
@@ -160,7 +175,6 @@ import {;
               type="search";"
               placeholder="Search activities...";"
               className="w-[200px] md:w-[300px] pl-9";
-
             />;
           </div>;"
           <Button variant="outline" size="icon" className="h-10 w-10">;"
@@ -168,7 +182,7 @@ import {;
           </Button>;
         </div>;
       </div>;
-
+;
       <div className="rounded-md border">;
 >>>>>>> origin/chore/fix-lint-and-merge
         <Table>;
@@ -352,6 +366,11 @@ import {;
           Next;
 
       </div>
+<<<<<<< HEAD
+      
+
+      
+=======
 
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
@@ -366,6 +385,8 @@ import {;
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
+=======
 
         <div className="text-sm text-muted-foreground">"
 

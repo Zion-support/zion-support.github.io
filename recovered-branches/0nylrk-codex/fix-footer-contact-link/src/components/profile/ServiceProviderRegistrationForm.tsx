@@ -52,10 +52,48 @@ type ServiceFormValues = z && z.infer<typeof serviceProfileSchema>;
 
 export function ServiceProviderRegistrationForm() {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [serviceTags, setServiceTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Switch } from "@/components/ui/switch",
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import {
+  Form;
+  FormControl;
+  FormDescription;
+  FormField;
+  FormItem;
+  FormLabel;
+import { Badge } from "@/components/ui/badge",
+import { Separator } from "@/components/ui/separator",
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",
+import { toast } from "@/components/ui/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useAuth } from "@/hooks/useAuth";
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { useAuth } from "@/hooks/useAuth",
+=======
 
 // Define form schema
 
@@ -67,6 +105,21 @@ const serviceProfileSchema = z.object({
   services: z.string().min(2, "Enter at least one service"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
 
+<<<<<<< HEAD
+    message: "Rate must be a number"})
+  availability: z.enum(["available", "limited", "unavailable"]);
+  enhancedProfile: z.boolean().default(true)
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()})
+type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
+export function ServiceProviderRegistrationForm() {
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [serviceTags, setServiceTags] = useState<string[]>([]);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null)
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     message: "Rate must be a number"}),
 
   availability: z.enum(["available", "limited", "unavailable"]),
@@ -160,6 +213,12 @@ export function ServiceProviderRegistrationForm() { return null; }
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const [serviceTags, setServiceTags] = useState<string[]>([]),;
   const [isGenerating, setIsGenerating] = useState(false),;
+<<<<<<< HEAD
+  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),;
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),;
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),;
+=======
 
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
@@ -183,6 +242,15 @@ export function ServiceProviderRegistrationForm() { return null; }
       availability: "available",;
       enhancedProfile: true,;"
       website: ""}}),;
+<<<<<<< HEAD
+  // Handle adding service tags;
+  const handleAddService = () => {;
+    const serviceInput = form.getValues("services"),;
+    if (serviceInput && !serviceTags.includes(serviceInput)) {;
+      setServiceTags([...serviceTags, serviceInput]),;
+      form.setValue("services", "");
+    }
+=======
 
   // Handle adding service tags;
   const handleAddService = () => {;
@@ -274,6 +342,9 @@ export function ServiceProviderRegistrationForm() { return null; }
         title: "Enhanced Profile Generated"
         description: "AI has created a professional bio and suggested additional services for your profile."})
     } catch (error: any) {
+<<<<<<< HEAD
+      console.error("Error generating enhanced profile:", error),
+=======
       console.error("Error generating enhanced profile:", error);
       console.error("Error generating enhanced profile:", error),
       toast({
@@ -327,6 +398,7 @@ function ServiceProviderRegistrationForm() {}
 ;
   // Initialize form with default values;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   // Apply generated content to form;
@@ -354,13 +426,85 @@ function ServiceProviderRegistrationForm() {}
   const handleRemoveService = (service: string) => {;
     setServiceTags(serviceTags && serviceTags.filter((s) => s !== service));
   };
+    }
+    setIsSubmitting(true);
 
     try {
       // For actual implementation with Supabase
       if (!user?.id) {
 
         throw new Error("User not authenticated")
+<<<<<<< HEAD
+;
+  // Handle key press in services input (add on enter);
+  const handleServiceKeyPress = (e: React && React.KeyboardEvent) => {;
+    if (e && e.key === "Enter") {;
+      e && e.preventDefault(),;
+      handleAddService();
+    }
+  };
+  // Handle avatar upload;
+  const handleAvatarUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const file = e && e.target.files?.[0];
+    if (file) {;
+      const reader = new FileReader(),;
+      reader && reader.onloadend = () => {;
+        setUploadedAvatar(reader && reader.result as string);
+      };
+      reader && reader.readAsDataURL(file);
+    }
+  };
+  // Generate enhanced profile with AI;
+  const generateEnhancedProfile = async () => {;
+    const formData = form && form.getValues();
+    if (!formData && formData.bio || formData && formData.bio.length < 20) {;
+      toast({;
+        title: "More information needed",;
+        description: "Please provide at least a detailed bio before generating enhanced content."}),;
+      return;
+    }
+    try {;
+      setIsGenerating(true);
+      // Call the Supabase Edge Function;
+      const { data, error } = await supabase && supabase.functions.invoke('service-profile-enhancer', {;
+        body: {;
+          providerData: {;
+            name: formData && formData.name,;
+            title: formData && formData.title,;
+            bio: formData && formData.bio,;
+            services: serviceTags,;
+            location: formData && formData.location;
+          }
+        }
+      });
+      if (error) {;
+        throw new Error(error && error.message);
+      }
+      }
+      // Enhance profile if not already done
+      let finalSummary = values.bio;
+      let finalServices = serviceTags;
+      if (values.enhancedProfile && !generatedContent) {
+        try {
+          const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {
+            body: {
+              providerData: {
+                name: values.name
+                title: values.title
+                bio: values.bio
+                services: serviceTags
+                location: values.location
+              }
+            }
+          });
+          if (aiData) {
+            finalSummary = (aiData as any).summary |values.bio;
+            // Merge AI suggested services with user-provided services
+            const aiServices = (aiData as any).services |[];
+            finalServices = [...new Set([...serviceTags, ...aiServices])]
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
       setGeneratedContent(data as { summary: string, services: string[] }),;
       toast({;"
@@ -373,11 +517,15 @@ function ServiceProviderRegistrationForm() {}
         description: error.message || "There was an error generating your enhanced profile. Please try again.",;
 "
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         variant: "destructive"});
     } finally {;
       setIsGenerating(false);
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   // Apply generated content to form;
   const applyGeneratedContent = () => {;
@@ -385,16 +533,38 @@ function ServiceProviderRegistrationForm() {}
           service => typeof service === 'string' && service && !serviceTags.includes(service);
         ),;
         if (newServices.length > 0) {;
+<<<<<<< HEAD
+  };
+  // Apply generated content to form;
+  const applyGeneratedContent = () => {;
+    if (generatedContent) {;
+      form && form.setValue("bio", generatedContent && generatedContent.summary);
+      if (generatedContent && generatedContent.services && generatedContent && generatedContent.services.length > 0) {;
+        const newServices = generatedContent && generatedContent.services.filter(;
+          service => typeof service === 'string' && service && !serviceTags && serviceTags.includes(service);
+        );
+        if (newServices && newServices.length > 0) {;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           setServiceTags([...serviceTags, ...newServices]);
         }
       }
     }
+<<<<<<< HEAD
+  };
+  // Handle form submission;
+  const onSubmit = async (values: ServiceFormValues) => {;
+    if (serviceTags.length === 0) {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   },;
   // Handle form submission;
   const onSubmit = async (values: ServiceFormValues) => {;
     if (serviceTags.length === 0) {;
+<<<<<<< HEAD
+=======
 
 ;
   // Handle form submission;
@@ -411,7 +581,6 @@ if ( {) {}
     }
     setIsSubmitting (true);
 ;
-
     try {
 
       // For actual implementation with Supabase;
@@ -422,7 +591,6 @@ if ( {) {}
         throw new Error ("User not authenticated");
 
       }
-
       // Enhance profile if not already done;
       let final_summary = values.bio;
       let final_services = service_tags;
@@ -440,6 +608,30 @@ if ( {) {}
       if (!user?.id) {;"
         throw new Error("User not authenticated");
       }
+<<<<<<< HEAD
+;
+      // Enhance profile if not already done;
+      let finalSummary = values.bio,;
+      let finalServices = serviceTags,;
+      if (values.enhancedProfile && !generatedContent) {;
+        try {;
+          const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {;
+            body: {;
+              providerData: {;
+                name: values.name,;
+                title: values.title,;
+                bio: values.bio,;
+                services: serviceTags,;
+                location: values.location;
+              }
+            }
+          }),;
+          if (aiData) {;
+            finalSummary = (aiData as any).summary || values.bio,;
+            // Merge AI suggested services with user-provided services;
+            const aiServices = (aiData as any).services || [],;
+            finalServices = [...new Set([...serviceTags, ...aiServices])];
+=======
 
           if (aiData) {;
             finalSummary = (aiData as any).summary || values && values.bio;
@@ -505,6 +697,7 @@ if ( {) {}
 
       }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .select(),
 
       if (error) throw error,
@@ -516,6 +709,16 @@ if ( {) {}
       const { error: serviceError } = await supabase'
         .from('service_profiles')
 
+<<<<<<< HEAD
+          user_id: user.id
+          services: finalServices
+          hourly_rate: Number(values.hourlyRate)
+          availability_status: values.availability
+          location: values.location
+          website: values.website |null})
+      if (serviceError) throw serviceError;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           user_id: user.id,
           services: finalServices,
           hourly_rate: Number(values.hourlyRate),
@@ -524,6 +727,10 @@ if ( {) {}
           website: values.website || null}),
 
       if (serviceError) throw serviceError,
+<<<<<<< HEAD
+        .select();
+      if (error) throw error;
+=======
 
                 name: values.name,
                 title: values.title,
@@ -1037,6 +1244,13 @@ if ( {) {}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
+                          <FormMessage className="text-red-400" />;
+                        </FormItem>;
+                      )}
+                    />;
+                  </div>;
+=======
 
                     <FormField
                       control={form && form.control}
@@ -1096,6 +1310,15 @@ if ( {) {}
                             src={uploadedAvatar}
                             alt="Avatar preview"
                             className="w-full h-full object-cover"
+<<<<<<< HEAD
+                          <img;
+                            src={uploadedAvatar}
+                            alt="Avatar preview";
+                            className="w-full h-full object-cover";
+                          />;
+                        </AspectRatio>;
+                      ) :(;
+=======
                           />;
                         </AspectRatio>;
 
@@ -1198,7 +1421,10 @@ onChange={handleAvatarUpload}
 
                         <p className="text-zion-slate italic">{generatedContent && generatedContent.summary}</p>;
                       </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {generatedContent && generatedContent.services && generatedContent && generatedContent.services.length > 0 && (;
 
                             ))}
@@ -1208,6 +1434,12 @@ onChange={handleAvatarUpload}
                     </div>;
                   </div>;
                 )}
+<<<<<<< HEAD
+              </div>;
+;
+              <Separator className="bg-zion-blue-light/50" />;
+;
+=======
 
                           <X className="h-3 w-3" />;
                         </button>;
@@ -1269,6 +1501,18 @@ onChange={handleAvatarUpload}
                                 Available for Work;
                               </label>;
                             </div>;
+<<<<<<< HEAD
+                                checked={field.value === "available"}
+                                onChange={() => field.onChange("available")}
+                                className="text-zion-purple focus:ring-zion-purple"
+                              />
+                              <label htmlFor="available" className="text-white flex items-center gap-2">
+                                <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                                Available for Work
+                              </label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+=======
 
                               <input
 
@@ -1276,6 +1520,18 @@ onChange={handleAvatarUpload}
                                 Limited Availability;
                               </label>;
                             </div>;
+<<<<<<< HEAD
+                                checked={field.value === "limited"}
+                                onChange={() => field.onChange("limited")}
+                                className="text-zion-purple focus:ring-zion-purple"
+                              />
+                              <label htmlFor="limited" className="text-white flex items-center gap-2">
+                                <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
+                                Limited Availability
+                              </label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+=======
 
                               <input"
                                 type="radio""

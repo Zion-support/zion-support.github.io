@@ -37,6 +37,8 @@ interface OptimizedImageProps {}
   quality?: number;
   sizes?: string;
 }
+<<<<<<< HEAD
+=======
 
 const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   }

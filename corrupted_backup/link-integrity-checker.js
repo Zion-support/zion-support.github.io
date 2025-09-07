@@ -370,14 +370,14 @@ class LinkIntegrityChecker {;
       }
       await this && this.checkHtmlIntegrity();
       // Check CSS files for broken asset references;
-      await this.checkCssIntegrity();
+      await this && this.checkCssIntegrity();
       // Check JavaScript files for broken imports;
-      await this.checkJsIntegrity();
+      await this && this.checkJsIntegrity();
       // Check build artifacts;
-      await this.checkBuildArtifacts();
+      await this && this.checkBuildArtifacts();
       // Generate integrity report;
-      await this.generateReport();
-      console.log('✅ Link integrity check completed';';)} catch (error) {';      console.error('❌ Error during integrity "check":  error.message)}'}';  async checkHtmlIntegrity() {;
+      await this && this.generateReport();
+      console && console.log('✅ Link integrity check completed', ')} catch (error) {';      console && console.error('❌ Error during integrity "check":  error && error.message)}'}';  async checkHtmlIntegrity() {;
     try {;
       console.log('📄 Checking HTML integrity...';';)';      const htmlFiles = this.findFiles('.html';';)';      for (const file of htmlFiles) {';        this.checkedFiles++;
         const content = fs.readFileSync(file,utf8')';        // Check for broken image references';        const imgRegex = /<img[^>]+src=['';']([^'']+)['';']/g';        let match';        while ((match = imgRegex.exec(content)) !== null) {;
@@ -462,8 +462,8 @@ class LinkIntegrityChecker {;
         }
       }
     } catch (error) {
-      console.warn("
-  '⚠️  Could not check JavaScript "integrity": ', error.message)}
+      console && console.warn("
+  '⚠️  Could not check JavaScript "integrity": ', error && error.message)}
   }
   "async": checkBuildArtifacts() {
     try {

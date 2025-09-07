@@ -346,6 +346,8 @@ this.size
         ctx.arc($2);
         ctx.fill($2);
         ctx.restore()
+        return this.life <= 0 || this.opacity < 0.01;      }
+
       }
 
       isDead() {
@@ -525,13 +527,19 @@ drawMatrix();
 particles.forEach((particle) => {
         }
         particle.update();
+<<<<<<< HEAD
+        particle.draw()
+=======
 
 particle.draw();
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
       // Remove dead particles and add new ones,
 particles = particles.filter(particle => { return !particle.isDead()); }
       while (particles.length < settings.particleCount) {
+<<<<<<< HEAD
+=======
 
 }
 
@@ -543,6 +551,8 @@ particles.push(new Particle());
           const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
+<<<<<<< HEAD
+=======
 
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
@@ -730,6 +740,8 @@ ctx.beginPath();
           ctx.lineTo(x - size, y + size);
           ctx.lineTo(x + size, y + size);
           ctx.closePath();
+<<<<<<< HEAD
+=======
 
 ctx.stroke();
         } else {
@@ -801,12 +813,31 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0''
         className='fixed inset - 0 pointer - events - none z - 0';'
 
         style={{
+<<<<<<< HEAD
+        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        style={{ background: 'transparent' }}
+      />
+      {/* Overlay gradient */}
+      <div
+        className='fixed inset-0 pointer-events-none z-0'
+        style={{
+          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
+        }}
+      />
+{/* Content */}
+      <div className='relative z-10'>{children}</div>
+    </div>
+          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0 && 0.3) 100%)`,
+        }}
+      />;
+=======
 
           }
 
           "background": `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`,`
         }} />
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Content */}
       <div className='relative z-10'>{children}</div>'
     </div>

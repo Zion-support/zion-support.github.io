@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
   return (<div className=&quot;fixed inset - 0 -z - 10 overflow - hidden & quot    />
 

@@ -27,6 +27,8 @@ class PerformanceMonitor {
   }
   generateReport() {
     const report = {
+<<<<<<< HEAD
+=======
 
       timestamp: this.metrics.timestamp
       bundleSize: this.metrics.bundleSize

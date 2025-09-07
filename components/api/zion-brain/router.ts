@@ -84,6 +84,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 const routed = await routeToChain(result.intent, payload || {});
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return res.status(200).json({ ...result, routed })
   } catch (e: any) {
     const latencyMs = $2;

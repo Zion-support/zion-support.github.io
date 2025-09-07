@@ -2,6 +2,7 @@ import React from "react",
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",
 import { cn } from "@/lib/utils",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface OnboardingStep {
   id: string,
   label: string,
@@ -34,6 +35,17 @@ export interface OnboardingStep {;
       </div>
       {/* Progress bar */}"
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
+<<<<<<< HEAD
+        <div
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+        <div 
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+;
+export function OnboardingTracker({;
+  steps,;
+  title = "Complete Your Profile",;
+  className;
+=======
 
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
@@ -51,6 +63,9 @@ export function OnboardingTracker({;
   className?: string;
 }
 
+  title?: string;
+  className?: string;
+}
 export function OnboardingTracker(): any ({ ;
   steps;
 

@@ -84,6 +84,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ) {
   const { type } = req.query as { type: AdminType };
 
@@ -109,6 +110,7 @@ query = query.or(
             '%''
         );
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       if (params.sort)query = query.order(params.sort, { "ascending": params.order === 'asc','
 };

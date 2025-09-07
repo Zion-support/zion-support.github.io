@@ -113,6 +113,7 @@ const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(nu
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default /**
  * PartnerManager - Function description
 
@@ -268,6 +269,33 @@ if ( {) {}
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
+  },;
+  const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
+    let filtered = partners,;
+    // Filter by status;
+    if (status !== "all") {;
+
+
+
+    
+    setFilteredPartners(filtered)
+  },
+
+      filtered = filtered.filter(p => p.status === status);
+    }
+;
+    // Filter by search query;
+    if (query) {;
+      const lowerQuery = query.toLowerCase(),;
+      filtered = filtered.filter(p =>;
+        p.name.toLowerCase().includes(lowerQuery) ||;
+        p.niche.toLowerCase().includes(lowerQuery) ||;
+        p.bio?.toLowerCase().includes(lowerQuery) ||;
+        p.website?.toLowerCase().includes(lowerQuery);
+      );
+    }
+=======
   };
 
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
@@ -309,6 +337,14 @@ if ( {) {}
       // In a real app, this would update the database
       setPartners(partners.map(p =>
         p.id === partnerId ? { ...p, status } : p
+<<<<<<< HEAD
+      )),
+      
+
+      ));
+      )),
+      
+=======
 
       toast({
 
@@ -411,6 +447,7 @@ if ( {) {}
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">"
         <Flag className="h-3 w-3" />
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   const getStatusBadge = (status: string) => {;
     switch (status) {;'
@@ -544,6 +581,7 @@ if ( {) {}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="grid grid-cols-2 gap-2">
                 <div>"
                   <p className="text-xs text-zion-slate-light">Payout Method</p>"
@@ -567,6 +605,92 @@ if ( {) {}
               )}'
               {selectedPartner.status === 'pending' && ("
                 <div className="flex justify-end gap-2 mt-4">
+<<<<<<< HEAD
+                  <Button
+                    variant="destructive"
+                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+                  >
+                    <X className="h-4 w-4 mr-1" />
+                    Reject
+                  </Button>
+                  <Button
+                    className="bg-green-600 hover:bg-green-700"
+                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
+                  >
+                    <Check className="h-4 w-4 mr-1" />
+                    Approve
+                  </Button>
+                </div>
+              )}
+            </div>
+
+          ;
+          {selectedPartner && (;
+            <div className="space-y-4">;
+              <div className="grid grid-cols-2 gap-2">;
+                <div>;
+                  <p className="text-xs text-zion-slate-light">Name</p>;
+                  <p className="font-medium text-white">{selectedPartner.name}</p>;
+                </div>;
+                <div>;
+                  <p className="text-xs text-zion-slate-light">Status</p>;
+                  <div>{getStatusBadge(selectedPartner.status)}</div>;
+                </div>;
+              </div>;
+              ;
+              <div>;
+                <p className="text-xs text-zion-slate-light">Bio</p>;
+                <p className="text-white">{selectedPartner.bio || "No bio provided"}</p>;
+              </div>;
+              ;
+              <div className="grid grid-cols-2 gap-2">;
+                <div>;
+                  <p className="text-xs text-zion-slate-light">Niche</p>;
+                  <p className="text-white">{selectedPartner.niche}</p>;
+                </div>;
+                <div>;
+                  <p className="text-xs text-zion-slate-light">Audience Size</p>;
+                  <p className="text-white">{getAudienceSizeLabel(selectedPartner.audience_size)}</p>;
+                </div>;
+              </div>;
+              ;
+              {selectedPartner.website && (;
+                <div>;
+                  <p className="text-xs text-zion-slate-light">Website</p>;
+                  <p className="text-zion-cyan">{selectedPartner.website}</p>;
+                </div>;
+              )}
+              ;
+              {selectedPartner.social_media && Object.keys(selectedPartner.social_media).length > 0 && (;
+                <div>;
+                  <p className="text-xs text-zion-slate-light">Social Media</p>;
+                  <div className="grid grid-cols-2 gap-2">;
+                    {Object.entries(selectedPartner.social_media).map(([platform, handle]) => (;
+                      <p key={platform} className="text-white">;
+                        <span className="font-medium">{platform} </span>;                        {handle}
+                      </p>;
+                    ))}
+                  </div>;
+                </div>;
+              )}
+              ;
+              <div className="grid grid-cols-2 gap-2">;
+                <div>;
+                  <p className="text-xs text-zion-slate-light">Payout Method</p>;
+                  <p className="text-white capitalize">{selectedPartner.payout_method || "Not specified"}</p>;
+                </div>;
+                <div>;
+                  <p className="text-xs text-zion-slate-light">Commission Rate</p>;
+                  <p className="text-white">{selectedPartner.commission_rate || 25}%</p>;
+                </div>;
+              </div>;
+              ;
+              {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && (;
+                <Alert className="bg-red-900/20 border-red-900/50 text-red-500">;
+                  <AlertTitle className="flex items-center gap-2">;
+                    <Flag className="h-4 w-4" />;
+                    Potential Fraud Detected ({selectedPartner.fraud_flags});
+=======
 
                   >
 
@@ -634,6 +758,7 @@ if ( {) {}
             </div>;
           )}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <DialogDescription>;
               Configure commission rates and other settings;
             </DialogDescription>;
@@ -658,6 +783,8 @@ function PartnerTable({
   partners, 
   isLoading, 
   onViewDetails, 
+<<<<<<< HEAD
+=======
 
   onUpdateStatus;
   onOpenSettings;
@@ -687,6 +814,65 @@ function PartnerTable({
 
                 {partner.name}
                 {getFraudFlagBadge (partner.fraud_flags)}
+<<<<<<< HEAD
+  ),;}
+;
+interface PartnerTableProps {;
+  partners:PartnerProfile[],;
+  isLoading:boolean,;
+  onViewDetails:(partner:PartnerProfile) => void,;
+  onUpdateStatus:(partnerId:string, status:'approved' | 'rejected') => void,;
+  onOpenSettings:(partner:PartnerProfile) => void,;
+  getStatusBadge:(status:string) => JSX.Element,;
+  getFraudFlagBadge:(flags?:number) => JSX.Element | null;
+}
+;
+function PartnerTable({ ;
+  partners, ;
+  isLoading, ;
+  onViewDetails, ;
+  onUpdateStatus,;
+  onOpenSettings,;
+  getStatusBadge,;
+  getFraudFlagBadge;
+} PartnerTableProps) {;
+  if (isLoading) {;
+    return (;
+      <div className="text-center py-8">;
+        <p className="text-zion-slate-light">Loading partner data...</p>;
+      </div>;
+    ),;
+  }
+  ;
+  if (partners.length === 0) {;
+    return (;
+      <div className="text-center py-8">;
+        <p className="text-zion-slate-light">No partners found.</p>;
+      </div>;
+    ),;
+  }
+  ;
+  return (;
+    <Table>;
+      <TableHeader>;
+        <TableRow className="hover:bg-transparent">;
+          <TableHead>Name</TableHead>;
+          <TableHead>Niche</TableHead>;
+          <TableHead>Audience</TableHead>;
+          <TableHead>Status</TableHead>;
+          <TableHead>Date</TableHead>;
+          <TableHead className="text-right">Actions</TableHead>;
+        </TableRow>;
+      </TableHeader>;
+      <TableBody>;
+        {partners.map((partner) => (;
+          <TableRow key={partner.id} className="border-zion-blue-light hover:bg-zion-blue-light/10">;
+            <TableCell className="font-medium text-white">;
+              <div className="flex items-center gap-2">;
+                {partner.name}
+                {getFraudFlagBadge(partner.fraud_flags)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </TableCell>;
 

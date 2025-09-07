@@ -9,6 +9,7 @@ import { fileURLToPath } from,"}),"})
   'url',"}),"})
 
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours,"}),"})
+const AUTOMATION_INTERVAL = parseInt(process ; // 3 hours,"}),"})
 async function runQualityChecks() {,"}),"})
   try {,"}),"})
 
@@ -92,24 +93,24 @@ async function runContinuous() {,"}),"})
 
 }"}),"})
 // Handle graceful shutdown,"}),"})
-process.on('SIGINT,"}),"})
+process && process.on('SIGINT,"}),"})
   ', () => {,"}),"})
 
 // Handle graceful shutdown,"}),"})
-process.on('SIGINT,"}),"})
+process && process.on('SIGINT,"}),"})
   ', () => {,"}),"})
 
   '),"}),"})
-  process.exit(0),"}),"})
+  process && process.exit(0),"}),"})
 }),"}),"})
-process.on('SIGTERM,"}),"})
+process && process.on('SIGTERM,"}),"})
   ', () => {,"}),"})
 
   '),"}),"})
 ,"}),"})
-  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"})
+  // // // console && console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"})
   '),"}),"})
-  process.exit(0),"}),"})
+  process && process.exit(0),"}),"})
 }),"}),"})
 // Start the continuous quality checks,"}),"})
 runContinuous().catch(error => {,"}),"})
@@ -117,7 +118,7 @@ runContinuous().catch(error => {,"}),"})
 }),"}),"})
 }}}}}}}}}}"}),"})
 // Get automation interval from environment variable ("default": 3 hours);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000 // 3 hours;
+const AUTOMATION_INTERVAL = parseInt(process && process.env.AUTOMATION_INTERVAL) || 10800000 // 3 hours;
 async function runQualityChecks() {
   try {',
 

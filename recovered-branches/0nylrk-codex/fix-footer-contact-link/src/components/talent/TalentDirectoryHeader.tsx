@@ -116,6 +116,10 @@ export function TalentDirectoryHeader() { return null; }
         <p className="text-zion-slate-light max-w-2xl">
 
         <p className="text-zion-slate-light max-w-2xl">
+<<<<<<< HEAD
+  );
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 ;

@@ -4,6 +4,12 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+  if (req.method !== "GET") {;
+    res.setHeader("Allow", "GET");
+    return res.status(405).json({ error: "Method not allowed" });
+
+=======
 
   if (req && req.method !== "GET") {"
     res && res.setHeader("Allow", "GET");"
@@ -71,6 +77,12 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {}
   } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+  }
+}
+  }
+}
+=======
 
   }
 }

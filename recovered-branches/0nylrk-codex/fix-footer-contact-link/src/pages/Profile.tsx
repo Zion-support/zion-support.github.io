@@ -1,5 +1,6 @@
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -73,6 +74,7 @@ return (;
     );
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
@@ -192,6 +194,7 @@ export default function Profile() {;
   }
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     navigate("/");
                   }}
                   variant="outline";
@@ -201,6 +204,10 @@ export default function Profile() {;
       toast.error ("Please log in to view your profile");
       navigate ("/login?redirect=/profile");
 
+<<<<<<< HEAD
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect } from 'react',;
 
 import { Header } from "@/components/Header",;
@@ -268,6 +275,29 @@ import { toast } from "sonner",;
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
+    </>;
+  ); export default function Profile () {
+  const {
+  user, isLoading, logout 
+}= useAuth ();
+const navigate = useNavigate ();
+useEffect ( () => {
+  if (!isLoading && !user) {
+  
+}
+;
+
+}, [user, isLoading, navigate]);
+return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="animate-pulse text-white" >Loading profile...</div> </div> <Footer /> </> if (!user) {
+  return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md" > <h1 className="text-xl font-bold text-white mb-4" >Please log in</h1> <p className="text-zion-slate mb-4" >You need to be logged in to view your profile.</p> <Button > Go to Login </Button> </div> </div> <Footer /> </>) 
+}return (<> <Header /> variant="outline" className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white" 
+}
+    </>;
+  );
+}
+;
+=======
 
     </>;
   ); export default function Profile () {}

@@ -294,6 +294,20 @@ export function MobileResumeBuilder() {;
           Skills;
         </Button>;
       </div>;
+<<<<<<< HEAD
+      ;
+      {renderStepContent()}
+      ;
+      <Button className="w-full flex gap-2" size="lg">;
+        <Zap className="h-5 w-5" /> Enhance with AI;
+      </Button>;
+      ;
+      {renderStepContent()}
+;
+      <Button className="w-full flex gap-2" size="lg">;
+        <Zap className="h-5 w-5" /> Enhance with AI;
+      </Button>;
+=======
 
       {renderStepContent()}
 "
@@ -312,6 +326,10 @@ export function MobileResumeBuilder() {;
   );
 
 }
+;
+function BasicsStep() {;
+  return (;
+=======
 
     <Card>
       <CardContent className="p-4 space-y-4">
@@ -363,6 +381,7 @@ export function MobileResumeBuilder() {;
         <div className="space-y-2">;
           <Label htmlFor="summary">Professional Summary</Label>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             rows={4}
           />
         </div>
@@ -370,6 +389,8 @@ export function MobileResumeBuilder() {;
     </Card>
 
 }
+<<<<<<< HEAD
+=======
 
 function ExperienceStep() { return null; }
   const [experiences, setExperiences] = useState([{ id: "1" }]);
@@ -441,6 +462,7 @@ function ExperienceStep() { return null; }
         </Card>
       ))}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         onClick={addExperience}
       >"
         <Plus className="h-4 w-4" /> Add Another Experience;
@@ -570,6 +592,7 @@ function SkillsStep() {
     setSkills(skills.filter((skill) => skill.id !== id));
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const updateSkill = (id: string, field: string, value: string) => {
 
     setSkills(
@@ -617,7 +640,10 @@ function SkillsStep() {
                   >"
                     <Trash2 className="h-4 w-4 text-destructive" />
                   </Button>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
       <Button;"
         variant="outline";"
@@ -655,17 +681,70 @@ function EducationStep() { return null; }
                   <Trash2 className="h-5 w-5 text-destructive" />
                 </Button>
               )}
+<<<<<<< HEAD
+            ;
+            <div className="space-y-2">;
+            </div>;
+            <div className="space-y-2">;
+              <Label htmlFor={`institution-${edu.id}`}>Institution</Label>;
+              <Input id={`institution-${edu.id}`} placeholder="School or university name" />;
+            </div>;
+            <div className="space-y-2">;
+              <Label htmlFor={`degree-${edu.id}`}>Degree</Label>;
+              <Input id={`degree-${edu.id}`} placeholder="e.g. Bachelor of Science" />;
+            </div>;
+            <div className="space-y-2">;
+              <Label htmlFor={`fieldOfStudy-${edu.id}`}>Field of Study</Label>;
+              <Input id={`fieldOfStudy-${edu.id}`} placeholder="e.g. Computer Science" />;
+            </div>;
+            <div className="grid grid-cols-2 gap-3">;
+              <div className="space-y-2">;
+                <Label htmlFor={`eduStartDate-${edu.id}`}>Start Date</Label>;
+                <Input id={`eduStartDate-${edu.id}`} type="month" />;
+              </div>;
+              <div className="space-y-2">;
+                <Label htmlFor={`eduEndDate-${edu.id}`}>End Date</Label>;
+                <Input id={`eduEndDate-${edu.id}`} type="month" placeholder="Present" />;
+=======
 
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
+;
+      <Button;
+        variant="outline";
+        className="w-full gap-2";
+        onClick={addEducation}
+      >;
+=======
 
       </Button>;
     </div>;
   );
 }
+<<<<<<< HEAD
+;
+function SkillsStep() {;
+  const [skills, setSkills] = useState([;
+    { id: '1', name: "", proficiency: "beginner" }
+  ]),;
+  const addSkill = () => {;
+    const newId = (skills.length + 1).toString(),;
+    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }]);
+  },;
+  const removeSkill = (id: string) => {;
+    setSkills(skills.filter(skill => skill.id !== id));
+  };
+  const updateSkill = (id: string, field: string, value: string) => {;
+    setSkills(skills.map(skill =>;
+      skill.id === id ? { ...skill, [field]: value } : skill;
+    ));
+  };
+  return (;
+=======
 
     <div className="space-y-4">;
       <Card>;"
@@ -687,6 +766,8 @@ function EducationStep() { return null; }
             <Button 
               variant="outline" 
               className="w-full gap-2" 
+<<<<<<< HEAD
+=======
 
               onClick={addSkill}
             >

@@ -3,11 +3,14 @@ import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() {;
+<<<<<<< HEAD
+=======
 
   const { user } = useAuth();
 
@@ -53,6 +56,7 @@ import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -94,13 +98,16 @@ pr-12325
           return null;
 
         }
-        throw resume_error;
+        throw resumeError
       }
 
       // Fetch work experience
       const { data: workData, error: workError } = await supabase
         .from('work_history')
         .select('*')
+<<<<<<< HEAD
+        .eq('resume_id', resumeData.id)
+=======
         .eq('resume_id', resumeData && resumeData.id)
 .eq('resume_id', resumeData.id)
         .eq('resume_id', resumeData && resumeData.id)
@@ -111,6 +118,9 @@ pr-12325
       const { data: educationData, error: educationError } = await supabase
         .from('education')
         .select('*')
+<<<<<<< HEAD
+        .eq('resume_id', resumeData.id)
+=======
         .eq('resume_id', resumeData && resumeData.id)
 .eq('resume_id', resumeData.id)
         .eq('resume_id', resumeData && resumeData.id)
@@ -121,6 +131,13 @@ pr-12325
       const { data: skillsData, error: skillsError } = await supabase
         .from('resume_skills')
         .select('*')
+<<<<<<< HEAD
+        }
+        throw resume_error;
+      }
+        .eq('resume_id', resumeData && resumeData.id);
+        .eq('resume_id', resumeData.id);
+=======
 
         .eq('resume_id', resumeData && resumeData.id);
 
@@ -135,7 +152,10 @@ pr-12325
       const { data: certData, error: certError } = await supabase
         .from('certifications')
         .select('*')
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('resume_id', resumeData && resumeData.id);
 
 .eq('resume_id', resumeData && resumeData.id);
@@ -144,7 +164,6 @@ pr-12325
         id: resumeData && resumeData.id;
         user_id: resumeData && resumeData.user_id;
         basic_info: {
-
           id: resumeData && resumeData.id;
           title: resumeData && resumeData.title;
           headline: resumeData && resumeData.headline,

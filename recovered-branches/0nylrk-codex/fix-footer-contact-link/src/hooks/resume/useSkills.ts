@@ -24,6 +24,8 @@ import {Skill} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {;
+<<<<<<< HEAD
+=======
 
   const { user } = useAuth();
 
@@ -205,6 +207,7 @@ export function useSkills() {;
       
       if (error) throw error,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
 
     } catch (e: any) {
@@ -230,12 +233,15 @@ function use_skills() {}
 
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   return {;
     isLoading,;
     error;
     addSkill;
     deleteSkill;
+<<<<<<< HEAD
+=======
 
   }
 }

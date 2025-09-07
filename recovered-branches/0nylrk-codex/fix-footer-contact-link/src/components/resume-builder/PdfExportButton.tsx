@@ -139,6 +139,7 @@ const [fontFamily, setFontFamily] = useState<FontFamily>('default'),;'
       document.body.removeChild(link),
       URL.revokeObjectURL(url),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="gap-2"
           disabled={isExporting}>;
           {isExporting ? (;
@@ -146,6 +147,64 @@ const [fontFamily, setFontFamily] = useState<FontFamily>('default'),;'
           ) : (;
             <FileText className="h-4 w-4" />;
           )}
+<<<<<<< HEAD
+    }
+  }
+  },
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button
+          variant="outline"
+          className="gap-2"
+          disabled={isExporting}
+        >
+          {isExporting ? (
+            <Loader2 className="h-4 w-4 animate-spin" />
+          ) : (
+            <FileText className="h-4 w-4" />
+          )}
+          Export PDF
+          <ChevronDown className="h-4 w-4" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="w-56">
+        <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Theme</DropdownMenuLabel>
+        <DropdownMenuRadioGroup value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>
+          <DropdownMenuRadioItem value="light">Light</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Font</DropdownMenuLabel>
+        <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value) => setFontFamily(value as FontFamily)}>
+          <DropdownMenuRadioItem value="default">Default</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="montserrat">Montserrat</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="open-sans">Open Sans</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="roboto">Roboto</DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuCheckboxItem
+          checked={includePortfolio}
+          onCheckedChange={setIncludePortfolio}
+        >
+          Include Portfolio Projects
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem onClick={handleExport}>
+          <Download className="h-4 w-4 mr-2" />
+          Download PDF
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  )
+
+
+
+}
+=======
 
           Export PDF
           <ChevronDown className="h-4 w-4" />
@@ -223,7 +282,10 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
           ) : (;}
             <FileText className=\"h-4 w-4\" />;}
           )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           Export PDF;
           <ChevronDown className=\"h-4 w-4\" />;
         </Button>;
@@ -231,14 +293,20 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
       <DropdownMenuContent align=\"end\" className=\"w-56\" />;
         <DropdownMenuLabel />PDF Export Options</DropdownMenuLabel>;
         <DropdownMenuSeparator />;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Theme</DropdownMenuLabel>;
         <DropdownMenuRadioGroup value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>;
           <DropdownMenuRadioItem value="light">Light</DropdownMenuRadioItem>;
           <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>;
 
         </DropdownMenuRadioGroup>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <DropdownMenuSeparator />;
         <DropdownMenuLabel className=\"text-xs font-normal text-muted-foreground\" />Font</DropdownMenuLabel>;
         <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value) = /> setFontFamily(value as FontFamily)}>;
@@ -247,6 +315,15 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
           <DropdownMenuRadioItem value=\"open-sans\" />Open Sans</DropdownMenuRadioItem>;
           <DropdownMenuRadioItem value=\"roboto\" />Roboto</DropdownMenuRadioItem>;
         </DropdownMenuRadioGroup>;
+<<<<<<< HEAD
+        <DropdownMenuSeparator />;
+        <DropdownMenuCheckboxItem;
+          checked={includePortfolio}
+          onCheckedChange={setIncludePortfolio}
+        >;
+          Include Portfolio Projects;
+        </DropdownMenuCheckboxItem>;
+=======
 
         <DropdownMenuSeparator />;
         <DropdownMenuItem onClick={handleExport} />;
@@ -261,6 +338,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
 import {Button} from '@/components / ui / button';'
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components / ui / dropdown - menu';'
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components / ui / dropdown - menu';

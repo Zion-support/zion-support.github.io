@@ -64,6 +64,11 @@ default define_config ({"test_dir": tests / e2e',  "use": {"baseURL": process.en
     {"name": Mobile Safari',      "use": {"browserName": webkit',        ...devices['iPhone 12']}'
     }
   ];
+<<<<<<< HEAD
+  reporter: [
+    ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 });
   "reporter": [;

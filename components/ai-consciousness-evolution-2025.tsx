@@ -1,3 +1,79 @@
+<<<<<<< HEAD
+import { 
+  Brain, Star, Users, TrendingUp, Zap, Shield, 
+  CheckCircle, Clock, Award, Target, Globe, Sparkles;
+  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
+  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
+} from 'lucide-react';
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+
+import {
+  Brain
+  Star
+  Users
+  TrendingUp
+  Zap
+  Shield
+  CheckCircle
+  Clock
+  Award
+  Target
+  Globe
+  Sparkles
+  Cpu
+  Lock
+  Cloud
+  BarChart3
+  Eye
+  Heart
+  Lightbulb
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Globe as GlobeIcon;} from 'lucide-react';import {
+  Brain, Star, Users, TrendingUp, Zap, Shield
+  Brain,
+  Star,
+  Users,
+  TrendingUp,
+  Zap,
+  Shield,
+  CheckCircle,
+  Clock,
+  Award,
+  Target,
+  Globe,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  BarChart3,
+  Eye,
+  Heart,
+  Lightbulb,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,;
+  Globe as GlobeIcon,;} from 'lucide-react';import { 
+  Brain, Star, Users, TrendingUp, Zap, Shield, ;
+  CheckCircle, Clock, Award, Target, Globe, Sparkles;
+  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
+  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+
+=======
 
 
 import React from 'react';'
@@ -162,6 +238,13 @@ name='keywords''
         <title>;
           AI Consciousness Evolution Platform 2025 - Zion Tech Group;
         </title>;
+<<<<<<< HEAD
+        />;
+      </Head>;
+      {/* Hero Section */}
+      <div className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
+        {/* Animated Background */}
+=======
 
       {/* Hero Section */}
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -511,6 +594,7 @@ className='text-center mb-16''
             className="text-center mb-16"
           >
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <h2 className="text-4xl font-bold text-white mb-6">
               How AI Consciousness Evolution
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Works</span>
@@ -1045,6 +1129,9 @@ plan.popular
                 }`}`              >;
 
                 {plan.popular && (
+<<<<<<< HEAD
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+=======
 
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'
                     <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold'>'
@@ -1065,12 +1152,19 @@ plan.popular
 <div className='text-center mb-8'>'
                   <h3 className='text-2xl font-bold text-white mb-2'>'
 
+<<<<<<< HEAD
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {plan.name}
                   </h3>;
                   <div className='mb - 4'>;'
                     <span className='text - 4xl font - bold text - purple - 400'>;'
 
                       {plan.price}
+<<<<<<< HEAD
+=======
 
                     </span>
                     <span className='text-gray-400'>{plan.period}</span>'
@@ -1165,6 +1259,28 @@ evolution journey today.
               </button>
             </div>
             {/* Contact Info */}
+<<<<<<< HEAD
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }
+                { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
+                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
+              ].map((contact, index) => (
+            <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
+              {[
+                {
+                  icon: <Phone className='w-6 h-6' />
+                  label: 'Call Us'
+                  value: contactInfo.mobile
+                }
+                {
+                  icon: <Mail className='w-6 h-6' />
+                  label: 'Email Us'
+                  value: contactInfo.email
+                }
+                {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 <div className='mt-12 grid grid-cols-1 "md":grid-cols-3 gap-6'>'
               {[

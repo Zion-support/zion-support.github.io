@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }

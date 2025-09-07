@@ -43,6 +43,12 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
           <span className="block">Email: </span>
           <a 
             href={`mailto:${email}`} 
+<<<<<<< HEAD
+            className="text-zion-cyan hover:underline truncate block"
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="text-zion-cyan hover:underline truncate block"
           >
             {email}

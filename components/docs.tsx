@@ -1,3 +1,36 @@
+<<<<<<< HEAD
+import Head from 'next / head';
+import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
+import { Star } from 'lucide-react';
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
+
+export default function DocsPage() {
+export default function DocsPage() {
+export default /**
+ * DocsPage - Function description
+ */
+function DocsPage() {
+  const contact = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+{ name: 'Overview', href: '/enhanced-services-showcase' },
+        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
+        { name: 'Contact Sales', href: '/contact' }]
+    };
+    {
+      title: 'AI Services Docs'
+      links: [
+=======
 
 
 import Head from 'next/head';'
@@ -336,6 +369,7 @@ href='/contact''
               <a className='text - purple - 400' href={`"mailto": ${contact.email},`
 }>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card className="p-6 bg-black/40 border border-gray-700/50">
             <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
@@ -344,7 +378,6 @@ href='/contact''
               ))}
             </ul>
           </Card>
-
           <Card className="p-6 bg-black/40 border border-gray-700/50">
             <h2 className="text-xl font-semibold mb-4 text-white">Need help?</h2>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -352,7 +385,10 @@ href='/contact''
               <Button href={contact.website} variant="outline" className="border-gray-600 text-gray-200">Visit Website</Button>
               <a className="text-cyan-400" href={`tel:${contact.mobile.replace(/[^+\\d]/g, '')}`}>{contact.mobile}</a>
               <a className="text-purple-400" href={`mailto:${contact.email}`}>{contact.email}</a>
+<<<<<<< HEAD
+=======
             </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </Card>
         </div>
     </UltraAdvancedFuturisticBackground>

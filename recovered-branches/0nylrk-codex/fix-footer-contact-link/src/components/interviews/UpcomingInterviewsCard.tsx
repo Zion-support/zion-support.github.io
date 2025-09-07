@@ -8,6 +8,13 @@ import {Link} from "react-router-dom";
 import {Calendar, Clock, Video} from "lucide-react";
 import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
+<<<<<<< HEAD
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {;
+    const loadInterviews = async () => {;
+=======
 
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
@@ -45,6 +52,30 @@ export function UpcomingInterviewsCard() {};
       try {;
         const interviews = await fetchInterviews();
         const now = new Date();
+<<<<<<< HEAD
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+import React, { useEffect, useState } from "react",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { format, isPast, parseISO } from "date-fns",
+import { Link } from "react-router-dom",
+import { Calendar, Clock, Video } from "lucide-react";
+import { Avatar } from "@/components/ui/avatar";
+export function UpcomingInterviewsCard() {
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+import { Calendar, Clock, Video } from "lucide-react",
+import { Avatar } from "@/components/ui/avatar",
+export function UpcomingInterviewsCard() {
+  const { fetchInterviews } = useInterviews(),
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+=======
 
         const interviews = await fetchInterviews(),
         const now = new Date(),
@@ -54,6 +85,7 @@ export function UpcomingInterviewsCard() {};
         const interviews = await fetchInterviews(),
         const now = new Date(),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         // Filter for confirmed interviews in the future
         const upcoming = interviews
 
@@ -77,6 +109,15 @@ export function UpcomingInterviewsCard() {};
         setIsLoading(false)
       }
 
+<<<<<<< HEAD
+    }
+    loadInterviews()
+  }, []);
+    }
+    loadInterviews()
+  }, []);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 
     loadInterviews()
@@ -94,6 +135,7 @@ export function UpcomingInterviewsCard() {;
   }
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (isLoading) {
     return (
 
@@ -114,7 +156,10 @@ export function UpcomingInterviewsCard() {;
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -136,6 +181,8 @@ export function UpcomingInterviewsCard() { return null; }
       try {;
         const interviews = await fetchInterviews(),;
         const now = new Date(),;
+<<<<<<< HEAD
+=======
 
         console.error ("Error loading upcoming interviews:", error);
       } finally {}
@@ -279,7 +326,7 @@ export function UpcomingInterviewsCard() { return null; }
                 <div className="flex-1">;
                   <div className="flex justify-between items-start">;
                     <p className="font-medium line-clamp-1">;
-                      {interview && interview.title || "Interview"}
+                      {interview.title || "Interview"}
                     </p>;
                     {isStartingSoon && (;
                       <span className="text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;

@@ -5,6 +5,10 @@ interface AIListingFormProps {
     category: string
     keyFeatures: string
     targetAudience: string
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState } from "react";
 
@@ -36,7 +40,10 @@ interface AIListingFormProps {
 
   }) => void,
   isLoading: boolean,
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   initialValues?: {
 
     title?: string,
@@ -58,6 +65,27 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
 
+<<<<<<< HEAD
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title || "");
+  const [category, setCategory] = useState(initialValues.category || "");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title |"");
+  const [category, setCategory] = useState(initialValues.category |"");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
+  const { toast } = useToast(),
+  const [title, setTitle] = useState(initialValues.title || ""),
+  const [category, setCategory] = useState(initialValues.category || ""),
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSubmit = () => {
     if (!title |!category) {
       toast({
@@ -119,6 +147,17 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           onChange={(e) => setTargetAudience(e.target.value)}"
           placeholder="e.g. Developers, Marketers, Startups""
           className="bg-zion-blue border border-zion-blue-light text-white"
+<<<<<<< HEAD
+      <Button 
+
+          disabled={isLoading}
+        />
+      </div>
+      <Button
+        onClick={handleSubmit}
+        disabled={isLoading |!title |!category}
+      <Button 
+=======
 
           disabled={isLoading}
         />
@@ -136,7 +175,10 @@ import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 
 import { Sparkles } from "lucide-react",;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface AIListingFormProps {;
   onSubmit: (formData: {;
     title: string,;
@@ -158,11 +200,10 @@ interface AIListingFormProps {;
 
           id="targetAudience"
           value={targetAudience}
-          onChange={(e) => setTargetAudience(e && e.target.value)}
-          placeholder="e && e.g. Developers, Marketers, Startups";
+          onChange={(e) => setTargetAudience(e.target.value)}
+          placeholder="e.g. Developers, Marketers, Startups";
           className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
-
         />;
       </div>;
 
@@ -184,7 +225,10 @@ interface AIListingFormProps {;
             Generate Optimized Content;
           </>
         )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
       </div>;
       <Button;

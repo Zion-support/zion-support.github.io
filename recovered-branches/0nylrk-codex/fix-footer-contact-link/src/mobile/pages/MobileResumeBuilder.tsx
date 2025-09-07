@@ -113,6 +113,12 @@ export function MobileResumeBuilder() {;
       <MobileHeader;
         title="Resume Builder";
         showBack;
+<<<<<<< HEAD
+      />;
+      <main className="py-4">;
+        <ResumeBuilderComponent />;
+      </main>;
+=======
 
       />;
 
@@ -120,6 +126,7 @@ export function MobileResumeBuilder() {;
         <ResumeBuilderComponent />;
       </main>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <BottomNavigation />;
 
   );

@@ -72,6 +72,11 @@ export function SocialLogin() {
   )
 
 import { Web3Login } from "./Web3Login",;
+<<<<<<< HEAD
+export function SocialLogin() {;
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
+  return (;
+=======
 
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;

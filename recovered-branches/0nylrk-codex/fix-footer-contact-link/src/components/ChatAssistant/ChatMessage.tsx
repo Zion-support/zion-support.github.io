@@ -1,5 +1,29 @@
 import {cn} from "@/lib/utils";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+<<<<<<< HEAD
+interface ChatMessageProps {;
+  role: 'user' | 'assistant',;
+  message: string,;
+import {cn} from "@/lib/utils";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+
+import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+interface ChatMessageProps {
+
+  role: 'user' | 'assistant'
+  message: string
+
+  timestamp?: Date;
+import {cn} from "@/lib/utils";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import { cn } from "@/lib/utils",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+
+import { cn } from "@/lib/utils",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+
+=======
 
 interface ChatMessageProps {;
   role: 'user' | 'assistant',;
@@ -95,6 +119,8 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
         "max-w-[80%] px-4 py-2 rounded-lg",
         isUser "
           ? "bg-zion-purple/20 text-white rounded-tr-none" 
+<<<<<<< HEAD
+=======
 
 "
         "max-w-[80%] px-4 py-2 rounded-lg",
@@ -109,6 +135,17 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
         <div className="whitespace-pre-wrap">{message}</div>
         {timestamp && ("
           <div className="text-xs text-zion-slate mt-1 text-right">
+<<<<<<< HEAD
+};
+
+            {timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+          </div>
+        )}
+      </div>
+    </div>
+  )
+};
+=======
 
 import { cn } from "@/lib/utils",;
 
@@ -135,6 +172,10 @@ interface ChatMessageProps {;'
         <div className="whitespace-pre-wrap">{message}</div>;
         {timestamp && (;
           <div className="text-xs text-zion-slate mt-1 text-right">;
+<<<<<<< HEAD
+            {timestamp.toLocaleTimeString([], { hour:'2-digit', minute:'2-digit' })}
+            {timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+=======
             {timestamp && timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
 {timestamp.toLocaleTimeString([], { hour:'2-digit', minute:'2-digit' })}
             {timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}

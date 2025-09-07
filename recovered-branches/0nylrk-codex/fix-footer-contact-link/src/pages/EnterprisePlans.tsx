@@ -39,6 +39,10 @@ import { SEO } from "@/components/SEO",export default function EnterprisePlans()
       </main>
       <Footer />
 
+<<<<<<< HEAD
+
+}
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -147,6 +151,10 @@ export default function EnterprisePlans() {;
       />;
 
       <Header />;
+<<<<<<< HEAD
+      <main className="min-h-screen bg-background">;
+      <main className="min-h-screen bg-background">;
+=======
       <main className="min - h-screen bg - background">;
 <main className="min-h-screen bg-background">;
       <main className="min-h-screen bg-background">;

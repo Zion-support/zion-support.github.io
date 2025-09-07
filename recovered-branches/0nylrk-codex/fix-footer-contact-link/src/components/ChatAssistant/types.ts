@@ -5,6 +5,7 @@ export interface Message {;
 export interface Message {
 export interface Message {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
 
 }
@@ -19,6 +20,8 @@ export interface Recipient {;
   avatarUrl?: string;
   role?: string;
 }
+<<<<<<< HEAD
+=======
 
 export interface Message {;
   id: string,;'

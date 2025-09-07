@@ -27,6 +27,8 @@ export function ProjectDetailsStep({}
         </h3>
 
       <div>
+<<<<<<< HEAD
+=======
 
         <h3 className="text-xl font-semibold text-white mb-4">
           Contact Information;
@@ -36,6 +38,18 @@ export function ProjectDetailsStep({}
           Contact Information;
         </h3>
 
+<<<<<<< HEAD
+<div>
+<h3 className="text-xl font-semibold text-white mb-4">
+          Contact Information
+        </h3>
+      <div>
+        <h3 className="text-xl font-semibold text-white mb-4">
+          Contact Information
+        </h3>
+        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>"
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -154,6 +168,14 @@ value={formData.contactInfo.name}
                 updateFormData({
                   contactInfo: {
 
+<<<<<<< HEAD
+                    ...formData.contactInfo
+                    name: e.target.value
+                  }
+                })
+              }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               value={formData.contactInfo.name}
               onChange={(e) =>
                 updateFormData({
@@ -197,6 +219,27 @@ value={formData.contactInfo.name}
               id="email"
               type="email"
               placeholder="Your email address"
+<<<<<<< HEAD
+              onChange={(e) => updateFormData({;
+                contactInfo: { ...formData.contactInfo, email: e.target.value } ;
+              })}
+
+
+              value={formData.contactInfo.email}
+onChange={(e) =>
+              value={formData.contactInfo.email}
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+                    ...formData.contactInfo
+                    email: e.target.value
+                  }
+                })
+              }
+              onChange={(e) => updateFormData({;
+                contactInfo: { ...formData.contactInfo, email: e.target.value } ;
+              })}
+=======
 
               value={formData.contactInfo.email}
               onChange={(e) =>
@@ -287,6 +330,8 @@ value={formData.contactInfo.name}
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+=======
 
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 import { QuoteFormData  } from '@/types / quotes';
@@ -351,6 +396,39 @@ interface ProjectDetailsStepProps {
             <Label html_for="email" className="text - zion - slate-light">;
               Email;
             </Label>;
+      ;
+      <div>;
+        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>;
+        ;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <div>;
+            <Label htmlFor="name" className="text-zion-slate-light">Name</Label>;
+            <Input;
+              id="name";
+              placeholder="Your name";
+              value={formData.contactInfo.name}
+              onChange={(e) => updateFormData({ ;
+                contactInfo:{ ...formData.contactInfo, name:e.target.value } ;
+              })}
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
+            />;
+          </div>;
+          ;
+          <div>;
+            <Label htmlFor="company" className="text-zion-slate-light">Company</Label>;
+            <Input;
+              id="company";
+              placeholder="Your company name";
+              value={formData.contactInfo.company}
+              onChange={(e) => updateFormData({ ;
+                contactInfo:{ ...formData.contactInfo, company:e.target.value } ;
+              })}
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
+            />;
+          </div>;
+          ;
+          <div>;
+            <Label htmlFor="email" className="text-zion-slate-light">Email</Label>;
             <Input;
               id="email";
               type="email";
@@ -367,6 +445,7 @@ interface ProjectDetailsStepProps {
               className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
             />;
           </div>;
+          ;
           <div>;
             <Label html_for="phone" className="text - zion - slate-light">;
               Phone;

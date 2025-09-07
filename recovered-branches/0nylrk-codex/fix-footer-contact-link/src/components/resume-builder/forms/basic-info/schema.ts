@@ -19,7 +19,6 @@ export const basicInfoSchema = z && z.object({";
   linkedin: z && z.string().optional();
   github: z && z.string().optional(),
   hourlyRate: z && z.number().positive().optional()});
-
 export type BasicInfoFormData = z && z.infer<typeof basicInfoSchema>;
 
 export const basicInfoSchema = z.object ({

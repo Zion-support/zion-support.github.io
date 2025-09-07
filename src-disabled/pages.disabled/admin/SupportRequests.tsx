@@ -94,36 +94,69 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
 
+<<<<<<< HEAD
         {/* Status Cards */}
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>
-          <Card>
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>{openCount}</CardTitle>
+        
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        {/* Status Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-2xl font-bold">{openCount}</CardTitle>
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
+=======
 
           <Card>
-            <CardHeader className='pb-2'>
-              <CardTitle className='text-2xl font-bold'>
-                {inProgressCount}
-              </CardTitle>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>
               <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
+=======
 
           <Card>
-            <CardHeader className='pb-2'>
-              <CardTitle className='text-2xl font-bold'>
-                {resolvedCount}
-              </CardTitle>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
-
+<<<<<<< HEAD
+            <CardHeader className="pb-2">
+              <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
+ursor/fix-website-loading-errors-and-merge-6662
+          
+          
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>
+              <CardDescription>In Progress</CardDescription>
+            </CardHeader>
+          </Card>
+          
+          
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>
+              <CardDescription>Resolved</CardDescription>
+            </CardHeader>
+          </Card>
           <Card>
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>{totalCount}</CardTitle>
+          
+=======
+
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
               <CardDescription>Total Requests</CardDescription>
             </CardHeader>
           </Card>
@@ -139,11 +172,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Tabs defaultValue="all" className="mb-8">
 
           <TabsList>
-            <TabsTrigger value='all'>All Requests</TabsTrigger>
-            <TabsTrigger value='escalated'>Escalated</TabsTrigger>
-            <TabsTrigger value='ai-flagged'>AI Flagged</TabsTrigger>
-            <TabsTrigger value='need-response'>Need Response</TabsTrigger>
+            <TabsTrigger value="all">All Requests</TabsTrigger>
+            <TabsTrigger value="escalated">Escalated</TabsTrigger>
+            <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>
+            <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
+          <TabsContent value='all' className='mt-6'>
+          
+          <TabsContent value="all" className="mt-6">
+=======
 
       />;
       <div className='container mx-auto px-4 py-8'>;
@@ -302,14 +340,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <TabsContent value="all" className="mt-6">
 
             {/* Search and Filters */}
-            <div className='flex flex-col md:flex-row gap-4 mb-6'>;
-              <div className='relative flex-1'>;
-                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400' />;
+            <div className="flex flex-col md:flex-row gap-4 mb-6">
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <Input
+<<<<<<< HEAD
+                  placeholder='Search by ID, user or issue...'
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                  className='pl-10'                />
+              </div>
+              <Select
+                value={statusFilter |''}
+                onValueChange={value => setStatusFilter(value |null)}
+                value={statusFilter || ''}
+                onValueChange={value => setStatusFilter(value || null)}
+=======
 
                 value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Status' />
@@ -332,17 +383,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Select>
 
                 </SelectTrigger>
-                <SelectContent>
                   <SelectItem value=''>All Statuses</SelectItem>
                   <SelectItem value='open'>Open</SelectItem>
                   <SelectItem value='in-progress'>In Progress</SelectItem>
                   <SelectItem value='resolved'>Resolved</SelectItem>
                 </SelectContent>
               </Select>
+              
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Priority" />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="">All Statuses</SelectItem>
+                  <SelectItem value="open">Open</SelectItem>
+                  <SelectItem value="in-progress">In Progress</SelectItem>
+                  <SelectItem value="resolved">Resolved</SelectItem>
+                </SelectContent>
+              </Select>
+<<<<<<< HEAD
+              <Select
+                value={priorityFilter |''}
+                onValueChange={value => setPriorityFilter(value |null)}
+                value={priorityFilter || ''}
+                onValueChange={value => setPriorityFilter(value || null)}
+=======
 
                 value={priorityFilter || ''}
                 onValueChange={value => setPriorityFilter(value || null)}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Priority' />
@@ -360,16 +435,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value=''>All Priorities</SelectItem>
-                  <SelectItem value='high'>High</SelectItem>
-                  <SelectItem value='medium'>Medium</SelectItem>
-                  <SelectItem value='low'>Low</SelectItem>
+                  <SelectItem value="">All Priorities</SelectItem>
+                  <SelectItem value="high">High</SelectItem>
+                  <SelectItem value="medium">Medium</SelectItem>
+                  <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
+              <Select
+                value={categoryFilter |''}
+                onValueChange={value => setCategoryFilter(value |null)}
+                value={categoryFilter || ''}
+                onValueChange={value => setCategoryFilter(value || null)}
+=======
 
                 value={categoryFilter || ''}
                 onValueChange={value => setCategoryFilter(value || null)}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Category' />
@@ -388,18 +471,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </SelectContent>
               </Select>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value=''>All Categories</SelectItem>
-                  <SelectItem value='authentication'>Authentication</SelectItem>
-                  <SelectItem value='billing'>Billing</SelectItem>
-                  <SelectItem value='api'>API</SelectItem>
-                  <SelectItem value='disputes'>Disputes</SelectItem>
-                  <SelectItem value='verification'>Verification</SelectItem>
-                  <SelectItem value='profile'>Profile</SelectItem>
+                  <SelectItem value="">All Categories</SelectItem>
+                  <SelectItem value="authentication">Authentication</SelectItem>
+                  <SelectItem value="billing">Billing</SelectItem>
+                  <SelectItem value="api">API</SelectItem>
+                  <SelectItem value="disputes">Disputes</SelectItem>
+                  <SelectItem value="verification">Verification</SelectItem>
+                  <SelectItem value="profile">Profile</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
+              <Button
+                variant='outline'
+                onClick={resetFilters}
+                className='md:w-auto'
+              >
+                <Filter className='h-4 w-4 mr-2' /> Reset Filters
+              </Button>
+            </div>
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   onChange={e => setSearchQuery(e && e.target.value)}
                   className='pl-10'                />;
               </div>;
@@ -413,6 +508,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
@@ -452,6 +548,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <TableRow key={request.id}>
                         <TableCell className="font-medium">{request.id}</TableCell>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
@@ -499,18 +596,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         title='Support Requests | Admin Dashboard';
         description='Manage and track user support requests and issues';
       />;
-      <div className='container mx - auto px - 4 py - 8'>;
-        <div className='flex flex - col md:flex - row items - start md:items - center justify - between mb - 8'>;
+      <div className="container mx-auto px-4 py-8">;
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
           <div>;
-            <h1 className='text - 3xl font - bold bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent'>;
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
               Support Requests;
             </h1>;
-            <p className='text - zion - slate - light mt - 2'>;
+            <p className="text-zion-slate-light mt-2">;
               Manage and respond to user support requests and issues;
             </p>;
           </div>;
-          <div className='mt - 4 md:mt - 0'>;
-            <Button className='bg - zion - purple hover:bg - zion - purple - light'>;
+          <div className="mt-4 md:mt-0">;
+            <Button className="bg-zion-purple hover:bg-zion-purple-light">;
               New Support Case;
             </Button>;
           </div>;
@@ -567,51 +664,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <SelectTrigger className='w-[180px]'>;,
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 4 mb - 8'>;
           <Card>;
-            <CardHeader className='pb - 2'>;
-              <CardTitle className='text - 2xl font - bold'>{open_count}</CardTitle>;
-              <CardDescription > Open Requests</CardDescription>;
+            <CardHeader className="pb-2">;
+              <CardTitle className="text-2xl font-bold">{openCount}</CardTitle>;
+              <CardDescription>Open Requests</CardDescription>;
             </CardHeader>;
           </Card>;
           <Card>;
-            <CardHeader className='pb - 2'>;
-              <CardTitle className='text - 2xl font - bold'>;
-                {inProgressCount}
-              </CardTitle>;
-              <CardDescription > In Progress</CardDescription>;
+            <CardHeader className="pb-2">;
+              <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>;
+              <CardDescription>In Progress</CardDescription>;
             </CardHeader>;
           </Card>;
           <Card>;
-            <CardHeader className='pb - 2'>;
-              <CardTitle className='text - 2xl font - bold'>;
-                {resolved_count}
-              </CardTitle>;
-              <CardDescription > Resolved</CardDescription>;
+            <CardHeader className="pb-2">;
+              <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>;
+              <CardDescription>Resolved</CardDescription>;
             </CardHeader>;
           </Card>;
           <Card>;
-            <CardHeader className='pb - 2'>;
-              <CardTitle className='text - 2xl font - bold'>{total_count}</CardTitle>;
-              <CardDescription > Total Requests</CardDescription>;
+            <CardHeader className="pb-2">;
+              <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>;
+              <CardDescription>Total Requests</CardDescription>;
             </CardHeader>;
           </Card>;
         </div>;
-        <Tabs default_value='all' className='mb - 8'>;
+        <Tabs defaultValue="all" className="mb-8">;
           <TabsList>;
-            <TabsTrigger value='all'>All Requests</TabsTrigger>;
-            <TabsTrigger value='escalated'>Escalated</TabsTrigger>;
-            <TabsTrigger value='ai - flagged'>AI Flagged</TabsTrigger>;
-            <TabsTrigger value='need - response'>Need Response</TabsTrigger>;
+            <TabsTrigger value="all">All Requests</TabsTrigger>;
+            <TabsTrigger value="escalated">Escalated</TabsTrigger>;
+            <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>;
+            <TabsTrigger value="need-response">Need Response</TabsTrigger>;
           </TabsList>;
-          <TabsContent value='all' className='mt - 6'>;
+          <TabsContent value="all" className="mt-6">;
             {/* Search and Filters */}
-            <div className='flex flex - col md:flex - row gap - 4 mb - 6'>;
-              <div className='relative flex - 1'>;
-                <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - gray - 400' />;
+            <div className="flex flex-col md:flex-row gap-4 mb-6">;
+              <div className="relative flex-1">;
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
                 <Input;
-                  placeholder='Search by ID, user or issue...';
-                  value={search_query}
-                  on_change={e => setSearchQuery (e.target.value)}
-                  className='pl - 10'                />;
+                  placeholder="Search by ID, user or issue...";
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10";
+                />;
               </div>;
               <Select;
                 value={status_filter || ''}
@@ -621,6 +715,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <SelectValue placeholder='Status' />;
                 </SelectTrigger>;
                 <SelectContent>;
+<<<<<<< HEAD
+                  <SelectItem value="">All Statuses</SelectItem>;
+                  <SelectItem value="open">Open</SelectItem>;
+                  <SelectItem value="in-progress">In Progress</SelectItem>;
+                  <SelectItem value="resolved">Resolved</SelectItem>;
+                </SelectContent>;
+              </Select>;
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>;
+                <SelectTrigger className="w-[180px]">;
+                  <SelectValue placeholder="Priority" />;
+=======
                   <SelectItem value=''>All Statuses</SelectItem>;
                   <SelectItem value='open'>Open</SelectItem>;
 
@@ -689,14 +794,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >;
                 <SelectTrigger className='w-[180px]'>;
                   <SelectValue placeholder='Priority' />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </SelectTrigger>;
                 <SelectContent>;
-                  <SelectItem value=''>All Priorities</SelectItem>;
-                  <SelectItem value='high'>High</SelectItem>;
-                  <SelectItem value='medium'>Medium</SelectItem>;
-                  <SelectItem value='low'>Low</SelectItem>;
+                  <SelectItem value="">All Priorities</SelectItem>;
+                  <SelectItem value="high">High</SelectItem>;
+                  <SelectItem value="medium">Medium</SelectItem>;
+                  <SelectItem value="low">Low</SelectItem>;
                 </SelectContent>;
               </Select>;
+<<<<<<< HEAD
+              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>;
+                <SelectTrigger className="w-[180px]">;
+                  <SelectValue placeholder="Category" />;
+=======
 
               <Select;
                 value={category_filter || ''}
@@ -705,17 +816,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >;
                 <SelectTrigger className='w-[180px]'>;
                   <SelectValue placeholder='Category' />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </SelectTrigger>;
                 <SelectContent>;
-                  <SelectItem value=''>All Categories</SelectItem>;
-                  <SelectItem value='authentication'>Authentication</SelectItem>;
-                  <SelectItem value='billing'>Billing</SelectItem>;
-                  <SelectItem value='api'>API</SelectItem>;
-                  <SelectItem value='disputes'>Disputes</SelectItem>;
-                  <SelectItem value='verification'>Verification</SelectItem>;
-                  <SelectItem value='profile'>Profile</SelectItem>;
+                  <SelectItem value="">All Categories</SelectItem>;
+                  <SelectItem value="authentication">Authentication</SelectItem>;
+                  <SelectItem value="billing">Billing</SelectItem>;
+                  <SelectItem value="api">API</SelectItem>;
+                  <SelectItem value="disputes">Disputes</SelectItem>;
+                  <SelectItem value="verification">Verification</SelectItem>;
+                  <SelectItem value="profile">Profile</SelectItem>;
                 </SelectContent>;
               </Select>;
+<<<<<<< HEAD
+              <Button variant="outline" onClick={resetFilters} className="md:w-auto">;
+                <Filter className="h-4 w-4 mr-2" /> Reset Filters;
+=======
 
               <Button;
                 variant='outline';
@@ -729,6 +845,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             {/* Support Requests Table */}
             <Card>;
+<<<<<<< HEAD
+              <CardContent className="p-0">;
+                <Table>;
+                  <TableHeader>;
+                    <TableRow>;
+                      <TableHead>ID</TableHead>;
+                      <TableHead>User</TableHead>;
+                      <TableHead>Issue</TableHead>;
+                      <TableHead>Status</TableHead>;
+                      <TableHead>Priority</TableHead>;
+                      <TableHead>Category</TableHead>;
+                      <TableHead>Created</TableHead>;
+                      <TableHead>Last Updated</TableHead>;
+                      <TableHead>Actions</TableHead>;
+                    </TableRow>;
+                  </TableHeader>;
+                  <TableBody>;
+                    {filteredRequests.map((request) => (;
+                      <TableRow key={request.id}>;
+                        <TableCell className="font-medium">{request.id}</TableCell>;
+=======
               <CardContent className='p - 0'>;
                 <Table>;
                   <TableHeader>;
@@ -779,23 +916,51 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               : 'outline';
                           }>;
                         <TableCell>{request.user}</TableCell>;
-                        <TableCell className='max - w-xs truncate'>;
-                          {request.issue}
-                        </TableCell>;
+                        <TableCell className="max-w-xs truncate">{request.issue}</TableCell>;
                         <TableCell>;
-                          <Badge;
-                            variant={
-                              request.status === 'open';
-                                ? 'default';
-                                : request.status === 'in - progress';
-                                  ? 'secondary';
-                                  : 'outline';
-                            }
-                          >;
+                          <Badge variant={;
+                            request.status === 'open';
+                              ? 'default';
+                              : request.status === 'in-progress';
+                              ? 'secondary';
+                              : 'outline';
+                          }>;
                             {request.status}
                           </Badge>;
                         </TableCell>;
                         <TableCell>;
+<<<<<<< HEAD
+                          <Badge variant={;
+                            request.priority === 'high';
+                              ? 'destructive';
+                              : request.priority === 'medium';
+                              ? 'default';
+                              : 'outline';
+                          }>;
+                            {request.priority}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>{request.category}</TableCell>
+                        <TableCell>{new Date(request.createdAt).toLocaleDateString()}</TableCell>
+                        <TableCell>{new Date(request.lastUpdated).toLocaleDateString()}</TableCell>
+                        <TableCell>
+                          <Button variant="ghost" size="sm">View</Button>
+                          <Button variant="ghost" size="sm">Assign</Button>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value='escalated' className='mt-6'>
+            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
+              <h3 className='text-xl font-medium mb-4'>Escalated Requests</h3>
+              <p className='text-zion-slate-light'>
+                This tab will show support requests that have been escalated by
+                agents or the system.
+=======
 
                             {request.priority}
                           </Badge>;
@@ -849,6 +1014,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
               <p className="text-zion-slate-light">
                 This tab will show support requests that have been escalated by agents or the system.
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </p>
             </div>
           </TabsContent>
@@ -867,9 +1033,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
               <p className="text-zion-slate-light">
                 These support requests have been waiting for an agent response for over 24 hours.
+<<<<<<< HEAD
+=======
 
               </p>
-            </div>
           </TabsContent>
         </Tabs>
       </div>

@@ -20,6 +20,8 @@ const DataPipelineEngineeringChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
       <main>;
         <h1>DataPipelineEngineeringChat</h1>;
         <p>Service details coming soon...</p>;

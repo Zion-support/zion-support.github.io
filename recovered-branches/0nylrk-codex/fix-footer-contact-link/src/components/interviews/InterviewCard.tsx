@@ -133,6 +133,10 @@ import React, { useState } from './react';
 >>>>>>> origin/chore/fix-lint-and-merge
     }
   }
+<<<<<<< HEAD
+    
+
+=======
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
@@ -213,18 +217,15 @@ if ( {) {}
 
   const isClient = user?.id === interview && interview.client_id;
   const isTalent = user?.id === interview && interview.talent_id;
-
   // Format interview date and time;
 
   const formattedTime = format(interviewDate, 'h: mm a'),;
-
   // Calculate when interview ends;
   const endTime = new Date(interviewDate);
 
   const isInterviewConfirmed = interview && interview.status === 'confirmed';
   const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate && interviewDate.getTime() - 5 * 60000)), // 5 minutes before;
   const isInterviewPast = isPast(interviewDate);
-
   const getRelativeTime = () => {;
 
       return `Starts in ${formatDistanceToNow(interviewDate)}`;
@@ -262,7 +263,10 @@ if ( {) {}
 >>>>>>> origin/chore/fix-lint-and-merge
       status ;
     });
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (success) {;
 
       });
@@ -275,11 +279,13 @@ if ( {) {}
     }
     setIsLoading(false);
   };
-
   const handleCancelInterview = async () => {;
     setIsLoading(true);
     const success = await cancelInterview(interview && interview.id);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (success) {;
 
         variant: "destructive";
@@ -287,7 +293,10 @@ if ( {) {}
     }
     setIsLoading(false);
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const getStatusBadge = () => {;
     switch (interview && interview.status) {;'
       case 'requested':;"
@@ -309,6 +318,9 @@ if ( {) {}
       default:;
         return <Badge>{interview && interview.status}</Badge>;
     }
+<<<<<<< HEAD
+  };
+=======
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
@@ -538,6 +550,15 @@ if ( {) {}
                 </Button>
               )}
 
+<<<<<<< HEAD
+                  <Video className="h-4 w-4 mr-2" />
+                  <Video className="h-4 w-4 mr-2" /> 
+                  {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+                </Button>
+              )}
+              
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <AlertDialog>
 
                 <AlertDialogTrigger asChild>
@@ -556,6 +577,7 @@ if ( {) {}
                   <AlertDialogFooter>
                     <AlertDialogCancel>Go Back</AlertDialogCancel>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <AlertDialog>;
                 <AlertDialogTrigger asChild>;"
                   <Button variant="outline" size="sm" className="w-full mt-2">;"
@@ -576,6 +598,14 @@ if ( {) {}
                     </AlertDialogDescription>;
                   </AlertDialogHeader>;
                   <AlertDialogFooter>;
+<<<<<<< HEAD
+                    <AlertDialogCancel>Go Back</AlertDialogCancel>;
+                    <AlertDialogAction ;
+                      onClick={handleCancelInterview} ;
+                      disabled={isLoading}
+                      className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
+                    >;
+=======
 
 <AlertDialogCancel>Go Back</AlertDialogCancel>;
                     <AlertDialogAction ;
@@ -588,6 +618,27 @@ if ( {) {}
                   </AlertDialogFooter>;
                 </AlertDialogContent>;
               </AlertDialog>;
+<<<<<<< HEAD
+                      disabled={isLoading}
+                      className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                    >
+                      Cancel Interview
+                    </AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
+            </>
+          )}
+        </div>
+      </CardFooter>
+      {/* Response dialog for talents */}
+      <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>
+        <DialogContent className="sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white">
+          <DialogHeader>
+            <DialogTitle>Respond to Interview Request</DialogTitle>
+          </DialogHeader>
+            </>;          )}
+=======
 
       {/* Response dialog for talents */}
       <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>;
@@ -601,6 +652,14 @@ if ( {) {}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
             isLoading={isLoading}
+<<<<<<< HEAD
+          />
+        </DialogContent>
+      </Dialog>
+    </Card>
+  )
+}
+=======
 
             </>)}
         </div>;

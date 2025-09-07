@@ -8,6 +8,15 @@ export type Database = {}
 
   | Json[];
 
+<<<<<<< HEAD
+export type Json =
+  | string
+  | number
+  | boolean
+  | null
+  | { [key: string]: Json | undefined }
+  | Json[]
+=======
 export type Json =;
   | string;
   | number;
@@ -26,6 +35,162 @@ export type Database = {
     Tables: {
       ai_chats: {
         Row: {
+<<<<<<< HEAD
+
+      api_logs: {;
+        Row: {;
+
+          created_at: string
+          id: string
+          message: string
+          response: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          message: string
+          response: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          message?: string
+          response?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ai_chats_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      analytics_events: {
+        Row: {
+          created_at: string | null
+          event_type: string
+          id: string
+          metadata: Json | null
+          path: string | null
+          session_id: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          event_type: string
+          id?: string
+          metadata?: Json | null
+          path?: string | null
+          session_id?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          event_type?: string
+          id?: string
+          metadata?: Json | null
+          path?: string | null
+          session_id?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "analytics_events_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      api_keys: {
+        Row: {
+          created_at: string
+          expires_at: string | null
+          id: string
+          is_active: boolean
+          key_hash: string
+          key_prefix: string
+          last_used_at: string | null
+          name: string
+          scopes: Database["public"]["Enums"]["api_key_scope"][]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          is_active?: boolean
+          key_hash: string
+          key_prefix: string
+          last_used_at?: string | null
+          name: string
+          scopes?: Database["public"]["Enums"]["api_key_scope"][]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          is_active?: boolean
+          key_hash?: string
+          key_prefix?: string
+          last_used_at?: string | null
+          name?: string
+          scopes?: Database["public"]["Enums"]["api_key_scope"][]
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "api_keys_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      api_logs: {
+        Row: {
+          api_key_id: string | null
+          created_at: string
+          endpoint: string
+          id: string
+          ip_address: string | null
+          method: string
+          response_time_ms: number | null
+          status_code: number
+          user_agent: string | null
+          user_id: string | null
+        }
+        Insert: {
+          api_key_id?: string | null
+          created_at?: string
+          endpoint: string
+          id?: string
+          ip_address?: string | null
+          method: string
+          response_time_ms?: number | null
+          status_code: number
+          user_agent?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          api_key_id?: string | null
+          created_at?: string
+          endpoint?: string
+          id?: string
+          ip_address?: string | null
+          method?: string
+          response_time_ms?: number | null
+          status_code?: number
+          user_agent?: string | null
+          user_id?: string | null
+      api_logs: {;
+        Row: {;
+=======
           created_at: string;
           id: string;
           message: string;
@@ -285,6 +450,7 @@ created_at: string
       api_logs: {;
         Row: {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           api_key_id: string | null;
 
           created_at: string;
@@ -308,6 +474,15 @@ created_at: string
           status_code?: number;
           user_agent?: string | null;
           user_id?: string | null;
+<<<<<<< HEAD
+        }
+        Relationships: [
+          {
+            foreignKeyName: "api_logs_api_key_id_fkey"
+            columns: ["api_key_id"]
+            isOneToOne: false
+            referencedRelation: "api_keys"
+=======
 
         }
         Relationships: [;
@@ -317,6 +492,7 @@ created_at: string
         }
         Relationships: [;
           {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             foreignKeyName: "api_logs_api_key_id_fkey"
 
@@ -1474,6 +1650,12 @@ referencedColumns: ["id"];
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
+<<<<<<< HEAD
+          }
+
+          },
+
+=======
 
           }
 },
@@ -1862,6 +2044,8 @@ referencedColumns: ["id"];
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
+<<<<<<< HEAD
+=======
 
           },
 
@@ -2026,6 +2210,12 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false;
             referenced_relation: "project_milestones";
             referenced_columns: ["id"];
+<<<<<<< HEAD
+          }
+
+          },
+
+=======
 
           }
 },
@@ -2781,6 +2971,12 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: true;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
+<<<<<<< HEAD
+          }
+
+          },
+
+=======
 
           }
 },
@@ -2918,6 +3114,12 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
+<<<<<<< HEAD
+          }
+
+          },
+
+=======
 
           }
 
@@ -2993,6 +3195,12 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false;
             referenced_relation: "projects";
             referenced_columns: ["id"];
+<<<<<<< HEAD
+          }
+
+          },
+
+=======
 
           }
 },
@@ -3143,7 +3351,10 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             foreignKeyName: "projects_client_id_fkey";
             columns: ["client_id"];
             isOneToOne: false;
@@ -3601,6 +3812,12 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false;"
             referenced_relation: "profiles";"
             referenced_columns: ["id"];
+<<<<<<< HEAD
+          }
+
+          },
+
+=======
 
           }
 
@@ -3674,12 +3891,66 @@ foreignKeyName: "job_applications_job_id_fkey";
           updated_at?: string;
           user_id: string;
         }
+<<<<<<< HEAD
+        Update: {;
+=======
         Update: {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           code?: string;
           created_at?: string;
           id?: string;
           updated_at?: string;
           user_id?: string;
+<<<<<<< HEAD
+        }
+        Relationships: [
+          {
+            foreignKeyName: "referral_codes_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      referral_rewards: {
+        Row: {
+          amount: number | null
+          created_at: string
+          expires_at: string | null
+          id: string
+          partner_id: string | null
+          referral_id: string
+          reward_type: string
+          user_id: string
+        }
+        Insert: {
+          amount?: number | null
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          partner_id?: string | null
+          referral_id: string
+          reward_type: string
+          user_id: string
+        }
+        Update: {
+          amount?: number | null
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          partner_id?: string | null
+          referral_id?: string
+          reward_type?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "referral_rewards_partner_id_fkey"
+            columns: ["partner_id"]
+            isOneToOne: false
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"]
+=======
 
         }
         Relationships: [;
@@ -3732,18 +4003,24 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
+<<<<<<< HEAD
+=======
 
           },
 
 },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             foreignKeyName: "referrals_partner_id_fkey";
             columns: ["partner_id"];
             isOneToOne: false;
@@ -4176,7 +4453,6 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false;"
             referenced_relation: "user_metrics";"
             referenced_columns: ["user_id"];
-
           }
 
           },
@@ -5910,6 +6186,296 @@ export const Constants = {
   referenced_relation: "talent_resumes";""
             referenced_columns: ["id"];"
           }];
+<<<<<<< HEAD
+          }
+          },
+          {
+            foreignKeyName: "tenant_administrators_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      user_onboarding: {
+        Row: {
+          application_sent: boolean | null
+          application_sent_at: string | null
+          availability_set: boolean | null
+          availability_set_at: string | null
+          created_at: string
+          id: string
+          job_posted: boolean | null
+          job_posted_at: string | null
+          last_reminder_sent: string | null
+          match_received: boolean | null
+          match_received_at: string | null
+          match_viewed: boolean | null
+          match_viewed_at: string | null
+          profile_completed: boolean | null
+          profile_completed_at: string | null
+          quote_received: boolean | null
+          quote_received_at: string | null
+          reminder_count: number | null
+          role: string
+          skills_added: boolean | null
+          skills_added_at: string | null
+          talent_invited: boolean | null
+          talent_invited_at: string | null
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          application_sent?: boolean | null
+          application_sent_at?: string | null
+          availability_set?: boolean | null
+          availability_set_at?: string | null
+          created_at?: string
+          id?: string
+          job_posted?: boolean | null
+          job_posted_at?: string | null
+          last_reminder_sent?: string | null
+          match_received?: boolean | null
+          match_received_at?: string | null
+          match_viewed?: boolean | null
+          match_viewed_at?: string | null
+          profile_completed?: boolean | null
+          profile_completed_at?: string | null
+          quote_received?: boolean | null
+          quote_received_at?: string | null
+          reminder_count?: number | null
+          role: string
+          skills_added?: boolean | null
+          skills_added_at?: string | null
+          talent_invited?: boolean | null
+          talent_invited_at?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          application_sent?: boolean | null
+          application_sent_at?: string | null
+          availability_set?: boolean | null
+          availability_set_at?: string | null
+          created_at?: string
+          id?: string
+          job_posted?: boolean | null
+          job_posted_at?: string | null
+          last_reminder_sent?: string | null
+          match_received?: boolean | null
+          match_received_at?: string | null
+          match_viewed?: boolean | null
+          match_viewed_at?: string | null
+          profile_completed?: boolean | null
+          profile_completed_at?: string | null
+          quote_received?: boolean | null
+          quote_received_at?: string | null
+          reminder_count?: number | null
+          role?: string
+          skills_added?: boolean | null
+          skills_added_at?: string | null
+          talent_invited?: boolean | null
+          talent_invited_at?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_onboarding_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      user_privacy_settings: {
+        Row: {
+          activity_monitoring_enabled: boolean | null
+          ai_analysis_enabled: boolean | null
+          id: string
+          message_scanning_enabled: boolean | null
+          updated_at: string | null
+        }
+        Insert: {
+          activity_monitoring_enabled?: boolean | null
+          ai_analysis_enabled?: boolean | null
+          id: string
+          message_scanning_enabled?: boolean | null
+          updated_at?: string | null
+        }
+        Update: {
+          activity_monitoring_enabled?: boolean | null
+          ai_analysis_enabled?: boolean | null
+          id?: string
+          message_scanning_enabled?: boolean | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_privacy_settings_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      webhook_configs: {
+        Row: {
+          created_at: string
+          event_types: string[]
+          id: string
+          is_active: boolean
+          last_triggered_at: string | null
+          name: string
+          secret: string | null
+          updated_at: string
+          url: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          event_types: string[]
+          id?: string
+          is_active?: boolean
+          last_triggered_at?: string | null
+          name: string
+          secret?: string | null
+          updated_at?: string
+          url: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          event_types?: string[]
+          id?: string
+          is_active?: boolean
+          last_triggered_at?: string | null
+          name?: string
+          secret?: string | null
+          updated_at?: string
+          url?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "webhook_configs_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      whitelabel_tenants: {
+        Row: {
+          account_manager_id: string | null
+          brand_name: string
+          created_at: string | null
+          custom_domain: string | null
+          dns_verified: boolean
+          email_template_override: Json | null
+          id: string
+          is_active: boolean
+          landing_page_copy: Json | null
+          logo_url: string | null
+          primary_color: string
+          subdomain: string
+          theme_preset: string
+          updated_at: string | null
+        }
+        Insert: {
+          account_manager_id?: string | null
+          brand_name: string
+          created_at?: string | null
+          custom_domain?: string | null
+          dns_verified?: boolean
+          email_template_override?: Json | null
+          id?: string
+          is_active?: boolean
+          landing_page_copy?: Json | null
+          logo_url?: string | null
+          primary_color?: string
+          subdomain: string
+          theme_preset?: string
+          updated_at?: string | null
+        }
+        Update: {
+          account_manager_id?: string | null
+          brand_name?: string
+          created_at?: string | null
+          custom_domain?: string | null
+          dns_verified?: boolean
+          email_template_override?: Json | null
+          id?: string
+          is_active?: boolean
+          landing_page_copy?: Json | null
+          logo_url?: string | null
+          primary_color?: string
+          subdomain?: string
+          theme_preset?: string
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "whitelabel_tenants_account_manager_id_fkey"
+            columns: ["account_manager_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      work_history: {
+        Row: {
+          company_logo_url: string | null
+          company_name: string
+          created_at: string
+          description: string | null
+          end_date: string | null
+          id: string
+          is_current: boolean
+          location: string | null
+          resume_id: string
+          role_title: string
+          start_date: string
+          updated_at: string
+        }
+        Insert: {
+          company_logo_url?: string | null
+          company_name: string
+          created_at?: string
+          description?: string | null
+          end_date?: string | null
+          id?: string
+          is_current?: boolean
+          location?: string | null
+          resume_id: string
+          role_title: string
+          start_date: string
+          updated_at?: string
+        }
+        Update: {
+          company_logo_url?: string | null
+          company_name?: string
+          created_at?: string
+          description?: string | null
+          end_date?: string | null
+          id?: string
+          is_current?: boolean
+          location?: string | null
+          resume_id?: string
+          role_title?: string
+          start_date?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "work_history_resume_id_fkey"
+            columns: ["resume_id"]
+            isOneToOne: false
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"]
+          }]
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     }
     Views: {,
@@ -6078,6 +6644,62 @@ export type Tables<;
 }
         Row: infer R;
       }
+<<<<<<< HEAD
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+
+
+          date: string
+          event_type: string
+          count: number
+        }[]
+      }
+      hash_api_key: {
+        Args: { api_key: string }
+        Returns: string
+      }
+      schedule_email_reminders: {
+        Args: Record<PropertyKey, never>
+        Returns: number
+      schedule_email_reminders: {;
+        Args: Record<PropertyKey never>;
+        Returns: number;
+      }
+      trigger_resume_scoring: {
+        Args: { application_id: string }
+        Returns: undefined
+      }
+      update_onboarding_milestone: {
+        Args: { _user_id: string, _milestone: string, _status: boolean }
+        Returns: undefined
+      }
+      verify_api_key: {
+        Args: { provided_key: string, stored_hash: string }
+        Returns: boolean
+      }
+    }
+    Enums: {
+      api_key_scope:
+        | "jobs:read"
+        | "jobs:write"
+        | "talent:read"
+        | "quotes:write"
+        | "webhooks:manage"
+      fraud_severity: "safe" | "suspicious" | "dangerous"
+      quote_request_status:
+        | "new"
+        | "in_review"
+        | "accepted"
+        | "responded"
+        | "closed"
+        | "archived"
+      referral_status: "pending" | "completed" | "expired"
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
+}
+=======
 
           date: string;,
   event_type: string;
@@ -6125,6 +6747,7 @@ export type Tables<
         Row: infer R;
       }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ? R;
       : never;
     : never;
@@ -6386,6 +7009,100 @@ export type TablesUpdate<;
         Update: infer U;
       }
 
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
+        "jobs:read",
+        "jobs:write",
+        "talent:read",
+        "quotes:write",
+        "webhooks:manage"],
+      fraud_severity: ["safe", "suspicious", "dangerous"],
+      quote_request_status: [
+        "new";
+        "in_review";
+        "accepted";
+        "responded";
+        "closed";
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
+        "new",
+        "in_review",
+        "accepted",
+        "responded",
+        "closed",
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
+type DefaultSchema = Database[Extract<keyof Database, "public">];
+export type Tables<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"]);
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {;
+      Row: infer R;
+    }
+    ? R;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &;
+        DefaultSchema["Views"]);
+    ? (DefaultSchema["Tables"] &;
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;
+        Row: infer R;
+      }
+      ? R;
+      : never;
+    : never;
+export type TablesInsert<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
+      Insert: infer I;
+    }
+    ? I;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
+        Insert: infer I;
+      }
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
+      Update: infer U;
+    }
+    ? U;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
+        Update: infer U;
+      }
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ? U;
       : never;
     : never;
@@ -6451,7 +7168,10 @@ export type CompositeTypes<;
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];""
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];"
     : never;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const Constants = {
   public: {,
   Enums: {

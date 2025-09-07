@@ -129,6 +129,7 @@ function ApiErrorCodes() {}`
 }`;
 }`,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const rateLimitExample = `{
   "error": "rate_limit_exceeded",
   "message": "Rate limit exceeded. Try again in 30 seconds",
@@ -155,6 +156,7 @@ function ApiErrorCodes() {}`
       code: "invalid_token"
       message: "Invalid or expired API key."
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       status: 403
       code: "forbidden"
@@ -179,6 +181,7 @@ function ApiErrorCodes() {}`
       code: "rate_limit_exceeded"
       message: "Rate limit exceeded. Try again later."
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       status: 500
       code: "internal_error"
@@ -198,6 +201,7 @@ function ApiErrorCodes() {}`
       endpoint: "All GET endpoints"
       limit: "100 requests per minute"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       endpoint: "All POST endpoints"
       limit: "30 requests per minute"
@@ -222,6 +226,10 @@ function ApiErrorCodes() {}`
       endpoint: "/api/talent (Search)"
       limit: "50 requests per minute"
       notes: "Higher limit for common search operations"
+<<<<<<< HEAD
+    }
+    },
+=======
 
     },
 
@@ -442,10 +450,16 @@ function ApiErrorCodes() {}`
 
     },
 
+<<<<<<< HEAD
+    },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       endpoint: "Webhook delivery"
       limit: "N/A"
       notes: "Webhooks don't count against your rate limits"
+<<<<<<< HEAD
+=======
 
   const errorCodes = [;
     {;
@@ -502,8 +516,8 @@ function ApiErrorCodes() {}`
       message: "Service temporarily unavailable.",;
       details: "The API is temporarily unavailable due to maintenance or high load.";
     }
+<<<<<<< HEAD
   ];
-
   const rateLimits = [;
     {;
       endpoint: "All GET endpoints",;
@@ -539,7 +553,6 @@ function ApiErrorCodes() {}`
       endpoint: "Webhook delivery",;
       limit: "N/A",;
       notes: "Webhooks don't count against your rate limits";
-
     }
   ];
     }
@@ -556,6 +569,20 @@ function ApiErrorCodes() {}`
           When an error occurs, the API will return an appropriate HTTP status code along with ;
           a JSON response body containing details about the error.;
         </p>;
+<<<<<<< HEAD
+    <ApiDocsLayout>;
+      <div className="max-w-3xl prose prose-invert">;
+        <h1>Error Codes & Rate Limits</h1>;
+        <h2>Error Format</h2>;
+        <p>;
+          When an error occurs, the API will return an appropriate HTTP status code along with;
+          a JSON response body containing details about the error.;
+        </p>;
+        <CodeBlock code={errorExample} language="json" showLineNumbers={true} />;
+        <p>;
+          Most errors include:;
+        </p>;
+=======
 
         <CodeBlock code={errorExample} language="json" showLineNumbers={true} />;
 
@@ -563,14 +590,34 @@ function ApiErrorCodes() {}`
           Most errors include:;
         </p>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <ul>;
           <li><code>error</code>: A machine-readable error code</li>;
           <li><code>message</code>: A human-readable description of the error</li>;
           <li><code>details</code>: Additional context about the error (when available)</li>;
         </ul>;
+<<<<<<< HEAD
+        <h2>Common Error Codes</h2>;
+        ;
+        <CodeBlock code={errorExample} language="json" showLineNumbers={true} />;
+        ;
+        <p>;
+          Most errors include:;
+        </p>;
+        ;
+        <ul>;
+          <li><code>error</code>:A machine-readable error code</li>;
+          <li><code>message</code>:A human-readable description of the error</li>;
+          <li><code>details</code>:Additional context about the error (when available)</li>;
+        </ul>;
+;
+        <h2>Common Error Codes</h2>;
+        ;
+=======
 
         <h2>Common Error Codes</h2>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="overflow-x-auto mb-8">;
 
           <table className="w-full border-collapse">;
@@ -587,6 +634,9 @@ function ApiErrorCodes() {}`
             </tbody>;
           </table>;
         </div>;
+<<<<<<< HEAD
+        <h3>Rate Limit Headers</h3>;
+=======
 
         <h2>Handling Errors</h2>;
         <p>;

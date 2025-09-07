@@ -12,18 +12,24 @@ function runNode(relPath, args = []) {
 =======
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
 >>>>>>> origin/chore/fix-lint-and-merge
   return {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
 exports && exports.config = {
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -36,6 +42,11 @@ exports && exports.handler = async () => {}
   function logStep(name, fn) {}
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
+    if (stdout) logs && logs.push(stdout);
+    if (stderr) logs && logs.push(stderr);
+    logs && logs.push(`exit=${status}`);
+=======
 
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
@@ -50,11 +61,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     runNode('automation/front-index-advertiser && advertiser.cjs')
   );
   // Attempt to sync changes back to main (best-effort)
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
 };function runNode(relPath, args = []) {
   const abs = path && path.resolve(__dirname, '....', relPath),
+<<<<<<< HEAD
+  const abs = path.resolve(__dirname, '....', relPath),
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 

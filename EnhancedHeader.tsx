@@ -43,6 +43,7 @@ export default function EnhancedHeader() {
     setActiveDropdown(null);
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       is_scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -57,6 +58,7 @@ export default function EnhancedHeader() {
             <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
           </Link>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigation_items.map((item) => (
@@ -89,6 +91,7 @@ export default function EnhancedHeader() {
           </button>
         </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Mobile Menu */}
         <AnimatePresence>
           {is_open && (

@@ -22,6 +22,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -76,6 +77,8 @@ export default function SearchPage() {}
     navigate(`/search?q=${encodeURIComponent(query)}`),
     search(query)
   },
+<<<<<<< HEAD
+=======
 
   return (
 
@@ -112,6 +115,10 @@ export default function SearchPage() {}
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
+<<<<<<< HEAD
+          />;
+        </form>;
+=======
 
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;"

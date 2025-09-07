@@ -23,6 +23,13 @@ export function useOnboardingStatus() { return null; }
 export function useOnboardingStatus() {}
   const { user } = useAuth(),
 
+<<<<<<< HEAD
+export function useOnboardingStatus() {;
+  const { user } = useAuth();
+export function useOnboardingStatus() {
+  const { user } = useAuth(),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [status, setStatus] = useState<OnboardingStatus>({
 
   }),
@@ -40,6 +47,18 @@ export function useOnboardingStatus() {}
     const fetchOnboardingStatus = async () => {}
       if (!user) return;
 
+<<<<<<< HEAD
+  });
+  }),
+  
+  useEffect(() => {
+
+    const fetchOnboardingStatus = async () => {
+      if (!user) return;
+      if (!user) return,
+      
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
@@ -54,6 +73,15 @@ export function useOnboardingStatus() {}
           console.error("Error fetching onboarding status:", error),
           return
 
+<<<<<<< HEAD
+          .single();
+          .single(),
+          
+        if (error) {
+          console.error("Error fetching onboarding status:", error),
+          return
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from "react",;
 import { useAuth } from "./useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -91,6 +119,8 @@ export function useOnboardingStatus() {;
         if (error) {;
           console.error("Error fetching onboarding status:", error),;
           return;
+<<<<<<< HEAD
+=======
 
           .eq("user_id", user.id)
           .single();
@@ -101,6 +131,7 @@ export function useOnboardingStatus() {;
 
         }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       try {;
         // Get user onboarding progress from database;
         const { data, error } = await supabase;
@@ -154,10 +185,8 @@ export function useOnboardingStatus() {;
       }
 
     };
-
     fetchOnboardingStatus();
   }, [user]);
-
   return status;
 }
 

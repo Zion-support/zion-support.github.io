@@ -7,6 +7,8 @@ function fixUtilsFile(filePath) {
     let content = fs.readFileSync(filePath, "utf8");
     const originalContent = content;
     // Fix common patterns in utils files
+<<<<<<< HEAD
+=======
 
       "export interface $1 {");
     content = content.replace(
@@ -19,6 +21,7 @@ function fixUtilsFile(filePath) {
       /const\s+([^=]+)\s*=\s*([^]+);/g,
       "const $1 = $2;");
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "if (!$1) return $2;");
     // Fix string literals
     content = content.replace(/'([^']+),\s*([^']+)'/g, "'$1 $2'");
@@ -44,6 +47,8 @@ function fixUtilsFile(filePath) {
     content = content.replace(/defineProper,\s*t,\s*y/g, "defineProperty");
     content = content.replace(/Even,\s*t/g, "Event");
     // Fix type annotations
+<<<<<<< HEAD
+=======
 
       "cloud-services");
     content = content.replace(/na,\s*m,\s*e/g, "name");
@@ -77,6 +82,7 @@ function fixUtilsFile(filePath) {
       /NEXT_PUBLIC_SUPABASE_U,\s*R,\s*L/g,
       "NEXT_PUBLIC_SUPABASE_URL");
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "'placeholder-key'");
     content = content.replace(/supabaseMiddleware/g, "supabaseMiddleware");
     content = content.replace(/au,\s*t,\s*h/g, "auth");
@@ -214,12 +220,16 @@ import fs from "fs"; import { glob } from "glob"; function fixUtilsFile(filePath
     if () {) {
       fixed_count++}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // // // // // // // console.log (`Fixed ${fixed_count} utils files.`)}
       console.log (`"Fixed": ${file_path}`);
 
       return true}
     console.error (`Error processing ${file_path}:`, error.message);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return false}
 async function fixed_count = 0;
 >>>>>>> origin/chore/fix-lint-and-merge

@@ -35,6 +35,7 @@ import { BLOG_POSTS } from "@/data/blog-posts",
 export default function BlogPost() {
   const { slug } = useParams() as { slug: string },;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
@@ -57,12 +58,15 @@ const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
   const navigate = useNavigate($2);
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { slug } = useParams() as { slug: string },
   const navigate = useNavigate(),
 >>>>>>> origin/chore/fix-lint-and-merge
   const [post, setPost] = useState<BlogPostType | null>(null),
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
   const [showShareMenu, setShowShareMenu] = useState(false),
+<<<<<<< HEAD
+=======
 
   useEffect(() => {
     // Find the current post by slug
@@ -77,6 +81,12 @@ const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
 
       ).slice(0, 3),
 
+<<<<<<< HEAD
+      ).slice(0, 3);
+      ).slice(0, 3),
+      
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setRelatedPosts(related)
 
     } else {
@@ -94,31 +104,34 @@ const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
   useEffect(() => {;
     // Find the current post by slug;
     const currentPost = BLOG_POSTS && BLOG_POSTS.find(p => p && p.slug === slug);
-
     if (currentPost) {;
       setPost(currentPost);
-
       // Find related posts (same category, excluding current post);
       const related = BLOG_POSTS && BLOG_POSTS.filter(p => ;
         p && p.id !== currentPost && currentPost.id && ;
         (p && p.category === currentPost && currentPost.category || ;
          p && p.tags.some(tag => currentPost && currentPost.tags.includes(tag)));
       ).slice(0, 3);
-
       setRelatedPosts(related);
     } else {;
       // Post not found;
       navigate("/blog", { replace: true });
     }
-
     // Scroll to top when post changes;
     window && window.scrollTo(0, 0);
   }, [slug, navigate]);
-
   if (!post) {;
 
     return (
+<<<<<<< HEAD
+  }, [slug, navigate]);
+  }, [slug, navigate]),
+  
+  if (!post) {
+    return (
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <AppLayout>
         <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
 
@@ -127,6 +140,27 @@ const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
       </AppLayout>
 
     )
+<<<<<<< HEAD
+  };
+
+
+  }
+  // Helper function to get share URL
+  const getShareUrl = (platform: string) => {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(post.title)
+    switch (platform) {
+      case 'facebook':
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+      case 'twitter':
+        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+      case 'linkedin':
+        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
+      default: return '#'
+    }
+  }
+  };
+=======
 
   }
   // Helper function to get share URL
@@ -201,7 +235,37 @@ export default function BlogPost() {;
   }, [slug, navigate]),;
   if (!post) {;
     return (;
+<<<<<<< HEAD
+  ;
+  useEffect(() => {;
+    // Find the current post by slug;
+    const currentPost = BLOG_POSTS.find(p => p.slug === slug),;
+    ;
+    if (currentPost) {;
+      setPost(currentPost),;
+      ;
+      // Find related posts (same category, excluding current post);
+      const related = BLOG_POSTS.filter(p => ;
+        p.id !== currentPost.id && ;
+        (p.category === currentPost.category || ;
+         p.tags.some(tag => currentPost.tags.includes(tag)));
+      ).slice(0, 3),;
+      ;
+      setRelatedPosts(related),;
+    } else {;
+      // Post not found;
+      navigate("/blog", { replace:true }),;
+    }
+    ;
+    // Scroll to top when post changes;
+    window.scrollTo(0, 0),;
+  }, [slug, navigate]),;
+  ;
+  if (!post) {;
+    return (;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <AppLayout>;
         <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">;
           <div className="animate-pulse">Loading article...</div>;
@@ -210,6 +274,8 @@ export default function BlogPost() {;
 
     );
   }
+<<<<<<< HEAD
+=======
 
   return (
 
@@ -255,7 +321,10 @@ export default function BlogPost() {;
   const getShareUrl = (platform: string) => {;
     const url = encodeURIComponent(window && window.location.href);
     const title = encodeURIComponent(post && post.title),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     switch (platform) {;
       case 'facebook':;
         return `https://www && www.facebook.com/sharer/sharer && sharer.php?u=${url}`;
@@ -266,7 +335,10 @@ export default function BlogPost() {;
       default: return '#';
     }
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <AppLayout>;
       <SEO
@@ -298,6 +370,53 @@ export default function BlogPost() {;
                     const target = e && e.target as HTMLImageElement;
                     target && target.src = "https: //images && images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";
                   }}
+<<<<<<< HEAD
+                <img
+                  src={post.author.avatarUrl}
+                  alt={post.author.name}
+                <img 
+                  src={post.author.avatarUrl} 
+                  alt={post.author.name} 
+                  className="w-12 h-12 rounded-full mr-3"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement,
+                    target.src = "https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80"
+                  }}
+                />
+                <div>
+                  <p className="text-white font-medium">{post.author.name}</p>
+                  <p className="text-sm text-zion-slate-light">{post.author.title}</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center text-zion-slate-light">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  <span className="text-sm">{post.publishedDate}</span>
+                </div>
+                <div className="flex items-center text-zion-slate-light">
+                  <Clock className="h-4 w-4 mr-1" />
+                  <span className="text-sm">{post.readTime}</span>
+                </div>
+                <div className="relative">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
+                    onClick={() => setShowShareMenu(!showShareMenu)}
+                  >
+                    <Share2 className="h-4 w-4 mr-1" />
+                    <span className="text-sm">Share</span>
+                  </Button>
+                  {showShareMenu && (
+                    <div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">
+                      <a
+                        href={getShareUrl('facebook')}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
+                      >
+                        <Facebook className="h-4 w-4 mr-2" />
+                        <span>Facebook</span>
 
                   className="w-12 h-12 rounded-full mr-3"
                   onError={(e) => {
@@ -351,6 +470,7 @@ export default function BlogPost() {;
                         href={getShareUrl("twitter")}
                         target="_blank"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         rel="noopener noreferrer"
 
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
@@ -363,6 +483,7 @@ export default function BlogPost() {;
                         href={getShareUrl("linkedin")}
                         target="_blank"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
                       >
@@ -370,7 +491,10 @@ export default function BlogPost() {;
                         <span>LinkedIn</span>
                       </Link>
                     </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">;
 
               <div className="flex items-center mb-4 sm:mb-0">;
@@ -382,12 +506,42 @@ export default function BlogPost() {;
                     const target = e.target as HTMLImageElement,;"
                     target.src = "https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";
                   }}
+<<<<<<< HEAD
+=======
 
                     onClick={() => setShowShareMenu(!showShareMenu)}
                   >;"
                     <Share2 className="h-4 w-4 mr-1" />;"
                     <span className="text-sm">Share</span>;
                   </Button>;
+<<<<<<< HEAD
+                  {showShareMenu && (;
+                    <div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">;
+                      <a;
+                        href={getShareUrl('facebook')} ;
+                        target="_blank";
+                        rel="noopener noreferrer";
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white";
+                      >;
+                        <Facebook className="h-4 w-4 mr-2" />;
+                        <span>Facebook</span>;
+                      </a>;
+                      <a;
+                        href={getShareUrl('twitter')} ;
+                        target="_blank";
+                        rel="noopener noreferrer";
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white";
+                      >;
+                        <Twitter className="h-4 w-4 mr-2" />;
+                        <span>Twitter</span>;
+                      </a>;
+                      <a;
+                        href={getShareUrl('linkedin')} ;
+                        target="_blank";
+                        rel="noopener noreferrer";
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white";
+                      >;
+=======
 
                         <span>Facebook</span>;
                       </a>;
@@ -405,13 +559,64 @@ export default function BlogPost() {;
                         <span>LinkedIn</span>;
                       </a>;
                     </div>;
+<<<<<<< HEAD
+                  ;
+                  {showShareMenu && (;
+                    <div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">;
+                      <a ;
+                        href={getShareUrl('facebook')} ;
+                        target="_blank" ;
+                        rel="noopener noreferrer";
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white";
+                      >;
+                        <Facebook className="h-4 w-4 mr-2" />;
+                        <span>Facebook</span>;
+                      </a>;
+                      <a ;
+                        href={getShareUrl('twitter')} ;
+                        target="_blank" ;
+                        rel="noopener noreferrer";
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white";
+                      >;
+                        <Twitter className="h-4 w-4 mr-2" />;
+                        <span>Twitter</span>;
+                      </a>;
+                      <a ;
+                        href={getShareUrl('linkedin')} ;
+                        target="_blank" ;
+                        rel="noopener noreferrer";
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white";
+                      >;
+                        <Linkedin className="h-4 w-4 mr-2" />;
+                        <span>LinkedIn</span>;
+                      </a>;
+                    </div>;                  )}
+=======
 
                   )}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Featured image */}
+          <div className="mb-12 max-w-5xl mx-auto">
+            <div className="aspect-[21/9] rounded-lg overflow-hidden">
+              <img
+                src={post.featuredImage}
+                alt={post.title}
+                className="object-cover w-full h-full"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
+=======
 
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
@@ -516,6 +721,7 @@ src={post.featuredImage}
                           className="object-cover w-full h-full"
                           onError={(e) => {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
 
                           }}
@@ -535,6 +741,7 @@ src={post.featuredImage}
 
             <Separator className="my-12 bg-zion-blue-light" />;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Related articles */}
             {relatedPosts && relatedPosts.length > 0 && (;"
               <div className="mt-12">;"
@@ -582,12 +789,18 @@ src={post.featuredImage}
 
                 asChild>;
 
+<<<<<<< HEAD
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="flex justify-between items-center mt-12">;
               <Button;
                 variant="outline";
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
                 asChild;
               >;
+<<<<<<< HEAD
+=======
 
 }
       set_post (current_post);
@@ -825,6 +1038,68 @@ if ( {) {}
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+    </AppLayout>;
+  ); export default function BlogPost () {
+  const {
+  slug 
+}= useParams () as {
+  slug: string 
+};
+const navigate = useNavigate ();
+const [post, setPost] = useState<BlogPostType | null> (null);
+const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]> ([]);
+const [showShareMenu, setShowShareMenu] = useState (false);
+useEffect ( () => {
+  //Find the current post by slug const currentPost = BLOG POSTS.find (p => p.slug === slug);
+setPost (currentPost);
+//Find related posts (same category, excluding current post) const related = BLOG POSTS.filter (p => p.id !== currentPost.id && (p.category === currentPost.category || p.tags.some (tag => currentPost.tags.includes (tag) ) ) 
+}//Scroll to top when post changes window.scrollTo (0, 0) 
+}, [slug, navigate]);
+if (!post) {
+  return (<AppLayout> <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center" > <div className="animate-pulse" >Loading article...</div> </div> </AppLayout> switch (platform) {
+  case 'facebook': return `https://www.facebook.com/sharer/sharer.php?u=$ {
+  url 
+}`;
+case 'twitter': 
+}
+;
+
+};
+return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" asChild > <Link to="/blog" > <ArrowLeft className="mr-2 h-4 w-4" /> Back to all articles </Link> </Button> </div> 
+}
+}/> <div> <p className="text-white font-medium" > {
+  post.author.name 
+}</p> <p className="text-sm text-zion-slate-light" > {
+  post.author.title 
+}</p> </div> </div> <div className="flex items-center space-x-4" > <div className="flex items-center text-zion-slate-light" > <Calendar className="h-4 w-4 mr-1" /> <span className="text-sm" > {
+  post.publishedDate 
+}</span> </div> <div className="flex items-center text-zion-slate-light" > <Clock className="h-4 w-4 mr-1" /> <span className="text-sm" > {
+  post.readTime 
+}</span> relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {
+  getShareUrl ('facebook') 
+}target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>) 
+}</div> </div> </div> </div> 
+}
+}tag 
+}className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {
+  tag 
+}</span>) ) 
+}</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <img 
+}
+}/> </div> <div className=" p-4"> <span className=" text-xs text-zion-cyan"> {
+  relatedPost.category 
+}</span> <h4 className=" text-white font-bold mt-1 line-clamp-2"> {
+  relatedPost.title 
+}</h4> 
+}</div> </div>) 
+}<Button asChild > <Link to=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </AppLayout>) 
+}
+    </AppLayout>;
+  );
+}
+;
+=======
 
 };
 const navigate = useNavigate ();

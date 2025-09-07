@@ -92,7 +92,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             size="sm" 
             onClick={handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-          >
             View
             <ExternalLink className="h-3 w-3 ml-1" />
           </Button>

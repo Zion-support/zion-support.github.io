@@ -87,6 +87,7 @@ const [sortBy, setSortBy] = useState<
     ...specializedEmergingTechServices,
   ];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
     {
@@ -196,6 +197,51 @@ const [sortBy, setSortBy] = useState<
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+<<<<<<< HEAD
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import { motion, AnimatePresence } from 'framer-motion',;
+import { 
+  Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
+  ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search,
+  Filter, Grid, List, BarChart3, DollarSign, Target as TargetIcon
+} from 'lucide-react',;
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',;
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',;
+export default function ComprehensiveServicesOverviewPage() {
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity')
+  // Combine all services
+  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices]
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
+    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length }
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length }
+    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices.filter(s => s.category === 'Fintech AI').length }
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s => s.category === 'Cybersecurity').length }
+    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length }
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices.filter(s => s.category === 'Blockchain & DeFi').length }
+    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: allServices.filter(s => s.category === 'Quantum Computing').length }
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: allServices.filter(s => s.category === 'Space Technology').length }
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: allServices.filter(s => s.category === 'Autonomous Systems').length }
+    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽', count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length }
+    { id: '5G/6G Networks', name: '5G/6G', icon: '📡', count: allServices.filter(s => s.category === '5G/6G Networks').length }
+    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: allServices.filter(s => s.category === 'Biotechnology AI').length }
+    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: allServices.filter(s => s.category === 'Renewable Energy').length }
+    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length }
+    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length }
+    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
+  ]
+  // Filter and sort services
+  const filteredServices = allServices
+    .filter(service => {
+      const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
+=======
 
       return matchesCategory && matchesSearch;
     })
@@ -288,6 +334,18 @@ export default function ComprehensiveServicesOverviewPage(req, res) {}
   const totalMarketSize = allServices.reduce((sum, service) => {
     const marketSize = service.marketSize.match(/\$([\d.]+)B/)
     return sum + (marketSize ? parseFloat(marketSize[1]) : 0)
+<<<<<<< HEAD
+  }, 0)
+  }, 0),
+  const averageROI = allServices.reduce((sum, service) => {
+    const roi = service.roi.match(/(\d+)%/)
+    return sum + (roi ? parseInt(roi[1]) : 0)
+  }, 0) / allServices.length
+  const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0)
+
+  }, 0) / allServices.length,
+  const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0),
+=======
 
 const matchesCategory =
         selectedCategory === 'all' || service.category === selectedCategory;
@@ -338,6 +396,7 @@ return sum + (marketSize ? parseFloat(marketSize[1]) : 0);
     0
   );
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <Head>
@@ -924,6 +983,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >;
                   <span>{category.icon}</span>;
                   {category.name}
+<<<<<<< HEAD
+                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
+                </button>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+        {/* Services Display */}
+=======
 
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
@@ -932,6 +1000,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <AnimatePresence mode="wait">
                   {filteredServices.map((service, index) => (
                     <motion.div
+<<<<<<< HEAD
+=======
 
 <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
                     {category.count}
@@ -951,11 +1021,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {filteredServices.map((service, index) => (
                     <motion.div
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       key={service.id}
                       initial={{ opacity: 0, coordinate_y: 30 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: -30 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
+=======
 
                       key={service.id  } catch (error) {"
     console.error("Error:", error);"
@@ -1162,6 +1235,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         >
                           Learn More"
                           <ExternalLink className="w-4 h-4" />
+<<<<<<< HEAD
+                        </a>
+                        </Link>
+                      </div>
+                    </motion.div>
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
                       </div>
                     </motion.div>
@@ -1188,6 +1272,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </motion.div>
                   ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </AnimatePresence>
               </div>
             ) : (
@@ -1195,12 +1280,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <AnimatePresence mode='wait'>
                   {filteredServices.map((service, index) => (
                     <motion.div
+<<<<<<< HEAD
+=======
 
                       key={service.id}
                       initial={{ opacity: 0, coordinate_x: -30 }}
                       animate={{ opacity: 1, coordinate_x: 0 }}
                       exit={{ opacity: 0, coordinate_x: 30 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
+=======
 
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1387,11 +1476,14 @@ target='_blank'
               </div>
             )}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* No Results */}
             {filtered_services.length === 0 && (
               <motion.div;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+<<<<<<< HEAD
+=======
 
                 className="text-center py-20"
               >"
@@ -1495,4 +1587,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
     </>);
+                  <a
+                    href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                    className=&quot;bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2&quot;
+                  >
+                    Contact Sales Team
+                    <ArrowRight className=&quot;w-5 h-5&quot; />
+                  </Link>
+                  <a
+                    href=&quot;tel:+13024640950&quot;
+                    className=&quot;bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2&quot;
+                  >
+                    Call +1 302 464 0950
+                  </Link>
+                          </Link>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

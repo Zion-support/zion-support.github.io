@@ -389,6 +389,33 @@ ed.start && ed.end
               </div>;
             </section>;
           ) : null}
+<<<<<<< HEAD
+          {/* Certifications */}
+          {data && data.certifications?.length ? (;
+            <section className='mb-5'>;
+              <SectionTitle>Certifications</SectionTitle>;
+              <ul className='mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                {data && data.certifications.map((c, idx) => (            <section className="mb-5">;
+              <SectionTitle>Certifications</SectionTitle>;
+              <ul className="mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">;
+                {data && data.certifications.map((c, idx) => (;
+                  <li key={`cert-${idx}`}>{c}</li>;
+                ))}
+              </ul>;
+            </section>;
+          ) : null}
+
+          {/* Portfolio */}
+          {portfolioItems.length ? (
+            <section className='mb-5'>
+              <SectionTitle>Portfolio</SectionTitle>
+              <div className='mt-2 space-y-2'>
+                {portfolioItems.map((p, idx) => (
+                  <div key={`proj-${idx}`} className='text-sm'>
+                    <div className='font-medium text-gray-900 dark:text-white'>
+                      {p.title}
+                      {p.link && (
+
+=======
 
           {/* Portfolio */}
           {portfolioItems.length ? (
@@ -439,6 +466,10 @@ key={`proj-${idx}-t-${tIdx}`}`
           ) : null}
         </div>;
 export default ResumePreview;
+<<<<<<< HEAD
+ResumePreview.displayName = 'ResumePreview';
+export default ResumePreview;
+=======
 
 
 ResumePreview.displayName = 'ResumePreview';'

@@ -13,6 +13,7 @@ export interface EmergingTechService2028 {
     email: string,
     address: string}
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export const emergingTech2028Services: EmergingTechService2028[] = [
   {

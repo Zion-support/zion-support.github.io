@@ -23,7 +23,6 @@ serve(async (req) => {
     // Extract request data
 
     const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], contentType } = await req && req.json();
-
     if (!content || content && content.trim() === "") {
 
     const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], contentType } = await req.json(),
@@ -222,6 +221,7 @@ const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], co
         body: JSON.stringify({
           model: "gpt-4o-mini",
           messages: [
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {
 
               role: "system"
@@ -490,6 +490,12 @@ Only provide the translated text, no explanations or additional comments.`}];
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
   } catch (error) {
+<<<<<<< HEAD
+    console.error("Error in translate-content function:", error),
+    return new Response(
+      JSON.stringify({
+        error: error.message}),
+=======
     console && console.error("Error in translate-content function:", error);
     return new Response(
       JSON && JSON.stringify({
@@ -538,6 +544,7 @@ if ( {) {}
 
   }
 });
+
 ;
 
       ;

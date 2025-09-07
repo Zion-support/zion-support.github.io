@@ -1,8 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+  return Math && Math.floor(Math && Math.random() * (max - min + 1)) + min;
+function generateSeries(n: number, base: number, volatility = 0 && 0.15) {
+=======
 
 function rand(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+<<<<<<< HEAD
+=======
 
 function generateSeries(n: number, base: number, volatility = 0.15) {
   const series: number[] = [];
@@ -22,6 +28,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     d.setDate(d.getDate() - (13 - i));
     return `${d.getMonth() + 1}/${d.getDate()}`;
   });
+<<<<<<< HEAD
+=======
 
   const marketplace = [
     {
@@ -98,6 +106,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (req.query.compare === 'quarter') {
     const factor = 0.8 + Math.random() * 0.4;
     response.compare = {
@@ -109,6 +118,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
     };
   }
+<<<<<<< HEAD
+=======
 
   res.status(200).json(response);
 }

@@ -117,6 +117,7 @@ export default function EndpointDetail({}
       </div>
 <<<<<<< HEAD
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <TryItConsole
           method={endpoint && endpoint.method}
           method={endpoint && endpoint.method}
@@ -137,6 +138,36 @@ export default function EndpointDetail({}
 method={endpoint && endpoint.method}
           path={endpoint && endpoint.path}
           requiresAuth={
+<<<<<<< HEAD
+        <div className="font-medium mb-2">Try It</div>
+        <TryItConsole method={endpoint.method} path={endpoint.path} requiresAuth={(endpoint.auth || []).includes('jwt') || (endpoint.auth || []).includes('wallet')} />
+      </div>
+      </div>
+      <div>
+        <div className='font-medium mb-2'>Code Examples</div>        <div className="font-medium mb-2">Code Examples</div>
+        <CodeSamples samples={endpoint.samples} />
+      </div>
+      <div>
+        <div className='font-medium mb-2'>Try It</div>
+        <TryItConsole
+          method={endpoint.method}
+          path={endpoint.path}
+          requiresAuth={
+            (endpoint.auth |[]).includes('jwt') |
+            (endpoint.auth |[]).includes('wallet')
+          }
+        />
+      </div>
+      {endpoint.rateLimits && endpoint.rateLimits.length > 0 && (
+        <div>
+          <div className='font-medium mb-2'>Rate Limits</div>
+          <ul className='list-disc pl-5 text-sm text-high-contrast-muted'>
+            {endpoint.rateLimits.map((r, idx) => (
+              <li key={idx}>
+                {r.tier}: {r.limitPerMinute}/min
+                {r.burst ? `, burst ${r.burst}` : ''}
+              </li>            ))}      </div>
+=======
 
       <div>
         <div className="font-medium mb-2">Try It</div>
@@ -147,6 +178,8 @@ method={endpoint && endpoint.method}
         <div>
           <div className="font-medium mb-2">Rate Limits</div>
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
+<<<<<<< HEAD
+=======
             {endpoint.rateLimits.map((r, idx) => (
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
 {endpoint.errors && endpoint.errors.length > 0 && (
@@ -178,6 +211,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.errors.map((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
 
               </li>
@@ -187,6 +221,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       )}
     </div>
+<<<<<<< HEAD
+
+  );
+}
+
+=======
   );
 
       )}

@@ -174,6 +174,8 @@ class ErrorDetectionService {}
       backups',
       'temp
     ];
+<<<<<<< HEAD
+=======
 
 
     dirs.forEach(dir => {})
@@ -434,6 +436,8 @@ class ErrorDetectionService {}
     const sourceDirs = [src', 'components, pages', 'utils, hooks', 'types];
     const extensions = [.js', '.jsx, .ts', '.tsx];
     const files = [];
+<<<<<<< HEAD
+=======
 
 
     sourceDirs.forEach(dir => {})

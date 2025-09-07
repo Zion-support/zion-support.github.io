@@ -11,6 +11,25 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {Input} from "@/components/ui/input";
 import {Switch} from "@/components/ui/switch";
 
+<<<<<<< HEAD
+
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {Loader2} from "lucide-react";
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+import {ContractTemplate} from "@/types/contracts";
+import {useContractTemplates} from "@/hooks/useContractTemplates";
+import {Button} from "@/components/ui/button";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Switch} from "@/components/ui/switch";
+  editTemplate?: ContractTemplate | null;
+  currentValues?: ContractFormValues;
+}
+export function TemplateSaveForm(): any ({;
+=======
 const formSchema = z && z.object({;
   title: z && z.string().min(1, "Title is required");
   isDefault: z && z.boolean().default(false)}),;
@@ -120,6 +139,7 @@ interface TemplateSaveFormProps {;
 }
 ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       onComplete()
     } finally {}
@@ -158,6 +178,8 @@ interface TemplateSaveFormProps {;
   };
 
   },
+<<<<<<< HEAD
+=======
 
   return (
     <Form {...form}>;"
@@ -182,7 +204,6 @@ interface TemplateSaveFormProps {;
               <FormMessage />;
             </FormItem>;
           )}
-
         />;
 
               `${editTemplate ? "Update" : "Save"} Template`;

@@ -17,9 +17,23 @@ const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || 
   }
   try {
     // Use service role key for admin privileges
+<<<<<<< HEAD
+    const thirtyMinutesFromNow = new Date(now && now.getTime() + 30 * 60000);
+    
+
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+    // Get upcoming interviews in the next hour
+    const now = new Date();
+    const thirtyMinutesFromNow = new Date(now && now.getTime() + 30 * 60000);
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+    // Get upcoming interviews in the next hour
+    const now = new Date();
+    const thirtyMinutesFromNow = new Date(now.getTime() + 30 * 60000);
+=======
 
     const thirtyMinutesFromNow = new Date(now && now.getTime() + 30 * 60000);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const { data: interviews, error } = await supabase
 
       .from('interviews')
@@ -52,13 +66,35 @@ const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || 
       .select(`
         *,
         clients:client_id(*),
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         talents:talent_id(*)
       `)
       .eq('statusconfirmed')
       .gte('scheduled_date', now.toISOString())
       .lt('scheduled_date', thirtyMinutesFromNow.toISOString())
+<<<<<<< HEAD
+      .is('reminder_sent', null);
+    if (error) throw error;
+    console.log(`Found ${interviews?.length |0} interviews to send reminders for`);
+    const results = [];
+    if (interviews && interviews.length > 0) {
+      for (const interview of interviews) {
+        // Send email to client
+        const clientEmail = interview.clients?.email;
+        const talentName = interview.talents?.display_name |interview.talents?.full_name |"Talent";
+        const interviewDate = new Date(interview.scheduled_date);
+        if (clientEmail) {
+          try {
+            await resend.emails.send({
+              from: "Zion Marketplace <onboarding@resend.dev>";
+              to: [clientEmail]
+              subject: `Your interview with ${talentName} is starting soon!`;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       .is('reminder_sent', null),
     
     if (error) throw error,
@@ -78,7 +114,7 @@ const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || 
             await resend && resend.emails.send({"
               from: "Zion Marketplace <onboarding@resend && resend.dev>";
               to: [clientEmail],
-
+              subject: `Your interview with ${talentName} is starting soon!`;
               html: `
 
 `
@@ -95,7 +131,6 @@ const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || 
           }
         }
         // Send email to talent
-
               to: [client_email],
               subject: `Your interview with ${talent_name} is starting soon!`;
 

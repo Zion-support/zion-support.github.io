@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 interface NoJobsCardProps {;
   onUpdateProfile?: () => void;
+<<<<<<< HEAD
 }
 
 export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
@@ -12,8 +13,7 @@ export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
 export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
 
         <p className="text-muted-foreground">;
-          No job suggestions available yet. Complete your profile to get;
-          AI-matched jobs.;
+          No job suggestions available yet. Complete your profile to get AI-matched jobs.;
         </p>;
         {onUpdateProfile && (;"
           <Button variant="outline" className="mt-4" asChild>;"

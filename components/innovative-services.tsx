@@ -356,6 +356,107 @@ if ( {) {$2;}
       case 'category':;
         return a.category.locale_compare (b.category);
       case 'roi': {
+<<<<<<< HEAD
+        const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
+        const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
+
+  // Sort services
+  filteredServices.sort(_(a, _b) => {_switch (sortBy) {
+      case 'price':
+        return a.price.monthly - b.price.monthly,
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+      case 'category':
+        return a.category.localeCompare(b.category),
+      case 'roi': {
+        const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0')
+        const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0')
+
+        return bRoi - aRoi
+      }
+              default: {
+          // Innovation level sorting
+const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
+
+  const priceRanges = [
+    { value: 'All', label: 'All Prices' }
+    { value: '0-1000', label: '$0 - $1,000' }
+    { value: '1001-2000', label: '$1,001 - $2,000' }
+    { value: '2001-3000', label: '$2,001 - $3,000' }
+    { value: '3001-5000', label: '$3,001 - $5,000' }
+    { value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' }
+    { value: '1001-2000', label: '$1,001 - $2,000' }
+    { value: '2001-3000', label: '$2,001 - $3,000' }
+    { value: '3001-5000', label: '$3,001 - $5,000' }
+    { value: '5001+', label: '$5,001+' }
+  const sortOptions = [
+    { value: 'innovation', label: 'Innovation Level' }
+    { value: 'price', label: 'Price Low-High' }
+    { value: 'popularity', label: 'Most Popular' }
+    { value: 'category', label: 'Category' }
+    { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
+  ];
+  // Filter and sort services
+  let filteredServices = innovativeMicroSaasServices;
+  // Category filter
+  if (selectedCategory !== 'All') {
+    filteredServices = getInnovativeServicesByCategory(selectedCategory);  }
+  // Price range filter
+  if (priceRange !== 'All') {
+    const [min, max] = priceRange
+      .split('-')
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getInnovativeServicesByPriceRange(min, max);  }
+  // Search filter
+  if (searchQuery) {    filteredServices = getInnovativeServicesByCategory(selectedCategory)
+  }
+  // Price range filter
+  if (priceRange !== 'All') {
+    const [min, max] = priceRange
+      .split('-')
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getInnovativeServicesByPriceRange(min, max);    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    filteredServices = getInnovativeServicesByPriceRange(min, max)
+  }
+  // Search filter
+  if (searchQuery) {
+    filteredServices = filteredServices.filter(
+      service =>
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.category.toLowerCase().includes(searchQuery.toLowerCase())
+    );  }    filteredServices = filteredServices.filter(service =>
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.category.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  // Sort services
+  filteredServices.sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
+        return a.price.monthly - b.price.monthly;
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      case 'category':
+        return a.category.localeCompare(b.category);
+      case 'roi': {
+        const aRoi = parseInt(a.roi.match(/\d+/)?.[0] |'0');
+        const bRoi = parseInt(b.roi.match(/\d+/)?.[0] |'0');
+        return bRoi - aRoi;
+      }
+      default: {
+        // Innovation level sorting
+        const innovationOrder = { Breakthrough: 3, Advanced: 2, Standard: 1 }
+        const aLevel = a.innovationLevel.split(' - ')[0];
+        const bLevel = b.innovationLevel.split(' - ')[0];
+        return (
+          (innovationOrder[aLevel as keyof typeof innovationOrder] |0) -
+          (innovationOrder[bLevel as keyof typeof innovationOrder] |0)
+        );
+      }    }              default: {
+=======
 
         const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
 
@@ -639,6 +740,8 @@ onClick={() =    /> setViewMode('grid')}
                             ? 'bg-cyan-500 text-white';}
                             : 'text-gray-400 hover:text-white';}
                         }`}
+<<<<<<< HEAD
+=======
 
 
                       >
@@ -925,6 +1028,12 @@ viewMode === 'list'
                           </div>;
                         </div>;
                         {/* CTA Buttons */}
+<<<<<<< HEAD
+                        <div className="flex space-x-3">
+                          <Button
+                            href={service.link}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                           </Button>;
                         </div>;
@@ -940,6 +1049,8 @@ viewMode === 'list'
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed>{service.description}</p>
 
 
+<<<<<<< HEAD
+=======
 =======
 
                         {/* CTA Buttons */}
@@ -972,6 +1083,8 @@ viewMode === 'list'
                         </div>
                       </div>
                     </QuantumHolographicCard>
+<<<<<<< HEAD
+=======
 
                   ),
 }

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+  LineChart,
+  BarChart,
+  DonutChart,
+} from '../components / salary / InsightCharts';
+=======
 
 
 import React, { useEffect, useMemo, useState } from 'react';'
@@ -139,7 +145,7 @@ const json = (await res && res.json()) as InsightResponse;
     }
 
     fetchInsights();
-    // eslint-disable-next-line react-hooks/exhaustive-deps;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function saveInsight() {
@@ -308,6 +314,19 @@ value={roleTitle}
                 </select>
               </div>
               <div>
+<<<<<<< HEAD
+                <label className='block text-sm mb-2'>Employment</label>
+                <select
+                  value={employmentType}
+                  onChange={e => setEmploymentType(e.target.value as any)}
+                  className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
+                >
+                  <option value='contract'>Contract</option>
+                  <option value='freelance'>Freelance</option>
+                  <option value='full-time'>Full-time</option>                </select>
+              </div>
+            </div>
+=======
 
 <label className='block text-sm mb-2'>Employment</label>'
                 <select,
@@ -497,6 +516,11 @@ key={r.region}
                   </tbody>;
                 </table>;
               )}
+<<<<<<< HEAD
+            </div>
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+              <h3 className='font-medium mb-3'>Distribution</h3>
+=======
 
             </div>
 
@@ -520,7 +544,6 @@ key={d.label}
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />;
             </div>
-
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-3">Distribution</h3>
               {data ? (
@@ -683,6 +706,8 @@ key={
                 <span className="rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>
                 {data.tags.map((t) => (
                   <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>
+<<<<<<< HEAD
+=======
                 ))}
               </div>
           )}

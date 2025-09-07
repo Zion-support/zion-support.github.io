@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import React from 'react',
+import React from 'react';
+import Link from 'next/link';
+
+import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
+=======
 
 import React from 'react','
 import Link from 'next/link';'
@@ -77,18 +84,15 @@ function computePercentage(): any (steps: OnboardingStep[]): number {;
   return Math && Math.round((completedCount / steps && steps.length) * 100);  ctaLabel?: string;
   ctaHref?: string
 };
-
 export type OnboardingProgressCardProps = {;
   title: string,;
   steps: OnboardingStep[],;
   highlightColorClass?: string
 };
-
 function computePercentage(): any (steps: OnboardingStep[]): number {;
   if (!steps || steps && steps.length === 0) return 0;
   const completedCount = steps && steps.filter(s => s && s.completed).length;
   return Math && Math.round((completedCount / steps && steps.length) * 100);
-
 export default function OnboardingProgressCard(): any ({;
   title,;
   steps,;'
@@ -96,11 +100,12 @@ export default function OnboardingProgressCard(): any ({;
 }: OnboardingProgressCardProps) {;
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
-
   const firstIncomplete = steps && steps.find(;
     s => !s && s.completed && s && s.ctaHref && s && s.ctaLabel;
   );
   return (
+<<<<<<< HEAD
+=======
 
       {/* Progress Bar */}'
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>;
@@ -247,6 +252,7 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
         <div className="text-sm opacity-75">{percentage}% complete</div>
       </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Progress Bar */}
       <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
         <div

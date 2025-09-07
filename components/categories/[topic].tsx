@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 import type { GetServerSideProps, NextPage } from 'next';
@@ -21,6 +24,8 @@ import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
 type Props = { topic: string, posts: BlogPost[] },
 
+<<<<<<< HEAD
+=======
 import type { GetServerSideProps, NextPage } from 'next';
 
 
@@ -53,6 +58,9 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
         <meta name='description' content={`Articles about ${topic}`} />;
         <meta property='og:title' content={`${topic} - Zion Blog`} />;
         <meta property='og:description' content={`Articles about ${topic}`} />;
+<<<<<<< HEAD
+        <meta property='og:image' content='/images / og / topic - default.jpg' />;
+=======
 
 
         <meta property='og:image' content='/images / og / topic - default.jpg' />;
@@ -71,7 +79,10 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
         <meta name='twitter:card' content='summary_large_image' />;
         <meta name='twitter:title' content={`${topic} - Zion Blog`} />;
         <meta name='twitter:description' content={`Articles about ${topic}`} />;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onShare={network =>;
               fetch('/api/analytics/share', {;
                 method: 'POST',;
@@ -86,6 +97,8 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
                     '&utm_medium=share&utm_campaign=category',;
                 }),;
               }).catch(() => {});
+<<<<<<< HEAD
+=======
 
 
 
@@ -176,17 +189,17 @@ export default TopicPage;      </Head>
 
 
 };
-
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));
   return { props: { topic, posts } };
 };
-
 export default TopicPage;      </Head>;
       <div className="mx-auto max-w-6xl">;
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
         <div className="mb-6">;
+<<<<<<< HEAD
+=======
 
 
 
@@ -252,6 +265,8 @@ export default TopicPage;
           {posts && posts.map((p) => (;
             <BlogCard key={p && p.id} post={p} />;
           ))}
+<<<<<<< HEAD
+=======
 
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -267,7 +282,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 
 };
-
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));

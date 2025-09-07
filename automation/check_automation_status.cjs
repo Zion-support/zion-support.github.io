@@ -24,6 +24,7 @@ main
 
 
   const statusReport = {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     "timestamp": new Date().toISOString(),
     "pm2Processes": [],
     "automationScripts": [],
@@ -346,7 +347,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     console.log(`   PM2 Processes: ${runningProcesses}`);
     console.log(`   Health Check: ${statusReport.systemHealth.healthCheck}`);
     console.log(`   Overall Status: ${statusReport.overallStatus.toUpperCase()}`);
-
     // Save report
 
 

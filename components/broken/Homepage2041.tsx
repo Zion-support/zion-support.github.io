@@ -268,6 +268,8 @@ className='text-center''
                   viewport={{ "once": true }}
 
                 >
+<<<<<<< HEAD
+=======
 
 <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4'>'
                     <stat.icon className='w-8 h-8 text-white' />'
@@ -394,9 +396,16 @@ className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8''
             </motion && motion.div>;
             <motion&& motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion && motion.div 
+<<<<<<< HEAD
+            </motion.div>
+            <motion.div
+              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div
+              className="text-center mt-12"
+=======
 
               className="text-center mt-12"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
@@ -414,6 +423,24 @@ className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8''
               transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
               viewport={{ once: true }}>;
               <Link
+<<<<<<< HEAD
+                href="/2041-futuristic-services-showcase"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+              >
+                href='/2041-futuristic-services-showcase'
+                className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'
+              >
+                <Eye className='w-5 h-5' />
+                View All 2041 Services
+                <ArrowRight className='w-5 h-5' />              </Link>              >
+                <Eye className="w-5 h-5" />
+                View All 2041 Services
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+        {/* Testimonials Section */}
 
 href='/2041-futuristic-services-showcase'
                 className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'

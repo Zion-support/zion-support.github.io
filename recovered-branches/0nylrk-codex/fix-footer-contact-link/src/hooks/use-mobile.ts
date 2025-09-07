@@ -100,6 +100,8 @@ pr-12325
     return undefined;
   }, []);
   return isMobile;
+<<<<<<< HEAD
+=======
 
 }
 ;

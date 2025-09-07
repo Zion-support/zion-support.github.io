@@ -194,6 +194,46 @@ class ChunkErrorHandler {
       font-family: system-ui, -apple-system, sans-serif;
     `;
 
+<<<<<<< HEAD
+    errorDiv.innerHTML = `
+    window.location.href = window.location.href + '?_t=' + Date.now();
+  }
+
+  private showFatalErrorMessage(): void {
+    // Create a user-friendly error message
+    const errorDiv = document.createElement('div')
+    errorDiv.style.cssText = `
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 0.8)
+      color: white
+      display: flex
+      align-items: center
+      justify-content: center
+      z-index: 999999
+      font-family: system-ui, -apple-system, sans-serif
+    `
+    const errorDiv = document.createElement('div'),
+    errorDiv.style.cssText = `
+      position: fixed,
+      top: 0,
+      left: 0,
+      width: 100%,
+      height: 100%,
+      background: rgba(0, 0, 0, 0.8),
+      color: white,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      z-index: 999999,
+      font-family: system-ui, -apple-system, sans-serif,
+    `,
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>

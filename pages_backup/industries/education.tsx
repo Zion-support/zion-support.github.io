@@ -4,6 +4,8 @@ import React from 'react;
 import Link from next/link';';
 import { motion } from framer-motion;
 
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from next/link;';
 import { motion } from 'framer-motion;
@@ -52,6 +54,7 @@ const services = [;
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Layout from '../../components/Layout';
 import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChart3, FileText, Video, Globe, Database } from 'lucide-react';
 import React from 'react';
@@ -74,6 +77,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Virtual Classrooms,',
+    description: 'Advanced virtual learning environments with interactive features.,',
+    icon: Video,
+    features: [;
+      'Live video streaming,',
+      'Interactive whiteboards',',
+      'Breakout rooms',',
+=======
 
     title: 'Virtual Classrooms,,
     description: Advanced virtual learning environments with interactive features.,',
@@ -89,6 +101,15 @@ const services = [
   }];
   },
   {}
+<<<<<<< HEAD
+    title: 'Educational AI Tutors,',
+    description: 'AI-powered tutoring systems for personalized learning experiences.,',
+    icon: Brain,
+    features: [;
+      'Adaptive learning paths,',
+      'Intelligent tutoring',',
+      'Progress monitoring',',
+=======
 
     title: 'Educational AI Tutors,',
     description: AI-powered tutoring systems for personalized learning experiences.,,
@@ -102,6 +123,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Student Analytics,',
+    description: 'Data-driven insights into student performance and engagement.,',
+    icon: BarChart3,
+    features: [;
+      'Performance tracking,',
+      'Engagement metrics',',
+      'Predictive analytics',',
+=======
 
     title: Student Analytics,',
     description: 'Data-driven insights into student performance and engagement.,,
@@ -117,6 +147,15 @@ const services = [
   }];
   },
   {}
+<<<<<<< HEAD
+    title: 'Online Assessment Tools,',
+    description: 'Secure and comprehensive online testing and evaluation systems.,',
+    icon: FileText,
+    features: [;
+      'Automated grading,',
+      'Plagiarism detection',',
+      'Secure testing',',
+=======
 
     title: Online Assessment Tools,,
     description: 'Secure and comprehensive online testing and evaluation systems.,',
@@ -130,6 +169,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Content Management Systems,',
+    description: 'Digital content creation and management platforms for educators.,',
+    icon: Database,
+    features: [;
+      'Content creation tools,',
+      'Resource libraries',',
+      'Version control',',
+=======
 
     description: 'Digital content creation and management platforms for educators.,,
     icon: Database,
@@ -450,18 +498,35 @@ export default function EducationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Transform Education?;
+=======
 
               </h2>;
               <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">";
                 Let our education technology experts help you implement solutions that improve;
                 learning outcomes and student engagement.;
               </p>;
+<<<<<<< HEAD
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+                  Start Your Education Project;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">";
+                  Learn About Our Expertise;
+=======
 
             >
 <<<<<<< HEAD
               <h2 className=text-4xl md:text-5xl font-bold mb-6">
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Link>;
               </div>;
             </motion.div>;

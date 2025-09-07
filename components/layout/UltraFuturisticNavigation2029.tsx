@@ -8,6 +8,7 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin;
   Microscope, DollarSign, Home, Briefcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -236,6 +237,13 @@ return (;
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
             >
 
+<<<<<<< HEAD
+      <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
+          <div className="flex items-center space-x-6">
+            <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>'
@@ -387,7 +395,6 @@ href={contactInfo.websit
                   <span>All Services</span>
                   <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
                 </button>
-                
                 {/* Mega Menu */}
                 <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
@@ -517,6 +524,7 @@ whileHover={{ "scale": 1.02 }}
                     whileTap={{ "scale": 0.98 }}
                     className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300''
                   >
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Get Started
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                     Get Started;

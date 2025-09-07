@@ -242,11 +242,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
               </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
+
+}
+
+
+
+  );
+=======
 
   );
 }
@@ -336,6 +345,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </UltraAdvancedFuturisticBackground>)}}
     </UltraAdvancedFuturisticBackground>);
 }
+<<<<<<< HEAD
+;
+}
+=======
 
 }
 

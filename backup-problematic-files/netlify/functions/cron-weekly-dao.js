@@ -88,6 +88,7 @@ const cachePath = path.join(process.cwd(), 'datadaometrics.json');'
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return { statusCode: 200, body: JSON.stringify({ ok: true, updatedAt: data.updatedAt }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }

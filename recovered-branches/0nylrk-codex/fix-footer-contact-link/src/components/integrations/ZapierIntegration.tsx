@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+=======
 
 import {;
   Card,;
@@ -78,6 +85,9 @@ export function ZapierIntegration() {}
     navigator && navigator.clipboard.writeText(apiKey);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+<<<<<<< HEAD
+  
+=======
 
   return ("
     <div className="space-y-6">"
@@ -317,6 +327,8 @@ export function ZapierIntegration() {;
           </CardFooter>
         </Card>
       </div>
+<<<<<<< HEAD
+=======
 
       <Card>
 
@@ -457,6 +469,14 @@ import { Check, Copy, ExternalLink } from "lucide-react",;
               </div>;
             </div>;
           </CardContent>;
+<<<<<<< HEAD
+          <CardFooter className="flex flex-col items-start">;
+            <Button variant="outline" className="gap-2">;
+              <ExternalLink className="h-4 w-4" />;
+          <CardFooter className="flex flex-col items-start">;
+            <Button variant="outline" className="gap-2">;
+              <ExternalLink className="h-4 w-4" />;
+=======
 
           <CardFooter className="flex flex - col items - start">;
             <Button variant="outline" className="gap - 2">;
@@ -472,6 +492,30 @@ import { Check, Copy, ExternalLink } from "lucide-react",;
             </Button>;
           </CardFooter>;
         </Card>;
+<<<<<<< HEAD
+        ;
+        <Card>;
+          <CardHeader>;
+            <h3 className="text-lg font-semibold">Popular Zaps</h3>;
+          </CardHeader>;
+          <CardContent>;
+            <ul className="space-y-2 text-sm">;
+              <li className="flex items-center gap-2">;
+                <Check className="h-4 w-4 text-green-500" />;
+                <span>Add new Zion contacts to Mailchimp</span>;
+              </li>;
+              <li className="flex items-center gap-2">;
+                <Check className="h-4 w-4 text-green-500" />;
+                <span>Create Slack notifications for new jobs</span>;
+              </li>;
+              <li className="flex items-center gap-2">;
+                <Check className="h-4 w-4 text-green-500" />;
+                <span>Sync completed projects to accounting</span>;
+              </li>;
+              <li className="flex items-center gap-2">;
+                <Check className="h-4 w-4 text-green-500" />;
+                <span>Create calendar events for interviews</span>;
+=======
 
 ;
         <Card>;
@@ -499,6 +543,14 @@ import { Check, Copy, ExternalLink } from "lucide-react",;
             </ul>;
           </CardContent>;
           <CardFooter>;
+<<<<<<< HEAD
+            <Button variant="outline" className="w-full gap-1">;
+              <ExternalLink className="h-4 w-4" />;
+              <span>Explore Zion Zaps</span>;
+            <Button variant="outline" className="w-full gap-1">;
+              <ExternalLink className="h-4 w-4" />;
+              <span>Explore Zion Zaps</span>;
+=======
 
 <Button variant="outline" className="w-full gap-1">;
               <ExternalLink className="h-4 w-4" />;
@@ -510,16 +562,28 @@ import { Check, Copy, ExternalLink } from "lucide-react",;
           </CardFooter>;
         </Card>;
       </div>;
+<<<<<<< HEAD
+=======
 
               <Button size="sm" variant="outline">;
                 Set Up Trigger;
               </Button>;
             </div>;
+<<<<<<< HEAD
+            <div className="border rounded - md p - 4">;
+              <h4 className="font - medium mb - 2">New Application</h4>;
+              <p className="text - xs text - muted - foreground mb - 3">;
+=======
 
               <Button size="sm" variant="outline">;
                 Set Up Trigger;
               </Button>;
             </div>;
+<<<<<<< HEAD
+            <div className="border rounded - md p - 4">;
+              <h4 className="font - medium mb - 2">Contract Signed</h4>;
+              <p className="text - xs text - muted - foreground mb - 3">;
+=======
 
           </div>;
         </CardContent>;

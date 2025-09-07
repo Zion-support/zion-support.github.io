@@ -3,10 +3,13 @@ import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
+=======
 
 // Allow either UserProfile or UserDetails
 
@@ -62,6 +65,38 @@ if (throw error) {}
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+export function useMessages(;
+  user: UserWithProfile;
+  activeConversation: Conversation | null;
+  activeMessages: Message[];
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
+  conversations: Conversation[];
+  setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
+  setUnreadCount: (updater: (prev: number) => number) => void;
+  setIsLoading: (loading: boolean) => void;
+  fetchConversations: () => Promise<void>
+) {
+  /**
+   * Fetch messages for a conversation
+   */
+  const loadMessages = async (conversationId: string) => {
+    if (!user) return;
+    setIsLoading(true)
+    try {
+      const { data, error } = await supabase
+        .from('messages')
+        .select('*')
+        .eq('conversation_id', conversationId)
+        .order('created_at', { ascending: true });
+      if (error) throw error;
+      // Use updater function for setActiveMessages
+      setActiveMessages(() => data as Message[]);
+      // Mark messages as read
+      const unreadMessages = data.filter(
+        msg => !msg.read && msg.recipient_id === user.id
+      );
+=======
 
 import { UserProfile, UserDetails } from '@/types/auth',;
 
@@ -126,6 +161,7 @@ export function useMessages(;
     try {}
       const conversation = conversations && conversations.find(c => c && c.id === conversationId),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (!conversation) {
 
         throw new Error('Conversation not found')

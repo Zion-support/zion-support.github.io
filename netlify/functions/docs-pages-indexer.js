@@ -34,6 +34,8 @@ exports && exports.handler = async () => {
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
+=======
 
 ursor/expand-services-advertise-and-build-project-4b36
 
@@ -52,6 +54,8 @@ ursor/expand-services-advertise-and-build-project-4b36
     stderr: res && res.stderr || '',
   };'
 exports && exports.config = { schedule: '0 */4 * * *' };
+<<<<<<< HEAD
+=======
 
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -61,6 +65,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   const step = (name, fn) => {}
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
+=======
 
 ursor/expand-services-advertise-and-build-project-4b36
 
@@ -81,6 +87,7 @@ ursor/expand-services-advertise-and-build-project-4b36
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
 
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }

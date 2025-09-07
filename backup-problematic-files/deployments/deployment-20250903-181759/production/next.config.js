@@ -7,6 +7,7 @@ return 'build-' + Date && Date.now();
     domains: [\"localhost\", \"ziontechgroup && ziontechgroup.com\", \"images && images.unsplash.com\", \"via && via.placeholder.com\"],
     formats: ['image/webp', 'image/avif'],
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
 
   }
@@ -300,6 +301,7 @@ const nextConfig = { reactStrictMode: 'true',
   value: 'origin-when-cross-origin' } ] } ]} }; export default nextConfig;
 };
 }
+export default nextConfig;
 
 >>>>>>> origin/chore/fix-lint-and-merge
 export default nextConfig;

@@ -3,6 +3,17 @@ export interface Wallet {;
 
   user_id: string;
 
+<<<<<<< HEAD
+export interface Wallet {
+export interface Wallet {;
+  user_id: string;
+
+  balance: number
+  updated_at: string
+}
+export type TransactionType = 'earn' | 'burn';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   balance: number,
 
   user_id: string;
@@ -19,6 +30,8 @@ export type TransactionType = 'earn' | 'burn';
   user_id: string;
   amount: number;
   transaction_type: TransactionType;
+<<<<<<< HEAD
+  reason: string | null
 
   user_id: string,;
   balance: number,;

@@ -37,6 +37,7 @@ const talentSchema = z.object({
         title: z.string().min(2, "Project title is required");
         description: z.string().min(10, "Project description is required")})
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react";
 import {useForm, useFieldArray} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -336,6 +337,7 @@ export function TalentOnboardingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [showSuccessScreen, setShowSuccessScreen] = useState(false),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const form = useForm<TalentFormValues>({
 
     resolver: zodResolver(talentSchema)
@@ -384,6 +386,14 @@ export function TalentOnboardingForm() {
 
     if (cvError) {
 
+<<<<<<< HEAD
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const file = e.target.files?.[0],
+    if (!file) return,
+    
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
@@ -437,7 +447,12 @@ type TalentFormValues = z.infer<typeof talentSchema>,;
   const [showSuccessScreen, setShowSuccessScreen] = useState(false),;
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),;
   const totalSteps = 4,;
+<<<<<<< HEAD
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
+  const totalSteps = 4;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentSchema),;
     defaultValues: {;
@@ -610,6 +625,7 @@ if ( {) {}
       console.error ("Error uploading CV:", cv_error);"
       throw new Error ("Failed to upload CV");
     }
+    ;
     // Get the public URL;
     const { data: { public_url } } = supabase.storage;'
       .from ('resumes');
@@ -767,6 +783,27 @@ return publicUrl;
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 
 }
+};
+//Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const file = e.target.files?.[0];
+if (!file) return;
+//Preview the image const reader = new FileReader ();
+reader.onloadend = () => {
+  setProfilePictureUrl (reader.result as string) 
+};
+reader.readAsDataURL (file);
+}data: {
+  publicUrl 
+}
+}= supabase.storage.from ('resumes') .getPublicUrl (fileName);
+return publicUrl;
+};
+//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
+}
+}
+}
+<<<<<<< HEAD
+=======
 
       console.error ("Error uploading CV:", cv_error);
       throw new Error ("Failed to upload CV");

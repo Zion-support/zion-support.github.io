@@ -7,6 +7,10 @@ export interface ContractTemplate {;
   title: string;
   template_data: ContractFormValues;
   is_default: boolean;
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   created_at: string,
   updated_at: string;
@@ -28,6 +32,8 @@ export interface ContractTemplate {  id: string;
 }
   created_at: string,
   updated_at: string
+<<<<<<< HEAD
+=======
 
 export interface ContractTemplate {
   id: string,

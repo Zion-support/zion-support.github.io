@@ -94,6 +94,11 @@ export default function ProfileDetail() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const { profileId } = useParams();
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {;
+    const fetchProfile = async () => {;
       setIsLoading(true);
       setError(null);
       try {;
@@ -108,11 +113,13 @@ export default function ProfileDetail() {
           .single();
           .single(),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         if (error) {
           throw new Error(error.message);
         }
         if (!data) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const { data, error } = await supabase;
           .from("talent_profiles");
           .select("*");
@@ -138,6 +145,7 @@ export default function ProfileDetail() {
       }
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 
   if (isLoading) {
@@ -161,6 +169,11 @@ export default function ProfileDetail() {
         <p>Profile not found.</p>
       </div>
 
+<<<<<<< HEAD
+  }
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from "react",;
 import { useParams } from "react-router-dom",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -216,7 +229,14 @@ export default function ProfileDetail() {;
           return;
         }
 ;
+<<<<<<< HEAD
+      } finally {
+        setIsLoading (false);
+      }
+    }
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         setProfileData(data);
       } catch (err: any) {;
         setError(err && err.message || "Failed to fetch profile."),;
@@ -244,6 +264,13 @@ export default function ProfileDetail() {;
 
     );
   }
+<<<<<<< HEAD
+  if (error) {;
+    return (
+;
+  if (error) {;
+    return (;
+=======
 
   if (error) {;
 
@@ -261,6 +288,18 @@ export default function ProfileDetail() {;
       </div>;
     );
   }
+<<<<<<< HEAD
+        description={profileData.bio || "Check out this talent's profile on Zion!"}
+
+
+
+  return (
+    <>
+      <SEO
+        title={`${profileData.full_name} | Zion AI Marketplace`}
+        description={profileData.bio |"Check out this talent's profile on Zion!"}
+        description={profileData.bio || "Check out this talent's profile on Zion!"}
+=======
 
   return (
     <>;
@@ -344,6 +383,7 @@ export default function ProfileDetail() {;
               </CardContent>;
             </Card>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Skills Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
@@ -356,6 +396,9 @@ export default function ProfileDetail() {;
                 </div>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
+;
+=======
 
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
@@ -500,6 +543,7 @@ export default function ProfileDetail() {;
                         href={link && link.url}
                         target="_blank"
                         rel="noopener noreferrer"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   </div>
                 ) : ("

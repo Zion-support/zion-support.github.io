@@ -53,6 +53,9 @@ console.log('=====')
           "replacement": 'const Layout = dynamic(() => import("../components/Layout"), { "ssr"}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+          "pattern"
+=======
           "pattern"
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -88,10 +88,7 @@ export function ContactPublisherModal({
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
-      e.stopPropagation();
-      onClose()
-    }
-  };
+<<<<<<< HEAD
 
   return (
     <>

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export default function KnowledgeGraph({ report }: Props) {
+=======
 
 
 import fs from 'fs','

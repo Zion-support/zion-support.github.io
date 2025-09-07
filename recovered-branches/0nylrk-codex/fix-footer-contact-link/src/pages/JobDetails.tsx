@@ -34,6 +34,19 @@ import {useWhitelabel} from '@/context/WhitelabelContext';
 
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
+<<<<<<< HEAD
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+import {ApplyToJobModal} from '@/components/messaging/job-application';
+import {SEO} from '@/components/SEO';
+import {useWhitelabel} from '@/context/WhitelabelContext';
+export default function JobDetails() {
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { jobId } = useParams() as { jobId?: string };
+  const { job, isLoading, error } = useJobDetails(jobId);
+  const { user, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+  const { isWhitelabel, brandName } = useWhitelabel();
+=======
 
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
@@ -90,6 +103,43 @@ export default function JobDetails() {};
     );
   }
     return (
+
+import React, { useState, useEffect } from 'react',;
+import { useParams, useNavigate } from 'react-router-dom',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components/icons',;
+import { formatDistanceToNow } from 'date-fns',;
+import { toast } from 'sonner',;
+import { useAuth } from '@/hooks/useAuth',;
+import useJobDetails from '@/hooks/useJobDetails',;
+import { ApplyToJobModal } from '@/components/messaging/job-application',;
+import { SEO } from '@/components/SEO',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+;
+export default function JobDetails() {;
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { jobId } = useParams() as { jobId?:string },;
+  const { job, isLoading, error } = useJobDetails(jobId),;
+  const { user, isAuthenticated } = useAuth(),;
+  const navigate = useNavigate(),;
+  const { isWhitelabel, brandName } = useWhitelabel(),;
+  ;
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),;
+;
+  if (isLoading) {;
+    return (;
+      <div className="flex items-center justify-center min-h-screen">;
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
+      </div>;
+    ),;
+  }
+;
+  if (error || !job) {;
+    return (;
       <>;
         <Header />;"
         <div className="container mx-auto px-4 py-16 text-center">;"
@@ -99,7 +149,6 @@ export default function JobDetails() {};
         </div>;
         <Footer />;
       </>;
-    );
   }
 <<<<<<< HEAD
   const handleApply = () => {
@@ -127,6 +176,7 @@ export default function JobDetails() {};
         <Footer />;
       </>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   const isOwnJob = user?.id === job.client_id,
@@ -337,6 +387,7 @@ export default function JobDetails() {
   const handleApplySuccess = async (appliedJobId: string) => {;"
     toast && toast.success("Application submitted successfully!"),;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
       <SEO'`
@@ -405,7 +456,7 @@ export default function JobDetails() {
               </CardContent>;
             </Card>;
           </div>;
-
+          ;
           <div>;
 
                 <div className="flex items-start">;
@@ -414,11 +465,11 @@ export default function JobDetails() {
                   <div className="ml-3">;
                     <p className="text-sm text-muted-foreground">Deadline</p>;
                     <p className="font-medium">;
-                      {job && job.deadline ? new Date(job && job.deadline).toLocaleDateString() : "Flexible"}
+                      {job.deadline ? new Date(job.deadline).toLocaleDateString() :"Flexible"}
                     </p>;
                   </div>;
                 </div>;
-
+                ;
                 <div className="flex items-start">;
                   <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />;
                   <div className="ml-3">;

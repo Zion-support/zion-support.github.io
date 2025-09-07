@@ -381,6 +381,7 @@ const useCases = [
 <<<<<<< HEAD
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       title: 'E-commerce Websites',
   description:
         'Optimize product pages, category pages, and search functionality for better conversions.',
@@ -519,6 +520,8 @@ const useCases = [
       tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards];
     }
   ];
+<<<<<<< HEAD
+=======
 
 
             </Button>;
@@ -579,6 +582,31 @@ href='#pricing'
 href='#demo'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
+              className='border-white/20 hover:border-white/40 hover:bg-white/5'
+            >
+              <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.08),transparent_50%)]" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+              <Sparkles className="w-4 h-4 mr-2" />
+              AI-Powered Search Engine Optimization
+            </div>
+          </div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight">
+            AI-Powered SEO Suite
+          </h1>
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">
+            Dominate search rankings with AI-powered SEO tools, comprehensive analytics, and intelligent optimization
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+=======
 
               className='border-white/20 hover: border-white/40 hover:bg-white/5'
                 />
@@ -782,6 +810,7 @@ key={toolIndex}
 >>>>>>> origin/chore/fix-lint-and-merge
 
                           {toolName}
+<<<<<<< HEAD
                         </div>;
                       ))}
                     </div>;
@@ -789,6 +818,12 @@ key={toolIndex}
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
+          </div>
+        </div>
+      </section>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       {/* Success Metrics Section */}
 
@@ -873,6 +908,7 @@ key={benefitIndex}
 >>>>>>> origin/chore/fix-lint-and-merge
 
                           {benefit}
+<<<<<<< HEAD
                         </div>;
                       ))}
                     </div>;
@@ -936,6 +972,7 @@ key={index}
 <div className='text-center mb-8'    />
                   <h3 className='text-2xl font-bold text-white mb-2'    />
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'    />;

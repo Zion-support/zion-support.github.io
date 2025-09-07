@@ -66,6 +66,17 @@ export function LoginForm() {
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
+  },;
+  const handleResendEmail = async () => {;
+    const email = form.getValues('email'),;
+    if (!email) {;
+      form.setError('root', { message: 'Please enter your email address.' }),;
+      return;
+    }
+    setIsResending(true),;
+    setVerificationMessage(''),;
+=======
   };
 
   const handleResendEmail = async () => {
@@ -93,6 +104,10 @@ export function LoginForm() {
     } finally {
       setIsResending(false)
     }
+<<<<<<< HEAD
+  return (
+    <Form {...form}>;
+=======
   };
 
   const handleCheckStatus = () => {
@@ -194,10 +209,23 @@ export function LoginForm() {
                   aria-label="Remember me"
                 />
               </FormControl>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
               </div>
             </FormItem>
+                <Checkbox
+                  checked={field && field.value}
+                  onCheckedChange={field && field.onChange}
+                  className='border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white'
+                  aria-label='Remember me'                />;
+              </FormControl>;
+              <div className='space-y-1 leading-none'>;
+                <FormLabel className='text-zion-slate-light'>;
+                  Remember me;
+                </FormLabel>;
+              <FormMessage className="text-red-400" />;
+            </FormItem>;
           )}
         />
         <div className="flex items-center justify-between">

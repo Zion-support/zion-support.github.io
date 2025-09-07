@@ -144,6 +144,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Header */}
           <div className='flex items - start justify - between mb - 4'>;'
             <div className='flex items - center space - x-3'>;'
@@ -158,6 +159,30 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 <h3 className='text - xl font - bold text - white mt - 1'>;'
 
                   {service.name}
+<<<<<<< HEAD
+        <div className="bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full">
+          {/* Header */}
+        <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
+          {/* Header */}
+          <div className='flex items-start justify-between mb-4'>
+            <div className='flex items-center space-x-3'>
+              <div className='text-3xl'>{service.icon}</div>
+              <div>
+                <div className='flex items-center space-x-2'>
+                  {getCategoryIcon(service.category)}
+                  <span className='text-xs text-gray-400 uppercase tracking-wider'>
+                    {service.category}
+                  </span>
+                </div>
+                <h3 className='text-xl font-bold text-white mt-1'>
+                  {service.name}
+                </h3>
+              </div>
+            </div>
+            {service.popular && (
+              <motion.div
+                className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'                animate={{ scale: [1, 1.1, 1] }}          {/* Header */}
+=======
 
         <div className="bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full">
           {/* Header */}
@@ -213,7 +238,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               </div>;
             {service && service.popular && (;
               <motion&& motion.div
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
 
             {service && service.popular && (<motion&& motion.div;
@@ -389,6 +417,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span className="text-gray-400">Growth Rate:</span>;"
               <span className="text-blue-400 font-semibold">{service && service.growthRate}</span>;
           </div>;
+<<<<<<< HEAD
+=======
 
             <div className='flex items-center justify-between text-sm mt-1'>'
               <span className='text-gray-400'>Growth "Rate":</span>'

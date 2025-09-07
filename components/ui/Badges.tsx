@@ -528,6 +528,8 @@ pr-12243
       <span className="leading - none">{type}</span>;
     </span>);
 }
+<<<<<<< HEAD
+=======
 
 pr-12243
       </figcaption>;
@@ -541,6 +543,8 @@ pr-12243
     </span>;
   );
 }
+<<<<<<< HEAD
+=======
 
 pr-12243
 export /**
@@ -660,6 +664,8 @@ function MicroTestimonial() {}
       <blockquote className="italic opacity - 90">“{quote}”</blockquote>;"
       <figcaption className="mt - 2 font - medium opacity - 80">— {author}</figcaption>;
     </figure>);
+    </span>
+  )
 }
 
   );

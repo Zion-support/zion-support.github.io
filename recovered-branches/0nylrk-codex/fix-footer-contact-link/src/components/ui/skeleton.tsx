@@ -6,6 +6,16 @@ function Skeleton({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
 
+<<<<<<< HEAD
+import { cn } from &quot;@/lib/utils&quot;
+import { cn } from "@/lib/utils"
+
+function Skeleton({
+  className
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { cn } from &quot;@/lib / utils & quot;
 ;
 /**

@@ -244,6 +244,8 @@ if ({
   }
   fixSpecificPages()
 }
+<<<<<<< HEAD
+=======
 
 
 
@@ -352,6 +354,16 @@ module.exports = {restorePage,fixSpecificPages,findBestBackup;
 }
 
 
+<<<<<<< HEAD
+module.exports = {
+
+  restorePage
+  fixSpecificPages
+  findBestBackup
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 module.exports = {;
   }

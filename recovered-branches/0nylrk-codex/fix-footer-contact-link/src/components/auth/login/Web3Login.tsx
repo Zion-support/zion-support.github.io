@@ -7,6 +7,7 @@ export function Web3Login() {
 
       // Check if wallet is available
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleWeb3Login = async () => {;
     try {;
       setIsLoading(true);
@@ -21,16 +22,16 @@ export function Web3Login() {
       console.error("Web3 login error:", error)
     } finally {}
       setIsLoading(false)
+<<<<<<< HEAD
+=======
 
         return;
       }
-
       await loginWithWeb3();
 
       console && console.error("Web3 login error:", error);
     } finally {;
       setIsLoading(false);
-
     }
 <<<<<<< HEAD
 export function Web3Login() {
@@ -65,7 +66,10 @@ export function Web3Login() {
       variant="outline""
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
       onClick={handleWeb3Login}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       disabled={isLoading}
     >
       {isLoading ? ("

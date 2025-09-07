@@ -97,6 +97,11 @@ export function DateFields(): any ({;
           <PopoverContent className="w-auto p-0" align="start">
             <Calendar"
               mode="single"
+<<<<<<< HEAD
+              selected={startDate}
+              onSelect={setStartDate}
+              disabled={(date) => date > new Date()}
+=======
 
 import { format } from 'date-fns',;
 import { Label } from "@/components/ui/label",;
@@ -115,6 +120,7 @@ interface DateFieldsProps {;
   setEndDate: (date: Date | undefined) => void;
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       <div>;"
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>;
@@ -134,6 +140,11 @@ interface DateFieldsProps {;
               mode="single"
               selected={startDate}
               onSelect={setStartDate}
+<<<<<<< HEAD
+              disabled={(date) =>;
+                date > new Date();
+              }
+=======
 
               disabled={(date) =>;
                 date > new Date();
@@ -153,6 +164,7 @@ interface DateFieldsProps {;
               <Button"
                 variant={"outline"}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   !endDate && "text-muted-foreground"
 
                 )}
@@ -182,6 +194,11 @@ interface DateFieldsProps {;
           </PopoverContent>;
         </Popover>;
       </div>;
+<<<<<<< HEAD
+    </div>;
+  );
+}
+=======
 
           </PopoverContent>;
         </Popover>;

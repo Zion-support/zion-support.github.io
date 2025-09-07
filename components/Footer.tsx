@@ -40,7 +40,6 @@ const Footer = () => {
     { name: 'GitHub', href: '#', icon: '🐙' },
     { name: 'YouTube', href: '#', icon: '📺' },
   ];
-
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">

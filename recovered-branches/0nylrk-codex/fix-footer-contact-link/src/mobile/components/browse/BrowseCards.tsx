@@ -5,6 +5,28 @@ import {Badge} from "@/components/ui/badge";
 import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+interface BrowseItem {
+
+  id: string
+  title: string
+  subtitle: string
+  description: string
+  location?: string;
+  badges: string[]
+
+  price?: string;
+  image?: string;
+  match?: number;
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+=======
 interface BrowseItem {;
   id: string,;
   title: string,;
@@ -542,15 +564,38 @@ interface BrowseCardsProps {;
                   ) : (;"
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
+<<<<<<< HEAD
+                </button>;
+              </div>;
+                </button>;
+              </div>;
+              <div className="mt-3 flex flex-wrap gap-1">;
+=======
 
               <div className="mt-3 flex flex-wrap gap-1">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {item.badges.map((badge, index) => (;
                   <Badge;
                     key={index} ;"
                     variant="outline";"
                     className="text-xs font-normal";
                   >;
+<<<<<<< HEAD
+                {item && item.badges.map((badge, index) => (;
+                  <Badge
+                    key={index} 
+                    variant="outline" 
+                    className="text-xs font-normal">;
+              ;
+              <div className="mt-3 flex flex-wrap gap-1">;
+                {item.badges.map((badge, index) => (;
+                  <Badge ;
+                    key={index} ;
+                    variant="outline" ;
+                    className="text-xs font-normal";
+                  >;
+=======
 
                     {badge}
 

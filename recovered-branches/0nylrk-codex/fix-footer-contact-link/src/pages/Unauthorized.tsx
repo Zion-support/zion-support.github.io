@@ -11,6 +11,7 @@ import { Footer } from "@/components/Footer";
 import { ShieldAlert } from "lucide-react";
 import { Footer } from "@/components/Footer",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Unauthorized() {
 
   return (
@@ -81,6 +82,7 @@ export default function Unauthorized() {;
           </p>;
           <div className="flex flex-col gap-3">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">;
 
             >;
@@ -89,6 +91,7 @@ export default function Unauthorized() {;
             <Link;
               to="/login";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Login with Different Account;
             </Link>;
           </div>;

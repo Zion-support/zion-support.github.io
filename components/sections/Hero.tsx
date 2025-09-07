@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react','
 import Button from '../ui/Button';'
@@ -33,6 +36,8 @@ interface HeroProps {
 return (;
     <section className;
             {subtitle}
+<<<<<<< HEAD
+=======
 
           </p />
           </p>;
@@ -137,18 +142,20 @@ variant='outline';
         {stats && (<div;
             className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in';
                   variant="outline"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   size="lg"
                   className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
                   style={{ animationDelay: '0.4s' }}
                 >
                   <Play className="w-5 h-5 mr-2" />
+<<<<<<< HEAD
+=======
                   {secondaryAction.text}
                 </Button>
               )}
             </div>
           )}
         </div>
-
         {/* Stats Section */}
         {stats && (
 <div
@@ -185,6 +192,14 @@ className='mt-16 "md":mt-20 animate-fade-in''
               <Users className="w-4 h-4" />"
               <span>10,000+ Developers</span>
             </div>
+<<<<<<< HEAD
+            <div className='flex items-center gap-2'>
+              <Users className='w-4 h-4' />
+              <span>10,000+ Developers</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <Star className='w-4 h-4 text-yellow-400' />              <span>99.9% Uptime</span>            <div className="flex items-center gap-2">
+=======
 
             <div className='flex items-center gap-2'>'
               <Users className='w-4 h-4' />'

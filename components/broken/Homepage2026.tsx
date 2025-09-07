@@ -266,6 +266,8 @@ className='text-center''
               </motion.div>
             </div>
         </section>
+<<<<<<< HEAD
+=======
 
         {/* Service Categories *
 }
@@ -649,6 +651,11 @@ management for enterprise-grade performance.
                   </button>;
                 </Link>;
               </motion && motion.div>;
+<<<<<<< HEAD
+
+
+
+=======
 
 
 
@@ -869,6 +876,8 @@ advanced AI.
               </motion.div>
             </div>
         </section>
+<<<<<<< HEAD
+=======
 
         {/* Contact Section *
 }

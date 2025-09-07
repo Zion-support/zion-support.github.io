@@ -8,6 +8,8 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
+=======
 
 import { Dispute, DisputeStatus } from "@/types/disputes";
 import { Button } from "@/components/ui/button";
@@ -55,6 +57,8 @@ type DisputesListProps = {
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
+<<<<<<< HEAD
+=======
 
         return "outline",
       default:"
@@ -243,6 +247,14 @@ export /**;
                   </div>;
                 </TableCell>;
                 <TableCell>;
+<<<<<<< HEAD
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  )
+}
+=======
 
 </TableBody>
         </Table>
@@ -256,6 +268,9 @@ export /**;
     </div>;
   );
 }
+<<<<<<< HEAD
+                  {formatDistanceToNow(new Date(dispute.created_at), { addSuffix:true })}
+=======
 
 ;
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix:true })}

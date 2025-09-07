@@ -178,13 +178,13 @@ export default function MicroSAAS() {const microSAAS = [{"name: AI-Powered Invoi
       {/* Services Grid */}
 
                         {feature}
-                      </li>;
+                      </li>
                     ))}
                   </ul>;
                 </div>;
 
                         {benefit}
-                      </li>;
+                      </li>
                     ))}
                   </ul>;
                 </div>;
@@ -194,10 +194,35 @@ export default function MicroSAAS() {const microSAAS = [{"name: AI-Powered Invoi
                 </div>;
               </div>;
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* Contact Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 "sm": px-6 lg:px-8 bg-gray-800">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+            Ready to Transform Your Business with Micro SAAS?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Contact us today to discuss your needs and get started with the perfect micro SAAS solution
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 text-gray-300 mb-8">
+            <div>
+              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Phone</h3>
+              <p>+1 302 464 0950</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Email</h3>
+              <p>kleber@ziontechgroup.com</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Address</h3>
+              <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
 
               Contact Us Now;
             </Link>;
@@ -659,6 +684,8 @@ export default function MicroSAAS() {
             </Link>
             <Link
               href="/request-quote"
+<<<<<<< HEAD
+=======
 
               className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
 <<<<<<< HEAD

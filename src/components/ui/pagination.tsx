@@ -1,10 +1,42 @@
 
 interface PaginationButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
   isActive?: boolean
 }
 const PaginationLink = ({
+<<<<<<< HEAD
+  className
+  isActive
+  size = &quot;icon&quot;
+  size = &quot;icon&quot;
+ursor/fix-website-loading-errors-and-merge-6662
+  className
+  isActive
+  size = &quot;icon&quot;
+  className,
+  isActive,
+  size = &quot;icon&quot;
+  size = "icon",
+=======
+
+
+  className,
+  isActive,
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  ...props
+  <a
+    aria-current={isActive ? "page" : undefined}
+    className={cn(
+      buttonVariants({
+<<<<<<< HEAD
+        size})
+        variant: isActive ? "outline" : "ghost",
+        variant: isActive ? "outline&quot; : &quot;ghost&quot;
+        size})
+        variant: isActive ? "outline" : "ghost",
+        size}),
 
   ...props
 }: PaginationLinkProps) => (
@@ -12,15 +44,22 @@ const PaginationLink = ({
     aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         variant: isActive ? "outline" : "ghost",
 
         size}),
       className
-    )}
     {...props}
   />
 )
+<<<<<<< HEAD
+PaginationLink.displayName = &quot;PaginationLink&quot;
+PaginationLink.displayName = &quot;PaginationLink&quot;
+PaginationLink.displayName = "PaginationLink"
+
+=======
 
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
   ({ page, isActive, className, ...props }, ref) => (
@@ -30,9 +69,15 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       aria-label={`Page ${page}`}
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
+<<<<<<< HEAD
+        buttonVariants({ variant: 'ghost', size: 'icon' });
+        isActive && 'bg-green-600 text-white';
+ursor/fix-website-loading-errors-and-merge-6662
+        buttonVariants({ variant: 'ghost', size: 'icon' });
+        isActive && 'bg-green-600 text-white';
+=======
 
         className;
-      )}
       {...props}
     >;
       {page}
@@ -54,6 +99,12 @@ const PaginationPrevious = ({
     <span>Previous</span>
   </PaginationLink>
 )
+<<<<<<< HEAD
+PaginationPrevious.displayName = &quot;PaginationPrevious&quot;
+PaginationPrevious.displayName = &quot;PaginationPrevious&quot;
+PaginationPrevious.displayName = "PaginationPrevious"
+
+=======
 
 const PaginationNext = ({
   className
@@ -69,6 +120,12 @@ const PaginationNext = ({
     <ChevronRight className="h-4 w-4" />
   </PaginationLink>
 )
+<<<<<<< HEAD
+PaginationNext.displayName = &quot;PaginationNext&quot;
+PaginationNext.displayName = &quot;PaginationNext&quot;
+PaginationNext.displayName = "PaginationNext"
+
+=======
 
 const PaginationEllipsis = ({
   className
@@ -83,4 +140,16 @@ const PaginationEllipsis = ({
     <span className="sr-only">More pages</span>
   </span>
 )
+<<<<<<< HEAD
+PaginationEllipsis.displayName = &quot;PaginationEllipsis"
+export {
+  Pagination
+  PaginationContent
+  PaginationEllipsis
+  PaginationItem
+  PaginationLink
+  PaginationButton
+  PaginationNext
+  PaginationPrevious}
+=======
 

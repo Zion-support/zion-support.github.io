@@ -347,7 +347,6 @@ function ResumePreviewCard() {
         {resume.basic_info.summary && (
           <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
             {resume.basic_info.summary}
-
             className="h-8 w-8 p-0">;
             <Download className="h-4 w-4 text-zion-cyan" />;
             <span className="sr-only">Download Resume</span>;
@@ -363,7 +362,6 @@ function ResumePreviewCard() {
             {resume && resume.basic_info.summary}
           </p>;
         )}
-
         {resume && resume.skills && resume && resume.skills.length > 0 && (;
           <div className="flex flex-wrap gap-1 mt-2">;
             {resume && resume.skills.slice(0, 5).map((skill, index) => (;
@@ -452,5 +450,10 @@ function ResumePreviewCard() {
               </Badge>)}
           </div>)}
       </CardContent>;
+<<<<<<< HEAD
+    </Card>;
+  );
+}
+=======
     </Card>);
 }

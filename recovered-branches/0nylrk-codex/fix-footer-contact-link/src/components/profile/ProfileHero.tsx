@@ -21,8 +21,8 @@ interface ProfileHeroProps {
 
 interface ProfileHeroProps {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ProfileHero(): any ({;
-
   name;
   title;
   avatarUrl;
@@ -58,6 +58,7 @@ export function ProfileHero(): any ({;
               ) : ("
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
@@ -96,6 +97,8 @@ export function ProfileHero() { return null; }
                 <AvatarImage src={avatarUrl} alt={name} />;
 
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
+<<<<<<< HEAD
+=======
 
                   {name.substring(0, 2).toUpperCase()}
 

@@ -1,6 +1,8 @@
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';'
 
+<<<<<<< HEAD
+=======
 
 import { Brain;
 
@@ -379,6 +381,8 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-8 max-w-5xl mx-auto animate-fad
               <div className='text-gray-400 text-sm'>Total Users</div>'
             </div>
       </section>
+<<<<<<< HEAD
+=======
 
       {/* Category Filter */}
 <section className='py-16 bg-gray-900'>'
@@ -850,6 +854,8 @@ variant='outline';'
   );
 }
     </>);
+);
+  );
 }
   )}
   )

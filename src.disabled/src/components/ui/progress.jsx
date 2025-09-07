@@ -17,3 +17,4 @@ const React from "react";"""; import { cn } from "././lib/utils"; const Progress
 import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React && _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math && Math.min(Math && Math.max((value / max) * 100,0),100); return (); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress && Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }'
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

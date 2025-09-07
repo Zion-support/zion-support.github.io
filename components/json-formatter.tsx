@@ -282,6 +282,19 @@ real-time validation.
         </div>
       </section>
       {/* JSON Formatter Tool */}
+<<<<<<< HEAD
+      <section className='py-20 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+              Format Your JSON Data
+            </h2>
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+              Our advanced JSON formatter provides multiple formatting options
+              and real-time validation.            </p>
+          </div>
+          {/* Settings Bar */}      <section className="py-20 bg-gray-900">
+=======
 
 <<<<<<< HEAD
 
@@ -317,6 +330,8 @@ and real-time validation.
                     <option value={8}    />8 spaces</option>
                   </select>
                 </div>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -480,6 +495,11 @@ onChange={e =    /> setInputJson(e.target.value)}
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;}
                       showLineNumbers ? 'pl-16' : '';}
                     }`}
+<<<<<<< HEAD
+                  />
+                </div>
+                {!isValid && errorMessage && (
+=======
 
                   />
                 </div>
@@ -535,6 +555,8 @@ variant='outline'
                 </div>
               </div>
             </Card>
+<<<<<<< HEAD
+=======
 
             {/* Output Section */}
 <<<<<<< HEAD
@@ -638,6 +660,16 @@ onClick={() =    />}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+
+      {/* Features */}
+      <section className='py-20 bg-gray-800'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       {/* Features */}
       <section className="py-20 bg-gray-800>
@@ -759,6 +791,18 @@ files with professional formatting.
 >>>>>>> origin/chore/fix-lint-and-merge
               </ul>
             </Card>
+<<<<<<< HEAD
+            <Card className='p-8 bg-gray-700 border border-gray-600'>
+              <div className='text-4xl mb-4'>📊</div>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                Data Analysts
+              </h3>
+              <p className='text-gray-400 mb-6'>
+                Clean and format JSON datasets for analysis, reporting, and data
+                visualization projects.
+              </p>
+              <ul className='space-y-2 text-gray-300'>                <li>• Data cleaning and preparation</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
+=======
 
 
 <<<<<<< HEAD
@@ -767,6 +811,18 @@ files with professional formatting.
                 <li>• Data validation</li>
               </ul>
             </Card>
+<<<<<<< HEAD
+            <Card className='p-8 bg-gray-700 border border-gray-600'>
+              <div className='text-4xl mb-4'>🔧</div>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                DevOps Engineers
+              </h3>
+              <p className='text-gray-400 mb-6'>
+                Manage configuration files, validate deployment manifests, and
+                format infrastructure as code.
+              </p>
+              <ul className='space-y-2 text-gray-300'>                <li>• Configuration management</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
+=======
 
 
                 <li>• Configuration management</li>
@@ -774,6 +830,18 @@ files with professional formatting.
                 <li>• Deployment automation</li>
               </ul>
             </Card>
+<<<<<<< HEAD
+            <Card className='p-8 bg-gray-700 border border-gray-600'>
+              <div className='text-4xl mb-4'>📝</div>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                Technical Writers
+              </h3>
+              <p className='text-gray-400 mb-6'>
+                Format JSON examples for documentation, tutorials, and technical
+                specifications.
+              </p>
+              <ul className='space-y-2 text-gray-300'>                <li>• Documentation examples</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
+=======
 
 
                 <li>• Documentation examples</li>

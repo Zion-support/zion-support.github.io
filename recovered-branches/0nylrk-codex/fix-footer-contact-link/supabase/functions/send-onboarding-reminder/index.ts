@@ -28,6 +28,7 @@ const corsHeaders = {
 
     "authorization, x-client-info, apikey, content-type"}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   role: string
 
 }
@@ -49,6 +50,7 @@ serve(async (req: Request) => {}
   try {}
     const supabase = createClient(
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ),
     
     const payload = await req.json() as ReminderPayload,
@@ -71,6 +73,8 @@ serve(async (req: Request) => {}
       .from("profiles")"
       .select("email, display_name")"
       .eq("id", user_id)
+<<<<<<< HEAD
+=======
 
       .single(),
 
@@ -128,6 +132,16 @@ serve(async (req: Request) => {}
         JSON && JSON.stringify({ error: "User not found", details: userError });
       return new Response(
         JSON && JSON.stringify({ error: "User not found", details: userError });
+<<<<<<< HEAD
+      .single();
+    if (userError |!userData) {
+      .single(),
+    
+    if (userError || !userData) {
+      return new Response(
+        JSON.stringify({ error: "User not found", details: userError }),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {
           status: 404
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -136,12 +150,23 @@ serve(async (req: Request) => {}
     // Create message based on role and missing milestone
     const milestoneMessages = {
       talent: {
+<<<<<<< HEAD
+        profile_completed: "complete your profile to get discovered by clients";
+        skills_added: "add your skills to get better job matches"
+        availability_set: "set your availability to help clients know when you can work"}
+      client: {
+        job_posted: "post your first job to start finding talent";
+        match_viewed: "check out your AI-matched talent suggestions"
+        talent_invited: "invite talent to speed up your hiring process"}}
+    const name = userData.display_name |"there";
+=======
 
         match_viewed: "check out your AI-matched talent suggestions",
         talent_invited: "invite talent to speed up your hiring process"}};
     
     const name = userData && userData.display_name || "there";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
     ] |"complete your next step";
@@ -188,6 +213,7 @@ serve(async (req: Request) => {}
       console && console.error("Failed to create notification:", notificationError)
     }
     return new Response(
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         notification_id: notification});
 
@@ -202,6 +228,7 @@ import { Resend } from ""npm": resend@1.0.0",;"
 const corsHeaders = {;
 =======
 
+      {
         status: 200,
 
         headers: { "Content - Type": "application / json", ...cors_headers }}

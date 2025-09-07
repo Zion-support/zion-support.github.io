@@ -89,10 +89,18 @@ function ServiceDetails() {}
       "Australia": ["Sydney", "Melbourne", "Perth"],
       "Singapore": ["Singapore Central"],
       "Canada": ["Toronto", "Montreal", "Vancouver"],
+<<<<<<< HEAD
+      // Default for other countries
+      "default": ["Major metropolitan areas"]
+    }
+    return dataCenters[country] |dataCenters["default"]
+  }
+=======
 
       // Default for other countries
       "default": ["Major metropolitan areas"]
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 
     return dataCenters[country] || dataCenters["default"]
@@ -111,13 +119,12 @@ function ServiceDetails() {}
       // Default placeholder
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Default for other countries;
       "default": ["Major metropolitan areas"];
     };
-
     return dataCenters[country] || dataCenters["default"];
   };
-
   // Get region-specific image;
   const getRegionalImage = (country: string): string => {;
     // In a real app, you'd have specific images for each region;
@@ -131,15 +138,12 @@ function ServiceDetails() {}
       // Default placeholder;
       "default": "https://source && source.unsplash.com/featured/900x700/?datacenter";
     };
-
     return regions[country] || regions["default"];
   };
-
   // Get region-specific instructions;
   const getRegionalInstructions = (country: string): string => {;
     // In a real implementation, this would be much more detailed and specific;
     const timeZones: Record<string, string> = {;
-
       "United States": "EST/CST/PST depending on location";
       "United Kingdom": "GMT/BST";
       "Germany": "CET/CEST";
@@ -177,6 +181,23 @@ function ServiceDetails() {}
       "Japan": "JST";
       "Australia": "AEST / ACDT / AWST depending on location";
       "Singapore": "SGT";
+<<<<<<< HEAD
+  // Get region-specific image
+  const getRegionalImage = (country: string): string => {
+    // In a real app, you'd have specific images for each region
+    const regions: Record<string string> = {
+      "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
+      "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
+      "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",
+      "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan",
+      "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
+      "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
+      // Default placeholder
+      "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+    }
+    return regions[country] |regions["default"]
+  }
+=======
 
     }
     return regions[country] |regions["default"]
@@ -201,6 +222,7 @@ function ServiceDetails() {}
     return regions[country] || regions["default"]
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
@@ -212,12 +234,18 @@ function ServiceDetails() {}
       "Australia": "AEST/ACDT/AWST depending on location",
       "Singapore": "SGT",
       "default": "Local timezone"
+<<<<<<< HEAD
+    }
+    const timezone = timeZones[country] |timeZones["default"];
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     "
 
     const timezone = timeZones[country] || timeZones["default"],
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
@@ -228,6 +256,7 @@ function ServiceDetails() {}
   
   const datacenters = getDatacenters(country),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -244,6 +273,78 @@ function ServiceDetails() {}
 
            `For remote locations, additional travel fees may apply.`;
   };
+<<<<<<< HEAD
+  const datacenters = getDatacenters(country);
+  return (
+
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Server, Clock, MapPin } from "lucide-react",;
+;
+interface ServiceDetailsProps {;
+  country:string;
+}
+;
+// Component to show service details for the selected country;
+export function ServiceDetails({ country } ServiceDetailsProps) {;
+  // Get datacenters for regions (simplified - in production this would come from a real database);
+  const getDatacenters = (country:string):string[] => {;
+    const dataCenters:Record<string string[]> = {;
+      "United States":["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],;
+      "United Kingdom":["London", "Manchester", "Birmingham"],;
+      "Germany":["Frankfurt", "Berlin", "Munich"],;
+      "Japan":["Tokyo", "Osaka"],;
+      "Australia":["Sydney", "Melbourne", "Perth"],;
+      "Singapore":["Singapore Central"],;
+      "Canada":["Toronto", "Montreal", "Vancouver"],;
+      // Default for other countries;
+      "default":["Major metropolitan areas"];
+    },;
+    ;
+    return dataCenters[country] || dataCenters["default"],;
+  },;
+  ;
+  // Get region-specific image;
+  const getRegionalImage = (country:string):string => {;
+    // In a real app, you'd have specific images for each region;
+    const regions:Record<string string> = {;
+      "United States":"https://source.unsplash.com/featured/900x700/?datacenter,usa",;
+      "United Kingdom":"https://source.unsplash.com/featured/900x700/?datacenter,uk",;
+      "Germany":"https://source.unsplash.com/featured/900x700/?datacenter,germany",;
+      "Japan":"https://source.unsplash.com/featured/900x700/?datacenter,japan",;
+      "Australia":"https://source.unsplash.com/featured/900x700/?datacenter,australia",;
+      "Singapore":"https://source.unsplash.com/featured/900x700/?datacenter,singapore",;
+      // Default placeholder;
+      "default":"https://source.unsplash.com/featured/900x700/?datacenter";
+    },;
+    ;
+    return regions[country] || regions["default"],;
+  },;
+  ;
+  // Get region-specific instructions;
+  const getRegionalInstructions = (country:string):string => {;
+    // In a real implementation, this would be much more detailed and specific;
+    const timeZones:Record<string string> = {;
+      "United States":"EST/CST/PST depending on location",;
+      "United Kingdom":"GMT/BST",;
+      "Germany":"CET/CEST",;
+      "Japan":"JST",;
+      "Australia":"AEST/ACDT/AWST depending on location",;
+      "Singapore":"SGT",;
+      "default":"Local timezone";
+    },;
+    ;
+    const timezone = timeZones[country] || timeZones["default"],;
+    ;
+    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;
+           `Response times are typically within 4 hours for metropolitan areas. ` +;
+           `Please have site access permissions and contact details ready for our technicians. ` +;
+           `For remote locations, additional travel fees may apply.`,;
+  },;
+  ;
+  const datacenters = getDatacenters(country),;
+  ;
+  return (;
+=======
 
   const datacenters = getDatacenters(country);
 
@@ -281,7 +382,10 @@ interface ServiceDetailsProps {;
 
         <CardDescription className="text-zion-slate-light">;
           Details about our service locations and capabilities in {country}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </CardDescription>;
 
 "
@@ -347,6 +451,19 @@ export function ServiceDetails() { return null; }
             src={getRegionalImage(country)}`
             alt={`Datacenter in ${country}`}"
             className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110";
+<<<<<<< HEAD
+          />;
+        </div>;
+          <img ;
+            src={getRegionalImage(country)}
+            alt={`Datacenter in ${country}`}
+            className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110";
+          />;
+        </div>;
+        ;
+          />;
+        </div>;
+=======
 
           />;
         </div>;
@@ -358,7 +475,10 @@ export function ServiceDetails() { return null; }
               Service Locations;
             </h4>;"
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {datacenters.map((dc, idx) => (;
                 <div;
                   key={idx} ;"

@@ -2,7 +2,6 @@ interface GradientHeadingProps {;
   children: React && React.ReactNode,;
 
   const Tag = level;
-
   return (
     <Tag;
       className={cn("
@@ -74,6 +73,7 @@ interface GradientHeadingProps {
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";"
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
         className
 

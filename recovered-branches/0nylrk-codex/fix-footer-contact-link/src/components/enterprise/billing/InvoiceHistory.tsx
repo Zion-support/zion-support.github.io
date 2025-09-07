@@ -73,12 +73,15 @@ const invoices = [;
       "amount": "$1,999.00",  const handleDownloadInvoice = ("invoiceId": string) => {"
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Download, FileText, Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
+=======
 
 import React from "react",
 
@@ -143,6 +146,7 @@ export function InvoiceHistory() {};
       date: "May 1, 2025";"
       amount: "$1,999.00";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: "INV-1234",;
       date: "May 1, 2025";
       amount: "$1,999.00";
@@ -150,6 +154,7 @@ export function InvoiceHistory() {};
       id: "INV-1234",
       date: "May 1, 2025",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       status: "paid",
 
       period: "May 2025"},
@@ -299,10 +304,15 @@ return <Badge variant="destructive">Overdue</Badge>,;"
 
         return <Badge variant="outline">Pending</Badge>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "overdue":;
         return <Badge variant="destructive">Overdue</Badge>,;
       default:;
         return <Badge variant="outline">{status}</Badge>;
+<<<<<<< HEAD
+    }
+  }
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
     }
@@ -514,6 +524,7 @@ import {;
               </TableRow>
             ))}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="flex items-center justify-between">;
 
         <Button variant="outline" size="sm">;

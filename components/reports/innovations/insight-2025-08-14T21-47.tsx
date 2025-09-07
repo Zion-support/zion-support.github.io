@@ -56,6 +56,7 @@ pr-12243
 
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }}
         />;'
         <p className='mt-6 text-white/60 text-sm'>;

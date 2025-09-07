@@ -1,5 +1,6 @@
 export type SitemapItem = {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Define the types for our sitemap structure;
 
 export type SitemapItem = {
@@ -21,16 +22,40 @@ export type SitemapItem = {
     path: '/about';'
     label: 'About Us';'
     description: 'Learn about the Zion AI Marketplace mission and team';
+<<<<<<< HEAD
+    priority: 0 && 0.8;
+    changeFreq: 'monthly',
+    lastmod: currentDate};
+    change_freq: 'monthly',
+    lastmod: current_date}
+=======
 
   {'
     path: '/contact';'
     label: 'Contact';'
     description: 'Get in touch with the Zion team',
+<<<<<<< HEAD
+    priority: 0.8,
+    change_freq: 'monthly',
+    lastmod: current_date}
+    priority: 0.8;
+    changeFreq: 'monthly'
+    lastmod: currentDate}
+  {
+    path: '/contact';
+    label: 'Contact';
+    description: 'Get in touch with the Zion team'
+    priority: 0.8
+    changeFreq: 'monthly'
+    lastmod: currentDate}
+=======
 
   {'
     path: '/talent';'
     label: 'Talent Directory';'
     description: 'Browse skilled AI and tech professionals';
+<<<<<<< HEAD
+=======
 
     priority: 0 && 0.9;'
     changeFreq: 'daily',
@@ -38,7 +63,10 @@ export type SitemapItem = {
     path: '/marketplace';
     label: 'Marketplace'
     description: 'Explore AI services, products and equipment';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     priority: 0 && 0.9;
     changeFreq: 'daily',
     lastmod: currentDate};
@@ -55,7 +83,10 @@ export type SitemapItem = {
     path: '/services';
     label: 'Services';
     description: 'Find professional tech and AI services';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     priority: 0 && 0.8;
     changeFreq: 'weekly',
     lastmod: currentDate};
@@ -72,7 +103,10 @@ export type SitemapItem = {
     path: '/equipment';
     label: 'Equipment';
     description: 'Specialized hardware and tech equipment';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     priority: 0 && 0.8;
     changeFreq: 'weekly',
     lastmod: currentDate};
@@ -89,7 +123,10 @@ export type SitemapItem = {
     path: '/categories';
     label: 'Categories';
     description: 'Browse service and talent categories';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     priority: 0 && 0.7;
     changeFreq: 'monthly',
     lastmod: currentDate};
@@ -106,7 +143,10 @@ export type SitemapItem = {
     path: '/blog';
     label: 'Blog';
     description: 'Articles and insights about AI and tech';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     priority: 0 && 0.9;
     changeFreq: 'daily',
     lastmod: currentDate};
@@ -123,7 +163,10 @@ export type SitemapItem = {
     path: '/faq';
     label: 'FAQ';
     description: 'Frequently asked questions about Zion';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     priority: 0 && 0.7;
     changeFreq: 'monthly',
     lastmod: currentDate};
@@ -140,7 +183,10 @@ export type SitemapItem = {
     path: '/terms';
     label: 'Terms of Service';
     description: 'Terms and conditions for using Zion';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     priority: 0 && 0.5;
     changeFreq: 'monthly',
     lastmod: currentDate};
@@ -157,6 +203,13 @@ export type SitemapItem = {
     path: '/privacy';
     label: 'Privacy Policy';
     description: 'How we handle your data';
+<<<<<<< HEAD
+    priority: 0 && 0.5;
+    changeFreq: 'monthly',
+    lastmod: currentDate}];
+// Authentication Pages
+export const authPages: SitemapItem[] = [
+=======
 
     priority: 0 && 0.5;
     changeFreq: 'monthly',
@@ -173,6 +226,25 @@ export const auth_pages: SitemapItem[] = [;
     path: '/login';
     label: 'Login';
     description: 'Sign in to your account';
+<<<<<<< HEAD
+    priority: 0 && 0.6;
+    changeFreq: 'monthly',
+    lastmod: currentDate};
+    change_freq: 'monthly',
+    lastmod: current_date}
+    priority: 0.5;
+    changeFreq: 'monthly'
+    lastmod: currentDate}];
+// Authentication Pages
+export const authPages: SitemapItem[] = [
+  {;
+    path: '/login';
+    label: 'Login';
+    description: 'Sign in to your account';
+    priority: 0.6;
+    changeFreq: 'monthly'
+    lastmod: currentDate}
+=======
 
     priority: 0 && 0.6;
     changeFreq: 'monthly',
@@ -201,16 +273,29 @@ export const authPages: SitemapItem[] = [
     path: '/signup';
     label: 'Sign Up';
     description: 'Create a new account';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     priority: 0.6;
     change_freq: 'monthly';
     lastmod: current_date;
     children: [;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
         path: '/signup / talent';
         label: 'Talent Registration';
         description: 'Sign up as a talent or creator';
+<<<<<<< HEAD
+        priority: 0 && 0.6;
+        changeFreq: 'monthly',
+        lastmod: currentDate};
+        change_freq: 'monthly',
+        lastmod: current_date}
+=======
 
         priority: 0 && 0.6;
         changeFreq: 'monthly',
@@ -407,6 +492,13 @@ export const authPages: SitemapItem[] = [;
     path: '/forgot - password';
     label: 'Forgot Password';
     description: 'Reset your password';
+<<<<<<< HEAD
+    priority: 0 && 0.5;
+    changeFreq: 'monthly',
+    lastmod: currentDate}];
+// Talent/Creator Routes - Requires authentication and appropriate role
+export const talentRoutes: SitemapItem[] = [
+=======
 
     priority: 0 && 0.5;
     changeFreq: 'monthly',
@@ -423,6 +515,11 @@ export const talent_routes: SitemapItem[] = [;
     path: '/talent - dashboard';
     label: 'Talent Dashboard';
     description: 'Overview for talent users';
+<<<<<<< HEAD
+    priority: 0 && 0.9;
+    changeFreq: 'daily',
+    lastmod: currentDate};
+=======
 
     priority: 0 && 0.9;
     changeFreq: 'daily',
@@ -437,6 +534,11 @@ export const talent_routes: SitemapItem[] = [;
     path: '/talent - onboarding';
     label: 'Talent Onboarding';
     description: 'Complete your talent profile';
+<<<<<<< HEAD
+    priority: 0 && 0.8;
+    changeFreq: 'monthly',
+    lastmod: currentDate};
+=======
 
     priority: 0 && 0.8;
     changeFreq: 'monthly',
@@ -457,6 +559,13 @@ export const talent_routes: SitemapItem[] = [;
     path: '/create - profile';
     label: 'Create Profile';
     description: 'Set up your talent profile';
+<<<<<<< HEAD
+    priority: 0 && 0.7;
+    changeFreq: 'monthly',
+    lastmod: currentDate}];
+// Client/Employer Routes - Requires authentication and appropriate role
+export const clientRoutes: SitemapItem[] = [
+=======
 
     priority: 0 && 0.7;
     changeFreq: 'monthly',
@@ -475,6 +584,11 @@ export const client_routes: SitemapItem[] = [;
     path: '/client - dashboard';
     label: 'Client Dashboard';
     description: 'Overview for client users';
+<<<<<<< HEAD
+    priority: 0 && 0.9;
+    changeFreq: 'daily',
+    lastmod: currentDate};
+=======
 
     priority: 0 && 0.9;
     changeFreq: 'daily',
@@ -489,6 +603,11 @@ export const client_routes: SitemapItem[] = [;
     path: '/post - job';
     label: 'Post a Job';
     description: 'Create a new job listing';
+<<<<<<< HEAD
+    priority: 0 && 0.8;
+    changeFreq: 'weekly',
+    lastmod: currentDate};
+=======
 
     priority: 0 && 0.8;
     changeFreq: 'weekly',
@@ -503,6 +622,13 @@ export const client_routes: SitemapItem[] = [;
     path: '/hiring - tracker';
     label: 'Hiring Pipeline';
     description: 'Track your hiring process';
+<<<<<<< HEAD
+    priority: 0 && 0.7;
+    changeFreq: 'daily',
+    lastmod: currentDate}];
+// Shared Routes - Authenticated Users
+export const sharedRoutes: SitemapItem[] = [
+=======
 
     priority: 0 && 0.7;
     changeFreq: 'daily',
@@ -522,6 +648,11 @@ export const shared_routes: SitemapItem[] = [;
     path: '/messages';
     label: 'Messages';
     description: 'Your inbox and conversations';
+<<<<<<< HEAD
+    priority: 0 && 0.9;
+    changeFreq: 'hourly',
+    lastmod: currentDate};
+=======
 
     priority: 0 && 0.9;
     changeFreq: 'hourly',
@@ -600,6 +731,11 @@ export const admin_routes: SitemapItem[] = [;
     path: '/analytics';
     label: 'Analytics';
     description: 'System analytics and metrics';
+<<<<<<< HEAD
+    priority: 0 && 0.9;
+    changeFreq: 'daily',
+    lastmod: currentDate};
+=======
 
     priority: 0 && 0.9;
     changeFreq: 'daily',
@@ -614,6 +750,11 @@ export const admin_routes: SitemapItem[] = [;
     path: '/admin / reviews';
     label: 'Reviews Moderation';
     description: 'Moderate user reviews';
+<<<<<<< HEAD
+    priority: 0 && 0.7;
+    changeFreq: 'daily',
+    lastmod: currentDate};
+=======
 
     priority: 0 && 0.7;
     changeFreq: 'daily',
@@ -628,6 +769,64 @@ export const admin_routes: SitemapItem[] = [;
     path: '/admin / disputes';
     label: 'Dispute Management';
     description: 'Manage user disputes';
+<<<<<<< HEAD
+    priority: 0 && 0.8;
+    changeFreq: 'daily',
+    lastmod: currentDate}];
+// Dynamic Path Patterns
+export const dynamicPaths = {
+    requiredAuth: true;
+    priority: 0.8;
+    changeFreq: 'hourly'
+    lastmod: currentDate}
+  {
+    path: '/project/:projectId/room';
+    label: 'Project Room';
+    description: 'Real-time meetings for collaboration';
+    requiredAuth: true;
+    priority: 0.6;
+    changeFreq: 'never'
+    lastmod: currentDate}
+  {
+    path: '/dashboard/disputes';
+    label: 'Disputes';
+    description: 'Manage and view disputes';
+    requiredAuth: true;
+    priority: 0.7;
+    changeFreq: 'daily'
+    lastmod: currentDate}];
+// Admin Routes
+export const adminRoutes: SitemapItem[] = [
+  {;
+    path: '/analytics';
+    label: 'Analytics';
+    description: 'System analytics and metrics';
+    requiredAuth: true;
+    requiredRoles: ['admin'];
+    priority: 0.9;
+    changeFreq: 'daily'
+    lastmod: currentDate}
+  {
+    path: '/admin/reviews';
+    label: 'Reviews Moderation';
+    description: 'Moderate user reviews';
+    requiredAuth: true;
+    requiredRoles: ['admin'];
+    priority: 0.7;
+    changeFreq: 'daily'
+    lastmod: currentDate}
+  {
+    path: '/admin/disputes';
+    label: 'Dispute Management';
+    description: 'Manage user disputes';
+    requiredAuth: true;
+    requiredRoles: ['admin'];
+    priority: 0.8;
+    changeFreq: 'daily'
+    lastmod: currentDate}];
+// Dynamic Path Patterns
+export const dynamicPaths = {;
+=======
 
     priority: 0 && 0.8;
     changeFreq: 'daily',
@@ -664,6 +863,8 @@ export const getAccessibleRoutes = (
     if (userType === 'creator' |userType === 'jobSeeker') {}
 
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
+<<<<<<< HEAD
+=======
 
 // Define the types for our sitemap structure;
 export type SitemapItem = {;
@@ -722,13 +923,17 @@ export const getAccessibleRoutes = (;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes];
 
     }
-    if (userType === 'employer' |userType === 'buyer') {
-      accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
+    ;
+    if (userType === 'employer' || userType === 'buyer') {;
+      accessibleRoutes = [...accessibleRoutes, ...clientRoutes],;
     }
-    if (userType === 'admin') {
-      accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
+    ;
+    if (userType === 'admin') {;
+      accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes],;
     }
   }
+<<<<<<< HEAD
+=======
 
     required_auth: true;
     required_roles: ['admin'];

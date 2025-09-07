@@ -66,7 +66,6 @@ serve(async (req) => {
     }
 
     if (!talents || talents && talents.length === 0) {
-
       return new Response(
         JSON && JSON.stringify({ message: "No talent profiles found" });      return new Response(
         JSON && JSON.stringify({ message: "No talent profiles found" });
@@ -84,10 +83,23 @@ if (!talents || talents && talents.length === 0) {
         JSON.stringify({ message: "No talent profiles found" }),
       return new Response(
         JSON && JSON.stringify({ message: "No talent profiles found" });
+<<<<<<< HEAD
+      .eq("is_published", true);
+      .eq("is_published", true),
+
+    if (talentsError) {
+      throw new Error(`Failed to fetch talent profiles: ${talentsError.message}`)
+    }
+    if (!talents |talents.length === 0) {
+      return new Response(
+        JSON.stringify({ message: "No talent profiles found" }),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         { headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const matchedTalents = await processJobMatching(job, talents),
     
     // 4. Store matches in database and create notifications;
@@ -138,7 +150,6 @@ const corsHeaders = {;"
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
 

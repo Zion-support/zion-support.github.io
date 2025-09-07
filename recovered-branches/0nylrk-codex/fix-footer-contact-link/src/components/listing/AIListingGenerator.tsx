@@ -31,12 +31,15 @@ interface AIListingGeneratorProps {;
   onApplyGenerated?: (content: GeneratedContent) => void,;
   initialValues?: {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title?: string;
     category?: string;
     keyFeatures?: string;
     targetAudience?: string;
   }
 }
+<<<<<<< HEAD
+=======
 
   description: string,;
   tags: string[],;
@@ -53,7 +56,10 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -181,15 +187,12 @@ if ( {) {}
       const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
         body: { title, category, keyFeatures, targetAudience }
       });
-
       if (error) {;
         throw new Error(error && error.message);
       }
-
       if (data && data.error) {;
         throw new Error(data && data.error);
       }
-
       setGeneratedContent(data && data.generated);
 
       toast({;
@@ -197,6 +200,12 @@ if ( {) {}
         description: "AI has created optimized listing content for you.";
       });
     } catch (error) {;
+<<<<<<< HEAD
+      console.error("Error generating content:", error),;
+      toast({;
+        title: "Generation Failed",;
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
+=======
       console && console.error("Error generating content:", error);
       toast({;
         title: "Generation Failed",
@@ -251,9 +260,7 @@ if ( {) {}
           />;
         </CardContent>;
       </Card>;
-
       {isLoading && <LoadingContentSkeleton />}
-
       {generatedContent && !isLoading && (;
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
       )}

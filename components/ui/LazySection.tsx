@@ -161,6 +161,8 @@ export const LazySection: React.FC<LazySectionProps> = ({
         return { opacity: 1, y: 0 }
     }
   };
+<<<<<<< HEAD
+=======
 
   return (
     <motion.div

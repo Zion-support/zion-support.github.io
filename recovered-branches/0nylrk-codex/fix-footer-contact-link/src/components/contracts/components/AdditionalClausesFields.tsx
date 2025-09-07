@@ -6,10 +6,13 @@ import {;
   FormLabel,;
   FormControl,;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   FormField,
   FormItem,
   FormLabel,
   FormControl,
+<<<<<<< HEAD
+=======
 
 import { Checkbox } from "@/components/ui/checkbox";
 
@@ -150,6 +153,16 @@ export function AdditionalClausesFields(): any ({;
                           : field.on_change ("
                               current_values.filter ((value) => value !== "nda"),
 
+<<<<<<< HEAD
+                      checked={field.value?.includes("nda")}
+                      onCheckedChange={(checked) => {
+                        const currentValues = field.value |[];
+                        return checked
+                          ? field.onChange([...currentValues, "nda"])
+                          : field.onChange(
+                              currentValues.filter((value) => value !== "nda")
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       onCheckedChange={(checked) => {;
 
                         const currentValues = field.value || [];
@@ -157,6 +170,8 @@ export function AdditionalClausesFields(): any ({;
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange("
                               currentValues.filter((value) => value !== "nda"),
+<<<<<<< HEAD
+=======
 
                       checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {;
@@ -165,6 +180,23 @@ export function AdditionalClausesFields(): any ({;
                           ? field.onChange([...currentValues, 'nda']);
                           : field.onChange(;'
                               currentValues.filter((value) => value !== 'nda');
+<<<<<<< HEAD
+                            );
+                      }}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>
+                      Confidentiality (NDA)
+                    </FormLabel>
+                    <FormDescription>
+                      Protect sensitive information
+                    </FormDescription>
+                  </div>
+                </FormItem>
+              )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                             );
                       }}
@@ -352,6 +384,27 @@ interface AdditionalClausesFieldsProps {
                           ? field.onChange([...currentValues, 'revisions']);
                           : field.onChange(;'
                               currentValues.filter((value) => value !== 'revisions');
+<<<<<<< HEAD
+                            );
+                      }}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>
+                      Revisions & Amendments
+                    </FormLabel>
+                    <FormDescription>
+                      Define how changes to the contract are handled
+                    </FormDescription>
+                  </div>
+                </FormItem>
+              )}
+            />
+          </div>
+        </FormItem>
+      )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                             );
 
@@ -362,7 +415,31 @@ interface AdditionalClausesFieldsProps {
 
                   <div className="space - y-1 leading-none">;
                     <FormLabel > Revisions & Amendments</FormLabel>;
-
+                </FormItem>;              )}
+            />;
+            ;
+            <FormField;
+              control={form.control}
+              name="additionalClauses";
+              render={({ field }) => (;
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
+                  <FormControl>;
+                    <Checkbox;
+                      checked={field.value?.includes('revisions')}
+                      onCheckedChange={(checked) => {;
+                        const currentValues = field.value || [],;
+                        return checked;
+                          ? field.onChange([...currentValues, 'revisions']);
+                          :field.onChange(;
+                              currentValues.filter((value) => value !== 'revisions');
+                            ),;
+                      }}
+                    />;
+                  </FormControl>;
+                  <div className="space-y-1 leading-none">;
+                    <FormLabel>;
+                      Revisions & Amendments;
+                    </FormLabel>;
                     <FormDescription>;
                       Define how changes to the contract are handled;
                     </FormDescription>;
@@ -374,6 +451,36 @@ interface AdditionalClausesFieldsProps {
                 </FormItem>)}
             />;
           </div>;
+<<<<<<< HEAD
+        </FormItem>;
+      )}
+    />;
+  ),;}
+ import {
+  FormField;
+FormItem;
+FormLabel;
+FormControl;
+FormDescription interface AdditionalClausesFieldsProps {
+  form: UseFormReturn<ContractFormValues> 
+}form 
+}: AdditionalClausesFieldsProps) {
+  return (<FormField control= {
+  form.control 
+}<FormLabel>Additional Clauses</FormLabel> <FormDescription> Select additional clauses to include in your contract </FormDescription> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField control= {
+  form.control 
+}/> </FormControl> <div className="space-y-1 leading-none" > <FormLabel> Confidentiality (NDA) </FormLabel> <FormDescription> Protect sensitive information </FormDescription> </div> </FormItem>) 
+}/> <FormField /> </FormControl> <div className="space-y-1 leading-none" > <FormLabel> Intellectual Property Transfer </FormLabel> <FormDescription> Transfer ownership of work products </FormDescription> </div> </FormItem>) 
+}/> <FormField /> </FormControl> <div className="space-y-1 leading-none" > <FormLabel> Termination Clause </FormLabel> <FormDescription> Define conditions for ending the contract </FormDescription> </div> </FormItem>) 
+}/> <FormField /> </FormControl> <div className="space-y-1 leading-none" > <FormLabel> Revisions & Amendments </FormLabel> <FormDescription> Define how changes to the contract are handled </FormDescription> </div> </FormItem>) 
+}/> </div> </FormItem>) 
+}/>) 
+}
+    />
+    />;
+  );
+}
+=======
         </FormItem>)}
     />);
                             );

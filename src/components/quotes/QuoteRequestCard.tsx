@@ -61,7 +61,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         </div>
         
         <div className="flex justify-between items-center mt-4">
-          <Button
             variant="outline"
             size="sm"
             onClick={() => onViewDetails(quote)}
@@ -72,7 +71,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           </Button>
           
           <div className="flex items-center">
-            {quote.status !== 'responded' && onMarkAsResponded && (
               <Button
                 variant="ghost"
                 size="sm"

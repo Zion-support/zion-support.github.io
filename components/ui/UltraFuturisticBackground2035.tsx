@@ -1,3 +1,63 @@
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface UltraFuturisticBackground2035Props {;
+  children: React && React.ReactNode;
+interface UltraFuturisticBackground2035Props {
+;
+interface UltraFuturisticBackground2035Props {
+  children: React.ReactNode;
+  intensity?: 'low' | 'medium' | 'high';
+  color_scheme?:;
+    | 'quantum - fusion';
+    | 'neon - cyber';
+    | 'holographic - matrix';
+    | 'space - time';  particle_count?: number;interface UltraFuturisticBackground2035Props {
+  children: React.ReactNode,
+  intensity?: 'low' | 'medium' | 'high';
+}) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<any[]>([]);
+  const animationRef = useRef<number | undefined>(undefined);
+  const getColorScheme = () => {
+    switch (colorScheme) {
+      case 'quantum-fusion':
+  color_scheme?: 'quantum - fusion' | 'neon - cyber' | 'holographic - matrix' | 'space - time';
+  particle_count?: number;
+  animation_speed?: number;
+  enable_holographic?: boolean;
+  enableQuantumEffects?: boolean;
+  enableNeonEffects?: boolean;
+  enableSpaceTime?: boolean;
+;
+const UltraFuturisticBackground2035: React.FC<;
+  UltraFuturisticBackground2035Props;
+> = ({
+  intensity = 'medium',
+  color_scheme = 'quantum - fusion',
+  particle_count = 200,
+  animation_speed = 1.0,
+  enable_holographic = true,
+  enableQuantumEffects = true,
+  enableNeonEffects = true,
+  enableSpaceTime = true, }) => {const UltraFuturisticBackground2035: React.FC < UltraFuturisticBackground2035Props> = ({
+  intensity = 'medium';
+  color_scheme = 'quantum - fusion';
+  particle_count = 200;
+  animation_speed = 1.0;
+  enable_holographic = true;
+  enableQuantumEffects = true;
+  enableNeonEffects = true,
+  enableSpaceTime = true;
+  const canvas_ref = useRef < HTMLCanvasElement>(null);
+  const particles_ref = useRef < any[]>([]);
+  const animation_ref = useRef < number | undefined>(undefined);
+;
+  const getColorScheme = () =>: any {
+    switch (color_scheme) {
+      case 'quantum - fusion':;
+        return {
+=======
 
 
 import React, { useEffect, useRef } from 'react';'
@@ -66,6 +126,11 @@ const getColorScheme = () => {;
         return {"primary": '#00ffff',"secondary": '#ff00ff',"accent": '#ffff00',"background": 'rgba(0, 0, 0, 0 && 0.95)',"glow": 'rgba(0, 255, 255, 0 && 0.3)'}}          "background": 'rgba(0, 0, 0, 0 && 0.95)';'
           "glow": 'rgba(0, 255, 255, 0 && 0.3)';'
 
+<<<<<<< HEAD
+  const _getColorScheme = () => {
+    switch (colorScheme) {
+      case 'quantum-fusion':
+=======
         return {
           }
           "primary": '#00ffff','
@@ -161,7 +226,6 @@ const initParticles = () => {
 
     resizeCanvas();'
     window && window.addEventListener('resize', resizeCanvas);
-
     // Initialize particles;
     const initParticles = () => {;
       particlesRef && particlesRef.current = [];
@@ -315,6 +379,7 @@ drawSpaceTimeEffects(ctx, colors);
       animationRef.current = requestAnimationFrame(animate)
 };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     animate();
       animationRef.current = $2;
     animate($2);
@@ -322,6 +387,8 @@ drawSpaceTimeEffects(ctx, colors);
       }
       window.removeEventListener('resize', resizeCanvas);'
       if (animationRef.current) {
+<<<<<<< HEAD
+=======
 
 }
 
@@ -396,6 +463,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.beginPath();
       ctx.moveTo(0, y);
       ctx.lineTo(ctx.canvas.width, y);
+<<<<<<< HEAD
+      ctx.stroke();
+    }
+    for (let y = 0; y < ctx.canvas.height; y += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(ctx.canvas.width, y);
+      ctx.stroke();    }      ctx.stroke()
+=======
 
       ctx.stroke();
     }

@@ -1029,310 +1029,311 @@ export default function ITServices() {;
     { "name": 'Databases', "icon": Database, "description": 'PostgreSQL, MongoDB, Redis' },;
     { "name": 'Networking', "icon": Network, "description": 'Cisco, Fortinet, SD-WAN' }
   ];
-  const benefits = [{;
-      "title": 'Reduced Downtime',;
-      "description": 'Proactive monitoring and maintenance',;
-      "icon": Clock,;
-      "stat": '99 && 99.9%';
-    },;
-    {;
-      "title": 'Cost Savings',;
-      "description": 'Optimized infrastructure and processes',;
-      "icon": Zap,;
-      "stat": '40%';
-    },;
-    {;
-      "title": 'Enhanced Security',;
-      "description": 'Enterprise-grade protection',;
-      "icon": Shield,;
-      "stat": '100%';
-    },;
-    {;
-      "title": 'Scalability',;
-      "description": 'Flexible and scalable solutions',;
-      "icon": TrendingUp,;
-      "stat": 'Unlimited';
+  const benefits = [{
+      "title": 'Reduced Downtime',
+      "description": 'Proactive monitoring and maintenance',
+      "icon": Clock,
+      "stat": '99.9%'
+    },
+    {
+      "title": 'Cost Savings',
+      "description": 'Optimized infrastructure and processes',
+      "icon": Zap,
+      "stat": '40%'
+    },
+    {
+      "title": 'Enhanced Security',
+      "description": 'Enterprise-grade protection',
+      "icon": Shield,
+      "stat": '100%'
+    },
+    {
+      "title": 'Scalability',
+      "description": 'Flexible and scalable solutions',
+      "icon": TrendingUp,
+      "stat": 'Unlimited'
     }
   ];
   const description = 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and 24/7 support.';
-  const itServices = [{;
-      "title": 'Cloud Migration & Management',;
-      "description": 'Complete cloud infrastructure migration and ongoing management services',;
-      "icon": Cloud,;
-      "features": [;
-        'AWS, Azure, and Google Cloud migration',;
-        'Multi-cloud strategy and optimization',;
-        'Cost optimization and resource management',;
-        'Disaster recovery and backup solutions',;
-        'Cloud security and compliance',;
-        '24/7 monitoring and support';
-      ],;
-      "pricing": '$2,500 - $15,000/month',;
-      "delivery": '4-12 weeks',;
-      "category": 'Cloud Services',;
-      "marketPrice": '$4,000 - $25,000/month',;
-      "benefits": 'Reduce infrastructure costs by 40%, improve scalability by 300%';
-    },;
-    {;
-      "title": 'DevOps & CI/CD Pipeline',;
-      "description": 'Automated development and deployment pipelines for faster, reliable releases',;
-      "icon": Settings,;
-      "features": ['Docker containerization and orchestration',;
-        'Kubernetes cluster management',;
-        'Automated testing and deployment',;
-        'Infrastructure as Code (IaC)',;
-        'Monitoring and logging solutions',;
-        'Security scanning and compliance';
-      ],;
-      "pricing": '$3,000 - $20,000/month',;
-      "delivery": '6-16 weeks',;
-      "category": 'DevOps',;
-      "marketPrice": '$5,000 - $35,000/month',;
-      "benefits": 'Deploy 10x faster, reduce deployment failures by 90%';
-    },;
-    {;
-      "title": 'Cybersecurity Solutions',;
-      "description": 'Comprehensive security services to protect your digital assets and data',;
-      "icon": Shield,;
-      "features": ['Security assessment and penetration testing',;
-        'Firewall and network security configuration',;
-        'Endpoint protection and antivirus management',;
-        'Security monitoring and incident response',;
-        'Compliance auditing (SOC 2, GDPR, HIPAA)',;
-        'Employee security training and awareness';
-      ],;
-      "pricing": '$2,000 - $12,000/month',;
-      "delivery": '2-8 weeks',;
-      "category": 'Cybersecurity',;
-      "marketPrice": '$3,500 - $20,000/month',;
-      "benefits": 'Prevent 99 && 99.9% of security breaches, ensure compliance';
-    },;
-    {;
-      "title": 'Network Infrastructure Design',;
-      "description": 'Enterprise-grade network design, implementation, and optimization',;
-      "icon": Network,;
-      "features": ['Network architecture design and planning',;
-        'Wireless network deployment and optimization',;
-        'VPN and remote access solutions',;
-        'Load balancing and traffic management',;
-        'Network monitoring and performance tuning',;
-        'Disaster recovery and redundancy planning';
-      ],;
-      "pricing": '$1,500 - $10,000/month',;
-      "delivery": '3-10 weeks',;
-      "category": 'Networking',;
-      "marketPrice": '$2,500 - $15,000/month',;
-      "benefits": 'Improve network performance by 200%, reduce downtime by 95%';
-    },;
-    {;
-      "title": 'Database Management & Optimization',;
-      "description": 'Database design, optimization, and management for peak performance',;
-      "icon": Database,;
-      "features": ['Database design and architecture',;
-        'Performance tuning and optimization',;
-        'Backup and recovery strategies',;
-        'Database migration and upgrades',;
-        'Monitoring and maintenance',;
-        'Security and access control';
-      ],;
-      "pricing": '$1,000 - $8,000/month',;
-      "delivery": '2-6 weeks',;
-      "category": 'Database',;
-      "marketPrice": '$1,800 - $12,000/month',;
-      "benefits": 'Improve query performance by 500%, ensure 99 && 99.9% uptime';
-    },;
-    {;
-      "title": 'IT Support & Help Desk',;
-      "description": '24/7 technical support and help desk services for your organization',;
-      "icon": MessageSquare,;
-      "features": ['24/7 technical support and troubleshooting',;
-        'Remote desktop support and assistance',;
-        'Software installation and updates',;
-        'Hardware maintenance and repairs',;
-        'User training and documentation',;
-        'IT asset management and tracking';
-      ],;
-      "pricing": '$500 - $3,000/month',;
-      "delivery": '1-2 weeks',;
-      "category": 'Support',;
-      "marketPrice": '$800 - $5,000/month',;
-      "benefits": 'Reduce IT issues by 80%, improve user satisfaction by 90%';
-    },;
-    {;
-      "title": 'Server Management & Maintenance',;
-      "description": 'Comprehensive server administration, monitoring, and maintenance services',;
-      "icon": Server,;
-      "features": ['Server installation and configuration',;
-        'Operating system updates and patches',;
-        'Performance monitoring and optimization',;
-        'Backup and disaster recovery',;
-        'Security hardening and compliance',;
-        'Capacity planning and scaling';
-      ],;
-      "pricing": '$800 - $5,000/month',;
-      "delivery": '2-4 weeks',;
-      "category": 'Server Management',;
-      "marketPrice": '$1,200 - $8,000/month',;
-      "benefits": 'Ensure 99 && 99.9% server uptime, reduce maintenance costs by 60%';
-    },;
-    {;
-      "title": 'IT Consulting & Strategy',;
-      "description": 'Strategic IT planning and technology consulting for business growth',;
-      "icon": Target,;
-      "features": ['IT strategy development and planning',;
-        'Technology roadmap creation',;
-        'Vendor evaluation and selection',;
-        'Budget planning and cost optimization',;
-        'Digital transformation consulting',;
-        'Technology risk assessment';
-      ],;
-      "pricing": '$150 - $500/hour',;
-      "delivery": '1-4 weeks',;
-      "category": 'Consulting',;
-      "marketPrice": '$200 - $800/hour',;
-      "benefits": 'Align IT with business goals, optimize technology investments';
-    },;
-    {;
-      "title": 'Backup & Disaster Recovery',;
-      "description": 'Comprehensive backup solutions and disaster recovery planning',;
-      "icon": HardDrive,;
-      "features": ['Automated backup systems and scheduling',;
-        'Off-site and cloud backup storage',;
-        'Disaster recovery planning and testing',;
-        'Business continuity planning',;
-        'Data restoration and recovery services',;
-        'Compliance and audit support';
-      ],;
-      "pricing": '$300 - $2,000/month',;
-      "delivery": '1-3 weeks',;
-      "category": 'Backup & Recovery',;
-      "marketPrice": '$500 - $3,500/month',;
-      "benefits": 'Ensure 99 && 99.9% data recovery, minimize business disruption';
-    },;
-    {;
-      "title": 'Email & Communication Systems',;
-      "description": 'Email server setup, migration, and communication platform management',;
-      "icon": Mail,;
-      "features": ['Email server installation and configuration',;
-        'Email migration and data transfer',;
-        'Spam filtering and security',;
-        'Mobile device synchronization',;
-        'Collaboration tools integration',;
-        'Email archiving and compliance';
-      ],;
-      "pricing": '$200 - $1,500/month',;
-      "delivery": '1-2 weeks',;
-      "category": 'Communication',;
-      "marketPrice": '$350 - $2,500/month',;
-      "benefits": 'Improve email reliability by 99%, enhance collaboration';
-    },;
-    {;
-      "title": 'IT Security Auditing',;
-      "description": 'Comprehensive security assessments and compliance auditing services',;
-      "icon": Shield,;
-      "features": ['Vulnerability assessments and penetration testing',;
-        'Security policy development and implementation',;
-        'Compliance auditing (SOC 2, GDPR, HIPAA)',;
-        'Security training and awareness programs',;
-        'Incident response planning',;
-        'Ongoing security monitoring and reporting';
-      ],;
-      "pricing": '$2,000 - $15,000/project',;
-      "delivery": '2-8 weeks',;
-      "category": 'Security Auditing',;
-      "marketPrice": '$3,500 - $25,000/project',;
-      "benefits": 'Identify and fix security vulnerabilities, ensure compliance';
-    },;
-    {;
-      "title": 'IT Infrastructure Monitoring',;
-      "description": '24/7 monitoring and alerting for all IT infrastructure components',;
-      "icon": Monitor,;
-      "features": ['Real-time system and network monitoring',;
-        'Performance metrics and reporting',;
-        'Automated alerting and escalation',;
-        'Capacity planning and forecasting',;
-        'Root cause analysis and troubleshooting',;
-        'Custom dashboard and reporting';
-      ],;
-      "pricing": '$500 - $3,000/month',;
-      "delivery": '1-2 weeks',;
-      "category": 'Monitoring',;
-      "marketPrice": '$800 - $5,000/month',;
-      "benefits": 'Prevent 95% of IT issues, reduce downtime by 90%';
+  const itServices = [{
+      "title": 'Cloud Migration & Management',
+      "description": 'Complete cloud infrastructure migration and ongoing management services',
+      "icon": Cloud,
+      "features": [
+        'AWS, Azure, and Google Cloud migration',
+        'Multi-cloud strategy and optimization',
+        'Cost optimization and resource management',
+        'Disaster recovery and backup solutions',
+        'Cloud security and compliance',
+        '24/7 monitoring and support'
+      ],
+      "pricing": '$2,500 - $15,000/month',
+      "delivery": '4-12 weeks',
+      "category": 'Cloud Services',
+      "marketPrice": '$4,000 - $25,000/month',
+      "benefits": 'Reduce infrastructure costs by 40%, improve scalability by 300%'
+    },
+    {
+      "title": 'DevOps & CI/CD Pipeline',
+      "description": 'Automated development and deployment pipelines for faster, reliable releases',
+      "icon": Settings,
+      "features": ['Docker containerization and orchestration',
+        'Kubernetes cluster management',
+        'Automated testing and deployment',
+        'Infrastructure as Code (IaC)',
+        'Monitoring and logging solutions',
+        'Security scanning and compliance'
+      ],
+      "pricing": '$3,000 - $20,000/month',
+      "delivery": '6-16 weeks',
+      "category": 'DevOps',
+      "marketPrice": '$5,000 - $35,000/month',
+      "benefits": 'Deploy 10x faster, reduce deployment failures by 90%'
+    },
+    {
+      "title": 'Cybersecurity Solutions',
+      "description": 'Comprehensive security services to protect your digital assets and data',
+      "icon": Shield,
+      "features": ['Security assessment and penetration testing',
+        'Firewall and network security configuration',
+        'Endpoint protection and antivirus management',
+        'Security monitoring and incident response',
+        'Compliance auditing (SOC 2, GDPR, HIPAA)',
+        'Employee security training and awareness'
+      ],
+      "pricing": '$2,000 - $12,000/month',
+      "delivery": '2-8 weeks',
+      "category": 'Cybersecurity',
+      "marketPrice": '$3,500 - $20,000/month',
+      "benefits": 'Prevent 99.9% of security breaches, ensure compliance'
+    },
+    {
+      "title": 'Network Infrastructure Design',
+      "description": 'Enterprise-grade network design, implementation, and optimization',
+      "icon": Network,
+      "features": ['Network architecture design and planning',
+        'Wireless network deployment and optimization',
+        'VPN and remote access solutions',
+        'Load balancing and traffic management',
+        'Network monitoring and performance tuning',
+        'Disaster recovery and redundancy planning'
+      ],
+      "pricing": '$1,500 - $10,000/month',
+      "delivery": '3-10 weeks',
+      "category": 'Networking',
+      "marketPrice": '$2,500 - $15,000/month',
+      "benefits": 'Improve network performance by 200%, reduce downtime by 95%'
+    },
+    {
+      "title": 'Database Management & Optimization',
+      "description": 'Database design, optimization, and management for peak performance',
+      "icon": Database,
+      "features": ['Database design and architecture',
+        'Performance tuning and optimization',
+        'Backup and recovery strategies',
+        'Database migration and upgrades',
+        'Monitoring and maintenance',
+        'Security and access control'
+      ],
+      "pricing": '$1,000 - $8,000/month',
+      "delivery": '2-6 weeks',
+      "category": 'Database',
+      "marketPrice": '$1,800 - $12,000/month',
+      "benefits": 'Improve query performance by 500%, ensure 99.9% uptime'
+    },
+    {
+      "title": 'IT Support & Help Desk',
+      "description": '24/7 technical support and help desk services for your organization',
+      "icon": MessageSquare,
+      "features": ['24/7 technical support and troubleshooting',
+        'Remote desktop support and assistance',
+        'Software installation and updates',
+        'Hardware maintenance and repairs',
+        'User training and documentation',
+        'IT asset management and tracking'
+      ],
+      "pricing": '$500 - $3,000/month',
+      "delivery": '1-2 weeks',
+      "category": 'Support',
+      "marketPrice": '$800 - $5,000/month',
+      "benefits": 'Reduce IT issues by 80%, improve user satisfaction by 90%'
+    },
+    {
+      "title": 'Server Management & Maintenance',
+      "description": 'Comprehensive server administration, monitoring, and maintenance services',
+      "icon": Server,
+      "features": ['Server installation and configuration',
+        'Operating system updates and patches',
+        'Performance monitoring and optimization',
+        'Backup and disaster recovery',
+        'Security hardening and compliance',
+        'Capacity planning and scaling'
+      ],
+      "pricing": '$800 - $5,000/month',
+      "delivery": '2-4 weeks',
+      "category": 'Server Management',
+      "marketPrice": '$1,200 - $8,000/month',
+      "benefits": 'Ensure 99.9% server uptime, reduce maintenance costs by 60%'
+    },
+    {
+      "title": 'IT Consulting & Strategy',
+      "description": 'Strategic IT planning and technology consulting for business growth',
+      "icon": Target,
+      "features": ['IT strategy development and planning',
+        'Technology roadmap creation',
+        'Vendor evaluation and selection',
+        'Budget planning and cost optimization',
+        'Digital transformation consulting',
+        'Technology risk assessment'
+      ],
+      "pricing": '$150 - $500/hour',
+      "delivery": '1-4 weeks',
+      "category": 'Consulting',
+      "marketPrice": '$200 - $800/hour',
+      "benefits": 'Align IT with business goals, optimize technology investments'
+    },
+    {
+      "title": 'Backup & Disaster Recovery',
+      "description": 'Comprehensive backup solutions and disaster recovery planning',
+      "icon": HardDrive,
+      "features": ['Automated backup systems and scheduling',
+        'Off-site and cloud backup storage',
+        'Disaster recovery planning and testing',
+        'Business continuity planning',
+        'Data restoration and recovery services',
+        'Compliance and audit support'
+      ],
+      "pricing": '$300 - $2,000/month',
+      "delivery": '1-3 weeks',
+      "category": 'Backup & Recovery',
+      "marketPrice": '$500 - $3,500/month',
+      "benefits": 'Ensure 99.9% data recovery, minimize business disruption'
+    },
+    {
+      "title": 'Email & Communication Systems',
+      "description": 'Email server setup, migration, and communication platform management',
+      "icon": Mail,
+      "features": ['Email server installation and configuration',
+        'Email migration and data transfer',
+        'Spam filtering and security',
+        'Mobile device synchronization',
+        'Collaboration tools integration',
+        'Email archiving and compliance'
+      ],
+      "pricing": '$200 - $1,500/month',
+      "delivery": '1-2 weeks',
+      "category": 'Communication',
+      "marketPrice": '$350 - $2,500/month',
+      "benefits": 'Improve email reliability by 99%, enhance collaboration'
+    },
+    {
+      "title": 'IT Security Auditing',
+      "description": 'Comprehensive security assessments and compliance auditing services',
+      "icon": Shield,
+      "features": ['Vulnerability assessments and penetration testing',
+        'Security policy development and implementation',
+        'Compliance auditing (SOC 2, GDPR, HIPAA)',
+        'Security training and awareness programs',
+        'Incident response planning',
+        'Ongoing security monitoring and reporting'
+      ],
+      "pricing": '$2,000 - $15,000/project',
+      "delivery": '2-8 weeks',
+      "category": 'Security Auditing',
+      "marketPrice": '$3,500 - $25,000/project',
+      "benefits": 'Identify and fix security vulnerabilities, ensure compliance'
+    },
+    {
+      "title": 'IT Infrastructure Monitoring',
+      "description": '24/7 monitoring and alerting for all IT infrastructure components',
+      "icon": Monitor,
+      "features": ['Real-time system and network monitoring',
+        'Performance metrics and reporting',
+        'Automated alerting and escalation',
+        'Capacity planning and forecasting',
+        'Root cause analysis and troubleshooting',
+        'Custom dashboard and reporting'
+      ],
+      "pricing": '$500 - $3,000/month',
+      "delivery": '1-2 weeks',
+      "category": 'Monitoring',
+      "marketPrice": '$800 - $5,000/month',
+      "benefits": 'Prevent 95% of IT issues, reduce downtime by 90%'
     }
   ];
-  const categories = [...new Set(itServices && itServices.map(service => service && service.category))];
-  const categories = [...new Set(itServices && itServices.map(service => service && service.category))];
+  const categories = [...new Set(itServices.map(service => service.category))];
+  const categories = [...new Set(itServices.map(service => service.category))];
   const title = "IT Services - Zion Tech Group";
   const description = "Comprehensive IT services including AI-powered operations, cloud solutions, cybersecurity, and digital transformation.";
   return (
-    <>;
-      <Head>;
-        <title>IT Services - Zion Tech Group</title>;
-        <meta name="description" content={description} />;
-        <link rel="canonical" href=""https": //ziontechgroup && ziontechgroup.com/it-services" />;
-        <meta property="og:title" content={title} />;
-        <meta property=""og": description" content={description} />;
-        <meta property=""og": url" content="https://ziontechgroup && ziontechgroup.com/it-services" />;
-        <meta property="og:type" content="website" />;
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={title} />;
-        <meta name=""twitter": description" content={description} />;
-      </Head>;
-      <Navigation />;
-      <main className="min-h-screen">;
-        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">;
-          <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
-            <div className="text-center">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-                IT Services;
-              </h1>;
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">;
-                Comprehensive IT solutions to transform your business infrastructure and operations;
-              </p>;
-            </div>;
-          </div>;
-        </section>;
-        <section className="py-20 bg-gray-50">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center mb-16">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                Our IT Services;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-                We provide end-to-end IT services to help your business thrive in the digital age;
-              </p>;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {itServices && itServices.map((service, index) => (;
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 "hover": shadow-xl transition-shadow duration-300">;
-                  <div className="flex items-center mb-4">;
-                    <service && service.icon className="h-8 w-8 text-blue-600 mr-3" />;
-                    <h3 className="text-xl font-bold text-gray-900">{service && service.title}</h3>;
-                  </div>;
-                  <p className="text-gray-600 mb-4">{service && service.description}</p>;
-                  <div className="space-y-2">;
-                    {service && service.features.map((feature, featureIndex) => (;
-                      <div key={featureIndex} className="flex items-center">;
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />;
-                        <span className="text-sm text-gray-600">{feature}</span>;
-                      </div>;
+    <>
+      <Head>
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href=""https": //ziontechgroup.com/it-services" />
+        <meta property="og:title" content={title} />
+        <meta property=""og": description" content={description} />
+        <meta property=""og": url" content="https://ziontechgroup.com/it-services" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name=""twitter": description" content={description} />
+      </Head>
+      <Navigation />
+      <main className="min-h-screen">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                IT Services
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Comprehensive IT solutions to transform your business infrastructure and operations
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Our IT Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We provide end-to-end IT services to help your business thrive in the digital age
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {itServices.map((service, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 "hover": shadow-xl transition-shadow duration-300">
+                  <div className="flex items-center mb-4">
+                    <service.icon className="h-8 w-8 text-blue-600 mr-3" />
+                    <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        <span className="text-sm text-gray-600">{feature}</span>
+                      </div>
                     ))}
-                  </div>;
-                  <div className="mt-4 pt-4 border-t border-gray-200">;
-                    <div className="flex justify-between items-center">;
-                      <span className="text-sm font-semibold text-gray-900">{service && service.pricing}</span>;
-                      <span className="text-sm text-gray-600">{service && service.delivery}</span>;
-                    </div>;
-                    <div className="bg-green-50 p-3 rounded-lg mb-4">;
-                      <p className="text-sm text-green-800 font-medium">{service && service.benefits}</p>;
-                    </div>;
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-semibold text-gray-900">{service.pricing}</span>
+                      <span className="text-sm text-gray-600">{service.delivery}</span>
+                    </div>
+                    <div className="bg-green-50 p-3 rounded-lg mb-4">
+                      <p className="text-sm text-green-800 font-medium">{service.benefits}</p>
+                    </div>
                     <Link
                       href="/contact"
-                      className="w-full bg-blue-600 "hover": bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold text-center block transition-colors">;
-                      Get Started;
-                    </Link>;
-                  </div>;
-                </div>;
+                      className="w-full bg-blue-600 "hover": bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold text-center block transition-colors"
+                    >
+                      Get Started
+                    </Link>
+                  </div>
+                </div>
               ))}
 >>>>>>> origin/chore/fix-lint-and-merge

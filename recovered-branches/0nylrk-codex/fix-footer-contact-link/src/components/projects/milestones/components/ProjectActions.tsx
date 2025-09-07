@@ -12,11 +12,14 @@ import { ShieldAlert } from "lucide-react";
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Button} from '@/components/ui/button';
 
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";'
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+<<<<<<< HEAD
+=======
 
 import React from 'react',
 import { Button } from '@/components/ui/button',
@@ -87,7 +90,10 @@ export function ProjectActions({
           projectId={projectId}
           variant="outline"
         />
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
@@ -103,6 +109,7 @@ interface ProjectActionsProps {;
 }
 ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="flex gap-2">;
       {isUnderDispute && disputeId ? (;
         <Button variant="outline" asChild>;

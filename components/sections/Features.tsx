@@ -2,6 +2,7 @@ import Card from '../ui/Card';'
 
 import { Zap } from 'lucide-react';'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import Card from '../ui/Card';'
 import { Zap } from 'lucide-react';
@@ -19,13 +20,11 @@ class ErrorBoundary extends React.Component {
     this.state = { "hasError": false
 };
   }
-  
   static getDerivedStateFromError(error) {
 }
 return { "hasError": true,;
 };
   }
-  
   componentDidCatch(error, errorInfo) {
     }
     console.error('Error caught by "boundary":', error, errorInfo);'

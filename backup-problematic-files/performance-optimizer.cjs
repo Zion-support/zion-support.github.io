@@ -151,7 +151,6 @@ function optimizePerformance() {
       if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
         const filePath = path.join(pagesDir, file);
         const content = fs.readFileSync(filePath, 'utf8');
-        
         // Check for large components
         const lines = content.split('\n').length;
         if (lines > 200) {
@@ -162,7 +161,6 @@ function optimizePerformance() {
             message: `Component has ${lines} lines, consider splitting`
           });
         }
-        
         // Check for missing React.memo
         if (content.includes('export default function') && !content.includes('React.memo')) {
           optimizations.push({
@@ -171,7 +169,6 @@ function optimizePerformance() {
             message: 'Consider using React.memo for performance'
           });
         }
-        
         // Check for missing useMemo/useCallback
         if (content.includes('useState') && !content.includes('useMemo') && !content.includes('useCallback')) {
           optimizations.push({
@@ -183,7 +180,6 @@ function optimizePerformance() {
       }
     });
   }
-  
   // Generate performance report
 =======
 

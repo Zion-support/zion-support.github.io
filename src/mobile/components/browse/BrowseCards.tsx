@@ -1,21 +1,22 @@
 
-import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+
+import React, { useState } from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
 interface BrowseItem {
   id: string,
   title: string,
   subtitle: string,
   description: string,
-  location?: string;
+  location?: string,
   badges: string[],
-  price?: string;
-  image?: string;
-  match?: number;
+  price?: string,
+  image?: string,
+  match?: number,
   timePosted?: string
 }
 
@@ -120,7 +121,11 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
               <Button 
                 size="sm"
                 onClick={() => onViewDetails(item.id)}
-                className="gap-1"
+                className='gap-1'              >
+                View Details <ChevronRight className='h-4 w-4' />              </Button>
+                View Details <ChevronRight className="h-4 w-4" />
+ursor/fix-website-loading-errors-and-merge-6662
+                onClick={() => onViewDetails(item.id)}
               >
                 View Details <ChevronRight className="h-4 w-4" />
               </Button>

@@ -64,6 +64,8 @@ const defaultValues: AppMetadataValues = {"
     setIsSaving(true)
     try {
       // This would be implemented with actual API calls in production
+<<<<<<< HEAD
+=======
 
   const handleSaveMetadata = async (data: AppMetadataValues) => {}
     setIsSaving(true)
@@ -132,6 +134,7 @@ export const MetadataManager: React.FC = () => {";
       // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 1000)),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast.success(`${currentPlatform === "ios" ? "iOS" : "Android"} metadata saved successfully!`)
     } catch (error) {"
       toast.error("Failed to save metadata"),
@@ -139,9 +142,18 @@ export const MetadataManager: React.FC = () => {";
     } finally {}
       setIsSaving(false)
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
+<<<<<<< HEAD
+  }
+  },
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="bg-zion-blue-dark rounded-lg p-6">
 
@@ -217,7 +229,10 @@ import { Button } from "@/components/ui/button",;
 import { toast } from "sonner",;
 
 export type AppPlatform = "ios" | "android",;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type AppMetadataValues = {;
   appTitle: string,;
   shortDescription: string,;

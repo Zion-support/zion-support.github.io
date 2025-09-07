@@ -280,6 +280,28 @@ import { Toaster as SonnerToaster } from "./components/ui/sonner",
   EnterpriseRoutes,
   CommunityRoutes,
 
+<<<<<<< HEAD
+  DeveloperRoutes,;
+} from "./routes";
+const Home = React.lazy(() => import("./pages/Home"));
+const AIMatcherPage = React.lazy(() => import("./pages/AIMatcher"));
+const TalentDirectory = React.lazy(() => import("./pages/TalentDirectory"));
+const TalentsPage = React.lazy(() => import("./pages/TalentsPage"));
+const ServicesPage = React.lazy(() => import("./pages/ServicesPage"));
+const EquipmentPage = React.lazy(() => import("./pages/EquipmentPage"));
+const Analytics = React.lazy(() => import("./pages/Analytics"));
+const MobileLaunchPage = React.lazy(() => import("./pages/MobileLaunchPage"));
+const CommunityPage = React.lazy(() => import("./pages/CommunityPage"));
+const Categories = React.lazy(() => import("./pages/Categories"));
+const Login = React.lazy(() => import("./pages/Login"));
+const Signup = React.lazy(() => import("./pages/Signup"));
+const ITOnsiteServicesPage = React.lazy(
+  () => import("./pages/ITOnsiteServicesPage"),
+);
+const OpenAppRedirect = React.lazy(() => import("./pages/OpenAppRedirect"));
+const ContactPage = React.lazy(() => import("./pages/Contact"));
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   DeveloperRoutes
 
 } from './routes',
@@ -298,6 +320,8 @@ const Signup = React.lazy(() => import('./pages/Signup')),
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
+<<<<<<< HEAD
+=======
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -330,6 +354,10 @@ const App = () => {}
         <SonnerToaster position="top-right" />
       </ThemeProvider>
     </WhitelabelProvider>
+<<<<<<< HEAD
+  );
+}
+export default App;
 
 export default App,
 import React, { Suspense } from 'react',;

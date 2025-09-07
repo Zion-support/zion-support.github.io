@@ -213,6 +213,7 @@ export function TalentRegistrationForm() {
     }
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -238,6 +239,7 @@ export function TalentRegistrationForm() {
     }
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
     if (skillTags.length === 0) {
@@ -323,7 +325,6 @@ export function TalentRegistrationForm() {
       }, 1500);
 
       // Here would be the actual code to save the profile to Supabase
-      /*
       const { error } = await supabase
         .from('talent_profiles')
         .insert({
@@ -482,9 +483,14 @@ export function TalentRegistrationForm() {
                         </div>
                       )}
                     </div>
+<<<<<<< HEAD
+                    <label className='flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors'>
+                      <Upload className='mr-2 h-4 w-4' />
+=======
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <span>Upload Photo</span>
                       <input
                         type="file"
@@ -536,6 +542,7 @@ export function TalentRegistrationForm() {
                         <FormLabel className="text-white flex items-center">
                           <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
                           AI Profile Enhancement
+                        </FormLabel>
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your profile for better visibility and engagement
@@ -625,6 +632,7 @@ export function TalentRegistrationForm() {
 
               <Separator className="bg-zion-blue-light/50" />
 
+<<<<<<< HEAD
               {/* Skills and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Skills Section */}
@@ -765,7 +773,6 @@ export function TalentRegistrationForm() {
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Profile"}
                 </Button>
-              </div>
             </CardFooter>
           </form>
         </Form>

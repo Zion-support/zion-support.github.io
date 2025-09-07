@@ -97,10 +97,40 @@ export interface HireRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   initialJobTitle?: string;
   userDetails?: {;
     name?: string;
     email?: string;
+<<<<<<< HEAD
+export interface HireRequestFormProps {
+  talent: TalentProfile,
+  onClose: () => void,;
+  initialJobTitle?: string;
+import React from "react",
+import { useHireRequestForm, FormValues } from "./useHireRequestForm",
+import { Button } from "@/components/ui/button",
+import { DialogFooter } from "@/components/ui/dialog",
+import { Form } from "@/components/ui/form",
+import { Loader2 } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
+import { PersonalInfoFields } from "./PersonalInfoFields",
+import { ProjectDetailsField } from "./ProjectDetailsField",
+import { TimelineField } from "./TimelineField";
+import { BudgetFields } from "./BudgetFields";
+export interface HireRequestFormProps {
+
+  talent: TalentProfile
+  onClose: () => void
+
+  initialJobTitle?: string;
+import { TimelineField } from "./TimelineField",
+import { BudgetFields } from "./BudgetFields",
+export interface HireRequestFormProps {
+  talent: TalentProfile,
+  onClose: () => void,
+  initialJobTitle?: string,
+=======
 
 "
 import React from "react",""
@@ -127,6 +157,7 @@ import { BudgetFields } from "./BudgetFields","
   onClose: () => void,
   initialJobTitle?: string,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   userDetails?: {
     name?: string,
     email?: string,
@@ -196,10 +227,14 @@ import { BudgetFields } from "./BudgetFields",;"
   initialJobTitle?: string,;
     name?: string,;
     email?: string,;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id?: string;
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {;
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ ;
     talent, ;
@@ -236,6 +271,7 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
 
             )}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </Button>;
         </DialogFooter>;
       </form>;

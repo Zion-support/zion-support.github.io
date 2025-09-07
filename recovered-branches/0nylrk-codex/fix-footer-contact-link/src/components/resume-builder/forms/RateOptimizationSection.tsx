@@ -3,6 +3,15 @@ import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessag
 import {Input} from "@/components/ui/input";
 import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
 import {Card, CardContent} from "@/components/ui/card";
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Control } from "react-hook-form",
+
+import React, { useState } from "react",
+import { Control } from "react-hook-form",
+import React, { useState } from "react",
+import { Control } from "react-hook-form",
+=======
 
 "
 import React, { useState } from "react","
@@ -45,6 +54,8 @@ import { Card, CardContent } from "@/components/ui/card";
 =======
   FormDescription;
 
+<<<<<<< HEAD
+=======
 import {Control} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -66,6 +77,22 @@ interface RateOptimizationSectionProps {
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
+<<<<<<< HEAD
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
+import { Card, CardContent } from "@/components/ui/card";
+interface RateOptimizationSectionProps {
+
+  control: Control<any>
+  setValue: (name: string, value: any) => void
+  skills: string[]
+  yearsExperience: number
+
+  location?: string;
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
+import { Card, CardContent } from "@/components/ui/card",
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface RateOptimizationSectionProps {
 
   control: Control<any>,
@@ -92,6 +119,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   yearsExperience,
   location,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   rateType
 }) => {
 
@@ -105,6 +133,12 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
   },
 
+<<<<<<< HEAD
+  }
+  },
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <div className="space-y-4">
@@ -116,6 +150,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
             <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>
             <FormControl>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",;
 
 import { Control } from "react-hook-form",;
@@ -150,13 +185,18 @@ interface RateOptimizationSectionProps {}
   control;
   set_value;
   skills;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   location,;
   rateType;
 }) => {;
 
     setValue("hourlyRate", rate);
   };
+<<<<<<< HEAD
+=======
 
   return (
 
@@ -197,6 +237,9 @@ interface RateOptimizationSectionProps {}
                 type="number";
                 min="1";
                 step="0.01";
+<<<<<<< HEAD
+                placeholder={rateType === "hourly" ? "e.g. 45" :"e.g. 1000"}
+=======
 
 "
                 placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}
@@ -222,6 +265,12 @@ interface RateOptimizationSectionProps {}
         </CardContent>;
       </Card>;
     </div>;
+<<<<<<< HEAD
+
+
+
+};
+=======
   );
 
 };

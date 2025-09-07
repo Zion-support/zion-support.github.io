@@ -56,6 +56,33 @@ const categories = [;
     link: "/services",
     color: "from - purple - 500 to - indigo - 600"},
 
+<<<<<<< HEAD
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+const categories = [
+  {
+    title: "Services"
+    description: "On-demand IT support, consulting, development, and more";
+    icon: <Briefcase className="w-10 h-10" />
+    link: "/services"
+    color: "from-purple-500 to-indigo-600"}
+  {
+    title: "Talents"
+    description: "Connect with AI experts, developers, and tech specialists";
+    icon: <Users className="w-10 h-10" />
+    link: "/talent"
+    color: "from-cyan-500 to-blue-600"}
+  {
+    title: "Equipment"
+    description: "Rent or buy specialized hardware, servers, and devices";
+    icon: <HardDrive className="w-10 h-10" />
+    link: "/equipment"
+    color: "from-amber-500 to-orange-600"}
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+=======
   {
     title: "Talents"
 
@@ -71,6 +98,7 @@ import {GradientHeading} from "./GradientHeading";
 import {Link} from "react-router-dom";
 import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const categories = [
   {
     title: "Services",
@@ -147,15 +175,87 @@ import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;"
 =======
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
 
+  {
+    title: "Talents"
+    description: "Connect with AI experts, developers, and tech specialists";
+    icon: <Users className="w - 10 h - 10" />,
+    link: "/talent",
+    color: "from - cyan - 500 to - blue - 600"},
+  {
+    title: "Equipment"
+    description: "Rent or buy specialized hardware, servers, and devices";
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const categories = [;
 
     color: "from-emerald-500 to-green-600"}],;
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
 const specialServices = [;
   {;"
     title: "IT Onsite Services","
     link: "/it-onsite-services";
+<<<<<<< HEAD
+  }
+];
+interface CategoriesSectionProps {;
+  showTitle?: boolean;
+}
+export function CategoriesSection(): any ({ showTitle = true }: CategoriesSectionProps) {;
+  return (
+
+
+}
+
+
+import { GradientHeading } from "./GradientHeading",;
+import { Link } from "react-router-dom",;
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
+;
+const categories = [;
+  {;
+    title:"Services",;
+    description:"On-demand IT support, consulting, development, and more",;
+    icon:<Briefcase className="w-10 h-10" />,;
+    link:"/services",;
+    color:"from-purple-500 to-indigo-600"},;
+  {;
+    title:"Talents",;
+    description:"Connect with AI experts, developers, and tech specialists",;
+    icon:<Users className="w-10 h-10" />,;
+    link:"/talent",;
+    color:"from-cyan-500 to-blue-600"},;
+  {;
+    title:"Equipment",;
+    description:"Rent or buy specialized hardware, servers, and devices",;
+    icon:<HardDrive className="w-10 h-10" />,;
+    link:"/equipment",;
+    color:"from-amber-500 to-orange-600"},;
+  {;
+    title:"Innovation",;
+    description:"Discover cutting-edge solutions and tech breakthroughs",;
+    icon:<Lightbulb className="w-10 h-10" />,;
+    link:"/category/innovation",;
+    color:"from-emerald-500 to-green-600"}],;
+;
+const specialServices = [;
+  {;
+    title:"IT Onsite Services",;
+    link:"/it-onsite-services";
+  }
+],;
+;
+interface CategoriesSectionProps {;
+  showTitle?:boolean,;
+}
+;
+export function CategoriesSection({ showTitle = true } CategoriesSectionProps) {;
+  return (;
+=======
 
   }
 ];
@@ -174,6 +274,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </p>;
           </div>;
         )}
+<<<<<<< HEAD
+=======
 
           <div className="flex flex-wrap justify-center gap-4">;
             {specialServices && specialServices.map((service) => (;
@@ -372,6 +474,55 @@ pr-12325
         </div>;
       </div>;
 
+<<<<<<< HEAD
+
+;
+    </section>;
+  );}
+ const categories = [ {
+  title: "Services";
+description: "On-demand IT support, consulting, development, and more";
+icon: <Briefcase className="w-10 h-10" />;
+link: "/services";
+color: "from-purple-500 to-indigo-600" 
+};
+{
+  title: "Talents";
+description: "Connect with AI experts, developers, and tech specialists";
+icon: <Users className="w-10 h-10" />;
+link: "/talent";
+color: "from-cyan-500 to-blue-600" 
+};
+{
+  title: "Equipment";
+description: "Rent or buy specialized hardware, servers, and devices";
+icon: <HardDrive className="w-10 h-10" />;
+link: "/equipment";
+color: "from-amber-500 to-orange-600" 
+};
+{
+  const specialServices = [ {
+  title: "IT Onsite Services";
+link: "/it-onsite-services" 
+}];
+interface CategoriesSectionProps {
+  showTitle?: boolean 
+}export function CategoriesSection ({
+  showTitle = true 
+}: CategoriesSectionProps) {
+  return (<section className="py-20 bg-zion-blue" > <div className="container mx-auto px-4" > showTitle && (<div className="text-center mb-16" > <GradientHeading>Explore Categories</GradientHeading> </p> </div>) 
+}</div> </Link>) ) 
+}</div> > {
+  service.title 
+}</Link>) ) 
+}</div> </div> <div className="mt-12 flex justify-center" > <Link > View All Categories → </Link> </div> </div> </section>) 
+}
+    </section>;
+  );
+}
+;
+;
+=======
     </section>);
 ;
     </section>;

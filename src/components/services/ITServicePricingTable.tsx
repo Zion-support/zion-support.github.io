@@ -47,6 +47,7 @@ export function ITServicePricingTable() {
           : "ascending"})
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
@@ -58,6 +59,7 @@ export function ITServicePricingTable() {
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
           />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>
 
       <div className="rounded-md border border-zion-blue-light overflow-hidden">

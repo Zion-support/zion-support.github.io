@@ -166,6 +166,7 @@ export const createTransport = mockSentry.createTransport;
 export const SDK_VERSION = mockSentry.SDK_VERSION;
 export const Severity = mockSentry.Severity;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Additional exports for compatibility
 export { mockSentry as Sentry };
 

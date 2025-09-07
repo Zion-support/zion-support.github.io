@@ -30,12 +30,26 @@ import { useToast } from "@/hooks/use-toast";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+=======
 
 import {}
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
+<<<<<<< HEAD
+  DropdownMenuTrigger,
+} from '@/components / ui / dropdown - menu';
+;
+export /**
+ * UserMenu - Function description
+ */
+function UserMenu() {
+  const { user, logout } = use_auth ();
+  const { toast } = use_toast ();
+;
+=======
 
   const handleSignOut = async () => {
     try {
@@ -49,11 +63,17 @@ import {;
   DropdownMenuSeparator,;
   DropdownMenuTrigger,;"
 } from "@/components/ui/dropdown-menu";
+<<<<<<< HEAD
+export function UserMenu() {;
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+=======
 
 export function UserMenu() { return null; }
   const { user, logout } = useAuth();
   const { toast } = useToast();
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSignOut = async () => {;
     try {;
       await logout();
@@ -62,6 +82,42 @@ export function UserMenu() { return null; }
         title: "Error signing out","
         description: "There was an error signing you out. Please try again.",;"
         variant: "destructive",;
+<<<<<<< HEAD
+  DropdownMenuTrigger,;
+} from "@/components/ui/dropdown-menu";
+
+export function UserMenu() {;
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+import { Link } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { 
+  DropdownMenu,
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuSeparator, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
+
+export function UserMenu() {
+  const { user, logout } = useAuth(),
+  const { toast } = useToast(),
+
+  const handleSignOut = async () => {
+    try {
+      await logout()
+    } catch (error) {
+      toast({
+        title: "Error signing out"
+        description: "There was an error signing you out. Please try again."
+        variant: "destructive"
+      });
+    }
+  }
+=======
 
       });
     }
@@ -73,11 +129,17 @@ export function UserMenu() { return null; }
     } catch (error) {
       toast({
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
         variant: "destructive"})
     }
   },
+<<<<<<< HEAD
+      });
+    }
+  }
+=======
 
   if (!user) {;
 
@@ -93,6 +155,7 @@ export function UserMenu() { return null; }
       </div>;
     );
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>
 
@@ -213,6 +276,7 @@ export function UserMenu() {;
 
   );
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast ({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",

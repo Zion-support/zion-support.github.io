@@ -296,6 +296,7 @@ export class PerformanceMonitorService {
     return {}
       url;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       loadTime: Math && Math.random() * 2000 + 500;
       firstContentfulPaint: Math && Math.random() * 1500 + 300;
       largestContentfulPaint: Math && Math.random() * 2500 + 800;

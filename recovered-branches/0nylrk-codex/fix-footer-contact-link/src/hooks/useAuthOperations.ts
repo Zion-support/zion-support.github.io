@@ -101,6 +101,9 @@ cleanupAuthState();
         toast({"
           variant: "destructive","
           title: "Error during signup",
+<<<<<<< HEAD
+          variant: "destructive";
+=======
 
           description: error.message}),
         return { data: null, error: error.message }"
@@ -113,7 +116,6 @@ cleanupAuthState();
           description: error && error.message});
         return { data: null, error: error && error.message }
       }
-
       // Add this after successful signup;
       // Check condition;
 if ( {) {}
@@ -143,6 +145,12 @@ if ( {) {}
           description: "You have been successfully logged out."})
       }
 
+<<<<<<< HEAD
+  }
+  },
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const resetPassword = async (email: string) => {
     setIsLoading(true)
     try {
@@ -247,11 +255,41 @@ if ( {) {}
       setIsLoading (false);
     }
 
+<<<<<<< HEAD
+        variant: "destructive";
+        title: "Profile update failed"
+        description: "There was an issue updating your profile. Please try again."});
+        variant: "destructive",
+        title: "Profile update failed",
+        description: "There was an issue updating your profile. Please try again."}),
+      return { error: "Failed to update profile." }
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  },
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const loginWithGoogle = async () => {
     setIsLoading(true),
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
+<<<<<<< HEAD
+        provider: "google"});
+      if (error) {
+        toast({
+          variant: "destructive";
+          title: "Oh no! Something went wrong."
+          description: error.message})
+      }
+    } finally {
+      setIsLoading(false)
+    }
+  }
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         provider: "google"}),
 
       if (error) {}
@@ -259,6 +297,58 @@ if ( {) {}
           variant: "destructive","
           title: "Oh no! Something went wrong.",
           description: error.message})
+<<<<<<< HEAD
+      }
+    } finally {
+      setIsLoading(false)
+    }
+  };
+        return prevUser;
+      }),;
+      toast({;
+        title: "Profile updated!",;
+        description: "Your profile has been successfully updated."}),;
+      return { error: null }
+    } catch (error) {;
+      console.error("Profile update failed:", error),;
+      toast({;
+        variant: "destructive",;
+        title: "Profile update failed",;
+        description: "There was an issue updating your profile. Please try again."}),;
+      return { error: "Failed to update profile." }
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  const loginWithGoogle = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.auth.signInWithOAuth({;
+        provider: "google"}),;
+      if (error) {;
+        toast({;
+          variant: "destructive",;
+          title: "Oh no! Something went wrong.",;
+          description: error.message});
+      }
+    } finally {;
+      setIsLoading(false);
+    }
+  },
+
+        provider: "google"}),
+
+  const loginWithFacebook = async () => {
+    setIsLoading(true),
+    try {
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: "facebook"});
+      if (error) {
+        toast({
+          variant: "destructive";
+          title: "Oh no! Something went wrong."
+          description: error.message})
+=======
 
         return prevUser;
       }),;
@@ -486,6 +576,12 @@ if ( {) {}
       if (!ethereum) {
         throw new Error("Web3 wallet not found")
 
+<<<<<<< HEAD
+    resetPassword;
+    updateProfile;
+    loginWithGoogle;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   const loginWithWeb3 = async () => {;
     setIsLoading(true),;

@@ -242,6 +242,7 @@ const staggerContainer = {"initial":  ,;
       icon: Zap}
   ],
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const itemVariants = {
     initial: { opacity: 0, y: 20},
     animate: { opacity: 1, y: 0},
@@ -255,6 +256,7 @@ const staggerContainer = {"initial":  ,;
       }
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
       {showInternalNav && (
@@ -450,7 +452,7 @@ href='"mailto":kleber@ziontechgroup.com';'
                       </div>;
                   </motion.div>;
                 )}
-              </AnimatePresence>;
+</AnimatePresence>;
             </div>;
           </nav>;
         </>;
@@ -597,6 +599,12 @@ href='"mailto":kleber@ziontechgroup.com';'
             </div>;
           </nav>;
         </>)}
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
       {/* Hero Section */}
       <section;
         id='hero';'

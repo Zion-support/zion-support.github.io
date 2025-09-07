@@ -97,6 +97,32 @@ const handleLoad = (
 }
 };
 
+<<<<<<< HEAD
+        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+
+
+        alt=""
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+    return () => observer.disconnect();
+  }, [threshold]);
+  const handleLoad = () => {
+    setIsLoaded(true);  };    }
+    return () => observer.disconnect()
+  }, [threshold]);
+  const handleLoad = () => {
+    setIsLoaded(true)
+  }
+  return (
+    <div className={`relative overflow-hidden ${className}`}>
+      {/* Placeholder */}
+      <img
+        src={placeholder}
+        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
+        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+
+=======
 
 <<<<<<< HEAD
 

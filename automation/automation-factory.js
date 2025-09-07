@@ -577,6 +577,7 @@ class CodeQualityMonitor {,
       files.forEach($2);
         const lines = content.split($2);
         totalComplexity += lines.length * 0.1, // Simplified complexity metric
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }),
       return Math.min(Math.floor(totalComplexity), 100)
     } catch (error) {,
@@ -591,6 +592,7 @@ class CodeQualityMonitor {,
       const avgFileSize = files.reduce((acc, file) => {,
         const stats = fs.statSync($2);
         return acc + stats.size
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }, 0) / totalFiles,
 ,
       // Lower file size = $2;
@@ -621,6 +623,7 @@ class CodeQualityMonitor {,
 ,
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
           walkDir(fullPath)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {,
           files.push(fullPath)
         }

@@ -39,6 +39,34 @@ export function BillingHeader() {
             <Mail className="h-4 w-4" />
             Contact Billing Support
           </Button>
+ursor/fix-website-loading-errors-and-merge-6662
+          <Button variant="outline" size="sm" className="gap-1" asChild>
+          <Button variant='outline' size='sm' className='gap-1' asChild>
+            <Link href='/dashboard/client/analytics'>
+              <BarChart3 className='h-4 w-4' />              Analytics
+          <Button variant="outline" size="sm" className="gap-1" asChild>
+            <Link href="/dashboard/client/analytics">
+              <BarChart3 className="h-4 w-4" />
+import React from "react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+
+export function BillingHeader() {
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold tracking-tight">Billing & Invoices</h1>
+        <div className="flex gap-2">
+          <Button variant="outline" size="sm" className="gap-1">
+            <Download className="h-4 w-4" />
+            Export
+          </Button>
+          <Button variant="outline" size="sm" className="gap-1">
+            <Mail className="h-4 w-4" />
+            Contact Billing Support
+          </Button>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -51,6 +79,19 @@ export function BillingHeader() {
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
+      <p className="text-muted-foreground">
+        Manage your subscription, view invoice history, and update payment methods.
+      </p>
+    </div>
+  ) <p className="text-muted-foreground">
+        Manage your subscription, view invoice history, and update payment methods.
+      </p>
+    </div>;
+  );
+};
+}
+=======
 
       <p className="text-muted-foreground">
 
@@ -58,6 +99,7 @@ export function BillingHeader() {
       </p>
     </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function BillingHeader() {;
   return (
     <div className='space-y-2'>;
@@ -151,7 +193,8 @@ function BillingHeader() {return (<div className="space - y-2">;
     </div>) <p className=text - muted - foreground">;
         Manage your subscription, view invoice history, and update payment methods.;
       </p>;
-    </div>);
+    </div>;
+  );
 }
 ;
 

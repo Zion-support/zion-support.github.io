@@ -143,6 +143,7 @@ import { Quote  } from './lucide-react';'
   }
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Carousel,
 
   CarouselContent,
@@ -185,6 +186,7 @@ const testimonials = []
   }
 ];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",
 import { Quote } from "lucide-react",
 
@@ -305,3 +307,4 @@ function EnterpriseTestimonials() {
 pr-12325
 
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

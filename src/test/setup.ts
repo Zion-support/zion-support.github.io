@@ -33,7 +33,7 @@ global && global.IntersectionObserver = class IntersectionObserver {global.Inter
 };
 
 // Mock ResizeObserver
-global && global.ResizeObserver = class ResizeObserver {
+global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
@@ -134,7 +134,14 @@ afterAll(() => {
 
     original_warn.call (console, ...args);
   }
+})
+afterAll(() => {
+  console.error = originalError
+  console.warn = originalWarn;
 });
+});
+<<<<<<< HEAD
+=======
 after_all (() => {
   console.error = original_error;
   console.warn = original_warn;

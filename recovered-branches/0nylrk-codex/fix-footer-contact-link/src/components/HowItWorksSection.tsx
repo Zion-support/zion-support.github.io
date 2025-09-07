@@ -101,6 +101,32 @@ const steps = [;
     description: "Enjoy hassle-free delivery and support for your technology solutions.",;
     icon: Check}];
 
+import { GradientHeading } from "./GradientHeading",;
+import { Check, Handshake, Search, Send } from "lucide-react",;
+;
+const steps = [;
+  {;
+    title:"Post",;
+    description:"Publish your service, job, or equipment in minutes with our AI-powered form.",;
+    icon:Send},;
+  {;
+    title:"Match",;
+    description:"Our AI automatically matches your needs with the perfect providers or opportunities.",;
+    icon:Search},;
+  {;
+    title:"Hire/Buy",;
+    description:"Connect directly with matched providers and complete your transaction securely.",;
+    icon:Handshake},;
+  {;
+    title:"Done",;
+    description:"Enjoy hassle-free delivery and support for your technology solutions.",;
+    icon:Check}],;
+;
+export function HowItWorksSection() {;
+  return (;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section className="py-20 bg-zion-blue">;
 
       <div className="container mx-auto px-4">;
@@ -110,6 +136,12 @@ const steps = [;
             A simple four-step process to connect technology providers with clients;
           </p>;
         </div>;
+<<<<<<< HEAD
+        <div className="relative">;
+          {/* Timeline line */}
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>;
+          <div className="space-y-12 md:space-y-0">;
+=======
 
             {steps.map((step, index) => (;
               <div;
@@ -117,6 +149,8 @@ const steps = [;
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${;"
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
+<<<<<<< HEAD
+=======
 
                 } relative`}
               >"
@@ -192,6 +226,7 @@ const steps = [;
                 </div>
               </div>
             ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </div>
         </div>

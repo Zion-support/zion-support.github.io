@@ -2,10 +2,16 @@ import * as React from 'react';
 import * as SwitchPrimitives from '@radix-ui/react-switch';
 import {cn} from '@/lib/utils';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
+<<<<<<< HEAD
+
+import { cn } from "@/lib/utils"
+
+=======
 
 "
 

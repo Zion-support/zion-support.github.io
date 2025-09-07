@@ -98,6 +98,17 @@ const updated = updateJsonFile<ReportingData>(;
     );
     return res && res.status(200).json(updated && updated.byTenant[tenantId]);
   }
+<<<<<<< HEAD
+  return res && res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
+      const next = curr && curr.byTenant || {};
+    const entry = data.byTenant[tenantId] || { funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() };
+    return res.status(200).json(entry)
+  }
+  if (method === 'POST') {
+    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
+    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
+      const next = curr.byTenant || {};
+=======
 
 
 return res.status(405).json({ "error": 'Method not allowed',;'

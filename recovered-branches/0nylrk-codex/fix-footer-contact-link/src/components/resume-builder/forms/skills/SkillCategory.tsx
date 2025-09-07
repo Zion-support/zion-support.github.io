@@ -2,6 +2,8 @@ import {SkillCategoryProps} from './types';
 import {SkillItem} from './SkillItem';
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;
   if (!skills || skills.length === 0) return null;
+<<<<<<< HEAD
+=======
 
 import { SkillCategoryProps } from './types',
 import { SkillItem } from './SkillItem',
@@ -17,6 +19,8 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
             key={skill.id}
             skill={skill}
             category={category}
+<<<<<<< HEAD
+=======
 
 import { SkillCategoryProps } from "./types";
 
@@ -28,6 +32,7 @@ export const SkillCategory = ({}
 }: SkillCategoryProps) => {};
   if (!skills || skills.length === 0) return null;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-2">
       <h4 className="text-sm font-medium text-muted-foreground">{category}</h4>

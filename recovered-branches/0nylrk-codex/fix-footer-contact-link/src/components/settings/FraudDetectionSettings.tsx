@@ -8,6 +8,8 @@ import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 export function FraudDetectionSettings() {;
+<<<<<<< HEAD
+=======
 
 import React, { useState } from "react";
 import {}
@@ -38,6 +40,7 @@ import { toast } from "@/hooks/use-toast";"
 import { supabase } from "@/integrations/supabase/client";"
 import { useAuth } from "@/hooks/useAuth";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
@@ -65,6 +68,9 @@ export function FraudDetectionSettings() {
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),
   const [isSaving, setIsSaving] = useState(false),
+<<<<<<< HEAD
+  
+import React, { useState } from 'react';
 
   const handleSavePreferences = async () => {
 

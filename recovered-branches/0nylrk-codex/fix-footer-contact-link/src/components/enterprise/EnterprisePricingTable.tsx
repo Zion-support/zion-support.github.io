@@ -84,6 +84,7 @@ export function EnterprisePricingTable() {}
 
       name: "Business",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",
@@ -148,6 +149,7 @@ import {;
   TableCell,;
   TableHead,;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function EnterprisePricingTable() {;
 
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -293,7 +295,11 @@ return (;
           <p className="text - xl text - muted - foreground max - w-2xl mx-auto">;"
 =======
       name: "Business",;
+<<<<<<< HEAD
+      price: "$1,999",;
+=======
       price: "$1,999";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       billing: "/month",;
       description: "Ideal for growing companies",;
       users: "Up to 50 users",;
@@ -323,10 +329,84 @@ return (;
         { name: "Admin dashboard", included: true },;
         { name: "Team collaboration", included: true },;
         { name: "API access", included: true },;
+<<<<<<< HEAD
+
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Check, X } from "lucide-react",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+;
+export function EnterprisePricingTable() {;
+  const plans = [;
+    {;
+      name:"Teams",;
+      price:"$599",;
+      billing:"/month",;
+      description:"Perfect for small teams",;
+      users:"Up to 10 users",;
+      popular:false,;
+      features:[;
+        { name:"Private hiring portal", included:true },;
+        { name:"Dedicated talent pool", included:true },;
+        { name:"Standard SLA (24h)", included:true },;
+        { name:"Basic branding", included:true },;
+        { name:"Admin dashboard", included:true },;
+        { name:"Team collaboration", included:true },;
+        { name:"API access", included:false },;
+        { name:"Custom integrations", included:false },;
+        { name:"Dedicated success manager", included:false }]},;
+    {;
+      name:"Business",;
+      price:"$1,999",;
+      billing:"/month",;
+      description:"Ideal for growing companies",;
+      users:"Up to 50 users",;
+      popular:true,;
+      features:[;
+        { name:"Private hiring portal", included:true },;
+        { name:"Dedicated talent pool", included:true },;
+        { name:"Enhanced SLA (8h)", included:true },;
+        { name:"Advanced branding", included:true },;
+        { name:"Admin dashboard", included:true },;
+        { name:"Team collaboration", included:true },;
+        { name:"API access", included:true },;
+        { name:"Custom integrations", included:false },;
+        { name:"Dedicated success manager", included:false }]},;
+    {;
+      name:"Enterprise",;
+      price:"Custom",;
+      billing:"",;
+      description:"For large organizations",;
+      users:"Unlimited users",;
+      popular:false,;
+      features:[;
+        { name:"Private hiring portal", included:true },;
+        { name:"Dedicated talent pool", included:true },;
+        { name:"Premium SLA (1h)", included:true },;
+        { name:"Full white labeling", included:true },;
+        { name:"Admin dashboard", included:true },;
+        { name:"Team collaboration", included:true },;
+        { name:"API access", included:true },;
+        { name:"Custom integrations", included:true },;
+        { name:"Dedicated success manager", included:true }]}],;
+;
+  return (;
+        { name: "Custom integrations", included: true };
+        { name: "Dedicated success manager", included: true }]}];
+  return (;
+=======
         { name: "Custom integrations", included: true },;
         { name: "Dedicated success manager", included: true }]}],;
 
   return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section id="pricing" className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-7xl">;
         <div className="text-center mb-12">;
@@ -337,6 +417,9 @@ return (;
             Choose the perfect plan for your team size and requirements;
           </p>;
         </div>;
+<<<<<<< HEAD
+;
+=======
 
 "
         <div className="overflow-x-auto">;"

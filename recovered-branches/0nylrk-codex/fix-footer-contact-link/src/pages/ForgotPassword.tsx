@@ -66,6 +66,7 @@ export default function ForgotPassword() {};
   }
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   email: z.string().email("Please enter a valid email")}),
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
@@ -174,25 +175,26 @@ import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Form validation schema;
-const forgotPasswordSchema = z && z.object({;
-  email: z && z.string().email("Please enter a valid email")}),;
-
-type ForgotPasswordFormValues = z && z.infer<typeof forgotPasswordSchema>;
-
+const forgotPasswordSchema = z.object({;
+  email:z.string().email("Please enter a valid email")}),;
+;
+type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,;
+;
 export default function ForgotPassword() {;
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);
-
+  const { resetPassword, isLoading } = useAuth(),;
+  const [submitted, setSubmitted] = useState(false),;
+  ;
   // Initialize react-hook-form;
   const form = useForm({;
-    resolver: zodResolver(forgotPasswordSchema),;
-    defaultValues: {;
-      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>,;
-
+    resolver:zodResolver(forgotPasswordSchema),;
+    defaultValues:{;
+      email:""}}) as UseFormReturn<ForgotPasswordFormValues>,;
+;
   // Form submission handler;
-  const onSubmit = async (data: ForgotPasswordFormValues) => {;
-    await resetPassword(data && data.email),;
+  const onSubmit = async (data:ForgotPasswordFormValues) => {;
+    await resetPassword(data.email),;
     setSubmitted(true);
   };
 
@@ -656,6 +658,49 @@ type ForgotPasswordFormValues = z.infer < typeof forgotPasswordSchema>;
                 <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3>;""
                 <p className="text-lg text-white/80">;"
       <Footer />;
+<<<<<<< HEAD
+                    <Link
+                      to="/login"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
+                    >
+                      Back to login
+                    </Link>
+                  </div>
+                </div>
+              ) : (
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-zion-slate-light">Email address</FormLabel>
+                          <FormControl>
+                            <div className="relative">
+                              <Input
+                                placeholder="you@example.com"
+                                className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                                {...field}
+                              />
+                              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                            </div>
+                          </FormControl>
+                          <FormMessage className="text-red-400" />
+                        </FormItem>
+                      )}
+                    />
+                    <Button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                      disabled={isLoading}
+                    >
+                      {isLoading ? "Sending..." : "Reset Password"}
+                    </Button>
+                    <div className="text-center">
+                      <Link
+                        to="/login"
+=======
 
     </>);
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light""

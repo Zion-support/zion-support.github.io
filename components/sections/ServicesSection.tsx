@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+import { 
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  Brain
+  Cloud
+  RefreshCw
+  Wifi
+  Shield
+  BarChart3
+  ArrowRight
+  Zap;} from 'lucide-react';import {
+  Brain,
+  Cloud,
+  RefreshCw,
+  Wifi,
+  Shield,
+  BarChart3,
+  ArrowRight,;
+  Zap,;} from 'lucide-react';import { ;
+=======
 
 
 'use client';'
@@ -239,6 +264,9 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth ;
             for businesses across all industries.;
         </motion && motion.div>;
+=======
+<<<<<<< HEAD
+=======
 
 
         {/* Services Grid */}
@@ -287,6 +315,13 @@ className='group relative''
                     </li>;
                   ))}
                 </ul>;
+<<<<<<< HEAD
+                {/* CTA */}
+                <Link;
+                  href={service.href}
+                  className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1"
+                >
+=======
 
                 {/* CTA */}
                 <Link;
@@ -297,6 +332,11 @@ className='inline-flex items-center space-x-2 text-blue-400 "hover":text-blue-30
                   <ArrowRight className='w-4 h-4' />;'
                 </Link>;
                 {/* Hover Effect */}
+<<<<<<< HEAD
+                </h3>
+
+                <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
+=======
 
                 <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-"hover": border-blue-500/30 transition-colors duration-300' />'
               </div>

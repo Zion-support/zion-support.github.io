@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
 
 ;
 import { ServiceVariant } from "../types/service-variants";"

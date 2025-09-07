@@ -44,12 +44,19 @@ import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ProfileBadgeProps {;
   type: BadgeType,;
   className?: string;
 
 }
+<<<<<<< HEAD
+;
+export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
+=======
 
 export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
 
@@ -70,6 +77,8 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
       icon: Award,;"
       text: "Top Rated",;"
       colors: "bg-purple-500/20 text-purple-400"}},;
+<<<<<<< HEAD
+=======
 
   const { icon: Icon, text, colors } = badgeConfig[type];
   return (

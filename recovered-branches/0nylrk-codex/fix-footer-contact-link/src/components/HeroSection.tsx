@@ -29,6 +29,8 @@ export function HeroSection() {
         <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse"></div>
         <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-pulse"></div>
       </div>
+<<<<<<< HEAD
+=======
 
       <div className="container relative z-10 px-4 mx-auto text-center">
 
@@ -42,8 +44,21 @@ export function HeroSection() {
           place.
         </p>
         <div className="flex flex-col sm: flex-row justify-center gap-4">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+import { Button } from "@/components/ui/button",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Link } from "react-router-dom",;
+;
+export function HeroSection() {;
+  return (;
+    <section className="relative overflow-hidden py-20 md:py-32">;
+      {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>;
+      ;
+      <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>;
+<<<<<<< HEAD
+=======
 
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6"
@@ -92,6 +107,9 @@ export function HeroSection() { return null; }
         <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse"></div>;
         <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-pulse"></div>;
       </div>;
+<<<<<<< HEAD
+      ;
+=======
 
       ;
 ;
@@ -100,6 +118,8 @@ export function HeroSection() { return null; }
         <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold">;
           The Future of Tech & AI Marketplace;
         </GradientHeading>;
+<<<<<<< HEAD
+=======
 
             size="lg"
             asChild>;"
@@ -116,6 +136,7 @@ export /**;
           <Button;"
             variant="outline";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Link to="/marketplace">Explore Marketplace</Link>;
           </Button>;
         </div>;

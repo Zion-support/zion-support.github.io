@@ -20,6 +20,8 @@ const CloudArchitectureChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
       <main>;
         <h1>CloudArchitectureChat</h1>;
         <p>Blog content coming soon...</p>;

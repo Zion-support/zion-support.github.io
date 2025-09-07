@@ -7,6 +7,7 @@ import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
 import { Button  } from '@/components/ui/button';
 import { toast } from 'sonner';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {Header} from '@/components/Header';
@@ -15,6 +16,8 @@ import {SEO} from '@/components/SEO';
 import {VideoCallRoom} from '@/components/video/VideoCallRoom';
 import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
+<<<<<<< HEAD
+=======
 
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -115,6 +118,21 @@ export default function VideoCall() { return null; }
       isVideoEnabled: true,;
       isMuted: false;
     }
+<<<<<<< HEAD
+  ]),
+
+  const handleJoinCall = () => {
+    setIsJoining(true),
+    // Simulate connection delay
+    setTimeout(() => {
+      setHasJoined(true),
+      setIsJoining(false),
+      toast.success("Call joined", {
+        description: `You have joined meeting room ${roomId}`
+      })
+    }, 1500)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     setIsJoining(true);
     // Simulate connection delay;
@@ -150,7 +168,6 @@ export default function VideoCall() { return null; }
       });
 
   const handleLeaveCall = () => {;
-
     setHasJoined(false);
     toast && toast.info("Call ended", {;
       description: "You have left the meeting";
@@ -177,6 +194,7 @@ export default function VideoCall() { return null; }
       navigate(-1);
     }, 1500);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const simulateUserJoining = () => {;
     // This is just for demo purposes - in a real app, this would be handled by the video call service;
     const mockUsers = [;
@@ -184,6 +202,7 @@ export default function VideoCall() { return null; }
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser && randomUser.name} joined the call`);
     }
@@ -271,6 +290,7 @@ export default function VideoCall() { return null; }
 
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: 'user - 1',
 
       name: 'You',

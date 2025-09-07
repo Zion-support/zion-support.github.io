@@ -5,6 +5,11 @@ import {ReviewsList} from "@/components/reviews/ReviewsList";
 import {useReviews} from "@/hooks/useReviews";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+<<<<<<< HEAD
+  averageRating?: number;
+  ratingCount?: number;
+}
+=======
 
   averageRating?: number;
   ratingCount?: number;
@@ -14,6 +19,7 @@ interface ProfileRatingsProps {
   userId: string,
   averageRating?: number,
   ratingCount?: number
+}
 
 }
 
@@ -95,6 +101,32 @@ export function ProfileRatings({}
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}
+<<<<<<< HEAD
+              />
+            </TabsContent>
+
+            <TabsContent value="positive">
+              <ReviewsList
+                reviews={reviews.filter((r) => r.rating >= 4)}
+                isLoading={isLoading}
+                onReportReview={reportReview}
+              />
+            </TabsContent>
+
+            <TabsContent value="critical">
+              <ReviewsList
+                reviews={reviews.filter((r) => r.rating < 4)}
+                isLoading={isLoading}
+                onReportReview={reportReview}
+              />
+            </TabsContent>
+          </Tabs>
+        </div>
+      </div>
+    </div>
+  );
+
+=======
 
               <ReviewsList
 
@@ -266,7 +298,12 @@ export function ProfileRatings({
                 reviews={reviews.filter ((r) => r.rating < 4)}
                 is_loading={is_loading}
                 onReportReview={report_review}
-
+            ;
+            <TabsContent value="critical">;
+              <ReviewsList;
+                reviews={reviews.filter((r) => r.rating < 4)}
+                isLoading={isLoading}
+                onReportReview={reportReview}
               />;
             </TabsContent>;
           </Tabs>;

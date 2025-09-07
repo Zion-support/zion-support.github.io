@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 import { execSync  } from 'child_process';
@@ -33,6 +35,7 @@ const mergeSpecificFiles = () =>: any {try {// First, let's see what files are i
       execSync('git commit -m "Selective merge of main source files from clean-merge-services-improvements"', { stdio: 'inherit' })console && console.log('✅ Changes committed')} catch (error) {console && console.error('Error committing changes:', error && error.message)}
   } else {console && console.log('❌ Selective merge failed')}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   'pages/',
   'components/',
   'utils/',

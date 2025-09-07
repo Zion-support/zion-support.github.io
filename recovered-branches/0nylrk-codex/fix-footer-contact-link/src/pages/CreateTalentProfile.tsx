@@ -58,6 +58,7 @@ export default function CreateTalentProfile() {
   )
 import React from "react";"
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react",;
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
@@ -85,6 +86,22 @@ import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationF
 
 export default function CreateTalentProfile() {;
   return (
+<<<<<<< HEAD
+    <div className="bg-zion-blue min-h-screen py-8 md: py-12">;
+
+import React from "react",;
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",;
+;
+export default function CreateTalentProfile() {;
+  return (;
+    <div className="bg-zion-blue min-h-screen py-8 md:py-12">;
+}
+import React from "react",;
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
+export default function CreateTalentProfile() {;
+  return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">;
       <div className="container mx-auto px-4">;
         <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">;
@@ -98,6 +115,8 @@ export default function CreateTalentProfile() {;
 }
 
 ;
+<<<<<<< HEAD
+=======
 
     </div>);
 export default function CreateTalentProfile() {;

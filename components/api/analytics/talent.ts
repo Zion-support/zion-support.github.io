@@ -1,4 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { createServerClient } from '../../../utils/supabase/server';
 
 import { createServerClient } from '../../../utils/supabase/server';
 

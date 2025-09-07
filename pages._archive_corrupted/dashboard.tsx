@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+import React, { useState } from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import { motion } from 'framer-motion'
+import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 import { BarChart3,Users,DollarSign,TrendingUp,Code,Cloud,Shield,Zap,ArrowRight,CheckCircle,Star;

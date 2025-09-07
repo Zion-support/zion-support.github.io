@@ -15,6 +15,10 @@ import React, { useState } from 'react';
   defaultOptions;
   onApply;
   onClose;
+    content: initialContent || defaultOptions && defaultOptions.content}),;
+  const [generatedContent, setGeneratedContent] = useState<string>('');
+  const [copied, setCopied] = useState(false);
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
 
     content: initialContent || defaultOptions && defaultOptions.content}),;
   const [generatedContent, setGeneratedContent] = useState<string>('');
@@ -26,6 +30,12 @@ import React, { useState } from 'react';
     if (result) {
       setGeneratedContent(result)
     }
+<<<<<<< HEAD
+  };
+
+  }
+  };
+=======
 
   }
 };
@@ -61,12 +71,27 @@ export function AIEnhancementPanel() { return null; }
   const [generatedContent, setGeneratedContent] = useState<string>(''),;
   const [copied, setCopied] = useState(false),;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+<<<<<<< HEAD
+  const handleGenerate = async () => {;
+=======
 
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
     }
 
+<<<<<<< HEAD
+
+
+
+  const handleGenerate = async () => {;
+    const result = await enhanceContent(options),;
+    if (result) {;
+      setGeneratedContent(result);
+    }
+  },
+
+=======
   },
 
     const result = await enhanceContent(options);
@@ -124,6 +149,7 @@ export function AIEnhancementPanel() { return null; }
         <div className="space-y-2">;"
           <label className="text-sm font-medium">Content to enhance</label>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Context input */}
         <div className="space-y-2">;
 
@@ -133,6 +159,27 @@ export function AIEnhancementPanel() { return null; }
             className="min-h-[60px]"
             value={options && options.context}'
             onChange={(e) => handleInputChange(e, 'context')}
+<<<<<<< HEAD
+          />;
+        </div>;
+          <Textarea;
+            placeholder="Enter your content to enhance...";
+            className="min-h-[100px]";            value={options.content}
+            onChange={(e) => handleInputChange(e, 'content')}
+          />;
+        </div>;
+;
+        {/* Context input */}
+        <div className="space-y-2">;
+          <label className="text-sm font-medium">Context (optional)</label>;
+          <Textarea;
+            placeholder="Add any relevant context to guide the AI...";
+            className="min-h-[60px]";            value={options.context}
+            onChange={(e) => handleInputChange(e, 'context')}
+          />;
+        </div>;
+;
+=======
 
         {/* Instructions input (optional) */}
         {showInstructions && (;"
@@ -210,6 +257,8 @@ export function AIEnhancementPanel() { return null; }
 
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
+<<<<<<< HEAD
+=======
 
         >
           {isEnhancing ? (

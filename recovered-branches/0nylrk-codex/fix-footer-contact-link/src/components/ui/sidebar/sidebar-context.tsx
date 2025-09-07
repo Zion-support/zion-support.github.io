@@ -1,5 +1,12 @@
 import * as React from "react"
 import type { CSSProperties } from "react"
+<<<<<<< HEAD
+import {TooltipProvider} from "@/components/ui/tooltip"
+import {useIsMobile} from "@/hooks/use-mobile"
+import {cn} from "@/lib/utils"
+import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
+;
+=======
 
 import { TooltipProvider } from "@/components/ui/tooltip""
 import { useIsMobile } from "@/hooks/use-mobile""
@@ -16,11 +23,19 @@ export function useSidebar(): SidebarContextType {}
   if (!context) {"
     throw new Error("useSidebar must be used within a SidebarProvider.")
 
+<<<<<<< HEAD
+import * as React from "react";
+import type { CSSProperties } from "react";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils";
+=======
 import * as React from './react';
 import type { CSSProperties } from './react';
 import { TooltipProvider } from '@/components / ui / tooltip';
 import { useIsMobile } from '@/hooks / use - mobile';
 import { cn } from '@/lib / utils';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
 ;
 
@@ -67,11 +82,23 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   onOpenChange?: (open: boolean) => void
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   SidebarProviderProps
 >(
   (
     {
+<<<<<<< HEAD
+      defaultOpen = true;
+      open: openProp
+      onOpenChange: setOpenProp
+      className;
+      style;
+      children;
+      ...props
+    }
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       defaultOpen = true,
       open: openProp,
       onOpenChange: setOpenProp,
@@ -79,6 +106,7 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
       style,
       children,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ref
   ) => {
 

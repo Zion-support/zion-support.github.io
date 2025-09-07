@@ -39,6 +39,11 @@ import {
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
 
+import { cn } from "@/lib/utils";
+import { QuoteFormData } from "@/types/quotes";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
 import {format} from "date-fns";
 import {Calendar} from "@/components/ui/calendar";
@@ -48,6 +53,8 @@ import {CalendarIcon} from "@/components/icons";
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 import {cn} from "@/lib/utils";
 import {QuoteFormData} from "@/types/quotes";
+<<<<<<< HEAD
+=======
 
 import { useState } from "react",
 import { format } from "date-fns",
@@ -126,9 +133,17 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
                 I have specific start and end dates;
               </p>
             </div>
+<<<<<<< HEAD
+=======
 
             <div
 
+<<<<<<< HEAD
+<div
+            <div
+            <div 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "flexible"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -209,7 +224,10 @@ interface TimelineStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepProps) {;
   return ("
     <div className="space-y-6">;
@@ -229,6 +247,16 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
               <h4 className="font-medium text-white">Fixed Dates</h4>;"
               <p className="text-sm text-zion-slate-light">I have specific start and end dates</p>;
             </div>;
+<<<<<<< HEAD
+            ;
+            <div ;
+              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${;
+                formData.timeline === "flexible" ;
+                  ? "bg-zion-purple/20 border-zion-purple" ;
+                  :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
+              }`}
+              onClick={() => updateFormData({ timeline:"flexible" })}
+=======
 
             <div;`
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${"
@@ -375,7 +403,7 @@ export function TimelineStep() { return null; }`
                   </PopoverContent>;
                 </Popover>;
               </div>;
-
+              ;
               <div>;
                 <Label className="block mb-2 text-zion-slate-light">End Date</Label>;
                 <Popover>;
@@ -417,7 +445,25 @@ export function TimelineStep() { return null; }`
                       disabled={(date) =>;
                         date < (form_data.start_date || new Date ());
                       }
-
+                    <Button;
+                      variant="outline";
+                      className={cn(;
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",;
+                        !formData.endDate && "text-zion-slate-light";
+                      )}
+                    >;
+                      <CalendarIcon className="mr-2 h-4 w-4" />;
+                      {formData.endDate ? format(formData.endDate, "PPP") :<span>Pick a date</span>}
+                    </Button>;
+                  </PopoverTrigger>;
+                  <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">;
+                    <Calendar;
+                      mode="single";
+                      selected={formData.endDate}
+                      onSelect={(date) => updateFormData({ endDate:date })}
+                      initialFocus;
+                      className="p-3 pointer-events-auto";
+                      disabled={(date) => date < (formData.startDate || new Date())}
                     />;
                   </PopoverContent>;
                 </Popover>;

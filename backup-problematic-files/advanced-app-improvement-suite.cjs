@@ -26,6 +26,7 @@ class AdvancedAppImprovementSuite {}
 
 
 #!/usr/bin/env node
+
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");"
@@ -674,6 +675,11 @@ log(message) {
     this.log(`Report saved to: ${reportFile}`);
 <<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
 <<<<<<< HEAD
+console.log(`[${timestamp}] ${message}`);
+
+};
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
 =======
@@ -702,7 +708,11 @@ log(message) {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     console.log(`[${timestamp}] ${message}`);
   }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+    console.log(`[${timestamp}] ${message}`);
+
+  }
   async runPerformanceOptimizations() {
     this.log('🚀 Running performance optimizations...');
     
@@ -901,6 +911,7 @@ if (require.main === module) {}
 =======
       throw error;    }
   }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
@@ -969,6 +980,12 @@ if (require.main === module) {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module.exports = AdvancedAppImprovementSuite;
 // Run the improvement suite
+<<<<<<< HEAD
+
+const suite = new AdvancedAppImprovementSuite();
+suite.run().catch(console.error);
+
+=======
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

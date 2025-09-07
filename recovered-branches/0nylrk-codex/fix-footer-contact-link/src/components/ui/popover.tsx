@@ -15,6 +15,7 @@ const PopoverContent = React.forwardRef<
   React.ElementRef<typeof PopoverPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         className
 
 export { Popover, PopoverTrigger, PopoverContent }
@@ -26,6 +27,7 @@ export { Popover, PopoverTrigger, PopoverContent };
 export { Popover, PopoverTrigger, PopoverContent };
 ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from &quot;react & quot;
 import * as PopoverPrimitive from &quot;@radix - ui / react - popover & quot;
 ;
@@ -36,11 +38,25 @@ export { Popover, PopoverTrigger, PopoverContent };
 
 export { Popover, PopoverTrigger, PopoverContent };
 export { Popover, PopoverTrigger, PopoverContent }
+export { Popover, PopoverTrigger, PopoverContent }
+;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export { Popover, PopoverTrigger, PopoverContent };
+export { Popover, PopoverTrigger, PopoverContent }
+<<<<<<< HEAD
+import * as React from "react";
+import * as PopoverPrimitive from "@radix-ui/react-popover";
+;
+import { cn } from "@/lib/utils";
+=======
 
 ;
 
 ;
 const Popover = PopoverPrimitive.Root;
+;
 const PopoverTrigger = PopoverPrimitive.Trigger;
 import * as React from "react"""
 import * as PopoverPrimitive from "@radix-ui/react-popover"""
@@ -95,6 +111,21 @@ const PopoverContent = React.forward_ref<;
         class_name)}
       {...props}
     />;
+<<<<<<< HEAD
+  </PopoverPrimitive.Portal>;
+));
+PopoverContent.displayName = PopoverPrimitive.Content.displayName;
+;
+export { Popover, PopoverTrigger, PopoverContent }import * as React from "react" import * as PopoverPrimitive from "@radix-ui/react-popover" const Popover = PopoverPrimitive.Root const PopoverTrigger = PopoverPrimitive.Trigger const PopoverContent = React.forwardRef< React.ElementRef<typeof PopoverPrimitive.Content>;
+React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>) 
+}{
+  ...props 
+}/> </PopoverPrimitive.Portal>) ) PopoverContent.displayName = PopoverPrimitive.Content.displayName export {
+  Popover, PopoverTrigger, PopoverContent 
+}
+;
+;
+=======
   </PopoverPrimitive.Portal>));
 PopoverContent.display_name = PopoverPrimitive.Content.display_name;
 export { Popover, PopoverTrigger, PopoverContent }

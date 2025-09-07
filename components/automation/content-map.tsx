@@ -85,6 +85,8 @@ return (;
         <ul className="text-sm space-y-1">;"
           {sections && sections.map(([sec, n]) => (<li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>;"
           ))}
+<<<<<<< HEAD
+=======
 
 }
 ) )

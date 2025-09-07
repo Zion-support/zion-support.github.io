@@ -23,10 +23,13 @@ interface Milestone {
   dueDate: string
   estimatedHours: number
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
+=======
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
@@ -37,6 +40,18 @@ const corsHeaders = {
   description: string,
   dueDate: string,
   estimatedHours: number
+<<<<<<< HEAD
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+interface Milestone {;
+  title: string,;
+  description: string,;
+  dueDate: string,;
+  estimatedHours: number;
+
+=======
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 
@@ -112,6 +127,44 @@ if (req.method === 'OPTIONS') {
   }
 
   try {
+<<<<<<< HEAD
+    // Get the OpenAI API key from environment variables,
+const apiKey = Deno.env.get('OPENAIAPI_KEY'),
+    if (!apiKey) {
+      throw new Error('OPENAIAPI_KEY is not set')
+    }
+
+    // Parse request body,
+const {
+      talentName,
+      clientName,
+      projectName,
+      scopeSummary,
+      startDate,
+      endDate,
+      paymentTerms,
+      paymentAmount,
+      additionalClauses,
+      milestones
+    } = await req.json(),
+    // Create the contract prompt for OpenAI,
+let prompt = `
+    Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
+
+
+
+
+}
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders })
+  }
+
+  try {
+    // Get the OpenAI API key from environment variables
+    const apiKey = Deno.env.get('OPENAI_API_KEY');
+=======
     // Get the OpenAI API key from environment variables
 
 const corsHeaders = {;"
@@ -140,6 +193,7 @@ try {;
   // TODO: Implement
     // Get the OpenAI API key from environment variables;
     const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
     // Parse request body;
@@ -181,6 +235,9 @@ serve(async (req) => {
       paymentAmount;
       additionalClauses;
       milestones
+<<<<<<< HEAD
+    } = await req.json();
+=======
 
     let prompt = `
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
@@ -340,6 +397,8 @@ if (milestones && milestones.length > 0) {prompt += `
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
       `;
     }
+<<<<<<< HEAD
+=======
 
     const data = await response && response.json();
     

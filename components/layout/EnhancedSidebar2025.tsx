@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+]
+ ] 
+] 
+ ] 
+=======
 
 import React, { useState, useEffect } from 'react','
 import Link from 'next/link';'
@@ -876,6 +882,8 @@ const sidebar_items: SidebarItem[] = [;
   { "name": 'Community', "href": '/community', "description": 'Connect with users','
 }
 ];
+<<<<<<< HEAD
+=======
 
 const toggleSection = ("title": string) => ;
   const newExpanded = new Set(expandedSections)if (newExpanded.has(title)) {newExpanded.delete(title)} else {new_expanded.add (title)}
@@ -1459,7 +1467,6 @@ const resources = [;
   { "name": 'Community Forum', "href": '/community', "icon": <Users className="w-4 h-4" />,"
 }
 ];
-
 const supportLinks = [;
   { "name": 'Community', "href": '/community', "description": 'Connect with users','
 }
@@ -1523,6 +1530,7 @@ const toggleSection = ("title": string) => ;
                 </div>
               )}
             </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">;"
@@ -2230,6 +2238,11 @@ initial={{ x:, -100%;
 , transition = {'';
   { type: 'spring, damping: 25, , stiffness: 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`';
       {/* Sidebar */}
+<<<<<<< HEAD
+      <motion&& motion.div
+initial={{ x: '-100%' }}'        animate={{ x: isOpen ? 0 : '-100%' }}'        transition = {'
+  { type: 'spring',
+=======
 
       <motion.div,
 initial={{ "x":, -100%
@@ -2286,6 +2299,8 @@ className={`fixed left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - bl
 
 
 }
+<<<<<<< HEAD
+=======
 
 
 const [expanded_sections, setExpandedSections] =;

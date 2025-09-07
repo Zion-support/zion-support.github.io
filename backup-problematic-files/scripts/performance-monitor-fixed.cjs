@@ -659,6 +659,9 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
         "Reduce First Input Delay - minimize JavaScript execution time"
         "Improve Cumulative Layout Shift - add size attributes to images and videos"
         "Reduce bundle size - remove unused dependencies and optimize imports"
+<<<<<<< HEAD
+        "Optimize memory usage - check for memory leaks and optimize data structures"
+=======
         "Optimize memory usage - check for memory leaks and optimize data structures"
 
   console.error("Fatal "error": ")  console.error("Fatal "error": ")

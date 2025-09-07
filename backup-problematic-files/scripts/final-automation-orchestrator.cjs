@@ -59,6 +59,9 @@ console.log('=====')
       console.log('\n "Recommendations")
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+    console.error(' Final automation orchestrator "failed")
+=======
     console.error(' Final automation orchestrator "failed")
 <<<<<<< HEAD
 <<<<<<< HEAD

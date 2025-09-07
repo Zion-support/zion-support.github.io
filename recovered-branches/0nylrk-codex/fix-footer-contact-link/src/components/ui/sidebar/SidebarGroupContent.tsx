@@ -79,6 +79,19 @@ interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> 
 ;
 export function SidebarGroupContent({ className, children, ...props }: SidebarGroupContentProps) {;
   return (;
+<<<<<<< HEAD
+}
+
+;
+
+
+    <div className={cn("space-y-1", className)} {...props}>;
+      {children}
+    </div>;
+  );
+}
+;
+=======
 
 "
     <div className={cn("space-y-1", className)} {...props}>;

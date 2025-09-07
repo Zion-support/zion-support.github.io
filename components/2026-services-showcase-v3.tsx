@@ -642,6 +642,7 @@ className='flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 t
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
                 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <motion.a
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
@@ -651,6 +652,27 @@ className='flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 t
                   <span>Email Us</span>
                 </motion.a>
               </div>
+<<<<<<< HEAD
+              <div className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 rounded-2xl border border-purple-500/20'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
+                  <div>
+                    <div className='text-white font-medium'>
+                      {contactInfo.mobile}
+                    </div>
+                    <div className='text-gray-400 text-sm'>Mobile</div>
+                  </div>
+                  <div>
+                    <div className='text-white font-medium'>
+                      {contactInfo.email}
+                    </div>
+                    <div className='text-gray-400 text-sm'>Email</div>
+                  </div>
+                  <div>
+                    <div className='text-white font-medium'>
+                      {contactInfo.address}
+                    </div>
+                    <div className='text-gray-400 text-sm'>Address</div>                  </div>                  <div>
+=======
 
               <div className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 rounded-2xl border border-purple-500/20>
                 <div className=grid grid-cols-1 md:grid-cols-3 gap-6 text-center">

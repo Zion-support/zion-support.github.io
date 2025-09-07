@@ -4,6 +4,8 @@ import React from 'react;
 import Link from next/link';';
 import { motion } from framer-motion;
 
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from next/link;';
 import { motion } from 'framer-motion;
@@ -54,6 +56,7 @@ const services = [;
     title: 'Smart Factory Solutions,',
     description: 'IoT-enabled manufacturing systems for intelligent production management.,',
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Layout from '../../components/Layout';
 import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
 import React from 'react';
@@ -76,6 +79,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Predictive Maintenance AI,',
+    description: 'AI-powered systems to predict and prevent equipment failures.,',
+    icon: Brain,
+    features: [;
+      'Equipment health monitoring,',
+      'Failure prediction algorithms',',
+      'Maintenance scheduling',',
+=======
 
     title: 'Predictive Maintenance AI,,
     description: AI-powered systems to predict and prevent equipment failures.,',
@@ -91,6 +103,15 @@ const services = [
   }];
   },
   {}
+<<<<<<< HEAD
+    title: 'IoT Sensor Networks,',
+    description: 'Connected sensor systems for comprehensive factory monitoring.,',
+    icon: Cpu,
+    features: [;
+      'Environmental monitoring,',
+      'Equipment status tracking',',
+      'Data collection systems',',
+=======
 
     title: 'IoT Sensor Networks,',
     description: Connected sensor systems for comprehensive factory monitoring.,,
@@ -104,6 +125,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Quality Control Systems,',
+    description: 'Automated quality assurance using computer vision and AI.,',
+    icon: Shield,
+    features: [;
+      'Visual inspection systems,',
+      'Defect detection algorithms',',
+      'Quality metrics tracking',',
+=======
 
     title: Quality Control Systems,',
     description: 'Automated quality assurance using computer vision and AI.,,
@@ -119,6 +149,15 @@ const services = [
   }];
   },
   {}
+<<<<<<< HEAD
+    title: 'Supply Chain Optimization,',
+    description: 'AI-driven supply chain management for improved efficiency.,',
+    icon: BarChart3,
+    features: [;
+      'Demand forecasting,',
+      'Inventory optimization',',
+      'Supplier management',',
+=======
 
     title: Supply Chain Optimization,,
     description: 'AI-driven supply chain management for improved efficiency.,',
@@ -132,6 +171,15 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
+    title: 'Digital Twin Technology,',
+    description: 'Virtual replicas of physical manufacturing systems for simulation.,',
+    icon: Database,
+    features: [;
+      '3D factory modeling,',
+      'Process simulation',',
+      'Performance optimization',',
+=======
 
     description: 'Virtual replicas of physical manufacturing systems for simulation.,,
     icon: Database,

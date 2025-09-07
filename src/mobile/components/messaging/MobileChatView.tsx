@@ -115,6 +115,54 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             <Button variant="ghost" size="icon" aria-label="More options">
               <MoreVertical className="h-5 w-5" />
             </Button>
+            <Button
+              variant='ghost'
+              size='icon'
+              onClick={startVideoCall}
+              aria-label='Start video call'            >
+              <Video className='h-5 w-5' />
+            </Button>
+            <Button variant='ghost' size='icon' aria-label='More options'>
+              <MoreVertical className='h-5 w-5' />
+          
+          <div className="flex">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={startAudioCall}
+              aria-label="Start audio call"
+            >
+              <Phone className="h-5 w-5" />
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={startVideoCall}
+              aria-label="Start video call"
+            >
+              <Video className="h-5 w-5" />
+            </Button>
+            
+            <Button variant="ghost" size="icon" aria-label="More options">
+              <MoreVertical className="h-5 w-5" />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={startVideoCall}
+              aria-label="Start video call"
+            >
+              <Video className="h-5 w-5" />
+            </Button>
+            
+            <Button variant="ghost" size="icon" aria-label="More options">
+              <MoreVertical className="h-5 w-5" />
           </div>
         </div>
       </header>

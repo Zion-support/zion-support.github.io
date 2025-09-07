@@ -1,3 +1,121 @@
+<<<<<<< HEAD
+import {;
+  ArrowRight,;
+  Play,;
+  TrendingUp,;
+  Brain,;
+  Shield,;
+  Rocket,;
+  Globe,;
+  Cpu,;
+  Database,;
+  Atom,;
+  Target,;
+  Star,;
+  Sparkles as SparklesIcon,;
+  Brain as BrainIcon,;
+  Atom as AtomIcon,;
+  Shield as ShieldIcon,;
+  Rocket as RocketIcon,;
+  Zap,;
+  Eye,;
+  Heart,;
+  Infinity,;
+  ChevronRight,;
+  ChevronLeft,;
+  ExternalLink,;
+  Users,;
+  Award,;
+  Clock,;
+  CheckCircle,;
+  Zap as ZapIcon,;
+  DollarSign,;
+  BarChart3,;
+  Palette,;
+  Cloud,;
+  Network,;
+  ShoppingCart,;
+  Settings,;
+  Building,;
+  Monitor,;
+  Layers,;
+  Globe2,;
+  Lock,;
+  Code,;
+  Server,;
+  Phone,;
+  Search,;
+  Filter,;
+  Grid,;
+  List,;
+  Eye as EyeIcon,;
+  ArrowUpRight,;
+  Star as StarIcon,;
+  Sparkles,;
+  Target as TargetIcon,;} from 'lucide-react';import { ;
+import { 
+import {motion, AnimatePresence} from 'framer-motion';
+import Link from 'next / link';
+import {
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import Link from 'next/link';
+
+import {
+  ArrowRight
+  Play
+  TrendingUp
+  Brain
+  Shield
+  Rocket
+  Globe
+  Cpu
+  Database
+  Atom
+  Target
+  Star
+  Sparkles as SparklesIcon
+  Brain as BrainIcon
+  Atom as AtomIcon
+  Shield as ShieldIcon
+  Rocket as RocketIcon
+  Zap
+  Eye
+  Heart
+  Infinity
+  ChevronRight
+  ChevronLeft
+  ExternalLink
+  Users
+  Award
+  Clock
+  CheckCircle
+  Zap as ZapIcon
+  DollarSign
+  BarChart3
+  Palette
+  Cloud
+  Network
+  ShoppingCart
+  Settings
+  Building
+  Monitor
+  Layers
+  Globe2
+  Lock
+  Code
+  Server
+  Phone
+  Search
+  Filter
+  Grid
+  List
+  Eye as EyeIcon
+  ArrowUpRight
+  Star as StarIcon
+  Sparkles
+  Target as TargetIcon;} from 'lucide-react';import {
+=======
 
 
 import React, { useEffect, useState, useCallback } from 'react';'
@@ -9,6 +127,11 @@ import { ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Databa
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
   Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon;
+<<<<<<< HEAD
+  ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon
+
+
+=======
 
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon
  } from 'lucide-react';'
@@ -202,6 +325,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 const fadeInUp = {
@@ -471,6 +595,8 @@ initial='initial''
 }
 key={index}
                     variants={fadeInUp}
+<<<<<<< HEAD
+=======
 
 className='text-center''
                   >
@@ -680,6 +806,18 @@ className='relative''
             </motion.div>;
           </div>;
       </section>;
+
+                    >
+
+                      Learn More
+                    </Link>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
+          </div>
+        </div>
+      </section>
       {/* Services Overview */}
             initial={{ "opacity": 0, "y": 30 
 }
@@ -818,6 +956,8 @@ className='group relative'>'
           </motion.div>;
         </div>;
       </section>;
+
+
       {/* Featured Services Grid */}
       <section className='relative py - 20 px - 4 "sm":px - 6 "lg":px - 8'>;'
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="relative py - 20 px - 4 "sm":px - 6 "lg":px - 8">;"

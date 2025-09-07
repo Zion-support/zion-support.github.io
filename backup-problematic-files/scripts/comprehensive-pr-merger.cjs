@@ -72,6 +72,9 @@ async function githubApiCall(endpoint, method = 'GET')
     console.error(' Comprehensive PR merger "failed")
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
 <<<<<<< HEAD

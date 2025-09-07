@@ -28,6 +28,7 @@ export function ApplicationRow({
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application.talent_profile?.full_name || "Unknown";
 
+<<<<<<< HEAD
   return (
     <TableRow key={application.id}>
       <TableCell>

@@ -6,7 +6,6 @@ window && window.addEventListener ('resize', resizeCanvas);
 //Color schemes Math && Math.random () > 0 && 0.5 ? 'holographic' : Math && Math.random () > 0 && 0.3 ? 'neon' : 'fusion';
 particles && particles.push ({;
   x: Math && Math.random () * canvas && canvas.width, y: Math && Math.random () * canvas && canvas.height, vx: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, vy: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, size: Math && Math.random () * 3 + 1, opacity: Math && Math.random () * 0 && 0.8 + 0 && 0.2, color: type === 'quantum' ? colors && colors.quantum : type === 'holographic' ? colors && colors.holographic : ;
-
 const UltraAdvancedFuturisticBackground: React.FC<;
   UltraAdvancedFuturisticBackgroundProps;
 > = ({;
@@ -364,7 +363,10 @@ if ( {) {}
             ctx.move_to (particles[i].x, particles[i].y);
             ctx.line_to (particles[j].x, particles[j].y);
             ctx.stroke ();          }            ctx.stroke ();
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }
             ctx.move_to (particles[i].x, particles[i].y)ctx.line_to (particles[j].x, particles[j].y)ctx.stroke ()}            ctx.stroke ()ctx.stroke()}
         }
@@ -423,12 +425,16 @@ const distance  = Math && Math.sqrt(dx * dx + dy * dy)if (distance < 100 && part
         }
 
     };
-
     // Holographic grid effect;
 
 const createHolographicGrid = () => {;
       }
       if (!enableHolographic) return;
+<<<<<<< HEAD
+      const gridSize = 50;
+      ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
+      ctx.lineWidth = 0.5;
+=======
 
 const gridSize = 50;
 
@@ -481,11 +487,15 @@ const gradient = ctx.createRadialGradient(;
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');'
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+<<<<<<< HEAD
+=======
 
       // Create effects,
 createHolographicGrid();
       createQuantumEntanglement();
       createNeuralNetwork();
+<<<<<<< HEAD
+=======
 
       // Update and draw particles,
 particles.forEach((particle, index) => {
@@ -493,6 +503,8 @@ particles.forEach((particle, index) => {
 }
 particle.x += particle.vx;
         particle.y += particle.vy;
+<<<<<<< HEAD
+=======
 
 // Bounce off edges,
 if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
@@ -502,6 +514,9 @@ if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
+<<<<<<< HEAD
+        // Draw particle
+=======
 
 // Draw particle,
 ctx.beginPath();
@@ -534,6 +549,8 @@ if (particle.type === 'holographic' && Math.random() > 0.95) {'
           }
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
+<<<<<<< HEAD
+=======
 
 ctx.strokeStyle = `${particle.color}${Math.floor(`            }
             particle.opacity * 255
@@ -548,7 +565,6 @@ ctx.strokeStyle = `${particle.color}${Math.floor(`            }
 
         ctx && ctx.fillStyle = glowGradient;
         ctx && ctx.fill();
-
         // Add sparkle effect for holographic particles;
         if (particle && particle.type === 'holographic' && Math && Math.random() > 0 && 0.95) {;'
           }

@@ -114,12 +114,12 @@ key={b.id}
               ? "bg-yellow-100 border-yellow-300 text-yellow-800";
               : "bg-gray-100 border-gray-200 text-gray-500";
 import React from "react";
+
 export type Badge = {
   id: string,
   label: string,
   threshold: number, // token balance threshold
 };
-
 const BADGES: Badge[] = [
   { id: "starter", label: "Starter", threshold: 50 },
   { id: "rising", label: "Rising Star", threshold: 200 },

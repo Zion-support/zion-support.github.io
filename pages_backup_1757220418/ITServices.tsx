@@ -328,7 +328,6 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -346,7 +345,6 @@ export default function ITServices() {
               A proven methodology that ensures successful IT implementation and maximum value for your investment.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
@@ -374,7 +372,6 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4">
@@ -399,7 +396,6 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">

@@ -7,6 +7,8 @@ interface LeaderboardEntry {
   name: string,
   referrals: number
 }
+<<<<<<< HEAD
+=======
 
 export function ReferralLeaderboard() {
   // This would typically be fetched from the server
@@ -34,7 +36,6 @@ export function ReferralLeaderboard() {
               key={entry.rank}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
             >
-              <div className="flex items-center gap-3">
                 <div 
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry.rank === 1
@@ -45,7 +46,7 @@ export function ReferralLeaderboard() {
                       ? "bg-amber-200 text-amber-800"
                       : "bg-muted text-muted-foreground"
                   }`}
-                >
+                >;
                   {entry.rank}
                 </div>
                 <span className="font-medium">{entry.name}</span>
@@ -55,6 +56,8 @@ export function ReferralLeaderboard() {
               </span>
             </div>
           ))}
+<<<<<<< HEAD
+=======
         </div>
       </CardContent>
     </Card>

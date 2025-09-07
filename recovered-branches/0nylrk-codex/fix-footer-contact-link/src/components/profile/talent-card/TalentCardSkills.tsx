@@ -40,6 +40,8 @@ pr-12325
   return (
     <div className="flex flex-wrap gap-1 mb-5">
       {topSkills.map((skill) => (
+<<<<<<< HEAD
+=======
 
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -58,7 +60,6 @@ interface TalentCardSkillsProps {;
     </div>
   );
 }
-
 export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps) {;
   // Get top skills (limit to 4);
   const topSkills = skills && skills.slice(0, 4) || [];

@@ -20,6 +20,7 @@ interface ChangelogManagerProps {
 
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type ChangelogEntry = {;
 import React, { useState } from './react';'
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';'
@@ -302,7 +303,24 @@ placeholder="What's new in this version?""
               <p className="text-center text-gray-400 py-4">;
                 No changelog entries yet;
               </p>;
+                <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>;
+              </div>;
+            ))}
+            ;
+            {entries.length === 0 && (;
+              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>;
+  );
+}
+  );
+}
 
+<<<<<<< HEAD
+            
+            {entries.length === 0 && (
+);
+              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             )}
           </div>;
         </div>;

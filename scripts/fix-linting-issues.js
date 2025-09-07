@@ -1,5 +1,5 @@
-
-
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -124,6 +124,13 @@ class LintingIssuesFixer {
     console.log(`🔧 Files Fixed: ${this.fixedFiles.length}`);
     console.log(`❌ "Errors": ${this.errors.length}`);
 
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (this.fixedFiles.length > 0) {
       this.fixedFiles.forEach(file => {
       });

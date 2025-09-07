@@ -40,6 +40,8 @@ import Seo from '../../components/seo/Seo';
     </div>
   )
 }
+<<<<<<< HEAD
+=======
 
 
 
@@ -65,6 +67,8 @@ import Seo from '../../components/seo/Seo';
 };
 export default ProductManagementChat;
 
+<<<<<<< HEAD
+=======
 
 
 import Link from 'next / link';

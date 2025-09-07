@@ -185,6 +185,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {}
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
 
   const handleApply = async () => {
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -193,27 +195,48 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {}
         title: "Message required"
         description: "Please enter a message before applying."
         variant: "destructive"
+<<<<<<< HEAD
+=======
 
   const handleResumeSelected = (resume: ResumeOption) => {;
     setSelectedResume(resume),;
     setSelectedResumeId(resume && resume.id);
   };
-
   const handleApply = async () => {;
     if (!message && message.trim()) {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }),
       return
     }
     try {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setIsSubmitting(true),
 
+<<<<<<< HEAD
+      setIsSubmitting(true);
+      setIsSubmitting(true),
+      
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // First submit the application to the job applications table
       const applicationSuccess = await applyToJob(
         job.id
         message
         selectedResumeId
+<<<<<<< HEAD
+      );
+      if (!applicationSuccess) {
+        throw new Error("Failed to submit application")
+      }
+      // Format message with proposal link if provided
+      let fullMessage = message;
+      if (proposalLink) {
+        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
+=======
 
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
@@ -227,10 +250,84 @@ interface ApplyFormProps {
   const [proposalLink, setProposalLink] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      ),
+      
+      if (!applicationSuccess) {
+        throw new Error("Failed to submit application")
+<<<<<<< HEAD
+      }
+      
+      // Format message with proposal link if provided
+      let fullMessage = message;
+      
+      if (proposalLink) {
+        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
+import React, { useState } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from "lucide-react",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useMessaging } from "@/context/MessagingContext",;
+import { toast } from "@/hooks/use-toast",;
+import { ResumeSelector, ResumeOption } from "../resume-selector",;
+import { MessageTab } from "./MessageTab",;
+import { ResumeTab } from "./ResumeTab",;
+import { Job } from "./types",;
+interface ApplyFormProps {;
+  job: Job,;
+  onClose: () => void,;
+  onApplySuccess?: (jobId: string) => Promise<void>;
+}
+;
+export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
+  const { createConversation } = useMessaging(),;
+  const { applyToJob } = useJobApplications(),;
+  const [message, setMessage] = useState(;
+    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
+  ),;
+  const [proposalLink, setProposalLink] = useState(''),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [activeTab, setActiveTab] = useState<string>("message"),;
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),;
+  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),;
+  const handleResumeSelected = (resume: ResumeOption) => {;
+    setSelectedResume(resume),;
+    setSelectedResumeId(resume.id);
+  },;
+  const handleApply = async () => {;
+    if (!message.trim()) {;
+      toast({;
+        title: "Message required",;
+        description: "Please enter a message before applying.",;
+        variant: "destructive";
+      }),;
+      return;
+    }
+;
+    try {;
+      setIsSubmitting(true),;
+      // First submit the application to the job applications table;
+      const applicationSuccess = await applyToJob(;
+        job.id,;
+        message,;
+        selectedResumeId;
+      ),;
+      if (!applicationSuccess) {;
+        throw new Error("Failed to submit application");
+      }
+;
+      // Format message with proposal link if provided;
+      let fullMessage = message,;
+      if (proposalLink) {;
+        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
+
       ),
       
       if (!applicationSuccess) {"
         throw new Error("Failed to submit application")
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -302,6 +399,8 @@ export function ApplyForm() { return null; }
       if (selectedResume) {'`
         fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`
       }
+<<<<<<< HEAD
+=======
 
       // Create context data for the conversation
       const contextData = {
@@ -318,9 +417,11 @@ export function ApplyForm() { return null; }
       await createConversation(
         job.client_id;
 
+      });
+      return;
+    }
     try {;
       setIsSubmitting(true);
-
       // First submit the application to the job applications table;
       const applicationSuccess = await applyToJob(;
         job && job.id, ;
@@ -383,6 +484,8 @@ export function ApplyForm() { return null; }
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job.id);
+<<<<<<< HEAD
+=======
 
       }
       
@@ -397,6 +500,9 @@ export function ApplyForm() { return null; }
         description: `Your application for "${job.title}" has been sent.`})
       onClose()
     } catch (error) {
+<<<<<<< HEAD
+      console.error("Failed to send application:", error),
+=======
       console.error("Failed to send application:", error);
       console.error("Failed to send application:", error),
       toast({
@@ -407,6 +513,25 @@ export function ApplyForm() { return null; }
       })
     } finally {}
       setIsSubmitting(false)
+<<<<<<< HEAD
+    }
+  }
+  },
+
+  return (
+    <>
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+        <TabsList className="w-full mb-4 bg-zion-blue-dark/30">
+          <TabsTrigger value="message" className="flex-1">
+            Message
+          </TabsTrigger>
+          <TabsTrigger value="resume" className="flex-1">
+            Resume
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="message">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 
@@ -414,6 +539,11 @@ export function ApplyForm() { return null; }
       if (onApplySuccess) {;
         await onApplySuccess(job && job.id);
       }
+<<<<<<< HEAD
+      toast({;
+        title: "Application sent",;
+        description: `Your application for "${job && job.title}" has been sent.`}),;
+=======
 
       onClose();
     } catch (error) {;"
@@ -423,6 +553,8 @@ export function ApplyForm() { return null; }
       });
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
+=======
 
   return (
 
@@ -489,6 +621,7 @@ interface ApplyFormProps {
 </string>
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <MessageTab
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
 </void>"
@@ -738,6 +871,7 @@ if ( {) {}
           type="button"
           onClick={handleApply}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
 
           <ResumeTab;

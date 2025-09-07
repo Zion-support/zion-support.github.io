@@ -85,6 +85,9 @@ const { execSync } = require('child_process')
       { "component": 'ErrorBoundary', "status"}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+      { "component": 'PerformanceMonitor', "status"}
+=======
       { "component": 'PerformanceMonitor', "status"}
 <<<<<<< HEAD
 <<<<<<< HEAD

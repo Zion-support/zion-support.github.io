@@ -21,6 +21,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -50,6 +51,7 @@ export default function ServiceDescriptionGenerator() {}
   const { isAuthenticated, isLoading } = useAuth(),
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Show loading while checking authentication
   if (isLoading) {
 
@@ -87,6 +89,21 @@ export default function ServiceDescriptionGenerator() {}
           <div className="space-y-8">
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
+<<<<<<< HEAD
+              <GeneratedDescriptionDisplay
+              <GeneratedDescriptionDisplay 
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",;
+import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",;
+import { SEO } from "@/components/SEO",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+export default function ServiceDescriptionGenerator() {;
+  const { isAuthenticated, isLoading } = useAuth(),;
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
+=======
 
               <GeneratedDescriptionDisplay
               <GeneratedDescriptionDisplay 
@@ -121,6 +138,38 @@ export default function ServiceDescriptionGenerator() { return null; }
   if (!isAuthenticated) {;
     return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
   }
+<<<<<<< HEAD
+    ),;
+  }
+  ;
+  // Redirect to login if not authenticated;
+  if (!isAuthenticated) {;
+    return <Navigate to="/login" state={{ from:'/service-description-generator' }} replace />,;
+  }
+;
+  const handleDescriptionSave = (editedDescription:string) => {;
+    setGeneratedDescription(editedDescription),;
+    // Here you could also save to database if needed;
+  },;
+;
+  return (;
+    <div className="min-h-screen flex flex-col bg-zion-blue">;
+      <SEO ;
+        title="Service Description Generator" ;
+        description="Generate professional service descriptions using AI";
+        keywords="service description, AI content, professional description generator";
+;
+  const handleDescriptionSave = (editedDescription: string) => {;
+    setGeneratedDescription(editedDescription);
+    // Here you could also save to database if needed;
+  };
+  return (;
+    <div className="min-h-screen flex flex-col bg-zion-blue">;
+      <SEO;
+        title="Service Description Generator";
+        description="Generate professional service descriptions using AI";
+        keywords="service description, AI content, professional description generator";
+=======
 
   const handleDescriptionSave = (editedDescription: string) => {;
     setGeneratedDescription(editedDescription),;
@@ -200,6 +249,8 @@ export default function ServiceDescriptionGenerator() { return null; }
                 onSave={handleDescriptionSave}
               />;
             )}
+<<<<<<< HEAD
+=======
 
 import React, { useState } from './react';
 import { Header } from '@/components / Header';

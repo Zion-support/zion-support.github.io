@@ -107,6 +107,17 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     }
   };
 
+<<<<<<< HEAD
+  return (
+    <div className="space-y-6">
+
+
+  }
+}
+
+export function AIListingGenerator({ onApplyGenerated, initialValues;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -228,6 +239,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
             </div>
             
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
               <ul className="list-disc pl-5 text-white space-y-1">

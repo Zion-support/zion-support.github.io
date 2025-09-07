@@ -4,6 +4,21 @@ id: string;
   skills: string[];
   category: string;
 
+<<<<<<< HEAD
+export interface JobData {
+export interface JobData {;
+  id: string;
+  title: string;
+  description: string;
+  skills: string[];
+  category: string;
+  budget: {
+
+    min: number
+
+    max: number
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     min: number,
     max: number;
 

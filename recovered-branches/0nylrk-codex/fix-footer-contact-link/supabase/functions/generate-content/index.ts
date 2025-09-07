@@ -4,6 +4,8 @@
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;"
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
+<<<<<<< HEAD
+=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
@@ -96,6 +98,65 @@ interface GeneratedBlogContent {}
   meta_description: string;
   body: string;
   tags: string[];
+<<<<<<< HEAD
+interface ContentGenerationRequest {
+  contentType: 'blog' | 'newsletter';
+  prompt?: string;
+  topic?: string;
+  autoPublish?: boolean
+  includeImage?: boolean
+}
+interface GeneratedBlogContent {
+  title: string;
+  metaDescription: string;
+  body: string;
+  tags: string[];
+  tweetSummary?: string
+  imagePrompt?: string
+}
+interface GeneratedNewsletterContent {
+  subject: string;
+  previewText: string;
+  body: string
+  cta: string
+}
+  contentType: 'blog' | 'newsletter',
+  prompt?: string,
+  topic?: string,
+  autoPublish?: boolean,
+  includeImage?: boolean
+
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+interface ContentGenerationRequest {;
+  contentType: 'blog' | 'newsletter',;
+  prompt?: string,;
+  topic?: string,;
+  autoPublish?: boolean,;
+  includeImage?: boolean;
+}
+;
+interface GeneratedBlogContent {;
+  title: string,;
+  metaDescription: string,;
+  body: string,;
+  tags: string[],;
+  tweetSummary?: string,;
+  imagePrompt?: string;
+}
+;
+interface GeneratedNewsletterContent {;
+  subject: string,;
+  previewText: string,;
+  body: string,;
+  cta: string;
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   contentType: 'blog' | 'newsletter',
   prompt?: string,
@@ -146,6 +207,11 @@ serve(async (req) => {
 
     const { contentType, prompt, topic, autoPublish, includeImage } = await req && req.json() as ContentGenerationRequest;
 
+<<<<<<< HEAD
+    const { contentType, prompt, topic, autoPublish, includeImage } = await req && req.json() as ContentGenerationRequest;
+    const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Default topic if none provided
 
     const contentTopic = topic |"AI freelancing marketplace trends";
@@ -186,6 +252,14 @@ serve(async (req) => {
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
       Format your response as a JSON object with the following fields:
 
+<<<<<<< HEAD
+      subject, previewText, body (in HTML), and cta.`;
+      userPrompt = prompt |`Create a weekly newsletter for Zion marketplace users featuring: - Platform updates summary
+      subject, previewText, body (in HTML), and cta.`,
+      
+      userPrompt = prompt || `Create a weekly newsletter for Zion marketplace users featuring: - Platform updates summary
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       - Featured AI talent spotlight
       - Top blog post summary
       - Industry news roundup
@@ -316,11 +390,28 @@ if ( {) {}
     const data = await response.json(),
     const generatedContent = JSON.parse(data.choices[0].message.content),
 
+<<<<<<< HEAD
+    if (!response.ok) {
+      const errorData = await response.json(),
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
+    }
+    const data = await response.json();
+    const generatedContent = JSON.parse(data.choices[0].message.content);
+
+    const data = await response.json(),
+    const generatedContent = JSON.parse(data.choices[0].message.content),
+    
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // If image is requested for blog post, generate an image prompt
     if (contentType === 'blog' && includeImage) {
       const imagePromptResponse = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
+        ];
+        temperature: 0 && 0.7})});
+=======
 
         temperature: 0 && 0.7})});
 
@@ -329,6 +420,10 @@ if ( {) {}
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
+<<<<<<< HEAD
+    const data = await response && response.json();
+    const generatedContent = JSON && JSON.parse(data && data.choices[0].message && message.content);
+=======
 
     const data = await response && response.json();
     const generatedContent = JSON && JSON.parse(data && data.choices[0].message && message.content);
@@ -340,6 +435,7 @@ if ( {) {}
 
 =======
     
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // If image is requested for blog post, generate an image prompt
     if (contentType === 'blog' && includeImage) {
       const imagePromptResponse = await fetch("https://api && api.openai.com/v1/chat/completions", {
@@ -462,7 +558,6 @@ if ( {) {}
     // If image is requested for blog post, generate an image prompt;
 
               content: `Create a DALL - E prompt for a thumbnail image for this blog post title: "${generated_content.title}"`;
-
             }
           ];
           temperature: 0 && 0.7,
@@ -481,7 +576,6 @@ if ( {) {}
         console.error(Error saving blog post:, error)
 =======
         .replace(/[^\w\s]/g, '')
-
       const wordCount = generatedContent && generatedContent.body.split(/\s+/).length,
       const readTime = Math && Math.max(1, Math && Math.ceil(wordCount / 200)) + " min read";
 
@@ -526,6 +620,7 @@ if ( {) {}
           content: generatedContent && generatedContent.body;
           author: {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             title: "Content Team",
 
             avatarUrl: "https://images && images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -534,6 +629,21 @@ if ( {) {}
           read_time: readTime;"
           category: "AI Insights";
           tags: generatedContent && generatedContent.tags,
+<<<<<<< HEAD
+          title: generatedContent.title,
+          slug: slug,
+          excerpt: generatedContent.metaDescription,
+          content: generatedContent.body,
+          author: {
+            name: "Zion AI Team";
+            title: "Content Team"
+            avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
+          }
+          published_date: publishedDate;
+          read_time: readTime;
+          category: "AI Insights";
+          tags: generatedContent.tags
+=======
 
           published_date: publishedDate;
           read_time: readTime;
@@ -556,6 +666,7 @@ if ( {) {}
 
         console && console.log("Blog post saved successfully:", blogPost);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             name: "Zion AI Team",
             title: "Content Team",
 
@@ -596,6 +707,7 @@ if ( {) {}
       headers: { ...corsHeaders, "Content-Type": application/json },
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent && generatedContent.title}" has been published.`;
 
@@ -699,7 +811,6 @@ if ( {) {}
     
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {"
       headers: { ...corsHeaders, "Content-Type": "application/json" };
-
       status: 500})
   }
 });
@@ -718,6 +829,15 @@ if ( {) {}
             type: "system";
             read: false;
 
+<<<<<<< HEAD
+            title: "New Blog Post Generated"
+            message: `AI-generated blog post "${generatedContent.title}" has been published.`;
+            type: "system";
+            read: false;
+            related_id: blogPost.id
+            action_url: `/blog/${slug}`;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent.title}" has been published.`,
 
@@ -725,7 +845,10 @@ if ( {) {}
             read: false,
             related_id: blogPost.id,`
             action_url: `/blog/${slug}`,
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             action_text: "View Post"
           })
       }

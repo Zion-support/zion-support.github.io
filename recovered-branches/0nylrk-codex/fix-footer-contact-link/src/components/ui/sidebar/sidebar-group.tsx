@@ -56,6 +56,8 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   icon?: React.ReactNode,
   defaultExpanded?: boolean,
   showChevron?: boolean
+<<<<<<< HEAD
+}
 
 }
 
@@ -127,6 +129,7 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
           </button>;
         )}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
       </div>;
     );

@@ -11,10 +11,26 @@ export const useUploadDeliverable = () => {
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user |!projectId) return null;
 
+<<<<<<< HEAD
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {toast} from 'sonner';
+import {useRecordActivity} from './useRecordActivity';
+export const useUploadDeliverable = () => {
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { recordMilestoneActivity } = useRecordActivity();
+  const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
+    if (!user |!projectId) return null;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const useUploadDeliverable = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
+=======
 
 '
 import { useState } from 'react','
@@ -27,6 +43,8 @@ export const useUploadDeliverable = () => {}
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
+<<<<<<< HEAD
+=======
 
     try {
       setIsSubmitting(true)
@@ -35,6 +53,22 @@ export const useUploadDeliverable = () => {}
         .from('project_milestones')
         .select('*')
         .eq('id', milestoneId)
+<<<<<<< HEAD
+        .single();
+      if (fetchError) throw fetchError;
+      if (!milestone) throw new Error("Milestone not found");
+      // For this example, instead of actually uploading files (which would require storage setup);
+      // we'll just store the file metadata in the deliverables JSONB field
+      const newDeliverable = {
+        id: crypto.randomUUID();
+        filename: file.name;
+        size: file.size;
+        type: file.type;
+        added_at: new Date().toISOString()
+        added_by: user.id
+      }
+      const deliverables = [...(milestone.deliverables |[]), newDeliverable];
+=======
 
         id: crypto && crypto.randomUUID();
         filename: file && file.name;

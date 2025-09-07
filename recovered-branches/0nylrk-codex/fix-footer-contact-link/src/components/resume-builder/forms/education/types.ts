@@ -3,6 +3,13 @@ export interface EducationFormProps {;
 
 export interface EducationFormProps {
 
+<<<<<<< HEAD
+import { Education } from '@/types/resume';
+export interface EducationFormProps {
+import {Education} from '@/types/resume';
+export interface EducationFormProps {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   resumeId: string;
   educationEntries: Education[];
   onComplete: () => void;
@@ -15,6 +22,10 @@ export interface EducationFormProps {};
   onComplete: () => void;
   onBack: () => void;
 }
+<<<<<<< HEAD
+export interface EducationItemProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   education: Education;
 
@@ -34,6 +45,21 @@ export interface EducationItemProps {;
   onDelete: (id: string) => void;
 
 export interface EducationFormFieldsProps {;
+<<<<<<< HEAD
+import { Education } from '@/types/resume';
+export interface EducationFormProps {
+  resumeId: string;
+  educationEntries: Education[];
+  onComplete: () => void;
+onBack: () => void
+}
+export interface EducationItemProps {
+  education: Education;
+  onEdit: (education: Education) => void;
+onDelete: (id: string) => void
+}
+export interface EducationFormFieldsProps {
+=======
 
   isEditing: boolean;
   onSubmit: (data: any) => Promise<void>;

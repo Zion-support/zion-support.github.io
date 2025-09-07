@@ -6,6 +6,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
+<<<<<<< HEAD
+=======
 const STEPS = [
   { key: 'job', label: 'Job posted' },
   { key: 'invite', label: 'First invite sent' },
@@ -26,10 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       );
     } catch {}
   }, [completed]);
-
   const progress = Math && Math.round(;
     (Object && Object.values(completed).filter(Boolean).length / STEPS && STEPS.length) * 100;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   const toggle = (key: StepKey) =>;
     setCompleted(c => ({ ...c, [key]: !c[key] }));

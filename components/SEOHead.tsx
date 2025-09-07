@@ -340,6 +340,7 @@ export default SEOHead;
 ;
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   title?: string;
   description?: string;
   keywords?: string;

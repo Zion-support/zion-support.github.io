@@ -41,6 +41,13 @@ export default /**
  * handler - Function description;
  */
 
+<<<<<<< HEAD
+  res && res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  clearSessionCookie(res);
+  res && res.status(200).json({ ok: true })
+}
+  res.status(200).json({ ok: true })
+}
 =======
  */
 function handler() {}
@@ -51,6 +58,7 @@ function handler() {}
 function handler() {}
   clearSessionCookie (res);
   res.status (200).json ({ ok: true });
+
 }
 
 '

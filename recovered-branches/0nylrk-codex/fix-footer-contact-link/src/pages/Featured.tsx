@@ -52,6 +52,8 @@ function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
 
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -98,6 +100,7 @@ function Featured() {
             </p>;
           </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />
         </div>

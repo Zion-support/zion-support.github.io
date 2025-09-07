@@ -33,6 +33,17 @@ export async function createNotification({
   relatedId = null,
   sendEmail = false,
   actionUrl = null,
+<<<<<<< HEAD
+  actionText = null
+}: {
+  userId: string;
+  title: string;
+  message: string;
+  type: NotificationType;
+  relatedId?: string | null;
+  sendEmail?: boolean;
+  actionUrl?: string | null
+=======
 
   userId: string;
   title: string;
@@ -41,6 +52,7 @@ export async function createNotification({
   relatedId?: string | null;
   sendEmail?: boolean;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   userId: string,
   title: string,
   message: string,
@@ -48,6 +60,22 @@ export async function createNotification({
   relatedId?: string | null,
   sendEmail?: boolean,
   actionUrl?: string | null,
+<<<<<<< HEAD
+  actionText?: string | null
+}) {
+  void actionUrl,
+  void actionText,
+  try {
+    // Call the create_notification database function
+    const { data, error } = await supabase.rpc('create_notification', {
+      _user_id: userId;
+      _title: title;
+      _message: message;
+      _type: type
+      _related_id: relatedId
+    });
+    if (error) throw error;
+=======
 
   actionText?: string | null
 
@@ -84,11 +112,15 @@ export async function createNotification({
     
     if (error) throw error,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { supabase } from "@/integrations/supabase/client",;
 
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
@@ -108,12 +140,17 @@ export async function createNotification() { return null; }
     if (sendEmail && data) {;
       const notificationId = data,;'
       await supabase.functions.invoke('send-notification-email', {;
+<<<<<<< HEAD
+=======
 
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
 
       talentNotification,
@@ -206,6 +243,7 @@ success: talentNotification && talentNotification.success && adminNotification &
       talentNotification,;
       adminNotification;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export async function createHireRequestNotifications({
 
     }
@@ -280,10 +318,13 @@ export async function createHireRequestNotifications({
 * Demo function to create test notifications for the current user;
 */;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
   }
   const messages = {
+<<<<<<< HEAD
+=======
 
   const random_type = types[Math.floor (Math.random () * types.length)],
   const titles = {'
@@ -391,6 +432,8 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
+<<<<<<< HEAD
+=======
 
 }
 ;

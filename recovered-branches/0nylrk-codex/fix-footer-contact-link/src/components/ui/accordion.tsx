@@ -41,6 +41,7 @@ const AccordionItem = React.forwardRef<
     {...props}
   />
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ))
 
 AccordionItem.displayName = "AccordionItem"
@@ -48,6 +49,8 @@ AccordionItem.displayName = "AccordionItem"
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+<<<<<<< HEAD
+=======
 
         className
 
@@ -79,6 +82,7 @@ const AccordionTrigger = React.forwardRef<
 
     </AccordionPrimitive.Trigger>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -92,6 +96,11 @@ const AccordionContent = React.forwardRef<
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 
     ref={ref}
+<<<<<<< HEAD
+>(({ className, children, ...props }, ref) => (
+  <AccordionPrimitive.Content
+    ref={ref}
+=======
 
 AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
 

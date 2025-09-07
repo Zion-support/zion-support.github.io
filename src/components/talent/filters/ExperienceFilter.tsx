@@ -30,10 +30,33 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <Slider
             aria-label="Experience range"
             value={[experienceRange[0], experienceRange[1]]}
-            min={0}
             max={15}
             step={1}
             onValueChange={handleChange}
+            className="mt-6"
+        </div>
+      )}
+    </div>
+  )
+}
+=======
+
+
+    </div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  );
+};
+}
+}
+<<<<<<< HEAD
+            className='mt-6'          />            className="mt-6"
+            className="mt-6"
+          />
+        </div>
+      )};
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="mt-6"
           />
         </div>

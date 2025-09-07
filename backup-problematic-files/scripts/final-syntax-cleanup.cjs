@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const { execSync } = require('child_process');
-
 console.log('🔧 Final Syntax Cleanup');
 console.log('=');
-
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -81,6 +79,9 @@ for (const file of filesToFix) {
   }
 }
 console.log(`\n✅ Fixed ${totalFixed} files`);
+<<<<<<< HEAD
+console.log('🎉 Final syntax cleanup completed!');
+=======
 // Try to build
 console.log('\n🔨 Testing build...');
 try {

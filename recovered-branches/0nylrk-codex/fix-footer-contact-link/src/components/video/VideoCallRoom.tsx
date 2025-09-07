@@ -7,6 +7,8 @@ interface Participant {;
   is_muted?: boolean;
   isVideoEnabled?: boolean;
   isScreenSharing?: boolean;
+<<<<<<< HEAD
+=======
 
 interface VideoCallRoomProps {;
   roomId: string,;
@@ -17,6 +19,43 @@ interface VideoCallRoomProps {;
   onToggleScreenShare?: (isSharing: boolean) => void,;
   className?: string;
 }
+<<<<<<< HEAD
+export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
+  roomId,;
+  participants = [], ;
+import './video-call.css';
+import React, { useState } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX  } from '@/components/icons';
+import './video-call.css';
+interface Participant {
+
+  id: string
+  name: string
+
+  avatar?: string;
+  isMuted?: boolean;
+  isVideoEnabled?: boolean;
+  isScreenSharing?: boolean;
+  isHost?: boolean
+}
+interface VideoCallRoomProps {
+
+  roomId: string
+  participants?: Participant[];
+  onLeave?: () => void;
+  onToggleMute?: (isMuted: boolean) => void
+  onToggleVideo?: (isEnabled: boolean) => void
+  onToggleScreenShare?: (isSharing: boolean) => void
+  className?: string
+}
+export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
+  roomId
+  participants = []
+=======
 
     if (onToggleVideo) {
       onToggleVideo(newVideoState)
@@ -115,7 +154,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
       setIsAudioOnly(false)
 
   const handleToggleScreenShare = () => {;
-
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);
 
@@ -199,10 +237,123 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     setIsAudioOnly(!isAudioOnly);
     if (!isAudioOnly) {;
       setIsVideoEnabled(false);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (onToggleVideo) {;
+            Room:{roomId}
+          </Badge>;
+        </div>;
+        <div className="flex items-center space-x-2">;
+          <Badge variant="secondary" className="bg-zion-blue-light text-white">;
+            {formatDuration(callDuration)}
+          {participants.length > 0 ? (
+            participants.map ((participant) => (
+              <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
+                {participant.isVideoEnabled && !participant.isScreenSharing ? (
+          </Badge>;
+          <Badge variant="outline" className="text-white">;
+            {participants && participants.length} participant{participants && participants.length !== 1 ? 's' : ''}
+          </Badge>;
+        </div>;
+      </CardHeader>;
+      <CardContent className="p-0">;
+        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
+          {participants && participants.length > 0 ? (;
+            participants && participants.map((participant) => (;
+              <div key={participant && participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">;
+                {participant && participant.isVideoEnabled && !participant && participant.isScreenSharing ? (;
+          </Badge>;
+          <Badge variant="outline" className="text-white">;
+            {participants.length} participant{participants.length !== 1 ? 's' :''}
+          </Badge>;
+        </div>;
+      </CardHeader>;
+      ;
+      <CardContent className="p-0">;
+        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
+          {participants.length > 0 ? (;
+            participants.map((participant) => (;
+              <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">;
+                {participant.isVideoEnabled && !participant.isScreenSharing ? (;
+                  <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">;
+                    {/* Placeholder for actual video stream */}
+                    <Video className="h-12 w-12 opacity-50" />;
+                  </div>;
+                ) :participant.isScreenSharing ? (;
+                  <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">;
+                    {/* Placeholder for screen share */}
+                    <ScreenShare className="h-12 w-12 opacity-50" />;
+                  </div>;
+                ) :(;
+                  <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">;
+                    <Avatar className="h-20 w-20">;
+                      <AvatarImage src={participant.avatar} alt={participant.name} />;
+                      <AvatarFallback className="bg-zion-purple text-white text-2xl">;
+                        {participant.name.charAt(0).toUpperCase()}
+                      </AvatarFallback>;
+                    </Avatar>;
+                  </div>;
+                )}
+
+
+                
+
+
         onToggleVideo(false);
       }
     }
+<<<<<<< HEAD
+  },;
+  const handleLeaveCall = () => {;
+    if (onLeave) {;
+      onLeave();
+    }
+  },
+
+  return (
+    <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
+      <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
+        <div className="flex items-center space-x-2">
+          <CardTitle className="text-white">Video Call</CardTitle>
+          <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">
+            Room: {roomId}
+          </Badge>
+        </div>
+        <div className="flex items-center space-x-2">
+          <Badge variant="secondary" className="bg-zion-blue-light text-white">
+            {formatDuration(callDuration)}
+          </Badge>
+          <Badge variant="outline" className="text-white">
+            {participants.length} participant{participants.length !== 1 ? 's' : ''}
+          </Badge>
+        </div>
+      </CardHeader>
+      <CardContent className="p-0">
+        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {participants.length > 0 ? (
+            participants.map((participant) => (
+              <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
+                {participant.isVideoEnabled && !participant.isScreenSharing ? (
+                  <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
+                    {/* Placeholder for actual video stream */}
+                    <Video className="h-12 w-12 opacity-50" />
+                  </div>
+                ) : participant.isScreenSharing ? (
+                  <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">
+                    {/* Placeholder for screen share */}
+                    <ScreenShare className="h-12 w-12 opacity-50" />
+                  </div>
+                ) : (
+                  <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">
+                    <Avatar className="h-20 w-20">
+                      <AvatarImage src={participant.avatar} alt={participant.name} />
+                      <AvatarFallback className="bg-zion-purple text-white text-2xl">
+                        {participant.name.charAt(0).toUpperCase()}
+                      </AvatarFallback>
+                    </Avatar>
+                  </div>
+                )}
+                
+=======
 
   };
 
@@ -411,6 +562,9 @@ return (;
             onClick={handleToggleVideo}>;
             {isVideoEnabled ? <Video /> : <VideoOff />}
 
+            className="video-button rounded-full h-10 w-10"
+            onClick={handleToggleVideo}>;
+            {isVideoEnabled ? <Video /> : <VideoOff />}
           </Button>;
 
           <Button"

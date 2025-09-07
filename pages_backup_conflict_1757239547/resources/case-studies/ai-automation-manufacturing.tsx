@@ -53,6 +53,14 @@ export default function ResourceCaseStudyPage() {
                   <p className="text-white/90">
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance
                     quality control, and production optimization. Each system was designed to work independently while
+                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
+                    quality control, and production optimization. Each system was designed to work independently while
+=======
+
+                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
+                    quality control, and production optimization. Each system was designed to work independently while
+<<<<<<< HEAD
+=======
 
                     sharing data for comprehensive insights.
                   </p>
@@ -113,6 +121,14 @@ export default function ResourceCaseStudyPage() {
                   <Link
                     href="/resources"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
+<<<<<<< HEAD
+                  <Link
+                  <Link 
+                  <Link
+                    href="/resources"
+                    className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   >
                     Explore More Resources
                   </Link>

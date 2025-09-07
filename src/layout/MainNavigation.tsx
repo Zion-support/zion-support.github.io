@@ -136,6 +136,29 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 </Link>
               </li>
             ))}
+<<<<<<< HEAD
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+            {/* Wishlist link */}
+            {isAuthenticated && (
+              <li className='nav-item'>
+                <Link
+                  href='/wishlist'
+                  aria-label='Wishlist'
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    'nav-link'
+                    'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
+                    router.pathname === '/wishlist'
+                      ? 'bg-zion-purple/20 text-zion-cyan'
+                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
+                  )}                >
+                  <Heart className='w-4 h-4' />
+                  {count > 0 && (
+                    <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>
+=======
 
             {/* Wishlist link */}
             {isAuthenticated && (
@@ -229,7 +252,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                         {cartCount}
                       </span>
                     )}
-                  </Link>
                 </HoverCardTrigger>
                 <HoverCardContent>
                   <MiniCartPreview />

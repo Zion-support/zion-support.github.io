@@ -37,6 +37,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 <<<<<<< HEAD
 export default /**
@@ -74,12 +75,35 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import HelpCenter from "@/components/support/HelpCenter";
 import {SEO} from "@/components/SEO";
+<<<<<<< HEAD
+import React from "react",
+import HelpCenter from "@/components/support/HelpCenter";
+import { SEO } from "@/components/SEO";
+import HelpCenter from "@/components/support/HelpCenter",
+import { SEO } from "@/components/SEO",
+export default function HelpCenterPage() {
+  return (
+    <>
+=======
 export default function HelpCenterPage() {;
   return (
     <>;      <SEO
         title="Help Center | Zion AI Marketplace"
         description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team."
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace"
+<<<<<<< HEAD
+      />
+      <HelpCenter />
+    </>
+  )
+}
+import React from "react",;
+import HelpCenter from "@/components/support/HelpCenter",;
+import { SEO } from "@/components/SEO";
+export default function HelpCenterPage() {;
+  return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 import React from "react",;
@@ -202,6 +226,22 @@ function HelpCenterPage() {
 ;
 }
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+    </>;
+  ),;
+} export default function HelpCenterPage () {
+  return (<> <SEO title="Help Center | Zion AI Marketplace" description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team." keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace" /> <HelpCenter /> </>) 
+}
+    </>;
+  );
+}
+;
+<<<<<<< HEAD
+}
+;
+=======
 
     </>);
 pr-12325

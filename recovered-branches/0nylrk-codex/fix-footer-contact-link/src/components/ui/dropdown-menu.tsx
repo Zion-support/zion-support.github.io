@@ -17,6 +17,7 @@ import { Check, ChevronRight, Circle } from "lucide-react"
 import { cn } from "@/lib/utils"
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const DropdownMenu = DropdownMenuPrimitive.Root
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
 const DropdownMenuGroup = DropdownMenuPrimitive.Group
@@ -157,6 +158,7 @@ const DropdownMenuSubContent = React.forwardRef<
   <DropdownMenuPrimitive.SubContent;
     ref={ref}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
 
         className
@@ -498,6 +500,11 @@ const DropdownMenuRadioItem = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>;
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,;
 
+<<<<<<< HEAD
+  React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>;
+  React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
@@ -528,7 +535,6 @@ const DropdownMenuRadioItem = React.forwardRef<;
       </DropdownMenuPrimitive.ItemIndicator>;
     </span>;
     {children}
-
   </DropdownMenuPrimitive.RadioItem>));
 DropdownMenuRadioItem.display_name = DropdownMenuPrimitive.RadioItem.display_name;
 const DropdownMenuLabel = React.forward_ref<;
@@ -669,6 +675,8 @@ const DropdownMenuSeparator = React.forward_ref<;
     ref={ref}
     className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
+=======
 
   return (
     <span;
@@ -713,6 +721,7 @@ DropdownMenuShortcut.displayName = $2;
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export {
 

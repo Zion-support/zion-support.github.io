@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+import {;
+  Star,;
+  Quote,;
+  Users,;
+  Award,;
+  TrendingUp,;
+  CheckCircle,;
+import React from 'react';
+
+
+import React from 'react';
+
+import {
+  Star
+  Quote
+  Users
+  Award
+  TrendingUp
+  CheckCircle;
+=======
 
 ;
 import React from 'react';
@@ -18,6 +39,8 @@ import { Star;
 interface Testimonial  {interface Testimonial  {"id": string;
 
 }
+<<<<<<< HEAD
+=======
 
 interface Testimonial {
   }
@@ -148,6 +171,7 @@ return Array.from({ "length": 5,;
               </div>;
               <div className='text-3xl font-bold text-white mb-2'>;'
                 {stat.number}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
               <p className='text-blue-300 font-medium'>{stat.label}</p>;'
             </div>;
@@ -364,6 +388,24 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
                 {/* Author Info */}
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                <div className="flex items-center gap-1 mb-4">
+                  {renderStars(testimonial.rating)}
+                </div>
+                {/* Testimonial Text */}
+                <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">
+
+                {/* Author Info */}
+
+                  {renderStars(testimonial.rating)}
+                </div>
+
+                {/* Testimonial Text */}
+
+                  "{testimonial.content}"
+                </p>
+                {/* Author Info */}
+                <div className='flex items-center gap-4'>
+                  <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>
                     {testimonial.avatar}
                   </div>
                   <div className="flex-1">
@@ -371,6 +413,8 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
                     <div className="text-sm text-white/70">{testimonial.title}</div>
                     <div className="text-xs text-blue-400">{testimonial.company}</div>
                   </div>
+<<<<<<< HEAD
+=======
 
                 {/* Category Badge */}
                 <div className="mt-4">
@@ -381,11 +425,42 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
 
               {/* Hover Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           ))}
         </div>
 
+          ))}
+        </div>
+
         {/* CTA Section */}
+<<<<<<< HEAD
+        <div className='text-center mt-16'>
+          <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+
+              Ready to Join Our Success Stories?
+            </h3>
+            <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
+              Experience the same transformative results that our clients have
+              achieved. Let's discuss how Zion Tech Group can accelerate your
+              innovation journey.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <a
+                href='mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion'
+                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'              >
+                Start Your Success Story
+              </a>
+              <a
+                href='tel:+13024640950'
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+            </div>
+          ))}
+        </div>
+        {/* CTA Section */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -403,6 +478,10 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
                 Start Your Success Story
               </a>
               <a
+<<<<<<< HEAD
+                href='tel:+13024640950'
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href="tel:+13024640950"
+=======
                 href="tel:+13024640950"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
@@ -410,6 +489,7 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
               </a>
             </div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Trust Indicators */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-8 text-white/60 text-sm">

@@ -600,6 +600,10 @@ export const ZapOff = LucideZapOff,
 export const Zap = LucideZap,
 export const ZoomIn = LucideZoomIn,
 export const ZoomOut = LucideZoomOut,
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export const Home = null;
@@ -1203,6 +1207,12 @@ export const ZoomIn = LucideZoomIn
 export const ZoomOut = LucideZoomOut
 // Define the props for your Icon component
 export type IconProps = SVGProps<SVGSVGElement> & {
+<<<<<<< HEAD
+  name: keyof typeof iconMap
+  size?: number | string
+  className?: string
+}
+=======
 
   name: keyof typeof iconMap,
   size?: number | string,;
@@ -1499,6 +1509,8 @@ export type IconProps = SVGProps<SVGSVGElement> & {
   'zap-off': LucideZapOff,
   zap: LucideZap,'
   'zoom-in': LucideZoomIn,
+<<<<<<< HEAD
+  'zoom-out': LucideZoomOut},
 
 export const Icon: React.FC<IconProps> = ({
   name,
@@ -1506,6 +1518,17 @@ export const Icon: React.FC<IconProps> = ({
   className,
   ...props
 }) => {
+<<<<<<< HEAD
+  const LucideIconComponent = iconMap[name]
+  if (!LucideIconComponent) {
+    logWarn(`Icon "${name}" not found.`)
+    return null
+  }
+  // Render the dynamically selected Lucide icon component
+  return <LucideIconComponent size={size} className={className} {...props} />
+}
+export default Icon; // Default export the Icon component
+export const Icons = iconMap; // Export the map if you need to refer to available icons
 
   const LucideIconComponent = iconMap[name],
 
@@ -1525,7 +1548,6 @@ export const Icon: React.FC<IconProps> = ({
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }'
@@ -2139,7 +2161,10 @@ export type IconProps = SVGProps<SVGSVGElement> & {;
   size?: number | string;
   className?: string
 };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Create a map of icon names to component references;
 const iconMap = {;
   home: LucideHome,;'
@@ -2434,7 +2459,10 @@ const iconMap = {;
   'zap-off': LucideZapOff,;
 
 };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const Icon: React.FC<IconProps> = ({;
   name,;
   size = 24, // Default size;
@@ -2445,6 +2473,27 @@ export const Icon: React.FC<IconProps> = ({;
   if (!LucideIconComponent) {;
     logWarn(`Icon "${name}" not found.`);
     return null;
+<<<<<<< HEAD
+;
+  // Render the dynamically selected Lucide icon component;
+  return <LucideIconComponent size={size} className={className} {...props} />;
+};
+  }
+  // Render the dynamically selected Lucide icon component;
+  return <LucideIconComponent size={size} className={className} {...props} />;
+};
+export default Icon; // Default export the Icon component;
+export const Icons = iconMap; // Export the map if you need to refer to available icons
+export default Icon, // Default export the Icon component
+export const Icons = iconMap, // Export the map if you need to refer to available icons
+export default Icon, // Default export the Icon component
+export const Icons = iconMap, // Export the map if you need to refer to available icons;
+;
+export default Icon, // Default export the Icon component;
+export const Icons = iconMap, // Export the map if you need to refer to available icons;
+export default Icon, // Default export the Icon component;
+export const Icons = iconMap, // Export the map if you need to refer to available icons;
+=======
   }
 
   // Render the dynamically selected Lucide icon component;

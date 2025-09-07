@@ -5,6 +5,25 @@ import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSel
 import { RolePicker } from "../components/onboarding/RolePicker";
 import { SignUpForm } from "../components/onboarding/SignUpForm";
 type OnboardingStep = "language" | "role" | "signup";
+<<<<<<< HEAD
+export function MobileOnboarding() {
+
+export function MobileOnboarding() {;
+  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
+  const navigate = useNavigate();
+import React, { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",
+import { RolePicker } from "../components/onboarding/RolePicker",
+import { SignUpForm } from "../components/onboarding/SignUpForm",
+type OnboardingStep = "language" | "role" | "signup",
+
+export function MobileOnboarding() {
+  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
+  const navigate = useNavigate(),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function MobileOnboarding() {;
 
@@ -42,6 +61,13 @@ export function MobileOnboarding() {;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+  }
+  const handleRoleSelect = () => {
+    setCurrentStep("signup")
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   const handleRoleSelect = () => {
@@ -72,6 +98,8 @@ export function MobileOnboarding() {;
 =======
     setCurrentStep("signup")
   },
+<<<<<<< HEAD
+=======
 
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>
                 Continue;
@@ -117,9 +145,18 @@ export function MobileOnboarding() {;
 >>>>>>> origin/chore/fix-lint-and-merge
     }
   };
+<<<<<<< HEAD
+  const handleRoleSelect = () => {;
+    setCurrentStep("signup");
+  };
+  return (;
+=======
 
               <p className="text-muted-foreground">Let's set up your experience</p>;
             </div>;
+<<<<<<< HEAD
+            <LanguageThemeSelector />;
+=======
 
             <LanguageThemeSelector />;
 "
@@ -135,7 +172,10 @@ export function MobileOnboarding() {;
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -330,7 +370,6 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
-}
 
 "
 import React, { useState } from "react",;"

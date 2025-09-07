@@ -133,7 +133,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
-            Suggested Price Range
+            Tags
           </h3>
           <p className='text-white'>
             ${content.suggestedPrice.min.toFixed(2)} - $
@@ -143,6 +143,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
 
+
+
+              </Badge>;
+            ))}
+
+        
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
@@ -248,6 +258,10 @@ function GeneratedContentDisplay() {
         </div>;
       </CardContent>;
       <CardFooter>;
+<<<<<<< HEAD
+        <Button;
+          onClick={onApply}
+=======
 
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
@@ -283,6 +297,21 @@ function GeneratedContentDisplay() {
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
+;
+  )
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml-2 h-4 w-4" />;
+        </Button>;
+      </CardFooter>;
+    </Card>;
+  );
+}
+;
+;
+=======
 
 ;
 

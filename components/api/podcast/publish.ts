@@ -23,6 +23,8 @@ function handler() {if (return res.status (405).json ({ "error": 'Method not all
 })) {$2;
 
 }
+<<<<<<< HEAD
+=======
 
 export default async function handler() {
     (process.env.SITE_URL |'"http"://"localhost":3000') + '/podcast.xml';'

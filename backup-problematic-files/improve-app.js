@@ -396,6 +396,7 @@ if (})
   checkAppStructure () { const required_dirs = ['src', 'src / components', 'src / pages', 'public']required_dirs.for_each (dir => {
       if () {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )if ( {
 
         this && this.improvements.push(`Optimize ${images && images.length } images in public directory`)}
@@ -440,10 +441,12 @@ const next_config = {
         ]}
   // Bundle analyzer;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         fs: false}
         "net": false;"
         tls: false }}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   createPerformanceScript() { const performanceScript = "#!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
@@ -469,6 +472,7 @@ class PerformanceOptimizer {
     })}
     return totalSize}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   generateRecommendations() { const recommendations = [];
     if ( {)"
       recommendations && recommendations.push('Consider implementing code splitting')) {
@@ -505,6 +509,8 @@ class SecurityAuditor {
   }
   generate_report () {
     const report = {
+<<<<<<< HEAD
+=======
 
   improver.run().catch(error => {
 

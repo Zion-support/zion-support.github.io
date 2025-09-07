@@ -19,11 +19,19 @@ export function RecentActivity() {
       target: "Senior React Developer"
       timestamp: "1h ago"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: "act-1",
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
       timestamp: "1h ago",
+<<<<<<< HEAD
+      type: "job";
+    };
+      type: "job"
+    }
+    },
+=======
 
       type: "job";
     };
@@ -35,6 +43,7 @@ export function RecentActivity() {
     }
     },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: "act-3"
       user: "David Johnson"
@@ -83,6 +92,7 @@ type: "job";
 
 },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: "act-4"
       user: "Emily Davis"
@@ -264,6 +274,17 @@ import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 
+<<<<<<< HEAD
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+;
+}
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function RecentActivity() {;
   // Mock activity data;
   const activities = [;
@@ -275,6 +296,9 @@ export function RecentActivity() {;
       target: "Senior React Developer",;
       timestamp: "1h ago",;
       type: "job";
+<<<<<<< HEAD
+    },;
+=======
     };
 },;
     {;
@@ -284,6 +308,9 @@ export function RecentActivity() {;
       target: "5 candidates for UI/UX Designer",;
       timestamp: "3h ago",;
       type: "candidate";
+<<<<<<< HEAD
+    },;
+=======
     };
 },;
     {;
@@ -313,6 +340,31 @@ export function RecentActivity() {;
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
+        </div>;
+        ;
+        <div className="p-3 text-center border-t border-border">;
+          <button className="text-sm text-blue-500 font-medium hover:text-blue-700">;
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm">
+                    <span className="font-medium">{activity.user}</span>{" "}
+                    {activity.action}{" "}
+                    <span className="font-medium">{activity.target}</span>
+                  </p>
+                  <div className="flex items-center gap-2 mt-1 sm:mt-0">
+                    {getBadgeForType(activity.type)}
+                    <span className="text-xs text-muted-foreground">{activity.timestamp}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>;
+        <div className="p-3 text-center border-t border-border">;
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
+=======
 
             View All Activity;
 

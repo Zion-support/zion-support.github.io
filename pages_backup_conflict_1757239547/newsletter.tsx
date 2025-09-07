@@ -18,6 +18,8 @@ import {
   Star,
   TrendingUp,
   Award,
+<<<<<<< HEAD
+=======
 
 import {;
   ArrowRight,;
@@ -139,6 +141,14 @@ export default function NewsletterPage() {
 
 export default function NewsletterPage() {;
 
+<<<<<<< HEAD
+export default function NewsletterPage() {
+  const [email, setEmail] = useState('');
+origin/automation-improvements-final
+export default function NewsletterPage() {;
+  const [email, setEmail] = useState("");
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
@@ -154,6 +164,21 @@ export default function NewsletterPage() {;
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl font-bold mb-6">
+                Stay Ahead with Our Newsletter
+              </h1>
+              <p className="text-xl mb-8 text-blue-100">
+                Get exclusive insights, industry trends, and early access to new
+                features delivered directly to your inbox.
+              </p>
+                Get exclusive insights, industry trends, and early access to new
+                features delivered directly to your inbox.
+              </p>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
@@ -169,7 +194,6 @@ export default function NewsletterPage() {;
                 Get exclusive insights, industry trends, and early access to new;
                 features delivered directly to your inbox.;
               </p>;
-
               {!isSubscribed ? (;
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">;
                   <div className="flex flex-col sm:flex-row gap-4">;
@@ -371,7 +395,6 @@ function NewsletterPage() {
                 the latest insights and updates.;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
@@ -553,7 +576,6 @@ function NewsletterPage() {
                 to say.;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {testimonials && testimonials.map((testimonial, index) => (;
                 <motion&& motion.div
@@ -583,6 +605,21 @@ function NewsletterPage() {
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold mb-6">
+                Ready to Join Our Community?
+              </h2>
+              <p className="text-xl mb-8 text-green-100">
+                Subscribe now and start receiving valuable insights delivered to
+                your inbox every week.
+              </p>
+                Subscribe now and start receiving valuable insights delivered to
+                your inbox every week.
+              </p>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
@@ -598,7 +635,6 @@ function NewsletterPage() {
                 Subscribe now and start receiving valuable insights delivered to;
                 your inbox every week.;
               </p>;
-
               {!isSubscribed && (;
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">;
                   <div className="flex flex-col sm:flex-row gap-4">;

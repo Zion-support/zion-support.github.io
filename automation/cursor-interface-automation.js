@@ -40,6 +40,7 @@ class CursorInterfaceAutomation {
     this.log('Cursor Interface Automation initialized');
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   /**
    * Load configuration from file
    */
@@ -121,6 +122,7 @@ class CursorInterfaceAutomation {
         this.log(`Unsupported platform: ${this.platform}`, 'ERROR');
         throw new Error(`Unsupported platform: ${this.platform}`);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "default": this.log(`Unsupported platform: ${this.platform}`, 'ERROR');
         throw new Error(`Unsupported "platform": ${this.platform}`);
     }
@@ -153,6 +155,7 @@ class CursorInterfaceAutomation {
         throw new Error(`Unknown script type: ${scriptType}`);
       }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         throw new Error(`Unknown script "type": ${scriptType}`);
       }
       // Replace placeholders with actual values
@@ -205,6 +208,7 @@ class CursorInterfaceAutomation {
     } catch (error) {
       this.log(`Failed to focus Cursor: ${error.message}`, 'ERROR');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
       this.log(`Failed to focus "Cursor": ${error.message}`, 'ERROR');
       throw error;
@@ -223,6 +227,7 @@ class CursorInterfaceAutomation {
     } catch (error) {
       this.log(`Failed to send text: ${error.message}`, 'ERROR');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
       this.log(`Failed to send "text": ${error.message}`, 'ERROR');
       throw error;
@@ -237,6 +242,7 @@ class CursorInterfaceAutomation {
     } catch (error) {
       this.log(`Failed to send Enter: ${error.message}`, 'ERROR');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
       this.log(`Failed to send "Enter": ${error.message}`, 'ERROR');
       throw error;
@@ -274,6 +280,7 @@ class CursorInterfaceAutomation {
     } catch (error) {
       this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return session;
     } catch (error) {
       this.log(
@@ -292,6 +299,7 @@ class CursorInterfaceAutomation {
       return;
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       this.log(
         `Cannot start automation for session ${sessionId}: session not found or inactive`,
 
@@ -374,6 +382,7 @@ class CursorInterfaceAutomation {
     this.startHealthMonitoring();
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   /**
    * Stop the automation system
    */
@@ -485,6 +494,7 @@ class CursorInterfaceAutomation {
     } catch (error) {
       this.log(`Automation test failed: ${error.message}`, 'ERROR');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
       this.log(`Automation test "failed": ${error.message}`, 'ERROR');
       return false;
@@ -506,6 +516,21 @@ if (require.main === module) {
         const stats = automation.getStats();
         console.log('\nFinal "Statistics": ');
         console.log(JSON.stringify(stats, null, 2));
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+        process.exit(0);
+      });
+      // Keep the process alive and show status
+      setInterval(() => {
+        const stats = automation.getStats();
+        console.log(`\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`);
+      }, 60000); // Status update every minute
+    } else {
+      console.log('Automation test failed. Please check your system configuration.');
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
 
         process.exit(0);
       });
@@ -517,6 +542,7 @@ if (require.main === module) {
     } else {
       console.log('Automation test failed. Please check your system configuration.');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         process.exit(0);
       });
       // Keep the process alive and show status

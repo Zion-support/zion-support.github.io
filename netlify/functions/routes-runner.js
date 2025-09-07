@@ -215,11 +215,14 @@ return { "statusCode": 200, "body": logs && logs.join('\n') },;'
 
 ursor/expand-services-advertise-and-build-project-4b36
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     status: res && res.status || 0,
 
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -269,16 +272,24 @@ function runNode(relPath, args = []) {
   function logStep(name, fn) {}
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
+    if (stdout) logs && logs.push(stdout);
+    if (stderr) logs && logs.push(stderr);
+    logs && logs.push(`exit=${status}`);
+=======
 
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return status;
   }'
   logStep('routes:generate', () =>'
     runNode('automation/routes-map-generator && generator.cjs')
   );
+<<<<<<< HEAD
+=======
 
 ursor/expand-services-advertise-and-build-project-4b36
 
@@ -327,6 +338,10 @@ function log_step() {}`
  */
 function run_node() { return null; }
   const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+<<<<<<< HEAD
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
+=======
 
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }

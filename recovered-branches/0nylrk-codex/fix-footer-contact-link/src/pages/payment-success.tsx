@@ -34,11 +34,24 @@ import {CheckCircle2} from 'lucide-react';
 export default function PaymentSuccess() {;
   const navigate = useNavigate();
 
+<<<<<<< HEAD
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { useNavigate  } from 'react-router-dom';
+import { CheckCircle2 } from 'lucide-react';
+export default function PaymentSuccess() {
+
+  const navigate = useNavigate();
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {CheckCircle2} from 'lucide-react';
 export default function PaymentSuccess() {;
   const navigate = useNavigate();
+<<<<<<< HEAD
+=======
 
 import React from 'react',
 import { Button } from '@/components/ui/button',
@@ -76,6 +89,7 @@ export default function PaymentSuccess() {
           <Button
           <Button 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             variant="outline"
             onClick={() => navigate("/")}
 
@@ -99,6 +113,7 @@ import { CheckCircle2 } from 'lucide-react',;'
           <CheckCircle2 className="h-6 w-6 text-green-600" />;"
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {CheckCircle2} from 'lucide-react';
@@ -118,6 +133,23 @@ import { CheckCircle2 } from 'lucide-react',;
           <CheckCircle2 className="h-6 w-6 text-green-600" />;
 >>>>>>> origin/chore/fix-lint-and-merge
         </div>;
+<<<<<<< HEAD
+        <h1 className="text-2xl font-bold text-white mb-2">Payment Successful!</h1>;
+        <p className="text-zion-slate-light mb-6">;
+          Your payment has been processed successfully. You now have access to all the premium features.;
+        </p>;
+        <div className="flex flex-col space-y-3">;
+        ;
+        <h1 className="text-2xl font-bold text-white mb-2">Payment Successful!</h1>;
+        ;
+        <p className="text-zion-slate-light mb-6">;
+          Your payment has been processed successfully. You now have access to all the premium features.;
+        </p>;
+        ;
+        <div className="flex flex-col space-y-3">;
+          <Button ;
+          <Button;
+=======
 
         <h1 className="text-2xl font-bold text-white mb-2">Payment Successful!</h1>;
 
@@ -132,6 +164,17 @@ import { CheckCircle2 } from 'lucide-react',;
           >;
             Go to Dashboard;
           </Button>;
+<<<<<<< HEAD
+          ;
+          <Button ;
+            variant="outline";
+            onClick={() => navigate('/')}
+            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";
+          <Button;
+            variant="outline";
+            onClick={() => navigate('/')}
+            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
+=======
 
 ;
 

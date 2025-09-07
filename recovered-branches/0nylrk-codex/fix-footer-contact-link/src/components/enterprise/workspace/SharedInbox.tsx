@@ -20,11 +20,19 @@ export function SharedInbox() {
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm."
       timestamp: "2h ago"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: "msg-1",
       from: "John Smith",
       subject: "Interview Scheduled",
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
       timestamp: "2h ago",
+<<<<<<< HEAD
+      unread: true;
+    };
+      unread: true
+    }
+    },
+=======
 
       unread: true;
     };
@@ -165,6 +173,30 @@ export function SharedInbox() { return null; }
       </CardHeader>;
       <CardContent className="p-0">;
         <div className="divide-y divide-border">;
+<<<<<<< HEAD
+          {messages.map((message) => (;
+            <div ;
+              key={message.id} ;
+              className={`flex flex-col p-4 hover:bg-muted/50 cursor-pointer ${message.unread ? 'bg-blue-50 dark:bg-blue-900/10' :''}`}
+            >;
+              <div className="flex items-center justify-between">;
+                <p className={`font-medium ${message.unread ? 'font-semibold' :''}`}>{message.from}</p>;
+          {messages.map((message) => (;
+            <div;
+              key={message.id} ;
+              className={`flex flex-col p-4 hover:bg-muted/50 cursor-pointer ${message.unread ? 'bg-blue-50 dark:bg-blue-900/10' : ''}`}
+            >;
+              <div className="flex items-center justify-between">;
+                <p className={`font-medium ${message.unread ? 'font-semibold' : ''}`}>{message.from}</p>;
+                <span className="text-xs text-muted-foreground">{message.timestamp}</span>;
+              </div>;
+              <p className="text-sm font-medium mt-1">{message.subject}</p>;
+              <p className="text-sm text-muted-foreground mt-1 truncate">{message.preview}</p>;
+            </div>;
+          ))}
+        </div>;
+        {messages.length === 0 && (;
+=======
           {messages && messages.map((message) => (;
             <div
               key={message && message.id} 
@@ -180,10 +212,19 @@ export function SharedInbox() { return null; }
         </div>;
 
         {messages && messages.length === 0 && (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="p-4 text-center text-muted-foreground">;
             No new messages;
           </div>;
         )}
+<<<<<<< HEAD
+        ;
+        <div className="p-3 text-center border-t border-border">;
+          <button className="text-sm text-blue-500 font-medium hover:text-blue-700">;
+;
+        <div className="p-3 text-center border-t border-border">;
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
+=======
 
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;

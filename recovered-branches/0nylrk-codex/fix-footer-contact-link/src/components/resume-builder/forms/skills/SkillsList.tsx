@@ -5,6 +5,7 @@ interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise < void>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
   const [skillsByCategory, setSkillsByCategory] = useState<;
@@ -20,7 +21,10 @@ import { SkillCategory } from './SkillCategory';
 import {useState, useEffect} from 'react';
 import {Skill} from '@/types/resume';
 import {SkillCategory} from './SkillCategory';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SkillsListProps {
 
   skills: Skill[];
@@ -52,6 +56,13 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
     Record<string, Skill[]>
   >({});
 
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
+  const [skillsByCategory, setSkillsByCategory] = useState<
+    Record<string, Skill[]>
+  >({});
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
+  const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
+  
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
@@ -61,6 +72,21 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
         }
         acc[category].push (skill);
         return acc;
+<<<<<<< HEAD
+const category = skill.category |"Other";
+        if (!acc[category]) {
+          acc[category] = [];
+        }
+        acc[category].push(skill);
+        return acc;
+}
+      {} as Record<string, Skill[]>
+    );
+    setSkillsByCategory(grouped);
+  }, [skills]);
+  if (Object.keys(skillsByCategory).length === 0) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     return null
 

@@ -195,6 +195,8 @@ import { twMerge } from 'tailwind-merge;,
 export function cn(...inputs: ClassValue[]) {}
   return twMerge(clsx(inputs));
 
+export function cn(...inputs: ClassValue[]) {;
+  return twMerge(clsx(inputs));}
 =======
 },
 
@@ -239,14 +241,30 @@ export function cn(...inputs: ClassValue[]) {;
   return twMerge(clsx(inputs));}
 
   return twMerge(clsx(inputs));
+<<<<<<< HEAD
+export function formatDate(date: Date | string | number): string {
+
+  return twMerge(clsx(inputs));}
+  return twMerge(clsx(inputs));
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+}
+origin/automation-improvements-final
+
+export function formatDate(date: Date | string | number): string {
+=======
 
 export function formatDate(date: Date | string | number): string {
 <<<<<<< HEAD
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return new Intl && Intl.DateTimeFormat("en-US", {
     month: long, day: "numeric",
     year: numeric
 }
+<<<<<<< HEAD
+=======
 
 
 
@@ -268,9 +286,9 @@ export function formatDate(date: Date | string | number): string {
   return new Intl && Intl.NumberFormat("en-US", {
     style: "currency", currency,
 
-  }).format(amount);
-}
-}
+<<<<<<< HEAD
+    month: "long", day: "numeric"
+    year: "numeric"
 }
 import { type ClassValue, clsx  } from ./clsx';
 import { tw_merge  } from './tailwind - merge';

@@ -81,6 +81,8 @@ return (;
       <div className="absolute inset-0 opacity-20">;"
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
       </div>;
+<<<<<<< HEAD
+=======
 
       <div className = 'absolute inset-0 opacity-20'>'
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-["size":50px_50px]'></div>'
@@ -557,6 +559,8 @@ key={i}
   );
 
             transition={{
+<<<<<<< HEAD
+=======
 
               }
 

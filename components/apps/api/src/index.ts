@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 
 import Fastify from 'fastify','
 import cors from '@fastify/cors','
@@ -32,6 +34,17 @@ await app.register(cors, {
   };
   methods: ['GETPOSTOPTIONS']
 });
+<<<<<<< HEAD
+await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
+const openai = createOpenAIClient(process.env.OPENAI_API_KEY |'');
+function getUserId(req: any): string | null {
+  return (
+    (req.headers['x-user-id'] as string) |
+    (req.query as any)['user_id'] |
+    null
+  );  return (req.headers['x-user-id'] as string) |(req.query as any)['user_id'] |null;
+}
+=======
 
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 

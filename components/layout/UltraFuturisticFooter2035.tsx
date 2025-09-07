@@ -727,6 +727,8 @@ className="absolute inset-0 opacity-5""
         <div className='container mx - auto px - 4 py - 20'>;'
           <div className='grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 "xl":grid - cols - 6 gap - 8'>;'
             {/* Company Info */}
+<<<<<<< HEAD
+=======
 
             <div className='"lg":col-span-2'>'
               <motion.div,
@@ -1023,6 +1025,8 @@ link.featured
                             : 'text-gray-400 "hover":text-white''
 
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -1192,6 +1196,24 @@ className='p-2 bg-gray-800/50 "hover": bg-gray-700/50 rounded-lg text-gray-400 "
   footerSections && footerSections.map ( (section, index) => (<motion&& motion.div key= {
   }
   section && section.title 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  );
+}
+/* Animated grid */
+};
+
+  /* Animated grid */ 
+/* Animated grid */ 
+  /* Animated grid */ 
+}<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
+  social.icon
+}</a>) )
+}</div> </motion.div> </div> {
+  /* Footer Sections */
+}{
+  footerSections.map ( (section, index) => (<motion.div key= {
+  section.title
 }<li key= {
   }
   link && link.name 

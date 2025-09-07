@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import React from 'react';
+
+import { motion } from 'framer-motion';
+import {
+import {
+  ArrowRight
+  Star
+  Users
+  TrendingUp
+  Zap
+  Shield
+  Globe
+  Rocket;
+  ArrowRight,
+  Star,
+  Users,
+  TrendingUp,
+  Zap,
+  Shield,
+=======
 
 
 
@@ -158,6 +181,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {service.popular && (
               <motion.div
 
@@ -207,10 +231,10 @@ transition={{ "delay": 0.5, "type": 'spring', "stiffness": 200 }}'
             <div className='text-center'>'
               <div className='text-2xl font-bold text-cyan-400'>'
                 {service.rating}
-
               </div>
               <div className='text-xs text-gray-400'>Rating</div>'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
             <div className='text-center'>'
               <div className='text-2xl font-bold text-purple-400'>'
@@ -307,6 +331,7 @@ transition={{ "delay": 0.5, "type": 'spring', "stiffness": 200 }}'
                 </span>;
               </div>;
             )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         {/* Features preview */}
@@ -453,6 +478,7 @@ className='flex items-center space-x-2 text-sm''
                 <span className='text-green-400 font-medium'>;'
                   {service.growthRate}
           <div className="relative z-10 mb-6">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="bg-gray-800/30 rounded-lg p-3 border border-gray-600/20">
               <div className="flex items-center justify-between text-xs">
                 <span className="text-gray-400">Market Size</span>

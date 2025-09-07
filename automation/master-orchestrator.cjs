@@ -36,7 +36,7 @@ class MasterAutomationOrchestrator {
       const result = execSync(command, {
         encoding: 'utf8',
         stdio: 'pipe',
-        cwd: path.join(__dirname, '..'),
+        cwd: path.join(__dirname, '..')
       });
       this.log(`✅ ${description} - Success`);
       return { success: true, result };
@@ -52,7 +52,7 @@ class MasterAutomationOrchestrator {
     const commands = [
       { cmd: 'npm run lint:fix', desc: 'Fix linting errors' },
       { cmd: 'npm run type-check', desc: 'TypeScript type checking' },
-      { cmd: 'npm run test:smoke', desc: 'Run smoke tests' },
+      { cmd: 'npm run test:smoke', desc: 'Run smoke tests' }
     ];
 
     for (const { cmd, desc } of commands) {
@@ -65,7 +65,7 @@ class MasterAutomationOrchestrator {
 
     const commands = [
       { cmd: 'npm run clean', desc: 'Clean build artifacts' },
-      { cmd: 'npm run build', desc: 'Build application' },
+      { cmd: 'npm run build', desc: 'Build application' }
     ];
 
     for (const { cmd, desc } of commands) {
@@ -82,7 +82,7 @@ class MasterAutomationOrchestrator {
 
     const fixCommands = [
       { cmd: 'npm run lint:fix', desc: 'Fix linting issues' },
-      { cmd: 'node comprehensive-syntax-fix.cjs', desc: 'Fix syntax issues' },
+      { cmd: 'node comprehensive-syntax-fix.cjs', desc: 'Fix syntax issues' }
     ];
 
     for (const { cmd, desc } of fixCommands) {
@@ -122,11 +122,14 @@ class MasterAutomationOrchestrator {
       scripts: {
         linting: 'completed',
         build: 'completed',
-        automation: 'completed',
+        automation: 'completed'
       },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       summary: 'Master automation orchestrator completed successfully',
     };
-
     const reportPath = path.join(
       __dirname,
       'reports',
@@ -135,16 +138,13 @@ class MasterAutomationOrchestrator {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);
   }
-
   async run() {
     try {
       this.log('🎯 Starting master automation orchestration...');
-
       await this.runLinting();
       await this.runBuildProcess();
       await this.runAutomationScripts();
       await this.generateReport();
-
       this.log('🎉 Master automation orchestration completed successfully!');
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
@@ -152,7 +152,6 @@ class MasterAutomationOrchestrator {
     }
   }
 }
-
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);

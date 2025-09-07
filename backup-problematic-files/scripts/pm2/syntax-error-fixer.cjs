@@ -218,6 +218,8 @@ class SyntaxErrorFixer {}
       this.fixesFailed = 0;
       this.fixesSkipped = 0;
       this.fixedFiles.clear();
+<<<<<<< HEAD
+=======
 
 
 =======

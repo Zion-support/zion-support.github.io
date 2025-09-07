@@ -1,6 +1,8 @@
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';'
 
+<<<<<<< HEAD
+=======
 
 import { Search;
 
@@ -268,6 +270,8 @@ const matchesCategory =;
       selectedCategory === 'All' || tool.category === selectedCategory;'
     return matchesSearch && matchesCategory;
   });
+<<<<<<< HEAD
+=======
 
 const sortedTools = [...filteredTools].sort((a, b) => {
     }
@@ -433,6 +437,10 @@ key={category}
                 </button>
               ))}
             </div>
+            {/* Sort */}
+<<<<<<< HEAD
+            <div className='flex items-center space-x-2'>
+              <Filter className='w-5 h-5 text-gray-400' />
 
             {/* Sort */}
 
@@ -442,6 +450,7 @@ key={category}
               <select,
 value={sortBy}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 onChange={e => { return setSortBy(e.target.value)}
                 className='bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white "focus":outline-none "focus":ring-2 "focus":ring-purple-500'>'

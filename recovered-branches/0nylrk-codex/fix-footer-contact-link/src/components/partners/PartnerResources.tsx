@@ -88,12 +88,17 @@ import { toast } from "@/hooks/use-toast",
                     className="w-full flex items-center gap-2"
 
                     <Download className="h-4 w-4" />
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",;
 
 import { toast } from "@/hooks/use-toast",;
+<<<<<<< HEAD
+=======
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -125,6 +130,8 @@ import { toast } from "@/hooks/use-toast",;
                     className="w-full flex items-center gap-2";
                   >;"
                     <Download className="h-4 w-4" />;
+<<<<<<< HEAD
+=======
 
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
@@ -132,6 +139,7 @@ import { toast } from "@/hooks/use-toast",;
               </Card>
 
             ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </div>
         </CardContent>
@@ -214,8 +222,19 @@ import { toast } from "@/hooks/use-toast",;
           </div>;
         </CardContent>;
       </Card>;
-      <Card className="bg - zion - blue - dark border - zion - blue - light">;
+;
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
+<<<<<<< HEAD
+          <CardTitle>Promotion Guidelines</CardTitle>;
+};
+          </div>;
+        </CardContent>;
+      </Card>;
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle>Promotion Guidelines</CardTitle>;
+=======
           <CardTitle > Promotion Guidelines</CardTitle>;
 ;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -282,6 +301,15 @@ pr-12325
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+;
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle>Partner Support</CardTitle>;
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle>Partner Support</CardTitle>;
+=======
 
             Contact Partner Support;
           </Button>;

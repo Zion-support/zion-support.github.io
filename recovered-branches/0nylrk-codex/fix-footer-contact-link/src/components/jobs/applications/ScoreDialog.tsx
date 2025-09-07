@@ -17,6 +17,35 @@ interface ScoreDialogProps {};
   onScoreUpdated: (updatedApplication: JobApplication) => void;
 }
 
+<<<<<<< HEAD
+export function ScoreDialog({;
+  open;
+  onOpenChange;
+  application;
+export function ScoreDialog({
+  open,
+  onOpenChange,
+  application,
+  onScoreUpdated
+}: ScoreDialogProps) {
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader>
+          <DialogTitle>Application Match Score</DialogTitle>
+        </DialogHeader>
+        {application && (
+          <ApplicationScoreCard
+          <ApplicationScoreCard 
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle;
+} from "@/components/ui/dialog",;
+import { JobApplication } from "@/types/jobs",;
+import { ApplicationScoreCard } from "../ApplicationScoreCard",;
+=======
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 
@@ -28,14 +57,48 @@ interface ScoreDialogProps {;
   application: JobApplication | null,;
   onScoreUpdated: (updatedApplication: JobApplication) => void;
 }
+<<<<<<< HEAD
+  open;
+;
+export function ScoreDialog({;
+  open,;
+=======
 
 export function ScoreDialog(): any ({;
 
   open;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onOpenChange;
   application;
   onScoreUpdated;
 }: ScoreDialogProps) {;
+<<<<<<< HEAD
+
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle;
+} from "@/components/ui/dialog",;
+import { JobApplication } from "@/types/jobs",;
+import { ApplicationScoreCard } from "../ApplicationScoreCard",;
+;
+interface ScoreDialogProps {;
+  open:boolean,;
+  onOpenChange:(open:boolean) => void,;
+  application:JobApplication | null,;
+  onScoreUpdated:(updatedApplication:JobApplication) => void;
+}
+;
+export function ScoreDialog({;
+  open,;
+  onOpenChange,;
+  application,;
+  onScoreUpdated;
+} ScoreDialogProps) {;
+  return (;
+  return (;
+=======
   return (
 
       <DialogContent className="sm:max-w-md">
@@ -44,6 +107,7 @@ export function ScoreDialog(): any ({;
         </DialogHeader>
         {application && (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Dialog open={open} onOpenChange={onOpenChange}>;
 
       <DialogContent className="sm:max-w-md">;

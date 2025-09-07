@@ -43,6 +43,8 @@ export function ActiveFilters({
   
   if (!hasActiveFilters) return null;
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
       <span className="text-zion-slate-light text-sm">Active filters:</span>

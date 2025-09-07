@@ -15,6 +15,7 @@ import { Form;
   FormField;
   FormItem;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -29,6 +30,8 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
+<<<<<<< HEAD
+=======
 
 // Define schema for form validation
 
@@ -49,6 +52,7 @@ export function EducationFormFields({
   onCancel
 }: EducationFormFieldsProps) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
@@ -71,12 +75,15 @@ export function EducationFormFields({
       setError(err.message |'An error occurred')
     } finally {}
       setIsLoading(false)
+<<<<<<< HEAD
+=======
 
 import {EducationFormFieldsProps} from './types';
-
     }
   }
   };
+<<<<<<< HEAD
+=======
 
 import { useForm } from 'react-hook-form',;
 
@@ -235,7 +242,7 @@ import {EducationFormFieldsProps} from './types';
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
-
+              </FormItem>;            )}
           />;
 
           <FormField
@@ -274,7 +281,6 @@ import {EducationFormFieldsProps} from './types';
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />;
               </FormControl>;
               <FormMessage />;
-
         />;
           <FormField
             control={form && form.control}
@@ -304,6 +310,8 @@ import {EducationFormFieldsProps} from './types';
 
                   <Input 
                     type="date" 
+<<<<<<< HEAD
+=======
 
 <Input
                     type="date"
@@ -353,6 +361,17 @@ import {EducationFormFieldsProps} from './types';
                   </div>;
                 </FormItem>;
               )}
+<<<<<<< HEAD
+            />;
+              <FormField
+                control={form && form.control}
+                name="end_date"
+;
+            {!form.watch('is_current') && (;
+              <FormField;
+                control={form.control}
+                name="end_date";
+=======
 
                         type="date" ;
                         {...field} ;'
@@ -382,6 +401,14 @@ import {EducationFormFieldsProps} from './types';
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
+            </FormItem>;          )}
+        />;
+;
+        <FormField;
+          control={form.control}
+          name="description";
+=======
 
           render={({ field }) => (;
             <FormItem>;
@@ -398,6 +425,8 @@ import {EducationFormFieldsProps} from './types';
                 />;
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
+=======
 
           </Button>;
 "
@@ -405,6 +434,7 @@ import {EducationFormFieldsProps} from './types';
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}'
             {isEditing ? 'Update' : 'Add'} Education;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </Button>;
 
         </div>;

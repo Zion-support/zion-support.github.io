@@ -42,6 +42,8 @@ export default function UnderDisputeBadge(): any ({;
   );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
   return { hasActiveDispute, isLoading: !data && !error }
 }
+<<<<<<< HEAD
+=======
 
 }
 

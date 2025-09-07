@@ -168,6 +168,10 @@ export const PaymentSummary:React.FC<PaymentSummaryProps> = ({ milestones, payme
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;"
             <p className="font-medium">;
               ${paidAmount}
+<<<<<<< HEAD
+  )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </p>;
           </div>;
         </div>;

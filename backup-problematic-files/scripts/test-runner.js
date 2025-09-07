@@ -5,7 +5,7 @@ const fs = // // require('fs');
 const path = // // require('path');
 class TestRunner {
   constructor() {
-    this.results = {
+    this && this.results = {
       "unit": { passed: 0, "failed": 0 },
       "integration": { passed: 0, "failed": 0 },
       "e2e": { passed: 0, "failed": 0 }
@@ -17,7 +17,7 @@ class TestRunner {
           file && file.includes('.test.') || file && file.includes('.spec.')
 
         );
-        testFilesFound += testFiles.length;
+        testFilesFound += testFiles && testFiles.length;
       }
     });
     if (testFilesFound === 0) {
@@ -41,13 +41,13 @@ class TestRunner {
   generateReport() {
     const report = {
       "timestamp": new Date().toISOString(),
-      "results": this.results,
+      "results": this && this.results,
       "summary": {
-        testFilesFound: this.checkTestFiles(),
-        "testScriptExists": this.checkPackageJsonScripts()
+        testFilesFound: this && this.checkTestFiles(),
+        "testScriptExists": this && this.checkPackageJsonScripts()
       }
-    fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2));
-    console.log('Test report generated');
+    fs && fs.writeFileSync('test-report && report.json', JSON && JSON.stringify(report, null, 2));
+    console && console.log('Test report generated');
   }
 
   runner.generateReport();

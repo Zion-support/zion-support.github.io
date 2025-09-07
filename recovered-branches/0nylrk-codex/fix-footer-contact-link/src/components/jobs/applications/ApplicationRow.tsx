@@ -8,6 +8,10 @@ interface ApplicationRowProps {
   onViewScore: (application: JobApplication) => void
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {Calendar, User, FileText, BarChart} from "lucide-react";
@@ -316,6 +320,11 @@ interface ApplicationRowProps {
           onViewApplication={onViewApplication}
 
           onStatusChange={onStatusChange}
+<<<<<<< HEAD
+        />;
+      </TableCell>;
+    </TableRow>;
+=======
 
 />;
       </TableCell>;

@@ -28,6 +28,7 @@ declare let process: {env: {;
     [key: string]: string | undefined;
     NODE_ENV: 'development' | 'production' | 'test';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ImportMetaEnv {;
   readonly VITE_APP_TITLE: string,;
   // add more env variables as needed;
@@ -73,6 +74,8 @@ declare let process: {;
   env: {;
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test',;
+<<<<<<< HEAD
+=======
 
     PORT?: string;
   }

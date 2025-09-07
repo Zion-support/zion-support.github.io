@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import type {;
+  RemoteParticipant,;
+  LocalParticipant,;
+  TrackPublication,;
+  Track,;
+=======
 
 
 import React, { useEffect, useRef } from 'react';'
@@ -74,6 +81,21 @@ import type {;
   Track,;
 } from 'livekit-client';
 
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react';
+
+import type {
+  RemoteParticipant
+  LocalParticipant
+  TrackPublication
+  Track;
+  RemoteParticipant,
+  LocalParticipant,
+  TrackPublication,;
+  Track,;
+} from 'livekit-client';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
@@ -146,10 +168,16 @@ export default function ParticipantTile() {
         track.attach(videoRef.current);
 };
 
+<<<<<<< HEAD
+};
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function ParticipantTile(): any ({;
   participant,;
   isLocal,;
   displayName,;
+<<<<<<< HEAD
+=======
 }: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
 type Props = {;
   participant: RemoteParticipant | LocalParticipant,;
@@ -173,6 +201,53 @@ export default function ParticipantTile() {const videoRef = useRef<HTMLVideoElem
         track && track.attach(videoRef && videoRef.current);
       }'
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
+<<<<<<< HEAD
+}
+export default function ParticipantTile({
+  participant
+  isLocal
+  displayName
+  participant,
+  isLocal,
+  displayName,;
+}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
+type Props = {;
+  participant: RemoteParticipant | LocalParticipant,;
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
+type Props = {
+  participant: RemoteParticipant | LocalParticipant,
+  isLocal?: boolean;
+  displayName?: string
+}
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
+};
+
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {;
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  useEffect(() => {
+    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
+
+  useEffect__(() => {
+    const _handleTrackSubscribed = (_pub: TrackPublication, _track: Track) => {
+
+      if (track.kind === 'video' && videoRef.current) {
+        track.attach(videoRef.current);
+      }
+      if (track.kind === 'audio' && audioRef.current) {
+        track.attach(audioRef.current);      }
+    }
+    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
+      if (track.kind === 'video' && videoRef.current) {
+        track.detach(videoRef.current);
+      }
+      if (track.kind === 'audio' && audioRef.current) {
+        track.detach(audioRef.current);      }        track.attach(videoRef.current)
+      }
+      if (track.kind === 'audio' && audioRef.current) {
+        track.attach(audioRef.current)
+      }
+=======
         track && track.attach(audioRef && audioRef.current);      }
     };
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;'
@@ -423,6 +498,27 @@ if ( {) {$2;
       </div>;
 
     </div>);
+
+    participant.on('trackSubscribed', handleTrackSubscribed),
+    participant.on('trackUnsubscribed', handleTrackUnsubscribed),
+
+    return () => {
+      participant.off('trackSubscribed', handleTrackSubscribed),
+      participant.off('trackUnsubscribed', handleTrackUnsubscribed)
+    }
+  }, [participant]),
+
+  return (
+    <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
+      <video ref={_videoRef} autoPlay playsInline muted={_Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />
+      <audio ref={_audioRef} autoPlay className="hidden" />
+      <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">
+        {_displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
+
+      </div>
+    </div>
+  )
+
 }
       </div>
   );

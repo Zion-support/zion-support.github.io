@@ -297,12 +297,19 @@ const Homepage2035: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const [activeCategory, setActiveCategory] = useState('all');
+<<<<<<< HEAD
+=======
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
       setIsVisible(true)
     }, 800);
+<<<<<<< HEAD
+    return () => clearTimeout(timer);  }, []);      setIsVisible(true);
+    }, 800);
+    return () => clearTimeout(timer);
+=======
 
     return () => clearTimeout(timer)
   }, []);
@@ -322,6 +329,7 @@ const Homepage2035: React.FC = () => {
   };
 
   const backgroundVariants = {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     initial: { opacity: 0, scale: 0.8 },
     animate: { 
       opacity: 1, 

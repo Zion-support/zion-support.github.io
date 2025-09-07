@@ -20,6 +20,7 @@ export function TalentDashboard() {
         
         <div className="space-y-3">
           <Card>
+        <div className='space-y-3'>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
                 <div className="space-y-1">
@@ -45,7 +46,6 @@ export function TalentDashboard() {
           </Card>
           
           <Card>
-            <CardContent className="p-4">
               <div className="flex justify-between items-start">
                 <div className="space-y-1">
                   <h3 className="font-medium">UX/UI Designer</h3>
@@ -64,7 +64,6 @@ export function TalentDashboard() {
               </div>
               <div className="flex gap-2 mt-3">
                 <Button size="sm">Apply Now</Button>
-                <Button size="sm" variant="outline">View Details</Button>
               </div>
             </CardContent>
           </Card>
@@ -94,7 +93,6 @@ export function TalentDashboard() {
               </div>
             </div>
             <Button variant="outline" className="w-full mt-4">
-              View All Applications
             </Button>
           </CardContent>
         </Card>

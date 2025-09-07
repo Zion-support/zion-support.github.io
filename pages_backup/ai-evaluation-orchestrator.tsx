@@ -18,6 +18,8 @@ const AIEvaluationOrchestrator: React.FC = () => {
           </header>
           <section className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 
+<<<<<<< HEAD
+=======
           href='https://ziontechgroup && ziontechgroup.com/ai-evaluation-orchestrator'
         />;
       </Head>;'
@@ -96,19 +98,29 @@ const AIEvaluationOrchestrator: React.FC = () => {
               href='/contact';'
               className='px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 700 text - white';
             >;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Talk to Sales;
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
+        <div className="text - center">;
+          <a href="/contact" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 700 text - white rounded - lg hover: opacity - 90">;
+=======
 
         <div className="text - center">;"
           <a href="/contact" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 700 text - white rounded - lg hover: opacity - 90">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Talk to Sales;
           </a>;
         </div>;
       </main>;
+<<<<<<< HEAD
+=======
 
 '
               'Create datasets and scoring functionsBatch runs across models and versionsTrack regressions and enforce quality gatesIntegrations: OpenAI, Anthropic, Groq, OpenRouter, LangfuseExport reports, share baselines, and diff resultsFrom $199/mo'
@@ -171,6 +183,20 @@ import React from 'react',
 
 import Button from '../components/ui/Button';
 export default function AIEvaluationOrchestratorPage() {
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+const AIEvaluationOrchestrator: React.FC = () => {
+import React from 'react',
+import Head from 'next/head';
+
+import Layout from '../components/layout/Layout';
+const AIEvaluationOrchestrator: React.FC = () => {
+
+import Head from 'next/head',
+import Button from '../components/ui/Button',
+export default function AIEvaluationOrchestratorPage() {
   return (
     <>
       <Head>
@@ -194,6 +220,21 @@ export default function AIEvaluationOrchestratorPage() {
           </section>"
           <div className="text-center">"
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>
+          </header>
+          <section className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+            {[
+              'Create datasets and scoring functionsBatch runs across models and versionsTrack regressions and enforce quality gatesIntegrations: OpenAI, Anthropic, Groq, OpenRouter, LangfuseExport reports, share baselines, and diff resultsFrom $199/mo'
+            ].map((f) => (
+              <div key={f} className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200&quot;>{f}</div>
+              'Create datasets and scoring functions', _'Batch runs across models and versions', _'Track regressions and enforce quality gates', _'Integrations: OpenAI, _Anthropic, _Groq, _OpenRouter, _Langfuse', _'Export reports, _share baselines, _and diff results', _'From $199/mo'
+            ].map((f) => (
+              <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{_f}</div>
+
+            ))}
+          </section>
+          <div className=&quot;text-center&quot;>
+            <Button href=&quot;/contact&quot; className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white&quot;>Talk to Sales</Button>
+
           </div>
         </div>
 

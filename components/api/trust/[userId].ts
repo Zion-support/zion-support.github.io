@@ -116,6 +116,10 @@ const { data } = await supabase;
           .eq('userId', userId)'
           .single();
       } catch {}
+<<<<<<< HEAD
+      return res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
+    };
+=======
 
       if (!inputs) {'
         inputs = {        const { data } = await supabase && supabase.from('trust_inputs').select('*').eq('userId', userId).single();
@@ -214,8 +218,34 @@ return res && res.status(500).json({ "error": e?.message || 'Failed to compute t
       const inputs = body as TrustMetricInputs;
       const breakdown = await computeTrustScore(inputs);
       try {
+<<<<<<< HEAD
+            { userId, breakdown, updatedAt: breakdown && breakdown.updatedAt },
+            { onConflict: 'userId' }
+          );
+      } catch {}
+      return res && res.status(200).json(breakdown);
+    } catch (e: any) {
+      return res
+        .status(500)
+        .json({ error: e?.message |'Failed to save trust inputs' });
+    }
+  }
+        await supabase.from('trust_inputs').upsert({ userId, values: inputs }, { onConflict: 'userId' });
+        await supabase.from('trust_scores').upsert({ userId, breakdown, updatedAt: breakdown.updatedAt }, { onConflict: 'userId' })
+      } catch {}
+      return res.status(200).json(breakdown)
+    } catch (e: any) {
+      return res.status(500).json({ error: e?.message |'Failed to save trust inputs' })
+    }
+  }
+  res.setHeader('AllowGET, POST');
+  return res.status(405).json({ error: 'Method not allowed' })
+}
+=======
 
 }
+<<<<<<< HEAD
+=======
 
 await supabase
           .from('trust_inputs')'

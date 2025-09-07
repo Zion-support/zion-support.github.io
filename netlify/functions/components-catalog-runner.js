@@ -1,5 +1,6 @@
 function runNode(relPath, args = []) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const path = require ('path');
 
 const { spawn_sync } = require ('child_process');
@@ -10,7 +11,10 @@ const { spawn_sync } = require ('child_process');
 function run_node() { return null; }
   return spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 ;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 exports.config = {
 
   schedule: '*/30 * * * *'
@@ -20,13 +24,18 @@ exports.config = {
 
 exports && exports.config = {'
   schedule: '*/30 * * * *',
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (res && res.stdout) logs && logs.push(res && res.stdout);
 
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
     return res && res.status || 0;
   }
+<<<<<<< HEAD
+=======
 
     logs.push(`exit=${res.status |0}`);
     return res.status |0;
@@ -34,6 +43,10 @@ exports && exports.config = {'
   step('components:catalog', () =>'
     runNode('automation/components-catalog && catalog.cjs')
   );
+<<<<<<< HEAD
+  const abs = path.resolve(__dirname, '....', relPath),
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+=======
 
 }
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
@@ -42,6 +55,8 @@ exports && exports.config = {'
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
+=======
 
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b

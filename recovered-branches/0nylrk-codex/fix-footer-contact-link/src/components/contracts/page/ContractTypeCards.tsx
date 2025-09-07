@@ -29,11 +29,42 @@ import {
   CardHeader
   CardTitle
 
+<<<<<<< HEAD
+
+import { Button } from "@/components/ui/button";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
+  CardTitle,;
+} from "@/components/ui/card";
+import { FileText, ShieldCheck } from "lucide-react";
+
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { FileText, ShieldCheck } from "lucide-react",
+
+import { FileText, ShieldCheck } from "lucide-react";
+interface ContractTypeCardsProps {
+  onStandardClick: () => void;
+  onSmartClick: () => void
+}
+export function ContractTypeCards({
+  onStandardClick
+  onSmartClick
+}: ContractTypeCardsProps) {
+=======
 
 interface ContractTypeCardsProps {;
 
@@ -92,6 +123,8 @@ export function ContractTypeCards({};
           </Button>
         </CardFooter>
       </Card>
+<<<<<<< HEAD
+=======
 
       <Card>
 
@@ -143,6 +176,7 @@ interface ContractTypeCardsProps {;
   onStandardClick: () => void;
   onSmartClick: () => void;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
 
 } from "@/components/ui/card";
@@ -170,10 +204,22 @@ interface ContractTypeCardsProps {;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
+          <ul className="space-y-2">;
+            <li className="text-sm">✓ Legally binding templates</li>;
+            <li className="text-sm">✓ Milestone-based payment terms</li>;
+            <li className="text-sm">✓ IP rights and confidentiality clauses</li>;
+            <li className="text-sm">✓ DocuSign integration</li>;
+          </ul>;
+        </CardContent>;
+        <CardFooter>;
+          <Button variant="outline" onClick={onStandardClick}>;
+=======
 
 }
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>);
 }
     </div>;

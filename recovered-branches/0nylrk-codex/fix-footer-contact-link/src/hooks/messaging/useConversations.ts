@@ -6,10 +6,13 @@ import { toast } from '@/hooks/use-toast';
 import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Conversation, ConversationContextData} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
+=======
 
 // Allow either UserProfile or UserDetails
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -56,6 +59,41 @@ if (throw error) {}
           user_id: otherUserId;
           other_user: {}
             id: otherUserId;
+<<<<<<< HEAD
+            avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
+            user_type: isUserOne ? conv.user_two_type : conv.user_one_type;
+export function useConversations(;
+  user: UserWithProfile;
+  setConversations: (conversations: Conversation[]) => void;
+  setUnreadCount: (count: number) => void;
+  setIsLoading: (loading: boolean) => void
+) {
+  /**
+   * Fetch conversations for the current user
+   */
+  const fetchConversations = async () => {
+    if (!user) return;
+    setIsLoading(true)
+    try {
+      // Fetch conversations from the database
+      const { data, error } = await supabase
+        .from('conversations')
+        .select('*')
+        .or(`user_one_id.eq.${user.id},user_two_id.eq.${user.id}`);
+      if (error) throw error;
+      // Format conversations
+      const formattedConversations: Conversation[] = data.map(conv => {
+        const isUserOne = conv.user_one_id === user.id;
+        const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id;
+        return {
+          id: conv.id;
+          user_id: otherUserId;
+          other_user: {
+            id: otherUserId;
+            name: isUserOne ? conv.user_two_name : conv.user_one_name;
+            avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar
+            user_type: isUserOne ? conv.user_two_type : conv.user_one_type
+=======
 
           }
 
@@ -65,6 +103,7 @@ if (throw error) {}
       const totalUnread = formattedConversations && formattedConversations.reduce(
         (total, conv) => total + (conv && conv.unread_count || 0), 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         0
 
       );
@@ -85,6 +124,12 @@ if (throw error) {}
             last_message_time: new Date().toISOString();
             context_type: contextType;
 
+        conversationId = newConversation && newConversation.id
+      }
+
+
+<<<<<<< HEAD
+        conversationId = newConversation.id
       }
 
 import { UserProfile, UserDetails } from '@/types/auth',;
@@ -256,6 +301,7 @@ export function useConversations(;
   }
   return {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Failed to create conversation",
         description: "Please try again later",
         variant: "destructive"
@@ -286,7 +332,6 @@ export function useConversations(;
       })
 
     fetchConversations;
-
     createConversation}
   /**;
   const create_conversation = async (

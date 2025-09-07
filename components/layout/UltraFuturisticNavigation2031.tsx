@@ -8,6 +8,7 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Microscope, DollarSign, Home, Users, Briefcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   BookOpen, MessageCircle, Star, TrendingUp, Target;
 
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
@@ -121,6 +122,7 @@ const serviceCategories = [;
       }
       {"name": 'Swarm Robotics Orchestration',"href": '/swarm-robotics-orchestration',"description": 'Coordinate robot swarms',"price": '$449/month'}]}];'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const mainNavigation = [;
   { "name": 'Home', "href": '/', "icon": Home,'
 },{ "name": 'Services', "href": '/services', "icon": Briefcase,'
@@ -247,6 +249,19 @@ return (;
 return (;
     <>;
       {/* Top Contact Bar */}
+<<<<<<< HEAD
+      <div className="bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2">
+              <Phone className="w-4 h-4 text-cyan-400" />
+              <span>{contactInfo.mobile}</span>
+            </div>
+      <div className='bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm'>
+        <div className='max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0'>
+          <div className='flex items-center space-x-6'>
+            <div className='flex items-center space-x-2'>
+              <Phone className='w-4 h-4 text-cyan-400' />
 
               <span>{contactInfo.mobile}</span>
             </div>
@@ -285,6 +300,9 @@ return (;
           </div>;
 
       </div>;
+<<<<<<< HEAD
+      {/* Main Navigation */}
+=======
 
       {/* Main Navigation */}
 

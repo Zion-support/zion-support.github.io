@@ -9,18 +9,53 @@ interface HireNowCTAProps {;
     hourly_rate?: number;
   }
 }
+<<<<<<< HEAD
+export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleOpenModal = () => {;
+    setModalOpen(true);
+  };
+  const handleCloseModal = () => {;
+    setModalOpen(false);
+  };
+  // Check if we have minimum required data;
+  const canHire = talentProfile && talentProfile.id && talentProfile && talentProfile.full_name;
+  // Calculate talent profile completeness (simplified);
+import { Button } from "@/components/ui/button",
+import { HireRequestModal } from "./hire-request",
+import { useState } from "react";
+import { TalentProfile } from "@/types/talent";
+interface HireNowCTAProps {
+  talentProfile: {
+
+    id: string
+
+    full_name?: string;
+    professional_title?: string;
+import { useState } from "react",
+import { TalentProfile } from "@/types/talent",
+=======
 
 export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
   const [modalOpen, setModalOpen] = useState(false);
 
     id: string
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
     full_name?: string,
     professional_title?: string,
 
+<<<<<<< HEAD
+
+
+  const handleOpenModal = () => {
+    setModalOpen(true)
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     hourly_rate?: number
   }
 }
@@ -119,10 +154,50 @@ interface HireNowCTAProps {;
           />;
         </div>;
       </div>;
+<<<<<<< HEAD
+      <div className="flex flex-col space-y-4 mt-6">;
+          <div;
+            className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";
+            style={{ width:`${profileCompleteness}%` }}
+          />;
+        </div>;
+      </div>;
+      ;
+      <div className="flex flex-col space-y-4 mt-6">;
+        <Button;
+          onClick={handleOpenModal}
+          disabled={!canHire}
+          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+        >;
+          Request to Hire;
+        </Button>;
+=======
 
           Schedule Interview;
         </Button>;
       </div>;
+<<<<<<< HEAD
+      <HireRequestModal;
+        isOpen={modalOpen}
+        onClose={handleCloseModal}
+        talent={talentProfile ? {
+          id: talentProfile.id
+          user_id: talentProfile.id
+          full_name: talentProfile.full_name |'Talent'
+          professional_title: talentProfile.professional_title |'Professional'
+          bio: ''
+          years_experience: 0
+          skills: []
+          availability_type: 'full_time'
+          timezone: ''
+          hourly_rate: talentProfile.hourly_rate
+        } : null}
+      />
+    </div>
+  )
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         isOpen={modalOpen}
         onClose={handleCloseModal}
@@ -137,6 +212,10 @@ interface HireNowCTAProps {;
           availability_type: 'full_time''
           timezone: ''
 
+      <HireRequestModal
+        isOpen={modalOpen}
+        onClose={handleCloseModal}
+        talent={talentProfile ? {
           id: talentProfile.id,
           user_id: talentProfile.id,'
           full_name: talentProfile && talentProfile.full_name || 'Talent','
@@ -191,6 +270,9 @@ function calculateProfileCompleteness(): any (profile: any) {;
 // Helper function to calculate profile completeness;
 function calculateProfileCompleteness(): any (profile: any) {;
   if (!profile) return 0;
+<<<<<<< HEAD
+  const fields = [;
+=======
 
 <<<<<<< HEAD
     'availability_type';'

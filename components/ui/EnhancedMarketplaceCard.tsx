@@ -176,6 +176,7 @@ pr-12243
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface MarketplaceCardProps {
 interface EnhancedMarketplaceCardProps {
   title: string;

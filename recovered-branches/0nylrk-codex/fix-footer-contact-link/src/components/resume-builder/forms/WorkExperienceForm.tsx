@@ -3,6 +3,7 @@ import { Form;
   FormControl;
   FormField;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -100,6 +101,8 @@ interface WorkExperienceFormProps {}
       await deleteWorkExperience(id);
     }
   },
+<<<<<<< HEAD
+=======
 
   const handleEnhanceDescription = (enhancedContent: string) => {'
     form.setValue('description', enhancedContent)
@@ -181,6 +184,8 @@ interface WorkExperienceFormProps {}
                         type="date" 
                         {...field} '
                         value={field.value || ''}
+<<<<<<< HEAD
+=======
 
                 <FormField
                   control={form && form.control}
@@ -192,6 +197,7 @@ interface WorkExperienceFormProps {}
                         <Checkbox;
                           checked={field && field.value}
                           onCheckedChange={field && field.onChange}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         />;
                       </FormControl>;"
                       <div className="space-y-1 leading-none">;
@@ -199,6 +205,17 @@ interface WorkExperienceFormProps {}
                       </div>;
                     </FormItem>;
                   )}
+<<<<<<< HEAD
+                />;
+                  <FormField
+                    control={form && form.control}
+                    name="end_date"
+;
+                {!form.watch('is_current') && (;
+                  <FormField;
+                    control={form.control}
+                    name="end_date";
+=======
 
                   <FormControl>;
 
@@ -208,6 +225,7 @@ interface WorkExperienceFormProps {}
             <FormField;
               control={form && form.control}"
               name="description"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               render={({ field }) => (;
                 <FormItem>;"
                   <FormLabel className="flex justify-between">;
@@ -215,6 +233,7 @@ interface WorkExperienceFormProps {}
                     <AIEnhancementButton"
                       enhancementType="work-description"'
                       context={`Role: ${form && form.getValues('role_title')} at ${form && form.getValues('company_name')}`}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       onEnhanced={handleEnhanceDescription}
                     />;
                   </FormLabel>;

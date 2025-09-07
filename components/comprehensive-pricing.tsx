@@ -343,6 +343,9 @@ filteredServices = filteredServices.filter(
 filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
+<<<<<<< HEAD
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+=======
 
 return (
           parseFloat(a.price.replace('$', '').replace(',', '')) -
@@ -738,6 +741,22 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center'
           </div>
         </section>
         {/* Contact Information Banner */}
+<<<<<<< HEAD
+        <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20'>
+          <div className='container mx-auto px-4'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
+              <div className='flex items-center gap-4'>
+                <Phone className='w-5 h-5 text-cyan-400' />
+                <span className='text-white'>{contactInfo.mobile}</span>
+                <Mail className='w-5 h-5 text-purple-400' />
+                <span className='text-white'>{contactInfo.email}</span>
+              </div>
+              <div className='flex items-center gap-4'>
+                <MapPin className='w-5 h-5 text-green-400' />
+                <span className='text-white'>{contactInfo.address}</span>
+                <Globe className='w-5 h-5 text-blue-400' />
+                <span className='text-white'>{contactInfo.website}</span>              </div>              <div className="flex items-center gap-4">
+=======
 
 <<<<<<< HEAD
 
@@ -861,6 +880,8 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';}
                     </div>;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 <div className='text-center'    />;
                       <Button;
@@ -960,6 +981,8 @@ value={selectedCategory}
 type='text'
                       placeholder='Search services...'
                       value={searchQuery}
+<<<<<<< HEAD
+=======
 
 
                       onChange={e =    /> setSearchQuery(e.target.value)}
@@ -1015,6 +1038,14 @@ type='text'
             </motion.div>
 
 
+<<<<<<< HEAD
+              whileInView="visible"
+              whileInView='visible'              viewport={{ once: true }}
+
+              viewport={{ once: true }}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1256,6 +1287,8 @@ variant='futuristic'
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
+=======
 
             </motion.div>
             {filteredServices.length === 0 && (
@@ -1280,6 +1313,58 @@ variant='primary'
                     setSelectedCategory('All');}
                     setPriceRange('All');}
                   }}
+<<<<<<< HEAD
+                             <Button 
+                               variant="futuristic" 
+                               size="sm"
+                               onClick={() => window.open('https: //ziontechgroup.com/contact_blank')}
+                             >
+                               Get Pricing
+                               <DollarSign className="ml-2 w-4 h-4" />
+                             >
+                               Get Pricing
+                               <DollarSign className=&quot;ml-2 w-4 h-4&quot; />
+
+                             </Button>
+                        </div>
+                      </div>
+                    )}
+                  </UltraFuturisticCard>
+                </motion.div>
+              ))}
+            </motion.div>
+            {filteredServices.length === 0 && (
+              <motion.div
+                className='text-center py-16'                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >              <motion.div
+                className="text-center py-16"
+
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className='text-6xl mb-4'>🔍</div>
+                <h3 className='text-2xl font-bold text-white mb-2'>
+                  No Services Found
+                </h3>
+                <p className='text-gray-400 mb-6'>
+                  Try adjusting your search criteria or filters.
+                </p>
+                <Button
+                  variant='primary'
+                  onClick={() => {
+                    setSearchQuery('');
+                    setSelectedCategory('All');
+                    setPriceRange('All');
+                  }}
+                >
+                  Clear Filters
+                </Button>              </motion.div>                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
+                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
+=======
 
                 >
                   Clear Filters;

@@ -20,6 +20,7 @@ interface TalentResultsProps {}
   handleRequestHire: (talent: TalentProfile) => void;
   savedTalents: string[]
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     selectedSkills: string[],
 
     toggleSkill: (skill: string) => void,
@@ -31,6 +32,30 @@ interface TalentResultsProps {}
     setPriceRange: (range: [number, number]) => void,
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
+<<<<<<< HEAD
+    clearFilters: () => void
+  }
+}
+
+export function TalentResults({;
+  filteredTalents;
+  isLoading;
+  viewProfile;
+  handleRequestHire;
+  savedTalents;
+  handleToggleSave;
+  isAuthenticated;
+export function TalentResults({
+  filteredTalents,
+  isLoading,
+  viewProfile,
+  handleRequestHire,
+  savedTalents,
+  handleToggleSave,
+  isAuthenticated,
+
+
+=======
 
     clearFilters: () => void;
 
@@ -58,13 +83,17 @@ export function TalentResults({}
 
   isAuthenticated,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { TalentProfile } from "@/types/talent",;
 import { ActiveFilters } from "@/components/talent/ActiveFilters",;
 import { ResultsHeader } from "@/components/talent/ResultsHeader",;
 
 import { TalentGrid } from "@/components/talent/TalentGrid",;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface TalentResultsProps {;
   filteredTalents: TalentProfile[],;
   isLoading: boolean,;
@@ -93,6 +122,7 @@ interface TalentResultsProps {;
   viewProfile;
   handleRequestHire;
   savedTalents;
+<<<<<<< HEAD
   handleToggleSave;
   isAuthenticated;
   activeFiltersProps;
@@ -177,6 +207,8 @@ function TalentResults() {
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
 
 ;
 

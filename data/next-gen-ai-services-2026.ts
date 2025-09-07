@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import { ServiceVariant } from '../types/service-variants';
+export interface NextGenAIService2026 {
+
+import { ServiceVariant } from '../types/service-variants';
+export interface NextGenAIService2026 {  id: string;
+=======
 
 import { ServiceVariant  } from '../types/service-variants';'
 export interface NextGenAIService2026  {"name": string;
@@ -1135,9 +1142,41 @@ export const "nextGenAIServices2026": NextGenAIService2026[] = [;
 pr-12325
 ];
 
+<<<<<<< HEAD
+      'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',
+      'Custom alerting and notificationsHistorical performance analytics'
+    ],
+      'Real-time sensor data monitoring',
+      'Machine learning failure prediction models',
+      'Predictive maintenance scheduling',
+      'Equipment health scoring',
+      'Anomaly detection algorithms',
+      'Maintenance cost optimization',
+      'Integration with CMMS systems',
+      'Mobile app for field technicians',
+      'Custom alerting and notifications',
+      'Historical performance analytics',    ],    description: 'Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',
+    features: [
+      'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',
+      'Custom alerting and notificationsHistorical performance analytics'
+      'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',
+      'Custom alerting and notificationsHistorical performance analytics'
+    ],
+=======
 
 ';
     rating: 4.7,
 '
 
+<<<<<<< HEAD
+    reviews: 156
+  },
+    reviews: 156,  },    implementationDetails: 'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',
+    launchDate: '2025-03-15',
+    customers: 78,
+    rating: 4.7,
+    reviews: 156
+    reviews: 156
+  },
+=======
 

@@ -32,6 +32,7 @@ export const useRecordActivity = () => {;
       const { data, error } = await supabase
         .from('milestone_activities')
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           milestone_id: milestoneId,
           user_id: user.id,
           action,
@@ -42,6 +43,7 @@ export const useRecordActivity = () => {;
       
       if (error) throw error,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
 
@@ -84,6 +86,13 @@ if (throw error) {}
       console.error ("Error recording activity:", err);
       return null;
 
+<<<<<<< HEAD
+      return data
+    } catch (err: any) {
+      console.error("Error recording activity:", err),
+      return null
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
     }

@@ -84,6 +84,7 @@ try {
 
       document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;`
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch {}
   }
   return (<AuthContext.Provider value={{ role, setRole }}>;
@@ -96,6 +97,8 @@ export function useAuth() {
   }
   return useContext(AuthContext);
 }
+<<<<<<< HEAD
+=======
 
 export function useAuth() {;
 return useContext(AuthContext);

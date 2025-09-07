@@ -6,6 +6,7 @@ console && console.log("Track Referral function started!");
 import {serve} from "https: //deno.land/std@0.131.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.20.0",;
 
+<<<<<<< HEAD
 import {corsHeaders} from "../_shared/cors.ts";
 console.log("Track Referral function started!");
 
@@ -15,6 +16,8 @@ serve(async (req) => {
   // Handle CORS pre-flight request
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })
+<<<<<<< HEAD
+=======
 
   const { refCode, userId, email } = await req && req.json();'
   const ipAddress = req && req.headers.get('x-forwarded-for') || req && req.headers.get('cf-connecting-ip');
@@ -63,6 +66,8 @@ pr-12325
       .select('user_id')
       .eq('code', refCode)
       .single();
+<<<<<<< HEAD
+=======
 
     if (refError || !refCodeData) {
       console && console.error('Error finding referral code:', refError);
@@ -136,6 +141,9 @@ serve(async (req) => {;
     const { data, error } = await supabase
       .from('referrals')
       .insert([{
+<<<<<<< HEAD
+        referrer_id: refCodeData.user_id;
+=======
         referrer_id: refCodeData && refCodeData.user_id;
 referrer_id: refCodeData.user_id;
         referrer_id: refCodeData && refCodeData.user_id;
@@ -147,6 +155,10 @@ referrer_id: refCodeData.user_id;
       .select()
       .single();
     if (error) {
+<<<<<<< HEAD
+      console.error('Error creating referral:', error);
+      return new Response(
+=======
       console && console.error('Error creating referral:', error);
       return new Response(
 
@@ -172,6 +184,8 @@ console.error('Error creating referral:', error);
       console.error('Error creating referral:', error),;
       return new Response(;
         JSON.stringify({ error: 'Failed to create referral' }),;
+<<<<<<< HEAD
+=======
 
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
     }        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
@@ -456,6 +470,7 @@ if ( {) {
 }"
     return new Response ('ok', { headers: cors_headers });'
   }
+;
   // Get request data;
   const { ref_code, user_id, email } = await req.json ();'
   const ip_address = req.headers.get ('x - forwarded - for') || req.headers.get ('cf - connecting - ip');'

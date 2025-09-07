@@ -32,6 +32,7 @@ export function useCompanyWorkspace(companySlug?: string) {};
           billingCycle: "Annual"
           workspaceUrl: "acme.zion-ai.com"});
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
             textColor: "#1f2937"},
@@ -41,6 +42,10 @@ export function useCompanyWorkspace(companySlug?: string) {};
           teamLimit: 50,"
           billingCycle: "Annual","
           workspaceUrl: "acme.zion-ai.com"}),
+<<<<<<< HEAD
+billingCycle: "Annual",
+          workspaceUrl: "acme && acme.zion-ai && ai.com"});
+=======
 
         setError(null)
       } else {

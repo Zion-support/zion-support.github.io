@@ -6,6 +6,10 @@ interface TalentProfileProps {
   onMessageTalent?: () => void
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 import {Handshake, MessageSquare, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -49,11 +53,54 @@ import {Availability} from "@/types/profile";
 
 export function TalentProfile(): any ({ ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   profile;
   onRequestHire;
   onMessageTalent;
 }: TalentProfileProps) {;
   const { isAuthenticated } = useAuth();
+<<<<<<< HEAD
+import React from "react",
+import { Handshake, MessageSquare, Star } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { HireNowCTA } from "./HireNowCTA",
+import { ProfileHero } from "./ProfileHero",
+import { ProfileSkills } from "./ProfileSkills",
+import { ProfileExperience } from "./ProfileExperience",
+import { ProfileProjects } from "./ProfileProjects",
+import { ProfileAvailability } from "./ProfileAvailability",
+import { ProfileContact } from "./ProfileContact",
+import { ProfileRatings } from "./ProfileRatings",
+import { TalentProfile as TalentProfileType } from "@/types/talent",
+import { useAuth } from "@/hooks/useAuth";
+import { Availability } from "@/types/profile";
+import { useAuth } from "@/hooks/useAuth",
+import { Availability } from "@/types/profile",
+interface TalentProfileProps {
+
+  profile: TalentProfileType
+  onRequestHire: () => void
+
+  onMessageTalent?: () => void
+}
+export function TalentProfile({
+  profile;
+  onRequestHire;
+  onMessageTalent
+}: TalentProfileProps) {
+  const { isAuthenticated } = useAuth();
+
+export function TalentProfile({ ;
+  profile;
+  onRequestHire;
+export function TalentProfile({ 
+  profile,
+  onRequestHire,
+  onMessageTalent
+}: TalentProfileProps) {
+  const { isAuthenticated } = useAuth(),
+  
+=======
 
 }
 
@@ -82,6 +129,7 @@ export function TalentProfile({};
 }: TalentProfileProps) {}
   const { isAuthenticated } = useAuth();
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Create proper availability object from talent profile
 
   // Create proper availability object from talent profile;
@@ -101,12 +149,24 @@ export function TalentProfile({};
     level: 3 // Default level since we don't have this data;
   })) || [],
 
+<<<<<<< HEAD
+  })) |[];
+  })) || [],
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Create proper projects array for ProfileProjects component
   const projectsArray = profile.key_projects?.map((proj, i) => ({
     id: `project-${i}`
     title: proj.title
     description: proj.description
     date: new Date().toISOString() // Default date since we don't have this data
+<<<<<<< HEAD
+  })) |[];
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+=======
 
   })) || [],
   
@@ -289,6 +349,81 @@ export function TalentProfile({;
   return (
     <div className="container mx-auto px-4 py-8">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  })) || [],
+  
+  return (
+    <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
+import React from "react",;
+import { Handshake, MessageSquare, Star } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { HireNowCTA } from "./HireNowCTA",;
+import { ProfileHero } from "./ProfileHero",;
+import { ProfileSkills } from "./ProfileSkills",;
+import { ProfileExperience } from "./ProfileExperience",;
+import { ProfileProjects } from "./ProfileProjects",;
+import { ProfileAvailability } from "./ProfileAvailability",;
+import { ProfileContact } from "./ProfileContact",;
+import { ProfileRatings } from "./ProfileRatings",;
+import { TalentProfile as TalentProfileType } from "@/types/talent",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Availability } from "@/types/profile",;
+interface TalentProfileProps {;
+  profile: TalentProfileType,;
+  onRequestHire: () => void,;
+  onMessageTalent?: () => void;
+}
+;
+export function TalentProfile({;
+  profile,;
+  onRequestHire,;
+  onMessageTalent;
+}: TalentProfileProps) {;
+  const { isAuthenticated } = useAuth(),;
+  // Create proper availability object from talent profile;
+  const availability: Availability = {;
+    status: profile.availability_type === 'full_time' ? 'available' :;
+            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',;
+    message: `${profile.professional_title} with ${profile.years_experience} years of experience`;
+  },;
+  // Create proper skills array for ProfileSkills component;
+  const skillsArray = profile.skills?.map(skill => ({;
+    name: skill,;
+    level: 3 // Default level since we don't have this data;
+  })) || [],;
+  // Create proper projects array for ProfileProjects component;
+  const projectsArray = profile.key_projects?.map((proj, i) => ({;
+    id: `project-${i}`,;
+    title: proj.title,;
+    description: proj.description;
+    date: new Date().toISOString() // Default date since we don't have this data;
+  })) || [];
+  return (;
+    <div className="container mx-auto px-4 py-8">;
+
+
+  // Create proper availability object from talent profile;
+  const availability: Availability = {;
+    status: profile && profile.availability_type === 'full_time' ? 'available' : ;
+            profile && profile.availability_type === 'part_time' ? 'limited' : 'unavailable',;
+    message: `${profile && profile.professional_title} with ${profile && profile.years_experience} years of experience`;
+  };
+  // Create proper skills array for ProfileSkills component;
+  const skillsArray = profile && profile.skills?.map(skill => ({;
+    name: skill,;
+    level: 3 // Default level since we don't have this data;
+  })) || [];
+  // Create proper projects array for ProfileProjects component;
+  const projectsArray = profile && profile.key_projects?.map((proj, i) => ({;
+    id: `project-${i}`,;
+    title: proj && proj.title,;
+    description: proj && proj.description,;
+    date: new Date().toISOString() // Default date since we don't have this data;
+  })) || [];
+  return (
+    <div className="container mx-auto px-4 py-8">;
+
   })) || [],
   return (
     <div className="container mx-auto px-4 py-8">
@@ -303,6 +438,14 @@ export function TalentProfile({;
         title={profile && profile.professional_title}
         avatarUrl={profile && profile.profile_picture_url}"
         profileType="talent"
+<<<<<<< HEAD
+        rating={profile && profile.average_rating}
+        reviewCount={profile && profile.rating_count}
+      />;
+      {/* Main content area */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
+        {/* Left Column - Skills & Info */}
+=======
 
         {/* Right Column - Bio & Projects */}
         <div className="lg:col-span-2 space-y-8">;
@@ -581,7 +724,6 @@ pr-12325
               <p className="text-zion-slate whitespace-pre-wrap">{profile && profile.bio}</p>;
             </div>;
           </div>;
-
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />;
 
@@ -590,13 +732,11 @@ pr-12325
               ratingCount={profile && profile.rating_count}
             />;
           </div>;
-
           {/* Hire Now CTA */}
 
                     <Handshake className="mr-2 h-5 w-5" />;
                     Hire Now;
                   </Button>;
-
                   {onMessageTalent && (;
 
                       <MessageSquare className="mr-2 h-5 w-5" />;

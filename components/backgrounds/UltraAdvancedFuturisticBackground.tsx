@@ -142,6 +142,9 @@ particle.life -= 0.5;
           }
           particle.life = particle.maxLife;
           particle.x = Math.random() * canvas.width;
+<<<<<<< HEAD
+          particle.y = Math.random() * canvas.height
+=======
 
 particle.y = Math.random() * canvas.height;
         }
@@ -218,6 +221,7 @@ ctx.save();
         ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife);
         ctx.translate(particle.x, particle.y);
         ctx.rotate(particle.rotation);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 if (particle.type = == 'quantum') {'
           // Quantum particle with wave effect

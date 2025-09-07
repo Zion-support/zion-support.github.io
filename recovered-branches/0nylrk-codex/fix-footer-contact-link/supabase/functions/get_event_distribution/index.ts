@@ -47,11 +47,38 @@ const corsHeaders = {
   }
   try {}
     const supabaseClient = createClient(
+<<<<<<< HEAD
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+    );
+    // Parse the request body
+    const { days_back = 7 } = await req.json();
+    // Calculate the start date
+    const startDate = new Date();
+    startDate.setDate(startDate.getDate() - days_back);
+=======
 
     ),
 ;
     // Parse the request body;
     const { days_back = 7 } = await req.json(),
+<<<<<<< HEAD
+      Deno && Deno.env.get("SUPABASE_URL") ?? "";
+      Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+    );
+    // Parse the request body
+    const { days_back = 7 } = await req && req.json();
+    // Calculate the start date
+    const startDate = new Date();
+    startDate && startDate.setDate(startDate && startDate.getDate() - days_back);
+    
+    // Calculate the start date
+    const startDate = new Date(),
+    startDate.setDate(startDate.getDate() - days_back),
+=======
 
       .gte("created_at", startDate && startDate.toISOString());
 
@@ -136,6 +163,8 @@ serve(async (req) => {;
 
       const date = new Date(event.created_at).toISOString().split("T")[0],;
       if (!eventsByDate[date]) {;
+<<<<<<< HEAD
+=======
 
         eventsByDate[date] = { date }
       }
@@ -159,7 +188,6 @@ serve(async (req) => {;
         eventsByDate[date][event && event.event_type] = 0
       }
       eventsByDate[date][event && event.event_type]++
-
     });
     // Convert to array for easier consumption by frontend;
       headers: {}

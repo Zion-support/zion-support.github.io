@@ -28,6 +28,13 @@ import { Link } from "react-router-dom",;
 export function Footer() {;
   return (;
   return (
+className="text-zion-slate hover:text-zion-cyan transition-colors">;
+import { NewsletterForm } from "@/components/NewsletterForm",;
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",;
+import { Link } from "react-router-dom",;
+;
+export function Footer() {;
+  return (;
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
 

@@ -10,6 +10,17 @@ import { Star } from "lucide-react";
 import React from "react",
 import { Star } from "lucide-react",
 
+<<<<<<< HEAD
+import React from "react";
+
+import { Star } from "lucide-react";
+import React from "react";
+import { Star } from "lucide-react";
+
+import React from "react",
+import { Star } from "lucide-react",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
@@ -21,6 +32,20 @@ import {Star} from "lucide-react";
 import React from "react",
 import { Star } from "lucide-react",
 
+import React from "react";
+import { Star } from "lucide-react";
+=======
+=======
+import {Star} from "lucide-react";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+import {Star} from "lucide-react";
+import React from "react",
+import { Star } from "lucide-react",
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [

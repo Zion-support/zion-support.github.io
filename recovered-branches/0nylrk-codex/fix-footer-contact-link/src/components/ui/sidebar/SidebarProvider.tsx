@@ -26,7 +26,10 @@ export function SidebarProvider({
   children, 
   defaultOpen = true 
 }: SidebarProviderProps) {;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -48,13 +51,18 @@ export function SidebarProvider({
 import React, { createContext, useContext, useState } from "react",;
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SidebarContextType {;
   isOpen: boolean,;
   toggle: () => void,;
   open: () => void,;
   close: () => void;
 }
+<<<<<<< HEAD
+;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const SidebarContext = createContext<SidebarContextType>({;
   isOpen: true,;
   toggle: () => {},;
@@ -69,7 +77,11 @@ const SidebarContext = createContext<SidebarContextType>({;
       </div>
     </SidebarContext.Provider>
   );
+<<<<<<< HEAD
+  return (
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <SidebarContext && SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
         {children}

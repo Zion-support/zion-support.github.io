@@ -1,3 +1,53 @@
+<<<<<<< HEAD
+import {;
+  Brain,;
+  Shield,;
+  Rocket,;
+  Cpu,;
+  Database,;
+  Atom,;
+  Users,;
+  CheckCircle,;
+  TrendingUp,;
+  Clock,;
+  Star,;
+  Filter,;
+  ChevronDown,;
+import React, { useState } from 'react';
+
+import React, { useState } from 'react';
+
+import {
+  Brain
+  Shield
+  Rocket
+  Cpu
+  Database
+  Atom
+  Users
+  CheckCircle
+  TrendingUp
+  Clock
+  Star
+  Filter
+  ChevronDown;
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Users,
+  CheckCircle,
+  TrendingUp,
+  Clock,
+  Star,
+  Filter,;
+  ChevronDown,;
+} from 'lucide-react';
+interface Service {;
+
+=======
 
 ;
 import React, { useState } from 'react';

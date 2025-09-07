@@ -150,6 +150,15 @@ return (;
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
+        <meta name='description' content={service.description} />
+        <link rel='canonical' href={canonicalUrl} />
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto'>
+          <div className='text-center mb-10'>
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
+              <span className='text-5xl' aria-hidden>
+=======
 
 <meta name='description' content={service.description} />'
         <link rel='canonical' href={canonicalUrl} />'
@@ -262,6 +271,11 @@ variant='quantum';'
                   <span className='text-xs'>{service.contactInfo.address}</span>'
                 </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
+}
+
+
+=======
   );
 // Static export "support": generate root-level pages for service slugs,
 type Svc = (typeof enhancedRealMicroSaasServices)[number];

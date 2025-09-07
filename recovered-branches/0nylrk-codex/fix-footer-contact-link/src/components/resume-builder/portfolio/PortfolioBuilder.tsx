@@ -109,6 +109,8 @@ export function PortfolioBuilder() {;
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
+=======
 
       {/* Projects List */}
       {projects && projects.length > 0 ? (;
@@ -118,6 +120,34 @@ export function PortfolioBuilder() {;
               key={project && project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
+<<<<<<< HEAD
+              {editingProject ? 'Edit Project' :'Add New Project'}
+            </h2>;
+            ;
+            <ProjectForm ;
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess :handleAddSuccess}
+              onCancel={() => {;
+                setShowAddProject(false),;
+                setEditingProject(null),;
+              }}
+            />;
+          </CardContent>;
+        </Card>;      )}
+      ;
+      {/* Projects List */}
+      {projects.length > 0 ? (;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+          {projects.map((project) => (;
+            <ProjectCard;
+              key={project.id}              project={project}
+              onEdit={_() => setEditingProject(project)}
+              onDelete={handleDeleteProject}
+            />;
+          ))}
+        </div>;
+      ) :(;
+=======
               onDelete={handleDeleteProject}
             />;
           ))}
@@ -291,6 +321,7 @@ if ( {) {
                 <Button;
                   on_click={() => setShowAddProject (true)}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 >;
                   Add Your First Project;
                 </Button>;

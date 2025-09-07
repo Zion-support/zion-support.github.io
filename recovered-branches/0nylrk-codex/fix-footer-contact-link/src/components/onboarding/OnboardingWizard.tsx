@@ -3,11 +3,14 @@ import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
+<<<<<<< HEAD
+=======
 
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 '
@@ -19,6 +22,7 @@ import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components
 import Rocket from 'lucide-react / dist / esm / icons / rocket';'
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';'
 import {cn} from '@/lib / utils';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   title: string,
   description: string,
@@ -57,9 +61,14 @@ interface OnboardingWizardProps {;'
 }
 
   const [currentStep, setCurrentStep] = useState(0);
-
   const navigate = useNavigate();
   const { user } = useAuth();
+<<<<<<< HEAD
+import Rocket from 'lucide-react/dist/esm/icons/rocket';
+import { FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
+import { cn } from '@/lib/utils';
+interface WizardStep {
+=======
 
   title: string,
   description: string,
@@ -81,6 +90,8 @@ interface OnboardingWizardProps {
 
 export function OnboardingWizard() { return null; }
   const { user } = useAuth();
+<<<<<<< HEAD
+=======
 
 import { useState, useEffect } from 'react',;
 
@@ -200,6 +211,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Add your skills, experience, and preferences","
       icon: <FileText className="h-6 w-6 text-zion-purple" />,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: "Define skills & availability"
       description: "Let clients know when you're available and what you can do"
@@ -222,6 +234,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {"
         text: "Preview Profile"
         url: `/talent/${user?.id}`
+<<<<<<< HEAD
+      }
+      skipText: "Skip for now"
+    }
+      },
+      skipText: "Skip for now"
+    },
+=======
 
       },"
       skipText: "Skip for now"
@@ -232,6 +252,61 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
+<<<<<<< HEAD
+        text: "Enable Matchmaking"
+        url: "/talent-dashboard"
+      }
+    }
+  ];
+  const steps = type === 'client' ? clientSteps : talentSteps;
+  // Navigate to the specified URL
+  const handleAction = () => {
+    if (currentStep < steps.length - 1) {
+      navigate(steps[currentStep].action.url);
+      setCurrentStep(currentStep + 1)
+    } else {
+      // Last step
+      navigate(steps[currentStep].action.url);
+      onComplete()
+    }
+  }
+  // Skip the current step
+  const handleSkip = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1)
+    } else {
+      // Last step
+      onSkip()
+    }
+  }
+        text: "Enable Matchmaking",
+        url: "/talent-dashboard"
+      }
+    }
+  };
+  ],;
+  const steps = type === 'client' ? clientSteps : talentSteps,;
+  // Navigate to the specified URL;
+  const handleAction = () => {;
+    if (currentStep < steps.length - 1) {;
+      navigate(steps[currentStep].action.url),;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      navigate(steps[currentStep].action.url),;
+      onComplete();
+    }
+  },;
+  // Skip the current step;
+  const handleSkip = () => {;
+    if (currentStep < steps.length - 1) {;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      onSkip();
+    }
+  },
+=======
 
         text: "Enable Matchmaking"
         url: "/talent-dashboard"
@@ -297,6 +372,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
           {type === 'client' ?"
             "Ready to find top IT talent?" :
 
+    {
+      title: "Complete your profile"
+      description: "Add your skills, experience, and preferences";
   // Define steps based on user type;
   const clientSteps: WizardStep[] = [;
     {;
@@ -427,10 +505,22 @@ onClick={handleAction}>;
             variant="ghost"
             className="text-zion-slate-light hover:text-white"
             onClick={handleSkip}>;
+        <Button;
+          className="w-full bg-zion-purple hover:bg-zion-purple-light";
+          onClick={handleAction}
+        >;
+          {steps[currentStep].action.text}
+        </Button>;
+        ;
+        {steps[currentStep].skipText && (;
+          <Button;
+            variant="ghost";
+            className="text-zion-slate-light hover:text-white";
+            onClick={handleSkip}
+          >;
             {steps[currentStep].skipText}
           </Button>;
         )}
-
       </CardFooter>;
     </Card>;
   );

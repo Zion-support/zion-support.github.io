@@ -107,6 +107,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav;
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
 
+<<<<<<< HEAD
+}
+ 
+ 
+};
+=======
 
 };
 
@@ -206,6 +212,37 @@ ursor/fix-website-loading-errors-and-merge-6662
   "opacity": 1, "y": 0
 }transition= {
   {
+<<<<<<< HEAD
+  duration: 0.8, delay: index * 0.1
+}> <UltraFuturisticServiceCard2026 /> </motion.div>) )
+}</div> {
+  /* Call to Action */
+}<motion.div > <a href="/comprehensive-services-showcase-2036" className="inline-block px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold text-xl rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-purple-500/25" > View Complete Portfolio </a> </motion.div> </div> </section> </svg> </button> </div> {
+  /* Mobile Navigation Menu */
+}<AnimatePresence> key= {
+  section.id
+}onClick= {
+  () => scrollToSection (section.id)
+}className= {
+  `flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 $ {
+  activeSection === section.id ? 'bg-cyan-400/20 text-cyan-400' : 'text-gray-300 hover:bg-white/10'
+}`
+}> <span> {
+  section.icon
+}</span> <span> {
+  section.label
+}</span> </button>) )
+}<div className="pt-4 border-t border-white/10" > <a href="tel:+13024640950" className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300" > <span>📱</span> <span>+1 302 464 0950</span> </a> <a href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300" > <span>✉️</span> <span>kleber@ziontechgroup.com</span> </a> </div> </div> </motion.div>)
+}</AnimatePresence> </div> </nav> </>)
+}> <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > Future of Technology </span> </motion.h1> <motion.p > Revolutionary micro SAAS services, cutting-edge AI solutions, quantum cybersecurity, and emerging technologies that transform businesses and industries. </motion.p> <motion.div > Explore Services </button> <a href="https://ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Visit Website </a> </motion.div> {
+  /* Floating Service Cards */
+}<motion.div > {
+  featuredServices.slice (0, 3) .map ( (service, index) => (<motion.div key= {
+  service.id
+}</motion.div>) )
+}</motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Micro SAAS Services </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Transform your business with our cutting-edge micro SAAS solutions that deliver immediate value and rapid ROI. </p> </motion.div> <motion.div key= {
+  service.id
+=======
 
 
   }
@@ -574,6 +611,15 @@ pr-12243
   {
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 
+<<<<<<< HEAD
+  duration: 0.8, delay: index * 0.1 
+  duration: 0.8, delay: index * 0.1
+}viewport= {
+  {
+  once: true
+}> <UltraFuturisticServiceCard2026 /> </motion.div>) )
+  duration: 0.8, delay: index * 0.1 
+=======
 
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 pr-12243
@@ -591,6 +637,8 @@ pr-12243
   {
   once: true 
 
+<<<<<<< HEAD
+=======
 
 
 pr-12243
@@ -610,6 +658,15 @@ pr-12243
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
+  duration: 0.8, delay: index * 0.1
+}viewport= {
+  {
+  once: true
+}> <UltraFuturisticServiceCard2026 /> </motion.div>) )
+}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent" > Advanced IT Solutions </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Comprehensive IT services that drive digital transformation and business innovation. </p> </motion.div> <motion.div key= {
+  service.id
+=======
 
 
 pr-12243
@@ -643,6 +700,15 @@ pr-12243
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
+  duration: 0.8, delay: index * 0.1
+}viewport= {
+  {
+  once: true
+}> <UltraFuturisticServiceCard2026 /> </motion.div>) )
+}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent" > Emerging Technologies </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary technologies that define the future of human civilization and business. </p> </motion.div> <motion.div key= {
+  service.id
+=======
 
 
 pr-12243
@@ -676,6 +742,14 @@ pr-12243
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
+  duration: 0.8, delay: index * 0.1
+}viewport= {
+  {
+  once: true
+}> <UltraFuturisticServiceCard2026 /> </motion.div>) )
+}</div> </div> </section> <motion.div initial= {
+=======
 
 
 pr-12243

@@ -23,6 +23,20 @@ export default function Careers() {
     { id: 'space-tech', name: 'Space Technology' },
     { id: 'sales', name: 'Sales & Business Development' },
     { id: 'marketing', name: 'Marketing' },
+<<<<<<< HEAD
+
+export default function Careers() {;
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const departments = [
+    { id: 'all', name: 'All Departments' }
+    { id: 'engineering', name: 'Engineering' }
+    { id: 'ai-research', name: 'AI Research' }
+    { id: 'quantum', name: 'Quantum Computing' }
+    { id: 'space-tech', name: 'Space Technology' }
+    { id: 'sales', name: 'Sales & Business Development' }
+    { id: 'marketing', name: 'Marketing' }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     { id: 'operations', name: 'Operations' }
   ],
 
@@ -161,6 +175,13 @@ export default function Careers() {
           </div>
         </motion.div>
 
+<<<<<<< HEAD
+        {/* Benefits */}
+        <motion&& motion.div 
+          </div>;
+        </motion && motion.div>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Benefits */}
         <motion.div 
           initial={{ opacity: 0, y: 20}}

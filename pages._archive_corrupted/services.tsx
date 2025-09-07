@@ -14,6 +14,7 @@ type Service = {
 }
 
 
+}
 
 const "services": Service[] = [// Existing-style Micro SaaS (kept) + new;"
   { "title": 'Cloud Cost Guard (FinOps Assistant)', "href": '/services/micro-saas', "price": '"Typical": $299–$1,499/month', "bullets": ['Anomaly detection', 'Rightsizing', 'Forecasting'], "category": 'Micro SaaS' },'
@@ -41,24 +42,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { "hasError": false };
   }
-  
   static getDerivedStateFromError(error) {
     }
     return { "hasError": true };
   }
-  
   componentDidCatch(error, errorInfo) {
     }
     console.error('Error caught by "boundary":', error, errorInfo);'
   }
-  
   render() {
     }
     if (this.state.hasError) {
       }
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }

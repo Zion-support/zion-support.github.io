@@ -15,6 +15,15 @@ export interface TalentProfileData {;
   title: string;
   bio: string;
 
+<<<<<<< HEAD
+  skills: string[]
+
+  location?: string
+}
+export interface CategorizedSkills {
+
+export interface CategorizedSkills {;
+=======
   skills: string[],
   location?: string;
 
@@ -66,6 +75,18 @@ export function useTalentProfileEnhancer() { return null; }
     setIsGenerating(true);
     setError(null),
 
+<<<<<<< HEAD
+
+      if (error) {
+        throw new Error(error.message)
+
+    try {
+      // Call the Supabase Edge Function
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+        body: { talentData: profileData }
+      });
+
+=======
     try {
       // Call the Supabase Edge Function
       const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
@@ -124,8 +145,19 @@ export interface CategorizedSkills {
   programming: string[];
   devops: string[];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
 
+<<<<<<< HEAD
+  return {
+    enhanceProfile;
+    isGenerating;
+    error
+  }
+  };
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return {
     enhanceProfile;
     isGenerating;

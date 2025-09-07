@@ -1,6 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+import type { GrantApplication } from '../../../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);
+}
+=======
 
 import { GrantApplication } from '../../../../../types/grants';
 
@@ -57,6 +66,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(405).end('Method Not Allowed');
     return;
   }
+<<<<<<< HEAD
+  const ms = existing.milestones || [];
+  const idx = ms.findIndex((m) => m.id === milestoneId);
+=======
 
   const existing = readGrant(id);
   if (!existing) {
@@ -71,7 +84,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   ms[idx].completed = true;
   ms[idx].completedAt = new Date().toISOString();
-
   const tranche = ms[idx].trancheAmount || 0;
   existing.fundsReleased = (existing.fundsReleased || 0) + tranche;
   existing.milestones = ms;

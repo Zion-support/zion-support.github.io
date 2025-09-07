@@ -19,10 +19,19 @@ export type IntegrationProviderId =
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
+  details?: Record < string, any>;
+;
+  details?: Record<string, any>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface ManualOverride {
   job_id: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
+<<<<<<< HEAD
+;
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 

@@ -20,6 +20,8 @@ const WebApplicationDevelopmentChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
       <main>;
         <h1>WebApplicationDevelopmentChat</h1>;
         <p>Service details coming soon...</p>;

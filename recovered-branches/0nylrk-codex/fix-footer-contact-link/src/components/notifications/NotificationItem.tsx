@@ -52,11 +52,15 @@ import {cn} from '@/lib/utils';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
 import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
+<<<<<<< HEAD
+=======
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':;
       return <span className="text-blue-500">💬</span>;
+<<<<<<< HEAD
+=======
 
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
@@ -116,6 +120,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   const handleClick = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
+<<<<<<< HEAD
+=======
 
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;'
@@ -144,6 +150,24 @@ export const getTypeIcon = (type: NotificationType) => {;
     default:;"
 
       return <span className="text-gray-500">📣</span>;
+<<<<<<< HEAD
+  }
+}
+interface NotificationItemProps {
+  notification: Notification
+  onMarkAsRead: (id: string) => Promise<void>
+  onDismiss: (id: string) => Promise<void>
+}
+export const NotificationItem: React.FC<NotificationItemProps> = ({
+  notification
+  onMarkAsRead
+  onDismiss
+}) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    if (!notification.read) {
+      onMarkAsRead(notification.id)
+=======
 
   }
 }
@@ -281,6 +305,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
           <Tooltip>;
             <TooltipTrigger asChild>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;

@@ -32,6 +32,7 @@ interface MobileConversationListProps {;
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Conversation {
 
   id: string,
@@ -72,6 +73,7 @@ export function MobileConversationList(): any ({;
 
   conversations;
   activeConversation;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onSelectConversation;
 }: MobileConversationListProps) {;
   return (
@@ -117,13 +119,13 @@ export function MobileConversationList({;
       <div className="px-4 mb-2">;
         <div className="relative">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;
-          <Input
-            placeholder="Search messages..."
-            className="pl-9"
+          <Input;
+            placeholder="Search messages...";
+            className="pl-9";
           />;
         </div>;
       </div>;
-
+      ;
       <div className="px-4 pb-4 space-y-2">;
         <div className="flex space-x-2">;
           <Badge variant="secondary" className="rounded-full px-3">All</Badge>;
@@ -153,6 +155,7 @@ export function MobileConversationList({;
 
                 <AvatarFallback>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>

@@ -45,6 +45,7 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ServiceProfileData {
 
   name: string,
@@ -68,6 +69,7 @@ serve(async (req) => {}
     if (req && req.method === "OPTIONS") {
       return new Response(null, { headers, status: 204 })
     }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     const reqData = await req && req.json();
     const providerData = reqData && reqData.providerData as ServiceProfileData;
@@ -75,11 +77,31 @@ serve(async (req) => {}
     const reqData = await req.json(),
     const providerData = reqData.providerData as ServiceProfileData,
 
+<<<<<<< HEAD
+    // Handle CORS preflight request
+    if (req.method === "OPTIONS") {
+      return new Response(null, { headers, status: 204 })
+    }
+    const reqData = await req.json();
+    const providerData = reqData.providerData as ServiceProfileData;
+
+    const reqData = await req.json(),
+    const providerData = reqData.providerData as ServiceProfileData,
+    
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Validate input
     if (!providerData |!providerData.bio) {
       return new Response(
         JSON.stringify({
 
+<<<<<<< HEAD
+          error: "Missing required service provider data"});
+        { headers, status: 400 }
+      )
+    }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           error: "Missing required service provider data"}),
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
@@ -129,6 +151,19 @@ if ( {) {}
       return new Response(;
         JSON.stringify({;"
           error: "OpenAI API key not configured"}),;
+<<<<<<< HEAD
+        { headers, status: 500 }
+      )
+    }
+    const prompt = `
+    You are an expert in creating professional service profiles. Based on the following information about a service provider, create:
+    1. A concise yet compelling professional summary (max 250 words)
+    2. A list of 5-10 specific services they could offer based on their description
+    Service Provider Name: ${providerData.name}
+    Business/Service Title: ${providerData.title}
+    Location: ${providerData.location}
+    Current Bio: ${providerData.bio}
+=======
 
     const prompt = `
     You are an expert in creating professional service profiles. Based on the following information about a service provider, create:
@@ -149,6 +184,19 @@ if ( {) {}
     Location: ${providerData && providerData.location}
     Current Bio: ${providerData && providerData.bio}
 
+<<<<<<< HEAD
+    ${providerData.services && providerData.services.length > 0
+    ${providerData.services && providerData.services.length > 0 
+      ? `Current Services: ${providerData.services.join(", ")}`
+      : "No services listed yet."}
+    Focus on highlighting their unique value proposition, expertise, and professionalism.
+    Only respond with JSON in this exact format: {
+      "summary": "Professional summary goes here..."
+      "services": ["Service 1", "Service 2", "Service 3", ...]
+    }
+    `;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     Only respond with JSON in this exact format:
     {
       "summary": "Professional summary goes here...",
@@ -214,6 +262,7 @@ if ( {) {}
         messages: [;
           {"
             role: "system",
+    `,
 
 "
             content: "You are an expert at creating professional service descriptions for marketplaces."}
@@ -259,6 +308,9 @@ if ( {) {}
       return new Response(
         JSON && JSON.stringify({"
           error: "Failed to generate enhanced profile content",
+<<<<<<< HEAD
+          details: responseData});
+=======
 
 ;
     const response_data = await response.json ();
@@ -294,6 +346,27 @@ if ( {) {}
       )
     } catch (error) {"
       console.error("Error parsing AI response:", error),
+<<<<<<< HEAD
+    try {
+      const content = responseData && responseData.choices[0].message && message.content;
+      const parsedContent = JSON && JSON.parse(content);
+      return new Response(
+      return new Response(
+        JSON.stringify({
+          error: "Failed to parse AI response"
+          raw: responseData.choices[0]?.message?.content});
+          error: "Failed to parse AI response",
+          error: "Failed to parse AI response",
+          raw: responseData.choices[0]?.message?.content});
+          raw: responseData.choices[0]?.message?.content}),
+      );
+    } catch (error) {;
+      console.error("Error parsing AI response:", error),;
+      return new Response(;
+        JSON.stringify({;
+          error: "Failed to parse AI response",;
+          raw: responseData.choices[0]?.message?.content}),;
+=======
 
     try {
 
@@ -351,6 +424,39 @@ if ( {) {}
     return new Response(
       JSON.stringify({
 
+<<<<<<< HEAD
+        { headers, status: 500 }
+      )
+    }
+  } catch (error) {
+    console.error("Function error:", error),
+    return new Response(
+      JSON.stringify({
+        error: "Internal server error"});
+      {
+        headers: {
+          "Content-Type": "application/json"
+          "Access-Control-Allow-Origin": "*"}
+        status: 500
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        error: "Internal server error"}),
+      { 
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*"}, 
+        status: 500 
+<<<<<<< HEAD
+  } catch (error) {;
+    console.error("Function error:", error),;
+    return new Response(;
+      JSON.stringify({;
+        error: "Internal server error"}),;
+      {;
+        headers: {;
+          "Content-Type": "application/json",;
+          "Access-Control-Allow-Origin": "*"},;
+        status: 500;
         error: "Internal server error"}),
       { 
         headers: {

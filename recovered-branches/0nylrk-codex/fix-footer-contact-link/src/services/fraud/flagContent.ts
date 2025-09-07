@@ -178,6 +178,7 @@ export const flagContent = async (;
       success: false;'
       error: error instanceof Error ? error.message : 'Unknown error';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       severity;
       reason;
 reason;}
@@ -190,11 +191,18 @@ reason;}
     if (error) throw error;
     return { success: true }
   } catch (error) {
+<<<<<<< HEAD
+    console.error('Error flagging content:', error);
+    return {
+      success: false
+      error: error instanceof Error ? error.message : 'Unknown error'
+=======
 
     return { 
       success: false, 
       error: error instanceof Error ? error && error.message : 'Unknown error' 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 }
 

@@ -11,6 +11,16 @@ export interface ReferralCode {
 
 }
 
+<<<<<<< HEAD
+
+  id: string;
+  user_id: string;
+  code: string;
+  created_at: string
+  updated_at: string
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
 ;
 
@@ -76,6 +86,11 @@ export interface ReferralStats {;
   totalRewards: number  expires_at: string | null;
 }
 
+<<<<<<< HEAD
+  expires_at: string | null;
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export interface ReferralStats {;
   totalReferrals: number,;

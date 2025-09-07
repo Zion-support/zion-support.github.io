@@ -86,6 +86,9 @@ console.log('')
     console.log('\n Final "Report")
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+    console.error(' Comprehensive Code Fixer "failed")
+=======
     console.error(' Comprehensive Code Fixer "failed")
 <<<<<<< HEAD
 <<<<<<< HEAD

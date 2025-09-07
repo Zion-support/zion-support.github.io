@@ -17,6 +17,8 @@ import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRig
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
   Heart,
@@ -344,6 +346,8 @@ const industries = []
     href: /industries/government','
     features: [Citizen Services, 'Data Security', Digital Transformation]
   }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 export default function Industries() {
@@ -424,31 +428,32 @@ export default function Industries() {
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Industry-Specific{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
-                  Technology Solutions;
-                </span>;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-                We understand the unique challenges and requirements of different industries. Our specialized solutions ;
-                are designed to address sector-specific needs while ensuring compliance, security, and scalability.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
-                  Get Industry Consultation;
-                </Link>;
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
-                  View All Solutions;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Technology Solutions
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                We understand the unique challenges and requirements of different industries. Our specialized solutions 
+                are designed to address sector-specific needs while ensuring compliance, security, and scalability.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Get Industry Consultation
+                </Link>
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  View All Solutions
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
         {/* Industries Grid */}
-        <section className="py-20 bg-gray-50">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
               className="text-center mb-16"
-              className="text-center"">;
+              className="text-center""
+            >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Industry-Specific{' '}',;
 
@@ -519,7 +524,7 @@ export default function Industries() {
               whileInView={{ opacity: 1, y: 0 }}
 
                 return (
-                  <motion&& motion.div
+                  <motion.div
                     key={index}
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">,;
 
@@ -530,6 +535,13 @@ export default function Industries() {
                 Our deep industry expertise allows us to deliver tailored solutions that address specific sector challenges;
                 and drive measurable business outcomes.;
               </p>;
+<<<<<<< HEAD
+            </motion.div>;
+
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
 
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4>
@@ -583,6 +595,26 @@ export default function Industries() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
+<<<<<<< HEAD
+                    whileHover={{ y: -5 }}
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+                  >
+                    <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                  >,
+                    <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>,
+                      <IconComponent className="w-8 h-8 text-white" />";
+                    </div>;
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      {industry.name}
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 <<<<<<< HEAD
 =======
@@ -610,6 +642,8 @@ export default function Industries() {
 >>>>>>> origin/chore/fix-lint-and-merge
                       {industry.description}
                     </p>
+<<<<<<< HEAD
+=======
 
                       </div>,
                     </div>;
@@ -667,6 +701,7 @@ export default function Industries() {
 >>>>>>> origin/chore/fix-lint-and-merge
               initial={{ opacity: 0, y: 30 }}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >,
 
               <h2 className=text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4>";
@@ -730,6 +765,7 @@ export default function Industries() {
                 </p>;
               </motion.div>;
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <motion.div
 
                 className="text-center p-8"
@@ -798,6 +834,7 @@ export default function Industries() {
                   className="text-center
                   initial={{ opacity: 0, y: 30 }}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 >,
 
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">;

@@ -74,12 +74,22 @@ return (;
             </p>;
           </div>;
         </CardContent>;
+<<<<<<< HEAD
+      </Card>;
+    );
+  }
+  if (!suggestion) {
+    return null
+  }
+
+=======
 
   }
   if (!suggestion) {
     return null
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
     Medium: "bg-yellow-100 text-yellow-800"
@@ -139,6 +149,7 @@ return (;
     Low: "bg-red-100 text-red-800"}[suggestion && suggestion.confidence],;
 
   return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Card className="border-2 border-dashed border-muted-foreground/20">;
       <CardContent className="p-5 space-y-4">;
         <div className="flex items-center justify-between">;
@@ -150,6 +161,30 @@ return (;
             {rateType === "hourly" ? "/hour" : " total"}
           </span>;
         </div>;
+<<<<<<< HEAD
+        <div className="flex items-start space-x-2 text-sm text-muted-foreground">;
+          <Info className="h-4 w-4 flex-shrink-0 mt-1" />;
+            {suggestion.confidence} confidence;
+          </Badge>;
+        </div>;
+;
+        <div className="bg-muted/50 rounded-md p-3 text-center">;
+          <span className="text-2xl font-bold">;
+            ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
+          </span>;
+          <span className="text-sm text-muted-foreground ml-1">;
+            {rateType === "hourly" ? "/hour" :" total"}
+          </span>;
+        </div>;
+;
+        <div className="flex items-start space-x-2 text-sm text-muted-foreground">;
+          <Info className="h-4 w-4 flex-shrink-0 mt-1" />;
+          <p>{suggestion.explanation}</p>;
+        </div>;
+;
+          <p>{suggestion.explanation}</p>;
+        </div>;
+=======
 
         <div className="flex items-center justify-between">;
           <TooltipProvider>;

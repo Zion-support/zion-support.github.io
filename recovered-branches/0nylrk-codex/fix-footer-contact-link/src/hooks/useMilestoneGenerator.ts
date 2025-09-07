@@ -40,6 +40,16 @@ import { toast } from 'sonner';
 export interface GeneratedMilestone {;
 
   description: string;
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
+export interface MilestoneInput {
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {toast} from 'sonner';
+export interface MilestoneInput {;
+  scope: string;
+  startDate: string;
 
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
 
@@ -97,11 +107,11 @@ export function useMilestoneGenerator() {
 }
 
         isAiGenerated: true}));
-
 ;
       setGeneratedMilestones (milestonesWithFlag);
       return milestonesWithFlag;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 
@@ -144,6 +154,8 @@ export interface GeneratedMilestone {;
   },;
   return {;
     generateMilestones,;
+<<<<<<< HEAD
+=======
 
     generatedMilestones;
     isGenerating;

@@ -12,7 +12,10 @@ import {
   CheckCircle,
   AlertCircle,'
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const ContactForm: React.FC = () => {;
   const [formData, setFormData] = useState({;'
     name: '',;'
@@ -601,6 +604,12 @@ type='submit';'
                 </button>;
               </form>;
             )}
+<<<<<<< HEAD
+          </motion.div>
+        </div>
+      </div>
+    </section>
+=======
 
 
 export default ContactForm;

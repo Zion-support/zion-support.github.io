@@ -69,6 +69,8 @@ export interface ProfileExperience {;
   role: string;
   company: string,
   description: string;
+<<<<<<< HEAD
+=======
 
   startDate: string;
   endDate?: string;

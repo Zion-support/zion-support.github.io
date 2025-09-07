@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+import {;
+  Room,;
+  RoomEvent,;
+  RemoteParticipant,;
+  LocalParticipant,;
+  createLocalTracks,;
+  VideoPresets,;
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+
+
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+
+import {
+  Room
+  RoomEvent
+  RemoteParticipant
+  LocalParticipant
+  createLocalTracks
+  VideoPresets;
+=======
 
 
 
@@ -54,6 +75,7 @@ onLeave
 
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   projectId,
   userId,
   displayName,
@@ -63,6 +85,8 @@ onLeave
   startMode,
   onLeave
 }: Props) {;
+<<<<<<< HEAD
+=======
 
   }
 

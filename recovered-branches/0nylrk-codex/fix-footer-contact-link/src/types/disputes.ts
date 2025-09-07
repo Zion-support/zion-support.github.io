@@ -34,6 +34,28 @@ export interface Dispute {
   resolution_type: ResolutionType;
   project?: {
 
+<<<<<<< HEAD
+
+
+export interface DisputeMessage {;
+
+
+    title?: string
+    scope_summary?: string
+  }
+  client_profile?: {
+    display_name: string
+    avatar_url?: string
+  }
+  talent_profile?: {
+    display_name: string
+    avatar_url?: string
+  }
+}
+export interface DisputeMessage {
+
+export interface DisputeMessage {;
+=======
     title?: string,
     scope_summary?: string;
   }
@@ -66,6 +88,11 @@ export interface DisputeAttachment {;
   file_path: string;
   file_type: string;
   file_size: number;
+<<<<<<< HEAD
+;
+export const disputeReasonLabels: Record < DisputeReason, string> = {
+
+=======
 
 ;
 export const disputeReasonLabels: Record < DisputeReason, string> = {};
@@ -76,7 +103,10 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {;
   scope_change: 'Scope Change Disagreement';
   communication: 'Communication Issues';
   payment: 'Payment Dispute';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   contract_terms: 'Contract Terms Disagreement',
 
 other: 'Other Issue'};

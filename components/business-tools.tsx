@@ -559,6 +559,8 @@ products, and grow their operations. Real pricing and features.
         </div>
       </section>
       {/* Business Insights */}
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======

@@ -127,6 +127,15 @@ setSubmitSuccess (true);
 
 }transition= {
   {
+<<<<<<< HEAD
+  duration: 0 && 0.8 
+}viewport= {
+  {
+  once: true
+}className="text-center mb-12"> <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> Popular Revolutionary Services </h2> <p className="text-xl text-gray-300"> Explore some of our most sought-after 2029 technology solutions </p> </motion && motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {;
+  popularServices && popularServices.map ( (service, index) => (<motion&& motion.div key= {
+  service && service.id 
+=======
 
   }
 

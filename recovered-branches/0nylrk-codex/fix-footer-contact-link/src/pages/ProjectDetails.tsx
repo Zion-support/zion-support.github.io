@@ -18,6 +18,16 @@ function ProjectDetailsContent() {;
   const [newNote, setNewNote] = useState("");
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);"
   const [activeTab, setActiveTab] = useState("details");
+<<<<<<< HEAD
+  // Load project data
+  useEffect(() => {
+    async function loadProject() {
+      if (!projectId) return;
+      setIsLoading(true);
+      const projectData = await getProjectById(projectId);
+      if (projectData) {
+        setProject(projectData);
+=======
 
   // Load project data
   useEffect(() => {
@@ -79,6 +89,8 @@ import {}
   Video,
   User,"
   XCircle} from "lucide-react",
+<<<<<<< HEAD
+=======
 
 function ProjectDetailsContent() {
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -230,6 +242,7 @@ if ( {) {
         .select (`;
           *;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           created_by_profile:profiles ! user_id (display_name, avatar_url);
         `);
         .eq ("project_id", project_id);
@@ -239,13 +252,11 @@ if (throw error) {
   $2
 }
       set_notes (data || []);
-
     } catch (err) {
       console.error ("Error fetching project notes:", err);
 >>>>>>> origin/chore/fix-lint-and-merge
     }
   }
-
 ;
   const handleSubmitNote = async () => {
     if (|| !project || !user) return) {
@@ -279,7 +290,6 @@ if (throw error) {
         title: "Failed to add note",
         description: err.message || "An error occurred while adding your note.",
         variant: "destructive"});
-
     } finally {
       setIsSubmittingNote (false);
     }
@@ -950,13 +960,33 @@ if ( {) {
   useEffect(() => {;
     async function loadProject() {;
       if (!projectId) return;
-
       setIsLoading(true);
       const projectData = await getProjectById(projectId);
-
       if (projectData) {;
         setProject(projectData);
+<<<<<<< HEAD
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { projectId } = useParams() as { projectId?: string },;
+  const { user } = useAuth(),;
+  const navigate = useNavigate(),;
+  const { getProjectById, updateProjectStatus } = useProjects(),;
+  const [project, setProject] = useState<Project | null>(null),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [notes, setNotes] = useState<any[]>([]),;
+  const [newNote, setNewNote] = useState(""),;
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false),;
+  const [activeTab, setActiveTab] = useState("details"),;
+  // Load project data;
+  useEffect(() => {;
+    async function loadProject() {;
+      if (!projectId) return,;
+      setIsLoading(true),;
+      const projectData = await getProjectById(projectId),;
+      if (projectData) {;
+        setProject(projectData),;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         // Now fetch notes;
         fetchProjectNotes(projectId);
       } else {;
@@ -973,6 +1003,7 @@ if ( {) {
     loadProject()
   }, [projectId]),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const fetchProjectNotes = async (projectId: string) => {
     try {
   // TODO: Implement
@@ -995,6 +1026,7 @@ if ( {) {
     if (!newNote.trim() || !project || !user) return,
     setIsSubmittingNote(true),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
   // TODO: Implement
 }
@@ -1004,7 +1036,15 @@ if ( {) {
           project_id: project.id;,
   user_id: user.id;)
           content: newNote})
+<<<<<<< HEAD
+        .select();
+      if (error) throw error;
+      // Refresh notes
+      fetchProjectNotes(project.id);
+      setNewNote("");
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .select(),
       if (error) throw error,
       // Refresh notes;
@@ -1024,7 +1064,18 @@ if ( {) {
 }
       setIsSubmittingNote(false)
     }
+<<<<<<< HEAD
+  }
+  const handleStatusChange = async (newStatus: ProjectStatus) => {
+    if (!project) return
+    const success = await updateProjectStatus(project.id, newStatus);
+    if (success) {
+      setProject({
+        ...project;
+        status: newStatus})
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   const handleStatusChange = async (newStatus: ProjectStatus) => {
     if (!project) return,
@@ -1041,9 +1092,18 @@ if ( {) {
   description: "The project is now in progress. Congratulations!"})"
       }
     }
+<<<<<<< HEAD
+  },
+  
+
+  }
+  },
+  
+=======
 
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {"
       case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,""
@@ -1890,7 +1950,6 @@ if ( {) {
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project && project.status);
 
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project && project.status);
-
   return (
     <>;
 
@@ -1898,7 +1957,60 @@ if ( {) {
                 </span>;
               </div>;
             </div>;
-
+            {/* Action Buttons Based on Role and Status */}
+  ;
+  if (!project) {;
+    return (;
+      <div className="container mx-auto py-8">;
+        <Card>;
+          <CardContent className="flex flex-col items-center justify-center py-10">;
+            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />;
+            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>;
+            <p className="text-muted-foreground mb-4">;
+              The project you're looking for doesn't exist or you don't have access to it.;
+            </p>;
+            <Button onClick={() => navigate("/dashboard")}>;
+              Return to Dashboard;
+            </Button>;
+          </CardContent>;
+        </Card>;
+      </div>;
+    ),;
+  }
+  ;
+  // Check if user is either the client or the talent;
+  const isClient = user?.id === project.client_id,;
+  const isTalent = user?.id === project.talent_id,;
+  ;
+  if (!isClient && !isTalent) {;
+    navigate("/unauthorized"),;
+    return null,;
+  }
+  ;
+  const isOfferPending = project.status === "offer_sent",;
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),;
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),;
+  ;
+  return (;
+    <>;
+      <SEO ;
+        title={`Project:${project.job?.title || 'Project Details'} | Zion AI Marketplace`} ;
+        description="View and manage your project details and collaboration.";
+      />;
+      <AppHeader />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className="mb-6">;
+          <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">;
+            <div>;
+              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>;
+              <div className="flex items-center gap-2 mt-1">;
+                {getStatusBadge(project.status)}
+                <span className="text-muted-foreground">;
+                  Started on {format(new Date(project.start_date), "PPP")}
+                </span>;
+              </div>;
+            </div>;
+            ;
             {/* Action Buttons Based on Role and Status */}
 
             <div className="space-x-2">;
@@ -1977,7 +2089,7 @@ if ( {) {
 
                 </Button>;
               )}
-
+;
               {isActiveProject && (;
 
                 </Button>;
@@ -2006,7 +2118,7 @@ if ( {) {
                 <TabsTrigger value="timeline">Timeline</TabsTrigger>;
                 <TabsTrigger value="documents">Documents</TabsTrigger>;
                 <TabsTrigger value="notes">Shared Notes</TabsTrigger>;
-                {project && project.status === "completed" && (;
+                {project.status === "completed" && (;
                   <TabsTrigger value="reviews">Reviews</TabsTrigger>;
                 )}
               </TabsList>;
@@ -2258,6 +2370,15 @@ src={project.talent_profile.profile_picture_url}
 
                           className="mt-2"
 
+<<<<<<< HEAD
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     loadProject();
   }, [projectId]),;
@@ -2485,10 +2606,22 @@ src={project.talent_profile.profile_picture_url}
 
                           src={project && project.talent_profile.profile_picture_url}
                           alt={project && project.talent_profile.full_name}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         />;
                       ) : (;"
                         <User className="h-6 w-6" />;
                       )}
+<<<<<<< HEAD
+                    </Avatar>
+                    <div>
+                      <h3 className="font-semibold">
+                        {project.talent_profile?.full_name || "Talent"}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {project.talent_profile?.professional_title || "Professional"}
+                      </p>
+                      {isClient && (
+=======
 
                         <Button"
                           variant="outline""
@@ -2500,6 +2633,13 @@ src={project.talent_profile.profile_picture_url}
                           <MessageSquare className="mr-1 h-3 w-3" /> Message;
                         </Button>;
                       )}
+<<<<<<< HEAD
+                    </div>;
+                  </div>;
+                </div>;
+              </CardContent>;
+            </Card>;
+=======
 
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
@@ -2569,6 +2709,9 @@ src={project.talent_profile.profile_picture_url}
                 </div>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
+            ;
+=======
 
 ;
                     </div>;
@@ -2582,6 +2725,22 @@ src={project.talent_profile.profile_picture_url}
                 <div className="space-y-2">;
                   <div className="flex justify-between items-center">;
                     <span className="text-sm font-medium">Current Status:</span>;
+<<<<<<< HEAD
+                    <div>{getStatusBadge(project.status)}</div>;
+                  </div>;
+                  ;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-sm font-medium">Creation Date:</span>;
+                    <span className="text-sm">;
+                      {format(new Date(project.created_at), "PPP")}
+                    </span>;
+                  </div>;
+                  ;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-sm font-medium">Start Date:</span>;
+                    <span className="text-sm">;
+                      {format(new Date(project.start_date), "PPP")}
+=======
                     <div>{getStatusBadge(project && project.status)}</div>;
                   </div>;
 
@@ -2614,6 +2773,11 @@ src={project.talent_profile.profile_picture_url}
                   </div>;
                 </div>;
               </CardContent>;
+<<<<<<< HEAD
+              ;
+              {/* Conditional Footer Based on Status */}
+              {project.status === "changes_requested" && isClient && (;
+=======
 
               {/* Conditional Footer Based on Status */}
               {project && project.status === "changes_requested" && isClient && (;
@@ -2649,20 +2813,93 @@ src={project.talent_profile.profile_picture_url}
                   <Button
                     variant="outline"
                     onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className="w-full";
                   >;
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes;
                   </Button>;
                 </CardFooter>;
               )}
+<<<<<<< HEAD
+              ;
+              {project.status === "offer_sent" && isClient && (;
+=======
 
               {project && project.status === "offer_sent" && isClient && (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
                   <p className="text-sm text-muted-foreground">;
                     Waiting for the talent to accept your offer.;
                   </p>;
                 </CardFooter>;
               )}
+<<<<<<< HEAD
+                  <Button
+                    variant="outline"
+                    onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
+                    className="w-full"
+                  >
+                    <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
+                  </Button>
+                </CardFooter>
+              )}
+              {project.status === "offer_sent" && isClient && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-muted-foreground">
+                    Waiting for the talent to accept your offer.
+                  </p>
+                </CardFooter>
+              )}
+              {project.status === "completed" && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-green-600 flex items-center gap-1">
+                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.
+                  </p>
+                </CardFooter>
+              )}
+              {project.status === "canceled" && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-red-600 flex items-center gap-1">
+                    <XCircle className="h-4 w-4" /> This project has been canceled.
+                  </p>
+                </CardFooter>
+              )}
+
+
+              {project && project.status === "completed" && (;
+              ;
+              {project.status === "completed" && (;
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
+                  <p className="text-sm text-green-600 flex items-center gap-1">;
+                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.;
+                  </p>;
+                </CardFooter>;
+              )}
+              ;
+              {project.status === "canceled" && (;
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
+                  <p className="text-sm text-red-600 flex items-center gap-1">;
+                    <XCircle className="h-4 w-4" /> This project has been canceled.;
+                  </p>;
+                </CardFooter>;
+              )}
+            </Card>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
+}
+export default function ProjectDetails() {
+  return (
+    <ProtectedRoute>
+      <ProjectDetailsContent />
+    </ProtectedRoute>
+  )
+};
+;
+=======
 
             </Card>;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -2675,6 +2912,8 @@ src={project.talent_profile.profile_picture_url}
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
+=======
 
     </>;
   );

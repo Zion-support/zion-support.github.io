@@ -1,4 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+  const cookie = req.headers.cookie || '';
+  const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
+  if (match) return decodeURIComponent(match.split('=')[1]);
+=======
 
 import { supabase } from '../../../utils/supabase/client';
 
@@ -24,6 +29,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .update({ read_status: true })
       .eq('id', id)
       .eq('user_id', userId);
+<<<<<<< HEAD
+=======
 
     if (error) {
       return res.status(500).json({ error: 'Failed to mark notification as read' });

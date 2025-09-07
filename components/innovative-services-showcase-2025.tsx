@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Head from 'next / head';
+import React, { useState } from 'react',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+=======
 
 import { motion } from 'framer-motion';'
 
@@ -54,6 +62,25 @@ const contactInfo = null;
 
   const filteredServices = serviceCategories.flatMap(category => 
 
+<<<<<<< HEAD
+export default function InnovativeServicesShowcase2025() {
+
+export default function InnovativeServicesShowcase2025() {;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
+  const filteredServices = serviceCategories.flatMap(category =>
+    category.services.filter(
+      service =>
+        (selectedCategory === 'all' |category.id === selectedCategory) &&
+        (searchTerm === '' |
+          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+          service.description
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) |
+          service.category.toLowerCase().includes(searchTerm.toLowerCase()))    )  const filteredServices = serviceCategories.flatMap(category =>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     category.services.filter(service =>
       (selectedCategory === 'all' |category.id === selectedCategory) &&
       (searchTerm === '' |
@@ -97,6 +124,8 @@ const sortedServices = [...filteredServices].sort((a, b) => {
         return a.pricing.starter.price - b.pricing.starter.price;
       case 'category':'
         return a.category.localeCompare(b.category);
+<<<<<<< HEAD
+=======
 
 "default":
         return 0;
@@ -247,6 +276,15 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-8 max-w-4xl mx-auto''
               </div>
                   className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 "focus":outline-none "focus":border-cyan-500/50'                />'
 
+<<<<<<< HEAD
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50"
+                />
+              </div>
+                  className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50'                />
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 />
 
               </div>

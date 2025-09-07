@@ -4,6 +4,7 @@
 
 // in this file.
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use

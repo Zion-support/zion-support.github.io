@@ -217,7 +217,10 @@ export const "comprehensiveInnovativeServices": ComprehensiveInnovativeService[]
     "roi": 'Reduce deployment time by 70% and increase team productivity by 50%';'
     "period": '/month',"description": 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.';'
     ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     capabilities: [;
       'Identity verification_device trust scoring_application control_network segmentation_continuous monitoring';
     ],
@@ -225,6 +228,8 @@ export const "comprehensiveInnovativeServices": ComprehensiveInnovativeService[]
   }
 ;
   // DevOps & Infrastructure Services;
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   {
@@ -303,7 +308,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     "roi": 'Reduce latency by 80% and improve operational efficiency by 45%';'
     "period": '/month',"description": 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.';'
     ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     capabilities: [;
       'Intelligent CI / CDAutomated testing_predictive optimization_performance monitoring_infrastructure automation';
     ],
@@ -311,6 +319,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ;
   // Edge Computing Services;
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   {
@@ -499,7 +509,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     "price": '$799';'
     "period": '/month';'
     ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     capabilities: [;
       'Real - time risk assessment_fraud detection_compliance monitoring_portfolio analysis_regulatory reporting';
     ],
@@ -507,6 +520,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ;
   // Education Technology Services;
+<<<<<<< HEAD
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   {
@@ -944,6 +959,51 @@ export default comprehensiveInnovativeServices;"marketAdvantage": string;const c
   }
 ];
 export default comprehensiveInnovativeServices;
+
+import { ServiceVariant } from '../types/service-variants',;
+export interface ComprehensiveInnovativeService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number,;
+  benefits: string[],;
+  capabilities: string[],;
+  marketAdvantage: string;
+}
 ;
 export default comprehensiveInnovativeServices;
 ;

@@ -28,6 +28,20 @@ const corsHeaders = {
 >>>>>>> origin/chore/fix-lint-and-merge
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+<<<<<<< HEAD
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
+import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
+const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
+
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
@@ -101,6 +115,7 @@ serve(async (req) => {;
       )
     }
 
+    const { bio, skills, title, name } = await req && req.json();
     if (!bio || bio && bio.length < 20) {
 
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -127,7 +142,10 @@ serve(async (req) => {;
           {'
             role: 'user'`
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Skills: ${skills && skills.join()}
 
 Skills: ${skills && skills.join()}
@@ -317,6 +335,12 @@ return new Response(;
     try {}
       // Find the JSON object in the response;
       const jsonMatch = responseContent && responseContent.match(/\{[\s\S]*\}/);
+
+      const jsonMatch = responseContent && responseContent.match(/\{[\s\S]*\}/);
+      
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       const jsonMatch = responseContent.match(/\{[\s\S]*\}/),
 

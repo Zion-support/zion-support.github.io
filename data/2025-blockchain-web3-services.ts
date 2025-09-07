@@ -578,6 +578,9 @@ export interface BlockchainWeb3Service {;
   rating: number;
   reviews: number
 }
+<<<<<<< HEAD
+];      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance';
+=======
 
 
   {

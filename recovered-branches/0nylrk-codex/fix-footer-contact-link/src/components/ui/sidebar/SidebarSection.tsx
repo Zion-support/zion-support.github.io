@@ -25,6 +25,7 @@ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
   title?: string;
   children?: React && React.ReactNode;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 
       <div className="space-y-1">{children}</div>

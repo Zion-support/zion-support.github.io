@@ -320,6 +320,11 @@ className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-c
           ))}
         </motion.div>
 
+<<<<<<< HEAD
+          ))}
+        </motion && motion.div>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map((service, index) => (

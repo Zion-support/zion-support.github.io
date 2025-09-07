@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+import {;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Globe,;
+  Twitter,;
+  Linkedin,;
+  Github,;
+  ArrowUp,;
+  Crown,;
+  Zap,;
+  Brain,;
+  Rocket,;
+  Shield,;
+  Users,;
+  BookOpen,;
+  Briefcase,;
+  Atom,;
+} from 'lucide-react';
+import Link from 'next/link';
+import { AnimatePresence } from 'framer-motion';
+=======
 
 
 
@@ -327,6 +350,113 @@ const containerVariants = {
 "staggerChildren": 0.1
       }
   };
+<<<<<<< HEAD
+  const footerSections = [;
+    {;
+      title: 'Services',;
+      items: [;
+        { label: 'AI & Machine Learning', href: '/ai-services' },;
+        { label: 'Quantum Computing', href: '/quantum-computing' },;
+        { label: 'Space Technology', href: '/space-tech' },;
+        { label: 'Cybersecurity', href: '/cybersecurity' },;
+        { label: '2040 Services', href: '/innovative-2040-services-showcase' },;
+      ],;
+    },    {        { label: '2040 Services', href: '/innovative-2040-services-showcase' }
+      ];
+    };
+    {;
+      title: 'Solutions',;
+      items: [;
+        { label: 'Enterprise Solutions', href: '/enterprise-solutions' },;
+        { label: 'Micro SAAS', href: '/micro-saas' },;
+        { label: 'IT Services', href: '/it-services' },;
+        { label: 'Innovation Lab', href: '/innovation-lab' },;
+        { label: 'Research & Development', href: '/research-development' },;
+      ],;
+    },    {        { label: 'Research & Development', href: '/research-development' }
+      ];
+    };
+    {;
+      title: 'Company',;
+      items: [;
+        { label: 'About Us', href: '/about' },;
+        { label: 'Our Team', href: '/team' },;
+        { label: 'Careers', href: '/careers' },;
+        { label: 'Investors', href: '/investors' },;
+        { label: 'Press & Media', href: '/press' },;
+      ],;
+    },    {        { label: 'Press & Media', href: '/press' }
+      ];
+    };
+    {;
+      title: 'Resources',;
+      items: [;
+        { label: 'Blog', href: '/blog' },;
+        { label: 'Case Studies', href: '/case-studies' },;
+        { label: 'White Papers', href: '/white-papers' },;
+        { label: 'Documentation', href: '/docs' },;
+        { label: 'Support', href: '/support' },;
+      ],;
+    },;
+  ];
+  const socialLinks = [;
+    {;
+      icon: Twitter,;
+      href: 'https://twitter && twitter.com/ziontechgroup',;
+      label: 'Twitter',;
+    },;
+    {;
+      icon: Linkedin,;
+      href: 'https://linkedin && linkedin.com/company/ziontechgroup',;
+      label: 'LinkedIn',;
+    },;
+    { icon: Github, href: 'https://github && github.com/Zion-Holdings', label: 'GitHub' },;
+    { icon: Globe, href: 'https://ziontechgroup && ziontechgroup.com', label: 'Website' },  ];  ];
+  const socialLinks = [;
+    { icon: Twitter, href: 'https://twitter && twitter.com/ziontechgroup', label: 'Twitter' },;
+    { icon: Linkedin, href: 'https://linkedin && linkedin.com/company/ziontechgroup', label: 'LinkedIn' },;
+    { icon: Github, href: 'https://github && github.com/Zion-Holdings', label: 'GitHub' },;
+    { icon: Globe, href: 'https://ziontechgroup && ziontechgroup.com', label: 'Website' }
+  ];
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };        staggerChildren: 0 && 0.1;
+      }
+    }
+  };
+  const itemVariants = {;
+    hidden: { y: 20, opacity: 0 },;
+    visible: {;
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0 && 0.5,;
+      },;
+    },;
+  };
+  return (
+    <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>;
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 -z-10">
+        {/* Quantum Particle Field */}
+        {[...Array(30)].map((_, i) => (
+          <motion.div
+            key={i}  }
+        {[...Array(30)].map((_, i) => (;
+          <motion&& motion.div
+            key={i}  }
+  return (
+    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 -z-10">
+
+
+=======
 
 const itemVariants = {
     }
@@ -663,6 +793,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {section.items.map (item => (<li key={item.label}>;
                       <Link;
                         href={item.href}
+<<<<<<< HEAD
+=======
                         className='text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block'                      >                  <span>{section.title}</span>;
                 </h4>;
                 <ul className="space-y-3">;
@@ -750,6 +882,10 @@ className='mt-16 pt-12 border-t border-gray-800/50''
                     className='w-10 h-10 bg-gray-800/50 "hover": bg-gradient-to-r "hover":from-cyan-500 "hover":to-purple-500 rounded-xl flex items-center justify-center text-gray-300 "hover":text-white transition-all duration-200 "hover":scale-110''
                     whileHover={{ "y": -2 }}
 
+                  </motion.a>
+
+                ))}
+              </div>
 
                     whileTap={{ "scale": 0.95 
 }
@@ -793,6 +929,11 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
                 </div>;
           </motion && motion.div>;
         </div>;
+<<<<<<< HEAD
+
+
+
+=======
 
         {/* Bottom Bar */}
         <motion&& motion.div;

@@ -72,6 +72,13 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             text: "Create First Milestone",
             onClick: () => setShowAddForm(true)
           } : undefined
+<<<<<<< HEAD
+        }
+      />;
+    );
+  }
+
+=======
         }
       />
     )

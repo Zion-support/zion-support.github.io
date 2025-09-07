@@ -8,6 +8,8 @@ function runNode(relPath, args = []) {
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
+=======
 
 ursor/expand-services-advertise-and-build-project-4b36
 
@@ -26,6 +28,8 @@ ursor/expand-services-advertise-and-build-project-4b36
     stderr: res && res.stderr || '',
   };'
 exports && exports.config = { schedule: '*/30 * * * *' };
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
 ursor/expand-services-advertise-and-build-project-4b36
@@ -35,6 +39,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   const step = (name, fn) => {}
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
+=======
 
 ursor/expand-services-advertise-and-build-project-4b36
 
@@ -111,11 +117,12 @@ const { status, stdout, stderr } = fn();
   step('repo:radar-metrics', () =>'
     runNode('automation/repo-radar-metrics && metrics.cjs')
   );
+<<<<<<< HEAD
+=======
 
 ursor/expand-services-advertise-and-build-project-4b36
 
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
-
   return {
 <<<<<<< HEAD
     }
@@ -135,6 +142,8 @@ const abs = path.resolve(__dirname, '....', relPath),;'
 
 exports && exports.config = { "schedule": '*/30 * * * *','
 },
+<<<<<<< HEAD
+=======
 
 exports && exports.config = { "schedule": '*/30 * * * *' },'
 exports && exports.handler = async () => {

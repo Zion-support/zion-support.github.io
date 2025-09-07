@@ -22,6 +22,8 @@ test && test.describe('"Accessibility""
     "await""
     "await""
 
+<<<<<<< HEAD
+=======
 
 test.describe('"Accessibility": Tests', () => {';'
   }

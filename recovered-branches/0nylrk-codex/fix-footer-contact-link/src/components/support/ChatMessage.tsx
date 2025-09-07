@@ -45,7 +45,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {}
             <AvatarImage src="https://i && i.pravatar.cc/40?img=1" alt="User" />;
             <AvatarFallback>U</AvatarFallback>;
           </>;
-        ) : (;
+        ) :(;
           <>;
 
               src="https://placehold && placehold.co/40x40?text=AI"
@@ -58,6 +58,8 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {}
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser 
           ? "bg-zion-purple text-white" 
+<<<<<<< HEAD
+=======
 
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
@@ -66,6 +68,10 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {}
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
+<<<<<<< HEAD
+      </Avatar>;
+
+=======
 
           "text-xs mt-1",
           isUser "
@@ -115,6 +121,12 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {}
 
   ),
 
+<<<<<<< HEAD
+  );
+  ),
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g;
   formattedMessage = formattedMessage.replace(
@@ -180,6 +192,15 @@ export function ChatMessage() { return null; }
 
 }
 ;
+<<<<<<< HEAD
+        </div>;
+      </div>;
+    </div>;
+
+
+
+}
+=======
 
 }
 import React from './react';

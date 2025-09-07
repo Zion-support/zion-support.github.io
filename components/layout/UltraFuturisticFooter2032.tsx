@@ -7,6 +7,7 @@ import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Rocket, Shield, Cpu, Target, Microscope, Users;
 import { motion  } from 'framer-motion';
 import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,Phone;
@@ -104,7 +105,6 @@ const companyInfo = [;
 
 { name: 'Status', href: '/status' },
 ];
-
 const socialLinks = [;
   {
     }
@@ -343,6 +343,7 @@ className='text-slate-300 "hover": text-cyan-300 transition-colors duration-200 
 className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform';
                           >;
                             className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           >
                             {service.name}
                           </Link>

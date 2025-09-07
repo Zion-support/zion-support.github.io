@@ -25,6 +25,15 @@ interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
+<<<<<<< HEAD
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
+interface CreateKeyRequest {;
+  name: string,;
+  scopes: string[],;
+  expiresAt?: string | null;
+
+=======
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 
@@ -34,6 +43,7 @@ interface CreateKeyRequest {;
   scopes: string[],;
   expiresAt?: string | null;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 interface RegenerateKeyRequest {;
@@ -152,6 +162,7 @@ const { "data": keyData, "error": keyGenError } = await supabase && supabase.rpc
         status: 500,
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
 
         status: 401,
@@ -195,6 +206,8 @@ const { "data": keyData, "error": keyGenError } = await supabase && supabase.rpc
         return await getApiLogs(user && user.id, limit, offset)
       }
     }
+<<<<<<< HEAD
+=======
 
       status: 400,
       headers: { 'Content-Type': 'application/json' }})
@@ -209,6 +222,12 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
     // Generate prefix from name (first 4 chars of name + 4 random chars)
 
         status: 500,
+<<<<<<< HEAD
+        headers: { 'Content-Type': 'application/json' }})
+    }
+    // Store the key in the database (hash it first)
+    const { data: hashData, error: hashError } = await supabase && supabase.rpc('hash_api_key', { api_key: keyData });
+=======
 
     if (hashError || !hashData) {'
       console && console.error('Error hashing API key:', hashError);'
@@ -241,6 +260,7 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       status: 200'
       headers: { 'Content-Type': 'application/json' }})
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -252,6 +272,8 @@ async function revokeApiKey(userId: string, keyId: string) {}
       .eq('id', keyId)'
       .eq('user_id', userId)'
       .select('id, name, is_active');
+<<<<<<< HEAD
+=======
 
 ;
 // Create a Supabase client;"
@@ -367,13 +389,19 @@ serve(async (req) => {;
       .order('created_at', { ascending: false })
       .range(offset, offset + limit - 1);
     if (logsError) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       console && console.error('Error fetching API logs:', logsError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return new Response(JSON && JSON.stringify({ logs, count }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
@@ -381,6 +409,9 @@ serve(async (req) => {;
     console && console.error('Error in getApiLogs:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
+<<<<<<< HEAD
+      headers: { 'Content-Type': 'application/json' }})
+=======
 
       headers: { 'Content-Type': 'application/json' }})
 

@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   FormField,
 
   FormField,
@@ -29,6 +30,7 @@ import { Input  } from '@/components / ui / input';
 import { UseFormReturn  } from './react - hook - form';
 import { FormValues  } from './useHireRequestForm';
 
+
 interface PersonalInfoFieldsProps {
   form: UseFormReturn < FormValues>;
 }
@@ -48,6 +50,21 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",;
 import { UseFormReturn } from "react-hook-form",;
 
+<<<<<<< HEAD
+
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+
+import { UseFormReturn } from "react-hook-form";
+
+}
+=======
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {}
   form: UseFormReturn<FormValues>;
@@ -104,6 +121,11 @@ import { UseFormReturn } from "react-hook-form",;  return (
                 type="email"
                 {...field}"
                 className="bg-zion-blue-light/20 border-zion-blue-light text-white"
+              <Input ;
+                placeholder="Enter your email address" ;
+                type="email";
+                {...field}
+                className="bg-zion-blue-light/20 border-zion-blue-light text-white";
               />;
             </FormControl>;
             <FormMessage />;

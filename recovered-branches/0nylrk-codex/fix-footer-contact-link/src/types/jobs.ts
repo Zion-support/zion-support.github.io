@@ -21,7 +21,10 @@ export type JobCategory =
   | "other";
 
 export interface JobBudget {;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   min: number;
 
 export type JobCategory =
@@ -227,6 +230,28 @@ export interface JobBudget {;
   file_url?: string,;
   resume_id?: string,;
 
+<<<<<<< HEAD
+
+
+}
+;
+      missing: string[];
+    },;
+    experience_match?: {;
+      score: number,;
+      analysis: string;
+    },;
+    education_match?: {;
+      score: number,;
+      analysis: string;
+    }
+  },;
+  match_suggestion?: string,;
+  scored_at?: string;
+  notes?: string,  // New field for client notes;
+}
+;
+=======
       missing: string[];
     };
     experience_match?: {}

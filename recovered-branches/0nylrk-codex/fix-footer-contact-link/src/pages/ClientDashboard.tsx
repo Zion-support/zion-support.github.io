@@ -68,6 +68,9 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);"
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
+<<<<<<< HEAD
+import { useIsMobile } from "@/hooks/use-mobile",
+=======
 
   // Set the first job as selected when jobs are loaded (if any);
   useEffect(() => {;
@@ -348,16 +351,24 @@ import { useState, useEffect } from "react",;
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* AI Talent Suggestions */}
               <div>;
                 <h2 className="text-xl font-semibold mb-4 flex items-center">;
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />;
                   AI Talent Suggestions;
                 </h2>;
+<<<<<<< HEAD
+                ;
+                {selectedJobId ? (;
+                  <SuggestedTalents jobId={selectedJobId} />;
+                ) :(;
+=======
 
                 {selectedJobId ? (;
                   <SuggestedTalents jobId={selectedJobId} />;
                 ) : (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="bg-muted/30 border rounded-lg p-6 text-center">;
                     <p className="text-muted-foreground">;
                       Select a job to see AI-matched talent suggestions;

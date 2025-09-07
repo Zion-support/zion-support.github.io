@@ -1,6 +1,13 @@
 projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
+<<<<<<< HEAD
+  projectType?: string
+}
+export function MilestoneCreator({
+
+export function MilestoneCreator({;
+=======
   projectType?: string;
 }
 

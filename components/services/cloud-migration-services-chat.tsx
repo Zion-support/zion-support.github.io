@@ -20,6 +20,8 @@ const CloudMigrationServicesChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
       <main>;
         <h1>CloudMigrationServicesChat</h1>;
         <p>Service details coming soon...</p>;

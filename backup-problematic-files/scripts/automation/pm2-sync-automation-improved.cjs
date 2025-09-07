@@ -616,6 +616,8 @@ process.on(SIGINT', async () => {}
     await global.improvedPm2SyncAutomation.stop()}
   process.exit(0)}
 });
+<<<<<<< HEAD
+=======
 
 process.on(SIGTERM', async () => {}
 =======

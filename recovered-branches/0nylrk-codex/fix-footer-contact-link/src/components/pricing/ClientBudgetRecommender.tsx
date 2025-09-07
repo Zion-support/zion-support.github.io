@@ -3,6 +3,15 @@ import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackP
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+=======
 
 import { 
 
@@ -124,6 +133,7 @@ const result = await getClientBudgetSuggestion(params),;
     if (suggestion) {;
       onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Track this suggestion application;
       if (user) {;
         trackPricingSuggestion({;
@@ -131,11 +141,28 @@ const result = await getClientBudgetSuggestion(params),;
           suggestionType: 'client',;
           suggestedMin: suggestion && suggestion.minRate,;
           suggestedMax: suggestion && suggestion.maxRate,;
+<<<<<<< HEAD
+  const handleApplySuggestion = () => {;
+    if (suggestion) {;
+      onSuggestionApplied(suggestion.minRate, suggestion.maxRate),;
+      // Track this suggestion application;
+      if (user) {;
+        trackPricingSuggestion({;
+          userId: user.id,;
+          suggestionType: 'client',;
+          suggestedMin: suggestion.minRate,;
+          suggestedMax: suggestion.maxRate,;
+          accepted: true;
+        });
+      }
+    }
+=======
           accepted: true;
         });
       }
     }
   },
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       setSuggestion(result);
     } catch (error) {;"
@@ -274,6 +301,8 @@ return (;
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
+<<<<<<< HEAD
+=======
 
       </div>;
     </div>;

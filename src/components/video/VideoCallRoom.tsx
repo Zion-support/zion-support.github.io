@@ -188,6 +188,88 @@ import './video-call.css';interface Participant  {id: string;
             {isMuted ? <MicOff /> : <Mic />}
           </Button>
           
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Button
+            variant="outline"
+            size="icon"
+            className="video-button rounded-full h-10 w-10"
+<<<<<<< HEAD
+            onClick = {handleToggleVideo,}
+            aria-label = {isVideoEnabled ? 'Disable camera' : 'Enable camera',}
+          >
+            {isVideoEnabled ? <Video /> : <VideoOff />}
+          </Button>
+=======
+
+          </Button>;
+
+
+            onClick={handleToggleVideo}
+            aria-label={isVideoEnabled ? 'Disable camera' : 'Enable camera'}
+          >;
+            {isVideoEnabled ? <Video /> : <VideoOff />}
+          </Button>
+          
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Button
+            variant="outline"
+            size="icon"
+            className="video-button rounded-full h-10 w-10"
+<<<<<<< HEAD
+            onClick = {handleToggleScreenShare,}
+            aria-label = {isScreenSharing ? 'Stop sharing screen' : 'Share screen',}
+          >
+            {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
+          </Button>
+=======
+
+          </Button>;
+
+
+            onClick={handleToggleScreenShare}
+            aria-label={isScreenSharing ? 'Stop sharing screen' : 'Share screen'}
+          >;
+            {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
+          </Button>
+          
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Button
+            variant="outline"
+            size="icon"
+            className="video-button rounded-full h-10 w-10"
+<<<<<<< HEAD
+            onClick = {handleToggleAudioOnly,}
+            aria-label = {isAudioOnly ? 'Disable audio only' : 'Enable audio only',}
+          >
+            {isAudioOnly ? <VolumeX /> : <Volume2 />}
+          </Button>
+=======
+
+          </Button>;
+
+
+            onClick={handleToggleAudioOnly}
+            aria-label={isAudioOnly ? 'Disable audio only' : 'Enable audio only'}
+          >;
+            {isAudioOnly ? <VolumeX /> : <Volume2 />}
+          </Button>
+          
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Button
+            variant="destructive"
+            size="icon"
+            className="video-button video-button-danger rounded-full h-10 w-10"
+<<<<<<< HEAD
+            onClick = {handleLeaveCall,}
+            aria-label="Leave call"
+          >
+
+            onClick={handleToggleMute}
+            aria-label={isMuted ? 'Unmute microphone' : 'Mute microphone'}
+          >;
+            {isMuted ? <MicOff /> : <Mic />}
+          </Button>
+          
           <Button
             variant="outline"
             size="icon"
@@ -226,7 +308,6 @@ import './video-call.css';interface Participant  {id: string;
             aria-label="Leave call"
           >
             <Phone className="rotate-135" />
-          </Button>
         </div>
       </CardContent>
     </Card>

@@ -79,6 +79,9 @@ console.log(' Starting Advanced Monitoring System...')
     console.log("⚠  Performance "issues")
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+  return { "status": 'success', "metrics": mockPerformance, "message"}
+=======
   return { "status": 'success', "metrics": mockPerformance, "message"}
 <<<<<<< HEAD
 <<<<<<< HEAD

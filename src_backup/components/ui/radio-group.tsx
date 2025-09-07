@@ -21,6 +21,20 @@ const RadioGroup = React.forward_ref<;
 
       className={cn("grid gap-2", className)}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      {...props}
+      className={cn(&quot;grid gap-2&quot; className)}
+ursor/fix-website-loading-errors-and-merge-6662
+      ref={ref}
+    />;
+  );
+});
+<<<<<<< HEAD
+RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
+const RadioGroupItem = React.forwardRef<;
+
+      className={cn("grid gap-2", className)}
+
       {...props}
 
       ref={ref}
@@ -39,6 +53,20 @@ const RadioGroupItem = React.forwardRef<;
   return (;
     <RadioGroupPrimitive.Item;
       ref={ref}
+<<<<<<< HEAD
+      className={cn(
+        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+className={cn(
+        &quot;aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;
+ursor/fix-website-loading-errors-and-merge-6662
+      className={cn(
+        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+className={cn(
+        &quot;aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;
+      className={cn(
+        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+
+=======
 
         className
 
@@ -52,6 +80,14 @@ const RadioGroupItem = React.forwardRef<;
   )
 })
 
+export { RadioGroup, RadioGroupItem }
+;
+export { RadioGroup, RadioGroupItem };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+export { RadioGroup, RadioGroupItem }
+;
 RadioGroup.display_name = RadioGroupPrimitive.Root.display_name;
 const RadioGroupItem = React.forward_ref<;
   React.ElementRef < typeof RadioGroupPrimitive.Item>,

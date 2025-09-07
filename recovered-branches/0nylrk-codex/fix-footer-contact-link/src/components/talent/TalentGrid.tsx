@@ -6,6 +6,8 @@ import {TalentCard} from "@/components/talent/TalentCard";"
 import {TalentProfile} from "@/types/talent";"
 import { TalentCard } from "@/components/talent/TalentCard","
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+=======
 
 export interface TalentGridProps {
 
@@ -15,6 +17,17 @@ export interface TalentGridProps {
   savedTalentIds: string[],
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean,
+<<<<<<< HEAD
+  viewProfile?: (id: string) => void,
+  clearFilters?: () => void,
+
+  handleRequestHire?: (talent: TalentProfile) => void
+  viewProfile?: (id: string) => void,;
+  clearFilters?: () => void;
+  viewProfile?: (id: string) => void,
+  clearFilters?: () => void,
+  handleRequestHire?: (talent: TalentProfile) => void
+=======
 
   handleRequestHire?: (talent: TalentProfile) => void
   clearFilters?: () => void;
@@ -70,12 +83,18 @@ if ( {) {
   $2
 }
       view_profile (id);
-
     } else {
-      onTalentClick (id);
-    }
-
       // Default implementation
+      console.log("Request to hire:", talent.id)
+    }
+  }
+  const handleViewProfile = (id: string) => {
+    if (viewProfile) {
+      viewProfile(id)
+    } else {
+      onTalentClick(id)
+    }
+  }
 
       // Default implementation;
   };
@@ -114,6 +133,13 @@ export function TalentGrid() { return null; }
       onTalentClick(id);
     }
   },
+<<<<<<< HEAD
+
+
+  
+  
+  
+=======
 
   if (isLoading) {
 
@@ -135,9 +161,9 @@ export function TalentGrid(): any ({ ;  talents, ;
   onTalentClick, ;
   savedTalentIds, ;
   onToggleSave, ;
-  isAuthenticated;
-  viewProfile;
-  clearFilters;
+  isAuthenticated,;
+  viewProfile,;
+  clearFilters,;
   handleRequestHire;
 }: TalentGridProps) {;
   }
@@ -169,6 +195,32 @@ onClick={clearFilters}  };
         >
           Clear Filters;
         </button>
+<<<<<<< HEAD
+      )}
+    </div>
+  }
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {talents.map((talent) => (
+        <TalentCard
+          key={talent.id}
+          talent={talent}
+          onViewProfile={() => handleViewProfile(talent.id)}
+          onRequestHire={() => handleRequestHireInternal(talent)}
+          isSaved={savedTalentIds.includes(talent.id)}
+          onToggleSave={onToggleSave}
+          isAuthenticated={isAuthenticated}
+        />
+      ))}
+    </div>
+  )
+}
+    </div>;
+  );
+}
+;
+=======
 
   };
 

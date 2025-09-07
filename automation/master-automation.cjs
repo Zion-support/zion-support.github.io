@@ -19,13 +19,22 @@ class MasterAutomation {
       fs.mkdirSync(logsDir, { recursive: true });
     }
   }
-
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
+  async runCommand(command, description) {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 
   async runCommand(command, description, options = {}) {
     try {
@@ -132,20 +141,18 @@ class MasterAutomation {
     this.log("Health check completed.");
   }
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async runBuildProcess() {
     this.log('🚀 Starting build process...');
-
     const steps = [
       { command: 'npm install', description: 'Installing dependencies' },
       { command: 'npm run build', description: 'Building application' },
       { command: 'npm run test:smoke', description: 'Running smoke tests' },
     ];
-
     const results = [];
     for (const step of steps) {
       const result = await this.runCommand(step.command, step.description);
       results.push({ ...step, result });
-
       if (!result.success) {
         this.log(`❌ Build process failed at: ${step.description}`, 'error');
         return { success: false, results };
@@ -156,14 +163,13 @@ class MasterAutomation {
     return { success: true, results };
   }
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
-
     const checks = [
       { command: 'npm run lint', description: 'Linting check' },
       { command: 'npm run type-check', description: 'TypeScript type check' },
     ];
-
     const results = [];
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
@@ -217,16 +223,14 @@ class MasterAutomation {
       },
     };
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
-
     if (report.quality.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
-
     if (report.automation.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
-
     // Save report
     const reportFile = path.join(
       path.dirname(this.logFile),
@@ -244,17 +248,14 @@ class MasterAutomation {
     this.log('🏁 Master Automation completed');
     return report;
   }
-
   async status() {
     this.log('📊 Checking automation status...');
-
     const status = {
       timestamp: new Date().toISOString(),
       buildStatus: 'unknown',
       gitStatus: 'unknown',
       dependenciesStatus: 'unknown',
     };
-
     // Check build status
     try {
       const buildResult = await this.runCommand('npm run build', 'Build check');
@@ -262,7 +263,6 @@ class MasterAutomation {
     } catch (_error) {
       status.buildStatus = 'error';
     }
-
     // Check git status
     try {
       const gitResult = await this.runCommand(
@@ -273,7 +273,6 @@ class MasterAutomation {
     } catch (_error) {
       status.gitStatus = 'error';
     }
-
     // Check dependencies
     try {
       const depsResult = await this.runCommand(
@@ -284,11 +283,20 @@ class MasterAutomation {
     } catch (_error) {
       status.dependenciesStatus = 'error';
     }
-
     this.log('📊 Status check completed');
     return status;
   }
 }
+// CLI interface
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 
 // CLI interface
 if (require.main === module) {

@@ -1219,7 +1219,10 @@ export interface AdvancedITService  {"id": string;"name": string;
     description:;
       'Enterprise - grade zero trust security platform implementing the latest security principles with continuous verification, micro - segmentation, and advanced threat detection.',
     features: [;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Continuous identity verification',
       'Micro - segmentation',
       'Advanced threat detection',
@@ -1233,6 +1236,8 @@ export interface AdvancedITService  {"id": string;"name": string;
     ],
     popular: true,
     icon: '🛡️',
+<<<<<<< HEAD
+=======
 
     color: 'from - red - 600 to - orange - 700',
     text_color: 'text - red - 400',
@@ -1275,7 +1280,10 @@ export interface AdvancedITService  {"id": string;"name": string;
     growth_rate: '200% annual growth',
     variant: 'zero - trust - futuristic',
     contact_info: {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

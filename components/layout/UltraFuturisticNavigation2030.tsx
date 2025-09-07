@@ -8,6 +8,7 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Microscope, DollarSign, Home, Users, Briefcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   BookOpen, MessageCircle, Star, TrendingUp, Target;
 
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
@@ -16,6 +17,51 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;];const mainNavigation = [;
   Code, Wrench, Smartphone, BarChart3, Eye;
+<<<<<<< HEAD
+  Infinity, Hexagon, Network
+
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
+}
+const serviceCategories = [
+  {
+    title: '🚀 2030 Ultra-Futuristic AI Services'
+    icon: Brain
+    color: 'from-violet-600 via-purple-600 to-indigo-600'
+    description: 'Next-generation AI consciousness and creativity'
+    services: [
+      {
+        name: 'AI Consciousness Evolution Platform'
+        href: '/ai-consciousness-evolution-platform'
+        description: 'Develop genuine AI consciousness'
+        price: '$19,999/month'
+      }
+      {
+        name: 'AI Emotional Intelligence Platform'
+        href: '/ai-emotion-intelligence-platform'
+        description: 'Real-time emotion analysis and response'
+        price: '$1,299/month'
+      }
+      {
+        name: 'AI Creativity Orchestrator'
+        href: '/ai-creativity-orchestrator'
+        description: 'Multi-model creativity fusion'
+        price: '$1,799/month'
+      }
+      {
+        name: 'AI Autonomous Business Manager'
+        href: '/ai-autonomous-business-manager'
+        description: 'Fully autonomous business operations'
+        price: '$3,999/month'
+      }
+    ]
+  },  {      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' }
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotion-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$1,299/month' }
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$1,799/month' }
+=======
 
 ];
 
@@ -807,7 +853,7 @@ return (;
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
           : 'bg-gradient-to-r from-black/95 via-purple-900/95 to-black/95 backdrop-blur-sm'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
       {/* Main Navigation */}
 <nav,
@@ -916,6 +962,8 @@ className='block p-3 rounded-lg "hover":bg-purple-500/10 transition-colors durat
                   <span>{item.name}</span>
                 </Link>
               ))}
+<<<<<<< HEAD
+=======
 
                               </Link>
                                   </span>;

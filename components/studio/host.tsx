@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+};
+export default function StudioHostPage() {;
+  const [persona, setPersona] = useState<PersonaConfig>({;
+    voice: 'Visionary',;
+    language: 'English',;
+import React, { useState } from 'react';
+
+type PersonaConfig = {
+  voice: 'Visionary' | 'Grounded' | 'Technical';
+  language: string;
+  cloneStyleText?: string;
+}
+export default function StudioHostPage() {
+  const [persona, setPersona] = useState<PersonaConfig>({
+
+
+    voice: 'Visionary'
+    language: 'English'
+    voice: 'Visionary',
+    language: 'English',;
+=======
 
 
 
@@ -16,6 +38,7 @@ export default function StudioHostPage() {
     "voice": 'Visionary','
     "language": 'English',;'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });
 
 const [inviteeName, setInviteeName] = useState('');'
@@ -296,6 +319,9 @@ className='px-4 py-2 bg-blue-600 text-white rounded''
         </button>
       </section>
       {episode && (
+<<<<<<< HEAD
+        <section className="space-y-4">
+=======
 
 <section className='space-y-4'>'
           <h2 className='text-xl font-semibold'>Episode Draft</h2>'

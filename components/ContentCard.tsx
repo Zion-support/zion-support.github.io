@@ -74,5 +74,4 @@ const "ContentCard": React.FC<ContentCardProps> = ({ title;
     </Link>
   )
 };
-
 export default ContentCard;

@@ -123,9 +123,7 @@ const "shortUrl": ShortUrl = {
         "clicks": 0,
         "isActive": true
       };
-
       urlStorage.set(shortCode, shortUrl);
-
       res.status(201).json({
         }
         "success": true,
@@ -162,6 +160,8 @@ const "shortUrl": ShortUrl = {
 }) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params && params.shortCode;
   const shortUrl = urlStorage && urlStorage.get(shortCode);
+<<<<<<< HEAD
+=======
 
       data: urls as any
     })
@@ -205,7 +205,6 @@ export async function getServerSideProps() {
 export async function getServerSideProps() {
   }
   const shortUrl = urlStorage.get(shortCode);
-
   if (!shortUrl || !shortUrl.isActive) {
     }
     return {

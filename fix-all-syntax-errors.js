@@ -11,7 +11,10 @@ return true;
     console && console.error('❌ Error fixing accessibility && accessibility.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 // Fix api && api.tsx
 const fixApi = () => {
@@ -22,6 +25,10 @@ const fixApi = () => {
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
 
     }
+<<<<<<< HEAD
+    fs && fs.writeFileSync('pages/api && api.tsx', content);
+    console && console.log('✅ Fixed api && api.tsx');
+=======
 
 <<<<<<< HEAD
     if (!content && content.includes(export default')) {
@@ -102,23 +109,30 @@ const main = () =>: any {console.log ('Starting comprehensive syntax fixes...)co
 =======
     console && console.log('✅ Fixed api && api.tsx');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return true;
   } catch (error) {'
     console && console.error('❌ Error fixing api && api.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+=======
 
     return true;
   } catch (error) {'
     console && console.error('❌ Error fixing careers && careers.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+=======
 
     return true;
   } catch (error) {'
     console && console.error('❌ Error fixing support && support.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+=======
 
     return true;
   } catch (error) {'

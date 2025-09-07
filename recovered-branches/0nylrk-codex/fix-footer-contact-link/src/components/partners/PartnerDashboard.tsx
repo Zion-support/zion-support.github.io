@@ -141,11 +141,11 @@ export function PartnerDashboard() {;
 
             <div className="text-2xl font-bold">{stats && stats.totalReferrals}</div>;
             <p className="text-xs text-zion-slate-light">;
-              {stats && stats.completedReferrals} completed, {stats && stats.pendingReferrals} pending;
+              {stats.completedReferrals} completed, {stats.pendingReferrals} pending;
             </p>;
           </CardContent>;
         </Card>;
-
+        ;
         <Card className="bg-zion-blue-dark border-zion-blue-light">;
           <CardHeader className="flex flex-row items-center justify-between pb-2">;
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>;
@@ -158,7 +158,7 @@ export function PartnerDashboard() {;
             </p>;
           </CardContent>;
         </Card>;
-
+        ;
         <Card className="bg-zion-blue-dark border-zion-blue-light">;
           <CardHeader className="flex flex-row items-center justify-between pb-2">;
             <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>;
@@ -170,7 +170,7 @@ export function PartnerDashboard() {;
           </CardContent>;
         </Card>;
       </div>;
-
+      ;
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
@@ -184,7 +184,7 @@ export function PartnerDashboard() {;
           </div>;
         </CardContent>;
       </Card>;
-
+      ;
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader className="flex flex-row items-center justify-between">;

@@ -71,6 +71,10 @@ export default function EmptyState({ title, description, icon, primaryAction, se
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default function EmptyState(): any ({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+export default function EmptyState({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {
   return (
     <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">;
       {description && (<p className='text-sm opacity-80 max-w-prose'>{description}</p>;
@@ -163,6 +167,30 @@ export default function EmptyState({ title, description, icon, primaryAction, se
 
 >>>>>>> origin/chore/fix-lint-and-merge
       )}
+<<<<<<< HEAD
+}
+
+
+    </div>
+  );
+
+    </div>;
+  );
+}
+
+}
+}
+}
+    </div>
+  );
+}
+};
+
+export default EmptyState;
+};
+
+export default EmptyState;
+=======
 
     </div>
   );

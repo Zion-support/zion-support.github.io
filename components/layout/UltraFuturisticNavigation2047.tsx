@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState, useEffect } from 'react','
 import Link from 'next/link';'
@@ -439,6 +442,10 @@ interface NavigationItem  {name: string;
   href: string;
 import { motion, AnimatePresence } from 'framer-motion';
 
+import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu,
   ChevronDown,
@@ -499,8 +506,6 @@ import {
   Youtube,;
   MapPin,;
 } from 'lucide-react';
-
-
 
 import {
   Menu,
@@ -603,6 +608,121 @@ const UltraFuturisticNavigation2047 = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+<<<<<<< HEAD
+  const handleDropdownToggle = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name)
+  }
+
+    description: 'Main pages and core information',
+    category: 'core',
+    color: 'from-emerald-500 to-cyan-500',
+    children: [
+
+    description: 'Advanced AI and technology solutions',
+
+    badge: 'Featured',
+    category: 'services',
+    color: 'from-purple-500 to-pink-500',
+    children: [
+      {
+
+        name: 'All Services',
+        href: '/services',
+        description: 'Complete services overview',
+        icon: <Grid className='w-4 h-4' />,
+        featured: true,
+      },
+      {
+        name: 'AI Consciousness Evolution',
+        href: '/ai-consciousness-evolution-2029',
+        description: 'Next-generation AI consciousness',
+        icon: <Brain className='w-4 h-4' />,
+        color: 'from-purple-500 to-pink-500',
+        featured: true,
+      },
+      {
+        name: 'Quantum Neural Networks',
+        href: '/quantum-neural-network-platform',
+        description: 'Quantum-powered AI neural networks',
+        icon: <Atom className='w-4 h-4' />,
+        color: 'from-blue-500 to-cyan-500',
+        featured: true,
+      },
+      {
+        name: 'Autonomous Business Operations',
+        href: '/autonomous-business-operations-platform',
+        description: 'AI-powered business automation',
+        icon: <Bot className='w-4 h-4' />,
+        color: 'from-emerald-500 to-teal-500',
+      },
+      {
+        name: 'IT Asset Management',
+        href: '/ai-powered-it-asset-management',
+        description: 'AI-powered IT infrastructure management',
+        icon: <Monitor className='w-4 h-4' />,
+        color: 'from-indigo-500 to-purple-500',
+      },
+    ],
+  },
+  {
+    name: 'Advanced Solutions',
+    href: '/solutions',
+    icon: <Rocket className='w-5 h-5' />,    description: 'Cutting-edge technology solutions',
+    category: 'solutions',
+    color: 'from-blue-500 to-cyan-500',
+    children: [
+      {
+
+    description: 'Cutting-edge technology solutions',
+    category: 'solutions',
+    color: 'from-blue-500 to-cyan-500',
+    children: [
+
+    description: 'Knowledge base and insights',
+    category: 'resources',
+    color: 'from-orange-500 to-red-500',
+    children: [
+
+    description: 'Company information and support',
+    category: 'company',
+    color: 'from-gray-500 to-slate-500',
+    children: [
+      {
+        href: '/about',
+        description: 'Our story and mission',
+        icon: <Info className='w-4 h-4' />,
+        featured: true,
+      },
+      {
+        name: 'Careers',
+        href: '/careers',
+        description: 'Join our team',
+        icon: <Users className='w-4 h-4' />,
+        color: 'from-green-500 to-emerald-500',
+      },
+      {
+        name: 'Support',
+        href: '/support',
+        description: 'Get help and support',
+        icon: <MessageCircle className='w-4 h-4' />,
+        color: 'from-blue-500 to-cyan-500',
+      },
+      {
+        name: 'Privacy Policy',
+        href: '/privacy',
+        description: 'Privacy and data protection',
+        icon: <Shield className='w-4 h-4' />,
+        color: 'from-red-500 to-pink-500',
+      },
+    ],
+  },];        icon: <Shield className="w-4 h-4" />,
+        color: 'from-red-500 to-pink-500'
+      }
+    ]
+  }
+
+  };
+=======
 
 const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
 
@@ -624,9 +744,12 @@ setActiveDropdown(activeDropdown === name ? null : name)
       if (window.innerWidth >= 1024) {
         }
         setIsOpen(false);
+<<<<<<< HEAD
+=======
 
 setActiveDropdown(null);
       }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     };
 
     window.addEventListener('resize', handleResize);'
@@ -649,6 +772,8 @@ return (;
               </span>
             </Link>
           </div>
+<<<<<<< HEAD
+=======
 
           {/* Desktop Navigation */}
 
@@ -769,6 +894,55 @@ href={`"tel":${contactInfo.mobile}`}`                className='flex items-cente
             <div className="flex items-center space-x-4 text-sm text-gray-400">
               <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
+<<<<<<< HEAD
+                                  <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full">
+                                    Featured
+                                  </span>
+                                )}
+                              </div>
+                              <p className='text-sm text-gray-400 mt-1'>
+                                {child.description}
+                              </p>                              <p className="text-sm text-gray-400 mt-1">{child.description}</p>
+                            </div>
+
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+
+          {/* Contact Info & CTA */}
+          <div className='hidden lg:flex lg:items-center lg:space-x-4'>
+            <div className='flex items-center space-x-4 text-sm text-gray-400'>
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className='flex items-center space-x-1 hover:text-white transition-colors'
+              >
+                <Phone className='w-4 h-4' />                <span>{contactInfo.mobile}</span>
+              </a>
+            </div>
+            <Link          <div className="hidden lg:flex lg:items-center lg:space-x-4">
+            <div className="flex items-center space-x-4 text-sm text-gray-400">
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
+                <Phone className="w-4 h-4" />
+
+                <span>{contactInfo.mobile}</span>
+              </a>
+            </div>
+            <Link
+              href='/contact'
+              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'
+            >
+              Get Started
+              <ArrowRight className='ml-2 w-4 h-4' />            </Link>
+          </div>
+          {/* Mobile menu button */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 <Phone className='w-4 h-4' />'
                 <span>{contactInfo.mobile}</span>

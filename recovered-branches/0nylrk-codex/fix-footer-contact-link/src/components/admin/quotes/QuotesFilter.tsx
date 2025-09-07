@@ -39,6 +39,8 @@ interface QuotesFilterProps {
 
   onReset: () => void
 }
+<<<<<<< HEAD
+=======
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   searchQuery;
@@ -61,6 +63,90 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   setStatusFilter;
   archive_filter;
   setArchiveFilter;
+<<<<<<< HEAD
+  date_range;
+  setDateRange,
+  on_reset;
+}) => {
+  setDateRange,;
+  onReset;
+}) => {;
+  return (
+
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter;
+  setArchiveFilter;
+  dateRange;
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter;
+  setArchiveFilter;
+  dateRange;
+
+  setDateRange
+  searchQuery,
+  setSearchQuery,
+  statusFilter,
+  setStatusFilter,
+  archiveFilter,
+  setArchiveFilter,
+  dateRange,
+  setDateRange,
+  onReset
+}) => {
+  return (
+    <Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">
+      <CardContent className="p-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+          <div className="relative">
+            <Input
+              placeholder="Search quotes..."
+              className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+          <div>
+            <p className="text-zion-slate-light text-sm mb-2">Status</p>
+            <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>
+              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
+                <SelectValue placeholder="Status" />
+              </SelectTrigger>
+              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">
+                <SelectItem value="all">All Statuses</SelectItem>
+                <SelectItem value="new">New</SelectItem>
+                <SelectItem value="in_review">In Review</SelectItem>
+                <SelectItem value="responded">Responded</SelectItem>
+                <SelectItem value="accepted">Accepted</SelectItem>
+                <SelectItem value="closed">Closed</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div>
+            <p className="text-zion-slate-light text-sm mb-2">Archive</p>
+            <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>
+              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
+                <SelectValue placeholder="Archive Status" />
+              </SelectTrigger>
+              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">
+                <SelectItem value="active">Active Only</SelectItem>
+                <SelectItem value="archived">Archived Only</SelectItem>
+                <SelectItem value="all">All Quotes</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div>
+            <p className="text-zion-slate-light text-sm mb-2">Date Range</p>
+            <Popover>
+              <PopoverTrigger asChild>
+=======
 
               onChange={(e) => setSearchQuery(e && e.target.value)}
 
@@ -132,6 +218,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({};
   setArchiveFilter;
   dateRange;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   mode="range"
 import React from "react",;
 import { Calendar, RefreshCw } from "@/components/icons",;
@@ -208,6 +295,19 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               </SelectContent>;
             </Select>;
           </div>;
+<<<<<<< HEAD
+          ;
+          <div>;
+            <p className="text-zion-slate-light text-sm mb-2">Archive</p>;
+            <Select value={archiveFilter} onValueChange={(value:any) => setArchiveFilter(value)}>;
+          <div>;
+            <p className="text-zion-slate-light text-sm mb-2">Archive</p>;
+            <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>;
+              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
+                <SelectValue placeholder="Archive Status" />;
+              </SelectTrigger>;
+              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
+=======
 
                 <SelectItem value="active">Active Only</SelectItem>;
 
@@ -249,6 +349,24 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
+<<<<<<< HEAD
+                />
+              </PopoverContent>
+            </Popover>
+          </div>
+        </div>
+        <div className="mt-4 flex justify-end">
+          <Button
+            variant="outline"
+            onClick={onReset}
+            className="border-zion-blue-light text-zion-slate-light"
+          >
+            <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  )
 
                   {date_range?.from ? (
                     date_range.to ? (

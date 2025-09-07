@@ -15,6 +15,8 @@ interface EmptyStateProps {
   title: string
   description: string
   action?: {
+<<<<<<< HEAD
+=======
 
 import React from "react";
 import {cn} from "@/lib/utils";
@@ -39,6 +41,7 @@ interface EmptyStateProps {;
 
 export function EmptyState(): any ({;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   icon;
 
   title;
@@ -66,6 +69,24 @@ export function EmptyState(): any ({;
     href?: string,
     onClick?: () => void;
   },
+<<<<<<< HEAD
+  className?: string
+}
+
+export function EmptyState({;
+  icon;
+  title;
+  description;
+  action;
+  secondaryAction;
+export function EmptyState({
+  icon,
+  title,
+  description,
+  action,
+  secondaryAction,
+  className}: EmptyStateProps) {
+=======
 
   title;
   description;
@@ -83,6 +104,8 @@ export function EmptyState({
   return (;
     <div;
       className={cn(
+<<<<<<< HEAD
+        "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 
@@ -126,6 +149,17 @@ export function EmptyState() { return null; }
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
         {icon}
 
+  secondaryAction,;
+  className} EmptyStateProps) {;
+  return (;
+    <div;
+      className={cn(;
+        "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",;
+        className;
+      )}
+    >;
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
+        {icon}
       </div>;
       <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
       <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
@@ -139,10 +173,9 @@ export function EmptyState() { return null; }
             </Button>;
           ) : (;
 
-            <Button 
-              size="lg" 
-              className="bg-zion-purple hover:bg-zion-purple-light"
 
+<<<<<<< HEAD
+=======
               onClick={action.onClick}
             >
               {action.text}
@@ -259,6 +292,7 @@ interface EmptyStateProps {;
     </div>);
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {secondaryAction && (
           secondaryAction.href ? (
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">

@@ -3,6 +3,18 @@ import { ApplicationCard } from "./ApplicationCard";
 import { LoadingState } from "./LoadingState";
 import { EmptyState } from "./EmptyState";
 import { ErrorState } from "./ErrorState";
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import { ApplicationStatus } from "@/types/jobs";
+export function ApplicationsTracker() {;
+export function ApplicationsTracker() {
+  const { applications, isLoading, error } = useJobApplications();
+
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(
+    "all"
+  );
+
+=======
 
 import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
@@ -68,6 +80,19 @@ export function ApplicationsTracker() {}
       ? applications
       : applications.filter((app) => app.status === statusFilter);
 
+    return <ErrorState error={error} />;
+  }
+  if (applications.length === 0) {
+    return <EmptyState />;
+  }
+  const filteredApplications =
+    statusFilter === "all"
+      ? applications
+      : applications.filter((app) => app.status === statusFilter);
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return <LoadingState />
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -86,6 +111,15 @@ export function ApplicationsTracker() { return null; }
     return <LoadingState />;
   }
 ;
+<<<<<<< HEAD
+  if (error) {;
+    return <ErrorState error={error} />;
+  }
+;
+  if (applications.length === 0) {;
+    return <EmptyState />;
+  }
+=======
 
   if (isLoading) {;
     return <LoadingState />;

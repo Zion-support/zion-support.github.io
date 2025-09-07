@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+export interface EnterpriseService2034 {;
+export interface EnterpriseService2034 {
+export interface EnterpriseService2034 {;
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price: string;
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  technology: string[];
+  marketSize: string;
+  competitors: string[];
+  competitiveAdvantage: string;
+  implementationTime: string;
+  roi: string;
+  support: string;
+  documentation: string;
+  api: boolean;
+  sdk: boolean;
+  integrations: string[];
+  compliance: string[];
+  security: string[];
+  scalability: string;
+  uptime: string;
+  contact: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
   {}];"id": string;

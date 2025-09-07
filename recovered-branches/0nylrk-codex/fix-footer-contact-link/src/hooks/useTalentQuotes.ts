@@ -3,10 +3,17 @@ import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
 import { useAuth  } from '@/hooks/useAuth';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import {useAuth} from '@/hooks/useAuth';
+<<<<<<< HEAD
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
+
+import {useToast} from '@/hooks/use-toast';
+export const useTalentQuotes = () => {;
+=======
 
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
@@ -63,6 +70,14 @@ export const useTalentQuotes = () => {;
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
+<<<<<<< HEAD
+    return true
+  });
+  // Mark as viewed/responded mutation
+  const updateStatusMutation = useMutation({
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+      quoteRequestService && quoteRequestService.updateStatus(id, status);
+=======
 
     return true
   });
@@ -76,6 +91,14 @@ export const useTalentQuotes = () => {;
       if (variables && variables.status === 'in_review') {
         message = "Quote marked as viewed"
       } else if (variables && variables.status === 'responded') {
+<<<<<<< HEAD
+    onSuccess: (_, variables) => {
+      let message = "Status updated",
+      if (variables.status === 'in_review') {
+        message = "Quote marked as viewed"
+      } else if (variables.status === 'responded') {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         message = "Quote marked as responded"
       }
       toast({
@@ -89,7 +112,17 @@ export const useTalentQuotes = () => {;
       toast({"
         title: "Error";"
         description: "Failed to update status: " + error && error.message,
+<<<<<<< HEAD
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
+    }
+    onError: (error: Error) => {
+      toast({
+        title: "Error";
+        description: "Failed to update status: " + error.message
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         variant: "destructive"
 
       })
@@ -99,6 +132,7 @@ export const useTalentQuotes = () => {;
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     onError: (error: Error) => {}
       toast({"
@@ -112,6 +146,8 @@ export const useTalentQuotes = () => {;
 
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
+<<<<<<< HEAD
+=======
 
     onSuccess: (_, variables) => {
 
@@ -266,6 +302,8 @@ if ( {) {}
     toggleArchive: (id: string, isArchived: boolean) => 
 
     toggleArchive: (id: string, isArchived: boolean) => 
+<<<<<<< HEAD
+=======
 
     onError: (error: Error) => {
       toast({

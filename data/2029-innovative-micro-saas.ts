@@ -13,6 +13,7 @@ export interface InnovativeMicroSaas2029 {
     email: string,
     address: string}
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
   {

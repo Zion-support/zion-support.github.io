@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
@@ -38,6 +39,39 @@ jest.mock("next/link", () => {
   };
 });
 
+<<<<<<< HEAD
+on: jest.fn()
+        on: jest.fn()
+        off: jest.fn()
+        emit: jest.fn()
+      }
+      isFallback: false
+    }
+  }
+}));
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+      isFallback: false,
+    };
+  },
+}));
+
+// Mock Next.js Image component
+jest.mock("next/image", () => {
+  return function MockImage({ src, alt, ...props }) {
+    return <img src={src} alt={alt} {...props} />;
+  }
+});
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  return function MockLink({ children, href, ...props }) {
+    return <a href={href} {...props}>{children}</a>;
+  }
+});
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState, useEffect } from 'react','
 import Link from 'next/link';'
@@ -771,6 +774,7 @@ className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-c
                       onMouseLeave={() => setActiveCategory(null)}
                       className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
                     >
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                         {serviceCategories.map((category) => (
                           <div key={category.title} className="space-y-4">
@@ -809,6 +813,7 @@ key={service.name}
                                     </div>
                                     <p className="text-sm text-gray-400">{service.description}</p>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                   key={service.name}
                                   href={service.href}"
                                   className="block group";
@@ -816,6 +821,11 @@ key={service.name}
                                   <div className="p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 200">;"
                                     <div className="flex items - center justify - between mb - 2">;"
                                       <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors">;
+                                  className="block group"
+                                >
+                                  <div className="p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200">
+                                    <div className="flex items-center justify-between mb-2">
+                                      <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors">
                                         {service.name}
                                       </h4>;"
                                       <span className="text - sm text - purple - 400 font - medium">;
@@ -831,6 +841,7 @@ key={service.name}
                                       </h4>
                                       <span className='text-sm text-purple-400 font-medium'>
                                         {service.price}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                       </span>
                                     </div>
                                     <p className='text-sm text-gray-400'>
@@ -1156,6 +1167,14 @@ className='text-sm text-gray-400 hover: text-cyan-400 transition-colors'
 
                 {/* Mobile Contact Button */}
                 <div className="pt-4">
+                  </div>
+                </div>
+                {/* Mobile Contact Button */}
+                <div className='pt-4'>
+
+                {/* Mobile Contact Button */}
+                <div className='pt-4'>
+
                   <Link
                     href="/contact"
                     onClick={closeMenu}

@@ -47,7 +47,7 @@ function shouldProcessFile(filePath) {
       return glob && glob.sync(pattern, { "cwd": path && path.dirname(filePath) }).then(matches =>
         matches && matches.some(match => filePath && filePath.includes(match))
       )}
-    return filePath && filePath.includes(pattern)})}
+    return filePath.includes(pattern)})}
 function removeConsoleStatements(content) {
   let modifiedContent = content
   let removedCount = 0

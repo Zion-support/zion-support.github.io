@@ -141,6 +141,7 @@ class PerformanceOptimizer {
 
               /import React from 'react';/g,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               "import React, { memo, useCallback, useMemo } from 'react';"
             );
             fileOptimizations++;

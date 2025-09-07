@@ -111,6 +111,26 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
       return;
     }
 
+<<<<<<< HEAD
+
+;
+
+    // Get the application that was dragged
+    const application = applications.find(app => app.id === draggableId);
+    if (!application) return;
+    // Update the application status in the database
+    const newStatus = destination.droppableId as ApplicationStatus;
+    // Optimistically update the UI
+    const sourceColumn = [...columns[source.droppableId]];
+    const destColumn = [...columns[destination.droppableId]];
+    const [removed] = sourceColumn.splice(source.index, 1);
+    destColumn.splice(destination.index, 0, { ...removed, status: newStatus })
+    setColumns({
+      ...columns;
+      [source.droppableId]: sourceColumn;
+      [destination.droppableId]: destColumn});
+;
+=======
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -135,6 +155,7 @@ interface DropResult {;
 
 ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Define the kanban board columns based on application statuses;
   {;
     id: "new",;
@@ -155,6 +176,7 @@ interface DropResult {;
   {;
     id: "rejected",;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface KanbanBoardProps {;
   jobId?: string;
 }
@@ -207,6 +229,15 @@ interface KanbanBoardProps {;
         description: "Please try again""
         variant: "destructive"})
     }
+<<<<<<< HEAD
+  },
+  
+
+  }
+
+  },
+  
+=======
 
   }
 
@@ -218,21 +249,100 @@ interface KanbanBoardProps {;
     // Update the application status in the database;
     const newStatus = destination && destination.droppableId as ApplicationStatus;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Optimistically update the UI;
     const sourceColumn = [...columns[source && source.droppableId]];
     const destColumn = [...columns[destination && destination.droppableId]];
     const [removed] = sourceColumn && sourceColumn.splice(source && source.index, 1);
     destColumn && destColumn.splice(destination && destination.index, 0, { ...removed, status: newStatus }),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setColumns({;
       ...columns;
       [source && source.droppableId]: sourceColumn;
       [destination && destination.droppableId]: destColumn});
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Update status in the database;
     try {;
       await updateApplicationStatus(draggableId, newStatus);
 
+        variant: "destructive"});
+    }
+  };
+  if (isLoading) {;
+    return (
+      <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
+        {Array && Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
+      const groupedApplications = COLUMNS.reduce((acc, column) => {;
+        acc[column.id] = applications.filter(app => app.status === column.id),;
+        return acc,;
+      }, {} as Record<string JobApplication[]>),;
+      ;
+      setColumns(groupedApplications),;
+    }
+  }, [applications]),;
+  ;
+  // Handle drag end event to update the application status;
+  const handleDragEnd = async (result:DropResult) => {;
+    const { destination, source, draggableId } = result,;
+    ;
+    // If there's no destination or the item is dropped in the same place, do nothing;
+    if (!destination || ;
+        (destination.droppableId === source.droppableId && ;
+         destination.index === source.index)) {;
+      return,;
+    }
+    ;
+    // Get the application that was dragged;
+    const application = applications.find(app => app.id === draggableId),;
+    if (!application) return,;
+    ;
+    // Update the application status in the database;
+    const newStatus = destination.droppableId as ApplicationStatus,;
+    ;
+;
+    // Get the application that was dragged;
+    const application = applications.find(app => app.id === draggableId),;
+    if (!application) return,;
+    // Update the application status in the database;
+    const newStatus = destination.droppableId as ApplicationStatus,;
+    // Optimistically update the UI;
+    const sourceColumn = [...columns[source.droppableId]],;
+    const destColumn = [...columns[destination.droppableId]],;
+    const [removed] = sourceColumn.splice(source.index, 1),;
+    destColumn.splice(destination.index, 0, { ...removed, status: newStatus }),;
+    setColumns({;
+      ...columns,;
+      [source.droppableId]: sourceColumn,;
+      [destination.droppableId]: destColumn}),;
+    // Update status in the database;
+    try {;
+      await updateApplicationStatus(draggableId, newStatus),;
+      toast({;
+        title: "Status updated",;
+        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    } catch (error) {;
+      // Revert the UI changes if the database update fails;
+      toast({;
+        title: "Failed to update status",;
+<<<<<<< HEAD
+        description: "Please try again";
+        variant: "destructive"});
+    }
+  };
+  if (isLoading) {;
+    return (;
+      <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
+        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
+=======
+        description: "Please try again",;
         variant: "destructive"});
     }
   };
@@ -276,6 +386,8 @@ interface KanbanBoardProps {;
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
+=======
 
         ))}
       </div>;
@@ -463,11 +575,15 @@ if ( {) {}
       <div className={`grid ${is_mobile ? 'grid - cols - 1 gap - y-6' : 'grid - cols - 1 md:grid - cols - 3 lg:grid - cols - 5 gap - 4'} overflow - x-auto`}>;
         {COLUMNS.map (column => (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             key={column.id}
             id={column.id}
             title={column.title}
             description={column.description}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             key={column && column.id}
             id={column && column.id}
             title={column && column.title}

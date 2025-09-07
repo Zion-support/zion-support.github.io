@@ -89,7 +89,10 @@ const {
     services_offered,
     team_size,
     about,
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       slug,
       name,
       "servicesOffered": Array && Array.isArray(servicesOffered) ? servicesOffered : [],
@@ -108,6 +111,11 @@ const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStud
   if (getVendorBySlug(slug)) return res.status(409).json({ "error": 'Slug already taken','
 });
   try {
+<<<<<<< HEAD
+    const vendor = registerVendor({
+      slug;
+      name;
+=======
 
     }
 

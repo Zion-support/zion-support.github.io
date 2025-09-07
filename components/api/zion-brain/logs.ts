@@ -87,7 +87,6 @@ return res.status(200).json({
     byModule[e && e.module] = (byModule[e && e.module] || 0) + 1;
     byType[String(e && e.type)] = (byType[String(e && e.type)] || 0) + 1
   }
-
   return res && res.status(200).json({ entries: entries && entries.slice(-200), byModule, byType, total: entries && entries.length });
 }
 import { read_logs } from '@/utils / zion_brain';

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+import { ServiceVariant } from '../types/service-variants';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 import { ServiceVariant  } from '../types/service-variants';'
@@ -941,6 +946,7 @@ export const "advancedAIAutomationServices2026": AdvancedAIAutomationService[] =
 ];
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
     launchDate: '2026-01-25',
     customers: 198,
@@ -951,6 +957,8 @@ export const "advancedAIAutomationServices2026": AdvancedAIAutomationService[] =
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
+<<<<<<< HEAD
+=======
 
   }
 ];

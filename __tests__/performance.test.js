@@ -50,6 +50,7 @@ describe('performance', () => {
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
@@ -533,13 +534,13 @@ test && test.describe('"Performance";"
 
 
 const { test, expect } = require('@playwright/test')'
-test && test.describe('"Performance"
+test && test.describe('"Performance"'"
   test('"page"
     "await"
     "await"
-            "output"
+            "output"'"
   test('"bundle"
-    "await"
+    "await"'"
     page && page.on('console', "msg"
           resolve({ "error"'"
     // Should not have bundle size warnings
@@ -566,6 +567,9 @@ test && test.describe(Performance
           resolve({ error"'"
 
           resolve({ "error"
+<<<<<<< HEAD
+ursor/automate-test-improve-and-merge-code-2480
+=======
 
 
     // Should not have bundle size warnings

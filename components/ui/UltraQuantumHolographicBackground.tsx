@@ -247,6 +247,37 @@ ctx.stroke();
         this.maxLife = 100;
         this.type = ['quantumholographicenergymatrix'][Math.floor(Math.random() * 4)] as any
       }
+<<<<<<< HEAD
+      maxLife: number;
+      type: 'quantum' | 'holographic' | 'energy' | 'matrix';      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      life: number
+      maxLife: number
+      type: 'quantum' | 'holographic' | 'energy' | 'matrix'
+        this.x = Math.random() * dimensions.width;
+        this.y = Math.random() * dimensions.height;
+        this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
+        this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
+        this.size = Math.random() * 3 * intensityMultiplier + 1;
+        this.color = [
+          colors.primary
+          colors.secondary
+          colors.tertiary
+          colors.accent
+        ][Math.floor(Math.random() * 4)];
+        this.life = Math.random() * 100;
+        this.maxLife = 100;
+        this.type = ['quantum', 'holographic', 'energy', 'matrix'][
+          Math.floor(Math.random() * 4)
+        ] as any;      }        this.color = [colors.primary, colors.secondary, colors.tertiary, colors.accent][Math.floor(Math.random() * 4)];
+        this.life = Math.random() * 100;
+        this.maxLife = 100;
+        this.type = ['quantumholographicenergymatrix'][Math.floor(Math.random() * 4)] as any
+=======
 
       update() {
         this.x += this.vx;
@@ -494,6 +525,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx && ctx.lineTo(dimensions && dimensions.width, y);
         ctx && ctx.stroke();
       }
+<<<<<<< HEAD
+=======
 
       animationId = requestAnimationFrame(animate)
 };
@@ -716,6 +749,22 @@ className='absolute inset-0''
             ]
           }}
           transition={{
+            duration: 4
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+      </div>
+    </div>
+);  )
+}
+
+          }}
+        />
+      </div>
 
       <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;
         <motion.div;'

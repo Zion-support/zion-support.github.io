@@ -24,6 +24,7 @@ interface HelpArticleViewProps {;
       }
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
   const [feedbackGiven, setFeedbackGiven] = useState<
@@ -93,6 +94,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
         <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
 
         <div className="flex items-center text-sm text-zion-slate-light mb-6">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <span>Last updated: {formatDate(article.lastUpdated)}</span>
         </div>
 
@@ -114,15 +116,12 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   if (!article) {;
     return <div>Article not found</div>;
   }
-
   const handleFeedback = (type: "helpful" | "not-helpful") => {;
     setFeedbackGiven(type),;
-
     // In a real implementation, this would send feedback to the server;
 
         : "We'll work on improving this article."});
   };
-
   return (
 
     <div>;

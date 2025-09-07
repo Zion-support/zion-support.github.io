@@ -184,16 +184,59 @@ export default function TokenManager() { return null; }
   const [amount, setAmount] = useState(0),;'
 
   const isAdmin = user?.userType === 'admin',;
+<<<<<<< HEAD
+      });
+      fetch_transactions ();
+    } else {
+  useEffect(() => {;
+    if (isAdmin) fetchTransactions();
+  }, [isAdmin]);
+import { useEffect, useState } from 'react',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { useAuth } from '@/hooks/useAuth',;
+import { supabase } from '@/integrations/supabase/client',;
+import { TokenTransaction } from '@/types/tokens',;
+import { ProtectedRoute } from '@/components/ProtectedRoute',;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',;
+import { useToast } from '@/hooks/use-toast',;
+;
+export default function TokenManager() {;
+  const { user } = useAuth(),;
+  const { toast } = useToast(),;
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),;
+  const [userId, setUserId] = useState(''),;
+  const [amount, setAmount] = useState(0),;
+;
+  const isAdmin = user?.userType === 'admin',;
+;
+  useEffect(() => {;
+    if (isAdmin) fetchTransactions(),;
+  }, [isAdmin]),;
+;
+  useEffect(() => {;
+    if (isAdmin) fetchTransactions();
+  }, [isAdmin]),;
+=======
 
   useEffect(() => {;
     if (isAdmin) fetchTransactions();
   }, [isAdmin]);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const fetchTransactions = async () => {;
     const { data, error } = await supabase;
       .from('token_transactions');
       .select('*');
       .order('created_at', { ascending: false });
+<<<<<<< HEAD
+      .limit(100),;
+    if (!error) setTransactions(data || []);
+  },;
+=======
       .limit(100);
     if (!error) setTransactions(data || []);
   };
@@ -264,6 +307,10 @@ export default function TokenManager() { return null; }
                 <CardTitle>Issue or Revoke Tokens</CardTitle>;
               </CardHeader>;
               <CardContent className="space-y-4">;
+<<<<<<< HEAD
+                <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />;
+                <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))} />;
+=======
                 <Input placeholder="User ID" value={userId} onChange={e => setUserId(e && e.target.value)} />;
                 <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e && e.target.value))} />;
 <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />;
@@ -276,6 +323,8 @@ export default function TokenManager() { return null; }
                 </div>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
+=======
 
             <Tabs defaultValue="history">;
       const err = await res.json ();
@@ -285,6 +334,7 @@ export default function TokenManager() { return null; }
         variant: 'destructive';
       });
     }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 ;
   return (
@@ -337,6 +387,7 @@ export default function TokenManager() { return null; }
 
   return (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <TabsList>;
                 <TabsTrigger value="history>Transaction History</TabsTrigger>;
               </TabsList>;
@@ -394,6 +445,15 @@ export default function TokenManager() { return null; }
 }
 =======
               <TabsContent value="history">;
+<<<<<<< HEAD
+                <ul className="space-y-2">;
+                  {transactions.map(tx => (;
+                    <li key={tx.id} className="flex justify-between border-b py-2 text-white">;
+                      <span>{tx.user_id}</span>;
+                      <span>{tx.transaction_type === 'earn' ? '' :'-'}{tx.amount}</span>;
+                    </li>;
+                  ))}
+=======
 
 ))}
                 <ul className="space - y-2">;
@@ -402,6 +462,7 @@ export default function TokenManager() { return null; }
                       <span>{tx.user_id}</span>;
                       <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </ul>;
         <Footer />;
       </div>;

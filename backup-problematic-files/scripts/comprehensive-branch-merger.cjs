@@ -67,6 +67,9 @@ console.log('==')
         console.error(' Failed to push "changes")
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+    console.error(' Comprehensive branch merger "failed")
+=======
     console.error(' Comprehensive branch merger "failed")
 <<<<<<< HEAD
 <<<<<<< HEAD

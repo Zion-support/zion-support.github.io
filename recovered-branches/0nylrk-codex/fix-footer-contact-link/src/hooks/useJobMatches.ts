@@ -46,6 +46,27 @@ function useJobMatches() {}
             bio;
             years_experience;
 
+<<<<<<< HEAD
+
+  const fetchMatches = async () => {
+    setIsLoading(true),
+    try {
+      const { data, error } = await supabase
+        .from("job_talent_matches")
+        .select(`
+          *;
+          talent_profile: talent_id(
+            id;
+            user_id;
+            full_name;
+            professional_title;
+            profile_picture_url;
+            hourly_rate;
+            bio;
+            years_experience;
+            key_projects
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           *,
           talent_profile:talent_id(
 
@@ -58,6 +79,7 @@ function useJobMatches() {}
             bio,
             years_experience,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             skills
 
           )
@@ -68,11 +90,14 @@ function useJobMatches() {}
 
       if (error) throw error,
       setMatches(data || [])
+<<<<<<< HEAD
+=======
 
     } catch (error) {
       console && console.error("Error fetching job matches:", error);
       toast({
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             key_projects,
             skills);
         `);
@@ -105,6 +130,16 @@ if (throw error) {
         title: "Error",
         description: "Failed to load matched talents. Please try again later.",
 
+<<<<<<< HEAD
+    } catch (error) {
+      console.error("Error fetching job matches:", error),
+      toast({
+        title: "Error";
+        description: "Failed to load matched talents. Please try again later."
+        title: "Error",
+        description: "Failed to load matched talents. Please try again later.",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         variant: "destructive"})
     } finally {
       setIsLoading(false)
@@ -116,7 +151,10 @@ if (throw error) {
     setIsProcessing(true),
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         body: { jobId }}),
 
       if (response && response.error) throw new Error(response && response.error.message);
@@ -220,6 +258,8 @@ export function useJobMatches(jobId: string) {;
         variant: "destructive"})
     } finally {
       setIsProcessing(false)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     }
   };

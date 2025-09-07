@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+// Particle system const particles: Array< {
+  alpha: Math.random () * 0.8 + 0.2;
+life: Math.random () * 100 + 50
+})
+}// Animation loop // Wrap around edges if (particle.x < 0) particle.x = canvas.width;
+if (particle.x > canvas.width) particle.x = 0;
+if (particle.y < 0) particle.y = canvas.height;
+if (particle.y > canvas.height) particle.y = 0;
+// Draw particle // Add glow effect ctx.shadowColor = particle.color;
+ctx.shadowBlur = 20;
 
 import React, { useEffect, useRef } from 'react';'
 
@@ -78,6 +91,33 @@ for (let i = 0; i < 100; i++) {
         "life": Math.random() * 100 + 50
       });
     }
+<<<<<<< HEAD
+// Animation loop
+    // Create initial particles
+    for (let i = 0; i < 100; i++) {      particles.push({      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      alpha: number
+      life: number
+    }> = [];
+    // Create initial particles
+    for (let i = 0, i < 100, i++) {
+        x: Math.random() * canvas.width
+        y: Math.random() * canvas.height
+        vx: (Math.random() - 0.5) * 2
+        vy: (Math.random() - 0.5) * 2
+        size: Math.random() * 3 + 1
+        color: `hsl(${Math.random() * 360}, 70%, 60%)`
+        alpha: Math.random() * 0.8 + 0.2
+        life: Math.random() * 100 + 50
+      });    }        color: `hsl(${Math.random() * 360}, 70%, 60%)`;
+        alpha: Math.random() * 0.8 + 0.2
+        life: Math.random() * 100 + 50
+      })
+=======
 
     // Animation loop,
 const animate = () => {
@@ -186,6 +226,7 @@ cancelAnimationFrame(animationRef.current);
 origin/cursor/automate-test-improve-and-merge-code-2533
       }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-10'>;'
         {/* Animated Grid */}
@@ -343,6 +384,8 @@ className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/30 transf
         <motion.div,
 className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full''
           animate={{
+<<<<<<< HEAD
+=======
 
             }
 
@@ -485,6 +528,7 @@ className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 tr
             "ease": 'linear','
           }} />
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Energy Orbs */}
         <motion.div;
 className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50';'

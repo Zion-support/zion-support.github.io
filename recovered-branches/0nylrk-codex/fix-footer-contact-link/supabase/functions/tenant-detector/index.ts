@@ -5,12 +5,25 @@ interface TenantInfo {
   subdomain: string;
   custom_domain: string | null;
   primary_color: string;
+const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL');
+const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+if (!supabaseUrl || !supabaseServiceKey) {
 
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
       (forwardedHost ? forwardedHost && forwardedHost.split()[0].trim().split(':')[0] : null) ||
       url && url.hostname;
+<<<<<<< HEAD
+    const url = new URL(req.url);
+    const hostnameParam = url.searchParams.get('host');
+    const subdomainParam = url.searchParams.get('subdomain');
+    // Get hostname from parameters or headers
+    const forwardedHost = req.headers.get('x-forwarded-host');
+    const hostname = hostnameParam |
+      (forwardedHost ? forwardedHost.split()[0].trim().split(':')[0] : null) |
+      url.hostname;
+=======
 
       throw new Error('No hostname or subdomain provided')
     }

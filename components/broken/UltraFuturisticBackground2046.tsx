@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+const UltraFuturisticBackground2046: React.FC = () => {
+const UltraFuturisticBackground2046: React.FC = () => {;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<any[]>([]);
+  const animationRef = useRef<number>();
+  useEffect(() => {;
+    const canvas = canvasRef && canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas && canvas.getContext('2d');
+    if (!ctx) return;
+    // Set canvas size;
+    const resizeCanvas = () => {;
+      canvas && canvas.width = window && window.innerWidth;
+      canvas && canvas.height = window && window.innerHeight;      canvas && canvas.height = window && window.innerHeight;
+      canvas.height = window.innerHeight
+    };
+    resizeCanvas();
+    window && window.addEventListener('resize', resizeCanvas);
+=======
 
 
 import React, { useEffect, useRef } from 'react';'
@@ -88,6 +108,27 @@ const types = ['quantum', 'neural', 'data', 'energy'];'
 if (Math.random() < 0.01) {
           }
           this.vx += (Math.random() - 0.5) * 0.5;
+<<<<<<< HEAD
+          this.vy += (Math.random() - 0.5) * 0.5;        }
+        // Limit velocity
+        this.vx = Math.max(-3, Math.min(3, this.vx));
+        this.vy = Math.max(-3, Math.min(3, this.vy));      }
+      draw() {
+        if (!ctx) return;          this.vy += (Math.random() - 0.5) * 0.5
+        }
+        // Limit velocity
+        this.vx = Math.max(-3, Math.min(3, this.vx));
+        this.vy = Math.max(-3, Math.min(3, this.vy));        this.vy = Math.max(-3, Math.min(3, this.vy))
+      }
+      draw() {
+        if (!ctx) return;
+        const alpha = this.life / this.maxLife;
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        const alpha = this.life / this.maxLife;
+        ctx.save();
+        ctx.globalAlpha = alpha;
+=======
 
 this.vy += (Math.random() - 0.5) * 0.5;
         }
@@ -127,6 +168,8 @@ this.vy = Math.max(-3, Math.min(3, this.vy));
                 }
             });
             break;
+<<<<<<< HEAD
+=======
 
 case 'data':'
             // Data streams,
@@ -152,6 +195,8 @@ ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
+<<<<<<< HEAD
+=======
 
 // Glow effect,
 const gradient = ctx.createRadialGradient(;

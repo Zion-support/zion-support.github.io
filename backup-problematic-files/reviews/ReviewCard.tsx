@@ -26,14 +26,23 @@
 
         )}
 
+<<<<<<< HEAD
       </div>;
       <p className='text-sm leading-6'>{review && review.text}</p>;
 
+        )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      </div>;
+      <p className='text-sm leading-6'>{review && review.text}</p>;
       <div className='flex flex-wrap gap-2 mt-3'>;
           <span className='pill'>;
             Communication: {review && review.categories.communication}★;
           </span>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         )}
         {typeof review && review.categories?.qualityOfWork === 'number' && (;
           <span className='pill'>;
@@ -48,6 +57,18 @@
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+  return (
+    <div className="enhanced-card hover: shadow-lg transition-shadow">
+      <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center gap-2">
+          <StarRating value={review.rating} onChange={() => {}} readOnly size={18} />
+          <span className="text-sm text-gray-500">{new Date(review.createdAt).toLocaleDateString()}</span>
+        </div>
+        <button
+          className="text-xs text-red-500 hover:underline"
+
+          onClick={() => onReport && onReport(review.id)}
 
           <span className="pill pill-success">Would work again</span>
         )}

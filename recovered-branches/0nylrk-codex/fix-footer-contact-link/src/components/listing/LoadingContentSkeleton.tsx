@@ -96,6 +96,11 @@ export function LoadingContentSkeleton() {
             <Skeleton key={i} className="h - 6 w - full bg - zion - blue - light / 20" />))}
         </div>;
       </CardContent>;
+<<<<<<< HEAD
+    </Card>;
+  );
+}
+=======
     </Card>);
 }
 

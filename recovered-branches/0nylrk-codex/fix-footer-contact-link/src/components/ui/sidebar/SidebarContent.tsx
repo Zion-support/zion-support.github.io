@@ -54,6 +54,19 @@ interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
 ;
 export function SidebarContent({ className, children, ...props }: SidebarContentProps) {;
   return (;
+<<<<<<< HEAD
+}
+
+;
+
+
+    <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
+      {children}
+    </div>;
+  );
+}
+;
+=======
 
 "
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
