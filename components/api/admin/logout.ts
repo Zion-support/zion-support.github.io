@@ -25,6 +25,8 @@ export default function handler() {clearSessionCookie(res)res.status(200).json({
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
 
+  res.status(200).json({ ok: true })
+}
 
   res.status(200).json({ ok: true })
 }

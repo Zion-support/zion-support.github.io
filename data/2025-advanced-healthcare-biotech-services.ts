@@ -1153,6 +1153,7 @@ export interface AdvancedHealthcareBiotechService {;
   rating: number,;
   reviews: number;
 }
+
 ;
 export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] = [;
   // AI-Powered Drug Discovery Platform;

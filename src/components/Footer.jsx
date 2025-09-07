@@ -149,9 +149,21 @@ export function Footer() {const currentYear  = new Date().getFullYear()const foo
                   <social.icon className="h-5 w-5" />;
                 </a>;
               ))}
+<<<<<<< HEAD
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;
+=======
             </div>;
           </div>;
         </div>;
       </div>;
     </footer>;
   )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
