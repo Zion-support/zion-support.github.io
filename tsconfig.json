@@ -50,6 +50,9 @@
     "temp_backup",
     "recovered-branches",
     "api.disabled",
-    "lib"
+    "lib",
+    "components-disabled",
+    "pages-disabled",
+    "src"
   ]
 }
