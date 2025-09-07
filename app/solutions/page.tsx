@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-=======
-import Link from "next/link";
->>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
 
 export const metadata = {
   title: "Solutions | Zion Tech Group",
@@ -12,9 +8,83 @@ export const metadata = {
   keywords: "solutions, business, technology"
 };
 
+const solutions = [
+  {
+    icon: '🤖',
+    title: 'AI Solutions',
+    description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
+    features: [
+      'Machine Learning Models',
+      'Natural Language Processing',
+      'Computer Vision',
+      'Predictive Analytics',
+      'Automated Decision Making'
+    ]
+  },
+  {
+    icon: '⚡',
+    title: 'Automation',
+    description: 'Streamline your operations with intelligent automation solutions.',
+    features: [
+      'Workflow Automation',
+      'Process Optimization',
+      'Data Integration',
+      'Task Scheduling',
+      'Performance Monitoring'
+    ]
+  },
+  {
+    icon: '🔧',
+    title: 'Custom Development',
+    description: 'Tailored software solutions built specifically for your business needs.',
+    features: [
+      'Web Applications',
+      'Mobile Apps',
+      'API Development',
+      'Database Design',
+      'System Integration'
+    ]
+  },
+  {
+    icon: '📊',
+    title: 'Analytics & Insights',
+    description: 'Data-driven insights to help you make informed business decisions.',
+    features: [
+      'Business Intelligence',
+      'Data Visualization',
+      'Performance Metrics',
+      'Trend Analysis',
+      'Custom Dashboards'
+    ]
+  },
+  {
+    icon: '☁️',
+    title: 'Cloud Solutions',
+    description: 'Scalable cloud infrastructure and services for modern businesses.',
+    features: [
+      'Cloud Migration',
+      'Infrastructure as Code',
+      'Container Orchestration',
+      'Auto-scaling',
+      'Disaster Recovery'
+    ]
+  },
+  {
+    icon: '🔒',
+    title: 'Security & Compliance',
+    description: 'Comprehensive security solutions to protect your business and data.',
+    features: [
+      'Security Audits',
+      'Compliance Management',
+      'Threat Detection',
+      'Data Encryption',
+      'Access Control'
+    ]
+  }
+];
+
 export default function SolutionsPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -42,29 +112,6 @@ export default function SolutionsPage() {
               </ul>
             </div>
           ))}
-=======
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Solutions
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Professional solutions for your business needs.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🚀</span>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Business Solutions
-          </h3>
-          <p className="text-gray-600">
-            Comprehensive business solutions tailored to your specific needs.
-          </p>
->>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
         </div>
 
         <div className="text-center">
@@ -90,27 +137,6 @@ export default function SolutionsPage() {
             </Link>
           </div>
         </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🎯</span>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Custom Solutions
-          </h3>
-          <p className="text-gray-600">
-            Create custom solutions tailored to your specific business needs.
-          </p>
-        </div>
-      </div>
-
-      <div className="text-center">
-        <Link 
-          href="/contact" 
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Get Started
-        </Link>
       </div>
     </div>
   );
