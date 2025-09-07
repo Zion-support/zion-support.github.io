@@ -40,9 +40,7 @@ class $1 {}
 <<<<<<< HEAD
 =======
   const timestamp = new Date().toISOString();
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}`;`
+const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}`;`;
     console.log("message);
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\\n");

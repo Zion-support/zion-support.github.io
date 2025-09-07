@@ -1,39 +1,17 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-=======
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-
-
-
-const fs = require("$1")
-const path = require("path")
-      let content = fs.readFileSync(filePath, "utf8")
-      content = content.replace(/&apos;s\s*\s*$/gm, "&apos;s)
-      content = content.replace(/&apos;s\s*\s*>/gm, "&apos;s">")
-      content = content.replace(/&apos;s\s*\s*,/gm, "&apos;s", ")
-      content = content.replace(/we\\"ll\s*\s*$/gm, "we\\"ll)
-      content = content.replace(/we\\"ll\s*\s*,/gm, "we\\"ll", ")
-      content = content.replace(/\s*$/gm, ")
-      content = content.replace(/\s*>/gm, >")
-      content = content.replace(/\s*,/gm, ", ")
-      content = content.replace(/\s*\)/gm, )"
+const fs = require("$1");
+const path = require("path");
+let content = fs.readFileSync(filePath, "utf8");
+      content = content.replace(/&apos;s\s*""\s*$/gm, "&apos;s"")
+      content = content.replace(/&apos;s\s*""\s*>/gm, "&apos;s">")
+      content = content.replace(/&apos;s\s*""\s*,/gm, "&apos;s", ")
+      content = content.replace(/we\\"ll\s*""\s*$/gm, "we\\"ll"")
+      content = content.replace(/we\\"ll\s*""\s*,/gm, "we\\"ll", ")
+      content = content.replace(/""\s*$/gm, """)
+      content = content.replace(/""\s*>/gm, "">")
+      content = content.replace(/""\s*,/gm, ", ")
+      content = content.replace(/""\s*\)/gm, "")"
         fs.writeFileSync(filePath, content, "utf8")
       this.errors.push({ "file": filePath, "error"})
     this.log(" Starting syntax error fixing...")

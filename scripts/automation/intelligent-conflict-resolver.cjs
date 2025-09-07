@@ -28,11 +28,7 @@ class $1 {}
 ;"
   log(message, level = "INFO") {}"
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    const logMessage = `[${timestamp}] [${level}] ${message}`;`
+const logMessage = `[${timestamp}] [${level}] ${message}`;`;
     console.log("logMessage);
     // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + "\n");
@@ -98,7 +94,6 @@ class $1 {}
             break};
         // Find the end marker;
         for (let j = marker.separator + 1; j < lines.length; j++) {}
-  if (lines[j].startsWith(">>>>>>>")) {}
   marker.end = j;
             marker.endMarker = lines[j];
             marker.otherBranch = lines[j].substring(8).trim();
@@ -127,23 +122,42 @@ class $1 {}
   return marker.endMarker};"
     return "};"
   isPackageJsonConflict(startContent, endContent) {}
-  return (;)"
+return (;);
       startContent.includes("package.json") ||;
       endContent.includes("package.json");"
   isLockFileConflict(startContent, endContent) {}
-
-      endContent.includes("yarn.lock");"
+return (;);
+      startContent.includes("package-lock.json") ||;
+      endContent.includes("yarn.lock");
+    )};
+;
   isConfigFileConflict(startContent, endContent) {}
-
-      startContent.includes("eslint");"
+return (;);
+      startContent.includes("tsconfig") ||;
+      startContent.includes("vite.config") ||;
+      startContent.includes("webpack.config") ||;
+      startContent.includes("eslint");
+    )};
+;
   isComponentConflict(startContent, endContent) {}
-
-      startContent.includes("className");"
-  isImportConflict(startContent, endContent) {}"
-  return startContent.includes("import ") || startContent.includes("export ")};"
+return (;);
+      startContent.includes("React") ||;
+      startContent.includes("useState") ||;
+      startContent.includes("useEffect") ||;
+      startContent.includes("className");
+    )};
+;
+  isImportConflict(startContent, endContent) {}
+  return startContent.includes("import ") || startContent.includes("export ")};
+;
   isStyleConflict(startContent, endContent) {}
-
-      startContent.includes("tailwind");"
+return (;);
+      startContent.includes("className") ||;
+      startContent.includes("style=") ||;
+      startContent.includes("css") ||;
+      startContent.includes("tailwind");
+    )};
+;
   canAutoResolve(markers) {}
   // Can auto-resolve package.json, lock files, and some config conflicts;"
     const autoResolvableTypes = ["package-json", "lock-file", "config-file"];"
@@ -194,7 +208,9 @@ class $1 {}
   merged.devDependencies = {}
   ...merged.devDependencies,
           ...endJson.devDependencies};
-      return content.replace(;)
+      };
+;
+return content.replace(;);
         this.getConflictRange(content, marker),
 
       return content};
@@ -206,8 +222,12 @@ class $1 {}
 
     // Simple "strategy": take the section with more configuration options;"
     if (startSection.length > endSection.length) {}
+return content.replace(;);
+        this.getConflictRange(content, marker),
         startSection;
       )} else {}
+return content.replace(;);
+        this.getConflictRange(content, marker),
         endSection;
   getConflictSection(content, marker, side) {}"
 
@@ -224,10 +244,27 @@ class $1 {}
           "autoResolvable": conflicts.filter(c => c.resolvable).length,
           "manualReview": conflicts.filter(c => !c.resolvable).length},
         "conflicts": conflicts,
-        "recommendations": this.generateOverallRecommendations(conflicts)};"
-      const reportPath = path.join(;)"
-        this.projectRoot,conflict-resolution-report.json";"
-
+        "recommendations": this.generateOverallRecommendations(conflicts)};
+const reportPath = path.join(;);
+        this.projectRoot,conflict-resolution-report.json";
+  async generateConflictReport(conflicts) {}
+  this.log("Generating conflict resolution report...");
+    try {}
+  const report = {}
+  "timestamp": new Date().toISOString(),
+        "summary": {}
+  totalConflicts: conflicts.length,
+          "autoResolvable": conflicts.filter(c => c.resolvable).length,
+          "manualReview": conflicts.filter(c => !c.resolvable).length},
+        "conflicts": conflicts,
+        "recommendations": this.generateOverallRecommendations(conflicts)};
+;
+const reportPath = path.join(;);
+        this.projectRoot,conflict-resolution-report.json";
+      );
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+this.log(`Conflict resolution report saved to ${reportPath}`);
+      return report} catch (error) {  this.log(`Failed to generate "report": ${error.message  }`, "ERROR");
       throw error};
   generateOverallRecommendations(conflicts) {}
   const recommendations = [];
@@ -284,58 +321,38 @@ class $1 {}
       ); // Every 30 minutes;"
       this.log("Intelligent conflict resolver started successfully");"
       // Keep the process running;
-
+      setInterval(() => {}
+  this.log("Conflict resolver heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start conflict "resolver": ${error.message  }`, "ERROR");
+      throw error};
+  };
+};
+;
 // Main execution;
 if (require.main === module) {}
   const resolver = new IntelligentConflictResolver();
-  // Handle graceful shutdown;"
+  // Handle graceful shutdown;
   process.on("SIGINT", () => {}
-  resolver.log("Shutting down gracefully...");"
+  resolver.log("Shutting down gracefully...");
     process.exit(0)}
-
+});
+  process.on("SIGTERM", () => {}
+  resolver.log("Shutting down gracefully...");
+    process.exit(0)}
+});
+  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
 // Main execution;
-  // Handle graceful shutdown;"
-
+if (require.main === module) {}
+  const resolver = new IntelligentConflictResolver();
+  // Handle graceful shutdown;
+  process.on("SIGINT", () => {}
+  resolver.log("Shutting down gracefully...");
+    process.exit(0)}
+});
+  process.on("SIGTERM", () => {}
+  resolver.log("Shutting down gracefully...");
+    process.exit(0)}
+});
+  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
     process.exit(1)})};
-<<<<<<< HEAD
-module.exports = IntelligentConflictResolver;
-=======
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-=======
 module.exports = IntelligentConflictResolver;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-module.exports = IntelligentConflictResolver;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = IntelligentConflictResolver;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
-module.exports = IntelligentConflictResolver;
-
-module.exports = IntelligentConflictResolver;
-module.exports = IntelligentConflictResolver;
-module.exports = IntelligentConflictResolver;
-
-<<<<<<< HEAD
-module.exports = IntelligentConflictResolver;
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

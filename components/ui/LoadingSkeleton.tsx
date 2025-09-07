@@ -1,9 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-interface SkeletonProps {
-  className?: string,
-  height?: string,
-  width?: string,
+
+
+import React from 'react';'
+import { motion } from 'framer-motion';'
   rounded?: string
 }
 

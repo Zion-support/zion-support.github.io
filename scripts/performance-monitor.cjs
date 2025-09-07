@@ -216,6 +216,37 @@ class PerformanceMonitor {
             });
           }
         }
+      });
+      
+      const sizeInMB = totalSize / (1024 * 1024);
+      console.log(`📦 Total bundle size: ${sizeInMB.toFixed(2)} MB`);
+      
+      return sizeInMB < 10; // Alert if over 10MB
+    }
+  },
+  {
+    name: 'Image optimization check',
+    check: () => {
+      const publicDir = 'public';
+      if (!fs.existsSync(publicDir)) return true;
+      
+      const files = fs.readdirSync(publicDir, { recursive: true });
+      const imageFiles = files.filter(file => 
+        /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
+      );
+      
+      console.log(`🖼️  Found ${imageFiles.length} image files`);
+      
+      // Check for unoptimized images
+      const largeImages = imageFiles.filter(file => {
+        const filePath = path.join(publicDir, file);
+        const stats = fs.statSync(filePath);
+return stats.size > 500000; // 500KB;
+      });
+      
+      if (largeImages.length > 0) {
+        console.log(`⚠️  Large images found: ${largeImages.join(', ')}`);
+        return false;
       }
     };
 

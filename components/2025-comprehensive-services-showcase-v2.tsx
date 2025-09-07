@@ -3,20 +3,31 @@ const staggerContainer = {
   transition: {
   staggerChildren: 0.1 
 }
+
+const fadeInUp = {"initial": { "opacity": 0, "y": 20,;
+},"animate": { "opacity": 1, "y": 0
+},"transition": { "duration": 0.6 }
 }
+;
+  const staggerContainer = {"animate": {"transition": {"staggerChildren": 0.1;
+    }
+  }
 }
-const serviceCategories = [ {
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> <SEO title="2025 Comprehensive Services Showcase V2 | Zion Tech Group" description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions." keywords= {
-  ["micro SAAS", "IT infrastructure", "AI services", "industry solutions", "emerging technology", "Zion Tech Group"] 
-}/> {
-  /* Hero Section */ 
-}<section className="relative py-20 px-4 overflow-hidden"> <div className="max-w-7xl mx-auto text-center"> <motion.h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6" initial= {
-  {
-  opacity: 0, y: 30 
+
+export default function ComprehensiveServicesShowcase2025V2() {const allNewServices = [
+  ...advancedMicroSaasExpansion2025V2,...advancedITServices2025,...advancedAIServices2025
+];
+
+
 }
-}animate= {
-  {
-  opacity: 1, y: 0 
+
+
+const serviceCategories = [;
+  {"id": 'micro-saas',"name": 'Innovative Micro SAAS',"icon": <Smartphone className="w-8 h-8" />,"color": 'from-blue-500 to-cyan-500',"services": advancedMicroSaasExpansion2025V2,"description": 'Cutting-edge micro SAAS solutions for modern businesses';'
+    },{"id": 'it-infrastructure',"name": 'IT Infrastructure Services',"icon": <Cloud className="w-8 h-8" />,"color": 'from-purple-500 to-pink-500',"services": advancedITServices2025,"description": 'Advanced IT infrastructure and security solutions';'
+    },{"id": 'ai-services',"name": 'AI & Machine Learning',"icon": <Brain className="w-8 h-8" />,"color": 'from-green-500 to-emerald-500',"services": advancedAIServices2025,"description": 'Intelligent AI solutions for business transformation';'
+    },{"id": 'industry-solutions',"name": 'Industry Solutions',"icon": <Building className="w-8 h-8" />,"color": 'from-orange-500 to-red-500',"services": advancedITServices2025,"description": 'Specialized solutions for specific industries';'
+    },{"id": 'emerging-tech',"name": 'Emerging Technology',"icon": <Zap className="w-8 h-8" />,"color": 'from-indigo-500 to-purple-500',"services": advancedAIServices2025,"description": 'Breakthrough technologies of the future';'
 }
 }transition= {
   {

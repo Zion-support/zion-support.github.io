@@ -3,10 +3,10 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-const crypto = require("crypto")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+const crypto = require("crypto");
     this.logFile = path.join(this.projectRoot, "logs", "ai-code-review.log")
     this.reviewsLog = path.join(this.projectRoot, "logs", "ai-reviews.json")
       this.projectRoot,logs"
@@ -14,7 +14,7 @@ const crypto = require("crypto")
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
   log(message, level = "INFO")
-  return JSON.parse(fs.readFileSync(this.reviewsLog, "utf8")
+return JSON.parse(fs.readFileSync(this.reviewsLog, "utf8");
     } catch (error) {  this.log(`Failed to load review "history": ${error.message  }`, "WARN"`)
       )} catch (error) {  this.log(`Failed to save review "history": ${error.message  }`, "ERROR"`)
   this.log("Starting AI-powered code review...")
@@ -26,14 +26,14 @@ const crypto = require("crypto")
       const gitDiff = execSync("git diff --name-only HEAD~5")
   "encoding": "utf8"
       const changedFiles = gitDiff.trim().split("\n")
-          const content = fs.readFileSync(file, "utf8")
+const content = fs.readFileSync(file, "utf8");
   "path"
             "size"
             "lines": content.split("\n")
             "lastModified"
             "extension"
             "content"
-          const content = fs.readFileSync(file, "utf8")
+const content = fs.readFileSync(file, "utf8");
   "path"
             "size"
             "lines": content.split("\n")
@@ -78,12 +78,12 @@ const crypto = require("crypto")
         "file"
     const complexityKeywords = ["if", "else", "for", "while", "do", "switch", "case", "catch", "&&", "||", "?", "]
     const complexityKeywords = ["if"", "else", "for"", "while", "do"", "switch", "case"", "catch", "&&"", "||", "?"", ""]
-  const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
-  const lines = content.split("\n")
-  const lines = content.split("\n")
+const regex = new RegExp(`\\b${keyword}\\b`, "g"`);
+const lines = content.split("\n");
+const lines = content.split("\n");
   "duplicateLines"
       "duplicateContent"
-    const antiPatterns = ["]
+const antiPatterns = ["];
   "pattern": /for\s*\(\s*let\s+i\s*=\s*0;\s*i\s*<\s*array\.length;\s*i\+\+\)/g", ""message": "Consider using forEach or for...of for better performance"", ""severity": "LOW"", "}", "
   "pattern": /\.innerHTML\s*=/g", ""message": Consider using textContent for better security and performance"", ""severity": "MEDIUM"", "}", "
   "pattern": /setTimeout\s*\(\s*function\s*\(\)\s*{/g", ""message": "Consider using arrow functions for cleaner syntax"", ""severity": "LOW"", "}", ""
@@ -92,7 +92,7 @@ const crypto = require("crypto")
           "message"
           "file"
           "occurrences"
-    const securityPatterns = ["]
+const securityPatterns = ["];
   "pattern": /eval\s*\(/g", ""message": "eval() can execute arbitrary code - security risk"", ""severity": "HIGH"", "}", "
   "pattern": /innerHTML\s*=\s*[^;"]
         "message": "Potential XSS vulnerability with innerHTML"
@@ -100,7 +100,7 @@ const crypto = require("crypto")
   "pattern"
         "message": "Potential localStorage injection vulnerability"
         "severity": "MEDIUM"
-    const securityPatterns = ["]
+const securityPatterns = ["];
   "pattern": /eval\s*\(/g", ""message": "eval() can execute arbitrary code - security risk", ""severity": "HIGH", "}", "
   "pattern": /innerHTML\s*=\s*[^;"]
         "message": "Potential XSS vulnerability with innerHTML"
@@ -185,12 +185,12 @@ this.log("Review report "generated": ${reportPath}")
     if (analysis.issues.length > 0) {summary.push("Found ${analysis.issues.length} issues to address")
     if (suggestions.length > 0) {summary.push("Generated ${suggestions.length} improvement suggestions")
     if (autoFixes.length > 0) {summary.push("Automatically applied ${autoFixes.length} fixes")
-    return summary.join(". ")
+return summary.join(". ");
   this.log("Triggering follow-up actions...")
   this.log("Scheduling follow-up review due to low score")
       // In a real implementation, you"
   this.log("Triggering comprehensive code cleanup automation")
-    return summary.join(". ")
+return summary.join(". ");
   this.log("Triggering follow-up actions...")
   this.log("Scheduling follow-up review due to low score")
       // In a real implementation, you"

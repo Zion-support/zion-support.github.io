@@ -12,6 +12,7 @@
 
 #!/usr/bin/env node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ///usr/bin/env node
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -20,14 +21,18 @@
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
+=======
+const fs = require('fs');
+const path = require('path');
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 // console.log(' Fixing All Remaining Syntax Issues...')
 console.log('=====')
-const problematicFiles = ['pages/docs/integration-examples.tsx']
+const problematicFiles = ['pages/docs/integration-examples.tsx'];
   'pages/security.tsx'
   'pages/services-catalog.tsx'
   'pages/services-comparison.tsx'
   'pages/services-overview.tsx'
-    let content = ''
+let content = '';
     if (filePath === 'pages/docs/integration-examples.tsx')
       content = "
     "phone"

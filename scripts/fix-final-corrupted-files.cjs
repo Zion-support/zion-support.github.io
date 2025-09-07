@@ -12,6 +12,7 @@
 
 #!/usr/bin/env node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ///usr/bin/env node
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -20,14 +21,18 @@
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
+=======
+const fs = require('fs');
+const path = require('path');
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 // console.log(' Fixing Final Corrupted Files...')
 console.log('')
-const corruptedFiles = ['pages/docs/integration-examples.tsx']
+const corruptedFiles = ['pages/docs/integration-examples.tsx'];
   'pages/marketplace.tsx'
   'pages/privacy.tsx'
   'pages/request-quote.tsx'
   'pages/schedule-demo.tsx'
-    let content = ''
+let content = '';
     if (filePath === 'pages/docs/integration-examples.tsx')
       content = "
     "name"
@@ -36,8 +41,12 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
     "phone"
     "service"
     "message"
+<<<<<<< HEAD
   const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"]
 <<<<<<< HEAD
+=======
+const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"];
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
         <meta name="description" content="
 
 

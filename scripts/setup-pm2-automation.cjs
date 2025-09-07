@@ -3,9 +3,9 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
     this.ecosystemPath = path.resolve(this.projectRoot, 'ecosystem.config.cjs')
 // console.log(' Setting up PM2 Error Fixing Automation System...')
       console.log(' PM2 Error Fixing Automation System setup completed!')

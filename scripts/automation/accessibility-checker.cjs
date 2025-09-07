@@ -27,7 +27,7 @@ class AccessibilityChecker {}
     ) {}"
         const timestamp = new Date().toISOString(})
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
 <<<<<<< HEAD
 =======
@@ -114,7 +114,7 @@ class AccessibilityChecker {}
 
             // Check for heading hierarchy;
             if (line.match(/<h[1-6]/)) {}
-                const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {}]
+const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {}];
      {}
 <<<<<<< HEAD
         
@@ -190,7 +190,7 @@ class AccessibilityChecker {}
         if () {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
         // Accessibility utilities;
-        const accessibilityUtils = "/**
+const accessibilityUtils = "/**;
  * Accessibility Utilities;
  * Helper functions for accessibility compliance;
  */
@@ -211,7 +211,7 @@ export const accessibility = {}
     ) {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
         // Accessibility utilities;
-        const accessibilityUtils = "/**
+const accessibilityUtils = "/**;
  * Accessibility Utilities;
  * Helper functions for accessibility compliance;
  */
@@ -219,14 +219,13 @@ export const accessibility = {}
 export const accessibility = {}
   // Generate unique IDs for form elements;
   "generateId": (prefix = 'element') => {}
-    return \"\${prefi}x}-\${Math.random().toString(36).substr(2, 9)}\"},
-<<<<<<< HEAD
+return \"\${prefi}x}-\${Math.random().toString(36).substr(2, 9)}\"},;
   
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // Check if element is focusable;
   "isFocusable": (element) => {}
-    const focusableSelectors = ['a[href]',
+const focusableSelectors = ['a[href]',;
       '"button": not([disabled])',
       '"input": not([disabled])',
       '"select": not([disabled])',
@@ -244,7 +243,7 @@ export const accessibility = {}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // Trap focus within an element;
   "trapFocus": (element) => {}
-    const focusableElements = element.querySelectorAll()
+const focusableElements = element.querySelectorAll();
       'a[href], "button": not([disabled]), "input": not([disabled]), "select": not([disabled]), "textarea": not([disabled]), [tabindex]:not([tabindex="-1"])"
    ;);
 <<<<<<< HEAD
@@ -390,7 +389,7 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
     if ( {})
       // Run accessibility checks in development;
       const checkAccessibility = () => {}
-        const "newIssues": string[] = [) {}]
+const "newIssues": string[] = [) {}];
      {}
       // Run accessibility checks in development;
       const checkAccessibility = () => {}
@@ -442,7 +441,7 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
   if ( {})
     return () {}
      {}
-    return (};)
+return (};);
       <div>
         <div style={{}
           "position": 'fixed',
@@ -511,7 +510,7 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         return report};
     generateAccessibilityRecommendations(issues) {}
-        const recommendations = ['Use semantic HTML elements (header, nav, main, section, article, aside, footer)',]
+const recommendations = ['Use semantic HTML elements (header, nav, main, section, article, aside, footer)',];
             'Ensure all images have descriptive alt text',
             'Provide labels for all form inputs',
             'Use proper heading hierarchy (H1, H2, H3, etc.)',

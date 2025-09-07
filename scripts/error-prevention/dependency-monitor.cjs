@@ -79,7 +79,7 @@ class DependencyMonitor {}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       
       // Check for outdated packages;
-      const child = spawn('npm', ['outdated'], {})
+const child = spawn('npm', ['outdated'], {});
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();"
       };);
@@ -212,7 +212,7 @@ class DependencyMonitor {}
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       
-      const child = spawn('npm', ['ls'], {})
+const child = spawn('npm', ['ls'], {});
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);

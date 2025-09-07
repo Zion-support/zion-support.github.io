@@ -102,18 +102,30 @@ class BuildHealthMonitor {}
 
           "details": error.message};"
       // Check bundle size;
-
-          "encoding": "utf8"}"
-        report.bundleSize = {}"
-  "details": bundleAnalysis};"
-
+      try {}
+const bundleAnalysis = execSync("npm run analyze", {});
+  "stdio": "pipe",
+          "encoding": "utf8"}
+});
+        report.bundleSize = {}
+  "details": bundleAnalysis};
+      } catch (error) {}
+  report.bundleSize = {}
+  "status": "error",
+          "details": error.message};
+      };
+;
       // Generate recommendations;
       report.recommendations = this.generateRecommendations(report);
       // Save report;
       const timestamp = Date.now();
-      const reportPath = path.join(;)"`;
-        this.projectRoot,error-reports", `build-health-report-${timestamp}.json`} catch (error) {`}"
-
+const reportPath = path.join(;);
+        this.projectRoot,error-reports", `build-health-report-${timestamp}.json`} catch (error) {`}
+  report.bundleSize = {}
+  "status": "error",
+          "details": error.message};
+      };
+;
       // Generate recommendations;
 <<<<<<< HEAD
 =======
@@ -121,7 +133,9 @@ class BuildHealthMonitor {}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
       // Save report;
-        this.projectRoot,error-reports", `build-health-report-${timestamp}.json`;`"
+      const timestamp = Date.now();
+const reportPath = path.join(;);
+        this.projectRoot,error-reports", `build-health-report-${timestamp}.json`;`
       );
 <<<<<<< HEAD
 

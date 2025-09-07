@@ -3,9 +3,9 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
   "performance"
       "memory"
       "security"
@@ -26,13 +26,13 @@ const { execSync } = require("child_process")
   console.error(" AI Code Optimization "failed": ")
   console.error(" AI Code Optimization "failed": ")
   console.log(" Analyzing codebase for optimization opportunities...")
-    const srcDir = path.join(process.cwd(), "
+const srcDir = path.join(process.cwd(), ";
   console.log(" Analyzing codebase for optimization opportunities...")
-    const srcDir = path.join(process.cwd(), "src"
-  const items = await fs.readdir(dir, { "withFileTypes"})
+const srcDir = path.join(process.cwd(), "src";
+const items = await fs.readdir(dir, { "withFileTypes"});
     } catch (error) {  console.log(⚠  Could not read directory ${dir  }: ${error.message}```)
-    return [".js", ".jsx", ".ts", ".tsx", ".vue"]
-  const content = await fs.readFile(filePath, "utf8")
+return [".js", ".jsx", ".ts", ".tsx", ".vue"];
+const content = await fs.readFile(filePath, "utf8");
       this.optimizations.accessibility.push(...analysis.accessibility)} catch (error) {  console.log("⚠  Could not analyze file ${filePath  }: ${error.message}")
   "performance"
       "memory"
@@ -88,7 +88,7 @@ const { execSync } = require("child_process")
         "priority": "medium"
 // console.log("" Identifying optimization opportunities...")
   console.log("" Identifying optimization opportunities...")
-    return analysis;")}"
+return analysis;")}";
 "
   async identifyOptimizationOpportunities() {"}
 // console.log(" Identifying optimization opportunities...")
@@ -103,7 +103,7 @@ console.log(` Found ${totalOptimizations} optimization "opportunities"`)
   if (optimization.priority === "high")
   if (optimization.priority === "high")
         appliedCount++;")}")}"
-      const content = await fs.readFile(filePath, "utf8")
+const content = await fs.readFile(filePath, "utf8");
         this.backupDir,${path.basename(filePath)}.backup.${Date.now()}"
   case "performance"
         case "memory"
@@ -141,9 +141,9 @@ console.log(` Found ${totalOptimizations} optimization "opportunities"`)
   console.log("" Measuring improvements...")
       this.analysisResults.securityFixes = this.optimizations.security.length} catch (error) {  console.log("⚠  Could not measure "improvements"})
   execSync("npm run build", { "stdio": "pipe"})
-  const { execSync } = require("child_process")
-      const output = execSync("ps aux | grep node", { "encoding": "utf8"})
-      const lines = output.split("\n")
+const { execSync } = require("child_process");
+const output = execSync("ps aux | grep node", { "encoding": "utf8"});
+const lines = output.split("\n");
   "timestamp"
       "summary"
         "optimizationsApplied"

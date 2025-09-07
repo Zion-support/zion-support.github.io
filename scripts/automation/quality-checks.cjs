@@ -3,13 +3,13 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log("" Starting continuous quality checks automation...")
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log("" Starting continuous quality checks automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Running ESLint..."`)
@@ -56,7 +56,7 @@ console.log(" Checking for duplicate code...")
   "timestamp"
       "summary": "Quality checks completed"
       "status": "completed"
-    const reportPath = path.join(process.cwd(), "quality-report.json"
+const reportPath = path.join(process.cwd(), "quality-report.json";
     console.log(" Continuous quality checks completed successfully")
   console.error(" Continuous quality checks "failed": ")
   "
@@ -66,7 +66,7 @@ process.on(")
   "timestamp"
       "summary": "Quality checks completed"
       "status": "completed"
-    const reportPath = path.join(process.cwd(), "quality-report.json"
+const reportPath = path.join(process.cwd(), "quality-report.json";
     console.log(" Continuous quality checks completed successfully")
   console.error(" Continuous quality checks "failed": ")
     // Don"

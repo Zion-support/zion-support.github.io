@@ -4,34 +4,8 @@ import Link from 'next/link';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Contact', href: '/contact' },
-    ],
-    services: [
-      { name: 'AI Solutions', href: '/services/ai-solutions' },
-      { name: 'Blockchain', href: '/services/blockchain' },
-      { name: 'Micro SaaS', href: '/services/micro-saas' },
-      { name: 'Research', href: '/research' },
-    ],
-    resources: [
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api' },
-      { name: 'Support', href: '/support' },
-      { name: 'Blog', href: '/blog' },
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-    ],
-  };
-
   return (
-    <footer className="bg-black/90 backdrop-blur-xl border-t border-white/20">
+    <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}

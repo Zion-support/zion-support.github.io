@@ -3,9 +3,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader(\"Allow\", \"POST\");}"
     return res.status(405).json({ error: \"Method Not Allowed\" })
 
-}
-}"
-      return res.status (400).json ({ error: "Missing required fields" });
+
+export default async function handler() {
+  }
+  if (req.method !== "POST") {"
     }
     try {}
       const { partner, api_key } = await create_partner ({}
@@ -39,8 +40,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
   if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {
-    return res.status(400).json({ error: "Missing required fields" })
-  }
+}
+return res.status(400).json({ "error": "Missing required fields" });"
+ 
+}
   try {
 
 const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};

@@ -1,7 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { authenticateRequest  } from '@/utils/auth';
-import { authenticateRequest } from '@/utils/auth';
-import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
+import type { NextApiRequest, NextApiResponse } from 'next';'
+
+
+import { authenticateRequest  } from '@/utils/auth';'
+import { readJsonFile, updateJsonFile } from '@/utils/fileDb';'
+
 interface ReportingData {
   byTenant: Record<string, {
     funnel: { stage: string, count: number}[],
@@ -15,8 +17,11 @@ interface ReportingData {
   byTenant: Record<string, {}
     funnel: { stage: string, count: number,}
 }[];
-    timeToHireDays: number;
+    "timeToHireDays": number;
     costPerHireUsd?: number;
+    "updatedAt": string
+  }>
+}
 
 const FILE = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -24,7 +29,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       funnel: { stage: string; count: number }[];
       timeToHireDays: number;
       costPerHireUsd?: number;
-      updated_at: string;
+      "updated_at": string;
     }
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;
@@ -35,7 +40,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   >;
 
-origin/cursor/automate-test-improve-and-merge-code-2533
+const FILE = 'reporting.json';'
 
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;
@@ -78,16 +83,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const updated = updateJsonFile<ReportingData>(
       FILE
 const entry = data.byTenant[tenantId] || {
-      funnel: [],
-      timeToHireDays: 0,
-      updatedAt: new Date().toISOString(),
+      }
+      "funnel": [],
+      "timeToHireDays": 0,
+      "updatedAt": new Date().toISOString()
     };
     return res.status(200).json(entry);
   }
 
-  if (method === 'POST') {
-    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-const updated = updateJsonFile<ReportingData>(
+  if (method = == 'POST') {'
+   ;
+  }
+  const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
+
+const updated = updateJsonFile<ReportingData>(;
       FILE,
 origin/cursor/automate-test-improve-and-merge-code-2533
       curr => {
@@ -112,10 +121,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     );
     return res && res.status(200).json(updated && updated.byTenant[tenantId]);
   }
-    const data = readJsonFile<ReportingData>(FILE, FALLBACK),
-    const entry = data.byTenant[tenantId] || { funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() },
-    return res.status(200).json(entry)
+
+
+return res.status(405).json({ "error": 'Method not allowed',;'
+});
+return res.status(200).json(updated.byTenant[tenantId]);
   }
+return res.status(405).json({ "error": 'Method not allowed',;'
+});
+}
 
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {},

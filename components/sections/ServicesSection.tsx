@@ -1,21 +1,6 @@
-'use client';
 
-import React from 'react',
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Brain;
-  Cloud;
-  RefreshCw;
-  Wifi;
-  Shield;
-  BarChart3;
-  ArrowRight;
-  Zap
- } from 'lucide-react';
-const ServicesSection: React.FC;
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+
+'use client';'
 import {
   Cloud
   RefreshCw
@@ -90,7 +75,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Zap
   ArrowRight,
   Zap,;
-} from 'lucide-react';
+} from 'lucide-react';'
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 const ServicesSection: React.FC = () => {
@@ -108,7 +93,7 @@ const ServicesSection: React.FC = () => {
       description: 'Advanced analytics and business intelligence solutions.',
       features: [;'
         'Big Data Processing','
-        'Real - time Dashboards','
+        'Real-time Dashboards','
         'Predictive Modeling','
         'Data Visualization',
       ],'
@@ -415,15 +400,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden' />;
       {/* Background Elements */}
-
-      <div className = 'absolute inset-0'    />
-        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]'    />
-        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]'    />
-      </div>
-      <div className='relative container mx-auto px-4'>        {/* Section Header */}  }
-
-const card_variants = {hidden: { opacity: 0, coordinate_y: 20}
-},visible: { opacity: 1, coordinate_y: 0}
+    "hidden": { "opacity": 0, "y": 20
+},"visible": { "opacity": 1, "y": 0
 }}
 
   const cardVariants = {hidden: { opacity: 0, y: 20}
@@ -693,8 +671,10 @@ const ServicesSection: React.FC = () => {;
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
 
-className='text-center mb-16'
+          viewport={{ "once": true 
+}
 
+className='text-center mb-16''
         >
           <motion.div
           viewport={{ once: true }}className='text-center mb-16';
@@ -748,6 +728,7 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
               Solutions
             </span>
           </h2>
+          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>'
 
             efficiency, and growth for businesses across all industries.          </p>
             We deliver cutting-edge technology solutions that drive innovation,
@@ -800,7 +781,6 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
             We deliver cutting-edge technology solutions that drive innovation,
             efficiency, and growth for businesses across all industries.
           </p>
-origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
             <Zap className='w-5 h-5 text-blue-400' />;
             <span className='text-blue-400 font-medium'>Our Services</span>;
@@ -848,96 +828,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >
           {services.map((service, index) => (
             <motion.div
-              key={service.title}
+}
+key={service.title}
               variants={cardVariants}
               whileHover={{ y: -10 }}
               className="group relative"
             >
-              <div className="relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden">
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-                
-                {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-
-                {/* Content */}
-initial='hidden';
-          whileInView='visible';
-          viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          initial="hidden";
-          whileInView="visible";
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16";
-          {services && services.map((service, index) => (<motion&& motion.div;
-              key={service && service.title}
-              variants={cardVariants}
-              whileHover={{ y: -10 }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16';
-        >;
-          {services.map((service, index) => (<motion.div;
-              key={service.title}
-              variants={cardVariants}
-              whileHover={{ y: -10 }}
-className='group relative';
-            >;
-              <div className='relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden'>;
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          initial="hidden";
-          whileInView="visible";
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16";
-          {services && services.map((service, index) => (;
-            <motion&& motion.div
-              key={service && service.title}
-              variants={cardVariants}
-              whileHover={{ y: -10 }}
+              <div className='relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 "hover":border-gray-700 transition-all duration-300 overflow-hidden'>'
                 {/* Background Gradient */}
                 <div
                 {/* Content */}
-                {/* Background Gradient */}
-                <div;
-                {/* Content */}{/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />;
-                {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
-                  <service.icon className="w-8 h-8 text-white" />;
-                </div>;
+
+                <h3 className='text-2xl font-bold text-white mb-4 group-"hover":text-blue-400 transition-colors duration-300'>'
+
+                  {service.titl
+}
                 </h3>;
-                <p className='text - gray - 300 mb - 6 leading - relaxed'>                  {service.description}
-                </p>;
-                {/* Features */}            >;
-              <div className="relative h - full bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 800 rounded - 2xl p - 8 hover:border - gray - 700 transition - all duration - 300 overflow - hidden">;
-                {/* Background Gradient */}
-                <div className={`absolute inset - 0 bg - gradient - to - br ${service.color} opacity - 0 group - hover:opacity - 5 transition - opacity duration - 300`} />;
-                {/* Icon */}
-                <div className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}>;
-                  <service.icon className="w - 8 h - 8 text - white" />;
-                </div>;
-                {/* Content */}
-                <h3 className="text - 2xl font - bold text - white mb - 4 group - hover:text - blue - 400 transition - colors duration - 300">;
-                  {service.title}
-                  <span className="font-medium">Learn More</span>;
-                  <ArrowRight className="w-4 h-4" />;
-                </Link>;
-                </ul>;{/* CTA */}
-                <Link;
-                  href={service && service.href}
-                  className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1'>;
-                  <span className='font-medium'>Learn More</span>;
-                  <ArrowRight className='w-4 h-4' />;
-                </Link>;<h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>;
-                  {service.title}
-                </h3>;
-                <p className='text-gray-300 mb-6 leading-relaxed'>;
+                <p className='text-gray-300 mb-6 leading-relaxed'>;'
                   {service.description}
                 </p>;
                 {/* Features */}
-<ul className='space-y-2 mb-8'>;
-                  {service.features.map(feature => (<li;
+<ul className='space-y-2 mb-8'>;'
+                  {service.features.map(feature => { return (<li; }
+                      }
                       key={feature}
-                      className='flex items-center space-x-3 text-gray-400';
-                    >;
-                      <div className='w-2 h-2 bg-blue-400 rounded-full' />;
-                      <span className='text-sm'>{feature}</span>;
+                      className='flex items-center space-x-3 text-gray-400'>'
+
+                      <div className='w-2 h-2 bg-blue-400 rounded-full' />;'
+                      <span className='text-sm'>{feature}</span>;'
                     </li>;
                   ))}
                 </ul>;
@@ -974,10 +892,11 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
         </motion.div>
         {/* Bottom CTA */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-          viewport={{ once: true }}
+          initial={{ "opacity": 0, "y": 30 
+}
+          whileInView={{ "opacity": 1, "y": 0 
+}
+          transition={{ "duration": 0 && 0.8, "delay": 0 && 0.4 }}
 
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
                   {service.title}
@@ -987,46 +906,15 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
                   {service.description}
                 </p>
 
-                {/* Features */}
-                <ul className="space-y-2 mb-8">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center space-x-3 text-gray-400">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full" />
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA */}
-                <Link
-                  href={service.href}
-                  className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1"
-                >
-                  <span className="font-medium">Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-
-                {/* Hover Effect */}
-                <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true}}
-          className="text-center"
+className='text-center''
         >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>'
+            <h3 className='text-2xl font-bold text-white mb-4'>'
               Ready to Transform Your Business?
             </h3>
-            <p className="text-gray-300 mb-6">
-              Let&apos,s discuss how our technology solutions can drive your success and accelerate your growth.
+            <p className='text-gray-300 mb-6'>'
+              Let&apos;s discuss how our technology solutions can drive your,
+success and accelerate your growth.
             </p>
             <Link
           viewport={{ once: true }}className='text-center';
@@ -1182,13 +1070,13 @@ export default ServicesSection;
               className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1'
             >
               <span>Get Started Today</span>
-              <ArrowRight className='w-5 h-5' />
+              <ArrowRight className='w-5 h-5' />'
             </Link>
           </div>
         </motion.div>
       </div>
     </section>
-);
+)
 };
 export default ServicesSection;
 origin/cursor/automate-test-improve-and-merge-code-2533

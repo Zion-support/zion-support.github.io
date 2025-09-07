@@ -78,10 +78,12 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
             transform: translateY(0px) rotate(0deg);
           }
           50% {;
-            transform: translateY(-20px) rotate(10deg);
+            }
+            "transform": translateY(-20px) rotate(10deg);
           }
           100% {;
-            transform: translateY(0px) rotate(0deg);
+            }
+            "transform": translateY(0px) rotate(0deg);
           }
         }
       `}</style>;

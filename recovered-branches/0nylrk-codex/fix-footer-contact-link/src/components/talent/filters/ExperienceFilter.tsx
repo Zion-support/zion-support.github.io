@@ -1,4 +1,5 @@
-  const handleChange = (values: number[]) => {
+const handleChange = ("values": number[]) => {
+    }
     setExperienceRange([values[0], values[1]])
 };
 import { ChevronDown, ChevronUp } from "lucide-react",
@@ -103,16 +104,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       >
         <span>Years of Experience</span>
         {expanded ? (
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />"
         ) : (
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />"
         )}
       </button>
-
->
       {expanded && (
-        <div className="mt-6">
-          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
+        <div className="mt-6">"
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">"
             <span>{experienceRange[0]} years</span>
             <span>{experienceRange[1]} years</span>
           </div>
@@ -183,14 +182,14 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
         className="flex w-full items-center justify-between text-white font-medium">;
 =>        <span>Years of Experience</span>;
         {expanded ? (;
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
         ) : (;
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;"
         )}
       </button>;
       {expanded && (;
-        <div className="mt-6">;
-          <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
+        <div className="mt-6">;"
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">;"
             <span>{experienceRange[0]} years</span>;
             <span>{experienceRange[1]} years</span>;
           <Slider;
@@ -214,27 +213,36 @@ aria-label='Experience range'
             min={0}
             max={15}
             step={1}
-import { ChevronDown, ChevronUp  } from './lucide-react';
-import { Slider  } from '@/components / ui / slider';
-import { ExperienceFilterProps  } from '@/types / filters';
+            onValueChange={handleChange}
+            className="mt-6"" />;
+        </div>;
+      )}
+    </div>
+  );
+}
+import { ChevronDown, ChevronUp  } from './lucide-react';'
+import { Slider  } from '@/components / ui / slider';'
+import { ExperienceFilterProps  } from '@/types / filters';'
 export /**
  * ExperienceFilter - Function description
  */
 function ExperienceFilter() {
-  const handle_change = (values: number[]) =>: any {
+  }
+  const handle_change = ("values": number[]) =>: any {
+    }
     setExperienceRange ([values[0], values[1]]);
   }
 ;
-  return (
-    <div className="mb - 6 border - b border - zion - blue - light pb-6">;
+return (;
+    <div className="mb - 6 border - b border - zion - blue - light pb-6">;"
       <button;
         on_click={toggle_section}
-        className="flex w - full items - center justify - between text - white font-medium";
+        className="flex w - full items - center justify - between text - white font-medium";"
       >;
         <span > Years of Experience</span>;
         {expanded ? (
-          <ChevronUp className="h - 4 w - 4 text - zion - slate-light" />) : (
-          <ChevronDown className="h - 4 w - 4 text - zion - slate-light" />)}
+          <ChevronUp className="h - 4 w - 4 text - zion - slate-light" />) : ("
+          <ChevronDown className="h - 4 w - 4 text - zion - slate-light" />)}"
       </button>;
       {expanded && (
         <div className="mt-6">;
@@ -284,8 +292,7 @@ className='mt-6';
             max={15}
             step={1}
             onValueChange={handle_change}
-            className="mt-6";
-          />;
+            className="mt-6";" />;
         </div>)}
     </div>);
 }

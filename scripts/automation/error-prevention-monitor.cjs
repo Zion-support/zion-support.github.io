@@ -208,8 +208,8 @@ class ErrorPreventionMonitor {
     this.log('Checking for file size issues...', 'INFO');
 
     const largeFiles = [];
-    const maxSize = 1024 * 1024; // 1MB;
-  // TODO: Implement
+const maxSize = 1024 * 1024; // 1MB;
+    try {
       const files = this.getAllSourceFiles();
       for (const file of files) {
         const stats = fs.statSync(file);
@@ -324,7 +324,16 @@ class ErrorPreventionMonitor {
     return consoleStatements}
   findHardcodedValues() {
     const hardcodedValues = [];
-
+    const files = this.getAllSourceFiles();
+    for (const file of files) {
+      const content = fs.readFileSync(file, 'utf8');
+      const lines = content.split('\n');
+      for (let i = 0; i < lines.length; i++) {
+        // Look for hardcoded URLs, API keys, etc.
+const hardcodedPatterns = [/https?:\/\/[^\s'"]+/g,;
+          /api_key\s*[:=]\s*['"][^'"]+['"]/g,
+          /password\s*[:=]\s*['"][^'"]+['"]/g,
+          /secret\s*[:=]\s*['"][^'"]+['"]/g
         ];
         for (const pattern of hardcodedPatterns) {
           const matches = lines[i].match(pattern);
@@ -356,11 +365,17 @@ class ErrorPreventionMonitor {
       content += `## ${todo.file}:${todo.line}\n`;`;
       content += `${todo.comment}\n\n`}
     fs.writeFileSync(reviewFile, content);
-  // TODO: Implement
-
-  // TODO: Implement
-      // Run all prevention checks;
-      const [largeFiles,
+    return {
+      "type": 'todo-review-created',
+      "file": reviewFile,
+      "count": todos.length,
+      "action": 'review-file-created'
+    }}
+  async runPreventionCheck() {
+    this.log('Starting error prevention check...');
+    try {
+      // Run all prevention checks
+const [largeFiles,;
         circularDeps,
         unusedDeps,
         vulnerabilities,

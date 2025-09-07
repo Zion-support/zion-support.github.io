@@ -1,5 +1,18 @@
-const res = null;
-      setStatus('')
+
+
+      const res = null;
+      setStatus('')'
+    }
+
+const data = await res.json();
+      if (!res.ok) throw new Error(data?.error |'Deploy failed');'
+      setCid(data.cid);
+      setProvider(data.provider || '');'
+setStatus('Deployed successfully');'
+    } catch ("e": any) {
+      }
+      setError(e.message);
+      setStatus('');'
     }
   }
 
@@ -23,9 +36,9 @@ const res = null;
 <div className='min-h-screen p-8'>
       <Head>
         <title>Zion Offworld Deploy</title>
-      </Head>'
+      </Head>
       <h1 className='text-2xl font-bold mb-4'>Zion OS Offworld Deploy</h1>'
-      <p className='mb-6'>
+      <p className='mb-6'>'
         Export the site and pin it to IPFS for disconnected/offworld use.
       </p>
       <button'
@@ -67,11 +80,13 @@ export default function OffworldDeploy() {const [cid, setCid] = useState<string 
         onClick={handleDeploy}>;
         Deploy to IPFS;
       </button>;
-      {status && <p className='mt-4 text-green-600'>{status}</p>}
-      {error && <p className='mt-4 text-red-600'>{error}</p>}
-      {cid && (<div className='mt-6 space-y-2'>;
+      {status && <p className='mt-4 text-green-600'>{status}</p>}'
+      {error && <p className='mt-4 text-red-600'>{error}</p>}'
+      {cid && (<div className='mt-6 space-y-2'>;'
           <div>;
-            CID: <code className='break-all'>{cid}</code>;
+            }
+            "CID": <code className='break-all'>{ci,'
+}</code>;
           </div>;
           {provider && <div>Provider: {provider}</div>}<div className='text-sm text-gray-600'>;
             You can open via any IPFS gateway or offline node.;
@@ -164,7 +179,7 @@ function handle_deploy() {
             You can open via any IPFS gateway or offline node.
           </div>
         </div>
-      ,
+      
 }
     </div>
   );

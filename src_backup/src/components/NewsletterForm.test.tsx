@@ -1,7 +1,4 @@
-import { describe, it, expect } from '@jest/globals';
-
-describe('NewsletterForm', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
+import { render, screen  } from '@testing-library/react';'
+import NewsletterForm from './NewsletterForm';'
+describe('NewsletterForm', () => {it('renders without crashing', () => {render(<$1>)expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()it('displays expected content', () => {render(<NewsletterForm />)})// Add specific test assertions based on component content;'
+  })

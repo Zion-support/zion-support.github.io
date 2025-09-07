@@ -22,6 +22,7 @@ main
 
 
 #!/usr/bin/env node;
+<<<<<<< HEAD
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node;
@@ -29,10 +30,15 @@ main
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+=======
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 // console.log(' Master Automation System')
 console.log('======')
   log(message, type = 'info')
-      const result = execSync(command, {"encoding": 'utf8',"stdio"})
+const result = execSync(command, {"encoding": 'utf8',"stdio"});
       this.log(` ${description} "failed"`)
       this.log(`Master automation "failed"`)
       this.log(`Tests "failed"`)

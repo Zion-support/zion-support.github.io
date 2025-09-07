@@ -492,13 +492,10 @@ export const biotechAIServices: BiotechAIService[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
     }
-    realImplementation: true;
-    implementationDetails:;
-      'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.';
-    launchDate: '2024-03-10';
-    customers: 90;
-    rating: 4.9;
-    reviews: 45;
+    "mobile": string;
+    "email": string;
+    "address": string;
+    "website": string;
   }
       'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.',launchDate: '2024-03-10',customers: 90,rating: 4.9,reviews: 45;
   }];      mobile: '+1 302 464 0950';
@@ -1400,9 +1397,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface BiotechAIService {;
 
   }
-
-];
-origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
 origin/cursor/expand-services-advertise-and-build-project-c28b
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1466,15 +1460,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 5.0;
     reviews: 60;
   }
-  {'
-    id: 'ai-genetic-engineering-suite''
-    name: 'AI Genetic Engineering Suite''
-    tagline: 'Revolutionary genetic engineering with AI precision''
-    price: '$4,999''
-    period: '/month'
-    description:'
-      'Advanced AI-powered genetic engineering platform that enables precise gene editing, synthetic biology, and genetic optimization. Create new organisms and optimize existing ones.'
-    features: ['
+  {
+    }
+    "id": 'ai-genetic-engineering-suite''
+    "name": 'AI Genetic Engineering Suite''
+    "tagline": 'Revolutionary genetic engineering with AI precision''
+    "price": '$4,999''
+    "period": '/month''
+    "description":
+      'Advanced AI-powered genetic engineering platform that enables precise gene editing, synthetic biology, and genetic optimization. Create new organisms and optimize existing ones.''
+    "features": [
       'AI gene editing algorithms''
       'Synthetic biology design''
       'CRISPR optimization''
@@ -1484,7 +1479,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Regulatory compliance''
       'Research collaboration''
       'Mobile app''
-      'API for lab integration'
+      'API for lab integration''
     ]
     popular: true
     icon: '🔬'
@@ -1507,7 +1502,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Research databases'
       'Regulatory platforms'
     ]
-    useCases: ['
+    "useCases": [
       'Gene editing''
       'Synthetic biology''
       'Genetic optimization''
@@ -1537,7 +1532,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Research platforms'
       'Analytical tools'
     ]
-    useCases: ['
+    "useCases": [
       'Therapeutic proteins''
       'Industrial enzymes''
       'Research tools''
@@ -1567,7 +1562,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Analytical tools'
       'Healthcare systems'
     ]
-    useCases: ['
+    "useCases": [
       'Trial optimization''
       'Patient recruitment''
       'Data analysis''
@@ -1597,7 +1592,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Analytical tools'
       'Data sources'
     ]
-    useCases: ['
+    "useCases": [
       'Disease diagnosis''
       'Treatment response''
       'Prognosis prediction''
@@ -1627,7 +1622,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Laboratory systems'
       'Clinical platforms'
     ]
-    useCases: ['
+    "useCases": [
       'Treatment optimization''
       'Drug selection''
       'Risk assessment''
@@ -1657,7 +1652,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Analytical tools'
       'Market data'
     ]
-    useCases: ['
+    "useCases": [
       'New indications''
       'Combination therapy''
       'Rare diseases''
@@ -1687,7 +1682,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Cloud platforms'
       'Data sources'
     ]
-    useCases: ['
+    "useCases": [
       'Genomic analysis''
       'Proteomic analysis''
       'Metabolomic analysis''
@@ -1717,7 +1712,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automation systems'
       'Monitoring tools'
     ]
-    useCases: ['
+    "useCases": [
       'Process optimization''
       'Yield improvement''
       'Quality control''
@@ -1745,11 +1740,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9
     reviews: 45
   }
-
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+];      "mobile": '+1 302 464 0950';'
+      "email": 'kleber@ziontechgroup.com';'
+      "address": '364 E Main St STE 1008 Middletown DE 19709''
+      "website": '"https"://ziontechgroup.com''
     }
     realImplementation: true
     implementationDetails:
@@ -1759,11 +1753,39 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9
     reviews: 45
   }
-      'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.',
-    launchDate: '2024-03-10',
-    customers: 90,
-    rating: 4.9,
-    reviews: 45,
+];
+  "id": string,;
+  "name": string,;
+  "tagline": string,;
+  "price": string,;
+  "period": string,;
+  "description": string,;
+  "features": string[],;
+  "popular": boolean,;
+  "icon": string,;
+  "color": string,;
+  "textColor": string,;
+  "link": string,;
+  "marketPosition": string,;
+  "targetAudience": string,;
+  "trialDays": number,;
+  "setupTime": string,;
+  "category": string,;
+  "realService": boolean,;
+  "technology": string[],;
+  "integrations": string[],;
+  "useCases": string[],;
+  "roi": string,;
+  "competitors": string[],;
+  "marketSize": string,;
+  "growthRate": string,;
+  "variant": string,;
+  "contactInfo": {;
+    }
+    "mobile": string,;
+    "email": string,;
+    "address": string,;
+    "website": string;
   },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -2266,20 +2288,18 @@ pr-12325
   reviews: number;
 }
 ;
-pr-12325
-export const biotechAIServices: BiotechAIService[] = [;
-  {;'
-    id: 'ai-drug-discovery-platform',;'
-    name: 'AI Drug Discovery Platform',;'
-    tagline: 'Accelerate drug development with AI-powered discovery',;'
-    price: '$3,999',;'
-    period: '/month',;'
-    description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.',;
-    features: [;'
+export const "biotechAIServices": BiotechAIService[] = [;
+  {;
+    }
+    "id": 'ai-drug-discovery-platform',;'
+    "name": 'AI Drug Discovery Platform',;'
+    "tagline": 'Accelerate drug development with AI-powered discovery',;'
+    "price": '$3,999',;'
+    "period": '/month',;'
+    "description": 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.',;'
+    "features": [;
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',;'
-      'API for research integrationMulti-omics data analysis';
-      'API for research integrationMulti-omics data analysis';']
-pr-12325
+      'API for research integrationMulti-omics data analysis';'
     ],;
     popular: true,;'
     icon: '🧬',;'

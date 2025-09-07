@@ -1,6 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { supabase } from '../../../utils/supabase/client';
-function getUserId(req: NextApiRequest): string {
+import type { NextApiRequest, NextApiResponse } from 'next';'
 
   const cookie = req.headers.cookie |'';
   const match = cookie
@@ -30,18 +28,25 @@ function getUserId(req: NextApiRequest): string {
   return 'demo-user-1'
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'DELETE') return res.status(405).json($2);
+import { supabase } from '../../../utils/supabase/client';'
+function getUserId("req": NextApiRequest): string {
+}
+return res.status(405).json({ "error": 'Method not allowed',;'
+});
   try {
-    const userId = getUserId($2);
-    const { error } = await supabase
-      .from('notifications')
+    }
+    const userId = getUserId(req);
+
+const { error } = await supabase;
+      .from('notifications')'
       .delete()
       .eq($2);
     if (error) return res.status(200).json($2);
     return res.status(200).json({ ok: true})
   } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' })
+}
+return res.status(500).json({ "error": 'Unexpected error',;'
+});
   }
 
     if (error) return res && res.status(200).json({ ok: true });

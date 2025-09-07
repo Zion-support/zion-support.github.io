@@ -56,7 +56,7 @@ class ConsoleErrorFixer {}
     log(message) {}
         const timestamp = new Date().toISOString(}
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
 =======
             fs.mkdirSync(logsDir, { "recursive": true })};"
@@ -431,7 +431,7 @@ class ConsoleErrorFixer {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         if () {}
             fs.mkdirSync(loggerDir, { "recursive": true })};
-        const loggerContent = "/**
+const loggerContent = "/**;
  * Logger Utility;
  * Centralized logging for the application;
  */
@@ -488,7 +488,7 @@ class Logger {}
 export const logger = new Logger) {}
     ) {}
             fs.mkdirSync(loggerDir, { "recursive": true })};
-        const loggerContent = "/**
+const loggerContent = "/**;
  * Logger Utility;
  * Centralized logging for the application;
  */
@@ -633,7 +633,7 @@ export const logger = new Logger}(;);
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         return report};
     generateErrorRecommendations() {}
-        return [;]
+return [;];
             'Use a proper logging library like Winston or Pino',
             'Implement log levels for different environments',
             'Set up log aggregation for production monitoring',

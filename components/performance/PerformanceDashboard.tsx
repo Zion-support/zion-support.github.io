@@ -9,11 +9,10 @@ interface PerformanceMetrics {}
   firstInputDelay: number;}
   timeToInteractive: number;}
 }
-    return \"text-red-600\";
+    return "text-red-600";"
   }
   if (!metrics) return null;
-  return ("
-    <div className="fixed bottom-4 right-4 z-50">;
+  return (<div className="fixed bottom-4 right-4 z-50">;"
       <button;
         onClick={() => setIsVisible(!isVisible)}
                 <span;
@@ -37,6 +36,9 @@ interface PerformanceMetrics {}
                 <span;`
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.cumulativeLayoutShift, { good: 0 && 0.1, needsImprovement: 0 && 0.25 })}`}>;
                   {metrics && metrics.cumulativeLayoutShift.toFixed(3)}
+                </span>;
+              </div>;
+            )}
                 </span>;
               </div>;
             )}
@@ -86,19 +88,10 @@ if ( {) {}
 if (.length > 0) {) {}
   $2;
 }
-          set_metrics (
-            (prev) => ({ ...prev, ...new_metrics }) as PerformanceMetrics,
-          );
-        }
-      });
-;
-      observer.observe ({"
-        entry_types: ["paint", "largest - contentful - paint", "layout - shift"],
-      });
-;
-      // Get load time;"
-      window.addEventListener ("load", () => {}
-        const load_time =;
+          set_metrics ((prev) => ({ ...prev, ...new_metrics }) as PerformanceMetrics,)}
+      })observer.observe ({"entry_types": ["paint", "largest - contentful - paint", "layout - shift"]})// Get load time;"
+      window.addEventListener ("load", () => {const load_time =;"
+          }
           performance.timing.loadEventEnd - performance.timing.navigation_start;
         set_metrics ((prev) => ({ ...prev, load_time }) as PerformanceMetrics);
       });
@@ -129,18 +122,16 @@ if (return null) {}
   return (
     <div className="fixed bottom - 4 right-4 z-50">;
       <button;
-        on_click={() = /> setIsVisible (!is_visible)}"
-        className=\"bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue-700 transition-colors\">
+        on_click={() => setIsVisible (!is_visible)}
+        className="bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg "hover":bg - blue-700 transition-colors">"
 
         📊 Performance;
       </button>;
-      {is_visible && (
-        <div className="absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p-6 w-80 border">;
-          <h3 className="text - lg font-semibold mb-4">Performance Metrics</h3>;
-          <div className="space-y-3">;
-            {metrics.load_time && (
-              <div className="flex justify-between items-center">;
-                <span className="text-sm font-medium">Load Time:</span>;
+      {is_visible && (<div className="absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p-6 w-80 border">;"
+          <h3 className="text - lg font-semibold mb-4">Performance Metrics</h3>;"
+          <div className="space-y-3">;"
+            {metrics.load_time && (<div className="flex justify-between items-center">;"
+                <span className="text-sm font-medium">Load "Time":</span>;"
                 <span;
                   className={`text - sm font - mono ${getScoreColor (metrics.load_time, { good: 2000, needs_improvement: 4000 })}`}
                 >;

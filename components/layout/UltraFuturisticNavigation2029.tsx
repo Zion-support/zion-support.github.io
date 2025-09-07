@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin;
+  }
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Briefcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -59,15 +60,18 @@ const serviceCategories = $2;
         description: 'Automate Mars colonization process','
         price: '$99, 999 / month',
   Code, Wrench, Smartphone, BarChart3, Eye, Timer
- } from 'lucide-react';
+ } from 'lucide-react';'
+
 const contactInfo = null;
-const serviceCategories = [
+
+const serviceCategories = [;
   {
-    title: '🧠 2029 AI Consciousness & Innovation'
-    icon: Brain
-    color: 'from-purple-600 to-pink-600'
-    description: 'Beyond human consciousness simulation'
-    services: [
+    }
+    "title": '🧠 2029 AI Consciousness & Innovation''
+    "icon": Brain,
+"color": 'from-purple-600 to-pink-600''
+    "description": 'Beyond human consciousness simulation''
+    "services": [
 {
         name: 'AI Consciousness Simulation Platform',
         href: '/ai-consciousness-simulation-platform',
@@ -203,57 +207,90 @@ const serviceCategories = [;
         description: 'Real-time solar system communication';
         price: '$75,999/month';
       }
-      {name: 'Space Mining Automation Platform',href: '/space-mining-automation-platform',description: 'Automate asteroid and lunar mining',price: '$65,999/month',},],},{title: '🏠 2029 Space Architecture & Energy',icon: Building,color: 'from-green-600 to-teal-600',description: 'Habitat design and space energy harvesting',services: [;
-{name: 'Space Habitat Design Platform',href: '/space-habitat-design-platform',description: 'Design space habitats for any planet',price: '$45,999/month',},{name: 'Space Energy Harvesting Platform',href: '/space-energy-harvesting-platform',description: 'Harvest energy from space sources',price: '$55,999/month',},],},{title: '🤖 Advanced AI & Machine Learning',icon: Brain,color: 'from-emerald-600 to-teal-600',description: 'Next-generation AI solutions',services: [;
-{name: 'AI Emotional Intelligence Platform',href: '/ai-emotional-intelligence-platform',description: 'AI that understands human emotions',price: '$2,999/month',},{name: 'AI Multimodal Fusion Platform';
-        href: '/ai-multimodal-fusion-platform';
-        description: 'Unified text, image, audio, video AI';
-        price: '$4,999/month';
+    ]
+  },
+  {
+    }
+    "title": '🚀 2029 Space Colonization & Mining','
+    "icon": Rocket,
+    "color": 'from-red-600 to-orange-600','
+    "description": 'Interplanetary expansion and resource extraction','
+    "services": [
+{
+        }
+        "name": 'Mars Colonization Automation Platform','
+        "href": '/mars-colonization-automation-platform','
+        "description": 'Automate Mars colonization process','
+        "price": '$99,999/month','
+      },
+      {
+        }
+        "name": 'Interplanetary Communication Network''
+        "href": '/interplanetary-communication-network''
+        "description": 'Real-time solar system communication''
+        "price": '$75,999/month''
+
       }
-      {name: 'AI Customer Service Automation';
-        href: '/ai-customer-service-automation';
-        description: 'Intelligent customer support';
-        price: '$899/month';
+      {"name": 'Space Mining Automation Platform',"href": '/space-mining-automation-platform',"description": 'Automate asteroid and lunar mining',"price": '$65,999/month'}]},{"title": '🏠 2029 Space Architecture & Energy',"icon": Building,"color": 'from-green-600 to-teal-600',"description": 'Habitat design and space energy harvesting',"services": [;'
+{"name": 'Space Habitat Design Platform',"href": '/space-habitat-design-platform',"description": 'Design space habitats for any planet',"price": '$45,999/month'},{"name": 'Space Energy Harvesting Platform',"href": '/space-energy-harvesting-platform',"description": 'Harvest energy from space sources',"price": '$55,999/month'}]},{"title": '🤖 Advanced AI & Machine Learning',"icon": Brain,"color": 'from-emerald-600 to-teal-600',"description": 'Next-generation AI solutions',"services": [;'
+{"name": 'AI Emotional Intelligence Platform',"href": '/ai-emotional-intelligence-platform',"description": 'AI that understands human emotions',"price": '$2,999/month'},{"name": 'AI Multimodal Fusion Platform';'
+        }
+        "href": '/ai-multimodal-fusion-platform';'
+        "description": 'Unified text, image, audio, video AI';'
+        "price": '$4,999/month';'
       }
-      {name: 'AI Education Platform';
-        href: '/ai-education-platform';
-        description: 'Personalized learning with AI';
-        price: '$1,499/month';
+      {"name": 'AI Customer Service Automation';'
+        }
+        "href": '/ai-customer-service-automation';'
+        "description": 'Intelligent customer support';'
+        "price": '$899/month';'
       }
-      {name: 'AI Content Creation Suite',href: '/ai-content-creation-suite',description: 'Unlimited AI content creation',price: '$1,299/month',},],},{title: '⛓️ Blockchain & Web3 Solutions',icon: Layers,color: 'from-orange-600 to-red-600',description: 'Decentralized and blockchain solutions',services: [;
-{name: 'Quantum Blockchain Platform',href: '/quantum-blockchain-platform',description: 'Quantum-resistant blockchain security',price: '$6,999/month',},{name: 'Blockchain Supply Chain Transparency';
-        href: '/blockchain-supply-chain-transparency';
-        description: 'End-to-end supply chain visibility';
-        price: '$2,499/month';
+      {"name": 'AI Education Platform';'
+        }
+        "href": '/ai-education-platform';'
+        "description": 'Personalized learning with AI';'
+        "price": '$1,499/month';'
       }
-      {name: 'Smart Contract Automation Platform';
-        href: '/smart-contract-automation';
-        description: 'Automated blockchain contracts';
-        price: '$1,999/month';
+      {"name": 'AI Content Creation Suite',"href": '/ai-content-creation-suite',"description": 'Unlimited AI content creation',"price": '$1,299/month'}]},{"title": '⛓️ Blockchain & Web3 Solutions',"icon": Layers,"color": 'from-orange-600 to-red-600',"description": 'Decentralized and blockchain solutions',"services": [;'
+{"name": 'Quantum Blockchain Platform',"href": '/quantum-blockchain-platform',"description": 'Quantum-resistant blockchain security',"price": '$6,999/month'},{"name": 'Blockchain Supply Chain Transparency';'
+        }
+        "href": '/blockchain-supply-chain-transparency';'
+        "description": 'End-to-end supply chain visibility';'
+        "price": '$2,499/month';'
       }
-      {name: 'DeFi Yield Optimization',href: '/defi-yield-optimization',description: 'Maximize DeFi returns',price: '$3,999/month',},],},{title: '🏥 Healthcare & Biotech Innovation',icon: Heart,color: 'from-pink-600 to-rose-600',description: 'Advanced healthcare solutions',services: [;
-{name: 'AI Personalized Medicine Platform',href: '/ai-personalized-medicine-platform',description: 'AI-powered personalized treatment',price: '$8,999/month',},{name: 'AI Healthcare Diagnosis Platform';
-        href: '/ai-healthcare-diagnosis-platform';
-        description: 'Revolutionary medical diagnosis';
-        price: '$3,999/month';
+      {"name": 'Smart Contract Automation Platform';'
+        }
+        "href": '/smart-contract-automation';'
+        "description": 'Automated blockchain contracts';'
+        "price": '$1,999/month';'
       }
-      {name: 'Biotech Research Automation',href: '/biotech-research-automation',description: 'Automated biotechnology research',price: '$4,999/month',},],},{title: '🏙️ Smart City & Infrastructure',icon: Building,color: 'from-slate-600 to-gray-600',description: 'Intelligent urban management',services: [;
-{name: 'AI Smart City Orchestrator',href: '/ai-smart-city-orchestrator',description: 'Comprehensive city infrastructure AI',price: '$12,999/month',},{name: 'Smart Traffic Management';
-        href: '/smart-traffic-management';
-        description: 'AI-powered traffic optimization';
-        price: '$3,999/month';
+      {"name": 'DeFi Yield Optimization',"href": '/defi-yield-optimization',"description": 'Maximize DeFi returns',"price": '$3,999/month'}]},{"title": '🏥 Healthcare & Biotech Innovation',"icon": Heart,"color": 'from-pink-600 to-rose-600',"description": 'Advanced healthcare solutions',"services": [;'
+{"name": 'AI Personalized Medicine Platform',"href": '/ai-personalized-medicine-platform',"description": 'AI-powered personalized treatment',"price": '$8,999/month'},{"name": 'AI Healthcare Diagnosis Platform';'
+        }
+        "href": '/ai-healthcare-diagnosis-platform';'
+        "description": 'Revolutionary medical diagnosis';'
+        "price": '$3,999/month';'
       }
-      {name: 'Energy Grid Optimization',href: '/energy-grid-optimization',description: 'Smart energy management',price: '$5,999/month',},],},{title: '🔬 Research & Development',icon: Microscope,color: 'from-blue-600 to-indigo-600',description: 'Advanced research tools and platforms',services: [;
-{name: 'AI Research Assistant',href: '/ai-research-assistant',description: 'AI-powered research acceleration',price: '$1,999/month',},{name: 'Data Analysis Platform';
-        href: '/data-analysis-platform';
-        description: 'Advanced data analytics';
-        price: '$2,499/month';
+      {"name": 'Biotech Research Automation',"href": '/biotech-research-automation',"description": 'Automated biotechnology research',"price": '$4,999/month'}]},{"title": '🏙️ Smart City & Infrastructure',"icon": Building,"color": 'from-slate-600 to-gray-600',"description": 'Intelligent urban management',"services": [;'
+{"name": 'AI Smart City Orchestrator',"href": '/ai-smart-city-orchestrator',"description": 'Comprehensive city infrastructure AI',"price": '$12,999/month'},{"name": 'Smart Traffic Management';'
+        }
+        "href": '/smart-traffic-management';'
+        "description": 'AI-powered traffic optimization';'
+        "price": '$3,999/month';'
       }
-      {name: 'Research Collaboration Hub',href: '/research-collaboration-hub',description: 'Global research collaboration',price: '$1,799/month',},],},{title: '💼 Enterprise & Business Solutions',icon: Briefcase,color: 'from-emerald-600 to-blue-600',description: 'Corporate and business automation',services: [;
-{name: 'Enterprise AI Operations Center',href: '/enterprise-ai-operations-center',description: 'Centralized AI operations',price: '$15,999/month',},{name: 'Business Process Automation';
-        href: '/business-process-automation';
-        description: 'End-to-end process automation';
-        price: '$4,999/month';
+      {"name": 'Energy Grid Optimization',"href": '/energy-grid-optimization',"description": 'Smart energy management',"price": '$5,999/month'}]},{"title": '🔬 Research & Development',"icon": Microscope,"color": 'from-blue-600 to-indigo-600',"description": 'Advanced research tools and platforms',"services": [;'
+{"name": 'AI Research Assistant',"href": '/ai-research-assistant',"description": 'AI-powered research acceleration',"price": '$1,999/month'},{"name": 'Data Analysis Platform';'
+        }
+        "href": '/data-analysis-platform';'
+        "description": 'Advanced data analytics';'
+        "price": '$2,499/month';'
+      }
+      {"name": 'Research Collaboration Hub',"href": '/research-collaboration-hub',"description": 'Global research collaboration',"price": '$1,799/month'}]},{"title": '💼 Enterprise & Business Solutions',"icon": Briefcase,"color": 'from-emerald-600 to-blue-600',"description": 'Corporate and business automation',"services": [;'
+{"name": 'Enterprise AI Operations Center',"href": '/enterprise-ai-operations-center',"description": 'Centralized AI operations',"price": '$15,999/month'},{"name": 'Business Process Automation';'
+        }
+        "href": '/business-process-automation';'
+        "description": 'End-to-end process automation';'
+        "price": '$4,999/month';'
       }
       },
     ],
@@ -283,36 +320,36 @@ const mainNavItems = [
 { name: 'Contact', href: '/contact', icon: Phone },
 ];
 
-const mainNavItems = [
-      {name: 'Corporate Intelligence Platform',href: '/corporate-intelligence-platform',description: 'AI-powered business intelligence',price: '$7,999/month',},],},];const mainNavItems = [;
-  { name: 'Home', href: '/', icon: Home },{ name: 'Services', href: '/services', icon: Briefcase },{ name: 'Solutions', href: '/solutions', icon: Target },{ name: 'Pricing', href: '/pricing', icon: DollarSign },{ name: 'Resources', href: '/resources', icon: BookOpen },{ name: 'News', href: '/news', icon: TrendingUp },{ name: 'Support', href: '/support', icon: MessageCircle },{ name: 'Contact', href: '/contact', icon: Phone },];const mainNavItems = [;
-    services: [;
-      {name: 'AI Personalized Medicine Platform',href: '/ai-personalized-medicine-platform',description: 'AI-powered personalized treatment',price: '$8,999/month',},{name: 'AI Healthcare Diagnosis Platform',href: '/ai-healthcare-diagnosis-platform',description: 'Revolutionary medical diagnosis',price: '$3,999/month',},{name: 'Biotech Research Automation',href: '/biotech-research-automation',description: 'Automated biotechnology research',price: '$4,999/month',},],},  {      { name: 'AI Personalized Medicine Platform', href: '/ai-personalized-medicine-platform', description: 'AI-powered personalized treatment', price: '$8,999/month' }title: '🏥 Healthcare & Biotech Innovation',icon: Heart,color: 'from - pink - 600 to - rose - 600',description: 'Advanced healthcare solutions',{ name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform', description: 'Revolutionary medical diagnosis', price: '$3,999/month' }{ name: 'Biotech Research Automation', href: '/biotech-research-automation', description: 'Automated biotechnology research', price: '$4,999/month' }
+const mainNavItems = [;
+
+    "services": [;
+      {"name": 'AI Personalized Medicine Platform',"href": '/ai-personalized-medicine-platform',"description": 'AI-powered personalized treatment',"price": '$8,999/month'},{"name": 'AI Healthcare Diagnosis Platform',"href": '/ai-healthcare-diagnosis-platform',"description": 'Revolutionary medical diagnosis',"price": '$3,999/month'},{"name": 'Biotech Research Automation',"href": '/biotech-research-automation',"description": 'Automated biotechnology research',"price": '$4,999/month'}]},  {      { "name": 'AI Personalized Medicine Platform', "href": '/ai-personalized-medicine-platform', "description": 'AI-powered personalized treatment', "price": '$8,999/month' }"title": '🏥 Healthcare & Biotech Innovation',"icon": Heart,"color": 'from - pink - 600 to - rose - 600',"description": 'Advanced healthcare solutions',{ "name": 'AI Healthcare Diagnosis Platform', "href": '/ai-healthcare-diagnosis-platform', "description": 'Revolutionary medical diagnosis', "price": '$3,999/month' }{ "name": 'Biotech Research Automation', "href": '/biotech-research-automation', "description": 'Automated biotechnology research', "price": '$4,999/month' }'
     ];
-  }title: '🏙️ Smart City & Infrastructure',icon: Building,color: 'from-slate-600 to-gray-600',description: 'Intelligent urban management',services: [;
-      {name: 'AI Smart City Orchestrator',href: '/ai-smart-city-orchestrator',description: 'Comprehensive city infrastructure AI',price: '$12,999/month',},{name: 'Smart Traffic Management',href: '/smart-traffic-management',description: 'AI-powered traffic optimization',price: '$3,999/month',},{name: 'Energy Grid Optimization',href: '/energy-grid-optimization',description: 'Smart energy management',price: '$5,999/month',},],},  {      { name: 'AI Smart City Orchestrator', href: '/ai-smart-city-orchestrator', description: 'Comprehensive city infrastructure AI', price: '$12,999/month' }title: '🏙️ Smart City & Infrastructure',icon: Building,color: 'from - slate - 600 to - gray - 600',description: 'Intelligent urban management',{ name: 'Smart Traffic Management', href: '/smart-traffic-management', description: 'AI-powered traffic optimization', price: '$3,999/month' }{ name: 'Energy Grid Optimization', href: '/energy-grid-optimization', description: 'Smart energy management', price: '$5,999/month' }
+  }"title": '🏙️ Smart City & Infrastructure',"icon": Building,"color": 'from-slate-600 to-gray-600',"description": 'Intelligent urban management',"services": [;'
+      {"name": 'AI Smart City Orchestrator',"href": '/ai-smart-city-orchestrator',"description": 'Comprehensive city infrastructure AI',"price": '$12,999/month'},{"name": 'Smart Traffic Management',"href": '/smart-traffic-management',"description": 'AI-powered traffic optimization',"price": '$3,999/month'},{"name": 'Energy Grid Optimization',"href": '/energy-grid-optimization',"description": 'Smart energy management',"price": '$5,999/month'}]},  {      { "name": 'AI Smart City Orchestrator', "href": '/ai-smart-city-orchestrator', "description": 'Comprehensive city infrastructure AI', "price": '$12,999/month' }"title": '🏙️ Smart City & Infrastructure',"icon": Building,"color": 'from - slate - 600 to - gray - 600',"description": 'Intelligent urban management',{ "name": 'Smart Traffic Management', "href": '/smart-traffic-management', "description": 'AI-powered traffic optimization', "price": '$3,999/month' }{ "name": 'Energy Grid Optimization', "href": '/energy-grid-optimization', "description": 'Smart energy management', "price": '$5,999/month' }'
     ];
-  }title: '🔬 Research & Development',icon: Microscope,color: 'from-blue-600 to-indigo-600',description: 'Advanced research tools and platforms',services: [;
-      {name: 'AI Research Assistant',href: '/ai-research-assistant',description: 'AI-powered research acceleration',price: '$1,999/month',},{name: 'Data Analysis Platform',href: '/data-analysis-platform',description: 'Advanced data analytics',price: '$2,499/month',},{name: 'Research Collaboration Hub',href: '/research-collaboration-hub',description: 'Global research collaboration',price: '$1,799/month',},],},  {      { name: 'AI Research Assistant', href: '/ai-research-assistant', description: 'AI-powered research acceleration', price: '$1,999/month' }title: '🔬 Research & Development',icon: Microscope,color: 'from - blue - 600 to - indigo - 600',description: 'Advanced research tools and platforms',{ name: 'Data Analysis Platform', href: '/data-analysis-platform', description: 'Advanced data analytics', price: '$2,499/month' }{ name: 'Research Collaboration Hub', href: '/research-collaboration-hub', description: 'Global research collaboration', price: '$1,799/month' }
+  }"title": '🔬 Research & Development',"icon": Microscope,"color": 'from-blue-600 to-indigo-600',"description": 'Advanced research tools and platforms',"services": [;'
+      {"name": 'AI Research Assistant',"href": '/ai-research-assistant',"description": 'AI-powered research acceleration',"price": '$1,999/month'},{"name": 'Data Analysis Platform',"href": '/data-analysis-platform',"description": 'Advanced data analytics',"price": '$2,499/month'},{"name": 'Research Collaboration Hub',"href": '/research-collaboration-hub',"description": 'Global research collaboration',"price": '$1,799/month'}]},  {      { "name": 'AI Research Assistant', "href": '/ai-research-assistant', "description": 'AI-powered research acceleration', "price": '$1,999/month' }"title": '🔬 Research & Development',"icon": Microscope,"color": 'from - blue - 600 to - indigo - 600',"description": 'Advanced research tools and platforms',{ "name": 'Data Analysis Platform', "href": '/data-analysis-platform', "description": 'Advanced data analytics', "price": '$2,499/month' }{ "name": 'Research Collaboration Hub', "href": '/research-collaboration-hub', "description": 'Global research collaboration', "price": '$1,799/month' }'
     ];
-  }title: '💼 Enterprise & Business Solutions',icon: Briefcase,color: 'from-emerald-600 to-blue-600',description: 'Corporate and business automation',services: [;
-      {name: 'Enterprise AI Operations Center',href: '/enterprise-ai-operations-center',description: 'Centralized AI operations',price: '$15,999/month',},{name: 'Business Process Automation',href: '/business-process-automation',description: 'End-to-end process automation',price: '$4,999/month',},{name: 'Corporate Intelligence Platform',href: '/corporate-intelligence-platform',description: 'AI-powered business intelligence',price: '$7,999/month',},],},];      { name: 'Enterprise AI Operations Center', href: '/enterprise-ai-operations-center', description: 'Centralized AI operations', price: '$15,999/month' }title: '💼 Enterprise & Business Solutions',icon: Briefcase,color: 'from - emerald - 600 to - blue - 600',description: 'Corporate and business automation',{ name: 'Business Process Automation', href: '/business-process-automation', description: 'End-to-end process automation', price: '$4,999/month' }{ name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
+  }"title": '💼 Enterprise & Business Solutions',"icon": Briefcase,"color": 'from-emerald-600 to-blue-600',"description": 'Corporate and business automation',"services": [;'
+      {"name": 'Enterprise AI Operations Center',"href": '/enterprise-ai-operations-center',"description": 'Centralized AI operations',"price": '$15,999/month'},{"name": 'Business Process Automation',"href": '/business-process-automation',"description": 'End-to-end process automation',"price": '$4,999/month'},{"name": 'Corporate Intelligence Platform',"href": '/corporate-intelligence-platform',"description": 'AI-powered business intelligence',"price": '$7,999/month'}]}];      { "name": 'Enterprise AI Operations Center', "href": '/enterprise-ai-operations-center', "description": 'Centralized AI operations', "price": '$15,999/month' }"title": '💼 Enterprise & Business Solutions',"icon": Briefcase,"color": 'from - emerald - 600 to - blue - 600',"description": 'Corporate and business automation',{ "name": 'Business Process Automation', "href": '/business-process-automation', "description": 'End-to-end process automation', "price": '$4,999/month' }{ "name": 'Corporate Intelligence Platform', "href": '/corporate-intelligence-platform', "description": 'AI-powered business intelligence', "price": '$7,999/month' }'
     ];
   }
 
-const mainNavItems = [;
-  { name: 'Home', href: '/', icon: Home },;
-  { name: 'Services', href: '/services', icon: Briefcase },;
-  { name: 'Solutions', href: '/solutions', icon: Target },;
-  { name: 'Pricing', href: '/pricing', icon: DollarSign },;
-  { name: 'Resources', href: '/resources', icon: BookOpen },;
-  { name: 'News', href: '/news', icon: TrendingUp },;
-  { name: 'Support', href: '/support', icon: MessageCircle },;
-  { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
-];
-];
-
-export default function UltraFuturisticNavigation2029() {;
+  { "name": 'Home', "href": '/', "icon": Home,'
+},
+  { "name": 'Services', "href": '/services', "icon": Briefcase,'
+},
+  { "name": 'Solutions', "href": '/solutions', "icon": Target,'
+},
+  { "name": 'Pricing', "href": '/pricing', "icon": DollarSign,'
+},
+  { "name": 'Resources', "href": '/resources', "icon": BookOpen,'
+},
+  { "name": 'News', "href": '/news', "icon": TrendingUp,'
+},
+  { "name": 'Support', "href": '/support', "icon": MessageCircle,'
+},
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -483,26 +520,23 @@ const mainNavItems = [;'
 ];
 ];
 
-export default function UltraFuturisticNavigation2029() { return null; }
-    };'
-    window && window.addEventListener('scroll', handleScroll);'
-    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setScrolled(window && window.scrollY > 50);
-    };'
-    window && window.addEventListener('scroll', handleScroll);'
-    return () => window && window.removeEventListener('scroll', handleScroll);
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+    }
 
-setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+
+}
+
+setScrolled(window.scrollY > 50)
+};
+
+    window.addEventListener('scroll', handleScroll);'
+    return () => window.removeEventListener('scroll', handleScroll);'
   }, []);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
+const toggleMenu = () => setIsOpen(!isOpen);
+
+const closeMenu = () => setIsOpen(false);
+return (;
     <>;
       {/* Top Contact Bar */}
 <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>
@@ -548,9 +582,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 ];export default function UltraFuturisticNavigation2029() {const [isOpen, setIsOpen] = useState(false)const [activeCategory, setActiveCategory] = useState<string | null>(null)const [scrolled, setScrolled] = useState(false)useEffect(() => {const handleScroll = () => {setScrolled(window && window.scrollY > 50)}window && window.addEventListener('scroll', handleScroll)return () => window && window.removeEventListener('scroll', handleScroll)}, [])setScrolled(window && window.scrollY > 50)}window && window.addEventListener('scroll', handleScroll)return () => window && window.removeEventListener('scroll', handleScroll)const toggleMenu = () => setIsOpen(!isOpen)const closeMenu  = () => setIsOpen(false)setScrolled(window.scrollY > 50)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const toggleMenu = () => setIsOpen(!isOpen)const closeMenu  = () => setIsOpen(false)return (<>;
       {/* Top Contact Bar */}
-<div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>;
-        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
-          <div className='flex items-center space-x-6'>;
+<div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>;'
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;'
+          <div className='flex items-center space-x-6'>;'
             <a;
               href={`tel:${contactInfo.mobile}`}
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors';
@@ -558,9 +592,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Phone size={14} />;
               <span>{contactInfo.mobile}</span>;
             </a>;
-      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>;
-        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
-          <div className='flex items-center space-x-6'>;
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>;'
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;'
+          <div className='flex items-center space-x-6'>;'
             <a;
               href={`tel:${contactInfo.mobile}`}
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors';
@@ -785,28 +819,16 @@ export default function UltraFuturisticNavigation2029() {
 }
               animate={{ opacity: 1;, x: 0 ;}}
 
-      {/* Main Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
-          : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0}}
-              className="flex items-center space-x-3"
+              className='flex items-center space-x-3''
             >
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
-                  <Rocket className="w-6 h-6 text-white" />
+              <div className='relative'>'
+                <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center'>'
+                  <Rocket className='w-6 h-6 text-white' />'
                 </div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg blur opacity-75 animate-pulse"></div>
+                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg blur opacity-75 animate-pulse'></div>'
               </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              <div className='flex flex-col'>'
+                <span className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>'
                   Zion Tech Group
                 </span>
               className='flex items-center space-x-3'>;
@@ -865,16 +887,15 @@ export default function UltraFuturisticNavigation2029() {
               {mainNavItems.map(item => (<Link;
                   key={item.name}
                   href={item.href}
-                  className='group relative text-gray-300 hover:text-white transition-colors duration-200';
-                >;
-                  <div className='flex items-center space-x-2'>;
+                  className='group relative text-gray-300 "hover":text-white transition-colors duration-200'>'
+
+                  <div className='flex items-center space-x-2'>;'
                     <item.icon;
                       size={16}
-                      className='group-hover:text-cyan-400 transition-colors';
-                    />;
+                      className='group-"hover":text-cyan-400 transition-colors';' />;
                     <span>{item.name}</span>;
                   </div>;
-                  <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full'></div>;
+                  <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-"hover":w-full'></div>;'
                 </Link>;
               ))}
               {/* Services Dropdown */}
@@ -890,25 +911,12 @@ export default function UltraFuturisticNavigation2029() {
                     size={14}'
                     className='group-hover:rotate-180 transition-transform duration-200'
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {mainNavItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="group relative text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  <div className="flex items-center space-x-2">
-                    <item.icon size={16} className="group-hover:text-cyan-400 transition-colors" />
-                    <span>{item.name}</span>
-                  </div>
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
-<div className='relative group'>;
-                <button className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>;
-                  <Briefcase;
-                    size={16}
-                    className='group-hover:text-cyan-400 transition-colors';
-                  />;
+<div className='relative group'>'
+                <button className='flex items-center space-x-2 text-gray-300 "hover": text-white transition-colors duration-200'>'
+                  <Briefcase,
+size={1
+}
+                    className='group-"hover":text-cyan-400 transition-colors';' />;
                   <ChevronDown;
                     size={14}
 
@@ -919,6 +927,8 @@ export default function UltraFuturisticNavigation2029() {
 
 
 
+                <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-"hover":opacity-100 group-"hover":visible transition-all duration-300 transform translate-y-2 group-"hover":translate-y-0'>'
+                  <div className='p-6 grid grid-cols-2 "lg":grid-cols-3 gap-6'>'
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -964,6 +974,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>;'
                           <p className='text-sm text-gray-400 mb-4'>;
 
+className='group''
                       >
                         <div
                     className='group-hover:rotate-180 transition-transform duration-200';
@@ -985,9 +996,8 @@ className='group';
                           <div className='flex items-center space-x-3 mb-3'>;
                             <category&& category.icon;
                               size={20}
-                              className='text-cyan-400';
-                            />;
-                            <h3 className='font-semibold text-white group-hover:text-cyan-300 transition-colors'>;
+                              className='text-cyan-400';' />;
+                            <h3 className='font-semibold text-white group-"hover":text-cyan-300 transition-colors'>;'
                               {category && category.title}
                             </h3>;
                           </div>;
@@ -1093,17 +1103,17 @@ className='group';
 key={service.name}
 
                                 href={service.href}
-                                className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200 group';
-                              >;
-                                <div className='flex items-center justify-between'>;
-                                  <span className='text-sm text-gray-300 group-hover:text-white transition-colors'>;
+                                className='block p-2 rounded bg-black/30 "hover":bg-cyan-500/20 transition-all duration-200 group'>'
+
+                                <div className='flex items-center justify-between'>;'
+                                  <span className='text-sm text-gray-300 group-"hover":text-white transition-colors'>;'
                                     {service.name}
                                   </span>;
-                                  <span className='text-xs text-cyan-400 font-mono'>;
+                                  <span className='text-xs text-cyan-400 font-mono'>;'
                                     {service.price}
                                   </span>;
                                 </div>;
-                                <p className='text-xs text-gray-500 mt-1'>;
+                                <p className='text-xs text-gray-500 mt-1'>;'
                                   {service.description}
                                 </p>;
                               </Link>;
@@ -1179,17 +1189,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-            {/* Mobile Menu Button *}
+
+            {/* Mobile Menu Button *
 }
-<div className='lg:hidden' />;
+<div className='"lg":hidden'>;'
               <button;
                 onClick={toggleMenu}
 
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
-              <button
-                onClick={toggleMenu}
-                className="text-gray-300 hover:text-white transition-colors"
+                className='text-gray-300 "hover": text-white transition-colors''
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -1197,6 +1204,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </nav>
+
+
 
                 {isOpen ? <X size={24} /> : <Menu size={24} /
 }
@@ -1376,20 +1385,9 @@ className='absolute inset-0 bg-black/80 backdrop-blur-sm'
                       href={item.href}
                       onClick={closeMenu}
 
-className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200'
+className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 "hover":text-white "hover":bg-cyan-500/20 transition-all duration-200''
                     >
-                      <item.icon size={20} className='text-cyan-400' />
-
-                {/* Mobile Navigation Items */}
-                <div className="space-y-4">
-                  {mainNavItems.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={closeMenu}
-                      className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200"
-                    >
-                      <item.icon size={20} className="text-cyan-400" />
+                      <item.icon size={20} className='text-cyan-400' />'
                       <span>{item.name}</span>
                     </Link>
                   ))}
@@ -1414,8 +1412,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       >'
                         <h4 className='font-medium text-white mb-2'>
                           {category.title}
-                        </h4>'
-                        <p className='text-sm text-gray-400 mb-3'>
+                        </h4>;
+                        <p className='text-sm text-gray-400 mb-3'>;'
                           {category.description}
                         </p>'
                         <div className='space-y-2'>
@@ -1540,37 +1538,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     ))}
                 {/* Mobile CTA */}
-                <div className='mt-8'>;
-                  <motion&& motion.button
-                    whileHover={{ scale: 1 && 1.02 }}
-                    whileTap={{ scale: 0 && 0.98 }}
-                    className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'>                <div className="mt-8">;
-                  <motion&& motion.button
-                    whileHover={{ scale: 1 && 1.02 }}
-                    whileTap={{ scale: 0 && 0.98 }}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                    Get Started
-                  </motion && motion.button>;
-                </div>;
-              </div>;
-            </div>;
-          </motion && motion.div>;
-        )}
-                {/* Mobile CTA */}
-                <div className="mt-8">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  </div>
-                </div>
 
-                {/* Mobile CTA */}
-                <div className="mt-8">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+<div className='mt-8'>'
+                  <motion.button,
+whileHover={{ "scale": 1.02 }}
+                    whileTap={{ "scale": 0.98 }}
+                    className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-300''
                   >
                     Get Started
                 {/* Mobile CTA */}'

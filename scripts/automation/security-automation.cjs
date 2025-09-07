@@ -110,7 +110,7 @@ class $1 {}
 <<<<<<< HEAD
 =======
     return new Promise((resolve, reject) => {this.log(Running "command": ${command}");
-      const child = spawn(command, [], {})
+const child = spawn(command, [], {});
   "shell": true,
         cwd,
         "stdio": ["pipe", "pipe", "pipe"]}
@@ -160,23 +160,23 @@ class $1 {}
       return true} catch (error) {  this.log("Failed to install "dependencies": ${error.message  }", "ERROR");"
       return false};
   };
-  async runNpmAudit() {}"
-  this.log("Running npm audit...");"
-  const result = await this.runCommand(npm audit --audit-level=moderate --json";)"
+;
+  async runNpmAudit() {}
+  this.log("Running npm audit...");
+    try {}
+const result = await this.runCommand(npm audit --audit-level=moderate --json";);
+      );
       // Parse the JSON output;
       const auditData = JSON.parse(result.stdout);
       // Check for vulnerabilities;
       const vulnerabilities = auditData.metadata?.vulnerabilities || {};
-      const totalVulnerabilities = Object.values(vulnerabilities).reduce(;)
+const totalVulnerabilities = Object.values(vulnerabilities).reduce(;);
         (sum, count) => sum + count,
         0;
       );`;
       this.log( `NPM audit completed. Found ${totalVulnerabilities} vulnerabilities`;`)
       // Save detailed audit report;
-<<<<<<< HEAD
-
-=======
-      const auditReportFile = path.join(;)
+const auditReportFile = path.join(;);
         this.projectRoot,security-reports",
         "npm-audit-report.json";
 <<<<<<< HEAD
@@ -195,7 +195,7 @@ class $1 {}
   async runNpmAudit() {}
   this.log("Running npm audit...");
     try {}
-  const result = await this.runCommand(npm audit --audit-level=moderate --json";)
+const result = await this.runCommand(npm audit --audit-level=moderate --json";);
       );
 <<<<<<< HEAD
       const auditReportFile = path.join(;)"
@@ -244,7 +244,7 @@ class $1 {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Check for vulnerabilities;
       const vulnerabilities = auditData.metadata?.vulnerabilities || {};
-      const totalVulnerabilities = Object.values(vulnerabilities).reduce(;)
+const totalVulnerabilities = Object.values(vulnerabilities).reduce(;);
         (sum, count) => sum + count,
         0;
       );
@@ -264,8 +264,7 @@ class $1 {}
       );
 
       // Save detailed audit report;
-<<<<<<< HEAD
-      const auditReportFile = path.join(;)
+const auditReportFile = path.join(;);
         this.projectRoot,security-reports",
         "npm-audit-report.json";
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -325,7 +324,7 @@ this.log(`Found ${outdatedCount} outdated packages");"
       const outdatedCount = Object.keys(outdatedData).length;`;
 this.log(`Found ${outdatedCount} outdated packages`);
       // Save outdated packages report;
-      const outdatedReportFile = path.join(;)
+const outdatedReportFile = path.join(;);
         this.projectRoot,security-reports",
         "outdated-packages.json"} catch (error) {}
   this.log(`NPM audit "failed": ${error.message}`, "ERROR");
@@ -376,10 +375,12 @@ this.log(`Found ${outdatedCount} outdated packages");"
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Save outdated packages report;
-
-        "outdated-packages.json";"
-      );"`;
-        `outdated-packages.json";"
+const outdatedReportFile = path.join(;);
+        this.projectRoot,security-reports",
+        "outdated-packages.json";
+      );
+        `outdated-packages.json";
+      );
 fs.writeFileSync(;)
         outdatedReportFile,
         JSON.stringify(outdatedData, null, 2);

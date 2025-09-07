@@ -58,41 +58,56 @@ optimizeImages();
   }
 #!/usr/bin/env node
 
-/**
- * Image Optimization Script
- * Optimizes images for better performance
- */
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('🖼️  Starting image optimization...');
 
-const imageExtensions = ['.jpg', '.jpeg', '.png', '.webp', '.gif', '.svg'];
-const publicDir = path.join(__dirname, '..', 'public');
-const mediaDir = path.join(__dirname, '..', 'media');
+const sharp = require('sharp');'
 
-function findImages(dir) {
-  const images = [];
-  
-  if (!fs.existsSync(dir)) {
-    return images;
+const fs = require('fs');'
+
+const path = require('path');'
+
+async function optimizeImages() {
   }
+  const publicDir = path.join(__dirname, 'public');'
+
+const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif'];'
   
-  const files = fs.readdirSync(dir, { withFileTypes: true });
-  
-  for (const file of files) {
-    const fullPath = path.join(dir, file.name);
-    
-    if (file.isDirectory()) {
-      images.push(...findImages(fullPath));
-    } else if (imageExtensions.some(ext => file.name.toLowerCase().endsWith(ext))) {
-      images.push(fullPath);
+  function scanDirectory() {
+    }
+    const files = fs.readdirSync(dir);
+    for (const file of files) {
+      }
+      const filePath = path.join(dir, file);
+
+const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        }
+        scanDirectory(filePath);
+      } else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
+        }
+        optimizeImage(filePath);
+      }
     }
   }
   
-  return images;
+  async function optimizeImage() {
+    }
+    try {
+      }
+      const outputPath = imagePath.replace(/\.(jpg|jpeg|png|gif)$/i, '.webp');'
+      await sharp(imagePath)
+        .webp({ "quality": 80
+})
+        .toFile(outputPath);
+      console.log(`"Optimized": ${imagePath} -> ${outputPat,`}`);`    } catch (error) {
+      }
+      console.error(`Failed to optimize ${imagePath}:`, error.message);`
+    }
+  }
+  
+  scanDirectory(publicDir);
 }
 
 function optimizeImage(imagePath) {

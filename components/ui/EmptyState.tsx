@@ -9,20 +9,36 @@ import EnhancedButton from \"./EnhancedButton\";
 export type EmptyStateProps = {
   title: string;
 
-  description?: string;}
-  primaryAction?: { label: string; href: string}
-}secondaryAction?: { label: string; href: string }
+
+import React from 'react','
+import Link from 'next/link';'
+import EnhancedButton from './EnhancedButton';'
+
+export type EmptyStateProps = any;
+import React from "react";"
+import Link from "next/link";"
+import EnhancedButton from "./EnhancedButton";"
+
+export type EmptyStateProps = {
+  }
+  "title": string;
+
+  description?: string;
+  primaryAction?: { "label": string; "href": string
+}secondaryAction?: { "label": string; "href": string }
 }
-export default function EmptyState(): any ({title,description,icon,primaryAction,secondaryAction}: EmptyStateProps) {primaryAction?: { label: string; href: string}
-}secondaryAction?: { label: string; href: string }
+
+export default function EmptyState(): any ({title,description,icon,primaryAction,secondaryAction}: EmptyStateProps) {primaryAction?: { "label": string; "href": string
+}secondaryAction?: { "label": string; "href": string }
 }
 
 interface EmptyStateProps {
-  className?: string;}
-}
+  }
+  className?: string;
+
 }
 
-const EmptyState: React.FC<EmptyStateProps /> = ({ className   }
+const "EmptyState": React.FC<EmptyStateProps> = ({ className   ,;
 }) => {
 
 }
@@ -30,11 +46,18 @@ return (<div className='w-full border border-dashed border-gray-300 dark:border-
       <div className='text-3xl opacity-70' />{icon ?? '🧭'}</div>;
       <h3 className='text-lg font-semibold' />{title}</h3>;
 
-      {description && (;}
-        <p className='text-sm opacity-80 max-w-prose' />{description}</p>;
+}
+
+
+return (<div className='w-full border border-dashed border-gray-300 "dark":border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3'>;'
+      <div className='text-3xl opacity-70'>{icon ?? '🧭'}</div>;'
+      <h3 className='text-lg font-semibold'>{title}</h3>;'
+
+      {description && (;
+        <p className='text-sm opacity-80 max-w-prose'>{description}</p>;'
       )}
       {(primaryAction |secondaryAction) && (
-        <div className='flex gap-2 mt-2'>
+        <div className = 'flex gap-2 mt-2'>'
           {primaryAction && (
             <Link href={primaryAction.href}>
               <a>
@@ -89,9 +112,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
           {secondaryAction && (<Link href={secondaryAction && secondaryAction.href}>;
               <a>;
-                <EnhancedButton variant='secondary' size='md'>;
+                <EnhancedButton variant='secondary' size='md'>;'
                   {secondaryAction && secondaryAction.label}
-                </EnhancedButton>              </a>                <EnhancedButton variant="secondary" size="md">{secondaryAction && secondaryAction.label}</EnhancedButton>;
+                </EnhancedButton>              </a>                <EnhancedButton variant="secondary" size="md">{secondaryAction && secondaryAction.label}</EnhancedButton>;"
               </a>;
             </Link>;
           )}

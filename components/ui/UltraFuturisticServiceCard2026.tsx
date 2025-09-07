@@ -1,13 +1,13 @@
 id: string;
 
-import React from 'react';
-    monthly?: number;
-    yearly?: number;
-    currency?: string;id: string;
-  name: string;
-  tagline: string;
-  description: string;
+
+  "id": string;
+
+  "name": string;
+  "tagline": string;
+  "description": string;
   price?: string | {monthly?: number;
+    }
     yearly?: number;
     currency?: string;
     trialDays?: number;
@@ -17,7 +17,7 @@ import React from 'react';
     currency?: string;
   period?: string;
   pricing?: any;
-  features: string[],;
+  "features": string[],;
   popular?: boolean;
     setupTime?: string;
   },period?: string;

@@ -27,7 +27,7 @@ class SecurityScanner {}
     ) {}"
         const timestamp = new Date().toISOString(})
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
 <<<<<<< HEAD
 =======
@@ -37,8 +37,8 @@ class SecurityScanner {}
     scanForVulnerabilities() {}
         this.log('Scanning for security vulnerabilities...');
         try {}
-            const auditResult = execSync('npm audit --json', { })
-                "cwd": this.projectRoot,
+const auditResult = execSync('npm audit --json', { });
+                "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -66,8 +66,8 @@ class SecurityScanner {}
     };
     scanForSecrets() {}
         this.log('Scanning for exposed secrets...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-        const secretPatterns = [{ "name": 'API Keys', "pattern": /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },
+        
+const secretPatterns = [{ "name": 'API Keys', "pattern": /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },;
             { "name": 'Passwords', "pattern": /password\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'Secrets', "pattern": /secret\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'Tokens', "pattern": /token\s*[:=]\s*['"][^'"]+['"]/gi },
@@ -145,10 +145,7 @@ class SecurityScanner {}
     checkFilePermissions() {}
 <<<<<<< HEAD
         
-=======
-        this.log('Checking file permissions...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-        const criticalFiles = ['package.json',]
+const criticalFiles = ['package.json',];
             'package-lock.json',
             '.env',
             '.env.local',
@@ -251,14 +248,14 @@ class SecurityScanner {}
     };
     checkForVulnerablePackages(dependencies) {}
         // This is a simplified check - in practice, you'd use a vulnerability database;
-        const knownVulnerable = ['lodash@4.17.0',]
+const knownVulnerable = ['lodash@4.17.0',];
             'jquery@1.12.0',
             'moment@2.24.0'
         ];
         const vulnerable = [];
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         for (const [name, version] of Object.entries(dependencies)) {}
-            const packageVersion = \`\${name}@\${version}\;`;`
+const packageVersion = \`\${name}@\${version}\;`;`;
             if ([0]))) {}
                 vulnerable.push({})
                     "name": name,
@@ -297,16 +294,18 @@ class SecurityScanner {}
 
         // Add security headers if not already present;
         if (!nextConfig.includes('X-Frame-Options')) {}
-            const securityHeaders = 
+const securityHeaders = ';
   // Security headers;
   async headers() {}
     return ) {}
-
+    ) {}
+            nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
+        // Add security headers if not already present;
+        if (!nextConfig.includes('X-Frame-Options')) {}
+const securityHeaders = ';
   // Security headers;
-    return }[;]
-<<<<<<< HEAD
-            
-=======
+  async headers() {}
+return }[;];
       {}
         "source": '/(.*)',
         "headers": []
@@ -363,7 +362,7 @@ class SecurityScanner {}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         return report};
     generateSecurityRecommendations() {}
-        return [;]
+return [;];
             'Use environment variables for all sensitive configuration',
             'Implement proper input validation and sanitization',
             'Use HTTPS in production environments',

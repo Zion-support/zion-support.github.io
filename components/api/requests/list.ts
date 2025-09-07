@@ -1,14 +1,13 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json'),
 
-const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
-export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
-) {
-origin/cursor/automate-test-improve-and-merge-code-2533
+
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';'
+
+const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');'
+
+export default async function handler() {
+  }
   try {
     const raw = null;
 
@@ -20,15 +19,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     res && res.status(200).json({ items });
   } catch {}
   } catch {
-  res.status (200).json ({ items: []}
+  } catch {
+    }
+    res.status (200).json ({ "items": []
 });
   }
-  try {"
-    const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
-    const items = JSON.parse(raw);
-    res.status(200).json({ items });"
-    const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");
-    const items = JSON.parse (raw);
+  try {
+    }
+    const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");"
+
+const items = JSON.parse(raw);
+    res.status(200).json({ items });
+
+const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");"
+
+const items = JSON.parse (raw);
     res.status (200).json ({ items });
   } catch {}
     res.status (200).json ({ items: [] });
@@ -36,7 +41,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
   } catch {
-  res.status(200).json({ items: []}
+
+    }
+
+    res.status(200).json({ "items": []
 });
   }
 

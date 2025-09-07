@@ -1,5 +1,8 @@
-import fs from 'fs';
-import path from 'path';
+
+
+import fs from 'fs';'
+import path from 'path';'
+
 type NewsItem = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 export async function getServerSideProps() { return null; }

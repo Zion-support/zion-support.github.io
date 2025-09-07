@@ -1,7 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { supabase as supabaseClient  } from '@/utils/supabase/client';
-import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
-import type { TalentProfile } from '@/utils/types/talent';
+import type { NextApiRequest, NextApiResponse } from 'next';'
+
+
+import { supabase as supabaseClient  } from '@/utils/supabase/client';'
+import { TALENT_PROFILES as LOCAL  } from '@/data/talent';'
+
+import type { TalentProfile } from '@/utils/types/talent';'
+
 const hasSupabase =;
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
   !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -60,28 +64,32 @@ if (throw error) {$2;
 }
         return res.status (201).json ({ slug: item.slug })return res.status(500).json({ error: e.message })}
   }
-  if (req.method === 'POST') {try {const payload = req.body as Partial<TalentProfile>;
+  if (req.method = == 'POST') {try ;'
+  }
+  const payload = req.body as Partial<TalentProfile>;
+
 const slug =;
-        (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') +;
-        '-' +;
+        (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') +;'
+        '-' +;'
         uuid().slice(0, 6)...payload;
-        id: uuid()slug;
-        verified: false;
-        rating: 0;
-        reviewsCount: 0;
-        createdAt: new Date().toISOString()summary: payload.summary |'';
-        skills: payload.skills |[];
-        name: payload.name |'Unnamed';
-        title: payload.title |'Professional';
-        location: payload.location |'Remote';
-        availability: (payload.availability as any) |'Open';
+        "id": uuid()slug;
+        "verified": false;
+        "rating": 0;
+        "reviewsCount": 0;
+        "createdAt": new Date().toISOString()"summary": payload.summary |'';'
+        "skills": payload.skills |[];
+        "name": payload.name |'Unnamed';'
+        "title": payload.title |'Professional';'
+        "location": payload.location |'Remote';'
+        "availability": (payload.availability as any) |'Open';'
       } as TalentProfile;
       // Auto-translate;
       const originalLang =;
         payload.originalLanguage |;
-        detectLanguageSimple([item.title, item.summary, item.bio |''].join('\n'))const translations: TalentProfile['translations'] = {}
+        detectLanguageSimple([item.title, item.summary, item.bio |''].join('\n'))const "translations": TalentProfile['translations'] = {}'
         translations.summary = translations.summary |{}
-        translations.bio = translations.bio |{}
+        translations.bio = translations.bio |
+}
         if (item.title)translations.title[lang] = await translateText(item.title;
             lang;
             originalLang;
@@ -308,6 +316,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   }
 return res;
-    .setHeader('Allow', 'GET, POST')
+    .setHeader('Allow', 'GET, POST')'
     .status(405)
-    .end('Method Not Allowed');
+    .end('Method Not Allowed');'
+

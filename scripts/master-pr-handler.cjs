@@ -29,6 +29,7 @@
 
 #!/usr/bin/env node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -56,6 +57,17 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN ||
 =======
 const REPO_OWNER = 'Zion-Holding;s;
 const REPO_NAME = 'zion.app;
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+// console.log(' Master PR Handler & Automation System')
+console.log('')
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
+throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.';
+const REPO_OWNER = 'Zion-Holding;s;';
+const REPO_NAME = 'zion.app;';
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 async function githubApiCall(endpoint, method = 'GET')
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,8 +82,8 @@ async function githubApiCall(endpoint, method = 'GET')
       'Accept': 'application/vnd.github.v3+json'
       'Content-Type': 'application/json'
   console.log('� Fetching open PRs...')
-  const prs = await githubApiCall('/pulls?state=open&per_page=100;')
-    const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH'`)
+const prs = await githubApiCall('/pulls?state=open&per_page=100;');
+const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH'`);
       "state"
       "name"
       "command"

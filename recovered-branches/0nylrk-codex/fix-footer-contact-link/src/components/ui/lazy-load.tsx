@@ -1,15 +1,16 @@
-import { useEffect, useState, useRef, ReactNode } from "react",
-import { cn } from "@/lib/utils";
-import { Skeleton } from "@/components/ui/skeleton";
+import { useEffect, useState, useRef, ReactNode } from "react","
+import { cn } from "@/lib/utils";"
+import { Skeleton } from "@/components/ui/skeleton";"
 interface LazyLoadProps {
-import {useEffect, useState, useRef, ReactNode} from "react";
-import {cn} from "@/lib/utils";
-import {Skeleton} from "@/components/ui/skeleton";
+}
+import {useEffect, useState, useRef, ReactNode} from "react";"
+import {cn} from "@/lib/utils";"
+import {Skeleton} from "@/components/ui/skeleton";"
 interface LazyLoadProps {;
+  }
   height?: string | number;
   width?: string | number;
-  children: ReactNode,;
-
+  "children": ReactNode,;
   loadingComponent?: ReactNode;
   className?: string;
 }
@@ -19,127 +20,84 @@ interface LazyLoadProps {;
   children: ReactNode,
   loadingComponent?: ReactNode,
 export function LazyLoad(): any ({;interface LazyLoadProps {
+  }
   height?: string | number,
   width?: string | number,
-  children: ReactNode,
+  "children": ReactNode,
   loadingComponent?: ReactNode,  className?: string
 }
-
-export function LazyLoad({;
-  height = "200px";
-  width = "100%";
-  children;
-  loadingComponent;
-export function LazyLoad({
-
-  height = "200px";
-  width = "100%";
-  children;
-  loadingComponent;
-  className}: LazyLoadProps) {
+export function LazyLoad() {
+  }
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  height = "200px",
-  width = "100%",
+  height = "200px","
+  width = "100%","
   children,
   loadingComponent,
   className}: LazyLoadProps) {
-  const [isVisible, setIsVisible] = useState(false),
-  const [isLoaded, setIsLoaded] = useState(false),
-  const containerRef = useRef<HTMLDivElement>(null),
-
-  className?: string
 }
-
-  children: ReactNode
-
-  loadingComponent?: ReactNode;
-  className?: string
-}
-interface LazyLoadProps {
-  height?: string | number,
-  width?: string | number,
-  children: ReactNode,
-  loadingComponent?: ReactNode,
-  className?: string
-}
-export function LazyLoad({
-  height = $2;
-  width = $2;
-  children,
-  loadingComponent,
-  className}: LazyLoadProps) {
-  const [isVisible, setIsVisible] = useState($2);
-  const [isLoaded, setIsLoaded] = useState($2);
-  const containerRef = $2;
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-        threshold: 0.1}
+const [isVisible, setIsVisible] = useState(false),;
+const [isLoaded, setIsLoaded] = useState(false),;
+const containerRef = useRef<HTMLDivElement>(null),;
+        "threshold": 0.1}
     );
-
-import { useEffect, useState, useRef, ReactNode } from "react",;
-import { cn } from "@/lib/utils",;
-import { Skeleton } from "@/components/ui/skeleton",;
+import { useEffect, useState, useRef, ReactNode } from "react";"
+import { cn } from "@/lib/utils";"
+import { Skeleton } from "@/components/ui/skeleton",;"
 interface LazyLoadProps {;
+  }
   height?: string | number,;
   width?: string | number,;
-  children: ReactNode,;
+  "children": ReactNode,;
   loadingComponent?: ReactNode,;
   className?: string;
 }
 ;
-export function LazyLoad({;
-  height = "200px",;
-  width = "100%",;
-  children,;
-  loadingComponent,;
-  className}: LazyLoadProps) {;
+export function LazyLoad() {;
+  }
   const [isVisible, setIsVisible] = useState(false),;
   const [isLoaded, setIsLoaded] = useState(false),;
   const containerRef = useRef<HTMLDivElement>(null),;
-
-import { useEffect, useState, useRef, ReactNode } from "react",;
-import { cn } from "@/lib/utils",;
-import { Skeleton } from "@/components/ui/skeleton",;
+import { useEffect, useState, useRef, ReactNode } from "react",;"
+import { cn } from "@/lib/utils",;"
+import { Skeleton } from "@/components/ui/skeleton",;"
 ;
 interface LazyLoadProps {;
+  }
   height?:string | number,;
   width?:string | number,;
-  children:ReactNode,;
+  "children":ReactNode,;
   loadingComponent?:ReactNode,;
   className?:string;
 }
 ;
-export function LazyLoad({;
-  height = "200px",;
-  width = "100%",;
-  children,;
-  loadingComponent,;
-  className} LazyLoadProps) {;
+export function LazyLoad() {;
+  }
   const [isVisible, setIsVisible] = useState(false),;
   const [isLoaded, setIsLoaded] = useState(false),;
   const containerRef = useRef<HTMLDivElement>(null),;
 ;
-        threshold: 0.1}
-
+        "threshold": 0.1}
           setIsVisible(true),;
           observer.disconnect(),;
         }
       },;
       {;
-        rootMargin:"200px", // Start loading when element is within 200px of viewport;
-        threshold:0.1}
+        }
+        "rootMargin":"200px", // Start loading when element is within 200px of viewport;"
+        "threshold":0.1}
     ),;
 ;
     if (containerRef.current) {;
+      }
       observer.observe(containerRef.current),;
     }
 ;
     return () => {;
+      }
       if (containerRef.current) {;
+        }
         observer.unobserve(containerRef.current),;
       }
     );
@@ -151,31 +109,24 @@ export function LazyLoad({;
 
       },
       {
-        rootMargin: "200px", // Start loading when element is within 200px of viewport
-
-          setIsVisible($2);
-          observer.disconnect()
         }
-      }
-      {
-        rootMargin: "200px", // Start loading when element is within 200px of viewport
-        threshold: 0.1}
-    ),
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current)
-    }
+        "rootMargin": "200px", // Start loading when element is within 200px of viewport"
     return () => {
+      }
       if (containerRef.current) {
+        }
         observer.unobserve(containerRef.current)
       }
     }
   }, []),;
 
   useEffect(() => {;
+    }
     if (isVisible) {;
       // Simulate loading delay (remove in production);
+      }
       const timer = setTimeout(() => {;
+        }
         setIsLoaded(true);
         className
       )}>;
@@ -229,11 +180,13 @@ export function LazyLoad({;
 }
   useEffect (() => {
     // Check condition
+}
 if ( {) {
   $2
 }
       // Simulate loading delay (remove in production);
       const timer = set_timeout (() => {
+        }
         setIsLoaded (true);
       }, 500);
 ;
@@ -241,17 +194,17 @@ if ( {) {
     }
   }, [is_visible]);
 ;
-  const defaultLoadingComponent = (
+const defaultLoadingComponent = (;
     <Skeleton;
       style={{ height, width }}
-      className="rounded - md bg - zion - blue-light / 20";
-    />);
+      className="rounded - md bg - zion - blue-light / 20";" />);
 ;
-  return (
+return (;
     <div;
       ref={container_ref}
-      className={cn ("transition - opacity duration - 500",
-        is_loaded ? "opacity - 100" : "opacity - 0";
+      className={cn ("transition - opacity duration - 500","
+        }
+        is_loaded ? "opacity - 100" : "opacity - 0";"
         class_name)}
     >;
       {is_visible ? (
@@ -264,12 +217,14 @@ if ( {) {
 }
 }, [isVisible]);
 const defaultLoadingComponent = (<Skeleton />);
-return (<div) 
+return (<div);
 }> {
+  }
   isVisible ? (<> {
-  !isLoaded && (loadingComponent || defaultLoadingComponent) 
+  !isLoaded && (loadingComponent || defaultLoadingComponent)
 }{
-  isLoaded && children 
-}</>) : (loadingComponent || defaultLoadingComponent) 
-}</div>) 
+  }
+  isLoaded && children
+}</>) : (loadingComponent || defaultLoadingComponent)
+}</div>)
 }

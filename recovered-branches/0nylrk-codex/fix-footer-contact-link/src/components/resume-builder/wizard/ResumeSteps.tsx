@@ -1,25 +1,29 @@
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { StepProps } from "./types";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";"
+import { StepProps } from "./types";"
 interface ResumeStepsProps {
-  steps: StepProps[],
-  activeTab: string,
-  onChange: (value: string) => void
+  }
+  "steps": StepProps[];
+  "activeTab": string;
+  "onChange": ("value": string) => void;
 }
-
 export const ResumeSteps = ({
+  }
   steps,
   activeTab,
-  onChange,
-}: ResumeStepsProps) => {
-  return (
+  onChange}: ResumeStepsProps) => {
+}
+return (;
+    <TabsList className="grid grid-cols-2 "md":grid-cols-3 "lg":grid-cols-6 mb-8">"
+      {steps.map((step) => (
+        <TabsTrigger key={step.id} value={step.id}>
   )
 };
 
   active_tab,
-  on_change,
-}: ResumeStepsProps) =>: any {
-  return (
-    <TabsList className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 mb-8">;
+  on_change}: ResumeStepsProps) =>: any {
+}
+return (;
+    <TabsList className="grid grid - cols - 2 "md":grid - cols - 3 "lg":grid - cols - 6 mb-8">;"
       {steps.map ((step) => (
         <TabsTrigger key={step.id} value={step.id}>;
           {step.label}
@@ -27,19 +31,20 @@ export const ResumeSteps = ({
     </TabsList>);
 }
 ;
-
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { StepProps } from "./types",;
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";"
+import { StepProps } from "./types";"
 ;
 interface ResumeStepsProps {;
-  steps:StepProps[],;
-  activeTab:string,;
-  onChange:(value:string) => void;
+  }
+  "steps":StepProps[],;
+  "activeTab":string,;
+  "onChange":("value":string) => void;
 }
 ;
 export const ResumeSteps = ({ steps, activeTab, onChange } ResumeStepsProps) => {;
+  }
   return (;
-    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">;
+    <TabsList className="grid grid-cols-2 "md":grid-cols-3 "lg":grid-cols-6 mb-8">;"
       {steps.map((step) => (;
         <TabsTrigger key={step.id} value={step.id}>;
           {step.label}
@@ -59,4 +64,4 @@ export const ResumeSteps = ({ steps, activeTab, onChange } ResumeStepsProps) => 
 
   )
 };
-    <TabsList className = $2;
+};

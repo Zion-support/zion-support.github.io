@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+
+
+
+import React, { useState } from 'react';'
 
 type PersonaConfig = any;
-  language: string;
+  "language": string;
   cloneStyleText?: string;
 }
 export default function StudioHostPage() {
@@ -27,14 +30,10 @@ export default function StudioHostPage() {
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
 
-export default function StudioHostPage() { return null; }
-  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;'
-  const [inviteeName, setInviteeName] = useState('');'
-  const [inviteeBio, setInviteeBio] = useState('');'
-  const [topic, setTopic] = useState('');'
-  const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
-  const [operatorPrompt, setOperatorPrompt] = useState(
-    'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
+const [topic, setTopic] = useState('');'
+
+const [operatorPrompt, setOperatorPrompt] = useState(;
+    'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.''
   );
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -97,8 +96,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setGenerating(false);
     }
   }
-  const handleSynthesize = async () => {
-    if (!episode?.id) return;
+
+const handleSynthesize = async () => {
+    }
+    if (!episode?.id);
+  return;
     setSynthesizing(true);
     try {
       const res = await fetch('/api/podcast/synthesize', {
@@ -109,8 +111,9 @@ body: JSON.stringify({ episodeId: episode.id, persona }),
       const data = await res.json();
       setEpisode(data.episode);
     } catch (e) {
+      }
       console.error(e);
-      alert('Failed to synthesize audio');
+      alert('Failed to synthesize audio');'
     } finally {
       setSynthesizing(false);    }      const data = await res.json();
       setEpisode(data.episode)
@@ -129,8 +132,11 @@ body: JSON.stringify({ episodeId: episode.id, persona }),
       await res.json($2);
       alert('RSS feed updated. Platforms will pull on next refresh.')
   }
-  const handlePublishRss = async () => {
-    if (!episode?.id) return;
+
+const handlePublishRss = async () => {
+    }
+    if (!episode?.id);
+  return;
     setPublishing(true);
     try {
       const res = await fetch('/api/podcast/rss', { method: 'POST' });
@@ -158,13 +164,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='mt-1 w-full border rounded p-2'
               value={persona && persona.voice}
               onChange={e =>;
-                setPersona({ ...persona, voice: e && e.target.value as any });
-      set_publishing (false);
-    }
-  }
-;
-  return ('
-    <div className='space - y-8'>;'
+                }
+                setPersona({ ...persona, "voice": e && e.target.value as any })set_publishing (false)}
+ 
+}return (<div className='space - y-8'>;'
       <h1 className='text - 3xl font - bold'>Podcast Studio Host</h1>;'
       <section className='space - y-3'>;'
         <h2 className='text - xl font - semibold'>AI Persona</h2>;'
@@ -175,9 +178,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='mt - 1 w - full border rounded p - 2';
               value={persona.voice}
               on_change={e =>;
-                set_persona ({ ...persona, voice: e.target.value as any });
-              }
-            >;'
+                }
+                set_persona ({ ...persona, "voice": e.target.value as any }
+}
+            >;
               <option value='Visionary'>Visionary</option>;'
               <option value='Grounded'>Grounded</option>;'
               <option value='Technical'>Technical</option>;
@@ -348,8 +352,8 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
               className='mt-1 w-full border rounded p-2'
               rows={3}
               value={operatorPrompt}
-              onChange={e => setOperatorPrompt(e && e.target.value)}
-            />;
+              onChange={e => { return setOperatorPrompt(e && e.target.value)}
+            />; }
           </div>;
         </div>;
             <label className="block text-sm font-medium">Invitee Name</label>
@@ -657,22 +661,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {episode.audio.mp3Url && (}
                   <a;}
 href={episode.audio.mp3Url}
-                    className='text-blue-600 underline' />
+                    className='text-blue-600 underline'>'
 
                     Download MP3;
                   </a>;
                 )}
                 {episode.audio.wavUrl && (<a;
+                    }
                     href={episode.audio.wavUrl}
-                    className='text-blue-600 underline';
-                  >;
+                    className='text-blue-600 underline'>'
+
                     Download WAV;
                   </a>;
                 )}
                 {episode.audio.mp4Url && (<a;
+                    }
                     href={episode.audio.mp4Url}
-                    className='text-blue-600 underline';
-                  >;
+                    className='text-blue-600 underline'>'
+
                     Download MP4;
                   </a>;
                 )}

@@ -568,24 +568,24 @@ orchestrator.orchestrate().catch(console.error);
  * Comprehensive Automation Orchestrator;
  * Orchestrates all automation scripts for maximum efficiency;
  */;
-
-const fs = require("$1")
-const path = require("$1")
-const { execSync, spawn } = require("child_process")
+const fs = require("$1");
+const path = require("$1");
+const { execSync, spawn } = require("child_process");
     this.reportsDir = path.join(this.projectRoot, "reports")
       "success"
       "errors"
       "warnings"
       "metrics"
       "comprehensive-error-fixer.cjs"
-      "advanced-build-optimizer.js"
-      "performance-monitor-enhanced.js"
-      "auto-fixer.js"
-      "optimize-build.js"
+      "advanced-build-optimizer.js",
+      "performance-monitor-enhanced.js",
+      "auto-fixer.js",
+      "optimize-build.js",
       "performance-optimizer.js"
-      fs.mkdirSync(this.reportsDir, { "recursive"})
+    ];
+    fs.mkdirSync(this.reportsDir, { recursive: true });
   log(message, type = "info")
-    const prefix = type === "error" ? "" : type === "success" ? "" : "ℹ"
+const prefix = type === "error" ? "" : type === "success" ? "" : "ℹ";
     this.log("� Starting Comprehensive Automation Orchestration...")
     this.log(" Zion Tech Group - Advanced Automation System")
       this.log("� Comprehensive automation completed successfully!", "success")
@@ -594,7 +594,7 @@ const { execSync, spawn } = require("child_process")
     this.log(" Running pre-automation checks...")
     // Check if we"
     if (!fs.existsSync("package.json")
-      throw new Error("Not in a Node.js project directory")
+throw new Error("Not in a Node.js project directory");
     if (!fs.existsSync("scripts")
       this.log("Creating scripts directory...")
       fs.mkdirSync("scripts", { "recursive"})
@@ -620,7 +620,7 @@ const { execSync, spawn } = require("child_process")
         this.log(`${name} completed successfully`, "success"`)
         this.results.warnings.push(`${name} had "issues"`)
         this.log(`${name} had issues`, "error"`)
-    const scriptPath = path.join("scripts")
+const scriptPath = path.join("scripts");
       execSync(`node ${scriptPath}`, { "stdio": "pipe"`})
       this.log(`${scriptName} completed successfully`, "success"`)
       this.results.errors.push(`${scriptName} "failed"`)
@@ -635,7 +635,7 @@ const { execSync, spawn } = require("child_process")
       "results"
       "recommendations"
       "nextSteps"
-    const reportPath = path.join(process.cwd(), "comprehensive-automation-report.json"
+const reportPath = path.join(process.cwd(), "comprehensive-automation-report.json";
     this.log(`� Comprehensive report saved to ${reportPath}`, "success"`)
 ${report.results.success.map(item => `- ${item}`).join("\n"`)
 ${report.results.errors.map(item => `- ${item}`).join("\n"`)
@@ -643,7 +643,7 @@ ${report.results.warnings.map(item => `- ${item}`).join("\n"`)
 ${report.recommendations.map(item => `- ${item}`).join("\n"`)
 ${report.nextSteps.map(item => `- ${item}`).join("\n"`)
 *"Timestamp"
-    const markdownPath = path.join(process.cwd(), "AUTOMATION_REPORT.md"
+const markdownPath = path.join(process.cwd(), "AUTOMATION_REPORT.md";
     this.log(`� Markdown summary saved to ${markdownPath}`, "success"`)
       recommendations.push("Address all errors before deployment")
       recommendations.push("Review and address warnings for better code quality")
@@ -716,7 +716,7 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n"`)
         "Run end-to-end tests"
         "Deploy to production"
         "Monitor application performance"
-    const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.json")
+const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.json");
     this.log(" Starting Comprehensive Automation Orchestrator")
 <<<<<<< HEAD
 <<<<<<< HEAD

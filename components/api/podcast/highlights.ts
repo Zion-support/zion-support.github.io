@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
-import path from 'path';
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
+import path from 'path';'
 
 function ensureStorage() {
   const dir = path.dirname($2);
@@ -159,15 +158,16 @@ return res.status(200).json({ episode });  return res.status(200).json({ episode
 }
   return res.status(200).json({ episode });
 const EPISODES_PATH = null;
-  return res.status(200).json({ ok: true });
+return res.status(200).json({ episode });
 }
 const EPISODES_PATH = path.join(
   process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
+  'data''
+  'podcast''
+  'episodes.json''
 );
 function ensureStorage() {
+  }
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH))
@@ -192,8 +192,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const idx = episodes.findIndex((e) => e.id === episodeId);
   if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
   const episode = episodes[idx];
-  const segments = episode?.time_markers?.segments || [];
-  const highlights = segments.map ((t: string, index: number) => ({label: `Highlight ${i + 1}`,start: t,end:;
+
+const segments = episode?.timeMarkers?.segments |[];
+
+const highlights = segments.map(("t": string, "i": number) => ({"label": `Highlight ${i + ,`}`,"start": t,"end":;`
       i + 1 < segments.length;
         ? segments[i + 1];
         : episode?.time_markers?.closing || '15:00',}))label: `Highlight ${i + 1}`;

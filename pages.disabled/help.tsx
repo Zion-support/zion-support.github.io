@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {
+  }
   BookOpen,
   Can,
   CheckCircle,
@@ -19,8 +20,8 @@ import {
   Users,
   Video,
   Within,
-  Yes,
-} from 'lucide-react';
+  Yes
+} from 'lucide-react';'
 
 export default function Help() {
   const faqs = [

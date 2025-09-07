@@ -1,6 +1,14 @@
-const fs = require('fs');
-const path = require('path');
 const { execSync } = require('child_process');
+const fs = require('fs');
+console.log(' Deployment Automator Starting...')
+        "name"
+        "command"
+        "name"
+        "command"
+        "name"
+        "command"
+        "name"
+        "command"
 
 console.log('🚀 Deployment Automator Starting...');
 

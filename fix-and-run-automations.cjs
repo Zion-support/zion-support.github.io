@@ -27,7 +27,7 @@ class AutomationScriptFixer {
         this.log(`Fixing merge conflicts in: ${filePath}`);
 
         // Simple merge conflict resolution - take the HEAD version
-        let fixedContent = content
+let fixedContent = content;
           .replace(
             '$1'
           );
@@ -122,7 +122,7 @@ class AutomationScriptFixer {
       this.log(`✅ Fixed ${this.fixedCount} script files`);
 
       // Run some key automation scripts
-      const keyScripts = [
+const keyScripts = [;
         'scripts/performance-monitor.js',
         'scripts/health-checker.js',
         'scripts/seo-optimizer.js',
@@ -157,7 +157,7 @@ class AutomationScriptFixer {
         errors: this.errors,
       };
 
-      const reportFile = path.join(
+const reportFile = path.join(;
         this.projectRoot,
         'automation-scripts-report.json'
       );
@@ -197,16 +197,16 @@ fixer
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
     this.scriptsDir = path.join(this.projectRoot, 'scripts')
-      const content = fs.readFileSync(filePath, 'utf8')
+const content = fs.readFileSync(filePath, 'utf8');
         content.includes('')
         content.includes('')
             '$1'
             '$1'
-      const content = fs.readFileSync(filePath, 'utf8')
+const content = fs.readFileSync(filePath, 'utf8');
       if (content.includes("console.log(`"Checking"`)
           "console.log(`"Checking"`)
           'console.log(`"Checking"`)

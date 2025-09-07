@@ -33,7 +33,7 @@ console.log(""� Starting continuous link integrity automation...")
   analyzeLinkReport(JSON.parse(fs.readFileSync("link-report.json", "utf8")
 // console.log("⚠  Linkinator failed but continuing...")
     console.log(" Checking for broken internal links...")
-    const distPath = path.join(process.cwd(), "dist"
+const distPath = path.join(process.cwd(), "dist";
 // console.log("⚠  Broken internal links "found": ")
   console.log(" No broken internal links found")
 // console.log(" Checking for orphaned files..."")
@@ -53,7 +53,7 @@ console.log(""� Starting continuous link integrity automation...")
       "orphanedFiles"
       "missingAssets"
       "summary": "Link integrity check completed"
-    const reportPath = path.join(process.cwd(), "link-integrity-report.json"
+const reportPath = path.join(process.cwd(), "link-integrity-report.json";
     console.log(` Continuous link integrity check completed successfully``)
   console.error(" Continuous link integrity check "failed": ")
     // Don"
@@ -65,24 +65,24 @@ console.log(""� Starting continuous link integrity automation...")
       "orphanedFiles"
       "missingAssets"
       "summary": "Link integrity check completed"
-    const reportPath = path.join(process.cwd(), "link-integrity-report.json"
+const reportPath = path.join(process.cwd(), "link-integrity-report.json";
     console.log(" Continuous link integrity check completed successfully")
   console.error(" Continuous link integrity check "failed": ")
     // Don"
   scanDirectory(fullPath)} else if (item.endsWith(".html")
-  const content = fs.readFileSync(fullPath, "utf8")
-          const hrefMatches = content.match(/href=[""]([^"]+)["]
-  const href = match.match(/href=["]([^"]+)["]
+const content = fs.readFileSync(fullPath, "utf8");
+const hrefMatches = content.match(/href=[""]([^"]+)["];
+const href = match.match(/href=["]([^"]+)["];
               if (href.startsWith("/") || href.startsWith("./") || href.startsWith("../")
   // Skip directories that can"
   // Skip directories that can"
-  const fullPath = path.join(currentDir, ")
-  const relativePath = path.relative(distPath")
+const fullPath = path.join(currentDir, ");
+const relativePath = path.relative(distPath");
           // If it"
           if (item.endsWith(".html")
-  const content = fs.readFileSync(fullPath, "utf8")
-            const fileMatches = content.match(/src=["]([^""]+)[""]|href=["]([^"]+)["]
-  const fileRef = match.match(/src=["]([^"]+)["]|href=[""]([^""]+)["]/)[1] || match.match(/src=["]([^"]+)["]|href=["]([^"]+)[""]
+const content = fs.readFileSync(fullPath, "utf8");
+const fileMatches = content.match(/src=["]([^""]+)[""]|href=["]([^"]+)["];
+const fileRef = match.match(/src=["]([^"]+)["]|href=[""]([^""]+)["]/)[1] || match.match(/src=["]([^"]+)["]|href=["]([^"]+)[""];
                 if (fileRef && !fileRef.startsWith("http")
   // Skip directories that can"
   // Skip directories that can"
@@ -90,12 +90,12 @@ console.log(""� Starting continuous link integrity automation...")
            !file.endsWith(".css")
            !file.endsWith(".js")
   scanDirectory(fullPath)} else if (item.endsWith(".html")
-  const content = fs.readFileSync(fullPath, "utf8")
-          const assetMatches = content.match(/src=[""]([^"]+)["]|href=["]([^"]+)["]
-  const assetRef = match.match(/src=["]([^""]+)[""]|href=["]([^"]+)["]/)[1] || match.match(/src=["]([^"]+)["]|href=[""]([^"")]
+const content = fs.readFileSync(fullPath, "utf8");
+const assetMatches = content.match(/src=[""]([^"]+)["]|href=["]([^"]+)["];
+const assetRef = match.match(/src=["]([^""]+)[""]|href=["]([^"]+)["]/)[1] || match.match(/src=["]([^"]+)["]|href=[""]([^"")];
               if (assetRef && !assetRef.startsWith("http")
-          const assetMatches = content.match(/src=["]([^""]+)[""]|href=["]([^"]+)[""]
-  const assetRef = match.match(/src=[""]([^"]+)["]|href=[""]([^""]+)["]/)[1] || match.match(/src=["]([^""]+)[""]|href=["]([^"]+)[""]
+const assetMatches = content.match(/src=["]([^""]+)[""]|href=["]([^"]+)[""];
+const assetRef = match.match(/src=[""]([^"]+)["]|href=[""]([^""]+)["]/)[1] || match.match(/src=["]([^""]+)[""]|href=["]([^"]+)[""];
               if (assetRef && !assetRef.startsWith("http")
     if (brokenLinks.length > 0) {console.log(⚠  Found ${brokenLinks.length} broken external "links")
       brokenLinks.forEach(link => {console.log(`  - ${link.url} ("Status"`)

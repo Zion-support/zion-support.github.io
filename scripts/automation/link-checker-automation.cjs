@@ -63,7 +63,7 @@ class LinkCheckerAutomation {}
     log(message) {}
         const timestamp = new Date().toISOString(}
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
 =======
             fs.mkdirSync(logsDir, { "recursive": true })};"

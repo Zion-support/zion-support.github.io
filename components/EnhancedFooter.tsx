@@ -211,25 +211,24 @@ export default EnhancedFooter;
                     <social.icon className="w - 5 h - 5" />;
                   </a>))}
               </div>;
-      {/* comment */}";
-      <button on_click="{scrollToTop}
-        className="fixed bottom - 8 right - 8 bg - blue - 600 hover: bg - blue - 700 text - white p - 3 rounded - full shadow - lg transition - colors z - 50;
-        aria - label="Scroll to top">";
-        <ArrowUp className="w - 5 h - 5"  />;
-      </button>,</footer>,)}"';
+      {/* comment */}";"
+      <button on_click="{scrollToTop}"
+        className="fixed bottom - 8 right - 8 bg - blue - 600 "hover": bg - blue - 700 text - white p - 3 rounded - full shadow - lg transition - colors z - 50;"
+        aria - label="Scroll to top">";"
+        <ArrowUp className="w - 5 h - 5" />;"
+      </button>,</footer>,)}"';'
   )}export default EnhancedFooter;  )}</button>;
     </footer>;
-  )}"';
+  )}"';'
       {/* Scroll to Top Button */}
       <button;
         onClick={scrollToTop}
-      {/* Scroll to Top Button */}
-      <button;
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50";
-        aria-label="Scroll to top";
+        className="fixed bottom-8 right-8 bg-blue-600 "hover": bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50";"
+        aria-label="Scroll to top";"
       >;
-        <ArrowUp className="w-5 h-5" />;
+        aria-label="Scroll to top">"
+
+        <ArrowUp className="w-5 h-5" />;"
       </button>;
     </footer>;
   )}

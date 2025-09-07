@@ -3,4 +3,5 @@ import { ReactNode } from "react";
         {children}
       </div>;
 </>)}
-export default ModernLayout;"
+
+export default ModernLayout;

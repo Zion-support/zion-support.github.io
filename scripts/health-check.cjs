@@ -28,9 +28,7 @@ const { execSync } = require('child_process');
 
 console.log('🔍 Comprehensive Health Check Starting...');
 
-console.log('� Overall "status")
-console.log('� Overall "status")
-const checks = [
+const checks = [;
   {
     name: 'Package.json exists',
     check: () => fs.existsSync('package.json')

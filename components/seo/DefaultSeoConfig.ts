@@ -28,6 +28,15 @@ const config: DefaultSeoProps = {defaultTitle: 'Zion Tech Solutions',
   content: '#111827',}
 };
 }
+
+export default config;import type { DefaultSeoProps } from 'next - seo';'
+
+  "additionalMetaTags": [
+{ "name": 'viewport', "content": 'width = device-width, initial-scale=1' }'
+    { "name": 'theme-color', "content": '#111827','
+};
+}
+
 export default config;
 import type { DefaultSeoProps } from 'next - seo';
 
@@ -85,7 +94,8 @@ import type { DefaultSeoProps } from 'next - seo';
 export default config;ursor/fix-website-loading-errors-and-merge-6662;
 export default config;
 
-const config: DefaultSeoProps;
+const "config": DefaultSeoProps;
+
 export default config;
 ;
 export default config;

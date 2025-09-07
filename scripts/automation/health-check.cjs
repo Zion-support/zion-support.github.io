@@ -27,14 +27,7 @@ class HealthChecker {}
     };
     log(message) {}
         const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-        const logMessage = `[${timestamp}] ${message}\n`;`
-        console.log(logMessage.trim());
-        fs.appendFileSync(this.logFile, logMessage)};
-        
-=======
-
-        const logMessage = `[${timestamp}] ${message}\n`;`
+const logMessage = `[${timestamp}] ${message}\n`;`;
         console.log(logMessage.trim());
         fs.appendFileSync(this.logFile, logMessage)};
     async checkSystemHealth() {}

@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
-    const { userId, preferences } = body;
+    }
+    const session = await getServerSession();
 
     // Mock user update - replace with actual database operation
     const updatedUser = {

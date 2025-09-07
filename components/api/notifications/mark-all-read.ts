@@ -1,6 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { supabase } from '../../../utils/supabase/client';
-function getUserId(req: NextApiRequest): string {
+import type { NextApiRequest, NextApiResponse } from 'next';'
 
   const cookie = req.headers.cookie |'';
   const match = cookie
@@ -47,9 +45,11 @@ function getUserId(req: NextApiRequest): string {
 origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     const userId = getUserId(req);
-    const { error } = await supabase'
-      .from('notifications')
-      .update({ read_status: true })'
+
+const { error } = await supabase;
+      .from('notifications')'
+      .update({ "read_status": true
+})
       .eq('user_id', userId)'
       .eq('read_status', false);
     if (error) return res.status(200).json({ ok: true });

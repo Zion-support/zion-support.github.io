@@ -3,9 +3,9 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
   "checkInterval"
       "maxErrors"
       "autoFix"
@@ -39,47 +39,47 @@ const { execSync } = require("child_process")
     // Check "1"
 // console.log("" Prevention checks completed")
     console.log(" Prevention checks completed")
-  const result = execSync("npm run type-check")
+const result = execSync("npm run type-check");
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
       if (result.includes("error TS")
-  const errorCount = (result.match(/error ""TS/g")
+const errorCount = (result.match(/error ""TS/g");
   console.log(` No TypeScript errors found``)
-      const errorOutput = error.stdout || error.stderr || ""
-      const errorCount = (errorOutput.match(/error ""TS/g")
-  const content = fs.readFileSync(filePath, "utf8")
+const errorOutput = error.stdout || error.stderr || "";
+const errorCount = (errorOutput.match(/error ""TS/g");
+const content = fs.readFileSync(filePath, "utf8");
       if (content.includes(".ts"") || content.includes(.ts")
-      const importLines = content.match(/import.*""from/g"")
-  const content = fs.readFileSync(filePath, "utf8")
+const importLines = content.match(/import.*""from/g"");
+const content = fs.readFileSync(filePath, "utf8");
       if (content.includes(".ts") || content.includes(.ts"")
-      const importLines = content.match(/import.*"from/g")
+const importLines = content.match(/import.*"from/g");
     if (importIssues > 0) {console.log(⚠  Found ${importIssues} import issues"")
   console.log("" No import issues found")
-  const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
       if (content.includes("any"")
       if (content.includes("<\\w+")
       if (content.includes("\\w+\\w+":")
-  const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
       if (content.includes("any"")
       if (content.includes("<\\w+")
       if (content.includes("\\w+\\w+":")
     if (syntaxIssues > 0) {console.log("})
   console.log("" No syntax issues found")
-      const result = execSync("npm run lint -- --quiet")
+const result = execSync("npm run lint -- --quiet");
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
-      const unusedImportCount = (result.match(/""unused/g"")
+const unusedImportCount = (result.match(/""unused/g"");
   console.log("" No syntax issues found")
       if (this.config.autoFix) {"}
         await this.autoFixSyntaxIssues();")}")} else {"}
       console.log(" No syntax issues found")
-      const result = execSync("npm run lint -- --quiet")
+const result = execSync("npm run lint -- --quiet");
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
-      const unusedImportCount = (result.match(/"unused/g")
+const unusedImportCount = (result.match(/"unused/g");
       if (unusedImportCount > 0) {console.log(⚠  Found ${unusedImportCount} unused imports")
 // console.log(" No unused imports found")
       console.log(")

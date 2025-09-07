@@ -28,6 +28,7 @@ visible: {
 }
 }
 import { Star, TrendingUp, Zap, Brain, Rocket, Shield;
+  }
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink, Search, Filter;
   Grid, List, ChevronDown, ChevronUp, Sparkles;
@@ -40,23 +41,22 @@ import {
   Phone, Mail, MapPin, ExternalLink, Search, Filter;
   Grid, List, ChevronDown, ChevronUp, Sparkles;
   Crown, Award, Target, Globe, Cpu, Database
-} from 'lucide-react';
-import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { quantumSpaceServices } from '../data/quantum-space-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
-import { realMarketServices } from '../data/real-market-services';
-import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
+ } from 'lucide-react';'
+import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground','
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';'
+import { nextGenerationAIServices  } from '../data/next-generation-ai-services';'
+import { cuttingEdgeITServices  } from '../data/cutting-edge-it-services';'
+import { innovativeMicroSaasV2Services  } from '../data/innovative-micro-saas-v2';'
+import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';'
+import { innovativeAIServices  } from '../data/innovative-ai-services';'
+import { quantumSpaceServices  } from '../data/quantum-space-services';'
+import { enterpriseITServices  } from '../data/enterprise-it-services';'
+import { realMarketServices  } from '../data/real-market-services';'
+import { newVerifiedServicesQ22025  } from '../data/real-verified-services-q2-2025';'
+
 export default function EnhancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<string>('name');
+  }
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');'
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -76,8 +76,8 @@ export default function EnhancedServicesShowcase() {
 }
 }animate= {
   {
-  opacity: 1, y: 0 
-}
+  }
+  "opacity": 1, "y": 0
 }transition= {
   {
   duration: 0.8 
@@ -200,8 +200,8 @@ export default function EnhancedServicesShowcase() {
   /* Contact Section */ 
 }<section className="py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-4xl mx-auto text-center"> <motion.div initial= {
   {
-  opacity: 0, y: 30 
-}
+  }
+  "opacity": 0, "y": 30
 }whileInView= {
   {
   opacity: 1, y: 0 

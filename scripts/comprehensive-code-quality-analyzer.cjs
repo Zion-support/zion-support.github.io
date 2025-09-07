@@ -57,20 +57,13 @@ main();
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 #!/usr/bin/env node;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 // console.log(' Comprehensive Code Quality Analyzer v2.0')
-console.log()
-    const content = fs.readFileSync(filePath, 'utf8')
-    const lines = content.split('\n')
+console.log('')
+const content = fs.readFileSync(filePath, 'utf8');
+const lines = content.split('\n');
     const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//')
     const commentLines = lines.filter(line => line.trim().startsWith('//')
     log('warn')

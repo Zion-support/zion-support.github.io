@@ -4,9 +4,7 @@ import path from 'path';
 import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
 
-function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`)
-}
+function grantPath() {
 
 function readGrant(id: string): GrantApplication | null {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync($2);
@@ -38,7 +36,7 @@ function writeGrant(record: GrantApplication) {
   fs.writeFileSync(
     grantPath(record.id)
     JSON.stringify(record, null, 2)
-    'utf8'
+    'utf8''
   );
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |'';
@@ -72,7 +70,8 @@ function isAuthorized(req: NextApiRequest) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (!isAuthorized(req)) {
-  res.status(401).json({ error: 'Unauthorized',}
+    }
+    res.status(401).json({ "error": 'Unauthorized','
 });
 return;
 function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
@@ -96,12 +95,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
-  const { id } = req.query as { id: string},
-  if (!id) {
-    res.status(400).json($2);
-    return
+const { id } = req.query as { "id": string }
+  if (!id) {res.status(400).json({ "error": 'Missing id','
+})return;
   }
 
+  if (req.method = == 'GET') {'
+   ;
+  }
+  const existing = readGrant(id);
+    if (!existing) return res.status(404).json({ "error": 'Not found','
+});
+return res.status(200).json({ "milestones": existing.milestones || [],;
+});
+  }
+  if (req.method = == 'POST') {'
+   ;
+  }
+  const existing = readGrant(id);
+    if (!existing) return res.status(404).json({ "error": 'Not found','
+});
 
   if (req.method === 'GET') {
     const existing = readGrant($2);
@@ -201,8 +214,51 @@ if ( {) {$2;
     return res.status(200).json({ record: existing})
   }
 
-  res.setHeader($2);
-  res.status(405).end('Method Not Allowed')
+const { id } = req.query as { "id": string,;
+}
+  // Check condition;
+if ( {) {$2;
+}
+    res.status (400).json ({ "error": 'Missing id','
+})return;  }    return;
+  }
+  // Check condition;
+if ( {) {$2;
+}
+
+const existing = read_grant (id)if ;
+return res.status (404).json ({ "error": 'Not found',;'
+})) {$2;
+}
+return res.status (200).json ({ "milestones": existing.milestones || [] })}    return res.status (200).json ({ "milestones": existing.milestones || [] },;
+}
+  // Check condition;
+if ( {) {$2;
+}
+
+const existing = read_grant (id)if ;
+return res.status (404).json ({ "error": 'Not found',;'
+})) {$2;
+}
+
+const payload = req.body as MilestonesUpdatePayload;
+    existing.milestones = payload.milestones || [];
+
+    existing.updated_at = new Date ().toISOString ();
+    write_grant (existing);
+return res.status (200).json ({ "record": existing,;
+});
+  }
+  res.set_header ('Allow', 'GET, POST');'
+  res.status (405).end ('Method Not Allowed');    return res.status (200).json ({ "record": existing,'
+});
+  }
+  res.set_header ('AllowGET, POST');'
+  res.status (405).end ('Method Not Allowed');'
+  res.setHeader('Allow', 'GET, POST');'
+
+  res.status(405).end('Method Not Allowed');'
+  res.status(405).end('Method Not Allowed')'
 }
   if (!isAuthorized(req)) {
     res.status(401).json({ error: 'Unauthorized' });

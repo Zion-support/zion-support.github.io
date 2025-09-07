@@ -6,9 +6,14 @@ export type AiScores = {
   scam: number, // 0-1
 },
 
-
-  flagId: string;
-  action: ModerationStatus;
+export interface ModerationResult  {"id": string;
+  }
+  "content": string;
+  "status": 'approved' | 'rejected' | 'pending';'
+  reason?: string;moderatedBy?: string;
+  "moderatedAt": Date;
+  "flagId": string;
+  "action": ModerationStatus;
   adminNotes?: string;
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 export type AiScores = {;
@@ -62,6 +67,7 @@ export interface ModerationAction {;
 export interface ModerationFlag {
 
 ;
+}
 export interface ModerationAction {
   id: string;
   type: "approve" | "remove" | "warn" | "ban";
@@ -69,10 +75,8 @@ export interface ModerationAction {
   targetType: "post" | "comment" | "user";
   adminId: string;
   reason?: string;
-  createdAt: string;
-
-  created_at: string;
-
+  "createdAt": string;
+  "created_at": string;
 }
 }
 export interface ModerationFlag  {export interface ModerationFlag  {id: string;

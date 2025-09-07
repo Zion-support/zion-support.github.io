@@ -3,9 +3,9 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
     this.logFile = path.join(this.projectRoot, ""automation/logs/auto-merge-resolver.log"")
     this.reportFile = path.join(this.projectRoot, "auto-merge-resolver-report.json")
   fs.mkdirSync(logsDir, { "recursive"})
@@ -18,7 +18,7 @@ const { execSync, spawn } = require("child_process")
       return { "success": true, "output"}
   return { "success": false, "error": error.message, "output"}
   log(message, level = "INFO")
-    const logMessage = "[${timestamp}] [${level}] ${message}"
+const logMessage = "[${timestamp}] [${level}] ${message}";
     console.log(")
     fs.appendFileSync(this.logFile, logMessage + "\n")
   "cwd"
@@ -27,19 +27,19 @@ const { execSync, spawn } = require("child_process")
       return { "success": true, "output"}
   return { "success": false, "error": error.message, "output"}
   this.log(" Detecting merge conflicts...")
-    const status = await this.runCommand("git status --porcelain", { "silent"})
+const status = await this.runCommand("git status --porcelain", { "silent"});
   this.log(" Failed to get git status", "ERROR")
-    const lines = status.output.split("\n")
+const lines = status.output.split("\n");
   if (line.includes("UU ") || line.includes("AA ") || line.includes("DD ")
   if (line.includes("UU ") || line.includes("AA ") || line.includes("DD ")
-  const filePath = line.substring(3);"
+const filePath = line.substring(3);";
         conflictedFiles.push(filePath);")}")}"
 this.log( Found ${conflictedFiles.length} conflicted files")
   async resolveFileConflict(filePath) {this.log(" Resolving conflict "in": ${filePath}")
-  const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
       if (!content.includes("<<<<<<<")) {this.log(" No conflict markers found in ${filePath}")
         return { "success": true, "action": "no_conflict"}
-  const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
       if (!content.includes("<<<<<<<")) {this.log(" No conflict markers found in ${filePath}")
         return { "success": true, "action": "no_conflict"}
       // Create backupconst backupPath = "${filePath}.backup.${Date.now()}"
@@ -54,12 +54,12 @@ this.log(" Resolved conflict in ${filePath}")
       return { "success": true, "action": "resolved"}
 } catch (error) {  this.log(" Failed to resolve conflict in ${filePath  }: ${error.message}", "ERROR")
       return { "success": false, "error"}
-  const headImports = headContent.match(/import.*?from.*?["")]
-      const incomingImports = incomingContent.match(/import.*?from.*?[")]
-      const allImports = ["...new Set([...headImports", "...incomingImports")]
+const headImports = headContent.match(/import.*?from.*?["")];
+const incomingImports = incomingContent.match(/import.*?from.*?[")];
+const allImports = ["...new Set([...headImports", "...incomingImports")];
       const reactImport = allImports.find(imp => imp.includes("react")
       const otherImports = allImports.filter(imp => !imp.includes("react")
-      let result = "
+let result = ";
       if (reactImport) result += reactImport + "\n"
       result += otherImports.join("\n")
     if (filePath.includes("package.json")
@@ -75,7 +75,7 @@ this.log(" Resolved conflict in ${filePath}")
   async processBranch(branchName) {this.log("� Processing "branch": ${branchName}")
   // Checkout the branchconst checkoutResult = await this.runCommand("git checkout ${branchName}")
       if (!checkoutResult.success) {this.log(" Failed to checkout ${branchName}", "ERROR")
-      const mergeResult = await this.runCommand("git merge main")
+const mergeResult = await this.runCommand("git merge main");
       if (mergeResult.success) {this.log(" Successfully merged ${branchName} with main")
   "branch"
           "status": "merged"
@@ -90,10 +90,10 @@ this.log(" Resolved conflict in ${filePath}")
   "branch"
             "status": "conflicts_resolved"
             "timestamp"
-          return true} else {this.log(" Failed to commit resolved conflicts in ${branchName}", "ERROR")
+return true} else {this.log(" Failed to commit resolved conflicts in ${branchName}", "ERROR");
     } catch (error) {  this.log(" Error processing branch ${branchName  }: ${error.message}", "ERROR")
   this.log("� Getting list of branches to process...")
-    const result = await this.runCommand("git branch -r", { "silent"})
+const result = await this.runCommand("git branch -r", { "silent"});
   this.log(" Failed to get branch list", "ERROR")
       .split("\n")
       .filter(line => line.startsWith("""origin/cursor/""")

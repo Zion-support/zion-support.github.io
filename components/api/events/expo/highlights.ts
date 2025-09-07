@@ -1,12 +1,18 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { agendaItems } from '../../../../data/expo/agenda';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';'
+
+
+import { agendaItems } from '../../../../data/expo/agenda';'
+
+export default async function handler() {
+  }
   try {
     const top = agendaItems.slice($2);
     const baseSummary = $2;
     const apiKey = $2;
     if (!apiKey) {
-      return res.status(200).json({ summary: baseSummary, provider: 'local' })
+}
+return res.status(200).json({ "summary": baseSummary, "provider": 'local',;'
+});
     }
   try {
 

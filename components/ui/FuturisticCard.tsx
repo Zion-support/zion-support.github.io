@@ -6,6 +6,11 @@ type Props = $2;
 
 import { ReactNode } from 'react';
 
+}
+
+type Props = {"title": string,"description": string;
+
+}
 
 import React from "react";
 type Props = {;

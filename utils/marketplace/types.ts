@@ -1,43 +1,46 @@
 
 
-// Marketplace types
+
+
+// Marketplace types,
 export interface Offer {
 
-export interface Offer {;
+}
 
 export interface Offer {;
 
+}
 
-  id: string;
-  createdAtIso: string;
-  client_id: string;
-  talent_slug: string;
-  startDateIso: string;scopeSummary: string;
-  paymentTerms: PaymentTerms;
+export interface Offer {;
+
+
+  }
+
+
+  "id": string;
+  "createdAtIso": string;
+  "client_id": string;
+  "talent_slug": string;
+  "startDateIso": string;
+
+  "scopeSummary": string;
+  "paymentTerms": PaymentTerms;
   agreementUrl?: string;
-  status: "SENT" | "CONFIRMED" | "CHANGES_REQUESTED" | "DECLINED";
-  changeRequestNote?: string;
-  projectId?: string;
-}export interface PaymentTerms  {type: "hourly" | "fixed" | "milestone";
-  amount?: number;
-  currency?: string;
-  milestones?: Array<{title: string;
-    amount: number;
-    dueDateIso: string;
-  }>;
-}scopeSummary: string;
-  paymentTerms: PaymentTerms;
-  agreementUrl?: string;
-  status: "SENT" | "CONFIRMED" | "CHANGES_REQUESTED" | "DECLINED";
+  "status": "SENT" | "CONFIRMED" | "CHANGES_REQUESTED" | "DECLINED";"
   changeRequestNote?: string;
   projectId?: string;
 }
-export interface PaymentTerms  {type: "hourly" | "fixed" | "milestone";
+
+export interface PaymentTerms {
+  }
+  "type": "hourly" | "fixed" | "milestone";"
   amount?: number;
   currency?: string;
-  milestones?: Array<{title: string;
-    amount: number;
-    dueDateIso: string;
+  milestones?: Array<{
+    }
+    "title": string;
+    "amount": number;
+    "dueDateIso": string;
   }>;
 }
 export interface Project  {export interface PaymentTerms  {type: 'hourly' | 'fixed' | 'milestone';
@@ -53,45 +56,37 @@ export interface Project  {export interface PaymentTerms  {type: 'hourly' | 'fix
 
 
 
-  scopeSummary: string;
-  paymentTerms: PaymentTerms;
+  "scopeSummary": string;
+  "paymentTerms": PaymentTerms;
 
 
 
 
-  id: string;
-  title: string;
-  summary: string;
-  client_id: string;
-  talent_slug: string;
-  startDateIso: string;ursor/automate-test-improve-and-merge-code-646c;
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';timeline: any[];
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";  timeline: any[];
-  documents: ProjectDocument[];
-  notes: ProjectNote[];
-}export interface ProjectNote  {export interface ProjectNote  {id: string;
-  startDateIso: string;
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
+  "id": string;
+  "title": string;
+  "summary": string;
+  "client_id": string;
+  "talent_slug": string;
+  "startDateIso": string;
+  "status": "ACTIVE" | "COMPLETED" | "CANCELLED";"
+  "status": "ACTIVE" | "COMPLETED" | "CANCELLED";"
 
 
 
 
-  timeline: any[];
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";  timeline: any[];
-  documents: ProjectDocument[];
-  notes: ProjectNote[];
+  "timeline": any[];
+  "documents": ProjectDocument[];
+  "notes": ProjectNote[];
 }
 
 
 export interface ProjectNote {
-  id: string;
-  authorId: string;
-  authorRole: string;
-  content: string;
-  createdAtIso: string;
-}ursor/automate-test-improve-and-merge-code-646c;
+  }
+  "id": string;
+  "authorId": string;
+  "authorRole": string;
+  "content": string;
+  "createdAtIso": string;
 }
 
 

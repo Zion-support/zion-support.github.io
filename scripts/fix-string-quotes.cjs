@@ -12,6 +12,7 @@
 
 #!/usr/bin/env node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ///usr/bin/env node
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -20,9 +21,13 @@
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
+=======
+const fs = require('fs');
+const path = require('path');
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 // console.log(' Fixing String Quote Issues...')
 console.log('====')
-const filesToFix = ['pages/api/docs.ts']
+const filesToFix = ['pages/api/docs.ts'];
   'pages/api/health.ts'
   'components/ContactForm.tsx'
   'components/ErrorBoundary.tsx'

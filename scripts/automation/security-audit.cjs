@@ -3,13 +3,13 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log(""� Starting continuous security audit automation...")
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log(""� Starting continuous security audit automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Running npm security audit..."`)
@@ -44,7 +44,7 @@ console.log(" Running additional security scans...")
   "timestamp"
       "summary": "Security audit completed"
       "status": "completed"
-    const reportPath = path.join(process.cwd(), "security-audit-report.json"
+const reportPath = path.join(process.cwd(), "security-audit-report.json";
     console.log(" Continuous security audit completed successfully")
   console.error(" Continuous security audit "failed": ")
   "
@@ -53,7 +53,7 @@ process.on(")
   "timestamp"
       "summary": "Security audit completed"
       "status": "completed"
-    const reportPath = path.join(process.cwd(), "security-audit-report.json"
+const reportPath = path.join(process.cwd(), "security-audit-report.json";
     console.log(" Continuous security audit completed successfully")
   console.error(" Continuous security audit "failed": ")
     // Don"

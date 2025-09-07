@@ -1,14 +1,8 @@
-import React from "react";
-import {useNavigate} from "react-router-dom";
-import {ChevronLeft, Bell, Settings} from "lucide-react";
-import {cn} from "@/lib/utils";
-import React from "react",
-import { useNavigate } from "react-router-dom",
-import { ChevronLeft, Bell, Settings } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-interface MobileHeaderProps {
-import {Button} from "@/components/ui/button";  showBack?: boolean;
+import React from "react";"
+import {useNavigate} from "react-router-dom";"
+import {ChevronLeft, Bell, Settings} from "lucide-react";"
+import {cn} from "@/lib/utils";"
+import {Button} from "@/components/ui/button";  showBack?: boolean;"
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
@@ -25,99 +19,63 @@ import {Button} from "@/components/ui/button";  showBack?: boolean;
   className;
   onNotificationsClick;
   onSettingsClick}: MobileHeaderProps) {;
+  }
   const navigate = useNavigate();
   return (interface MobileHeaderProps {
-  title: string,
+  }
+  "title": string,
   showBack?: boolean,
   showNotifications?: boolean,
   showSettings?: boolean,
   className?: string,
-  onNotificationsClick?: () => void,export function MobileHeader({;
-  title;
-  showBack = false;
-  showNotifications = false;
-  showSettings = false;
-  className;
-  onNotificationsClick;
-export function MobileHeader({
-  title;
-
-  title,
-  showBack = false,
-  showNotifications = false,
-  showSettings = false,
-  className,
-  onNotificationsClick,
-  onSettingsClick}: MobileHeaderProps) {
-  const navigate = useNavigate(),
-
-  return (
-    <header className={cn(
-  onNotificationsClick?: () => void,
-  onSettingsClick?: () => void
+  onNotificationsClick?: () => void,export function MobileHeader() {
 }
-export function MobileHeader({
-  title,
-  showBack = $2;
-  showNotifications = $2;
-  showSettings = $2;
-  className,
-  onNotificationsClick,
-  onSettingsClick}: MobileHeaderProps) {
-  const navigate = useNavigate($2);
-  return (
-    <header className = $2;
-      className
-    )}>
-      <div className="flex items-center justify-between h-14 px-4">
-        <div className="flex items-center">
-          {showBack && (
-            <Button
-              variant="ghost"
-              size="icon"
-              className="mr-2"
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",              onClick={() => navigate(-1)}
-              onClick={() => navigate(-1)}
+const navigate = useNavigate(),;
+return (;
+    <header className={cn(
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",              onClick={() => navigate(-1)}"
             >
-              <ChevronLeft className="h-5 w-5" />
-              <span className="sr-only">Back</span>
+              <ChevronLeft className="h-5 w-5" />"
+              <span className="sr-only">Back</span>"
             </Button>
           )}
-          <h1 className="text-lg font-medium leading-none truncate">
+          <h1 className="text-lg font-medium leading-none truncate">"
             {title}
           </h1>
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2">"
           {showNotifications && (
             <Button
-              variant="ghost"
-              size="icon"
+}
+variant="ghost";"
+              size="icon""
               onClick={onNotificationsClick}
             >
-              <Bell className="h-5 w-5" />
-              <span className="sr-only">Notifications</span>
+              <Bell className="h-5 w-5" />"
+              <span className="sr-only">Notifications</span>"
             </Button>
           )}
           {showSettings && (
             <Button
-              variant="ghost"
-              size="icon"
+}
+variant="ghost";"
+              size="icon""
               onClick={onSettingsClick}
             >
-              <Settings className="h-5 w-5" />
-              <span className="sr-only">Settings</span>
+              <Settings className="h-5 w-5" />"
+              <span className="sr-only">Settings</span>"
             </Button>
 }
 
 }
-
-import React from "react",;
-import { useNavigate } from "react-router-dom",;
-import { ChevronLeft, Bell, Settings } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { Button } from "@/components/ui/button",;
+import React from "react";"
+import { useNavigate } from "react-router-dom";"
+import { ChevronLeft, Bell, Settings } from "lucide-react",;"
+import { cn } from "@/lib/utils",;"
+import { Button } from "@/components/ui/button",;"
 interface MobileHeaderProps {;
-  title: string,;
+  }
+  "title": string,;
   showBack?: boolean,;
   showNotifications?: boolean,;
   showSettings?: boolean,;
@@ -125,7 +83,8 @@ interface MobileHeaderProps {;
   onNotificationsClick?: () => void,;
   onSettingsClick?: () => void;
 interface MobileHeaderProps {;
-  title:string,;
+  }
+  "title":string,;
   showBack?:boolean,;
   showNotifications?:boolean,;
   showSettings?:boolean,;
@@ -133,29 +92,32 @@ interface MobileHeaderProps {;
   onNotificationsClick?:() => void,;
   onSettingsClick?:() => void;
   onSettingsClick} MobileHeaderProps) {;
+  }
   const navigate = useNavigate(),;
 ;
   return (;
     <header className={cn(;
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;"
+      }
       className;
-      <div className="flex items-center justify-between h-14 px-4">;
-        <div className="flex items-center">;
-          {showBack && (;              size="icon"
+      <div className="flex items-center justify-between h-14 px-4">;"
+        <div className="flex items-center">;"
+          {showBack && (;              size="icon""
+              }
               onClick={onNotificationsClick}>;
             <Button ;
-              variant="ghost" ;
-              size="icon";
+              variant="ghost" ;"
+              size="icon";"
               onClick={onNotificationsClick}
             >;
             <Button;
-              variant="ghost";
-              size="icon";
+              variant="ghost";"
+              size="icon";"
               onClick={onNotificationsClick}
             >;
-              <span className="sr-only">Notifications</span>;
+              <span className="sr-only">Notifications</span>;"
             </Button>;
-          )}              <span className="sr-only">Settings</span>;
+          )}              <span className="sr-only">Settings</span>;"
             </Button>;
           )}
         </div>;
@@ -163,13 +125,14 @@ interface MobileHeaderProps {;
     </header>;
 
 }
-import React from './react';
-import { use_navigate } from './react-router-dom';
-import { ChevronLeft, Bell, Settings } from './lucide-react';
-import { cn } from '@/lib / utils';
-import { Button } from '@/components / ui / button';
+import React from './react';'
+import { use_navigate } from './react-router-dom';'
+import { ChevronLeft, Bell, Settings } from './lucide-react';'
+import { cn } from '@/lib / utils';'
+import { Button } from '@/components / ui / button';'
 interface MobileHeaderProps {
-  title: string,
+  }
+  "title": string,
   show_back?: boolean;
   show_notifications?: boolean;
   show_settings?: boolean;
@@ -181,6 +144,7 @@ export /**
  * MobileHeader - Function description
  */
 function MobileHeader() {
+  }
   const navigate = use_navigate ();
 ;
           )}

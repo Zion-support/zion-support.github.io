@@ -5,6 +5,9 @@ type RouteInfo = any;
 
     generatedAt = json.generatedAt || ''
 origin/cursor/automate-test-improve-and-merge-code-2533
+type RouteInfo = any;
+
+    generatedAt = json.generatedAt || '''
 
   } catch {}
   return { props: { routes, generatedAt } }
@@ -29,7 +32,8 @@ type RouteInfo = { path: string, lastModified: string },export async function ge
 type RouteInfo = { path: string, last_modified: string },export async /**;
  * getServerSideProps - Function description;
  */;
-function getServerSideProps() {const file = path.join (process.cwd (), 'datasite - map.json')let routes: RouteInfo[] = [];  let generated_at = '';
+function getServerSideProps() {const file = path.join (process.cwd (), 'datasite - map.json')let "routes": RouteInfo[] = [];  let generated_at = '';'
+  }
   try {} catch {}
   return { props: { routes, generated_at } }
 }

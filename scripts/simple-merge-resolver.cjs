@@ -23,11 +23,15 @@ main
 
 
 // Fix the specific syntax errors we identified
+<<<<<<< HEAD
 const files = [
 =======
 // Fix the specific syntax errors we identified,
   const files = [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+const files = [;
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
   'components/Footer.tsx',
   'components/Header.tsx',
   'pages/about.tsx',
@@ -146,6 +150,7 @@ console.log('✅ Syntax fixes completed!');
 console.log('🎉 Ready for merge process!');
 #!/usr/bin/env node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]
 files.forEach(file => {
   try {
@@ -213,10 +218,16 @@ const fs = require('fs')
 const path = require('path')
 const { exec } = require('child_process')
 const util = require('util')
+=======
+const fs = require('fs');
+const path = require('path');
+const { exec } = require('child_process');
+const util = require('util');
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
     this.projectRoot = path.join(__dirname, '..')
   async log(message, level = 'INFO')
       const { stdout } = await execAsync('git diff --name-only --diff-filter=U')
-      return stdout.trim().split('\n')
+return stdout.trim().split('\n');
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")

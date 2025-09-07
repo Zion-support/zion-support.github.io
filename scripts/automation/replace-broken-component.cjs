@@ -129,7 +129,27 @@ interface AIChatbotSystemProps {}
   showSettings?: boolean;
   maxMessages?: number;
   autoScroll?: boolean};
-export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
+export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
+  showHeader = true,
+  showSettings = true,
+  maxMessages = 50,
+  autoScroll = true;
+}) => {}
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [inputValue, setInputValue] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [showSettingsPanel, setShowSettingsPanel] = useState(false);
+const [settings, setSettings] = useState({});
+    "voiceEnabled": false,
+    "autoResponse": true,
+    "language": 'en',
+    "theme": 'dark',
+    "responseSpeed": 'normal'
+  }
+});
+  const [isListening, setIsListening] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const [messages, setMessages] = useState<ChatMessage[]>([]);
 
@@ -216,17 +236,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
     // Simulate processing delay;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-    
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    const responses = [{}]
+const responses = [{}];
         "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
         "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
         "relatedServices": ['AI Solutions', 'Cloud Services', 'Digital Transformation'];
@@ -405,56 +415,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-  // Rate response;
-  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
-    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-
-<<<<<<< HEAD
-
-
-
-=======
-  // Toggle voice input;
-  const toggleVoiceInput = useCallback(() => {}
-    setIsListening(!isListening)}, [isListening]);
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-  return ()
-"
-  const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}"
-
-<<<<<<< HEAD
-
-    <>
-      {/* Chat Toggle Button */};
-      <button;
-        onClick={() => setIsOpen(!isOpen)};
-=======
+return ();
     <>
       {/* Chat Toggle Button */};
       <button;

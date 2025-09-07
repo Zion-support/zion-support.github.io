@@ -1,62 +1,51 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+
+
+import React, { useEffect, useRef } from 'react';'
+import { motion } from 'framer-motion';'
+
 interface UltraFuturisticBackground2026Props {
-  children: React.ReactNode;
+  }
+  "children": React.ReactNode;
   className?: string
 }
 
 ;
-import React, { useEffect, useRef } from 'react';
-import { motion  } from 'framer-motion';
-interface UltraFuturisticBackground2026Props  {children: React.ReactNode;
+import React, { useEffect, useRef } from 'react';'
+import { motion  } from 'framer-motion';'
+
+interface UltraFuturisticBackground2026Props {
+  }
+  "children": React.ReactNode;
   className?: string;
-}const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props> = ({children;
+
+}
+
+const "UltraFuturisticBackground2026": React.FC<UltraFuturisticBackground2026Props> = ({children;
+  }
   className;
   const animationRef = useRef<number | undefined>(undefined)useEffect(() => {const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext('2d')if (!ctx) return;
+
+const ctx = canvas.getContext('2d')if (!ctx);'
+  return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-      vx: number;
-    let particles: Array<{x: number;
-      y: number;vx: number;
-    let particles: Array<{x: number;
-      y: number;vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      alpha: number;
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraFuturisticBackground2026Props {
-  children: React.ReactNode,
-  className?: string
+    let "particles": Array<{
 }
+"x": number;
+      "y": number;
+      "vx": number;
 
-const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props> = ({ 
-  children,
-  className = $2;
-  const animationRef = $2;
-  useEffect(() => {
-    const canvas = $2;
-    if (!canvas) return,
+      "vy": number;
+      "size": number;
+      "color": string;
+      "alpha": number;
 
-    const ctx = canvas.getContext($2);
-    if (!ctx) return,
+      "life": number;
 
-    canvas.width = $2;
-    canvas.height = $2;
-    let particles: Array<{
-      x: number,
-      y: number,
-      vx: number,
-      vy: number,
-      size: number,
-      color: string,
-      alpha: number,
-      life: number,
-      maxLife: number}> = [],
+      "maxLife": number;
+    }> = [];
 
 
     const colors = [
@@ -69,8 +58,11 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
       '#0080ff', // Blue
       life: number;
     ];
-    const createParticle = () => {
-      const side = Math.floor(Math.random() * 4);
+
+const createParticle = () => {
+     ;
+  }
+  const side = Math.floor(Math.random() * 4);
       let x, y, vx, vy;
       switch (side) {
         case 0: // Top
@@ -108,19 +100,18 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
           vx = (Math.random() - 0.5) * 2;
           vy = Math.random() * 2 + 1;
           break;
-        case 1: // Right
+        case "1": // Right;
           x = canvas.width + 10;
           y = Math.random() * canvas.height;
           vx = -(Math.random() * 2 + 1);
           vy = (Math.random() - 0.5) * 2;
           break;
-        case 2: // Bottom
+        case "2": // Bottom;
           x = Math.random() * canvas.width;
           y = canvas.height + 10;
           vx = (Math.random() - 0.5) * 2;
-          vy = -(Math.random() * 2 + 1);
-          break;
-        case 3: // Left
+          vy = -(Math.random() * 2 + 1)break;
+        case "3": // Left;
           x = -10;
           y = Math.random() * canvas.height;
           vx = Math.random() * 2 + 1;
@@ -130,8 +121,11 @@ break;
       return {x,y,vx,vy,size: Math.random() * 3 + 1,color: colors[Math.floor(Math.random() * colors.length)],alpha: Math.random() * 0.8 + 0.2,life: 0,maxLife: Math.random() * 200 + 100,}}const initParticles = () => {particles = [];
 for (let i = 0; i < 100; i++) {particles.push(createParticle())}
     }
-    const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
+
+const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
+      }
       particles.forEach((particle, index) => {particle.x += particle.vx;
+        }
         particle.y += particle.vy;
         vy;
         // Draw particle
@@ -186,7 +180,8 @@ for (let i = 0; i < 100; i++) {particles.push(createParticle())}
           }
         });
       }
-      for (let coordinate_y = 0, y < canvas.height, y += grid_size) {}
+      for (let coordinate_y = 0, y < canvas.height, y += grid_size) {
+        }
         ctx.begin_path ();
         ctx.move_to (0, y);
         ctx.line_to (canvas.width, y);
@@ -196,26 +191,32 @@ for (let i = 0; i < 100; i++) {particles.push(createParticle())}
       animationRef.current = requestAnimationFrame(animate)
 };
 
-const handleResize = (
+
+const handleResize = () => {
+      }
       canvas.width = window.innerWidth;
 canvas.height = window.innerHeight) => {
   return $3;}
 }
 };
 
-    window.addEventListener('resize', handleResize);
+
+    window.addEventListener('resize', handleResize);'
     initParticles();
     animate();
     return () => {
-      window.removeEventListener('resize', handleResize);
+      }
+      window.removeEventListener('resize', handleResize);'
       if (animationRef.current) {
+}
 cancelAnimationFrame(animationRef.current);
       }
     };
 origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
-  return (
-    <div className={`relative min-h-screen overflow-hidden ${className}`}>;
+return (;
+    <div className={`relative min-h-screen overflow-hidden ${className}`}>`
+
       {/* Animated Canvas Background */}
       <canvas;
         ref={canvasRef}
@@ -389,21 +390,23 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0'
         <motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20'
           animate={{
-            rotate: 360,
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3],
+            }
+            "rotate": 360,
+            "scale": [1, 1.2, 1],
+            "opacity": [0.3, 0.6, 0.3]
           }}
           transition={{
-            duration: 8,
-            repeat: Infinity,
-ease: 'linear',
-          }}
-        />
-        <motion.div
-          className='absolute top-40 right-32 w-24 h-24 border border-pink-400/20 rounded-full'
+            }
+            "duration": 8,
+            "repeat": Infinity,
+"ease": 'linear','
+          }} />
+        <motion.div,
+className='absolute top-40 right-32 w-24 h-24 border border-pink-400/20 rounded-full''
           animate={{
-            y: [0, -20, 0],
-            opacity: [0.2, 0.5, 0.2],
+            }
+            "y": [0, -20, 0],
+            "opacity": [0.2, 0.5, 0.2]
           }}
           transition={{
             duration: 6,
@@ -453,24 +456,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]
 
           }}
-          transition={{}
-            duration: 10;
-            repeat: Infinity'"
-            ease: 'linear',            ease: "linear"
-          animate={{}
-            rotate: [0, -180, -360];
-            opacity: [0.4, 0.7, 0.4];
-            rotate: [0, -180, -360],
-            opacity: [0.4, 0.7, 0.4],
+          transition={{"rotate": [0, 180, 360],"scale": [1, 1.1, 1]}}
+          transition={{"duration": 12,"repeat": Infinity,"ease": 'linear'}}' />;
+
+        <motion&& motion.div,
+className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12''
+          animate={{
+
+            }
+
+            "rotate": [0, -180, -360],
+            "opacity": [0.4, 0.7, 0.4]
           }}
           transition={{
-            duration: 10,
-            repeat: Infinity,
-ease: 'linear',
-origin/cursor/automate-test-improve-and-merge-code-2533
+            }
+            "duration": 10,
+            "repeat": Infinity,
+"ease": 'linear','
           }}
-          transition={{}
-        />;
+          transition={{ />;
+
       </div>;
 
 
@@ -491,40 +496,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
       </div>;
       {/* Energy Field Effects */}
-      <div className='fixed inset - 0 pointer - events - none z - 20'>;
+      <div className='fixed inset - 0 pointer - events - none z - 20'>;'
         <motion.div;
-          className='absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent';
-            duration: 10,repeat: Infinity,/>;
+          className='absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent';'
+            "duration": 10,"repeat": Infinity, />;
       </div>;
       {/* Energy Field Effects */}
-            ease: "linear"
+
+      <div className='fixed inset-0 pointer-events-none z-20'>'
+
+        <motion.div,
+className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent''
+          animate={{
+
+            }
+
+            "x": ['-100%', '100%'],'
           }}
           transition={{
-            duration: 15,
-            repeat: Infinity}
-ease: 'linear'}
-          }}
-        />
-        <motion.div;
-className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent'
-          animate={{}
-            y: ['-100%', '100%']}
+            }
+            "duration": 15,
+            "repeat": Infinity,
+"ease": 'linear','
+          }} />
+        <motion.div,
+className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent''
+          animate={{
+            }
+            "y": ['-100%', '100%'],'
           }}
           transition={{
-            duration: 20,
-            repeat: Infinity
-}
-ease: 'linear'}
+            }
+            "duration": 20,
+            "repeat": Infinity,
+
+"ease": 'linear','
           }}
 
           }}
 
-            duration: 20,
-            repeat: Infinity
+            "duration": 20,
+            "repeat": Infinity
 
-          }}
 
-        />
+          }} />
       </div>
 
       {/* Energy Field Effects */}
@@ -573,8 +588,7 @@ ease: 'linear'}
       {/* Content */}
       <div className='relative z-30'>{children}</div>
 
-        />;
-      </div>;
+<div className='relative z-30'>{children}</div>'
 
       {/* Content */}
           }}
@@ -582,9 +596,9 @@ ease: 'linear'}
 
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Holographic Overlay */}
-      <div className='fixed inset-0 pointer-events-none z-40'>
-        <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />
-        <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent' />
+      <div className='fixed inset-0 pointer-events-none z-40'>'
+        <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />'
+        <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent' />'
       </div>
     </div>
   );

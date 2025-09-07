@@ -62,42 +62,50 @@ declare module "*.svg" { const content: string; export default content} declare 
 
 ursor/automate-test-improve-and-merge-code-646c;
 // Global type declarations for DOM types;
-declare global {interface Window  {performance: Performance;
+declare global {interface Window  {"performance": Performance;
   }
-  interface Performance  {getEntriesByType (type: string): PerformanceEntry[];
+interface Performance  {getEntriesByType ("type": string): PerformanceEntry[];
+    }
     now (): number;
   }
-  interface PerformanceEntry  {name: string;
-    entry_type: string;
-    start_time: number;
-    duration: number;
+interface PerformanceEntry  {"name": string;
+    }
+    "entry_type": string;
+    "start_time": number;
+    "duration": number;
   }
-  interface Element  {tag_name: string;
-    attributes: NamedNodeMap;
-    children: HTMLCollection;
-    parent_element: HTMLElement | null;
+interface Element  {"tag_name": string;
+    }
+    "attributes": NamedNodeMap;
+    "children": HTMLCollection;
+    "parent_element": HTMLElement | null;
   }
-  interface CSSStyleDeclaration  {[key: string]: string;
+interface CSSStyleDeclaration  {["key": string]: string;
   }
-  interface HTMLElement extends Element  {class_name: string;
-    id: string;
-    innerHTML: string;
-    text_content: string | null;
-    style: CSSStyleDeclaration;
+interface HTMLElement extends Element  {"class_name": string;
+    }
+    "id": string;
+    "innerHTML": string;
+    "text_content": string | null;
+    "style": CSSStyleDeclaration;
   }
-  interface HTMLDivElement extends HTMLElement {}
-  interface HTMLParagraphElement extends HTMLElement {}
-  interface HTMLHeadingElement extends HTMLElement {}
-  interface HTMLAnchorElement extends HTMLElement  {href: string;
-    target: string;
+interface HTMLDivElement extends HTMLElement {}
+interface HTMLParagraphElement extends HTMLElement {}
+interface HTMLHeadingElement extends HTMLElement {}
+interface HTMLAnchorElement extends HTMLElement  {"href": string;
+    }
+    "target": string;
   }
-    data: T;
-    origin: string;
-    lastEventId: string;
-    source: MessageEventSource | null;
-    ports: ReadonlyArray < MessagePort>;
+  interface MessageEvent<T = any> {
+    }
+    "data": T;
+    "origin": string;
+    "lastEventId": string;
+    "source": MessageEventSource | null;
+    "ports": ReadonlyArray < MessagePort>;
   }
-  interface RequestInit  {body?: BodyInit | null;
+interface RequestInit  {body?: BodyInit | null;
+    }
     cache?: RequestCache;
     credentials?: RequestCredentials;
     headers?: HeadersInit;
@@ -112,7 +120,8 @@ declare global {interface Window  {performance: Performance;
     window?: any;
     timeout?: number;
   }
-  interface AbortController  {signal: AbortSignal;
+interface AbortController  {"signal": AbortSignal;
+    }
     abort (): void;
   }
   interface AbortSignal extends EventTarget  {aborted: boolean;
@@ -126,8 +135,10 @@ declare module "*.svg" {const "content": string;
   export default content
 }
 declare global {
+  }
   interface Window {
-    gtag?: (...args: any[]) => void;
+    }
+    gtag?: (..."args": any[]) => void;
     dataLayer?: any[];
   }
 }// Global type declarations
@@ -278,31 +289,34 @@ export {};
     aborted: boolean;
     onabort: ((this: AbortSignal, ev: Event) => any) | null;
   }
+  const "content": string;"
+export default content}
+declare module "*.png" {const "content": string;"
 }
-
-export {};
-
-export {};
-// Global type declarations
-declare module "*.svg" {
-  const "content": string;
-  export default content}
-declare module "*.png" {const "content": string;
-  export default content}
-declare module "*.jpg" {const "content": string;
-  export default content}
-declare module "*.jpeg" {const "content": string;
-  export default content}
-declare module "*.gif" {const "content": string;
-  export default content}
-declare module "*.webp" {const "content": string;
-  export default content}
-declare module "*.css" {const "content": { [className: string]: string }export default content}
-declare module "*.scss" {const "content": { [className: string]: string }export default content}
-declare module "*.module.css" {const "content": { [className: string]: string }export default content}
-declare module "*.module.scss" {const "content": { [className: string]: string }export default content}
+export default content}
+declare module "*.jpg" {const "content": string;"
+}
+export default content}
+declare module "*.jpeg" {const "content": string;"
+}
+export default content}
+declare module "*.gif" {const "content": string;"
+}
+export default content}
+declare module "*.webp" {const "content": string;"
+}
+export default content}
+declare module "*.css" {const "content": { ["className": string]: string }"
+export default content}
+declare module "*.scss" {const "content": { ["className": string]: string }"
+export default content}
+declare module "*.module.css" {const "content": { ["className": string]: string }"
+export default content}
+declare module "*.module.scss" {const "content": { ["className": string]: string }"
+export default conten}
 // Next.js specific types;
-declare namespace NodeJS {interface ProcessEnv  {"NODE_ENV": "development" | "production" | "test";
+declare namespace NodeJS {interface ProcessEnv  {"NODE_ENV": "development" | "production" | "test";"
+    }
     NEXT_PUBLIC_SUPABASE_URL?: string;
     NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
     SUPABASE_SERVICE_ROLE_KEY?: string;
@@ -313,7 +327,59 @@ declare namespace NodeJS {interface ProcessEnv  {"NODE_ENV": "development" | "pr
 /// <reference types="next/image-types/global" />;
 /// <reference types="next/navigation-types/navigation" />;
 // Global window extensions;
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare global {interface Window  {gtag?: (..."args": any[]) => void;
+declare module "*.svg" { const "content": string;"
+}
+export default content} declare module "*.png" { const "content": string;"
+}
+export default content} declare module "*.jpg" { const "content": string;"
+}
+export default content} declare module "*.jpeg" { const "content": string;"
+}
+export default content} declare module "*.gif" { const "content": string;"
+}
+export default content} declare module "*.webp" { const "content": string;"
+}
+export default content} declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (..."args": any[]) => void; dataLayer?: any[]} }"
+export {}declare module "*.svg" { const "content": string;"
+}
+export default content} declare module "*.png" { const "content": string;"
+}
+export default content} declare module "*.jpg" { const "content": string;"
+}
+export default content} declare module "*.jpeg" { const "content": string;"
+}
+export default content} declare module "*.gif" { const "content": string;"
+}
+export default content} declare module "*.webp" { const "content": string;"
+}
+export default content} declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (..."args": any[]) => void; dataLayer?: any[]} }"
+export {}declare module "*.svg" { const "content": string;"
+}
+export default content} declare module "*.png" { const "content": string;"
+}
+export default content} declare module "*.jpg" { const "content": string;"
+}
+export default content} declare module "*.jpeg" { const "content": string;"
+}
+export default content} declare module "*.gif" { const "content": string;"
+}
+export default content} declare module "*.webp" { const "content": string;"
+}
+export default content} declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (..."args": any[]) => void; dataLayer?: any[]} }"
+export {}declare global {interface Window  {gtag?: (..."args": any[]) => void;"
+    }
     dataLayer?: any[]}
 }
 export {}declare module "*.svg" { const content: 'string; export default content;' } declare module "*.png" { const content: 'string; export default content;' } declare module "*.jpg" { const content: 'string; export default content;' } declare module "*.jpeg" { const content: 'string; export default content;' } declare module "*.gif" { const content: 'string; export default content;' } declare module "*.webp" { const content: 'string; export default content;' } declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } } declare global { interface Window { gtag?: (...args: 'any[]) => void; dataLayer?: any[];' } } } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare global {interface Window  {gtag?: (..."args": any[]) => void;
@@ -325,7 +391,41 @@ export {}
 export {}
 declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
 export {};
+declare module "*.svg" { const "content": 'string;'
+}
+export default content;' } declare module "*.png" { const "content": 'string;'
+}
+export default content;' } declare module "*.jpg" { const "content": 'string;'
+}
+export default content;' } declare module "*.jpeg" { const "content": 'string;'
+}
+export default content;' } declare module "*.gif" { const "content": 'string;'
+}
+export default content;' } declare module "*.webp" { const "content": 'string;'
+}
+export default content;' } declare module "*.css" { const "content": { ["className": string]: string};"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string};"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string};"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string};"
+export default content} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } } declare global { interface Window { gtag?: (..."args": 'any[]) => void; dataLayer?: any[];' } } }'
 export {};
+declare module "*.svg" { const "content": string;"
+}
+export default content} declare module "*.png" { const "content": string;"
+}
+export default content} declare module "*.jpg" { const "content": string;"
+}
+export default content} declare module "*.jpeg" { const "content": string;"
+}
+export default content} declare module "*.gif" { const "content": string;"
+}
+export default content} declare module "*.webp" { const "content": string;"
+}
+export default content} declare module "*.css" { const "content": { ["className": string]: string};"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string};"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string};"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string};"
+export default content} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (..."args": any[]) => void; dataLayer?: any[]} }"
 export {};
 ursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -333,23 +433,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 export {};
 
 export {};
-declare module "*.svg" { const content: 'string; export default content;' } declare module "*.png" { const content: 'string; export default content;' } declare module "*.jpg" { const content: 'string; export default content;' } declare module "*.jpeg" { const content: 'string; export default content;' } declare module "*.gif" { const content: 'string; export default content;' } declare module "*.webp" { const content: 'string; export default content;' } declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } } declare global { interface Window { gtag?: (...args: 'any[]) => void; dataLayer?: any[];' } } } export {};
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
-
 declare global {
+  }
   interface Window {
     gtag?: (..."args": any[]) => void;
     dataLayer?: any[]}
-}export {}ursor/integrate-build-improve-and-re-verify-8f7d;
+}
+export {}ursor/integrate-build-improve-and-re-verify-8f7d;
 // Re-export DOM types that might not be available;
 export {}ursor/fix-website-loading-errors-and-merge-6662;
 // Re-export DOM types that might not be available;
@@ -359,48 +449,241 @@ export {}
 // Re - export DOM types that might not be available;
 export {}ursor/fix-netlify-build-and-merge-to-main-9571;
 // Module declarations;
-declare module "*.svg" {const content: string;
-  export default content;
-}declare module "*.png" {const content: string;
-  export default content;
-}declare module "*.jpg" {const content: string;
-  export default content;
-}declare module "*.jpeg" {const content: string;
-  export default content;
-}declare module "*.gif" {const content: string;
-  export default content;
-}declare module "*.webp" {const content: string;
-  export default content;
-}declare module "*.css" {const content: { [className: string]: string }export default content;
-}declare module "*.scss" {const content: { [className: string]: string }export default content;
-}declare module "*.module.css" {const content: { [className: string]: string }export default content;
-}declare module "*.module.scss" {const content: { [className: string]: string }export default content;
+declare module "*.svg" {const "content": string;"
+}
+export default content;
+}declare module "*.png" {const "content": string;"
+}
+export default content;
+}declare module "*.jpg" {const "content": string;"
+}
+export default content;
+}declare module "*.jpeg" {const "content": string;"
+}
+export default content;
+}declare module "*.gif" {const "content": string;"
+}
+export default content;
+}declare module "*.webp" {const "content": string;"
+}
+export default content;
+}declare module "*.css" {const "content": { ["className": string]: string}"
+export default content;
+}declare module "*.scss" {const "content": { ["className": string]: string}"
+export default content;
+}declare module "*.module.css" {const "content": { ["className": string]: string}"
+export default content;
+}declare module "*.module.scss" {const "content": { ["className": string]: string}"
+export default content;
 }// Environment variables;
-declare namespace NodeJS {interface ProcessEnv  {NODE_ENV: "development" | "production" | "test";
+declare namespace NodeJS {interface ProcessEnv  {"NODE_ENV": "development" | "production" | "test";"
+    }
     NEXT_PUBLIC_SUPABASE_URL?: string;
     NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
     SUPABASE_SERVICE_ROLE_KEY?: string;
     NEXT_PUBLIC_GA_TRACKING_ID?: string;
   }
-}export {}export {}export {}ursor/integrate-build-improve-and-re-verify-8f7d;
+}
+export {}
+export {}
+export {}ursor/integrate-build-improve-and-re-verify-8f7d;
 // Re-export DOM types that might not be available;
-export {}export {}declare module "*.svg" { const content: 'string; export default content;' } declare module "*.png" { const content: 'string; export default content;' } declare module "*.jpg" { const content: 'string; export default content;' } declare module "*.jpeg" { const content: 'string; export default content;' } declare module "*.gif" { const content: 'string; export default content;' } declare module "*.webp" { const content: 'string; export default content;' } declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } } declare global { interface Window { gtag?: (...args: 'any[]) => void; dataLayer?: any[];' } } } export {}// Re-export DOM types that might not be available;
+export {}
+export {}declare module "*.svg" { const "content": 'string;'
+}
+export default content;' } declare module "*.png" { const "content": 'string;'
+}
+export default content;' } declare module "*.jpg" { const "content": 'string;'
+}
+export default content;' } declare module "*.jpeg" { const "content": 'string;'
+}
+export default content;' } declare module "*.gif" { const "content": 'string;'
+}
+export default content;' } declare module "*.webp" { const "content": 'string;'
+}
+export default content;' } declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } } declare global { interface Window { gtag?: (..."args": 'any[]) => void; dataLayer?: any[];' } } }'
+export {}// Re-export DOM types that might not be available;
 export {}
 // Re - export DOM types that might not be available;
 export {}
 ursor/fix-netlify-build-and-merge-to-main-9571;
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}export {}declare module "*.svg" { const content: 'string; export default content;' } declare module "*.png" { const content: 'string; export default content;' } declare module "*.jpg" { const content: 'string; export default content;' } declare module "*.jpeg" { const content: 'string; export default content;' } declare module "*.gif" { const content: 'string; export default content;' } declare module "*.webp" { const content: 'string; export default content;' } declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } } declare global { interface Window { gtag?: (...args: 'any[]) => void; dataLayer?: any[];' } } } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}ursor/automate-test-improve-and-merge-code-646c;
-export {}declare module "*.svg" { const content: 'string; export default content;' } declare module "*.png" { const content: 'string; export default content;' } declare module "*.jpg" { const content: 'string; export default content;' } declare module "*.jpeg" { const content: 'string; export default content;' } declare module "*.gif" { const content: 'string; export default content;' } declare module "*.webp" { const content: 'string; export default content;' } declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } } declare global { interface Window { gtag?: (...args: 'any[]) => void; dataLayer?: any[];' } } } export {}// Re-export DOM types that might not be available;
-export {}
-// Re - export DOM types that might not be available;
-export {}
-declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }export default content} declare module "*.scss" { const content: { [className: string]: string }export default content} declare module "*.module.css" { const content: { [className: string]: string }export default content} declare module "*.module.scss" { const content: { [className: string]: string }export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {}
+declare module "*.svg" { const "content": string;"
 }
-
-export {};
-export {};
-declare module "*.svg" { const content: 'string; export default content;' } declare module "*.png" { const content: 'string; export default content;' } declare module "*.jpg" { const content: 'string; export default content;' } declare module "*.jpeg" { const content: 'string; export default content;' } declare module "*.gif" { const content: 'string; export default content;' } declare module "*.webp" { const content: 'string; export default content;' } declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } } declare global { interface Window { gtag?: (...args: 'any[]) => void; dataLayer?: any[];' } } } export {};
-// Re-export DOM types that might not be available
+export default content} declare module "*.png" { const "content": string;"
+}
+export default content} declare module "*.jpg" { const "content": string;"
+}
+export default content} declare module "*.jpeg" { const "content": string;"
+}
+export default content} declare module "*.gif" { const "content": string;"
+}
+export default content} declare module "*.webp" { const "content": string;"
+}
+export default content} declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (..."args": any[]) => void; dataLayer?: any[]} }"
+export {}
+export {}declare module "*.svg" { const "content": 'string;'
+}
+export default content;' } declare module "*.png" { const "content": 'string;'
+}
+export default content;' } declare module "*.jpg" { const "content": 'string;'
+}
+export default content;' } declare module "*.jpeg" { const "content": 'string;'
+}
+export default content;' } declare module "*.gif" { const "content": 'string;'
+}
+export default content;' } declare module "*.webp" { const "content": 'string;'
+}
+export default content;' } declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } } declare global { interface Window { gtag?: (..."args": 'any[]) => void; dataLayer?: any[];' } } }'
+export {}declare module "*.svg" { const "content": string;"
+}
+export default content} declare module "*.png" { const "content": string;"
+}
+export default content} declare module "*.jpg" { const "content": string;"
+}
+export default content} declare module "*.jpeg" { const "content": string;"
+}
+export default content} declare module "*.gif" { const "content": string;"
+}
+export default content} declare module "*.webp" { const "content": string;"
+}
+export default content} declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (..."args": any[]) => void; dataLayer?: any[]} }"
+export {}declare module "*.svg" { const "content": string;"
+}
+export default content} declare module "*.png" { const "content": string;"
+}
+export default content} declare module "*.jpg" { const "content": string;"
+}
+export default content} declare module "*.jpeg" { const "content": string;"
+}
+export default content} declare module "*.gif" { const "content": string;"
+}
+export default content} declare module "*.webp" { const "content": string;"
+}
+export default content} declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (..."args": any[]) => void; dataLayer?: any[]} }"
+export {}declare module "*.svg" { const "content": string;"
+}
+export default content} declare module "*.png" { const "content": string;"
+}
+export default content} declare module "*.jpg" { const "content": string;"
+}
+export default content} declare module "*.jpeg" { const "content": string;"
+}
+export default content} declare module "*.gif" { const "content": string;"
+}
+export default content} declare module "*.webp" { const "content": string;"
+}
+export default content} declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (..."args": any[]) => void; dataLayer?: any[]} }"
+export {}declare module "*.svg" { const "content": string;"
+}
+export default content} declare module "*.png" { const "content": string;"
+}
+export default content} declare module "*.jpg" { const "content": string;"
+}
+export default content} declare module "*.jpeg" { const "content": string;"
+}
+export default content} declare module "*.gif" { const "content": string;"
+}
+export default content} declare module "*.webp" { const "content": string;"
+}
+export default content} declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (..."args": any[]) => void; dataLayer?: any[]} }"
+export {}declare module "*.svg" { const "content": string;"
+}
+export default content} declare module "*.png" { const "content": string;"
+}
+export default content} declare module "*.jpg" { const "content": string;"
+}
+export default content} declare module "*.jpeg" { const "content": string;"
+}
+export default content} declare module "*.gif" { const "content": string;"
+}
+export default content} declare module "*.webp" { const "content": string;"
+}
+export default content} declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (..."args": any[]) => void; dataLayer?: any[]} }"
+export {}declare module "*.svg" { const "content": string;"
+}
+export default content} declare module "*.png" { const "content": string;"
+}
+export default content} declare module "*.jpg" { const "content": string;"
+}
+export default content} declare module "*.jpeg" { const "content": string;"
+}
+export default content} declare module "*.gif" { const "content": string;"
+}
+export default content} declare module "*.webp" { const "content": string;"
+}
+export default content} declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (..."args": any[]) => void; dataLayer?: any[]} }"
+export {}declare module "*.svg" { const "content": string;"
+}
+export default content} declare module "*.png" { const "content": string;"
+}
+export default content} declare module "*.jpg" { const "content": string;"
+}
+export default content} declare module "*.jpeg" { const "content": string;"
+}
+export default content} declare module "*.gif" { const "content": string;"
+}
+export default content} declare module "*.webp" { const "content": string;"
+}
+export default content} declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (..."args": any[]) => void; dataLayer?: any[]} }"
+export {}ursor/automate-test-improve-and-merge-code-646c;
+export {}declare module "*.svg" { const "content": 'string;'
+}
+export default content;' } declare module "*.png" { const "content": 'string;'
+}
+export default content;' } declare module "*.jpg" { const "content": 'string;'
+}
+export default content;' } declare module "*.jpeg" { const "content": 'string;'
+}
+export default content;' } declare module "*.gif" { const "content": 'string;'
+}
+export default content;' } declare module "*.webp" { const "content": 'string;'
+}
+export default content;' } declare module "*.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.scss" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.css" { const "content": { ["className": string]: string }"
+export default content} declare module "*.module.scss" { const "content": { ["className": string]: string }"
+export default conten} declare namespace NodeJS { interface ProcessEnv { "NODE_ENV": "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } } declare global { interface Window { gtag?: (..."args": 'any[]) => void; dataLayer?: any[];' } } }'
+export {}// Re-export DOM types that might not be available;
 export {}
 // Re - export DOM types that might not be available;
 export {}

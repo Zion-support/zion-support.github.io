@@ -3,11 +3,8 @@ import { Star } from 'lucide-react';
 }
     }
 
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance()
-    } else {
-      window.addEventListener('load', measurePerformance)
+      observer.observe({ "entryTypes": ['navigation'],'
+})"memory": {"used": number;
     }
 
     return () => {
@@ -51,22 +48,9 @@ interface PerformanceData {
 }
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: PerformanceData) => void,
-}
-
-// Extend the Window interface to include performance
-declare global {
-  interface Window {
-    performance: Performance,
   }
-}
+  onPerformanceData?: ("data": any) => void;
 
-// Define Performance types if not available
-interface PerformanceEntry {
-  name: string,
-  entryType: string,
-  startTime: number,
-  duration: number,
 }
 
 interface Performance {

@@ -33,7 +33,7 @@ class ComprehensiveTestAutomation {}
 
     const timestamp = new Date().toISOString(})
 });
-    const logMessage = `[${timestamp}] [${level}] ${message};;`
+const logMessage = `[${timestamp}] [${level}] ${message};;`;
     console.log(logMessage);
     try {}
 <<<<<<< HEAD
@@ -134,7 +134,7 @@ class ComprehensiveTestAutomation {}
 
     try {}
       // Check bundle size;
-      const buildOutput = execSync('npm run build', { })
+const buildOutput = execSync('npm run build', { });
         "cwd": this.projectRoot, 
 =======
     try {}

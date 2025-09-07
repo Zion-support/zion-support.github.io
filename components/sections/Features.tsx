@@ -1,5 +1,6 @@
-import Card from '../ui/Card';
-import { Zap } from 'lucide-react';
+import Card from '../ui/Card';'
+
+import { Zap } from 'lucide-react';'
 
 
 import Card from '../ui/Card';'
@@ -7,13 +8,6 @@ import { Zap } from 'lucide-react';
 
 
 interface Feature {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  icon: React.ReactNode;
-
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
   }
   
   static getDerivedStateFromError(error) {}
@@ -31,17 +25,17 @@ class ErrorBoundary extends React.Component {}
   icon: React.ReactNode;
 
 class ErrorBoundary extends React.Component {
+  }
   constructor(props) {
+    }
     super(props);
-    this.state = { hasError: false };
+    this.state = { "hasError": false
+};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  static getDerivedStateFromError(error) {}
-    return { hasError: true,}
+}
+return { "hasError": true,;
 };
   }
 
@@ -51,6 +45,7 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.hasError) {
+      }
       return <div>Something went wrong.</div>;
     }
 
@@ -64,13 +59,11 @@ interface Feature  {icon: React.ReactNode;class ErrorBoundary extends React.Comp
   }
 }'
 import React from 'react';'
-import Card from '../ui/Card';'
-import { Zap } from 'lucide-react';
+  "title": string;
+  "description": string;
+  "color": string;
 
-  title: string;
-  description: string;
-  color: string;
-  gradient: string;
+  "gradient": string;
 
   delay?: number;
   return ('
@@ -151,32 +144,30 @@ const Features: React.FC<FeaturesProps> = ({
             {subtitle}
           </p>;
         </div>;{/* Features Grid */}
-        <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
-          {features && features.map((feature, index) => (<Card;
-              key={index}}export default Features;  )}export default Features;
-};
+        <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>`
 
-          {features && features.map((feature, index) => (;}
-            <Card;}
+          {features && features.map((feature, index) => (;
+            <Card
+}
 key={index}
 
-className='text-center group bg-gray-900/50 border border-gray-800 hover: border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
+className='text-center group bg-gray-900/50 border border-gray-800 "hover": border-blue-500/30 "hover":bg-gray-900/80 transition-all duration-300 "hover":-translate-y-1''
 
-              style={{ animationDelay: `${index * 0.1 + 0.2}s` ,
-}
-             />;
-              <div className='relative' />;
+              style={{ "animationDelay": `${index * 0.1 + 0.2}s` ,`}
+            >;
+              <div className='relative'>;'
                 <div;
-                  className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
-                >;
-                  {feature.icon}
+                  className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-"hover": scale-110 group-"hover":shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>`
+
+                  {feature.ico
+}
                 </div>;
-                <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm' />;
+                <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent rounded-2xl opacity-0 group-"hover":opacity-100 transition-opacity duration-300 blur-sm' />;'
               </div>;
-              <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>;
+              <h3 className='text-xl font-bold mb-4 text-white group-"hover":text-blue-400 transition-colors duration-300'>;'
                 {feature.title}
               </h3>;
-              <p className='text-gray-400 leading-relaxed'>;
+              <p className='text-gray-400 leading-relaxed'>;'
                 {feature.description}
               </p>;
             </Card>;

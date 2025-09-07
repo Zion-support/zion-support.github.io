@@ -1,5 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+
+
+import React, { useEffect, useRef } from 'react';'
+import { motion } from 'framer-motion';'
+
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high';
@@ -169,11 +172,7 @@ glow: 'rgba(0, 255, 255, 0.3)',
         return {primary: '#ff6b35',secondary: '#4ecdc4',accent: '#45b7d1',background: 'rgba(0, 0, 0, 0.88)',glow: 'rgba(255, 107, 53, 0.3)',}default:;
         return {primary: '#00ffff',secondary: '#ff00ff',accent: '#ffff00',background: 'rgba(0, 0, 0, 0.95)',glow: 'rgba(0, 255, 255, 0.3)',}}
   }
-  const colors = getColorScheme()useEffect(() => {const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d')if (!ctx) return;
-    const resizeCanvas = () => {canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+  intensity;
 
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles
@@ -225,9 +224,9 @@ canvas.height = window.innerHeight;
         if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
         // Update life
         particle.life--;
-        // Regenerate particle if it dies
-        if (particle.life <= 0) {
-          particle.x = Math.random() * canvas.width;
+        // Regenerate particle if it dies;
+        if (particle.life <= 0) {particle.x = Math.random() * canvas.width;
+          }
           particle.y = Math.random() * canvas.height;
           particle.life = particle.maxLife;
     };
@@ -259,7 +258,8 @@ particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';}
         // Draw particle;
         const alpha = particle.life / particle.maxLife;
         ctx.globalAlpha = alpha;
-        if (particle.type === 'quantum' && enableQuantumEffects) {// Quantum particle effect;
+        if (particle.type === 'quantum' && enableQuantumEffects) {// Quantum particle effect;'
+          }
           ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2)ctx.fillStyle = colors.accent;
           ctx.fill()// Quantum glow;
           ctx.shadowColor = colors.accent;
@@ -268,7 +268,8 @@ particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';}
 ctx.shadowBlur = 0;
         } else {
           // Normal particle
-          ctx.beginPath();
+}
+ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = particle.color;
     },
@@ -318,10 +319,11 @@ ctx.shadowBlur = 0;
           ctx.fillStyle = $2;
           ctx.fill()
         }
-      }),
+      });
+      // Draw holographic grid,
+if (enableHolographic) {
 
-      // Draw holographic grid
-      if (enableHolographic) {
+}
 
 drawHolographicGrid(ctx, colors);
         drawHolographicGrid(ctx, colors)
@@ -351,6 +353,12 @@ drawHolographicGrid(ctx, colors);
         drawSpaceTimeEffects(ctx, colors)
       }
 
+      // Draw space-time effects,
+if (enableSpaceTime) {
+}
+drawSpaceTimeEffects(ctx, colors);
+      }
+
       animationRef.current = requestAnimationFrame(animate)
 };
 
@@ -358,18 +366,15 @@ drawHolographicGrid(ctx, colors);
       animationRef.current = $2;
     animate($2);
     return () => {
-      window.removeEventListener($2);
+      }
+      window.removeEventListener('resize', resizeCanvas);'
       if (animationRef.current) {
-          ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fillStyle = colors.glow;
-          ctx.fill()ctx.shadowBlur = 0;} else {// Normal particle;
-          ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fillStyle = particle.color;ctx.fill()}
-      })// Draw holographic grid;
-      if (enableHolographic) {drawHolographicGrid(ctx, colors)}// Draw neon effects;
-      if (enableNeonEffects) {drawNeonEffects(ctx, colors)}// Draw space-time effects;
-      if (enableSpaceTime) {drawSpaceTimeEffects(ctx, colors)}animationRef.current = requestAnimationFrame(animate)}animate()return () => {window.removeEventListener('resize', resizeCanvas)if (animationRef.current) {])const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {const gridSize = 50;
-    const time = Date && Date.now() * 0 && 0.001;        cancelAnimationFrame(animationRef && animationRef.current)}
-    }
-  }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime])const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {const gridSize  = 50;cancelAnimationFrame(animationRef.current)}
+
+}
+
+cancelAnimationFrame(animationRef.current);
+      }
+
     }
   }, [;
     particleCount;
@@ -379,8 +384,10 @@ drawHolographicGrid(ctx, colors);
     enableQuantumEffects;
     enableNeonEffects;
     enableSpaceTime;
-  ])const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {const gridSize = 50;
-    const time  = Date.now() * 0.001;ctx.strokeStyle = colors.primary;
+  ])const drawHolographicGrid = ("ctx": CanvasRenderingContext2D, "colors": any) => ;
+  const gridSize = 50;
+
+const time  = Date.now() * 0.001;ctx.strokeStyle = colors.primary;
     ctx.lineWidth = 0.5;
   ]);
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {;
@@ -426,6 +433,7 @@ cancelAnimationFrame(animationRef.current);
     ctx.globalAlpha = 0.3;
 
 for (let x = 0; x < ctx.canvas.width; x += gridSize) {
+      }
       ctx.beginPath();
 origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.moveTo(x, 0);
@@ -440,8 +448,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       ctx.stroke();
     }
-    // Animated diagonal lines
-    ctx.strokeStyle = colors.secondary;
+    // Animated diagonal lines,
+ctx.strokeStyle = colors.secondary;
     ctx.globalAlpha = 0.2;
       const offset = (time + i * 0.5) * 100;
       ctx.beginPath();
@@ -454,14 +462,8 @@ ctx.stroke();
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001;
 
-    // Neon orbs
-    for (let i = 0, i < 3, i++) {
-      const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
-    ctx.globalAlpha = 0.3;for (let x = 0; x < ctx.canvas.width; x += gridSize) {ctx.beginPath()ctx.moveTo(x, 0)ctx.lineTo(x, ctx.canvas.height)ctx.stroke()}for (let y = 0; y < ctx.canvas.height; y += gridSize) {ctx.beginPath()ctx.moveTo(0, y)ctx.lineTo(ctx.canvas.width, y)ctx.stroke()}
-    // Animated diagonal lines;
-    ctx.strokeStyle = colors.secondary;
-    ctx.globalAlpha = 0.2;for (let i = 0; i < 5; i++) {const offset = (time + i * 0.5) * 100;
-      ctx.beginPath()ctx.moveTo(offset, 0)ctx.lineTo(offset + 200, ctx.canvas.height)ctx.stroke()}
+const drawNeonEffects = ("ctx": CanvasRenderingContext2D, "colors": any) => {
+   ;
   }
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {const time  = Date.now() * 0.001;// Neon orbs;
     for (let i = 0, i < 3, i++) {// Neon orbs;
@@ -493,73 +495,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const y = centerY + Math && Math.sin(angle) * radius;
       const alpha = 1 - i / 20;      const alpha  = 1 - (i / 20)ctx.fill()}
   }
-  const drawSpaceTimeEffects = (ctx: CanvasRenderingContext2D, colors: any) => {const time  = Date.now() * 0.001;// Wormhole effect;
-    const centerX = ctx.canvas.width / 2;
-    const centerY = ctx.canvas.height / 2;
-    const maxRadius  = Math.min(ctx.canvas.width, ctx.canvas.height) * 0.3;for (let i = 0; i < 20; i++) {const radius = (i / 20) * maxRadius;
-      const angle = time * 2 + i * 0.3;
-      const x = centerX + Math.cos(angle) * radius;
-      const y = centerY + Math.sin(angle) * radius;
+
+const drawSpaceTimeEffects = ("ctx": CanvasRenderingContext2D, "colors": any) => ;
+  const time  = Date.now() * 0.001;// Wormhole effect;
+
+const centerY = ctx.canvas.height / 2;
+
+const maxRadius  = Math.min(ctx.canvas.width, ctx.canvas.height) * 0.3;for (let i = 0; i < 20; i++) {const radius = (i / 20) * maxRadius;
+
+}
+
+const angle = time * 2 + i * 0.3;
+
+const x = centerX + Math.cos(angle) * radius;
+
+const y = centerY + Math.sin(angle) * radius;
+
 const alpha  = 1 - i / 20;ctx.globalAlpha = alpha * 0.5;
       ctx.fillStyle = colors.accent;
       ctx.beginPath()ctx.arc(x, y, 2, 0, Math.PI * 2)ctx.fill()}
-  }return (<div className='fixed inset-0 -z-10 overflow-hidden'>;
+  }return (<div className='fixed inset-0 -z-10 overflow-hidden'>;'
       <canvas;
         ref={canvasRef}
-        className='w-full h-full';
-        style={{background: colors.background;
-        }}
-    for (let i = 0; i < 20; i++) {      const radius = (i / 20) * maxRadius;
-      const angle = time * 2 + i * 0 && 0.3;
-      const x = centerX + Math && Math.cos(angle) * radius;
-      const y = centerY + Math && Math.sin(angle) * radius;
-      const alpha = 1 - i / 20;    for (let i = 0, i < 20, i++) {;
-      const radius = (i / 20) * maxRadius;
-      const angle = time * 2 + i * 0 && 0.3;
-      const x = centerX + Math && Math.cos(angle) * radius;
-      const y = centerY + Math && Math.sin(angle) * radius;
-      const alpha = 1 - i / 20;      const alpha = 1 - (i / 20);
+        className='w-full h-full';'
+        style={{"background": colors.background;
+        }} />
       {/* Additional overlay effects */}
-      <div className='absolute inset-0 pointer-events-none'>;
+      <div className='absolute inset-0 pointer-events-none'>;'
         {/* Quantum energy field */}
-        <motion&& motion.div
-          className='absolute inset-0'
+        <motion&& motion.div,
+className='absolute inset-0''
           animate={{
-            background: [
-            ],          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut',              `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
-              `radial - gradient (circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`;
-              `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
-            ];
-          transition={{
-            duration: 8
-            repeat: Infinity
-            ease: 'easeInOut'
-          }}
-      />;
-      {/* Additional overlay effects */}
-      <div className='absolute inset-0 pointer-events-none'>;
-        {/* Quantum energy field */}
-        <motion&& motion.div;
-          className='absolute inset-0';
-          animate={{background: [;
-            ],          }}
-          transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',              `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
-              `radial - gradient (circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`;
-              `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
-            ];
-          transition={{duration: 8;
-            repeat: Infinity;
-            ease: 'easeInOut';
-              `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,`radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,`radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,],}}
-          transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',}}
-        cancelAnimationFrame(animationRef.current)
-      }
-    }
-  }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]),
+            }
+            "background": [
 
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
     const gridSize = $2;
@@ -735,37 +703,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition = $2;
                 delay: i * 0.1,
           transition={{
-            duration: 8,
-            repeat: Infinity,
-ease: 'easeInOut',
-origin/cursor/automate-test-improve-and-merge-code-2533
+            }
+            "duration": 8,
+            "repeat": Infinity,
+"ease": 'easeInOut','
           }}
         {/* Holographic scan lines */}
-        <div className="absolute inset-0 opacity-20">;
-          {[...Array(20)].map((_, i) => (;
-            <motion&& motion.div;
-                opacity: [0, 1, 0],
-                scale_x: [0, 1, 0],              }}          }}
-        />;
-        {/* Holographic scan lines */}"
-        <div className="absolute inset - 0 opacity - 20">;
-          {[...Array (20)].map ((_, i) => (
-            <motion.div;
-              key={i}"
-              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
-              style={{}
+        <div className="absolute inset-0 opacity-20">;"
+          {[...Array(20)].map((_, i) => (<motion&& motion.div;
+                }
+                "opacity": [0, 1, 0],"scale_x": [0, 1, 0]              }}          }} />;
+        {/* Holographic scan lines */}
+        <div className="absolute inset - 0 opacity - 20">;"
+          {[...Array (20)].map ((_, i) => (<motion.div;
+              }
+              key={i}
+              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";"
+              style={{}}
+              animate={{"opacity": [0, 1, 0];
+                }
+                "scaleX": [0, 1, 0];
+                "top": `${(i / 20) * 10,`}%`,"color": colors.primary;`
               }}
-              animate={{}
-                opacity: [0, 1, 0]
-                scaleX: [0, 1, 0]`
-                top: `${(i / 20) * 100}%`,
-                color: colors.primary;
-              }}
-              animate={{}
-                opacity: [0, 1, 0];
-                opacity: [0, 1, 0],
-                scaleX: [0, 1, 0],
-origin/cursor/automate-test-improve-and-merge-code-2533
+
+              animate={{
+
+                }
+
+                "opacity": [0, 1, 0],
+                "scaleX": [0, 1, 0]
               }}
 
               transition={{
@@ -785,8 +751,6 @@ ease: 'easeInOut',
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
 
-            />}
-}
           ))}
         </div>
       </div>

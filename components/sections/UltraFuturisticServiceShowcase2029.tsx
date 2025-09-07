@@ -42,10 +42,12 @@ export default function UltraFuturisticServiceShowcase2029() {return (<section c
 }: UltraFuturisticServiceShowcase2029Props) {return (<section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">;
   title?: string;
   subtitle?: string;
-export default function UltraFuturisticServiceShowcase2029({
-  services,
-  title = '2029 Cutting-Edge Services',
-  subtitle = 'Experience the future of technology with our revolutionary solutions',
+
+export default function UltraFuturisticServiceShowcase2029() {
+}
+return (;
+    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>'
+      <div className='max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8'>,'
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
@@ -86,9 +88,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
             {title}
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {subtitle}
-          </p>
+          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>{subtitl,'
+}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -121,18 +122,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {services.slice(0, 6).map((service, index) => (}
             <motion.div;}
 key={service.id}
-          </p />;"
-        </motion && motion.div>;<div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\" />;
-          {services && services.slice(0, 6).map((service, index) => (<motion&& motion.div;}
+          </p>;
+        </motion && motion.div>;<div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">;"
+          {services && services.slice(0, 6).map((service, index) => (<motion&& motion.div;
+              }
               key={service && service.id}
-              initial={{ opacity: 0, y: 20 }
+              initial={{ "opacity": 0, "y": 20 
 }
 
-              whileInView={{ opacity: 1, y: 0 }
+              whileInView={{ "opacity": 1, "y": 0 
 }
 
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20'
+              transition={{ "duration": 0.6, "delay": index * 0.1 }}
+className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 "hover":border-cyan-400/40 transition-all duration-300 "hover":shadow-2xl "hover":shadow-cyan-500/20''
             >
               className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20'
               <div className='flex items-center justify-between mb-4'>
@@ -163,31 +165,14 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
                   <span className='text-sm text-gray-300'>5.0</span>
                 </div>
               </div>
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
-              whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}
-className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20';
-            >;
-              <div className='flex items-center justify-between mb-4'>;
-                <div className='flex items-center space-x-2'>;
-                  <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />;
-                  <span className='text-sm text-cyan-400 font-medium'>NEW</span>;
-                </div>;
-                <div className='flex items-center space-x-1'>;
-                  <Star className='w-4 h-4 text-yellow-400 fill-current' />;
-                  <span className='text-sm text-gray-300'>5.0</span>;
-                </div>;
-              </div>;
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
-                {service.name}
+              <h3 className='text-xl font-bold text-white mb-2 group-"hover":text-cyan-400 transition-colors'>'
+
+                {service.nam
+}
               </h3>;
-              <p className='text - gray - 400 text - sm mb - 3'>{service.tagline}</p>;
-              <p className='text - gray - 300 mb - 4 line - clamp - 3'>;
-                {service.description}<span className="text-2xl font-bold text-cyan-400">{service.price}</span>;
-                <div className="flex items-center space-x-2">;
-                  <Zap className="w-4 h-4 text-yellow-400" />;
-                  <Shield className="w-4 h-4 text-green-400" />;
-                  <Brain className="w-4 h-4 text-purple-400" />;
-              <Link;
+              <p className='text - gray - 400 text - sm mb - 3'>{service.tagline}</p>;'
+              <p className='text - gray - 300 mb - 4 line - clamp - 3'>;'
+
                 {service.description}
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2">
@@ -237,10 +222,10 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
                 <span className='text-2xl font-bold text-cyan-400'>;
                   {service.price}
                 </span>;
-                <div className='flex items-center space-x-2'>;
-                  <Zap className='w-4 h-4 text-yellow-400' />;
-                  <Shield className='w-4 h-4 text-green-400' />;
-                  <Brain className='w-4 h-4 text-purple-400' />;
+                <div className='flex items-center space-x-2'>;'
+                  <Zap className='w-4 h-4 text-yellow-400' />;'
+                  <Shield className='w-4 h-4 text-green-400' />;'
+                  <Brain className='w-4 h-4 text-purple-400' />;'
                 </div>;
               </div>;
               <Link;
@@ -326,13 +311,13 @@ className='inline-flex items-center justify-center w-full bg-gradient-to-r from-
           )
 }
         <motion.div;
-        </div />;<motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
+        </div>;<motion&& motion.div;
+          initial={{ "opacity": 0, "y": 20 
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ "opacity": 1, "y": 0 
 }
 
-          transition={{ duration: 0.6, delay: 0.6 }
+          transition={{ "duration": 0.6, "delay": 0.6 
 }
 
 className='text-center mt-12'

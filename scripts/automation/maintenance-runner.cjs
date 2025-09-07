@@ -12,44 +12,10 @@
 <<<<<<< HEAD
 
 
-
-
-
-  console.error('Failed to write maintenance "summary")
-  console.error('Failed to write maintenance "summary")
-
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
-
-  console.error('Failed to write maintenance "summary")
-
-=======
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
-const reportsDir = path.join(projectRoot, 'reports')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+const reportsDir = path.join(projectRoot, 'reports');
     execSync(command, { "stdio"})
 <<<<<<< HEAD
 <<<<<<< HEAD

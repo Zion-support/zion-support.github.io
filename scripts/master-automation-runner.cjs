@@ -38,16 +38,9 @@ const fs = require('fs')
 const path = require('path')
 
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 console.log(' Starting Master Automation Runner...')
     "name"
     "script"

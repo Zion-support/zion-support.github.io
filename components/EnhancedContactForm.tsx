@@ -33,113 +33,119 @@ const handleInputBlur = (name: keyof FormData) => {
 }
 export default EnhancedContactForm
           variants={containerVariants}
-          initial="hidden";
-          whileInView="visible";
-          viewport={{ once: true }}
+          initial="hidden";"
+          whileInView="visible";"
+          viewport={{ "once": true }}
+          viewport={{ "once": true 
+}
         >;
           {/* Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">;
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full text-blue-600 text-sm font-medium mb-6">;
-              <MessageSquare className="w-4 h-4" />;
+          <motion.div variants={itemVariants} className="text-center mb-16">;"
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full text-blue-600 text-sm font-medium mb-6">;"
+              <MessageSquare className="w-4 h-4" />;"
               Get In Touch;
             </div>;
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">;
+            <h2 className="text-4xl "md":text-6xl font-bold text-gray-900 mb-6">;"
               Ready to Start Your;
-              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
+              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;"
                 Project?;
               </span>;
             </h2>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">;"
               Let&apos;s discuss your technology needs and explore how our;
-              expertise can drive innovation and growth for your business.'';
+              expertise can drive innovation and growth for your business.'';'
             </p>;
           </motion.div>;
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-16 max-w-7xl mx-auto">;
+          <div className="grid grid-cols-1 "lg": grid-cols-2 gap-16 max-w-7xl mx-auto">;"
             {/* Contact Information */}
-            <motion.div variants={itemVariants} className="space-y-8">;
+            <motion.div variants={itemVariants} className="space-y-8">;"
               <div>;
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">;
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">;"
                   Let&apos;s Connect;
                 </h3>;
-                '';
-                <p className="text-gray-600 mb-8 leading-relaxed">;
+                '';'
+                <p className="text-gray-600 mb-8 leading-relaxed">;"
                   Our team of technology experts is ready to help you navigate;
                   the digital landscape and implement solutions that drive real;
                   business value.;
                 </p>;
               </div>;
               {/* Contact Details */}
-              <div className="space-y-6">;
-                <div className="flex items-start space-x-4">;
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">;
-                    <Phone className="w-6 h-6 text-white" />;
+              <div className="space-y-6">;"
+                <div className="flex items-start space-x-4">;"
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">;"
+                    <Phone className="w-6 h-6 text-white" />;"
                   </div>;
                   <div>;
-                    <h4 className="font-semibold text-gray-900">Phone</h4>;
+                    <h4 className="font-semibold text-gray-900">Phone</h4>;"
                     <a;
-                      href="tel: +13024640950";
-                      className="text-blue-600 hover:text-blue-700 text-lg";
+                      href=""tel": +13024640950";"
+                      className="text-blue-600 "hover":text-blue-700 text-lg";"
                     >;
+                      className="text-blue-600 "hover":text-blue-700 text-lg">"
+
                       +1 (302) 464-0950;
                     </a>;
-                    <p className="text-gray-600 text-sm">;
+                    <p className="text-gray-600 text-sm">;"
                       Available Monday - Friday, 9 AM - 6 PM EST;
                     </p>;
                   </div>;
                 </div>;
-                <div className="flex items-start space-x-4">;
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">;
-                    <Mail className="w-6 h-6 text-white" />;
+                <div className="flex items-start space-x-4">;"
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">;"
+                    <Mail className="w-6 h-6 text-white" />;"
                   </div>;
                   <div>;
-                    <h4 className="font-semibold text-gray-900">Email</h4>;
+                    <h4 className="font-semibold text-gray-900">Email</h4>;"
                     <a;
-                      href="mailto: kleber@ziontechgroup.com";
-                      className="text-blue-600 hover:text-blue-700 text-lg";
+                      href=""mailto": kleber@ziontechgroup.com";"
+                      className="text-blue-600 "hover":text-blue-700 text-lg";"
                     >;
+                      className="text-blue-600 "hover":text-blue-700 text-lg">"
+
                       kleber@ziontechgroup.com;
                     </a>;
-                    <p className="text-gray-600 text-sm">;
+                    <p className="text-gray-600 text-sm">;"
                       We typically respond within 2-4 hours;
                     </p>;
                   </div>;
                 </div>;
-                <div className="flex items-start space-x-4">;
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">;
-                    <MapPin className="w-6 h-6 text-white" />;
+                <div className="flex items-start space-x-4">;"
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">;"
+                    <MapPin className="w-6 h-6 text-white" />;"
                   </div>;
                   <div>;
-                    <h4 className="font-semibold text-gray-900">Office</h4>;
-                    <p className="text-gray-900 text-lg">;
+                    <h4 className="font-semibold text-gray-900">Office</h4>;"
+                    <p className="text-gray-900 text-lg">;"
                       364 E Main St STE 1008;
                     </p>;
-                    <p className="text-gray-600 text-sm">;
+                    <p className="text-gray-600 text-sm">;"
                       Middletown, DE 19709, United States;
                     </p>;
                   </div>;
                 </div>;
               </div>;
               {/* Quick Stats */}
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white">;
-                <h4 className="text-lg font-semibold mb-4">;
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white">;"
+                <h4 className="text-lg font-semibold mb-4">;"
                   Why Choose Zion Tech Group?;
                 </h4>;
-                <div className="grid grid-cols-2 gap-4 text-sm">;
+                <div className="grid grid-cols-2 gap-4 text-sm">;"
                   <div>;
-                    <div className="text-2xl font-bold">500+</div>;
-                    <div className="text-blue-100">Projects Delivered</div>;
+                    <div className="text-2xl font-bold">500+</div>;"
+                    <div className="text-blue-100">Projects Delivered</div>;"
                   </div>;
                   <div>;
-                    <div className="text-2xl font-bold">98%</div>;
-                    <div className="text-blue-100">Client Satisfaction</div>;
+                    <div className="text-2xl font-bold">98%</div>;"
+                    <div className="text-blue-100">Client Satisfaction</div>;"
                   </div>;
                   <div>;
-                    <div className="text-2xl font-bold">15+</div>;
-                    <div className="text-blue-100">Years Experience</div>;
+                    <div className="text-2xl font-bold">15+</div>;"
+                    <div className="text-blue-100">Years Experience</div>;"
                   </div>;
                   <div>;
-                    <div className="text-2xl font-bold">24/7</div>;
-                    <div className="text-blue-100">Support Available</div>;
+                    <div className="text-2xl font-bold">24/7</div>;"
+                    <div className="text-blue-100">Support Available</div>;"
                   </div>;
                 </div>;
               </div>;
@@ -148,32 +154,34 @@ export default EnhancedContactForm
             <motion.div variants={itemVariants}>;
               <form;
                 onSubmit={handleSubmit}
-                className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8";
+                className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8";"
               >;
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">;
+                className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8">"
+
+                <div className="grid grid-cols-1 "md": grid-cols-2 gap-6 mb-6">;"
                   {/* Name */}
                   <div>;
                     <label;
-                      htmlFor="name";
-                      className="block text-sm font-medium text-gray-700 mb-2";
+                      htmlFor="name";"
+                      className="block text-sm font-medium text-gray-700 mb-2";"
                     >;
+                      className="block text-sm font-medium text-gray-700 mb-2">"
+
                       Full Name *;
                     </label>;
-                    <div className="relative">;
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />;
+                    <div className="relative">;"
+                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />;"
                       <input;
-                        type="text";
-                        id="name";
-                        name="name";
+                        type="text";"
+                        id="name";"
+                        name="name";"
                         value={formData.name}
                         onChange={handleChange}
-                        className={`w-full pl-10 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${errors.name ? 'border-red-500' : 'border-gray-300';
-                        }`}
-                        placeholder="Enter your full name";
-                      />;
+                        className={`w-full pl-10 pr-4 py-3 border rounded-xl "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent transition-colors duration-300 ${errors.name ? 'border-red-500' : 'border-gray-300';'
+                        }`}`                        placeholder="Enter your full name";" />;
                     </div>;
-                    {errors.name && (<div className="flex items-center gap-2 mt-2 text-red-600 text-sm">;
-                        <AlertCircle className="w-4 h-4" />;
+                    {errors.name && (<div className="flex items-center gap-2 mt-2 text-red-600 text-sm">;"
+                        <AlertCircle className="w-4 h-4" />;"
                         {errors.name}
                       </div>;
                     )}
@@ -181,26 +189,26 @@ export default EnhancedContactForm
                   {/* Email */}
                   <div>;
                     <label;
-                      htmlFor="email";
-                      className="block text-sm font-medium text-gray-700 mb-2";
+                      htmlFor="email";"
+                      className="block text-sm font-medium text-gray-700 mb-2";"
                     >;
+                      className="block text-sm font-medium text-gray-700 mb-2">"
+
                       Email Address *;
                     </label>;
-                    <div className="relative">;
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />;
+                    <div className="relative">;"
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />;"
                       <input;
-                        type="email";
-                        id="email";
-                        name="email";
+                        type="email";"
+                        id="email";"
+                        name="email";"
                         value={formData.email}
                         onChange={handleChange}
-                        className={`w-full pl-10 pr-4 py-3 border rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${errors.email ? 'border-red-500' : 'border-gray-300';
-                        }`}
-                        placeholder="Enter your email";
-                      />;
+                        className={`w-full pl-10 pr-4 py-3 border rounded-xl "focus": ring-2 "focus":ring-blue-500 "focus":border-transparent transition-colors duration-300 ${errors.email ? 'border-red-500' : 'border-gray-300';'
+                        }`}`                        placeholder="Enter your email";" />;
                     </div>;
-                    {errors.email && (<div className="flex items-center gap-2 mt-2 text-red-600 text-sm">;
-                        <AlertCircle className="w-4 h-4" />;
+                    {errors.email && (<div className="flex items-center gap-2 mt-2 text-red-600 text-sm">;"
+                        <AlertCircle className="w-4 h-4" />;"
                         {errors.email}
                       </div>;
                     )}
@@ -208,91 +216,101 @@ export default EnhancedContactForm
                   {/* Company */}
                   <div>;
                     <label;
-                      htmlFor="company";
-                      className="block text-sm font-medium text-gray-700 mb-2";
+                      htmlFor="company";"
+                      className="block text-sm font-medium text-gray-700 mb-2";"
                     >;
+                      className="block text-sm font-medium text-gray-700 mb-2">"
+
                       Company;
                     </label>;
-                    <div className="relative">;
-                      <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />;
+                    <div className="relative">;"
+                      <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />;"
                       <input;
-                        type="text";
-                        id="company";
-                        name="company";
+                        type="text";"
+                        id="company";"
+                        name="company";"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300";
-                        placeholder="Enter company name";
-                      />;
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl "focus": ring-2 "focus":ring-blue-500 "focus":border-transparent transition-colors duration-300";"
+                        placeholder="Enter company name";" />;
                     </div>;
                   </div>;
                   {/* Phone */}
                   <div>;
                     <label;
-                      htmlFor="phone";
-                      className="block text-sm font-medium text-gray-700 mb-2";
+                      htmlFor="phone";"
+                      className="block text-sm font-medium text-gray-700 mb-2";"
                     >;
+                      className="block text-sm font-medium text-gray-700 mb-2">"
+
                       Phone Number;
                     </label>;
-                    <div className="relative">;
-                      <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />;
+                    <div className="relative">;"
+                      <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />;"
                       <input;
-                        type="tel";
-                        id="phone";
-                        name="phone";
+                        type="tel";"
+                        id="phone";"
+                        name="phone";"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300";
-                        placeholder="Enter phone number";
-                      />;
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent transition-colors duration-300";"
+                        placeholder="Enter phone number";" />;
                     </div>;
                   </div>;
                 </div>;
                 {/* Service Selection */}
-                <div className="mb-6">;
-                  <label className="block text-sm font-medium text-gray-700 mb-3">;
+                <div className="mb-6">;"
+                  <label className="block text-sm font-medium text-gray-700 mb-3">;"
                     Service of Interest *;
                   </label>;
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
-                    {services.map(service => (<button;
+                  <div className="grid grid-cols-2 "md":grid-cols-3 gap-3">;"
+                    {services.map(service => { return (<button; }
+                        }
                         key={service.id}
-                        type="button";
-                        onClick={() => {setFormData(prev => ({...prev,service: service.id,}))setSelectedService(service.id)if (errors.service) {setErrors(prev => ({ ...prev, service: '' }))}
+                        type="button";"
+                        onClick={() => {setFormData(prev => ({...prev,"service": service.id}))setSelectedService(service.id)if (errors.service) {setErrors(prev => ({ ...prev, "service": '' }))}'
                         }}
-                        className={`p-3 rounded-xl border-2 transition-all duration-300 text-left ${selectedService === service.id;
-                            ? 'border-blue-500 bg-blue-50 text-blue-700';
-                            : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50';
-                        }`}
-                      >;
-                        <div className="text-sm font-medium">;
+                        className={`p-3 rounded-xl border-2 transition-all duration-300 text-left ${selectedService === service.id;`                            ? 'border-blue-500 bg-blue-50 text-blue-700';'
+                            : 'border-gray-200 "hover":border-gray-300 "hover":bg-gray-50';'
+                        }`}`                      >;
+                        
+}
+                        className={`p-3 rounded-xl border-2 transition-all duration-300 text-left ${selectedService === service.id;`                            ? 'border-blue-500 bg-blue-50 text-blue-700';'
+                            : 'border-gray-200 "hover":border-gray-300 "hover":bg-gray-50';'
+                        }`}>`
+                        <div className="text-sm font-medium">;"
                           {service.name}
                         </div>;
                       </button>;
                     ))}
                   </div>;
-                  {errors.service && (<div className="flex items-center gap-2 mt-2 text-red-600 text-sm">;
-                      <AlertCircle className="w-4 h-4" />;
+                  {errors.service && (<div className="flex items-center gap-2 mt-2 text-red-600 text-sm">;"
+                      <AlertCircle className="w-4 h-4" />;"
                       {errors.service}
                     </div>;
                   )}
                 </div>;
                 {/* Budget and Timeline */}
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">;
+                <div className="grid grid-cols-1 "md": grid-cols-2 gap-6 mb-6">;"
                   <div>;
                     <label;
-                      htmlFor="budget";
-                      className="block text-sm font-medium text-gray-700 mb-2";
+                      htmlFor="budget";"
+                      className="block text-sm font-medium text-gray-700 mb-2";"
                     >;
+                      className="block text-sm font-medium text-gray-700 mb-2">"
+
                       Budget Range;
                     </label>;
                     <select;
-                      id="budget";
-                      name="budget";
+                      id="budget";"
+                      name="budget";"
                       value={formData.budget}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300";
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent transition-colors duration-300";"
                     >;
-                      <option value="">Select budget range</option>;
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent transition-colors duration-300">"
+
+                      <option value="">Select budget range</option>;"
                       {budgetRanges.map(budget => (<option key={budget.value} value={budget.value}>;
                           {budget.label}
                         </option>;
@@ -301,19 +319,23 @@ export default EnhancedContactForm
                   </div>;
                   <div>;
                     <label;
-                      htmlFor="timeline";
-                      className="block text-sm font-medium text-gray-700 mb-2";
+                      htmlFor="timeline";"
+                      className="block text-sm font-medium text-gray-700 mb-2";"
                     >;
+                      className="block text-sm font-medium text-gray-700 mb-2">"
+
                       Project Timeline;
                     </label>;
                     <select;
-                      id="timeline";
-                      name="timeline";
+                      id="timeline";"
+                      name="timeline";"
                       value={formData.timeline}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300";
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl "focus": ring-2 "focus":ring-blue-500 "focus":border-transparent transition-colors duration-300";"
                     >;
-                      <option value="">Select timeline</option>;
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl "focus": ring-2 "focus":ring-blue-500 "focus":border-transparent transition-colors duration-300">"
+
+                      <option value="">Select timeline</option>;"
                       {timelineOptions.map(timeline => (<option key={timeline.value} value={timeline.value}>;
                           {timeline.label}
                         </option>;
@@ -322,51 +344,57 @@ export default EnhancedContactForm
                   </div>;
                 </div>;
                 {/* Message */}
-                <div className="mb-8">;
+                <div className="mb-8">;"
                   <label;
-                    htmlFor="message";
-                    className="block text-sm font-medium text-gray-700 mb-2";
+                    htmlFor="message";"
+                    className="block text-sm font-medium text-gray-700 mb-2";"
                   >;
+                    className="block text-sm font-medium text-gray-700 mb-2">"
+
                     Project Details *;
                   </label>;
                   <textarea;
-                    id="message";
-                    name="message";
+                    id="message";"
+                    name="message";"
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${errors.message ? 'border-red-500' : 'border-gray-300';
-                    }`}
-                    placeholder="Tell us about your project, requirements, timeline, and budget...";
-                  />;
-                  {errors.message && (<div className="flex items-center gap-2 mt-2 text-red-600 text-sm">;
-                      <AlertCircle className="w-4 h-4" />;
+                    className={`w-full px-4 py-3 border rounded-xl "focus": ring-2 "focus":ring-blue-500 "focus":border-transparent transition-colors duration-300 ${errors.message ? 'border-red-500' : 'border-gray-300';'
+                    }`}`
+                    placeholder="Tell us about your project, requirements, timeline, and budget...";" />;
+                  {errors.message && (<div className="flex items-center gap-2 mt-2 text-red-600 text-sm">;"
+                      <AlertCircle className="w-4 h-4" />;"
                       {errors.message}
                     </div>;
                   )}
                 </div>;
                 {/* Submit Button */}
                 <button;
-                  type="submit";
+                  type="submit";"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none";
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-xl font-semibold text-lg "hover": from-blue-700 "hover":to-purple-700 transition-all duration-300 shadow-lg "hover":shadow-xl transform "hover":-translate-y-0.5 "disabled":opacity-50 "disabled":cursor-not-allowed "disabled":transform-none";"
                 >;
-                  {isSubmitting ? (<div className="flex items-center justify-center gap-3">;
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />;
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-xl font-semibold text-lg "hover": from-blue-700 "hover":to-purple-700 transition-all duration-300 shadow-lg "hover":shadow-xl transform "hover":-translate-y-0.5 "disabled":opacity-50 "disabled":cursor-not-allowed "disabled":transform-none">"
+
+                  {isSubmitting ? (<div className="flex items-center justify-center gap-3">;"
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />;"
+                      }
                       Sending Message...;
                     </div>;
-                  ) : (<div className="flex items-center justify-center gap-3">;
-                      <Send className="w-5 h-5" />;
+                  ) : (<div className="flex items-center justify-center gap-3">;"
+                      <Send className="w-5 h-5" />;"
                       Send Message;
                     </div>;
                   )}
                 </button>;
-                <p className="text-sm text-gray-500 text-center mt-4">;
-                  By submitting this form, you agree to our{' '}
+                <p className="text-sm text-gray-500 text-center mt-4">;"
+                  By submitting this form, you agree to our{' '}'
                   <Link;
-                    href="/privacy";
-                    className="text-blue-600 hover: text-blue-700 underline";
+                    href="/privacy";"
+                    className="text-blue-600 "hover": text-blue-700 underline";"
                   >;
+                    className="text-blue-600 "hover": text-blue-700 underline">"
+
                     Privacy Policy;
                   </Link>;
                 </p>;

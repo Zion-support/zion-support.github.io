@@ -192,7 +192,7 @@ class TypeScriptErrorAutoFixer {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     // Apply common TypeScript fixes;
-    const fixes = [this.fixAnyType.bind(this)]
+const fixes = [this.fixAnyType.bind(this),];
       this.fixMissingImports.bind(this),
       this.fixTypeAnnotations.bind(this),
       this.fixInterfaceIssues.bind(this),
@@ -298,7 +298,7 @@ class TypeScriptErrorAutoFixer {}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         
         // Add missing import at the top of the file;
-        const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
+const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`;
         
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -353,11 +353,7 @@ class TypeScriptErrorAutoFixer {}
       const varMatch = line.match(/(const|let|var)\s+(\w+)\s*=/);
       if (varMatch) {}
         const varName = varMatch[2];
-<<<<<<< HEAD
-        
-
-=======
-        const fixedLine = line.replace()
+const fixedLine = line.replace();
           new RegExp(`(${varMatch[1]}\\s+${varName}\\s*)=`),`
           "$"1": unknown ="
         );

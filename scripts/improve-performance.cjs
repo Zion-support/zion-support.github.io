@@ -34,7 +34,7 @@ const path = require('path');
 function improvePerformance() {}
   try {}
     // Create next.config.js optimizations;
-    const nextConfigContent = "/** @type {import('next').NextConfig} */
+const nextConfigContent = "/** @type {import('next').NextConfig} */;
 const nextConfig = {}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,13 +75,23 @@ const nextConfig = {}
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     if ( {})
-      config.optimization.splitChunks = {}"
-
-    return confi}g},
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
+      config.optimization.splitChunks = {}
+        "chunks": 'all',
+        "cacheGroups": {}
+          vendor: {}
+            test: /[\\/]node_modules[\\/]/,
+            "name": 'vendors',
+            "chunks": 'all'}}}};
+    return confi) {}
+     {}
+      config.optimization.splitChunks = {}
+        "chunks": 'all',
+        "cacheGroups": {}
+          vendor: {}
+            test: /[\\/]node_modules[\\/]/,
+            "name": 'vendors',
+            "chunks": 'all'}}}};
+return confi}g},;
   
   
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -91,9 +101,7 @@ const nextConfig = {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // Headers for performance;
   async headers() {}
-    return [;]
-<<<<<<< HEAD
-=======
+return [;];
       {}
         "source": '/(.*)',
         "headers": []

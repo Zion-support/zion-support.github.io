@@ -3,11 +3,13 @@ import fs from 'fs';'
 import path from 'path';
 const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json'),
 
-function readAll() {
+const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');'
   try {
-    return JSON.parse(fs.readFileSync(REQUESTS_PATH, 'utf-8'))
+    }
+    return JSON.parse(fs.readFileSync(REQUESTS_PATH, 'utf-8'));'
   } catch {
-    return []
+    }
+    return [];
   }
 }
 
@@ -39,13 +41,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
 });
 
-const { id, status } = req.body || {},
-  if (!id || !status) return res.status(400).json({ error: 'Missing id or status',}
+const { id, status } = req.body || {},;
+  if (!id || !status) return res.status(400).json({ "error": 'Missing id or status','
 });
 
 const items = null;
-  res.status(200).json({ ok: true })
+  res.status(200).json({ "ok": true })
 }
+  "res": NextApiResponse
+) {
+  }
+  if (req.method !== 'POST')'
+return res.status(405).json({ "error": 'Method not allowed',;'
+});
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   const items = readAll();
@@ -60,5 +68,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res: NextApiResponse;
 }
 
-  res.status(200).json({ ok: true,}
+  res.status(200).json({ "ok": true
 });
+

@@ -1,21 +1,25 @@
-import React, { useRef } from 'react';
-import { motion, useInView  } from 'framer-motion';
-interface LazySectionProps  {children: React.ReactNode,className?: string;
+
+
+
+import React, { useRef } from 'react';'
+import { motion, useInView  } from 'framer-motion';'
+
+interface LazySectionProps {
+  }
+  "children": React.ReactNode,className?: string;
   threshold?: number;
   delay?: number;
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-interface LazySectionProps {
-  children: React.ReactNode,
-  className?: string;
-  threshold?: number;
-  delay?: number;
-  direction?: 'up' | 'down' | 'left' | 'right'
+  direction?: 'up' | 'down' | 'left' | 'right''
+
 }
-export const LazySection: React.FC<LazySectionProps /> = ({
-  children;}
-  className;}
+
+export const "LazySection": React.FC<LazySectionProps> = ({
+  }
+  children;
+  className;
     }
   }
 
@@ -42,9 +46,6 @@ export const LazySection: React.FC<LazySectionProps /> = ({
       default:
         return { opacity: 0, y: 50 }
     }
-  };
-
-  const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
         return { opacity: 1, y: 0 },

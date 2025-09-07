@@ -88,7 +88,7 @@ class LinterWatcher {}
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       
-      const child = spawn('npm', ['run', 'lint'], {})
+const child = spawn('npm', ['run', 'lint'], {});
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();"
       };);
@@ -190,7 +190,7 @@ class LinterWatcher {}
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       
-      const child = spawn('npm', ['run', '"lint": fix'], {})
+const child = spawn('npm', ['run', '"lint": fix'], {});
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);

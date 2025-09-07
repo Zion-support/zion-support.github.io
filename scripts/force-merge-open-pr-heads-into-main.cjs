@@ -1,9 +1,5 @@
 <<<<<<< HEAD
 
-
-
-
-
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -34,7 +30,7 @@ function getRepo() {}
 async function gh(path, method = 'GET') {}
   const base = '"https": //api.github.com';
   const token = getToken();
-  const res = await fetch(`${base}${path}`, {`})
+const res = await fetch(`${base}${path}`, {`});
     method,
     "headers": {}
       Authorization: `token ${token}`,`
@@ -68,8 +64,6 @@ function autoResolveConflicts() {}
     const src = fs.readFileSync(file, 'utf8');
     // Prefer incoming (theirs) content on conflict;
     const resolved = src;
-      .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, theirs) => theirs);
-      .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
     fs.writeFileSync(file, resolved);
     sh(`git add -- "${file}"`)};
   const staged = sh('git diff --cached --name-only || true');
@@ -133,6 +127,7 @@ async function main() {}
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 try {}`
@@ -146,3 +141,6 @@ try {}`
 =======
 });
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+});
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c

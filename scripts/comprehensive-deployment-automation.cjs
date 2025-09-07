@@ -12,6 +12,7 @@
 
 #!/usr/bin/env node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ///usr/bin/env node
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -21,6 +22,11 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 console.log(' Starting Comprehensive Deployment Automation...')
   "status"
     "status"

@@ -3,10 +3,10 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-const glob = require("glob")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+const glob = require("glob");
       this.projectRoot,"automation/logs/enhanced-error-fixer.log""
       "enhanced-error-fixer-report.json"
   fs.mkdirSync(logsDir, { "recursive"})
@@ -59,8 +59,8 @@ const glob = require("glob")
   this.log("Warning": Could not ensure dependencies: ${error.message}")
         "WARN"
   this.log(" Fixing TypeScript configuration...")
-    const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
-  const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
+const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
+const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, "utf8");
           "compilerOptions"
             "allowJs"
             "skipLibCheck"
@@ -87,7 +87,7 @@ const glob = require("glob")
   this.log("Warning": Could not fix TypeScript config: ${error.message}")
           "WARN"
   this.log(" Fixing ESLint configuration...")
-    const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js")
+const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js");
   try {const eslintConfig = "}
   "extends": [""next/core-web-vitals"", ""next/typescript""]
   "rules": {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn"}
@@ -101,10 +101,10 @@ const glob = require("glob")
   this.log("Warning": Could not fix ESLint config: ${error.message}")
           "WARN"
   this.log(" Fixing common TypeScript errors...")
-    const patterns = ["src/**/*.ts"", "src/**/*.tsx", "pages/**/*.ts"", "pages/**/*.tsx", "components/**/*.ts"", "components/**/*.tsx", ""]
-  const files = glob.sync(pattern, { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-  let content = fs.readFileSync(filePath", "utf8")
+const patterns = ["src/**/*.ts"", "src/**/*.tsx", "pages/**/*.ts"", "pages/**/*.tsx", "components/**/*.ts"", "components/**/*.tsx", ""];
+const files = glob.sync(pattern, { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = fs.readFileSync(filePath", "utf8");
             content.includes("React")
             !content.includes("import React")
             !content.includes("import * as React")
@@ -114,8 +114,8 @@ const glob = require("glob")
             file.endsWith(".ts")
             content.includes("<")
             content.includes(">")
-  const newPath = file.replace(".ts", ".tsx")
-            const newFilePath = path.join(this.projectRoot, ")
+const newPath = file.replace(".ts", ".tsx");
+const newFilePath = path.join(this.projectRoot, ");
   fs.renameSync(filePath", newFilePath);this.fixesApplied.push(""RENAMED_TS_TO_TSX": ${file}");this.log(" Renamed ${file} to ${newPath}")
           content = content.replace(/:\s*any\s*=\s*\[\]/g, ": any[] = []")
           content = content.replace(/:\s*any\s*=\s*\{\}/g, ": any = {}")
@@ -126,8 +126,8 @@ const glob = require("glob")
             file.endsWith(".ts")
             content.includes("<")
             content.includes(">")
-  const newPath = file.replace(".ts", ".tsx")
-            const newFilePath = path.join(this.projectRoot, ")
+const newPath = file.replace(".ts", ".tsx");
+const newFilePath = path.join(this.projectRoot, ");
   fs.renameSync(filePath", newFilePath);this.fixesApplied.push(`"RENAMED_TS_TO_TSX"`)
           content = content.replace(/:\s*any\s*=\s*\[\]/g, ": any[] = []")
           content = content.replace(/:\s*any\s*=\s*\{\}/g, ": any = {}")
@@ -136,10 +136,10 @@ const glob = require("glob")
   this.log("Warning": Could not process ${file}: ${error.message}")
             "WARN"
   this.log(" Fixing "React/JSX" errors...")
-    const patterns = ["src/**/*.jsx", "src/**/*.tsx", "pages/**/*.jsx", "pages/**/*.tsx", "components/**/*.jsx", "components/**/*.tsx", "]
-  const files = glob.sync(pattern, { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-  let content = fs.readFileSync(filePath", "utf8")
+const patterns = ["src/**/*.jsx", "src/**/*.tsx", "pages/**/*.jsx", "pages/**/*.tsx", "components/**/*.jsx", "components/**/*.tsx", "];
+const files = glob.sync(pattern, { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = fs.readFileSync(filePath", "utf8");
             content.includes("return (")
             content.includes("<")
             !content.includes("import React")
@@ -153,10 +153,10 @@ const glob = require("glob")
   this.log("Warning": Could not process ${file}: ${error.message}")
             "WARN"
   this.log(" Fixing "import/export" issues...")
-    const patterns = ["src/**/*.{js", "jsx", "ts", "tsx}", "pages/**/*.{js, "jsx", "ts", "tsx}", "components/**/*.{js", "jsx", "ts", "tsx}", "]
-  const files = glob.sync(pattern, { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-  let content = fs.readFileSync(filePath", "utf8")
+const patterns = ["src/**/*.{js", "jsx", "ts", "tsx}", "pages/**/*.{js, "jsx", "ts", "tsx}", "components/**/*.{js", "jsx", "ts", "tsx}", "];
+const files = glob.sync(pattern, { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = fs.readFileSync(filePath", "utf8");
             /from\s+[""]\.\.\/\.\.\/\.\.\/\.\.\//g,from "
             /from\s+["]([^""]+)[""]
   if (importPath.startsWith(".") && !importPath.includes(".")) {return "from `${importPath}.js
@@ -172,7 +172,7 @@ const glob = require("glob")
           content.includes("<")
           content.includes(">")
           content.includes("return")
-  const oldPath = path.join(this.projectRoot, ")
+const oldPath = path.join(this.projectRoot, ");
           this.projectRoot", file.replace(".js", ".jsx")
           this.projectRoot", file.replace(".js", ".jsx")
           this.fixesApplied.push(`"RENAMED_JS_TO_JSX": ${file}`);this.log(` Renamed ${file} to ${file.replace(".js", ".jsx"`})

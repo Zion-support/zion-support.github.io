@@ -11,12 +11,13 @@ export default function Contact() {;
         <p>Get in touch with our team for your IT and AI service needs.</p>;
       </main>;
   );
-import React from './react';
+import React from './react';'
 ;
 export default function Contact() {return (</div>;
-  )import React from './react';export default /**;
+  )import React from './react';export default /**;'
  * Contact - Function description;
  */;
+}
 function Contact() {return (<div>;
       <main>;
         <h1 > Contact Us</h1>;

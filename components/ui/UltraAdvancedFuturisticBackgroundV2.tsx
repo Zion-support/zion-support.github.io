@@ -8,8 +8,10 @@ interface UltraAdvancedFuturisticBackgroundV2Props  {children: React.ReactNode;
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundV2Props {
-  children: React.ReactNode;
-  className?: string
+  }
+  "children": React.ReactNode;
+  className?: string;
+
 }
 
 const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props /> = ({ children;
@@ -21,7 +23,9 @@ let particles: Array< {const UltraAdvancedFuturisticBackgroundV2: React.FC<;
   UltraAdvancedFuturisticBackgroundV2Props;
 > = ({ children, className = '' }) => {const canvasRef  = useRef<HTMLCanvasElement>(null)useEffect(() => {const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext('2d')if (!ctx) return;
+
+const ctx = canvas.getContext('2d')if (!ctx);'
+  return;
     canvas.width = window.innerWidth;
 
 let particles: Array< {
@@ -116,13 +120,19 @@ if (return) {$2;
     const colors = [;
       '#00ffff','#ff00ff','#ffff00','#00ff00','#ff0080','#8000ff','#ff8000','#0080ff','#ff0080','#80ff00',];
     // Initialize particles;
-    const initParticles = () => {particles = [];
-for (let i = 0; i < 150; i++) {particles.push({x: Math.random() * canvas.width,y: Math.random() * canvas.height,vx: (Math.random() - 0.5) * 2,vy: (Math.random() - 0.5) * 2,size: Math.random() * 3 + 1,color: colors[Math.floor(Math.random() * colors.length)],life: Math.random() * 100,maxLife: 100,})}
+
+const initParticles = () => {particles = [];
+}
+for (let i = 0; i < 150; i++) {particles.push({"x": Math.random() * canvas.width,"y": Math.random() * canvas.height,"vx": (Math.random() - 0.5) * 2,"vy": (Math.random() - 0.5) * 2,"size": Math.random() * 3 + 1,"color": colors[Math.floor(Math.random() * colors.length)],"life": Math.random() * 100,"maxLife": 100})}
     }
     // Update and draw particles;
-    const updateParticles = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)// Create gradient background;
-      const gradient = ctx.createRadialGradient(canvas.width / 2,canvas.height / 2,0,canvas.width / 2,canvas.height / 2,canvas.width / 2;
-      )gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)')gradient.addColorStop(0.5, 'rgba(20, 20, 40, 0.6)')gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)')ctx.fillStyle = gradient;
+
+const updateParticles = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)// Create gradient background;
+
+}
+
+const gradient = ctx.createRadialGradient(canvas.width / 2,canvas.height / 2,0,canvas.width / 2,canvas.height / 2,canvas.width / 2;
+      )gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)')gradient.addColorStop(0.5, 'rgba(20, 20, 40, 0.6)')gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)')ctx.fillStyle = gradient;'
       ctx.fillRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
       particles.forEach((particle, index) => {particle.x += particle.vx;
         particle.y += particle.vy;
@@ -130,9 +140,9 @@ for (let i = 0; i < 150; i++) {particles.push({x: Math.random() * canvas.width,y
         // Bounce off edges
         if (particle.x <= 0 |particle.x >= canvas.width) particle.vx *= -1;
         if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
-        // Reset particle if it dies
-        if (particle.life <= 0) {
-          particle.x = Math.random() * canvas.width;
+        // Reset particle if it dies;
+        if (particle.life <= 0) {particle.x = Math.random() * canvas.width;
+          }
           particle.y = Math.random() * canvas.height;
           particle.life = particle.maxLife;
 particle.color = colors[Math.floor(Math.random() * colors.length)];
@@ -368,7 +378,7 @@ ctx.stroke();
 
       // Draw quantum matrix overlay
       ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = '#00ffff';
+      ctx.strokeStyle = '#00ffff';'
       ctx.lineWidth = 0.5;
 // Vertical lines
       for (let x = 0; x < canvas.width; x += 50) {
@@ -386,25 +396,18 @@ ctx.stroke();
 
       // Draw holographic circles
       ctx.globalAlpha = 0.05;
-for (let i = 0; i < 5; i++) {
-        const centerX =
+for (let i = 0; i < 5; i++) {const centerX =;
+          }
           canvas.width / 2 + Math.sin(Date.now() * 0.001 + i) * 100;
         const centerY =
           canvas.height / 2 + Math.cos(Date.now() * 0.001 + i) * 100;
-        const radius = 100 + Math.sin(Date.now() * 0.002 + i) * 50;
-        ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-ctx.stroke();
+
+const radius = 100 + Math.sin(Date.now() * 0.002 + i) * 50;
+        ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`;`        ctx.lineWidth = 2;
+        ctx.beginPath()ctx.arc(centerX, centerY, radius, 0, Math.PI * 2)ctx.stroke()}animationFrameId = requestAnimationFrame(updateParticles)}// Handle resize;
+
+const handleResize = () => {canvas.width = window.innerWidth;
       }
-
-      animationFrameId = requestAnimationFrame(updateParticles);
-    };
-
-    // Handle resize
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
 initParticles();
     };
@@ -585,11 +588,8 @@ ease: 'easeInOut',
         {[...Array (20)].map ((_, i) => (
           <motion.div;
             key={i}
-            className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
-            style={{
-          <motion.div
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`,
+            className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';'
+            style={{"left": `${Math.random() * 10,`}%`;`              "top": `${Math.random() * 10,`}%`;`
             }}
             animate={{
               y: [0, -100, 0],
@@ -665,15 +665,15 @@ ease: 'easeInOut',
               ease: 'easeInOut',            }}
 
             }}
-            transition={{duration: 3 + Math.random() * 2
-              repeat: Infinity;}
-              delay: Math.random() * 2;}"
-              duration: 3 + Math && Math.random() * 2,repeat: Infinity,delay: Math && Math.random() * 2,transition={{ease: 'easeInOut'            }}              ease: \'easeInOut\'
-              y: [0, -100, 0],opacity: [0, 1, 0],scale: [0, 1, 0]}}
-            transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut'}}
-             />
+            transition={{"duration": 3 + Math.random() * 2;
+              }
+              "repeat": Infinity;
+              "delay": Math.random() * 2;
+              "duration": 3 + Math && Math.random() * 2,"repeat": Infinity,"delay": Math && Math.random() * 2,transition={{"ease": 'easeInOut'            }}              "ease": "easeInOut";"
+              "y": [0, -100, 0],"opacity": [0, 1, 0],"scale": [0, 1, 0]}}
+            transition={{"duration": 3 + Math.random() * 2,"repeat": Infinity,"delay": Math.random() * 2,"ease": 'easeInOut'}}' />;
         ))}
-            transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut'            }}/>
+            transition={{"duration": 3 + Math.random() * 2,"repeat": Infinity,"delay": Math.random() * 2,"ease": 'easeInOut'            }}/>;'
         ))}
 
       </div>

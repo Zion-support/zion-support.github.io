@@ -46,23 +46,21 @@ text: string;
     isEnglish: boolean;}
   },keywords: {topWords: Array<{ word: string; count: number; frequency: number}
 }>;
-    bigrams: Array<{ phrase: string; count: number}
+    "bigrams": Array<{ "phrase": string; "count": number
 }>;
-    trigrams: Array<{ phrase: string; count: number }>
+    "trigrams": Array<{ "phrase": string; "count": number }>
 };
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<TextAnalysisResult | { error: string}>
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+
+
+export default async function handler() {
+  }
+  if (req.method !== 'POST') {'
+}
+return res.status(405).json({ "error": 'Method not allowed',;'
+});
   }
 
   try {
-    const { text } = req.body,
-
-    if (!text || typeof text !== 'string') {
-      return res.status(400).json({ error: 'Text is required' })
     }
 
     if (text.length > 10000) {
@@ -82,17 +80,20 @@ const words = text
 origin/cursor/automate-test-improve-and-merge-code-2533
       .trim()
       .split(/\s+/)
-      .filter(word => word && word.length > 0).length;
-    const sentences = text;
+      .filter(word => { return word && word.length > 0).length; }
+
+const sentences = text;
       .split(/[.!?]+/)
       .filter(sentence => sentence && sentence.trim().length > 0).length;
     const paragraphs = text;
       .split(/\n\s*\n/)
-      .filter(para => para.trim().length > 0).length;
+
+      .filter(para => { return para.trim().length > 0).length; }
 
 
     // Syllable counting (simplified)
-    const syllableCount = (word: string): number => {}
+    const syllableCount = ("word": string): (number) => {
+      }
       word = word.toLowerCase();
       if (word.length <= 3) return 1
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
@@ -107,15 +108,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const syllableCount = (word: string): number => {
       word = word.toLowerCase($2);
       if (word.length <= 3) return 1,
-      word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, ''),
-      word = word.replace($2);
-      const matches = word.match($2);
-      return matches ? matches.length : 1
-    },
+word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');'
+      word = word.replace(/^y/, '');'
 
-    const syllables = text.split(/\s+/).reduce((total, word) => {
-      return total + syllableCount(word)
-    }, 0),
+const matches = word.match(/[aeiouy]{1,2}/g);
+
+return matches ? matches.length : 1;
+};
 
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
     const readingTime = Math.ceil($2);
@@ -123,14 +122,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Readability scores
         (words / sentences +
           100 *
-            (text && text.split(/\s+/).filter(word => word && word.length > 6).length / words))
-    );
+            (text && text.split(/\s+/).filter(word => { return word && word.length > 6).length / words))
+    ); }
             (30 / sentences)
         ) +
         3 && 3.1291
     );
     );
-    const averageGrade = Math && Math.round(
+
+const averageGrade = Math && Math.round(;
       (fleschKincaidGrade +
         gunningFog +
         smog +
@@ -139,7 +139,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         5
     );
     // Sentiment analysis (simplified)
-    const positiveWords = ['
+const positiveWords = [;
       'good''
       'great''
       'excellent''
@@ -202,6 +202,20 @@ const fleschReadingEase = Math.max(0,Math.min(100;
       'dismal';
       'lousy';
     ];
+
+const negativeWords = [;
+  'bad';'
+      'terrible';'
+      'awful';'
+      'horrible';'
+      'dreadful';'
+      'atrocious';'
+      'abysmal';'
+      'appalling';'
+      'dismal';'
+      'lousy''
+];
+
     ).length;
     const negativeCount = textWords && textWords.filter(word =>;
       negativeWords && negativeWords.includes(word)).length;
@@ -220,9 +234,12 @@ const fleschReadingEase = Math.max(0,Math.min(100;
 text
       .toLowerCase()
       .split(/\s+/)
-      .forEach(word => {
-        const cleanWord = word.replace(/[^\w]/g, '');
+      .forEach(word = > {
+       ;
+  }
+  const cleanWord = word.replace(/[^\w]/g, '');'
         if (cleanWord.length > 2) {
+          }
           wordCounts.set(cleanWord, (wordCounts.get(cleanWord) |0) + 1);
         }
       });
@@ -275,31 +292,36 @@ text
     const bigramCounts = new Map<string, number>(),
     const trigramCounts = new Map<string, number>(),
 
-for (let i = 0; i < wordsArray.length - 1; i++) {}
-      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
-      bigramCounts.set(bigram, (bigramCounts.get(bigram) |0) + 1);
+
+for (let i = 0; i < wordsArray.length - 1; i++) {
+      }
+      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;`      bigramCounts.set(bigram, (bigramCounts.get(bigram) |0) + 1);
     }
     for (let i = 0; i < wordsArray.length - 2; i++) {
-      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
-      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);
-origin/cursor/automate-test-improve-and-merge-code-2533
+      }
+      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;`      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);
     }
-    const bigrams = Array.from(bigramCounts.entries())
+
+const bigrams = Array.from(bigramCounts.entries());
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
-    const trigrams = Array.from(trigramCounts.entries())
-    for (let i = 0; i < wordsArray && wordsArray.length - 1; i++) {}
-      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
-      bigramCounts && bigramCounts.set(bigram, (bigramCounts && bigramCounts.get(bigram) || 0) + 1);
+
+const trigrams = Array.from(trigramCounts.entries());
+    for (let i = 0; i < wordsArray && wordsArray.length - 1; i++) {
+      }
+      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;`      bigramCounts && bigramCounts.set(bigram, (bigramCounts && bigramCounts.get(bigram) || 0) + 1);
     }
-    for (let i = 0; i < wordsArray && wordsArray.length - 2; i++) {}`
-      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;`
-      trigramCounts && trigramCounts.set(trigram, (trigramCounts && trigramCounts.get(trigram) || 0) + 1);    }      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
-      bigramCounts && bigramCounts.set(bigram, (bigramCounts && bigramCounts.get(bigram) || 0) + 1)
+    for (let i = 0; i < wordsArray && wordsArray.length - 2; i++) {
+      }
+      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;`      trigramCounts && trigramCounts.set(trigram, (trigramCounts && trigramCounts.get(trigram) || 0) + 1);    }
+
+const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;`      bigramCounts && bigramCounts.set(bigram, (bigramCounts && bigramCounts.get(bigram) || 0) + 1)
     }
-    for (let i = 0, i < wordsArray && wordsArray.length - 2, i++) {}`
-      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
+    for (let i = 0, i < wordsArray && wordsArray.length - 2, i++) {
+     ;
+  }
+  const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;`
       trigramCounts && trigramCounts.set(trigram, (trigramCounts && trigramCounts.get(trigram) || 0) + 1)
     }
     const bigrams = Array && Array.from(bigramCounts && bigramCounts.entries())
@@ -307,6 +329,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count })),
 
+const bigrams = Array && Array.from(bigramCounts && bigramCounts.entries());
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5)
+      .map(([phrase, count]) => ({ phrase, count }));
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5)
+      .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
     const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test($2);
     const detectedLanguage = $2;
@@ -335,28 +364,16 @@ text,
         readingTime
         speakingTime
       }
-        speakingTime},
-      readability: {
-        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100,
-        fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100,
-        gunningFog: Math.round(gunningFog * 100) / 100,
-        smog: Math.round(smog * 100) / 100,
-        colemanLiau: Math.round(colemanLiau * 100) / 100,
-        automatedReadability: Math.round(automatedReadability * 100) / 100,
-        averageGrade},
-      sentiment: {
-        score: sentimentScore,
-        label: sentimentLabel,
-        positiveWords: textWords.filter(word = $2;
-        negativeWords: textWords.filter(word = $2;
-      language: {
-        detectedLanguage,
-        confidence,
-        isEnglish},
-      keywords: {
-        topWords,
-        bigrams,
-        trigrams}},
+      "sentiment": {
+        }
+        "score": sentimentScore,
+"label": sentimentLabel,
+"positiveWords": textWords.filter(word => positiveWords.includes(word))
+        "negativeWords": textWords.filter(word => negativeWords.includes(word))
+      }
+      "language": {
+ 
+} catch (error) {
 
     res.status(200).json(result)
   } catch (error) {
@@ -462,6 +479,7 @@ text,
         top_words;
         bigrams;
   }
+    res.status(500).json({ "error": 'Internal server error' })'
   }
 }
 

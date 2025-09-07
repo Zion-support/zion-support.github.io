@@ -17,7 +17,7 @@ import { motion } from 'framer-motion';
   Clock,
   Shield,;
   Zap,;
-} from 'lucide-react';
+} from 'lucide-react';'
 
   }import React from 'react';
 import { motion   } from 'framer-motion';
@@ -40,6 +40,7 @@ interface EnhancedServiceCardProps {
 interface EnhancedServiceCardProps {}
   service: {}
 import {;
+  }
   Star,;
   ExternalLink,;
   ArrowRight,;
@@ -92,6 +93,32 @@ interface EnhancedServiceCardProps {;
     customers: number;
     rating: number;
 
+    "link": string;
+    "marketPosition": string;
+    "targetAudience": string;
+    "trialDays": number;
+    "setupTime": string;
+    "category": string;
+    "realService": boolean;
+    "technology": string[];
+    "integrations": string[];
+    "useCases": string[];
+    "roi": string;
+    "competitors": string[];
+    "marketSize": string;
+    "growthRate": string;
+    "variant": string;
+    "contactInfo": {"mobile": string;
+      }
+      "email": string;
+      "address": string;
+      "website": string;
+    },"realImplementation": boolean;
+    "implementationDetails": string;
+    "launchDate": string;
+    "customers": number;
+    "rating": number;
+    "reviews": number;
   }
 
     hover: {
@@ -302,32 +329,28 @@ ease: 'easeInOut' as const,
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Background Glow */}
       <div;
-        className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-        style={{}`
-          background: `linear-gradient(135deg, ${service && service.color'
-            .replace('from-', '')'
-            .replace('to-', '')'
-            .split(' ')
-    >
+        className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-"hover": opacity-10 transition-opacity duration-500,`}
+        style={{"background": `linear-gradient(135deg, ${service && service.color;`            .replace('from-', '').replace('to-', '').split(' ')>;'
       {/* Background Glow */}
-      <div;`
-        className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-        style={{'`
-          background: `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(', ')})`
-        }}
+      <div;
+        className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-"hover": opacity-10 transition-opacity duration-500,`}
+        style={{"background": `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(', ')})`;`        }}
       />;
       {/* Popular Badge */}
 
 
       {service.popular && (
-        <div className='absolute top-4 right-4 z-10'>
+        <div className='absolute top-4 right-4 z-10'>'
           <motion.div
-            className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+}
+className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1''
+            initial={{ "scale": 0, "rotate": -180 
+}
+            animate={{ "scale": 1, "rotate": 0 
+}
+            transition={{ "delay": 0.2, "duration": 0.5 }}
           >
-<Star className='w-3 h-3 fill-current' />
+<Star className='w-3 h-3 fill-current' />'
             POPULAR
           </motion.div>
         </div>
@@ -336,8 +359,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Card Content */}
 
-      {/* Card Content */}'
-      <div className='relative p-6'>
+<div className='relative p-6'>'
 
 <div className='relative p-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -399,18 +421,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Title & Tagline */}
         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
           {service.name}
-        </h3>
-        <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+        </h3>;
+        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>;'
           {service.tagline}
-        </p>
-
+        </p>;
         {/* Description */}
-        <p className="text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3">
+<p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>;'
           {service.description}
-        </p>
-
+        </p>;
         {/* Key Metrics */}
-      <div className='relative p-6'>
 
       {/* Card Content */}
       <div className='relative p-6'>
@@ -565,7 +584,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Zap className="w-4 h-4 text-yellow-400" />
             Key Features
           </h4>
-          <div className="space-y-2">
+          <div className='space-y-2'>'
             {service.features.slice(0, 3).map((feature, index) => (
               <motion.div
 <div className='grid grid-cols-2 gap-4 mb-6'>;
@@ -694,46 +713,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </span>'
             <span className='text-xs text-cyan-400'>{service.marketSize}</span>
 
-          </div>'
+          </div>
           <div className='flex items-center justify-between mb-2'>'
-            <span className='text-xs font-semibold text-white'>
-              Growth Rate;
-            </span>'
-            <span className='text-xs text-green-400'>{service.growthRate}</span>
-          </div>'
+            <span className='text-xs font-semibold text-white'>'
+              Growth Rate
+            </span>
+            <span className='text-xs text-green-400'>{service.growthRate}</span>'
+          </div>
           <div className='flex items-center justify-between'>'
             <span className='text-xs font-semibold text-white'>ROI</span>'
-            <span className='text-xs text-yellow-400'>{service.roi}</span>          </div>
-        </div>
-        {/* Trial & Setup Info */}          </div>"
-        <div className="mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10">"
-          <div className="flex items-center justify-between mb-2">"
-            <span className="text-xs font-semibold text-white">Market Size</span>"
-            <span className="text-xs text-cyan-400">{service.marketSize}</span>
-          </div>"
-          <div className="flex items-center justify-between mb-2">"
-            <span className="text-xs font-semibold text-white">Growth Rate</span>"
-            <span className="text-xs text-green-400">{service.growthRate}</span>
-          </div>"
-          <div className="flex items-center justify-between">"
-            <span className="text-xs font-semibold text-white">ROI</span>"
-            <span className="text-xs text-yellow-400">{service.roi}</span>
-          </div>
-        </div>
-        {/* Trial & Setup Info */}"
-          <div className="flex items-center gap-2 text-gray-400">"
-            <Clock className="w-4 h-4" />
-            {service.trialDays} day trial;
-          </div>"
-          <div className="flex items-center gap-2 text-gray-400">"
-            <Shield className="w-4 h-4" />
-            <span className='text-xs text-yellow-400'>{service.roi}</span>
+
+            <span className='text-xs text-yellow-400'>{service.roi}</span>'
           </div>
         </div>
         {/* Trial & Setup Info */}
-<div className='flex items-center justify-between mb-6 text-sm'>
-          <div className='flex items-center gap-2 text-gray-400'>
-            <Clock className='w-4 h-4' />
+<div className='flex items-center justify-between mb-6 text-sm'>'
+          <div className='flex items-center gap-2 text-gray-400'>'
+            <Clock className='w-4 h-4' />'
             {service.trialDays} day trial
           </div>
           <div className='flex items-center gap-2 text-gray-400'>
@@ -810,23 +806,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
         {/* Trial & Setup Info */}
-          <div className="flex items-center gap-2 text-gray-400">;
-            <Clock className="w-4 h-4" />;
+          <div className="flex items-center gap-2 text-gray-400">;"
+            <Clock className="w-4 h-4" />;"
             {service.trialDays} day trial;
           </div>;
-          <div className="flex items-center gap-2 text-gray-400">;
-            <Shield className="w-4 h-4" />;
-            <span className='text-xs text-yellow-400'>{service.roi}</span>;
+          <div className="flex items-center gap-2 text-gray-400">;"
+            <Shield className="w-4 h-4" />;"
+            <span className='text-xs text-yellow-400'>{service.roi}</span>;'
           </div>;
         </div>;
         {/* Trial & Setup Info */}
-<div className='flex items-center justify-between mb-6 text-sm'>;
-          <div className='flex items-center gap-2 text-gray-400'>;
-            <Clock className='w-4 h-4' />;
+<div className='flex items-center justify-between mb-6 text-sm'>;'
+          <div className='flex items-center gap-2 text-gray-400'>;'
+            <Clock className='w-4 h-4' />;'
             {service.trialDays} day trial;
           </div>;
-          <div className='flex items-center gap-2 text-gray-400'>;
-            <Shield className='w-4 h-4' />;
+          <div className='flex items-center gap-2 text-gray-400'>;'
+            <Shield className='w-4 h-4' />;'
             {service.setupTime}</div>;
         </div>;
           </div>;
@@ -884,20 +880,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}>;
             <ExternalLink className='w-4 h-4' />;
+        <div className='flex gap-3'>
+
+
+          </div>
+        </div>
+        {/* Action Buttons */}
+
+<div className='flex gap-3'>'
+          <motion.a,
+href={service.link}
+            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 "hover":from-cyan-400 "hover":to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform "hover":scale-105 flex items-center justify-center gap-2';'
+            whileHover={{ "scale": 1 && 1.05 }}
+            whileTap={{ "scale": 0 && 0.95 
+}>;
+            <ExternalLink className='w-4 h-4' />;'
             Learn More;
           </motion && motion.a>;<motion&& motion.a;
-            href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
-            className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center';
-            className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center'
+            href={`"mailto": ${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}`
+            className='bg-white/10 "hover":bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 "hover":border-white/40 flex items-center justify-center''
 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+
+            whileHover={{ "scale": 1.05 }}
+            whileTap={{ "scale": 0.95 
+}
           >;
-            <ArrowRight className='w-4 h-4' />;
+            <ArrowRight className='w-4 h-4' />;'
           </motion.a>;
         </div>;
         {/* Contact Info */}
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+
+<div className='mt-4 pt-4 border-t border-white/10'>'
+          <div className='text-xs text-gray-500 text-center'>'
+            "Contact": {service.contactInfo.email}
           </div>
         </div>
       </div>
@@ -911,11 +926,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <ExternalLink className="w-4 h-4" />;
             Learn More;
           </motion && motion.a>;<motion&& motion.a;
-            href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
-            className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center";
-            whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }}>;
-            <ArrowRight className="w-4 h-4" />;
+            href={`"mailto": ${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name},`
+}
+            className="bg-white/10 "hover":bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 "hover":border-white/40 flex items-center justify-center";"
+            whileHover={{ "scale": 1 && 1.05 }}
+            whileTap={{ "scale": 0 && 0.95 
+}>;
+            <ArrowRight className="w-4 h-4" />;"
           </motion && motion.a>;
         </div>;{/* Contact Info */}
         <div className='mt-4 pt-4 border-t border-white/10'>;
@@ -943,43 +960,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Contact Info */}'
         <div className='mt-4 pt-4 border-t border-white/10'>;'
-          <div className='text-xs text-gray-500 text-center'>            Contact: {service && service.contactInfo.email}          <motion&& motion.a;
-            href={service && service.link}"
-        <div className="flex gap-3">
-          <motion.a;
-            href={service.link}"
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ArrowRight className='w-4 h-4' />
-          </motion.a>
-        </div>
-        {/* Contact Info */}
-<div className='mt-4 pt-4 border-t border-white/10'>
-          <div className='text-xs text-gray-500 text-center'>
-            Contact: {service.contactInfo.email}
-origin/cursor/automate-test-improve-and-merge-code-2533
-          </div>
-        </div>
-      </div>
-            whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }}>;"
-            <ExternalLink className="w-4 h-4" />;
-            Learn More;
-          </motion && motion.a>;
-
-          <motion&& motion.a;`
-            href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}"
-            className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
-            whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }}>;"
-            <ArrowRight className="w-4 h-4" />;
-          </motion && motion.a>;
-        </div>;
-
-        {/* Contact Info */}'
-        <div className='mt-4 pt-4 border-t border-white/10'>;'"
           <div className='text-xs text-gray-500 text-center'>        <div className="mt-4 pt-4 border-t border-white/10">;"
           <div className="text-xs text-gray-500 text-center">;
             Contact: {service && service.contactInfo.email}

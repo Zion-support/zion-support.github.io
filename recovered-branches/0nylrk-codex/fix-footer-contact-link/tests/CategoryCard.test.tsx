@@ -24,15 +24,14 @@ it('renders category card with link to slug', () => {
 it('renders category card with link to slug', () => {;
   render(;
     <MemoryRouter>;
-      <CategoryCard title='Test Category' description='desc' icon='*' />;
+      <CategoryCard title='Test Category' description='desc' icon='*' />;'
     </MemoryRouter>;
-  ),;
-
-import {render, screen} from '@testing - library / react';
-import {MemoryRouter} from 'react-router-dom';
-import {CategoryCard} from '@/components / CategoryCard';
-it ('renders category card with link to slug', () => {
-  render (
+  );,;
+  const link = screen.getByRole('link', { "name": /test category/i ;};);,;'
+  expect(link);.toHaveAttribute('href/category/test-category');}),;'
+it('normalizes slug with special characters', (); => {;'
+  }
+  render(;
     <MemoryRouter>;
       <CategoryCard title='Test Category' description='desc' icon='*' />;
     </MemoryRouter>);

@@ -76,7 +76,7 @@ class $1 {}
 
 =======
     return new Promise((resolve, reject) => {this.log(Running "command": ${command}");
-      const child = spawn(command, [], {})
+const child = spawn(command, [], {});
   "shell": true,
         cwd,
         "stdio": ["pipe", "pipe", "pipe"]}
@@ -140,13 +140,15 @@ class $1 {}
       return true} catch (error) {  this.log("Build "failed": ${error.message  }", "ERROR");"
   async verifyBuildOutput() {}"
   this.log("Verifying build output...");
-    const distPath = path.join(this.projectRoot, "dist");"
-    if (!fs.existsSync(distPath)) {}"
-  this.log("Build output directory not found", "ERROR");"
-
-    // Check for critical files;"
-    const criticalFiles = ["index.html"];"
-    const missingFiles = criticalFiles.filter(;)
+    const distPath = path.join(this.projectRoot, "dist");
+    if (!fs.existsSync(distPath)) {}
+  this.log("Build output directory not found", "ERROR");
+      return false};
+;
+    const files = fs.readdirSync(distPath);this.log("Build output contains ${files.length} ""files/directories""");
+    // Check for critical files;
+    const criticalFiles = ["index.html"];
+const missingFiles = criticalFiles.filter(;);
       file => !fs.existsSync(path.join(distPath, file));
     );"
     if (missingFiles.length > 0) {this.log("Missing critical "files": ${missingFiles.join(", ")}", "ERROR");"
@@ -164,12 +166,15 @@ class $1 {}
       const httpServer = require("http-server");
       const serverPath = path.join(this.projectRoot, "dist");"
       // Check if http-server is available;
-
-        await this.runCommand("npm install -g http-server")};"
-      // Start server in background;"
-      const serverProcess = spawn(npx")
-        ["http-server", "serverPath", "-p", "5000", "-s"],"
-        {}"
+      try {}
+  await this.runCommand("npx http-server --version")} catch (error) {}
+  this.log("Installing http-server...");
+        await this.runCommand("npm install -g http-server")};
+;
+      // Start server in background;
+const serverProcess = spawn(npx",);
+        ["http-server", "serverPath", "-p", "5000", "-s"],
+        {}
   "shell": true,
           "cwd": this.projectRoot,
           "stdio": "pipe"};"
@@ -180,7 +185,7 @@ class $1 {}
 
 =======
       try {}
-  const testResult = await this.runCommand(curl -s -o /""dev/null"" -w "%{http_code}" "http": //localhost:5000";)
+const testResult = await this.runCommand(curl -s -o /""dev/null"" -w "%{http_code}" "http": //localhost:5000";);
         );
         if (testResult.stdout.includes("200")) {}
   this.log("Asset paths verification passed`);
@@ -200,7 +205,7 @@ class $1 {}
         await this.runCommand("npm install -g http-server")};
 ;
       // Start server in background;
-      const serverProcess = spawn(npx",)
+const serverProcess = spawn(npx",);
         ["http-server", "serverPath", "-p", "5000", "-s"],
         {}
   "shell": true,
@@ -224,7 +229,7 @@ class $1 {}
 
 =======
       try {}
-  const testResult = await this.runCommand(curl -s -o /"dev/null" -w "%{http_code} "http": //localhost:5000";)
+const testResult = await this.runCommand(curl -s -o /"dev/null" -w "%{http_code} "http": //localhost:5000";);
         );
         if (testResult.stdout.includes("200")) {}
   this.log("Asset paths verification passed");
@@ -254,7 +259,7 @@ serverProcess.kill();
   this.log("Running tests...");
     try {}
   // Check if test script exists;
-      const packageJson = JSON.parse(;)
+const packageJson = JSON.parse(;);
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
 <<<<<<< HEAD
       );
@@ -264,7 +269,7 @@ serverProcess.kill();
   this.log("Running tests...");
     try {}
   // Check if test script exists;
-      const packageJson = JSON.parse(;)
+const packageJson = JSON.parse(;);
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
       );
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

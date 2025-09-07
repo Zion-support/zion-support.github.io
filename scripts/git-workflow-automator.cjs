@@ -3,12 +3,12 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
     this.reportsDir = path.join(this.projectRoot, 'git-workflow-reports')
     this.log(' Checking git status...')
-      const result = execSync('git status --porcelain')
+const result = execSync('git status --porcelain');
         "encoding"
         "status"
         "encoding"

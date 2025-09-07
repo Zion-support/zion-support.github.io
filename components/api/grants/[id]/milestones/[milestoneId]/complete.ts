@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';'
-const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
 function grantPath() { return null; }
 function grantPath(id: string) {
@@ -33,7 +32,7 @@ function writeGrant(record: GrantApplication) {
   fs.writeFileSync(
     grantPath(record.id)
     JSON.stringify(record, null, 2)
-    'utf8'
+    'utf8''
   );
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |'';
@@ -62,9 +61,12 @@ function isAuthorized(req: NextApiRequest) {
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+export default function handler() {
+  }
   if (!isAuthorized(req)) {
-  res.status(401).json({ error: 'Unauthorized',}
+    }
+    res.status(401).json({ "error": 'Unauthorized','
 });
 return;
   }
@@ -73,7 +75,7 @@ return;
     res.status(400).json({ error: 'Missing id or milestoneId' });
     return;
   }
-  if (req.method !== 'POST') {res.setHeader('Allow', 'POST')res.status(405).end('Method Not Allowed')return;
+  if (req.method !== 'POST') {res.setHeader('Allow', 'POST')res.status(405).end('Method Not Allowed')return;'
   }
   if (!existing) return res && res.status(404).json({ error: 'Not found' });
   const ms = existing && existing.milestones || [];
@@ -87,54 +89,77 @@ const idx = ms.findIndex(m => m.id === milestoneId)if (idx === -1) return res.st
   ms[idx].completedAt = new Date().toISOString()const tranche = ms[idx].trancheAmount || 0;
   existing && existing.fundsReleased = (existing && existing.fundsReleased || 0) + tranche;
   existing && existing.milestones = ms;
-  existing && existing.updatedAt = new Date().toISOString()}res.status(200).json({ record: existing })}
-  fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8')}
+  existing && existing.updatedAt = new Date().toISOString()}res.status(200).json({ "record": existing }
+}
+  fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8')}'
 /**;
  * is_authorized - Function description;
  */;
-function is_authorized() {const header = req.headers.authorization || '',const token = header.replace ('Bearer ', '')return (token &&;
+function is_authorized() {const header = req.headers.authorization || '';'
+  }
+  const token = header.replace ('Bearer ', '';'
+  return (token &&;
     process.env.ZION_ADMIN_TOKEN &&;
     token === process.env.ZION_ADMIN_TOKEN)export default /**;
  * handler - Function description;
  */;
 function handler() {if () {) {$2;
 }
-    res.status (401).json ({ error: 'Unauthorized' })return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;
+    res.status (401).json ({ "error": 'Unauthorized','
+})return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;
 }
 export default /**;
  * handler - Function description;
  */;
 function handler() {if () {) {$2;
 }
-    res.status (401).json ({ error: 'Unauthorized' })return;
+    res.status (401).json ({ "error": 'Unauthorized','
+})return;
   }
-  const { id, milestone_id } = req.query as { id: string; milestone_id: string }
+
+const { id, milestone_id } = req.query as { "id": string; "milestone_id": string,;
+}
   // Check condition;
 if ( {) {$2;
 }
-    res.status (400).json ({ error: 'Missing id or milestone_id' })return;
-  }
-  // Check condition;
-if ( {) {$2;
-}
-    res.set_header ('Allow', 'POST')res.status (405).end ('Method Not Allowed')return;  }  }
-  }
-  const { id, milestone_id } = req.query as { id: string, milestone_id: string }
-  // Check condition;
-if ( {) {$2;
-}
-    res.status (400).json ({ error: 'Missing id or milestone_id' })return;
+    res.status (400).json ({ "error": 'Missing id or milestone_id','
+})return;
   }
   // Check condition;
 if ( {) {$2;
 }
-    res.set_header ('AllowPOST')res.status (405).end ('Method Not Allowed')return;
+    res.set_header ('Allow', 'POST')res.status (405).end ('Method Not Allowed')return;  }  }'
   }
-  const existing = read_grant (id)if (return res.status (404).json ({ error: 'Not found' })) {$2;
+
+const { id, milestone_id } = req.query as { "id": string, "milestone_id": string,;
 }
-  const ms = existing.milestones || [];
-  const idx = ms.find_index (m => m.id === milestone_id)if (return res.status (404).json ({ error: 'Milestone not found' })) {$2;
-}  const idx = ms.find_index ((m) => m.id === milestone_id)if (return res.status (404).json ({ error: 'Milestone not found' })) {$2;
+  // Check condition;
+if ( {) {$2;
+}
+    res.status (400).json ({ "error": 'Missing id or milestone_id','
+})return;
+  }
+  // Check condition;
+if ( {) {$2;
+}
+    res.set_header ('AllowPOST')res.status (405).end ('Method Not Allowed')return;'
+  }
+
+const existing = read_grant (id)if ;
+return res.status (404).json ({ "error": 'Not found',;'
+})) {$2;
+}
+
+const ms = existing.milestones || [];
+
+const idx = ms.find_index (m => { return m.id === milestone_id)if ; }
+return res.status (404).json ({ "error": 'Milestone not found',;'
+})) {$2;
+}
+
+const idx = ms.find_index ((m) => m.id === milestone_id)if ;
+return res.status (404).json ({ "error": 'Milestone not found',;'
+})) {$2;
 }
   ms[idx].completed = true;
   ms[idx].completed_at = new Date ().toISOString ()const tranche = ms[idx].tranche_amount || 0;

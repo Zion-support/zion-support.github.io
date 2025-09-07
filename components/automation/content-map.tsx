@@ -20,12 +20,12 @@ export default function ContentMap({ report }: Props) {};
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
-import fs from 'fs',
-import path from 'path';
-import type { GetStaticProps } from 'next';
+import fs from 'fs','
+import path from 'path';'
+import type { GetStaticProps } from 'next';'
+
 type Entry = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
+return (;
     <div className="space-y-6">"
       <header className="space-y-1">"
         <h1 className="text-3xl font-bold">Content Map</h1>"
@@ -134,8 +134,8 @@ export default function ContentMap(): any ({ report }: Props) {
         </ul>
       </section>
       <section>
-        <h2 className="font-semibold mb-2">All Pages</h2>
-        <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
+        <h2 className="font-semibold mb-2">All Pages</h2>"
+        <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 "dark":border-gray-800">"
           {report.pages.map((p, i) => (
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
           ))}

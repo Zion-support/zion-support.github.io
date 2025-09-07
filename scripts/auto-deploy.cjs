@@ -3,7 +3,7 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const { execSync } = require('child_process')
+const { execSync } = require('child_process');
     this.steps = ['git add .']
       'git commit -m ""feat": automated improvements and fixes"
 <<<<<<< HEAD

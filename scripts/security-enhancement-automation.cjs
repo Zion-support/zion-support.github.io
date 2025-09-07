@@ -17,18 +17,8 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+const fs = require('fs');
+const path = require('path');
 console.log('� Starting Security Enhancement Automation...')
     "file"
     "issue"

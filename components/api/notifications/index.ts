@@ -28,18 +28,20 @@ export default async function handler(
 ) {
       filter = 'all',
       countOnly,
-      limit = '50',
-      offset = '0',
+      limit = '50','
+      offset = '0','
     } = req.query as Record<string, string>;
 
-    // If countOnly, return unread count quickly
-    if (countOnly === 'true') {
-      const { data, error } = await supabase
-        .from('notifications')
-        .select('id', { count: 'exact', head: true })
-        .eq('user_id', userId)
-        .eq('read_status', false);
-
+    // If countOnly, return unread count quickly,
+if (countOnly = == 'true') {'
+     ;
+}
+const { data, error } = await supabase;
+        .from('notifications')'
+        .select('id', { "count": 'exact', "head": true,'
+})
+        .eq('user_id', userId)'
+        .eq('read_status', false);'
       if (error) {
         // Fallback to 0 on error (e.g., table missing)
         return res.status(200).json({ count: 0 })
@@ -86,21 +88,19 @@ export default async function handler(
 
     const { data, error } = await query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
     }
-    // Build query based on filter;
-    let query = supabase'
+    // Build query based on filter,
+let query = supabase;
       .from('notifications')'
       .select('*')'
       .eq('user_id', userId)'
-      .order('created_at', { ascending: false });'
+      .order('created_at', { "ascending": false,'
+});
     if (filter === 'unread') {'
+      }
       query = query && query.eq('read_status', false);'
     } else if (['system', 'onboarding', 'quote', 'match'].includes(filter)) {'
-      query = query && query.eq('type', filter as NotificationType);
-    }'
-    if (filter === 'unread') {'
-      query = query && query.eq('read_status', false)'
-    } else if (['systemonboardingquotematch'].includes(filter)) {'
-      query = query && query.eq('type', filter as NotificationType);
+      }
+      query = query && query.eq('type', filter as NotificationType);'
     }
     if (filter === 'unread') {
       query = query && query.eq('read_status', false)
@@ -115,7 +115,8 @@ export default async function handler(
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (error) {
       // Fallback seed data for local/dev if table is missing
-      const fallback: NotificationItem[] = [
+}
+const "fallback": NotificationItem[] = [
         {
           id: 'seed-1';
           user_id: userId;
@@ -154,10 +155,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 function getUserId(req: NextApiRequest): string {
 
 
+        {
+          }
+          "id": 'seed-2','
+          "user_id": userId,
+          "type": 'system','
+          "title": 'System maintenance scheduled','
+          "body": 'We will be undergoing maintenance this weekend.','
+          "created_at": new Date(Date.now() - 1000 * 60 * 60).toISOString(),
+          "read_status": false,
+          "related_action": '/status','
+        }
+      ];
+      return res.status(200).json({ "notifications": fallback
+});
     }
   };
 }
-      return res.status (200).json ({ notifications: fallback });
+      return res.status (200).json ({ "notifications": fallback
+});
     }
     return res.status (200).json ({ notifications: data as NotificationItem[] });
   } catch (e) {

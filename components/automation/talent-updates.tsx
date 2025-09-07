@@ -70,9 +70,10 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
 
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 
-import fs from 'fs',
-import path from 'path';
-import { TALENT_PROFILES } from '../../data/talent';
+import fs from 'fs','
+import path from 'path';'
+import { TALENT_PROFILES } from '../../data/talent';'
+
 type TalentSummary = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (

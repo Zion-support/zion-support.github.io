@@ -1,4 +1,5 @@
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
 }
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary: ';, error, errorInfo)}
   render() {if (this.state.hasError) ;}
@@ -7,33 +8,28 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     return this.props.children;
   }
 }
-import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
+import React, { useEffect, useState } from 'react';'
 
-const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {}
-  ssr: false,}
+
+import dynamic from 'next/dynamic';'
+
+const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {'
+  }
+  "ssr": false
 });
-async function resolveDisplayName(addr: string): Promise<string | null /> {
-  try {}
-    const did = data?.payload || ,}
+async function resolveDisplayName("addr": string): Promise<string | null> {
+  }
+  try {
+}
+const did = data?.payload || ,;
 };
 return did.lens || did.ens || null;
-  } catch {}
-    return null;}
+  } catch {
+    }
+    return null;
   }
 export default function Web3LoginButton() {;
-  const [open, setOpen] = useState(false);
-  const [user, setUser] = useState<{;
-    address: string;
-    chain: 'evm' | 'sol';
-  } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
-  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-  useEffect(() => {    return did.lens |did.ens |null
-    const r = $2;
-    const { data } = await r.json($2);
-    const did = $2;
-    return did.lens || did.ens || null
-  } catch { return null }
+
 }
 
 export default function Web3LoginButton() {
@@ -45,16 +41,10 @@ export default function Web3LoginButton() {
     setUser(u)
 };
 
-const disconnect = async () => {
-    window.localStorage.removeItem('zion-web3-user');
-try {}
-      await fetch('/api/auth/logout', { method: 'POST',}
-});
-    } catch {}
-    setUser(null);
-  if (user) {;
-    const base =;
-      displayName || `${user && user.address.slice(0, 6)}…${user && user.address.slice(-4)}`;
+const [user, setUser] = useState<{;
+    }
+    "address": string;
+    "chain": 'evm' | 'sol';'
 
   if (user) {
     const base =
@@ -120,8 +110,10 @@ export default function Web3LoginButton() {};
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   useEffect(() => {
   } | null>(null);
-  const [displayName, setDisplayName] = useState<string | null>(null);
-  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+
+const [displayName, setDisplayName] = useState<string | null>(null);
+
+const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   useEffect(() => {
 const saved =
       typeof window !== 'undefined'
@@ -129,7 +121,8 @@ const saved =
 origin/cursor/automate-test-improve-and-merge-code-2533
         : null;
     if (saved) setUser(JSON && JSON.parse(saved));
-    const pref =;'
+
+const pref =;
       typeof window !== 'undefined';'
         ? window && window.localStorage.getItem('zion-web3-display');
         : null;'
@@ -150,30 +143,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
 
   useEffect(() => {
+
     (async () => {
+}
 if (user && displayWeb3)
         setDisplayName(await resolveDisplayName(user.address));
       else setDisplayName(null);
     })();
-  const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) => {
-    window.localStorage.setItem('zion-web3-user', JSON.stringify(u));
-    setUser(u);
-  };
 
-  const disconnect = async () => {
-    window.localStorage.removeItem('zion-web3-user');
+const onLoggedIn = ("u": { "address": string; "chain": 'evm' | 'sol',;'
+}) => {
+    }
+    window.localStorage.setItem('zion-web3-user', JSON.stringify(u));'
+    setUser(u)
+};
+
+const disconnect = async () => {
+    }
+    window.localStorage.removeItem('zion-web3-user');'
 try {
 origin/cursor/automate-test-improve-and-merge-code-2533
       await fetch('/api/auth/logout', { method: 'POST' });
     } catch {}
     setUser(null);
   if (user) {;
-    const base =;`
-      displayName || `${user && user.address.slice(0, 6)}…${user && user.address.slice(-4)}`;
 
-  if (user) {}
-    const base =`
-      displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
+}
 
 origin/cursor/automate-test-improve-and-merge-code-2533
     return (
@@ -181,13 +176,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1 && 1.5 py-0 && 0.5'>;
           Web3 Verified;
         </span>;
-        <button'
-          className='rounded-md border px-2 py-1 text-xs'
+        <button;
+          className='rounded-md border px-2 py-1 text-xs';'
           onClick={() => setOpen(true)}
         >;
           {base}
-        </button>;'
-        <button className='text-xs text-red-600' onClick={disconnect}>;
+        </button>;
+        <button className='text-xs text-red-600' onClick={disconnect}>;'
           Logout;
         </button>;
         {open && (;
@@ -211,7 +206,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     );
   }
-  return (
+return (;
     <>
 <button
 origin/cursor/automate-test-improve-and-merge-code-2533

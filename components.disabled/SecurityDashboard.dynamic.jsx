@@ -1,47 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-const SecurityDashboard = dynamic(() => import("./SecurityDashboard"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SecurityDashboard' ,'
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-const SecurityDashboard = dynamic(() => import("./SecurityDashboard"),{'; loading: () => <p>Loading...</p,>}) export: 'default SecurityDashboard' ,';
-</p>';
-</p>';
-</p>';
-</p>';
-ursor/automate-test-improve-and-merge-code-646c;
-const SecurityDashboard = dynamic(() => import("./SecurityDashboard"),{'; loading: () => <p>Loading...</p,>}) export: 'default SecurityDashboard' ,';
-</p>';
-</p>';
-</p>';
-</p>';
-</p>';
-</p>';
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/automate-test-improve-and-merge-code-646c;
-</p>';
-</p>';
-</p>';
-</p>';
-ursor/automate-test-improve-and-merge-code-646c;
-</p>';
-</p>';
-</p>';
-const SecurityDashboard = dynamic(() => import("./SecurityDashboard"),{'; loading: () => <p>Loading...</p,>}) export: 'default SecurityDashboard' ,'
-<<<<<<< HEAD
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-</p>'
-</p>'
-</p>'
+
+const SecurityDashboard = dynamic(() => import("./SecurityDashboard"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SecurityDashboard' ,''
+
+</p>''
+</p>''
+</p>''
 
 
-</p>'
+</p>''
 
 
-</p>'
+</p>''
 
-</p>'
-</p>'
-</p>'
+</p>''
+</p>''
+</p>''

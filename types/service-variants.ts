@@ -271,14 +271,6 @@ interface ServicevariantsProps {
   // TODO: Implement
 }
   // Add props here as needed;
-export default function Servicevariants({ }: ServicevariantsProps) {
-  return (
-    <div>
-</div>
-      <h1>Servicevariants</h1>
-      <p>This component is currently under development.</p>
-    </div>)
-export type ServiceVariant = 
 
   | 'default'
   | 'holographic'
@@ -387,7 +379,27 @@ export type ServiceVariant =
   | 'neural-futuristic',
   | 'quantum - hologographic';
 
+export default function Servicevariants() {return (<div>;
+      <h1>Servicevariants</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )export type ServiceVariant =;
+  | 'default';'
+  | 'holographic';'
+  | 'quantum';'
+  | 'cyberpunk';'
+  | 'neural';'
+  | 'quantum-holographic';'
+  | 'quantum-advanced';'
+  | 'quantum-cyberpunk';'
+  | 'neural-holographic';'
+  | 'cyberpunk-neural';'
+  | 'advanced';'
+  | 'premium';'
+  | 'enterprise';'
+  | 'custom';'
 
+}
 
   | 'neural-futuristic';
 

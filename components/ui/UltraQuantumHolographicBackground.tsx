@@ -1,25 +1,37 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion  } from 'framer-motion';
-interface UltraQuantumHolographicBackgroundProps  {children: React.ReactNode;
-  intensity?: 'low' | 'medium' | 'high' | 'ultra';
-  colorScheme?: 'quantum' | 'holographic' | 'cyberpunk' | 'neon';
+
+
+
+import React, { useEffect, useRef, useState } from 'react';'
+import { motion  } from 'framer-motion';'
+
+interface UltraQuantumHolographicBackgroundProps {
+  }
+  "children": React.ReactNode;
+  intensity?: 'low' | 'medium' | 'high' | 'ultra';'
+  colorScheme?: 'quantum' | 'holographic' | 'cyberpunk' | 'neon';'
   particleCount?: number;
   animationSpeed?: number;
   className?: string;}
 }
 }
 export default function UltraQuantumHolographicBackground({children;
+  }
   intensity;
 
+            "ease": "easeInOut""
 useEffect ( () => {
+  }
   const updateDimensions = () => {
+  }
   setDimensions ({
 origin/cursor/automate-test-improve-and-merge-code-2533
 useEffect ( () => {
   const updateDimensions = () => {
   setDimensions ({
   const updateDimensions = () => {;
+  }
   setDimensions ({;
+  }
   updateDimensions ();
 vx: number;
             ease: "easeInOut";
@@ -135,24 +147,15 @@ overlay: 'rgba(0, 0, 0, 0.28)',
     intensity
   ];
   useEffect(() => {
-    const updateDimensions = () => {
-      setDimensions({
-        width: window.innerWidth,
-height: window.innerHeight,
-      });
-    };
-
-    updateDimensions();
-    window.addEventListener('resize', updateDimensions);
-    setIsVisible(true);
-
-return () => window.removeEventListener('resize', updateDimensions);
-  }, []);
+}
+const updateDimensions = () => {setDimensions({"width": window.innerWidth,"height": window.innerHeight})}updateDimensions()window.addEventListener('resize', updateDimensions)setIsVisible(true;'
+  return () => window.removeEventListener('resize', updateDimensions)}, [];'
   useEffect(() => {
-    if (!canvasRef.current |!dimensions.width |!dimensions.height) return;
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+}
+if (!canvasRef.current |!dimensions.width |!dimensions.height) return;
+
+const ctx = canvas.getContext('2d')if (!ctx);'
+  return;
     canvas.width = dimensions.width;
     canvas.height = dimensions.height;
     // Particle system
@@ -181,7 +184,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
         this.size = Math.random() * 3 * intensityMultiplier + 1;
 this.color = [;
-          colors.primary,colors.secondary,colors.tertiary,colors.accent,][Math.floor(Math.random() * 4)];
+          colors.primary,colors.secondary,colors.tertiary,colors.accent][Math.floor(Math.random() * 4)];
         this.life = Math.random() * 100;
         this.maxLife = 100;
     updateDimensions($2);
@@ -259,7 +262,8 @@ this.vy = Math.random() * 2 + 1;}
         // Matrix rain effect
         if (this.type === 'matrix') {
           this.vy += 0.1;
-          if (this.y > dimensions.height) {}
+          if (this.y > dimensions.height) {
+            }
             this.y = -10;
             this.vy = Math.random() * 2 + 1
 
@@ -277,7 +281,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }
       }
 
-      draw() {}
+      draw() {
+        }
         if (this.life <= 0) return;
         const alpha = this.life / this.maxLife;
         ctx.save();
@@ -448,19 +453,18 @@ ctx.stroke();
             // Energy field
             const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
             gradient.addColorStop(0, this.color);
-            gradient.addColorStop(1, 'transparent');
+            gradient.addColorStop(1, 'transparent');'
             ctx.fillStyle = gradient;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
             break;
+          case 'matrix':'
+            // Matrix digital rain,
+ctx.fillStyle = this.color;
+            ctx.font = `${this.size * 2}px monospace`;`            ctx.fillText('01', this.x, this.y);'
 
-          case 'matrix':
-            // Matrix digital rain
-            ctx.fillStyle = this.color;
-            ctx.font = `${this.size * 2}px monospace`;
-            ctx.fillText('01', this.x, this.y);
-            break
+break;
         }
 
         ctx.restore()
@@ -480,15 +484,21 @@ const gradient = ctx.createRadialGradient(this.x,this.y,0,this.x,this.y,this.siz
         }ctx.restore()}
     }
     // Create particles;
-    const particles: Particle[] = [];
+
+const "particles": Particle[] = [];
 for (let i = 0; i < particleCount; i++) {particles.push(new Particle())}
     // Animation loop;
-    let animationId: number;
-    const animate = () => {ctx.clearRect(0, 0, dimensions.width, dimensions.height)// Draw quantum field background;
-      const gradient = ctx.createRadialGradient(dimensions.width / 2,dimensions.height / 2,0,dimensions.width / 2,dimensions.height / 2,Math.max(dimensions.width, dimensions.height) / 2;
+    let "animationId": number;
+
+const animate = () => {ctx.clearRect(0, 0, dimensions.width, dimensions.height)// Draw quantum field background;
+
+}
+
+const gradient = ctx.createRadialGradient(dimensions.width / 2,dimensions.height / 2,0,dimensions.width / 2,dimensions.height / 2,Math.max(dimensions.width, dimensions.height) / 2;
       )gradient.addColorStop(0, colors.background)gradient.addColorStop(1, colors.overlay)ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, dimensions.width, dimensions.height)// Update and draw particles;
       particles.forEach((particle, index) => {particle.update()particle.draw()// Remove dead particles and create new ones;
+        }
         if (particle.life <= 0) {particles[index] = new Particle()}
       })// Draw quantum entanglement lines;
       ctx.strokeStyle = colors.primary;
@@ -611,6 +621,7 @@ for (let i = 0; i < particles.length; i += 10) {for (let j = i + 10; j < particl
     animate();
 
     return () => {
+      }
       if (animationId) {
       animationId = requestAnimationFrame(animate);    };      const gridSize = 50;
       for (let x = 0, x < dimensions && dimensions.width, x += gridSize) {;
@@ -628,21 +639,12 @@ for (let i = 0; i < particles.length; i += 10) {for (let j = i + 10; j < particl
       }
     }
   }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);
-  return (
+return (;
       {/* Quantum Holographic Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        cancelAnimationFrame(animationId)
-      }
-    }
-  }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);
+      <canvas,
+ref={canvasRef}
 
-  return (
-    <div className={`relative min-h-screen overflow-hidden ${className}`}>
-      {/* Quantum Holographic Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+className='fixed inset-0 w-full h-full pointer-events-none z-0''
         style={{
           background: colors.background,
           filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`
@@ -656,33 +658,8 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0'
       {/* Holographic Overlay Effects */}
       <div className="fixed inset-0 z-10 pointer-events-none">
         {/* Quantum Field Lines */}
-
-
-      {/* Holographic Overlay Effects */}
-
-          }}
-        />
-
-        {/* Holographic Scan Lines */}
-
-          }}
-
-        />
-      </div>
-
-      {/* Content Layer */}
-      <div className='relative z-20'>{children}</div>
-
-      {/* Quantum Noise Effect */}
-      <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
-
-      {/* Holographic Overlay Effects */}
-      <div className='fixed inset-0 z-10 pointer-events-none'>
-
-      {/* Holographic Overlay Effects */}
-      <div className='fixed inset-0 z-10 pointer-events-none'>
-        <motion.div
-          className="absolute inset-0"
+        <motion.div,
+className='absolute inset-0''
           animate={{
             background: [
               `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`;
@@ -890,12 +867,14 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
       </div>;
       {/* Content Layer */}
 
-<div className='relative z-20' />{children}</div>
+<div className='relative z-20'>{children}</div>'
+
 
       {/* Quantum Noise Effect */}
-      <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;
+      <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;'
         <motion.div;
-          className='absolute inset - 0';
+          className='absolute inset - 0';'
+
           animate={{
             background: [;
               `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
@@ -939,10 +918,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{
 
-            background: [
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-            ],
+            }
+
+            "background": [
+              `url(""data":image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='"http"://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,`              `url(""data":image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='"http"://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,`
+            ]
           }}
           transition={{
             duration: 4,

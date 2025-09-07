@@ -1,35 +1,13 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-=======
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-
-
-
-const { execSync, spawn } = require("$1")
-const fs = require("$1")
-const path = require("path")
+const { execSync, spawn } = require("$1");
+const fs = require("$1");
+const path = require("path");
 // console.log("� Error Prevention & Automation System")
-console.log(Process": ", process.env.PM2_PROCESS || "unknown")
-const { execSync, spawn } = require("$1")
-const fs = require("$1")
-const path = require("path")";console.log("� Error Prevention & Automation System");console.log("Process": ", process.env.PM2_PROCESS || "unknown");"
+console.log(""Process": ", process.env.PM2_PROCESS || "unknown")
+const { execSync, spawn } = require("$1");
+const fs = require("$1");
+const path = require("path")";console.log("� Error Prevention & Automation System");console.log("""Process": ", process.env.PM2_PROCESS || "unknown");";
         "encoding"
         "stdio"
 <<<<<<< HEAD

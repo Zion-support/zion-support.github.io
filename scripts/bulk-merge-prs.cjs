@@ -3,17 +3,13 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const https = require('https')
-const fs = require('fs')
-const path = require('path')
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+const https = require('https');
+const fs = require('fs');
+const path = require('path');
     this.owner = 'Zion-Holdings'
     this.repo = 'zion.app'
     this.token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || ''
-      throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.'
+throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.';
   async makeRequest(url, method = 'GET')
         "hostname"
       console.error(' Error fetching "PRs")

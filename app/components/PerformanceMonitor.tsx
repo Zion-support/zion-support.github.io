@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -23,7 +23,7 @@ export default function PerformanceMonitor() {
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
       
       const connection = (navigator as any).connection;
-      const connectionType = connection ? connection.effectiveType : 'unknown';
+      const connectionType = connection ? connection.effectiveType : 'unknown'
 
       setMetrics({
         loadTime,

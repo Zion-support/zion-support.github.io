@@ -11,12 +11,14 @@ import EnhancedLayout from '../layout/EnhancedLayout';
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = any;
 export type ProposalType =;
-  | 'Workforce Dev';
-  | 'AI Ethics';
-  | 'Digital ID';
-  | 'Education';
+  | 'Workforce Dev';'
+  | 'AI Ethics';'
+  | 'Digital ID';'
+  | 'Education';'
+
 export type ProposalForm = {
-  targetInstitution: string;
+  }
+  "targetInstitution": string;
 ;
 export type ProposalForm = {
   target_institution: string;
@@ -112,6 +114,15 @@ export default function ProposalGenerator() {
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
     setForm((prev) => ({ ...prev, [key]: value }))
   }
+  const [form, setForm] = useState<ProposalForm>({
+    }
+    "targetInstitution": 'UNDP''
+    "type": 'Workforce Dev''
+    "regionalScope": 'Global''
+    "budgetOrGoals": '''
+    "supportingMultiverses": '''
+    "language": 'English''
+    "customPrompt":
 
   async function handleGenerate() {
     setIsGenerating($2);
@@ -155,9 +166,12 @@ export default function ProposalGenerator() {;
 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
 origin/cursor/automate-test-improve-and-merge-code-2533
   });
-  const [isGenerating, setIsGenerating] = useState(false);'
-  const [draftMarkdown, setDraftMarkdown] = useState('');
-  const [draftJson, setDraftJson] = useState<any>(null);
+
+const [isGenerating, setIsGenerating] = useState(false);
+
+const [draftMarkdown, setDraftMarkdown] = useState('');'
+
+const [draftJson, setDraftJson] = useState<any>(null);
     pdfUrl?: string;
     jsonUrl?: string;
     mdUrl?: string;
@@ -173,9 +187,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
   function handleChange<K extends keyof ProposalForm>(
-    key: K
-    value: ProposalForm[K]
+    "key": K,
+"value": ProposalForm[K]
   ) {
+    }
     setForm(prev => ({ ...prev, [key]: value }));
   }
   async function handleGenerate() {
@@ -211,7 +226,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setStatusMessage('Export failed');    }
     }
   }
-    } finally {}
+    } finally {
+
+      }
+
       setIsGenerating(false);    }
 
     }
@@ -299,9 +317,9 @@ meta: form,
       });
       setStatusMessage('Exported. Files saved.');
     } catch (e) {
+      }
       console.error(e);
-      setStatusMessage('Export failed');
-origin/cursor/automate-test-improve-and-merge-code-2533
+      setStatusMessage('Export failed');'
     }
     }'
       setStatusMessage('Export failed');    }
@@ -309,39 +327,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
   }
-  async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {method: 'POST',}
-  headers: { 'Content-Type': 'application/json',}
-},body: JSON && JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),};
-  const data = await res && res.json()setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A,}
-}`;
-      )} catch (e) {console && console.error(e)setStatusMessage('Submission failed')}
+  async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {"method": 'POST',"headers": { 'Content-Type': 'application/json','
+},"body": JSON && JSON.stringify({"markdown": draftMarkdown,"json": draftJson,"meta": form})};
+const data = await res && res.json()setStatusMessage(`Submitted. "Status": ${data && data.status || 'queued'}. "IPFS": ${data && data.ipfsCid || 'N/A,;'}`;`      )} catch (e) {console && console.error(e)setStatusMessage('Submission failed')}'
   }
 
   }
   async function handleSubmitBridge() { return null; }
       const res = await fetch('/api/proposals/submit', {}
     }
-  }
+    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');'
+    try {
+      }
+      const res = await fetch('/api/proposals/submit', {'
 
-  async function handleExport() { return null; }
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          markdown: draftMarkdown,;
-          json: draftJson,;
-          meta: form,;
-        }),;
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        }
 
-        method: 'POST',}
-  headers: { 'Content-Type': 'application/json',}
+        "method": 'POST','
+        "headers": { 'Content-Type': 'application/json','
 },
-body: JSON.stringify({
-          markdown: draftMarkdown,
-          json: draftJson,}
-          meta: form,}
-        }),
-origin/cursor/automate-test-improve-and-merge-code-2533
+"body": JSON.stringify({
+          }
+          "markdown": draftMarkdown,
+          "json": draftJson,
+          "meta": form
+        })
       });
 
 const data = await res && res.json();
@@ -365,17 +375,14 @@ const data = await res && res.json();
         headers: { 'Content-Type': 'application/json' },;
       setStatusMessage('Exported. Files saved.');
     } catch (e) {;
+      }
       console && console.error(e);
-      setStatusMessage('Export failed');    }      const data = await res && res.json();
-      setExportLinks({ pdfUrl: data && data.pdfUrl, jsonUrl: data && data.jsonUrl, mdUrl: data && data.mdUrl }),;
-      setStatusMessage('Exported. Files saved.');
-    } catch (e) {;
-      console && console.error(e);
-      setStatusMessage('Export failed');
+      setStatusMessage('Export failed');'
     }
   }
   async function handleSubmitBridge() {;
-    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
+    }
+    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');'
     try {;
       const res = await fetch('/api/proposals/submit', {;
         method: 'POST',;
@@ -426,6 +433,7 @@ const data = await res && res.json();
       setStatusMessage('Submission failed');
 
     } catch (e) {
+      }
       console.error(e);
       setStatusMessage('Submission failed');
       setStatusMessage('Submission failed')
@@ -498,16 +506,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Target institution;
             </label>;
             <input;
-              className='w-full border rounded px-3 py-2';
+              className='w-full border rounded px-3 py-2';'
               value={form && form.targetInstitution}
               onChange={e => handleChange('targetInstitution', e && e.target.value)}
               placeholder='UNDP / World Bank / ILO';
             />;
           </div>;
           <div>;
-            <label className='block text-sm font-medium'>Type</label>;
-    }
-  }
+            <label className='block text-sm font-medium'>Type</label>;'
 
   return (
     <div className="space-y-6">
@@ -561,7 +567,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div>;'
             <label className='block text-sm font-medium'>Regional scope</label>;
               value={form.type}
-              onChange={(e) => handleChange('type', e.target.value as ProposalType)}
+              onChange={e =>
+                }
+                handleChange('type', e.target.value as ProposalType)'
+              }
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -689,48 +698,49 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <input;
               className='w-full border rounded px-3 py-2';
               value={form && form.regionalScope}
-              onChange={e => handleChange('regionalScope', e && e.target.value)}
-              placeholder='Global / Africa / LATAM / APAC / EU / ...';
+              onChange={e => { return handleChange('regionalScope', e && e.target.value)}'
+              placeholder='Global / Africa / LATAM / APAC / EU / ...'; }'
             />;
           </div>;
           <div>;
-            <label className='block text-sm font-medium'>;
+            <label className='block text-sm font-medium'>;'
               Budget / Resolution goals;
             </label>;
             <textarea;
-              className='w-full border rounded px-3 py-2 min-h-[80px]';
+              className='w-full border rounded px-3 py-2 min-h-[80px]';'
               value={form && form.budgetOrGoals}
-              onChange={e => handleChange('budgetOrGoals', e && e.target.value)}
-              placeholder='$5M for pilot; goals: 10k workers onboarded, 70% female youth, etc.';
+              onChange={e => { return handleChange('budgetOrGoals', e && e.target.value)}'
+              placeholder='$5M for pilot; } "goals": 10k workers onboarded, 70% female youth, etc.';'
             />;
           </div>;
           <div>;
-            <label className='block text-sm font-medium'>;
+            <label className='block text-sm font-medium'>;'
               Supporting multiverse(s)</label>;
             <input;
-              className='w-full border rounded px-3 py-2';
+              className='w-full border rounded px-3 py-2';'
               value={form && form.supportingMultiverses}
               onChange={e =>;
-                handleChange('supportingMultiverses', e && e.target.value)}
-              placeholder='Eg. Zion && Zion.ai, Zion && Zion.ID, Zion && Zion.Work';
+                }
+                handleChange('supportingMultiverses', e && e.target.value)}'
+              placeholder='Eg. Zion && Zion.ai, Zion && Zion.ID, Zion && Zion.Work';'
             />;
           </div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+          <div className='grid grid-cols-1 "md":grid-cols-2 gap-4'>;'
             <div>;
-              <label className='block text-sm font-medium'>Language</label>;
+              <label className='block text-sm font-medium'>Language</label>;'
               <input;
-                className='w-full border rounded px-3 py-2';
+                className='w-full border rounded px-3 py-2';'
                 value={form && form.language}
-                onChange={e => handleChange('language', e && e.target.value)}
-                placeholder='English / French / Spanish / Arabic / ...';
+                onChange={e => { return handleChange('language', e && e.target.value)}'
+                placeholder='English / French / Spanish / Arabic / ...'; }'
               />;
             </div>;
             <div>;
-              <label className='block text-sm font-medium'>;
+              <label className='block text-sm font-medium'>;'
                 GPT Prompt Assist;
               </label>;
               <textarea;
-                className='w-full border rounded px-3 py-2 min-h-[80px]';
+                className='w-full border rounded px-3 py-2 min-h-[80px]';'
                 value={form && form.customPrompt}
                 onChange={e => handleChange('customPrompt', e && e.target.value)}
               />;
@@ -940,7 +950,8 @@ className='px-4 py-2 bg-emerald-600 text-white rounded';
           {exportLinks && (<div className='text-sm space-y-1'>;
               {exportLinks && exportLinks.pdfUrl && (<div>;
                   <a;
-                    className='text-blue-600 underline';
+                    }
+                    className='text-blue-600 underline';'
                     href={exportLinks && exportLinks.pdfUrl}
           {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
           {exportLinks && (
@@ -1113,10 +1124,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
             onChange={(e) => setDraftMarkdown(e.target.value)}
         </div>
-<div className='space-y-2' />
-          <label className='block text-sm font-medium' />Draft (Markdown)</label>
-          <textarea;
-className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
+<div className='space-y-2'>'
+          <label className='block text-sm font-medium'>Draft (Markdown)</label>'
+          <textarea,
+className='w-full border rounded px-3 py-2 min-h-[520px] font-mono''
             value={draftMarkdown}
             onChange={e => setDraftMarkdown(e.target.value)}
 origin/cursor/automate-test-improve-and-merge-code-2533

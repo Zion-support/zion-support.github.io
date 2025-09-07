@@ -143,10 +143,10 @@ function broadcast() { return null; }
           className='border p - 2 w - full';'
           placeholder='Proposal ID';
           value={proposal_id}
-          on_change={e => setProposalId (e.target.value)}
-        />;
-        <select;'
-          className='border p - 2';
+          on_change={e => { return setProposalId (e.target.value)}
+        />; }
+        <select;
+          className='border p - 2';'
           value={vote_choice}
           on_change={e => setVoteChoice (e.target.value)}
         >;
@@ -228,11 +228,11 @@ function broadcast() { return null; }
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
         <button;
-          className='px-3 py-2 bg-black text-white rounded';
-      <section className='space-y-2'>;
-        <h2 className='font-semibold'>Broadcast Manifesto</h2>;
+          className='px-3 py-2 bg-black text-white rounded';'
+      <section className='space-y-2'>;'
+        <h2 className='font-semibold'>Broadcast Manifesto</h2>;'
         <button;
-          className='px-3 py-2 bg-indigo-600 text-white rounded';
+          className='px-3 py-2 bg-indigo-600 text-white rounded';'
           onClick={broadcast}>;
           Broadcast;
         </button>;

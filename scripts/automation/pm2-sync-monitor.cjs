@@ -121,10 +121,7 @@ class $1 {}
   fs.mkdirSync(logDir, { "recursive": true })};"
     this.log = (message, level = "INFO") => {}"
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-      const logMessage = `[${timestamp}] [${level}] ${message}`;`
-      console.log("logMessage);
-      const logMessage = `[${timestamp}] [${level}] ${message}`;`
+const logMessage = `[${timestamp}] [${level}] ${message}`;`;
       console.log("logMessage);
 
       const logMessage = `[${timestamp}] [${level}] ${message};`"
@@ -604,8 +601,11 @@ class $1 {}
       // Check if git repository exists;"
 
         isHealthy = false;
-      // Check git status;"
-      const status = execSync("git status --porcelain", {})
+        return { isHealthy, issues };
+      };
+;
+      // Check git status;
+const status = execSync("git status --porcelain", {});
   "cwd": this.config.projectRoot,
 <<<<<<< HEAD
 
@@ -758,9 +758,14 @@ class $1 {}
   async checkDependencies() {}
       // Check if node_modules exists;"
       if (!fs.existsSync("node_modules")) {}
-  issues.push("Dependencies not installed");"
-      // Check if node_modules exists;"
-
+  issues.push("Dependencies not installed");
+        isHealthy = false} else {}
+  // Check for outdated dependencies;
+        try {}
+const outdated = execSync("npm outdated --json", {});
+  "cwd": this.config.projectRoot,
+            "encoding": "utf8"}
+});
           const outdatedDeps = JSON.parse(outdated);
           if (Object.keys(outdatedDeps).length > 0) {}`;
   issues.push(`${Object.keys(outdatedDeps).length} dependencies are outdated`);
@@ -924,8 +929,9 @@ class $1 {}
         "disk": diskUsage.usagePercent};"
   return { "cpu": 0, "memory": 0, "disk": 0 };"
   async collectPerformanceMetrics() {}
-  // Get system performance data;"
-      const output = execSync("pm2 monit --no-daemon", {})
+  try {}
+  // Get system performance data;
+const output = execSync("pm2 monit --no-daemon", {});
   "encoding": "utf8",
         "timeout": 5000 }"
       // Parse performance data (simplified);
@@ -1000,8 +1006,7 @@ class $1 {}
   async monitorPerformance() {}
   try {}
   // Check if any process is using too much memory;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-      const output = execSync("pm2 monit --no-daemon", {})
+const output = execSync("pm2 monit --no-daemon", {});
   "encoding": "utf8",
         "timeout": 5000}
 });
@@ -1031,7 +1036,7 @@ class $1 {}
   async monitorPerformance() {}
   try {}
   // Check if any process is using too much memory;
-      const output = execSync("pm2 monit --no-daemon", {})
+const output = execSync("pm2 monit --no-daemon", {});
   "encoding": "utf8",
         "timeout": 5000}
 });

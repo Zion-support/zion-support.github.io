@@ -57,16 +57,16 @@ main();
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-const os = require('os')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+const os = require('os');
 // console.log(' Comprehensive Monitoring & Alerting v2.0')
 console.log('')
-    const output = execSync('df -h /', { "encoding"})
+const output = execSync('df -h /', { "encoding"});
       "percentage"
-    const output = execSync('cat /proc/net/dev', { "encoding"})
-    const output = execSync('ps aux | wc -l', { "encoding"})
+const output = execSync('cat /proc/net/dev', { "encoding"});
+const output = execSync('ps aux | wc -l', { "encoding"});
     execSync('npm run build', { "encoding": 'utf8', "stdio"})
       "stdio"
           "error"

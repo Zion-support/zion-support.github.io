@@ -6,53 +6,23 @@ import Link from 'next/link';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Research', href: '/research' },
-    { name: 'Contact', href: '/contact' },
-  ];
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <header className="bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl">
+    <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3 group" aria-label="Zion Tech Group Home">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <span className="text-xl font-bold text-white">
-                Zion Tech Group
-              </span>
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
             </Link>
           </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main menu">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-300 hover:text-white transition-all duration-200 font-medium relative group"
-                aria-label={`Navigate to ${item.name} page`}
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full" />
-              </Link>
-            ))}
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              aria-label="Get started with Zion Tech Group"
-            >
-              Get Started
+          
+          <nav className="hidden md:flex space-x-8">
+            <Link href="/about" className="text-gray-700 hover:text-blue-600">
+              About
             </Link>
           </div>
 
@@ -124,16 +94,20 @@ export default function Header() {
             <Link href="/services" className="hover:text-blue-400 transition duration-300">
               Services
             </Link>
-            <Link href="/solutions" className="hover:text-blue-400 transition duration-300">
-              Solutions
-            </Link>
-            <Link href="/research" className="hover:text-blue-400 transition duration-300">
-              Research
-            </Link>
-            <Link href="/contact" className="hover:text-blue-400 transition duration-300">
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600">
               Contact
             </Link>
           </nav>
+          
+          <button
+            className="md:hidden"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </div>
     </header>

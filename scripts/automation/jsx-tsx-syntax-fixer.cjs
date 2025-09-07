@@ -3,9 +3,9 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 console.log(' Starting JSX/TSX syntax fixer...')
       console.error(' JSX/TSX syntax fixer "failed")
         content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $"1"}
@@ -18,7 +18,7 @@ console.log(' Starting JSX/TSX syntax fixer...')
         content = content.replace(/id\s*=\s*{['"]([^'"]+)['"]}/g, 'id="$1"
         content = content.replace(/name\s*=\s*{['"]([^'"]+)['"]}/g, 'name="$1"
         content = content.replace(/type\s*=\s*{['"]([^'"]+)['"]}/g, 'type="$1"
-            return `style=``
+return `style=``;
             content = "
       execSync('npm run type-check', { "stdio"})
       "summary"

@@ -1,60 +1,35 @@
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {
+import { useState, useEffect } from "react";"
+import { supabase } from "@/integrations/supabase/client";"
+export function useDisputeCheck() {
+  }
   const [isUnderDispute, setIsUnderDispute] = useState(false);
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
-  const [disputeId, setDisputeId] = useState<string | null>(null),
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {
-  const [isUnderDispute, setIsUnderDispute] = useState($2);
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
-  const [disputeId, setDisputeId] = useState<string | null>(null),
-  const [isLoading, setIsLoading] = useState($2);
-  useEffect(() => {
-
+const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),;'
+const [disputeId, setDisputeId] = useState<string | null>(null),;
     const checkDispute = async () => {
-      if (!projectId && !milestoneId) {
-        setIsLoading($2);
-        return
       }
-      try {
-        setIsLoading($2);
-        let query = supabase
-          .from("disputes")
-          .select("id, status")
-          .eq($2);
-        // If milestone ID is provided, filter by that too
-        if (milestoneId) {
-          query = query.eq("milestone_id", milestoneId)
-        }
-        // Order by status priority: open, under_review, resolved, closed
-        query = query.order($2);
-        const { data, error } = await query,
-        
-        if (error) throw error,
-        
-    const checkDispute = async () => {
       if (!projectId && !milestoneId) {
+        }
         setIsLoading(false),
-        return
+return;
       }
       try {    isLoading
-
-    isLoading 
-
-    isLoading 
-
-import { useState, useEffect } from "react",;
-import { supabase } from "@/integrations/supabase/client",;
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
+}
+isLoading 
+    isLoading,
+import { useState, useEffect } from "react";"
+import { supabase } from "@/integrations/supabase/client";"
+export function useDisputeCheck() {;
+  }
   const [isUnderDispute, setIsUnderDispute] = useState(false),;
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),;
+  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),;'
   const [disputeId, setDisputeId] = useState<string | null>(null),;
   const [isLoading, setIsLoading] = useState(true),;
   useEffect(() => {;
+    }
     const checkDispute = async () => {;
+      }
       if (!projectId && !milestoneId) {;
+        }
         setIsLoading(false),;
         return;
       }
@@ -64,38 +39,43 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
 ;
 }  }
 }
-
-import { useState, useEffect } from "react",;
-import { supabase } from "@/integrations/supabase/client",;
+import { useState, useEffect } from "react",;"
+import { supabase } from "@/integrations/supabase/client",;"
 ;
-export function useDisputeCheck(projectId?:string, milestoneId?:string) {;
+export function useDisputeCheck() {;
+  }
   const [isUnderDispute, setIsUnderDispute] = useState(false),;
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),;
+  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),;'
   const [disputeId, setDisputeId] = useState<string | null>(null),;
   const [isLoading, setIsLoading] = useState(true),;
 ;
   useEffect(() => {;
+    }
     const checkDispute = async () => {;
+      }
       if (!projectId && !milestoneId) {;
+        }
         setIsLoading(false),;
         return,;
       }
 ;
       try {;
+        }
         setIsLoading(true),;
         ;
         let query = supabase;
-          .from("disputes");
-          .select("id, status");
-          .eq("project_id", projectId),;
+          .from("disputes");"
+          .select("id, status");"
+          .eq("project_id", projectId),;"
         ;
         // If milestone ID is provided, filter by that too;
         if (milestoneId) {;
-          query = query.eq("milestone_id", milestoneId),;
+          }
+          query = query.eq("milestone_id", milestoneId),;"
         }
         ;
-        // Order by status priority:open, under_review, resolved, closed;
-        query = query.order("status", { ascending:true }),;
+        // Order by status "priority":open, under_review, resolved, closed;
+        query = query.order("status", { "ascending":true }),;"
         ;
         const { data, error } = await query,;
         ;
@@ -103,20 +83,24 @@ export function useDisputeCheck(projectId?:string, milestoneId?:string) {;
         ;
         if (data && data.length > 0) {;
           // Get the first dispute (highest priority based on status);
+          }
           setIsUnderDispute(true),;
           setDisputeStatus(data[0].status as any),;
           setDisputeId(data[0].id),;
         } else {;
+          }
           setIsUnderDispute(false),;
           setDisputeStatus(null),;
           setDisputeId(null),;
         }
       } catch (err) {;
-        console.error("Error checking dispute status:", err),;
+        }
+        console.error("Error checking dispute "status":", err),;"
         setIsUnderDispute(false),;
         setDisputeStatus(null),;
         setDisputeId(null),;
       } finally {;
+        }
         setIsLoading(false),;
       }
     },;
@@ -125,26 +109,31 @@ export function useDisputeCheck(projectId?:string, milestoneId?:string) {;
   }, [projectId, milestoneId]),;
 ;
   return { ;
+    }
     isUnderDispute, ;
     disputeStatus, ;
     disputeId,;
     isLoading ;
   },;
-} export function useDisputeCheck (projectId?: string, milestoneId?: string) {
+} export function useDisputeCheck() {
+  }
   const [isUnderDispute, setIsUnderDispute] = useState (false);
-const [disputeStatus, setDisputeStatus] = useState<'open' | 'under review' | 'resolved' | 'closed' | null> (null);
+const [disputeStatus, setDisputeStatus] = useState<'open' | 'under review' | 'resolved' | 'closed' | null> (null);'
 const [disputeId, setDisputeId] = useState<string | null> (null);
 const [isLoading, setIsLoading] = useState (true);
 const checkDispute = async () => {
+  }
   if (!projectId && !milestoneId) {
   //If milestone ID is provided, filter by that too if (milestoneId) {
-  //Order by status priority: open, under review, resolved, closed query = query.order ("status", {
-  ascending: true 
+  //Order by status "priority": open, under review, resolved, closed query = query.order ("status", {"
+  }
+  "ascending": true 
 });
   data, error 
 }= await query;
 if (error) throw error;
 }finally {
+  }
   setIsLoading (false) 
 }
 };

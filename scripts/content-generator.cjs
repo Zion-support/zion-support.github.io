@@ -8,16 +8,14 @@
  * Content Generator Script;
  * Generates meaningful content for placeholder pages;
  */
-<<<<<<< HEAD
-=======
-const fs = require("child_process")
-const path = require("path")
+const fs = require("child_process");
+const path = require("path");
     this.projectRoot = path.resolve(__dirname, "..")
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log(" Starting Content Generation...")
-      const reportPath = path.join(this.projectRoot, "website-analysis-report.json")
-        const report = JSON.parse(fs.readFileSync(reportPath, "utf8")
+const reportPath = path.join(this.projectRoot, "website-analysis-report.json");
+const report = JSON.parse(fs.readFileSync(reportPath, "utf8");
       console.log(" Content generation completed successfully!")
       console.error(" Error generating "content": ")
     console.log(" Generating service page content...")
@@ -39,14 +37,7 @@ const path = require("path")
       "home": {"title": "Zion Tech Group - Technology Solutions","description": "Leading provider of AI, IT, and digital transformation services","content": "}
         "
     const report = {"timestamp": new Date().toISOString(),"generatedContent": Object.fromEntries(this.generatedContent),"totalPages"}
-    const reportPath = path.join(this.projectRoot, "content-generation-report.json")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+const reportPath = path.join(this.projectRoot, "content-generation-report.json");
 
     console.log(`� Report saved "to"`)
 <<<<<<< HEAD

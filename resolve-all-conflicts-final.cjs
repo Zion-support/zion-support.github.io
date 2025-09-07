@@ -42,7 +42,7 @@ function resolveMergeConflicts(filePath) {
 function findConflictedFiles() {
   try {
     const statusOutput = execSync('git status --porcelain', { encoding: 'utf8' });
-    const conflictedFiles = statusOutput
+const conflictedFiles = statusOutput;
       .split('\n')
       .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
       .map(line => line.split(' ').pop())
@@ -136,13 +136,43 @@ async function main() {
             }
         }
     }
-
-    console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
-
-    // Add resolved files to staging
-    if (resolvedCount > 0) {
-        console.log('📝 Adding resolved files to staging...');
-        execSync('git add .');
+    
+    // Also check for files with conflict markers that might not be in git status
+const filesWithConflicts = [;
+      'resolve-all-merge-conflicts.cjs',
+      'resolve-merge-conflicts-final.cjs',
+      'resolve-all-conflicts.cjs',
+      'resolve-merge-conflicts.cjs',
+      'pages/white-papers.tsx.disabled'
+    ];
+    
+    for (const file of filesWithConflicts) {
+      if (fs.existsSync(file)) {
+        if (resolveMergeConflicts(file)) {
+          resolvedCount++;
+        }
+      }
+    }
+    
+    console.log(`\n✅ Conflict resolution summary:`);
+    console.log(`- Files processed: ${conflictedFiles.length + filesWithConflicts.length}`);
+    console.log(`- Conflicts resolved: ${resolvedCount}`);
+    
+    // Add all resolved files to git
+    try {
+      execSync('git add .', { stdio: 'inherit' });
+      console.log('✅ Added resolved files to git');
+    } catch (error) {
+      console.error('Error adding files to git:', error.message);
+    }
+    
+    // Check if there are any remaining conflicts
+    try {
+      const statusOutput = execSync('git status --porcelain', { encoding: 'utf8' });
+      const remainingConflicts = statusOutput.split('\n').filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'));
+      
+      if (remainingConflicts.length === 0) {
+        console.log('\n🎉 All conflicts resolved! Ready to commit.');
         
         // Commit the resolved conflicts
         console.log('💾 Committing resolved conflicts...');

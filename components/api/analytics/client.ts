@@ -1,6 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createServerClient } from '../../../utils/supabase/server';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';'
+
+
+import { createServerClient } from '../../../utils/supabase/server';'
+
+export default async function handler() {
+  }
   try {
     const supabase = createServerClient($2);
     const clientId = $2;
@@ -25,17 +29,12 @@ supabase;
             status: 'posted';
             posted_at: '2025-01-01';
           }
-          {id: 12;
-            client_id: 'c1';
-            status: 'filled';
-            posted_at: '2025-01-02';
-            hired_at: '2025-01-05';
-          }
-          {id: 13;
-            client_id: 'c1';
-            status: 'filled';
-            posted_at: '2025-01-03';
-            hired_at: '2025-01-06';
+          {"id": 13;
+            }
+            "client_id": 'c1';'
+            "status": 'filled';'
+            "posted_at": '2025-01-03';'
+            "hired_at": '2025-01-06';'
           }
         ];
     const quotesData = quotes.length;
@@ -132,10 +131,13 @@ supabase
           { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }
         ];
 
-    const jobsPosted = jobsData.length;
-    const quotesReceived = quotesData.length;
-    const filled = jobsData.filter(j => j.status === 'filled');
-    const timeToHireDays = filled.length
+const jobsPosted = jobsData.length;
+
+const quotesReceived = quotesData.length;
+
+const filled = jobsData.filter(j => { return j.status === 'filled'); }'
+
+const timeToHireDays = filled.length;
 ? filled.reduce(
           (acc, j) =>
             acc +
@@ -143,10 +145,10 @@ supabase
               (1000 * 60 * 60 * 24)
           0
         ) / filled.length
-origin/cursor/automate-test-improve-and-merge-code-2533
-    const talentViewed = 12; // Placeholder
-    const shortlisted = 5; // Placeholder
-    const funnel = [
+   ;
+const talentViewed = 12; // Placeholder;
+const shortlisted = 5; // Placeholder;
+const funnel = [;
       },
       { label: 'Hire', value: filled && filled.length },
     ];
@@ -213,9 +215,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
         { label: 'Hire', value: 2 }
       ]
-    });
+   
+});
   }
-        { label: 'Hire', value: 2 }]})
+        { "label": 'Hire', "value": 2 }]})'
   }
 
         { label: 'Hire', value: 2 }]})

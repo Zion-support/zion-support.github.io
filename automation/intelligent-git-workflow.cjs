@@ -35,7 +35,52 @@ class IntelligentGitWorkflow {
     }
   }
 
-    return statusResult.output.includes('') || 
+  async getGitStatus() {
+    const statusResult = await this.runCommand('git status --porcelain', 'Get git status');
+    if (!statusResult.success) return null;
+
+    const lines = statusResult.output.split('\n').filter(line => line.trim());
+    const changes = {
+      modified: [],
+      added: [],
+      deleted: [],
+      untracked: []
+    };
+
+    lines.forEach(line => {
+      const status = line.substring(0, 2);
+      const file = line.substring(3);
+      
+      if (status.includes('M')) changes.modified.push(file);
+      if (status.includes('A')) changes.added.push(file);
+      if (status.includes('D')) changes.deleted.push(file);
+      if (status.includes('??')) changes.untracked.push(file);
+    });
+
+    return changes;
+  }
+
+  async getCurrentBranch() {
+    const branchResult = await this.runCommand('git branch --show-current', 'Get current branch');
+    return branchResult.success ? branchResult.output.trim() : null;
+  }
+
+  async getRemoteBranches() {
+    const remoteResult = await this.runCommand('git branch -r', 'Get remote branches');
+    if (!remoteResult.success) return [];
+
+return remoteResult.output;
+      .split('\n')
+      .map(line => line.trim())
+      .filter(line => line && !line.includes('HEAD'))
+      .map(line => line.replace('origin/', ''));
+  }
+
+  async checkForConflicts() {
+    const statusResult = await this.runCommand('git status', 'Check for merge conflicts');
+    if (!statusResult.success) return false;
+
+return statusResult.output.includes('') ||;
            statusResult.output.includes('') || 
            statusResult.output.includes('>>>>>>>');
   }
@@ -77,7 +122,7 @@ class IntelligentGitWorkflow {
       const content = fs.readFileSync(filePath, 'utf8');
       
       if (!content.includes('')) {
-        return false; // No conflicts in this file
+return false; // No conflicts in this file;
       }
 
       // Simple conflict resolution strategy
@@ -100,7 +145,25 @@ class IntelligentGitWorkflow {
           continue;
         }
         
-        if (line.includes('>>>>>>>')) {
+return false; // No conflicts in this file;
+      }
+
+      // Simple conflict resolution strategy
+      const lines = content.split('\n');
+      const resolvedLines = [];
+      let inConflict = false;
+      let conflictType = '';
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        if (line.includes('')) {
+          inConflict = true;
+          conflictType = 'head';
+          continue;
+        }
+        
+        if (line.includes('')) {
           inConflict = false;
           conflictType = '';
           continue;
@@ -129,7 +192,7 @@ class IntelligentGitWorkflow {
     const status = await this.getGitStatus();
     if (!status) return false;
 
-    const allChanges = [
+const allChanges = [;
       ...status.modified,
       ...status.added,
       ...status.deleted

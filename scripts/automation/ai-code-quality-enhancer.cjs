@@ -368,7 +368,7 @@ class $1 {}
     };
 ;
     // Additional intelligent analysis;
-    const additionalIssues = this.findAdditionalQualityIssues(;)
+const additionalIssues = this.findAdditionalQualityIssues(;);
       content,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -386,7 +386,7 @@ class $1 {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     // Additional intelligent analysis;
-    const additionalIssues = this.findAdditionalQualityIssues(;)
+const additionalIssues = this.findAdditionalQualityIssues(;);
       content,
       filePath;
     );
@@ -494,10 +494,12 @@ class $1 {}
         maxNesting = Math.max(maxNesting, currentNesting)} else if (char === "<" && content[content.indexOf(char) + 1] === "/") {}"
   currentNesting = Math.max(0, currentNesting - 1)};
     return maxNesting};
-  findUnusedImports(content, filePath) {}"
-  // This is a simplified check - in a real implementation, you"d use TypeScript compiler API;"
-    const importMatches = content.match(;)"
-
+;
+  findUnusedImports(content, filePath) {}
+  // This is a simplified check - in a real implementation, you"d use TypeScript compiler API;
+const importMatches = content.match(;);
+      /import\s+{([^}]+)}\s+from\s+[""][^"]+["]/g;
+    );
     if (!importMatches) return [];
     const imports = importMatches;
       .map(match => {})
@@ -521,7 +523,7 @@ class $1 {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   findUnusedImports(content, filePath) {}
   // This is a simplified check - in a real implementation, you"d use TypeScript compiler API;
-    const importMatches = content.match(;)
+const importMatches = content.match(;);
       /import\s+{([^}]+)}\s+from\s+["][^"]+[""]/g;
     );
     if (!importMatches) return [];
@@ -554,9 +556,9 @@ class $1 {}
 });
       .flat();
     // Check if imports are used in the file;
-    const unused = imports.filter(imp => {})"
-  const importName = imp.split(" as ")[0].trim();"
-      return (;)`;
+    const unused = imports.filter(imp => {})
+  const importName = imp.split(" as ")[0].trim();
+return (;);
         !content.includes(importName) ||content.indexOf(importName) === content.indexOf(`import {${imp}}`);
       )}
 <<<<<<< HEAD
@@ -747,7 +749,7 @@ return { improvements }
         // Check for expensive operations in render;
 
         // Check for missing dependency arrays in useEffect;
-        const useEffectMatches = content.match(;)
+const useEffectMatches = content.match(;);
           /useEffect\s*\(\s*\(\)\s*=>\s*{[^}]*}\s*\)/g;
         if (useEffectMatches) {}
 
@@ -849,7 +851,7 @@ return { improvements }
 });
     // Generate recommendations for each category;
     for (const ["category", "priorities"] of Object.entries(grouped)) {}
-  const categoryRecommendations = this.generateCategoryRecommendations(;)
+const categoryRecommendations = this.generateCategoryRecommendations(;);
         category,
         priorities;
       );
@@ -930,7 +932,7 @@ return { improvements }
   async applyAutomaticImprovements(improvements) {}
   const appliedFixes = [];
     // Only apply safe, automatic fixes;
-    const safeFixes = improvements.filter(;)
+const safeFixes = improvements.filter(;);
       imp =>;
         imp.priority === "LOW" &&;
         ["unused-imports", "component-naming", "console-log"].includes(;)

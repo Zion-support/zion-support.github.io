@@ -1,18 +1,18 @@
-import { cn } from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-import {cn} from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils";"
+import React from "react","
+import { cn } from "@/lib/utils","
+import {cn} from "@/lib/utils";"
+import React from "react","
+import { cn } from "@/lib/utils","
 interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {
+  }
   className?: string,
-  children?: React.ReactNode
-
-import React from "react",
-import { cn } from "@/lib/utils",
-
-import {cn} from "@/lib/utils";
+  children?: React.ReactNode,
+import React from "react","
+import { cn } from "@/lib/utils","
+import {cn} from "@/lib/utils";"
 interface SidebarGroupContentProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+  }
   className?: string;
   children?: React && React.ReactNode;
 }
@@ -21,25 +21,26 @@ interface SidebarGroupContentProps extends React && React.HTMLAttributes<HTMLDiv
   )
 
   )
-
-import React from "react",;
-import { cn } from "@/lib/utils",;
+import React from "react";"
+import { cn } from "@/lib/utils";"
 interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {;
+  }
   className?: string;
   children?: React.ReactNode
 };
-export function SidebarGroupContent({ className, children, ...props }: SidebarGroupContentProps) {;
+export function SidebarGroupContent() {;
+  }
   return (;
 }
 
 ;
-
-    <div className={cn("space-y-1", className)} {...props}>;
+    <div className={cn("space-y-1", className)} {...props}>;"
       {children}
-import React from './react';
-import { cn  } from '@/lib / utils';
+import React from './react';'
+import { cn  } from '@/lib / utils';'
 interface SidebarGroupContentProps;
   extends React.HTMLAttributes < HTMLDivElement> {
+  }
   class_name?: string;
   children?: React.ReactNode;
 }
@@ -47,28 +48,10 @@ export /**
  * SidebarGroupContent - Function description
  */
 function SidebarGroupContent() {
-  return (
-    <div className={cn ("space - y-1", class_name)} {...props}>;
+}
+return (;
+    <div className={cn ("space - y-1", class_name)} {...props}>;"
       {children}
     </div>);
-}
-;
-import React from "react";
-import { cn } from "@/lib/utils";
-interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string,
-  children?: React.ReactNode
-}
-export function SidebarGroupContent({
-  className
-  children
-  ...props
-}: SidebarGroupContentProps) {
-  return (
-    <div className={cn("space-y-1", className)} {...props}>
-      {children}
-    </div>
-  )
-}
 }
 ;

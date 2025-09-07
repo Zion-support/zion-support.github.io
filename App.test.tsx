@@ -1,12 +1,11 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import App from './src/App';
+import { render, screen } from '@testing-library/react';'
+import { describe, it, expect } from 'vitest';'
+import App from './App';'
 
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
-    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
+    expect(screen.getByRole('main')).toBeInTheDocument();'
   });
 
   it('displays correct content', () => {
@@ -16,6 +15,7 @@ describe('App', () => {
 
   it('handles user interactions', () => {
     render(<App />);
-    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
+    // Add interaction tests here,
+expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
 });

@@ -3,14 +3,15 @@ import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import {
+  }
   Building,
   Users,
   Shield,
   Zap,
   Database,
   Globe,
-  CheckCircle,
-} from 'lucide-react';
+  CheckCircle
+} from 'lucide-react';'
 
 const EnterpriseSolutions: NextPage = () => {
   return (

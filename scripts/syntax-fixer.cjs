@@ -3,10 +3,10 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const fs = require("fs")
-const path = require("path")
-const { exec } = require("child_process")
-const util = require("util")
+const fs = require("fs");
+const path = require("path");
+const { exec } = require("child_process");
+const util = require("util");
     this.logFile = path.join(__dirname, "../logs/syntax-fixer.log")
     this.reportFile = path.join(__dirname, "../logs/syntax-fixes.json")
     this.projectRoot = path.join(__dirname, "..")

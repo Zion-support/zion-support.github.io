@@ -21,9 +21,10 @@ const ServiceCard = ({
   {
   opacity: 0, y: 20 
 }
-}animate= {
-  {
-  opacity: 1, y: 0 
+const allServices = [;
+  ...advancedEnterpriseServices2025;
+  ...innovativeMicroSaasExpansion2025;
+  ...cuttingEdgeITInfrastructureServices];  "website": '"https"://ziontechgroup.com';'
 }
 }transition= {
   {
@@ -273,44 +274,50 @@ const allServices = [
 const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
-  ...cuttingEdgeITInfrastructureServices
-    description: 'Complete portfolio of advanced services'
+  ...cuttingEdgeITInfrastructureServices;
+    "description": 'Complete portfolio of advanced services';'
   }
-  {id: 'enterprise';
-    name: 'Enterprise Solutions';
-    icon: <Building className="w-6 h-6" />;
-    color: 'from-blue-500 to-purple-500';
-    description: 'Enterprise-grade AI and IT solutions';
+  {"id": 'enterprise';'
+    }
+    "name": 'Enterprise Solutions';'
+    "icon": <Building className="w-6 h-6" />;"
+    "color": 'from-blue-500 to-purple-500';'
+    "description": 'Enterprise-grade AI and IT solutions';'
   }
-  {id: 'micro-saas';
-    name: 'Micro SAAS';
-    icon: <Globe className="w-6 h-6" />;
-    color: 'from-green-500 to-emerald-500';
-    description: 'Innovative micro SAAS solutions';
+  {"id": 'micro-saas';'
+    }
+    "name": 'Micro SAAS';'
+    "icon": <Globe className="w-6 h-6" />;"
+    "color": 'from-green-500 to-emerald-500';'
+    "description": 'Innovative micro SAAS solutions';'
   }
-  {id: 'infrastructure';
-    name: 'IT Infrastructure';
-    icon: <Shield className="w-6 h-6" />;
-    color: 'from-orange-500 to-red-500';
-    description: 'Cutting-edge infrastructure services';
+  {"id": 'infrastructure';'
+    }
+    "name": 'IT Infrastructure';'
+    "icon": <Shield className="w-6 h-6" />;"
+    "color": 'from-orange-500 to-red-500';'
+    "description": 'Cutting-edge infrastructure services';'
   }
-  {id: 'ai-ml';
-    name: 'AI & Machine Learning';
-    icon: <Brain className="w-6 h-6" />;
-    color: 'from-purple-500 to-pink-500';
-    description: 'Advanced AI and ML platforms';
+  {"id": 'ai-ml';'
+    }
+    "name": 'AI & Machine Learning';'
+    "icon": <Brain className="w-6 h-6" />;"
+    "color": 'from-purple-500 to-pink-500';'
+    "description": 'Advanced AI and ML platforms';'
   }
-  {import React, { useState, useEffect } from 'react',import SEO from '../components/SEO';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+  {import React, { useState, useEffect } from 'react',import SEO from '../components/SEO';'
+import SEO from '../components/SEO';'
+import { motion, AnimatePresence } from 'framer-motion';'
 import { Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
+  }
   Brain, Atom, Shield, Building, Globe;
   Users, TrendingUp, Award, Phone, Mail, MapPin;
-  } from 'lucide-react';
+  } from 'lucide-react';'
 // Import our new service data;
-import { advancedEnterpriseServices2025   } from '../data/2025-advanced-enterprise-services-expansion';
-import { innovativeMicroSaasExpansion2025   } from '../data/2025-innovative-micro-saas-expansion';
-import { cuttingEdgeITInfrastructureServices  } from '../data/2025-cutting-edge-it-infrastructure';
+import { advancedEnterpriseServices2025   } from '../data/2025-advanced-enterprise-services-expansion';'
+import { innovativeMicroSaasExpansion2025   } from '../data/2025-innovative-micro-saas-expansion';'
+import { cuttingEdgeITInfrastructureServices  } from '../data/2025-cutting-edge-it-infrastructure';'
+
 const contactInfo = null;
   Search;
   Grid;
@@ -330,347 +337,510 @@ const contactInfo = null;
   Phone;
   Mail;
   MapPin;
-} from 'lucide-react';
+} from 'lucide-react';'
 // Mock service data;
 const advancedEnterpriseServices2025 = [;
-  {id: "enterprise-1";
-    title: "Enterprise AI Solutions";
-    description: "Comprehensive AI implementation for large enterprises";
-    category: "enterprise";
-    price: "$50,000+";
-    rating: 4.9;
-    tags: ["AI", "Machine Learning", "Enterprise"];
-    color: "from-blue-500 to-purple-500";
-    icon: "🤖";
+  {"id": "enterprise-1";"
+    }
+    "title": "Enterprise AI Solutions";"
+    "description": "Comprehensive AI implementation for large enterprises";"
+    "category": "enterprise";"
+    "price": "$50,000+";"
+    "rating": 4.9;
+    "tags": ["AI", "Machine Learning", "Enterprise"];"
+    "color": "from-blue-500 to-purple-500";"
+    "icon": "🤖";"
   }
 ];
 const innovativeMicroSaasExpansion2025 = [;
-  {id: "micro-1";
-    title: "Micro SaaS Platform";
-    description: "Lightweight SaaS solutions for small businesses";
-    category: "micro-saas";
-    price: "$99/month";
-    rating: 4.7;
-    tags: ["SaaS", "Micro Services", "Cloud"];
-    color: "from-green-500 to-teal-500";
-    icon: "⚡";
+  {"id": "micro-1";"
+    }
+    "title": "Micro SaaS Platform";"
+    "description": "Lightweight SaaS solutions for small businesses";"
+    "category": "micro-saas";"
+    "price": "$99/month";"
+    "rating": 4.7;
+    "tags": ["SaaS", "Micro Services", "Cloud"];"
+    "color": "from-green-500 to-teal-500";"
+    "icon": "⚡";"
   }
 ];
 const cuttingEdgeITInfrastructureServices = [;
-  {id: "infra-1",title: "Cloud Infrastructure",description: "Scalable cloud infrastructure solutions",category: "infrastructure",price: "$5,000/month",rating: 4.8,tags: ["Cloud", "Infrastructure", "DevOps"],color: "from-orange-500 to-red-500",icon: "☁️";
+  {"id": "infra-1","title": "Cloud Infrastructure","description": "Scalable cloud infrastructure solutions","category": "infrastructure","price": "$5,000/month","rating": 4.8,"tags": ["Cloud", "Infrastructure", "DevOps"],"color": "from-orange-500 to-red-500","icon": "☁️";"
   }
 ];
-const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
+const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
 }const allServices = [;
   ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices;
-];const categories = [;
-  {id: 'all',name: 'All Services',icon: <Grid className='w-6 h-6' />,color: 'from-gray-500 to-slate-500',description: 'Complete portfolio of advanced services';
-  },{id: 'enterprise',name: 'Enterprise Solutions',icon: <Building className='w-6 h-6' />,color: 'from-blue-500 to-purple-500',description: 'Enterprise-grade AI and IT solutions';
-  },{id: 'micro-saas',name: 'Micro SAAS',icon: <Globe className='w-6 h-6' />,color: 'from-green-500 to-emerald-500',description: 'Innovative micro SAAS solutions';
-  },{id: 'infrastructure',name: 'IT Infrastructure',icon: <Shield className='w-6 h-6' />,color: 'from-orange-500 to-red-500',description: 'Cutting-edge infrastructure services';
-  },{id: 'ai-ml',name: 'AI & Machine Learning',icon: <Brain className='w-6 h-6' />,color: 'from-purple-500 to-pink-500',description: 'Advanced AI and ML platforms';
-  },{id: 'quantum';
-    name: 'Quantum Computing';
-    icon: <Atom className="w-6 h-6" />;
-    color: 'from-violet-500 to-indigo-500';
-    description: 'Quantum computing solutions';
+];const cuttingEdgeITInfrastructureServices = [;
+  {"id": "infra-1","title": "Cloud Infrastructure","description": "Scalable cloud infrastructure solutions","category": "infrastructure","price": "$5,000/month","rating": 4.8,"tags": ["Cloud", "Infrastructure", "DevOps"],"color": "from-orange-500 to-red-500","icon": "☁️";"
+  }
+];
+
+const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
+}
+
+const allServices = [;
+  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices
+];
+
+
+const categories = [;
+  {"id": 'all',"name": 'All Services',"icon": <Grid className='w-6 h-6' />,"color": 'from-gray-500 to-slate-500',"description": 'Complete portfolio of advanced services';'
+  },{"id": 'enterprise',"name": 'Enterprise Solutions',"icon": <Building className='w-6 h-6' />,"color": 'from-blue-500 to-purple-500',"description": 'Enterprise-grade AI and IT solutions';'
+  },{"id": 'micro-saas',"name": 'Micro SAAS',"icon": <Globe className='w-6 h-6' />,"color": 'from-green-500 to-emerald-500',"description": 'Innovative micro SAAS solutions';'
+  },{"id": 'infrastructure',"name": 'IT Infrastructure',"icon": <Shield className='w-6 h-6' />,"color": 'from-orange-500 to-red-500',"description": 'Cutting-edge infrastructure services';'
+  },{"id": 'ai-ml',"name": 'AI & Machine Learning',"icon": <Brain className='w-6 h-6' />,"color": 'from-purple-500 to-pink-500',"description": 'Advanced AI and ML platforms';'
+  },{"id": 'quantum';'
+    }
+    "name": 'Quantum Computing';'
+    "icon": <Atom className="w-6 h-6" />;"
+    "color": 'from-violet-500 to-indigo-500';'
+    "description": 'Quantum computing solutions';'
   }
 ursor/automate-test-improve-and-merge-code-646c;
-import SEO from './seo/Seo';
+import SEO from './seo/Seo';'
 import { Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check,Brain, Zap, Shield, Building, Globe,Users, TrendingUp, Award, Phone, Mail, MapPin;
- } from 'lucide-react';
+ } from 'lucide-react';'
 // Import our new service data;
-import { advancedInnovativeServices  } from '../data/2025-advanced-innovative-services-expansion';
-import { advancedITInfrastructureServices2025  } from '../data/2025-advanced-it-infrastructure-services';
-const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
+import { advancedInnovativeServices  } from '../data/2025-advanced-innovative-services-expansion';'
+import { advancedITInfrastructureServices2025  } from '../data/2025-advanced-it-infrastructure-services';'
+const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
 }const allServices = [;
   ...advancedInnovativeServices,...advancedITInfrastructureServices2025;
-];const categories = [;
-  {id: 'all',name: 'All Services',icon: <LayoutGrid className="w-6 h-6" />,color: 'from-gray-500 to-slate-500',description: 'Complete portfolio of advanced services';
-  },{id: 'enterprise',name: 'Enterprise Solutions',icon: <Building className="w-6 h-6" />,color: 'from-blue-500 to-purple-500',description: 'Enterprise-grade AI and IT solutions';
-  },{id: 'micro-saas',name: 'Micro SAAS',icon: <Globe className="w-6 h-6" />,color: 'from-green-500 to-emerald-500',description: 'Innovative micro SAAS solutions';
-  },{id: 'infrastructure',name: 'IT Infrastructure',icon: <Shield className="w-6 h-6" />,color: 'from-orange-500 to-red-500',description: 'Cutting-edge infrastructure services';
-  },{id: 'ai-ml',name: 'AI & Machine Learning',icon: <Brain className="w-6 h-6" />,color: 'from-purple-500 to-pink-500',description: 'Advanced AI and ML platforms';
-  },{id: 'quantum',name: 'Quantum Computing',icon: <Zap className="w-6 h-6" />,color: 'from-violet-500 to-indigo-500',description: 'Quantum computing solutions';
+];const contactInfo = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
+}
+
+const allServices = [;
+  ...advancedInnovativeServices,...advancedITInfrastructureServices2025
+];
+
+
+const categories = [;
+  {"id": 'all',"name": 'All Services',"icon": <LayoutGrid className="w-6 h-6" />,"color": 'from-gray-500 to-slate-500',"description": 'Complete portfolio of advanced services';'
+  },{"id": 'enterprise',"name": 'Enterprise Solutions',"icon": <Building className="w-6 h-6" />,"color": 'from-blue-500 to-purple-500',"description": 'Enterprise-grade AI and IT solutions';'
+  },{"id": 'micro-saas',"name": 'Micro SAAS',"icon": <Globe className="w-6 h-6" />,"color": 'from-green-500 to-emerald-500',"description": 'Innovative micro SAAS solutions';'
+  },{"id": 'infrastructure',"name": 'IT Infrastructure',"icon": <Shield className="w-6 h-6" />,"color": 'from-orange-500 to-red-500',"description": 'Cutting-edge infrastructure services';'
+  },{"id": 'ai-ml',"name": 'AI & Machine Learning',"icon": <Brain className="w-6 h-6" />,"color": 'from-purple-500 to-pink-500',"description": 'Advanced AI and ML platforms';'
+  },{"id": 'quantum',"name": 'Quantum Computing',"icon": <Zap className="w-6 h-6" />,"color": 'from-violet-500 to-indigo-500',"description": 'Quantum computing solutions';'
   }
-    id: 'quantum',name: 'Quantum Computing',icon: <Atom className='w-6 h-6' />,color: 'from-violet-500 to-indigo-500',description: 'Quantum computing solutions';
-  }];const getServiceCategory = (service: any) => {if (service.category) return service.category;
-  return 'Other';
-}return 'Other';
-}website: 'https://ziontechgroup.com';
+    "id": 'quantum',"name": 'Quantum Computing',"icon": <Atom className='w-6 h-6' />,"color": 'from-violet-500 to-indigo-500',"description": 'Quantum computing solutions';'
+  }];const getServiceCategory = ("service": any) => {if (service.category) return service.category;
+  }];
+
+const getServiceCategory = ("service": any) => {if (service.category);
+  }
+  return service.category;
+  return 'Other';'
+}return 'Other';'
+}"website": '"https"://ziontechgroup.com';'
 }
 const allServices = [;
   ...advancedEnterpriseServices2025;
   ...innovativeMicroSaasExpansion2025;
-  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
-  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
-const cuttingEdgeITInfrastructureServices = [
-  {
-    id: 'enterprise'
-    name: 'Enterprise Solutions'
-    icon: <Building className="w-6 h-6" />
-    color: 'from-blue-500 to-purple-500'
-    description: 'Enterprise-grade AI and IT solutions'
-  }
-  {
-    description: 'Complete portfolio of advanced services'},
-    id: 'micro-saas'
-    name: 'Micro SAAS'
-    icon: <Globe className="w-6 h-6" />
-    color: 'from-green-500 to-emerald-500'
-    description: 'Innovative micro SAAS solutions'
-  }
-  {
-    id: 'infrastructure'
-    name: 'IT Infrastructure'
-    icon: <Shield className="w-6 h-6" />
-    color: 'from-orange-500 to-red-500'
-    description: 'Cutting-edge infrastructure services'
-  }
-  {
-    id: 'ai-ml'
-    name: 'AI & Machine Learning'
-    icon: <Brain className="w-6 h-6" />
-    color: 'from-purple-500 to-pink-500'
-    description: 'Advanced AI and ML platforms'
-  }
-  {
-    id: 'quantum'
-    name: 'Quantum Computing'
-    icon: <Atom className="w-6 h-6" />
-    color: 'from-violet-500 to-indigo-500'
-    description: 'Quantum computing solutions'
-  }
+  ...cuttingEdgeITInfrastructureServices];  "website": '"https"://ziontechgroup.com';'
+  ...cuttingEdgeITInfrastructureServices];  "website": '"https"://ziontechgroup.com';'
 
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import React, { useState, useEffect } from 'react';
-import SEO from './seo/Seo';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
-  Brain, Atom, Shield, Building, Globe;
-  Users, TrendingUp, Award, Phone, Mail, MapPin
-} from 'lucide-react';
-
-// Import our new service data
-import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
-import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
-import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-const allServices = [
-  ...advancedEnterpriseServices2025;
-      ...innovativeMicroSaasExpansion2025;
-  ...cuttingEdgeITInfrastructureServices
-];
-
-const categories = [
-  {
-    id: 'all',
-    name: 'All Services',
-    icon: <Grid className="w-6 h-6" />,
-    color: 'from-gray-500 to-slate-500',
-    description: 'Complete portfolio of advanced services'
-  };
-  {
-    id: 'enterprise',
-    name: 'Enterprise Solutions',
-    icon: <Building className="w-6 h-6" />,
-    color: 'from-blue-500 to-purple-500',
-    description: 'Enterprise-grade AI and IT solutions'
-  };
-  {
-    id: 'micro-saas',
-    name: 'Micro SAAS',
-    icon: <Globe className="w-6 h-6" />,
-    color: 'from-green-500 to-emerald-500',
-    description: 'Innovative micro SAAS solutions'
-  };
-  {
-    id: 'infrastructure',
-    name: 'IT Infrastructure',
-    icon: <Shield className="w-6 h-6" />,
-    color: 'from-orange-500 to-red-500',
-    description: 'Cutting-edge infrastructure services'
-  };
-  {
-    id: 'ai-ml',
-    name: 'AI & Machine Learning',
-    icon: <Brain className="w-6 h-6" />,
-    color: 'from-purple-500 to-pink-500',
-    description: 'Advanced AI and ML platforms'
-  };
-  {
-    id: 'quantum',
-    name: 'Quantum Computing',
-    icon: <Atom className="w-6 h-6" />,
-    color: 'from-violet-500 to-indigo-500',
-    description: 'Quantum computing solutions'
   }
-    description: 'Quantum computing solutions'},
-];
-    description: 'Quantum computing solutions'}];
-
-const getServiceCategory = (service: any) => {
-  if (service.category) return service.category;
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-  return 'Other';
+  "mobile": '+1 302 464 0950','
+  "email": 'kleber@ziontechgroup.com','
+  "address": '364 E Main St STE 1008 Middletown DE 19709','
+"website": '"https"://ziontechgroup.com,'
 };
 
-  website: 'https://ziontechgroup.com'
+const allServices = [;
+  ...advancedEnterpriseServices2025,
+  ...innovativeMicroSaasExpansion2025,
+  ...cuttingEdgeITInfrastructureServices];
+
+const categories = [;
+  {
+    }
+    "id": 'all','
+    "name": 'All Services','
+"icon": <Grid className='w-6 h-6' />,'
+    "color": 'from-gray-500 to-slate-500','
+    "description": 'Complete portfolio of advanced services,'
+},
+    "description": 'Complete portfolio of advanced services'},'
+    "description": 'Complete portfolio of advanced services,'
+},
+  {
+    }
+    "id": 'enterprise','
+    "name": 'Enterprise Solutions','
+    "icon": <Building className='w-6 h-6' />,'
+    "color": 'from-blue-500 to-purple-500','
+    "description": 'Enterprise-grade AI and IT solutions,'
+},
+  {
+    }
+    "id": 'micro-saas','
+    "name": 'Micro SAAS','
+    "icon": <Globe className='w-6 h-6' />,'
+    "color": 'from-green-500 to-emerald-500','
+    "description": 'Innovative micro SAAS solutions,'
+},
+  {
+    }
+    "id": 'infrastructure','
+    "name": 'IT Infrastructure','
+    "icon": <Shield className='w-6 h-6' />,'
+    "color": 'from-orange-500 to-red-500','
+    "description": 'Cutting-edge infrastructure services,'
+},
+  {
+    }
+    "id": 'ai-ml','
+    "name": 'AI & Machine Learning','
+    "icon": <Brain className='w-6 h-6' />,'
+    "color": 'from-purple-500 to-pink-500','
+    "description": 'Advanced AI and ML platforms,'
+},
+  {
+    }
+    "id": 'quantum''
+    "name": 'Quantum Computing''
+    "icon": <Atom className="w-6 h-6" />"
+    "color": 'from-violet-500 to-indigo-500''
+    "description": 'Quantum computing solutions''
+  }
+ 
 }
-const allServices = [
+import {
+  }
+  Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check;
+  Brain, Zap, Shield, Building, Globe;
+  Users, TrendingUp, Award, Phone, Mail, MapPin
+} from 'lucide-react';'
+
+// Import our new service data,
+import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion';'
+import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';'
+
+const contactInfo = {
+  }
+  "mobile": '+1 302 464 0950','
+  "email": 'kleber@ziontechgroup.com','
+  "address": '364 E Main St STE 1008 Middletown DE 19709','
+  "website": '"https"://ziontechgroup.com','
+};
+
+const allServices = [;
+  ...advancedInnovativeServices,
+  ...advancedITInfrastructureServices2025
+];
+
+const categories = [;
+  {
+    }
+    "id": 'all','
+    "name": 'All Services','
+    "icon": <LayoutGrid className="w-6 h-6" />,"
+    "color": 'from-gray-500 to-slate-500','
+    "description": 'Complete portfolio of advanced services''
+ 
+},
+  {
+    }
+    "id": 'enterprise','
+    "name": 'Enterprise Solutions','
+    "icon": <Building className="w-6 h-6" />,"
+    "color": 'from-blue-500 to-purple-500','
+    "description": 'Enterprise-grade AI and IT solutions''
+ 
+},
+  {
+    }
+    "id": 'micro-saas','
+    "name": 'Micro SAAS','
+    "icon": <Globe className="w-6 h-6" />,"
+    "color": 'from-green-500 to-emerald-500','
+    "description": 'Innovative micro SAAS solutions''
+ 
+},
+  {
+    }
+    "id": 'infrastructure','
+    "name": 'IT Infrastructure','
+    "icon": <Shield className="w-6 h-6" />,"
+    "color": 'from-orange-500 to-red-500','
+    "description": 'Cutting-edge infrastructure services''
+ 
+},
+  {
+    }
+    "id": 'ai-ml','
+    "name": 'AI & Machine Learning','
+    "icon": <Brain className="w-6 h-6" />,"
+    "color": 'from-purple-500 to-pink-500','
+    "description": 'Advanced AI and ML platforms''
+ 
+},
+  {
+    }
+    "id": 'quantum','
+    "name": 'Quantum Computing','
+    "icon": <Zap className="w-6 h-6" />,"
+    "color": 'from-violet-500 to-indigo-500','
+    "description": 'Quantum computing solutions''
+  }
+ 
+}
+    "id": 'quantum','
+    "name": 'Quantum Computing','
+    "icon": <Atom className='w-6 h-6' />,'
+    "color": 'from-violet-500 to-indigo-500','
+    "description": 'Quantum computing solutions,'
+}
+];
+    "description": 'Quantum computing solutions'}];'
+    "description": 'Quantum computing solutions,'
+},
+
+const getServiceCategory = ("service": any) => {
+  }
+  if (service.category);
+  return service.category;
+return 'Other';'
+};
+
+  "website": '"https"://ziontechgroup.com''
+
+  "website": '"https"://ziontechgroup.com','
+}
+
+const allServices = [;
   ...advancedEnterpriseServices2025
   ...innovativeMicroSaasExpansion2025
-  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com'
+  ...cuttingEdgeITInfrastructureServices];  "website": '"https"://ziontechgroup.com','
 }
 const allServices = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
-    description: 'Complete portfolio of advanced services';
+    "description": 'Complete portfolio of advanced services';'
   }
-  {id: 'enterprise';
-    name: 'Enterprise Solutions';
-    icon: <Building className="w-6 h-6" />;
-    color: 'from-blue-500 to-purple-500';
-    description: 'Enterprise-grade AI and IT solutions';
+  {"id": 'enterprise';'
+    }
+    "name": 'Enterprise Solutions';'
+    "icon": <Building className="w-6 h-6" />;"
+    "color": 'from-blue-500 to-purple-500';'
+    "description": 'Enterprise-grade AI and IT solutions';'
   }
-  {id: 'micro-saas';
-    name: 'Micro SAAS';
-    icon: <Globe className="w-6 h-6" />;
-    color: 'from-green-500 to-emerald-500';
-    description: 'Innovative micro SAAS solutions';
+  {"id": 'micro-saas';'
+    }
+    "name": 'Micro SAAS';'
+    "icon": <Globe className="w-6 h-6" />;"
+    "color": 'from-green-500 to-emerald-500';'
+    "description": 'Innovative micro SAAS solutions';'
   }
-  {id: 'infrastructure';
-    name: 'IT Infrastructure';
-    icon: <Shield className="w-6 h-6" />;
-    color: 'from-orange-500 to-red-500';
-    description: 'Cutting-edge infrastructure services';
+  {"id": 'infrastructure';'
+    }
+    "name": 'IT Infrastructure';'
+    "icon": <Shield className="w-6 h-6" />;"
+    "color": 'from-orange-500 to-red-500';'
+    "description": 'Cutting-edge infrastructure services';'
   }
-  {id: 'ai-ml';
-    name: 'AI & Machine Learning';
-    icon: <Brain className="w-6 h-6" />;
-    color: 'from-purple-500 to-pink-500';
-    description: 'Advanced AI and ML platforms';
+  {"id": 'ai-ml';'
+    }
+    "name": 'AI & Machine Learning';'
+    "icon": <Brain className="w-6 h-6" />;"
+    "color": 'from-purple-500 to-pink-500';'
+    "description": 'Advanced AI and ML platforms';'
   }
-  {id: 'quantum';
-    name: 'Quantum Computing';
-    icon: <Atom className="w-6 h-6" />;
-    color: 'from-violet-500 to-indigo-500';
-    description: 'Quantum computing solutions';
+  {"id": 'quantum';'
+    }
+    "name": 'Quantum Computing';'
+    "icon": <Atom className="w-6 h-6" />;"
+    "color": 'from-violet-500 to-indigo-500';'
+    "description": 'Quantum computing solutions';'
   }
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
-return 'Other';
-}const getServicePricing = (service: any) => {if (service.price) return `${service.price}${service.period}`;
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;const allServices = [;
-  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
+return 'Other';'
+}const getServicePricing = ("service": any) => {if (service.price) return `${service.price}${service.period}`;`  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;const allServices = [;`  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  "website": '"https"://ziontechgroup && ziontechgroup.com';'
 }const allServices = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
 ursor/automate-test-improve-and-merge-code-646c;
-  return 'Contact for pricing';
-  return 'Contact for pricing';
-return 'Contact for pricing';}const getServiceFeatures = (service: any) => {if (service.features) return service.features;
+  return 'Contact for pricing';'
+  return 'Contact for pricing';'
+return 'Contact for pricing';}const getServiceFeatures = ("service": any) => {if (service.features) return service.features;'
+  }
   if (service.keyFeatures) return service.keyFeatures;
   return [];
 }export default function AdvancedServicesShowcase() {const allServices = [;
-  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
+  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  "website": '"https"://ziontechgroup && ziontechgroup.com';'
 };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-const getServicePricing = (service: any) => {
-  if (service.price) return `${service.price}${service.period}`;
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+const getServicePricing = ("service": any) => {
+  }
+  if (service.price) return `${service.price}${service.period}`;`}
 
+const getServicePricing = ("service": any) => {if (service.price);
+  }
+  return `${service.price}${service.period}`;`  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;`
+const allServices = [;
+  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  "website": '"https"://ziontechgroup && ziontechgroup.com';'
+}
+
+
+
+export default function AdvancedServicesShowcase() {
+}
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
-  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
+  ...cuttingEdgeITInfrastructureServices];  "website": '"https"://ziontechgroup && ziontechgroup.com';'
 };
 const allServices = [;
-  ...advancedEnterpriseServices2025;
-      ...innovativeMicroSaasExpansion2025;
-  ...cuttingEdgeITInfrastructureServices;
-
-  return 'Contact for pricing';
-return 'Contact for pricing';
-origin/cursor/automate-test-improve-and-merge-code-2533
-    description: 'Complete portfolio of advanced services';
-  }
-  {id: 'enterprise';
-    name: 'Enterprise Solutions';
-    icon: <Building className="w-6 h-6" />;
-    color: 'from-blue-500 to-purple-500';
-    description: 'Enterprise-grade AI and IT solutions';
-  }
-  {id: 'micro-saas';
-    name: 'Micro SAAS';
-    icon: <Globe className="w-6 h-6" />;
-    color: 'from-green-500 to-emerald-500';
-    description: 'Innovative micro SAAS solutions';
-  }
-  {id: 'infrastructure';
-    name: 'IT Infrastructure';
-    icon: <Shield className="w-6 h-6" />;
-    color: 'from-orange-500 to-red-500';
-    description: 'Cutting-edge infrastructure services';
-  }
-  {id: 'ai-ml';
-    name: 'AI & Machine Learning';
-    icon: <Brain className="w-6 h-6" />;
-    color: 'from-purple-500 to-pink-500';
-    description: 'Advanced AI and ML platforms';
-  }
-  {id: 'quantum';
-    name: 'Quantum Computing';
-    icon: <Atom className="w-6 h-6" />;
-    color: 'from-violet-500 to-indigo-500';
-    description: 'Quantum computing solutions';
-  }
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-return 'Other';
-}const getServicePricing = (service: any) => {if (service.price) return `${service.price}${service.period}`;
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;const allServices = [;
-  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
+  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  "website": '"https"://ziontechgroup && ziontechgroup.com';'
 }const allServices = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
+ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
-  return 'Contact for pricing';
-  return 'Contact for pricing';
-return 'Contact for pricing';}const getServiceFeatures = (service: any) => {if (service.features) return service.features;
+ursor/fix-netlify-build-and-merge-to-main-9571;
+return [];
+}export default function AdvancedServicesShowcase() {const [selectedCategory, setSelectedCategory] = useState('all')const [searchTerm, setSearchTerm] = useState('')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')const [filteredServices, setFilteredServices]  = useState(allServices)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { "service": any }) => (<motion&& motion.div;'
+      initial={{ "opacity": 0, "y": 20 }}
+      animate={{ "opacity": 1, "y": 0 }}
+      transition={{ "duration": 0 && 0.5 }}
+      className={`relative bg-white "dark":bg-gray-800 rounded-2xl shadow-lg "hover":shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 "dark":border-gray-700 ${</p>;`        </div>;
+}
+ursor/automate-test-improve-and-merge-code-646c;
+          </p>;
+        </div>;
+  useEffect(() => {let filtered  = allServices;// Filter by category;
+    }
+    if (selectedCategory !== 'all') {filtered = filtered.filter((service) => {const category = getServiceCategory(service).toLowerCase()if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial')if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project')if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge')if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml')if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant')return false;'
+      })}// Filter by search term;
+    if (searchTerm) {filtered = filtered.filter(service =>;
+        }
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())if (selectedCategory === 'enterprise')return (category.includes('enterprise') |;'
+            category.includes('legal') |;'
+            category.includes('financial'))if (selectedCategory === 'micro-saas')return (category.includes('marketing') |;'
+            category.includes('social') |;'
+            category.includes('customer') |;'
+            category.includes('project'))if (selectedCategory === 'infrastructure')return (category.includes('infrastructure') |;'
+            category.includes('network') |;'
+            category.includes('data center') |;'
+            category.includes('edge'))if (selectedCategory === 'ai-ml')return (category.includes('ai') |;'
+            category.includes('machine learning') |;'
+            category.includes('nlp') |;'
+            category.includes('ml'))if (selectedCategory === 'quantum')return (category.includes('quantum') |;'
+            category.includes('quantum-resistant'))return false;'
+      })}
+    if (searchTerm) {filtered = filtered.filter(service =>;
+          }
+          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |;
+          service.description;
+            .toLowerCase().includes(searchTerm.toLowerCase()) |;
+          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) |;
+          getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase()))}setFilteredServices(filtered)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { "service": any }) => (<motion.div;
+const allServices = [;
+  ...advancedEnterpriseServices2025;
+      ...innovativeMicroSaasExpansion2025;
+  ...cuttingEdgeITInfrastructureServices;
+ursor/automate-test-improve-and-merge-code-646c;
+  return 'Contact for pricing';'
+  return 'Contact for pricing';'
+return 'Contact for pricing';}'
+
+const getServiceFeatures = ("service": any) => {if (service.features);
+  }
+  return service.features;
   if (service.keyFeatures) return service.keyFeatures;
   return [];
-}export default function AdvancedServicesShowcase() {const allServices = [;
-  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
+}
+
+export default function AdvancedServicesShowcase() {const allServices = [
+  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  "website": '"https"://ziontechgroup && ziontechgroup.com','
 };
 
-];
 
-const getServiceCategory = (service: any) => {
-  if (service.category) return service.category;
-  return 'Other'
+
+
+export default function AdvancedServicesShowcase() {
+}
+const allServices = [;
+  ...advancedEnterpriseServices2025,;
+  ...innovativeMicroSaasExpansion2025,;
+  ...cuttingEdgeITInfrastructureServices];  "website": '"https"://ziontechgroup && ziontechgroup.com';'
 };
+const allServices = [;
+  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  "website": '"https"://ziontechgroup && ziontechgroup.com';'
+}const allServices = [;
+  ...advancedEnterpriseServices2025;
+      ...innovativeMicroSaasExpansion2025;
+  ...cuttingEdgeITInfrastructureServices;
+ursor/fix-netlify-build-and-merge-to-main-9571;
+ursor/automate-test-improve-and-merge-code-646c;
+ursor/fix-netlify-build-and-merge-to-main-9571;
+return [];
+}export default function AdvancedServicesShowcase() {const [selectedCategory, setSelectedCategory] = useState('all')const [searchTerm, setSearchTerm] = useState('')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')const [filteredServices, setFilteredServices]  = useState(allServices)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { "service": any }) => (<motion&& motion.div;'
+      initial={{ "opacity": 0, "y": 20 }}
+      animate={{ "opacity": 1, "y": 0 }}
+      transition={{ "duration": 0 && 0.5 }}
+      className={`relative bg-white "dark":bg-gray-800 rounded-2xl shadow-lg "hover":shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 "dark":border-gray-700 ${</p>;`        </div>;
+}
+ursor/automate-test-improve-and-merge-code-646c;
+          </p>;
+        </div>;
+  useEffect(() => {let filtered  = allServices;// Filter by category;
+    }
+    if (selectedCategory !== 'all') {filtered = filtered.filter((service) => {const category = getServiceCategory(service).toLowerCase()if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial')if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project')if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge')if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml')if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant')return false;'
+      })}// Filter by search term;
+    if (searchTerm) {filtered = filtered.filter(service =>;
+        }
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())if (selectedCategory === 'enterprise')return (category.includes('enterprise') |;'
+            category.includes('legal') |;'
+            category.includes('financial'))if (selectedCategory === 'micro-saas')return (category.includes('marketing') |;'
+            category.includes('social') |;'
+            category.includes('customer') |;'
+            category.includes('project'))if (selectedCategory === 'infrastructure')return (category.includes('infrastructure') |;'
+            category.includes('network') |;'
+            category.includes('data center') |;'
+            category.includes('edge'))if (selectedCategory === 'ai-ml')return (category.includes('ai') |;'
+            category.includes('machine learning') |;'
+            category.includes('nlp') |;'
+            category.includes('ml'))if (selectedCategory === 'quantum')return (category.includes('quantum') |;'
+            category.includes('quantum-resistant'))return false;'
+      })}
+    if (searchTerm) {filtered = filtered.filter(service =>;
+          }
+          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |;
+          service.description;
+            .toLowerCase().includes(searchTerm.toLowerCase()) |;
+          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) |;
+          getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase()))}setFilteredServices(filtered)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { "service": any }) => (<motion.div;
+const allServices = [;
+  ...advancedEnterpriseServices2025;
+      ...innovativeMicroSaasExpansion2025;
+  ...cuttingEdgeITInfrastructureServices;
+ursor/automate-test-improve-and-merge-code-646c;
+  return 'Contact for pricing';'
+  return 'Contact for pricing';'
+return 'Contact for pricing';}'
 
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
@@ -679,137 +849,360 @@ const getServicePricing = (service: any) => {
   return 'Contact for pricing'
 };
 
-const getServiceFeatures = (service: any) => {
-  if (service.features) return service.features;
+const getServiceFeatures = ("service": any) => {
+  }
+  if (service.features);
+  return service.features;
   if (service.keyFeatures) return service.keyFeatures;
-  return []
+return [];
 };
 
 
 
 export default function AdvancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [filteredServices, setFilteredServices] = useState(allServices);
 
   useEffect(() => {
-    let filtered = allServices;
 
-    // Filter by category
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => {
-        const category = getServiceCategory(service).toLowerCase();
-        if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial');
-        if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project');
-        if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge');
-        if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml');
-        if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant');
-        return false
-      })
     }
 
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    let filtered = allServices;
+
+    // Filter by category,
+if (selectedCategory !== 'all') {'
+      }
+      filtered = filtered.filter((service) => {
+       ;
+  }
+  const category = getServiceCategory(service).toLowerCase();
+        if (selectedCategory = == 'enterprise');'
+  return category.includes('enterprise') || category.includes('legal') || category.includes('financial');'
+        if (selectedCategory = == 'micro-saas');'
+  return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project');'
+        if (selectedCategory = == 'infrastructure');'
+  return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge');'
+        if (selectedCategory = == 'ai-ml');'
+  return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml');'
+        if (selectedCategory = == 'quantum');'
+  return category.includes('quantum') || category.includes('quantum-resistant');'
+        return false;
+      });
+    }
+
+    // Filter by search term,
+if (searchTerm) {
+      }
+      filtered = filtered.filter(service => { return service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
         getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())
-      )
+      ); }
     }
 
     setFilteredServices(filtered)
   }, [selectedCategory, searchTerm]);
 
-  const ServiceCard = ({ service }: { service: any }) => (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
-        service.popular ? 'ring-2 ring-blue-500' : ''
-      }`}
+const ServiceCard = ({ service }: { "service": any,;
+}) => (
+    <motion.div,
+initial={{ "opacity": 0, "y": 20 
+}
+      animate={{ "opacity": 1, "y": 0 }}
+      transition={{ "duration": 0.5 }}
+      className={`relative bg-white "dark":bg-gray-800 rounded-2xl shadow-lg "hover":shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 "dark":border-gray-700 ${service.popular ? 'ring-2 ring-blue-500' : '';'
+      }`}`    >;
+      transition={{ "duration": 0.5 
+}
+      className={`relative bg-white "dark":bg-gray-800 rounded-2xl shadow-lg "hover":shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 "dark":border-gray-700 ${service.popular ? 'ring-2 ring-blue-500' : '';'
+      }`}>`
+      {service.popular && (<div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">;"
+          <Star className="w-4 h-4" />;"
+          }
+          Popular;
+        </div>;
+      )}<div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>;`      )}<div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>`
+        <span className="text-4xl">{service.icon}</span>;"
+      </div>;
+      <div className="p-6">;"
+        <div className="flex items-start justify-between mb-3">;"
+          <h3 className="text-xl font-bold text-gray-900 "dark":text-white mb-2">;"
     >
       {service.popular && (
-        <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
-          <Star className="w-4 h-4" />
+        <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">"
+          <Star className="w-4 h-4" />"
+          }
           Popular
         </div>
       )}
       
-      <div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
-        <span className="text-4xl">{service.icon}</span>
+      <div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>`        <span className="text-4xl">{service.icon}</span>"
       </div>
       
-      <div className="p-6">
-        <div className="flex items-start justify-between mb-3">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+      <div className="p-6">"
+        <div className="flex items-start justify-between mb-3">"
+          <h3 className="text-xl font-bold text-gray-900 "dark":text-white mb-2">"
             {service.name}
-          </h3>
-        </div>
-        
-        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
+          <h3 className="text-xl font-bold text-gray-900 "dark": text-white mb-2">"
+            {service.nam
+}
+          </h3>;
+        </div>;
+        <p className="text-gray-600 "dark":text-gray-300 mb-4 line-clamp-2">;"
           {service.tagline}
-        </p>
-        
-        <div className="flex items-center justify-between mb-4">
-          <span className="text-2xl font-bold text-gray-900 dark:text-white">
+        </p>;
+        <div className="flex items-center justify-between mb-4">;"
+          <span className="text-2xl font-bold text-gray-900 "dark":text-white">;"
             {getServicePricing(service)}
+          </span>;
+          <span className="text-sm text-gray-500 "dark":text-gray-400">;"
+            {service.trialDays} day trial;
+          </span>;
+        </div>;
+        <div className="space-y-3 mb-6">;"
+          <div className="flex items-center gap-2">;"
+            <CheckCircle className="w-4 h-4 text-green-500" />;"
+            <span className="text-sm text-gray-600 "dark":text-gray-400">;"
+              {service.setupTime} setup;
+            </span>;
+          </div>;
+          <div className="flex items-center gap-2">;"
+            <Users className="w-4 h-4 text-blue-500" />;"
+            <span className="text-sm text-gray-600 "dark":text-gray-400">;"
+              {service.customers ? service.customers.toLocaleString() : '1000'}+ customers;'
+            </span>;
+          </div>;
+          <div className="flex items-center gap-2">;"
+            <Star className="w-4 h-4 text-yellow-500" />;"
+            <span className="text-sm text-gray-600 "dark":text-gray-400">;"
+<div className='absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1'>;'
+          <Star className='w-4 h-4' />;'
+          Popular;
+        </div>;
+      )}
+      <div;
+        className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}`      >;
+        className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>`
+        <span className='text-4xl'>{service.icon}</span>;'
+      </div>;
+      <div className='p-6'>;'
+        <div className='flex items-start justify-between mb-3'>;'
+          <h3 className='text-xl font-bold text-gray-900 "dark":text-white mb-2'>;'
+            {service.name}
+          </h3>;
+        </div>;
+        <p className='text-gray-600 "dark":text-gray-300 mb-4 line-clamp-2'>;'
+          {service.tagline}
+        </p>;
+        <div className='flex items-center justify-between mb-4'>;'
+          <span className='text-2xl font-bold text-gray-900 "dark":text-white'>;'
+            {getServicePricing(service)}
+          </span>;
+          <span className='text-sm text-gray-500 "dark":text-gray-400'>;'
+            {service.trialDays} day trial;
+          </span>;
+        </div>;
+        <div className='space-y-3 mb-6'>;'
+          <div className='flex items-center gap-2'>;'
+            <CheckCircle className='w-4 h-4 text-green-500' />;'
+            <span className='text-sm text-gray-600 "dark":text-gray-400'>;'
+              {service.setupTime} setup;
+            </span>;
+          </div>;
+          <div className='flex items-center gap-2'>;'
+            <Users className='w-4 h-4 text-blue-500' />;'
+            <span className='text-sm text-gray-600 "dark":text-gray-400'>;'
+              {service.customers ? service.customers.toLocaleString() : '1000'}+;'
+              customers;
+            </span>;
+          </div>;
+          <div className='flex items-center gap-2'>;'
+            <Star className='w-4 h-4 text-yellow-500' />;'
+            <span className='text-sm text-gray-600 "dark":text-gray-400'>;'
+              {service.rating}/5 ({service.reviews} reviews)</span>;
+          </div>;
+        </div>;
+        <div className="mb-6">;"
+          <h4 className="font-semibold text-gray-900 "dark":text-white mb-2">Key "Features":</h4>;"
+          <div className="space-y-1">;"
+            {getServiceFeatures(service).slice(0, 3).map(("feature": string, "index": number) => (<div key={index} className="flex items-center gap-2">;"
+                <Check className="w-3 h-3 text-green-500" />;"
+                <span className="text-sm text-gray-600 "dark":text-gray-400">{feature}</span>;"
+            {getServiceFeatures(service).slice(0, 3).map(("feature": string, "index": number) => (<div key={inde
+} className="flex items-center gap-2">;"
+                <Check className="w-3 h-3 text-green-500" />;"
+                <span className="text-sm text-gray-600 "dark": text-gray-400">{featur,"
+}</span>;
+              </div>;
+            ))}
+            {getServiceFeatures(service).length > 3 && (<span className="text-sm text-gray-500 "dark":text-gray-400">;"
+<div className='mb-6'>;'
+          <h4 className='font-semibold text-gray-900 "dark":text-white mb-2'>;'
+            }
+            Key "Features":;
+          </h4>;
+          <div className='space-y-1'>;'
+            {getServiceFeatures(service).slice(0, 3).map(("feature": string, "index": number) => (<div key={index} className='flex items-center gap-2'>;'
+            {getServiceFeatures(service).slice(0, 3).map(("feature": string, "index": number) => (<div key={inde
+} className='flex items-center gap-2'>;'
+                  <Check className='w-3 h-3 text-green-500' />;'
+                  <span className='text-sm text-gray-600 "dark":text-gray-400'>;'
+                    {feature}
+                  </span>;
+                </div>;
+              ))}
+            {getServiceFeatures(service).length > 3 && (<span className='text-sm text-gray-500 "dark":text-gray-400'>;'
+                +{getServiceFeatures(service).length - 3} more features;
+              </span>;
+            )}
+          </div>;
+        </div>;
+        <div className="mb-6">;"
+          <h4 className="font-semibold text-gray-900 "dark":text-white mb-2">ROI & "Benefits":</h4>;"
+          <p className="text-sm text-gray-600 "dark":text-gray-400">;"
+            {service.roi}
+          </p>;
+        </div>;
+<div className='mb-6'>;'
+          <h4 className='font-semibold text-gray-900 "dark":text-white mb-2'>;'
+            ROI & "Benefits":;
+          </h4>;
+          <p className='text-sm text-gray-600 "dark":text-gray-400'>;'
+            {service.roi}
+          </p>;
+        </div>;
+  }, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { "service": any }) => (<motion&& motion.div;
+      initial={{ "opacity": 0, "y": 20 }}
+      animate={{ "opacity": 1, "y": 0 }}
+      transition={{ "duration": 0 && 0.5 }}
+  }, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { "service": any
+}) => (<motion&& motion.div;
+      initial={{ "opacity": 0, "y": 20 
+}
+      animate={{ "opacity": 1, "y": 0 }}
+      transition={{ "duration": 0 && 0.5 
+}
+      className={`relative bg-white "dark":bg-gray-800 rounded-2xl shadow-lg "hover":shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 "dark":border-gray-700 ${</p>;`        </div>;
+}
+ursor/fix-netlify-build-and-merge-to-main-9571;
+ursor/automate-test-improve-and-merge-code-646c;
+ursor/fix-netlify-build-and-merge-to-main-9571;
+        <div className="mb-6">;"
+          <h4 className="font-semibold text-gray-900 "dark":text-white mb-2">Market "Position":</h4>;"
+          <p className="text-sm text-gray-600 "dark":text-gray-400">;"
+            {service.marketPosition}
+          </p>;
+        </div>;
+ursor/fix-netlify-build-and-merge-to-main-9571;
+ursor/automate-test-improve-and-merge-code-646c;
+ursor/fix-netlify-build-and-merge-to-main-9571;
+        <div className="flex items-center justify-between">;"
+          <a;
+            href={service.link}
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold "hover":from-blue-700 "hover":to-purple-700 transition-all duration-300 transform "hover":scale-105";"
+          >;
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold "hover":from-blue-700 "hover":to-purple-700 transition-all duration-300 transform "hover":scale-105">"
+
+            Learn More;
+            <ArrowRight className="w-4 h-4" />;"
+          </a>;
+ursor/fix-netlify-build-and-merge-to-main-9571;
+ursor/automate-test-improve-and-merge-code-646c;
+          <a;
+            href={`"mailto":${contactInfo.email}?subject=Inquiry about ${service.name}`}`            className="inline-flex items-center gap-2 bg-gray-100 "dark": bg-gray-700 text-gray-700 "dark":text-gray-300 px-4 py-3 rounded-lg font-semibold "hover":bg-gray-200 "dark":"hover":bg-gray-600 transition-all duration-300";"
+ursor/fix-netlify-build-and-merge-to-main-9571;
+          <a;
+            href={`"mailto":${contactInfo.email}?subject=Inquiry about ${service.name}`}`            href={`"mailto": ${contactInfo.email}?subject=Inquiry about ${service.name},`}
+            className="inline-flex items-center gap-2 bg-gray-100 "dark": bg-gray-700 text-gray-700 "dark":text-gray-300 px-4 py-3 rounded-lg font-semibold "hover":bg-gray-200 "dark":"hover":bg-gray-600 transition-all duration-300";"
+ursor/fix-netlify-build-and-merge-to-main-9571;
+          <a;
+            href={`"mailto": ${contactInfo.email}?subject=Inquiry about ${service.name},`}
+            className="inline-flex items-center gap-2 bg-gray-100 "dark": bg-gray-700 text-gray-700 "dark":text-gray-300 px-4 py-3 rounded-lg font-semibold "hover":bg-gray-200 "dark":"hover":bg-gray-600 transition-all duration-300";"
+        <div className='mb-6'>;'
+          <h4 className='font-semibold text-gray-900 "dark":text-white mb-2'>;'
+            Market "Position":;
+          </h4>;
+          <p className='text-sm text-gray-600 "dark":text-gray-400'>;'
+            {service.marketPosition}
+          </p>;
+        </div>;
+        <div className='flex items-center justify-between'>;'
+          <a;
+            href={service.link}
+            className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold "hover":from-blue-700 "hover":to-purple-700 transition-all duration-300 transform "hover":scale-105';'
+          >;
+            className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold "hover":from-blue-700 "hover":to-purple-700 transition-all duration-300 transform "hover":scale-105'>'
+
+            Learn More;
+            <ArrowRight className='w-4 h-4' />;'
+          </a>;
+          <a;
+            href={`"mailto":${contactInfo.email}?subject=Inquiry about ${service.name}`}`            className='inline-flex items-center gap-2 bg-gray-100 "dark":bg-gray-700 text-gray-700 "dark":text-gray-300 px-4 py-3 rounded-lg font-semibold "hover":bg-gray-200 "dark":"hover":bg-gray-600 transition-all duration-300';'
+          >;
+            href={`"mailto": ${contactInfo.email}?subject=Inquiry about ${service.name},`}
+            className='inline-flex items-center gap-2 bg-gray-100 "dark":bg-gray-700 text-gray-700 "dark":text-gray-300 px-4 py-3 rounded-lg font-semibold "hover":bg-gray-200 "dark":"hover":bg-gray-600 transition-all duration-300'>'
+
+            Contact;
+          </a>;
+        </div>;
+      </div>;
+    </motion.div>;
+  )const ServiceList = ({ service }: { "service": any }) => (<motion.div;
+  )const ServiceList = ({ service }: { "service": any
+}) => (<motion.div;
           </span>
-          <span className="text-sm text-gray-500 dark:text-gray-400">
+          <span className="text-sm text-gray-500 "dark": text-gray-400">"
             {service.trialDays} day trial
           </span>
         </div>
         
-        <div className="space-y-3 mb-6">
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-green-500" />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
+        <div className="space-y-3 mb-6">"
+          <div className="flex items-center gap-2">"
+            <CheckCircle className="w-4 h-4 text-green-500" />"
+            <span className="text-sm text-gray-600 "dark":text-gray-400">"
               {service.setupTime} setup
             </span>
           </div>
-          <div className="flex items-center gap-2">
-            <Users className="w-4 h-4 text-blue-500" />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
-              {service.customers ? service.customers.toLocaleString() : '1000'}+ customers
+          <div className="flex items-center gap-2">"
+            <Users className="w-4 h-4 text-blue-500" />"
+            <span className="text-sm text-gray-600 "dark":text-gray-400">"
+              {service.customers ? service.customers.toLocaleString() : '1000'}+ customers'
             </span>
           </div>
-          <div className="flex items-center gap-2">
-            <Star className="w-4 h-4 text-yellow-500" />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
-              {service.rating}/5 ({service.reviews} reviews)
+          <div className="flex items-center gap-2">"
+            <Star className="w-4 h-4 text-yellow-500" />"
+            <span className="text-sm text-gray-600 "dark":text-gray-400">"
+              {service.rating}/5 ({service.review
+} reviews)
             </span>
           </div>
         </div>
         
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
-          <div className="space-y-1">
-            {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (
-              <div key={index} className="flex items-center gap-2">
-                <Check className="w-3 h-3 text-green-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
+        <div className="mb-6">"
+          <h4 className="font-semibold text-gray-900 "dark":text-white mb-2">Key "Features":</h4>"
+          <div className="space-y-1">"
+            {getServiceFeatures(service).slice(0, 3).map(("feature": string, "index": number) => (
+              <div key={index} className="flex items-center gap-2">"
+                <Check className="w-3 h-3 text-green-500" />"
+                <span className="text-sm text-gray-600 "dark":text-gray-400">{feature}</span>"
               </div>
             ))}
             {getServiceFeatures(service).length > 3 && (
-              <span className="text-sm text-gray-500 dark:text-gray-400">
+              <span className="text-sm text-gray-500 "dark":text-gray-400">"
                 +{getServiceFeatures(service).length - 3} more features
               </span>
             )}
           </div>
         </div>
         
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+        <div className="mb-6">"
+          <h4 className="font-semibold text-gray-900 "dark":text-white mb-2">ROI & "Benefits":</h4>"
+          <p className="text-sm text-gray-600 "dark":text-gray-400">"
             {service.roi}
           </p>
         </div>
         
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+        <div className="mb-6">"
+          <h4 className="font-semibold text-gray-900 "dark":text-white mb-2">Market "Position":</h4>"
+          <p className="text-sm text-gray-600 "dark":text-gray-400">"
             {service.marketPosition}
           </p>
         </div>
@@ -820,7 +1213,7 @@ export default function AdvancedServicesShowcase() {
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
             Learn More
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4" />"
           </a>
           
           <a
@@ -1081,18 +1474,17 @@ export default function AdvancedServicesShowcase() {
           </div>
           
           {/* Category Filters */}
-          <div className="mt-6">
-            <div className="flex flex-wrap gap-3">
+          <div className="mt-6">"
+            <div className="flex flex-wrap gap-3">"
               {categories.map((category) => (
                 <button
-                  key={category.id}
+}
+key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
-                    selectedCategory === category.id
-                      ? 'bg-gradient-to-r text-white shadow-lg'
-                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'
-                  } ${category.color}`}
-                >
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${selectedCategory === category.id;`                      ? 'bg-gradient-to-r text-white shadow-lg';'
+                      : 'bg-white "dark":bg-gray-800 text-gray-700 "dark":text-gray-300 border border-gray-200 "dark":border-gray-600 "hover":bg-gray-50 "dark":"hover":bg-gray-700';'
+                  } ${category.color}`}`                >;
+                  } ${category.color}`}>`
                   {category.icon}
                   {category.name}
                 </button>
@@ -1102,61 +1494,54 @@ export default function AdvancedServicesShowcase() {
         </div>
 
         {/* Results Summary */}
-        <div className="mb-8">;
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">;
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">;
+        <div className="mb-8">;"
+          <div className="bg-white "dark":bg-gray-800 rounded-xl p-6 border border-gray-200 "dark":border-gray-700">;"
+            <div className="flex flex-col "md":flex-row items-start "md":items-center justify-between gap-4">;"
               <div>;
-        <div className="mb-8">;
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">;
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">;
-<div className='mb-8'>;
-          <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>;
-            <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>;
+        <div className="mb-8">;"
+          <div className="bg-white "dark":bg-gray-800 rounded-xl p-6 border border-gray-200 "dark":border-gray-700">;"
+            <div className="flex flex-col "md":flex-row items-start "md":items-center justify-between gap-4">;"
+<div className='mb-8'>;'
+          <div className='bg-white "dark":bg-gray-800 rounded-xl p-6 border border-gray-200 "dark":border-gray-700'>;'
+            <div className='flex flex-col "md":flex-row items-start "md":items-center justify-between gap-4'>;'
               <div>;
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
-                  className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${selected_category === category.id;
-                      ? 'bg - gradient - to - r text - white shadow - lg';
-                      : 'bg - white dark:bg - gray - 800 text - gray - 700 dark:text - gray - 300 border border - gray - 200 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700';
-                  } ${category.color}`}
-                >;
+                  className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${selected_category === category.id;`                      ? 'bg - gradient - to - r text - white shadow - lg';'
+                      : 'bg - white "dark":bg - gray - 800 text - gray - 700 "dark":text - gray - 300 border border - gray - 200 "dark":border - gray - 600 "hover":bg - gray - 50 "dark":"hover":bg - gray - 700';'
+                  } ${category.color}`}`                >;
+                  } ${category.color}`}>`
                   {category.icon}
                   {category.name}
               ))}
         {/* Results Summary */}
-        <div className='mb-8'>;
-          <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>;
-            <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>;
+        <div className='mb-8'>;'
+          <div className='bg-white "dark":bg-gray-800 rounded-xl p-6 border border-gray-200 "dark":border-gray-700'>;'
+            <div className='flex flex-col "md":flex-row items-start "md":items-center justify-between gap-4'>;'
               <div>;
-                <h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-2'>;
+                <h2 className='text-2xl font-bold text-gray-900 "dark":text-white mb-2'>;'
                   {filteredServices && filteredServices.length} Services Found;
                 </h2>;
-                <p className='text-gray-600 dark:text-gray-400'>;
-                  {selectedCategory !== 'all' &&;
-                    `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
-                  {searchTerm && ` • Search: "${searchTerm}"`}
-main
-
+                <p className='text-gray-600 "dark":text-gray-400'>;'
+                  {selectedCategory !== 'all' &&;'
+                    `Filtered "by": ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}`                  {searchTerm && ` • "Search": "${searchTerm}"`}`                  {searchTerm && ` • "Search": "${searchTerm}","
+}
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">;
+                <h2 className="text-2xl font-bold text-gray-900 "dark":text-white mb-2">;"
                   {filteredServices.length} Services Found;
                 </h2>;
-                <p className="text-gray-600 dark:text-gray-400">;
-                  {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
-                  {searchTerm && ` • Search: "${searchTerm}"`}
-        <div className="mb-8">
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <p className="text-gray-600 "dark":text-gray-400">;"
+                  {selectedCategory !== 'all' && `Filtered "by": ${categories.find(c => c.id === selectedCategory)?.name}`}`                  {searchTerm && ` • "Search": "${searchTerm}"`}`        <div className="mb-8">"
+          <div className="bg-white "dark":bg-gray-800 rounded-xl p-6 border border-gray-200 "dark":border-gray-700">"
+            <div className="flex flex-col "md":flex-row items-start "md":items-center justify-between gap-4">"
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                <h2 className="text-2xl font-bold text-gray-900 "dark":text-white mb-2">"
                   {filteredServices.length} Services Found
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
-                  {searchTerm && ` • Search: "${searchTerm}"`}
-                </p>
+                <p className="text-gray-600 "dark":text-gray-400">"
+                  {selectedCategory !== 'all' && `Filtered "by": ${categories.find(c => c.id === selectedCategory)?.name}`}`                  {searchTerm && ` • "Search": "${searchTerm}"`}`                </p>
               </div>
               
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
@@ -1164,8 +1549,8 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                   <TrendingUp className="w-4 h-4 text-green-500" />
                   <span>Market Growth: 150%+ YoY</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Award className="w-4 h-4 text-blue-500" />
+                <div className="flex items-center gap-2">"
+                  <Award className="w-4 h-4 text-blue-500" />"
                   <span>4.8+ Average Rating</span>
                 </div>
               </div>
@@ -1242,27 +1627,28 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               </div>;
 
         {/* Services Grid/List */}
-        <div className="space-y-6">
+        <div className="space-y-6">"
           {filteredServices.length === 0 ? (
-            <div className="text-center py-12">
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <div className="text-center py-12">"
+              <div className="text-gray-400 "dark":text-gray-500 text-6xl mb-4">🔍</div>"
+              <h3 className="text-xl font-semibold text-gray-900 "dark":text-white mb-2">"
+                }
                 No services found
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-600 "dark":text-gray-400">"
                 Try adjusting your search terms or category filters.
               </p>
             </div>
           ) : (
             <AnimatePresence>
-              {viewMode === 'grid' ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {viewMode === 'grid' ? ('
+                <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">"
                           {filteredServices.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}
                 </div>
               ) : (
-                <div className="space-y-6">
+                <div className="space-y-6">"
                   {filteredServices.map((service) => (
                     <ServiceList key={service.id} service={service} />
                   ))}
@@ -1272,13 +1658,53 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
           )}
         </div>
 
+        {/* Services Grid/List */}
+        <div className="space-y-6">;"
+          {filteredServices.length === 0 ? (<div className="text-center py-12">;"
+              <div className="text-gray-400 "dark":text-gray-500 text-6xl mb-4">🔍</div>;"
+              <h3 className="text-xl font-semibold text-gray-900 "dark":text-white mb-2">;"
+                }
+                No services found;
+              </h3>;
+              <p className="text-gray-600 "dark":text-gray-400">;"
+                Try adjusting your search terms or category filters.;
+              </p>;
+            </div>;
+          ) : (<AnimatePresence>;
+              {viewMode === 'grid' ? (<div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">;"
+                          {filteredServices.map((service) => (<ServiceCard key={service.id} service={service} />;
+        ))}
+                </div>;
+              ) : (<div className="space-y-6">;"
+                  {filteredServices.map((service) => (<ServiceList key={service.id} service={service} />;
+                  ))}
+                </div>;
+              )}
+            </AnimatePresence>;
+          )}
+        </div>;
         {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <div className="mt-16 text-center">;"
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">;"
+            <h2 className="text-3xl "md":text-4xl font-bold mb-6">;"
+              Ready to Transform Your Business?;
+            </h2>;
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;"
+              Our team of experts is ready to help you implement these cutting-edge solutions.;
+ursor/automate-test-improve-and-merge-code-646c;
+            </h2>;
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;"
+              Our team of experts is ready to help you implement these cutting-edge solutions.;
+              Get in touch today to discuss your specific needs and discover how we can drive your success.;
+            </p>;
+            <div className="flex flex-col "sm":flex-row gap-4 justify-center items-center">;"
+              <a;
+        <div className="mt-16 text-center">"
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">"
+            <h2 className="text-3xl "md": text-4xl font-bold mb-6">"
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
               Our team of experts is ready to help you implement these cutting-edge solutions. 
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
@@ -1294,7 +1720,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                 href={`tel:${contactInfo.mobile}`}
                 className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5" />"
                 Call Now
               </a>
             </div>

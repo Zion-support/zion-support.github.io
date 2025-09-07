@@ -27,7 +27,7 @@ class SEOOptimizer {}
     ) {}"
         const timestamp = new Date().toISOString(})
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
 <<<<<<< HEAD
 =======
@@ -49,7 +49,7 @@ class SEOOptimizer {}
         const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml';);
         const pages = this.findPages(;);
         
-        const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 ${pages.map(page => `  <url>`})
@@ -89,8 +89,8 @@ ${pages.map(page => `  <url>`})
             this.findPagesInDirectory(pagesDir, , pages)};
         // Find pages from app directory (App Router);
         if (fs.existsSync(appDir)) {}
-            this.findPagesInAppDirectory(appDir, , pages)};
-        return [...new Set(pages)) {}]
+            this.findPagesInAppDirectory(appDir, '', pages)};
+return [...new Set(pages)) {}];
     ) {}
 
         return [...new Set(pages)}]; // Remove duplicates;
@@ -166,24 +166,7 @@ ${pages.map(page => `  <url>`})
 <<<<<<< HEAD
         
         const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt';);
-        const robotsContent = "User-"agent": *
-
-        const items = fs.readdirSync(dir})
-
-        const robotsContent = "User-"agent": *"
-Allow: /
-
-# Sitemap;
-Sitemap: https://ziontechgroup.com/sitemap.xml;
-# Disallow admin and private areas;
-Disallow: /admin/,
-  Disallow: /api/
-Disallow: /_next/,
-  Disallow: /private/
-=======
-        const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt';);
-        const robotsContent = "User-"agent": *
-Allow: /
+const robotsContent = "User-"agent": *;
 Allow: /
 
 # Sitemap;
@@ -250,11 +233,10 @@ export default function SEO({})
   section,
   tags = [];
 }: SEOProps) {}
-  const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group;\;`;`
+const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group;\;`;`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : descripti;o;n;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-  return (;)
+  
+return (;);
     <Head>
 
       <title>{fullTitle}</title>
@@ -435,7 +417,7 @@ export default function SEO({})
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         return report};
     generateSEORecommendations() {}
-        return [;]
+return [;];
             'Implement structured data markup for better search visibility',
             'Optimize page loading speed for better Core Web Vitals',
             'Use descriptive and keyword-rich URLs',

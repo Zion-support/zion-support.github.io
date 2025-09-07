@@ -16,17 +16,22 @@ function ensureStorage() {}
 const EPISODES_PATH = null;
 const EPISODES_PATH = path.join(
   process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
+  'data''
+  'podcast''
+  'episodes.json''
 );
 
 function ensureStorage() {
+  }
   const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { "recursive": true
+});
 if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');'
+
+export default function handler() {
+
+  }
 
   ensureStorage();
   const { id } = req.query as { id?: string };'
@@ -36,19 +41,16 @@ const episode = episodes.find(e => e.id === id);
   return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);'
   if (!episode) return res.status(404).json({ error: 'Not found' });
 
-;
-const EPISODES_PATH = path.join (
-  process.cwd (),'
-  'data','
-  'podcast','
-  'episodes.json');
-/**
- * ensure_storage - Function description;
- */
-function ensure_storage() {}
-  const dir = path.dirname (EPISODES_PATH);
-  if () fs.mkdir_sync (dir, { recursive: true })) {}
-  $2;
+const { id } = req.query as { id?: string };
+
+const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];'
+
+const episode = episodes.find(e => { return e.id === id); }
+  if (!episode) return res.status(404).json({ "error": 'Not found','
+});
+
+  return res.status(200).json({ episode });
+return res.status(200).json({ episode });
 }
   if ()) {}
   $2;

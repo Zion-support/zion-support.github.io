@@ -1,9 +1,14 @@
 import React from 'react'
 
 interface SeparatorProps {
+  }
   className?: string;
-  orientation?: 'horizontal' | 'vertical';}
+  orientation?: 'horizontal' | 'vertical';'
+
 }
+
+export function Separator() {const baseClasses = 'bg-slate-600';'
+
 }
 export function Separator() {const baseClasses = 'bg-slate-600';}
 }

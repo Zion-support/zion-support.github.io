@@ -1,39 +1,13 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 console.log(' Starting App Optimizer...')
     // Directory doesn't exist or can'
     // Directory doesn't exist or can'
 console.log(' Analyzing bundle size...')
-  const nextDir = path.join(process.cwd(), '.next;'
+const nextDir = path.join(process.cwd(), '.next;';
       optimizationReport.recommendations.push('Bundle size is large (>50MB). Consider code splitting and lazy loading.'
       optimizationReport.improvements.push('Bundle size is within acceptable limits')
   console.warn('Could not analyze bundle "size")

@@ -61,29 +61,27 @@ export async function simulateAction<T = any>(
   return { log, result: { ok: true } as unknown as T };
 }
 
-// CRM actions
-export const crm = {
+// Specific connector implementations,
+export class SlackConnector implements BaseConnector {
+  }
+  "id": string;
+  "name": string;
+  "type": string;
+  "isActive": boolean;
+  lastSync?: Date;
+  "config": Record<string, any>;
 
-origin/cursor/automate-test-improve-and-merge-code-2533
+  constructor("config": Record<string, any>) {
+    }
+    this.id = uuidv4();
+    this.name = 'Slack';'
+    this.type = 'slack';'
+    this.isActive = true;
+    this.config = config;
+  }
 
-  async syncContact(
-    connection: ProviderConnection
-    contact: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "sync_contact", { contact });
-  }
-  async addEmailTouchpoint(
-    connection: ProviderConnection
-    touchpoint: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
-  }
-  async addProjectNote(
-    connection: ProviderConnection
-    note: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_project_note", { note });
-  }
+  async sync(): Promise<SyncLogEntry[]> {
+    // Implementation for Slack sync
 }
 // ATS actions
 export const ats = {

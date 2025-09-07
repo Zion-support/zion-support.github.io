@@ -33,73 +33,37 @@ async function summarizeAndTag(input: {}
   if (!openaiApiKey) {
   }
   try {
-    const { OpenAI } = await import('openai');
-    const client = new OpenAI({ apiKey: openaiApiKey });
-    const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`;
-import fse from 'fs-extra';
-import { randomUUID } from 'crypto';
-// Lazy import to avoid serverless cold start cost unless needed
-async function summarizeAndTag(input: {
-  fullName: string,
-  professionalTitle: string,
-  bio: string,
-  projects?: string,
-  skills: string,
-  tools?: string
-}) {
-  const openaiApiKey = $2;
-  const combinedText = $2;
-    input.bio,
-    input.projects || '',
-    input.skills,
-    input.tools || ''].join($2);
-  const basicTags = Array.from(new Set(
-    (input.skills +  + (input.tools || ''))
-      .split(/[,\n]/)
-      .map((s) => s.trim())
-      .filter(Boolean)
-      .map((s) => s.toLowerCase())
-  )),
+    }
+    const { OpenAI } = await import('openai');'
 
-  if (!openaiApiKey) {
-    const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`,
-    return { summary, tags: basicTags.slice(0, 24) }
-  }
+const client = new OpenAI({ "apiKey": openaiApiKey,;
+});
 
-  try {
-    const { OpenAI } = await import($2);
-    const client = new OpenAI($2);
-    const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`,
-
-    const response = await client.chat.completions.create($2);
-    const content = $2;
-    try {
-        { role: 'system', content: 'You are an expert technical recruiter.' },
-        { role: 'user', content: prompt },
+const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with "keys": summary, tags.\n\"nTEXT": \n${combinedTex,;`}`;`
+const response = await client.chat.completions.create({
+      }
+      "model": 'gpt-4o-mini''
+      "messages": [
+{ "role": 'system', "content": 'You are an expert technical recruiter.','
+},
+        { "role": 'user', "content": prompt,'
+}
       ],
-      temperature: 0 && 0.4,
+      "temperature": 0.4
     });
-    const content = response && response.choices?.[0]?.message?.content || '';
+
+const content = response.choices?.[0]?.message?.content || '';'
     try {
-      const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
-        { role: 'user', content: prompt }];
-      temperature: 0.4});
-;
-    const content = response.choices?.[0]?.message?.content || '';
-    try {
-      const parsed = JSON.parse (content);
-      // Check condition
+      }
+      const parsed = JSON.parse(content);
 if (
-      ) {) {
-  $2
-}
-        return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }      }      if () {) {
-  $2
-}
-        return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }
-      const parsed = JSON.parse($2);
-      if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
-        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
+        parsed &&
+        typeof parsed.summary = == 'string' &&'
+        Array.isArray(parsed.tags)
+      ) {
+       ;
+  }
+  return { "summary": parsed.summary, "tags": parsed.tags.slice(0, 24) };
       }
     } catch (_) {
       // fall through to heuristic
@@ -110,13 +74,9 @@ if (
     // ignore and fallback
   }
 
-  const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`,
-  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
+const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;`  return { "summary": fallbackSummary, "tags": basicTags.slice(0, 24) }
 
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
+export default async function handler() {
 
   const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
   if (!openaiApiKey) {
@@ -440,7 +400,7 @@ if ( {) {$2;
     await fse.ensureDir(uploadsDir);
     await fse.ensureDir(dataDir);
 
-    let savedProfileImagePath: string | null = null,
+    let "savedProfileImagePath": string | null = null;
     if (profilePicture?.base64 && profilePicture?.name) {
       const ext = path.extname(profilePicture.name) || '.png';
       const filename = `${id}-profile${ext}`;
@@ -450,54 +410,17 @@ if ( {) {$2;
         await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
         savedProfileImagePath = `/uploads/${filename}`
       }
-    }
-      if (base64Data) {
-        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
-        savedCvPath = `/uploads/${filename}`
-      ai: {
-        summary;
-        tags}};
+      const ext = path.extname(profilePicture.name) || '.png';'
 
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
 
-    const aggregatePath = path && path.join(
-      process && process.cwd(),
-      'data',
-      'talent-submissions && submissions.json'
-    );    let aggregate: any[] = [];
-    if (fs && fs.existsSync(aggregatePath)) {
-      try {
-        const content = await fse && fse.readJSON(aggregatePath);
-        if (Array && Array.isArray(content)) aggregate = content;      } catch (_) {    const aggregatePath = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json');
-    }const { summary, tags } = await summarizeAndTag({fullName,professionalTitle,bio,projects,skills,tools,})const record = {id,createdAt: new Date().toISOString(),fullName,professionalTitle,bio,projects,yearsOfExperience: Number(yearsOfExperience) || 0,skills,tools,availability,timezone,hourlyRate: hourlyRate ? Number(hourlyRate) : null,portfolioLinks,assets: {profileImage: savedProfileImagePath,cv: savedCvPath,},ai: {summary,tags,},}const perRecordPath = path.join(dataDir, `${id}.json`)await fse.writeJSON(perRecordPath, record, { spaces: 2 })const aggregatePath = path.join(process.cwd(),'data','talent-submissions.json';
-    )let aggregate: any[] = [];
-    if (fs && fs.existsSync(aggregatePath)) {try {const content = await fse && fse.readJSON(aggregatePath)if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content;
-    let aggregate: any[] = [];
-    if (fs && fs.existsSync(aggregatePath)) {
-      try {
-        const content = await fse && fse.readJSON(aggregatePath);
-        if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content
-    let aggregate: any[] = [];
-    if () {) {
-  $2
 }
-    const perRecordPath = path.join($2);
-    await fse.writeJSON($2);
-    const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json'),
-    let aggregate: any[] = [],
-    if (fs.existsSync(aggregatePath)) {
-      try {
-        const content = await fse.readJSON($2);
-        if (Array.isArray(content)) aggregate = content
-      } catch (_) {
-        // ignore
-      }
-    }
-    aggregate.push($2);
-    await fse.writeJSON($2);
-    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
-    // For now, just return success with AI data
+
+const filename = `${id}-cv${ext}`;`
+const filePath = path.join(uploadsDir, filename;
+  const base64Data = cvFile.base64.split(',')[1];'
+      if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedCvPath = `/uploads/${filename}`;`      }
 
     return res.status(200).json({ ok: true, id, summary, tags })
 fullName,
@@ -509,21 +432,22 @@ fullName,
     })
 const record = {
       id,
-      createdAt: new Date().toISOString(),
+      "createdAt": new Date().toISOString(),
       fullName,
       professionalTitle,
       bio,
       projects,
-      yearsOfExperience: Number(yearsOfExperience) || 0,
+      "yearsOfExperience": Number(yearsOfExperience) || 0,
       skills,
       tools,
       availability,
       timezone,
-      hourlyRate: hourlyRate ? Number(hourlyRate) : null,
+      "hourlyRate": hourlyRate ? Number(hourlyRate) : null,
       portfolioLinks,
-      assets: {
-        profileImage: savedProfileImagePath,
-        cv: savedCvPath,
+      "assets": {
+        }
+        "profileImage": savedProfileImagePath,
+        "cv": savedCvPath
       },
       ai: {
         summary,}
@@ -567,14 +491,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
       try {const content = await fse.readJSON(aggregatePath)if (Array.isArray(content)) aggregate = content;} catch (_) {// ignore;
       }
-    }} catch (error) {return res && res.status(500).json({ error: 'Internal server error' })}    return res && res.status(200).json({ ok: true, id, summary, tags })} catch (error) {}
-    aggregate.push (record)await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 })// Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)// For now, just return success with AI data;
-    return res.status (200).json ({ ok: true, id, summary, tags })} catch (error) {return res.status (500).json ({ error: 'Internal server error' })}    return res.status (200).json ({ ok: true, id, summary, tags })} catch (error) {return res.status (500).json ({ error: 'Internal server error' })}
+    };
 
-  } catch (error) {
-    return res && res.status(500).json({ error: 'Internal server error' });
-  }    return res && res.status(200).json({ ok: true, id, summary, tags })
-  } catch (error) {
+const perRecordPath = path.join(dataDir, `${id}.json`);`
+    await fse.writeJSON(perRecordPath, record, { "spaces": 2
+});
+
+const aggregatePath = path.join(;
+      process.cwd(),
+      'data','
+      'talent-submissions.json''
+    );
+
+    let "aggregate": any[] = [];
+    if () {) {$2;
 }
     aggregate.push (record);
     await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
@@ -608,6 +538,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   $2;
 }
       try {
+
+        }
+
         const content = await fse.readJSON(aggregatePath);
 if (Array.isArray(content)) aggregate = content;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -650,12 +583,13 @@ if (Array.isArray(content)) aggregate = content;}
     }
 
     aggregate.push(record);
-    await fse.writeJSON(aggregatePath, aggregate, { spaces: 2;,}
+    await fse.writeJSON(aggregatePath, aggregate, { "spaces": 2
 });
-    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
-    // For now, just return success with AI data;
-return res.status(200).json({ ok: true;, id, summary, tags });
-  } catch (error) {}
-    return res.status(500).json({ error: 'Internal server error';,}
+    // "Placeholder": trigger operator workflow hook (could be a message queue or cron pickup)
+    // For now, just return success with AI data,
+return res.status(200).json({ "ok": true, id, summary, tags });
+  } catch (error) {
+}
+return res.status(500).json({ "error": 'Internal server error',;'
 });
   }

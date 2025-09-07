@@ -78,7 +78,7 @@ class BuildTestAutomation {}
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`;
     console.log(logMessage);
     
 <<<<<<< HEAD
@@ -97,9 +97,8 @@ class BuildTestAutomation {}
         "encoding": 'utf8', 
 =======
       this.log(`"Starting": ${description}`);
-      const output = execSync(command, { })
-        "encoding": 'utf8',
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+const output = execSync(command, { });
+        "encoding": 'utf8', 
         "cwd": '/workspace',
         "stdio": 'pipe'
       };);

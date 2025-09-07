@@ -3,12 +3,12 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
     this.logFile = path.join(this.projectRoot, "automation/logs/quick-error-checker.log")
     console.log(")
     await fs.appendFile(this.logFile, logMessage + "\n")
@@ -18,14 +18,14 @@ const path = require("path")
       return { "success": true, "output"}
   return { "success": false, "output"}
   await this.log(" Quick syntax check...")
-    const jsFiles = ["""automation/browser-error-fixer.js"""", """scripts/automation/""*.cjs", """scripts/automation/""*.js"]
-    const jsFiles = [""automation/browser-error-fixer.js"", ""scripts/automation/"*.cjs", ""scripts/automation/"*.js"]
+const jsFiles = ["""automation/browser-error-fixer.js"""", """scripts/automation/""*.cjs", """scripts/automation/""*.js"];
+const jsFiles = [""automation/browser-error-fixer.js"", ""scripts/automation/"*.cjs", ""scripts/automation/"*.js"];
     "
     // Check for common syntax errors in JS files"
-    const jsFiles = ["""automation/browser-error-fixer.js"""", """scripts/automation/""*.cjs", """scripts/automation/""*.js"]
-  const files = require("glob").sync(pattern", "{ "cwd"})
-  const filePath = path.join(this.projectRoot", ")
-          const content = await fs.readFile(filePath", "utf8")
+const jsFiles = ["""automation/browser-error-fixer.js"""", """scripts/automation/""*.cjs", """scripts/automation/""*.js"];
+const files = require("glob").sync(pattern", "{ "cwd"});
+const filePath = path.join(this.projectRoot", ");
+const content = await fs.readFile(filePath", "utf8");
           if (content.includes("}\n  }") || content.includes("]\n  }")) {await this.log( Fixing syntax in ${file}")
               .replace(/(\w+:\s*["^", "}"]+)\s*\n\s*(\w+:)/g, "$1,\n  $2"
               .replace(/(\w+:\s*\[[^\]]*\])\s*\n\s*(\w+:)/g, "$1,\n  $2"
@@ -39,9 +39,9 @@ const path = require("path")
               "file"
               "timestamp"
   await this.log(" Quick import check...")
-    const jsxFiles = require("glob").sync("src/**/*.{jsx,tsx}", { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-        const content = await fs.readFile(filePath", "utf8")
+const jsxFiles = require("glob").sync("src/**/*.{jsx,tsx}", { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+const content = await fs.readFile(filePath", "utf8");
         // Check if file uses React but doesn"
         if ((content.includes("React.") || content.includes("<React.")) && !content.includes(")
           const fixedContent = import React from "react";
@@ -49,18 +49,18 @@ const path = require("path")
             "file"
             "timestamp"
   await this.log(" Quick import check...")
-    const jsxFiles = require("glob").sync("src/**/*.{jsx,tsx}", { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-        const content = await fs.readFile(filePath", "utf8")
+const jsxFiles = require("glob").sync("src/**/*.{jsx,tsx}", { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+const content = await fs.readFile(filePath", "utf8");
         // Check if file uses React but doesn"
         if ((content.includes("React.") || content.includes("<React.")) && !content.includes(import React")
-          const fixedContent = "import React from "react";\n"
+const fixedContent = "import React from "react";\n";
   "type": "import-fix"
             "file"
             "timestamp"
   await this.log(" Quick ESLint config check...")
-  const eslintPath = path.join(this.projectRoot, ".eslintrc.js")
-      const content = await fs.readFile(eslintPath, "utf8")
+const eslintPath = path.join(this.projectRoot, ".eslintrc.js");
+const content = await fs.readFile(eslintPath, "utf8");
       if (!content.includes("module.exports")
   await this.log(" Fixing ESLint configuration...");const fixedConfig = "
   "extends": [""next/core-web-vitals"", ""next/typescript""]

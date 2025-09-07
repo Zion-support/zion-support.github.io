@@ -1,5 +1,9 @@
-
-#!/usr/bin/env node
+#!/usr/bin/env node;
+/**
+ * PM2 Git Workflow Service;
+ * Manages git operations and branch cleanup;
+ */
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -12,63 +16,48 @@ class GitWorkflowAutomator {
   }
   log(message) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {
-      console.error('Error writing to log file:', error.message);
-    }
-  }
-  async getCurrentBranch() {
-    try {
-      const branch = execSync('git branch --show-current', {
-        cwd: this.projectRoot,
-        encoding: 'utf8'
+const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`;
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
+  };
+  async getCurrentBranch() {}
+    try {}
+const branch = execSync('git branch --show-current', { });
+        "encoding": 'utf8',
+        "stdio": 'pipe'
       }).trim();
       return branch;
     } catch (error) {
       this.log(`Error getting current branch: ${error.message}`);
       return null;
-    }
-  }
-  async getBranchList() {
-    try {
-      const branches = execSync('git branch -a', {
-        cwd: this.projectRoot,
-        encoding: 'utf8'
-      });
-      return branches.split('\n')
-        .map(line => line.trim())
-        .filter(line => line && !line.includes('HEAD'))
-        .map(line => line.replace(/^\*?\s*/, ''))
-        .map(line => line.replace(/^remotes\/origin\//, ''));
-    } catch (error) {
-      this.log(`Error getting branch list: ${error.message}`);
+    };
+  };
+  async getBranches() {}
+    try {}
+const branches = execSync('git branch -a', { });
+        "encoding": 'utf8',
+        "stdio": 'pipe'
+      }).split('\n');
+        .map(b => b.trim());
+        .filter(b => b && !b.startsWith('*'));
+        .map(b => b.replace(/^remotes\/origin\//, ''));
+      return [...new Set(branches)]; // Remove duplicates;
+    } catch (error) {}
+      this.log(`Failed to get "branches": ${error.message}`);
       return [];
-    }
-  }
-  async getStaleBranches() {
-    try {
-      this.log('🧹 Checking for stale branches...');
-      // Get merged branches
-      const mergedBranches = execSync('git branch --merged main', {
-        cwd: this.projectRoot,
-        encoding: 'utf8'
-      }).split('\n')
-        .map(line => line.trim())
-        .filter(line => line && !line.includes('main') && !line.includes('master'))
-        .map(line => line.replace(/^\*?\s*/, ''));
-      // Get remote branches that are merged
-      const remoteMerged = execSync('git branch -r --merged origin/main', {
-        cwd: this.projectRoot,
-        encoding: 'utf8'
-      }).split('\n')
-        .map(line => line.trim())
-        .filter(line => line && !line.includes('origin/main') && !line.includes('origin/HEAD'))
-        .map(line => line.replace(/^origin\//, ''));
-      return [...new Set([...mergedBranches, ...remoteMerged])];
-    } catch (error) {
-      this.log(`Error getting stale branches: ${error.message}`);
+    };
+  };
+  async getMergedBranches() {}
+    try {}
+const mergedBranches = execSync('git branch --merged', { });
+        "encoding": 'utf8',
+        "stdio": 'pipe'
+      }).split('\n');
+        .map(b => b.trim());
+        .filter(b => b && !b.startsWith('*') && b !== 'main' && b !== 'master');
+      return mergedBranches;
+    } catch (error) {}
+      this.log(`Failed to get merged "branches": ${error.message}`);
       return [];
     }
   }
@@ -426,36 +415,81 @@ main
           this.log(`Resolving conflicts in ${file}...`);
           // Read the file and resolve conflicts (simplified approach);
           let content = fs.readFileSync(file, 'utf8');
-
-          // Remove conflict markers and keep both versions (simplified)
-
-
-
-
-main
-
           // Remove conflict markers and keep both versions (simplified);
           content = content.replace(/\n/g, );
 
   async safeMerge() {}
-  if($2) {}"
-      this.log('Safe merge disabled')
-      return { "merged": false };"
-
-const currentBranch = await this.getCurrentBranch()
-  if($2) {}
-        this.log('Cannot merge main/master branch')
-    return report
-  async start() {}`
-    this.log(`${this.processName} started`)
-      const report = await this.generateReport()
-// Start the service
-  if($2) {}
-  const gitWorkflow = new GitWorkflow()
-  gitWorkflow.start().catch(console.error)
-module.exports = GitWorkflow
-cursor/website-audit-and-update-with-deployment-76dc
-
+    if (!this.autoMergeSafe) {}
+      this.log('Safe merge disabled');
+      return { "merged": false };
+    };
+    try {}
+      this.log('Attempting safe merge...');
+      const currentBranch = await this.getCurrentBranch();
+      if (!currentBranch || currentBranch === 'main' || currentBranch === 'master') {}
+        this.log('Cannot merge main/master branch');
+        return { "merged": false, "reason": 'Cannot merge main branch' };
+      };
+      // Check if there are any uncommitted changes;
+const status = execSync('git status --porcelain', { });
+        "encoding": 'utf8',
+        "stdio": 'pipe'
+      }).trim();
+      if (status) {}
+        this.log('Cannot "merge": uncommitted changes detected');
+        return { merged: false, "reason": 'Uncommitted changes' };
+      };
+      // Try to merge with main;
+      try {}
+        execSync('git fetch origin', { "stdio": 'pipe' }
+});
+        execSync('git merge origin/main', { "stdio": 'pipe' }
+});
+        this.log('Safe merge completed successfully');
+        return { "merged": true };
+      } catch (mergeError) {}
+        this.log(`Merge "failed": ${mergeError.message}`);
+        // Try to resolve conflicts automatically;
+        const conflictResolution = await this.resolveConflicts();
+        if (conflictResolution.resolved) {}
+          try {}
+            execSync('git commit -m "Auto-resolved merge conflicts"', { "stdio": 'pipe' }
+});
+            this.log('Merge completed after conflict resolution');
+            return { "merged": true, "conflictsResolved": true };
+          } catch (commitError) {}
+            this.log(`Failed to commit after conflict "resolution": ${commitError.message}`);
+            return { "merged": false, "error": commitError.message };
+          };
+        };
+        return { "merged": false, "error": mergeError.message };
+      };
+    } catch (error) {}
+      this.log(`Safe merge "failed": ${error.message}`);
+      return { "merged": false, "error": error.message };
+    };
+  };
+  async generateReport() {}
+    const report = {}
+      "timestamp": new Date().toISOString(),
+      "processName": this.processName,
+      "currentBranch": await this.getCurrentBranch(),
+      "branches": await this.getBranches(),
+      "branchCleanup": await this.cleanupBranches(),
+      "conflictCheck": await this.checkForConflicts(),
+      "conflictResolution": await this.resolveConflicts(),
+      "safeMerge": await this.safeMerge(),
+      "environment": {}
+        NODE_ENV: process.env.NODE_ENV,
+        "autoBranchCleanup": this.autoBranchCleanup,
+        "autoMergeSafe": this.autoMergeSafe,
+        "conflictResolution": this.conflictResolution,
+        "branchStrategy": this.branchStrategy;
+      };
+    };
+    const reportFile = path.join(__dirname, '../../logs/pm2/git-workflow-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`Git workflow report "generated": ${reportFile}`);
     return report;
   async start() {}`;
     this.log(`${this.processName} started`);
@@ -469,17 +503,3 @@ module.exports = GitWorkflow;
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
-
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-
-
-cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
-
-main
-
-
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-

@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter  } from 'next/router';
+
+
+
+import React, { useEffect, useState } from 'react';'
+import { useRouter  } from 'next/router';'
 
 const router = null;
 
@@ -38,8 +41,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         Guest: {episode.invitee?.name} ·{' '}
         {new Date(episode.createdAt).toLocaleString()}
       </p>;
-      {episode.audio?.mp3Url && (<audio controls className='w-full'>;
-          <source src={episode.audio.mp3Url} type='audio/mpeg' />;
+      {episode.audio?.mp3Url && (<audio controls className='w-full'>;'
+          <source src={episode.audio.mp3Url} type='audio/mpeg' />;'
         </audio>;
       )}
       <div>;

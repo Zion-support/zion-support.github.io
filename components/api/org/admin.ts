@@ -3,8 +3,10 @@ import {readOrgData, writeOrgData} from '../../../utils/org-data';
 import type { OrgData, BasePerson } from '../../../types/org';
 const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 type AdminAction = any;
-    return res.status(200).json({ ok: true });
-const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
+return res.status(200).json({ "ok": true,;
+})
+const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';'
+
 type AdminAction =
 import { readOrgData, writeOrgData } from '../../../utils/org-data';
 import type { OrgData, BasePerson } from '../../../types/org';
@@ -13,26 +15,20 @@ type AdminAction = any;
     return res.status(200).json({ ok: true })const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
 type AdminAction =;
 
-  | { type: 'invite'; section: keyof OrgData; person: BasePerson }
-  | {type: 'promote';
-      section: keyof OrgData;
-      id: string;
-      updates: Partial < BasePerson>;
+  | { "type": 'invite'; "section": keyof OrgData; "person": BasePerson,'
+}
+  | {"type": 'promote';'
+      }
+      "section": keyof OrgData;
+      "id": string;
+      "updates": Partial < BasePerson>;
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
 
-  | { type: 'deactivate'; section: keyof OrgData; id: string,}
+  | { "type": 'deactivate'; "section": keyof OrgData; "id": string,'
 }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {}
-  if (req.method !== 'POST') {}
-    return res.status(405).json({ error: 'Method not allowed' }) }
 
-const key = req.headers['x-admin-key'];
-
-const key = req && req.headers['x-admin-key'];
-  if (key !== ADMIN_KEY) {}
-    return res && res.status(401).json({ error: 'Unauthorized',}
-});
+export default function handler() {
   }
 
 ;
@@ -170,14 +166,13 @@ if ( {) {}
 }'
       return res.status (400).json ({ error: 'ID already exists' });
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
+const key = req.headers['x-admin-key'];'
 
-  const key = $2;
+const key = req && req.headers['x-admin-key'];'
   if (key !== ADMIN_KEY) {
-    return res.status(401).json({ error: 'Unauthorized' })
+}
+return res && res.status(401).json({ "error": 'Unauthorized',;'
+});
   }
 
 const arr: BasePerson[] = data[section] || [];
@@ -221,13 +216,13 @@ const arr: BasePerson[] = data[section] || [];
     writeOrgData(data)}return res.status(200).json({ ok: true })}
   if (action.type === 'promote') {const section = action.section;
     }
-    arr && arr.push({ ...action && action.person, active: true,}
+    arr && arr.push({ ...action && action.person, "active": true
 });
-    // @ts-expect-error write back dynamic section;
+    // @ts-expect-error write back dynamic section,
 data[section] = arr as any;
     writeOrgData(data);
 
-return res.status(200).json({ ok: true,}
+return res.status(200).json({ "ok": true,;
 });
   }
   // Check condition;
@@ -245,23 +240,24 @@ if ( {) {}
 }
     arr[idx] = { ...arr[idx], ...action.updates }
 
-  if (action && action.type = == 'promote') {
+  if (action && action.type = == 'promote') {'
    ;
+  }
   const section = action && action.section;
-    // @ts-expect-error Indexing into dynamic section;
-const arr: BasePerson[] = data[section] || [];
+    // @ts-expect-error Indexing into dynamic section,
+const "arr": BasePerson[] = data[section] || [];
 
-const idx = arr && arr.findIndex(p => p && p.id === action && action.id)if (idx === -1);}
-  return res && res.status(404).json({ error: 'Not found',}
+const idx = arr && arr.findIndex(p => { return p && p.id === action && action.id)if (idx === -1); }
+return res && res.status(404).json({ "error": 'Not found',;'
 };
   const idx = arr && arr.findIndex((p) => p && p.id === action && action.id)if (idx === -1);
-  return res && res.status(404).json({ error: 'Not found',}
+return res && res.status(404).json({ "error": 'Not found',;'
 })arr[idx] = { ...arr[idx], ...action && action.updates }// @ts-expect-error write back dynamic section;
     data[section] = arr as any;
 
     writeOrgData(data);
 
-return res.status(200).json({ ok: true,}
+return res.status(200).json({ "ok": true,;
 });
   }
   // Check condition;
@@ -290,6 +286,7 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
 origin/cursor/automate-test-improve-and-merge-code-2533
   if (action.type = == 'deactivate') {
    ;
+  }
   const section = action.section;
     // @ts-expect-error Indexing into dynamic section;
 const arr: BasePerson[] = data[section] || [];
@@ -303,7 +300,8 @@ const arr: BasePerson[] = data[section] || [];
     data[section] = arr as any;
     writeOrgData(data);
 
-return res.status(200).json({ ok: true });
+return res.status(200).json({ "ok": true,;
+});
   }
   if (action.type === 'deactivate') {
   const action = req.body as AdminAction;
@@ -320,9 +318,9 @@ const arr: BasePerson[] = data[section] || [];
     writeOrgData(data);
     return res.status(200).json({ ok: true });
   }
-return res.status(400).json({ error: 'Unknown action',}
-});    return res.status(200).json({ ok: true });
+return res.status(400).json({ "error": 'Unknown action',;'
+});    return res.status(200).json({ "ok": true })
   }
-  return res.status(400).json({ error: 'Unknown action',}
+return res.status(400).json({ "error": 'Unknown action',;'
 });
 }

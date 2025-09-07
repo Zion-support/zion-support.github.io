@@ -23,7 +23,7 @@ export default function NewPost() {return (<div>;
 function NewPost() {return (<div>;
       <h1 > NewPost</h1>;
       <p > Component placeholder - needs implementation</p>;
-    </div>)}}import React from 'react';
+    </div>)}}import React from 'react';'
 export default function NewPost() {return (<div>;
       <h1>NewPost</h1>;
       <p>Component placeholder - needs implementation</p>;
@@ -43,7 +43,7 @@ import React from 'react';
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 export default function NewPost() {
-
+  }
   return (
     <div>
       <h1>NewPost</h1>
@@ -95,7 +95,8 @@ export default /**
  * NewPost - Function description
 
  */
-function NewPost() {}
+function NewPost() {
+  }
   return (
     <div>;
       <h1 > NewPost</h1>;
@@ -136,15 +137,9 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-import React from 'react';
+import React from 'react';'
 export default function NewPost() {;
+  }
   return (;
     <div>;
       <h1>NewPost</h1>;

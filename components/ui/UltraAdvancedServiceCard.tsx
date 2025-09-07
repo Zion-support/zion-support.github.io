@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
+
+import React, { useState } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';'
 import { ArrowRight, ExternalLink, Star, TrendingUp;
+  }
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
  } from 'lucide-react';
@@ -9,6 +12,7 @@ interface UltraAdvancedServiceCardProps {
   Rocket, Dna, DollarSign, Lock, Globe;
 interface UltraAdvancedServiceCardProps {}
 import {;
+  }
   ArrowRight,;
   ExternalLink,;
   Star,;
@@ -23,7 +27,7 @@ import {;
   Dna,;
   DollarSign,;
   Lock,;
-  Globe,;} from 'lucide-react';
+  Globe,;} from 'lucide-react';'
 
 ;
 import { ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe,} from 'lucide-react';
@@ -53,8 +57,9 @@ import { ArrowRight, ExternalLink, Star, TrendingUp;
   Globe,;} from 'lucide-react';
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe;
-  } from 'lucide-react';
-interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe,} from 'lucide-react';
+  } from 'lucide-react';'
+
+interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe} from 'lucide-react';'
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe;interface UltraAdvancedServiceCardProps  {service: {id: string;
 import {
@@ -232,32 +237,28 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   const getCategoryIcon = (category: string) => {;'
     if (category && category.includes('AI') || category && category.includes('Machine Learning'));'
       return <Brain className='w-4 h-4' />;'
-    if (category && category.includes('Quantum')) return <Zap className='w-4 h-4' />;'
-    if (category && category.includes('Space')) return <Rocket className='w-4 h-4' />;'
-    if (category && category.includes('Biotech') || category && category.includes('Healthcare'));'
-      return <Dna className='w-4 h-4' />;'
-    if (category && category.includes('Finance') || category && category.includes('Trading'));'
-      return <DollarSign className='w-4 h-4' />;'
-    if (category && category.includes('Security') || category && category.includes('Cybersecurity'));'
-      return <Lock className='w-4 h-4' />;'
-    if (category && category.includes('Internet') || category && category.includes('Network'));'
-      return <Globe className='w-4 h-4' />;'
-    return <Zap className='w-4 h-4' />;  };
-  const containerVariants = {;
-    hidden: { opacity: 0, y: 20 },;
-    visible: {      opacity: 1,;
-      y: 0,;
-      transition: {;
-        duration: 0 && 0.6,;'
-        ease: 'easeOut' as const,;
-      },;
-    },    hover: {;
-      y: -10,;
-      transition: {;
-        duration: 0 && 0.3,;'
-        ease: 'easeOut' as const,;
-      },;
-    },  };
+    if (category.includes('Quantum')) return <Zap className='w-4 h-4' />;'
+    if (category.includes('Space')) return <Rocket className='w-4 h-4' />;'
+    if (category.includes('Biotech') |category.includes('Healthcare'))return <Dna className='w-4 h-4' />;'
+    if (category.includes('Finance') |category.includes('Trading'))return <DollarSign className='w-4 h-4' />;'
+    if (category.includes('Security') |category.includes('Cybersecurity'))return <Lock className='w-4 h-4' />;'
+    if (category.includes('Internet') |category.includes('Network'))return <Globe className='w-4 h-4' />;'
+return <Zap className='w-4 h-4' />;'
+};
+
+
+const contentVariants = {
+    }
+    "hidden": { "opacity": 0, "height": 0
+},
+"visible": {
+      }
+      "opacity": 1,
+      "height": 'auto','
+      "transition": {
+        }
+        "duration": 0.5,
+        "ease": 'easeOut' as const,'
       }
     }
   };
@@ -436,35 +437,32 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       onHoverEnd={() => setIsHovered(false)}
     >
       {/* Glow Effect */}
-      <div 
-        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
-          isHovered ? 'opacity-100' : 'opacity-50'
-        }`}
-        style={{
-          background: `linear-gradient(135deg, ${service.color})`;
-          transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
-      />
-      
+<div;
+        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-50';'        }`}`        style={{"background": `linear-gradient(135deg, ${service.color})`;`          "transform": isHovered ? 'scale(1.05)' : 'scale(1)';'
+        }} />;
       {/* Main Card */}
-      <div 
-        className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
-          isHovered ? 'shadow-2xl' : 'shadow-lg'
-        }`}
+      <div;
+    "hidden": { "opacity": 0, "height": 0
+},<div;
+        className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${isHovered ? 'shadow-2xl' : 'shadow-lg';'
+        }`}`
       >
-      >;
-<div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>;
+
+<div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>'
+
           {/* Header */}
-          <div className='flex items - start justify - between mb - 4'>;
-            <div className='flex items - center space - x-3'>;
-              <div className='text - 3xl'>{service.icon}</div>;
+          <div className='flex items - start justify - between mb - 4'>;'
+            <div className='flex items - center space - x-3'>;'
+              <div className='text - 3xl'>{service.icon}</div>;'
               <div>;
-                <div className='flex items - center space - x-2'>;
+                <div className='flex items - center space - x-2'>;'
                   {getCategoryIcon (service.category)}
-                  <span className='text - xs text - gray - 400 uppercase tracking - wider'>;
+                  <span className='text - xs text - gray - 400 uppercase tracking - wider'>;'
                     {service.category}
                   </span>;
                 </div>;
-                <h3 className='text - xl font - bold text - white mt - 1'>;
+                <h3 className='text - xl font - bold text - white mt - 1'>;'
+
                   {service.name}
 
         <div className="bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full">
@@ -572,14 +570,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             
             {service.popular && (
               <motion.div
-                className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                POPULAR
-              </motion.div>
-            )}
-          </div>
+}
+className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold''
 
           {/* Tagline */}
           <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -639,28 +631,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex items-center justify-between mb-4'>
             <div className='flex items-baseline space-x-1'>
               <span className='text-2xl font-bold text-white'>
+          {/* Tagline */}
+<p className='text-gray-300 text-sm mb-4 leading-relaxed'>;'
+            {service.tagline}
+          </p>
+          {/* Price */}
+
+<div className='flex items-center justify-between mb-4'>'
+            <div className='flex items-baseline space-x-1'>'
+              <span className='text-2xl font-bold text-white'>'
                 {service.price}
               </span>
-              <span className='text-gray-400'>{service.period}</span>
-            <div className='flex items-center space-x-2'>
-              <div className='flex items-center space-x-1'>
-                <Star className='w-4 h-4 text-yellow-400 fill-current' />
-                <span className='text-white text-sm'>{service.rating}</span>
+              <span className='text-gray-400'>{service.period}</span>'
+            <div className='flex items-center space-x-2'>'
+              <div className='flex items-center space-x-1'>'
+                <Star className='w-4 h-4 text-yellow-400 fill-current' />'
+                <span className='text-white text-sm'>{service.rating}</span>'
               </div>
-              <span className='text-gray-400 text-sm'>({service.reviews})</span>
+              <span className='text-gray-400 text-sm'>({service.reviews})</span>'
             </div>
           </div>
           {/* Quick Stats */}
-<div className='grid grid-cols-2 gap-3 mb-4'>
-            <div className='flex items-center space-x-2 text-sm'>
-              <Users className='w-4 h-4 text-blue-400' />
-              <span className='text-gray-300'>
+<div className='grid grid-cols-2 gap-3 mb-4'>'
+            <div className='flex items-center space-x-2 text-sm'>'
+              <Users className='w-4 h-4 text-blue-400' />'
+              <span className='text-gray-300'>'
                 {service.customers.toLocaleString()}+ users
               </span>
             </div>
-            <div className='flex items-center space-x-2 text-sm'>
-              <Clock className='w-4 h-4 text-green-400' />
-              <span className='text-gray-300'>
+            <div className='flex items-center space-x-2 text-sm'>'
+              <Clock className='w-4 h-4 text-green-400' />'
+              <span className='text-gray-300'>'
                 {service.trialDays} day trial
               </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -899,7 +900,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           </div>
 
-          {/* Expandable Content *}
+
+
+          {/* Expandable Content *
 }
           <AnimatePresence />;
             {isExpanded && (;}
@@ -927,49 +930,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 {/* Features */}
                 <div>
-                  <h4 className="text-white font-semibold mb-2">Key Features</h4>
-                  <div className="grid grid-cols-1 gap-2">
+
+<h4 className='text-white font-semibold mb-2'>'
+                    Key Features
+                  </h4>
+                  <div className='grid grid-cols-1 gap-2'>'
                     {service.features.slice(0, 6).map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-2 text-sm">
-                        <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                </div>;{/* Features */}<div>;
-                  <div className="grid grid-cols-1 gap-2">;
-                    {service.features.slice(0, 6).map((feature, index) => (<div key={index} className="flex items-center space-x-2 text-sm">;
-                        <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
-                        <span className="text-gray-300">{feature}</span>;
-                        <span className='text-gray-300'>{feature}</span>                      </div>;
-<h4 className='text-white font-semibold mb-2'>;
-                    Key Features;
-                  </h4>;
-                  <div className='grid grid-cols-1 gap-2'>;
-                    {service.features.slice(0, 6).map((feature, index) => (<div;
-                        key={index}
-                        className='flex items-center space-x-2 text-sm';
-                      >;
-                        <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
-                        <span className='text-gray-300'>{feature}</span>;
-                      </div>;
-                    ))}{/* ROI */}
-<div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>;
-                  <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>;
-                  <p className='text-gray-300 text-sm'>{service.roi}</p>;
-                </div>;
+                      <div
+}
+key={index}
+                        className='flex items-center space-x-2 text-sm''
+                      >
+                        <Check className='w-3 h-3 text-green-400 flex-shrink-0' />'
+                        <span className='text-gray-300'>{feature}</span>'
+                      </div>
+                    ))}
+
+
+
+
+                {/* ROI */}
+<div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>'
+                  <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>'
+                  <p className='text-gray-300 text-sm'>{service.roi}</p>'
+
+
+
+
+                </div>
+
                 {/* Contact Info */}
-                <div className='bg-gray-800/50 rounded-lg p-3'>;
-                  <h4 className='text-white font-semibold mb-2'>;
+                <div className='bg-gray-800/50 rounded-lg p-3'>;'
+                  <h4 className='text-white font-semibold mb-2'>;'
                     Contact Information;
                   </h4>;
-                  <div className='space-y-1 text-sm'>;
-                    <div className='flex items-center space-x-2'>;
-                      <span className='text-gray-400'>Mobile:</span>;
-                      <span className='text-white'>;
+                  <div className='space-y-1 text-sm'>;'
+                    <div className='flex items-center space-x-2'>;'
+                      <span className='text-gray-400'>"Mobile":</span>;'
+                      <span className='text-white'>;'
                         {service.contactInfo.mobile}
                       </span>;
                     </div>;
-                    <div className='flex items-center space-x-2'>;
-                      <span className='text-gray-400'>Email:</span>;
-                      <span className='text-white'>;
+                    <div className='flex items-center space-x-2'>;'
+                      <span className='text-gray-400'>"Email":</span>;'
+                      <span className='text-white'>;'
                         {service.contactInfo.email}
                       </div>
                     ))}
@@ -1007,20 +1011,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </h4>'
                   <div className='space-y-1 text-sm'>'
                     <div className='flex items-center space-x-2'>'
-                      <span className='text-gray-400'>Mobile:</span>'
-                      <span className='text-white'>
-                        {service.contactInfo.mobile}
-                      </span>
-                    </div>'
-                    <div className='flex items-center space-x-2'>'
-                      <span className='text-gray-400'>Email:</span>'
-                      <span className='text-white'>
-                        {service.contactInfo.email}
-                      </span>
-                    </div>'
-                    <div className='flex items-center space-x-2'>'
-                      <span className='text-gray-400'>Address:</span>'
-                      <span className='text-white text-xs'>
+                      <span className='text-gray-400'>"Address": </span>'
+                      <span className='text-white text-xs'>'
                         {service.contactInfo.address}
                       </span>                    </div>                </div>
                 {/* Contact Info */}
@@ -1109,7 +1101,12 @@ className='flex justify-center mt-4';
             transition={{ duration: 0.3 }}
   );
 }
-};
+            >;
+              {isExpanded ? 'Show Less' : 'Details'}{/* Expand/Collapse Indicator */}'
+          <motion.div;
+className='flex justify-center mt-4';'
+            animate={{ "rotate": isExpanded ? 180 : 0 }}
+            transition={{ "duration": 0.3 }}
 
 export default UltraAdvancedServiceCard;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1282,6 +1279,7 @@ export default UltraAdvancedServiceCard;
 
 export default UltraAdvancedServiceCard;
 
+)
 };
 
 

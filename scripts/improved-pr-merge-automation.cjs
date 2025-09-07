@@ -11,6 +11,7 @@
 
 
 #!/usr/bin/env node;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -28,6 +29,11 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+=======
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 // console.log(' Improved PR Merge Automation System')
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,10 +52,10 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 console.log('===')
   log(message, type = 'info')
-      const result = execSync(command, {"encoding": 'utf8',"stdio"})
+const result = execSync(command, {"encoding": 'utf8',"stdio"});
       this.log(` ${description} "failed"`)
       this.log(`Error getting additional "branches"`)
-      const statusResult = execSync('git status --porcelain', { "encoding"})
+const statusResult = execSync('git status --porcelain', { "encoding"});
           "encoding"
         const changesResult = execSync('git diff --cached --name-only', { "encoding"})
         await this.runCommand("git commit -m "Resolve merge conflicts with main branch"")

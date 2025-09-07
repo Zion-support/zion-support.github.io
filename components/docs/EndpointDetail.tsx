@@ -5,8 +5,7 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
     <div className="space-y-4">
 
 
-  endpoint,
-}: {;
+import { EndpointSpec } from '../../data/api-docs/types';'
 
   endpoint: EndpointSpec;
 }) {
@@ -72,7 +71,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 
       <div>
-        <div className="font-medium mb-2">Code Examples</div>
+<div className='font-medium mb-2'>Code Examples</div>'
         <CodeSamples samples={endpoint.samples} />
       </div>
 
@@ -115,6 +114,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div>'
           <div className='font-medium mb-2'>Error Codes</div>'
           <ul className='list-disc pl-5 text-sm text-high-contrast-muted'>
+{endpoint.errors && endpoint.errors.length > 0 && (
+origin/cursor/automate-test-improve-and-merge-code-2533
+        <div>
+          <div className='font-medium mb-2'>Error Codes</div>'
+          <ul className='list-disc pl-5 text-sm text-high-contrast-muted'>'
             {endpoint.errors.map(e => (
               <li key={e.code}>
                 <strong>{e.code}</strong> ({e.httpStatus}) - {e.message}"

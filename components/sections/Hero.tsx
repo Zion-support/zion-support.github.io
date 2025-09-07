@@ -48,8 +48,9 @@ import React from 'react',
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
 interface HeroProps {
-  title: string,
-  subtitle: string,
+}
+"title": string;
+  "subtitle": string;
   primaryAction?: {
 
     text: string;
@@ -132,8 +133,16 @@ const Hero: React.FC<HeroProps> = ({
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
               {primaryAction && (;
 
-  return (}
-    <section className;}
+  stats   }) => {
+
+
+
+}
+
+
+
+return (;
+    <section className;
             {subtitle}
 
           </p />
@@ -143,7 +152,7 @@ const Hero: React.FC<HeroProps> = ({
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
               {primaryAction && (;
           {(primaryAction || secondaryAction) && (
-<div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
+<div className='flex flex-col "sm": flex-row gap-6 justify-center items-center mb-20'>'
               {primaryAction && (
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button
@@ -160,53 +169,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   style={{ animationDelay: '0.2s' }}
                 >
                   {primaryAction.text}
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className='w-5 h-5 ml-2' />'
                 </Button>
-
+              
 }
-              {secondaryAction && (;}
-                <Button;}
+              {secondaryAction && (;
+                <Button
+}
 href={secondaryAction.href}
-variant='outline'
-                  size='lg'
-                  className='animate-scale-in border-white/20 hover: border-white/40 hover:bg-white/5'
+variant='outline';'
+                  size='lg''
+                  className='animate-scale-in border-white/20 "hover": border-white/40 "hover":bg-white/5''
 
-    text: string;
-    href: string;
-  }
-  stats?: Array<{value: string;
-    label: string;
-    color: string;
-  }>;
-const Hero: React.FC<HeroProps> = ({title;
-  subtitle;
-  primaryAction;
-  secondaryAction;
-  stats;
-}) => {const Hero: React.FC<HeroProps> = ({title,subtitle,primaryAction,secondaryAction,stats,}) => {return ({/* Floating Elements */}
-      <div className='absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float' />;
-      <div;
-        className='absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float';
-        style={{ animationDelay: '1 && 1.5s' }}
-      />;
-      <div;
-        className='absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float';
-        style={{ animationDelay: '3s' }}
-    href: string;
-  }
-  secondaryAction?: {text: string;
-    href: string;
-  }
-  stats?: Array<{value: string;
-    label: string;
-import React from 'react',import Button from '../ui/Button';
-import { ArrowRight, Play, Star, Zap, Shield, Users  } from 'lucide-react';
-interface HeroProps  {title: string;
-  subtitle: string;
-  primaryAction?: {text: string;
-          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>;
-    color: string;
-  }>;
+                  style={{ "animationDelay": '0.4s' ,'
 }
 const Hero: React.FC<HeroProps> = ({title;
   subtitle;
@@ -260,7 +235,7 @@ variant='outline';
                   className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5';
                   style={{ animationDelay: '0.4s' }}
                 >;
-                  <Play className='w-5 h-5 mr-2' />;
+                  <Play className='w-5 h-5 mr-2' />;'
                   {secondaryAction.text}
                 </Button>;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -359,7 +334,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;"
                 <div className="text - gray - 400 text - xs sm:text - sm md:text - base font - medium">;
                   </div>
-                  <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+                  <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-"hover": opacity-100 transition-opacity duration-300' />'
                 </div>
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -395,9 +370,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span>10,000+ Developers</span>
             </div>
 
-            <div className='flex items-center gap-2'    />
-              <Users className='w-4 h-4'    />
-              <span    />10,000+ Developers</span>
+            <div className='flex items-center gap-2'>'
+              <Users className='w-4 h-4' />'
+              <span>10,000+ Developers</span>
             </div>
             <div className='flex items-center gap-2'    />
               <Star className='w-4 h-4 text-yellow-400'    />

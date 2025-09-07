@@ -2,9 +2,14 @@ import React from 'react';
 export function VerifiedBadge({ labels }: { labels: string[],}
 }) {
 
-  return (
-    <div className='flex gap-2 items-center'>;
-      {labels && labels.map(label => (;
+export function VerifiedBadge() {
+
+  }
+
+  if (!labels || labels.length;
+return (;
+    <div className='flex gap-2 items-center'>;'
+      {labels && labels.map(label => { return (; }
         <span
 export function VerifiedBadge() {if (!labels || labels.length;return (<div className='flex gap-2 items-center'>;
       {labels && labels.map(label => (<span;

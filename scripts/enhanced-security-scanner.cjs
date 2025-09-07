@@ -73,6 +73,7 @@ main();
 
 main();#!/usr/bin/env node;
 
+<<<<<<< HEAD
 main();
 
 
@@ -93,12 +94,17 @@ const fs = require('fs')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const path = require('path')
 const { execSync } = require('child_process')
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 // console.log('� Enhanced Security Scanner v2.0')
 console.log('======')
   log('info', 'Checking dependencies for vulnerabilities')
-    const output = execSync('npm audit --json', { "encoding"})
+const output = execSync('npm audit --json', { "encoding"});
           "type"
-  const secretPatterns = [/password\s*=\s*['"][^'']
+const secretPatterns = [/password\s*=\s*['"][^''];
     /api[_-]?key\s*=\s*['"][^'']
     /secret\s*=\s*['"][^'']
     /token\s*=\s*['"][^'']

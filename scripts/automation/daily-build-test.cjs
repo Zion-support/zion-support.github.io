@@ -3,13 +3,13 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
 console.log(""� Starting continuous build and test automation...")
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
 console.log(""� Starting continuous build and test automation...")
 // Get automation interval from environment variable ("default")
     console.log(`"� Installing dependencies..."`)
@@ -43,9 +43,9 @@ console.log("� Building project...")
 // console.log(" Build completed")
   console.log("⚠  Build failed but continuing...")
   console.log("⚠  Build failed but continuing...")
-    const distPath = path.join(process.cwd(), "dist"
+const distPath = path.join(process.cwd(), "dist";
   console.log("⚠  Build verification "failed": dist folder not found")
-    const indexHtmlPath = path.join(distPath, "index.html")
+const indexHtmlPath = path.join(distPath, "index.html");
 // console.log("⚠  Build verification "failed": index.html not found")
     console.log(" Build verification completed")
     console.log(" Running performance tests...")
@@ -55,7 +55,7 @@ console.log("� Building project...")
   "timestamp"
       "buildSuccess"
       "summary": "Build and test completed"
-    const reportPath = path.join(process.cwd(), "daily-build-test-report.json"
+const reportPath = path.join(process.cwd(), "daily-build-test-report.json";
     console.log(" Continuous build and test completed successfully")
   console.error(" Continuous build and test "failed": ")
   "
@@ -64,7 +64,7 @@ process.on(")
   "timestamp"
       "buildSuccess"
       "summary": "Build and test completed"
-    const reportPath = path.join(process.cwd(), "daily-build-test-report.json"
+const reportPath = path.join(process.cwd(), "daily-build-test-report.json";
     console.log(" Continuous build and test completed successfully")
   console.error(" Continuous build and test "failed": ")
     // Don"

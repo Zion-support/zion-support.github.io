@@ -2,119 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname  = path.dirname(__filename)// Service data structure;
 
-// Define all the routes for the sitemap
-const routes = [
-  {
-    url: '',
-    changefreq: 'daily',
-    priority: '1.0',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services',
-    changefreq: 'weekly',
-    priority: '0.9',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/ai-services',
-    changefreq: 'weekly',
-    priority: '0.8',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/micro-saas',
-    changefreq: 'weekly',
-    priority: '0.8',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/it-services',
-    changefreq: 'weekly',
-    priority: '0.8',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/blockchain-solutions',
-    changefreq: 'weekly',
-    priority: '0.7',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/ai-code-reviewer',
-    changefreq: 'monthly',
-    priority: '0.6',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/ai-customer-insights',
-    changefreq: 'monthly',
-    priority: '0.6',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/ai-customer-support-automation',
-    changefreq: 'monthly',
-    priority: '0.6',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/ai-email-optimizer',
-    changefreq: 'monthly',
-    priority: '0.6',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/ai-invoice-generator',
-    changefreq: 'monthly',
-    priority: '0.6',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/ai-meeting-assistant',
-    changefreq: 'monthly',
-    priority: '0.6',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/ai-powered-crm',
-    changefreq: 'monthly',
-    priority: '0.6',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/ai-project-management-suite',
-    changefreq: 'monthly',
-    priority: '0.6',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/ai-social-media-scheduler',
-    changefreq: 'monthly',
-    priority: '0.6',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/devops-automation',
-    changefreq: 'monthly',
-    priority: '0.6',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/fintech',
-    changefreq: 'monthly',
-    priority: '0.6',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/services/smart-invoice-generator',
-    changefreq: 'monthly',
-    priority: '0.6',
-    lastmod: new Date().toISOString().split('T')[0]
-  }
+const services = {"microSaaS": [;
+    'cloud-cost-guard', 'llm-evaluation-suite', 'customer-feedback-nps','api-rate-limiter', 'smart-document-processing', 'social-media-scheduler','email-deliverability-monitor', 'website-performance-optimizer';'
+  ],"aiServices": [;
+    'ai-customer-support', 'predictive-analytics', 'ai-content-generation','ai-cybersecurity', 'ai-healthcare', 'ai-financial-analytics','ai-supply-chain', 'ai-hr-platform';'
+  ],"itServices": [;
+    'cloud-migration', 'devops-automation', 'cybersecurity-audit','data-analytics', 'blockchain-solutions', 'iot-implementation','quantum-computing', 'edge-computing''
 ];
 
 // Generate sitemap XML

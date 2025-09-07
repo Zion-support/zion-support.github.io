@@ -1,28 +1,10 @@
 <<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-const fs = require("$1")
-const path = require("path")
+const fs = require("$1");
+const path = require("path");
     console.log("� Setting up error tracking...")
-    const errorTrackingConfig = "
+const errorTrackingConfig = ";
     "dsn"
     "environment"
     "tracesSampleRate"
@@ -35,8 +17,8 @@ const path = require("path")
     fs.writeFileSync(path.join(this.projectRoot, "config/analytics.js")
 // console.log(" Analytics configuration created")
     console.log("� Setting up health checks...")
-    const healthCheckScript = "
-const express = require("$1")
+const healthCheckScript = ";
+const express = require("$1");
 app.get("/health")
     "status": "healthy"
     "timestamp"

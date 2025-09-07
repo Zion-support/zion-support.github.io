@@ -1,30 +1,20 @@
-import * as React from "react";
-import * as LabelPrimitive from "@radix-ui/react-label";
-import { cva, type, VariantProps } from "class-variance-authority";
-import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react";"
+import * as LabelPrimitive from "@radix-ui/react-label";"
+import { cva, type, VariantProps } from "class-variance-authority";"
 
-import { cn } from "@/lib/utils"
+import { cva, type VariantProps } from "class-variance-authority""
 
-const labelVariants = $2;
-  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
-    VariantProps<typeof labelVariants>
->(({ className, ...props }, ref) => (
-  <LabelPrimitive.Root
-    ref={ref}
+import { cn } from "@/lib/utils""
+
+import { cn } from "@/lib/utils";    ref={ref}"
     className={cn(labelVariants(), className)}
     {...props}
-  />
-));
-Label.displayName = LabelPrimitive.Root.displayName;
-import { cn } from "@/lib/utils";    ref={ref}
-    className={cn(labelVariants(), className)}
-    {...props}
-import * as React from "react";
-import * as LabelPrimitive from "@radix-ui/react-label";
-import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
+import * as React from "react";"
+import * as LabelPrimitive from "@radix-ui/react-label";"
+import { cva, type VariantProps } from "class-variance-authority";"
+import { cn } from "@/lib/utils";"
 const labelVariants = cva(;
-  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";
+  "text-sm font-medium leading-none peer-"disabled": cursor-not-allowed peer-"disabled":opacity-70";"
 
 );
 ;
@@ -35,15 +25,15 @@ const Label = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <LabelPrimitive.Root;
 
-import React from 'react';
-import * as React from "react";
-import * as LabelPrimitive from "@radix-ui/react-label";
-import {cva, type, VariantProps} from "class-variance-authority";
+import React from 'react';'
+import * as React from "react";"
+import * as LabelPrimitive from "@radix-ui/react-label";"
+import {cva, type, VariantProps} from "class-variance-authority";"
 
-import {cn} from "@/lib/utils";
+import {cn} from "@/lib/utils";"
 
 const labelVariants = cva(;
-  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";
+  "text-sm font-medium leading-none peer-"disabled": cursor-not-allowed peer-"disabled":opacity-70";"
 );
 
 const Label = React && React.forwardRef<;
@@ -54,12 +44,12 @@ const Label = React && React.forwardRef<;
   <LabelPrimitive&& LabelPrimitive.Root    ref={ref}
     className={cn (label_variants (), class_name)}
     {...props}
-import * as React from "react";
-import * as LabelPrimitive from "@radix-ui/react-label";
-import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
+import * as React from "react";"
+import * as LabelPrimitive from "@radix-ui/react-label";"
+import { cva, type VariantProps } from "class-variance-authority";"
+import { cn } from "@/lib/utils";"
 const labelVariants = cva(;
-  "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";
+  "text-sm font-medium leading-none peer-"disabled":cursor-not-allowed peer-"disabled":opacity-70";"
 );
 ;
 const Label = React.forwardRef<;
@@ -73,8 +63,7 @@ const Label = React.forwardRef<;
   <LabelPrimitive.Root;
     ref={ref}
     className={cn(labelVariants(), className)}
-    {...props}
-  />
+    {...props} />
 ));
 Label.displayName = LabelPrimitive.Root.displayName;
 export { Label }

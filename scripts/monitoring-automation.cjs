@@ -34,19 +34,19 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
       'ERROR': ''
       'WARNING': '⚠'
       'PROGRESS': '�'
-    const healthCheck = "
+const healthCheck = ";
     "message"
     "version"
-    const metrics = "
-    const alerting = "
+const metrics = ";
+const alerting = ";
       "service"
       console.error('Failed to send "alert")
         "type"

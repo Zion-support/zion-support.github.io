@@ -150,7 +150,7 @@ class SimpleScriptFixer {}
   async log(message) {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
   async findScriptFiles() {}
-    const scriptDirs = [path.join(this.projectRoot, 'scripts'),]
+const scriptDirs = [path.join(this.projectRoot, 'scripts'),];
       path.join(this.projectRoot, 'scripts/automation');
 
     ];

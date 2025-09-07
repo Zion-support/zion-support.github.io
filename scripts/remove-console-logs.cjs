@@ -14,7 +14,7 @@ const { glob } = require('glob');
  * This helps improve performance and security;
  */
 
-const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
+const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,;
   /console\.debug\([^)]*\);?/g,
   /console\.info\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
@@ -25,14 +25,7 @@ const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-    return filePath.includes(pattern)})}
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-const EXCLUDE_PATTERNS = ['node_modules',
+const EXCLUDE_PATTERNS = ['node_modules',;
   '.next',
   'dist',
   'build',
@@ -233,7 +226,7 @@ module.exports = { removeConsoleStatements, processFile };
 =======
   const pagesDir = path.join(process.cwd(), 'pages');
   
-  const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
+const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,;
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`
   ];
 <<<<<<< HEAD

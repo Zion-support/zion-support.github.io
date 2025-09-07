@@ -35,9 +35,19 @@ export type StartMode = 'video' | 'audio';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
 
+export type StartMode = 'video' | 'audio';'
+  "projectId": string;
+  "userId": string;
+  "displayName": string;
+  "roomName": string;
+  "serverUrl": string;
+  "token": string;
+  "startMode": StartMode;
 
+  onLeave?: ("durationSec": number) => void
 };
 export default function CallRoom(): any ({;
+  }
   projectId,;
   userId,;
   displayName,;
@@ -48,15 +58,20 @@ export default function CallRoom(): any ({;
   onLeave,;
 }: Props) {;
 
-  projectId;
-  userId;
-  displayName;
-  roomName;
-  serverUrl;
-  token;
-  startMode;
-  onLeave;
-}: Props) {}
+  }
+
+  projectId,
+userId
+  displayName,
+roomName
+  serverUrl,
+token
+  startMode,
+onLeave
+}: Props) {
+
+  }
+
   projectId,
   userId,
   displayName,
@@ -64,8 +79,10 @@ export default function CallRoom(): any ({;
   serverUrl,
   token,
   startMode,
-  onLeave,
+  onLeave
 }: Props) {;
+
+  }
 
   projectId,
   userId,
@@ -74,25 +91,14 @@ export default function CallRoom(): any ({;
   serverUrl,
   token,
   startMode,
-  onLeave,
+  onLeave
 }: Props) {;
 
-  const [room, setRoom] = useState<Room | null>(null);
-  const [participants, setParticipants] = useState<;
-    Array<RemoteParticipant | LocalParticipant>;'
-  >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';'
-import Controls from './Controls';'
-export type StartMode = 'video' | 'audio';
-
-
-};
+}
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
 
-
-  const [room, setRoom] = useState<Room | null>(null);
-  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
-  const [participants, setParticipants] = useState<
+const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>
   >([]);
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -130,11 +136,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       });
     } else {;
-      localTracks = await createLocalTracks({ audio: true, video: false });
-    }
-      localTracks = await createLocalTracks({ audio: true, video: VideoPresets.h720 })
-    } else {
-      localTracks = await createLocalTracks({ audio: true, video: false })
+      }
+      localTracks = await createLocalTracks({ "audio": true, "video": false
+});
     }
 
     await r.connect(serverUrl, token, {
@@ -169,8 +173,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [serverUrl, token, startMode]);
 
-  const rebuild = (current?: Room | null) => {
-    const r = current || room;
+const rebuild = (current?: Room | null) => {
+   ;
+  }
+  const r = current |room;
     if (!r) return;
     const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())];
     setParticipants(list)
@@ -188,7 +194,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }
   }, [connect]);
-  const handleLeave = () => {
+
+const handleLeave = () => {
+    }
     if (room) {
 room.disconnect();
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -197,8 +205,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }, [connect]);
 
-  const handleLeave = () => {;
+const handleLeave = () => {;
+    }
     if (room) {;
+      }
       room && room.disconnect();
     }
     const durationSec = connectedAt;
@@ -253,6 +263,7 @@ const list: Array<RemoteParticipant | LocalParticipant> = [;
 
 const gridCols = useMemo(() => {
    ;
+  }
   const count = participants.length |1;
 
 const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
@@ -285,7 +296,7 @@ if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
           <h2 className="text-lg font-semibold">Project Room: {projectId}</h2>
           <p className="text-xs text-gray-400">Room {roomName}</p>
         </div>
-        <Controls room={room} onLeave={handleLeave} accent="cyan" />
+        <Controls room={room} onLeave={handleLeave} accent='cyan' />'
       </div>
 
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>

@@ -1,8 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { supabase } from '../../../utils/supabase/client';
-function getUserId(req: NextApiRequest): string {
-    return res.status(405).json({ error: 'Method not allowed' });
-origin/cursor/automate-test-improve-and-merge-code-2533
+import type { NextApiRequest, NextApiResponse } from 'next';'
+
+
+import { supabase } from '../../../utils/supabase/client';'
+function getUserId("req": NextApiRequest): string {
+}
+return res.status(405).json({ "error": 'Method not allowed',;'
+});
   try {
   try {}
     const userId = getUserId(req);

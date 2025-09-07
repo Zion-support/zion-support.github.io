@@ -1,5 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
+
+
+import React from 'react';'
+import Link from 'next/link';'
+
 export default function AutomationsPage() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-12">
@@ -48,7 +51,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 
-              className='rounded-md border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50'
+              className='rounded-md border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 "hover":bg-gray-50''
             >
 
               href="https://github.com/Zion-Holdings/zion.app/actions"
@@ -61,12 +64,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 
-<div className='rounded-xl border border-gray-200 bg-white p-6 shadow-sm' />
-          <h2 className='text-lg font-semibold text-gray-900' />
-            AI Content Curator;
+
+<div className='rounded-xl border border-gray-200 bg-white p-6 shadow-sm'>'
+          <h2 className='text-lg font-semibold text-gray-900'>'
+            AI Content Curator
           </h2>
-          <p className='mt-2 text-sm text-gray-600' />
-            Optionally uses AI to produce small, useful artifacts (e.g., growth;
+          <p className='mt-2 text-sm text-gray-600'>'
+            Optionally uses AI to produce small, useful artifacts (e.g., growth,
 experiments), committed into the repository.
           </p>
           <div className="mt-4 flex gap-3">

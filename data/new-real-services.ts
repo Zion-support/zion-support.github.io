@@ -95,32 +95,32 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out - of - the - box.',    features: [;'
       'Prompt and response tracing_cost and token analytics_automatic PII redaction_offline and online evals_guardrail policy engine_drift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters';
     ];
-    popular: true;'
-    icon: '📈';'
-    color: 'from - cyan - 600 to - blue - 700';'
-    text_color: 'text - cyan - 400';'
-    link: 'https://ziontechgroup.com / llm - observability - suite';'
-    market_position: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out - of - the - box.','
-    target_audience: 'AI product teams, platform engineers, data teams';
-    trial_days: 21;'
-    setup_time: '1 day';'
-    category: 'AI & Machine Learning';
-    real_service: true;'
-    technology: ['Next.jsOpenTelemetryPostgreSQLClickHouse'];'
-    integrations: ['OpenAI - compatibleLangChainLlamaIndexDatadogGrafana'];'
-    use_cases: ['LLM app monitoring_cost control_policy compliance'];'
-    roi: 'Cut LLM cost 20–45% while improving reliability';'
-    competitors: ['LangfuseArizeWeights & Biases'];'
-    market_size: '$5B+ AI Ops and Observability';'
-    growth_rate: 'Rapid growth with LLM adoption';'
-    variant: 'quantum - holographic';
-    contact_info: contact;
-    real_implementation: true,'
-    implementation_details: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.';'
-    launch_date: '2025 - 01 - 10';
-    customers: 32;
-    rating: 4.8,
-    reviews: 22;
+    "popular": false;
+    "icon": '✉️';'
+    "color": 'from - violet - 600 to - fuchsia - 700';'
+    "text_color": 'text - violet - 400';'
+    "link": '"https"://ziontechgroup.com / ai - sales - email - copilot';'
+    "market_position": 'Lower cost with better personalization vs. Jasper and constant - contact tools.','
+    "target_audience": 'B2B startups, agencies, SDR teams';'
+    "trial_days": 14;
+    "setup_time": '2 hours';'
+    "category": 'Sales & Marketing';'
+    "real_service": true;
+    "technology": ['Next.jsWorkersPostgreSQL'];'
+    "integrations": ['HubSpotSalesforceApolloLemlist'];'
+    "use_cases": ['Outbound sequences_upsell campaigns_reactivation'];'
+    "roi": 'Increase replies 2–5x with hyper - personalization';'
+    "competitors": ['Copy.aiLavenderInstantly'];'
+    "market_size": '$15B Sales Engagement';'
+    "growth_rate": 'Strong growth';'
+    "variant": 'holographic';'
+    "contact_info": contact;
+    "real_implementation": true,
+    "implementation_details": 'Sequencer, enrichment adapters, and warm - up utilities.';'
+    "launch_date": '2024 - 12 - 20';'
+    "customers": 120;
+    "rating": 4.7,
+    "reviews": 58;
   }
   {'
     id: 'ai - sales - email - copilot';'
@@ -163,32 +163,33 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;'
       'Prospect enrichment via public sources_personalized email generation_sequence and follow - up scheduling_a / B testing and analyticsSPF / DKIM / DMARC checks_inbox rotation support';
     ];
-    popular: false;'
-    icon: '✉️';'
-    color: 'from - violet - 600 to - fuchsia - 700';'
-    text_color: 'text - violet - 400';'
-    link: 'https://ziontechgroup.com / ai - sales - email - copilot';'
-    market_position: 'Lower cost with better personalization vs. Jasper and constant - contact tools.','
-    target_audience: 'B2B startups, agencies, SDR teams';
-    trial_days: 14;'
-    setup_time: '2 hours';'
-    category: 'Sales & Marketing';
-    real_service: true;'
-    technology: ['Next.jsWorkersPostgreSQL'];'
-    integrations: ['HubSpotSalesforceApolloLemlist'];'
-    use_cases: ['Outbound sequences_upsell campaigns_reactivation'];'
-    roi: 'Increase replies 2–5x with hyper - personalization';'
-    competitors: ['Copy.aiLavenderInstantly'];'
-    market_size: '$15B Sales Engagement';'
-    growth_rate: 'Strong growth';'
-    variant: 'holographic';
-    contact_info: contact;
-    real_implementation: true,'
-    implementation_details: 'Sequencer, enrichment adapters, and warm - up utilities.';'
-    launch_date: '2024 - 12 - 20';
-    customers: 120;
-    rating: 4.7,
-    reviews: 58;
+    "popular": true;
+    "icon": '🛡️';'
+    "color": 'from - emerald - 600 to - teal - 700';'
+    "text_color": 'text - emerald - 400';'
+    "link": '"https"://ziontechgroup.com / security - posture - as - code';'
+    "market_position": 'Brings policy - as - code and compliance automation into one product.','
+    "target_audience": 'Platform teams, security engineers, compliance leads';'
+    "trial_days": 21;
+    "setup_time": '1–3 days';'
+    "category": 'Cybersecurity';'
+    "real_service": true;
+    "technology": ['OPAKyvernoTerraformGitHub Actions'];'
+    "integrations": ['AWSAzureGCPGitHubGitLab'];'
+    "use_cases": ['Baseline enforcement_audit readiness_drift detection'];'
+    "roi": 'Reduce audit prep time by 70%';'
+    "competitors": ['WizPrisma CloudSnyk'];'
+    "market_size": '$30B Cloud Security';'
+    "growth_rate": 'High growth';'
+    "variant": 'neural - quantum';'
+    "contact_info": contact;
+    "real_implementation": true;
+    "implementation_details": 'Policy engine plus cloud / K8s scanners and fix generators.';'
+    "launch_date": '2025 - 01 - 05';'
+    "customers": 18;
+    "reviews": 14,
+"rating": 4.6,
+    "reviews": 14;
   }
   {'
     id: 'security - posture - as - code';'
@@ -292,15 +293,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 12
     reviews: 12;
   }
-  {'
-    id: 'api-performance-shield';'
-    name: 'API Performance Shield''
-    tagline: 'Global edge caching, rate limiting, and anomaly detection';'
-    price: '$149';'
-    period: '/month''
-    description: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.';
-    features: ['
-      'Global CDN edge cachingDynamic rate limitingAnomaly and abuse detectionZero-downtime deploys with shadow traffic'
+  {
+    }
+    "id": 'api - performance - shield';'
+    "name": 'API Performance Shield','
+    "tagline": 'Global edge caching, rate limiting, and anomaly detection';'
+    "price": '$149';'
+    "period": '/month','
+    "description": 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.';'
+    "features": [;
+      'Global CDN edge caching_dynamic rate limiting_anomaly and abuse detection_zero - downtime deploys with shadow traffic';'
     ];
     popular: true;'
     icon: '🛰️';'
@@ -318,15 +320,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.5,
     reviews: 12;
   }
-  {'
-    id: 'api - performance - shield';'
-    name: 'API Performance Shield','
-    tagline: 'Global edge caching, rate limiting, and anomaly detection';'
-    price: '$149';'
-    period: '/month','
-    description: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.';
-    features: [;'
-      'Global CDN edge caching_dynamic rate limiting_anomaly and abuse detection_zero - downtime deploys with shadow traffic';
+  {
+    }
+    "id": 'ai-product-analytics';'
+    "name": 'AI Product Analytics''
+    "tagline": 'Session insights, funnel auto-segmentation, and LLM-based insights';'
+    "price": '$129';'
+    "period": '/month''
+    "description": 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.';'
+    "features": [
+      'Auto-segmentation and cohortsLLM query interfaceRetention and churn signalsAnomaly alerts to Slack/Teams''
     ];
     popular: true;'
     icon: '🛰️';'
@@ -359,15 +362,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 9
     reviews: 9;
   }
-  {'
-    id: 'ai-product-analytics';'
-    name: 'AI Product Analytics''
-    tagline: 'Session insights, funnel auto-segmentation, and LLM-based insights';'
-    price: '$129';'
-    period: '/month''
-    description: 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.';
-    features: ['
-      'Auto-segmentation and cohortsLLM query interfaceRetention and churn signalsAnomaly alerts to Slack/Teams'
+  {
+    }
+    "id": 'ai - product - analytics';'
+    "name": 'AI Product Analytics','
+    "tagline": 'Session insights, funnel auto - segmentation, and LLM - based insights';'
+    "price": '$129';'
+    "period": '/month','
+    "description": 'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.';'
+    "features": [;
+      'Auto - segmentation and cohortsLLM query interface_retention and churn signals_anomaly alerts to Slack / Teams';'
     ];
     popular: false;'
     icon: '📊';'
@@ -388,15 +392,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7,
     reviews: 9;
   }
-  {'
-    id: 'ai - product - analytics';'
-    name: 'AI Product Analytics','
-    tagline: 'Session insights, funnel auto - segmentation, and LLM - based insights';'
-    price: '$129';'
-    period: '/month','
-    description: 'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.';
-    features: [;'
-      'Auto - segmentation and cohortsLLM query interface_retention and churn signals_anomaly alerts to Slack / Teams';
+  {
+    }
+    "id": 'ai-support-deflection';'
+    "name": 'AI Support Deflection''
+    "tagline": 'Self-serve answers with RAG, forms, and secure handoff';'
+    "price": '$99';'
+    "period": '/month''
+    "description": 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.';'
+    "features": [
+      'Multi-channel widgetsGrounded answers with citationsSecure human handoffAnalytics and CSAT tracking''
     ];
     popular: false;'
     icon: '📊';'
@@ -429,15 +434,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 20
     reviews: 20;
   }
-  {'
-    id: 'ai-support-deflection';'
-    name: 'AI Support Deflection''
-    tagline: 'Self-serve answers with RAG, forms, and secure handoff';'
-    price: '$99';'
-    period: '/month''
-    description: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.';
-    features: ['
-      'Multi-channel widgetsGrounded answers with citationsSecure human handoffAnalytics and CSAT tracking'
+  {
+    }
+    "id": 'ai - support - deflection';'
+    "name": 'AI Support Deflection','
+    "tagline": 'Self - serve answers with RAG, forms, and secure handoff';'
+    "price": '$99';'
+    "period": '/month','
+    "description": 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.';'
+    "features": [;
+      'Multi - channel widgets_grounded answers with citations_secure human handoff_analytics and CSAT tracking';'
     ];
     popular: true;'
     icon: '💬';'
@@ -458,15 +464,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.6,
     reviews: 20;
   }
-  {'
-    id: 'ai - support - deflection';'
-    name: 'AI Support Deflection','
-    tagline: 'Self - serve answers with RAG, forms, and secure handoff';'
-    price: '$99';'
-    period: '/month','
-    description: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.';
-    features: [;'
-      'Multi - channel widgets_grounded answers with citations_secure human handoff_analytics and CSAT tracking';
+  {
+    }
+    "id": 'cloud-cost-autopilot';'
+    "name": 'Cloud Cost Autopilot''
+    "tagline": 'Automated rightsizing, anomaly alerts, and commitment planning';'
+    "price": '$249';'
+    "period": '/month''
+    "description": 'Proactive optimization for AWS/Azure/"GCP": anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.';'
+    "features": [
+      'Rightsizing recommendationsAnomaly detectionSavings plan/RIs planningTag hygiene and showback''
     ];
     popular: true;'
     icon: '💬';'
@@ -499,15 +506,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 48
     reviews: 48;
   }
-  {'
-    id: 'cloud-cost-autopilot';'
-    name: 'Cloud Cost Autopilot''
-    tagline: 'Automated rightsizing, anomaly alerts, and commitment planning';'
-    price: '$249';'
-    period: '/month''
-    description: 'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.';
-    features: ['
-      'Rightsizing recommendationsAnomaly detectionSavings plan/RIs planningTag hygiene and showback'
+  {
+    }
+    "id": 'cloud - cost - autopilot';'
+    "name": 'Cloud Cost Autopilot','
+    "tagline": 'Automated rightsizing, anomaly alerts, and commitment planning';'
+    "price": '$249';'
+    "period": '/month','
+    "description": 'Proactive optimization for AWS / Azure / "GCP": anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.';'
+    "features": [;
+      'Rightsizing recommendations_anomaly detection_savings plan / RIs planning_tag hygiene and showback';'
     ];
     popular: true;'
     icon: '💸';'
@@ -526,15 +534,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7,
     reviews: 48;
   }
-  {'
-    id: 'cloud - cost - autopilot';'
-    name: 'Cloud Cost Autopilot','
-    tagline: 'Automated rightsizing, anomaly alerts, and commitment planning';'
-    price: '$249';'
-    period: '/month','
-    description: 'Proactive optimization for AWS / Azure / GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.';
-    features: [;'
-      'Rightsizing recommendations_anomaly detection_savings plan / RIs planning_tag hygiene and showback';
+  {
+    }
+    "id": 'privacy - vault';'
+    "name": 'Privacy Vault';'
+    "tagline": 'Tokenize PII and control access with audit trails';'
+    "price": '$179';'
+    "targetAudience": 'Developers, privacy and legal teams';'
+    "trialDays": 14;
+    "setupTime": '1–3 days';'
+    "period": '/month','
+    "description": 'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.';'
+    "features": [;
+      'Field - level encryption_tokenization APIsConsent enforcement_audit trail and reporting';'
     ];
     popular: true;'
     icon: '💸';'
@@ -621,15 +633,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.6,
     reviews: 7;
   }
-  {'
-    id: 'ai - fraud - detection - lite';'
-    name: 'AI Fraud Detection Lite';'
-    tagline: 'Graph - based anomalies with explainability for SMBs';'
-    price: '$159';'
-    period: '/month';'
-    description: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.';
-    features: [;'
-      'Graph - based anomaly detection_explainability reports_risk scoring APIWorkflow actions and webhooks';
+  {
+    }
+    "id": 'managed-postgres-ha-pro';'
+    "name": 'Managed Postgres HA Pro''
+    "tagline": 'Turnkey HA, backups, PITR, and query tuning';'
+    "price": '$199';'
+    "period": '/month''
+    "description": 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.';'
+    "features": [
+      'HA with automatic failoverContinuous backups and PITRSlow query insights and indexingEncryption and access controls''
     ];
     popular: false;
     icon: '🧠';
@@ -671,15 +684,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 8
     reviews: 8;
   }
-  {'
-    id: 'managed-postgres-ha-pro';'
-    name: 'Managed Postgres HA Pro''
-    tagline: 'Turnkey HA, backups, PITR, and query tuning';'
-    price: '$199';'
-    period: '/month''
-    description: 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.';
-    features: ['
-      'HA with automatic failoverContinuous backups and PITRSlow query insights and indexingEncryption and access controls'
+  {
+    }
+    "id": 'managed - postgres - ha - pro';'
+    "name": 'Managed Postgres HA Pro','
+    "tagline": 'Turnkey HA, backups, PITR, and query tuning';'
+    "price": '$199';'
+    "period": '/month','
+    "description": 'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.';'
+    "features": [;
+      'HA with automatic failover_continuous backups and PITRSlow query insights and indexing_encryption and access controls';'
     ];
     popular: true;'
     icon: '🗃️';'
@@ -697,15 +711,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.5,
     reviews: 8;
   }
-  {'
-    id: 'managed - postgres - ha - pro';'
-    name: 'Managed Postgres HA Pro','
-    tagline: 'Turnkey HA, backups, PITR, and query tuning';'
-    price: '$199';'
-    period: '/month','
-    description: 'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.';
-    features: [;'
-      'HA with automatic failover_continuous backups and PITRSlow query insights and indexing_encryption and access controls';
+  {
+    }
+    "id": 'browser-performance-monitor-pro';'
+    "name": 'Browser Performance Monitor Pro''
+    "tagline": 'RUM, Core Web Vitals, and session replay';'
+    "price": '$79';'
+    "period": '/month''
+    "description": 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.';'
+    "features": [
+      'Core Web Vitals dashboardsSession replay and heatmapsError tracking and sourcemapsA/B test impact analysis''
     ];
     popular: true;'
     icon: '🗃️';'
@@ -738,15 +753,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 5
     reviews: 5;
   }
-  {'
-    id: 'browser-performance-monitor-pro';'
-    name: 'Browser Performance Monitor Pro''
-    tagline: 'RUM, Core Web Vitals, and session replay';'
-    price: '$79';'
-    period: '/month''
-    description: 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.';
-    features: ['
-      'Core Web Vitals dashboardsSession replay and heatmapsError tracking and sourcemapsA/B test impact analysis'
+  {
+    }
+    "id": 'browser - performance - monitor - pro';'
+    "name": 'Browser Performance Monitor Pro','
+    "tagline": 'RUM, Core Web Vitals, and session replay';'
+    "price": '$79';'
+    "period": '/month','
+    "description": 'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.';'
+    "features": [;
+      'Core Web Vitals dashboards_session replay and heatmaps_error tracking and sourcemaps_a / B test impact analysis';'
     ];
     popular: true;'
     icon: '⚡';'
@@ -765,15 +781,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.6,
     reviews: 5;
   }
-  {'
-    id: 'browser - performance - monitor - pro';'
-    name: 'Browser Performance Monitor Pro','
-    tagline: 'RUM, Core Web Vitals, and session replay';'
-    price: '$79';'
-    period: '/month','
-    description: 'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.';
-    features: [;'
-      'Core Web Vitals dashboards_session replay and heatmaps_error tracking and sourcemaps_a / B test impact analysis';
+  {
+    }
+    "id": 'seo-automation-studio';'
+    "name": 'SEO Automation Studio''
+    "rating": 4.5,
+    "reviews": 6;
+  }
+  {
+    }
+    "id": 'seo - automation - studio';'
+    "name": 'SEO Automation Studio','
+    "tagline": 'Programmatic SEO, audits, and internal linking automation';'
+    "price": '$99';'
+    "period": '/month''
+    "description": 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.';'
+    "features": [;
+      'Site audits and fixes_schema and sitemaps_programmatic pages_internal linking graph';'
     ];
     popular: true;'
     icon: '⚡';'
@@ -806,21 +830,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 6
     reviews: 6;
   }
-  {'
-    id: 'seo-automation-studio';'
-    name: 'SEO Automation Studio'
-    rating: 4.5,
-    reviews: 6;
-  }
-  {'
-    id: 'seo - automation - studio';'
-    name: 'SEO Automation Studio','
-    tagline: 'Programmatic SEO, audits, and internal linking automation';'
-    price: '$99';'
-    period: '/month''
-    description: 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.';
-    features: [;'
-      'Site audits and fixes_schema and sitemaps_programmatic pages_internal linking graph';
+  {
+    }
+    "id": 'webhook - relay - replay - pro';'
+    "name": 'Webhook Relay & Replay Pro';'
+    "tagline": 'Reliable webhooks with DLQ and replays';'
+    "price": '$59';'
+    "period": '/month''
+    "description": 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.';'
+    "features": [;
+      'DLQ and retry policies_inspector and redaction_signature verification_fan - out and transformations';'
     ];
     popular: false;
     icon: '🔎';
@@ -867,15 +886,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.4,
     reviews: 4;
   }
-  {'
-    id: 'webhook - relay - replay - pro';'
-    name: 'Webhook Relay & Replay Pro';'
-    tagline: 'Reliable webhooks with DLQ and replays';'
-    price: '$59';'
-    period: '/month''
-    description: 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.';
-    features: [;'
-      'DLQ and retry policies_inspector and redaction_signature verification_fan - out and transformations';
+  {
+    }
+    "id": 'pdf - render - api - pro';'
+    "name": 'PDF Render API Pro';'
+    "tagline": 'Fast HTML - to - PDF with brand - safe templates';'
+    "price": '$49';'
+    "targetAudience": 'SaaS, finance, ops';'
+    "trialDays": 14;
+    "setupTime": '30 minutes';'
+    "period": '/month','
+    "description": 'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.';'
+    "features": [;
+      'Serverless scale_template gallery_brand - safe fonts_webhook on completion';'
     ];
     popular: true;
     icon: '🔁';
@@ -964,15 +987,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 10
     reviews: 10;
   }
-  {'
-    id: 'api-observability-starter-pro';'
-    name: 'API Observability Starter Pro''
-    tagline: 'Traces, metrics, logs for APIs without the bloat';'
-    price: '$99';'
-    period: '/month''
-    description: 'Easy OpenTelemetry-based tracing, RED metrics, and error analytics with exporters to your stack.';
-    features: ['
-      'Auto-instrumentationRED dashboardsError analyticsExporters to APMs'
+  {
+    }
+    "id": 'api - observability - starter - pro';'
+    "name": 'API Observability Starter Pro','
+    "tagline": 'Traces, metrics, logs for APIs without the bloat';'
+    "price": '$99';'
+    "period": '/month','
+    "description": 'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.';'
+    "features": [;
+      'Auto - instrumentationRED dashboards_error analytics_exporters to APMs';'
     ];
     popular: false;'
     icon: '🛰️';'
@@ -998,15 +1022,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.6,
     reviews: 10;
   }
-  {'
-    id: 'api - observability - starter - pro';'
-    name: 'API Observability Starter Pro','
-    tagline: 'Traces, metrics, logs for APIs without the bloat';'
-    price: '$99';'
-    period: '/month','
-    description: 'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.';
-    features: [;'
-      'Auto - instrumentationRED dashboards_error analytics_exporters to APMs';
+  {
+    }
+    "id": 'sso-in-a-box-pro';'
+    "name": 'SSO in a Box Pro''
+    "market_size": '$10B Observability';'
+    "growth_rate": 'High';'
+    "variant": 'quantum - holographic';'
+    "contact_info": contact;
+    "real_implementation": true,
+    "implementation_details": 'SDKs, collectors, quick dashboards.';'
+    "launch_date": '2025 - 01 - 17';'
+    "customers": 9;
+    "rating": 4.5,
+    "reviews": 4;
+  }
+  {
+    }
+    "id": 'sso - in - a-box - pro';'
+    "name": 'SSO in a Box Pro','
+    "tagline": 'SAML, OIDC, SCIM with turnkey onboarding';'
+    "price": '$149';'
+    "period": '/month''
+    "description": 'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.';'
+    "features": [;
+      'SAML and OIDCSCIM and JIT provisioning_branding and mapping_customer sandbox';'
     ];
     popular: false;'
     icon: '🛰️';'
@@ -1031,29 +1071,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 4
     reviews: 4;
   }
-  {'
-    id: 'sso-in-a-box-pro';'
-    name: 'SSO in a Box Pro''
-    market_size: '$10B Observability';'
-    growth_rate: 'High';'
-    variant: 'quantum - holographic';
-    contact_info: contact;
-    real_implementation: true,'
-    implementation_details: 'SDKs, collectors, quick dashboards.';'
-    launch_date: '2025 - 01 - 17';
-    customers: 9;
-    rating: 4.5,
-    reviews: 4;
-  }
-  {'
-    id: 'sso - in - a-box - pro';'
-    name: 'SSO in a Box Pro','
-    tagline: 'SAML, OIDC, SCIM with turnkey onboarding';'
-    price: '$149';'
-    period: '/month''
-    description: 'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.';
-    features: [;'
-      'SAML and OIDCSCIM and JIT provisioning_branding and mapping_customer sandbox';
+  {
+    }
+    "id": 'it - asset - discovery - agent - pro';'
+    "name": 'IT Asset Discovery Agent Pro';'
+    "tagline": 'Agentless discovery with CMDB sync';'
+    "price": '$129';'
+    "period": '/month''
+    "description": 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.';'
+    "features": [;
+      'Network scans and SNMPSoftware inventory_change trackingCMDB integrations';'
     ];
     popular: true;
     icon: '🔐';
@@ -1092,15 +1119,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7,
     reviews: 3;
   }
-  {'
-    id: 'it - asset - discovery - agent - pro';'
-    name: 'IT Asset Discovery Agent Pro';'
-    tagline: 'Agentless discovery with CMDB sync';'
-    price: '$129';'
-    period: '/month''
-    description: 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.';
-    features: [;'
-      'Network scans and SNMPSoftware inventory_change trackingCMDB integrations';
+  {
+    }
+    "id": 'vendor-risk-automation-lite';'
+    "name": 'Vendor Risk Automation Lite''
+    "contact_info": contact;
+    "real_implementation": true,
+    "implementation_details": 'Scanners, parsers, CMDB sync.';'
+    "launch_date": '2025 - 01 - 16';'
+    "customers": 5;
+    "rating": 4.4,
+    "reviews": 2;
+  }
+  {
+    }
+    "id": 'vendor - risk - automation - lite';'
+    "name": 'Vendor Risk Automation Lite','
+    "tagline": 'Questionnaires, evidence, and continuous monitoring';'
+    "price": '$129';'
+    "period": '/month''
+    "description": 'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.';'
+    "features": [;
+      'Questionnaire templates_evidence collection portal_continuous monitoring_risk scoring';'
     ];
     popular: false;
     icon: '🛰️';
@@ -1307,13 +1347,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_implementation: true,
     implementation_details:;'
       'Sequencer, enrichment adapters, and warm - up utilities.','
-    launch_date: '2024 - 12 - 20',
-    customers: 120,
-    rating: 4 && 4.7,
-    reviews: 58,
-  },
-  {}
-'
+    "launch_date": '2024 - 12 - 20','
+    "customers": 120,
+    "rating": 4 && 4.7,
+    "reviews": 58},
+  {
       'Policy packs for CIS/NIST','
     id: 'security - posture - as - code','
     name: 'Security Posture as Code','
@@ -3423,22 +3461,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / security - posture - as - code',
     market_position:;'
       'Brings policy - as - code and compliance automation into one product.','
-    target_audience: 'Platform teams, security engineers, compliance leads',
-    trial_days: 21,'
-    setup_time: '1–3 days','
-    category: 'Cybersecurity',
-    real_service: true,'
-    technology: ['OPA', 'Kyverno', 'Terraform', 'GitHub Actions'],'
-    integrations: ['AWS', 'Azure', 'GCP', 'GitHub', 'GitLab'],'
-    use_cases: ['Baseline enforcement', 'Audit readiness', 'Drift detection'],'
-    roi: 'Reduce audit prep time by 70%','
-    competitors: ['Wiz', 'Prisma Cloud', 'Snyk'],'
-    market_size: '$30B Cloud Security','
-    growth_rate: 'High growth','
-    variant: 'neural - quantum',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;'
+    "target_audience": 'Platform teams, security engineers, compliance leads','
+    "trial_days": 21,
+    "setup_time": '1–3 days','
+    "category": 'Cybersecurity','
+    "real_service": true,
+    "technology": ['OPA', 'Kyverno', 'Terraform', 'GitHub Actions'],'
+    "integrations": ['AWS', 'Azure', 'GCP', 'GitHub', 'GitLab'],'
+    "use_cases": ['Baseline enforcement', 'Audit readiness', 'Drift detection'],'
+    "roi": 'Reduce audit prep time by 70%','
+    "competitors": ['Wiz', 'Prisma Cloud', 'Snyk'],'
+    "market_size": '$30B Cloud Security','
+    "growth_rate": 'High growth','
+"variant": 'neural - quantum',;'
+    "contact_info": contact,
+    "real_implementation": true,
+    "implementation_details":;
       'Policy engine plus cloud / K8s scanners and fix generators.','
     launch_date: '2025 - 01 - 05',
 
@@ -3515,10 +3553,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Freshness and volume checks','
       'Schema drift detection','
       'SLA and SLO tracking','
-      'Incident routing to Slack / Teams',
-    ],
-    popular: false,
-'
+      'Incident routing to Slack / Teams'],'
+    }
+    "popular": false,
       'Light agents and metadata collectors with warehouse connectors.','
     launch_date: '2025 - 01 - 12',
     customers: 25,
@@ -3630,17 +3667,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_implementation: true,
     implementation_details:;'
       'Managed edge configs and anomaly ML with safe rollout tools.','
-    launch_date: '2025 - 01 - 15',
-    customers: 14,
-    rating: 4 && 4.7,
-    reviews: 9,
-  },
-  {}
-'
+    "launch_date": '2025 - 01 - 15','
+    "customers": 14,
+    "rating": 4 && 4.7,
+    "reviews": 9},
+  {
       'Auto-segmentation and cohorts','
-    id: 'ai - product - analytics','
-    name: 'AI Product Analytics',
-    tagline:;'
+    }
+    "id": 'ai - product - analytics','
+    "name": 'AI Product Analytics','
+    "tagline":;
       'Session insights, funnel auto - segmentation, and LLM - based insights','
     price: '$129','
     period: '/month',
@@ -4779,21 +4815,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
     ];
-    popular: true, icon: '📈',
-    color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/llm-observability-suite', marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
-    targetAudience: 'AI product teams, platform engineers, data teams',
-    trialDays: 21, setupTime: '1 day',
-    category: 'AI & Machine Learning', realService: true,
-    technology: ['Next.jsOpenTelemetryPostgreSQLClickHouse'], integrations: ['OpenAI-compatibleLangChainLlamaIndexDatadogGrafana'],
-    useCases: ['LLM app monitoringCost controlPolicy compliance'], roi: 'Cut LLM cost 20–45% while improving reliability',
-    competitors: ['LangfuseArizeWeights & Biases'], marketSize: '$5B+ AI Ops and Observability',
-    growthRate: 'Rapid growth with LLM adoption', variant: 'quantum-holographic',
-    contactInfo: contact, realImplementation: true,
-    implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
-    launchDate: '2025-01-10', customers: 32,
-    rating: 4.8,
-    reviews: 22
+    "popular": true, "icon": '📈','
+    "color": 'from-cyan-600 to-blue-700', "textColor": 'text-cyan-400','
+    "link": '"https"://ziontechgroup.com/llm-observability-suite', "marketPosition": 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.','
+    "targetAudience": 'AI product teams, platform engineers, data teams','
+    "trialDays": 21, "setupTime": '1 day','
+    "category": 'AI & Machine Learning', "realService": true,'
+    "technology": ['Next.jsOpenTelemetryPostgreSQLClickHouse'], "integrations": ['OpenAI-compatibleLangChainLlamaIndexDatadogGrafana'],'
+    "useCases": ['LLM app monitoringCost controlPolicy compliance'], "roi": 'Cut LLM cost 20–45% while improving reliability','
+    "competitors": ['LangfuseArizeWeights & Biases'], "marketSize": '$5B+ AI Ops and Observability','
+    "growthRate": 'Rapid growth with LLM adoption', "variant": 'quantum-holographic','
+    "contactInfo": contact, "realImplementation": true,
+    "implementationDetails": 'Agent SDKs, tracing collectors, and dashboards ready to deploy.','
+    "launchDate": '2025-01-10', "customers": 32,'
+    "rating": 4.8,
+    "reviews": 22
   }
 
     useCases: ['LLM app monitoring', 'Cost control', 'Policy compliance'],
@@ -5348,147 +5384,160 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 '
   {
-    id: 'ai-sales-email-copilot'
-    name: 'AI Sales Email Copilot'
-    tagline: 'Personalized multi-touch outbound with real-time enrichment'
-    price: '$129'
-    period: '/month'
-    description:
-      'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.'
-    features: [
-    reviews: 58
+    }
+    "id": 'ai-sales-email-copilot''
+    "name": 'AI Sales Email Copilot''
+    "tagline": 'Personalized multi-touch outbound with real-time enrichment''
+    "price": '$129''
+    "period": '/month''
+    "description":
+      'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.''
+    "features": [
+    "reviews": 58
   }
   {
-    id: 'security-posture-as-code'
-    name: 'Security Posture as Code'
-    tagline: 'CIS/NIST/Kyverno policy packs with drift remediation'
-    price: '$399'
-    period: '/month'
-    description:
-      'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.'
-    features: [
-    reviews: 14
+    }
+    "id": 'security-posture-as-code''
+    "name": 'Security Posture as Code''
+    "tagline": 'CIS/NIST/Kyverno policy packs with drift remediation''
+    "price": '$399''
+    "period": '/month''
+    "description":
+      'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.''
+    "features": [
+    "reviews": 14
   }
   {
-    id: 'etl-observability-starter'
-    name: 'ETL Observability Starter'
-    tagline: 'Data pipeline health with schema change and freshness alerts'
-    price: '$99'
-    period: '/month'
-    description:
-      'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.'
-    features: [
-    reviews: 12
+    }
+    "id": 'etl-observability-starter''
+    "name": 'ETL Observability Starter''
+    "tagline": 'Data pipeline health with schema change and freshness alerts''
+    "price": '$99''
+    "period": '/month''
+    "description":
+      'Monitor data pipelines end-to-"end": freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.''
+    "features": [
+    "reviews": 12
   }
   {
-    id: 'api-performance-shield'
-    name: 'API Performance Shield'
-    tagline: 'Global edge caching, rate limiting, and anomaly detection'
-    price: '$149'
-    period: '/month'
-    description:
-      'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.'
-    features: [
-    reviews: 9
+    }
+    "id": 'api-performance-shield''
+    "name": 'API Performance Shield''
+    "tagline": 'Global edge caching, rate limiting, and anomaly detection''
+    "price": '$149''
+    "period": '/month''
+    "description":
+      'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.''
+    "features": [
+    "reviews": 9
   }
   {
-    id: 'ai-product-analytics'
-    name: 'AI Product Analytics'
-    tagline:
-      'Session insights, funnel auto-segmentation, and LLM-based insights'
-    price: '$129'
-    period: '/month'
-    description:
-      'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.'
-    features: [
-    reviews: 20
+    }
+    "id": 'ai-product-analytics''
+    "name": 'AI Product Analytics''
+    "tagline":
+      'Session insights, funnel auto-segmentation, and LLM-based insights''
+    "price": '$129''
+    "period": '/month''
+    "description":
+      'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.''
+    "features": [
+    "reviews": 20
   }
   {
-    id: 'ai-support-deflection'
-    name: 'AI Support Deflection'
-    tagline: 'Self-serve answers with RAG, forms, and secure handoff'
-    price: '$99'
-    period: '/month'
-    description:
-      'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.'
-    features: [
-    reviews: 48
+    }
+    "id": 'ai-support-deflection''
+    "name": 'AI Support Deflection''
+    "tagline": 'Self-serve answers with RAG, forms, and secure handoff''
+    "price": '$99''
+    "period": '/month''
+    "description":
+      'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.''
+    "features": [
+    "reviews": 48
   }
   {
-    id: 'cloud-cost-autopilot'
-    name: 'Cloud Cost Autopilot'
-    tagline: 'Automated rightsizing, anomaly alerts, and commitment planning'
-    price: '$249'
-    period: '/month'
-    description:
-      'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.'
-    features: [
-    reviews: 11
+    }
+    "id": 'cloud-cost-autopilot''
+    "name": 'Cloud Cost Autopilot''
+    "tagline": 'Automated rightsizing, anomaly alerts, and commitment planning''
+    "price": '$249''
+    "period": '/month''
+    "description":
+      'Proactive optimization for AWS/Azure/"GCP": anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.''
+    "features": [
+    "reviews": 11
   }
   {
-    id: 'privacy-vault'
-    name: 'Privacy Vault'
-    tagline: 'Tokenize PII and control access with audit trails'
-    price: '$179'
-    period: '/month'
-    description:
-      'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.'
-    features: [
-    reviews: 7
+    }
+    "id": 'privacy-vault''
+    "name": 'Privacy Vault''
+    "tagline": 'Tokenize PII and control access with audit trails''
+    "price": '$179''
+    "period": '/month''
+    "description":
+      'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.''
+    "features": [
+    "reviews": 7
   }
   {
-    id: 'ai-fraud-detection-lite'
-    name: 'AI Fraud Detection Lite'
-    tagline: 'Graph-based anomalies with explainability for SMBs'
-    price: '$159'
-    period: '/month'
-    description:
-      'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.'
-    features: [
-    reviews: 8
+    }
+    "id": 'ai-fraud-detection-lite''
+    "name": 'AI Fraud Detection Lite''
+    "tagline": 'Graph-based anomalies with explainability for SMBs''
+    "price": '$159''
+    "period": '/month''
+    "description":
+      'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.''
+    "features": [
+    "reviews": 8
   }
   {
-    id: 'managed-postgres-ha-pro'
-    name: 'Managed Postgres HA Pro'
-    tagline: 'Turnkey HA, backups, PITR, and query tuning'
-    price: '$199'
-    period: '/month'
-    description:
-      'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.'
-    features: [
-    reviews: 5
+    }
+    "id": 'managed-postgres-ha-pro''
+    "name": 'Managed Postgres HA Pro''
+    "tagline": 'Turnkey HA, backups, PITR, and query tuning''
+    "price": '$199''
+    "period": '/month''
+    "description":
+      'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.''
+    "features": [
+    "reviews": 5
   }
   {
-    id: 'browser-performance-monitor-pro'
-    name: 'Browser Performance Monitor Pro'
-    tagline: 'RUM, Core Web Vitals, and session replay'
-    price: '$79'
-    period: '/month'
-    description:
-      'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.'
-    features: [
-    reviews: 6
+    }
+    "id": 'browser-performance-monitor-pro''
+    "name": 'Browser Performance Monitor Pro''
+    "tagline": 'RUM, Core Web Vitals, and session replay''
+    "price": '$79''
+    "period": '/month''
+    "description":
+      'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.''
+    "features": [
+    "reviews": 6
   }
   {
-    id: 'seo-automation-studio'
-    name: 'SEO Automation Studio'
-    tagline: 'Programmatic SEO, audits, and internal linking automation'
-    price: '$99'
-    period: '/month'
-    description:
-      'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.'
-    features: [
-    reviews: 4
+    }
+    "id": 'seo-automation-studio''
+    "name": 'SEO Automation Studio''
+    "tagline": 'Programmatic SEO, audits, and internal linking automation''
+    "price": '$99''
+    "period": '/month''
+    "description":
+      'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.''
+    "features": [
+    "reviews": 4
   }
   {
-    id: 'webhook-relay-replay-pro'
-    name: 'Webhook Relay & Replay Pro'
-    tagline: 'Reliable webhooks with DLQ and replays'
-    price: '$59'
-    period: '/month'
-    description:
-      'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.'
-    features: [
+    }
+    "id": 'webhook-relay-replay-pro''
+    "name": 'Webhook Relay & Replay Pro''
+    "tagline": 'Reliable webhooks with DLQ and replays''
+    "price": '$59''
+    "period": '/month''
+    "description":
+      'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.''
+    "features": [
 ];
 
 ];
